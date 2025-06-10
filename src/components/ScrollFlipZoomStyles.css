@@ -1,0 +1,26 @@
+.zoom-mat-container {
+  position: relative;
+  padding: 1rem;
+  border: 30px solid white;
+  background: white;
+  outline: 1px solid #ccc;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25); /* Stronger drop shadow */
+}
+
+/* Sharp bevel lines – clean cut */
+.zoom-mat-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 1px solid #aaa;   /* slightly darker than before */
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* REMOVE the gradient sheen for now */
+.zoom-mat-container::after {
+  content: none;
+}

@@ -1,0 +1,161 @@
+---
+// Imports remain unchanged
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryHeader from '../components/GalleryHeader.jsx';
+import GalleryIntro from '../components/GalleryInfo.jsx';
+import ChapterViewer from '../components/Chapter-CowboyColor.jsx';
+---
+
+<BaseLayout title="Facing History: Western Art – Color Photos">
+  <section id="gallery-shell">
+    <!-- Header: Visible initially -->
+    <div id="header-section" class="section-visible">
+      <GalleryHeader />
+    </div>
+
+    <!-- Intro: Visible initially -->
+    <div id="intro-section" class="section-visible">
+      <GalleryIntro />
+    </div>
+
+    <!-- Chapter Viewer: Hidden initially -->
+    <div id="chapter-section" class="section-hidden">
+      <ChapterViewer client:load />
+    </div>
+  </section>
+
+  <style>
+    .section-hidden {
+      opacity: 0;
+      pointer-events: none;
+      height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease, height 0.5s ease;
+    }
+
+    .section-visible {
+      opacity: 1;
+      pointer-events: auto;
+      height: auto;
+      transition: opacity 0.5s ease, height 0.5s ease;
+    }
+
+.nav-toggle {
+  position: fixed;
+  top: 43px;
+  right: 20px;
+  background: #f7f6f1;
+  color: #999; /* Light grey text */
+  border: 2px solid #ccc; /* Light grey border */
+  padding: 0.4rem 0.9rem;
+  font-size: 1rem;
+  font-family: 'Glegoo', serif;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-toggle:hover {
+  background: #eae7dd;
+  color: #2c2c2c; /* Darker on hover */
+
+}
+
+
+.nav-toggle:hover {
+  background: #eae7dd;
+
+}
+
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const exploreButton = document.querySelector('.explore-button');
+      const header = document.getElementById('header-section');
+      const intro = document.getElementById('intro-section');
+      const chapter = document.getElementById('chapter-section');
+
+      exploreButton?.addEventListener('click', () => {
+        header.classList.remove('section-visible');
+        header.classList.add('section-hidden');
+
+        intro.classList.remove('section-visible');
+        intro.classList.add('section-hidden');
+
+        chapter.classList.remove('section-hidden');
+        chapter.classList.add('section-visible');
+      });
+    });
+  </script>
+
+  <div id="nav-toggle" class="nav-toggle hidden">☰ Menu</div>
+
+<!-- Header Reinserted for Toggle -->
+<div id="floating-header" class="floating-header">
+  <GalleryHeader />
+</div>
+
+<style>
+  .nav-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    background: #333;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+.floating-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fdfcf9;
+  z-index: 998;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.floating-header.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const exploreButton = document.querySelector('.explore-button');
+    const header = document.getElementById('header-section');
+    const intro = document.getElementById('intro-section');
+    const chapter = document.getElementById('chapter-section');
+    const navToggle = document.getElementById('nav-toggle');
+    const floatingHeader = document.getElementById('floating-header');
+
+    exploreButton?.addEventListener('click', () => {
+      header?.classList.add('section-hidden');
+      intro?.classList.add('section-hidden');
+      chapter?.classList.remove('section-hidden');
+      chapter?.classList.add('section-visible');
+      navToggle?.classList.remove('hidden');
+    });
+
+    navToggle?.addEventListener('click', () => {
+      floatingHeader?.classList.toggle('show');
+    });
+  });
+</script>
+
+
+</BaseLayout>

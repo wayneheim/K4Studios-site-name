@@ -1,0 +1,32 @@
+{
+  "name": "k4-studios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wayneheim/K4-Studios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wayneheim/K4-Studios/issues"
+  },
+  "homepage": "https://github.com/wayneheim/K4-Studios#readme",
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "astro": "^5.9.2",
+    "framer-motion": "^12.16.0",
+    "lucide-react": "^0.513.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
