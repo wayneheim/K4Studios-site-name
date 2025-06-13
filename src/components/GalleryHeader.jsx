@@ -30,6 +30,7 @@ export default function GalleryHeader() {
   display: flex;
   justify-content: flex-end;
   padding: 0;
+   margin-top: 6px;
   border-bottom: none;
   background: transparent;
   position: relative;
@@ -110,6 +111,7 @@ export default function GalleryHeader() {
           min-width: 220px;
         }
 
+        
 
 
 .menu-panel a {
@@ -232,7 +234,24 @@ export default function GalleryHeader() {
     <div className="breadcrumbs">Facing History: Western Art: Color Photos</div>
   </div>
 
-  <div className="color-toggle">| <strong>Color</strong> | B/W |</div>
+<div className="ml-11 mt-4 text-xs text-neutral-600 space-x-1">
+  <span>|</span>
+  <a
+    href="/Facing-History/Western-Cowboy-Portraits/Color"
+    className="hover:text-black hover:underline transition"
+  >
+    <strong>Color</strong>
+  </a>
+  <span>|</span>
+  <a
+    href="/Facing-History/Western-Cowboy-Portraits/Black-White"
+    className="hover:text-black hover:underline transition"
+  >
+    B/W
+  </a>
+  <span>|</span>
+</div>
+
 
   <script dangerouslySetInnerHTML={{
     __html: `

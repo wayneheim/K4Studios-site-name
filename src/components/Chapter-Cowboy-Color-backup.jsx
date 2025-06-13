@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Grid } from "lucide-react";
 import './ScrollFlipZoomStyles.css';
 import { ShoppingCart } from "lucide-react"; 
-import RebuiltScrollGrid from './RebuiltScrollGrid';
 
 
 const galleryData = [
@@ -230,6 +229,8 @@ export default function ScrollFlipGallery() {
   </div>
 </div>
 
+
+
 <AnimatePresence>
   {isZoomed && (
     <motion.div
@@ -237,221 +238,153 @@ export default function ScrollFlipGallery() {
       className="fixed inset-0 bg-white bg-opacity-95 flex flex-col items-center justify-center z-50"
       onClick={() => setIsZoomed(false)}
       initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1.15 }}
+      animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.85, y: 40 }}
       transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
     >
-{/* Zoomed Image with Dynamic Mat Color */}
+
+    {/* Zoomed Image with Dynamic Mat Color */}
 <div
   className="zoom-mat-container"
   style={{
-    background:
-      matColor === "white"
-        ? "#ffffff"
-        : matColor === "gray"
-        ? "#888888"
-        : matColor === "black"
-        ? "#000000"
-        : "transparent",
+  backgroundColor:
+    matColor === "white"
+      ? "#ffffff"
+      : matColor === "gray"
+      ? "#888888"
+      : matColor === "black"
+      ? "#000000"
+      : "transparent",
 
-    // Always reserve space — transparent for wood
-    border:
-      matColor === "wood" || matColor === "none"
-        ? "30px solid transparent"
-        : `30px solid ${
-            matColor === "white"
-              ? "#ffffff"
-              : matColor === "gray"
-              ? "#888888"
-              : "#000000"
-          }`,
+  border:
+    matColor !== "none"
+      ? `30px solid ${
+          matColor === "white"
+            ? "#ffffff"
+            : matColor === "gray"
+            ? "#888888"
+            : matColor === "black"
+            ? "#000000"
+            : "transparent"
+        }`
+      : "30px solid transparent", // preserve space but no visible edge
 
-    // 🪵 Border image only for wood
-    borderImage:
-      matColor === "wood"
-        ? "url('Public/images/materials/Maple-w.png') 30 stretch"
-        : "none",
-
-    padding: "1.5rem",
-    boxShadow:
-      matColor === "none" || matColor === "wood"
-        ? "none"
-        : "0 4px 20px rgba(0, 0, 0, 0.2)",
-    outline:
-      matColor === "none" || matColor === "wood"
-        ? "none"
-        : "1px solid #ccc",
-    display: "inline-block",
-    transition: "all 0.3s ease",
-    position: "relative",
-  }}
+  padding: "1.5rem",
+  boxShadow: matColor === "none" ? "none" : "0 4px 20px rgba(0, 0, 0, 0.2)",
+  outline: matColor === "none" ? "none" : "1px solid #ccc",
+  display: "inline-block",
+  transition: "all 0.3s ease",
+  position: "relative",
+}}
 >
-{matColor === "wood" && (
-  <div
+
+
+<div
+  className="cut-edge-wrapper"
+  style={{
+  padding: "6px",
+  background:
+    matColor === "none"
+      ? "transparent"
+      : "linear-gradient(135deg, #ffffff, #cccccc)",
+  boxShadow:
+    matColor === "none"
+      ? "none"
+      : "inset -1px 1px 1px rgba(255, 255, 255, 0.6), inset 6px 10px 14px rgba(0, 0, 0, 0.23)",
+  border:
+    matColor === "none"
+      ? "none"
+      : "1px solid transparent", // fallback override if needed
+  outline: "none", // kill stray outlines
+}}
+
+>
+  <img
+    src={galleryData[currentIndex].image}
+    alt={galleryData[currentIndex].title}
+    className="zoomed-photo"
     style={{
-      position: "absolute",
-      top: "-8px",
-      left: "-5px",
-      width: "calc(100% + 15px)",
-      height: "calc(100% + 8px)",
-      backgroundImage: "url('/Public/images/materials/Maple-w.jpg')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      zIndex: -1,
-      borderRadius: "3px",
-      border: "1px solid rgba(209, 192, 172, 0.6)",
-      boxShadow: "0 10px 14px rgba(0, 0, 0, 0.12)", // 🎯 subtle shadow for wood layer
+      display: "block",
+      maxWidth: "100%",
+      height: "auto",
+      border: "1px solid #bbb",
+      background: "#fff",
     }}
   />
-)}
-  <div
-    className="cut-edge-wrapper"
-    style={{
-      padding: "6px", // always the same to prevent layout shift
-      background:
-        matColor === "wood" || matColor === "none"
-          ? "transparent"
-          : "linear-gradient(135deg, #ffffff, #cccccc)",
-      boxShadow:
-        matColor === "wood" || matColor === "none"
-          ? "none"
-          : "inset -1px 1px 1px rgba(255,255,255,0.6), inset 6px 10px 14px rgba(0,0,0,0.23)",
-      border:
-        matColor === "wood" || matColor === "none"
-          ? "none"
-          : "1px solid transparent",
-      outline: "none",
-    }}
-  >
-    <img
-      src={galleryData[currentIndex].image}
-      alt={galleryData[currentIndex].title}
-      className="zoomed-photo"
-      style={{
-        display: "block",
-        maxWidth: "100%",
-        height: "auto",
-        border: "1px solid #bbb",
-        background: "#fff",
-      }}
-    />
-  </div>
+</div>
+
 
   <div
-    className="mat-signature"
-    style={{
-      marginTop: "8px",
-      marginRight: "30px",
-      marginBottom: "18px",
-      fontSize: "0.75rem",
-      color:
-        matColor === "black" || matColor === "gray"
-          ? "#fdfcf9"
-          : "#2c2c2c",
-      textAlign: "right",
-         opacity: 0.55, // 👈 75% opacity added
-    }}
-  >
-    © Wayne Heim
-  </div>
+  className="mat-signature"
+  style={{
+    marginTop: "8px",
+    fontSize: "0.75rem",
+    color:
+      matColor === "black" || matColor === "gray"
+        ? "#fdfcf9"
+        : "#2c2c2c",
+    textAlign: "right",
+  }}
+>
+  © Wayne Heim
+</div>
+
 </div>
 
 
 
-<div className="flex flex-col items-center mt-6">
-  {/* Swatches + Exit Row */}
-  <div className="flex items-center gap-2 relative">
-    {/* Default (no mat) */}
-    <div className="flex flex-col items-center">
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setMatColor("none");
-        }}
-        className={`w-4 h-4 border border-gray-400 ${
-          matColor === "none" ? "bg-gray-200" : "bg-white"
-        }`}
-        style={{ borderRadius: "0.15rem" }}
-        title="Paper - Aluminum - Acrylic"
-      />
-      {matColor === "none" && (
-        <div className="w-1 h-0.5 bg-black rounded-sm mt-1" />
-      )}
-    </div>
-
-    {/* Wood Option */}
-    <div className="flex flex-col items-center">
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setMatColor("wood");
-        }}
-        className="w-4 h-4 border border-gray-400"
-        style={{
-          backgroundColor: "#deb887",
-          borderRadius: "0.15rem",
-        }}
-        title="Wood Border"
-      />
-      {matColor === "wood" && (
-        <div className="w-1 h-0.5 bg-black rounded-sm mt-1" />
-      )}
-    </div>
-
-    {/* Divider */}
-    <div className="text-gray-400 select-none font-semibold">|</div>
-
-    {/* Circle Swatches */}
-    <div className="flex flex-col items-center group">
-      <div className="relative flex items-center gap-2 w-[96px] justify-center">
-        {[
-          "white",
-          "gray",
-          "black"
-        ].map((color) => (
-          <div key={color} className="flex flex-col items-center">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setMatColor(color);
-              }}
-              className="w-4 h-4 rounded-full border border-gray-400 relative"
-              style={{
-                backgroundColor:
-                  color === "white"
-                    ? "#ffffff"
-                    : color === "gray"
-                    ? "#888888"
-                    : "#000000",
-              }}
-              title={`${color[0].toUpperCase() + color.slice(1)} Mat`}
-            />
-            {matColor === color && (
-              <div className="w-1 h-0.5 bg-black rounded-sm mt-1" />
-            )}
-          </div>
-        ))}
-
-        {/* Fade-in label under circles */}
-        <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 text-xs text-gray-500 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Finishing Ideas
-        </div>
-      </div>
-    </div>
-
-    {/* Exit Button aligned to swatches */}
+    {/* Mat Color Selector UI */}
+   <div className="flex gap-3 mt-5">
+  {["white", "gray", "black", "none"].map((color) => (
     <button
+      key={color}
       onClick={(e) => {
         e.stopPropagation();
-        setIsZoomed(false);
+        setMatColor(color);
       }}
-      className="ml-4 px-2 h-5 flex items-center justify-center text-xs font-semibold rounded-full text-gray-400 bg-gray-100 border border-gray-200 shadow hover:bg-gray-400 hover:text-white"
-      title="Exit Preview"
+      className={`w-5 h-5 rounded-full border border-gray-400 ${
+        color === "none" ? "flex items-center justify-center text-[10px]" : ""
+      }`}
+      style={{
+        backgroundColor:
+          color === "white"
+            ? "#ffffff"
+            : color === "gray"
+            ? "#888888"
+            : color === "black"
+            ? "#000000"
+            : "#f2f2f2",
+        color: color === "none" ? "#333" : "transparent",
+        position: "relative",
+      }}
+      title={color === "none" ? "No Mat" : `${color} Mat`}
     >
-      Exit
+      {color === "none" ? <span style={{ fontSize: "11px", lineHeight: "1" }}>✕</span> : null}
+      {matColor === color && (
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 w-1.5 h-0.5 rounded-sm"
+          style={{
+            bottom: "-5px",
+            backgroundColor: "#111", // fine black underline
+          }}
+        />
+      )}
     </button>
-  </div>
-</div>
+  ))}
+
+{/* Close Button */}
+<button
+  onClick={(e) => {
+    e.stopPropagation();
+    setIsZoomed(false);
+  }}
+  className="px-3 h-6 flex items-center justify-center text-sm font-semibold text-gray-400 bg-gray-100 border border-gray-200 rounded shadow hover:bg-gray-400 hover:text-white"
+  title="Exit Preview"
+>
+  Exit
+</button>
+
+</div> {/* ← closes mat selector container */}
 
     </motion.div>
   )}
@@ -525,15 +458,60 @@ export default function ScrollFlipGallery() {
 
 {/* Grid View */}
 {viewMode === "grid" && (
-  <RebuiltScrollGrid
-    galleryData={galleryData}
-    onCardClick={(i) => {
-      setCurrentIndex(i);
-      setIsExpanded(false);
-      setViewMode("flip");
-      window.scrollTo(0, 0);
-    }}
-  />
+  <>
+    {/* Watermarked Section Title */}
+<div className="w-full flex justify-center mt-0 mb-[-3rem]">
+<h2 className="watermark-title">Chapter Index</h2>
+</div>
+
+    {/* Grid Container */}
+    <div className="relative px-4 md:pr-[120px]">
+      <div
+        className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 mx-auto"
+        style={{ paddingRight: "30px", maxWidth: "1024px" }}
+      >
+        {galleryData.map((entry, index) => (
+          <div
+            key={index}
+            onClick={() => {
+              setCurrentIndex(index);
+              setIsExpanded(false);
+              setViewMode("flip");
+              window.scrollTo(0, 0); // reset scroll to top
+            }}
+            className="group border border-gray-200 rounded-xl p-4 hover:shadow-md transition cursor-pointer flex flex-col"
+            style={{ backgroundColor: '#f6f3ed' }}
+          >
+            {/* Image Container */}
+            <div className="aspect-[4/5] relative overflow-hidden bg-[#eae6df] rounded-sm">
+              <div
+                className="absolute inset-0 rounded-sm pointer-events-none"
+                style={{
+                  boxShadow: `
+                    inset -2px -2px 3px rgba(255, 255, 255, 0.75),
+                    inset 2px 2px 3px rgba(0, 0, 0, 0.35)
+                  `,
+                  zIndex: 5
+                }}
+              />
+              <img
+                src={entry.image}
+                alt={entry.title}
+                className="relative z-4 w-full h-full object-cover rounded-sm"
+              />
+            </div>
+
+            <h3
+              className="text-sm sm:text-base font-semibold text-center text-warm-fade"
+              style={{ marginTop: "15px" }}
+            >
+              {entry.title}
+            </h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </>
 )}
 
       </div>
