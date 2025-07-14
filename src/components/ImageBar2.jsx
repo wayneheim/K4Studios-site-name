@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 
 // Glob import: grabs all carousel slide data files from both Galleries and Other
+// rename to cap
 const allCarousels = import.meta.glob([
   "../data/Galleries/**/carousel.ts",
   "../data/Other/**/carousel.ts"
