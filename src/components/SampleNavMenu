@@ -1,0 +1,7 @@
+useEffect(() => {
+  function openDrawer() {
+    setMobileOpen(true);
+  }
+  window.addEventListener('openMobileMenu', openDrawer);
+  return () => window.removeEventListener('openMobileMenu', openDrawer);
+}, []);

@@ -1,0 +1,202 @@
+
+        body {
+          font-family: 'Glegoo', serif;
+        }
+        .intro-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-wrap: nowrap;
+          max-width: 100%;
+          margin: 2rem 6rem;
+          padding: 2 1rem;
+          position: relative;
+        }
+        .intro-text {
+        flex: 1 1 0%;
+        min-width: 0;
+        
+}
+        .intro-text h2 {
+          line-height: 1.65rem;
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+        .intro-text h3 {
+          font-size: 1rem;
+          color: #777;
+          margin-top: 0;
+          margin-bottom: 0.75rem;
+        }
+        .intro-text p {
+          font-size: 0.95rem;
+          line-height: 1.4;
+          margin-bottom: 0.95rem;
+        }
+        .intro-text a {
+          font-weight: bold;
+          font-size: 0.85rem;
+          color: #5a5a5a;
+        }
+        .intro-text details {
+          font-size: 0.9rem;
+          transition: all 0.3s ease;
+        }
+        .intro-text summary {
+          list-style: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-weight: bold;
+          color: #5a5a5a;
+        }
+        .intro-text summary span {
+          display: inline-block;
+          transition: transform 0.4s ease;
+          font-size: 0.7rem;
+        }
+        .intro-text details[open] summary span {
+          transform: rotate(90deg);
+        }
+        .intro-text details p {
+          margin-top: 0.5rem;
+          font-size: 0.95rem;
+          line-height: 1.5;
+          animation: fadeSlideDown 0.6s ease forwards;
+        }
+        @keyframes fadeSlideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .intro-image {
+          flex-shrink: 0;
+          min-width: 220px;
+          padding: .5rem;
+          width: 220px;
+          margin-top: 10px;
+          text-align: center;
+        }
+        .intro-image img {
+          display: block;
+          max-width: 100%;
+          width: 200px;
+          aspect-ratio: 3 / 4;
+          object-fit: cover;
+          margin-left: 10px;
+          border: 2px solid #ffffff;
+          box-shadow: 0 0 0 3px #aaa9a7;
+          border-radius: 15px;
+        }
+        .intro-image figcaption {
+          margin-left: 15px;
+          font-size: 0.8rem;
+          color: #555;
+          margin-top: 0.6rem;
+        }
+        .explore-section {
+          text-align: center;
+          font-size: 1.75rem;
+          font-weight: bold;
+          margin-bottom: 2rem;
+        }
+        .divider {
+          width: 200px;
+          margin: 1rem auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
+        .divider::before,
+        .divider::after {
+          content: '';
+          flex: 1;
+          height: 1px;
+          background: #888;
+        }
+        .divider span {
+          font-size: 2.2rem;
+          transition: text-shadow 0.3s ease;
+        }
+        .explore-section:hover .divider span {
+          color: #000;
+          text-shadow:
+            0 0 8px rgba(255, 100, 0, 0.8),
+            0 0 14px rgba(255, 100, 0, 0.7),
+            0 0 22px rgba(255, 100, 0, 0.6);
+        }
+        .explore-section:hover > span {
+          animation: arrowGlow 1.4s ease-in-out infinite;
+        }
+        @keyframes arrowGlow {
+          0% {
+            text-shadow: 0 0 2px rgba(255, 100, 0, 0.8);
+          }
+          50% {
+            text-shadow: 0 0 10px rgba(255, 100, 0, 0.7);
+          }
+          100% {
+            text-shadow: 0 0 2px rgba(255, 100, 0, 0.6);
+          }
+        }
+        @media (max-width: 900px) {
+          .intro-wrapper {
+            flex-direction: column;
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+          .intro-image {
+            align-self: center;
+            z-index: 1;
+          }
+        }
+            @media (max-width: 768px) {
+         .intro-image {
+          flex-shrink: 0;
+          min-width: 220px;
+          padding: .5rem;
+          width: 220px;
+          margin-top: 30px;
+          margin-bottom: -25px;
+          text-align: center;}
+
+             .intro-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-wrap: nowrap;
+          max-width: 100%;
+          margin: 3rem 3rem;
+          padding: 2 1rem;
+          position: relative;
+        }
+      }
+
+        details summary {
+  text-align: center;
+  cursor: pointer;
+  list-style: none; /* optional: removes default triangle in Safari */
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* hides default arrow */
+}
+
+.arrow-icon {
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+/* rotate arrow when open */
+details[open] .arrow-icon {
+  transform: rotate(90deg);
+}

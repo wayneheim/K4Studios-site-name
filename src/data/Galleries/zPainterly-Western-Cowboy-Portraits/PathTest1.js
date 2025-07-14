@@ -1,0 +1,1 @@
+export const test = "HELLO_FROM_PATHTEST";

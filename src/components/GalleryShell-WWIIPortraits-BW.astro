@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryHeader from '../components/Gallery-LandingHeader.jsx';
+import GalleryInfo from '../components/GalleryInfo.jsx';
+import ChapterViewer from '../components/Chapter-WWIIPortraitsBW.jsx';
+import Footer from '../components/Footer.astro';
+
+// Accept props passed down
+const { breadcrumb, entranceData, initialImageId } = Astro.props;
+---
+
+<BaseLayout title="Facing History: Roaring 20s – BW Photos">
+  <!--section id="gallery-shell" class="flex flex-col min-h-0 bg-white overflow-hidden" -->
+  <section id="gallery-shell" class="flex flex-col bg-white">
+
+    <div id="gallery-content" class="flex-grow relative overflow-hidden">
+
+      <!-- Header stays fixed above intro -->
+      <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
+        <GalleryHeader client:load breadcrumb={breadcrumb} />
+
+      </div>
+
+      <!-- Spacer to push intro below header visually -->
+      <div class="h-0 md:h-5"></div>
+
+      <!-- Intro: Visible initially, now loads under the header -->
+      <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
+        <GalleryInfo client:load entranceData={entranceData} />
+      </div>
+
+      <!-- Chapter Viewer: Hidden initially -->
+      <div id="chapter-section" class="section-hidden" style="display: none;">
+        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+      </div>
+ </div> 
+
+    <!-- Spacer pushes the footer down on landing page -->
+    <div class="h-12 md:h-20"></div>
+
+    <Footer />
+
+  </section>
+
+  <style>
+
+  
+
+ .hamburger-circle {
+  display: none !important;
+}
+
+  @media (max-width: 767px) {
+  #nav-toggle {
+    display: none !important;
+  }
+}
+   .section-hidden {
+  display: none !important;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 2s ease, transform 1.2s ease;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 0;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 1s ease, transform 1.2s ease;
+  pointer-events: auto;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+  </style>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const exploreButton = document.querySelector('.explore-button');
+    const header = document.getElementById('header-section');
+    const intro = document.getElementById('intro-section');
+    const chapter = document.getElementById('chapter-section');
+    const navToggle = document.getElementById('nav-toggle');
+    const floatingHeader = document.getElementById('floating-header');
+    const menuLabel = document.getElementById('menu-label');
+    const topSpacer = document.getElementById('top-spacer');
+
+    let isMenuOpen = false;
+
+      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+    if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
+  // Simulate actual click on Explore button
+  const clickExplore = () => {
+    if (!exploreButton) return;
+
+    exploreButton.click(); // triggers real logic
+  };
+
+  // Delay slightly to let DOM mount fully
+  setTimeout(clickExplore, 50);
+}
+
+
+    exploreButton?.addEventListener('click', () => {
+      header?.classList.add('section-hidden');
+      intro?.classList.add('section-hidden');
+
+      chapter.style.display = 'block';
+      setTimeout(() => {
+        chapter.classList.remove('section-hidden');
+        chapter.classList.add('section-visible');
+      }, 50);
+
+      if (window.innerWidth >= 768) {
+        navToggle?.classList.remove('hidden');
+      }
+
+      if (topSpacer) {
+        topSpacer.style.marginTop = "0px";
+        topSpacer.style.height = "0px";
+        topSpacer.style.overflow = "hidden";
+      }
+    });
+
+    navToggle?.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      menuLabel.textContent = isMenuOpen ? "M−" : "M+";
+      floatingHeader?.classList.toggle('show');
+    });
+  });
+</script>
+
+<!--
+<div id="nav-toggle" class="nav-toggle hidden md:block scroll-menu-button">
+  <div style="font-size: 1.2rem; line-height: 1;">☰</div>
+  <div style="font-size: 0.7rem;" id="menu-label">M+</div>
+</div> -->
+
+<!-- Header Reinserted for Toggle 
+<div id="floating-header" class="floating-header">
+  <GalleryHeader />
+</div>
+-->
+
+  <script>
+    document.addEventListener('contextmenu', function (e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+      }
+    });
+  </script>
+</BaseLayout>

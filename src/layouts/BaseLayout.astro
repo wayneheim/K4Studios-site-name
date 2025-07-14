@@ -4,7 +4,7 @@ const { title = 'Gallery' } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
@@ -13,14 +13,27 @@ const { title = 'Gallery' } = Astro.props;
     <style>
       body {
         font-family: 'Glegoo', serif;
-        background: #fdfcf9;
+        background:rgb(255, 255, 255);
         margin: 0;
         padding: 0;
         color: #2c2c2c;
+        margin-top: 1rem;
       }
+      
+
+      .page-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+
     </style>
   </head>
   <body>
-    <slot />
+    <div class="page-container">
+      <slot />
+    </div>
+    <div id="overlay-root"></div>
   </body>
 </html>

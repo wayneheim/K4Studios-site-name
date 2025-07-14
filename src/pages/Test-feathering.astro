@@ -1,0 +1,199 @@
+---
+import { siteNav } from "../data/siteNav.ts";
+import { autoLinkKeywordsInText } from '../components/utils/autoLinkKeywordsInText.ts';
+import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/story.ts';
+// Import your section semantic file
+import { semantic as cowboySemantic } from "../data/semantic/Western-Cowboy-Portraits-Sem.ts";
+
+const allGalleryData = import.meta.glob("../data/galleries/**/*.mjs", { eager: true });
+function hrefToFilePath(href) {
+  return "../data/galleries" + href.replace(/^\/Galleries/, "") + ".mjs";
+}
+
+const fakeUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
+
+function findNavEntryByUrl(nav, url) {
+  for (const entry of nav) {
+    if (entry.href === url) return entry;
+    if (entry.children) {
+      const found = findNavEntryByUrl(entry.children, url);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+const landingNav = findNavEntryByUrl(siteNav, fakeUrl);
+let galleryPaths = [];
+if (landingNav && landingNav.children) {
+  galleryPaths = landingNav.children
+    .filter(c => /\/Color$|\/Black-White$/.test(c.href))
+    .map(c => c.href);
+}
+
+const galleryDatas = galleryPaths.map(path => {
+  const filePath = hrefToFilePath(path);
+  return allGalleryData[filePath]?.galleryData || [];
+});
+
+// Feathering logic
+function featherImages(galleryDatas, galleryPaths, neededCount) {
+  function rankedImgs(data, excludeIds = new Set(), count = neededCount) {
+    let result = [];
+    for (const minRating of [4, 3, 2, 0]) {
+      let toAdd = data.filter(img =>
+        !excludeIds.has(img.id) &&
+        ((minRating === 0) ? true : (img.rating ?? 0) >= minRating)
+      );
+      toAdd = toAdd.sort(() => 0.5 - Math.random());
+      for (const img of toAdd) {
+        if (result.length < count) {
+          result.push(img);
+        }
+      }
+      if (result.length >= count) break;
+    }
+    return result;
+  }
+
+  let feathered = [];
+  const excludeIds = new Set();
+
+  if (galleryDatas.length === 2) {
+    let imgsA = rankedImgs(galleryDatas[0], excludeIds, Math.ceil(neededCount / 2));
+    imgsA.forEach(img => excludeIds.add(img.id));
+    let imgsB = rankedImgs(galleryDatas[1], excludeIds, Math.floor(neededCount / 2));
+    imgsB.forEach(img => excludeIds.add(img.id));
+    for (let i = 0; i < neededCount; i++) {
+      if (i % 2 === 0 && imgsA.length) {
+        feathered.push(imgsA.shift());
+      } else if (imgsB.length) {
+        feathered.push(imgsB.shift());
+      } else if (imgsA.length) {
+        feathered.push(imgsA.shift());
+      }
+    }
+  } else if (galleryDatas.length === 1) {
+    let imgs = rankedImgs(galleryDatas[0], excludeIds, neededCount);
+    feathered = imgs;
+  } else {
+    feathered = [];
+  }
+
+  return feathered.map(img => {
+    let idx = galleryDatas.findIndex(arr => arr && arr.find(e => e.id === img.id));
+    return {
+      ...img,
+      href: `${galleryPaths[idx] || galleryPaths[0]}/i-${img.id}`
+    };
+  });
+}
+
+const headingCount = westernStory.filter((entry, i) => i > 0 && entry.subhead).length;
+const featheredImages = featherImages(galleryDatas, galleryPaths, headingCount);
+const basePath = galleryPaths[0] || "";
+---
+
+<html lang="en">
+  <head>
+    <title>Feathering Demo (Weaponized Contextual Linking)</title>
+    <meta charset="UTF-8" />
+    <style>
+    
+    a.kw-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 0px dotted #999 !important;
+  transition: border-color 0.2s ease;
+}
+
+a.kw-link:hover {
+  border-bottom: 1px solid #000;
+}
+    
+      body { font-family: sans-serif; padding: 2rem; background: #f5f5f5; line-height: 1.6; }
+      h1 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+      .layout { display: flex; flex-wrap: wrap; gap: 2rem; }
+      .story-column { flex: 1 1 50%; min-width: 320px; max-width: 600px; }
+      .image-column { flex: 1 1 40%; min-width: 280px; }
+      .story-block { background: #fff; padding: 1rem 1.5rem; margin-bottom: 1.5rem; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+      .story-block h2, .story-block h3 { margin: 0.5rem 0; }
+      .story-block p em { color: #666; }
+      .story-block ul { padding-left: 1.25rem; margin-top: 0.75rem; }
+      .story-block li { margin-bottom: 0.4rem; }
+      .image-card { margin-bottom: 2rem; }
+      .image-card img { width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .image-card p { font-size: 0.9rem; color: #555; margin-top: 0.5rem; }
+      a.kw-link { text-decoration: underline; color:rgb(153, 0, 26); }
+    </style>
+  </head>
+  <body>
+    <h1>Feathered Images Side-by-Side (Weaponized Contextual Linking)</h1>
+    <div class="layout">
+      <div class="story-column">
+        {westernStory.map((block, i) => (
+          <div class="story-block" key={i}>
+            {block.title && 
+              <h2 set:html={autoLinkKeywordsInText(
+                block.title, 
+                galleryDatas, 
+                featheredImages, 
+                galleryPaths, 
+                cowboySemantic
+              )}></h2>
+            }
+            {block.subhead && 
+              <h3 set:html={autoLinkKeywordsInText(
+                block.subhead, 
+                galleryDatas, 
+                featheredImages, 
+                galleryPaths, 
+                cowboySemantic
+              )}></h3>
+            }
+           {block.tagline && 
+  <p set:html={autoLinkKeywordsInText(
+    block.tagline,
+    galleryDatas,
+    featheredImages,
+    galleryPaths,
+    cowboySemantic
+  )}></p>
+}
+            {block.paragraphs?.map((p, j) => (
+              <p key={`p-${j}`} set:html={autoLinkKeywordsInText(
+                p,
+                galleryDatas,
+                featheredImages,
+                galleryPaths,
+                cowboySemantic
+              )} />
+            ))}
+            {block.list?.length > 0 && (
+              <ul>
+                {block.list.map((item, k) => (
+                  <li key={`l-${k}`} set:html={autoLinkKeywordsInText(
+                    item,
+                    galleryDatas,
+                    featheredImages,
+                    galleryPaths,
+                    cowboySemantic
+                  )} />
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+      <div class="image-column">
+        {featheredImages.map((img, i) => (
+          <div class="image-card" key={img.id}>
+            <a href={img.href}>
+              <img src={img.src} alt={img.alt || img.title || "Image"} />
+            </a>
+            <p>{img.alt || img.title || "No description"}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </body>
+</html>

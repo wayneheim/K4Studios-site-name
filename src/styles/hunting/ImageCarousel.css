@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 1600px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px!important;
+  margin: 0 auto;
+}
+
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(248, 248, 248, 1), rgba(248, 248, 248, 0));
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(248, 248, 248, 1), rgba(248, 248, 248, 0));
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 60s linear infinite;
+  transition: transform 2.5s ease-in-out;
+  will-change: transform;
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0;
+  margin-right: 20px; /* Add spacing between slides */
+}
+
+.carousel-slide:last-child {
+  margin-right: 0; /* Prevent extra space after last slide */
+}
+
+.carousel-slide img {
+  height: 390px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.8s ease;
+  border: none;
+}
+
+.carousel-slide:hover img {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.carousel-slide figcaption {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide img {
+    height: 200px;
+  }
+}

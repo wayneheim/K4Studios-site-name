@@ -1,0 +1,20 @@
+---
+import { galleryData } from '../../../../../data/galleries/Painterly-Western-Cowboy-Portraits/BlackWhite.js';
+const { id } = Astro.params;
+const image = galleryData.find((img) => img.id === id);
+if (!image) throw new Error(`Image with id ${id} not found.`);
+---
+<html>
+  <head>
+    <title>{image.title} | Western Cowboy Portraits</title>
+  </head>
+  <body>
+    <main style="padding:2rem;">
+      <h1>{image.title}</h1>
+      <img src={image.src} alt={image.alt} style="max-width:450px;" />
+      <p>{image.description}</p>
+      <p><em>ID:</em> {id}</p>
+      <a href="../">Back to gallery</a>
+    </main>
+  </body>
+</html>

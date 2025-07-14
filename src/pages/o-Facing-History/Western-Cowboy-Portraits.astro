@@ -1,0 +1,131 @@
+---
+import BaseLayout         from '../../layouts/BaseLayout.astro';
+import LandingHeader      from '../../components/Landing-Header.jsx';
+import ImageBar2          from '../../components/ImageBar2.jsx';
+import TombstoneNav       from '../../components/TombstoneNav.jsx';
+import StorySection       from '../../components/StorySection.astro';
+import LandingRightImages from '../../components/LandingRightImages.jsx';
+import FAQAccordion       from '../../components/FAQAccordion.jsx';
+import SiteFooter         from '../../components/Footer.astro';
+import MobileStoryImages from '../../components/MobileStoryImages.jsx';
+import { landingWestern }          from '../../data/landings/western.ts';
+import { westernSamples,
+         westernSampleHeading }     from '../../data/westernSamples.ts';
+import { westernStory }            from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/story.ts';
+import { westernFAQ }              from '../../data/westernFAQ.ts';
+
+import '../../styles/global.css';
+---
+
+<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
+  <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+
+   <div class="drawer-mode">
+  <LandingHeader
+    client:load
+    breadcrumb="Facing History • Western Cowboy Portraits"
+  />
+</div>
+
+    <!-- MOBILE BREADCRUMB OUTSIDE LAYOUT CONSTRAINT -->
+    <div class="mobile-breadcrumb-wrapper">
+      <div class="mobile-breadcrumb">
+        {landingWestern.breadcrumb}
+      </div>
+    </div>
+
+    <!-- *******  ONE CENTRALISED CONTAINER ******* -->
+    <div class="w-full max-w-[1200px] mx-auto px-4">
+
+      <!-- Carousel -->
+      <ImageBar2 client:load />
+
+      <!-- TITLE BLOCK -->
+      <section class="section-heading-wrap">
+        <div class="section-heading">
+          <h1 class="page-title fade-in reveal-on-scroll">
+            {landingWestern.title}
+          </h1>
+          <h2 class="page-subtitle fade-in reveal-on-scroll">
+            {landingWestern.subtitle}
+          </h2>
+        </div>
+      </section>
+
+      <!-- Tombstones -->
+      <div class="py-10">
+        <TombstoneNav items={landingWestern.tombstones} />
+      </div>
+
+      <!-- Story + Sidebar -->
+      <section class="story-layout">
+        <div class="text-column">
+          <StorySection data={westernStory} />
+          <MobileStoryImages client:only="react" />
+        </div>
+        <div class="sidebar-column hidden md:block">
+          <LandingRightImages
+            heading={westernSampleHeading}
+            images={westernSamples}
+          />
+        </div>
+      </section>
+
+      <!-- FAQ + Footer -->
+      <section class="pb-16">
+        <input type="checkbox" id="faq-toggle" class="more-toggle" />
+        <div class="truncate-container">
+          <div class="truncate-text">
+            <FAQAccordion items={westernFAQ} />
+          </div>
+        </div>
+        <label for="faq-toggle" class="more-toggle-label"></label>
+      </section>
+
+      <SiteFooter class="pt-8 pb-12" />
+    </div>
+  </main>
+
+  <style>
+    /* ---- fade-in utilities ---- */
+    .fade-in          { opacity:0; visibility:hidden;
+                        transform:translateY(1px);
+                        transition:opacity 1.75s ease,
+                                   transform 1.75s ease,
+                                   visibility .5s linear 1.75s; }
+    .fade-in.is-visible { opacity:1; transform:translateY(0); visibility:visible; }
+    .page-title.fade-in { transition-delay:.2s; }
+
+    /* ---- section heading ---- */
+    .section-heading-wrap { margin:1.5rem 0 1.5rem; text-align:center; }
+    .section-heading .page-title    { font-size:2rem;  margin-bottom:.4rem; }
+    .section-heading .page-subtitle { font-size:1rem;  font-weight:400;
+                                      color:#6d5b4a;   opacity:.9; }
+
+@media (max-width: 768px) {
+
+  
+  
+  .section-heading .page-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .section-heading .page-subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: -0.04em; /* tighter tracking */
+  }
+
+  .section-heading-wrap {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-column {
+    display: none;
+  }
+}
+                                      
+  </style>
+</BaseLayout>

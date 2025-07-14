@@ -111,8 +111,6 @@
   padding: 0;
 }
 
-
-
   .floating-header {
   position: fixed;
   top: 0;
@@ -199,3 +197,74 @@
   width: 100%;
 }
 
+.fade-line {
+  height: 6px;
+  width: 160px;
+  background: linear-gradient(to right, transparent, #eeedeb, transparent);
+}
+body.zoom-open footer {
+opacity: 0%;
+ 
+}
+
+/* ── Zoom clean-up ─────────────────────────── */
+.zoom-modal {            /* outer shell never scrolls                   */
+  overflow: hidden !important;
+}
+
+.zoom-scroll {           /* inner block only scrolls if truly needed    */
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.zoom-content-wrapper {
+  display: inline-block;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .zoom-content-wrapper {
+    max-height: 90vh;
+  }
+}
+
+.swipe-hint-container {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  text-align: center;
+  pointer-events: none;
+  animation: fadeOut 4s forwards ease-out;
+}
+
+.swipe-icon {
+  width: 28px;
+  height: 28px;
+  background: url('/icons/hand-icon.svg') no-repeat center center;
+  background-size: contain;
+  animation: swipeMove 1.2s ease-in-out 0s 2 alternate;
+  margin: 0 auto;
+}
+
+.swipe-label {
+  margin-top: 0.3rem;
+  color: #444;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-family: Glegoo, serif;
+}
+
+@keyframes swipeMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-30px); }
+  100% { transform: translateX(30px); }
+}
+
+@keyframes fadeOut {
+  0%, 80% { opacity: 1; }
+  100% { opacity: 0; }
+}

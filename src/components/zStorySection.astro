@@ -1,0 +1,129 @@
+---
+export interface Props {
+  data: {
+    title?: string;
+    subhead?: string;
+    tagline?: string;
+    paragraphs?: string[];
+    list?: string[];
+  }[];
+}
+const { data } = Astro.props;
+---
+
+<section class="story-section">
+  {data.map((section, index) => (
+    <article class="story-block" key={index}>
+      {section.title && <h2 class="slide-in-left">{section.title}</h2>}
+      {section.subhead && <h3 class="slide-in-left">{section.subhead}</h3>}
+      {section.tagline && <h4 class="tagline reveal-on-scroll">{section.tagline}</h4>}
+
+      {section.paragraphs?.map((para, i) => (
+        <p key={i} class="reveal-on-scroll" set:html={para} />
+      ))}
+
+      {section.list && section.list.length > 0 && (
+        <ul>
+          {section.list.map((item, j) => (
+            <li key={j} class="reveal-on-scroll" set:html={item} />
+          ))}
+        </ul>
+      )}
+    </article>
+  ))}
+</section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
+    if (!("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    els.forEach(el => observer.observe(el));
+  });
+</script>
+
+<style>
+@media (max-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+
+  .mobile-inline-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 1.5rem auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .story-section {   
+    letter-spacing: -0.03em;
+  }
+
+  .story-block h2 {
+    letter-spacing: -0.05em;
+    font-size: 1.4rem !important;
+    margin-top: -0.59rem;
+    line-height: 1.15;
+  }
+}
+
+.story-section {
+  line-height: 1.3;
+  padding: 2rem 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  font-family: 'Glegoo', serif;
+}
+
+.story-block {
+  margin-bottom: 2.5rem;
+}
+
+.story-block h2 {
+  font-size: 1.65rem;
+  margin-bottom: 0.55rem;
+}
+
+.story-block h3 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin-top: -0.5rem;
+  margin-bottom: -.025rem;
+  color: #5a4a3b;
+}
+
+.story-block .tagline {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #7a6250;
+}
+
+.story-block p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.01rem;
+}
+
+.story-block ul {
+  padding-left: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.story-block li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+</style>

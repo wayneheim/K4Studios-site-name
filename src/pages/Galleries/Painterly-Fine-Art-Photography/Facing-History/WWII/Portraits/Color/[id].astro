@@ -1,0 +1,22 @@
+---
+import GalleryShell from '../../../../../..//../../components/GalleryShell-WWIIPortraits-Color.astro';
+import { entranceData as ColorEntranceData } from "../../../../../..//../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/ColorEntranceData.ts";
+
+import { galleryData } from '../../../../../..//../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs';
+
+export async function getStaticPaths() {
+  return galleryData.map(img => ({
+    params: { id: img.id },
+  }));
+}
+
+const { id } = Astro.params;
+const isValidId = galleryData.some(img => img.id === id);
+if (!isValidId) throw new Error(`Image with id ${id} not found.`);
+---
+
+<GalleryShell 
+  breadcrumb={ColorEntranceData.breadcrumb} 
+  entranceData={ColorEntranceData}
+  initialImageId={id}
+/>

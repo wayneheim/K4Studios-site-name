@@ -1,0 +1,52 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class="bg-[#fff] font-serif text-center w-full"
+  style="font-family: 'Glegoo', serif;"
+  aria-label="Site footer"
+  itemscope
+  itemtype="https://schema.org/Organization"
+>
+  <div class="mx-auto max-w-xl px-4 pt-8 pb-6">
+    <div class="flex justify-center gap-5 mb-3 opacity-40">
+      <a href="https://www.facebook.com/wayne.heim" target="_blank" rel="noopener noreferrer">
+        <img class="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" itemprop="sameAs" />
+      </a>
+      <a href="https://www.instagram.com/wayneheim" target="_blank" rel="noopener noreferrer">
+        <img class="social-icon" src="https://cdn.simpleicons.org/instagram/444444" alt="Instagram" width="20" height="20" itemprop="sameAs" />
+      </a>
+      <a href="https://www.threads.net/@wayneheim" target="_blank" rel="noopener noreferrer">
+        <img class="social-icon" src="https://cdn.simpleicons.org/threads/444444" alt="Threads" width="20" height="20" itemprop="sameAs" />
+      </a>
+      <a href="https://www.pinterest.com/wayneheim" target="_blank" rel="noopener noreferrer">
+        <img class="social-icon" src="https://cdn.simpleicons.org/pinterest/444444" alt="Pinterest" width="20" height="20" itemprop="sameAs" />
+      </a>
+      <a href="https://500px.com/wayneheim" target="_blank" rel="noopener noreferrer">
+        <img class="social-icon" src="https://cdn.simpleicons.org/500px/444444" alt="500px" width="20" height="20" itemprop="sameAs" />
+      </a>
+      <a href="/Contact">
+        <img class="social-icon" src="https://cdn.simpleicons.org/gmail/444444" alt="Email" width="20" height="20" itemprop="sameAs" />
+      </a>
+    </div>
+
+    <div class="text-xs text-[#2c2c2c] opacity-70" itemprop="name">
+      <time datetime={currentYear}>© {currentYear}</time> Wayne Heim / <em>K4 Studios</em>. All rights reserved.
+    </div>
+  </div>
+
+<div class="h-10"></div>
+  <style>
+    .social-icon {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+      filter: sepia(1) hue-rotate(10deg) saturate(3) brightness(0.8);
+    }
+
+    
+  </style>
+</footer>

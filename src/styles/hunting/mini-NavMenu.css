@@ -1,0 +1,160 @@
+/* ─── Mini version: Right-to-Left Collapse ─── */
+.hamburger-close {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #8b0000;
+  border-radius: 7px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+  margin: 0 auto 0.35rem auto;
+}
+
+.hamburger-close:hover {
+  background: #8b0000;
+}
+.drawer-header:has(.hamburger-close:hover) + .drawer-body {
+  opacity: 0.25;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.drawer-body {
+  transition: opacity 0.4s ease;
+}
+
+.hamburger-close .line {
+  position: absolute;
+  top: 6px;
+  width: 2px;
+  height: 16px;
+  background: #8b0000;
+  transition: transform 0.45s ease;
+}
+.hamburger-close .line-1 { left: 6px; }
+.hamburger-close .line-2 { left: 12px; }
+.hamburger-close .line-3 { left: 18px; }
+
+.hamburger-close:hover .line-1 { transform: translateX(0); }
+.hamburger-close:hover .line-2 { transform: translateX(-6px); }
+.hamburger-close:hover .line-3 { transform: translateX(-12px); }
+
+.k4-watermark { display: none; }
+
+/* ───────── Force Mobile Mode ───────── */
+.force-mobile-menu .hamburger-symbol,
+.force-mobile-menu .right-arrow {
+  display: inline !important;
+}
+
+.force-mobile-menu .dropdown-panel,
+.force-mobile-menu .submenu {
+  display: none !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.35rem 0 0.35rem 1rem;
+  margin: 0;
+}
+
+.force-mobile-menu .nav-item.expanded > .dropdown-panel,
+.force-mobile-menu .nav-item.expanded > .submenu {
+  display: block !important;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Depth tinting */
+.force-mobile-menu .dropdown-panel[data-depth="0"],
+.force-mobile-menu .submenu[data-depth="1"] {
+  background: rgba(212, 188, 168, 0.03);
+}
+
+.force-mobile-menu .submenu[data-depth="2"] {
+  background: rgba(212, 188, 168, 0.06);
+}
+.force-mobile-menu .submenu[data-depth="3"] {
+  background: rgba(212, 188, 168, 0.09);
+}
+.force-mobile-menu .submenu[data-depth="4"] {
+  background: rgba(212, 188, 168, 0.12);
+}
+.force-mobile-menu .submenu[data-depth="5"] {
+  background: rgba(212, 188, 168, 0.15);
+}
+
+/* ---- PERMANENT mobile icons ---- */
+.hamburger-circle,
+.wh-logo-mobile,
+.wh-logo {
+  display: inline-flex !important;
+}
+
+/* ---- Never render the horizontal desktop buttons ---- */
+.nav-bar:not(.open) {
+  display: none !important;
+}
+.nav-bar.open {
+  display: block !important;
+}
+
+/* The drawer *is* allowed to appear after click */
+.nav-bar.open {
+  display: block !important;
+
+  /* ───────── Force Mobile Mode ───────── */
+.force-mobile-menu .hamburger-symbol,
+.force-mobile-menu .right-arrow {
+  display: inline !important;
+}
+
+.force-mobile-menu .dropdown-panel,
+.force-mobile-menu .submenu {
+  display: none !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.35rem 0 0.35rem 1rem;
+  margin: 0;
+}
+
+.force-mobile-menu .nav-item.expanded > .dropdown-panel,
+.force-mobile-menu .nav-item.expanded > .submenu {
+  display: block !important;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Depth tinting */
+.dropdown-panel[data-depth="0"],
+.submenu[data-depth="1"] {
+  background: rgba(var(--submenu-base), 0.03);
+}
+
+.submenu[data-depth="2"] {
+  background: rgba(var(--submenu-base), 0.06);
+}
+
+.submenu[data-depth="3"] {
+  background: rgba(var(--submenu-base), 0.09);
+}
+
+.submenu[data-depth="4"] {
+  background: rgba(var(--submenu-base), 0.12);
+}
+
+.submenu[data-depth="5"] {
+  background: rgba(var(--submenu-base), 0.15);
+}

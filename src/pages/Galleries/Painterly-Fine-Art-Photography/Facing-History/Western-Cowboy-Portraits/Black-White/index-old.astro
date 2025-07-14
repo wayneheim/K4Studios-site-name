@@ -1,0 +1,9 @@
+---
+import GalleryShell from '../../../../../../components/GalleryShell-Cowboy-BW.astro';
+import ChapterCowboyBW from '../../../../../../components/Chapter-CowboyBW.jsx';
+import { entranceData as BWEntranceData } from "../../../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/BWEntranceData.ts";
+---
+
+<GalleryShell breadcrumb={BWEntranceData.breadcrumb} entranceData={BWEntranceData}>
+  <ChapterCowboyBW returnUrl="/Galleries/Painterly-Western-Cowboy-Portraits/Black-White" />
+</GalleryShell>

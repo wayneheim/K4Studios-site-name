@@ -1,0 +1,75 @@
+/* ————— wrapper ————— */
+.carousel{
+  position:relative;
+  width:95%;
+  max-width:1600px;
+  margin:10px auto 0;
+  overflow:hidden;
+  scroll-behavior:smooth;
+  box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+/* fade edges */
+.carousel::before,
+.carousel::after{
+  content:"";
+  position:absolute;
+  top:0;
+  width:30px;
+  height:100%;
+  z-index:2;
+  pointer-events:none;
+}
+.carousel::before{ left:0;  background:linear-gradient(to right, #fdfcf9 0%, #fdfcf900 100%);}
+.carousel::after { right:0; background:linear-gradient(to left , #fdfcf9 0%, #fdfcf900 100%);}
+
+/* ————— track ————— */
+.carousel-track{
+  display:flex;
+  gap:5px;                 /* use gap instead of per-slide margin ⇒ no extra gap at seam */
+  width:max-content;
+  animation:scroll 60s linear infinite;
+}
+.carousel:hover .carousel-track{ animation-play-state:paused; }
+.carousel-track::-webkit-scrollbar{display:none;}
+
+/* ————— slide ————— */
+.carousel-slide{
+  flex:0 0 auto;
+}
+.carousel-slide img {
+  height: 390px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-right: 14px solid white;
+  border-left: 14px solid white;
+  box-sizing: border-box;
+  transition: transform 0.8s ease;
+}
+
+.carousel-slide:hover img {
+  transform: scale(1.1);
+  z-index: 10;
+ 
+}
+/* hide captions but keep for SEO */
+.carousel-slide figcaption{
+  visibility:hidden;
+  width:0; height:0; overflow:hidden; position:absolute;
+}
+
+/* smaller on mobile */
+@media(max-width:768px){
+  .carousel-slide img{ height:200px; }
+  .carousel {
+      margin-bottom: -25px!important;
+      margin-top: 20px!important;
+  }
+}
+
+/* ————— keyframes ————— */
+@keyframes scroll{
+  from{ transform:translateX(0);     }
+  to  { transform:translateX(-50%);  }  /* -50 % of the doubled width = seamless */
+}

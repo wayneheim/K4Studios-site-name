@@ -1,0 +1,368 @@
+/* Mini Drawer Full Refined Styling – matches desktop nav family */
+
+/* Outer Drawer Container */
+.mini-drawer-portal  {
+  background: #fff;
+  padding: 1.5rem 1.5rem 3rem;
+  max-width: 400px;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Glegoo', serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+  transition: transform 0.3s ease;
+  border-right: 1px solid #ddd;
+}
+
+.drawer-container {
+  background: #fff;
+  padding: 1.5rem 1.5rem 3rem;
+  max-width: 400px;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 8px 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Glegoo', serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 100%;
+  z-index: 9999;
+  transition: transform 0.3s ease;
+  border-right: 1px solid #ddd;
+}
+
+
+/* Dim background overlay */
+.mini-drawer-portal .drawer-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 400px;
+  right: 0;
+  bottom: 0;
+ -webkit-backdrop-filter: blur(50%);
+  background: rgba(145, 142, 140, 0.2);
+  z-index: -1;
+}
+
+/* Header Section */
+.mini-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.mini-logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #807f7d;
+  margin: 0;
+}
+
+.mini-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem 0.4rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.mini-header-title {
+  font-family: 'Glegoo', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.mini-close-btn {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  background: #bbbbbb!important;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  line-height: 1.2;
+}
+
+.mini-close-btn:hover {
+  background: #575757 !important;
+}
+
+/* Menu Items */
+.mini-drawer-nav {
+  margin-top: 1.25rem;
+}
+
+.mini-menu-link {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+  border-bottom: 1px solid #eee;
+}
+
+.mini-menu-link:hover {
+  background: #f2f2f2;
+  color: #703a1d;
+}
+
+/* Submenu Nesting */
+.mini-submenu {
+  margin-left: 1rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid #884b29;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Expand icon */
+.right-arrow {
+  font-size: 0.85rem;
+  margin-left: auto;
+  color: #aaa;
+  opacity: 0.6;
+ 
+  padding: 0.2rem 0.3rem;
+
+
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.right-arrow:hover {
+  color: #703a1d;
+}
+
+/* Chaser underline animation */
+.mini-menu-link {
+  position: relative;
+}
+
+.mini-menu-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, #a0522d 60%, rgba(160,82,45,0));
+  transition: width 0.4s ease;
+}
+
+.mini-menu-link:hover::after {
+  width: 100%;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mini-drawer-nav .nav-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFade 0.5s ease-out forwards;
+}
+
+/* ─────────── Entrance Animation ─────────── */
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mini-drawer-portal .nav-item {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.mini-drawer-portal .nav-item:nth-child(1) { animation-delay: 0.05s; }
+.mini-drawer-portal .nav-item:nth-child(2) { animation-delay: 0.10s; }
+.mini-drawer-portal .nav-item:nth-child(3) { animation-delay: 0.15s; }
+.mini-drawer-portal .nav-item:nth-child(4) { animation-delay: 0.20s; }
+.mini-drawer-portal .nav-item:nth-child(5) { animation-delay: 0.25s; }
+/* Add more if needed */
+
+/*Death Shell*/
+/* ─── Hammy Icon ─── */
+
+.mini-menu-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-bottom: none; /* remove divider from row itself */
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Ensure full width */
+}
+.mini-menu-row::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+  height: 100%;
+  background: linear-gradient(to right, transparent, white); /* adjust if dark mode */
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.hamburger-symbol {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-right: 0.6rem;
+  color: #444;
+}
+
+.hamburger-symbol.open {
+  transform: rotate(90deg);
+}
+
+.mini-ham-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mini-ham-icon .bar {
+  width: 14px;
+  height: 2px;
+  background: #333;
+  margin: 1.5px 0;
+  transition: all 0.3s ease;
+}
+
+.mini-ham-icon.rotated {
+  transform: rotate(90deg);
+}
+
+.mini-menu-link {
+  display: block;
+  width: 100%; /* make it span the row */
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.24rem 0.75rem 0.6rem;
+  color: #333;
+  text-decoration: none;
+  background: transparent;
+  position: relative;
+  transition: background 0.2s ease, color 0.2s ease;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12); /* persistent underline */
+}
+
+.mini-menu-link:hover {
+  background: #f5f5f5;
+  border-color: #aaa;
+}
+
+/* Add space before titles that include a hammy icon */
+.mini-menu-row.has-ham .mini-menu-link {
+  padding-left: 1.3rem; /* or tweak as needed for your spacing */
+}
+
+.mini-placeholder-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  min-width: 14px; /* ⬅️ forces circle sizing */
+  min-height: 14px;
+  border: 1.5px solid #555;
+  border-radius: 50%;
+  background: transparent;
+  margin-right: 0.65rem;
+  margin-left: 0.1rem;
+  transform: translateY(1px);
+  opacity: 0.6;
+  flex-shrink: 0; /* prevents squashing in flex layout */
+}
+
+.mini-ham-icon.hover-collapse .bar {
+  transition: all 0.3s ease;
+}
+
+.mini-ham-icon.hover-collapse:hover .top,
+.mini-ham-icon.hover-collapse:hover .bot {
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+.mini-ham-icon.hover-collapse:hover .mid {
+  transform: scaleX(1.2);
+}
+
+.mini-menu-row.has-ham {
+  border-bottom: 0px solid rgba(204, 204, 204, 0.637)!important; /* standard for hammy */
+  
+}
+
+.mini-menu-row.no-ham {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.06); /* lighter for dot links */
+}
+
+/* ⬇ Row container padding reduction */
+.menu-row {
+ /* padding: 0.15rem 0.05rem;*/
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Optional: reduce the size of the hamburger and arrow icons */
+.left-icon.hamburger-symbol {
+  font-size: 0.9rem;
+  margin-right: 0.4rem;
+}
+
+.right-arrow {
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    border: none !important;
+  }
+
+  .dropdown-panel,
+  .submenu {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

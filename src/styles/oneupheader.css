@@ -1,0 +1,21 @@
+   :root {
+          --dark-brown: rgb(128, 143, 158)!important;
+          --stripe-color: rgb(192, 207, 230) !important;
+        }
+
+  /* stripe background behind logo */
+        .landing-header::before,
+        .landing-header::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background-image: repeating-linear-gradient(
+            to bottom,
+            var(--stripe-color) 0 2px,
+            transparent 2px 6px
+          );
+          opacity: 0.8;
+          z-index: 0;
+        }
+

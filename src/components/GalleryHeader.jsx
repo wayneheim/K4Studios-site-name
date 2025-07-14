@@ -11,8 +11,8 @@ export default function GalleryHeader() {
         body {
           font-family: 'Glegoo', serif;
           margin: 0;
-          padding-top: 1.5rem;
-          background: #fdfcf9;
+          padding-top: 0.5rem;
+          background:rgb(255, 255, 255);
           color: #2c2c2c;
         }
 
@@ -183,7 +183,7 @@ export default function GalleryHeader() {
           font-weight: bold;
           border: 4px solid #fff;
           position: absolute;
-          top: -15px;
+          top: -12px;
           left: 40px;
           z-index: 9999;
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
@@ -230,7 +230,19 @@ export default function GalleryHeader() {
   </div>
 
   <div className="gallery-bar" style={{ position: 'relative', zIndex: 1 }}>
-    <div className="logo-box">K4</div>
+    <div className="logo-box p-1">
+  <img
+    src="/Public/images/K4Logo-web.jpg"
+    alt="K4 Studios Logo"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "contain",
+      filter: "grayscale(100%)",
+      opacity: 0.85,
+    }}
+  />
+</div>
     <div className="breadcrumbs">Facing History: Western Art: Color Photos</div>
   </div>
 
