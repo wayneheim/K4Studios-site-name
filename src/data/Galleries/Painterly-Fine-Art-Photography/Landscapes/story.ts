@@ -1,4 +1,4 @@
-export const painterlyLandscapeStory = [
+export const westernStory = [
   // ─────────────────────────────── 1
   {
     title: "Painterly Landscape Photography – Art That Connects You to Nature",

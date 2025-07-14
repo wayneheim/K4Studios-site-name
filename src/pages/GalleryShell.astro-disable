@@ -4,7 +4,7 @@ import GalleryHeader from '../components/Gallery-LandingHeader.jsx';
 import GalleryInfo from '../components/GalleryInfo.jsx';
 import ChapterViewer from '../components/Chapter-CowboyColor.jsx';
 import Footer from '../components/Footer.astro';
-import { westernStory } from "../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/story.ts";
+//import { westernStory } from "../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/story.ts";
 ---
 
 
