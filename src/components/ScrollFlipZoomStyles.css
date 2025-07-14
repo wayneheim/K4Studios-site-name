@@ -244,7 +244,7 @@ opacity: 0%;
 .swipe-icon {
   width: 28px;
   height: 28px;
-  background: url('/icons/hand-icon.svg') no-repeat center center;
+  background: url('/icons/hand.svg') no-repeat center center;
   background-size: contain;
   animation: swipeMove 1.2s ease-in-out 0s 2 alternate;
   margin: 0 auto;
