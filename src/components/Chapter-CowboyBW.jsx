@@ -6,8 +6,10 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
+import { useInitialImageById } from "../hooks/useInitialImageById"; // adjust path
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
 import SwipeHint from "./SwipeHint";
+
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -28,22 +30,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-  useEffect(() => {
-  if (typeof window === "undefined") return;
-
-  const pathname = window.location.pathname;
-
-  const imageMatch = pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-  const hasTrailingSlash = pathname.endsWith("/");
-
-  if (imageMatch && !hasTrailingSlash) {
-    // Fix missing slash to ensure Astro static routing works
-    const correctedPath = `${pathname}/`;
-    console.log("🔁 Redirecting to trailing slash:", correctedPath);
-    window.location.replace(correctedPath);
-  }
-}, []);
-
+    useInitialImageById(galleryData, setCurrentIndex, setHasEnteredChapters);
   
     // 🔄 Trigger chapter entry mode via custom event
       useEffect(() => {
