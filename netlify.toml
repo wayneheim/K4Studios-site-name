@@ -1,4 +1,15 @@
-# Civil War Black-White [id] deep links
+# Civil War
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/index.html"
+status = 200
+
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/"
@@ -10,14 +21,128 @@ from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portr
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/index.html"
 status = 200
 
-# Civil War Color [id] deep links
+# Western Cowboy
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/*"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/index.html"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/index.html"
+status = 200
+
+# Roaring 20s
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/index.html"
+status = 200
+
+# WWII (Color + B&W)
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/index.html"
+status = 200
+
+# Transportation
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/index.html"
+status = 200
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/index.html"
+status = 200
+
+# Engrained Series
+[[redirects]]
+from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/*"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/index.html"
 status = 200

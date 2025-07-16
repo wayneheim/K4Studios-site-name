@@ -6,7 +6,6 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
-import { useInitialImageById } from './hooks/useInitialImageById'; // adjust path
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
 import SwipeHint from "./SwipeHint";
 
@@ -30,7 +29,6 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-    useInitialImageById(galleryData, setCurrentIndex, setHasEnteredChapters);
   
     // 🔄 Trigger chapter entry mode via custom event
       useEffect(() => {
