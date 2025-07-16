@@ -28,6 +28,22 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
+  useEffect(() => {
+  if (typeof window === "undefined") return;
+
+  const pathname = window.location.pathname;
+
+  const imageMatch = pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+  const hasTrailingSlash = pathname.endsWith("/");
+
+  if (imageMatch && !hasTrailingSlash) {
+    // Fix missing slash to ensure Astro static routing works
+    const correctedPath = `${pathname}/`;
+    console.log("🔁 Redirecting to trailing slash:", correctedPath);
+    window.location.replace(correctedPath);
+  }
+}, []);
+
   
     // 🔄 Trigger chapter entry mode via custom event
       useEffect(() => {
