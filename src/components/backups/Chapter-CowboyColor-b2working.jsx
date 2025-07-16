@@ -435,7 +435,7 @@ export default function ScrollFlipGallery() {
   {/* Logo Watermark Above Chapter Title */}
 <div className="mb-4 flex justify-center relative z-0 hidden md:flex">
   <img
-    src="/Public/images/K4Logo-web.jpg"
+    src="/images/K4Logo-web.jpg"
     alt="K4 Studios Logo"
     className="h-16 mb-5 opacity-20"
     style={{

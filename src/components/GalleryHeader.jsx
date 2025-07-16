@@ -232,7 +232,7 @@ export default function GalleryHeader() {
   <div className="gallery-bar" style={{ position: 'relative', zIndex: 1 }}>
     <div className="logo-box p-1">
   <img
-    src="/Public/images/K4Logo-web.jpg"
+    src="/images/K4Logo-web.jpg"
     alt="K4 Studios Logo"
     style={{
       width: "100%",

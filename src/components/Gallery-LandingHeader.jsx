@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SiteNavMenu from "./SiteNavMenu.jsx";
-import GalleryToggleButton from "./GalleryToggleButton.jsx"; // adjust path as needed
+import GalleryToggleButton from "./GalleryToggleButton.jsx";
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(false);
@@ -13,9 +13,15 @@ function useIsMobile() {
   return mobile;
 }
 
-
 export default function GalleryLandingHeader({ breadcrumb }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [pathname, setPathname] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setPathname(window.location.pathname);
+    }
+  }, []);
 
   return (
     <header
@@ -24,19 +30,17 @@ export default function GalleryLandingHeader({ breadcrumb }) {
     >
       {/* ── BREADCRUMB ON STRIPE BAR ── */}
       <div className="breadcrumb-toggle-wrapper desktop-only">
-  <div className="breadcrumb-overlay">{breadcrumb}</div>
-  <GalleryToggleButton currentPath={typeof window !== "undefined" ? window.location.pathname : ""} />
-
-</div>
+        <div className="breadcrumb-overlay">{breadcrumb}</div>
+        {pathname && <GalleryToggleButton currentPath={pathname} />}
+      </div>
 
       <a href="/" className="logo-slot">
         <img
-          src="/Public/images/K4Logo-web.jpg"
+          src="/images/K4Logo-web.jpg"
           alt="K4 Studios Logo"
           className="logo-img"
         />
       </a>
-
 
       <div className="rhs">
         <SiteNavMenu mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
@@ -50,27 +54,26 @@ export default function GalleryLandingHeader({ breadcrumb }) {
         <img src="/images/WH.png" alt="Contact" style={{ filter: "invert(100%)" }} />
       </a>
 
-
-{/* MOBILE BREADCRUMB – now includes toggle button */}
-<div className="mobile-breadcrumb-wrapper mobile-only">
-  <div
-    className="mobile-breadcrumb"
-    style={{
-      color: "#c2c2c2",
-      marginTop: "105px",
-      fontWeight: 600,
-      fontSize: ".85rem",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center", // ⬅️ centers the line horizontally
-      gap: "0.125rem",
-      textAlign: "center"
-    }}
-  >
-    <span>{breadcrumb}</span>
-    <GalleryToggleButton currentPath={typeof window !== "undefined" ? window.location.pathname : ""} />
-  </div>
-</div>
+      {/* MOBILE BREADCRUMB – now includes toggle button */}
+      <div className="mobile-breadcrumb-wrapper mobile-only">
+        <div
+          className="mobile-breadcrumb"
+          style={{
+            color: "#c2c2c2",
+            marginTop: "105px",
+            fontWeight: 600,
+            fontSize: ".85rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.125rem",
+            textAlign: "center"
+          }}
+        >
+          <span>{breadcrumb}</span>
+          {pathname && <GalleryToggleButton currentPath={pathname} />}
+        </div>
+      </div>
 
 
 

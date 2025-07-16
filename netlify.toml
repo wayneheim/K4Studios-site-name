@@ -1,0 +1,23 @@
+# Civil War Black-White [id] deep links
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/index.html"
+status = 200
+
+# Civil War Color [id] deep links
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/index.html"
+status = 200

@@ -25,7 +25,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
       {/* Center badge */}
       <a href="/" className="logo-slot">
         <img
-          src="/Public/images/K4Logo-web.jpg"
+          src="/images/K4Logo-web.jpg"
           alt="K4 Studios Logo"
           className="logo-img"
         />

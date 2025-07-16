@@ -9,18 +9,18 @@ export const siteNav = [
         "children": [
 {
             "label": "Civil War",
-            "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War",
+            "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits",
             "children": [
 {
                 "label": "Color",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color",
+                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
                 "code": "P-S1-Ss1-Sss1",
                 "slug": "color",
                 "type": "gallery-source"
               },
 {
                 "label": "Black & White",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Black-White",
+                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
                 "code": "P-S1-Ss1-Sss2",
                 "slug": "black--white",
                 "type": "gallery-source"

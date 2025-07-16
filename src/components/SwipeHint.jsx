@@ -4,30 +4,54 @@ import { Hand } from "lucide-react";
 
 export default function SwipeHint({ galleryKey = "default" }) {
   const [showHint, setShowHint] = useState(false);
-  const [delayPassed, setDelayPassed] = useState(false);
 
   useEffect(() => {
     const isMobile = window.innerWidth <= 768;
-    const storageKey = `swipeHintSeen-${galleryKey}`;
-    const hasSeen = localStorage.getItem(storageKey);
+    const sessionKey = `swipeHint-${galleryKey}`;
+    const maxViews = 3;
+    const cooldownMs = 10 * 60 * 1000; // 10 minutes
 
-    if (isMobile && !hasSeen) {
+    if (!isMobile) return;
+
+    const now = Date.now();
+    let hintData = {
+      count: 0,
+      lastShown: 0
+    };
+
+    try {
+      const stored = sessionStorage.getItem(sessionKey);
+      if (stored) {
+        hintData = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn("SwipeHint: Failed to parse sessionStorage", e);
+    }
+
+    const timeSinceLast = now - hintData.lastShown;
+
+    if (hintData.count < maxViews || timeSinceLast > cooldownMs) {
       const delay = setTimeout(() => {
-        setDelayPassed(true);
         setShowHint(true);
+
+        // auto hide after 4s
         const hideTimer = setTimeout(() => {
           setShowHint(false);
-          localStorage.setItem(storageKey, "true");
-        }, 4000); // hint visible for 4s
+          const newData = {
+            count: hintData.count + 1,
+            lastShown: Date.now()
+          };
+          sessionStorage.setItem(sessionKey, JSON.stringify(newData));
+        }, 4000);
 
         return () => clearTimeout(hideTimer);
-      }, 1100); // ✅ Delay mount by 2.5s
+      }, 1100); // initial delay
 
       return () => clearTimeout(delay);
     }
   }, [galleryKey]);
 
-  if (!delayPassed || !showHint) return null;
+  if (!showHint) return null;
 
   return (
     <motion.div

@@ -1,6 +1,6 @@
 /* ───────── LandingHeader.jsx – now uses SiteNavMenu ───────── */
 import React from "react";
-import SiteNavMenu from "./SiteNavMenu.jsx";   // adjust path if needed
+import SiteNavMenu from "./siteNavMenu.jsx";   // adjust path if needed
 import { useEffect, useState } from "react";
 
 function useIsMobile() {
@@ -29,7 +29,7 @@ export default function LandingHeader({ breadcrumb }) {
       {/* Center logo */}
       <a href="/" className="logo-slot">
         <img
-          src="/Public/images/K4Logo-web.jpg"
+          src="/images/K4Logo-web.jpg"
           alt="K4 Studios Home"
           className="logo-img"
         />

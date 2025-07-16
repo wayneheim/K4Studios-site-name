@@ -213,16 +213,22 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           transition: transform 0.4s ease-out, filter 0.4s ease-out;
         }
 
-        .tile-grid:hover .tile {
-          transform: scale(0.9);
-          filter: grayscale(100%) brightness(0.68);
-        }
+        
+   @media (hover: hover) and (pointer: fine) {
+    .tile-grid:hover .tile {
+      transform: scale(0.9);
+      filter: grayscale(100%) brightness(0.68);
+    }
 
-        .tile-grid:hover .tile:hover {
-          transform: scale(1);
-          filter: none;
-          z-index: 1;
-        }
+    .tile-grid:hover .tile:hover {
+      transform: scale(1.05);
+      filter: none;
+      z-index: 1;
+    }
+  }
+
+
+        
       `}</style>
     </section>
   );

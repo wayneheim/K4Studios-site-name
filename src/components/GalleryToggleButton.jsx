@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { siteNav } from "../data/siteNav";
 
+function normalize(path) {
+  return path.replace(/\/+$/, '').toLowerCase();
+}
+
 function findSiblingGalleries(pathname) {
+  const target = normalize(pathname);
+
   function findInNav(items) {
     for (const item of items) {
-      if (item.href === pathname) return null;
+      if (item.href && normalize(item.href) === target) return null;
       if (item.children) {
-        const match = item.children.find(child => child.href === pathname);
+        const match = item.children.find(child => normalize(child.href) === target);
         if (match) return item.children;
         const deeper = findInNav(item.children);
         if (deeper) return deeper;
@@ -14,6 +20,7 @@ function findSiblingGalleries(pathname) {
     }
     return null;
   }
+
   return findInNav(siteNav);
 }
 
@@ -22,21 +29,25 @@ export default function GalleryToggleButton({ currentPath }) {
   const [hoveringOther, setHoveringOther] = useState(false);
 
   useEffect(() => {
+    console.log("🟢 GalleryToggleButton mounted");
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  console.log("🟡 currentPath:", currentPath);
   const siblings = findSiblingGalleries(currentPath);
+  console.log("🧩 siblings found:", siblings?.map(s => s.href));
+
   if (!siblings || siblings.length < 2) return null;
 
   return (
     <div className="gallery-toggle">
       {siblings
-        .filter(s => !isMobile || s.href !== currentPath) // Only show inactive one on mobile
+        .filter(s => !isMobile || s.href !== currentPath)
         .map(sibling => {
-          const isActive = sibling.href === currentPath;
+          const isActive = normalize(sibling.href) === normalize(currentPath);
           const labelChar =
             sibling.label === "Color"
               ? "C"
@@ -66,30 +77,30 @@ export default function GalleryToggleButton({ currentPath }) {
 
       <style jsx>{`
         .gallery-toggle {
-  margin-left: 0.75rem;
-  display: inline-flex;
-  gap: 0.35rem;
-  z-index: 5;
-  min-width: 50px; /* ensures layout space is reserved even with 1 button */
-  justify-content: center;
-}
+          margin-left: 0.75rem;
+          display: inline-flex;
+          gap: 0.35rem;
+          z-index: 5;
+          min-width: 50px;
+          justify-content: center;
+        }
 
         .toggle-pill {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  font-size: 0.75rem;
-  font-weight: 600;
-  background: transparent;
-  border: 1.8px solid #c5bdbb;
-  color: #c5bdbb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  padding-top: 1px; /* micro tweak if needed */
-}
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          font-size: 0.75rem;
+          font-weight: 600;
+          background: transparent;
+          border: 1.8px solid #c5bdbb;
+          color: #c5bdbb;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          padding-top: 1px;
+        }
 
         .toggle-pill:hover {
           background: #e3dad4;

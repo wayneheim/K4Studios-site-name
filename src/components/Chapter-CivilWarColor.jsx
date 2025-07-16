@@ -6,7 +6,7 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
-import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color.mjs";
+import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
 import SwipeHint from "./SwipeHint";
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
@@ -57,7 +57,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
     if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color";
+  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color";
   const newUrl = `${basePath}/${imageId}`;
    const currentUrl = window.location.pathname;
  
@@ -74,7 +74,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
      const isViewingImageZero = currentIndex === 0;
  
      if (isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
-       const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color";
+       const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color";
        window.history.replaceState(null, "", cleanUrl);
      }
    }, [currentIndex]);
@@ -500,7 +500,7 @@ style={
                         aria-label="Close"
                         title="Close"
                         style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
-                        onClick={() => window.location.href = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War/Color"}
+                        onClick={() => window.location.href = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"}
                       >
                         ⨂
                       </button>
@@ -576,7 +576,7 @@ style={
                     {/* Logo Watermark Above Chapter Title */}
                     <div className="mb-4 flex justify-center relative z-0 hidden md:flex">
                       <img
-                        src="/Public/images/K4Logo-web-b.jpg"
+                        src="/images/K4Logo-web-b.jpg"
                         alt="K4 Studios Logo"
                         className="h-16.5 mb-5"
                         style={{
@@ -732,15 +732,17 @@ style={
 
 {/* Grid View */}
 {viewMode === "grid" && (
-  <RebuiltScrollGrid
-    galleryData={galleryData}
-    onCardClick={(i) => {
-      setCurrentIndex(i);
-      setIsExpanded(false);
-      setViewMode("flip");
-      window.scrollTo(0, 0);
-    }}
-  />
+ <RebuiltScrollGrid
+  galleryData={galleryData}
+  onCardClick={(i) => {
+    setCurrentIndex(i);
+    setIsExpanded(false);
+    setViewMode("flip");
+    window.scrollTo(0, 0);
+  }}
+  initialImageIndex={currentIndex}
+  style={{ display: viewMode === "grid" ? "block" : "none" }}
+/>
 )}
 </>
 )}

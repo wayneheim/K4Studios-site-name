@@ -341,7 +341,7 @@ export default function ScrollFlipGallery() {
                 left: '-5px',
                 width: 'calc(100% + 15px)',
                 height: 'calc(100% + 8px)',
-                backgroundImage: "url('/Public/images/materials/Maple-w.jpg')",
+                backgroundImage: "url('/images/materials/Maple-w.jpg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 zIndex: -1,
@@ -496,7 +496,7 @@ export default function ScrollFlipGallery() {
   {/* Logo Watermark Above Chapter Title */}
 <div className="mb-4 flex justify-center relative z-0 hidden md:flex">
   <img
-    src="/Public/images/K4Logo-web.jpg"
+    src="/images/K4Logo-web.jpg"
     alt="K4 Studios Logo"
     className="h-16 mb-5 opacity-20"
     style={{
