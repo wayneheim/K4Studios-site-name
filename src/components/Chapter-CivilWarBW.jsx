@@ -28,47 +28,26 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-  // 🔄 Trigger chapter entry mode via custom event
+  // -- Effects for URL, device, and UI behavior (unchanged) --
   useEffect(() => {
     const handleEnterChapters = () => setHasEnteredChapters(true);
     window.addEventListener("enterChapters", handleEnterChapters);
     return () => window.removeEventListener("enterChapters", handleEnterChapters);
   }, []);
 
-  // 🔍 Initial load: parse URL or use fallback AND simulate entering chapters on deep link
   useEffect(() => {
     const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
     const id = match ? match[1] : initialImageId;
     const index = galleryData.findIndex((entry) => entry.id === id);
-    const finalIndex = index !== -1 ? index : 0;
-    setCurrentIndex(finalIndex);
-
-    if (index !== -1) {
-      setHasEnteredChapters(true);
-
-      // Simulate UI state change as if "Explore" or image clicked
-      const header = document.getElementById("header-section");
-      const intro = document.getElementById("intro-section");
-      const chapter = document.getElementById("chapter-section");
-
-      if (header) header.classList.add("section-hidden");
-      if (intro) intro.classList.add("section-hidden");
-      if (chapter) {
-        chapter.style.display = "block";
-        chapter.classList.remove("section-hidden");
-        chapter.classList.add("section-visible");
-      }
-    }
+    setCurrentIndex(index !== -1 ? index : 0);
   }, []);
 
-  // 🟢 Auto-enter chapters if directly loading an image page (backup)
   useEffect(() => {
     if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
       setHasEnteredChapters(true);
     }
   }, []);
 
-  // 🔗 Update URL when navigating *after* entering chapters
   useEffect(() => {
     const imageId = galleryData[currentIndex]?.id;
     const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
@@ -83,7 +62,6 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   }, [currentIndex, hasEnteredChapters]);
 
-  // 🧼 Clean up stray ID in URL if landing intro is showing
   useEffect(() => {
     const introEl = document.getElementById("intro-section");
     const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
@@ -95,7 +73,6 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   }, [currentIndex]);
 
-  // ⬅️⬆️ Browser back/forward handler
   useEffect(() => {
     const handlePopState = () => {
       const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
@@ -138,7 +115,6 @@ export default function ScrollFlipGallery({ initialImageId }) {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // 📱 Device + UX handling (no change)
   useEffect(() => {
     document.body.classList.add("react-mounted");
   }, []);
@@ -179,7 +155,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   }, []);
 
-  // 👆 Touch navigation
+  // Touch navigation
   const handleTouchStart = (e) => {
     startX.current = e.touches[0].clientX;
   };
@@ -266,7 +242,9 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         ❮
                       </button>
 
-                      <div className="relative w-full md:w-[340px] flex flex-row">
+                      <div
+                        className="relative w-full md:w-[340px] flex flex-row"
+                      >
                         {/* Image */}
                         <div
                           className="aspect-[4/5] rounded-lg flex items-center justify-center text-gray-500 cursor-pointer overflow-hidden z-10 w-full group"
@@ -303,91 +281,6 @@ export default function ScrollFlipGallery({ initialImageId }) {
                             }}
                           />
                         </div>
-
-                        {/* Collector Notes Button & Panel (desktop only, right of image, top-aligned) */}
-                        {!isMobile && galleryData[currentIndex].notes && (
-                          <div className="hidden md:flex flex-col items-start relative">
-                            {/* Button, top aligned */}
-                            <button
-                              onClick={() => setShowNotes((prev) => !prev)}
-                              aria-label="View Collector Notes"
-                              title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
-                              className="ml-0 mt-1 w-6 h-8 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition relative z-30"
-                              style={{
-                                boxShadow: "0 2px 6px rgba(80,60,30,0.10)",
-                              }}
-                            >
-                              {showNotes ? (
-                                <span className="text-lg leading-none">✕</span>
-                              ) : (
-                                <>
-                                  <span className="absolute left-2 top-[2px] text-[12px] text-red-600 font-semibold">*</span>
-                                  <Notebook className="w-6 h-6 stroke-[1.75]" />
-                                </>
-                              )}
-                            </button>
-
-                            {/* Panel (flies out right, top-aligned with button/image) */}
-                            <AnimatePresence>
-                              {showNotes && (
-                                <motion.div
-                                  key="collector-notes-desktop"
-                                  initial={{ opacity: 0, x: -32 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  exit={{ opacity: 0, x: -32 }}
-                                  transition={{ duration: 0.38, ease: [0.33, 1, 0.68, 1] }}
-                                  className="absolute -left-3 top-11 z-50 w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
-                                  style={{
-                                    backgroundColor: "#9fa692",
-                                    border: "1px solid rgb(109, 111, 114)",
-                                    minWidth: "260px",
-                                    maxWidth: "90vw",
-                                    marginLeft: "16px",
-                                  }}
-                                >
-                                  <div
-                                    style={{
-                                      display: "flex",
-                                      alignItems: "center",
-                                      marginBottom: "0.5rem",
-                                    }}
-                                  >
-                                    <strong
-                                      style={{
-                                        color: "#fff",
-                                        textShadow: "0 1px 2px #444",
-                                        fontWeight: "bold",
-                                        marginRight: "0.75em",
-                                        fontSize: "1em",
-                                      }}
-                                    >
-                                      Collector Notes:
-                                    </strong>
-                                    <span
-                                      style={{
-                                        flex: 1,
-                                        marginTop: "4px",
-                                        height: "2px",
-                                        marginLeft: "0.5em",
-                                        borderRadius: "2px",
-                                        background:
-                                          "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))",
-                                        filter: "drop-shadow(0 1px 2px #444)",
-                                      }}
-                                    />
-                                  </div>
-                                  {galleryData[currentIndex].notes
-                                    .split("\n\n")
-                                    .map((para, idx) => (
-                                      <p key={idx} className="mb-3 last:mb-0">
-                                        {para}
-                                      </p>
-                                    ))}
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
-                          </div>
-                        )}
                       </div>
 
                       {/* Right Arrow (mobile only) */}
@@ -628,7 +521,9 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       {galleryData[currentIndex].title && (
                         <>
                           <br />
-                          <span className="chapter-title">{galleryData[currentIndex].title}</span>
+                          <span className="chapter-title">
+                            {galleryData[currentIndex].title}
+                          </span>
                         </>
                       )}
                     </h2>
@@ -669,68 +564,81 @@ export default function ScrollFlipGallery({ initialImageId }) {
                           </button>
 
                           <AnimatePresence>
-                            {isExpanded &&
-                              (isMobile ? (
-                                <motion.div
-                                  key={`desc-${currentIndex}-mobile`}
-                                  initial={{ opacity: 0, y: 12 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  exit={{ opacity: 0, y: 12 }}
-                                  transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
-                                  className="relative mt-4 mx-auto w-11/12 max-w-lg px-4"
-                                  style={{
-                                    background: "#f9f6f1",
-                                    border: "1.5px solid #e1d6c1",
-                                    borderRadius: 16,
-                                    boxShadow: "0 8px 48px rgba(130,110,60,0.10)",
-                                    padding: ".95rem 1.5rem",
-                                    color: "#564427",
-                                    minHeight: "4rem",
-                                    maxHeight: "290px",
-                                    overflowY: "auto",
-                                    width: "100%",
-                                  }}
-                                  id={descPanelId}
-                                  role="region"
-                                  aria-labelledby={`desc-toggle-${
-                                    galleryData[currentIndex]?.id || currentIndex
-                                  }`}
-                                  aria-label="More information about this image"
-                                >
-                                  <p className="pb-2">{galleryData[currentIndex].description}</p>
-                                </motion.div>
-                              ) : (
-                                <motion.div
-                                  key={`desc-${currentIndex}-desktop`}
-                                  initial={{ opacity: 0, y: 12 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  exit={{ opacity: 0, y: 12 }}
-                                  transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
-                                  className="absolute left-2/2 top-12 z-50"
-                                  style={{
-                                    transform: "translateX(-50%)",
-                                    background: "#f9f6f1",
-                                    border: "1.5px solid #e1d6c1",
-                                    borderRadius: 16,
-                                    boxShadow: "0 8px 48px rgba(130,110,60,0.18)",
-                                    padding: ".45rem 1.05rem",
-                                    color: "#564427",
-                                    minWidth: "340px",
-                                    maxWidth: "75vw",
-                                    minHeight: "4rem",
-                                    maxHeight: "260px",
-                                    overflowY: "auto",
-                                  }}
-                                  id={descPanelId}
-                                  role="region"
-                                  aria-labelledby={`desc-toggle-${
-                                    galleryData[currentIndex]?.id || currentIndex
-                                  }`}
-                                  aria-label="More information about this image"
-                                >
-                                  <p className="pb-2">{galleryData[currentIndex].description}</p>
-                                </motion.div>
-                              ))}
+                            {isExpanded && (
+                              <>
+                                {isMobile ? (
+                                  <motion.div
+                                    key={`desc-${currentIndex}-mobile`}
+                                    initial={{ opacity: 0, y: 12 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 12 }}
+                                    transition={{
+                                      duration: 0.45,
+                                      ease: [0.33, 1, 0.68, 1],
+                                    }}
+                                    className="relative mt-4 mx-auto w-11/12 max-w-lg px-4"
+                                    style={{
+                                      background: "#f9f6f1",
+                                      border: "1.5px solid #e1d6c1",
+                                      borderRadius: 16,
+                                      boxShadow: "0 8px 48px rgba(130,110,60,0.10)",
+                                      padding: ".95rem 1.5rem",
+                                      color: "#564427",
+                                      minHeight: "4rem",
+                                      maxHeight: "290px",
+                                      overflowY: "auto",
+                                      width: "100%",
+                                    }}
+                                    id={descPanelId}
+                                    role="region"
+                                    aria-labelledby={`desc-toggle-${
+                                      galleryData[currentIndex]?.id || currentIndex
+                                    }`}
+                                    aria-label="More information about this image"
+                                  >
+                                    <p className="pb-2">
+                                      {galleryData[currentIndex].description}
+                                    </p>
+                                  </motion.div>
+                                ) : (
+                                  <motion.div
+                                    key={`desc-${currentIndex}-desktop`}
+                                    initial={{ opacity: 0, y: 12 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 12 }}
+                                    transition={{
+                                      duration: 0.45,
+                                      ease: [0.33, 1, 0.68, 1],
+                                    }}
+                                    className="absolute left-2/2 top-12 z-50"
+                                    style={{
+                                      transform: "translateX(-50%)",
+                                      background: "#f9f6f1",
+                                      border: "1.5px solid #e1d6c1",
+                                      borderRadius: 16,
+                                      boxShadow: "0 8px 48px rgba(130,110,60,0.18)",
+                                      padding: ".45rem 1.05rem",
+                                      color: "#564427",
+                                      minWidth: "340px",
+                                      maxWidth: "75vw",
+                                      minHeight: "4rem",
+                                      maxHeight: "260px",
+                                      overflowY: "auto",
+                                    }}
+                                    id={descPanelId}
+                                    role="region"
+                                    aria-labelledby={`desc-toggle-${
+                                      galleryData[currentIndex]?.id || currentIndex
+                                    }`}
+                                    aria-label="More information about this image"
+                                  >
+                                    <p className="pb-2">
+                                      {galleryData[currentIndex].description}
+                                    </p>
+                                  </motion.div>
+                                )}
+                              </>
+                            )}
                           </AnimatePresence>
                         </div>
                       );
@@ -758,7 +666,9 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         <Grid className="w-5 h-5" color="#84766d" />
                       </button>
                       <button
-                        onClick={() => setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1))}
+                        onClick={() =>
+                          setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1))
+                        }
                         className={`bg-gray-100 px-3 py-1 -mt-16 rounded shadow hover:bg-gray-200 ${
                           showArrowHint ? "animate-pulse text-yellow-500" : "text-black"
                         }`}
