@@ -6,7 +6,7 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
-import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits";
+import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits.mjs";
 import SwipeHint from "./SwipeHint";
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
