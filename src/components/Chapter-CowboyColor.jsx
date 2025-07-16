@@ -8,6 +8,7 @@ import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
 import SwipeHint from "./SwipeHint";
+
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
 export default function ScrollFlipGallery({ initialImageId }) {
@@ -63,7 +64,6 @@ useEffect(() => {
       const imageId = galleryData[currentIndex]?.id;
       const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
       if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
-
 
   const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
   const newUrl = `${basePath}/${imageId}`;
