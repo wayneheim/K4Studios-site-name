@@ -508,7 +508,7 @@ style={
                         aria-label="Close"
                         title="Close"
                         style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
-                        onClick={() => window.location.href = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/ Roaring-20s-Portraits/Color/"}
+                        onClick={() => window.location.href = "/galleries/painterly-fine-art-photography/facing-history/roaring-20s-portraits/color/"}
                       >
                         ⨂
                       </button>
