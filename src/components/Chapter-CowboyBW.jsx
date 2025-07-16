@@ -35,7 +35,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     return () => window.removeEventListener("enterChapters", handleEnterChapters);
   }, []);
 
-// 🔍 Initial load: parse URL or use fallback — safe for static builds
+    // 🔍 Initial load: parse URL ordd use fallback — safe for static builds
 useEffect(() => {
   if (!galleryData || galleryData.length === 0) return;
 
