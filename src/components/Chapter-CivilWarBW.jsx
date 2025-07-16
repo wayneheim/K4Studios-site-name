@@ -36,20 +36,13 @@ export default function ScrollFlipGallery({ initialImageId }) {
         return () => window.removeEventListener("enterChapters", handleEnterChapters);
       }, []);
     
-    // 🔍 Initial load: parse URL or use fallback — safe for static builds
-useEffect(() => {
-  if (!galleryData || galleryData.length === 0) return;
-
-  const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-  const idFromURL = match ? match[1] : initialImageId;
-
-  if (idFromURL) {
-    const index = galleryData.findIndex((entry) => entry.id === idFromURL);
-    if (index !== -1) {
-      setCurrentIndex(index);
-    }
-  }
-}, [galleryData]);
+      // 🔍 Initial load: parse URL or use fallback
+      useEffect(() => {
+        const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
+        const id = match ? match[1] : initialImageId;
+        const index = galleryData.findIndex((entry) => entry.id === id);
+        setCurrentIndex(index !== -1 ? index : 0);
+      }, []);
     
       // 🟢 Auto-enter chapters if directly loading an image page
     useEffect(() => {
