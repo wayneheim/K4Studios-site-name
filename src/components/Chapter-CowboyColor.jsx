@@ -28,41 +28,33 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-  // 🔄 Trigger chapter entry mode via custom event
+  // === UNIVERSAL IMAGE ID LOADING LOGIC ===
   useEffect(() => {
-    const handleEnterChapters = () => setHasEnteredChapters(true);
-    window.addEventListener("enterChapters", handleEnterChapters);
-    return () => window.removeEventListener("enterChapters", handleEnterChapters);
-  }, []);
-  
-// 🔍 Initial load: parse URL or use fallback — safe for static builds
-useEffect(() => {
-  if (!galleryData || galleryData.length === 0) return;
-
-  const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-  const idFromURL = match ? match[1] : initialImageId;
-
-  if (idFromURL) {
-    const index = galleryData.findIndex((entry) => entry.id === idFromURL);
-    if (index !== -1) {
-      setCurrentIndex(index);
+    if (!galleryData || galleryData.length === 0) return;
+    // 1. Parse ID from URL if present
+    const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+    const idFromURL = match ? match[1] : initialImageId;
+    // 2. Fallback to 0 if nothing found
+    if (idFromURL) {
+      const index = galleryData.findIndex((entry) => entry.id === idFromURL);
+      setCurrentIndex(index !== -1 ? index : 0);
+    } else {
+      setCurrentIndex(0);
     }
-  }
-}, [galleryData]);
+  }, [galleryData, initialImageId]);
 
-  // 🟢 Auto-enter chapters if directly loading an image page
-useEffect(() => {
-  if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
-    setHasEnteredChapters(true);
-  }
-}, []);
+  // Auto-enter chapters if directly loading an image page
+  useEffect(() => {
+    if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
+      setHasEnteredChapters(true);
+    }
+  }, []);
 
-  // 🔗 Update URL when navigating *after* entering chapters
-useEffect(() => {
-  // Only run if hasEnteredChapters is true OR we're already on an /i-xxx page
-  const imageId = galleryData[currentIndex]?.id;
-  const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
-  if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
+  // Update URL when navigating *after* entering chapters
+  useEffect(() => {
+    const imageId = galleryData[currentIndex]?.id;
+    const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
+    if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
   const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
   const newUrl = `${basePath}/${imageId}`;

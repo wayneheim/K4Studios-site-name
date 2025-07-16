@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Grid, Notebook, ShoppingCart } from "lucide-react";
+import { Grid, Notebook, ShoppingCart, ChevronRight, ChevronLeft } from "lucide-react";
 import ZoomOverlay from "./ZoomOverlay.jsx";
 import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
