@@ -1,6 +1,6 @@
 /* ───────── LandingHeader.jsx – now uses SiteNavMenu ───────── */
 import React from "react";
-import SiteNavMenu from "./SiteNavMenu.jsx";   // adjust path if needed
+import SiteNavMenu from "./siteNavMenu.jsx";   // adjust path if needed
 import { useEffect, useState } from "react";
 
 function useIsMobile() {

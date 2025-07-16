@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SiteNavMenu from "./SiteNavMenu.jsx";
+import SiteNavMenu from "./siteNavMenu.jsx";
 import GalleryToggleButton from "./GalleryToggleButton.jsx";
 
 function useIsMobile() {
