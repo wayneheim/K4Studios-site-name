@@ -508,7 +508,7 @@ style={
                         aria-label="Close"
                         title="Close"
                         style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
-                        onClick={() => window.location.href = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black"}
+                        onClick={() => window.location.href = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"}
                       >
                         ⨂
                       </button>
