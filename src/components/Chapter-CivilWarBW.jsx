@@ -28,141 +28,147 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-  
-    // 🔄 Trigger chapter entry mode via custom event
-      useEffect(() => {
-        const handleEnterChapters = () => setHasEnteredChapters(true);
-        window.addEventListener("enterChapters", handleEnterChapters);
-        return () => window.removeEventListener("enterChapters", handleEnterChapters);
-      }, []);
-    
-      // 🔍 Initial load: parse URL or use fallback
-      useEffect(() => {
-        const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
-        const id = match ? match[1] : initialImageId;
-        const index = galleryData.findIndex((entry) => entry.id === id);
-        setCurrentIndex(index !== -1 ? index : 0);
-      }, []);
-    
-      // 🟢 Auto-enter chapters if directly loading an image page
-    useEffect(() => {
-      if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
-        setHasEnteredChapters(true);
+  // 🔄 Trigger chapter entry mode via custom event
+useEffect(() => {
+  const handleEnterChapters = () => setHasEnteredChapters(true);
+  window.addEventListener("enterChapters", handleEnterChapters);
+  return () => window.removeEventListener("enterChapters", handleEnterChapters);
+}, []);
+
+// 🔍 Initial load: parse URL or use fallback — safe for static builds
+useEffect(() => {
+  if (!galleryData || galleryData.length === 0) return;
+
+  const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+  const idFromURL = match ? match[1] : initialImageId;
+
+  if (idFromURL) {
+    const index = galleryData.findIndex((entry) => entry.id === idFromURL);
+    setCurrentIndex(index !== -1 ? index : 0);
+  } else {
+    setCurrentIndex(0);
+  }
+}, [galleryData, initialImageId]);
+
+// 🟢 Auto-enter chapters if directly loading an image page
+useEffect(() => {
+  if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
+    setHasEnteredChapters(true);
+  }
+}, []);
+
+// 🔗 Update URL when navigating *after* entering chapters
+useEffect(() => {
+  const imageId = galleryData[currentIndex]?.id;
+  const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
+  if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
+
+  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
+  const newUrl = `${basePath}/${imageId}`;
+  const currentUrl = window.location.pathname;
+
+  if (currentUrl !== newUrl) {
+    window.history.pushState(null, "", newUrl);
+  }
+}, [currentIndex, hasEnteredChapters, galleryData]);
+
+// 🧼 Clean up stray ID in URL if landing intro is showing (only if NOT on an image page)
+useEffect(() => {
+  const isOnImagePage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
+  const introEl = document.getElementById("intro-section");
+  const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
+  const isViewingImageZero = currentIndex === 0;
+
+  if (!isOnImagePage && isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
+    const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
+    window.history.replaceState(null, "", cleanUrl);
+  }
+}, [currentIndex]);
+
+// ⬅️⬆️ Browser back/forward handler
+useEffect(() => {
+  const handlePopState = () => {
+    const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
+    const id = match ? match[1] : null;
+
+    const header = document.getElementById("header-section");
+    const intro = document.getElementById("intro-section");
+    const chapter = document.getElementById("chapter-section");
+
+    if (id) {
+      const index = galleryData.findIndex((entry) => entry.id === id);
+      if (index !== -1) {
+        setCurrentIndex(index);
+        if (header) header.classList.add("section-hidden");
+        if (intro) intro.classList.add("section-hidden");
+        if (chapter) {
+          chapter.style.display = "block";
+          chapter.classList.remove("section-hidden");
+          chapter.classList.add("section-visible");
+        }
+        return;
       }
-    }, []);
-    
-      // 🔗 Update URL when navigating *after* entering chapters
-    useEffect(() => {
-      // Only run if hasEnteredChapters is true OR we're already on an /i-xxx page
-      const imageId = galleryData[currentIndex]?.id;
-      const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
-      if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
-  
-    const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
-    const newUrl = `${basePath}/${imageId}`;
-     const currentUrl = window.location.pathname;
-   
-     if (currentUrl !== newUrl) {
-       window.history.pushState(null, "", newUrl);
-     }
-   }, [currentIndex, hasEnteredChapters]);
-   
-   
-     // 🧼 Clean up stray ID in URL if landing intro is showing
-     useEffect(() => {
-       const introEl = document.getElementById("intro-section");
-       const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
-       const isViewingImageZero = currentIndex === 0;
-   
-       if (isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
-         const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
-         window.history.replaceState(null, "", cleanUrl);
-       }
-     }, [currentIndex]);
-   
-     // ⬅️⬆️ Browser back/forward handler
-     useEffect(() => {
-       const handlePopState = () => {
-         const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
-         const id = match ? match[1] : null;
-   
-         const header = document.getElementById("header-section");
-         const intro = document.getElementById("intro-section");
-         const chapter = document.getElementById("chapter-section");
-   
-         if (id) {
-           const index = galleryData.findIndex((entry) => entry.id === id);
-           if (index !== -1) {
-             setCurrentIndex(index);
-             if (header) header.classList.add("section-hidden");
-             if (intro) intro.classList.add("section-hidden");
-             if (chapter) {
-               chapter.style.display = "block";
-               chapter.classList.remove("section-hidden");
-               chapter.classList.add("section-visible");
-             }
-             return;
-           }
-         }
-   
-         // No image ID = return to intro
-         if (chapter) {
-           chapter.style.display = "none";
-           chapter.classList.add("section-hidden");
-           chapter.classList.remove("section-visible");
-         }
-         if (header) {
-           header.classList.remove("section-hidden", "slide-fade-out");
-         }
-         if (intro) {
-           intro.classList.remove("section-hidden", "slide-fade-out");
-         }
-       };
-   
-       window.addEventListener("popstate", handlePopState);
-       return () => window.removeEventListener("popstate", handlePopState);
-     }, []);
-   
-     // 📱 Device + UX handling (no change)
-     useEffect(() => {
-       document.body.classList.add("react-mounted");
-     }, []);
-   
-     useEffect(() => {
-       const updateOrientation = () => {
-         setIsLandscapeMobile(window.innerWidth < 900 && window.innerWidth > window.innerHeight);
-       };
-       updateOrientation();
-       window.addEventListener("resize", updateOrientation);
-       window.addEventListener("orientationchange", updateOrientation);
-       return () => {
-         window.removeEventListener("resize", updateOrientation);
-         window.removeEventListener("orientationchange", updateOrientation);
-       };
-     }, []);
-   
-     useEffect(() => {
-       const checkMobile = () => setIsMobile(window.innerWidth < 768);
-       checkMobile();
-       window.addEventListener("resize", checkMobile);
-       return () => window.removeEventListener("resize", checkMobile);
-     }, []);
-   
-     useEffect(() => {
-       if (!showArrows) return;
-       const timeout = setTimeout(() => setShowArrows(false), 4000);
-       return () => clearTimeout(timeout);
-     }, [showArrows]);
-   
-     useEffect(() => {
-       if (!localStorage.getItem("scrollFlipIntroSeen")) {
-         setShowArrowHint(true);
-         setTimeout(() => {
-           setShowArrowHint(false);
-           localStorage.setItem("scrollFlipIntroSeen", "true");
-         }, 3000);
-       }
-     }, []);
+    }
+
+    // No image ID = return to intro
+    if (chapter) {
+      chapter.style.display = "none";
+      chapter.classList.add("section-hidden");
+      chapter.classList.remove("section-visible");
+    }
+    if (header) {
+      header.classList.remove("section-hidden", "slide-fade-out");
+    }
+    if (intro) {
+      intro.classList.remove("section-hidden", "slide-fade-out");
+    }
+  };
+
+  window.addEventListener("popstate", handlePopState);
+  return () => window.removeEventListener("popstate", handlePopState);
+}, [galleryData]);
+
+// 📱 Device + UX handling (no change)
+useEffect(() => {
+  document.body.classList.add("react-mounted");
+}, []);
+
+useEffect(() => {
+  const updateOrientation = () => {
+    setIsLandscapeMobile(window.innerWidth < 900 && window.innerWidth > window.innerHeight);
+  };
+  updateOrientation();
+  window.addEventListener("resize", updateOrientation);
+  window.addEventListener("orientationchange", updateOrientation);
+  return () => {
+    window.removeEventListener("resize", updateOrientation);
+    window.removeEventListener("orientationchange", updateOrientation);
+  };
+}, []);
+
+useEffect(() => {
+  const checkMobile = () => setIsMobile(window.innerWidth < 768);
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
+
+useEffect(() => {
+  if (!showArrows) return;
+  const timeout = setTimeout(() => setShowArrows(false), 4000);
+  return () => clearTimeout(timeout);
+}, [showArrows]);
+
+useEffect(() => {
+  if (!localStorage.getItem("scrollFlipIntroSeen")) {
+    setShowArrowHint(true);
+    setTimeout(() => {
+      setShowArrowHint(false);
+      localStorage.setItem("scrollFlipIntroSeen", "true");
+    }, 3000);
+  }
+}, []);
+
 
   // 👆 Touch navigation
   const handleTouchStart = (e) => {
