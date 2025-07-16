@@ -28,14 +28,15 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-  // 🔄 Trigger chapter entry mode via custom event
-  useEffect(() => {
-    const handleEnterChapters = () => setHasEnteredChapters(true);
-    window.addEventListener("enterChapters", handleEnterChapters);
-    return () => window.removeEventListener("enterChapters", handleEnterChapters);
-  }, []);
-
-    // 🔍 Initial load: parse URL ordd use fallback — safe for static builds
+  
+    // 🔄 Trigger chapter entry mode via custom event
+      useEffect(() => {
+        const handleEnterChapters = () => setHasEnteredChapters(true);
+        window.addEventListener("enterChapters", handleEnterChapters);
+        return () => window.removeEventListener("enterChapters", handleEnterChapters);
+      }, []);
+    
+    // 🔍 Initial load: parse URL or use fallback — safe for static builds
 useEffect(() => {
   if (!galleryData || galleryData.length === 0) return;
 
@@ -49,20 +50,20 @@ useEffect(() => {
     }
   }
 }, [galleryData]);
-
-  // 🟢 Auto-enter chapters if directly loading an image page
-useEffect(() => {
-  if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
-    setHasEnteredChapters(true);
-  }
-}, []);
-
-  // 🔗 Update URL when navigating *after* entering chapters
-useEffect(() => {
-  // Only run if hasEnteredChapters is true OR we're already on an /i-xxx page
-  const imageId = galleryData[currentIndex]?.id;
-  const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
-  if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
+    
+      // 🟢 Auto-enter chapters if directly loading an image page
+    useEffect(() => {
+      if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
+        setHasEnteredChapters(true);
+      }
+    }, []);
+    
+      // 🔗 Update URL when navigating *after* entering chapters
+    useEffect(() => {
+      // Only run if hasEnteredChapters is true OR we're already on an /i-xxx page
+      const imageId = galleryData[currentIndex]?.id;
+      const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
+      if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
   const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
  const newUrl = `${basePath}/${imageId}`;
