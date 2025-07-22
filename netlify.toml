@@ -1,6 +1,7 @@
+
 [[redirects]]
 from = "/netlify-test"
-to = "/Galleries/Painterly-Fine-Art-Photography/"
+to = "/"
 status = 200
 
 [[redirects]]
