@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
+import netlify from '@astrojs/netlify';  // ✅ Add this line!
 
 export default defineConfig({
-  output: 'static',
+  output: 'server',                      // ✅ Change from 'static' to 'server'
+  adapter: netlify(),                    // ✅ Add Netlify adapter for SSR
   integrations: [react()],
   vite: {
     server: {
