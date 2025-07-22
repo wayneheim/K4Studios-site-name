@@ -205,6 +205,7 @@ export const semantic = {
     "powerful works of art",
     "window into the past",
     "with striking realism",
+    "rustic charm",
     
 
     // NEW: Painterly, landing, and features
