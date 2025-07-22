@@ -36,11 +36,34 @@ function scoreImageMatch(img, phrase: string): number {
   return score;
 }
 
+function getGalleryPathsForSection(currentPath: string): string[] {
+  const result: string[] = [];
+
+  function walk(node) {
+    if (node.href === currentPath && node.children) {
+      for (const child of node.children) {
+        result.push(child.href);
+      }
+    } else if (node.children) {
+      for (const child of node.children) {
+        walk(child);
+      }
+    }
+  }
+
+  for (const top of siteNav) {
+    walk(top);
+  }
+
+  return result;
+}
+
 export function autoLinkKeywordsInText(
   html: string,
   galleryDatas: any[][],
   featheredImages: any[],
-  galleryPaths: string[]
+  galleryPaths: string[],
+  currentPath: string
 ): string {
   if (!html || typeof html !== "string") return html;
 
@@ -77,6 +100,8 @@ export function autoLinkKeywordsInText(
   }
   matches.reverse();
 
+  const resolvedGalleryPaths = getGalleryPathsForSection(currentPath);
+
   let output = html;
   const alreadyLinkedCanonicals = new Set<string>();
 
@@ -89,7 +114,6 @@ export function autoLinkKeywordsInText(
     let bestScore = 0;
     let bestPath = galleryPaths[0] || "";
 
-    // Step 1: Try to find best match by score
     for (let i = 0; i < galleryDatas.length; i++) {
       const images = galleryDatas[i];
       for (const img of images) {
@@ -106,14 +130,9 @@ export function autoLinkKeywordsInText(
       }
     }
 
-    // Step 2: Fallback if no match at all
     if (!bestMatch) {
       const flatImages = allGalleryImages.filter(
-        img =>
-          img.id &&
-          img.id !== GHOST_IMAGE_ID &&
-          !featheredIds.has(img.id) &&
-          !usedImageIds.has(img.id)
+        img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id) && !usedImageIds.has(img.id)
       );
 
       const fallback =
@@ -134,10 +153,11 @@ export function autoLinkKeywordsInText(
     }
 
     let href = "";
-    if (bestMatch && bestMatch.id) {
+
+    if (bestMatch) {
+      const cleanId = bestMatch.id.startsWith("i-") ? bestMatch.id : `i-${bestMatch.id}`;
+      href = `${bestPath}/${cleanId}`;
       usedImageIds.add(bestMatch.id);
-      const idPart = bestMatch.id.startsWith("i-") ? bestMatch.id : `i-${bestMatch.id}`;
-      href = `${bestPath}/${idPart}`;
     } else {
       href = `/linked/${slugify(canonical)}`;
     }
