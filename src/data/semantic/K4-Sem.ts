@@ -1,7 +1,7 @@
 export const semantic = {
   mainKeywords: [
     // Master collections/sections (existing)
-    "facing history",
+    "facing history", "Wayne Heim's work",
     "civil war photography", "civil war art", "civil war art prints", "civil war reenactment photography",
     "western cowboy art", "western cowboy portraits", "western art", "cowboy portraits", "wild west photography",
     "roaring 20s photography", "roaring twenties portraits", "roaring 20s art", "gatsby era art",
@@ -131,12 +131,14 @@ export const semantic = {
       "americana photography", "route 66 art", "vintage auto art", "rust and chrome photography"
     ],
     "americana wall art": [
-      "route 66 wall art", "classic american cars", "vintage roadside photography", "freedom of the road prints"
+      "route 66 wall art", "Emotional Realism", "classic american cars", "vintage roadside photography", "freedom of the road prints"
     ]
   },
 
   longTails: [
     // Existing
+    "Frederic Remington",
+    "western art for cabins",
     "civil war art for history lovers",
     "american history wall decor",
     "western cowboy wall art for collectors",
