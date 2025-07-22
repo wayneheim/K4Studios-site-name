@@ -1,6 +1,6 @@
 import { c as createComponent, d as createAstro, i as renderComponent, r as renderTemplate } from '../../../../../chunks/astro/server_DU4U1nxe.mjs';
 import 'kleur/colors';
-import { e as entranceData, $ as $$GalleryShellRoaring20SColor } from '../../../../../chunks/ColorEntranceData_C9Xf0qVb.mjs';
+import { e as entranceData, $ as $$GalleryShellRoaring20SColor } from '../../../../../chunks/ColorEntranceData_JQTtqJvw.mjs';
 export { renderers } from '../../../../../renderers.mjs';
 
 const $$Astro = createAstro();

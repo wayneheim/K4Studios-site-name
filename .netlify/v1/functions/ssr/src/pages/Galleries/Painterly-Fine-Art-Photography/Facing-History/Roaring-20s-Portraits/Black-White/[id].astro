@@ -10,7 +10,10 @@ export async function getStaticPaths() {
   }));
 }
 
+// 👇 DECLARE id ASAP!
 const { id } = Astro.params;
+
+// 👇 ONLY use id AFTER declaration
 const isValidId = galleryData.some(img => img.id === id);
 if (!isValidId) throw new Error(`Image with id ${id} not found.`);
 ---

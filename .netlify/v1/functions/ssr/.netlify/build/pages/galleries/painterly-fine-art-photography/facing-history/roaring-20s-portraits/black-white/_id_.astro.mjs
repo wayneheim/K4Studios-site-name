@@ -1,6 +1,6 @@
 import { c as createComponent, d as createAstro, i as renderComponent, r as renderTemplate } from '../../../../../../chunks/astro/server_DU4U1nxe.mjs';
 import 'kleur/colors';
-import { e as entranceData, $ as $$GalleryShellRoaring20SBW } from '../../../../../../chunks/BWEntranceData_CKUD-d-I.mjs';
+import { e as entranceData, $ as $$GalleryShellRoaring20SBW } from '../../../../../../chunks/BWEntranceData_CtcMZWs_.mjs';
 import { g as galleryData } from '../../../../../../chunks/Black-White_CacyG34n.mjs';
 export { renderers } from '../../../../../../renderers.mjs';
 
