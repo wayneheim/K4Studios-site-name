@@ -159,7 +159,8 @@ export function autoLinkKeywordsInText(
       href = `${bestPath}/${cleanId}`;
       usedImageIds.add(bestMatch.id);
     } else {
-      href = `/linked/${slugify(canonical)}`;
+      // Force fallback to current section (not /linked/slug)
+      href = `${galleryPaths[0]}/i-placeholder`;
     }
 
     output =

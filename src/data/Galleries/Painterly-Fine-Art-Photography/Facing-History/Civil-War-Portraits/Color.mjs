@@ -19,8 +19,8 @@ export const galleryData = [
 {
     "id": "i-xhX479V",
     "title": "Civil War Art: A Hero's Ride",
-    "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: A Hero's Ride",
+    "description": "Painterly Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
+    "alt": "Civil War Art: A Hero's Ride: Painterly Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/K5Bg7SCmwhNJL9G8vCSMRPqtXnZV85nSQBSkktkdK/XL/Heros%2520ride-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/A",
     "keywords": [
@@ -28,6 +28,7 @@ export const galleryData = [
       "ride",
       "American Civil War",
       "Civil War",
+      "Painterly Fine Art Photography",
       "civil war photography",
       "civil war reenactment",
       "civil war reenactmet",
