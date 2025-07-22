@@ -55,6 +55,7 @@ export const semantic = {
     "Western Art Prints",
     "Rustic Wall Art",
     "Frontier Art Prints",
+    "powerful works of art"
     // Put any “high value” phrase you want to always link!
   ]
 };

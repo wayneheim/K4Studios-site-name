@@ -202,6 +202,7 @@ export const semantic = {
     "Gallery Highlights",
     "Collector-worthy prints",
     "Historic Reenactor Prints",
+    "powerful works of art",
     
 
     // NEW: Painterly, landing, and features
