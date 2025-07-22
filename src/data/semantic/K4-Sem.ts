@@ -89,6 +89,7 @@ export const semantic = {
     "american history wall art",
     "classic car photography",
     "photography printed on wood",
+    "traditional reenactment photography collection",
     "painterly fine art photography",
     "pictorialist photography",
     "steam engine art",
