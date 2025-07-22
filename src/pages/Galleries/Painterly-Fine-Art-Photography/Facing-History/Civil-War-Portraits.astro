@@ -12,7 +12,7 @@ import MobileStoryImages  from '../../../../components/MobileStoryImages.jsx';
 
 import { siteNav } from '../../../../data/siteNav.ts';
 import { getSideImages } from '../../../../components/utils/getSideImages.ts';
-import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
+import { autoLinkKeywordsUnified } from '../../../../components/utils/autoLinkKeywordsUnified.ts';
 import { semantic as cowboySemantic } from '../../../../data/semantic/Western-Cowboy-Portraits-Sem.ts';
 
 import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts';
@@ -100,18 +100,18 @@ const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas 
           <section class="story-section">
             {westernStory.map((section, index) => (
               <article class="story-block" key={index}>
-                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsUnified(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsUnified(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsUnified(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
 
                 {section.paragraphs?.map((para, i) => (
-                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsUnified(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
                 ))}
 
                 {section.list && section.list.length > 0 && (
                   <ul>
                     {section.list.map((item, j) => (
-                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsUnified(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
                     ))}
                   </ul>
                 )}
