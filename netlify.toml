@@ -1,6 +1,12 @@
 [[redirects]]
-from = "/*"
-to = "/:splat/"
+from = "/test-broken"
+to = "/nonexistent-page.html"
+status = 404
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/"
 status = 301
 force = true
 
