@@ -15,9 +15,9 @@ import { getSideImages } from '../../../../components/utils/getSideImages.ts';
 import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
 import { semantic as cowboySemantic } from '../../../../data/semantic/Western-Cowboy-Portraits-Sem.ts';
 
-import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts';
-import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/story.ts';
-import { westernFAQ } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/faq.ts';
+import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts';
+import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/story.ts';
+import { westernFAQ } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/faq.ts';
 
 import '../../../../styles/global.css';
 import '../../../../styles/oneupheader.css';
@@ -26,7 +26,7 @@ import '../../../../styles/oneupheader.css';
 // ----------------------
 
 // 1. Section Path (temporary until full routing is live)
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits";
+const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits";
 
 // 2. Get matching gallery paths from siteNav (Color & B/W)
 function findNavEntry(nav, url) {
@@ -64,7 +64,7 @@ const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas 
     <div class="drawer-mode">
       <LandingHeader
         client:load
-        breadcrumb="Facing History • Roaring 20's Portraits"
+        breadcrumb="Facing History • Civil War Portraits"
       />
     </div>
 
