@@ -30,10 +30,6 @@ function collectGalleryHrefs(node: any): string[] {
   return hrefs;
 }
 
-/**
- * Get all gallery paths and image arrays for a parent/section page (landing).
- * Use this on any page that isn't a one-up/gallery (which can use simple data).
- */
 function getAllDescendantGalleryData(sectionPath: string) {
   const navRoot = findNavNodeByHref(siteNav, sectionPath);
   if (!navRoot) return { galleryPaths: [], galleryDatas: [] };
@@ -42,10 +38,8 @@ function getAllDescendantGalleryData(sectionPath: string) {
   return { galleryPaths, galleryDatas };
 }
 
-// ---- AUTO-LINKER FUNCTION ----
-
 function escapeRegex(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return str.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&");
 }
 
 function flattenNav(nav, map = {}) {
@@ -60,44 +54,28 @@ function flattenNav(nav, map = {}) {
 
 function pickRandomImage(images) {
   if (!images || images.length === 0) return null;
-  // Prioritize 3-5 star, else all
   const high = images.filter(img => (img.rating ?? 0) >= 3);
   const pool = high.length > 0 ? high : images;
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
-export function autoLinkKeywordsInTextM(
-  html,
-  _sectionPath,
-  featheredImages
-) {
-  // 🔥 Hardcoded for consistent linking across all painterly pages
+export function autoLinkKeywordsInTextM(html, _sectionPath, featheredImages) {
   const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
-
-  // Gather all galleries & images for this section recursively
   const { galleryPaths, galleryDatas } = getAllDescendantGalleryData(sectionPath);
 
-  // Manual override URLs
   const overrides = {
     "medical illustration": "https://heimmedicalart.com",
     "medical illustrator": "https://heimmedicalart.com",
   };
 
-  // Section/gallery nav names
   const sectionLinks = flattenNav(siteNav);
-
   const featheredIds = new Set(featheredImages.map(img => img.id));
-  const linkableImages = [].concat(...galleryDatas)
-    .filter(img => !featheredIds.has(img.id));
+  const linkableImages = [].concat(...galleryDatas).filter(img => !featheredIds.has(img.id));
 
-  // --- Gather all unique, multi-word phrases (with suffixes, menu, overrides, and semantic linkOverrides) ---
   const validPhrases = new Set(Object.keys(overrides));
-
-  // Add semantic.linkOverrides (if present)
   const linkOverrides = (semantic.linkOverrides || []).map(s => s.toLowerCase());
   linkOverrides.forEach(p => validPhrases.add(p));
 
-  // Add menu nav (with allowed suffixes)
   const allowedSuffixes = ["series", "gallery", "collection", "art", "photos", "images"];
   Object.keys(sectionLinks).forEach(label => {
     if (label.split(/\s+/).length > 1) {
@@ -106,7 +84,6 @@ export function autoLinkKeywordsInTextM(
     }
   });
 
-  // Add gallery image multi-word phrases
   for (const img of linkableImages) {
     [img.title, img.alt, img.description, ...(img.keywords || [])]
       .filter(Boolean)
@@ -117,7 +94,6 @@ export function autoLinkKeywordsInTextM(
       });
   }
 
-  // --- 4. Link only these phrases (sorted longest to shortest) ---
   const allKeywords = Array.from(validPhrases).sort((a, b) => b.length - a.length);
   if (allKeywords.length === 0) return html;
   const keywordRegex = new RegExp(`\\b(${allKeywords.map(escapeRegex).join('|')})\\b`, "gi");
@@ -134,43 +110,56 @@ export function autoLinkKeywordsInTextM(
   for (const { index, keyword } of matches) {
     const kwLower = keyword.toLowerCase();
     if (alreadyLinked.has(kwLower)) continue;
+
     let href = null;
-    // 1. Manual override
+    // Manual override
     if (overrides[kwLower]) {
       href = overrides[kwLower];
     }
-    // 2. Section/gallery name (lookup with/without suffix)
+    // Section/gallery name
     else {
       let navLabel = Object.keys(sectionLinks).find(label =>
         kwLower === label ||
         allowedSuffixes.some(suffix => kwLower === `${label} ${suffix}`)
       );
       if (navLabel) {
-        href = sectionLinks[navLabel];
+        const targetHref = sectionLinks[navLabel];
+        if (_sectionPath.replace(/\/$/, '') === targetHref.replace(/\/$/, '')) {
+          const allImages = [].concat(...galleryDatas);
+          const img = pickRandomImage(allImages);
+          if (img) {
+            const galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
+            const idPart = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
+            href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
+          }
+        } else {
+          href = targetHref;
+        }
       }
     }
-    // 3. Semantic linkOverride (random image)
+    // Semantic linkOverride
     if (!href && linkOverrides.includes(kwLower)) {
       const img = pickRandomImage(linkableImages);
       if (img) {
-        let galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
+        const galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
         const idPart = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
         href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
       }
     }
-    // 4. Image keyword
+    // Image keyword
     if (!href) {
-      let img = linkableImages.find(img =>
+      const img = linkableImages.find(img =>
         [img.title, img.alt, img.description, ...(img.keywords || [])]
           .filter(Boolean)
           .some(str => typeof str === "string" && str.trim().toLowerCase() === kwLower)
       );
       if (img) {
-        let galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
+        const galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
         const idPart = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
         href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
       }
     }
+
     if (href) {
       output = output.slice(0, index) +
         `<a href="${href}" class="kw-link">${keyword}</a>` +
