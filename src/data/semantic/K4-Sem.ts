@@ -204,6 +204,7 @@ export const semantic = {
     "Historic Reenactor Prints",
     "powerful works of art",
     "window into the past",
+    "with striking realism",
     
 
     // NEW: Painterly, landing, and features
