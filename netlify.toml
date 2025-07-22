@@ -1,8 +1,7 @@
 [[redirects]]
-from = "/test-broken"
-to = "/nonexistent-page.html"
-status = 404
-force = true
+from = "/netlify-test"
+to = "/Galleries/Painterly-Fine-Art-Photography/"
+status = 200
 
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits"
