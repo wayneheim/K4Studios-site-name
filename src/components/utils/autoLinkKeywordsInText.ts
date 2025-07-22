@@ -24,7 +24,7 @@ function pickRandomImage(images) {
 
 function findNavNodeByHref(tree, href) {
   for (const node of tree) {
-    if (node.href?.toLowerCase() === href.toLowerCase()) return node;
+    if (node.href === href) return node;
     if (node.children) {
       const found = findNavNodeByHref(node.children, href);
       if (found) return found;
@@ -40,22 +40,27 @@ function collectGalleryHrefs(node) {
   return hrefs;
 }
 
-export function autoLinkKeywordsInText(
-  html,
-  galleryDatas,
-  featheredImages,
-  galleryPaths,
-  currentSectionPath
-) {
-  const sectionLinks = flattenNav(siteNav);
+export function autoLinkKeywordsInText(html, sectionPath, featheredImages) {
+  const modules = import.meta.glob('../../data/galleries/**/*.mjs', { eager: true });
+  const galleryDataMap = {};
+  for (const [path, mod] of Object.entries(modules)) {
+    const href = path.replace(/^.*[\\\/]galleries/, '/Galleries').replace(/\.mjs$/, '');
+    galleryDataMap[href] = mod.galleryData || mod.default || [];
+  }
 
-  const featheredIds = new Set(featheredImages.map(img => img.id));
-  const linkableImages = [].concat(...galleryDatas).filter(img => !featheredIds.has(img.id));
+  const navRoot = findNavNodeByHref(siteNav, sectionPath);
+  if (!navRoot) return html;
+  const galleryPaths = collectGalleryHrefs(navRoot);
+  const galleryDatas = galleryPaths.map(href => galleryDataMap[href] || []);
 
   const overrides = {
     "medical illustration": "https://heimmedicalart.com",
     "medical illustrator": "https://heimmedicalart.com",
   };
+
+  const sectionLinks = flattenNav(siteNav);
+  const featheredIds = new Set(featheredImages.map(img => img.id));
+  const linkableImages = [].concat(...galleryDatas).filter(img => !featheredIds.has(img.id));
 
   const validPhrases = new Set(Object.keys(overrides));
   const linkOverrides = (semantic.linkOverrides || []).map(s => s.toLowerCase());
@@ -70,11 +75,13 @@ export function autoLinkKeywordsInText(
   });
 
   for (const img of linkableImages) {
-    [img.title, img.alt, img.description, ...(img.keywords || [])].filter(Boolean).forEach(str => {
-      if (typeof str === "string" && str.trim().split(/\s+/).length > 1) {
-        validPhrases.add(str.trim().toLowerCase());
-      }
-    });
+    [img.title, img.alt, img.description, ...(img.keywords || [])]
+      .filter(Boolean)
+      .forEach(str => {
+        if (typeof str === "string" && str.trim().split(/\s+/).length > 1) {
+          validPhrases.add(str.trim().toLowerCase());
+        }
+      });
   }
 
   const allKeywords = Array.from(validPhrases).sort((a, b) => b.length - a.length);
@@ -95,7 +102,6 @@ export function autoLinkKeywordsInText(
     if (alreadyLinked.has(kwLower)) continue;
 
     let href = null;
-
     if (overrides[kwLower]) {
       href = overrides[kwLower];
     } else {
@@ -103,12 +109,10 @@ export function autoLinkKeywordsInText(
         kwLower === label ||
         allowedSuffixes.some(suffix => kwLower === `${label} ${suffix}`)
       );
-
       if (navLabel) {
         const targetHref = sectionLinks[navLabel];
-        if (currentSectionPath?.replace(/\/$/, '') === targetHref.replace(/\/$/, '')) {
-          const allImages = [].concat(...galleryDatas);
-          const img = pickRandomImage(allImages);
+        if (sectionPath.replace(/\/$/, '') === targetHref.replace(/\/$/, '')) {
+          const img = pickRandomImage([].concat(...galleryDatas));
           if (img) {
             const galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
             const idPart = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
