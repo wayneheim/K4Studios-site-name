@@ -17,7 +17,7 @@ export const westernStory = [
     tagline: "The Art of Storytelling in Every Frame",
     paragraphs: [
       `The American frontier wasn’t just a place — it was a world of dust and dreams, grit and grandeur. And in Wayne Heim’s work, it’s more than a backdrop — it’s a living, breathing character brought to life through painterly photography that blurs the line between photo and painting.`,
-      `Drawing inspiration from legendary Western artists like <strong>Frederic Remington</strong>, Wayne’s work evokes the timeless atmosphere of the Old West while capturing the raw, untamed spirit of the frontier. An award-winning medical illustrator and fine art photographer, Wayne brings a trained eye for anatomy, lighting, and narrative detail to every image.`
+      `As a trained award-winning medical illustrator, Wayne draws inspiration from legendary Western artists like <strong>Frederic Remington</strong>, Wayne’s work evokes the timeless atmosphere of the Old West while capturing the raw, untamed spirit of the frontier. An award-winning medical illustrator and fine art photographer, Wayne brings a trained eye for anatomy, lighting, and narrative detail to every image.`
     ],
     list: [
       `<strong>Painterly Technique:</strong> Each image is meticulously crafted to echo the emotion and texture of classic Western art — through a fine art lens.`,
