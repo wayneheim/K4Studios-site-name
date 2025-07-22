@@ -3,7 +3,7 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';  // ✅ Add this line!
 
 export default defineConfig({
-  output: 'server',                     // ✅ Required for SSR
+  output: 'static',                     // ✅ Required for SSR
   adapter: netlify(),                  // ✅ Required for Netlify SSR
   integrations: [react()],
   vite: {

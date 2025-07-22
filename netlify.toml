@@ -1,15 +1,3 @@
-
-[[redirects]]
-from = "/netlify-test"
-to = "/"
-status = 200
-
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/"
-status = 301
-force = true
-
 # Civil War
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
