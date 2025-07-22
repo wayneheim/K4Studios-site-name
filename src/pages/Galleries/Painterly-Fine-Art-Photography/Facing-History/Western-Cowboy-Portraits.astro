@@ -13,7 +13,7 @@ import MobileStoryImages  from '../../../../components/MobileStoryImages.jsx';
 import { siteNav } from '../../../../data/siteNav.ts';
 import { getFeatheredImages } from '../../../../components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
-import { semantic as cowboySemantic } from '../../../../data/semantic/K4-Sem.js';
+import { semantic as cowboySemantic } from '../../../../data/semantic/K4-Sem.ts';
 
 import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/landingstones.ts';
 import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/story.ts';
@@ -118,7 +118,7 @@ const featheredImages = getFeatheredImages({ sectionPath, headingCount, galleryD
               </article>
             ))}
           </section>
-<p>{JSON.stringify(cowboySemantic)}</p>
+
           <MobileStoryImages client:only="react" images={featheredImages} />
         </div>
 
@@ -364,44 +364,6 @@ ul li::marker {
   transition-delay: 1s;
 }
 
----
-const { title = 'Gallery' } = Astro.props;
----
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Glegoo', serif;
-        background:rgb(255, 255, 255);
-        margin: 0;
-        padding: 0;
-        color: #2c2c2c;
-        margin-top: 1rem;
-      }
-      
-
-      .page-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0;
-      }
-
-    </style>
-  </head>
-  <body>
-    <div class="page-container">
-      <slot />
-    </div>
-    <div id="overlay-root"></div>
-  </body>
-</html>
 
   </style>
 </BaseLayout>
