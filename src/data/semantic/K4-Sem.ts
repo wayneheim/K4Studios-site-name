@@ -2,11 +2,11 @@ export const semantic = {
   mainKeywords: [
     // Master collections/sections (existing)
     "facing history",
-    "civil war photography", "civil war art", "civil war art brints", "civil war reenactment photography",
+    "civil war photography", "civil war art", "civil war art prints", "civil war reenactment photography",
     "western cowboy art", "western cowboy portraits", "western art", "cowboy portraits", "wild west photography",
     "roaring 20s photography", "roaring twenties portraits", "roaring 20s art", "gatsby era art",
     "wwii photography", "world war ii art", "wwii fine art", "greatest generation photos", "wartime photography",
-    "engrained series", "wood panel art", "photography on wood", "fine art prints on wood",
+    "engrained series", "wood panel art", "photography on wood", "fine art prints on wood","9th-century photography",
 
     // Universal Wayne tags (existing)
     "story-driven photography", "narrative fine art", "painterly photography", "historic wall art", "collector photography", "emotional fine art",
