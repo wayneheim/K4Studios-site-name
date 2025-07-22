@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
+import netlify from '@astrojs/netlify';  // ✅ Add this line!
 
 export default defineConfig({
-  output: 'server',
+  output: 'server',                     // ✅ Required for SSR
+  adapter: netlify(),                  // ✅ Required for Netlify SSR
   integrations: [react()],
   vite: {
     server: {
@@ -12,11 +14,7 @@ export default defineConfig({
       hmr: {
         clientPort: 443,
       },
-      allowedHosts: [
-        '.trycloudflare.com',
-        'localhost',
-        '127.0.0.1',
-      ],
+      allowedHosts: ['.trycloudflare.com', 'localhost', '127.0.0.1'],
     },
   },
 });
