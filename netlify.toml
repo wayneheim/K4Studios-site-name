@@ -4,6 +4,11 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portrai
 status = 301
 force = true
 
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/index.html"
+status = 200
+
 # Civil War
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
