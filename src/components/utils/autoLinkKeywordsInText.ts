@@ -15,56 +15,54 @@ function slugify(text: string): string {
 export function autoLinkKeywordsInText(html: string): string {
   if (!html || typeof html !== "string") return html;
 
-  const defaultHrefBase = "/linked";
-  const phrases = new Set<string>();
+  const canonicalMap: Record<string, string> = {};
 
-  // mainKeywords
-  (semantic.mainKeywords || []).forEach(p => phrases.add(p.toLowerCase()));
+  // Add canonical phrases
+  for (const phrase of semantic.phrases || []) {
+    const norm = phrase.trim().toLowerCase();
+    canonicalMap[norm] = norm;
+  }
 
-  // linkOverrides
-  (semantic.linkOverrides || []).forEach(p => phrases.add(p.toLowerCase()));
-
-  // longTails
-  (semantic.longTails || []).forEach(p => phrases.add(p.toLowerCase()));
-
-  // synonymMap: both keys and values
-  if (semantic.synonymMap) {
-    for (const canonical in semantic.synonymMap) {
-      phrases.add(canonical.toLowerCase());
-      for (const syn of semantic.synonymMap[canonical] || []) {
-        phrases.add(syn.toLowerCase());
+  // Add synonyms and route to their canonical
+  for (const [canonical, synonyms] of Object.entries(semantic.synonymMap || {})) {
+    const key = canonical.trim().toLowerCase();
+    canonicalMap[key] = key;
+    for (const syn of synonyms || []) {
+      const synNorm = syn.trim().toLowerCase();
+      if (!canonicalMap[synNorm]) {
+        canonicalMap[synNorm] = key;
       }
     }
   }
 
-  // Sort longest to shortest for greedy match
-  const sorted = Array.from(phrases).sort((a, b) => b.length - a.length);
-  if (sorted.length === 0) return html;
-
-  const keywordRegex = new RegExp(`\\b(${sorted.map(escapeRegex).join("|")})\\b`, "gi");
+  const allMatchablePhrases = Object.keys(canonicalMap);
+  const sortedPhrases = allMatchablePhrases.sort((a, b) => b.split(" ").length - a.split(" ").length);
+  const regex = new RegExp(`\\b(${sortedPhrases.map(escapeRegex).join("|")})\\b`, "gi");
 
   let match;
   const matches = [];
-  while ((match = keywordRegex.exec(html)) !== null) {
+  while ((match = regex.exec(html)) !== null) {
     matches.push({ index: match.index, keyword: match[1] });
   }
-  matches.reverse();
+  matches.reverse(); // process from back to front to avoid index shifts
 
   let output = html;
-  const alreadyLinked = new Set<string>();
+  const alreadyLinkedCanonicals = new Set<string>();
 
   for (const { index, keyword } of matches) {
     const kwLower = keyword.toLowerCase();
-    if (alreadyLinked.has(kwLower)) continue;
+    const canonical = canonicalMap[kwLower];
+    if (!canonical || alreadyLinkedCanonicals.has(canonical)) continue;
 
-    const slug = slugify(keyword);
-    const href = `${defaultHrefBase}/${slug}`;
+    const slug = slugify(canonical);
+    const href = `/linked/${slug}`;
 
-    output = output.slice(0, index) +
+    output =
+      output.slice(0, index) +
       `<a href="${href}" class="kw-link">${keyword}</a>` +
       output.slice(index + keyword.length);
 
-    alreadyLinked.add(kwLower);
+    alreadyLinkedCanonicals.add(canonical);
   }
 
   return output;
