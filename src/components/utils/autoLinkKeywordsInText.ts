@@ -44,17 +44,17 @@ export function autoLinkKeywordsInText(
 ): string {
   if (!html || typeof html !== "string") return html;
 
+  const GHOST_IMAGE_ID = "i-k4studios";
   const featheredIds = new Set(featheredImages.map(img => img.id));
+  const usedImageIds = new Set<string>();
   const allGalleryImages = [].concat(...galleryDatas);
   const canonicalMap: Record<string, string> = {};
 
-  // Canonical phrases
   for (const phrase of semantic.phrases || []) {
     const norm = phrase.trim().toLowerCase();
     canonicalMap[norm] = norm;
   }
 
-  // Synonyms routed to canonical
   for (const [canonical, synonyms] of Object.entries(semantic.synonymMap || {})) {
     const key = canonical.trim().toLowerCase();
     canonicalMap[key] = key;
@@ -93,7 +93,10 @@ export function autoLinkKeywordsInText(
     for (let i = 0; i < galleryDatas.length; i++) {
       const images = galleryDatas[i];
       for (const img of images) {
+        if (!img.id || img.id === GHOST_IMAGE_ID) continue;
         if (featheredIds.has(img.id)) continue;
+        if (usedImageIds.has(img.id)) continue;
+
         const score = scoreImageMatch(img, canonical);
         if (score > bestScore) {
           bestScore = score;
@@ -105,7 +108,14 @@ export function autoLinkKeywordsInText(
 
     // Step 2: Fallback if no match at all
     if (!bestMatch) {
-      const flatImages = allGalleryImages.filter(img => !featheredIds.has(img.id));
+      const flatImages = allGalleryImages.filter(
+        img =>
+          img.id &&
+          img.id !== GHOST_IMAGE_ID &&
+          !featheredIds.has(img.id) &&
+          !usedImageIds.has(img.id)
+      );
+
       const fallback =
         flatImages.find(img => img.rating === 5) ||
         flatImages.find(img => img.rating === 4) ||
@@ -125,6 +135,7 @@ export function autoLinkKeywordsInText(
 
     let href = "";
     if (bestMatch && bestMatch.id) {
+      usedImageIds.add(bestMatch.id);
       const idPart = bestMatch.id.startsWith("i-") ? bestMatch.id : `i-${bestMatch.id}`;
       href = `${bestPath}/${idPart}`;
     } else {
