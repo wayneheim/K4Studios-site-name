@@ -1,80 +1,82 @@
-export const wwiiStory = [
-  /* ───────────────────────────────────────────── 1 */
+export const westernStory = [
+   /* ───────────────────────────────────────────── 1 */
   {
     breadcrumb: "Facing History | WWII Themed Photography",
     title: "WWII Photography: Embrace the Past... Live the Story",
-    subhead: "Remembering the Greatest Generation",
-    tagline: "Historically Themed Fine Art Painterly Reenactment Photography",
+    subhead: "The Untold Side of the Jazz Age",
+    tagline: "Painterly Fine Art Photography of Flappers, Gangsters, and G-Men",
     paragraphs: [
-      `Step into K4 Studios’ WWII gallery—where the past is brought to life through the lens of award-winning photographer Wayne Heim. These evocative portraits and scenes are more than just pictures: they are painterly fine art, created in close collaboration with some of the nation's most skilled reenactors at major historical events.`,
-      `Wayne’s painterly WWII photography captures the essence of the 1940s, revealing powerful stories of heroism, sacrifice, and the indomitable human spirit. Each image transports you into the heart of history, where every detail, expression, and gesture tells a story rooted in the experience of the Greatest Generation.`
+      `Step into the wild, rebellious world of the 1920s—an era defined by speakeasies, bootlegging, and infamous outlaws like Bonnie and Clyde. These Roaring 20s portraits don’t focus on the glamor of the Jazz Age, but on the grit, tension, and raw humanity of a decade lived on the edge of the law.`,
+      `Captured using a painterly photographic technique, each portrait tells a story. Flappers, gangsters, G-Men, and bootleggers come to life in moody, atmospheric images that reveal the shadowy essence of the time. These are not high-society ballrooms and bright art deco lights—they’re alleyways, hideouts, and whiskey-soaked speakeasies.`
     ]
   },
 
   /* ───────────────────────────────────────────── 2 */
   {
-    subhead: "Three Themes, One Historic Legacy",
-    tagline: "Art of War, Men & Machines, and Portraits",
+    subhead: "What Were the Roaring 20s Really Like?",
+    tagline: "Prohibition. Resistance. Survival.",
     paragraphs: [
-      `This curated gallery is divided into three immersive themes: <strong>Art of War</strong>, <strong>Men & Machines</strong>, and <strong>Portraits</strong>. Each explores a unique facet of the World War II experience:`,
-    ],
-    list: [
-      `Art of War: Experience the intensity and drama of battle—strategic moments, raw emotion, and the fog of war, all rendered with painterly artistry.`,
-      `Men & Machines: Delve into the intricate bond between soldiers and the powerful machinery that shaped their world—trucks, tanks, aircraft, and the relentless push of technology.`,
-      `Portraits: Discover the humanity and individuality of reenactors who breathe life into the WWII era, their faces and uniforms reflecting both the pride and the sacrifice of a generation.`
-    ],
-    paragraphs: [
-      `Each section invites you to connect with a different layer of history, providing a deeper and more personal understanding of the era.`
+      `The 1920s were a decade of radical change—when Prohibition turned ordinary citizens into outlaws, and the line between justice and survival blurred. While jazz filled the air and the Charleston ruled the dance floor, another, darker America thrived underground.`,
+      `This portrait series reveals that lesser-seen side. These aren’t just photos from the 20’s—they're intimate moments frozen in time, shaped by rebellion and resistance. Through the lens of painterly fine art photography, the true faces of the Roaring 20s emerge.`
     ]
   },
 
   /* ───────────────────────────────────────────── 3 */
   {
-    subhead: "The Painterly Technique: Bringing History to Life",
-    tagline: "Where Historical Reenactment Becomes Fine Art",
+    subhead: "The Real Roaring 20s: Portraits of Rebellion and Resistance",
+    tagline: "Bootleggers, Flappers, and the Fight for Freedom",
+    list: [
+      `Bootleggers running moonshine under the cover of darkness.`,
+      `G-Men on the trail of dangerous fugitives.`,
+      `Flappers who rejected tradition to embrace freedom and risk.`,
+      `Outlaws and lawmen locked in a deadly game of cat and mouse.`
+    ],
     paragraphs: [
-      `Wayne Heim’s signature painterly technique transforms every reenactment image into a timeless work of art. Each photograph blends meticulous historical research with fine art composition, using color, light, and texture to evoke the spirit of the 1940s.`,
-      `Unlike ordinary documentary photography, Wayne’s approach infuses every scene with a sense of atmosphere and emotion—bridging the gap between the past and the present. His WWII-themed art isn’t just a visual record; it’s an immersive experience, inviting the viewer to step directly into the world of World War II.`
+      `These 1920s portraits capture that raw defiance—where survival often meant breaking the rules and living in constant motion. The goal wasn’t wealth—it was freedom. To live fast, loud, and without apology.`
     ]
   },
 
   /* ───────────────────────────────────────────── 4 */
   {
-    subhead: "Stories of Courage, Sacrifice, and Humanity",
-    tagline: "The Emotional Heart of WWII Art",
+    subhead: "Flappers, Gangsters, and G-Men in Painterly Detail",
+    tagline: "Painterly Fine Art That Breathes With Character",
+    list: [
+      `Flappers in speakeasies, shadows hiding their smirks and secrets.`,
+      `Gangsters and bootleggers, caught mid-stride, gripping their fedoras and sidearms.`,
+      `Federal agents, stern and focused, in sharp contrast to the chaos around them.`
+    ],
     paragraphs: [
-      `Beyond uniforms and equipment, these photographs reveal the inner world of those who lived—and relive—history. Wayne’s painterly reenactment photography captures the struggles, triumphs, and quiet moments of the WWII generation, paying tribute to both real veterans and passionate reenactors.`,
-      `Each image is carefully crafted to honor the courage and resilience of the men and women who served, offering a rare window into the emotional reality of wartime life.`
+      `These aren’t re-enactments. They’re lived-in portrayals of a moment in American history that still echoes today.`
     ]
   },
 
   /* ───────────────────────────────────────────── 5 */
   {
-    subhead: "Decor that Tells a Story",
-    tagline: "A Powerful Addition to Any Man Cave or Collector’s Space",
+    subhead: "Experience the Spirit of the 20s Through Fine Art",
+    tagline: "Own the Grit and Grace of an Unforgiving Decade",
     paragraphs: [
-      `Wayne Heim’s WWII-themed art is more than a historical tribute—it’s a dramatic statement piece for your home, office, or man cave. These museum-quality prints serve as both fine art and a visual memorial, sparking conversation and remembrance of the Greatest Generation.`,
-      `Each portrait or action scene captures not just the outward drama of war, but the timeless emotions that resonate across generations.`
+      `Printed on high-quality materials, every piece in this collection transforms historical storytelling into wall-worthy artwork. Whether you're drawn to the thrill of the chase, the edge of rebellion, or the soul of a past era—these fine art portraits let you bring that energy home.`
     ]
   },
 
   /* ───────────────────────────────────────────── 6 */
   {
-    subhead: "Timeless Art for Every Generation",
-    tagline: "Where Past and Present Connect",
-    paragraphs: [
-      `Wayne’s WWII art bridges eras, inviting viewers of all ages to experience the drama, honor, and sacrifice of World War II. His painterly style ensures each photograph is both historical and contemporary—an artwork that keeps the stories of the past alive for today’s world.`,
-      `Collectors, history enthusiasts, and lovers of fine art alike will find something meaningful and unique in this WWII-themed collection. Every piece is a celebration of courage, resilience, and the enduring human spirit.`
+    subhead: "Collection Highlights",
+    tagline: "Stories in Every Shadow",
+    list: [
+      `Bootleggers and G-Men: Explore the dangerous cat-and-mouse world of Prohibition-era crime and law enforcement.`,
+      `Flapper Rebellion: See how women pushed boundaries and reshaped their roles in society through bold fashion and fearless attitude.`,
+      `Outlaws and Lawmen: From notorious icons like Bonnie and Clyde to forgotten faces of resistance, each portrait honors the people who made—and broke—the rules.`
     ]
   },
 
   /* ───────────────────────────────────────────── 7 */
   {
-    subhead: "Own a Piece of Living History",
-    tagline: "Bring the Story Home",
+    subhead: "Own a Piece of Roaring 20s History",
+    tagline: "Bring Home the Rebellion, Preserved in Painterly Form",
     paragraphs: [
-      `These aren’t just photographs—they’re stories, moments frozen in time, and tributes to the men and women who shaped history. Add a piece of Wayne Heim’s WWII collection to your space and embrace the past, live the story, and honor the legacy of the Greatest Generation.`,
-      `Experience World War II through a master photographer’s eye and see how painterly fine art can make history personal, powerful, and unforgettable.`
+      `Whether you're a collector, a history enthusiast, or someone who simply appreciates painterly storytelling, this series offers something unique: the grit and grace of 1920s America, captured in vivid, emotionally resonant fine art.`,
+      `These are not mass-produced vintage recreations. They are one-of-a-kind works that embrace the past and live the story—preserved in the expressive depth of each print.`
     ]
   }
 ];
