@@ -111,7 +111,7 @@ const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas 
                 {section.list && section.list.length > 0 && (
                   <ul>
                     {section.list.map((item, j) => (
-                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(section.title, featheredImages, sectionPath, allGalleryData, cowboySemantic)} />
+                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
                     ))}
                   </ul>
                 )}
