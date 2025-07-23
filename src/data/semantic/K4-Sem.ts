@@ -29,6 +29,7 @@ export const semantic = {
     "fine art for story lovers",
     "western painterly landscape photography",
     "museum quality prints",
+    "changed the course of time",
     "western landscapes fine art",
     "frederic remington",
     "1920s portraits",
