@@ -106,7 +106,11 @@ export function autoLinkKeywordsInText(
     }
   });
 
-  for (const img of linkableImages) {
+// Add ALL KWs/titles/desc from EVERY gallery image in every gallery database
+for (const galleryArr of galleryDatas) {
+  if (!Array.isArray(galleryArr)) continue;
+  for (const img of galleryArr) {
+    if (!img) continue;
     [img.title, img.alt, img.description, ...(img.keywords || [])]
       .filter(Boolean)
       .forEach(str => {
@@ -115,6 +119,8 @@ export function autoLinkKeywordsInText(
         }
       });
   }
+}
+
 
   // Link only these phrases (sorted longest to shortest)
   const allKeywords = Array.from(validPhrases).sort((a, b) => b.length - a.length);
