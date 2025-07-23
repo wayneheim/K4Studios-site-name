@@ -8,8 +8,6 @@ import FAQAccordion       from '../../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../../components/Footer.astro';
 import MobileStoryImages  from '../../../../components/MobileStoryImages.jsx';
 
-
-
 import { siteNav } from '../../../../data/siteNav.ts';
 import { getFeatheredImages } from '../../../../components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
@@ -28,7 +26,7 @@ import '../../../../styles/oneupheader.css';
 // 1. Section Path (temporary until full routing is live)
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
 
-// 2. Get matching gallery paths from siteNav (Color & B/W)
+// 2. Get all matching gallery paths from siteNav (no filter)
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -41,9 +39,7 @@ function findNavEntry(nav, url) {
 }
 
 const landingNav = findNavEntry(siteNav, sectionPath);
-const galleryPaths = landingNav?.children?.filter(c =>
-  /\/Color$|\/Black-White$/.test(c.href)
-).map(c => c.href) || [];
+const galleryPaths = landingNav?.children?.map(c => c.href) || [];
 
 // 3. Load gallery data
 const allGalleryData = import.meta.glob('../../../../data/Galleries/**/*.mjs', { eager: true });
@@ -74,108 +70,108 @@ const featheredImages = getFeatheredImages({ sectionPath, headingCount, galleryD
       </div>
     </div>
 
-      <div class="w-full max-w-[1200px] mx-auto px-4">
-  <div class="carousel-fade reveal-on-scroll">
-    <ImageBar2 client:load />
-  </div>
-</div>
+    <div class="w-full max-w-[1200px] mx-auto px-4">
+      <div class="carousel-fade reveal-on-scroll">
+        <ImageBar2 client:load />
+      </div>
+    </div>
 
-      <section class="section-heading-wrap">
-        <div class="section-heading">
-          <h1 class="page-title fade-in reveal-on-scroll">
-            {landingWestern.title}
-          </h1>
-          <h2 class="page-subtitle fade-in reveal-on-scroll">
-            {landingWestern.subtitle}
-          </h2>
-        </div>
-      </section>
+    <section class="section-heading-wrap">
+      <div class="section-heading">
+        <h1 class="page-title fade-in reveal-on-scroll">
+          {landingWestern.title}
+        </h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll">
+          {landingWestern.subtitle}
+        </h2>
+      </div>
+    </section>
 
-      <div class="py-5">
-        <TombstoneNav items={landingWestern.tombstones} />
+    <div class="py-5">
+      <TombstoneNav items={landingWestern.tombstones} />
+    </div>
+
+    <section class="story-layout">
+      <div class="text-column">
+        <section class="story-section">
+          {westernStory.map((section, index) => (
+            <article class="story-block" key={index}>
+              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+
+              {section.paragraphs?.map((para, i) => (
+                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+              ))}
+
+              {section.list && section.list.length > 0 && (
+                <ul>
+                  {section.list.map((item, j) => (
+                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                  ))}
+                </ul>
+              )}
+            </article>
+          ))}
+        </section>
+
+        <MobileStoryImages client:only="react" images={featheredImages} />
       </div>
 
-      <section class="story-layout">
-        <div class="text-column">
-          <section class="story-section">
-            {westernStory.map((section, index) => (
-              <article class="story-block" key={index}>
-                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-
-                {section.paragraphs?.map((para, i) => (
-                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-                ))}
-
-                {section.list && section.list.length > 0 && (
-                  <ul>
-                    {section.list.map((item, j) => (
-                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-                    ))}
-                  </ul>
-                )}
-              </article>
-            ))}
-          </section>
-
-          <MobileStoryImages client:only="react" images={featheredImages} />
-        </div>
-
-       <div class="sidebar-column hidden md:block">
-  <div class="sample-fade reveal-on-scroll">
+      <div class="sidebar-column hidden md:block">
+        <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
             heading="Featured Portraits"
             images={featheredImages.slice(0, 5)}
           />
-        </div></div>
-      </section>
-
-      <section class="pb-16">
-        <input type="checkbox" id="faq-toggle" class="more-toggle" />
-        <div class="truncate-container">
-          <div class="truncate-text">
-            <FAQAccordion items={westernFAQ} />
-          </div>
         </div>
-        <label for="faq-toggle" class="more-toggle-label"></label>
-      </section>
+      </div>
+    </section>
 
-      <SiteFooter class="pt-8 pb-12" />
-    </div>
+    <section class="pb-16">
+      <input type="checkbox" id="faq-toggle" class="more-toggle" />
+      <div class="truncate-container">
+        <div class="truncate-text">
+          <FAQAccordion items={westernFAQ} />
+        </div>
+      </div>
+      <label for="faq-toggle" class="more-toggle-label"></label>
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
   </main>
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Reveal-on-scroll logic
-    const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Reveal-on-scroll logic
+      const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.15
+        });
+        els.forEach(el => observer.observe(el));
+      }
+
+      // NEW: auto-expand FAQ box if a question is clicked
+      const faqToggle = document.getElementById("faq-toggle");
+      const truncateContainer = document.querySelector(".truncate-container");
+
+      if (truncateContainer && faqToggle) {
+        truncateContainer.addEventListener("click", (e) => {
+          const summaryClicked = e.target.closest("summary");
+          if (summaryClicked && !faqToggle.checked) {
+            faqToggle.checked = true;
           }
         });
-      }, {
-        threshold: 0.15
-      });
-      els.forEach(el => observer.observe(el));
-    }
-
-    // NEW: auto-expand FAQ box if a question is clicked
-    const faqToggle = document.getElementById("faq-toggle");
-    const truncateContainer = document.querySelector(".truncate-container");
-
-    if (truncateContainer && faqToggle) {
-      truncateContainer.addEventListener("click", (e) => {
-        const summaryClicked = e.target.closest("summary");
-        if (summaryClicked && !faqToggle.checked) {
-          faqToggle.checked = true;
-        }
-      });
-    }
-  });
-</script>
+      }
+    });
+  </script>
 
 
   <style>
