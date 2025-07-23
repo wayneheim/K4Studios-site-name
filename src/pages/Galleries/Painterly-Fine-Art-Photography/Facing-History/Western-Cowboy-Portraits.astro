@@ -46,9 +46,9 @@ const galleryPaths = landingNav?.children?.filter(c =>
 ).map(c => c.href) || [];
 
 // 3. Load gallery data
-const allGalleryData = import.meta.glob('../../../../data/galleries/**/*.mjs', { eager: true });
+const allGalleryData = import.meta.glob('../../../../data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
-  const filePath = "../../../../data/galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  const filePath = "../../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
   return allGalleryData[filePath]?.galleryData || [];
 });
 

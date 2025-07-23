@@ -5,28 +5,33 @@ function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-// --- NEW: Interleaved (Alternating) Pool Logic --- //
-function getRandomizedGalleryPool(arr) {
-  let images = arr.filter(img => img && img.id !== "i-k4studios");
-  if (images.length > 30) images = images.sort(() => Math.random() - 0.5).slice(0, 30);
-  if (images.length > 20) images = images.sort(() => Math.random() - 0.5).slice(0, 20);
-  return images.sort(() => Math.random() - 0.5);
-}
+// --- ROUND ROBIN Pool Logic --- //
+function getRoundRobinImagePool(galleryDatas) {
+  // Each galleryDatas[n] is an array of images (one per gallery)
+  const pools = galleryDatas.map(arr => {
+    let images = arr.filter(img => img && img.id !== "i-k4studios");
+    if (images.length > 30) images = images.sort(() => Math.random() - 0.5).slice(0, 30);
+    if (images.length > 20) images = images.sort(() => Math.random() - 0.5).slice(0, 20);
+    // Shuffle each pool independently
+    return images.sort(() => Math.random() - 0.5);
+  });
 
-function getAlternatingImagePool(galleryDatas) {
-  // Each galleryDatas[n] = color, bw, etc arrays
-  const pools = galleryDatas.map(getRandomizedGalleryPool);
-  const maxLen = Math.max(...pools.map(p => p.length));
-  const interleaved = [];
-  for (let i = 0; i < maxLen; i++) {
+  const roundRobin = [];
+  let i = 0, added;
+  do {
+    added = false;
     for (let p = 0; p < pools.length; p++) {
-      if (pools[p][i]) interleaved.push(pools[p][i]);
+      if (pools[p][i]) {
+        roundRobin.push(pools[p][i]);
+        added = true;
+      }
     }
-  }
-  return interleaved;
+    i++;
+  } while (added);
+  return roundRobin;
 }
 
-// --- NEW: Get "current section" (landing) href based on galleryPaths --- //
+// --- Find "current section" href based on galleryPaths --- //
 function getSectionHrefFromGalleryPaths(paths) {
   if (!Array.isArray(paths) || paths.length === 0) return null;
   const partsList = paths.map(path => path.split("/").filter(Boolean));
@@ -48,7 +53,7 @@ export function autoLinkKeywordsInText(
   galleryDatas,
   featheredImages,
   galleryPaths,
-  semantic = defaultSemantic // Fallback to K4-Sem if not passed
+  semantic = defaultSemantic
 ) {
   // Manual override URLs
   const overrides = {
@@ -71,8 +76,8 @@ export function autoLinkKeywordsInText(
   // Get feathered IDs (exclusions)
   const featheredIds = new Set(featheredImages.map(img => img.id));
 
-  // --- USE INTERLEAVED COLOR/BW POOL --- //
-  const linkableImages = getAlternatingImagePool(galleryDatas)
+  // --- USE ROUND ROBIN POOL --- //
+  const linkableImages = getRoundRobinImagePool(galleryDatas)
     .filter(img => !featheredIds.has(img.id));
 
   // --- Find current section/landing href for "self-link" reroute logic --- //
@@ -83,7 +88,6 @@ export function autoLinkKeywordsInText(
   const linkOverrides = (semantic.linkOverrides || []).map(s => s.toLowerCase());
   linkOverrides.forEach(p => validPhrases.add(p));
 
-  // --- ADD ALL PHRASES FROM K4-Sem.ts ---
   if (semantic.phrases && Array.isArray(semantic.phrases)) {
     for (const phrase of semantic.phrases) {
       if (typeof phrase === "string" && phrase.length > 1) {
@@ -124,7 +128,6 @@ export function autoLinkKeywordsInText(
   let output = html;
   let alreadyLinked = new Set();
 
-  // --- Always assign links using the per-block, alternating pool --- //
   let imgIdx = 0;
   for (const { index, keyword } of matches) {
     const kwLower = keyword.toLowerCase();
@@ -147,7 +150,6 @@ export function autoLinkKeywordsInText(
           currentSectionHref &&
           navHref.replace(/\/$/, "") === currentSectionHref.replace(/\/$/, "")
         ) {
-          // Link to an image in this section, not the landing page
           const img = linkableImages[imgIdx++] || linkableImages[0];
           if (img) {
             let galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
@@ -155,7 +157,6 @@ export function autoLinkKeywordsInText(
             href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
           }
         } else {
-          // Otherwise, link to nav page as normal
           href = navHref;
         }
       }
