@@ -1,19 +1,18 @@
 import { siteNav } from "../../data/siteNav.ts";
 import { semantic as defaultSemantic } from "../../data/semantic/K4-Sem.ts";
 
-// Defensive regex escape
-function escapeRegex(str: string) {
+function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-// ROUND ROBIN pool logic (defensive)
-function getRoundRobinImagePool(galleryDatas: any[][] = []) {
-  if (!Array.isArray(galleryDatas)) return [];
+// --- ROUND ROBIN Pool Logic --- //
+function getRoundRobinImagePool(galleryDatas) {
+  // Each galleryDatas[n] is an array of images (one per gallery)
   const pools = galleryDatas.map(arr => {
-    if (!Array.isArray(arr)) return [];
-    let images = arr.filter(img => img && img.id && img.id !== "i-k4studios");
+    let images = arr.filter(img => img && img.id !== "i-k4studios");
     if (images.length > 30) images = images.sort(() => Math.random() - 0.5).slice(0, 30);
     if (images.length > 20) images = images.sort(() => Math.random() - 0.5).slice(0, 20);
+    // Shuffle each pool independently
     return images.sort(() => Math.random() - 0.5);
   });
 
@@ -32,8 +31,8 @@ function getRoundRobinImagePool(galleryDatas: any[][] = []) {
   return roundRobin;
 }
 
-// Find "current section" href based on galleryPaths (defensive)
-function getSectionHrefFromGalleryPaths(paths: string[] = []) {
+// --- Find "current section" href based on galleryPaths --- //
+function getSectionHrefFromGalleryPaths(paths) {
   if (!Array.isArray(paths) || paths.length === 0) return null;
   const partsList = paths.map(path => path.split("/").filter(Boolean));
   let prefix = [];
@@ -48,23 +47,22 @@ function getSectionHrefFromGalleryPaths(paths: string[] = []) {
   return "/" + prefix.join("/");
 }
 
-// MAIN LINKING FUNCTION
+// --- MAIN LINKING FUNCTION --- //
 export function autoLinkKeywordsInText(
-  html: string = "",
-  galleryDatas: any[][] = [],
-  featheredImages: any[] = [],
-  galleryPaths: string[] = [],
-  semantic: any = defaultSemantic
+  html,
+  galleryDatas,
+  featheredImages,
+  galleryPaths,
+  semantic = defaultSemantic
 ) {
   // Manual override URLs
-  const overrides: Record<string, string> = {
+  const overrides = {
     "medical illustration": "https://heimmedicalart.com",
     "medical illustrator": "https://heimmedicalart.com",
   };
 
   // Section/gallery nav names
-  function flattenNav(nav: any[], map: Record<string, string> = {}) {
-    if (!Array.isArray(nav)) return map;
+  function flattenNav(nav, map = {}) {
     for (const entry of nav) {
       if (entry.label && entry.href) {
         map[entry.label.trim().toLowerCase()] = entry.href;
@@ -76,21 +74,22 @@ export function autoLinkKeywordsInText(
   const sectionLinks = flattenNav(siteNav);
 
   // Get feathered IDs (exclusions)
-  const featheredIds = new Set((featheredImages || []).map(img => img?.id));
+  const featheredIds = new Set(featheredImages.map(img => img.id));
 
-  // USE ROUND ROBIN POOL
+  // --- USE ROUND ROBIN POOL FOR IMAGES TO ASSIGN TO LINKS --- //
   const linkableImages = getRoundRobinImagePool(galleryDatas)
-    .filter(img => img && img.id && !featheredIds.has(img.id));
+    .filter(img => !featheredIds.has(img.id));
 
-  // Find current section/landing href for "self-link" reroute logic
+  // --- Find current section/landing href for "self-link" reroute logic --- //
   const currentSectionHref = getSectionHrefFromGalleryPaths(galleryPaths);
 
-  // Gather all unique, multi-word phrases
+  // --- Gather all unique, multi-word phrases (with suffixes, menu, overrides, semantic.phrases, and semantic.linkOverrides) ---
   const validPhrases = new Set(Object.keys(overrides));
-  const linkOverrides = ((semantic && semantic.linkOverrides) || []).map((s: string) => s.toLowerCase());
+  const linkOverrides = (semantic.linkOverrides || []).map(s => s.toLowerCase());
   linkOverrides.forEach(p => validPhrases.add(p));
 
-  if (semantic && semantic.phrases && Array.isArray(semantic.phrases)) {
+  // --- ADD ALL PHRASES FROM K4-Sem.ts ---
+  if (semantic.phrases && Array.isArray(semantic.phrases)) {
     for (const phrase of semantic.phrases) {
       if (typeof phrase === "string" && phrase.length > 1) {
         validPhrases.add(phrase.trim().toLowerCase());
@@ -106,25 +105,24 @@ export function autoLinkKeywordsInText(
     }
   });
 
-// Add ALL KWs/titles/desc from EVERY gallery image in every gallery database
-for (const galleryArr of galleryDatas) {
-  if (!Array.isArray(galleryArr)) continue;
-  for (const img of galleryArr) {
-    if (!img) continue;
-    [img.title, img.alt, img.description, ...(img.keywords || [])]
-      .filter(Boolean)
-      .forEach(str => {
-        if (typeof str === "string" && str.trim().split(/\s+/).length > 1) {
-          validPhrases.add(str.trim().toLowerCase());
-        }
-      });
+  // --- ADD ALL STRINGS FROM EVERY IMAGE IN EVERY DB --- //
+  for (const galleryArr of galleryDatas) {
+    if (!Array.isArray(galleryArr)) continue;
+    for (const img of galleryArr) {
+      if (!img) continue;
+      [img.title, img.alt, img.description, ...(img.keywords || [])]
+        .filter(Boolean)
+        .forEach(str => {
+          if (typeof str === "string" && str.trim().split(/\s+/).length > 1) {
+            validPhrases.add(str.trim().toLowerCase());
+          }
+        });
+    }
   }
-}
 
-
-  // Link only these phrases (sorted longest to shortest)
+  // --- 4. Link only these phrases (sorted longest to shortest) ---
   const allKeywords = Array.from(validPhrases).sort((a, b) => b.length - a.length);
-  if (allKeywords.length === 0 || typeof html !== "string") return html;
+  if (allKeywords.length === 0) return html;
   const keywordRegex = new RegExp(`\\b(${allKeywords.map(escapeRegex).join('|')})\\b`, "gi");
 
   let match, matches = [];
@@ -134,12 +132,13 @@ for (const galleryArr of galleryDatas) {
   matches.reverse();
 
   let output = html;
-  let alreadyLinked = new Set<string>();
+  let alreadyLinked = new Set();
+
   let imgIdx = 0;
   for (const { index, keyword } of matches) {
     const kwLower = keyword.toLowerCase();
     if (alreadyLinked.has(kwLower)) continue;
-    let href: string | null = null;
+    let href = null;
     // 1. Manual override
     if (overrides[kwLower]) {
       href = overrides[kwLower];
@@ -159,7 +158,7 @@ for (const galleryArr of galleryDatas) {
         ) {
           const img = linkableImages[imgIdx++] || linkableImages[0];
           if (img) {
-            let galleryIdx = galleryDatas.findIndex(arr => Array.isArray(arr) && arr.find(e => e.id === img.id));
+            let galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
             const idPart = img.id;
             href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
           }
@@ -172,7 +171,7 @@ for (const galleryArr of galleryDatas) {
     if (!href && linkOverrides.includes(kwLower)) {
       const img = linkableImages[imgIdx++] || linkableImages[0];
       if (img) {
-        let galleryIdx = galleryDatas.findIndex(arr => Array.isArray(arr) && arr.find(e => e.id === img.id));
+        let galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
         const idPart = img.id;
         href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
       }
@@ -181,7 +180,7 @@ for (const galleryArr of galleryDatas) {
     if (!href) {
       let img = linkableImages[imgIdx++] || linkableImages[0];
       if (img) {
-        let galleryIdx = galleryDatas.findIndex(arr => Array.isArray(arr) && arr.find(e => e.id === img.id));
+        let galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
         const idPart = img.id;
         href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
       }
