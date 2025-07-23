@@ -43,12 +43,15 @@ export function autoLinkKeywordsInText(
   const usedImageIds = new Set<string>();
 
   const sources = getGallerySources(currentPath);
-  const galleryPaths = sources.map(s => s.href); // ✅ fixed here
+  const galleryPaths = sources.map(s => String(s.href));
 
   const allGalleryImages = sources.flatMap(source =>
     source.images
       .filter(img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id))
-      .map(img => ({ ...img, href: `${source.href}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}` }))
+      .map(img => ({
+        ...img,
+        href: `${String(source.href)}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`
+      }))
   );
 
   const canonicalMap: Record<string, string> = {};
