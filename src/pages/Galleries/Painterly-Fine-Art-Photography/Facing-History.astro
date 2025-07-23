@@ -52,6 +52,11 @@ const featheredImages = getSideImages({
   galleryDatas,
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
+
+console.log("Facing History: galleryPaths", galleryPaths);
+console.log("Facing History: galleryDatas sample", galleryDatas.map(arr => arr.length));
+console.log("Facing History: featheredImages IDs", featheredImages.map(i => i.id));
+console.log("Facing History: K4 Semantic sample", (k4Semantic.phrases || []).slice(0, 10));
 ---
 
 <BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
