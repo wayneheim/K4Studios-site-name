@@ -9,8 +9,9 @@ import SiteFooter         from '../../../components/Footer.astro';
 import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
 
 import { siteNav } from '../../../data/siteNav.ts';
-import { autoLinkKeywordsInText } from '../../../components/utils/autoLinkKeywordsInText.ts';
 import { getSideImages } from '../../../components/utils/getSideImages.ts';
+import { autoLinkKeywordsInText } from '../../../components/utils/autoLinkKeywordsInText.ts';
+import { semantic as k4Semantic } from '../../../data/semantic/K4-Sem.ts';
 
 import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/landingstones.ts';
 import { facingHistoryStory as westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/story.ts';
@@ -19,26 +20,25 @@ import { facingFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photograph
 import '../../../styles/global.css';
 
 // ----------------------
-// UNIVERSAL IMAGE FEATHERING LOGIC (ALL CHILD GALLERIES)
+// DYNAMIC IMAGE FEATHERING LOGIC
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
 const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
-// Find all descendant gallery paths (nested children)
-function walk(nav, parentPath, out = []) {
+// Get gallery data from all immediate children of sectionPath
+function findNavEntry(nav, url) {
   for (const entry of nav) {
-    if (entry.href && entry.href.startsWith(parentPath) && entry.href !== parentPath) {
-      // Only add if no children (leaf galleries)
-      if (!entry.children || entry.children.length === 0) {
-        out.push(entry.href);
-      }
-      if (entry.children) walk(entry.children, parentPath, out);
+    if (entry.href === url) return entry;
+    if (entry.children) {
+      const found = findNavEntry(entry.children, url);
+      if (found) return found;
     }
   }
-  return out;
+  return null;
 }
-const galleryPaths = walk(siteNav, sectionPath);
+const landingNav = findNavEntry(siteNav, sectionPath);
+const galleryPaths = landingNav?.children?.map(c => c.href) || [];
 
 const allGalleryData = import.meta.glob('../../../data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
@@ -92,16 +92,22 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
         <section class="story-section">
           {westernStory.map((section, index) => (
             <article class="story-block" key={index}>
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths)} />}
+              {section.title && (
+                <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+              )}
+              {section.subhead && (
+                <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+              )}
+              {section.tagline && (
+                <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+              )}
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths)} />
+                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths)} />
+                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
                   ))}
                 </ul>
               )}
