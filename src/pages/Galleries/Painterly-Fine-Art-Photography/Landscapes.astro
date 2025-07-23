@@ -1,32 +1,62 @@
 ---
-import BaseLayout         from '../../../layouts/BaseLayout.astro';
-import LandingHeader      from '../../../components/Landing-Header.jsx';
-import ImageBar2          from '../../../components/ImageBar2.jsx';
-import TombstoneNav       from '../../../components/TombstoneNav.jsx';
-import LandingRightImages from '../../../components/LandingRightImages.jsx';
-import FAQAccordion       from '../../../components/FAQAccordion.jsx';
-import SiteFooter         from '../../../components/Footer.astro';
-import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
+import BaseLayout         from '../../layouts/BaseLayout.astro';
+import LandingHeader      from '../../components/Landing-Header.jsx';
+import ImageBar2          from '../../components/ImageBar2.jsx';
+import TombstoneNav       from '../../components/TombstoneNav.jsx';
+import LandingRightImages from '../../components/LandingRightImages.jsx';
+import FAQAccordion       from '../../components/FAQAccordion.jsx';
+import SiteFooter         from '../../components/Footer.astro';
+import MobileStoryImages  from '../../components/MobileStoryImages.jsx';
 
-import { autoLinkKeywordsInTextM } from '../../../components/utils/autoLinkKeywordsInTextM.ts';
-import { getSideImages } from '../../../components/utils/getSideImages.ts';
+import { siteNav } from '../../data/siteNav.ts';
+import { getSideImages } from '../../components/utils/getSideImages.ts';
+import { autoLinkKeywordsInText } from '../../components/utils/autoLinkKeywordsInText.ts';
+import { semantic as painterlySemantic } from '../../data/semantic/K4-Sem.ts';
 
-import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/landingstones.ts';
-import { westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/story.ts';
-import { facingFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/faq.ts';
+import { landingWestern } from '../../data/Galleries/Painterly-Fine-Art-Photography/landingstones.ts';
+import { painterlyStory as westernStory } from '../../data/Galleries/Painterly-Fine-Art-Photography/story.ts';
+import { facingFAQ } from '../../data/Galleries/Painterly-Fine-Art-Photography/faq.ts';
 
-import '../../../styles/global.css';
+import '../../styles/global.css';
 
-// ----------------------
-// UNIVERSAL IMAGE FEATHERING LOGIC (ALL CHILD GALLERIES)
-// ----------------------
+// ------ DYNAMIC LOGIC TO LOAD ALL DESCENDANT GALLERIES ------
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes";
-const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+// Recursively find nav node by href
+function findNavEntry(nav, url) {
+  for (const entry of nav) {
+    if (entry.href === url) return entry;
+    if (entry.children) {
+      const found = findNavEntry(entry.children, url);
+      if (found) return found;
+    }
+  }
+  return null;
+}
 
+// Recursively collect all descendant gallery hrefs (gallery-source only)
+function collectGalleryHrefs(node) {
+  let hrefs = [];
+  if (node?.type === 'gallery-source' && node.href) hrefs.push(node.href);
+  if (node.children) node.children.forEach(child => hrefs.push(...collectGalleryHrefs(child)));
+  return hrefs;
+}
+
+const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
+const navRoot = findNavEntry(siteNav, sectionPath);
+const galleryPaths = navRoot ? collectGalleryHrefs(navRoot) : [];
+
+const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
+const galleryDatas = galleryPaths.map(path => {
+  const filePath = "../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  return allGalleryData[filePath]?.galleryData || [];
+});
+
+// Feathered images (these are pulled from all descendants)
+const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getSideImages({
   sectionPath,
-  headingCount: mobileCount,
+  headingCount,
+  galleryDatas,
 });
 
 const featheredImagesSidebar = featheredImages.slice(0, 5);
@@ -37,19 +67,16 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
     </div>
-
     <div class="mobile-breadcrumb-wrapper">
       <div class="mobile-breadcrumb">
         {landingWestern.breadcrumb}
       </div>
     </div>
-
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
         <ImageBar2 client:load />
       </div>
     </div>
-
     <section class="section-heading-wrap">
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">
@@ -60,36 +87,32 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
         </h2>
       </div>
     </section>
-
     <div class="py-5">
       <TombstoneNav items={landingWestern.tombstones} />
     </div>
-
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section, index) => (
             <article class="story-block" key={index}>
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.title, sectionPath, featheredImages)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.subhead, sectionPath, featheredImages)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInTextM(section.tagline, sectionPath, featheredImages)} />}
+              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, painterlySemantic)} />}
+              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, painterlySemantic)} />}
+              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, painterlySemantic)} />}
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(para, sectionPath, featheredImages)} />
+                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, painterlySemantic)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(item, sectionPath, featheredImages)} />
+                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, painterlySemantic)} />
                   ))}
                 </ul>
               )}
             </article>
           ))}
         </section>
-
         <MobileStoryImages client:only="react" images={featheredImages} />
       </div>
-
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
@@ -99,7 +122,6 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
         </div>
       </div>
     </section>
-
     <section class="pb-10">
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container" style="min-height:0;">
@@ -109,10 +131,8 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
     </section>
-
     <SiteFooter class="pt-8 pb-12" />
   </main>
-
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
