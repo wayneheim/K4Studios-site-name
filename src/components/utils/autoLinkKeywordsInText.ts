@@ -43,6 +43,8 @@ export function autoLinkKeywordsInText(
   const usedImageIds = new Set<string>();
 
   const sources = getGallerySources(currentPath);
+  const galleryPaths = sources.map(s => s.href); // ✅ fixed here
+
   const allGalleryImages = sources.flatMap(source =>
     source.images
       .filter(img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id))
