@@ -13,7 +13,7 @@ import MobileStoryImages  from '../../../../components/MobileStoryImages.jsx';
 import { siteNav } from '../../../../data/siteNav.ts';
 import { getSideImages } from '../../../../components/utils/getSideImages.ts';
 import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
-import { semantic as cowboySemantic } from '../../../../data/semantic/K4-Sem.ts';
+import { semantic as cowboySemantic } from '../../../../data/semantic/Western-Cowboy-Portraits-Sem.ts';
 
 import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts';
 import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/story.ts';
@@ -22,7 +22,7 @@ import { westernFAQ } from '../../../../data/Galleries/Painterly-Fine-Art-Photog
 import '../../../../styles/global.css';
 import '../../../../styles/oneupheader.css';
 // ----------------------
-// DYNAMIC  LOGIC SECTION
+// DYNAMIC LOGIC SECTION
 // ----------------------
 
 // 1. Section Path (temporary until full routing is live)
@@ -95,51 +95,29 @@ const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas 
         <TombstoneNav items={landingWestern.tombstones} />
       </div>
 
-     <section class="story-section">
-  {westernStory.map((section, index) => (
-    <article class="story-block" key={index}>
-      {section.title && (
-        <h2
-          class="slide-in-left"
-          set:html={autoLinkKeywordsInText(section.title, featheredImages, sectionPath)}
-        />
-      )}
-      {section.subhead && (
-        <h3
-          class="slide-in-left"
-          set:html={autoLinkKeywordsInText(section.subhead, featheredImages, sectionPath)}
-        />
-      )}
-      {section.tagline && (
-        <h4
-          class="tagline reveal-on-scroll"
-          set:html={autoLinkKeywordsInText(section.tagline, featheredImages, sectionPath)}
-        />
-      )}
+      <section class="story-layout">
+        <div class="text-column">
+          <section class="story-section">
+            {westernStory.map((section, index) => (
+              <article class="story-block" key={index}>
+                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
 
-      {section.paragraphs?.map((para, i) => (
-        <p
-          key={i}
-          class="reveal-on-scroll"
-          set:html={autoLinkKeywordsInText(para, featheredImages, sectionPath)}
-        />
-      ))}
+                {section.paragraphs?.map((para, i) => (
+                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                ))}
 
-      {section.list && section.list.length > 0 && (
-        <ul>
-          {section.list.map((item, j) => (
-            <li
-              key={j}
-              class="reveal-on-scroll"
-              set:html={autoLinkKeywordsInText(item, featheredImages, sectionPath)}
-            />
-          ))}
-        </ul>
-      )}
-    </article>
-  ))}
-</section>
-
+                {section.list && section.list.length > 0 && (
+                  <ul>
+                    {section.list.map((item, j) => (
+                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                    ))}
+                  </ul>
+                )}
+              </article>
+            ))}
+          </section>
 
           <MobileStoryImages client:only="react" images={featheredImages} />
         </div>

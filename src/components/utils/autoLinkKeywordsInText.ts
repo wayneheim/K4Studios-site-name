@@ -1,106 +1,136 @@
+import { siteNav } from "../../data/siteNav.ts";
 import { semantic } from "../../data/semantic/K4-Sem.ts";
 
-// Max links per page
-const MAX_LINK_IMAGES = 30;
-
-// Helper: Build a master list of all unique keywords/phrases (including synonyms)
-function buildAllPhrases(semantic) {
-  const phrases = new Set([
-    ...(semantic.mainKeywords || []),
-    ...(semantic.longTails || []),
-    ...(semantic.linkOverrides || []),
-  ]);
-  if (semantic.synonymMap) {
-    Object.entries(semantic.synonymMap).forEach(([key, synonyms]) => {
-      phrases.add(key);
-      synonyms.forEach(s => phrases.add(s));
-    });
-  }
-  return Array.from(phrases).sort((a, b) => b.length - a.length);
-}
-
-// Helper: Escape regex
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-// Build image pool, alternating galleries, skipping ghost/feathered/dupes
-function buildImagePool(galleryDatas, featheredImages, max = MAX_LINK_IMAGES) {
-  const featheredIds = new Set(featheredImages.map(img => img.id));
-  const imagePool = [];
-  const usedIds = new Set();
-  const numGalleries = galleryDatas.length;
-  let idx = 0, cycles = 0;
-  while (imagePool.length < max && cycles < 200) {
-    const g = idx % numGalleries;
-    const gallery = galleryDatas[g] || [];
-    for (let i = 0; i < gallery.length; i++) {
-      const img = gallery[i];
-      if (
-        img &&
-        img.id &&
-        img.id !== "i-k4studios" &&
-        !featheredIds.has(img.id) &&
-        !usedIds.has(img.id)
-      ) {
-        imagePool.push({ ...img, galleryIdx: g });
-        usedIds.add(img.id);
-        break;
-      }
+function flattenNav(nav, map = {}) {
+  for (const entry of nav) {
+    if (entry.label && entry.href) {
+      map[entry.label.trim().toLowerCase()] = entry.href;
     }
-    idx++;
-    cycles++;
-    if (imagePool.length >= max) break;
-    if (idx > numGalleries * max) break; // safety
+    if (entry.children) flattenNav(entry.children, map);
   }
-  return imagePool;
+  return map;
+}
+
+function pickRandomImage(images) {
+  if (!images || images.length === 0) return null;
+  // Prioritize 3-5 star, else all
+  const high = images.filter(img => (img.rating ?? 0) >= 3);
+  const pool = high.length > 0 ? high : images;
+  return pool[Math.floor(Math.random() * pool.length)];
 }
 
 export function autoLinkKeywordsInText(
   html,
   galleryDatas,
   featheredImages,
-  galleryPaths,
-  semantic
+  galleryPaths
 ) {
-  if (!html) return html;
+  // Manual override URLs
+  const overrides = {
+    "medical illustration": "https://heimmedicalart.com",
+    "medical illustrator": "https://heimmedicalart.com",
 
-  // 1. Build master keyword/phrase list, include synonyms!
-  const phrases = buildAllPhrases(semantic);
-  if (phrases.length === 0) return html;
+  
+  };
 
-  // 2. Create regex for phrases (longest first)
-  const regex = new RegExp(
-    `\\b(${phrases.map(escapeRegex).join("|")})\\b`,
-    "gi"
-  );
+  // Section/gallery nav names
+  const sectionLinks = flattenNav(siteNav);
 
-  // 3. Build image pool (alternate, unique, skip ghosts/feathered)
-  const imagePool = buildImagePool(galleryDatas, featheredImages, MAX_LINK_IMAGES);
+  const featheredIds = new Set(featheredImages.map(img => img.id));
+  const linkableImages = [].concat(...galleryDatas)
+    .filter(img => !featheredIds.has(img.id));
 
-  let imgIdx = 0;
-  const linkedIds = new Set();
+  // --- Gather all unique, multi-word phrases (with suffixes, menu, overrides, and semantic linkOverrides) ---
+  const validPhrases = new Set(Object.keys(overrides));
 
-  // 4. Replace keyword matches with links (one per image, no repeats)
-  let output = html.replace(regex, (match) => {
-    if (imgIdx >= imagePool.length) return match; // Ran out, fallback to plain text
+  // Add semantic.linkOverrides (if present)
+  const linkOverrides = (semantic.linkOverrides || []).map(s => s.toLowerCase());
+  linkOverrides.forEach(p => validPhrases.add(p));
 
-    // Find gallery for this image
-    let img = imagePool[imgIdx++];
-    // Don't reuse an image on the same page
-    while (img && linkedIds.has(img.id) && imgIdx < imagePool.length) {
-      img = imagePool[imgIdx++];
+  // Add menu nav (with allowed suffixes)
+  const allowedSuffixes = ["series", "gallery", "collection", "art", "photos", "images"];
+  Object.keys(sectionLinks).forEach(label => {
+    if (label.split(/\s+/).length > 1) {
+      validPhrases.add(label);
+      allowedSuffixes.forEach(suffix => validPhrases.add(`${label} ${suffix}`.trim()));
     }
-    if (!img || linkedIds.has(img.id)) return match; // Out of images
-
-    linkedIds.add(img.id);
-
-    const idPart = img.id.startsWith("i-") ? img.id : `i-${img.id}`;
-    const galleryPath = galleryPaths?.[img.galleryIdx] || galleryPaths?.[0] || "";
-    const href = `${galleryPath}/${idPart}`;
-
-    return `<a href="${href}" class="kw-link">${match}</a>`;
   });
 
+  // Add gallery image multi-word phrases
+  for (const img of linkableImages) {
+    [img.title, img.alt, img.description, ...(img.keywords || [])]
+      .filter(Boolean)
+      .forEach(str => {
+        if (typeof str === "string" && str.trim().split(/\s+/).length > 1) {
+          validPhrases.add(str.trim().toLowerCase());
+        }
+      });
+  }
+
+  // --- 4. Link only these phrases (sorted longest to shortest) ---
+  const allKeywords = Array.from(validPhrases).sort((a, b) => b.length - a.length);
+  if (allKeywords.length === 0) return html;
+  const keywordRegex = new RegExp(`\\b(${allKeywords.map(escapeRegex).join('|')})\\b`, "gi");
+
+  let match, matches = [];
+  while ((match = keywordRegex.exec(html)) !== null) {
+    matches.push({ index: match.index, keyword: match[1] });
+  }
+  matches.reverse();
+
+  let output = html;
+  let alreadyLinked = new Set();
+
+  for (const { index, keyword } of matches) {
+    const kwLower = keyword.toLowerCase();
+    if (alreadyLinked.has(kwLower)) continue;
+    let href = null;
+    // 1. Manual override
+    if (overrides[kwLower]) {
+      href = overrides[kwLower];
+    }
+    // 2. Section/gallery name (lookup with/without suffix)
+    else {
+      let navLabel = Object.keys(sectionLinks).find(label =>
+        kwLower === label ||
+        allowedSuffixes.some(suffix => kwLower === `${label} ${suffix}`)
+      );
+      if (navLabel) {
+        href = sectionLinks[navLabel];
+      }
+    }
+    // 3. Semantic linkOverride (random image)
+    if (!href && linkOverrides.includes(kwLower)) {
+      const img = pickRandomImage(linkableImages);
+      if (img) {
+        let galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
+        const idPart = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
+        href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
+      }
+    }
+    // 4.  Image keyword
+    if (!href) {
+      let img = linkableImages.find(img =>
+        [img.title, img.alt, img.description, ...(img.keywords || [])]
+          .filter(Boolean)
+          .some(str => typeof str === "string" && str.trim().toLowerCase() === kwLower)
+      );
+      if (img) {
+        let galleryIdx = galleryDatas.findIndex(arr => arr.find(e => e.id === img.id));
+        const idPart = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
+        href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
+      }
+    }
+    if (href) {
+      output = output.slice(0, index) +
+        `<a href="${href}" class="kw-link">${keyword}</a>` +
+        output.slice(index + keyword.length);
+      alreadyLinked.add(kwLower);
+    }
+  }
   return output;
 }
