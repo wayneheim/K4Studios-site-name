@@ -1,116 +1,106 @@
-import { siteNav } from "../../data/siteNav.ts";
 import { semantic } from "../../data/semantic/K4-Sem.ts";
-const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
 
-const GHOST_IMAGE_ID = "i-k4studios";
+// Max links per page
+const MAX_LINK_IMAGES = 30;
 
-// Util to walk siteNav for all direct child galleries of current section
-function getGalleryChildren(sectionPath) {
-  function findNode(tree) {
-    for (const node of tree) {
-      if (node.href === sectionPath) return node;
-      if (node.children) {
-        const found = findNode(node.children, sectionPath);
-        if (found) return found;
-      }
-    }
-    return null;
+// Helper: Build a master list of all unique keywords/phrases (including synonyms)
+function buildAllPhrases(semantic) {
+  const phrases = new Set([
+    ...(semantic.mainKeywords || []),
+    ...(semantic.longTails || []),
+    ...(semantic.linkOverrides || []),
+  ]);
+  if (semantic.synonymMap) {
+    Object.entries(semantic.synonymMap).forEach(([key, synonyms]) => {
+      phrases.add(key);
+      synonyms.forEach(s => phrases.add(s));
+    });
   }
-  const node = findNode(siteNav);
-  return node?.children || [];
+  return Array.from(phrases).sort((a, b) => b.length - a.length);
 }
 
-// Classic round-robin gallery image picker (like feathered images)
-function getAlternatingGalleryImages(sectionPath, featheredIds = new Set()) {
-  const galleryChildren = getGalleryChildren(sectionPath);
-  // For each gallery, load & shuffle images (excluding ghost & feathered)
-  const galleriesWithImages = galleryChildren.map(child => {
-    const filePath = '../../data' + child.href + '.mjs';
-    const mod = allGalleryData[filePath];
-    const allImages = (mod?.galleryData || mod?.default || []).filter(
-      img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id)
-    );
-    return { images: [...allImages], child };
-  });
-
-  // Round-robin pluck (Color, BW, Color, BW, etc)
-  const alternated = [];
-  let idx = 0;
-  let exhausted = false;
-  while (!exhausted) {
-    exhausted = true;
-    for (const gallery of galleriesWithImages) {
-      if (gallery.images[idx]) {
-        const img = gallery.images[idx];
-        alternated.push({
-          ...img,
-          href: `${gallery.child.href}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`,
-        });
-        exhausted = false;
-      }
-    }
-    idx++;
-  }
-  return alternated;
-}
-
+// Helper: Escape regex
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-export function autoLinkKeywordsInText(
-  html,
-  featheredImages,
-  sectionPath
-) {
-  if (!html || typeof html !== "string") return html;
-
+// Build image pool, alternating galleries, skipping ghost/feathered/dupes
+function buildImagePool(galleryDatas, featheredImages, max = MAX_LINK_IMAGES) {
   const featheredIds = new Set(featheredImages.map(img => img.id));
-  const alternatedImages = getAlternatingGalleryImages(sectionPath, featheredIds);
-  const usedImageIds = new Set();
-
-  // Canonicalize all keywords/phrases + synonyms
-  const canonicalMap = {};
-  for (const phrase of semantic.phrases || []) {
-    canonicalMap[phrase.trim().toLowerCase()] = phrase.trim().toLowerCase();
-  }
-  for (const [canonical, synonyms] of Object.entries(semantic.synonymMap || {})) {
-    const base = canonical.trim().toLowerCase();
-    canonicalMap[base] = base;
-    for (const syn of synonyms) {
-      const s = syn.trim().toLowerCase();
-      if (!canonicalMap[s]) canonicalMap[s] = base;
-    }
-  }
-  const allMatchable = Object.keys(canonicalMap).sort((a, b) => b.length - a.length);
-  const regex = new RegExp(`\\b(${allMatchable.map(escapeRegex).join("|")})\\b`, "gi");
-
-  let match, matches = [];
-  while ((match = regex.exec(html)) !== null) {
-    matches.push({ index: match.index, keyword: match[1] });
-  }
-  matches.reverse();
-
-  let output = html;
-  let imageIdx = 0;
-
-  for (const { index, keyword } of matches) {
-    // Pull next available image that hasn't been used yet
-    let pick = null;
-    while (imageIdx < alternatedImages.length) {
-      const candidate = alternatedImages[imageIdx++];
-      if (!usedImageIds.has(candidate.id)) {
-        pick = candidate;
-        usedImageIds.add(candidate.id);
+  const imagePool = [];
+  const usedIds = new Set();
+  const numGalleries = galleryDatas.length;
+  let idx = 0, cycles = 0;
+  while (imagePool.length < max && cycles < 200) {
+    const g = idx % numGalleries;
+    const gallery = galleryDatas[g] || [];
+    for (let i = 0; i < gallery.length; i++) {
+      const img = gallery[i];
+      if (
+        img &&
+        img.id &&
+        img.id !== "i-k4studios" &&
+        !featheredIds.has(img.id) &&
+        !usedIds.has(img.id)
+      ) {
+        imagePool.push({ ...img, galleryIdx: g });
+        usedIds.add(img.id);
         break;
       }
     }
-    if (!pick) continue; // out of images
-
-    const href = pick.href;
-    output = output.slice(0, index) +
-      `<a href="${href}" class="kw-link">${keyword}</a>` +
-      output.slice(index + keyword.length);
+    idx++;
+    cycles++;
+    if (imagePool.length >= max) break;
+    if (idx > numGalleries * max) break; // safety
   }
+  return imagePool;
+}
+
+export function autoLinkKeywordsInText(
+  html,
+  galleryDatas,
+  featheredImages,
+  galleryPaths,
+  semantic
+) {
+  if (!html) return html;
+
+  // 1. Build master keyword/phrase list, include synonyms!
+  const phrases = buildAllPhrases(semantic);
+  if (phrases.length === 0) return html;
+
+  // 2. Create regex for phrases (longest first)
+  const regex = new RegExp(
+    `\\b(${phrases.map(escapeRegex).join("|")})\\b`,
+    "gi"
+  );
+
+  // 3. Build image pool (alternate, unique, skip ghosts/feathered)
+  const imagePool = buildImagePool(galleryDatas, featheredImages, MAX_LINK_IMAGES);
+
+  let imgIdx = 0;
+  const linkedIds = new Set();
+
+  // 4. Replace keyword matches with links (one per image, no repeats)
+  let output = html.replace(regex, (match) => {
+    if (imgIdx >= imagePool.length) return match; // Ran out, fallback to plain text
+
+    // Find gallery for this image
+    let img = imagePool[imgIdx++];
+    // Don't reuse an image on the same page
+    while (img && linkedIds.has(img.id) && imgIdx < imagePool.length) {
+      img = imagePool[imgIdx++];
+    }
+    if (!img || linkedIds.has(img.id)) return match; // Out of images
+
+    linkedIds.add(img.id);
+
+    const idPart = img.id.startsWith("i-") ? img.id : `i-${img.id}`;
+    const galleryPath = galleryPaths?.[img.galleryIdx] || galleryPaths?.[0] || "";
+    const href = `${galleryPath}/${idPart}`;
+
+    return `<a href="${href}" class="kw-link">${match}</a>`;
+  });
+
   return output;
 }
