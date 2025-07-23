@@ -30,6 +30,8 @@ export const semantic = {
     "museum quality prints",
     "western landscapes fine art",
     "frederic remington",
+    "1920s portraits",
+    "Bootleggers",
     "award-winning fine art photographer",
     "steam engine wall art for collectors",
     "gallery highlights",
