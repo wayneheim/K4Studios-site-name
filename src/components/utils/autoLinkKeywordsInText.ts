@@ -10,7 +10,7 @@ function getGalleryChildren(sectionPath) {
     for (const node of tree) {
       if (node.href === sectionPath) return node;
       if (node.children) {
-        const found = findNode(node.children);
+        const found = findNode(node.children, sectionPath);
         if (found) return found;
       }
     }
@@ -30,7 +30,6 @@ function getAllGalleryImages(sectionPath, featheredIds = new Set()) {
     const images = (mod?.galleryData || mod?.default || []).filter(
       img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id)
     );
-    // Sort by sortOrder or any other logic as in getSideImages if needed
     for (const img of images) {
       results.push({
         ...img,
@@ -54,12 +53,9 @@ export function autoLinkKeywordsInText(
 
   const featheredIds = new Set(featheredImages.map(img => img.id));
   const allGalleryImages = getAllGalleryImages(sectionPath, featheredIds);
-  console.warn("KWLINK allGalleryImages", allGalleryImages.length, allGalleryImages.map(img => img.id));
-
-  let imgIdx = 0;
   const usedImageIds = new Set();
 
-  // Canonicalize all keywords/phrases + synonyms (as in getSideImages)
+  // Canonicalize all keywords/phrases + synonyms
   const canonicalMap = {};
   for (const phrase of semantic.phrases || []) {
     canonicalMap[phrase.trim().toLowerCase()] = phrase.trim().toLowerCase();
@@ -81,8 +77,6 @@ export function autoLinkKeywordsInText(
   }
   matches.reverse();
 
-  console.warn("KWLINK matches", matches.length, matches.map(m => m.keyword));
-
   let output = html;
   const alreadyLinkedCanonicals = new Set();
 
@@ -91,20 +85,13 @@ export function autoLinkKeywordsInText(
     const canonical = canonicalMap[lower];
     if (!canonical || alreadyLinkedCanonicals.has(canonical)) continue;
 
-    // Pull next available image in round-robin
-    let pick;
-    while (imgIdx < allGalleryImages.length) {
-      if (!usedImageIds.has(allGalleryImages[imgIdx].id)) {
-        pick = allGalleryImages[imgIdx];
-        usedImageIds.add(pick.id);
-        imgIdx++;
-        break;
-      }
-      imgIdx++;
-    }
-    console.warn("KWLINK pick", pick && pick.id, pick && pick.href);
+    // Pull next available image that hasn't been used yet
+    const availableImages = allGalleryImages.filter(img => !usedImageIds.has(img.id));
+    const pick = availableImages[0];
+
     if (!pick) continue; // no image left
 
+    usedImageIds.add(pick.id);
     const href = pick.href;
 
     output = output.slice(0, index) +
