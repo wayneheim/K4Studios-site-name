@@ -8,9 +8,8 @@ import FAQAccordion       from '../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../components/Footer.astro';
 import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
 
-import { siteNav } from '../../../data/siteNav.ts';
+import { autoLinkKeywordsInTextM } from '../../../components/utils/autoLinkKeywordsInTextM.ts';
 import { getSideImages } from '../../../components/utils/getSideImages.ts';
-import { autoLinkKeywordsInTextM } from '../../../components/utils/autoLinkKeywordsInText.ts';
 
 import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/landingstones.ts';
 import { facingHistoryStory as westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/story.ts';
@@ -33,6 +32,7 @@ const featheredImages = getSideImages({
 // Desktop sidebar: always 5 samples
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 ---
+
 <BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
