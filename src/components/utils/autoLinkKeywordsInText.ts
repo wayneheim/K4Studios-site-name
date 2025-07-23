@@ -1,20 +1,16 @@
 import { siteNav } from "../../data/siteNav.ts";
 import { semantic as defaultSemantic } from "../../data/semantic/K4-Sem.ts";
 
-function escapeRegex(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
 // --- ROUND ROBIN Pool Logic --- //
-function getRoundRobinImagePool(galleryDatas) {
+function getRoundRobinImagePool(galleryDatas, galleryPaths) {
   if (!Array.isArray(galleryDatas) || galleryDatas.length === 0) return [];
   const pools = galleryDatas
-    .filter(arr => Array.isArray(arr) && arr.length) // only real arrays with images
-    .map(arr => {
-      let images = arr.filter(img => img && img.id !== "i-k4studios");
+    .map((arr, i) => {
+      let images = (arr || []).filter(img => img && img.id !== "i-k4studios");
       if (images.length > 30) images = images.sort(() => Math.random() - 0.5).slice(0, 30);
       if (images.length > 20) images = images.sort(() => Math.random() - 0.5).slice(0, 20);
-      return images.sort(() => Math.random() - 0.5);
+      // Attach galleryPath to each
+      return images.map(img => ({ img, galleryPath: galleryPaths[i] }));
     });
   const roundRobin = [];
   let i = 0, added;
@@ -45,6 +41,10 @@ function getSectionHrefFromGalleryPaths(paths) {
     }
   }
   return "/" + prefix.join("/");
+}
+
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 // --- MAIN LINKING FUNCTION --- //
@@ -79,9 +79,9 @@ export function autoLinkKeywordsInText(
   // Get feathered IDs (exclusions)
   const featheredIds = new Set((featheredImages || []).map(img => img.id));
 
-  // --- USE ROUND ROBIN POOL --- //
-  const linkableImages = getRoundRobinImagePool(galleryDatas)
-    .filter(img => img && !featheredIds.has(img.id));
+  // --- USE IMPROVED ROUND ROBIN POOL --- //
+  const linkableImages = getRoundRobinImagePool(galleryDatas, galleryPaths)
+    .filter(({ img }) => img && !featheredIds.has(img.id));
 
   // --- Find current section/landing href for "self-link" reroute logic --- //
   const currentSectionHref = getSectionHrefFromGalleryPaths(galleryPaths);
@@ -107,7 +107,7 @@ export function autoLinkKeywordsInText(
     }
   });
 
-  for (const img of linkableImages) {
+  for (const { img } of linkableImages) {
     [img.title, img.alt, img.description, ...(img.keywords || [])]
       .filter(Boolean)
       .forEach(str => {
@@ -152,33 +152,30 @@ export function autoLinkKeywordsInText(
           currentSectionHref &&
           navHref.replace(/\/$/, "") === currentSectionHref.replace(/\/$/, "")
         ) {
-          const img = linkableImages[imgIdx++] || linkableImages[0];
-          if (img) {
-            let galleryIdx = Math.max(0, galleryDatas.findIndex(arr => arr.find(e => e.id === img.id)));
-            const idPart = img.id;
-            href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
+          const entry = linkableImages[imgIdx++] || linkableImages[0];
+          if (entry) {
+            const { img, galleryPath } = entry;
+            href = `${galleryPath}/${img.id}`;
           }
         } else {
           href = navHref;
         }
       }
     }
-    // 3. S emantic linkOverride (random image)
+    // 3. Semantic linkOverride (random image)
     if (!href && linkOverrides.includes(kwLower)) {
-      const img = linkableImages[imgIdx++] || linkableImages[0];
-      if (img) {
-        let galleryIdx = Math.max(0, galleryDatas.findIndex(arr => arr.find(e => e.id === img.id)));
-        const idPart = img.id;
-        href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
+      const entry = linkableImages[imgIdx++] || linkableImages[0];
+      if (entry) {
+        const { img, galleryPath } = entry;
+        href = `${galleryPath}/${img.id}`;
       }
     }
     // 4.  Image keyword
     if (!href) {
-      let img = linkableImages[imgIdx++] || linkableImages[0];
-      if (img) {
-        let galleryIdx = Math.max(0, galleryDatas.findIndex(arr => arr.find(e => e.id === img.id)));
-        const idPart = img.id;
-        href = `${galleryPaths[galleryIdx] || galleryPaths[0]}/${idPart}`;
+      const entry = linkableImages[imgIdx++] || linkableImages[0];
+      if (entry) {
+        const { img, galleryPath } = entry;
+        href = `${galleryPath}/${img.id}`;
       }
     }
     if (href) {
