@@ -8,7 +8,8 @@ import FAQAccordion       from '../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../components/Footer.astro';
 import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
 
-import { autoLinkKeywordsInTextM } from '../../../components/utils/autoLinkKeywordsInTextM.ts';
+import { siteNav } from '../../../data/siteNav.ts';
+import { autoLinkKeywordsInText } from '../../../components/utils/autoLinkKeywordsInText.ts';
 import { getSideImages } from '../../../components/utils/getSideImages.ts';
 
 import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/landingstones.ts';
@@ -24,12 +25,32 @@ import '../../../styles/global.css';
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
 const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
+// Find all descendant gallery paths (nested children)
+function walk(nav, parentPath, out = []) {
+  for (const entry of nav) {
+    if (entry.href && entry.href.startsWith(parentPath) && entry.href !== parentPath) {
+      // Only add if no children (leaf galleries)
+      if (!entry.children || entry.children.length === 0) {
+        out.push(entry.href);
+      }
+      if (entry.children) walk(entry.children, parentPath, out);
+    }
+  }
+  return out;
+}
+const galleryPaths = walk(siteNav, sectionPath);
+
+const allGalleryData = import.meta.glob('../../../data/Galleries/**/*.mjs', { eager: true });
+const galleryDatas = galleryPaths.map(path => {
+  const filePath = "../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  return allGalleryData[filePath]?.galleryData || [];
+});
+
 const featheredImages = getSideImages({
   sectionPath,
   headingCount: mobileCount,
+  galleryDatas,
 });
-
-// Desktop sidebar: always 5 samples
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 ---
 
@@ -71,16 +92,16 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
         <section class="story-section">
           {westernStory.map((section, index) => (
             <article class="story-block" key={index}>
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.title, sectionPath, featheredImages)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.subhead, sectionPath, featheredImages)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInTextM(section.tagline, sectionPath, featheredImages)} />}
+              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths)} />}
+              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths)} />}
+              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths)} />}
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(para, sectionPath, featheredImages)} />
+                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(item, sectionPath, featheredImages)} />
+                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths)} />
                   ))}
                 </ul>
               )}
@@ -140,6 +161,8 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
       }
     });
   </script>
+</BaseLayout>
+
 
   <style>
     ul {
