@@ -40,8 +40,23 @@ function findNavEntry(nav, url) {
   return null;
 }
 
+// Recursively walk all descendants and return their .href if they’re a gallery
+function gatherGalleryPaths(navEntry) {
+  let result = [];
+  if (!navEntry) return result;
+  if (!navEntry.children || navEntry.children.length === 0) {
+    if (navEntry.href && navEntry.href.startsWith("/Galleries")) result.push(navEntry.href);
+    return result;
+  }
+  for (const child of navEntry.children) {
+    result = result.concat(gatherGalleryPaths(child));
+  }
+  return result;
+}
+
 const landingNav = findNavEntry(siteNav, sectionPath);
-const galleryPaths = landingNav?.children?.map(c => c.href) || [];
+const galleryPaths = gatherGalleryPaths(landingNav);
+
 
 
 // 3. Load gallery data
