@@ -28,29 +28,8 @@ import '../../../../styles/oneupheader.css';
 // 1. Section Path (temporary until full routing is live)
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits";
 
-// 2. Get matching gallery paths from siteNav (Color & B/W)
-function findNavEntry(nav, url) {
-  for (const entry of nav) {
-    if (entry.href === url) return entry;
-    if (entry.children) {
-      const found = findNavEntry(entry.children, url);
-      if (found) return found;
-    }
-  }
-  return null;
-}
-
-const landingNav = findNavEntry(siteNav, sectionPath);
-const galleryPaths = landingNav?.children?.filter(c =>
-  /\/Color$|\/Black-White$/.test(c.href)
-).map(c => c.href) || [];
-
-// 3. Load gallery data
 const allGalleryData = import.meta.glob('../../../../data/Galleries/**/*.mjs', { eager: true });
-const galleryDatas = galleryPaths.map(path => {
-  const filePath = "../../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-  return allGalleryData[filePath]?.galleryData || [];
-});
+
 
 // 4. Feathered image injection logic
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
@@ -95,29 +74,111 @@ const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas 
         <TombstoneNav items={landingWestern.tombstones} />
       </div>
 
-      <section class="story-layout">
-        <div class="text-column">
-          <section class="story-section">
-            {westernStory.map((section, index) => (
-              <article class="story-block" key={index}>
-                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+   <section class="story-layout">
+  <div class="text-column">
+    <section class="story-section">
+      {westernStory.map((section, index) => (
+        <article class="story-block" key={index}>
+          {section.title && (
+            <h2
+              class="slide-in-left"
+              set:html={
+                autoLinkKeywordsInText(
+                  section.title,
+                  featheredImages,
+                  sectionPath,
+                  siteNav,
+                  cowboySemantic,
+                  allGalleryData
+                )
+              }
+            />
+          )}
+          {section.subhead && (
+            <h3
+              class="slide-in-left"
+              set:html={
+                autoLinkKeywordsInText(
+                  section.subhead,
+                  featheredImages,
+                  sectionPath,
+                  siteNav,
+                  cowboySemantic,
+                  allGalleryData
+                )
+              }
+            />
+          )}
+          {section.tagline && (
+            <h4
+              class="tagline reveal-on-scroll"
+              set:html={
+                autoLinkKeywordsInText(
+                  section.tagline,
+                  featheredImages,
+                  sectionPath,
+                  siteNav,
+                  cowboySemantic,
+                  allGalleryData
+                )
+              }
+            />
+          )}
 
-                {section.paragraphs?.map((para, i) => (
-                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-                ))}
+          {section.paragraphs?.map((para, i) => (
+            <p
+              key={i}
+              class="reveal-on-scroll"
+              set:html={
+                autoLinkKeywordsInText(
+                  para,
+                  featheredImages,
+                  sectionPath,
+                  siteNav,
+                  cowboySemantic,
+                  allGalleryData
+                )
+              }
+            />
+          ))}
 
-                {section.list && section.list.length > 0 && (
-                  <ul>
-                    {section.list.map((item, j) => (
-                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-                    ))}
-                  </ul>
-                )}
-              </article>
-            ))}
-          </section>
+          {section.list && section.list.length > 0 && (
+            <ul>
+              {section.list.map((item, j) => (
+                <li
+                  key={j}
+                  class="reveal-on-scroll"
+                  set:html={
+                    autoLinkKeywordsInText(
+                      item,
+                      featheredImages,
+                      sectionPath,
+                      siteNav,
+                      cowboySemantic,
+                      allGalleryData
+                    )
+                  }
+                />
+              ))}
+            </ul>
+          )}
+        </article>
+      ))}
+    </section>
+
+    <MobileStoryImages client:only="react" images={featheredImages} />
+  </div>
+
+  <div class="sidebar-column hidden md:block">
+    <div class="sample-fade reveal-on-scroll">
+      <LandingRightImages
+        heading="Featured Portraits"
+        images={featheredImages.slice(0, 5)}
+      />
+    </div>
+  </div>
+</section>
+
 
           <MobileStoryImages client:only="react" images={featheredImages} />
         </div>
