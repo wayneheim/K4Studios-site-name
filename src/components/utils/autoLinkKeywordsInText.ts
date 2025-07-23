@@ -39,6 +39,7 @@ export function autoLinkKeywordsInText(
   const usedImageIds = new Set<string>();
 
   const sources = getGallerySources(currentPath);
+  console.warn("KWLINK gallerySources:", sources.length);
 
   const allGalleryImages = sources.flatMap(source =>
     source.images
@@ -48,6 +49,9 @@ export function autoLinkKeywordsInText(
         href: `${source.href}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`
       }))
   );
+
+  console.warn("KWLINK total images:", allGalleryImages.length);
+  console.warn("KWLINK first image:", allGalleryImages[0]);
 
   const canonicalMap: Record<string, string> = {};
   for (const phrase of semantic.phrases || []) {
