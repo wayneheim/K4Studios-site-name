@@ -1,4 +1,5 @@
 import { siteNav } from "../../data/siteNav.ts";
+import { semantic } from "../../data/semantic/K4-Sem.ts"; // <-- move import to top!
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
 
 const GHOST_IMAGE_ID = "i-k4studios";
@@ -44,8 +45,7 @@ export function autoLinkKeywordsInText(
   let imgIdx = 0;
   const usedImageIds = new Set();
 
-  // Build keyword list from phrases and synonyms (assuming you import semantic)
-  const { semantic } = await import("../../data/semantic/K4-Sem.ts");
+  // Build keyword list from phrases and synonyms (assuming you import semantic at the top)
   const canonicalMap = {};
   for (const phrase of semantic.phrases || []) {
     canonicalMap[phrase.trim().toLowerCase()] = phrase.trim().toLowerCase();
