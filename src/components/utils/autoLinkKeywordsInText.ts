@@ -1,32 +1,18 @@
 import { siteNav } from "../../data/siteNav.ts";
 import { semantic as defaultSemantic } from "../../data/semantic/K4-Sem.ts";
 
-// Utility: Get all descendant gallery paths (leaves, not landing pages)
-function getAllDescendantGalleryPaths(nav, parentPath) {
-  const paths = [];
-  function walk(node) {
-    if (node.href && node.href.startsWith(parentPath) && node.href !== parentPath) {
-      if (!node.children || node.children.length === 0) {
-        paths.push(node.href);
-      } else {
-        node.children.forEach(walk);
-      }
-    }
-  }
-  nav.forEach(walk);
-  return paths;
-}
-
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 // --- ROUND ROBIN Pool Logic --- //
 function getRoundRobinImagePool(galleryDatas) {
+  // Each galleryDatas[n] is an array of images (one per gallery)
   const pools = galleryDatas.map(arr => {
     let images = arr.filter(img => img && img.id !== "i-k4studios");
     if (images.length > 30) images = images.sort(() => Math.random() - 0.5).slice(0, 30);
     if (images.length > 20) images = images.sort(() => Math.random() - 0.5).slice(0, 20);
+    // Shuffle each pool independently
     return images.sort(() => Math.random() - 0.5);
   });
 
@@ -64,21 +50,12 @@ function getSectionHrefFromGalleryPaths(paths) {
 // --- MAIN LINKING FUNCTION --- //
 export function autoLinkKeywordsInText(
   html,
+  galleryDatas,
   featheredImages,
-  sectionPath, // new: pass the section's url path (e.g. "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII")
-  allGalleryData, // pass your import.meta.glob obj here
+  galleryPaths,
   semantic = defaultSemantic
 ) {
-  // 1. Gather all galleryPaths below this section
-  const galleryPaths = getAllDescendantGalleryPaths(siteNav, sectionPath);
-
-  // 2. Load all galleryDatas for the children (recursive, future-proof)
-  const galleryDatas = galleryPaths.map(path => {
-    const filePath = "../../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-    return allGalleryData[filePath]?.galleryData || [];
-  });
-
-  // 3. Manual override URLs
+  // Manual override URLs
   const overrides = {
     "medical illustration": "https://heimmedicalart.com",
     "medical illustrator": "https://heimmedicalart.com",
