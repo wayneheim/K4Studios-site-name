@@ -1,51 +1,65 @@
 import { siteNav } from "../../data/siteNav.ts";
-import { semantic } from "../../data/semantic/K4-Sem.ts"; // <-- move import to top!
+import { semantic } from "../../data/semantic/K4-Sem.ts";
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
 
 const GHOST_IMAGE_ID = "i-k4studios";
+
+// Util to walk siteNav for all direct child galleries of current section
+function getGalleryChildren(sectionPath) {
+  function findNode(tree) {
+    for (const node of tree) {
+      if (node.href === sectionPath) return node;
+      if (node.children) {
+        const found = findNode(node.children);
+        if (found) return found;
+      }
+    }
+    return null;
+  }
+  const node = findNode(siteNav);
+  return node?.children || [];
+}
+
+// Collect all images, feathered-excluded, grouped by gallery
+function getAllGalleryImages(sectionPath, featheredIds = new Set()) {
+  const galleryChildren = getGalleryChildren(sectionPath);
+  const results = [];
+  for (const child of galleryChildren) {
+    const filePath = '../../data' + child.href + '.mjs';
+    const mod = allGalleryData[filePath];
+    const images = (mod?.galleryData || mod?.default || []).filter(
+      img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id)
+    );
+    // Sort by sortOrder or any other logic as in getSideImages if needed
+    for (const img of images) {
+      results.push({
+        ...img,
+        href: `${child.href}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`
+      });
+    }
+  }
+  return results;
+}
 
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-// Walk siteNav and gather all image data for current section's child galleries
-function getAllGalleryImages(currentPath, featheredIds = new Set()) {
-  const results = [];
-  function walk(node) {
-    if (node.href === currentPath && node.children) {
-      for (const child of node.children) {
-        const path = '../../data' + child.href + '.mjs';
-        const mod = allGalleryData[path];
-        const images = (mod?.galleryData || mod?.default || [])
-          .filter(img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id));
-        for (const img of images) {
-          results.push({
-            ...img,
-            href: `${child.href}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`,
-          });
-        }
-      }
-    } else if (node.children) {
-      for (const child of node.children) walk(child);
-    }
-  }
-  for (const n of siteNav) walk(n);
-  return results;
-}
-
 export function autoLinkKeywordsInText(
   html,
   featheredImages,
-  currentPath
+  sectionPath
 ) {
   if (!html || typeof html !== "string") return html;
 
   const featheredIds = new Set(featheredImages.map(img => img.id));
-  const allGalleryImages = getAllGalleryImages(currentPath, featheredIds);
+  const allGalleryImages = getAllGalleryImages(sectionPath, featheredIds);
+  console.warn("KWLINK allGalleryImages", allGalleryImages.length, allGalleryImages.map(img => img.id));
+
   let imgIdx = 0;
   const usedImageIds = new Set();
 
-  // Build keyword list from phrases and synonyms (assuming you import semantic at the top)
+  // Canonicalize all keywords/phrases + synonyms (as in getSideImages)
   const canonicalMap = {};
   for (const phrase of semantic.phrases || []) {
     canonicalMap[phrase.trim().toLowerCase()] = phrase.trim().toLowerCase();
@@ -67,6 +81,8 @@ export function autoLinkKeywordsInText(
   }
   matches.reverse();
 
+  console.warn("KWLINK matches", matches.length, matches.map(m => m.keyword));
+
   let output = html;
   const alreadyLinkedCanonicals = new Set();
 
@@ -75,7 +91,7 @@ export function autoLinkKeywordsInText(
     const canonical = canonicalMap[lower];
     if (!canonical || alreadyLinkedCanonicals.has(canonical)) continue;
 
-    // Pick the next unused image
+    // Pull next available image in round-robin
     let pick;
     while (imgIdx < allGalleryImages.length) {
       if (!usedImageIds.has(allGalleryImages[imgIdx].id)) {
@@ -86,7 +102,10 @@ export function autoLinkKeywordsInText(
       }
       imgIdx++;
     }
-    const href = pick ? pick.href : "";
+    console.warn("KWLINK pick", pick && pick.id, pick && pick.href);
+    if (!pick) continue; // no image left
+
+    const href = pick.href;
 
     output = output.slice(0, index) +
       `<a href="${href}" class="kw-link">${keyword}</a>` +
