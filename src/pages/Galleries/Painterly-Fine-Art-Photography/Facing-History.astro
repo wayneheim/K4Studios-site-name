@@ -20,13 +20,20 @@ import { facingFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photograph
 import '../../../styles/global.css';
 
 // ----------------------
-// DYNAMIC IMAGE  FEATHERING LOGIC
+// DYNAMIC IMAGE FEATHERING LOGIC
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
 const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
-// Get gallery data from all immediate children of sectionPath
+// --- COLLECT ALL DESCENDANT GALLERIES --- //
+function collectGalleryHrefs(node) {
+  let hrefs = [];
+  if (node.href && node.href.startsWith('/Galleries/')) hrefs.push(node.href);
+  if (node.children) node.children.forEach(child => hrefs.push(...collectGalleryHrefs(child)));
+  return hrefs;
+}
+
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -37,8 +44,9 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
+
 const landingNav = findNavEntry(siteNav, sectionPath);
-const galleryPaths = landingNav?.children?.map(c => c.href) || [];
+const galleryPaths = landingNav ? collectGalleryHrefs(landingNav) : [];
 
 const allGalleryData = import.meta.glob('../../../data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
