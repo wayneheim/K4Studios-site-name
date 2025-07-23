@@ -44,6 +44,7 @@ export function autoLinkKeywordsInText(
 
   const sources = getGallerySources(currentPath);
   const galleryPaths = sources.map(s => String(s.href));
+  const fallbackPath = galleryPaths[0] || currentPath;
 
   const allGalleryImages = sources.flatMap(source =>
     source.images
@@ -86,7 +87,7 @@ export function autoLinkKeywordsInText(
     if (!canonical || alreadyLinkedCanonicals.has(canonical)) continue;
 
     const pick = allGalleryImages.find(img => !usedImageIds.has(img.id));
-    const href = pick ? pick.href : `${currentPath}/i-missing`;
+    const href = pick?.href || `${fallbackPath}/i-missing`;
     if (pick) usedImageIds.add(pick.id);
 
     output = output.slice(0, index) + `<a href="${href}" class="kw-link">${keyword}</a>` + output.slice(index + keyword.length);
