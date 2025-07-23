@@ -41,9 +41,8 @@ function findNavEntry(nav, url) {
 }
 
 const landingNav = findNavEntry(siteNav, sectionPath);
-const galleryPaths = landingNav?.children?.filter(c =>
-  /\/Color$|\/Black-White$/.test(c.href)
-).map(c => c.href) || [];
+const galleryPaths = landingNav?.children?.map(c => c.href) || [];
+
 
 // 3. Load gallery data
 const allGalleryData = import.meta.glob('../../../../data/Galleries/**/*.mjs', { eager: true });
@@ -100,21 +99,22 @@ const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas 
           <section class="story-section">
             {westernStory.map((section, index) => (
               <article class="story-block" key={index}>
-                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, featheredImages, galleryPaths, cowboySemantic)} />}
+{section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, featheredImages, galleryPaths, cowboySemantic)} />}
+{section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, featheredImages, galleryPaths, cowboySemantic)} />}
 
-                {section.paragraphs?.map((para, i) => (
-                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-                ))}
+{section.paragraphs?.map((para, i) => (
+  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, featheredImages, galleryPaths, cowboySemantic)} />
+))}
 
-                {section.list && section.list.length > 0 && (
-                  <ul>
-                    {section.list.map((item, j) => (
-                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-                    ))}
-                  </ul>
-                )}
+{section.list && section.list.length > 0 && (
+  <ul>
+    {section.list.map((item, j) => (
+      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, featheredImages, galleryPaths, cowboySemantic)} />
+    ))}
+  </ul>
+)}
+
               </article>
             ))}
           </section>
