@@ -8,10 +8,6 @@ function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-function slugify(text: string): string {
-  return text.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-").trim();
-}
-
 function getGallerySources(currentPath: string): { href: string, images: any[] }[] {
   const results: { href: string, images: any[] }[] = [];
 
@@ -43,15 +39,13 @@ export function autoLinkKeywordsInText(
   const usedImageIds = new Set<string>();
 
   const sources = getGallerySources(currentPath);
-  const galleryPaths = sources.map(s => String(s.href));
-  const fallbackPath = galleryPaths[0] || currentPath;
 
   const allGalleryImages = sources.flatMap(source =>
     source.images
       .filter(img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id))
       .map(img => ({
         ...img,
-        href: `${String(source.href)}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`
+        href: `${source.href}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`
       }))
   );
 
@@ -87,7 +81,7 @@ export function autoLinkKeywordsInText(
     if (!canonical || alreadyLinkedCanonicals.has(canonical)) continue;
 
     const pick = allGalleryImages.find(img => !usedImageIds.has(img.id));
-    const href = pick?.href || `${fallbackPath}/i-missing`;
+    const href = pick?.href || "";
     if (pick) usedImageIds.add(pick.id);
 
     output = output.slice(0, index) + `<a href="${href}" class="kw-link">${keyword}</a>` + output.slice(index + keyword.length);
