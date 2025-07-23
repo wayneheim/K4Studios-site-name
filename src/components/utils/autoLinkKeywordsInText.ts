@@ -163,7 +163,7 @@ export function autoLinkKeywordsInText(
         }
       }
     }
-    // 3. Semantic linkOverride (random image)
+    // 3. S emantic linkOverride (random image)
     if (!href && linkOverrides.includes(kwLower)) {
       const img = linkableImages[imgIdx++] || linkableImages[0];
       if (img) {
