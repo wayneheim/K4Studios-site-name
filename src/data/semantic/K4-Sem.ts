@@ -24,6 +24,7 @@ export const semantic = {
     "photo printed on wood panel",
     "western art for rustic interiors",
     "canadian rockies photography prints",
+    "Bring the Story Home",
     "authentic frontier art prints",
     "fine art for story lovers",
     "western painterly landscape photography",
