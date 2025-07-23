@@ -101,6 +101,7 @@ export const semantic = {
     "gatsby era art",
     "western cowboy art",
     "tactile storytelling",
+    "The Roaring 20s",
     "the Greatest Generation",
     "greatest generation",
     "Greatest Generation",
