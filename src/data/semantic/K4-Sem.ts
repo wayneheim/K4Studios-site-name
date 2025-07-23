@@ -97,6 +97,7 @@ export const semantic = {
     "gatsby era art",
     "western cowboy art",
     "tactile storytelling",
+    "the Greatest Generation",
     "rustic charm",
     "wild west photography",
     "civil war art",
