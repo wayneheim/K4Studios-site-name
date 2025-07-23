@@ -46,6 +46,8 @@ export function autoLinkKeywordsInText(
   const galleryDatas = sources.map(s => s.data);
   const galleryPaths = sources.map(s => s.href);
 
+  if (!galleryPaths.length) galleryPaths.push(currentPath);
+
   const allGalleryImages = sources.flatMap(s =>
     s.data.filter(
       img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id)
@@ -86,9 +88,11 @@ export function autoLinkKeywordsInText(
     if (!canonical || alreadyLinkedCanonicals.has(canonical)) continue;
 
     const fallback = allGalleryImages.find(img => !usedImageIds.has(img.id));
+    const fallbackPath = galleryPaths[0] || currentPath || "/linked";
+
     let href = fallback
-      ? `${galleryPaths[0]}/${fallback.id.startsWith("i-") ? fallback.id : `i-${fallback.id}`}`
-      : `${galleryPaths[0]}/i-missing`;
+      ? `${fallbackPath}/${fallback.id.startsWith("i-") ? fallback.id : `i-${fallback.id}`}`
+      : `${fallbackPath}/i-missing`;
 
     if (fallback) usedImageIds.add(fallback.id);
 
