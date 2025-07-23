@@ -98,6 +98,8 @@ export const semantic = {
     "western cowboy art",
     "tactile storytelling",
     "the Greatest Generation",
+    "greatest generation",
+    "Greatest Generation",
     "rustic charm",
     "wild west photography",
     "civil war art",
