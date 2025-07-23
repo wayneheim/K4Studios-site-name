@@ -20,24 +20,38 @@ function getGalleryChildren(sectionPath) {
   return node?.children || [];
 }
 
-// Collect all images, feathered-excluded, grouped by gallery
-function getAllGalleryImages(sectionPath, featheredIds = new Set()) {
+// Classic round-robin gallery image picker (like feathered images)
+function getAlternatingGalleryImages(sectionPath, featheredIds = new Set()) {
   const galleryChildren = getGalleryChildren(sectionPath);
-  const results = [];
-  for (const child of galleryChildren) {
+  // For each gallery, load & shuffle images (excluding ghost & feathered)
+  const galleriesWithImages = galleryChildren.map(child => {
     const filePath = '../../data' + child.href + '.mjs';
     const mod = allGalleryData[filePath];
-    const images = (mod?.galleryData || mod?.default || []).filter(
+    const allImages = (mod?.galleryData || mod?.default || []).filter(
       img => img.id && img.id !== GHOST_IMAGE_ID && !featheredIds.has(img.id)
     );
-    for (const img of images) {
-      results.push({
-        ...img,
-        href: `${child.href}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`
-      });
+    return { images: [...allImages], child };
+  });
+
+  // Round-robin pluck (Color, BW, Color, BW, etc)
+  const alternated = [];
+  let idx = 0;
+  let exhausted = false;
+  while (!exhausted) {
+    exhausted = true;
+    for (const gallery of galleriesWithImages) {
+      if (gallery.images[idx]) {
+        const img = gallery.images[idx];
+        alternated.push({
+          ...img,
+          href: `${gallery.child.href}/${img.id.startsWith("i-") ? img.id : `i-${img.id}`}`,
+        });
+        exhausted = false;
+      }
     }
+    idx++;
   }
-  return results;
+  return alternated;
 }
 
 function escapeRegex(str) {
@@ -52,7 +66,7 @@ export function autoLinkKeywordsInText(
   if (!html || typeof html !== "string") return html;
 
   const featheredIds = new Set(featheredImages.map(img => img.id));
-  const allGalleryImages = getAllGalleryImages(sectionPath, featheredIds);
+  const alternatedImages = getAlternatingGalleryImages(sectionPath, featheredIds);
   const usedImageIds = new Set();
 
   // Canonicalize all keywords/phrases + synonyms
@@ -78,26 +92,25 @@ export function autoLinkKeywordsInText(
   matches.reverse();
 
   let output = html;
-  const alreadyLinkedCanonicals = new Set();
+  let imageIdx = 0;
 
   for (const { index, keyword } of matches) {
-    const lower = keyword.toLowerCase();
-    const canonical = canonicalMap[lower];
-    if (!canonical || alreadyLinkedCanonicals.has(canonical)) continue;
-
     // Pull next available image that hasn't been used yet
-    const availableImages = allGalleryImages.filter(img => !usedImageIds.has(img.id));
-    const pick = availableImages[0];
+    let pick = null;
+    while (imageIdx < alternatedImages.length) {
+      const candidate = alternatedImages[imageIdx++];
+      if (!usedImageIds.has(candidate.id)) {
+        pick = candidate;
+        usedImageIds.add(candidate.id);
+        break;
+      }
+    }
+    if (!pick) continue; // out of images
 
-    if (!pick) continue; // no image left
-
-    usedImageIds.add(pick.id);
     const href = pick.href;
-
     output = output.slice(0, index) +
       `<a href="${href}" class="kw-link">${keyword}</a>` +
       output.slice(index + keyword.length);
-    alreadyLinkedCanonicals.add(canonical);
   }
   return output;
 }
