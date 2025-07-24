@@ -63,6 +63,11 @@ export function autoLinkKeywordsInText(
     "medical illustration": "https://heimmedicalart.com",
     "medical illustrator": "https://heimmedicalart.com",
     "Explore Civil War Photography": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits",
+    "Discover WWII Photography": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII",
+    "Step into the Roaring 20s": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
+    "Explore Western Photography": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+
+
   };
 
   // --- STEP 1: LINK ALL OVERRIDES FIRST (Longest to Shortest) --- //
