@@ -102,8 +102,8 @@ export const semantic = {
       { phrase: "canadian rockies photography prints", rating: 3, use: true },
       { phrase: "timeless waterfall prints for rustic decor", rating: 3, use: true },
       { phrase: "international landscape photography wall art", rating: 3, use: true },
-      { phrase: "timeless painterly landscape photography", rating: 3, use: true }
-       { phrase: "Western Mountains", rating: 3, use: true }
+      { phrase: "timeless painterly landscape photography", rating: 3, use: true },
+      { phrase: "Western Mountains", rating: 3, use: true },
     ]
   },
 
