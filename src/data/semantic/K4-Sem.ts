@@ -111,6 +111,7 @@ export const semantic = {
     "wwii photography",
     "wwii war room wall art",
     "wwii fine art",
+    "Moments of Connection",
     "wwii sacrifice & brotherhood",
     "classic car photography",
     "collector photography",
