@@ -8,7 +8,7 @@ import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
 import SwipeHint from "./SwipeHint";
-import { getStructuredData } from "../../../../components/utils/getStructuredData.ts"; // <-- ADDED
+import { getStructuredData } from "./utils/getStructuredData"; // <-- ADDED
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
