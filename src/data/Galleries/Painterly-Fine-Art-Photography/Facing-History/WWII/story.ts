@@ -24,7 +24,7 @@ export const westernStory = [
     `Men & Machines: Delve into the intricate bond between soldiers and the powerful machinery that shaped their world—trucks, tanks, aircraft, and the relentless push of technology.`,
     `Portraits: Discover the humanity and individuality of reenactors who breathe life into the WWII era, their faces and uniforms reflecting both the pride and the sacrifice of a generation.`
   ]
-}
+},
 
   /* ───────────────────────────────────────────── 3 */
   {
