@@ -6,7 +6,8 @@ export const semantic = {
       { phrase: "Explore Western Photography", rating: 5, use: true },
       { phrase: "western cowboy wall art for collectors", rating: 4, use: true },
       { phrase: "grit & glory of the west", rating: 4, use: true },
-      { phrase: "authentic frontier art prints", rating: 4, use: true }
+      { phrase: "authentic frontier art prints", rating: 4, use: true },
+      { phrase: "western art for rustic interiors", rating: 3, use: true }
     ],
     imagePhrases: [
       { phrase: "western cowboy art", rating: 5, use: true },
@@ -16,7 +17,11 @@ export const semantic = {
       { phrase: "historic western prints", rating: 3, use: true },
       { phrase: "painterly cowboy portraits", rating: 3, use: true },
       { phrase: "cowboy painting art", rating: 3, use: true },
-      { phrase: "western art", rating: 3, use: true }
+      { phrase: "western art", rating: 3, use: true },
+      { phrase: "western landscapes fine art", rating: 3, use: true },
+      { phrase: "frederic remington", rating: 3, use: true },
+      { phrase: "powerful works of art", rating: 3, use: true },
+      { phrase: "rustic charm", rating: 3, use: true }
     ]
   },
 
@@ -26,7 +31,8 @@ export const semantic = {
       { phrase: "Civil War Portraits", rating: 5, use: true },
       { phrase: "civil war valor & loss", rating: 5, use: true },
       { phrase: "Faces of Conflict", rating: 4, use: true },
-      { phrase: "american history wall decor", rating: 3, use: true }
+      { phrase: "american history wall decor", rating: 3, use: true },
+      { phrase: "civil war art for history lovers", rating: 3, use: true }
     ],
     imagePhrases: [
       { phrase: "civil war photography", rating: 5, use: true },
@@ -37,7 +43,9 @@ export const semantic = {
       { phrase: "19th-century photography", rating: 3, use: true },
       { phrase: "historic reenactor prints", rating: 3, use: true },
       { phrase: "civil war paintings", rating: 3, use: true },
-      { phrase: "civil war prints", rating: 3, use: true }
+      { phrase: "civil war prints", rating: 3, use: true },
+      { phrase: "traditional reenactment photography collection", rating: 3, use: true },
+      { phrase: "legacy portraits for collectors", rating: 3, use: true }
     ]
   },
 
@@ -55,7 +63,9 @@ export const semantic = {
       { phrase: "wwii fine art", rating: 4, use: true },
       { phrase: "greatest generation photos", rating: 4, use: true },
       { phrase: "world war ii art", rating: 3, use: true },
-      { phrase: "wartime prints", rating: 3, use: true }
+      { phrase: "wartime prints", rating: 3, use: true },
+      { phrase: "wwii war room wall art", rating: 3, use: true },
+      { phrase: "Moments of Connection", rating: 3, use: true }
     ]
   },
 
@@ -72,7 +82,8 @@ export const semantic = {
     imagePhrases: [
       { phrase: "roaring 20s photography", rating: 5, use: true },
       { phrase: "roaring twenties portraits", rating: 4, use: true },
-      { phrase: "1920s portraits", rating: 4, use: true }
+      { phrase: "1920s portraits", rating: 4, use: true },
+      { phrase: "roaring 20s art", rating: 3, use: true }
     ]
   },
 
@@ -91,7 +102,8 @@ export const semantic = {
       { phrase: "baltic birch wall art", rating: 3, use: true },
       { phrase: "wood-mounted art", rating: 3, use: true },
       { phrase: "historically inspired photo on wood", rating: 3, use: true },
-      { phrase: "photo printed on wood panel", rating: 3, use: true }
+      { phrase: "photo printed on wood panel", rating: 3, use: true },
+      { phrase: "museum quality historical prints", rating: 3, use: true }
     ]
   },
 
@@ -114,7 +126,8 @@ export const semantic = {
       { phrase: "Western Mountains", rating: 3, use: true },
       { phrase: "painterly landscapes", rating: 3, use: true },
       { phrase: "western landscape photography", rating: 4, use: true },
-      { phrase: "american west art", rating: 3, use: true }
+      { phrase: "american west art", rating: 3, use: true },
+      { phrase: "timeless landscape photo", rating: 3, use: true }
     ]
   },
 
@@ -143,7 +156,10 @@ export const semantic = {
       { phrase: "route 66 art", rating: 3, use: true },
       { phrase: "americana photography", rating: 3, use: true },
       { phrase: "vintage auto art", rating: 3, use: true },
-      { phrase: "rust and chrome photography", rating: 3, use: true }
+      { phrase: "rust and chrome photography", rating: 3, use: true },
+      { phrase: "timeless automotive prints", rating: 3, use: true },
+      { phrase: "locomotive painterly photography for home decor", rating: 3, use: true },
+      { phrase: "steam engine wall art for collectors", rating: 3, use: true }
     ]
   },
 
@@ -170,10 +186,17 @@ export const semantic = {
       { phrase: "with striking realism", rating: 3, use: true },
       { phrase: "Painterly Photography", rating: 5, use: true },
       { phrase: "custom painterly portraits", rating: 3, use: true },
-      { phrase: "gallery-worthy photography", rating: 3, use: true },
-      { phrase: "collector-worthy prints", rating: 4, use: true },
-      { phrase: "timeless landscape photo", rating: 3, use: true },
-      { phrase: "story portraits", rating: 3, use: true }
+      { phrase: "framed photography", rating: 3, use: true },
+      { phrase: "wayne heim's work", rating: 3, use: true },
+      { phrase: "changed the course of time", rating: 3, use: true },
+      { phrase: "painterly photography for galleries", rating: 3, use: true },
+      { phrase: "fine art for story lovers", rating: 3, use: true },
+      { phrase: "timeless photography for lodges", rating: 3, use: true },
+      { phrase: "Vintage Trucks", rating: 3, use: true },
+      { phrase: "Classic Cars", rating: 3, use: true },
+      { phrase: "powerful works of art", rating: 3, use: true },
+      { phrase: "tactile storytelling", rating: 3, use: true },
+      { phrase: "bringing history to life", rating: 3, use: true }
     ]
   },
 
@@ -197,7 +220,7 @@ export const semantic = {
       "1920s art", "jazz age portraits", "vintage roaring twenties photo"
     ],
     "wwii photography": [
-      "world war ii art", "World War II", "wartime prints", "greatest generation art", "historic war photography", "brotherhood & sacrifice art"
+      "world war ii art", "wartime prints", "greatest generation art", "historic war photography", "brotherhood & sacrifice art"
     ],
     "world war ii art": [
       "wwii wall art", "wwii fine art", "vintage wartime prints", "men & machines photography"
