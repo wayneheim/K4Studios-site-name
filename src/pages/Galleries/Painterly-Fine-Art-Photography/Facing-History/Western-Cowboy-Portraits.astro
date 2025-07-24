@@ -7,6 +7,7 @@ import LandingRightImages from '../../../../components/LandingRightImages.jsx';
 import FAQAccordion       from '../../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../../components/Footer.astro';
 import MobileStoryImages  from '../../../../components/MobileStoryImages.jsx';
+import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
 
 import { siteNav } from '../../../../data/siteNav.ts';
 import { getFeatheredImages } from '../../../../components/utils/getFeatheredImages.ts';
@@ -19,14 +20,12 @@ import { westernFAQ } from '../../../../data/Galleries/Painterly-Fine-Art-Photog
 
 import '../../../../styles/global.css';
 import '../../../../styles/oneupheader.css';
+
 // ----------------------
 // DYNAMIC LOGIC SECTION
 // ----------------------
 
-// 1. Section Path (temporary until full routing is live)
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
-
-// 2. Get all matching gallery paths from siteNav (no filter)
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -37,23 +36,41 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
-
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav?.children?.map(c => c.href) || [];
-
-// 3. Load gallery data
 const allGalleryData = import.meta.glob('../../../../data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = "../../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
   return allGalleryData[filePath]?.galleryData || [];
 });
-
-// 4. Feathered image injection logic
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getFeatheredImages({ sectionPath, headingCount, galleryDatas });
 
-// -----------------------
+// 5. Structured data for this gallery landing
+const structuredData = getStructuredData({
+  type: "gallery",
+  data: {
+    title: landingWestern.title,
+    description: landingWestern.subtitle || landingWestern.description,
+    url: `https://k4studios.com${sectionPath}`,
+    keywords: landingWestern.keywords || [],
+    copyrightNotice: "© Wayne Heim"
+  },
+  images: featheredImages,
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    acquireLicensePage: "https://k4studios.com/prints",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
 ---
+
+<!-- ✅ Inject JSON-LD in the head BEFORE layout, with set:html -->
+<script type="application/ld+json" is:inline set:html={structuredData}></script>
+
 <BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
 
