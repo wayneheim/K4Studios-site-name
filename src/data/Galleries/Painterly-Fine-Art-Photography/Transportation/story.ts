@@ -1,4 +1,4 @@
-export export const westernStory = [
+export const westernStory = [
   {
     title: "Transportation-Themed Painterly Photography – Vintage Trains & Classic Cars",
     paragraphs: [
