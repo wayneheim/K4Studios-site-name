@@ -8,8 +8,6 @@ import FAQAccordion       from '../../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../../components/Footer.astro';
 import MobileStoryImages  from '../../../../components/MobileStoryImages.jsx';
 
-
-
 import { siteNav } from '../../../../data/siteNav.ts';
 import { getSideImages } from '../../../../components/utils/getSideImages.ts';
 import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
@@ -19,13 +17,15 @@ import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Ph
 import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/story.ts';
 import { westernFAQ } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/faq.ts';
 
+import { getStructuredData } from '../../../../utils/getStructuredData.ts';
+
 import '../../../../styles/global.css';
 import '../../../../styles/oneupheader.css';
+
 // ----------------------
 // DYNAMIC LOGIC SECTION
 // ----------------------
 
-// 1. Section Path (temporary until full routing is live)
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits";
 
 // 2. Get matching gallery paths from siteNav (Color & B/W)
@@ -57,8 +57,6 @@ function gatherGalleryPaths(navEntry) {
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = gatherGalleryPaths(landingNav);
 
-
-
 // 3. Load gallery data
 const allGalleryData = import.meta.glob('../../../../data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
@@ -70,126 +68,172 @@ const galleryDatas = galleryPaths.map(path => {
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
 
+// ----- STRUCTURED DATA -----
+const galleryStructuredData = {
+  title: landingWestern.title,
+  description: landingWestern.subtitle,
+  url: sectionPath
+};
+
+const structuredDataJSON = getStructuredData({
+  type: "gallery",
+  data: galleryStructuredData,
+  images: galleryDatas.flat().filter(img => img.visibility !== "ghost")
+});
 // -----------------------
+
+const { title = 'Gallery' } = Astro.props;
 ---
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
-  <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
 
-    <div class="drawer-mode">
-      <LandingHeader
-        client:load
-        breadcrumb="Facing History • Civil War Portraits"
-      />
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-    <div class="mobile-breadcrumb-wrapper">
-      <div class="mobile-breadcrumb">
-        {landingWestern.breadcrumb}
-      </div>
-    </div>
+    {structuredDataJSON && (
+      <script type="application/ld+json" set:html={structuredDataJSON}></script>
+    )}
 
-      <div class="w-full max-w-[1200px] mx-auto px-4">
-  <div class="carousel-fade reveal-on-scroll">
-    <ImageBar2 client:load />
-  </div>
-</div>
+    <style>
+      body {
+        font-family: 'Glegoo', serif;
+        background:rgb(255, 255, 255);
+        margin: 0;
+        padding: 0;
+        color: #2c2c2c;
+        margin-top: 1rem;
+      }
+      .page-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
+        <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+          <div class="drawer-mode">
+            <LandingHeader
+              client:load
+              breadcrumb="Facing History • Civil War Portraits"
+            />
+          </div>
 
-      <section class="section-heading-wrap">
-        <div class="section-heading">
-          <h1 class="page-title fade-in reveal-on-scroll">
-            {landingWestern.title}
-          </h1>
-          <h2 class="page-subtitle fade-in reveal-on-scroll">
-            {landingWestern.subtitle}
-          </h2>
-        </div>
-      </section>
+          <div class="mobile-breadcrumb-wrapper">
+            <div class="mobile-breadcrumb">
+              {landingWestern.breadcrumb}
+            </div>
+          </div>
 
-      <div class="py-5">
-        <TombstoneNav items={landingWestern.tombstones} />
-      </div>
+          <div class="w-full max-w-[1200px] mx-auto px-4">
+            <div class="carousel-fade reveal-on-scroll">
+              <ImageBar2 client:load />
+            </div>
+          </div>
 
-  <section class="story-layout">
-  <div class="text-column">
-    <section class="story-section">
-      {westernStory.map((section, index) => (
-        <article class="story-block" key={index}>
-          {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-          {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-          {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-
-          {section.paragraphs?.map((para, i) => (
-            <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-          ))}
-
-          {section.list && section.list.length > 0 && (
-            <ul>
-              {section.list.map((item, j) => (
-                <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-              ))}
-            </ul>
-          )}
-        </article>
-            ))}
+          <section class="section-heading-wrap">
+            <div class="section-heading">
+              <h1 class="page-title fade-in reveal-on-scroll">
+                {landingWestern.title}
+              </h1>
+              <h2 class="page-subtitle fade-in reveal-on-scroll">
+                {landingWestern.subtitle}
+              </h2>
+            </div>
           </section>
 
-          <MobileStoryImages client:only="react" images={featheredImages} />
-        </div>
-
-       <div class="sidebar-column hidden md:block">
-  <div class="sample-fade reveal-on-scroll">
-          <LandingRightImages
-            heading="Featured Portraits"
-            images={featheredImages.slice(0, 5)}
-          />
-        </div></div>
-      </section>
-
-      <section class="pb-16">
-        <input type="checkbox" id="faq-toggle" class="more-toggle" />
-        <div class="truncate-container">
-          <div class="truncate-text">
-            <FAQAccordion items={westernFAQ} />
+          <div class="py-5">
+            <TombstoneNav items={landingWestern.tombstones} />
           </div>
-        </div>
-        <label for="faq-toggle" class="more-toggle-label"></label>
-      </section>
 
-      <SiteFooter class="pt-8 pb-12" />
+          <section class="story-layout">
+            <div class="text-column">
+              <section class="story-section">
+                {westernStory.map((section, index) => (
+                  <article class="story-block" key={index}>
+                    {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+                    {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+                    {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+
+                    {section.paragraphs?.map((para, i) => (
+                      <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                    ))}
+
+                    {section.list && section.list.length > 0 && (
+                      <ul>
+                        {section.list.map((item, j) => (
+                          <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                        ))}
+                      </ul>
+                    )}
+                  </article>
+                ))}
+              </section>
+              <MobileStoryImages client:only="react" images={featheredImages} />
+            </div>
+
+            <div class="sidebar-column hidden md:block">
+              <div class="sample-fade reveal-on-scroll">
+                <LandingRightImages
+                  heading="Featured Portraits"
+                  images={featheredImages.slice(0, 5)}
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="pb-16">
+            <input type="checkbox" id="faq-toggle" class="more-toggle" />
+            <div class="truncate-container">
+              <div class="truncate-text">
+                <FAQAccordion items={westernFAQ} />
+              </div>
+            </div>
+            <label for="faq-toggle" class="more-toggle-label"></label>
+          </section>
+          <SiteFooter class="pt-8 pb-12" />
+        </main>
+      </BaseLayout>
+      <div id="overlay-root"></div>
     </div>
-  </main>
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Reveal-on-scroll logic
-    const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.15
-      });
-      els.forEach(el => observer.observe(el));
-    }
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Reveal-on-scroll logic
+        const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          }, {
+            threshold: 0.15
+          });
+          els.forEach(el => observer.observe(el));
+        }
 
-    // NEW: auto-expand FAQ box if a question is clicked
-    const faqToggle = document.getElementById("faq-toggle");
-    const truncateContainer = document.querySelector(".truncate-container");
+        // NEW: auto-expand FAQ box if a question is clicked
+        const faqToggle = document.getElementById("faq-toggle");
+        const truncateContainer = document.querySelector(".truncate-container");
 
-    if (truncateContainer && faqToggle) {
-      truncateContainer.addEventListener("click", (e) => {
-        const summaryClicked = e.target.closest("summary");
-        if (summaryClicked && !faqToggle.checked) {
-          faqToggle.checked = true;
+        if (truncateContainer && faqToggle) {
+          truncateContainer.addEventListener("click", (e) => {
+            const summaryClicked = e.target.closest("summary");
+            if (summaryClicked && !faqToggle.checked) {
+              faqToggle.checked = true;
+            }
+          });
         }
       });
-    }
-  });
-</script>
+    </script>
 
 
   <style>
