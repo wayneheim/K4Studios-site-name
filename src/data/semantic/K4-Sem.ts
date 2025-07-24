@@ -14,7 +14,8 @@ export const semantic = {
       { phrase: "outlaw portraits", rating: 4, use: true },
       { phrase: "historic western prints", rating: 3, use: true },
       { phrase: "painterly cowboy portraits", rating: 3, use: true },
-      { phrase: "cowboy painting art", rating: 3, use: true }
+      { phrase: "cowboy painting art", rating: 3, use: true },
+      { phrase: "western art", rating: 3, use: true }
     ]
   },
 
@@ -33,7 +34,8 @@ export const semantic = {
       { phrase: "civil war reenactment photography", rating: 4, use: true },
       { phrase: "19th-century photography", rating: 3, use: true },
       { phrase: "historic reenactor prints", rating: 3, use: true },
-      { phrase: "civil war paintings", rating: 3, use: true }
+      { phrase: "civil war paintings", rating: 3, use: true },
+      { phrase: "civil war prints", rating: 3, use: true }
     ]
   },
 
@@ -49,7 +51,8 @@ export const semantic = {
       { phrase: "wwii photography", rating: 5, use: true },
       { phrase: "wwii fine art", rating: 4, use: true },
       { phrase: "greatest generation photos", rating: 4, use: true },
-      { phrase: "world war ii art", rating: 3, use: true }
+      { phrase: "world war ii art", rating: 3, use: true },
+      { phrase: "wartime prints", rating: 3, use: true }
     ]
   },
 
@@ -104,12 +107,16 @@ export const semantic = {
       { phrase: "international landscape photography wall art", rating: 3, use: true },
       { phrase: "timeless painterly landscape photography", rating: 3, use: true },
       { phrase: "Western Mountains", rating: 3, use: true },
+      { phrase: "painterly landscapes", rating: 3, use: true },
+      { phrase: "western landscape photography", rating: 4, use: true },
+      { phrase: "american west art", rating: 3, use: true }
     ]
   },
 
   transportation: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Transportation",
     landingPhrases: [
+      { phrase: "Transportation", rating: 5, use: true },
       { phrase: "Classic Cars & Trucks Collection", rating: 5, use: true },
       { phrase: "Route 66 Photography", rating: 5, use: true },
       { phrase: "Steam Engine Photography", rating: 5, use: true },
@@ -127,7 +134,11 @@ export const semantic = {
       { phrase: "americana wall art for garages", rating: 3, use: true },
       { phrase: "automotive art prints", rating: 3, use: true },
       { phrase: "vintage train photography for man cave", rating: 3, use: true },
-      { phrase: "steam engine wall art for collectors", rating: 3, use: true }
+      { phrase: "steam engine wall art for collectors", rating: 3, use: true },
+      { phrase: "route 66 art", rating: 3, use: true },
+      { phrase: "americana photography", rating: 3, use: true },
+      { phrase: "vintage auto art", rating: 3, use: true },
+      { phrase: "rust and chrome photography", rating: 3, use: true }
     ]
   },
 
@@ -153,12 +164,15 @@ export const semantic = {
       { phrase: "window into the past", rating: 3, use: true },
       { phrase: "with striking realism", rating: 3, use: true },
       { phrase: "Painterly Photography", rating: 5, use: true },
-      { phrase: "custom painterly portraits", rating: 3, use: true }
+      { phrase: "custom painterly portraits", rating: 3, use: true },
+      { phrase: "gallery-worthy photography", rating: 3, use: true },
+      { phrase: "collector-worthy prints", rating: 4, use: true },
+      { phrase: "timeless landscape photo", rating: 3, use: true },
+      { phrase: "story portraits", rating: 3, use: true }
     ]
   },
 
   synonymMap: {
-    // no changes — used to route synonyms  to canonical key
     "civil war photography": [
       "civil war art", "civil war prints", "civil war reenactment art", "civil war battle art", "historic civil war photo", "valor & loss art"
     ],
@@ -166,10 +180,10 @@ export const semantic = {
       "battle of gettysburg print", "antietam art", "union army wall art", "confederate art", "vintage war prints"
     ],
     "western cowboy art": [
-      "western art", "cowboy art prints", "western wall art", "frontier photography", "outlaw portraits"
+      "western art", "cowboy art prints", "cowboy painting art"
     ],
     "wild west photography": [
-      "old west art", "frontier wall art", "painterly cowboy portraits", "historic western prints"
+      "old west art", "painterly cowboy portraits"
     ],
     "roaring 20s photography": [
       "gatsby art", "flapper portraits", "speakeasy wall art", "bootlegger art", "prohibition era photography"
@@ -184,55 +198,43 @@ export const semantic = {
       "wwii wall art", "wwii fine art", "vintage wartime prints", "men & machines photography"
     ],
     "engrained series": [
-      "photography on wood", "wood panel art", "printed on birch", "baltic birch wall art", "stories etched in wood", "wood-mounted art", "photography on baltic birch"
+      "photography on wood", "printed on birch", "baltic birch wall art", "photography on baltic birch"
     ],
     "painterly photography": [
-      "narrative fine art", "emotional storytelling photography", "photo painting", "artistic photography"
+      "photo painting", "artistic photography", "emotional storytelling photography"
     ],
     "historic wall art": [
       "american history art", "legacy photography", "vintage story prints"
     ],
     "collector photography": [
-      "collector-worthy prints", "award-winning fine art", "gallery-worthy photography"
+      "award-winning fine art"
     ],
     "story-driven photography": [
-      "visual storytelling", "narrative art", "emotional fine art"
+      "visual storytelling", "narrative art"
     ],
     "legacy portraits": [
-      "timeless portrait", "generational photography", "story portraits"
+      "generational photography"
     ],
     "painterly fine art photography": [
-      "artistic photography", "pictorialist photography", "fine art photography", "narrative photography", "photo painting", "storytelling photography"
+      "pictorialist photography", "fine art photography", "narrative photography", "storytelling photography"
     ],
     "fine art landscape photography": [
-      "painterly landscapes", "western landscape photography", "timeless landscape photo", "atmospheric landscapes"
+      "painterly landscapes"
     ],
     "western landscape photography": [
-      "western landscapes", "painterly western landscapes", "american west art", "frontier wall art"
+      "american west art"
     ],
     "emotive wall art": [
-      "emotional fine art", "story-driven photography", "conversation art", "art with feeling"
-    ],
-    "rustic wall art": [
-      "western wall art", "wood panel art", "engrained series", "frontier wall art"
-    ],
-    "conversation-starting wall art": [
-      "storytelling photography", "story-driven photography", "narrative fine art", "legacy portraits"
+      "conversation art"
     ],
     "archival fine art prints": [
-      "museum quality prints", "collector-worthy prints", "gallery-quality prints"
+      "gallery-quality prints"
     ],
     "handcrafted fine art": [
-      "engrained series", "wood-mounted art", "art printed on wood"
-    ],
-    "photography printed on wood": [
-      "engrained series", "wood panel art", "stories etched in wood", "wood-mounted art"
+      "art printed on wood"
     ],
     "custom painterly portraits": [
-      "commissioned art", "bespoke portrait photography", "personalized fine art"
-    ],
-    "photography for collectors": [
-      "collector-worthy prints", "award-winning fine art", "museum quality prints"
+      "commissioned art", "bespoke portrait photography"
     ],
     "painterly transportation photography": [
       "vintage transportation prints", "railroad fine art", "classic vehicle photography", "locomotive wall art"
@@ -241,10 +243,10 @@ export const semantic = {
       "steam locomotive prints", "railroad art", "historic train wall art", "engine yard photography"
     ],
     "classic car photography": [
-      "americana photography", "route 66 art", "vintage auto art", "rust and chrome photography"
+      "vintage auto art", "rust and chrome photography"
     ],
     "americana wall art": [
-      "route 66 wall art", "emotional realism", "classic american cars", "vintage roadside photography", "freedom of the road prints"
+      "classic american cars", "vintage roadside photography", "freedom of the road prints"
     ]
   }
 };
