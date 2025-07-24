@@ -8,28 +8,57 @@ import FAQAccordion       from '../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../components/Footer.astro';
 import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
 
-import { autoLinkKeywordsInTextM } from '../../../components/utils/autoLinkKeywordsInTextM.ts';
+import { siteNav } from '../../../data/siteNav.ts';
 import { getSideImages } from '../../../components/utils/getSideImages.ts';
+import { autoLinkKeywordsInText } from '../../../components/utils/autoLinkKeywordsInText.ts';
+import { semantic as k4Semantic } from '../../../data/semantic/K4-Sem.ts';
 
 import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/landingstones.ts';
-import { westernStory as westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/story.ts';
+import { westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/story.ts';
 import { facingFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/faq.ts';
 
 import '../../../styles/global.css';
 
 // ----------------------
-// UNIVERSAL IMAGE FEATHERINGs LOGIC (ALL CHILD GALLERIES)
+// UNIVERSAL IMAGE FEATHERING LOGIC (ALL DESCENDANT GALLERIES)
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes";
-const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+
+// Find landingNav for this branch
+function findNavEntry(nav, url) {
+  for (const entry of nav) {
+    if (entry.href === url) return entry;
+    if (entry.children) {
+      const found = findNavEntry(entry.children, url);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+// Recursively gather all descendant gallery hrefs
+function recursivelyGatherAllGalleryHrefs(node) {
+  let result = [];
+  if (!node) return result;
+  if (node.type === 'gallery-source' && node.href) result.push(node.href);
+  if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
+  return result;
+}
+
+const landingNav = findNavEntry(siteNav, sectionPath);
+const galleryPaths = landingNav ? recursivelyGatherAllGalleryHrefs(landingNav) : [];
+const allGalleryData = import.meta.glob('../../../data/Galleries/**/*.mjs', { eager: true });
+const galleryDatas = galleryPaths.map(path => {
+  const filePath = "../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  return allGalleryData[filePath]?.galleryData || [];
+});
 
 const featheredImages = getSideImages({
   sectionPath,
-  headingCount: mobileCount,
+  headingCount,
+  galleryDatas,
 });
-
-// Desktop sidebar: always 5 samples
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 ---
 
@@ -71,16 +100,16 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
         <section class="story-section">
           {westernStory.map((section, index) => (
             <article class="story-block" key={index}>
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.title, sectionPath, featheredImages)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.subhead, sectionPath, featheredImages)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInTextM(section.tagline, sectionPath, featheredImages)} />}
+              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(para, sectionPath, featheredImages)} />
+                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(item, sectionPath, featheredImages)} />
+                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
                   ))}
                 </ul>
               )}
