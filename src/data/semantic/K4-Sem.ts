@@ -63,6 +63,7 @@ export const semantic = {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
     landingPhrases: [
       { phrase: "Roaring 20s Portraits", rating: 5, use: true },
+      { phrase: "The Roaring 20s", rating: 5, use: true },
       { phrase: "Step into the Roaring 20s", rating: 5, use: true },
       { phrase: "gatsby era art", rating: 4, use: true },
       { phrase: "roaring 20s wall art for jazz fans", rating: 4, use: true },
