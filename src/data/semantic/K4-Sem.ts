@@ -3,6 +3,7 @@ export const semantic = {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
     landingPhrases: [
       { phrase: "Western Cowboy Portraits", rating: 5, use: true },
+      { phrase: "Explore Western Photography", rating: 5, use: true },
       { phrase: "western cowboy wall art for collectors", rating: 4, use: true },
       { phrase: "grit & glory of the west", rating: 4, use: true },
       { phrase: "authentic frontier art prints", rating: 4, use: true }
@@ -29,6 +30,7 @@ export const semantic = {
     ],
     imagePhrases: [
       { phrase: "civil war photography", rating: 5, use: true },
+      { phrase: "Explore Civil War Photography", rating: 5, use: true },
       { phrase: "civil war art", rating: 4, use: true },
       { phrase: "civil war art prints", rating: 4, use: true },
       { phrase: "civil war reenactment photography", rating: 4, use: true },
@@ -43,6 +45,7 @@ export const semantic = {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII-Portraits",
     landingPhrases: [
       { phrase: "WWII Portraits", rating: 5, use: true },
+      { phrase: "Discover WWII Photography", rating: 5, use: true },
       { phrase: "the Greatest Generation", rating: 5, use: true },
       { phrase: "WWII Sacrifice & Brotherhood", rating: 5, use: true },
       { phrase: "wartime photography", rating: 4, use: true }
@@ -60,6 +63,7 @@ export const semantic = {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
     landingPhrases: [
       { phrase: "Roaring 20s Portraits", rating: 5, use: true },
+      { phrase: "Step into the Roaring 20s", rating: 5, use: true },
       { phrase: "gatsby era art", rating: 4, use: true },
       { phrase: "roaring 20s wall art for jazz fans", rating: 4, use: true },
       { phrase: "Bootleggers", rating: 4, use: true }

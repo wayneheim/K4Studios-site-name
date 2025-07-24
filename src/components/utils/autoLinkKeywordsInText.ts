@@ -111,11 +111,7 @@ export function autoLinkKeywordsInText(
   const overrides = {
     "medical illustration": "https://heimmedicalart.com",
     "medical illustrator": "https://heimmedicalart.com",
-    "Explore Civil War Photography": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits",
-    "Discover WWII Photography": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII",
-    "Step into the Roaring 20s": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
-    "Explore Western Photography": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
-  };
+    };
   const overridePhrases = Object.keys(overrides).sort((a, b) => b.length - a.length);
   for (const phrase of overridePhrases) {
     const overrideRegex = new RegExp(escapeRegex(phrase), "gi");
