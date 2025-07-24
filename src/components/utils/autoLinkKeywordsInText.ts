@@ -62,6 +62,7 @@ export function autoLinkKeywordsInText(
   const overrides = {
     "medical illustration": "https://heimmedicalart.com",
     "medical illustrator": "https://heimmedicalart.com",
+    "Explore Civil War Photography": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits",
   };
 
   // Section/gallery nav names
