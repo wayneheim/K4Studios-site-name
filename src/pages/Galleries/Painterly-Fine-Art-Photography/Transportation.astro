@@ -8,52 +8,27 @@ import FAQAccordion       from '../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../components/Footer.astro';
 import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
 
-import { siteNav } from '../../../data/siteNav.ts';
+import { autoLinkKeywordsInTextM } from '../../../components/utils/autoLinkKeywordsInTextM.ts';
 import { getSideImages } from '../../../components/utils/getSideImages.ts';
-import { autoLinkKeywordsInText } from '../../../components/utils/autoLinkKeywordsInText.ts';
-import { semantic as k4Semantic } from '../../../data/semantic/K4-Sem.ts';
 
 import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Transportation/landingstones.ts';
 import { painterlyTransportationStory as westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Transportation/story.ts';
-import { transportationFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Transportation/faq.ts';
+import { facingFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/faq.ts';
 
 import '../../../styles/global.css';
 
-// ----------------------
-// DYNAMIC LOGIC SECTION
-// ----------------------
-
+// --- SETUP IMAGE COUNTS ---
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Transportation";
+
+// For mobile, count # of subheads except the first block (matches WCP)
 const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+// For desktop, hard limit 5
+const desktopCount = 5;
 
-// Pull direct gallery children for data pool
-function findNavEntry(nav, url) {
-  for (const entry of nav) {
-    if (entry.href === url) return entry;
-    if (entry.children) {
-      const found = findNavEntry(entry.children, url);
-      if (found) return found;
-    }
-  }
-  return null;
-}
-const landingNav = findNavEntry(siteNav, sectionPath);
-const galleryPaths = landingNav?.children?.map(c => c.href) || [];
-
-const allGalleryData = import.meta.glob('../../../data/Galleries/**/*.mjs', { eager: true });
-const galleryDatas = galleryPaths.map(path => {
-  const filePath = "../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-  return allGalleryData[filePath]?.galleryData || [];
-});
-
-const featheredImages = getSideImages({
-  sectionPath,
-  headingCount: mobileCount,
-  galleryDatas,
-});
-const featheredImagesSidebar = featheredImages.slice(0, 5);
+// Pull images for both
+const mobileImages = getSideImages({ sectionPath, headingCount: mobileCount });
+const desktopImages = getSideImages({ sectionPath, headingCount: desktopCount });
 ---
-
 <BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
@@ -92,24 +67,18 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
         <section class="story-section">
           {westernStory.map((section, index) => (
             <article class="story-block" key={index}>
-              {section.title && (
-                <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-              )}
-              {section.subhead && (
-                <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-              )}
-              {section.tagline && (
-                <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-              )}
+              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.title, sectionPath, mobileImages)} />}
+              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.subhead, sectionPath, mobileImages)} />}
+              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInTextM(section.tagline, sectionPath, mobileImages)} />}
 
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(para, sectionPath, mobileImages)} />
               ))}
 
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(item, sectionPath, mobileImages)} />
                   ))}
                 </ul>
               )}
@@ -117,14 +86,15 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={featheredImages} />
+        {/* On mobile, use mobileImages */}
+        <MobileStoryImages client:only="react" images={mobileImages} />
       </div>
 
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
             heading="Collection Samples"
-            images={featheredImagesSidebar}
+            images={desktopImages}
           />
         </div>
       </div>
@@ -134,7 +104,7 @@ const featheredImagesSidebar = featheredImages.slice(0, 5);
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container" style="min-height:0;">
         <div class="truncate-text">
-          <FAQAccordion items={transportationFAQ} />
+          <FAQAccordion items={facingFAQ} />
         </div>
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
