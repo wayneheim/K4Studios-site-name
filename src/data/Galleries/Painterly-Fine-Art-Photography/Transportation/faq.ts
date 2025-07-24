@@ -1,4 +1,4 @@
-export const facingFAQ = [
+export const transportationFAQ = [
     //Painterly Transporation Photography FAQ
 {
     q: "What makes your transportation photography 'painterly'?",
