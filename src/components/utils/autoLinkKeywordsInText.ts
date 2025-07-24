@@ -65,7 +65,17 @@ export function autoLinkKeywordsInText(
     "Explore Civil War Photography": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits",
   };
 
-  // Section/gallery nav names
+  // --- STEP 1: LINK ALL OVERRIDES FIRST (Longest to Shortest) --- //
+  // This prevents any other keyword from matching inside an override.
+  const overridePhrases = Object.keys(overrides).sort((a, b) => b.length - a.length);
+  for (const phrase of overridePhrases) {
+    const overrideRegex = new RegExp(escapeRegex(phrase), "gi");
+    html = html.replace(overrideRegex, (matched) => {
+      return `<a href="${overrides[phrase]}" class="kw-link">${matched}</a>`;
+    });
+  }
+
+  // --- FLATTEN NAVIGATION FOR SECTION/GALLERY LINK LOGIC --- //
   function flattenNav(nav, map = {}) {
     for (const entry of nav) {
       if (entry.label && entry.href) {
@@ -87,7 +97,7 @@ export function autoLinkKeywordsInText(
   // --- Find current section/landing href for "self-link" reroute logic --- //
   const currentSectionHref = getSectionHrefFromGalleryPaths(galleryPaths);
 
-  // --- Gather all unique, multi-word phrases (with suffixes, menu, overrides, semantic.phrases, and semantic.linkOverrides) ---
+  // --- Gather all unique, multi-word phrases --- //
   const validPhrases = new Set(Object.keys(overrides));
   const linkOverrides = (semantic?.linkOverrides || []).map(s => s.toLowerCase());
   linkOverrides.forEach(p => validPhrases.add(p));
@@ -118,7 +128,7 @@ export function autoLinkKeywordsInText(
       });
   }
 
-  // --- 4. Link only these phrases (sorted longest to shortest) ---
+  // --- 4. Link only these phrases (sorted longest to shortest) --- //
   const allKeywords = Array.from(validPhrases).sort((a, b) => b.length - a.length);
   if (allKeywords.length === 0) return html;
   const keywordRegex = new RegExp(`\\b(${allKeywords.map(escapeRegex).join('|')})\\b`, "gi");
@@ -135,8 +145,16 @@ export function autoLinkKeywordsInText(
   for (const { index, keyword } of matches) {
     const kwLower = keyword.toLowerCase();
     if (alreadyLinked.has(kwLower)) continue;
+
+    // --- DO NOT LINK IF ALREADY INSIDE A LINK --- //
+    const before = output.lastIndexOf("<a", index);
+    const after = output.indexOf("</a>", index);
+    if (before !== -1 && after !== -1 && before < index && after > index) {
+      continue; // already inside a link, skip
+    }
+
     let href = null;
-    // 1. Manual override
+    // 1. Manual override (already handled above, so this block is redundant but safe to keep)
     if (overrides[kwLower]) {
       href = overrides[kwLower];
     }
