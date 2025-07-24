@@ -18,7 +18,7 @@ export function getStructuredData({
 }): string {
   // Set up global default fallbacks
   const {
-    copyrightNotice = "© Wayne Heim",
+    copyrightNotice = "© Wayne Heim, k4studios.com. All rights reserved.",
     license = "https://k4studios.com/",
     acquireLicensePage = "https://k4studios.com/",
     creditText = "Wayne Heim",
@@ -42,17 +42,15 @@ export function getStructuredData({
               "name": creatorName,
               "url": creatorUrl
             },
-            "license": img.license || license
+            "license": img.license || license,
+            "copyrightNotice": img.copyrightNotice || copyrightNotice,
+            "acquireLicensePage": img.buyLink || img.acquireLicensePage || acquireLicensePage
           };
           if (img.thumbnailUrl) obj.thumbnailUrl = img.thumbnailUrl;
           if (img.width) obj.width = img.width;
           if (img.height) obj.height = img.height;
           if (img.keywords && img.keywords.length)
             obj.keywords = img.keywords.join(", ");
-          if (img.copyrightNotice)
-            obj.copyrightNotice = img.copyrightNotice;
-          if (img.acquireLicensePage)
-            obj.acquireLicensePage = img.acquireLicensePage;
           if (img.datePublished)
             obj.datePublished = img.datePublished;
           return obj;
@@ -72,13 +70,12 @@ export function getStructuredData({
         "url": creatorUrl
       },
       "creator": { "@type": "Person", "name": creatorName, "url": creatorUrl },
+      "copyrightNotice": data.copyrightNotice || copyrightNotice,
       "inLanguage": "en"
     };
 
     if (data.keywords && data.keywords.length)
       collectionObj.keywords = data.keywords.join(", ");
-    if (data.copyrightNotice)
-      collectionObj.copyrightNotice = data.copyrightNotice;
     if (data.datePublished)
       collectionObj.datePublished = data.datePublished;
 
@@ -96,6 +93,7 @@ export function getStructuredData({
       "contentUrl": data.src,
       "url": data.src, // Google's ImageObject expects this too
       "license": data.license || license,
+      "copyrightNotice": data.copyrightNotice || copyrightNotice,
       "acquireLicensePage": data.buyLink || data.acquireLicensePage || acquireLicensePage,
       "creditText": data.creditText || creditText,
       "creator": {
@@ -115,8 +113,6 @@ export function getStructuredData({
     if (data.height) obj.height = data.height;
     if (data.keywords && data.keywords.length)
       obj.keywords = data.keywords.join(", ");
-    if (data.copyrightNotice)
-      obj.copyrightNotice = data.copyrightNotice;
     if (data.datePublished)
       obj.datePublished = data.datePublished;
 
