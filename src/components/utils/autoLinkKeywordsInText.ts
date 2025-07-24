@@ -76,6 +76,26 @@ function resolveSynonym(kwLower, semantic) {
   return null;
 }
 
+// --- GATHER ALL PHRASES + SYNONYMS --- //
+function getAllActivePhrases(semantic) {
+  let all = [];
+  for (const sectionKey of Object.keys(semantic)) {
+    if (sectionKey === "synonymMap") continue;
+    const section = semantic[sectionKey];
+    if (section.landingPhrases)
+      all = all.concat(section.landingPhrases.filter(p => p.use).map(p => p.phrase));
+    if (section.imagePhrases)
+      all = all.concat(section.imagePhrases.filter(p => p.use).map(p => p.phrase));
+  }
+  // --- ADD ALL SYNONYMS --- //
+  if (semantic.synonymMap) {
+    for (const synArr of Object.values(semantic.synonymMap)) {
+      all = all.concat(synArr);
+    }
+  }
+  return all;
+}
+
 // --- MAIN LINKER --- //
 export function autoLinkKeywordsInText(
   html,
@@ -109,19 +129,7 @@ export function autoLinkKeywordsInText(
   const linkableImages = getRoundRobinImagePool(galleryDatas, galleryPaths)
     .filter(({ img }) => img && !featheredIds.has(img.id));
 
-  // 3. Gather all active phrases (from all sections, use: true)
-  function getAllActivePhrases(semantic) {
-    let all = [];
-    for (const sectionKey of Object.keys(semantic)) {
-      if (sectionKey === "synonymMap") continue;
-      const section = semantic[sectionKey];
-      if (section.landingPhrases)
-        all = all.concat(section.landingPhrases.filter(p => p.use).map(p => p.phrase));
-      if (section.imagePhrases)
-        all = all.concat(section.imagePhrases.filter(p => p.use).map(p => p.phrase));
-    }
-    return all;
-  }
+  // 3. Gather all active phrases AND synonyms
   const allKeywords = getAllActivePhrases(semantic)
     .concat(Object.keys(overrides))
     .sort((a, b) => b.length - a.length);
