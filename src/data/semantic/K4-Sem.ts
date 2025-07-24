@@ -152,6 +152,7 @@ export const semantic = {
       { phrase: "timeless portrait", rating: 3, use: true },
       { phrase: "window into the past", rating: 3, use: true },
       { phrase: "with striking realism", rating: 3, use: true },
+      { phrase: "Painterly Photography", rating: 5, use: true },
       { phrase: "custom painterly portraits", rating: 3, use: true }
     ]
   },
@@ -177,7 +178,7 @@ export const semantic = {
       "1920s art", "jazz age portraits", "vintage roaring twenties photo"
     ],
     "wwii photography": [
-      "world war ii art", "wartime prints", "greatest generation art", "historic war photography", "brotherhood & sacrifice art"
+      "world war ii art", "World War II", "wartime prints", "greatest generation art", "historic war photography", "brotherhood & sacrifice art"
     ],
     "world war ii art": [
       "wwii wall art", "wwii fine art", "vintage wartime prints", "men & machines photography"
