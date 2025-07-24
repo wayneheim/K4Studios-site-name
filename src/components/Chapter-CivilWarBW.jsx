@@ -8,7 +8,6 @@ import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
 import SwipeHint from "./SwipeHint";
-import { getStructuredData } from "./utils/getStructuredData"; // <-- ADDED
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -26,55 +25,55 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  const [structuredData, setStructuredData] = useState(null); // <-- ADDED
-
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-  // 🔄 Trigger chapter entry mode via custom event
-  useEffect(() => {
-    const handleEnterChapters = () => setHasEnteredChapters(true);
-    window.addEventListener("enterChapters", handleEnterChapters);
-    return () => window.removeEventListener("enterChapters", handleEnterChapters);
-  }, []);
+  
+    // 🔄 Trigger chapter entry mode via custom event
+      useEffect(() => {
+        const handleEnterChapters = () => setHasEnteredChapters(true);
+        window.addEventListener("enterChapters", handleEnterChapters);
+        return () => window.removeEventListener("enterChapters", handleEnterChapters);
+      }, []);
+    
+    // 🔍 Initial load: parse URL or use fallback — safe for static builds
+useEffect(() => {
+  if (!galleryData || galleryData.length === 0) return;
 
-  // 🔍 Initial load: parse URL or use fallback — safe for static builds
-  useEffect(() => {
-    if (!galleryData || galleryData.length === 0) return;
+  const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+  const idFromURL = match ? match[1] : initialImageId;
 
-    const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-    const idFromURL = match ? match[1] : initialImageId;
-
-    if (idFromURL) {
-      const index = galleryData.findIndex((entry) => entry.id === idFromURL);
-      if (index !== -1) {
-        setCurrentIndex(index);
+  if (idFromURL) {
+    const index = galleryData.findIndex((entry) => entry.id === idFromURL);
+    if (index !== -1) {
+      setCurrentIndex(index);
+    }
+  }
+}, [galleryData]);
+    
+      // 🟢 Auto-enter chapters if directly loading an image page
+    useEffect(() => {
+      if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
+        setHasEnteredChapters(true);
       }
-    }
-  }, [galleryData]);
+    }, []);
+    
+      // 🔗 Update URL when navigating *after* entering chapters
+    useEffect(() => {
+      // Only run if hasEnteredChapters is true OR we're already on an /i-xxx page
+      const imageId = galleryData[currentIndex]?.id;
+      const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
+      if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-  // 🟢 Auto-enter chapters if directly loading an image page
-  useEffect(() => {
-    if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
-      setHasEnteredChapters(true);
-    }
-  }, []);
+  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
+ const newUrl = `${basePath}/${imageId}`;
+  const currentUrl = window.location.pathname;
 
-  // 🔗 Update URL when navigating *after* entering chapters
-  useEffect(() => {
-    // Only run if hasEnteredChapters is true OR we're already on an /i-xxx page
-    const imageId = galleryData[currentIndex]?.id;
-    const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
-    if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
+  if (currentUrl !== newUrl) {
+    window.history.pushState(null, "", newUrl);
+  }
+}, [currentIndex, hasEnteredChapters]);
 
-    const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
-    const newUrl = `${basePath}/${imageId}`;
-    const currentUrl = window.location.pathname;
-
-    if (currentUrl !== newUrl) {
-      window.history.pushState(null, "", newUrl);
-    }
-  }, [currentIndex, hasEnteredChapters]);
 
   // 🧼 Clean up stray ID in URL if landing intro is showing
   useEffect(() => {
@@ -196,16 +195,8 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   };
 
-  // ⬅️ Structured Data: Update when currentIndex or data changes
-  useEffect(() => {
-    if (galleryData[currentIndex]) {
-      setStructuredData(getStructuredData(galleryData[currentIndex]));
-    }
-  }, [currentIndex, galleryData]);
-
   const direction = currentIndex > prevIndex.current ? 1 : -1;
   prevIndex.current = currentIndex;
-
 
   return (
 
@@ -215,12 +206,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
       style={{ fontFamily: 'Glegoo, serif' }}
        onMouseMove={() => setShowArrows(true)}
     >
-          {structuredData && (
-      <script type="application/ld+json" suppressHydrationWarning>
-        {JSON.stringify(structuredData)}
-      </script>
-    )}
-
+      
 
       <link href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
