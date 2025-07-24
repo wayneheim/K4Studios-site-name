@@ -12,21 +12,19 @@ export const westernStory = [
   },
 
   /* ───────────────────────────────────────────── 2 */
-  {
-    subhead: "Three Themes, One Historic Legacy",
-    tagline: "Art of War, Men & Machines, and Portraits",
-    paragraphs: [
-      `This curated gallery is divided into three immersive themes: <strong>Art of War</strong>, <strong>Men & Machines</strong>, and <strong>Portraits</strong>. Each explores a unique facet of the World War II experience:`,
-    ],
-    list: [
-      `Art of War: Experience the intensity and drama of battle—strategic moments, raw emotion, and the fog of war, all rendered with painterly artistry.`,
-      `Men & Machines: Delve into the intricate bond between soldiers and the powerful machinery that shaped their world—trucks, tanks, aircraft, and the relentless push of technology.`,
-      `Portraits: Discover the humanity and individuality of reenactors who breathe life into the WWII era, their faces and uniforms reflecting both the pride and the sacrifice of a generation.`
-    ],
-    paragraphs: [
-      `Each section invites you to connect with a different layer of history, providing a deeper and more personal understanding of the era.`
-    ]
-  },
+{
+  subhead: "Three Themes, One Historic Legacy",
+  tagline: "Art of War, Men & Machines, and Portraits",
+  paragraphs: [
+    `This curated gallery is divided into three immersive themes: <strong>Art of War</strong>, <strong>Men & Machines</strong>, and <strong>Portraits</strong>. Each explores a unique facet of the World War II experience:`,
+    `Each section invites you to connect with a different layer of history, providing a deeper and more personal understanding of the era.`
+  ],
+  list: [
+    `Art of War: Experience the intensity and drama of battle—strategic moments, raw emotion, and the fog of war, all rendered with painterly artistry.`,
+    `Men & Machines: Delve into the intricate bond between soldiers and the powerful machinery that shaped their world—trucks, tanks, aircraft, and the relentless push of technology.`,
+    `Portraits: Discover the humanity and individuality of reenactors who breathe life into the WWII era, their faces and uniforms reflecting both the pride and the sacrifice of a generation.`
+  ]
+}
 
   /* ───────────────────────────────────────────── 3 */
   {
