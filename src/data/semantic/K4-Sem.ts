@@ -128,6 +128,8 @@ export const semantic = {
     "window into the past",
     "story-driven photography",
     "engrained series",
+    "Vintage Trucks",
+    "Classic Cars",
     "photography printed on wood",
     "wayne heim's work",
     "facing history",
