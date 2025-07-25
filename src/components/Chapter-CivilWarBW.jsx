@@ -276,14 +276,14 @@ useEffect(() => {
     isMobile
       ? {
           cursor: "zoom-in",
-          width: "100%",
+          width: "auto",
           height: "auto",            // 🔁 Changed
         objectFit: "contain",      // 🔁 Changed
           maxHeight: "65vh",
         }
       : {
           cursor: "zoom-in",
-          width: "100%",
+          width: "auto",
           height: "auto",
           objectFit: "contain",
           maxHeight: "70vh",
