@@ -279,7 +279,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
           height: "auto",
           objectFit: "contain",
           maxHeight: "70vh",
-          minHeight: "340px",
+          //minHeight: "340px",
           background: "#f7f7f7",
         }
   }
