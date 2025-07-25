@@ -3,6 +3,12 @@ const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 
 const { previewImages, previewPath } = Astro.props;
+
+const isGalleryLanding =
+  previewImages?.length > 0 &&
+  previewPath &&
+  !previewPath.includes('/i-') &&
+  !previewPath.includes('/Galleries/') || previewPath.split('/').length <= 6;
 ---
 
 <footer
@@ -13,8 +19,9 @@ const { previewImages, previewPath } = Astro.props;
   itemtype="https://schema.org/Organization"
 >
 
-  {previewImages?.length > 0 && previewPath && !previewPath.includes('/i-') && (
-    <div class="mb-6">
+  <!-- ✅ Preview bar appears above footer content -->
+  {isGalleryLanding && (
+    <div class="w-full max-w-screen-xl mx-auto px-4 pb-2">
       <GalleryPreviewStrip
         images={previewImages}
         path={previewPath}
