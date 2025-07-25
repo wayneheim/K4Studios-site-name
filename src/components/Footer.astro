@@ -4,11 +4,14 @@ import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 
 const { previewImages, previewPath } = Astro.props;
 
-const isGalleryLanding =
+// ✅ Works in both SSR + static builds
+const currentPath = Astro.url.pathname;
+
+// ✅ Suppress preview bar on image pages
+const showPreviewBar =
   previewImages?.length > 0 &&
   previewPath &&
-  !previewPath.includes('/i-') &&
-  !previewPath.includes('/Galleries/') || previewPath.split('/').length <= 6;
+  !currentPath.includes('/i-');
 ---
 
 <footer
@@ -19,8 +22,7 @@ const isGalleryLanding =
   itemtype="https://schema.org/Organization"
 >
 
-  <!-- ✅ Preview bar appears above footer content -->
-  {isGalleryLanding && (
+  {showPreviewBar && (
     <div class="w-full max-w-screen-xl mx-auto px-4 pb-2">
       <GalleryPreviewStrip
         images={previewImages}
