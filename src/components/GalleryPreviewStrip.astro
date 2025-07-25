@@ -17,17 +17,16 @@ const visibleImages = images
   .filter(img => img.visibility !== "ghost")
   .slice(0, limit);
 
-// Calculate mid-point index (e.g. 3 for 6 images)
 const middleIndex = Math.floor(visibleImages.length / 2);
 ---
 
-<section class="preview-strip-wrapper" aria-label="Gallery preview strip">
+<section class="preview-strip-wrapper fade-strip" aria-label="Gallery preview strip">
   <p class="preview-label">Gallery Preview</p>
 
   <div class="preview-strip">
     {visibleImages.map((img, index) => {
       const offset = index - middleIndex;
-      const delay = Math.abs(offset) * 100 + 200; // center first
+      const delay = Math.abs(offset) * 100 + 400; // starts after wrapper fade
       const direction = offset === 0 ? "center" : offset < 0 ? "left" : "right";
       return (
         <a
@@ -51,6 +50,15 @@ const middleIndex = Math.floor(visibleImages.length / 2);
   .preview-strip-wrapper {
     margin-top: 2.5rem;
     padding: 1rem 0;
+    opacity: 0;
+    animation: fadeStripIn 0.4s ease forwards;
+    animation-delay: 500ms;
+  }
+
+  @keyframes fadeStripIn {
+    to {
+      opacity: 1;
+    }
   }
 
   .preview-label {
@@ -82,7 +90,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     border: 2px solid #ccc;
     opacity: 0;
     transform: scale(0.95);
-    animation: fadeInCenter 0.6s ease forwards;
+    animation: fadeInCenter 0.5s ease forwards;
   }
 
   .preview-thumb img {
@@ -90,13 +98,6 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     height: 100%;
     object-fit: cover;
     display: block;
-  }
-
-  @keyframes fadeInCenter {
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
   }
 
   .anim-left {
@@ -109,6 +110,13 @@ const middleIndex = Math.floor(visibleImages.length / 2);
 
   .anim-center {
     animation-name: fadeInCenter;
+  }
+
+  @keyframes fadeInCenter {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   @keyframes fadeSlideLeft {
