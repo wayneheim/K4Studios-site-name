@@ -58,10 +58,10 @@ const middleIndex = Math.floor(visibleImages.length / 2);
 
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
-      const cartIcon = document.querySelector(".lucide-shopping-cart");
+      const hasCart = document.querySelector(".lucide-shopping-cart");
       const strip = document.getElementById("preview-strip");
-      if (cartIcon && strip) {
-        strip.style.display = "none";
+      if (hasCart && strip) {
+        strip.remove();
       }
     });
   </script>
