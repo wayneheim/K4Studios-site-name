@@ -271,7 +271,7 @@ useEffect(() => {
  <img
   src={galleryData[currentIndex].src}
   alt={galleryData[currentIndex].title}
-  className="chapter-image-mobile border-2 border-gray-400 rounded-lg"
+  className="chapter-image-mobile "
   style={
     isMobile
       ? {
