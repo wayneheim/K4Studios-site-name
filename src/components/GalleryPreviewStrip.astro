@@ -42,7 +42,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       return (
         <a
           href={`${path}/${img.id}`}
-          class={`gallery-thumb gallery-anim-${direction}`}
+          class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}
         >
@@ -62,13 +62,14 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     margin-top: 2.5rem;
     padding: 1rem 0;
     opacity: 0;
-    animation: gallery-fadeStripIn 0.4s ease forwards;
+    animation: fadeStripIn 0.4s ease forwards;
     animation-delay: 850ms;
-    will-change: opacity;
   }
 
-  @keyframes gallery-fadeStripIn {
-    to { opacity: 1; }
+  @keyframes fadeStripIn {
+    to {
+      opacity: 1;
+    }
   }
 
   .gallery-label-frame {
@@ -85,7 +86,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     color: #444;
     font-family: 'Glegoo', serif;
     opacity: 0;
-    animation: gallery-fadeLabelIn 0.75s ease-out forwards;
+    animation: fadeLabelIn 0.75s ease-out forwards;
     animation-delay: 600ms;
     white-space: nowrap;
   }
@@ -102,28 +103,30 @@ const middleIndex = Math.floor(visibleImages.length / 2);
 
   .gallery-hr-left {
     transform-origin: right;
-    animation: gallery-lineGrowLeft 1.2s ease-out forwards;
+    animation: lineGrowLeft 1.2s ease-out forwards;
     animation-delay: 1200ms;
   }
 
   .gallery-hr-right {
     transform-origin: left;
-    animation: gallery-lineGrowRight 1.2s ease-out forwards;
+    animation: lineGrowRight 1.2s ease-out forwards;
     animation-delay: 1200ms;
   }
 
-  @keyframes gallery-fadeLabelIn {
-    to { opacity: 0.75; }
+  @keyframes fadeLabelIn {
+    to {
+      opacity: 0.75;
+    }
   }
 
-  @keyframes gallery-lineGrowLeft {
+  @keyframes lineGrowLeft {
     to {
       transform: scaleX(1);
       opacity: 1;
     }
   }
 
-  @keyframes gallery-lineGrowRight {
+  @keyframes lineGrowRight {
     to {
       transform: scaleX(1);
       opacity: 1;
@@ -149,14 +152,9 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     border: 2px solid #ccc;
     opacity: 0;
     transform: scale(0.95);
-    animation: gallery-fadeInCenter 2s ease forwards;
+    animation: fadeInCenter 2s ease forwards;
     contain: content;
     will-change: transform, opacity;
-  }
-
-  .gallery-thumb:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 3px rgba(0,0,0,0.1);
   }
 
   .gallery-thumb img {
@@ -166,18 +164,26 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     display: block;
   }
 
-  .gallery-anim-left { animation-name: gallery-fadeSlideLeft; }
-  .gallery-anim-right { animation-name: gallery-fadeSlideRight; }
-  .gallery-anim-center { animation-name: gallery-fadeInCenter; }
+  .anim-left {
+    animation-name: fadeSlideLeft;
+  }
 
-  @keyframes gallery-fadeInCenter {
+  .anim-right {
+    animation-name: fadeSlideRight;
+  }
+
+  .anim-center {
+    animation-name: fadeInCenter;
+  }
+
+  @keyframes fadeInCenter {
     to {
       opacity: 1;
       transform: scale(1);
     }
   }
 
-  @keyframes gallery-fadeSlideLeft {
+  @keyframes fadeSlideLeft {
     0% {
       opacity: 0;
       transform: translateX(30px) scale(0.9);
@@ -188,7 +194,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     }
   }
 
-  @keyframes gallery-fadeSlideRight {
+  @keyframes fadeSlideRight {
     0% {
       opacity: 0;
       transform: translateX(-30px) scale(0.9);
@@ -211,8 +217,9 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     if (isVisible) {
       preview.style.transition = "opacity 0.5s ease";
       preview.style.opacity = "0";
-    } else {
-      preview.style.opacity = "1";
+      setTimeout(() => {
+        preview.style.display = "none";
+      }, 500);
     }
   };
 
