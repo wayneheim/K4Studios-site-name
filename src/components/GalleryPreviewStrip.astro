@@ -55,7 +55,10 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       );
     })}
   </div>
+
+  
 </section>
+
 
 <style>
   .preview-strip-wrapper {
@@ -203,19 +206,3 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     }
   }
 </style>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const isChapterMode = document.querySelector('#chapter-section.section-visible');
-    if (isChapterMode) {
-      const preview = document.querySelector('.preview-strip-wrapper');
-      if (preview) {
-        preview.style.transition = 'opacity 0.5s ease';
-        preview.style.opacity = '0';
-        setTimeout(() => {
-          preview.style.display = 'none';
-        }, 500);
-      }
-    }
-  });
-</script>
