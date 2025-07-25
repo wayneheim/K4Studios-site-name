@@ -2,16 +2,26 @@
 const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 
-const { previewImages, previewPath } = Astro.props;
----
+const currentPath = Astro.url.pathname;
 
-{previewImages && previewPath && (
-  <GalleryPreviewStrip
-    images={previewImages}
-    path={previewPath}
-    limit={6}
-  />
-)}
+let previewImages = [];
+let previewPath = "";
+
+if (
+  currentPath.includes("/Galleries/") &&
+  currentPath.split("/").length >= 6 &&
+  !currentPath.includes("/i-") // skip direct image view pages
+) {
+  try {
+    const importPath = `../data${currentPath}.mjs`;
+    const { galleryData } = await import(importPath);
+    previewImages = galleryData.filter(img => img.visibility !== "ghost").slice(0, 6);
+    previewPath = currentPath;
+  } catch (err) {
+    console.warn("[Footer] No preview data found for", currentPath);
+  }
+}
+---
 
 <footer
   class="bg-[#fff] font-serif text-center w-full"
@@ -60,3 +70,12 @@ const { previewImages, previewPath } = Astro.props;
     }
   </style>
 </footer>
+
+<!-- ✅ Preview strip loads *below* footer, automatically -->
+{previewImages.length && previewPath && (
+  <GalleryPreviewStrip
+    images={previewImages}
+    path={previewPath}
+    limit={6}
+  />
+)}
