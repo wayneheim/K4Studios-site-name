@@ -2,35 +2,16 @@
 const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 
-// ✅ Safe and always available in all contexts
-const currentPath = Astro.request.url.pathname;
-
-let previewImages = [];
-let previewPath = "";
-
-// 🔍 Use glob to preload all .mjs gallery data files
-const galleryFiles = import.meta.glob('../data/Galleries/**/*.mjs');
-
-// 🔎 Match key based on current path
-const matchKey = Object.keys(galleryFiles).find(key =>
-  key.endsWith(`${currentPath}.mjs`)
-);
-
-if (
-  currentPath.includes("/Galleries/") &&
-  currentPath.split("/").length >= 6 &&
-  !currentPath.includes("/i-") &&
-  matchKey
-) {
-  try {
-    const module = await galleryFiles[matchKey]();
-    previewImages = module.galleryData.filter(img => img.visibility !== "ghost").slice(0, 6);
-    previewPath = currentPath;
-  } catch (err) {
-    console.warn("[Footer] Failed loading gallery preview:", matchKey);
-  }
-}
+const { previewImages, previewPath } = Astro.props;
 ---
+
+{previewImages && previewPath && (
+  <GalleryPreviewStrip
+    images={previewImages}
+    path={previewPath}
+    limit={6}
+  />
+)}
 
 <footer
   class="bg-[#fff] font-serif text-center w-full"
@@ -79,12 +60,3 @@ if (
     }
   </style>
 </footer>
-
-<!-- ✅ Preview strip renders cleanly if data matched -->
-{previewImages.length && previewPath && (
-  <GalleryPreviewStrip
-    images={previewImages}
-    path={previewPath}
-    limit={6}
-  />
-)}
