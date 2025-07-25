@@ -12,6 +12,17 @@ const { previewImages, previewPath } = Astro.props;
   itemscope
   itemtype="https://schema.org/Organization"
 >
+
+  {previewImages?.length > 0 && previewPath && !previewPath.includes('/i-') && (
+    <div class="mb-6">
+      <GalleryPreviewStrip
+        images={previewImages}
+        path={previewPath}
+        limit={6}
+      />
+    </div>
+  )}
+
   <div class="mx-auto max-w-xl px-4 pt-8 pb-6">
     <div class="flex justify-center gap-5 mb-3 opacity-40">
       <a href="https://www.facebook.com/wayne.heim" target="_blank" rel="noopener noreferrer">
@@ -39,8 +50,6 @@ const { previewImages, previewPath } = Astro.props;
     </div>
   </div>
 
-  <div class="h-10"></div>
-
   <style>
     .social-icon {
       transition: transform 0.3s ease, filter 0.3s ease;
@@ -52,12 +61,3 @@ const { previewImages, previewPath } = Astro.props;
     }
   </style>
 </footer>
-
-<!-- ✅ Preview strip appears below footer if props exist -->
-{previewImages && previewPath && (
-  <GalleryPreviewStrip
-    images={previewImages}
-    path={previewPath}
-    limit={6}
-  />
-)}
