@@ -1,5 +1,20 @@
 ---
 const currentYear = new Date().getFullYear();
+import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
+
+const { previewImages, previewPath } = Astro.props;
+
+// Get actual runtime URL
+const currentPath = Astro.url.pathname;
+
+// Check if we're on a deep image page like /i-xxxxx
+const isImagePage = /\/i-[a-zA-Z0-9]+$/.test(currentPath);
+
+// ✅ Only show strip if preview data exists AND we are NOT on an /i-xxxxx page
+const showPreviewBar =
+  previewImages?.length > 0 &&
+  previewPath &&
+  !isImagePage;
 ---
 
 <footer
@@ -9,6 +24,17 @@ const currentYear = new Date().getFullYear();
   itemscope
   itemtype="https://schema.org/Organization"
 >
+
+  {showPreviewBar && (
+    <div class="w-full max-w-screen-xl mx-auto px-4 pb-2">
+      <GalleryPreviewStrip
+        images={previewImages}
+        path={previewPath}
+        limit={6}
+      />
+    </div>
+  )}
+
   <div class="mx-auto max-w-xl px-4 pt-8 pb-6">
     <div class="flex justify-center gap-5 mb-3 opacity-40">
       <a href="https://www.facebook.com/wayne.heim" target="_blank" rel="noopener noreferrer">
@@ -36,7 +62,6 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 
-<div class="h-10"></div>
   <style>
     .social-icon {
       transition: transform 0.3s ease, filter 0.3s ease;
@@ -46,7 +71,5 @@ const currentYear = new Date().getFullYear();
       transform: scale(1.2);
       filter: sepia(1) hue-rotate(10deg) saturate(3) brightness(0.8);
     }
-
-    
   </style>
 </footer>
