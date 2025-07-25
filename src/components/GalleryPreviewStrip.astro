@@ -57,14 +57,6 @@ const middleIndex = Math.floor(visibleImages.length / 2);
   </div>
 </section>
 
-<script is:inline>
-  requestAnimationFrame(() => {
-    const isSingleImage = window?.location?.pathname?.match(/\/i-[a-zA-Z0-9]+$/);
-    if (isSingleImage) {
-      const preview = document.querySelector('.preview-strip-wrapper');
-      if (preview) preview.remove();
-    }
-  });
 
 <style>
   .preview-strip-wrapper {
