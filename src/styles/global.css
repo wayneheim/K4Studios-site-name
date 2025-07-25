@@ -408,15 +408,25 @@ body.loading * {
 }
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .chapter-image-mobile {
     max-height: 44vh;    /* Try 40–55vh, adjust to taste */
-    width: 60%;
+ /*   width: 60%;
     object-fit: cover;
     border-radius: 12px;
   }
   .aspect-[4/5] {
     max-height: 44vh;
+  }
+}*/
+
+@media (max-width: 768px) {
+  .chapter-image-mobile {
+    width: 100%;               /* Let parent control width */
+    height: auto;
+    max-height: 65vh;          /* Matches your inline style logic */
+    object-fit: contain;       /* Prevents cropping/distortion */
+    border-radius: 12px;
   }
 }
 
