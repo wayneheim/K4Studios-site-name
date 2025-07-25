@@ -410,7 +410,7 @@ body.loading * {
 
 @media (max-width: 768px) {
   .chapter-image-mobile {
-    max-height: 44vh;    /* Try 40–55vh, adjust to taste */
+    max-height: 84vh;    /* Try 40–55vh, adjust to taste */
     width: 60%;
     object-fit: cover;
     border-radius: 12px;
