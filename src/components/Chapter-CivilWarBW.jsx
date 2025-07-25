@@ -261,41 +261,42 @@ useEffect(() => {
 
                       <div className="relative w-full md:w-[340px] flex flex-row">
   {/* Image */}
-  <div
-  className="aspect-[4/5] rounded-lg flex items-center justify-center text-gray-500 cursor-pointer overflow-hidden z-10 w-full group"
+ <div
+  className="rounded-lg flex items-center justify-center text-gray-500 cursor-pointer overflow-hidden z-10 w-full group"
   style={{
     marginLeft: isMobile ? "10px" : 0,
     marginRight: isMobile ? "10px" : 0,
   }}
 >
- <img
-  src={galleryData[currentIndex].src}
-  alt={galleryData[currentIndex].title}
-  className="chapter-image-mobile border-2 border-gray-400 rounded-lg"
-  style={
-    isMobile
-      ? {
-          cursor: "zoom-in",
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          maxHeight: "65vh",
-        }
-      : {
-          cursor: "zoom-in",
-          width: "100%",
-          height: "auto",
-          objectFit: "contain",
-          maxHeight: "70vh",
-          minHeight: "340px",
-          background: "#f7f7f7",
-        }
-  }
-  onClick={() => {
-    if (!isLandscapeMobile) setIsZoomed(true);
-  }}
-/>
+  <img
+    src={galleryData[currentIndex].src}
+    alt={galleryData[currentIndex].title}
+    className="chapter-image-mobile border-2 border-gray-400 rounded-lg"
+    style={
+      isMobile
+        ? {
+            cursor: "zoom-in",
+            width: "100%",
+            height: "auto",
+            objectFit: "contain",
+            maxHeight: "65vh",
+          }
+        : {
+            cursor: "zoom-in",
+            width: "100%",
+            height: "auto",
+            objectFit: "contain",
+            maxHeight: "70vh",
+            minHeight: "340px",
+            background: "#f7f7f7",
+          }
+    }
+    onClick={() => {
+      if (!isLandscapeMobile) setIsZoomed(true);
+    }}
+  />
 </div>
+
 
 
   {/* Collector Notes Button & Panel (desktop only, right of image, top-aligned) */}
