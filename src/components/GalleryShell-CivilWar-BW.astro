@@ -6,19 +6,33 @@ import ChapterViewer from '../components/Chapter-CivilWarBW.jsx';
 import Footer from '../components/Footer.astro';
 
 import { galleryData as allImages } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs';
+import { landingWestern } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts';
 import { getStructuredData } from '../components/utils/getStructuredData.ts';
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
 
-const currentImage = allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
+const isGhost = !initialImageId || initialImageId === "i-k4studios";
+const currentImage = isGhost
+  ? null
+  : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
+
 const imageStructuredData = currentImage
   ? getStructuredData({ type: "image", data: currentImage })
-  : null;
+  : getStructuredData({
+      type: "gallery",
+      data: {
+        title: landingWestern.title,
+        description: landingWestern.subtitle,
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
+      },
+      images: allImages.filter(img => img.visibility !== "ghost").slice(0, 8)
+    });
 ---
 <BaseLayout 
   title="Facing History: Civil War Themed Art – Color Photos" 
   structuredDataJSON={imageStructuredData}
 >
+
 
     <div id="gallery-content" class="flex-grow relative overflow-hidden">
 
