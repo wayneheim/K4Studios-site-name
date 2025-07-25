@@ -89,63 +89,61 @@ const middleIndex = Math.floor(visibleImages.length / 2);
   }
 
   .preview-thumb {
-    flex: 0 0 auto;
-    width: 110px;
-    height: 110px;
-    border-radius: 6px;
-    overflow: hidden;
-    display: block;
-    border: 2px solid #ccc;
+  flex: 0 0 auto;
+  width: 110px;
+  height: 110px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: block;
+  border: 2px solid #ccc;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInCenter 0.8s ease-out forwards;
+}
+
+.anim-left {
+  animation-name: fadeSlideLeft;
+}
+
+.anim-right {
+  animation-name: fadeSlideRight;
+}
+
+.anim-center {
+  animation-name: fadeInCenter;
+}
+
+@keyframes fadeInCenter {
+  0% {
     opacity: 0;
     transform: scale(0.95);
-    animation: fadeInCenter 1.75s ease forwards;
   }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-  .preview-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+@keyframes fadeSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(16px) scale(0.95);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
 
-  .anim-left {
-    animation-name: fadeSlideLeft;
+@keyframes fadeSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-16px) scale(0.95);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
 
-  .anim-right {
-    animation-name: fadeSlideRight;
-  }
-
-  .anim-center {
-    animation-name: fadeInCenter;
-  }
-
-  @keyframes fadeInCenter {
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  @keyframes fadeSlideLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(30px) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
-  }
-
-  @keyframes fadeSlideRight {
-    0% {
-      opacity: 0;
-      transform: translateX(-30px) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
-  }
 </style>
