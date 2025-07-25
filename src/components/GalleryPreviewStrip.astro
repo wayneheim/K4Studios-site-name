@@ -31,7 +31,6 @@ const visibleImages = images
           alt={img.alt ?? img.title ?? "Gallery image"}
           loading="lazy"
         />
-        <span class="preview-title">{img.title ?? ""}</span>
       </a>
     ))}
   </div>
@@ -46,37 +45,29 @@ const visibleImages = images
 
   .preview-strip {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 1rem;
     justify-content: center;
+    padding: 0 1rem;
   }
 
   .preview-thumb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 120px;
-    text-decoration: none;
-    color: inherit;
+    flex: 0 0 auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: block;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .preview-thumb img {
     width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
-  .preview-thumb:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  .preview-title {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    font-family: 'Glegoo', serif;
-  }
-</style>
+  .preview-thumb
