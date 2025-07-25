@@ -27,14 +27,14 @@ const visibleImages = shuffle(
 const middleIndex = Math.floor(visibleImages.length / 2);
 ---
 
-<section class="preview-strip-wrapper fade-strip" aria-label="Gallery preview strip">
-  <div class="preview-label-frame">
-    <span class="hr-line hr-line-left" />
-    <span class="preview-label">Gallery Preview</span>
-    <span class="hr-line hr-line-right" />
+<section class="gallery-preview-strip" aria-label="Gallery preview strip">
+  <div class="gallery-label-frame">
+    <span class="gallery-hr gallery-hr-left" />
+    <span class="gallery-label">Gallery Preview</span>
+    <span class="gallery-hr gallery-hr-right" />
   </div>
 
-  <div class="preview-strip">
+  <div class="gallery-strip">
     {visibleImages.map((img, index) => {
       const offset = index - middleIndex;
       const delay = Math.abs(offset) * 100 + 400;
@@ -42,7 +42,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       return (
         <a
           href={`${path}/${img.id}`}
-          class={`preview-thumb anim-${direction}`}
+          class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}
         >
@@ -58,7 +58,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
 </section>
 
 <style>
-  .preview-strip-wrapper {
+  .gallery-preview-strip {
     margin-top: 2.5rem;
     padding: 1rem 0;
     opacity: 0;
@@ -72,7 +72,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     }
   }
 
-  .preview-label-frame {
+  .gallery-label-frame {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +80,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     margin-bottom: 0.75rem;
   }
 
-  .preview-label {
+  .gallery-label {
     font-size: 1.2rem;
     font-weight: 500;
     color: #444;
@@ -91,7 +91,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     white-space: nowrap;
   }
 
-  .hr-line {
+  .gallery-hr {
     display: inline-block;
     height: 1px;
     background-color: #ccc;
@@ -101,13 +101,13 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     opacity: 0;
   }
 
-  .hr-line-left {
+  .gallery-hr-left {
     transform-origin: right;
     animation: lineGrowLeft 1.2s ease-out forwards;
     animation-delay: 1200ms;
   }
 
-  .hr-line-right {
+  .gallery-hr-right {
     transform-origin: left;
     animation: lineGrowRight 1.2s ease-out forwards;
     animation-delay: 1200ms;
@@ -133,7 +133,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     }
   }
 
-  .preview-strip {
+  .gallery-strip {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -142,7 +142,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     padding: 0 1rem;
   }
 
-  .preview-thumb {
+  .gallery-thumb {
     flex: 0 0 auto;
     width: 110px;
     height: 110px;
@@ -157,13 +157,11 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     will-change: transform, opacity;
   }
 
-  .preview-thumb img {
+  .gallery-thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 0;
-    box-shadow: none;
   }
 
   .anim-left {
@@ -208,11 +206,10 @@ const middleIndex = Math.floor(visibleImages.length / 2);
   }
 </style>
 
-
 <script>
   const checkAndHidePreview = () => {
     const chapter = document.getElementById("chapter-section");
-    const preview = document.querySelector(".preview-strip-wrapper");
+    const preview = document.querySelector(".gallery-preview-strip");
 
     if (!chapter || !preview) return;
 
@@ -242,4 +239,3 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     });
   });
 </script>
-
