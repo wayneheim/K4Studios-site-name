@@ -27,7 +27,7 @@ const visibleImages = shuffle(
 const middleIndex = Math.floor(visibleImages.length / 2);
 ---
 
-<section class="preview-strip-wrapper fade-strip" id="preview-strip" aria-label="Gallery preview strip">
+<section id="preview-strip" class="preview-strip-wrapper fade-strip" aria-label="Gallery preview strip">
   <div class="preview-label-frame">
     <span class="hr-line hr-line-left" />
     <span class="preview-label">Gallery Preview</span>
@@ -55,17 +55,18 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       );
     })}
   </div>
-
-  <script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
-      const hasCart = document.querySelector(".lucide-shopping-cart");
-      const strip = document.getElementById("preview-strip");
-      if (hasCart && strip) {
-        strip.remove();
-      }
-    });
-  </script>
 </section>
+
+<!-- 🚫  Hide strip if cart icon is detected (i.e., individual image page) -->
+<script is:inline>
+  requestAnimationFrame(() => {
+    const cart = document.querySelector(".lucide-shopping-cart");
+    const strip = document.getElementById("preview-strip");
+    if (cart && strip) {
+      strip.style.display = "none";
+    }
+  });
+</script>
 
 <style>
   .preview-strip-wrapper {
