@@ -13,9 +13,17 @@ interface Props {
 
 const { images, path, limit = 6 } = Astro.props;
 
-const visibleImages = images
-  .filter(img => img.visibility !== "ghost")
-  .slice(0, limit);
+function shuffle<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const visibleImages = shuffle(
+  images.filter(img => img.visibility !== "ghost")
+).slice(0, limit);
+
 
 const middleIndex = Math.floor(visibleImages.length / 2);
 ---
