@@ -4,14 +4,17 @@ import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 
 const { previewImages, previewPath } = Astro.props;
 
-// ✅ Works  in both SSR + static builds
+// Get actual runtime URL
 const currentPath = Astro.url.pathname;
 
-// ✅ Suppress preview bar on image pages
+// Check if we're on a deep image page like /i-xxxxx
+const isImagePage = /\/i-[a-zA-Z0-9]+$/.test(currentPath);
+
+// ✅ Only show strip if preview data exists AND we are NOT on an /i-xxxxx page
 const showPreviewBar =
   previewImages?.length > 0 &&
   previewPath &&
-  !currentPath.includes('/i-');
+  !isImagePage;
 ---
 
 <footer
