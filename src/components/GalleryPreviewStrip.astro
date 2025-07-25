@@ -55,6 +55,25 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       );
     })}
   </div>
+
+  <script is:inline>
+  requestAnimationFrame(() => {
+    const path = window?.location?.pathname;
+    if (path?.match(/\/i-[a-zA-Z0-9]+$/)) {
+      const strip = document.querySelector(".preview-strip-wrapper");
+      if (strip) {
+        setTimeout(() => {
+          strip.style.transition = "opacity 0.7s ease, transform 0.7s ease";
+          strip.style.opacity = "0";
+          strip.style.transform = "translateY(40px)";
+          setTimeout(() => {
+            strip.remove();
+          }, 750);
+        }, 900); // allow initial animation to complete
+      }
+    }
+  });
+</script>
 </section>
 
 
