@@ -38,15 +38,15 @@ import GalleryPreviewStrip from '../components/GalleryPreviewStrip.astro';
   <body>
     <div class="page-container">
       <slot />
-
-      {Astro.props.previewImages && Astro.props.previewPath && (
-        <GalleryPreviewStrip
-          images={Astro.props.previewImages}
-          path={Astro.props.previewPath}
-          limit={6}
-        />
-      )}
     </div>
+
+    {Astro.props.previewImages && Astro.props.previewPath && (
+      <GalleryPreviewStrip
+        images={Astro.props.previewImages}
+        path={Astro.props.previewPath}
+        limit={6}
+      />
+    )}
 
     <div id="overlay-root"></div>
   </body>
