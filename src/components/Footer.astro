@@ -5,14 +5,6 @@ import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 const { previewImages, previewPath } = Astro.props;
 ---
 
-{previewImages && previewPath && (
-  <GalleryPreviewStrip
-    images={previewImages}
-    path={previewPath}
-    limit={6}
-  />
-)}
-
 <footer
   class="bg-[#fff] font-serif text-center w-full"
   style="font-family: 'Glegoo', serif;"
@@ -60,3 +52,12 @@ const { previewImages, previewPath } = Astro.props;
     }
   </style>
 </footer>
+
+<!-- ✅ Preview strip appears below footer if props exist -->
+{previewImages && previewPath && (
+  <GalleryPreviewStrip
+    images={previewImages}
+    path={previewPath}
+    limit={6}
+  />
+)}
