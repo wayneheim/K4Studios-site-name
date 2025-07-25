@@ -5,13 +5,20 @@ import GalleryInfo from '../components/GalleryInfo.jsx';
 import ChapterViewer from '../components/Chapter-CivilWarBW.jsx';
 import Footer from '../components/Footer.astro';
 
-// Accept props passed down
-const { breadcrumb, entranceData, initialImageId } = Astro.props;
----
+import { galleryData as allImages } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs';
+import { getStructuredData } from '../components/utils/getStructuredData.ts';
 
-<BaseLayout title="Facing History: Civil War Themed Art – Color Photos">
-  <!--section id="gallery-shell" class="flex flex-col min-h-0 bg-white overflow-hidden" -->
-  <section id="gallery-shell" class="flex flex-col bg-white">
+const { breadcrumb, entranceData, initialImageId } = Astro.props;
+
+const currentImage = allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
+const imageStructuredData = currentImage
+  ? getStructuredData({ type: "image", data: currentImage })
+  : null;
+---
+<BaseLayout 
+  title="Facing History: Civil War Themed Art – Color Photos" 
+  structuredDataJSON={imageStructuredData}
+>
 
     <div id="gallery-content" class="flex-grow relative overflow-hidden">
 
@@ -156,4 +163,5 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
       }
     });
   </script>
+  
 </BaseLayout>

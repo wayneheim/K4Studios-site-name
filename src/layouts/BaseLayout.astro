@@ -8,6 +8,9 @@ const { title = 'Gallery' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    {Astro.props.structuredDataJSON && (
+  <script type="application/ld+json" set:html={Astro.props.structuredDataJSON} />
+)}
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <style>
