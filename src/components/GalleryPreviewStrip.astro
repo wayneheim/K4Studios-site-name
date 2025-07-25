@@ -24,17 +24,20 @@ const visibleImages = shuffle(
   images.filter(img => img.visibility !== "ghost")
 ).slice(0, limit);
 
-
 const middleIndex = Math.floor(visibleImages.length / 2);
 ---
 
 <section class="preview-strip-wrapper fade-strip" aria-label="Gallery preview strip">
-  <p class="preview-label">Gallery Preview</p>
+  <div class="preview-label-frame">
+    <span class="hr-line hr-line-left" />
+    <span class="preview-label">Gallery Preview</span>
+    <span class="hr-line hr-line-right" />
+  </div>
 
   <div class="preview-strip">
     {visibleImages.map((img, index) => {
       const offset = index - middleIndex;
-      const delay = Math.abs(offset) * 100 + 400; // starts after wrapper fade
+      const delay = Math.abs(offset) * 100 + 400;
       const direction = offset === 0 ? "center" : offset < 0 ? "left" : "right";
       return (
         <a
@@ -60,7 +63,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     padding: 1rem 0;
     opacity: 0;
     animation: fadeStripIn 0.24s ease forwards;
-    animation-delay: 800ms;
+    animation-delay: 900ms;
   }
 
   @keyframes fadeStripIn {
@@ -69,14 +72,65 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     }
   }
 
-  .preview-label {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
+  .preview-label-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
     margin-bottom: 0.75rem;
+  }
+
+  .preview-label {
+    font-size: 1.2rem;
+    font-weight: 500;
     color: #444;
     font-family: 'Glegoo', serif;
-    opacity: 0.85;
+    opacity: 0;
+    animation: fadeLabelIn 0.5s ease-out forwards;
+    animation-delay: 700ms;
+    white-space: nowrap;
+  }
+
+  .hr-line {
+    display: inline-block;
+    height: 1px;
+    background-color: #ccc;
+    flex-grow: 1;
+    max-width: 300px;
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  .hr-line-left {
+    transform-origin: right;
+    animation: lineGrowLeft 0.6s ease-out forwards;
+    animation-delay: 500ms;
+  }
+
+  .hr-line-right {
+    transform-origin: left;
+    animation: lineGrowRight 0.6s ease-out forwards;
+    animation-delay: 500ms;
+  }
+
+  @keyframes fadeLabelIn {
+    to {
+      opacity: 0.75;
+    }
+  }
+
+  @keyframes lineGrowLeft {
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes lineGrowRight {
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
   }
 
   .preview-strip {
