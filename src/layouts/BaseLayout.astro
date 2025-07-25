@@ -1,6 +1,5 @@
 ---
 const { title = 'Gallery' } = Astro.props;
-import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -14,31 +13,27 @@ import Footer from '../components/Footer.astro';
     <style>
       body {
         font-family: 'Glegoo', serif;
-        background: rgb(255, 255, 255);
+        background:rgb(255, 255, 255);
         margin: 0;
         padding: 0;
         color: #2e2e2eff;
         margin-top: 1rem;
       }
+      
 
       .page-container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0;
       }
+
+
     </style>
   </head>
   <body>
     <div class="page-container">
       <slot />
     </div>
-
-    <!-- ✅ ADD THIS -->
-    <Footer
-      previewImages={Astro.props.previewImages}
-      previewPath={Astro.props.previewPath}
-    />
-
     <div id="overlay-root"></div>
   </body>
 </html>
