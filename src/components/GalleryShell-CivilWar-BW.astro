@@ -16,6 +16,10 @@ const currentImage = isGhost
   ? null
   : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
 
+const previewImages = allImages
+  .filter(img => img.visibility !== "ghost")
+  .slice(0, 8);
+
 const imageStructuredData = currentImage
   ? getStructuredData({ type: "image", data: currentImage })
   : getStructuredData({
@@ -25,13 +29,16 @@ const imageStructuredData = currentImage
         description: landingWestern.subtitle,
         url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
       },
-      images: allImages.filter(img => img.visibility !== "ghost").slice(0, 8)
+      images: previewImages
     });
 ---
 <BaseLayout 
   title="Facing History: Civil War Themed Art – Color Photos" 
   structuredDataJSON={imageStructuredData}
->
+  previewImages={previewImages}
+  previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
+/>
+
 
 
     <div id="gallery-content" class="flex-grow relative overflow-hidden">
