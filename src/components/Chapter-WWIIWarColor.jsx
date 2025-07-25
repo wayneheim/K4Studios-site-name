@@ -265,17 +265,17 @@ export default function ScrollFlipGallery({ initialImageId }) {
   alt={galleryData[currentIndex].title}
   className="chapter-image-mobile border-2 border-gray-400 rounded-lg"
   style={
-    isMobile
+   isMobile
       ? {
           cursor: "zoom-in",
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
+          width: "auto",
+          height: "auto",            // 🔁 Changed
+        objectFit: "contain",      // 🔁 Changed
           maxHeight: "65vh",
         }
       : {
           cursor: "zoom-in",
-          width: "100%",
+          width: "auto",
           height: "auto",
           objectFit: "contain",
           maxHeight: "70vh",
