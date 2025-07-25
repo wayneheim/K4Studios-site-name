@@ -18,7 +18,9 @@ const visibleImages = images
   .slice(0, limit);
 ---
 
-<section class="preview-strip-wrapper">
+<section class="preview-strip-wrapper" aria-label="Gallery preview strip">
+  <p class="preview-label">Gallery Preview</p>
+
   <div class="preview-strip">
     {visibleImages.map(img => (
       <a
@@ -40,7 +42,16 @@ const visibleImages = images
   .preview-strip-wrapper {
     margin-top: 2.5rem;
     padding: 1rem 0;
-    border-top: 0px solid #ccc;
+  }
+
+  .preview-label {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: #444;
+    font-family: 'Glegoo', serif;
+    opacity: 0.85;
   }
 
   .preview-strip {
@@ -69,5 +80,4 @@ const visibleImages = images
     object-fit: cover;
     display: block;
   }
-
-  .preview-thumb
+</style>
