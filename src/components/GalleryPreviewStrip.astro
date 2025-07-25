@@ -1,0 +1,82 @@
+---
+interface Props {
+  images: {
+    id: string;
+    title?: string;
+    alt?: string;
+    src: string;
+    visibility?: string;
+  }[];
+  path: string;
+  limit?: number;
+}
+
+const { images, path, limit = 6 } = Astro.props;
+
+const visibleImages = images
+  .filter(img => img.visibility !== "ghost")
+  .slice(0, limit);
+---
+
+<section class="preview-strip-wrapper">
+  <div class="preview-strip">
+    {visibleImages.map(img => (
+      <a
+        href={`${path}/${img.id}`}
+        class="preview-thumb"
+        title={img.title ?? img.alt ?? "Gallery image"}
+      >
+        <img
+          src={img.src}
+          alt={img.alt ?? img.title ?? "Gallery image"}
+          loading="lazy"
+        />
+        <span class="preview-title">{img.title ?? ""}</span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .preview-strip-wrapper {
+    margin-top: 2.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .preview-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .preview-thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .preview-thumb img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .preview-thumb:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .preview-title {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-family: 'Glegoo', serif;
+  }
+</style>
