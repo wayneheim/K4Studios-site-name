@@ -1,5 +1,6 @@
 ---
 const { title = 'Gallery' } = Astro.props;
+import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -8,32 +9,42 @@ const { title = 'Gallery' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+
+    {Astro.props.structuredDataJSON && (
+      <script type="application/ld+json" set:html={Astro.props.structuredDataJSON} />
+    )}
+
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
     <style>
       body {
         font-family: 'Glegoo', serif;
-        background:rgb(255, 255, 255);
+        background: rgb(255, 255, 255);
         margin: 0;
         padding: 0;
         color: #2e2e2eff;
         margin-top: 1rem;
       }
-      
 
       .page-container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0;
       }
-
-
     </style>
   </head>
+
   <body>
     <div class="page-container">
       <slot />
     </div>
+
+    <Footer
+      previewImages={Astro.props.previewImages}
+      previewPath={Astro.props.previewPath}
+    />
+
     <div id="overlay-root"></div>
   </body>
 </html>
