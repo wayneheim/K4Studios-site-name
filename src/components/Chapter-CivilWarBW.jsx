@@ -262,7 +262,7 @@ useEffect(() => {
                       <div className="relative w-full md:w-[340px] flex flex-row">
   {/* Image */}
   <div
-  className=" rounded-lg flex items-center justify-center text-gray-500 cursor-pointer overflow-hidden z-10 w-full group"
+  className="aspect-[4/5] rounded-lg flex items-center justify-center text-gray-500 cursor-pointer overflow-hidden z-10 w-full group"
   style={{
     marginLeft: isMobile ? "10px" : 0,
     marginRight: isMobile ? "10px" : 0,
