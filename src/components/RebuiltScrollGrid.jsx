@@ -162,29 +162,28 @@ useEffect(() => {
               className="rounded-xl border border-gray-300 p-4 hover:shadow-md cursor-pointer flex flex-col will-change-transform"
               style={{ backgroundColor: "#f7f3eb" }}
             >
-              <div className="aspect-[4/5] bg-[#eae6df] rounded-sm overflow-hidden relative group">
-  <div
-    className="absolute inset-0 rounded-sm pointer-events-none"
-    style={{
-      boxShadow: `
-        inset 2px 0 3px rgba(75,75,75,.4),
-        inset -2px 0 3px rgba(236,236,236,.68),
-        inset 0 2px 3px rgba(77,77,77,.4),
-        inset 0 -3px 4px rgba(255,255,255,.81)
-      `,
-    }}
-  />
-  <img
-    src={entry.src}
-    alt={entry.title}
-    className="w-full h-full object-cover rounded-sm border-2 border-gray-400 transition-transform duration-[6000ms] ease-[cubic-bezier(0.33,1,0.68,1)] group-hover:scale-[1.1] group-hover:translate-x-[-2%] group-hover:translate-y-[-2%]"
-    style={{ minHeight: 120 }}
-    onError={(e) => {
-      e.target.style.opacity = 0.25;
-    }}
-  />
-</div>
-
+              <div className="aspect-[4/5] bg-[#eae6df] rounded-sm overflow-hidden relative">
+                <div
+                  className="absolute inset-0 rounded-sm pointer-events-none"
+                  style={{
+                    boxShadow: `
+                      inset 2px 0 3px rgba(75,75,75,.4),
+                      inset -2px 0 3px rgba(236,236,236,.68),
+                      inset 0 2px 3px rgba(77,77,77,.4),
+                      inset 0 -3px 4px rgba(255,255,255,.81)
+                    `,
+                  }}
+                />
+                <img
+  src={entry.src}
+  alt={entry.title}
+  className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
+  style={{ minHeight: 120 }}
+  onError={(e) => {
+    e.target.style.opacity = 0.25;
+  }}
+/>
+              </div>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
