@@ -5,8 +5,8 @@ import GalleryInfo from '../components/GalleryInfo.jsx';
 import ChapterViewer from '../components/Chapter-Roaring20sBW.jsx';
 import Footer from '../components/Footer.astro';
 
-import { galleryData as allImages } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s/Black-White.mjs';
-import { landingWestern } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s/landingstones.ts';
+import { galleryData as allImages } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs';
+import { landingWestern as landing20s } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts';
 import { getStructuredData } from '../components/utils/getStructuredData.ts';
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
@@ -25,20 +25,21 @@ const imageStructuredData = currentImage
   : getStructuredData({
       type: "gallery",
       data: {
-        title: landingWestern.title,
-        description: landingWestern.subtitle,
-        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s/Black-White"
+        title: landing20s.title,
+        description: landing20s.subtitle,
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
       },
       images: previewImages
     });
 ---
 
 <BaseLayout 
-  title="Facing History: Roaring 20s – BW Photos"
+  title="Facing History: Roaring 20s – BW Photos" 
   structuredDataJSON={imageStructuredData}
 >
   <div class="page-container">
     <div id="gallery-content" class="flex-grow relative overflow-hidden">
+
       <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
         <GalleryHeader client:load breadcrumb={breadcrumb} />
       </div>
@@ -58,7 +59,7 @@ const imageStructuredData = currentImage
 
     <Footer 
       previewImages={previewImages}
-      previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s/Black-White"
+      previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
     />
   </div>
 
@@ -119,7 +120,6 @@ const imageStructuredData = currentImage
       exploreButton?.addEventListener('click', () => {
         header?.classList.add('section-hidden');
         intro?.classList.add('section-hidden');
-
         chapter.style.display = 'block';
         setTimeout(() => {
           chapter.classList.remove('section-hidden');
