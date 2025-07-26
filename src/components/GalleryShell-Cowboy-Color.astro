@@ -5,83 +5,101 @@ import GalleryInfo from '../components/GalleryInfo.jsx';
 import ChapterViewer from '../components/Chapter-CowboyColor.jsx';
 import Footer from '../components/Footer.astro';
 
-// Accept props passed down
+import { galleryData as allImages } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { landingWestern } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/landingstones.ts';
+import { getStructuredData } from '../components/utils/getStructuredData.ts';
+
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
+
+const isGhost = !initialImageId || initialImageId === "i-k4studios";
+const currentImage = isGhost
+  ? null
+  : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
+
+const previewImages = allImages
+  .filter(img => img.visibility !== "ghost")
+  .slice(0, 8);
+
+const imageStructuredData = currentImage
+  ? getStructuredData({ type: "image", data: currentImage })
+  : getStructuredData({
+      type: "gallery",
+      data: {
+        title: landingWestern.title,
+        description: landingWestern.subtitle,
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      },
+      images: previewImages
+    });
 ---
 
-<BaseLayout title="Facing History: Western Art – Color Photos">
-  <!--section id="gallery-shell" class="flex flex-col min-h-0 bg-white overflow-hidden" -->
-  <section id="gallery-shell" class="flex flex-col bg-white">
+<BaseLayout 
+  title="Facing History: Western Cowboy Art – Color Photos"
+  structuredDataJSON={imageStructuredData}
+/>
 
-    <div id="gallery-content" class="flex-grow relative overflow-hidden">
+<section id="gallery-shell" class="flex flex-col bg-white">
+  <div id="gallery-content" class="flex-grow relative overflow-hidden">
+    <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
+      <GalleryHeader client:load breadcrumb={breadcrumb} />
+    </div>
 
-      <!-- Header stays fixed above intro -->
-      <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
-        <GalleryHeader client:load breadcrumb={breadcrumb} />
+    <div class="h-0 md:h-5"></div>
 
-      </div>
+    <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
+      <GalleryInfo client:load entranceData={entranceData} />
+    </div>
 
-      <!-- Spacer to push intro below header visually -->
-      <div class="h-0 md:h-5"></div>
+    <div id="chapter-section" class="section-hidden" style="display: none;">
+      <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+    </div>
+  </div>
 
-      <!-- Intro: Visible initially, now loads under the header -->
-      <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-        <GalleryInfo client:load entranceData={entranceData} />
-      </div>
+  <div class="h-12 md:h-20"></div>
 
-      <!-- Chapter Viewer: Hidden initially -->
-      <div id="chapter-section" class="section-hidden" style="display: none;">
-        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-      </div>
- </div> 
+  <Footer 
+    previewImages={previewImages}
+    previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+  />
+</section>
 
-    <!-- Spacer pushes the footer down on landing page -->
-    <div class="h-12 md:h-20"></div>
-
-    <Footer />
-
-  </section>
-
-  <style>
-
-  
-
- .hamburger-circle {
-  display: none !important;
-}
-
-  @media (max-width: 767px) {
-  #nav-toggle {
+<style>
+  .hamburger-circle {
     display: none !important;
   }
-}
-   .section-hidden {
-  display: none !important;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 2s ease, transform 1.2s ease;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  z-index: 0;
-}
 
-.section-visible {
-  opacity: 1;
-  transform: translateX(0%);
-  transition: opacity 1s ease, transform 1.2s ease;
-  pointer-events: auto;
-  position: relative;
-  width: 100%;
-  z-index: 2;
-}
+  @media (max-width: 767px) {
+    #nav-toggle {
+      display: none !important;
+    }
+  }
 
-  </style>
+  .section-hidden {
+    display: none !important;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 2s ease, transform 1.2s ease;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 0;
+  }
 
-  <script>
+  .section-visible {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s ease, transform 1.2s ease;
+    pointer-events: auto;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
+</style>
+
+<script>
   document.addEventListener('DOMContentLoaded', () => {
     const exploreButton = document.querySelector('.explore-button');
     const header = document.getElementById('header-section');
@@ -94,19 +112,10 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
 
     let isMenuOpen = false;
 
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+    const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
     if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-  // Simulate actual click on Explore button
-  const clickExplore = () => {
-    if (!exploreButton) return;
-
-    exploreButton.click(); // triggers real logic
-  };
-
-  // Delay slightly to let DOM mount fully
-  setTimeout(clickExplore, 50);
-}
-
+      setTimeout(() => exploreButton?.click(), 50);
+    }
 
     exploreButton?.addEventListener('click', () => {
       header?.classList.add('section-hidden');
@@ -135,25 +144,10 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
       floatingHeader?.classList.toggle('show');
     });
   });
+
+  document.addEventListener('contextmenu', (e) => {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
 </script>
-
-<!--
-<div id="nav-toggle" class="nav-toggle hidden md:block scroll-menu-button">
-  <div style="font-size: 1.2rem; line-height: 1;">☰</div>
-  <div style="font-size: 0.7rem;" id="menu-label">M+</div>
-</div> -->
-
-<!-- Header Reinserted for Toggle 
-<div id="floating-header" class="floating-header">
-  <GalleryHeader />
-</div>
--->
-
-  <script>
-    document.addEventListener('contextmenu', function (e) {
-      if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-      }
-    });
-  </script>
-</BaseLayout>
