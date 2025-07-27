@@ -504,10 +504,10 @@ style={
                       </a>
                       {/* CLOSE (⨂) */}
                       <button
-                        className="px-2 py-.5 border border-gray-200 hover:bg-gray-200 bg-white text-gray-400 text-lg rounded shadow-sm transition-colors duration-150 hover:text-gray-900 focus:text-gray-900 hover:border-gray-500 focus:border-gray-500"
-                        aria-label="Close"
-                        title="Close"
-                        style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
+                        className="px-2 py-.5 border border-gray-200 hover:bg-gray-200 bg-white text-gray-400 text-sm rounded shadow-sm transition-colors duration-150 hover:text-gray-900 focus:text-gray-900 hover:border-gray-500 focus:border-gray-500"
+                        aria-label="Exit Chapter View"
+                        title="Exit"
+                        style={{ minWidth: 32, minHeight: 32, fontWeight: 200 }}
                         onClick={() => window.location.href = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"}
                       >
                         Exit
