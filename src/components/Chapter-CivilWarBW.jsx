@@ -502,17 +502,31 @@ style={
                       >
                         <ShoppingCart className="w-4 h-4" />
                       </a>
-                      {/* CLOSE (⨂) */}
-                      <button
-                        className="px-2 py-.5 border border-gray-200 hover:bg-gray-200 bg-white text-gray-400 text-sm rounded shadow-sm transition-colors duration-150 hover:text-gray-900 focus:text-gray-900 hover:border-gray-500 focus:border-gray-500"
-                        aria-label="Exit Chapter View"
-                        title="Exit"
-                        style={{ minWidth: 32, minHeight: 32, fontWeight: 200 }}
-                        onClick={() => window.location.href = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"}
-                      >
-                        Exit
-                      </button>
-                    </div>
+                      {/* CLOSE (— to Exit on hover) */}
+<div className="group relative inline-block" style={{ minWidth: 40 }}>
+  <button
+    className="px-2 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded shadow-sm transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-500 focus:text-gray-900 focus:border-gray-500"
+    aria-label="Exit Chapter View"
+    title="Exit"
+    style={{ fontWeight: 400, minHeight: 32 }}
+    onClick={() =>
+      (window.location.href =
+        "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White")
+    }
+  >
+    <span className="relative block h-[1em] w-full overflow-hidden">
+      {/* Dash */}
+      <span className="absolute inset-0 flex items-center justify-center transition-all duration-200 opacity-100 translate-y-0 group-hover:opacity-0 group-hover:-translate-y-1">
+        —
+      </span>
+      {/* Exit */}
+      <span className="absolute inset-0 flex items-center justify-center transition-all duration-200 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0">
+        Exit
+      </span>
+    </span>
+  </button>
+</div>
+
 
                     {/* Collector Notes Panel (mobile only, static below bar) */}
                     {galleryData[currentIndex].notes && isMobile && (
