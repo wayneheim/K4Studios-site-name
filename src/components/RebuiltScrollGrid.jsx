@@ -174,13 +174,23 @@ useEffect(() => {
                     `,
                   }}
                 />
-                <img
-  src={entry.src}
-  alt={entry.title}
-  className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
+               <div
+  className="absolute inset-0 rounded-sm pointer-events-none"
   style={{
-    minHeight: 120,
-    transition: "transform 0.9s ease-out",
+    boxShadow: `
+      inset 2px 0 3px rgba(75,75,75,.4),
+      inset -2px 0 3px rgba(236,236,236,.68),
+      inset 0 2px 3px rgba(77,77,77,.4),
+      inset 0 -3px 4px rgba(255,255,255,.81)
+    `,
+    zIndex: 10, // makes sure it stays on top of the image
+  }}
+/>
+
+<div
+  className="w-full h-full"
+  style={{
+    transition: "transform 7.5s ease-out",
     willChange: "transform",
   }}
   onMouseEnter={(e) => {
@@ -189,13 +199,21 @@ useEffect(() => {
       "scale(1.1) translate(-4%, -4%) rotate(-1.4deg)";
   }}
   onMouseLeave={(e) => {
-    e.currentTarget.style.transition = "transform 19.051s ease-in";
+    e.currentTarget.style.transition = "transform 1.25s ease-in";
     e.currentTarget.style.transform = "none";
   }}
-  onError={(e) => {
-    e.target.style.opacity = 0.25;
-  }}
-/>
+>
+  <img
+    src={entry.src}
+    alt={entry.title}
+    className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
+    style={{ minHeight: 120 }}
+    onError={(e) => {
+      e.target.style.opacity = 0.25;
+    }}
+  />
+</div>
+
               </div>
               <motion.div
                 initial={{ opacity: 0 }}
