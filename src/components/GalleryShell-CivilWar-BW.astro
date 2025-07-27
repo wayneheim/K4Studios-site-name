@@ -39,7 +39,7 @@ const imageStructuredData = currentImage
   title="Facing History: Civil War Themed Art – Photography" 
   structuredDataJSON={imageStructuredData}
 >
-  <div id="gallery-content" class="flex-grow relative overflow-hidden">
+  <div id="gallery-content" class="relative">
 
     <!-- Header stays fixed above intro -->
     <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
@@ -70,8 +70,8 @@ const imageStructuredData = currentImage
     </div>
   </div>
 
-  <!-- Spacer pushes the footer down for landing view -->
-  <div class="h-1 md:h-5"></div>
+  <!-- Spacer only needed for landing view -->
+  {!isDeepLink && <div class="h-1 md:h-5"></div>}
 
   {!isDeepLink && (
     <Footer 
@@ -106,6 +106,7 @@ const imageStructuredData = currentImage
     }
 
     .section-visible {
+      display: block !important;
       opacity: 1;
       transform: translateX(0%);
       transition: opacity 1s ease, transform 1.2s ease;
@@ -113,6 +114,10 @@ const imageStructuredData = currentImage
       position: relative;
       width: 100%;
       z-index: 2;
+    }
+
+    #chapter-section.section-visible {
+      min-height: 40vh;
     }
 
     .chapter-footer {
