@@ -108,66 +108,62 @@ const imageStructuredData = currentImage
   </style>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const exploreButton = document.querySelector('.explore-button');
-      const header = document.getElementById('header-section');
-      const intro = document.getElementById('intro-section');
-      const chapter = document.getElementById('chapter-section');
-      const navToggle = document.getElementById('nav-toggle');
-      const floatingHeader = document.getElementById('floating-header');
-      const menuLabel = document.getElementById('menu-label');
-      const topSpacer = document.getElementById('top-spacer');
-      let isMenuOpen = false;
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('header-section');
+    const intro = document.getElementById('intro-section');
+    const chapter = document.getElementById('chapter-section');
+    const navToggle = document.getElementById('nav-toggle');
+    const floatingHeader = document.getElementById('floating-header');
+    const menuLabel = document.getElementById('menu-label');
+    const topSpacer = document.getElementById('top-spacer');
+    let isMenuOpen = false;
 
-      const activateChapterView = () => {
-        header?.classList.add('section-hidden');
-        intro?.classList.add('section-hidden');
-        chapter.style.display = 'block';
+    function activateChapterView() {
+      header?.classList.add('section-hidden');
+      intro?.classList.add('section-hidden');
+      chapter.style.display = 'block';
 
-        // ✅ Apply a temp min-height until viewer hydrates
-        chapter.style.minHeight = '80vh';
+      // Temp min-height to prevent footer drop
+      chapter.style.minHeight = '80vh';
 
-        setTimeout(() => {
-          chapter.classList.remove('section-hidden');
-          chapter.classList.add('section-visible');
+      setTimeout(() => {
+        chapter.classList.remove('section-hidden');
+        chapter.classList.add('section-visible');
+        chapter.style.minHeight = ''; // Clean up after hydration
+      }, 50);
 
-          // ✅ Remove the temp height once it's active
-          setTimeout(() => {
-            chapter.style.minHeight = '';
-          }, 1000);
-        }, 50);
-
-        if (window.innerWidth >= 768) {
-          navToggle?.classList.remove('hidden');
-        }
-
-        if (topSpacer) {
-          topSpacer.style.marginTop = "0px";
-          topSpacer.style.height = "0px";
-          topSpacer.style.overflow = "hidden";
-        }
-      };
-
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
-      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-        setTimeout(() => {
-          activateChapterView();
-        }, 50);
+      if (window.innerWidth >= 768) {
+        navToggle?.classList.remove('hidden');
       }
 
-      exploreButton?.addEventListener('click', activateChapterView);
+      if (topSpacer) {
+        topSpacer.style.marginTop = "0px";
+        topSpacer.style.height = "0px";
+        topSpacer.style.overflow = "hidden";
+      }
+    }
 
-      navToggle?.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        menuLabel.textContent = isMenuOpen ? "M−" : "M+";
-        floatingHeader?.classList.toggle('show');
-      });
+    const isDeepLink = window.location.pathname.match(/\/i-[a-zA-Z0-9]+/);
+    if (isDeepLink) {
+      activateChapterView(); // ✅ Don't wait for any button
+    }
+
+    const exploreButton = document.querySelector('.explore-button');
+    exploreButton?.addEventListener('click', activateChapterView);
+
+    navToggle?.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      menuLabel.textContent = isMenuOpen ? "M−" : "M+";
+      floatingHeader?.classList.toggle('show');
     });
 
+    // Disable right click on images
     document.addEventListener('contextmenu', function (e) {
       if (e.target.tagName === 'IMG') {
         e.preventDefault();
       }
     });
-  </script>
+  });
+</script>
+
 </BaseLayout>
