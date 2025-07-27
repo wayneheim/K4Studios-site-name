@@ -177,7 +177,7 @@ useEffect(() => {
                 <img
   src={entry.src}
   alt={entry.title}
-  className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
+  className="w-full h-full object-cover rounded-sm border-2 border-gray-400 transition-transform duration-[5000ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.15] hover:translate-x-[-4%] hover:translate-y-[-4%]"
   style={{ minHeight: 120 }}
   onError={(e) => {
     e.target.style.opacity = 0.25;
