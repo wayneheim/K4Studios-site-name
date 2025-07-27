@@ -177,8 +177,18 @@ useEffect(() => {
                 <img
   src={entry.src}
   alt={entry.title}
-  className="w-full h-full object-cover rounded-sm border-2 border-gray-400 transition-transform duration-[3000ms] ease-in-out hover:scale-110 hover:translate-x-[-2%] hover:translate-y-[-2%]"
-  style={{ minHeight: 120 }}
+  className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
+  style={{
+    minHeight: 120,
+    transition: "transform 5s ease-in-out",
+    willChange: "transform",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.15) translate(-4%, -4%)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "none";
+  }}
   onError={(e) => {
     e.target.style.opacity = 0.25;
   }}
