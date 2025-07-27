@@ -12,6 +12,8 @@ import { getStructuredData } from '../components/utils/getStructuredData.ts';
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
 
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
+const isDeepLink = !!initialImageId && initialImageId !== "i-k4studios";
+
 const currentImage = isGhost
   ? null
   : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
@@ -39,29 +41,27 @@ const imageStructuredData = currentImage
 >
   <div id="gallery-content" class="relative">
 
-    <!-- Header stays fixed above intro -->
     <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
       <GalleryHeader client:load breadcrumb={breadcrumb} />
     </div>
 
-    <!-- Spacer to push intro below header visually -->
     <div class="h-0 md:h-5"></div>
 
-    <!-- Intro: Visible initially -->
     <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
       <GalleryInfo client:load entranceData={entranceData} />
     </div>
 
-    <!-- Chapter Viewer: Hidden initially -->
     <div id="chapter-section" class="section-hidden" style="display: none;">
       <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-
-      <!-- ✅ Footer moved here, right after the chapter viewer -->
-      <Footer 
-        previewImages={previewImages}
-        previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
-      />
     </div>
+  </div>
+
+  <!-- ✅ Always render footer below gallery-content, never inside it -->
+  <div id="footer-wrapper" class="chapter-footer-hidden">
+    <Footer 
+      previewImages={previewImages}
+      previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
+    />
   </div>
 
   <style>
@@ -96,12 +96,22 @@ const imageStructuredData = currentImage
       pointer-events: auto;
       position: relative;
       width: 100%;
+      height: auto;
       z-index: 2;
     }
 
     #chapter-section.section-visible {
       display: block !important;
-      min-height: 40vh;
+      min-height: 50vh;
+      position: relative;
+    }
+
+    .chapter-footer-hidden {
+      display: none;
+    }
+
+    .chapter-footer-visible {
+      display: block;
     }
   </style>
 
@@ -111,26 +121,23 @@ const imageStructuredData = currentImage
       const header = document.getElementById('header-section');
       const intro = document.getElementById('intro-section');
       const chapter = document.getElementById('chapter-section');
+      const footerWrapper = document.getElementById('footer-wrapper');
       const navToggle = document.getElementById('nav-toggle');
       const floatingHeader = document.getElementById('floating-header');
       const menuLabel = document.getElementById('menu-label');
       const topSpacer = document.getElementById('top-spacer');
       let isMenuOpen = false;
 
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
-      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-        setTimeout(() => {
-          exploreButton?.click();
-        }, 50);
-      }
-
-      exploreButton?.addEventListener('click', () => {
+      const activateChapterView = () => {
         header?.classList.add('section-hidden');
         intro?.classList.add('section-hidden');
         chapter.style.display = 'block';
+
         setTimeout(() => {
           chapter.classList.remove('section-hidden');
           chapter.classList.add('section-visible');
+          footerWrapper?.classList.remove('chapter-footer-hidden');
+          footerWrapper?.classList.add('chapter-footer-visible');
         }, 50);
 
         if (window.innerWidth >= 768) {
@@ -142,7 +149,16 @@ const imageStructuredData = currentImage
           topSpacer.style.height = "0px";
           topSpacer.style.overflow = "hidden";
         }
-      });
+      };
+
+      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
+        setTimeout(() => {
+          activateChapterView();
+        }, 50);
+      }
+
+      exploreButton?.addEventListener('click', activateChapterView);
 
       navToggle?.addEventListener('click', () => {
         isMenuOpen = !isMenuOpen;
