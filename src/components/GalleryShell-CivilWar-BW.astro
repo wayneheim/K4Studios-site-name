@@ -37,7 +37,7 @@ const imageStructuredData = currentImage
   title="Facing History: Civil War Themed Art – Photography" 
   structuredDataJSON={imageStructuredData}
 >
-  <div id="gallery-content" class="flex-grow relative overflow-hidden">
+  <div id="gallery-content" class="relative">
 
     <!-- Header stays fixed above intro -->
     <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
@@ -57,9 +57,6 @@ const imageStructuredData = currentImage
       <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
     </div>
   </div>
-
-  <!-- Spacer pushes the footer down -->
-  
 
   <Footer 
     previewImages={previewImages}
@@ -98,7 +95,13 @@ const imageStructuredData = currentImage
       pointer-events: auto;
       position: relative;
       width: 100%;
+      height: auto; /* ✅ Fix added */
       z-index: 2;
+    }
+
+    /* Ensure chapter view has height when shown */
+    #chapter-section.section-visible {
+      min-height: 40vh; /* ✅ Optional buffer for layout integrity */
     }
   </style>
 
