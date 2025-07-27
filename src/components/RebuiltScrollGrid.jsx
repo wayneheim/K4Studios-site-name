@@ -186,7 +186,7 @@ useEffect(() => {
   onMouseEnter={(e) => {
     e.currentTarget.style.transition = "transform 3.29s ease-out";
     e.currentTarget.style.transform =
-      "scale(1.1) translate(-2%, -2%) rotate(-1.deg)";
+      "scale(1.15) translate(-4%, -4%) rotate(-1.25deg)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.transition = "transform 0.1s ease-in";
