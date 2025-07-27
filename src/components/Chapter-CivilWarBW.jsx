@@ -510,7 +510,7 @@ style={
                         style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
                         onClick={() => window.location.href = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"}
                       >
-                        ⨂
+                        ❌
                       </button>
                     </div>
 
