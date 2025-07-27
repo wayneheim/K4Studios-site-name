@@ -37,33 +37,34 @@ const imageStructuredData = currentImage
   title="Facing History: Civil War Themed Art – Photography" 
   structuredDataJSON={imageStructuredData}
 >
-  <div class="min-h-screen flex flex-col">
-    <div id="gallery-content" class="flex-grow relative overflow-hidden">
+  <div id="gallery-content" class="flex-grow relative overflow-hidden">
 
-      <!-- Header stays fixed above intro -->
-      <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
-        <GalleryHeader client:load breadcrumb={breadcrumb} />
-      </div>
-
-      <!-- Spacer to push intro below header visually -->
-      <div class="h-0 md:h-5"></div>
-
-      <!-- Intro: Visible initially -->
-      <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-        <GalleryInfo client:load entranceData={entranceData} />
-      </div>
-
-      <!-- Chapter Viewer: Hidden initially -->
-      <div id="chapter-section" class="section-hidden" style="display: none;">
-        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-      </div>
+    <!-- Header stays fixed above intro -->
+    <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
+      <GalleryHeader client:load breadcrumb={breadcrumb} />
     </div>
 
-    <Footer 
-      previewImages={previewImages}
-      previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
-    />
+    <!-- Spacer to push intro below header visually -->
+    <div class="h-0 md:h-5"></div>
+
+    <!-- Intro: Visible initially -->
+    <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
+      <GalleryInfo client:load entranceData={entranceData} />
+    </div>
+
+    <!-- Chapter Viewer: Hidden initially -->
+    <div id="chapter-section" class="section-hidden" style="display: none;">
+      <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+    </div>
   </div>
+
+  <!-- Spacer pushes the footer down -->
+  <div class="h-1 md:h-5"></div>
+
+  <Footer 
+    previewImages={previewImages}
+    previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
+  />
 
   <style>
     .hamburger-circle {
@@ -91,79 +92,66 @@ const imageStructuredData = currentImage
     }
 
     .section-visible {
-      display: block !important;
       opacity: 1;
       transform: translateX(0%);
       transition: opacity 1s ease, transform 1.2s ease;
       pointer-events: auto;
       position: relative;
       width: 100%;
-      height: auto;
       z-index: 2;
-    }
-
-    #chapter-section.section-visible {
-      min-height: 40vh;
     }
   </style>
 
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('header-section');
-    const intro = document.getElementById('intro-section');
-    const chapter = document.getElementById('chapter-section');
-    const navToggle = document.getElementById('nav-toggle');
-    const floatingHeader = document.getElementById('floating-header');
-    const menuLabel = document.getElementById('menu-label');
-    const topSpacer = document.getElementById('top-spacer');
-    let isMenuOpen = false;
+    document.addEventListener('DOMContentLoaded', () => {
+      const exploreButton = document.querySelector('.explore-button');
+      const header = document.getElementById('header-section');
+      const intro = document.getElementById('intro-section');
+      const chapter = document.getElementById('chapter-section');
+      const navToggle = document.getElementById('nav-toggle');
+      const floatingHeader = document.getElementById('floating-header');
+      const menuLabel = document.getElementById('menu-label');
+      const topSpacer = document.getElementById('top-spacer');
+      let isMenuOpen = false;
 
-    function activateChapterView() {
-      header?.classList.add('section-hidden');
-      intro?.classList.add('section-hidden');
-      chapter.style.display = 'block';
-
-      // Temp min-height to prevent footer drop
-      chapter.style.minHeight = '80vh';
-
-      setTimeout(() => {
-        chapter.classList.remove('section-hidden');
-        chapter.classList.add('section-visible');
-        chapter.style.minHeight = ''; // Clean up after hydration
-      }, 50);
-
-      if (window.innerWidth >= 768) {
-        navToggle?.classList.remove('hidden');
+      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
+        setTimeout(() => {
+          exploreButton?.click();
+        }, 50);
       }
 
-      if (topSpacer) {
-        topSpacer.style.marginTop = "0px";
-        topSpacer.style.height = "0px";
-        topSpacer.style.overflow = "hidden";
-      }
-    }
+      exploreButton?.addEventListener('click', () => {
+        header?.classList.add('section-hidden');
+        intro?.classList.add('section-hidden');
+        chapter.style.display = 'block';
+        setTimeout(() => {
+          chapter.classList.remove('section-hidden');
+          chapter.classList.add('section-visible');
+        }, 50);
 
-    const isDeepLink = window.location.pathname.match(/\/i-[a-zA-Z0-9]+/);
-    if (isDeepLink) {
-      activateChapterView(); // ✅ Don't wait for any button
-    }
+        if (window.innerWidth >= 768) {
+          navToggle?.classList.remove('hidden');
+        }
 
-    const exploreButton = document.querySelector('.explore-button');
-    exploreButton?.addEventListener('click', activateChapterView);
+        if (topSpacer) {
+          topSpacer.style.marginTop = "0px";
+          topSpacer.style.height = "0px";
+          topSpacer.style.overflow = "hidden";
+        }
+      });
 
-    navToggle?.addEventListener('click', () => {
-      isMenuOpen = !isMenuOpen;
-      menuLabel.textContent = isMenuOpen ? "M−" : "M+";
-      floatingHeader?.classList.toggle('show');
+      navToggle?.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        menuLabel.textContent = isMenuOpen ? "M−" : "M+";
+        floatingHeader?.classList.toggle('show');
+      });
     });
 
-    // Disable right click on images
     document.addEventListener('contextmenu', function (e) {
       if (e.target.tagName === 'IMG') {
         e.preventDefault();
       }
     });
-  });
-</script>
-
+  </script>
 </BaseLayout>
