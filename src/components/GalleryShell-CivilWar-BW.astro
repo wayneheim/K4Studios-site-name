@@ -12,6 +12,8 @@ import { getStructuredData } from '../components/utils/getStructuredData.ts';
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
 
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
+const isDeepLink = !!initialImageId && initialImageId !== "i-k4studios";
+
 const currentImage = isGhost
   ? null
   : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
@@ -55,16 +57,28 @@ const imageStructuredData = currentImage
     <!-- Chapter Viewer: Hidden initially -->
     <div id="chapter-section" class="section-hidden" style="display: none;">
       <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+
+      {isDeepLink && (
+        <div class="chapter-footer bg-white text-sm text-gray-600 px-4 py-6 text-center border-t border-gray-200">
+          <p>
+            ← <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White" class="underline hover:text-black">
+              Back to Gallery
+            </a>
+          </p>
+        </div>
+      )}
     </div>
   </div>
 
-  <!-- Spacer pushes the footer down -->
+  <!-- Spacer pushes the footer down for landing view -->
   <div class="h-1 md:h-5"></div>
 
-  <Footer 
-    previewImages={previewImages}
-    previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
-  />
+  {!isDeepLink && (
+    <Footer 
+      previewImages={previewImages}
+      previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
+    />
+  )}
 
   <style>
     .hamburger-circle {
@@ -100,6 +114,15 @@ const imageStructuredData = currentImage
       width: 100%;
       z-index: 2;
     }
+
+    .chapter-footer {
+      background-color: #fff;
+      font-size: 0.875rem;
+      color: #4b5563;
+      text-align: center;
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem 1rem;
+    }
   </style>
 
   <script>
@@ -114,14 +137,7 @@ const imageStructuredData = currentImage
       const topSpacer = document.getElementById('top-spacer');
       let isMenuOpen = false;
 
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
-      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-        setTimeout(() => {
-          exploreButton?.click();
-        }, 50);
-      }
-
-      exploreButton?.addEventListener('click', () => {
+      const activateChapterView = () => {
         header?.classList.add('section-hidden');
         intro?.classList.add('section-hidden');
         chapter.style.display = 'block';
@@ -139,7 +155,16 @@ const imageStructuredData = currentImage
           topSpacer.style.height = "0px";
           topSpacer.style.overflow = "hidden";
         }
-      });
+      };
+
+      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
+        setTimeout(() => {
+          activateChapterView();
+        }, 50);
+      }
+
+      exploreButton?.addEventListener('click', activateChapterView);
 
       navToggle?.addEventListener('click', () => {
         isMenuOpen = !isMenuOpen;
