@@ -184,12 +184,12 @@ useEffect(() => {
     willChange: "transform",
   }}
   onMouseEnter={(e) => {
-    e.currentTarget.style.transition = "transform 5.29s ease-out";
+    e.currentTarget.style.transition = "transform 7.29s ease-out";
     e.currentTarget.style.transform =
-      "scale(1.1) translate(-4%, -4%) rotate(-1.2deg)";
+      "scale(1.1) translate(-4%, -4%) rotate(-1.4deg)";
   }}
   onMouseLeave={(e) => {
-    e.currentTarget.style.transition = "transform 0.051s ease-in";
+    e.currentTarget.style.transition = "transform 9.051s ease-in";
     e.currentTarget.style.transform = "none";
   }}
   onError={(e) => {
