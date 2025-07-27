@@ -184,20 +184,18 @@ useEffect(() => {
     willChange: "transform",
   }}
   onMouseEnter={(e) => {
-    // Quick zoom in
-    e.currentTarget.style.transition = "transform 0.9s ease-out";
-    e.currentTarget.style.transform = "scale(1.15) translate(-4%, -4%)";
+    e.currentTarget.style.transition = "transform 1.29s ease-out";
+    e.currentTarget.style.transform =
+      "scale(1.15) translate(-4%, -4%) rotate(-1.25deg)";
   }}
   onMouseLeave={(e) => {
-    // Even quicker zoom out
-    e.currentTarget.style.transition = "transform 0.4s ease-in";
+    e.currentTarget.style.transition = "transform 0.24s ease-in";
     e.currentTarget.style.transform = "none";
   }}
   onError={(e) => {
     e.target.style.opacity = 0.25;
   }}
 />
-
               </div>
               <motion.div
                 initial={{ opacity: 0 }}
