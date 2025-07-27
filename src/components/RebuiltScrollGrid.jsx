@@ -180,19 +180,24 @@ useEffect(() => {
   className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
   style={{
     minHeight: 120,
-    transition: "transform 5s ease-in-out",
+    transition: "transform 0.9s ease-out",
     willChange: "transform",
   }}
   onMouseEnter={(e) => {
+    // Quick zoom in
+    e.currentTarget.style.transition = "transform 0.9s ease-out";
     e.currentTarget.style.transform = "scale(1.15) translate(-4%, -4%)";
   }}
   onMouseLeave={(e) => {
+    // Even quicker zoom out
+    e.currentTarget.style.transition = "transform 0.4s ease-in";
     e.currentTarget.style.transform = "none";
   }}
   onError={(e) => {
     e.target.style.opacity = 0.25;
   }}
 />
+
               </div>
               <motion.div
                 initial={{ opacity: 0 }}
