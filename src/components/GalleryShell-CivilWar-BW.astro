@@ -39,25 +39,28 @@ const imageStructuredData = currentImage
   title="Facing History: Civil War Themed Art – Photography" 
   structuredDataJSON={imageStructuredData}
 >
-  <div id="gallery-content" class="relative">
+  <div id="gallery-page" class="relative">
 
-    <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
+    <!-- Header -->
+    <div id="header-section" class="relative z-10">
       <GalleryHeader client:load breadcrumb={breadcrumb} />
     </div>
 
+    <!-- Spacer below header -->
     <div class="h-0 md:h-5"></div>
 
-    <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-      <GalleryInfo client:load entranceData={entranceData} />
-    </div>
+    <!-- Render either the intro or chapter viewer directly on SSR -->
+    {isDeepLink ? (
+      <div id="chapter-section" class="pt-4">
+        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+      </div>
+    ) : (
+      <div id="intro-section" class="pt-4">
+        <GalleryInfo client:load entranceData={entranceData} />
+      </div>
+    )}
 
-    <div id="chapter-section" class="section-hidden" style="display: none;">
-      <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-    </div>
-  </div>
-
-  <!-- ✅ Always render footer below gallery-content, never inside it -->
-  <div id="footer-wrapper" class="chapter-footer-hidden">
+    <!-- Footer always in flow, after whichever section is rendered -->
     <Footer 
       previewImages={previewImages}
       previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White"
@@ -65,8 +68,13 @@ const imageStructuredData = currentImage
   </div>
 
   <style>
-    .hamburger-circle {
-      display: none !important;
+    #gallery-page {
+      width: 100%;
+    }
+
+    #chapter-section,
+    #intro-section {
+      max-width: 100%;
     }
 
     @media (max-width: 767px) {
@@ -75,43 +83,8 @@ const imageStructuredData = currentImage
       }
     }
 
-    .section-hidden {
+    .hamburger-circle {
       display: none !important;
-      opacity: 0;
-      transform: translateX(100%);
-      transition: opacity 2s ease, transform 1.2s ease;
-      pointer-events: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 0;
-      z-index: 0;
-    }
-
-    .section-visible {
-      opacity: 1;
-      transform: translateX(0%);
-      transition: opacity 1s ease, transform 1.2s ease;
-      pointer-events: auto;
-      position: relative;
-      width: 100%;
-      height: auto;
-      z-index: 2;
-    }
-
-    #chapter-section.section-visible {
-      display: block !important;
-      min-height: 50vh;
-      position: relative;
-    }
-
-    .chapter-footer-hidden {
-      display: none;
-    }
-
-    .chapter-footer-visible {
-      display: block;
     }
   </style>
 
@@ -121,56 +94,20 @@ const imageStructuredData = currentImage
       const header = document.getElementById('header-section');
       const intro = document.getElementById('intro-section');
       const chapter = document.getElementById('chapter-section');
-      const footerWrapper = document.getElementById('footer-wrapper');
-      const navToggle = document.getElementById('nav-toggle');
-      const floatingHeader = document.getElementById('floating-header');
-      const menuLabel = document.getElementById('menu-label');
-      const topSpacer = document.getElementById('top-spacer');
-      let isMenuOpen = false;
 
-      const activateChapterView = () => {
-        header?.classList.add('section-hidden');
-        intro?.classList.add('section-hidden');
-        chapter.style.display = 'block';
-
-        setTimeout(() => {
-          chapter.classList.remove('section-hidden');
-          chapter.classList.add('section-visible');
-          footerWrapper?.classList.remove('chapter-footer-hidden');
-          footerWrapper?.classList.add('chapter-footer-visible');
-        }, 50);
-
-        if (window.innerWidth >= 768) {
-          navToggle?.classList.remove('hidden');
-        }
-
-        if (topSpacer) {
-          topSpacer.style.marginTop = "0px";
-          topSpacer.style.height = "0px";
-          topSpacer.style.overflow = "hidden";
-        }
-      };
-
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
-      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-        setTimeout(() => {
-          activateChapterView();
-        }, 50);
+      if (exploreButton && intro && chapter) {
+        exploreButton.addEventListener('click', () => {
+          header?.classList.add('hidden');
+          intro?.classList.add('hidden');
+          chapter?.classList.remove('hidden');
+        });
       }
 
-      exploreButton?.addEventListener('click', activateChapterView);
-
-      navToggle?.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        menuLabel.textContent = isMenuOpen ? "M−" : "M+";
-        floatingHeader?.classList.toggle('show');
+      document.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+        }
       });
-    });
-
-    document.addEventListener('contextmenu', function (e) {
-      if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-      }
     });
   </script>
 </BaseLayout>
