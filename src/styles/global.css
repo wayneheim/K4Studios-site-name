@@ -317,6 +317,10 @@ body.zoom-open {
     margin-top: -3rem;  
     margin-bottom: 2rem; /* adjust if it now sits too low */
   }
+  .chapter-title{
+    font-size: 1.25rem; /* Adjust to taste */
+    line-height: .12!important; /* Keep tight for mobile */
+  }
 }
 
 /* gallery enter animation */

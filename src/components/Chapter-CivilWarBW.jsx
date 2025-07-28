@@ -609,7 +609,7 @@ style={
                       />
                     </div>
                   
-                    <h2 className="text-center font-semibold mb-1 tracking-wide text-[#85644b]" style={{ fontSize: "1.55rem" }}>
+                    <h2 className="text-center font-semibold mb-1 tracking-wide text-[#85644b]" style={{ fontSize: "1.55rem", lineHeight: "120%", }}>
   Chapter {currentIndex + 1}:
   {galleryData[currentIndex].title && (
     <>
