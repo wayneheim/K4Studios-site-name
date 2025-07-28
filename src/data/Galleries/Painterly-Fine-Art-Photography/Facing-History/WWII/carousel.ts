@@ -1,37 +1,44 @@
 export const slides = [
   {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LVMjfqS2rs9BBRZF8RNdFNNzVNjHtffNcdSpJsCj8/S/Havana-Car-p-S.jpg",
-    alt: "Callin in Trouble from the street in painterly 20s style",
+    href: "",
+    src: "https://photos.smugmug.com/photos/i-gQNS688/1/MqwnWBf2TtnwNZqwTr5q7vqkxbGrfqtnRPr2tgnsc/S/i-gQNS688-S.jpg",
+    alt: "WWII Soldier: run for cover",
     description:
-      "Townfolk call in trouble from the street, at vintage call box.",
+      "WWII GI running for cover on beach in Normandy Landing",
   },
   {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/LrsP2CGWPpdRwGbGNVSGcHp5ZCCK9LFPzBrVpVfcX/S/12x18_O1H0006-Edit-2-Edit-S.jpg",
-    alt: "Shine em up sonny – 20s gangster in painterly style",
+    href: "",
+    src: "https://photos.smugmug.com/photos/i-2Px7qSK/1/Nd6F4n27TxPMbHBkpP2c2kxJfspmWxx4Mc5mKRGqz/M/i-2Px7qSK-M.jpg",
+    alt: "Looking for a way out",
     description:
-      "A young boy shines up a gansters shoes on a street corner in the South.",
+      "Soldier looking for a way out off the bloody beaches after Normandy Landing",
   },
   {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/0/KK47FFmwwVZQ5FnPTv4pkRhtbjw6srSNFWJfDRWQZ/S/_DSF3049-Edit-Edit-S.jpg",
-    alt: "Looking for trouble in the 20s – painterly fine art photography",
+    href: "",
+    src: "https://photos.smugmug.com/photos/i-WRJFPBq/0/MZjR3v5srLxq93CN9nNZj8WQ455qRLCs9FQzsN9Rd/M/i-WRJFPBq-M.jpg",
+    alt: "1940s Homefront: Landings have begun.",
     description:
-      "1920s wooman looks to stay out of or for trouble.",
+      "1940s Homefront: A soldier's wife listens to raidio broadcast and reads paper about the landings on the beaches of Normandy.",
   },
   {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-fNTTW43",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-fNTTW43/2/Lnk3ccpHGxJkhHwgLLBTmvrBpnmJr9Qv8LwD3N5gQ/S/_DSF3123-Edit-S.jpg",
-    alt: "Moonshiners Promise - Keep your mouth shut.",
+    href: "",
+    src: "https://photos.smugmug.com/photos/i-QR4sBDJ/1/Mpz6WrVcHQMssSxzM9x9ddm8SFp3T483NFHpdLVPR/M/i-QR4sBDJ-M.jpg",
+    alt: "Get Ready! Normandy Landings",
     description:
-      "Lawman and moonshiner share a moment of understanding in the 20s.",
+      "Solders are signaled to ready for final approach and landing on the beaches of Normandy.",
   },
   {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k2W3gQV",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/MsccQZ565tjw9Vrv9g68SmRQJLvMhtLMNbFF9V6N6/S/_DSF2597-Enhanced-NR-Edit-2-S.jpg",
-    alt: "Chief of Police in the 20s",
+    href: "",
+    src: "https://photos.smugmug.com/photos/i-c23JZjL/1/NN2Hm8ZXLVWKXqcZczRz3J4ZWHfRvpHvzKp3szG72/M/i-c23JZjL-M.jpg",
+    alt: "WWII USS Cod Submarine",
     description:
-      "The Chief pauses to reflect on the folks in his office.",
+      "Underway: USS Cod Submarine, a Gato-class submarine, during WWII.",
+  },
+  {
+    href: "",
+    src: "https://photos.smugmug.com/photos/i-5kXRsT3/1/K5LcHwmz5b4hWs4p6VXMXjt9bmjpjwq4ZgLL9vp8N/M/i-5kXRsT3-M.jpg",
+    alt: "WWII tanks in firing line",
+    description:
+      "WWII tanks in firing line, ready to advance on enemy positions at nightfall.",
   },
 ];

@@ -225,6 +225,34 @@ export default function ScrollFlipGallery({ initialImageId }) {
                   onTouchStart={handleTouchStart}
                   onTouchEnd={handleTouchEnd}
                 >
+
+                  {isMobile && (
+  // 📱 Mobile Branding Link — shows "⸺ K4 Studios ⸺" and links to the parent section landing page
+  <div
+    className="text-center text-md text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
+    style={{
+      fontFamily: "'Glegoo', serif",
+      marginTop: "-2.0rem", // ✅ This is the key line
+      opacity: ".6",
+      lineHeight: "1",       // optional tight spacing
+    }}
+  >
+    ⸺ <a
+      href={(() => {
+        const pathParts = window.location.pathname.split("/");
+        const iIndex = pathParts.findIndex((part) => part.startsWith("i-"));
+        if (iIndex > 1) {
+          return pathParts.slice(0, iIndex - 1).join("/");
+        }
+        return pathParts.slice(0, -1).join("/");
+      })()}
+      title="Explore Full Collection"
+      className="text-[#85644b] no-underline hover:underline"
+    >
+      K4 Studios
+    </a> ⸺
+  </div>
+)}
                   {/* --- IMAGE + ARROWS COLUMN --- */}
                   <div className="flex flex-col -mt-4 items-center w-full relative">
                     {/* --- Floating Mobile Arrows & Image --- */}
@@ -600,7 +628,14 @@ style={
                       />
                     </div>
                   
-                    <h2 className="text-center font-semibold mb-1 tracking-wide text-[#85644b]" style={{ fontSize: "1.55rem" }}>
+                    <h2 
+                     className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
+  style={{
+    fontSize: "1.55rem",
+    lineHeight: isMobile ? "1.0" : "1.35", // tighter for mobile
+    fontFamily: "'Glegoo', serif",
+  }}
+>
   Chapter {currentIndex + 1}:
   {galleryData[currentIndex].title && (
     <>
@@ -610,7 +645,7 @@ style={
   )}
 </h2>
 
-<p className="italic text-base md:text-lg mb-4 leading-snug text-left">
+<p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
   {galleryData[currentIndex].story}
 </p>
 
