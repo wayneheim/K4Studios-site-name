@@ -504,10 +504,10 @@ style={
                       </a>
                      {/* CLOSE (— to Exit on hover) */}
 <button
-  className="group relative inline-block px-2 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded shadow-sm transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-500 focus:text-gray-900 focus:border-gray-500"
+  className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded shadow-sm transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-500 focus:text-gray-900 focus:border-gray-500"
   aria-label="Exit Chapter View"
   title="Exit"
-  style={{ fontWeight: 400, minHeight: 32, minWidth: 40 }}
+  style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
   onClick={() =>
     (window.location.href =
       "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White")
@@ -525,7 +525,6 @@ style={
     </span>
   </span>
 </button>
-
 </div>
 
                     {/* Collector Notes Panel (mobile only, static below bar) */}
