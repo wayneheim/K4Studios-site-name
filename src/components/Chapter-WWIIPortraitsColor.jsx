@@ -194,7 +194,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
     
     <div
-      className="min-h-screen bg-white text-black font-serif px-5 py-8 overflow-hidden"
+      className="min-h- bg-white text-black font-serif px-5 py-8 overflow-hidden"
       style={{ fontFamily: 'Glegoo, serif' }}
        onMouseMove={() => setShowArrows(true)}
     >
