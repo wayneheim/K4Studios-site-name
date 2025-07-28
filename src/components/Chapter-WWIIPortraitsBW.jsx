@@ -502,7 +502,7 @@ style={
   style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
   onClick={() =>
     (window.location.href =
-      "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White")
+      "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White")
   }
 >
   <span className="block relative h-[1em]">
