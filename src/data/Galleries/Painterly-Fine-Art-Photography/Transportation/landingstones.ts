@@ -17,7 +17,7 @@ export const landingWestern = {
     },
      {
       title: 'Classic Car Photos',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White',
+      href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars',
       thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wkRb273/1/LjTmmDC5fJgXRfRR3p3XM7Kq4s4HQLNb8FBDPhx3J/S/_DSF0260-S.jpg',
     },
     

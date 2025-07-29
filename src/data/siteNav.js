@@ -311,13 +311,7 @@ export const siteNav = [
             "slug": "cars",
             "type": "gallery-source"
           },
-{
-            "label": "Boats",
-            "href": "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats",
-            "code": "P-S3-Ss4",
-            "slug": "boats",
-            "type": "gallery-source"
-          }
+
         ],
         "code": "P-S3",
         "slug": "transportation",

@@ -6,7 +6,7 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
-import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits.mjs";
+import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs";
 import SwipeHint from "./SwipeHint";
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
@@ -67,7 +67,7 @@ useEffect(() => {
 
   if (!imageId || isGhost || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits";
+  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White";
   const newUrl = `${basePath}/${imageId}`;
   const currentUrl = window.location.pathname;
 
@@ -561,7 +561,7 @@ style={
   style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
   onClick={() =>
     (window.location.href =
-      "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits")
+      "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White") 
   }
 >
   <span className="block relative h-[1em]">
@@ -826,7 +826,7 @@ style={
 </>
 )}
 </div>
-      <SwipeHint galleryKey="Misc-Painterly-Portraits" />
+      <SwipeHint galleryKey="Transportation-Trains-Black-White" />
 </div>
 );
 }

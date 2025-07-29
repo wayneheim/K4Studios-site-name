@@ -1,4 +1,4 @@
-// data/galleries/Painterly-Western-Cowboy-Portraits/ColorEntranceData.ts
+// data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/PortraitsEntranceData.ts
 
 export const entranceData = {
   title: "Misc Portrait Prints by Wayne Heim - Painterly Fine Art Portrait Photography",
@@ -12,5 +12,5 @@ export const entranceData = {
     alt: "Portrait preview",
     caption: "\"Making an Impression\"",
    },
-  breadcrumb: "Miscellaneous Portraits",
+  breadcrumb: "Miscellaneous | Portraits",
 };

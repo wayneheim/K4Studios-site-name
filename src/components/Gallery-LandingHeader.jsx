@@ -31,6 +31,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
       {/* ── BREADCRUMB ON STRIPE BAR ── */}
       <div className="breadcrumb-toggle-wrapper desktop-only">
         <div className="breadcrumb-overlay">{breadcrumb}</div>
+        {/* Safe to show toggle if pathname exists */}
         {pathname && <GalleryToggleButton currentPath={pathname} />}
       </div>
 
@@ -54,7 +55,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
         <img src="/images/WH.png" alt="Contact" style={{ filter: "invert(100%)" }} />
       </a>
 
-      {/* MOBILE BREADCRUMB – now includes toggle button */}
+      {/* MOBILE BREADCRUMB */}
       <div className="mobile-breadcrumb-wrapper mobile-only">
         <div
           className="mobile-breadcrumb"
@@ -75,12 +76,8 @@ export default function GalleryLandingHeader({ breadcrumb }) {
         </div>
       </div>
 
-
-
-
       {/* — styles that belong only to LandingHeader — */}
       <style jsx>{`
-
 .breadcrumb-toggle-wrapper {
   display: flex;
   align-items: center;
@@ -89,12 +86,10 @@ export default function GalleryLandingHeader({ breadcrumb }) {
   margin-top: 2px;
   font-size: 1.1rem;
 }
-
 .gallery-toggle-button {
   display: flex;
   gap: 0.5rem;
 }
-
 .gallery-toggle-pill {
   display: inline-flex;
   align-items: center;
@@ -110,28 +105,20 @@ export default function GalleryLandingHeader({ breadcrumb }) {
   cursor: pointer;
   transition: all 0.25s ease;
 }
-
 .gallery-toggle-pill:hover {
   transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 .gallery-toggle-pill.active {
   background-color: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
 }
-
-
-
 .k4-watermark {
 border: none!important;
-
 }
-
       /* ─── Mobile entrance animation for the stripes ─── */
 @keyframes slideFromLeft  { from { transform: translateX(-100%); } to { transform: translateX(0); } }
 @keyframes slideFromRight { from { transform: translateX(100%);  } to { transform: translateX(0); } }
-
 @media (max-width: 768px) {
   /* only run once per page-load */
   .mobile-animate::before,
@@ -149,20 +136,11 @@ border: none!important;
     animation-name: slideFromRight;
   }
 }
-
-
-      
         @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
-
         :root {
           --dark-brown: rgb(122, 102, 94);
           --stripe-color: rgb(180, 168, 162);
         }
-
-
-
-
-        
         .landing-header {
           margin-top: 1rem;
           font-family: "Glegoo", serif;
@@ -182,7 +160,6 @@ border: none!important;
           border-bottom: 3px solid var(--dark-brown);
           z-index: 100;
         }
-
         /* stripe background behind logo */
         .landing-header::before,
         .landing-header::after {
@@ -221,7 +198,6 @@ border: none!important;
             #000 100%
           );
         }
-
         /* breadcrumb */
         .breadcrumb-text {
         top: 5.3rem;
@@ -230,7 +206,6 @@ border: none!important;
           white-space: nowrap;
           z-index: 300;
         }
-
         /* logo badge */
         .logo-slot {
           position: absolute;
@@ -262,17 +237,14 @@ border: none!important;
           filter: grayscale(20%);
           opacity: 1;
         }
-
         /* Right-hand side wrapper so nav stays right-aligned */
         .rhs {
           display: flex;
           align-items: center;
           z-index: 3; /* above stripes */
         }
-
         /* Hide breadcrumb & stripes tweak on tablet/mobile */
         @media (max-width: 1024px) {
-        
           .desktop-only {
             display: none;
           }
@@ -283,15 +255,12 @@ border: none!important;
             opacity: 0.25;
           }
         }
-
         body.mobile-open .logo-slot {
         margin-top: 30px;
         margin-left: -8px;
-      
   z-index: 1 !important;  /* lower than drawer z-index 2001 */
   position: relative;
 }
-
 .wh-logo-mobile {
   position: absolute;
   right: 4.25%;
@@ -303,32 +272,26 @@ border: none!important;
   align-items: center;
   justify-content: center;
 }
-
 .wh-logo-mobile img {
   height: 25px;
   width: auto;
   filter: grayscale(100%);
   transition: opacity 0.3s ease;
 }
-
 .wh-logo-mobile:hover {
   opacity: 0.45;
 }
-
 @media (max-width: 1024px) {
   .wh-logo-mobile {
     display: inline-flex;
   }
 }
-
   .hamburger-circle {
      border: 2px solid rgb(190, 177, 172);
      }
-
       .hamburger-circle .bar {
           background:  rgb(190, 177, 172);
         }
-
       `}</style>
     </header>
   );
