@@ -18,6 +18,8 @@ import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photo
 import { facingHistoryStory as westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/story.ts';
 import { facingFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/faq.ts';
 
+import { getLandingMeta } from '../../../data/landingMeta.ts';
+
 import '../../../styles/global.css';
 
 // ----------------------
@@ -82,12 +84,21 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+
+// 🟢 OG/Twitter Meta Helper (auto-fills .ogUrl/.twitterUrl fields)
+const landingMeta = getLandingMeta(sectionPath);
+if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
 <!-- ✅ JSON-LD Structured Data for SEO -->
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
+<BaseLayout
+  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  meta={landingMeta}
+>
+
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
