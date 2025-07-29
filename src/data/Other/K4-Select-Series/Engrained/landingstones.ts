@@ -8,7 +8,7 @@ export const landingWestern = {
     
     {
       title: 'Engrained Series',
-      href: '/Other/Print-Options/Prints-on-Wood',
+      href: '/Other/K4-Select-Series/Engrained/Engrained-Series',
       thumb: '/images/tombstones/engrained-ts.jpg',
     },
   ]

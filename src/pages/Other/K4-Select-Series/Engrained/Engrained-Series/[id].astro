@@ -1,0 +1,24 @@
+---
+import GalleryShell from '../../../../../components/GalleryShell-Engrained-Series.astro';
+import { entranceData as BWEntranceData } from "../../../../../data/Other/K4-Select-Series/Engrained/EngrainedSeriesEntranceData.ts";
+import { galleryData } from '../../../../../data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs';
+
+export async function getStaticPaths() {
+  return galleryData.map(img => ({
+    params: { id: img.id },
+  }));
+}
+
+// 👇 DECLARE id ASAP!
+const { id } = Astro.params;
+
+// 👇 ONLY use id AFTER declaration
+const isValidId = galleryData.some(img => img.id === id);
+if (!isValidId) throw new Error(`Image with id ${id} not found.`);
+---
+
+<GalleryShell 
+  breadcrumb={BWEntranceData.breadcrumb} 
+  entranceData={BWEntranceData}
+  initialImageId={id}
+/>

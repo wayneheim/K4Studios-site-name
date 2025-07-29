@@ -1,0 +1,21 @@
+---
+import GalleryShell from '../../../../../components/GalleryShell-Engrained-Series.astro';
+import { entranceData as BWEntranceData } from "../../../../../data/Other/K4-Select-Series/Engrained/EngrainedSeriesEntranceData.ts";
+import { galleryData } from '../../../../../data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs';
+
+// ✅ Extract potential deep link ID from URL
+const match = Astro.url.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+const idFromURL = match ? match[1] : null;
+
+// ✅ Ensure it's a valid ID for this gallery only
+const validIds = galleryData.map((img) => img.id);
+const initialImageId = idFromURL && validIds.includes(idFromURL)
+  ? idFromURL
+  : "i-k4studios";
+---
+
+<GalleryShell 
+  breadcrumb={BWEntranceData.breadcrumb} 
+  entranceData={BWEntranceData}
+  initialImageId={initialImageId}
+/>

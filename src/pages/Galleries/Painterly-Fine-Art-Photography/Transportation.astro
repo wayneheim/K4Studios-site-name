@@ -1,4 +1,5 @@
 ---
+// IMPORTS — add the getLandingMeta import!
 import BaseLayout         from '../../../layouts/BaseLayout.astro';
 import LandingHeader      from '../../../components/Landing-Header.jsx';
 import ImageBar2          from '../../../components/ImageBar2.jsx';
@@ -14,6 +15,8 @@ import { getSideImages } from '../../../components/utils/getSideImages.ts';
 import { autoLinkKeywordsInText } from '../../../components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '../../../data/semantic/K4-Sem.ts';
 
+import { getLandingMeta } from '../../../data/landingMeta.ts';
+
 import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Transportation/landingstones.ts';
 import { westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Transportation/story.ts';
 import { transportationFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Transportation/faq.ts';
@@ -21,13 +24,13 @@ import { transportationFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Ph
 import '../../../styles/global.css';
 
 // ----------------------
-// TRANSPORTATION GALLERY DATA GATHERING (recursive, all children)
+// TRANSPORTATION GALLERY DATA GATHERING
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Transportation";
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
-// Find nav entry
+// nav helpers...
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -38,11 +41,9 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
-// Recursively gather all gallery-source children under Transportation
 function recursivelyGatherAllGalleryHrefs(node) {
   let result = [];
   if (!node) return result;
-  // Accept any descendant gallery
   if (node.href && node.href.startsWith('/Galleries/')) result.push(node.href);
   if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
   return result;
@@ -57,7 +58,6 @@ const galleryDatas = galleryPaths.map(path => {
   return allGalleryData[filePath]?.galleryData || [];
 });
 
-// Universal feathered images pool (for both mobile and desktop)
 const featheredImages = getSideImages({
   sectionPath,
   headingCount,
@@ -65,7 +65,12 @@ const featheredImages = getSideImages({
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
-// ✅ Structured Data
+// Get meta info for OG/twitter
+const meta = getLandingMeta(sectionPath);
+meta.ogUrl = `https://k4studios.com${sectionPath}`;
+meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// Structured data (your usual logic)
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -87,10 +92,15 @@ const structuredData = getStructuredData({
 });
 ---
 
-<!-- ✅ JSON-LD Structured Data for SEO -->
+<!-- SEO JSON-LD (Structured Data) -->
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
+<!-- BASE LAYOUT — meta prop added! -->
+<BaseLayout
+  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  meta={meta}
+>
+
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />

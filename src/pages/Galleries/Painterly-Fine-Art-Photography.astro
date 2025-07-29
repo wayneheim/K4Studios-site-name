@@ -8,6 +8,7 @@ import FAQAccordion       from '../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../components/Footer.astro';
 import MobileStoryImages  from '../../components/MobileStoryImages.jsx';
 import { getStructuredData } from '../../components/utils/getStructuredData.ts';
+import { getLandingMeta } from '../../data/landingMeta.ts';
 
 import { siteNav } from '../../data/siteNav.ts';
 import { getSideImages } from '../../components/utils/getSideImages.ts';
@@ -25,9 +26,10 @@ import '../../styles/global.css';
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
+const meta = getLandingMeta(sectionPath);
+
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
-// --- Recursive gatherer for *all* child galleries ---
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -62,7 +64,6 @@ const featheredImages = getSideImages({
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
-// ✅ Structured Data
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -84,10 +85,12 @@ const structuredData = getStructuredData({
 });
 ---
 
-<!-- ✅ JSON-LD Structured Data for SEO -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
+<BaseLayout
+  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
 
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
