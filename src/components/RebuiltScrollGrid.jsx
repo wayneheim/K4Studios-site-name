@@ -30,12 +30,28 @@ export default function RebuiltScrollGrid({
   onCardClick,
   initialImageIndex = 0,
   galleryKey = "default",
+  onClose,
 }) {
   const [colCount, setColCount] = useState(getColCount());
   const [simIndex, setSimIndex] = useState(initialImageIndex);
-  const [anchorOnNextUpdate, setAnchorOnNextUpdate] = useState(true); // only anchor when needed
+  const [anchorOnNextUpdate, setAnchorOnNextUpdate] = useState(true);
   const [pendingPrepend, setPendingPrepend] = useState(false);
+  const [headingHover, setHeadingHover] = useState(false);
   const rowRefs = useRef({});
+
+  // Simple close handler: reload the page to exit grid mode
+  const handleClose = () => {
+    window.location.reload();
+  };
+
+  // ESC key triggers close
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.key === "Escape") handleClose();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => setColCount(getColCount());
@@ -43,52 +59,41 @@ export default function RebuiltScrollGrid({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Buffer math: 5 rows before, 8 after (tweak as needed)
   const paddingTop = colCount * 5;
   const paddingBottom = colCount * 8;
   const start = Math.max(0, simIndex - paddingTop);
   const end = Math.min(galleryData.length, simIndex + paddingBottom);
   const visibleData = galleryData.slice(start, end);
 
-  // --- 1. Sticky scroll logic for "Show Previous" ---
   useEffect(() => {
     if (!pendingPrepend) return;
-    // Find the first card in the old grid (after prepend, now shifted down)
-    // Use the previous first row as anchor (row at old 'start + paddingTop')
     const anchorRowIndex = Math.floor((start + paddingTop) / colCount);
     const anchor = rowRefs.current[`row-${anchorRowIndex}`];
     if (anchor) {
       const anchorRect = anchor.getBoundingClientRect();
-      // Scroll page so this anchor row stays where it was before expand
       window.scrollBy({ top: anchorRect.top - 80, behavior: "instant" });
-      // ^ 80px fudge so not exactly at top edge
     }
     setPendingPrepend(false);
-    // eslint-disable-next-line
   }, [start, colCount, pendingPrepend]);
 
-// --- 2. Anchor to simulated index *only when anchorOnNextUpdate is true* ---
-useEffect(() => {
-  if (!anchorOnNextUpdate) return;
-  const rowIndex = Math.floor(simIndex / colCount);
-  if (rowIndex === 0) {
+  useEffect(() => {
+    if (!anchorOnNextUpdate) return;
+    const rowIndex = Math.floor(simIndex / colCount);
+    if (rowIndex === 0) {
+      setAnchorOnNextUpdate(false);
+      return;
+    }
+    const anchor = rowRefs.current[`row-${rowIndex}`];
+    if (anchor) {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 0);
+      });
+    }
     setAnchorOnNextUpdate(false);
-    return; // Skip scroll for row 0
-  }
-  const anchor = rowRefs.current[`row-${rowIndex}`];
-  if (anchor) {
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        anchor.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 0);
-    });
-  }
-  setAnchorOnNextUpdate(false);
-  // eslint-disable-next-line
-}, [colCount, simIndex, anchorOnNextUpdate]);
+  }, [colCount, simIndex, anchorOnNextUpdate]);
 
-
-  // --- Preload next batch (after) ---
   useEffect(() => {
     const preloadStart = end;
     const preloadEnd = Math.min(preloadStart + BATCH_SIZES[colCount], galleryData.length);
@@ -100,7 +105,6 @@ useEffect(() => {
     });
   }, [end, colCount, galleryData]);
 
-  // --- Preload previous batch (before) ---
   useEffect(() => {
     const preloadStart = Math.max(0, start - BATCH_SIZES[colCount]);
     const preloadEnd = start;
@@ -114,13 +118,24 @@ useEffect(() => {
 
   return (
     <section className="bg-white py-10 px-6">
-      <div className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4">
-        <div className="fade-line" />
-        <h2 className="watermark-title whitespace-nowrap" style={{ marginBottom: "1.5rem" }}>
-          Chapter Index
-        </h2>
-        <div className="fade-line" />
-      </div>
+      {/* Header with hover/focus effect */}
+     <div className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4">
+  <div className="fade-line" />
+  <h2
+    className="watermark-title whitespace-nowrap"
+    style={{
+      marginBottom: "1.5rem",
+      transition: "color .14s",
+      fontSize: "2.25rem",
+      fontWeight: 700,
+      color: "#5e4740",
+      textAlign: "center",
+    }}
+  >
+    Chapter Index
+  </h2>
+  <div className="fade-line" />
+</div>
 
       {/* Show Previous Button */}
       {start > 0 && (
@@ -128,9 +143,9 @@ useEffect(() => {
           <button
             className="px-6 py-2 bg-[#ece4d7] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
             onClick={() => {
-              setSimIndex(start); // re-center at current top
-              setAnchorOnNextUpdate(false); // don't anchor scroll!
-              setPendingPrepend(true); // run sticky scroll logic
+              setSimIndex(start);
+              setAnchorOnNextUpdate(false);
+              setPendingPrepend(true);
             }}
           >
             Show Previous
@@ -138,6 +153,7 @@ useEffect(() => {
         </div>
       )}
 
+      {/* The Grid */}
       <div
         style={{
           display: "grid",
@@ -172,48 +188,35 @@ useEffect(() => {
                       inset 0 2px 3px rgba(77,77,77,.4),
                       inset 0 -3px 4px rgba(255,255,255,.81)
                     `,
+                    zIndex: 10,
                   }}
                 />
-               <div
-  className="absolute inset-0 rounded-sm pointer-events-none"
-  style={{
-    boxShadow: `
-      inset 2px 0 3px rgba(75,75,75,.4),
-      inset -2px 0 3px rgba(236,236,236,.68),
-      inset 0 2px 3px rgba(77,77,77,.4),
-      inset 0 -3px 4px rgba(255,255,255,.81)
-    `,
-    zIndex: 10, // makes sure it stays on top of the image
-  }}
-/>
-
-<div
-  className="w-full h-full"
-  style={{
-    transition: "transform 7.5s ease-out",
-    willChange: "transform",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transition = "transform 8.15s ease-out";
-    e.currentTarget.style.transform =
-      "scale(1.1) translate(-4%, -4%) rotate(-1.5deg)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transition = "transform 19.25s ease-in";
-    e.currentTarget.style.transform = "none";
-  }}
->
-  <img
-    src={entry.src}
-    alt={entry.title}
-    className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
-    style={{ minHeight: 120 }}
-    onError={(e) => {
-      e.target.style.opacity = 0.25;
-    }}
-  />
-</div>
-
+                <div
+                  className="w-full h-full"
+                  style={{
+                    transition: "transform 7.5s ease-out",
+                    willChange: "transform",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transition = "transform 8.15s ease-out";
+                    e.currentTarget.style.transform =
+                      "scale(1.1) translate(-4%, -4%) rotate(-1.5deg)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transition = "transform 19.25s ease-in";
+                    e.currentTarget.style.transform = "none";
+                  }}
+                >
+                  <img
+                    src={entry.src}
+                    alt={entry.title}
+                    className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
+                    style={{ minHeight: 120 }}
+                    onError={(e) => {
+                      e.target.style.opacity = 0.25;
+                    }}
+                  />
+                </div>
               </div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -250,20 +253,26 @@ useEffect(() => {
         })}
       </div>
 
-      {/* Show More Button */}
-      {end < galleryData.length && (
-        <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-8 gap-4">
+        {end < galleryData.length && (
           <button
             className="px-6 py-2 bg-[#ece4d7] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
             onClick={() => {
               setSimIndex(end - 1);
-              setAnchorOnNextUpdate(true); // scroll to anchor!
+              setAnchorOnNextUpdate(true);
             }}
           >
             Show More
           </button>
-        </div>
-      )}
+        )}
+        <button
+          className="px-6 py-2 bg-[#ece4d7] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f7dede] shadow-md transition"
+          onClick={handleClose}
+          tabIndex={0}
+        >
+          Close
+        </button>
+      </div>
     </section>
   );
 }

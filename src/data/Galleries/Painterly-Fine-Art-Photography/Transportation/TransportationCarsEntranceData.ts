@@ -12,5 +12,5 @@ export const entranceData = {
     alt: "Colorful Classic Car Painterly Photography preview",
     caption: "\"Painterly Classic Car in Color\"",
   },
-  breadcrumb: "Transportation | Cars | Color",
+  breadcrumb: "Transportation | Cars",
 };
