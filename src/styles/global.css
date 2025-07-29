@@ -231,11 +231,17 @@ main {
   margin-top: -8rem; /* Try lowering this more if needed */
 }
 
-/*@media (min-width: 768px) {
-  .chapter-text-block {
-    margin-top: 2rem; /* Leave desktop spacing alone */
-/*  }
-}*/
+
+  @media (max-width: 700px) {
+    .chapter-title-block h2.watermark-title {
+      font-size: 2.5rem !important;
+      margin-bottom: -1.25rem !important;
+    }
+    .chapter-title-block .fade-line {
+      margin-bottom: -1.25rem !important;
+    }
+  }
+
 
 html, body {
   min-height: 100%;

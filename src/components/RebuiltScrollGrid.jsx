@@ -116,25 +116,27 @@ export default function RebuiltScrollGrid({
     });
   }, [start, colCount, galleryData]);
 
+
   return (
     <section className="bg-white py-10 px-6">
       {/* Header with hover/focus effect */}
-     <div className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4">
-  <div className="fade-line" />
+    <div className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4">
+  <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
   <h2
     className="watermark-title whitespace-nowrap"
     style={{
-      marginBottom: "1.5rem",
+      marginBottom: "2.5rem",
       transition: "color .14s",
-      fontSize: "2.25rem",
+      fontSize: "4rem",
       fontWeight: 700,
       color: "#5e4740",
+      opacity: ".17",
       textAlign: "center",
     }}
   >
     Chapter Index
   </h2>
-  <div className="fade-line" />
+  <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
 </div>
 
       {/* Show Previous Button */}
