@@ -111,6 +111,7 @@ export function autoLinkKeywordsInText(
   const overrides = {
     "medical illustration": "https://heimmedicalart.com",
     "medical illustrator": "https://heimmedicalart.com",
+    
     };
   const overridePhrases = Object.keys(overrides).sort((a, b) => b.length - a.length);
   for (const phrase of overridePhrases) {
