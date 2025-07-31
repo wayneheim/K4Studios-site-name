@@ -15,7 +15,6 @@ import { getSideImages }     from '../components/utils/getSideImagesHome.ts';
 
 import { autoLinkKeywordsInText } from '../components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '../data/semantic/K4-Sem.ts';
-import { phrase }                from '../data/semantic/K4-Sem.ts';
 
 import { landingWestern }        from '../data/home/landingstones.ts';
 import { painterlyStory }        from '../data/home/story.ts';
@@ -62,8 +61,6 @@ const featheredImagesSidebar = featheredImages.slice(0, 8);
 
 // Debug log (remove in prod)
 console.log("✅ Homepage Loaded");
-console.log("🧠 Phrases count:", phrase?.length);
-console.log("📘 First override phrase:", phrase?.[0]);
 console.log("📸 Feathered images count:", featheredImages.length);
 console.log("🧭 Semantic keys:", Object.keys(k4Semantic));
 console.log("🗂️ Gallery paths:", galleryPaths);
