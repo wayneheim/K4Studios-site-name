@@ -1,7 +1,11 @@
+// data/semantic/K4-Sem.ts
+
 export const semantic = {
+  // --- PAINTERLY: FACING HISTORY ---
   cowboy: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
     landingPhrases: [
+      { phrase: "a living journey", rating: 5, use: true },
       { phrase: "Western Cowboy Portraits", rating: 5, use: true },
       { phrase: "Explore Western Photography", rating: 5, use: true },
       { phrase: "western cowboy wall art for collectors", rating: 4, use: true },
@@ -10,6 +14,7 @@ export const semantic = {
       { phrase: "western art for rustic interiors", rating: 3, use: true }
     ],
     imagePhrases: [
+      { phrase: "misty landscapes", rating: 5, use: true },
       { phrase: "western cowboy art", rating: 5, use: true },
       { phrase: "cowboy portraits", rating: 5, use: true },
       { phrase: "wild west photography", rating: 4, use: true },
@@ -28,6 +33,7 @@ export const semantic = {
   civilwar: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits",
     landingPhrases: [
+      
       { phrase: "Civil War Portraits", rating: 5, use: true },
       { phrase: "civil war valor & loss", rating: 5, use: true },
       { phrase: "Faces of Conflict", rating: 4, use: true },
@@ -107,12 +113,198 @@ export const semantic = {
     ]
   },
 
+  // --- PAINTERLY: LANDSCAPES BY LOCATION ---
+  landscapeIntPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International",
+    landingPhrases: [
+      { phrase: "International Painterly Landscapes", rating: 5, use: true },
+      { phrase: "european landscape art", rating: 4, use: true },
+      { phrase: "world landscapes fine art", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "international landscape photography", rating: 5, use: true },
+      { phrase: "painterly european landscapes", rating: 4, use: true }
+    ]
+  },
+  landscapeWestPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West",
+    landingPhrases: [
+      { phrase: "Western Painterly Landscapes", rating: 5, use: true },
+      { phrase: "mountain west fine art photography", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "western landscape photography", rating: 5, use: true },
+      { phrase: "rocky mountain painterly art", rating: 4, use: true }
+    ]
+  },
+  landscapeMidwestPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest",
+    landingPhrases: [
+      { phrase: "Midwest Painterly Landscapes", rating: 5, use: true },
+      { phrase: "midwestern landscape art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "midwest landscape photography", rating: 5, use: true },
+      { phrase: "heartland painterly landscapes", rating: 4, use: true }
+    ]
+  },
+  landscapeNortheastPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast",
+    landingPhrases: [
+      { phrase: "Northeast Painterly Landscapes", rating: 5, use: true },
+      { phrase: "new england landscape art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "northeast landscape photography", rating: 5, use: true },
+      { phrase: "autumn in new england", rating: 4, use: true }
+    ]
+  },
+  landscapeSouthPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South",
+    landingPhrases: [
+      { phrase: "Southern Painterly Landscapes", rating: 5, use: true },
+      { phrase: "southern landscape fine art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "southern landscape photography", rating: 5, use: true },
+      { phrase: "blue ridge painterly landscapes", rating: 4, use: true }
+    ]
+  },
+
+  // --- PAINTERLY: LANDSCAPES BY THEME ---
+  mountainsPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    landingPhrases: [
+      { phrase: "Painterly Mountain Photography", rating: 5, use: true },
+      { phrase: "mountain landscapes fine art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "mountain landscape photography", rating: 5, use: true },
+      { phrase: "painterly mountain art", rating: 4, use: true }
+    ]
+  },
+  waterPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water",
+    landingPhrases: [
+      { phrase: "Painterly Water Photography", rating: 5, use: true },
+      { phrase: "fine art waterfall prints", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "waterfall landscape photography", rating: 5, use: true },
+      { phrase: "painterly river scenes", rating: 4, use: true }
+    ]
+  },
+  sunsetsPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    landingPhrases: [
+      { phrase: "Painterly Sunset Photography", rating: 5, use: true },
+      { phrase: "dramatic sunset wall art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "sunset landscape photography", rating: 5, use: true },
+      { phrase: "painterly sunset scenes", rating: 4, use: true }
+    ]
+  },
+
+  // --- TRADITIONAL FINE ART LANDSCAPES ---
+  landscapeIntTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International",
+    landingPhrases: [
+      { phrase: "fantastic places", rating: 4, use: true },
+      { phrase: "International Traditional Landscapes", rating: 5, use: true },
+      { phrase: "classic international landscape art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "traditional international landscape photography", rating: 5, use: true },
+      { phrase: "european scenery wall art", rating: 4, use: true }
+    ]
+  },
+  landscapeWestTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West",
+    landingPhrases: [
+      { phrase: "Western Traditional Landscapes", rating: 5, use: true },
+      { phrase: "classic western landscape prints", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "traditional western landscape photography", rating: 5, use: true },
+      { phrase: "western scenery wall art", rating: 4, use: true }
+    ]
+  },
+  landscapeMidwestTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest",
+    landingPhrases: [
+      { phrase: "Midwest Traditional Landscapes", rating: 5, use: true },
+      { phrase: "heartland landscape prints", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "traditional midwest landscape photography", rating: 5, use: true },
+      { phrase: "classic heartland scenery", rating: 4, use: true }
+    ]
+  },
+  landscapeNortheastTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast",
+    landingPhrases: [
+      { phrase: "Northeast Traditional Landscapes", rating: 5, use: true },
+      { phrase: "new england scenery wall art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "traditional northeast landscape photography", rating: 5, use: true },
+      { phrase: "new england landscapes fine art", rating: 4, use: true }
+    ]
+  },
+  landscapeSouthTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South",
+    landingPhrases: [
+      { phrase: "Southern Traditional Landscapes", rating: 5, use: true },
+      { phrase: "southern scenery wall art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "traditional southern landscape photography", rating: 5, use: true },
+      { phrase: "southern landscape prints", rating: 4, use: true }
+    ]
+  },
+  mountainsTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    landingPhrases: [
+      { phrase: "Traditional Mountain Photography", rating: 5, use: true },
+      { phrase: "classic mountain landscape art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "mountain landscape photography", rating: 5, use: true },
+      { phrase: "mountain scenery fine art", rating: 4, use: true }
+    ]
+  },
+  waterTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
+    landingPhrases: [
+      { phrase: "Traditional Water Photography", rating: 5, use: true },
+      { phrase: "classic water landscape prints", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "water landscape photography", rating: 5, use: true },
+      { phrase: "river and waterfall wall art", rating: 4, use: true }
+    ]
+  },
+  sunsetsTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    landingPhrases: [
+      { phrase: "Traditional Sunset Photography", rating: 5, use: true },
+      { phrase: "sunset landscape wall art", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "sunset photography", rating: 5, use: true },
+      { phrase: "classic sunset scenery", rating: 4, use: true }
+    ]
+  },
+
+  // --- GENERAL ---
   landscape: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes",
     landingPhrases: [
       { phrase: "Painterly Landscape Photography", rating: 5, use: true },
       { phrase: "western painterly landscape photography", rating: 4, use: true },
       { phrase: "mountain photography", rating: 4, use: true },
+     
       { phrase: "fine art landscape prints for collectors", rating: 3, use: true }
     ],
     imagePhrases: [
@@ -127,13 +319,16 @@ export const semantic = {
       { phrase: "painterly landscapes", rating: 3, use: true },
       { phrase: "western landscape photography", rating: 4, use: true },
       { phrase: "american west art", rating: 3, use: true },
+      { phrase: "rugged landscape", rating: 3, use: true },
       { phrase: "timeless landscape photo", rating: 3, use: true }
     ]
   },
 
+  // --- TRANSPORTATION, UNIVERSAL, SYNONYMS (UNCHANGED, CAN EXPAND) ---
   transportation: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Transportation",
     landingPhrases: [
+      { phrase: "visual storytelling", rating: 5, use: true },
       { phrase: "Transportation", rating: 5, use: true },
       { phrase: "Classic Cars & Trucks Collection", rating: 5, use: true },
       { phrase: "Route 66 Photography", rating: 5, use: true },
@@ -163,8 +358,47 @@ export const semantic = {
     ]
   },
 
+  // --- PAINTERLY: MAIN LANDING ---
+painterly: {
+  path: "/Galleries/Painterly-Fine-Art-Photography",
+  landingPhrases: [
+    { phrase: "Painterly Fine Art Photography", rating: 5, use: true },
+    { phrase: "painterly photography", rating: 5, use: true },
+    { phrase: "painterly art collection", rating: 4, use: true },
+    { phrase: "painterly style wall art", rating: 4, use: true },
+    { phrase: "painterly gallery", rating: 4, use: true }
+  ],
+  imagePhrases: [
+    { phrase: "fine art painterly photograph", rating: 5, use: true },
+    { phrase: "painterly photo", rating: 4, use: true },
+    { phrase: "artistic painterly prints", rating: 4, use: true },
+    { phrase: "painterly fine art", rating: 4, use: true },
+    { phrase: "painterly landscape image", rating: 3, use: true }
+  ]
+},
+
+// --- TRADITIONAL FINE ART: MAIN LANDING ---
+fineart: {
+  path: "/Galleries/Fine-Art-Photography",
+  landingPhrases: [
+    { phrase: "Fine Art Photography", rating: 5, use: true },
+    { phrase: "traditional fine art photography", rating: 5, use: true },
+    { phrase: "fine art gallery", rating: 4, use: true },
+    { phrase: "classic fine art photos", rating: 4, use: true },
+    { phrase: "timeless fine art", rating: 4, use: true }
+  ],
+  imagePhrases: [
+    { phrase: "fine art photo", rating: 5, use: true },
+    { phrase: "classic fine art image", rating: 4, use: true },
+    { phrase: "traditional photography", rating: 4, use: true },
+    { phrase: "gallery quality fine art", rating: 4, use: true }
+  ]
+},
+
+
   universal: {
     imagePhrases: [
+      { phrase: "every turn of the page", rating: 5, use: true },
       { phrase: "Embrace the Past – Live the Story", rating: 5, use: true },
       { phrase: "award-winning fine art photographer", rating: 5, use: true },
       { phrase: "museum quality prints", rating: 5, use: true },
@@ -172,7 +406,7 @@ export const semantic = {
       { phrase: "Bring the Story Home", rating: 4, use: true },
       { phrase: "story-driven photography", rating: 5, use: true },
       { phrase: "narrative fine art", rating: 5, use: true },
-      { phrase: "visual storytelling", rating: 5, use: true },
+      
       { phrase: "timeless photography", rating: 5, use: true },
       { phrase: "collector-worthy prints", rating: 4, use: true },
       { phrase: "handcrafted fine art", rating: 4, use: true },
@@ -184,7 +418,7 @@ export const semantic = {
       { phrase: "timeless portrait", rating: 3, use: true },
       { phrase: "window into the past", rating: 3, use: true },
       { phrase: "with striking realism", rating: 3, use: true },
-      { phrase: "Painterly Photography", rating: 5, use: true },
+     
       { phrase: "custom painterly portraits", rating: 3, use: true },
       { phrase: "framed photography", rating: 3, use: true },
       { phrase: "wayne heim's work", rating: 3, use: true },

@@ -54,7 +54,6 @@ function pullOnePerGallery(
 ): Image[] {
   const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
   const images: Image[] = [];
-  const usedGalleries = new Set();
 
   while (images.length < count) {
     let added = false;
@@ -82,7 +81,7 @@ function pullOnePerGallery(
   return images;
 }
 
-export function getSideImages({
+export default function getSideImages({
   headingCount,
   excludeIds = new Set<string>(),
 }: {
