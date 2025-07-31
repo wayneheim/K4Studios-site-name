@@ -7,46 +7,36 @@ import LandingRightImages from '../components/LandingRightImages.jsx';
 import FAQAccordion       from '../components/FAQAccordion.jsx';
 import SiteFooter         from '../components/Footer.astro';
 import MobileStoryImages  from '../components/MobileStoryImages.jsx';
-import { getStructuredData } from '../components/utils/getStructuredData.ts';
-import { getLandingMeta } from '../data/landingMeta.ts';
 
-import { siteNav } from '../data/siteNav.ts';
-import { getSideImages } from '../components/utils/getSideImagesHome.ts';
+import { getStructuredData } from '../components/utils/getStructuredData.ts';
+import { getLandingMeta }    from '../data/landingMeta.ts';
+import { siteNav }           from '../data/siteNav.ts';
+import { getSideImages }     from '../components/utils/getSideImagesHome.ts';
+
 import { autoLinkKeywordsInText } from '../components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '../data/semantic/K4-Sem.ts';
+import { phrases }                from '../data/semantic/K4-Sem.ts';
 
-import { landingWestern } from '../data/home/landingstones.ts';
-import { painterlyStory as westernStory } from '../data/home/story.ts';
-import { facingFAQ } from '../data/home/faq.ts';
+import { landingWestern }        from '../data/home/landingstones.ts';
+import { painterlyStory }        from '../data/home/story.ts';
+import { facingFAQ }             from '../data/home/faq.ts';
 
 import '../styles/global.css';
-
-// ----------------------
-// DYNAMIC LOGIC SECTION
-// ----------------------
 
 const sectionPath = "/index";
 const meta = getLandingMeta(sectionPath);
 
-const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+const headingCount = painterlyStory.filter((block, i) => i > 0 && block.subhead).length;
+const featheredImages = getSideImages({ sectionPath, headingCount });
 
-// Use same feathered pool for kw-linker and side images
-const featheredImages = getSideImages({
-  sectionPath,
-  headingCount: 50, // Pull a large pool for kw-linker (up to 50 random)
+const galleryPathMap = {};
+featheredImages.forEach(img => {
+  const path = img.href?.replace(/\/[^/]+$/, "") || "";
+  if (!galleryPathMap[path]) galleryPathMap[path] = [];
+  galleryPathMap[path].push(img);
 });
-// This array is your "galleryDatas" for home, just like gallery pages
-const galleryDatas = [featheredImages];
-// Use featheredImages' href to reconstruct galleryPaths for kw-linker
-const galleryPaths = featheredImages.map(img => img.href ? img.href.replace(/\/[^/]+$/, "") : "");
-
-// Sidebar uses first 5
-const featheredImagesSidebar = featheredImages.slice(0, 5);
-
-// Debug log (remove in prod)
-console.log("KW Linker Debug (Homepage):");
-console.log("galleryDatas[0].length", galleryDatas[0]?.length, "images");
-console.log("semantic keys", Object.keys(k4Semantic));
+const galleryDatas = Object.values(galleryPathMap);
+const galleryPaths = Object.keys(galleryPathMap);
 
 const structuredData = getStructuredData({
   type: "gallery",
@@ -67,6 +57,16 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+
+const featheredImagesSidebar = featheredImages.slice(0, 8);
+
+// Debug log (remove in prod)
+console.log("✅ Homepage Loaded");
+console.log("🧠 Phrases count:", phrases?.length);
+console.log("📘 First override phrase:", phrases?.[0]);
+console.log("📸 Feathered images count:", featheredImages.length);
+console.log("🧭 Semantic keys:", Object.keys(k4Semantic));
+console.log("🗂️ Gallery paths:", galleryPaths);
 ---
 
 <BaseLayout
@@ -109,7 +109,7 @@ const structuredData = getStructuredData({
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {westernStory.map((section, index) => (
+          {painterlyStory.map((section, index) => (
             <article class="story-block" key={index}>
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}

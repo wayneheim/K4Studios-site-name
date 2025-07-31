@@ -40,7 +40,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 0
@@ -68,7 +68,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 1
@@ -96,7 +96,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 2
@@ -124,7 +124,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 3
@@ -152,7 +152,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 4
@@ -180,7 +180,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 5
@@ -208,7 +208,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 6
@@ -236,7 +236,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 7
@@ -264,7 +264,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 8
@@ -292,7 +292,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 9
@@ -320,7 +320,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 10
@@ -348,7 +348,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 11
@@ -376,7 +376,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 12
@@ -404,7 +404,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 13
@@ -432,7 +432,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 14
@@ -460,7 +460,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 15
@@ -488,7 +488,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 16
@@ -516,7 +516,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 17
@@ -544,7 +544,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 18
@@ -572,7 +572,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 19
@@ -600,7 +600,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 20
@@ -628,7 +628,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 21
@@ -656,7 +656,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 22
@@ -684,7 +684,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 23
@@ -712,7 +712,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 24
@@ -740,7 +740,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 25
@@ -768,7 +768,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 26
@@ -796,7 +796,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 27
@@ -824,7 +824,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 28
@@ -852,7 +852,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 29
@@ -880,7 +880,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 30
@@ -908,7 +908,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 31
@@ -936,7 +936,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 32
@@ -964,7 +964,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 33
@@ -992,7 +992,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 34
@@ -1020,7 +1020,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 35
@@ -1048,7 +1048,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 36
@@ -1076,7 +1076,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 37
@@ -1104,7 +1104,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 38
@@ -1132,7 +1132,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 39
@@ -1160,7 +1160,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 40
@@ -1188,7 +1188,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 41
@@ -1216,7 +1216,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 42
@@ -1244,7 +1244,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 43
@@ -1272,7 +1272,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 44
@@ -1300,7 +1300,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 45
@@ -1328,7 +1328,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 46
@@ -1356,7 +1356,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 47
@@ -1384,7 +1384,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 48
@@ -1412,7 +1412,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 49
@@ -1440,7 +1440,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 50
@@ -1468,7 +1468,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 51
@@ -1496,7 +1496,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 52
@@ -1524,7 +1524,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 53
@@ -1552,7 +1552,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 54
@@ -1580,7 +1580,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 55
@@ -1608,7 +1608,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 56
@@ -1636,7 +1636,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 57
@@ -1664,7 +1664,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 58
@@ -1692,7 +1692,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 59
@@ -1720,7 +1720,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 60
@@ -1748,7 +1748,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 61
@@ -1776,7 +1776,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 62
@@ -1804,7 +1804,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 63
@@ -1832,7 +1832,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 64
@@ -1860,7 +1860,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 65
@@ -1888,7 +1888,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 66
@@ -1916,7 +1916,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 67
@@ -1944,7 +1944,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 68
@@ -1972,7 +1972,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 69
@@ -2000,7 +2000,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 70
@@ -2028,7 +2028,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 71
@@ -2056,7 +2056,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 72
@@ -2084,7 +2084,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 73
@@ -2112,7 +2112,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 74
@@ -2140,7 +2140,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 75
@@ -2168,7 +2168,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 76
@@ -2196,7 +2196,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 77
@@ -2224,7 +2224,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 78
@@ -2252,7 +2252,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 79
@@ -2280,7 +2280,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 80
@@ -2308,7 +2308,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 81
@@ -2336,7 +2336,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 82
@@ -2364,7 +2364,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 83
@@ -2392,7 +2392,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 84
@@ -2420,7 +2420,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 85
@@ -2448,7 +2448,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 86
@@ -2476,7 +2476,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 87
@@ -2504,7 +2504,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 88
@@ -2532,7 +2532,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 89
@@ -2560,7 +2560,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 90
@@ -2588,7 +2588,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 91
@@ -2616,7 +2616,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 92
@@ -2644,7 +2644,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 93
@@ -2672,7 +2672,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 94
@@ -2700,7 +2700,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 95
@@ -2730,7 +2730,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 96
@@ -2760,7 +2760,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 97
@@ -2790,7 +2790,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 98
@@ -2820,7 +2820,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 99
@@ -2850,7 +2850,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 100
@@ -2880,7 +2880,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 101
@@ -2910,7 +2910,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 102
@@ -2940,7 +2940,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 103
@@ -2970,7 +2970,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 104
@@ -3000,7 +3000,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 105
@@ -3030,7 +3030,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 106
@@ -3060,7 +3060,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 107
@@ -3090,7 +3090,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 108
@@ -3120,7 +3120,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 109
@@ -3150,7 +3150,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 110
@@ -3180,7 +3180,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 111
@@ -3210,7 +3210,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 112
@@ -3240,7 +3240,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 113
@@ -3270,7 +3270,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 114
@@ -3300,7 +3300,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 115
@@ -3330,7 +3330,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 116
@@ -3360,7 +3360,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 117
@@ -3390,7 +3390,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 118
@@ -3420,7 +3420,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 119
@@ -3450,7 +3450,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 120
@@ -3480,7 +3480,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 121
@@ -3510,7 +3510,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 122
@@ -3540,7 +3540,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 123
@@ -3570,7 +3570,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 124
@@ -3600,7 +3600,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 125
@@ -3630,7 +3630,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 126
@@ -3660,7 +3660,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 127
@@ -3690,7 +3690,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 128
@@ -3720,7 +3720,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 129
@@ -3750,7 +3750,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 130
@@ -3780,7 +3780,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 131
@@ -3810,7 +3810,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 132
@@ -3840,7 +3840,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 133
@@ -3870,7 +3870,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 134
@@ -3900,7 +3900,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 135
@@ -3930,7 +3930,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 136
@@ -3960,7 +3960,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 137
@@ -3990,7 +3990,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 138
@@ -4020,7 +4020,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 139
@@ -4050,7 +4050,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 140
@@ -4080,7 +4080,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 141
@@ -4110,7 +4110,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 142
@@ -4140,7 +4140,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 143
@@ -4171,7 +4171,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 144
@@ -4202,7 +4202,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 145
@@ -4233,7 +4233,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 146
@@ -4264,7 +4264,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 147
@@ -4295,7 +4295,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 148
@@ -4326,7 +4326,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 149
@@ -4357,7 +4357,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 150
@@ -4388,7 +4388,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 151
@@ -4419,7 +4419,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 152
@@ -4450,7 +4450,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 153
@@ -4481,7 +4481,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 154
@@ -4512,7 +4512,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 155
@@ -4543,7 +4543,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 156
@@ -4574,7 +4574,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 157
@@ -4605,7 +4605,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 158
@@ -4636,7 +4636,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 159
@@ -4667,7 +4667,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 160
@@ -4698,7 +4698,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 161
@@ -4729,7 +4729,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 162
@@ -4760,7 +4760,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 163
@@ -4791,7 +4791,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 164
@@ -4822,7 +4822,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 165
@@ -4853,7 +4853,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 166
@@ -4884,7 +4884,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 167
@@ -4915,7 +4915,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 168
@@ -4946,7 +4946,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 169
@@ -4977,7 +4977,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 170
@@ -5008,7 +5008,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 171
@@ -5039,7 +5039,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 172
@@ -5070,7 +5070,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 173
@@ -5101,7 +5101,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 174
@@ -5132,7 +5132,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 175
@@ -5163,7 +5163,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 176
@@ -5194,7 +5194,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 177
@@ -5225,7 +5225,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 178
@@ -5256,7 +5256,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 179
@@ -5287,7 +5287,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 180
@@ -5318,7 +5318,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 181
@@ -5349,7 +5349,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 182
@@ -5380,7 +5380,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 183
@@ -5411,7 +5411,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 184
@@ -5442,7 +5442,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 185
@@ -5473,7 +5473,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 186
@@ -5504,7 +5504,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 187
@@ -5535,7 +5535,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 188
@@ -5566,7 +5566,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 189
@@ -5597,7 +5597,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 190
@@ -5628,7 +5628,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 191
@@ -5657,7 +5657,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 192
@@ -5686,7 +5686,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 193
@@ -5715,7 +5715,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 194
@@ -5744,7 +5744,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 195
@@ -5773,7 +5773,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 196
@@ -5802,7 +5802,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 197
@@ -5831,7 +5831,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 198
@@ -5860,7 +5860,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 199
@@ -5889,7 +5889,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 200
@@ -5918,7 +5918,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 201
@@ -5947,7 +5947,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 202
@@ -5976,7 +5976,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 203
@@ -6005,7 +6005,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 204
@@ -6034,7 +6034,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 205
@@ -6063,7 +6063,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 206
@@ -6092,7 +6092,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 207
@@ -6121,7 +6121,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 208
@@ -6150,7 +6150,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 209
@@ -6179,7 +6179,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 210
@@ -6208,7 +6208,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 211
@@ -6237,7 +6237,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 212
@@ -6266,7 +6266,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 213
@@ -6295,7 +6295,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 214
@@ -6324,7 +6324,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 215
@@ -6353,7 +6353,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 216
@@ -6382,7 +6382,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 217
@@ -6411,7 +6411,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 218
@@ -6440,7 +6440,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 219
@@ -6469,7 +6469,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 220
@@ -6498,7 +6498,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 221
@@ -6527,7 +6527,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 222
@@ -6556,7 +6556,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 223
@@ -6585,7 +6585,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 224
@@ -6614,7 +6614,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 225
@@ -6643,7 +6643,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 226
@@ -6672,7 +6672,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 227
@@ -6701,7 +6701,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 228
@@ -6730,7 +6730,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 229
@@ -6759,7 +6759,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 230
@@ -6788,7 +6788,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 231
@@ -6817,7 +6817,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 232
@@ -6846,7 +6846,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
     ],
     "visibility": "show",
     "sortOrder": 233

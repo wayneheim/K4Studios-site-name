@@ -1,22 +1,21 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-  
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the Color Cowboy Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1
+  },
   {
     "id": "i-wxLBqLg",
     "title": "Grand Sunset Photography by Wayne Heim",
@@ -41,7 +40,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 0
@@ -70,7 +69,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 1
@@ -99,7 +98,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 2
@@ -128,7 +127,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 3
@@ -157,7 +156,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 4
@@ -186,7 +185,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 5
@@ -215,7 +214,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 6
@@ -244,7 +243,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 7
@@ -273,7 +272,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 8
@@ -302,7 +301,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 9
@@ -331,7 +330,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 10
@@ -360,7 +359,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 11
@@ -389,7 +388,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 12
@@ -418,7 +417,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 13
@@ -447,7 +446,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 14
@@ -476,7 +475,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 15
@@ -505,7 +504,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 16
@@ -534,7 +533,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 17
@@ -563,7 +562,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 18
@@ -592,7 +591,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 19
@@ -621,7 +620,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 20
@@ -650,7 +649,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 21
@@ -679,7 +678,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 22
@@ -708,7 +707,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 23
@@ -737,7 +736,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 24
@@ -766,7 +765,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 25
@@ -795,7 +794,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 26
@@ -824,7 +823,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ],
     "visibility": "show",
     "sortOrder": 27

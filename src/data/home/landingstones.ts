@@ -7,7 +7,7 @@ export const landingWestern = {
   tombstones: [
     {
       title: 'Painterly Style Photography',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes',
+      href: '/Galleries/Painterly-Fine-Art-Photography',
       thumb: 'https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/MdwvnZ7LTST6BHvQG527fBMhQ4pmKsgpxCjZ9DfKc/S/_WHZ7317-Edit-Edit-Edit-S.jpg',
     },
     {

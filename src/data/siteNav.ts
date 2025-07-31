@@ -265,7 +265,7 @@ export const siteNav = [
                 "label": "Water & Waterfalls",
                 "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water",
                 "code": "P-S2-Ss2-Sss2",
-                "slug": "water--waterfalls",
+                "slug": "water-waterfalls",
                 "type": "gallery-source"
               },
 {
@@ -427,7 +427,7 @@ export const siteNav = [
         ],
         "code": "T-S1",
         "slug": "landscapes",
-        "type": "gallery-source"
+        "type": "collection"
       },
 {
         "label": "Portraits",

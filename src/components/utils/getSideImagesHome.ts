@@ -8,9 +8,9 @@ type Image = {
   description?: string;
   alt?: string;
   href?: string;
+  galleryPath?: string;
 };
 
-// --- HELPERS ---
 function findGallerySourcesRecursive(node: any): any[] {
   let out: any[] = [];
   if (Array.isArray(node)) {
@@ -22,26 +22,22 @@ function findGallerySourcesRecursive(node: any): any[] {
   return [];
 }
 
-function getAllGallerySourcesMulti(sectionPaths: string[]): { label: string, href: string }[] {
-  function findNode(tree: any[], path: string): any {
+function getAllGallerySources(sectionPath: string): { label: string, href: string }[] {
+  function findNode(tree: any[]): any {
     for (const node of tree) {
-      if (node.href === path) return node;
+      if (node.href === sectionPath) return node;
       if (node.children) {
-        const found = findNode(node.children, path);
+        const found = findNode(node.children);
         if (found) return found;
       }
     }
     return null;
   }
-  let all: any[] = [];
-  for (const sectionPath of sectionPaths) {
-    const node = findNode(siteNav, sectionPath);
-    if (node) all = all.concat(findGallerySourcesRecursive(node));
-  }
-  return all;
+  const node = findNode(siteNav);
+  if (!node) return [];
+  return findGallerySourcesRecursive(node);
 }
 
-// --- SHUFFLE ---
 function shuffle<T>(arr: T[]): T[] {
   let a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -51,115 +47,41 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-// --- SMART FEATHER LOGIC FOR > 7 GALLERIES ---
-function getSmartFeatheredImages({
-  galleryChildren,
-  sectionPath,
-  headingCount,
-  excludeIds = new Set<string>(),
-}: {
-  galleryChildren: any[];
-  sectionPath: string;
-  headingCount: number;
-  excludeIds?: Set<string>;
-}): Image[] {
+function pullOnePerGallery(
+  gallerySources: { label: string, href: string }[],
+  count: number,
+  excludeIds = new Set<string>()
+): Image[] {
   const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
+  const images: Image[] = [];
+  const usedGalleries = new Set();
 
-  // Group by direct parent
-  const grouped: { [parent: string]: any[] } = {};
-  for (const gallery of galleryChildren) {
-    const split = gallery.href.split('/');
-    const parent = split.slice(0, -1).join('/') || 'root';
-    if (!grouped[parent]) grouped[parent] = [];
-    grouped[parent].push(gallery);
-  }
-  const groupArrs = shuffle(Object.values(grouped).map(gals => shuffle(gals)));
-
-  // Load images pools
-  const galleriesWithImages = groupArrs.map(group =>
-    group.map(child => {
-      const filePath = '../../data' + child.href + '.mjs';
+  while (images.length < count) {
+    let added = false;
+    for (const gallery of shuffle(gallerySources)) {
+      if (images.length >= count) break;
+      const filePath = '../../data' + gallery.href + '.mjs';
       const mod = allGalleryData[filePath];
       const allImages: Image[] = (mod?.galleryData || mod?.default || []).filter(
         (img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id)
       );
-      const highRated = allImages.filter(img => (img.rating ?? 0) >= 4);
-      const lowRated = allImages.filter(img => (img.rating ?? 0) < 4);
-      return { high: shuffle(highRated), low: shuffle(lowRated) };
-    })
-  );
-
-  // Round robin by group, feathering evenly!
-  const chosen: Image[] = [];
-  let idx = 0, inner = 0;
-  while (chosen.length < headingCount && groupArrs.length && idx < headingCount * 20) {
-    for (let g = 0; g < groupArrs.length && chosen.length < headingCount; g++) {
-      const group = galleriesWithImages[g];
-      if (!group.length) continue;
-      const gallery = group[inner % group.length];
-      let img: Image | undefined;
-      if (gallery.high.length) img = gallery.high.shift();
-      else if (gallery.low.length) img = gallery.low.shift();
-      if (img && !excludeIds.has(img.id)) {
-        chosen.push(img);
-        excludeIds.add(img.id);
+      if (allImages.length) {
+        const highRated = allImages.filter(img => (img.rating ?? 0) >= 4);
+        const pick = shuffle(highRated).pop() || shuffle(allImages).pop();
+        if (pick) {
+          pick.galleryPath = gallery.href;
+          images.push(pick);
+          excludeIds.add(pick.id);
+          added = true;
+        }
       }
     }
-    inner++;
-    idx++;
+    if (!added) break;
   }
-  // Set href for each image
-  return chosen.map(img => ({
-    ...img,
-    href: `${sectionPath}/${img.id}`,
-  }));
+
+  return images;
 }
 
-// --- CLASSIC ROUND ROBIN (for 7 or fewer galleries) ---
-function getClassicFeatheredImages({
-  galleryChildren,
-  sectionPath,
-  headingCount,
-  excludeIds = new Set<string>(),
-}: {
-  galleryChildren: any[];
-  sectionPath: string;
-  headingCount: number;
-  excludeIds?: Set<string>;
-}): Image[] {
-  const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
-  const galleriesWithImages = shuffle(galleryChildren).map(child => {
-    const filePath = '../../data' + child.href + '.mjs';
-    const mod = allGalleryData[filePath];
-    const allImages: Image[] = (mod?.galleryData || mod?.default || []).filter(
-      (img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id)
-    );
-    const highRated = allImages.filter(img => (img.rating ?? 0) >= 4);
-    const lowRated = allImages.filter(img => (img.rating ?? 0) < 4);
-    return { high: shuffle(highRated), low: shuffle(lowRated) };
-  });
-
-  const chosen: Image[] = [];
-  let idx = 0;
-  while (chosen.length < headingCount && galleriesWithImages.some(g => g.high.length || g.low.length)) {
-    const gallery = galleriesWithImages[idx % galleriesWithImages.length];
-    let img: Image | undefined;
-    if (gallery.high.length) img = gallery.high.shift();
-    else if (gallery.low.length) img = gallery.low.shift();
-    if (img && !excludeIds.has(img.id)) {
-      chosen.push(img);
-      excludeIds.add(img.id);
-    }
-    idx++;
-    if (idx > headingCount * 10) break;
-  }
-  return chosen.map(img => ({
-    ...img,
-    href: `${sectionPath}/${img.id}`,
-  }));
-}
-
-// --- MASTER HOMEPAGE EXPORT: pulls from both Painterly and Traditional
 export function getSideImages({
   headingCount,
   excludeIds = new Set<string>(),
@@ -167,43 +89,24 @@ export function getSideImages({
   headingCount: number;
   excludeIds?: Set<string>;
 }): Image[] {
-  // HOMEPAGE ONLY: Pull from both branches!
-  const galleryChildren = getAllGallerySourcesMulti([
-    "/Galleries/Painterly-Fine-Art-Photography",
-    "/Galleries/Fine-Art-Photography"
-  ]);
-  if (!galleryChildren.length) return [];
+  const painterlySources = getAllGallerySources("/Galleries/Painterly-Fine-Art-Photography");
+  const fineArtSources = getAllGallerySources("/Galleries/Fine-Art-Photography");
 
-  let featheredImages: Image[] = [];
-  let slotsLeft = headingCount;
+  const painterlyImgs = pullOnePerGallery(painterlySources, 50, excludeIds);
+  const fineArtImgs = pullOnePerGallery(fineArtSources, 50, excludeIds);
 
-  // No special WCP override on homepage (unless you want it—then copy/paste your override here.)
-
-  // LUCKY 7 THRESHOLD + FAILSAFE
-  try {
-    const moreImages =
-      galleryChildren.length > 7
-        ? getSmartFeatheredImages({
-            galleryChildren,
-            sectionPath: "/",
-            headingCount: slotsLeft,
-            excludeIds,
-          })
-        : getClassicFeatheredImages({
-            galleryChildren,
-            sectionPath: "/",
-            headingCount: slotsLeft,
-            excludeIds,
-          });
-    return [...featheredImages, ...moreImages];
-  } catch (err) {
-    // Failsafe fallback to classic!
-    const moreImages = getClassicFeatheredImages({
-      galleryChildren,
-      sectionPath: "/",
-      headingCount: slotsLeft,
-      excludeIds,
-    });
-    return [...featheredImages, ...moreImages];
+  const result: Image[] = [];
+  let p = 0, f = 0;
+  for (let i = 0; i < headingCount; i++) {
+    if (p < painterlyImgs.length && f < fineArtImgs.length) {
+      if (i % 2 === 0) result.push({ ...painterlyImgs[p++], href: `${painterlyImgs[p-1].galleryPath}/${painterlyImgs[p-1].id}` });
+      else             result.push({ ...fineArtImgs[f++], href: `${fineArtImgs[f-1].galleryPath}/${fineArtImgs[f-1].id}` });
+    } else if (p < painterlyImgs.length) {
+      result.push({ ...painterlyImgs[p], href: `${painterlyImgs[p].galleryPath}/${painterlyImgs[p].id}` }); p++;
+    } else if (f < fineArtImgs.length) {
+      result.push({ ...fineArtImgs[f], href: `${fineArtImgs[f].galleryPath}/${fineArtImgs[f].id}` }); f++;
+    }
   }
+
+  return result;
 }

@@ -67,8 +67,7 @@ export const painterlyStory = [
       "[Explore the full collection] and bring one of Wayne’s chapters home—make it part of your story."
     ]
   },
-
-  /* ──────────────────────────────────────── 8: Why Wayne Heim? */
+    /* ──────────────────────────────────────── 8: Why Wayne Heim? */
   {
     subhead: "Why Wayne Heim? – Art that Tells a Story",
     paragraphs: [
@@ -76,7 +75,15 @@ export const painterlyStory = [
     ]
   },
 
-  /* ──────────────────────────────────────── 9: Embrace the Past... Live the Story – Call to Action */
+  /* ──────────────────────────────────────── 9: Why Wayne Heim? */
+  {
+    subhead: "Why Wayne Heim? – Art that Tells a Story",
+    paragraphs: [
+      "Wayne Heim’s photography isn’t just art—it’s an experience. As an award-winning medical illustrator, Wayne is uniquely skilled at transforming complex narratives into compelling visual stories. Whether it’s a Western portrait, a rugged landscape, or a historic reenactment, each piece invites you to witness the story and become part of it."
+    ]
+  },
+
+  /* ──────────────────────────────────────── 10: Embrace the Past... Live the Story – Call to Action */
   {
     subhead: "Embrace the Past... Live the Story – Explore the Full Collection",
     paragraphs: [
