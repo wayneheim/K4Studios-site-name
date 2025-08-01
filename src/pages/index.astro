@@ -191,14 +191,16 @@ const structuredData = getStructuredData({
 
   <style>
 .section-heading-anim-wrap {
-  margin: .15rem 0 1.3rem 0;
+  margin: -1.8rem 0 1.3rem 0;
   min-height: 138px;
+   margin-bottom: -6px;
   text-align: center;
   position: relative;
   z-index: 2;
   pointer-events: none;
 }
 .section-heading-anim {
+   
   position: relative;
   width: 100%;
   min-height: 105px;
@@ -212,12 +214,12 @@ const structuredData = getStructuredData({
 .hero-subtitle-anim {
   font-family: "Glegoo", serif;
   font-weight: 400;
-  font-size: 1.4rem;
-  letter-spacing: -0.017em;
+  font-size: 1.2rem;
+  letter-spacing: -0.018em;
   line-height: 1.1;
   color: #6d5b4a;
   opacity: 1;
-transform: scale(1.7) translateY(50px);
+transform: scale(1.7) translateY(53px);
   opacity: 1;
   transition:
     opacity 0.7s cubic-bezier(.33,1,.68,1),
@@ -229,7 +231,7 @@ transform: scale(1.7) translateY(50px);
   /* FINAL state */
   transform: scale(1) translateY(130px);
   opacity: 0.96;
-  transition-delay: 3.41s;
+  transition-delay: 3.21s;
 }
 }
 
@@ -266,10 +268,52 @@ transform: scale(1.7) translateY(50px);
 
 /* Responsive tweaks */
 @media (max-width: 800px) {
-  .section-heading-anim-wrap { min-height: 90px; }
-  .hero-subtitle-anim { font-size: 1.35rem; }
-  .heading-animated .hero-subtitle-anim { font-size: 1rem; }
-  .hero-title-anim { font-size: 1.4rem; }
+    /* Title: starts hidden, rises/fades in out of subtitle area */
+.hero-title-anim {
+  font-family: "Glegoo", serif;
+  font-weight: 800;
+  font-size: 2.65rem;
+  letter-spacing: -0.04em;
+  color: #3e3220;
+  opacity: 0;
+  transform: translateY(45px) scale(0.8);
+  transition:
+    opacity 0.52s cubic-bezier(.33,1,.68,1),
+    transform 0.9s cubic-bezier(.38,1,.74,.96);
+  transition-delay: 0.21s;
+  margin-top: .95em;
+  margin-bottom: 0.02em;
+}
+
+.heading-animated .hero-title-anim {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.24s;
+}
+
+  .heading-animated .hero-subtitle-anim {
+  font-size: 1.1rem;
+  transform: scale(1) translateY(130px);
+  opacity: 0.96;
+  filter: blur(0);
+  transition-delay: 0.13s;
+}
+.hero-subtitle-anim {
+  font-family: "Glegoo", serif;
+  font-weight: 400;
+  font-size: 1.12rem;
+  letter-spacing: -0.028em;
+  line-height: 1.1;
+  color: #6d5b4a;
+  opacity: 1;
+transform: scale(1.1) translateY(83px);
+  opacity: 1;
+  transition:
+    opacity 0.7s cubic-bezier(.33,1,.68,1),
+    transform 1.625s cubic-bezier(.38,1,.74,.96),
+    filter 0.4s cubic-bezier(.4,1,.7,1);
+  transition-delay: 0.21s;
+}
 }
 
 

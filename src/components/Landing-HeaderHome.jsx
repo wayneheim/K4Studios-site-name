@@ -117,6 +117,11 @@ export default function LandingHeader({ breadcrumb }) {
       <div className="header-border-bottom" />
 
       <style jsx>{`
+           @media (max-width: 1024px) {
+           .k4splash{
+        display: none !important;
+      }}
+      
         @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
 
         :root {
