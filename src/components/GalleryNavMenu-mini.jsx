@@ -132,7 +132,7 @@ export default function GalleryNavMenuMini({ hideDefaultHamburger = false }) {
         {!mobileOpen && !hideDefaultHamburger && (
           <button
             className="hamburger-circle"
-            aria-label="Open menu"
+            aria-label="Open Menu"
             onClick={() => setMobileOpen(true)}
           >
             <span className="bar" />

@@ -86,6 +86,16 @@ function DelayedRH() {
 export default function LandingHeader({ breadcrumb }) {
   const isMobile = useIsMobile();
   const [animateStripes, setAnimateStripes] = useState(false);
+  const [showWHLogo, setShowWHLogo] = useState(false);
+
+  useEffect(() => {
+    if (isMobile) {
+      const timer = setTimeout(() => setShowWHLogo(true), 420); // Delay fade-in
+      return () => clearTimeout(timer);
+    } else {
+      setShowWHLogo(false);
+    }
+  }, [isMobile]);
 
   return (
     <header
@@ -108,21 +118,23 @@ export default function LandingHeader({ breadcrumb }) {
         <DelayedRH />
       )}
 
-      <a href="mailto:wayne@k4studios.com" className="wh-logo-mobile" aria-label="Email Wayne Heim">
+      <a
+        href="mailto:wayne@k4studios.com"
+        className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}
+        aria-label="Email Wayne Heim"
+      >
         <img src="/images/WH.png" alt="WH logo" />
       </a>
 
-      {/* NEW: Animated dark bars */}
       <div className="header-border-top" />
       <div className="header-border-bottom" />
 
       <style jsx>{`
-           @media (max-width: 1024px) {
-           .k4splash{
-        display: none !important;
-      }}
-      
-        @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
+        @media (max-width: 1024px) {
+          .k4splash {
+            display: none !important;
+          }
+        }
 
         :root {
           --dark-brown: rgb(122, 102, 94);
@@ -237,22 +249,6 @@ export default function LandingHeader({ breadcrumb }) {
           animation: growBarsOutward 0.5s ease-out 1.75s forwards;
         }
 
-        @keyframes barGrowOut {
-  0% {
-    transform: scaleX(0);
-    opacity: 0.24;
-  }
-  80% {
-    transform: scaleX(1);
-    opacity: 0.24;
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-}
-
-
         .header-border-top {
           top: 0;
         }
@@ -338,16 +334,21 @@ export default function LandingHeader({ breadcrumb }) {
           position: relative;
         }
 
+        /* WH logo fade-in */
         .wh-logo-mobile {
           position: absolute;
           right: 1.25rem;
           top: 50%;
           transform: translateY(-50%);
-          opacity: 0.2;
+          opacity: 0;
+          transition: opacity 0.5s ease;
           z-index: 10;
-          display: none;
           align-items: center;
           justify-content: center;
+        }
+
+        .wh-logo-mobile.fade-in {
+          opacity: 0.2;
         }
 
         .wh-logo-mobile img {
@@ -359,12 +360,6 @@ export default function LandingHeader({ breadcrumb }) {
 
         .wh-logo-mobile:hover {
           opacity: 0.45;
-        }
-
-        @media (max-width: 1024px) {
-          .wh-logo-mobile {
-            display: inline-flex;
-          }
         }
       `}</style>
     </header>

@@ -434,8 +434,8 @@ body.loading * {
   hr {
     display: none !important;
   }
+  
 }
-
 div.mini-drawer-nav div.mini-nav-item {
   border: none !important;
 }
@@ -459,6 +459,15 @@ div.mini-drawer-nav div.mini-nav-item {
   }
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 80%;          /* scale down to 80% of normal size */
+    margin-left: 1rem;       /* left margin */
+    margin-right: 1rem;      /* right margin */
+    word-break: break-word;  /* prevent overflow */
+    text-align: center;      /* optional: center text */
+  }
+}
 
 #header-section,
 footer {

@@ -1,6 +1,5 @@
-/* ───────── LandingHeader.jsx – now uses SiteNavMenu ───────── */
 import React, { useEffect, useState } from "react";
-import SiteNavMenu from "./siteNavMenu.jsx";   // adjust path if needed
+import SiteNavMenu from "./siteNavMenu.jsx"; // adjust path if needed
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(false);
@@ -16,216 +15,223 @@ function useIsMobile() {
 export default function LandingHeader({ breadcrumb }) {
   const isMobile = useIsMobile();
   const [animateStripes, setAnimateStripes] = useState(false);
+  const [showWHLogo, setShowWHLogo] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setAnimateStripes(true), 1300);
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (isMobile) {
+      const timer = setTimeout(() => setShowWHLogo(true), 420); // fade-in delay
+      return () => clearTimeout(timer);
+    } else {
+      setShowWHLogo(false);
+    }
+  }, [isMobile]);
+
   return (
     <header
-  className={`landing-header ${isMobile ? "mobile-animate" : ""} ${animateStripes ? "desktop-animate" : ""}`}
-  style={{ position: "relative", zIndex: 100 }}
->
+      className={`landing-header ${isMobile ? "mobile-animate" : ""} ${animateStripes ? "desktop-animate" : ""}`}
+      style={{ position: "relative", zIndex: 100 }}
+    >
       {/* Breadcrumb (desktop only) */}
-      <div className="breadcrumb-text desktop-only breadcrumb-fade">
-        {breadcrumb}
-      </div>
+      <div className="breadcrumb-text desktop-only breadcrumb-fade">{breadcrumb}</div>
 
       {/* Center logo */}
       <a href="/" className="logo-slot">
-        <img
-          src="/images/K4Logo-web.jpg"
-          alt="K4 Studios Home"
-          className="logo-img"
-        />
+        <img src="/images/K4Logo-web.jpg" alt="K4 Studios Home" className="logo-img" />
       </a>
 
-      {/* Responsive nav (desktop dropdown + mobile drawer) */}
+      {/* Responsive nav */}
       <div className="rhs">
         <SiteNavMenu />
       </div>
 
-      {/* WH Logo as right-side contact link (desktop only) */}
+      {/* WH Logo with fade-in */}
       <a
         href="mailto:wayne@k4studios.com"
-        className="wh-logo-mobile"
+        className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}
         aria-label="Email Wayne Heim"
       >
         <img src="/images/WH.png" alt="WH logo" />
       </a>
 
-      {/* — styles that belong only to LandingHeader — */}
       <style jsx>{`
-    @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
 
-:root {
-  --dark-brown: rgb(122, 102, 94);
-  --stripe-color: rgb(180, 168, 162);
-}
+        :root {
+          --dark-brown: rgb(122, 102, 94);
+          --stripe-color: rgb(180, 168, 162);
+        }
 
-@keyframes stripeInLeft {
-  from { transform: translateX(-200%); }
-  to   { transform: translateX(0); }
-}
+        @keyframes stripeInLeft {
+          from {
+            transform: translateX(-200%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
 
-@keyframes stripeInRight {
-  from { transform: translateX(200%); }
-  to   { transform: translateX(0); }
-}
+        @keyframes stripeInRight {
+          from {
+            transform: translateX(200%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
 
-.landing-header {
-  margin-top: 1rem;
-  font-family: "Glegoo", serif;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 0.75rem;
-  height: 60px;
-  background: #fff;
-  border-top: 3px solid var(--dark-brown);
-  border-bottom: 3px solid var(--dark-brown);
-  z-index: 100;
-}
+        .landing-header {
+          margin-top: 1rem;
+          font-family: "Glegoo", serif;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 0.75rem;
+          height: 60px;
+          background: #fff;
+          border-top: 3px solid var(--dark-brown);
+          border-bottom: 3px solid var(--dark-brown);
+          z-index: 100;
+        }
 
-.landing-header::before,
-.landing-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    var(--stripe-color) 0 2px,
-    transparent 2px 6px
-  );
-  z-index: 0;
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: none;
-}
+        .landing-header::before,
+        .landing-header::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background-image: repeating-linear-gradient(
+            to bottom,
+            var(--stripe-color) 0 2px,
+            transparent 2px 6px
+          );
+          z-index: 0;
+          opacity: 1;
+          transform: translateX(0);
+          pointer-events: none;
+        }
 
-.landing-header::before {
-  left: 0;
-  right: 50%;
-  margin-right: -20px;
-  transform: translateX(-100%);
-  mask-image: linear-gradient(to right, transparent 40%, #000 85%, #000 100%);
-}
+        .landing-header::before {
+          left: 0;
+          right: 50%;
+          margin-right: -20px;
+          transform: translateX(-100%);
+          mask-image: linear-gradient(to right, transparent 40%, #000 85%, #000 100%);
+        }
 
-.landing-header::after {
-  left: 50%;
-  right: 0;
-  margin-left: -20px;
-  transform: translateX(100%);
-  mask-image: linear-gradient(to left, transparent 10%, transparent 40%, #000 85%, #000 100%);
-}
+        .landing-header::after {
+          left: 50%;
+          right: 0;
+          margin-left: -20px;
+          transform: translateX(100%);
+          mask-image: linear-gradient(to left, transparent 10%, transparent 40%, #000 85%, #000 100%);
+        }
 
-.desktop-animate::before {
-  animation: stripeInLeft 0.6s ease-out forwards;
-}
-.desktop-animate::after {
-  animation: stripeInRight 0.6s ease-out forwards;
-}
+        .desktop-animate::before {
+          animation: stripeInLeft 0.6s ease-out forwards;
+        }
+        .desktop-animate::after {
+          animation: stripeInRight 0.6s ease-out forwards;
+        }
 
-.breadcrumb-text {
-  font-size: 1.15rem;
-  color: #2c2c2c;
-  white-space: nowrap;
-  z-index: 3;
-}
+        .breadcrumb-text {
+          font-size: 1.15rem;
+          color: #2c2c2c;
+          white-space: nowrap;
+          z-index: 3;
+        }
 
-.logo-slot {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -17px;
-  width: 85px;
-  height: 85px;
-  background: #000;
-  border: 5px solid #fff;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
+        .logo-slot {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: -17px;
+          width: 85px;
+          height: 85px;
+          background: #000;
+          border: 5px solid #fff;
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1;
+        }
 
-.logo-img {
-  height: 100%;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.9;
-  transition: filter 0.3s, opacity 0.3s;
-}
+        .logo-img {
+          height: 100%;
+          object-fit: contain;
+          filter: grayscale(100%);
+          opacity: 0.9;
+          transition: filter 0.3s, opacity 0.3s;
+        }
 
-.logo-slot:hover {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4),
-              0 0 12px rgba(160, 82, 45, 0.6);
-}
+        .logo-slot:hover {
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4),
+            0 0 12px rgba(160, 82, 45, 0.6);
+        }
 
-.logo-slot:hover .logo-img {
-  filter: grayscale(20%);
-  opacity: 1;
-}
+        .logo-slot:hover .logo-img {
+          filter: grayscale(20%);
+          opacity: 1;
+        }
 
-.rhs {
-  display: flex;
-  align-items: center;
-  z-index: 3;
-}
+        .rhs {
+          display: flex;
+          align-items: center;
+          z-index: 3;
+        }
 
-@media (max-width: 1024px) {
-  .desktop-only {
-    display: none;
-  }
-  .landing-header::before,
-  .landing-header::after {
-    transform: scaleX(0.76);
-    transform-origin: center;
-    opacity: 0.25;
-    animation: none !important;
-  }
-}
+        @media (max-width: 1024px) {
+          .desktop-only {
+            display: none;
+          }
+          .landing-header::before,
+          .landing-header::after {
+            transform: scaleX(0.76);
+            transform-origin: center;
+            opacity: 0.25;
+            animation: none !important;
+          }
+        }
 
-body.mobile-open .logo-slot {
-  margin-top: 30px;
-  margin-left: -8px;
-  z-index: 1 !important;
-  position: relative;
-}
+        body.mobile-open .logo-slot {
+          margin-top: 30px;
+          margin-left: -8px;
+          z-index: 1 !important;
+          position: relative;
+        }
 
-.wh-logo-mobile {
-  position: absolute;
-  right: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.2;
-  z-index: 10;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
+        .wh-logo-mobile {
+          position: absolute;
+          right: 1.25rem;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          z-index: 10;
+          align-items: center;
+          justify-content: center;
+        }
 
-.wh-logo-mobile img {
-  height: 25px;
-  width: auto;
-  filter: grayscale(100%);
-  transition: opacity 0.3s ease;
-}
+        .wh-logo-mobile.fade-in {
+          opacity: 0.2;
+        }
 
-.wh-logo-mobile:hover {
-  opacity: 0.45;
-}
+        .wh-logo-mobile img {
+          height: 25px;
+          width: auto;
+          filter: grayscale(100%);
+          transition: opacity 0.3s ease;
+        }
 
-@media (max-width: 1024px) {
-  .wh-logo-mobile {
-    display: inline-flex;
-  }
-}
-
-
+        .wh-logo-mobile:hover {
+          opacity: 0.45;
+        }
       `}</style>
     </header>
   );
