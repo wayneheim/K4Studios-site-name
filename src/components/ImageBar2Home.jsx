@@ -1,11 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 import { slides as homeSlides } from "../data/home/carousel.ts";
 
 export default function ImageBar2Home() {
   const trackRef = useRef(null);
+  const [show, setShow] = useState(false);
+  const [fullSize, setFullSize] = useState(false);
 
-  // Duplicate slides for infinite scroll effect
   useEffect(() => {
     if (
       trackRef.current &&
@@ -14,13 +15,28 @@ export default function ImageBar2Home() {
     ) {
       trackRef.current.innerHTML += trackRef.current.innerHTML;
     }
+
+    // Appear *almost instantly* (30ms after mount)
+    const fadeTimer = setTimeout(() => setShow(true), 30);
+
+    // Scale up after hero animation is done
+    const scaleTimer = setTimeout(() => setFullSize(true), 1950); // adjust as needed
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(scaleTimer);
+    };
   }, []);
 
   if (!homeSlides.length) return null;
 
   return (
     <section
-      className="carousel"
+      className={
+        "carousel carousel-fade" +
+        (show ? " carousel-fadein" : "") +
+        (fullSize ? " carousel-fullsize" : "")
+      }
       aria-label="Fine-Art Photography Carousel"
       role="region"
       itemScope
@@ -28,7 +44,6 @@ export default function ImageBar2Home() {
     >
       <meta itemProp="name" content="Fine Art Gallery Carousel" />
       <meta itemProp="creator" content="K4 Studios" />
-
       <div className="carousel-track" ref={trackRef}>
         {homeSlides.map((s, i) => (
           <figure
@@ -44,6 +59,22 @@ export default function ImageBar2Home() {
           </figure>
         ))}
       </div>
+      <style jsx>{`
+        .carousel-fade {
+          opacity: 0;
+          transform: scale(0.85);
+          transition:
+            opacity 0.18s cubic-bezier(.33,1,.68,1),
+            transform 1.82s cubic-bezier(.38,1,.74,.96)2.5s;
+          will-change: opacity, transform;
+        }
+        .carousel-fadein {
+          opacity: 1;
+        }
+        .carousel-fullsize {
+          transform: scale(1);
+        }
+      `}</style>
     </section>
   );
 }

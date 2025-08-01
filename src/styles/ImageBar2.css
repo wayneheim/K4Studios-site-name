@@ -29,7 +29,7 @@
   gap:5px;                 /* use gap instead of per-slide margin ⇒ no extra gap at seam */
   width:max-content;
   animation:scroll 60s linear infinite;
-  animation-delay: 6.25s; /* ← Delay scroll start by 1 second */
+  animation-delay: 6.7s; /* ← Delay scroll start by 1 second */
 }
 .carousel:hover .carousel-track{ animation-play-state:paused; }
 .carousel-track::-webkit-scrollbar{display:none;}
