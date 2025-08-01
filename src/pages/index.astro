@@ -1,7 +1,7 @@
 ---
 import BaseLayout         from '../layouts/BaseLayout.astro';
-import LandingHeader      from '../components/Landing-Header.jsx';
-import ImageBar2          from '../components/ImageBar2.jsx';
+import LandingHeader      from '../components/Landing-HeaderHome.jsx';
+import ImageBar2          from '../components/ImageBar2Home.jsx';
 import TombstoneNav       from '../components/TombstoneNav.jsx';
 import LandingRightImages from '../components/LandingRightImages.jsx';
 import FAQAccordion       from '../components/FAQAccordion.jsx';
@@ -81,16 +81,17 @@ const structuredData = getStructuredData({
       </div>
     </div>
 
-    <section class="section-heading-wrap">
-      <div class="section-heading">
-        <h1 class="page-title fade-in reveal-on-scroll">
-          {landingWestern.title}
-        </h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll">
-          {landingWestern.subtitle}
-        </h2>
-      </div>
-    </section>
+    <section class="section-heading-anim-wrap">
+  <div class="section-heading-anim">
+    <h2 class="hero-subtitle-anim" id="hero-subtitle">
+      {landingWestern.subtitle}
+    </h2>
+    <h1 class="hero-title-anim" id="hero-title">
+      {landingWestern.title}
+    </h1>
+  </div>
+</section>
+
 
     <div class="py-5">
       <TombstoneNav items={landingWestern.tombstones} />
@@ -175,9 +176,104 @@ const structuredData = getStructuredData({
         });
       }
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  // Reveal-on-scroll logic (keep your existing code above!)
+
+  // HERO TEXT ANIMATION (this triggers the heading-animated class)
+  setTimeout(() => {
+    document.querySelector('.section-heading-anim-wrap')
+      ?.classList.add('heading-animated');
+  }, 880); // Adjust to sync with your bar/tombstone animation
+});
+
   </script>
 
   <style>
+.section-heading-anim-wrap {
+  margin: .15rem 0 1.3rem 0;
+  min-height: 138px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+.section-heading-anim {
+  position: relative;
+  width: 100%;
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtitle: large and centered, then shrinks/moves down */
+.hero-subtitle-anim {
+  font-family: "Glegoo", serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: -0.017em;
+  line-height: 1.1;
+  color: #6d5b4a;
+  opacity: 1;
+transform: scale(1.7) translateY(60px);
+  opacity: 1;
+  transition:
+    opacity 0.7s cubic-bezier(.33,1,.68,1),
+    transform 1.525s cubic-bezier(.38,1,.74,.96),
+    filter 0.4s cubic-bezier(.4,1,.7,1);
+  transition-delay: 0.21s;
+}
+.heading-animated .hero-subtitle-anim {
+  /* FINAL state */
+  transform: scale(1) translateY(130px);
+  opacity: 0.96;
+  transition-delay: 3.41s;
+}
+}
+
+.heading-animated .hero-subtitle-anim {
+  font-size: 1.12rem;
+  transform: scale(1) translateY(130px);
+  opacity: 0.96;
+  filter: blur(0);
+  transition-delay: 0.13s;
+}
+
+/* Title: starts hidden, rises/fades in out of subtitle area */
+.hero-title-anim {
+  font-family: "Glegoo", serif;
+  font-weight: 800;
+  font-size: 3.45rem;
+  letter-spacing: -0.04em;
+  color: #3e3220;
+  opacity: 0;
+  transform: translateY(85px) scale(0.8);
+  transition:
+    opacity 0.52s cubic-bezier(.33,1,.68,1),
+    transform 0.9s cubic-bezier(.38,1,.74,.96);
+  transition-delay: 0.41s;
+  margin-top: .5em;
+  margin-bottom: 0.02em;
+}
+
+.heading-animated .hero-title-anim {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 3.49644s;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .section-heading-anim-wrap { min-height: 90px; }
+  .hero-subtitle-anim { font-size: 1.35rem; }
+  .heading-animated .hero-subtitle-anim { font-size: 1rem; }
+  .hero-title-anim { font-size: 1.4rem; }
+}
+
+
+
   ul {
     list-style-type: disc;
     padding-left: 1.25em;

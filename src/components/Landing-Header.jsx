@@ -1,7 +1,6 @@
 /* ───────── LandingHeader.jsx – now uses SiteNavMenu ───────── */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SiteNavMenu from "./siteNavMenu.jsx";   // adjust path if needed
-import { useEffect, useState } from "react";
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(false);
@@ -13,14 +12,21 @@ function useIsMobile() {
   }, []);
   return mobile;
 }
+
 export default function LandingHeader({ breadcrumb }) {
+  const isMobile = useIsMobile();
+  const [animateStripes, setAnimateStripes] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimateStripes(true), 1300);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-   <header
-  className={`landing-header ${useIsMobile() ? "mobile-animate" : ""}`}
+    <header
+  className={`landing-header ${isMobile ? "mobile-animate" : ""} ${animateStripes ? "desktop-animate" : ""}`}
   style={{ position: "relative", zIndex: 100 }}
 >
-
-
       {/* Breadcrumb (desktop only) */}
       <div className="breadcrumb-text desktop-only breadcrumb-fade">
         {breadcrumb}
@@ -38,176 +44,155 @@ export default function LandingHeader({ breadcrumb }) {
       {/* Responsive nav (desktop dropdown + mobile drawer) */}
       <div className="rhs">
         <SiteNavMenu />
-          
       </div>
+
       {/* WH Logo as right-side contact link (desktop only) */}
- <a
-  href="mailto:wayne@k4studios.com"
-  className="wh-logo-mobile"
-  aria-label="Email Wayne Heim"
->
-  <img src="/images/WH.png" alt="WH logo" />
-</a>
+      <a
+        href="mailto:wayne@k4studios.com"
+        className="wh-logo-mobile"
+        aria-label="Email Wayne Heim"
+      >
+        <img src="/images/WH.png" alt="WH logo" />
+      </a>
 
       {/* — styles that belong only to LandingHeader — */}
       <style jsx>{`
+    @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
 
-      /* ─── Mobile entrance animation for the stripes ─── */
-@keyframes slideFromLeft  { from { transform: translateX(-100%); } to { transform: translateX(0); } }
-@keyframes slideFromRight { from { transform: translateX(100%);  } to { transform: translateX(0); } }
+:root {
+  --dark-brown: rgb(122, 102, 94);
+  --stripe-color: rgb(180, 168, 162);
+}
 
-@media (max-width: 768px) {
-  /* only run once per page-load */
-  .mobile-animate::before,
-  .mobile-animate::after {
-    animation-duration: .7s;
-    animation-timing-function: cubic-bezier(.33,1,.68,1);
-    animation-fill-mode: forwards;
+@keyframes stripeInLeft {
+  from { transform: translateX(-200%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes stripeInRight {
+  from { transform: translateX(200%); }
+  to   { transform: translateX(0); }
+}
+
+.landing-header {
+  margin-top: 1rem;
+  font-family: "Glegoo", serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.75rem;
+  height: 60px;
+  background: #fff;
+  border-top: 3px solid var(--dark-brown);
+  border-bottom: 3px solid var(--dark-brown);
+  z-index: 100;
+}
+
+.landing-header::before,
+.landing-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--stripe-color) 0 2px,
+    transparent 2px 6px
+  );
+  z-index: 0;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: none;
+}
+
+.landing-header::before {
+  left: 0;
+  right: 50%;
+  margin-right: -20px;
+  transform: translateX(-100%);
+  mask-image: linear-gradient(to right, transparent 40%, #000 85%, #000 100%);
+}
+
+.landing-header::after {
+  left: 50%;
+  right: 0;
+  margin-left: -20px;
+  transform: translateX(100%);
+  mask-image: linear-gradient(to left, transparent 10%, transparent 40%, #000 85%, #000 100%);
+}
+
+.desktop-animate::before {
+  animation: stripeInLeft 0.6s ease-out forwards;
+}
+.desktop-animate::after {
+  animation: stripeInRight 0.6s ease-out forwards;
+}
+
+.breadcrumb-text {
+  font-size: 1.15rem;
+  color: #2c2c2c;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.logo-slot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -17px;
+  width: 85px;
+  height: 85px;
+  background: #000;
+  border: 5px solid #fff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.logo-img {
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.logo-slot:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4),
+              0 0 12px rgba(160, 82, 45, 0.6);
+}
+
+.logo-slot:hover .logo-img {
+  filter: grayscale(20%);
+  opacity: 1;
+}
+
+.rhs {
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
   }
-  .mobile-animate::before {             /* top stripe → from left */
-    transform: translateX(-100%);
-    animation-name: slideFromLeft;
-  }
-  .mobile-animate::after {              /* bottom stripe → from right */
-    transform: translateX(100%);
-    animation-name: slideFromRight;
+  .landing-header::before,
+  .landing-header::after {
+    transform: scaleX(0.76);
+    transform-origin: center;
+    opacity: 0.25;
+    animation: none !important;
   }
 }
 
-
-      
-        @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
-
-        :root {
-          --dark-brown: rgb(122, 102, 94);
-          --stripe-color: rgb(180, 168, 162);
-        }
-
-
-
-
-        
-        .landing-header {
-          margin-top: 1rem;
-          font-family: "Glegoo", serif;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 0 0.75rem;
-          height: 60px;
-          background: #fff;
-          border-top: 3px solid var(--dark-brown);
-          border-bottom: 3px solid var(--dark-brown);
-          z-index: 100;
-        }
-
-        /* stripe background behind logo */
-        .landing-header::before,
-        .landing-header::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          background-image: repeating-linear-gradient(
-            to bottom,
-            var(--stripe-color) 0 2px,
-            transparent 2px 6px
-          );
-          opacity: 0.8;
-          z-index: 0;
-        }
-        .landing-header::before {
-          left: 0;
-          right: 50%;
-          margin-right: -20px;
-          mask-image: linear-gradient(
-            to right,
-            transparent 40%,
-            #000 85%,
-            #000 100%
-          );
-        }
-        .landing-header::after {
-          left: 50%;
-          right: 0;
-          margin-left: -20px;
-          mask-image: linear-gradient(
-            to left,
-            transparent 10%,
-            transparent 40%,
-            #000 85%,
-            #000 100%
-          );
-        }
-
-        /* breadcrumb */
-        .breadcrumb-text {
-          font-size: 1.15rem;
-          color: #2c2c2c;
-          white-space: nowrap;
-          z-index: 3;
-        }
-
-        /* logo badge */
-        .logo-slot {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          top: -17px;
-          width: 85px;
-          height: 85px;
-          background: #000;
-          border: 5px solid #fff;
-          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 1;
-        }
-        .logo-img {
-          height: 100%;
-          object-fit: contain;
-          filter: grayscale(100%);
-          opacity: 0.9;
-          transition: filter 0.3s, opacity 0.3s;
-        }
-        .logo-slot:hover {
-          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4),
-            0 0 12px rgba(160, 82, 45, 0.6);
-        }
-        .logo-slot:hover .logo-img {
-          filter: grayscale(20%);
-          opacity: 1;
-        }
-
-        /* Right-hand side wrapper so nav stays right-aligned */
-        .rhs {
-          display: flex;
-          align-items: center;
-          z-index: 3; /* above stripes */
-        }
-
-        /* Hide breadcrumb & stripes tweak on tablet/mobile */
-        @media (max-width: 1024px) {
-        
-        
-          .desktop-only {
-            display: none;
-          }
-          .landing-header::before,
-          .landing-header::after {
-            transform: scaleX(0.76);
-            transform-origin: center;
-            opacity: 0.25;
-          }
-        }
-
-        body.mobile-open .logo-slot {
-        margin-top: 30px;
-        margin-left: -8px;
-      
-  z-index: 1 !important;  /* lower than drawer z-index 2001 */
+body.mobile-open .logo-slot {
+  margin-top: 30px;
+  margin-left: -8px;
+  z-index: 1 !important;
   position: relative;
 }
 
@@ -218,7 +203,7 @@ export default function LandingHeader({ breadcrumb }) {
   transform: translateY(-50%);
   opacity: 0.2;
   z-index: 10;
-  display: none; /* Default hidden (desktop) */
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -239,6 +224,7 @@ export default function LandingHeader({ breadcrumb }) {
     display: inline-flex;
   }
 }
+
 
       `}</style>
     </header>
