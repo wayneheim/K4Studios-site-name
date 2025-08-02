@@ -1,80 +1,73 @@
 export const westernFAQ = [
  {
-    q: "What makes Wayne Heim’s WWIIPortraits 20s portraits different from other 1920s photography?",
+    q: "What makes Wayne Heim’s WWII Portraits different from other World War II photography?",
     a: [
-      `Wayne’s painterly fine art photography doesn’t glamorize the Jazz Age — it captures its grit. As an <a href="https://heimmedicalart.com" target="_blank" rel="noopener">award-winning medical illustrator</a> and fine art photographer, Wayne uses a mix of historical research, lighting mastery, and narrative instinct to create portraits that feel like cinematic stills rather than posed reenactments.`,
-      `These are not simple vintage recreations — they’re expressive, emotionally charged artworks portraying flappers, gangsters, G-Men, and bootleggers with raw, moody character.`
+      `Wayne’s painterly fine art WWII portraits go beyond documentation — they reveal the emotion, grit, and dignity of the Greatest Generation. As an <a href="https://heimmedicalart.com" target="_blank" rel="noopener">award-winning medical illustrator</a> and fine art photographer, Wayne blends period-accurate research, creative lighting, and a cinematic painterly process to create images that feel like lost movie stills rather than standard reenactment photos.`,
+      `Every portrait is a story: GIs, nurses, medics, and homefront heroes brought to life with authenticity and character.`
     ],
   },
   {
-    q: "Are these flappers and gangsters real people or fictional characters?",
+    q: "Are these WWII portraits of real people or staged models?",
     a: [
-      `Every figure in this series is a real person — often a seasoned reenactor, performer, or historian — photographed in-character and in-context.`,
-      `They’re part of the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> series and help bring the 1920s to life through lived-in expressions and authentic wardrobe detail.`,
+      `Each subject is a real person — typically a dedicated reenactor, living historian, or veteran — photographed in character with period gear and authentic emotion.`,
+      `This approach ensures every image in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">WWII Portraits</a> series carries genuine presence, narrative depth, and historical respect.`,
     ],
   },
   {
-    q: "What’s the meaning behind the phrase 'Painterly Photography of Flappers, Gangsters, and G-Men'?",
+    q: "What does 'painterly WWII portrait photography' mean?",
     a: [
-      `It reflects Wayne’s unique post-processing technique: a modern nod to pictorialism that prioritizes storytelling, shadow, and texture.`,
-      `Each image in this <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits">WWIIPortraits 20s portrait gallery</a> balances fine detail with a painter’s eye — bringing historical characters to life with atmosphere and emotion.`,
+      `It refers to Wayne’s signature approach: blending photographic precision with a painter’s sense of shadow, texture, and atmosphere. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">WWII Portraits gallery</a> balances period detail with artistic interpretation, creating wall-ready artworks that capture both the era’s look and its emotional resonance.`
     ],
   },
   {
-    q: "Are these prints available in black and white as well as color?",
+    q: "Can I get these WWII portraits in both color and black and white?",
     a: [
-      `Yes. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Black-White">Black & White 20s portrait gallery</a> emphasizes contrast, tension, and timeless character — while the color collection adds warmth and vintage tonality that echoes old film stock.`,
-      `Both formats follow the same painterly style and storytelling emphasis, offering varied aesthetics for collectors or designers.`,
+      `Yes — the collection is available in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color">full painterly color</a> as well as <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White">timeless black and white</a>. Each format brings its own character: color reveals vintage tones and subtle textures, while black & white highlights drama and nostalgia.`,
+      `Collectors often display both to show the full range of Wayne’s painterly WWII work.`,
     ],
   },
   {
-    q: "How are these 1920s fine art portraits printed?",
+    q: "How are the WWII portraits printed?",
     a: [
-      `Each piece is available in multiple premium formats, including:`,
-
+      `Each WWII portrait is printed using top archival methods, including:`,
       `<ul>
-        <li>Archival photographic paper — traditional, deckled, or museum-grade</li>
-        <li>Modern aluminum panels for sleek, high-impact display</li>
-        <li>UV-printed wood panels from the <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> — revealing subtle wood grain behind the image</li>
+        <li>Museum-grade fine art paper (traditional or deckled edge)</li>
+        <li>Metal prints for striking contemporary impact</li>
+        <li>Artisan wood panels from the <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a>, letting the warmth of the wood show through select highlights</li>
       </ul>`,
-
-      `All prints preserve painterly detail, moody tonality, and sharp texture, making them ideal for collectors or historically inspired interiors.`,
+      `All formats preserve painterly detail, subtle contrast, and the emotion of the original photo.`
     ],
   },
   {
-    q: "Where do these WWIIPortraits 20s prints fit in interior design?",
+    q: "Where do these WWII portraits fit in interior design?",
     a: [
-      `These <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits">WWIIPortraits 20s art prints</a> are perfect for adding atmosphere and narrative to:`,
-
+      `These <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">WWII portraits</a> are perfect for adding narrative and atmosphere to:`,
       `<ul>
-        <li>Speakeasy-style bars and restaurants</li>
-        <li>Art deco or vintage-inspired interiors</li>
-        <li>Boutique hotels, cigar lounges, or private studies</li>
-        <li>Museums, galleries, or historical exhibits</li>
+        <li>Libraries, studies, and home offices</li>
+        <li>Veterans’ organizations, museums, or commemorative spaces</li>
+        <li>Boutique hotels, vintage-inspired living rooms, or creative workspaces</li>
+        <li>Gift collections for families with military heritage</li>
       </ul>`,
-
-      `The <a href="/Other/K4-Select-Series/Engrained">Engrained wood series</a> is especially striking in spaces needing warmth, texture, and visual storytelling.`,
+      `The <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> wood prints are especially impactful where texture and history matter.`
     ],
   },
   {
-    q: "How can I purchase a flapper or gangster art print?",
+    q: "How can I purchase a WWII portrait art print?",
     a: [
-      `Browse the full collection at the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits">WWIIPortraits 20s gallery</a>. Each image page lists available sizes and finishes.`,
-      `For special orders, curated installations, or collector editions, <a href="/Contact">contact Wayne</a> directly.`,
+      `Browse the complete <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">WWII Portraits collection</a> online. Each image page includes print sizes, materials, and finish options.`,
+      `For custom installations, corporate gifts, or collector inquiries, <a href="/Contact">contact Wayne</a> directly.`,
     ],
   },
   {
-    q: "Are custom formats or large-scale installations available?",
+    q: "Can you create custom sizes or installations for public spaces?",
     a: [
-      `Yes. Whether you're curating a themed space or designing a feature wall, Wayne can accommodate:`,
-
+      `Yes. Wayne works with clients to deliver:`,
       `<ul>
-        <li>Oversized gallery prints</li>
-        <li>Multi-panel storytelling displays</li>
-        <li>Custom finishes like matte, gloss, metallic, or wood-mounted</li>
+        <li>Oversized statement pieces for lobbies or conference rooms</li>
+        <li>Curated photo walls with themed groupings</li>
+        <li>Multi-panel displays, wood-mounting, or specialized framing</li>
       </ul>`,
-
-      `Let’s build something bold. <a href="/Contact">Reach out to start the conversation</a>.`,
+      `Start your custom project — <a href="/Contact">reach out to Wayne</a> for a consultation.`
     ],
   },
 ];

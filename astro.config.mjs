@@ -1,12 +1,17 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import netlify from '@astrojs/netlify';  // ✅ Add this line!
+import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  output: 'server',                     // ✅ Requireddd for SSR
-  adapter: netlify(),                  // ✅ Required for Netlify SSR
+  output: 'server',                     // ✅ Required for SSR
+  adapter: netlify(),                   // ✅ Required for Netlify SSR
   integrations: [react()],
   vite: {
+    resolve: {
+      alias: {
+        "@": "/src", // Now you can import from '@/...' anywhere
+      }
+    },
     server: {
       host: true,
       port: 4321,

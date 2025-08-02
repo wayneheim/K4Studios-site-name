@@ -1,0 +1,16 @@
+---
+import GalleryShell from "@/components/GalleryShell-WWIIWar-BW.astro";
+import { entranceData as BWEntranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/BWEntranceData.ts";
+
+
+const match = Astro.url.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+const initialImageId = match ? match[1] : "i-k4studios";
+
+console.log("🔥 initialImageId:", initialImageId);
+---
+
+<GalleryShell
+  breadcrumb={BWEntranceData.breadcrumb}
+  entranceData={BWEntranceData}
+  initialImageId={initialImageId}
+/>

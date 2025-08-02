@@ -21,6 +21,76 @@ export const landingMetaDB = {
     twitterDescription: "Western, Civil War, and Americana painterly portrait photography by Wayne Heim.",
     twitterImage: "https://k4studios.com/og/facing-history.jpg"
   },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits": {
+    ogTitle: "Civil War Portraits – Painterly History Photography by Wayne Heim",
+    ogDescription: "Relive the era of blue and gray—painterly Civil War portraits by Wayne Heim. Fine art images of reenactors, stories, and American history.",
+    ogImage: "https://k4studios.com/og/civilwar.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Civil War Portraits – Wayne Heim",
+    twitterDescription: "Painterly Civil War fine art photography by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/civilwar.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits": {
+    ogTitle: "Roaring 20s Portraits – Jazz Age Painterly Photography by Wayne Heim",
+    ogDescription: "Step back into the Roaring Twenties—painterly fine art portraits of flappers, gangsters, and jazz era characters by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/roaring20s.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Roaring 20s Portraits – Wayne Heim",
+    twitterDescription: "Fine art painterly photography from the Jazz Age by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/roaring20s.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits": {
+    ogTitle: "Western Cowboy Portraits – Painterly Art by Wayne Heim",
+    ogDescription: "Grit, grit, and more grit—painterly Western cowboy portraits by Wayne Heim. Fine art images of the Old West, outlaws, and Americana.",
+    ogImage: "https://k4studios.com/og/cowboy.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Western Cowboy Portraits – Wayne Heim",
+    twitterDescription: "Painterly cowboy and Western photography by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/cowboy.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII": {
+    ogTitle: "WWII Portraits & Machines – Painterly History by Wayne Heim",
+    ogDescription: "Powerful WWII stories—painterly portraits and machines from the Greatest Generation, as seen by fine art photographer Wayne Heim.",
+    ogImage: "https://k4studios.com/og/wwii.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "WWII History Photography – Wayne Heim",
+    twitterDescription: "Painterly WWII fine art photography—portraits, machines, and moments by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/wwii.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War": {
+    ogTitle: "WWII War Portraits – The Grit and Gear by Wayne Heim",
+    ogDescription: "The War Series: Painterly WWII war portraits and period machines. Capturing the heart and hardware of the Greatest Generation.",
+    ogImage: "https://k4studios.com/og/wwii-war.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "WWII War Portraits – Wayne Heim",
+    twitterDescription: "WWII war portraits and vintage military machines by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/wwii-war.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Portraits": {
+    ogTitle: "WWII Portraits – Faces of the Greatest Generation",
+    ogDescription: "See the courage and humanity of the Greatest Generation—painterly WWII portrait photography by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/wwii-portraits.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "WWII Portraits – Wayne Heim",
+    twitterDescription: "Painterly WWII portraits and human stories by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/wwii-portraits.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Machines": {
+    ogTitle: "WWII Machines – Vintage Military Equipment by Wayne Heim",
+    ogDescription: "The Machines Series: Painterly WWII photography of tanks, trucks, jeeps, and the vehicles that powered a global conflict.",
+    ogImage: "https://k4studios.com/og/wwii-machines.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "WWII Machines – Wayne Heim",
+    twitterDescription: "Painterly WWII machines and military equipment by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/wwii-machines.jpg"
+  },
   "/Galleries/Painterly-Fine-Art-Photography/Landscapes": {
     ogTitle: "Painterly Landscapes – Fine Art Nature Photography by Wayne Heim",
     ogDescription: "Discover painterly landscape photography of the American West, mountains, coastlines, and natural wonders—artfully captured by Wayne Heim and available as fine art prints and wood panels.",
@@ -30,6 +100,106 @@ export const landingMetaDB = {
     twitterTitle: "Painterly Landscape Photography – Wayne Heim",
     twitterDescription: "Fine art landscape and nature photography in a painterly style by Wayne Heim.",
     twitterImage: "https://k4studios.com/og/landscapes.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location": {
+    ogTitle: "Painterly Landscapes by Location – Wayne Heim",
+    ogDescription: "Explore painterly landscapes by location: West, Midwest, Northeast, South, and International. Each gallery features artful nature and scenic photography by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-location.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Landscapes by Location – Wayne Heim",
+    twitterDescription: "Fine art painterly landscapes by location: West, Midwest, Northeast, South, and more.",
+    twitterImage: "https://k4studios.com/og/landscapes-location.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International": {
+    ogTitle: "International Painterly Landscapes – Wayne Heim",
+    ogDescription: "Worldly vistas and painterly scenes—fine art landscape photography from international locations by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-intl.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "International Landscapes – Wayne Heim",
+    twitterDescription: "Painterly fine art landscapes from around the world by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-intl.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West": {
+    ogTitle: "Western Painterly Landscapes – Wayne Heim",
+    ogDescription: "Majestic painterly landscapes of the American West—mountains, plains, and wild spaces, photographed by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-west.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "American West Landscapes – Wayne Heim",
+    twitterDescription: "Painterly landscape photography of the American West by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-west.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest": {
+    ogTitle: "Midwest Painterly Landscapes – Wayne Heim",
+    ogDescription: "Painterly Midwest landscapes—fields, forests, and heartland vistas by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-midwest.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Midwest Landscapes – Wayne Heim",
+    twitterDescription: "Painterly Midwest landscape photography by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-midwest.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast": {
+    ogTitle: "Northeast Painterly Landscapes – Wayne Heim",
+    ogDescription: "Painterly landscapes of the American Northeast—mountains, rivers, forests, and more, photographed by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-northeast.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Northeast Landscapes – Wayne Heim",
+    twitterDescription: "Fine art painterly landscapes of the Northeast by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-northeast.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South": {
+    ogTitle: "Southern Painterly Landscapes – Wayne Heim",
+    ogDescription: "Painterly landscape photography from the American South—wetlands, forests, coastlines, and more by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-south.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Southern Landscapes – Wayne Heim",
+    twitterDescription: "Fine art painterly landscapes of the South by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-south.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme": {
+    ogTitle: "Painterly Landscapes by Theme – Wayne Heim",
+    ogDescription: "Discover landscapes by theme: mountains, water, and sunsets. Painterly fine art nature photography by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-theme.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Landscapes by Theme – Wayne Heim",
+    twitterDescription: "Painterly landscape photography by theme—mountains, water, and sunsets by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-theme.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains": {
+    ogTitle: "Mountain Landscapes – Painterly Nature Photography by Wayne Heim",
+    ogDescription: "Painterly mountain landscapes—soaring peaks and alpine vistas photographed by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-mountains.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Mountain Landscapes – Wayne Heim",
+    twitterDescription: "Fine art mountain landscape photography by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-mountains.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water": {
+    ogTitle: "Water Landscapes – Painterly Photography by Wayne Heim",
+    ogDescription: "Painterly water landscapes—rivers, lakes, and waterfalls, all captured in Wayne Heim's fine art style.",
+    ogImage: "https://k4studios.com/og/landscapes-water.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Water Landscapes – Wayne Heim",
+    twitterDescription: "Fine art water and waterfall landscape photography by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-water.jpg"
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets": {
+    ogTitle: "Sunset Landscapes – Painterly Photography by Wayne Heim",
+    ogDescription: "Painterly sunset landscapes—golden skies and dramatic evenings by Wayne Heim.",
+    ogImage: "https://k4studios.com/og/landscapes-sunsets.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Sunset Landscapes – Wayne Heim",
+    twitterDescription: "Fine art sunset and evening landscape photography by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/landscapes-sunsets.jpg"
   },
   "/Galleries/Painterly-Fine-Art-Photography/Transportation": {
     ogTitle: "Painterly Transportation Art: Trains, Cars & Boats",
@@ -71,7 +241,6 @@ export const landingMetaDB = {
     twitterDescription: "Museum-quality fine art photography: landscapes, portraits, and more.",
     twitterImage: "https://k4studios.com/og/traditional.jpg"
   },
-  // --- Optional fallback for other paths
   "default": {
     ogTitle: "Wayne Heim Fine Art Photography",
     ogDescription: "Painterly and fine art photography—Western, historical, landscape, and portraiture by Wayne Heim. Limited editions available as prints on paper or wood.",
@@ -83,6 +252,7 @@ export const landingMetaDB = {
     twitterImage: "https://k4studios.com/og/default.jpg"
   }
 };
+
 
 // Helper to retrieve meta for a given pathname (can be imported in Astro files)
 export function getLandingMeta(pathname: string) {

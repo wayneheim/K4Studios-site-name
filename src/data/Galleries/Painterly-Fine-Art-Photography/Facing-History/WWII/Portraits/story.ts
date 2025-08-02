@@ -1,82 +1,78 @@
 export const westernStory = [
-   /* ───────────────────────────────────────────── 1 */
+    /* ───────────────────────────────────────────── 1 */
   {
-    breadcrumb: "WWIIPortraits 20s Portraits | Color",
-    title: "WWIIPortraits 20s Portraits: Embrace the Past... Live the Story",
-    subhead: "The Untold Side of the Jazz Age",
-    tagline: "Painterly Fine Art Photography of Flappers, Gangsters, and G-Men",
+    breadcrumb: "WWII Portraits | Color & Black-and-White",
+    title: "WWII Portraits: Embrace the Past... Live the Story",
+    subhead: "Painterly Fine Art Photography of the Greatest Generation",
+    tagline: "Stories of Courage, Sacrifice, and Humanity — Told in Light and Shadow",
     paragraphs: [
-      `Step into the wild, rebellious world of the 1920s—an era defined by speakeasies, bootlegging, and infamous outlaws like Bonnie and Clyde. These WWIIPortraits 20s portraits don’t focus on the glamor of the Jazz Age, but on the grit, tension, and raw humanity of a decade lived on the edge of the law.`,
-      `Captured using a painterly photographic technique, each portrait tells a story. Flappers, gangsters, G-Men, and bootleggers come to life in moody, atmospheric images that reveal the shadowy essence of the time. These are not high-society ballrooms and bright art deco lights—they’re alleyways, hideouts, and whiskey-soaked speakeasies.`
+      `Step into the world of <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Portraits">WWII Portraits</a> — a collection capturing the courage and complexity of the men and women who shaped history. These painterly fine art portraits go beyond uniform and rank, revealing the raw emotion, camaraderie, and sacrifice behind every face.`,
+      `Each image blends documentary realism with painterly technique, echoing the spirit of an era defined by resilience. Here, you'll find <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War">soldiers</a>, <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines">mechanics</a>, <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color">nurses</a>, and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White">unsung heroes</a> — each rendered in painterly detail and historic authenticity.`
     ]
   },
 
   /* ───────────────────────────────────────────── 2 */
   {
-    subhead: "What Were the WWIIPortraits 20s Really Like?",
-    tagline: "Prohibition. Resistance. Survival.",
+    subhead: "Who Are the Faces in These WWII Portraits?",
+    tagline: "Real Reenactors. Real Stories.",
     paragraphs: [
-      `The 1920s were a decade of radical change—when Prohibition turned ordinary citizens into outlaws, and the line between justice and survival blurred. While jazz filled the air and the Charleston ruled the dance floor, another, darker America thrived underground.`,
-      `This portrait series reveals that lesser-seen side. These aren’t just photos from the 20’s—they're intimate moments frozen in time, shaped by rebellion and resistance. Through the lens of painterly fine art photography, the true faces of the WWIIPortraits 20s emerge.`
+      `Each portrait in this series is inspired by true stories and reenacted by living historians. Every <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Portraits">subject</a> is a person embodying the memory of a generation — not an actor in costume, but a keeper of history.`,
+      `These painterly WWII portraits serve as a living tribute, bridging past and present with every glance and gesture.`
     ]
   },
 
   /* ───────────────────────────────────────────── 3 */
   {
-    subhead: "The Real WWIIPortraits 20s: Portraits of Rebellion and Resistance",
-    tagline: "Bootleggers, Flappers, and the Fight for Freedom",
+    subhead: "The Power of Painterly WWII Portraits",
+    tagline: "From the Battlefield to the Homefront",
     list: [
-      `Bootleggers running moonshine under the cover of darkness.`,
-      `G-Men on the trail of dangerous fugitives.`,
-      `Flappers who rejected tradition to embrace freedom and risk.`,
-      `Outlaws and lawmen locked in a deadly game of cat and mouse.`
+      `Portraits of <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War">soldiers</a>, medics, and war photographers.`,
+      `Women in service: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Portraits">WACs, WAVES</a>, and nurses who broke boundaries.`,
+      `Moments of resilience — camaraderie at camp, farewells at the train station, the quiet before battle.`,
+      `Vivid detail: from decorated uniforms to well-worn gear, every portrait is a narrative in itself.`
     ],
     paragraphs: [
-      `These 1920s portraits capture that raw defiance—where survival often meant breaking the rules and living in constant motion. The goal wasn’t wealth—it was freedom. To live fast, loud, and without apology.`
+      `This series reveals the human stories behind iconic images, honoring the spirit and individuality of each subject.`
     ]
   },
 
   /* ───────────────────────────────────────────── 4 */
   {
-    subhead: "Flappers, Gangsters, and G-Men in Painterly Detail",
-    tagline: "Painterly Fine Art That Breathes With Character",
-    list: [
-      `Flappers in speakeasies, shadows hiding their smirks and secrets.`,
-      `Gangsters and bootleggers, caught mid-stride, gripping their fedoras and sidearms.`,
-      `Federal agents, stern and focused, in sharp contrast to the chaos around them.`
-    ],
+    subhead: "Why Choose Painterly WWII Portraits?",
+    tagline: "Collect History. Inspire Conversation.",
     paragraphs: [
-      `These aren’t re-enactments. They’re lived-in portrayals of a moment in American history that still echoes today.`
+      `Unlike mass-produced prints, these portraits are crafted as fine art — designed to evoke emotion and spark conversation. Perfect for collectors, educators, or anyone passionate about WWII history, each print connects you to the stories that shaped a generation.`
     ]
   },
 
   /* ───────────────────────────────────────────── 5 */
   {
-    subhead: "Experience the Spirit of the 20s Through Fine Art",
-    tagline: "Own the Grit and Grace of an Unforgiving Decade",
+    subhead: "Experience the Collection",
+    tagline: "Fine Art WWII Portraits, Ready to Display",
     paragraphs: [
-      `Printed on high-quality materials, every piece in this collection transforms historical storytelling into wall-worthy artwork. Whether you're drawn to the thrill of the chase, the edge of rebellion, or the soul of a past era—these fine art portraits let you bring that energy home.`
+      `Every portrait is printed on museum-grade materials, with rich tones and archival quality. Whether displayed at home, in an office, or as part of a historical exhibit, these images are more than photographs — they are living history, ready to inspire.`
     ]
   },
 
   /* ───────────────────────────────────────────── 6 */
   {
-    subhead: "Collection Highlights",
-    tagline: "Stories in Every Shadow",
+    subhead: "WWII Portraits — Collection Highlights",
+    tagline: "Explore Stories, Discover Heroes",
     list: [
-      `Bootleggers and G-Men: Explore the dangerous cat-and-mouse world of Prohibition-era crime and law enforcement.`,
-      `Flapper Rebellion: See how women pushed boundaries and reshaped their roles in society through bold fashion and fearless attitude.`,
-      `Outlaws and Lawmen: From notorious icons like Bonnie and Clyde to forgotten faces of resistance, each portrait honors the people who made—and broke—the rules.`
+      `The Soldier’s Story: Battlefront moments and the bonds of brotherhood.`,
+      `Women of WWII: Courage in the face of adversity — on the front lines and behind the scenes.`,
+      `Homefront Portraits: Families, farewells, and the sacrifices that defined a nation.`,
+      `Unsung Heroes: Medics, chaplains, and everyday people whose stories are finally told.`
     ]
   },
 
   /* ───────────────────────────────────────────── 7 */
   {
-    subhead: "Own a Piece of WWIIPortraits 20s History",
-    tagline: "Bring Home the Rebellion, Preserved in Painterly Form",
+    subhead: "Own a Piece of History",
+    tagline: "Preserve the Legacy of WWII — In Painterly Detail",
     paragraphs: [
-      `Whether you're a collector, a history enthusiast, or someone who simply appreciates painterly storytelling, this series offers something unique: the grit and grace of 1920s America, captured in vivid, emotionally resonant fine art.`,
-      `These are not mass-produced vintage recreations. They are one-of-a-kind works that embrace the past and live the story—preserved in the expressive depth of each print.`
+      `Bring home a story that matters. Every portrait in the WWII series is a work of art — vivid, expressive, and historically resonant. Explore the full collection in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Portraits">WWII Portraits</a> and discover the power of painterly fine art photography.`,
+      `Let these images become a part of your story — and help preserve the legacy of the Greatest Generation for years to come.`
     ]
   }
 ];

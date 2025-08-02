@@ -1,80 +1,69 @@
 export const westernFAQ = [
- {
-    q: "What makes Wayne Heim’s WWIIWar 20s portraits different from other 1920s photography?",
+  {
+    q: "What makes Wayne Heim’s Art of War WWII collection unique?",
     a: [
-      `Wayne’s painterly fine art photography doesn’t glamorize the Jazz Age — it captures its grit. As an <a href="https://heimmedicalart.com" target="_blank" rel="noopener">award-winning medical illustrator</a> and fine art photographer, Wayne uses a mix of historical research, lighting mastery, and narrative instinct to create portraits that feel like cinematic stills rather than posed reenactments.`,
-      `These are not simple vintage recreations — they’re expressive, emotionally charged artworks portraying flappers, gangsters, G-Men, and bootleggers with raw, moody character.`
+      `Wayne’s painterly fine art photography captures WWII with emotional depth and historical accuracy. As an <a href="https://heimmedicalart.com" target="_blank" rel="noopener">award-winning medical illustrator</a> and fine art photographer, Wayne combines rigorous research with creative lighting and composition to create cinematic, immersive images that go beyond typical reenactment photos.`,
+      `Each photograph tells a story of courage, strategy, and sacrifice, rendered with a painter’s touch that invites viewers to experience the war’s human drama.`
     ],
   },
   {
-    q: "Are these flappers and gangsters real people or fictional characters?",
+    q: "Are the subjects real veterans or reenactors?",
     a: [
-      `Every figure in this series is a real person — often a seasoned reenactor, performer, or historian — photographed in-character and in-context.`,
-      `They’re part of the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> series and help bring the 1920s to life through lived-in expressions and authentic wardrobe detail.`,
+      `The subjects are highly dedicated reenactors, historians, and performers who bring WWII history to life through authentic uniforms, gear, and settings.`,
+      `They’re part of the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII">Art of War series</a>, and their lived-in portrayals offer a powerful connection to the past.`
     ],
   },
   {
-    q: "What’s the meaning behind the phrase 'Painterly Photography of Flappers, Gangsters, and G-Men'?",
+    q: "What does 'painterly fine art photography' mean in this collection?",
     a: [
-      `It reflects Wayne’s unique post-processing technique: a modern nod to pictorialism that prioritizes storytelling, shadow, and texture.`,
-      `Each image in this <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIWar-20s-Portraits">WWIIWar 20s portrait gallery</a> balances fine detail with a painter’s eye — bringing historical characters to life with atmosphere and emotion.`,
+      `This style refers to Wayne’s unique post-processing technique inspired by pictorialism—using soft textures, controlled lighting, and rich color tonality to create images that feel like paintings.`,
+      `Rather than stark documentary photos, these are evocative artworks blending historical fidelity with emotional storytelling.`
     ],
   },
   {
-    q: "Are these prints available in black and white as well as color?",
+    q: "Are prints available in black and white or color?",
     a: [
-      `Yes. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIWar-20s-Portraits/Black-White">Black & White 20s portrait gallery</a> emphasizes contrast, tension, and timeless character — while the color collection adds warmth and vintage tonality that echoes old film stock.`,
-      `Both formats follow the same painterly style and storytelling emphasis, offering varied aesthetics for collectors or designers.`,
+      `Yes. The collection includes both <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII/Black-White">black & white</a> and color prints.`,
+      `Black and white emphasizes contrast and timeless character, while color adds warmth and vintage atmosphere, both rendered with the painterly aesthetic.`
     ],
   },
   {
-    q: "How are these 1920s fine art portraits printed?",
+    q: "What printing options are available for these WWII images?",
     a: [
-      `Each piece is available in multiple premium formats, including:`,
-
+      `Prints are available on archival photographic papers (museum-grade and deckled), sleek aluminum panels, and the unique <a href="/Other/K4-Select-Series/Engrained">Engrained UV-printed wood series</a> that showcases wood grain beneath the image.`,
+      `All options preserve the painterly detail and atmospheric mood that define the series.`
+    ],
+  },
+  {
+    q: "How can these prints be used in interior design?",
+    a: [
+      `These WWII prints add powerful narrative and texture to a variety of spaces, including:`,
       `<ul>
-        <li>Archival photographic paper — traditional, deckled, or museum-grade</li>
-        <li>Modern aluminum panels for sleek, high-impact display</li>
-        <li>UV-printed wood panels from the <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> — revealing subtle wood grain behind the image</li>
+        <li>Historical museums and exhibit spaces</li>
+        <li>Military clubs and veterans’ halls</li>
+        <li>Private collections and home libraries</li>
+        <li>Office or study environments seeking gravitas and storytelling</li>
       </ul>`,
-
-      `All prints preserve painterly detail, moody tonality, and sharp texture, making them ideal for collectors or historically inspired interiors.`,
+      `The Engrained wood prints are especially effective in spaces craving warmth and tactility.`
     ],
   },
   {
-    q: "Where do these WWIIWar 20s prints fit in interior design?",
+    q: "How do I purchase a print from the Art of War collection?",
     a: [
-      `These <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIWar-20s-Portraits">WWIIWar 20s art prints</a> are perfect for adding atmosphere and narrative to:`,
-
+      `Browse the full collection at the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII">Art of War WWII gallery</a>, where each image page lists available sizes and finishes.`,
+      `For custom commissions, collector editions, or curated installations, please <a href="/Contact">contact Wayne directly</a>.`
+    ],
+  },
+  {
+    q: "Are custom sizes or large-scale installations available?",
+    a: [
+      `Absolutely. Wayne offers:`,
       `<ul>
-        <li>Speakeasy-style bars and restaurants</li>
-        <li>Art deco or vintage-inspired interiors</li>
-        <li>Boutique hotels, cigar lounges, or private studies</li>
-        <li>Museums, galleries, or historical exhibits</li>
+        <li>Oversized prints suitable for galleries or feature walls</li>
+        <li>Multi-panel narrative installations</li>
+        <li>Special finishes including matte, gloss, metallic, and wood-mounted options</li>
       </ul>`,
-
-      `The <a href="/Other/K4-Select-Series/Engrained">Engrained wood series</a> is especially striking in spaces needing warmth, texture, and visual storytelling.`,
-    ],
-  },
-  {
-    q: "How can I purchase a flapper or gangster art print?",
-    a: [
-      `Browse the full collection at the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIWar-20s-Portraits">WWIIWar 20s gallery</a>. Each image page lists available sizes and finishes.`,
-      `For special orders, curated installations, or collector editions, <a href="/Contact">contact Wayne</a> directly.`,
-    ],
-  },
-  {
-    q: "Are custom formats or large-scale installations available?",
-    a: [
-      `Yes. Whether you're curating a themed space or designing a feature wall, Wayne can accommodate:`,
-
-      `<ul>
-        <li>Oversized gallery prints</li>
-        <li>Multi-panel storytelling displays</li>
-        <li>Custom finishes like matte, gloss, metallic, or wood-mounted</li>
-      </ul>`,
-
-      `Let’s build something bold. <a href="/Contact">Reach out to start the conversation</a>.`,
+      `Get in touch to discuss your vision and create a unique display.`
     ],
   },
 ];

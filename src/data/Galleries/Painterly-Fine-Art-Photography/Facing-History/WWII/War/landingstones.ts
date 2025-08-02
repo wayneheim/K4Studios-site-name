@@ -1,18 +1,18 @@
 export const landingWestern = {
-  title: "The WWIIWar Twenties: In Portraits",
-  subtitle: "Painterly WWIIWar Twentys Themed Photography by Wayne Heim",
-   breadcrumb: "Facing History: WWIIWar 20s Portraits",
+  title: "The WWII: Art of War",
+  subtitle: "Painterly WWII Themed War Photography by Wayne Heim",
+   breadcrumb: "Facing History | WWII | Art of War",
 
   tombstones: [
     {
-      title: 'Color 20s Themed Art',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIWar-20s-Portraits/Color/i-WSh3Nqv',
-      thumb: 'https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIWar-20s-Portraits/Color/i-WSh3Nqv/0/MHs2sGLV76Db4TRMFngqtzQBzFjzrVbj4dSkM4zcS/S/_DSF3071-Edit-S.jpg',
+      title: 'Color Art of War Photos',
+      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color',
+      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/Kg372cjJQWFhMsgRgTD9K6j22kJ3HhrscsPG8G6cm/S/_OLY7916-Edit-S.jpg',
     },
     {
-      title: 'Black & White 20s Photos',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIWar-20s-Portraits/Black-White/i-tpvJWLm',
-      thumb: 'https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIWar-20s-Portraits/Black-White/i-tpvJWLm/1/LVMjfqS2rs9BBRZF8RNdFNNzVNjHtffNcdSpJsCj8/S/Havana-Car-p-S.jpg',
+      title: 'Black & White Art of War Photos',
+      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White',
+      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-p8JdtJM/5/NgGsLDRCxJh7pWkr4BXHrctpQ7h8B8BrxhT4ndbjt/S/_IGP6535-Edit-S.jpg',
     },
 
   ]

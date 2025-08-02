@@ -1,44 +1,75 @@
-export const slides = [
-  {
-    href: "",
-    src: "https://photos.smugmug.com/photos/i-gQNS688/1/MqwnWBf2TtnwNZqwTr5q7vqkxbGrfqtnRPr2tgnsc/S/i-gQNS688-S.jpg",
-    alt: "WWII Soldier: run for cover",
-    description:
-      "WWII GI running for cover on beach in Normandy Landing",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/photos/i-2Px7qSK/1/Nd6F4n27TxPMbHBkpP2c2kxJfspmWxx4Mc5mKRGqz/M/i-2Px7qSK-M.jpg",
-    alt: "Looking for a way out",
-    description:
-      "Soldier looking for a way out off the bloody beaches after Normandy Landing",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/photos/i-WRJFPBq/0/MZjR3v5srLxq93CN9nNZj8WQ455qRLCs9FQzsN9Rd/M/i-WRJFPBq-M.jpg",
-    alt: "1940s Homefront: Landings have begun.",
-    description:
-      "1940s Homefront: A soldier's wife listens to raidio broadcast and reads paper about the landings on the beaches of Normandy.",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/photos/i-QR4sBDJ/1/Mpz6WrVcHQMssSxzM9x9ddm8SFp3T483NFHpdLVPR/M/i-QR4sBDJ-M.jpg",
-    alt: "Get Ready! Normandy Landings",
-    description:
-      "Solders are signaled to ready for final approach and landing on the beaches of Normandy.",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/photos/i-c23JZjL/1/NN2Hm8ZXLVWKXqcZczRz3J4ZWHfRvpHvzKp3szG72/M/i-c23JZjL-M.jpg",
-    alt: "WWII USS Cod Submarine",
-    description:
-      "Underway: USS Cod Submarine, a Gato-class submarine, during WWII.",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/photos/i-5kXRsT3/1/K5LcHwmz5b4hWs4p6VXMXjt9bmjpjwq4ZgLL9vp8N/M/i-5kXRsT3-M.jpg",
-    alt: "WWII tanks in firing line",
-    description:
-      "WWII tanks in firing line, ready to advance on enemy positions at nightfall.",
-  },
-];
+// carousel.ts for WWII Landing Page (real gallery path version)
+
+// @ts-ignore
+const modules   = import.meta.glob('./**/Color.mjs', { eager: true });
+// @ts-ignore
+const bwModules = import.meta.glob('./**/Black-White.mjs', { eager: true });
+
+// Collect images WITH their gallery path!
+let allColor = [];
+for (const path in modules) {
+  const gallery = modules[path]?.galleryData || modules[path]?.default || [];
+  const galleryPath = path
+    .replace(/^\.\//, '')                      // Remove './'
+    .replace(/\/Color\.mjs$/, '')              // Remove '/Color.mjs'
+    .replace(/\/Black-White\.mjs$/, '');       // (for robustness)
+  allColor = allColor.concat(
+    gallery.map(img => ({ ...img, galleryPath }))
+  );
+}
+
+let allBW = [];
+for (const path in bwModules) {
+  const gallery = bwModules[path]?.galleryData || bwModules[path]?.default || [];
+  const galleryPath = path
+    .replace(/^\.\//, '')
+    .replace(/\/Black-White\.mjs$/, '');
+  allBW = allBW.concat(
+    gallery.map(img => ({ ...img, galleryPath }))
+  );
+}
+
+// --- Universal filter for visible images ---
+function filterGalleryImages(images) {
+  return images.filter(
+    img =>
+      img.id !== 'i-k4studios' &&
+      (!img.visibility || img.visibility !== 'ghost')
+  );
+}
+
+// Build a pool of images prioritized by rating, then shuffle each
+function buildRankedPool(images) {
+  const getByRating = (r) => images.filter(img => img.rating === r);
+  return [
+    ...getByRating(5).sort(() => Math.random() - 0.5),
+    ...getByRating(4).sort(() => Math.random() - 0.5),
+    ...getByRating(3).sort(() => Math.random() - 0.5),
+    ...images.filter(img => ![5, 4, 3].includes(img.rating)).sort(() => Math.random() - 0.5),
+  ];
+}
+
+// Real gallery path in href! (and prefix i- to match your URLs)
+function toSlide(img) {
+  return {
+    href: `/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/${img.galleryPath}/${img.id}`,
+    src: img.src || img.url || '',
+    alt: img.alt || img.title || '',
+    description: img.description || '',
+  };
+}
+
+// Filter, build, alternate
+const colorPool = buildRankedPool(filterGalleryImages(allColor));
+const bwPool    = buildRankedPool(filterGalleryImages(allBW));
+
+const slides = [];
+const maxSlides = 10;
+let ci = 0, bi = 0;
+while (slides.length < maxSlides && (ci < colorPool.length || bi < bwPool.length)) {
+  if (ci < colorPool.length) slides.push(toSlide(colorPool[ci++]));
+  if (slides.length >= maxSlides) break;
+  if (bi < bwPool.length) slides.push(toSlide(bwPool[bi++]));
+}
+
+export { slides };

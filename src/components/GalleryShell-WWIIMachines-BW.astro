@@ -1,13 +1,13 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import GalleryHeader from '../components/Gallery-LandingHeader.jsx';
-import GalleryInfo from '../components/GalleryInfo.jsx';
-import ChapterViewer from '../components/Chapter-WWIIMachinesBW.jsx';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
+import GalleryInfo from "@/components/GalleryInfo.jsx";
+import ChapterViewer from "@/components/Chapter-WWIIMachinesBW.jsx";
+import Footer from "@/components/Footer.astro";
 
-import { galleryData as allImages } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs';
-import { landingWestern as landingMachines } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/landingstones.ts';
-import { getStructuredData } from '../components/utils/getStructuredData.ts';
+import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs";
+import { landingWestern } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/landingstones.ts";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
 
@@ -25,43 +25,60 @@ const imageStructuredData = currentImage
   : getStructuredData({
       type: "gallery",
       data: {
-        title: landingMachines.title,
-        description: landingMachines.subtitle,
+        title: landingWestern.title,
+        description: landingWestern.subtitle,
         url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
       },
       images: previewImages
     });
+
+// dynamic title logic
+function formatBreadcrumbTitle(bc) {
+  if (!bc) return "Gallery";
+  return bc.split("|").map(s => s.trim()).join(" – ");
+}
+const galleryTitle = formatBreadcrumbTitle(entranceData?.breadcrumb || breadcrumb);
+const pageTitle = currentImage
+  ? (currentImage.title
+      ? `${currentImage.title} — ${galleryTitle}`
+      : `Chapter ${allImages.findIndex(img => img.id === currentImage.id) + 1} — ${galleryTitle}`
+    )
+  : galleryTitle;
 ---
 
 <BaseLayout 
-  title="Facing History: WWII Machines – Black & White Photos" 
+  title={pageTitle} 
   structuredDataJSON={imageStructuredData}
 >
-  <div class="page-container">
-    <div id="gallery-content" class="flex-grow relative overflow-hidden">
 
-      <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
-        <GalleryHeader client:load breadcrumb={breadcrumb} />
-      </div>
+  <div id="gallery-content" class="flex-grow relative overflow-hidden">
 
-      <div class="h-0 md:h-5"></div>
-
-      <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-        <GalleryInfo client:load entranceData={entranceData} />
-      </div>
-
-      <div id="chapter-section" class="section-hidden" style="display: none;">
-        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-      </div>
+    <!-- Header stays fixed above intro -->
+    <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
+      <GalleryHeader client:load breadcrumb={breadcrumb} />
     </div>
 
-    <div class="h-12 md:h-20"></div>
+    <!-- Spacer to push intro below header visually -->
+    <div class="h-0 md:h-5"></div>
 
-    <Footer 
-      previewImages={previewImages}
-      previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    />
+    <!-- Intro: Visible initially -->
+    <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
+      <GalleryInfo client:load entranceData={entranceData} />
+    </div>
+
+    <!-- Chapter Viewer: Hidden initially -->
+    <div id="chapter-section" class="section-hidden" style="display: none;">
+      <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+    </div>
   </div>
+
+  <!-- Spacer pushes the footer down -->
+  <div class="h-12 md:h-20"></div>
+
+  <Footer 
+    previewImages={previewImages}
+    previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
+  />
 
   <style>
     .hamburger-circle {
@@ -109,12 +126,13 @@ const imageStructuredData = currentImage
       const floatingHeader = document.getElementById('floating-header');
       const menuLabel = document.getElementById('menu-label');
       const topSpacer = document.getElementById('top-spacer');
-
       let isMenuOpen = false;
 
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
       if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-        setTimeout(() => exploreButton?.click(), 50);
+        setTimeout(() => {
+          exploreButton?.click();
+        }, 50);
       }
 
       exploreButton?.addEventListener('click', () => {
@@ -144,7 +162,7 @@ const imageStructuredData = currentImage
       });
     });
 
-    document.addEventListener('contextmenu', (e) => {
+    document.addEventListener('contextmenu', function (e) {
       if (e.target.tagName === 'IMG') {
         e.preventDefault();
       }

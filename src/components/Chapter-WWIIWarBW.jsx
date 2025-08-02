@@ -6,7 +6,7 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
-import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs";
 import SwipeHint from "./SwipeHint";
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
@@ -57,7 +57,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
     if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White";
+  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White";
   const newUrl = `${basePath}/${imageId}`;
    const currentUrl = window.location.pathname;
  
@@ -74,7 +74,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
      const isViewingImageZero = currentIndex === 0;
  
      if (isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
-       const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White";
+       const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White";
        window.history.replaceState(null, "", cleanUrl);
      }
    }, [currentIndex]);
@@ -796,7 +796,7 @@ style={
 </>
 )}
 </div>
-      <SwipeHint galleryKey="Painterly-WWIIWar-Color" />
+      <SwipeHint galleryKey="Painterly-WWIIWar-Black-White" />
 </div>
 );
 }

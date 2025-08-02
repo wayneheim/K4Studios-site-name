@@ -85,6 +85,7 @@ export default function LandingHeader({ breadcrumb }) {
         }
 
         .landing-header {
+         margin-bottom: 1.25rem; 
           margin-top: 1rem;
           font-family: "Glegoo", serif;
           position: relative;
@@ -140,7 +141,7 @@ export default function LandingHeader({ breadcrumb }) {
         }
 
         .breadcrumb-text {
-          font-size: 1.15rem;
+          font-size: 1.1rem;
           color: #2c2c2c;
           white-space: nowrap;
           z-index: 3;

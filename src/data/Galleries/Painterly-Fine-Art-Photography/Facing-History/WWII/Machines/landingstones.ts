@@ -1,19 +1,44 @@
+import { galleryData as colorGallery } from './Color.mjs';
+import { galleryData as bwGallery } from './Black-White.mjs';
+
+// Universal filter for visible images
+function filterGalleryImages(images) {
+  return images.filter(
+    img =>
+      img.id !== 'i-k4studios' &&
+      (!img.visibility || img.visibility !== 'ghost')
+  );
+}
+
+// Random pick helper
+function pickRandom(images) {
+  if (!images.length) return null;
+  return images[Math.floor(Math.random() * images.length)];
+}
+
+const colorPool = filterGalleryImages(colorGallery);
+const bwPool = filterGalleryImages(bwGallery);
+
+const colorImg = pickRandom(colorPool);
+const bwImg = pickRandom(bwPool);
+
 export const landingWestern = {
-  title: "WWII: Men & Machines – This is a test marker • The Roaring Twenties: In Portraits",
-  subtitle: "WWII: Men & Machines – This is a test marker • Painterly Roaring Twentys Themed Photography by Wayne Heim",
-   breadcrumb: "Facing History: Roaring 20s Portraits",
+  title: "The WWII: Men and Machines",
+  subtitle: "Painterly WWII Men and Machines Themed Photography by Wayne Heim",
+  breadcrumb: "Facing History | WWII | Men & Machines",
 
   tombstones: [
     {
-      title: 'Color 20s Themed Art',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv',
-      thumb: 'https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/MHs2sGLV76Db4TRMFngqtzQBzFjzrVbj4dSkM4zcS/S/_DSF3071-Edit-S.jpg',
+      title: 'Color WWII Men & Machines',
+      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color',
+      thumb: colorImg ? colorImg.src || colorImg.url || '' : '',
+      alt: colorImg ? colorImg.alt || colorImg.title || '' : '',
     },
     {
-      title: 'Black & White 20s Photos',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm',
-      thumb: 'https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LVMjfqS2rs9BBRZF8RNdFNNzVNjHtffNcdSpJsCj8/S/Havana-Car-p-S.jpg',
+      title: 'Black & White Men and Machines',
+      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White',
+      thumb: bwImg ? bwImg.src || bwImg.url || '' : '',
+      alt: bwImg ? bwImg.alt || bwImg.title || '' : '',
     },
-
   ]
 };

@@ -1,37 +1,56 @@
-export const slides = [
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Color/i-WSh3Nqv",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Black-White/i-tpvJWLm/1/LVMjfqS2rs9BBRZF8RNdFNNzVNjHtffNcdSpJsCj8/S/Havana-Car-p-S.jpg",
-    alt: "Callin in Trouble from the street in painterly 20s style",
-    description:
-      "Townfolk call in trouble from the street, at vintage call box.",
-  },
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Color/i-8zkKqtg",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Color/i-8zkKqtg/0/LrsP2CGWPpdRwGbGNVSGcHp5ZCCK9LFPzBrVpVfcX/S/12x18_O1H0006-Edit-2-Edit-S.jpg",
-    alt: "Shine em up sonny – 20s gangster in painterly style",
-    description:
-      "A young boy shines up a gansters shoes on a street corner in the South.",
-  },
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Black-White/i-cpRfZ8j",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Black-White/i-cpRfZ8j/0/KK47FFmwwVZQ5FnPTv4pkRhtbjw6srSNFWJfDRWQZ/S/_DSF3049-Edit-Edit-S.jpg",
-    alt: "Looking for trouble in the 20s – painterly fine art photography",
-    description:
-      "1920s wooman looks to stay out of or for trouble.",
-  },
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Black-White/i-fNTTW43",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/WWIIPortraits-20s/i-fNTTW43/2/Lnk3ccpHGxJkhHwgLLBTmvrBpnmJr9Qv8LwD3N5gQ/S/_DSF3123-Edit-S.jpg",
-    alt: "Moonshiners Promise - Keep your mouth shut.",
-    description:
-      "Lawman and moonshiner share a moment of understanding in the 20s.",
-  },
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWIIPortraits-20s-Portraits/Color/i-k2W3gQV",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/WWIIPortraits-20s/i-k2W3gQV/10/MsccQZ565tjw9Vrv9g68SmRQJLvMhtLMNbFF9V6N6/S/_DSF2597-Enhanced-NR-Edit-2-S.jpg",
-    alt: "Chief of Police in the 20s",
-    description:
-      "The Chief pauses to reflect on the folks in his office.",
-  },
-];
+// carousel.ts for Machines
+
+import { galleryData as colorGallery } from './Color.mjs';
+import { galleryData as bwGallery } from './Black-White.mjs';
+
+// --- Universal filter for visible images ---
+function filterGalleryImages(images) {
+  return images.filter(
+    img =>
+      img.id !== 'i-k4studios' &&
+      (!img.visibility || img.visibility !== 'ghost')
+  );
+}
+
+// Prioritize by rating, then shuffle
+function buildRankedPool(images) {
+  const getByRating = (r) => images.filter(img => img.rating === r);
+  return [
+    ...getByRating(5).sort(() => Math.random() - 0.5),
+    ...getByRating(4).sort(() => Math.random() - 0.5),
+    ...getByRating(3).sort(() => Math.random() - 0.5),
+    ...images.filter(img => ![5,4,3].includes(img.rating)).sort(() => Math.random() - 0.5),
+  ];
+}
+
+function toSlide(img, galleryPath) {
+  return {
+    href: `${galleryPath}${img.id}`,
+    src: img.src || img.url || '',
+    alt: img.alt || img.title || '',
+    description: img.description || '',
+  };
+}
+
+const colorPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color";
+const bwPath    = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White";
+
+// --- Filter images before building pools ---
+const colorPool = buildRankedPool(filterGalleryImages(colorGallery));
+const bwPool    = buildRankedPool(filterGalleryImages(bwGallery));
+
+// Alternate-pull up to 10 images (change maxSlides if needed)
+const slides = [];
+const maxSlides = 10;
+let ci = 0, bi = 0;
+while (slides.length < maxSlides && (ci < colorPool.length || bi < bwPool.length)) {
+  if (ci < colorPool.length) {
+    slides.push(toSlide(colorPool[ci++], colorPath));
+  }
+  if (slides.length >= maxSlides) break;
+  if (bi < bwPool.length) {
+    slides.push(toSlide(bwPool[bi++], bwPath));
+  }
+}
+
+export { slides };
