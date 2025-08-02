@@ -4,16 +4,13 @@ import { Hand } from "lucide-react";
 
 export default function SwipeHintDebug({
   galleryKey = "default",
-  verticalOffsetPercent = 50, // fallback center
+  verticalOffsetPercent = 50,
   arrowSelectors = ['[aria-label*="Previous"]', '[aria-label*="Next"]'],
 }) {
   const [showHint, setShowHint] = useState(false);
   const [positionStyle, setPositionStyle] = useState({});
-  const showTimerRef = useRef(null);
-  const hideTimerRef = useRef(null);
   const repositionRef = useRef(null);
 
-  // force show every load for testing
   useEffect(() => {
     console.log("SwipeHintDebug: forcing show (bypassing session limits)");
     setShowHint(true);
@@ -22,15 +19,11 @@ export default function SwipeHintDebug({
   const computePosition = () => {
     if (typeof window === "undefined") return;
 
-    // grab arrow elements
     const matched = arrowSelectors
       .flatMap((sel) => Array.from(document.querySelectorAll(sel)))
       .filter(Boolean);
 
-    console.log("SwipeHintDebug: matched arrows:", matched);
-
     if (matched.length >= 2) {
-      // try to identify previous/next by aria-label if available
       let prevEl = matched.find((el) =>
         el.getAttribute("aria-label")?.toLowerCase().includes("previous")
       );
@@ -47,35 +40,28 @@ export default function SwipeHintDebug({
       const nextRect = nextEl.getBoundingClientRect();
 
       const gapExists = prevRect.right < nextRect.left;
-      const horizontalCenter = gapExists
+      const baseCenter = gapExists
         ? prevRect.right + (nextRect.left - prevRect.right) / 2
         : (prevRect.left + nextRect.right) / 2;
       const top = Math.max(prevRect.bottom, nextRect.bottom) + 6;
 
-      console.log("SwipeHintDebug: placing between arrows", { horizontalCenter, top });
-
       setPositionStyle({
         position: "fixed",
         top,
-        left: horizontalCenter,
-        transform: "translateX(-50%)",
+        left: baseCenter,
+        transform: "translateX(calc(-50% - 65px))", // left nudge
         zIndex: 1000,
       });
     } else if (matched.length === 1) {
       const r = matched[0].getBoundingClientRect();
-      const top = r.bottom + 6;
-      const center = r.left + r.width / 2;
-      console.log("SwipeHintDebug: single arrow fallback", { top, center });
       setPositionStyle({
         position: "fixed",
-        top,
-        left: center,
+        top: r.bottom + 6,
+        left: r.left + r.width / 2,
         transform: "translateX(-50%)",
         zIndex: 1000,
       });
     } else {
-      // fallback to vertical center
-      console.log("SwipeHintDebug: no arrows found, fallback centering");
       setPositionStyle({
         position: "fixed",
         top: `${verticalOffsetPercent}%`,
@@ -92,7 +78,6 @@ export default function SwipeHintDebug({
     window.addEventListener("resize", computePosition);
     window.addEventListener("scroll", computePosition, { passive: true });
 
-    // poll in case arrow buttons appear late
     let tries = 0;
     const poll = () => {
       if (tries++ > 10) return;

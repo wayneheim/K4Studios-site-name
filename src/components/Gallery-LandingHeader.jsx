@@ -152,7 +152,7 @@ border: none!important;
           padding: 0 0.75rem;
           line-height: 1.4; 
           letter-spacing: -0.02em;  
-          padding-left: 3.5rem;
+          padding-left: 1.5rem;
           height: 60px;
             color: white;
             background: rgb(73, 62, 58);
