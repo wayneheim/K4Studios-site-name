@@ -2,20 +2,56 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Hand } from "lucide-react";
 
-export default function SwipeHintDebug({ galleryKey = "default" }) {
+export default function SwipeHint({ galleryKey = "default" }) {
   const [showHint, setShowHint] = useState(false);
 
-  // Force show every time for testing
   useEffect(() => {
-    console.log("SwipeHintDebug: force showing hint (debug mode)");
-    setShowHint(true);
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) return;
+
+    const sessionKey = `swipeHint-${galleryKey}`;
+    const maxViews = 3;
+    const cooldownMs = 10 * 60 * 1000;
+    const now = Date.now();
+
+    let hintData = { count: 0, lastShown: 0 };
+    try {
+      const stored = sessionStorage.getItem(sessionKey);
+      if (stored) {
+        hintData = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn("SwipeHint: Failed to parse sessionStorage", e);
+    }
+
+    const timeSinceLast = now - hintData.lastShown;
+    const shouldShow = hintData.count < maxViews || timeSinceLast > cooldownMs;
+
+    if (shouldShow) {
+      const delay = setTimeout(() => {
+        setShowHint(true);
+
+        const hide = setTimeout(() => {
+          setShowHint(false);
+          const updated = {
+            count: hintData.count + 1,
+            lastShown: Date.now(),
+          };
+          sessionStorage.setItem(sessionKey, JSON.stringify(updated));
+        }, 4000);
+
+        return () => clearTimeout(hide);
+      }, 1100);
+
+      return () => clearTimeout(delay);
+    }
   }, [galleryKey]);
 
   const positionStyle = {
     position: "fixed",
-    top: "50%",
+    top: "40%",
     left: "50%",
-    transform: "translate(-50%, -50%)",
+    transform: "translateX(-115px)",
     zIndex: 1000,
     pointerEvents: "none",
     display: "flex",
@@ -25,7 +61,7 @@ export default function SwipeHintDebug({ galleryKey = "default" }) {
     <AnimatePresence>
       {showHint && (
         <motion.div
-          key="swipe-hint-debug"
+          key="swipe-hint"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 5 }}
@@ -36,6 +72,7 @@ export default function SwipeHintDebug({ galleryKey = "default" }) {
             style={{
               display: "flex",
               alignItems: "center",
+              marginLeft: "-3.5rem",
               gap: 8,
               background: "rgba(255,255,255,0.7)",
               padding: "0.75rem 1rem",
