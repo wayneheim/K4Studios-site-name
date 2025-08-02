@@ -10,8 +10,8 @@ export default function SwipeHint({ galleryKey = "default" }) {
     if (!isMobile) return;
 
     const sessionKey = `swipeHint-${galleryKey}`;
-    const maxViews = 3;
-    const cooldownMs = 10 * 60 * 1000;
+    const maxViews = 4;
+    const cooldownMs = 10 * 60 * 700;
     const now = Date.now();
 
     let hintData = { count: 0, lastShown: 0 };
@@ -25,7 +25,7 @@ export default function SwipeHint({ galleryKey = "default" }) {
     }
 
     const timeSinceLast = now - hintData.lastShown;
-    const shouldShow = hintData.count < maxViews || timeSinceLast > cooldownMs;
+    const shouldShow = hintData.count < 3 || timeSinceLast > cooldownMs;
 
     if (shouldShow) {
       const delay = setTimeout(() => {
@@ -38,7 +38,7 @@ export default function SwipeHint({ galleryKey = "default" }) {
             lastShown: Date.now(),
           };
           sessionStorage.setItem(sessionKey, JSON.stringify(updated));
-        }, 4000);
+        }, 9000);
 
         return () => clearTimeout(hide);
       }, 1100);

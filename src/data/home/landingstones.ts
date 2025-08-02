@@ -1,7 +1,7 @@
 export const landingWestern = {
     //Painterly Photogrqphy
   title: "K4 Studios",
-  subtitle: "Painterly & Fine Art Photography by Wayne Heim",
+  subtitle: "Fine Art Photography by Wayne Heim",
    breadcrumb: "Every Image a Leaf in the Scrapbook of Time",
 
   tombstones: [
