@@ -2,18 +2,10 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Hand } from "lucide-react";
 
-interface SwipeHintProps {
-  galleryKey?: string;
-  topOffset?: number; // px from top
-}
-
-export default function SwipeHint({
-  galleryKey = "default",
-  topOffset = 120,
-}: SwipeHintProps) {
+export default function SwipeHint({ galleryKey = "default", topOffset = 120 }) {
   const [showHint, setShowHint] = useState(false);
-  const showTimerRef = useRef<number | null>(null);
-  const hideTimerRef = useRef<number | null>(null);
+  const showTimerRef = useRef(null);
+  const hideTimerRef = useRef(null);
 
   useEffect(() => {
     const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
@@ -89,7 +81,7 @@ export default function SwipeHint({
               display: "flex",
               alignItems: "center",
               gap: 8,
-              background: "rgba(255,255,255,0.7)", // updated to 0.7 opacity
+              background: "rgba(255,255,255,0.7)", // 70% opacity
               padding: "0.75rem 1rem",
               borderRadius: 999,
               boxShadow: "0 12px 40px rgba(0,0,0,0.15)",
