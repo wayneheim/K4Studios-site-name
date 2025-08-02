@@ -62,7 +62,21 @@ export default function MobileMiniDrawer({ onClose }) {
               color: "#222",
             }}
           >
-            K4 Studios
+            <a
+              href="/"
+              aria-label="K4 Studios homepage"
+              title="Home"
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+                display: "inline-block",
+              }}
+              onClick={() => {
+                if (onClose) onClose();
+              }}
+            >
+              K4 Studios
+            </a>
           </h2>
 
           <button
@@ -100,24 +114,34 @@ export default function MobileMiniDrawer({ onClose }) {
 
         {/* Logo at bottom */}
         <div
-  style={{
-    marginTop: "3rem",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }}
->
-  <img
-    src="/images/K4Logo-web-c.png"
-    alt="K4 Studios Logo"
-    style={{
-      width: "120px",
-      height: "auto",
-      opacity: 0.2,
-      filter: "grayscale(100%)",
-    }}
-  />
-</div>
+          style={{
+            marginTop: "3rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <a
+            href="/"
+            aria-label="K4 Studios homepage"
+            title="Home"
+            style={{ display: "inline-block" }}
+            onClick={(e) => {
+              if (onClose) onClose();
+            }}
+          >
+            <img
+              src="/images/K4Logo-web-c.png"
+              alt="K4 Studios Logo"
+              style={{
+                width: "120px",
+                height: "auto",
+                opacity: 0.2,
+                filter: "grayscale(100%)",
+              }}
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
