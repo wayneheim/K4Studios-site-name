@@ -529,3 +529,23 @@ body.react-mounted footer {
   outline-offset: 3px;
 }
 
+
+/* add dynamic top padding only when viewport is taller than ~900px */
+#chapter-section.section-visible {
+  /* when vh > 900px, gives (vh - 900)/2 padding, capped to 160px */
+  padding-top: clamp(0px, calc((100vh - 900px) / 2), 160px);
+}
+
+/* fallback / reduce on narrow heights if you had earlier margin tweaks */
+@media (max-height: 900px) {
+  #chapter-section.section-visible {
+    padding-top: 0;
+  }
+}
+
+/* keep mobile unaffected */
+@media (max-width: 768px) {
+  #chapter-section.section-visible {
+    padding-top: 0 !important;
+  }
+}
