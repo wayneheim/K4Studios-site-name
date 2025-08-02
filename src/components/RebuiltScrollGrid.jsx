@@ -116,28 +116,27 @@ export default function RebuiltScrollGrid({
     });
   }, [start, colCount, galleryData]);
 
-
   return (
     <section className="bg-white py-10 px-6">
       {/* Header with hover/focus effect */}
-    <div className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4">
-  <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
-  <h2
-    className="watermark-title whitespace-nowrap"
-    style={{
-      marginBottom: "2.5rem",
-      transition: "color .14s",
-      fontSize: "4rem",
-      fontWeight: 700,
-      color: "#5e4740",
-      opacity: ".17",
-      textAlign: "center",
-    }}
-  >
-    Chapter Index
-  </h2>
-  <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
-</div>
+      <div className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4">
+        <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
+        <h2
+          className="watermark-title whitespace-nowrap"
+          style={{
+            marginBottom: "2.5rem",
+            transition: "color .14s",
+            fontSize: "4rem",
+            fontWeight: 700,
+            color: "#5e4740",
+            opacity: ".17",
+            textAlign: "center",
+          }}
+        >
+          Chapter Index
+        </h2>
+        <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
+      </div>
 
       {/* Show Previous Button */}
       {start > 0 && (
@@ -215,6 +214,7 @@ export default function RebuiltScrollGrid({
                     className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
                     style={{ minHeight: 120 }}
                     onError={(e) => {
+                      // @ts-ignore
                       e.target.style.opacity = 0.25;
                     }}
                   />
@@ -256,25 +256,43 @@ export default function RebuiltScrollGrid({
       </div>
 
       <div className="flex justify-center mt-8 gap-4">
-        {end < galleryData.length && (
-          <button
-            className="px-6 py-2 bg-[#ece4d7] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
-            onClick={() => {
-              setSimIndex(end - 1);
-              setAnchorOnNextUpdate(true);
-            }}
-          >
-            Show More
-          </button>
-        )}
-        <button
-          className="px-6 py-2 bg-[#ece4d7] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f7dede] shadow-md transition"
-          onClick={handleClose}
-          tabIndex={0}
-        >
-          Close
-        </button>
-      </div>
+   {/* Close first now with lighter tint */}
+  <button
+    onClick={handleClose}
+    tabIndex={0}
+    className="px-6 py-2 rounded-full border border-gray-300 font-medium text-sm shadow-md transition"
+    style={{
+      backgroundColor: "#d4d4d4", // lighter base
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = "#c0c0c0"; // hover slightly darker
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = "#d4d4d4";
+    }}
+    onFocus={(e) => {
+      e.currentTarget.style.outline = "2px solid rgba(0,0,0,0.35)";
+      e.currentTarget.style.outlineOffset = "2px";
+    }}
+    onBlur={(e) => {
+      e.currentTarget.style.outline = "none";
+    }}
+  >
+    Close
+  </button>
+
+  {end < galleryData.length && (
+    <button
+      className="px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
+      onClick={() => {
+        setSimIndex(end - 1);
+        setAnchorOnNextUpdate(true);
+      }}
+    >
+      Show More
+    </button>
+  )}
+</div>
     </section>
   );
 }

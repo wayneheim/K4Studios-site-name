@@ -258,7 +258,7 @@ useEffect(() => {
 {isMobile && (
   // 📱 Mobile Branding Link — shows "⸺ K4 Studios ⸺" and links to the parent section landing page
   <div
-    className="text-center text-md text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
+    className="text-center text-2xl text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
     style={{
       fontFamily: "'Glegoo', serif",
       marginTop: "-2.0rem", // ✅ This is the key line
@@ -663,6 +663,7 @@ style={
                      className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
   style={{
     fontSize: "1.55rem",
+    opacity: .5,
     lineHeight: isMobile ? "1.0" : "1.35", // tighter for mobile
     fontFamily: "'Glegoo', serif",
   }}
