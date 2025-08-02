@@ -1,6 +1,6 @@
 ---
 import GalleryShell from "@/components/GalleryShell-WWIIPortraits-BW.astro";
-import { entranceData as ColorEntranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/BWEntranceData.ts";
+import { entranceData as BWEntranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/BWEntranceData.ts";
 
 const match = Astro.url.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
 const initialImageId = match ? match[1] : "i-k4studios";
@@ -9,7 +9,7 @@ console.log("🔥 initialImageId:", initialImageId); // ✅ Add this
 ---
 
 <GalleryShell
-  breadcrumb={ColorEntranceData.breadcrumb}
-  entranceData={ColorEntranceData}
+  breadcrumb={BWEntranceData.breadcrumb}
+  entranceData={BWEntranceData}
   initialImageId={initialImageId}
 />
