@@ -49,7 +49,7 @@ export default function SwipeHintDebug({
         position: "fixed",
         top,
         left: baseCenter,
-        transform: "translateX(calc(-50% - 165px))", // left nudge
+        transform: "translateX(-115px)", // left nudge
         zIndex: 1000,
       });
     } else if (matched.length === 1) {
