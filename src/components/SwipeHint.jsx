@@ -49,7 +49,7 @@ export default function SwipeHint({ galleryKey = "default" }) {
 
   const positionStyle = {
     position: "fixed",
-    top: "40%",
+    top: "20%",
     left: "50%",
     transform: "translateX(-115px)",
     zIndex: 1000,
