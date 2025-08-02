@@ -1606,86 +1606,99 @@ export const galleryData = [
   "visibility": "show",
   "sortOrder": 65
 },
+ {
+    "id": "i-6bPGKw2",
+    "title": "Contemplative Reenactor",
+    "description": "Color portrait by Wayne Heim from D-Day Conneaut 2024 portrayal series, capturing a reenactor in a quiet, reflective moment—melding lived-in detail with historical presence. SEO: D-Day Conneaut 2024 reenactor portrait, WWII reflection, color historical photography.",
+    "alt": "Reenactor in thoughtful pose, color portrait",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-6bPGKw2/0/Knw35wM84N3fXmHH83RJtKVQRZWc3XbgCL4sdfh6F/XL/_HF26145-Edit-XL.jpg",
+    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-6bPGKw2/A",
+    "keywords": [
+      "D-Day Conneaut 2024",
+      "WWII reenactment",
+      "reenactor portrait",
+      "historical reflection",
+      "color photography"
+    ],
+    "story": "A reenactor caught in a quiet, introspective pause—color bringing immediacy to historical memory. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 66
+  },
+  {
+    "id": "i-MG2RBSQ",
+    "title": "Veteran Study in Color",
+    "description": "2018 color portrait by Wayne Heim from the Facing History series, showing a reenactor with layered expression that hints at the weight of legacy. SEO: WWII reenactment color portrait 2018, D-Day Conneaut reflection, historical depth imagery.",
+    "alt": "Reenactor thoughtful expression in color",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/KGb8NBfPfzWv4hdrttkdb4PmrbzfxGtz9pZ9dhqKs/XL/_K1W0867-Edit-2-XL.jpg",
+    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/A",
+    "keywords": [
+      "WWII reenactment 2018",
+      "color portrait",
+      "historical depth",
+      "D-Day Conneaut",
+      "Facing History series"
+    ],
+    "story": "A layered study of a reenactor in color, where expression carries echoes of history. © Wayne Heim 2018",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 67
+  },
+  {
+    "id": "i-nVVdKFm",
+    "title": "Portrait of Duty",
+    "description": "2018 color portrait by Wayne Heim of a WWII reenactor, emphasizing quiet resolve and the human dimension behind historical representation. SEO: D-Day Conneaut reenactor portrait, WWII color documentary, historical authenticity image.",
+    "alt": "WWII reenactor in color conveying resolve",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/LLPxL6P5H6gDdFSLGVtsCD9NwwhbTFmRpLG2FhnKf/XL/_K1W1423-Edit-XL.jpg",
+    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-nVVdKFm/A",
+    "keywords": [
+      "WWII reenactment 2018",
+      "color documentary portrait",
+      "historical authenticity",
+      "D-Day Conneaut",
+      "reenactor resolve"
+    ],
+    "story": "A reenactor embodying duty and quiet strength, rendered in color to bridge past and present. © Wayne Heim 2018",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 68
+  },
 {
-  "id": "i-6bPGKw2",
-  "title": "",
-  "description": "© Wayne Heim",
-  "alt": "© Wayne Heim",
-  "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-6bPGKw2/0/Knw35wM84N3fXmHH83RJtKVQRZWc3XbgCL4sdfh6F/XL/_HF26145-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-6bPGKw2/A",
-  "keywords": [
-    "HF24647",
-    "DDay 2024"
-  ],
-  "story": "© Wayne Heim",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color"
-  ],
-  "visibility": "show",
-  "sortOrder": 66
-},
-{
-  "id": "i-MG2RBSQ",
-  "title": "",
-  "description": "© Wayne Heim 2018",
-  "alt": "© Wayne Heim 2018",
-  "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/KGb8NBfPfzWv4hdrttkdb4PmrbzfxGtz9pZ9dhqKs/XL/_K1W0867-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/A",
-  "keywords": [
-    "HF24647",
-    "DDay 2024"
-  ],
-  "story": "© Wayne Heim 2018",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color"
-  ],
-  "visibility": "show",
-  "sortOrder": 67
-},
-{
-  "id": "i-nVVdKFm",
-  "title": "",
-  "description": "© Wayne Heim 2018",
-  "alt": "© Wayne Heim 2018",
-  "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/LLPxL6P5H6gDdFSLGVtsCD9NwwhbTFmRpLG2FhnKf/XL/_K1W1423-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-nVVdKFm/A",
-  "keywords": [
-    "HF24647",
-    "DDay 2024"
-  ],
-  "story": "© Wayne Heim 2018",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color"
-  ],
-  "visibility": "show",
-  "sortOrder": 68
-},
-{
-  "id": "i-53X9RW4",
-  "title": "",
-  "description": "© Wayne Heim",
-  "alt": "© Wayne Heim",
-  "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-53X9RW4/0/MzXxsCFVzJWPmxq6jzWLRMgjgcCH8cKSgKRvwKgSt/XL/_O1H0166-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-53X9RW4/A",
-  "keywords": [
-    "HF24647",
-    "DDay 2024"
-  ],
-  "story": "© Wayne Heim",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color"
-  ],
-  "visibility": "show",
-  "sortOrder": 69
-},
+    "id": "i-53X9RW4",
+    "title": "Momentary Pause",
+    "description": "Color portrait by Wayne Heim from the Facing History series at D-Day Conneaut 2024, capturing a reenactor in a quiet break—anchoring historical immersion with the intimacy of a candid moment. SEO: WWII reenactment portrait, D-Day Conneaut reflection, color historical photography, reenactor pause.",
+    "alt": "Reenactor taking a brief reflective pause in color",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-53X9RW4/0/MzXxsCFVzJWPmxq6jzWLRMgjgcCH8cKSgKRvwKgSt/XL/_O1H0166-Edit-2-XL.jpg",
+    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-53X9RW4/A",
+    "keywords": [
+      "D-Day Conneaut 2024",
+      "WWII reenactment",
+      "reenactor portrait",
+      "historical reflection",
+      "color photography",
+      "quiet moment"
+    ],
+    "story": "A reenactor caught in a brief, contemplative pause during the reenactment—color lending warmth and immediacy to the echo of history. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 69
+  },
 {
   "id": "i-W7kVgL8",
   "title": "Here's one for the boys.",
