@@ -2,10 +2,18 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Hand } from "lucide-react";
 
-export default function SwipeHint({ galleryKey = "default", topOffset = 120 }) {
+interface SwipeHintProps {
+  galleryKey?: string;
+  topOffset?: number; // px from top
+}
+
+export default function SwipeHint({
+  galleryKey = "default",
+  topOffset = 120,
+}: SwipeHintProps) {
   const [showHint, setShowHint] = useState(false);
-  const showTimerRef = useRef(null);
-  const hideTimerRef = useRef(null);
+  const showTimerRef = useRef<number | null>(null);
+  const hideTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
@@ -58,7 +66,7 @@ export default function SwipeHint({ galleryKey = "default", topOffset = 120 }) {
     <AnimatePresence>
       {showHint && (
         <motion.div
-          className="swipe-hint-overlay pointer-events-none"
+          key="swipe-hint-wrapper"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 5 }}
@@ -66,34 +74,46 @@ export default function SwipeHint({ galleryKey = "default", topOffset = 120 }) {
           style={{
             position: "fixed",
             top: topOffset,
-            left: "50%",
-            transform: "translateX(-50%)",
+            left: 0,
+            right: 0,
             zIndex: 1000,
             display: "flex",
-            alignItems: "center",
-            gap: 8,
-            background: "rgba(255,255,255,0.9)",
-            padding: "0.75rem 1rem",
-            borderRadius: 999,
-            boxShadow: "0 12px 40px rgba(0,0,0,0.15)",
-            fontWeight: 600,
-            fontSize: "0.9rem",
+            justifyContent: "center",
             pointerEvents: "none",
+            padding: "0 1rem",
           }}
         >
           <motion.div
-            className="swipe-hand"
-            animate={{ x: [0, 12, 0] }}
-            transition={{
-              repeat: Infinity,
-              duration: 1.2,
-              ease: "easeInOut",
+            className="swipe-hint-overlay"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              background: "rgba(255,255,255,0.7)", // updated to 0.7 opacity
+              padding: "0.75rem 1rem",
+              borderRadius: 999,
+              boxShadow: "0 12px 40px rgba(0,0,0,0.15)",
+              fontWeight: 600,
+              fontSize: "0.9rem",
+              maxWidth: 400,
+              width: "100%",
+              justifyContent: "center",
             }}
-            style={{ display: "flex", alignItems: "center" }}
           >
-            <Hand size={24} />
+            <motion.div
+              className="swipe-hand"
+              animate={{ x: [0, 12, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.2,
+                ease: "easeInOut",
+              }}
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <Hand size={24} />
+            </motion.div>
+            <span className="swipe-label">Swipe</span>
           </motion.div>
-          <span className="swipe-label">Swipe</span>
         </motion.div>
       )}
     </AnimatePresence>
