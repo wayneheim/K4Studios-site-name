@@ -61,6 +61,7 @@ export default function ImageBar2Home() {
       </div>
       <style jsx>{`
         .carousel-fade {
+        margin-top: -25px;
           opacity: 0;
           transform: scale(0.85);
           transition:
