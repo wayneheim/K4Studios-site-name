@@ -24,32 +24,23 @@ export default function SwipeHintDebug({
       .filter(Boolean);
 
     if (matched.length >= 2) {
-      let prevEl = matched.find((el) =>
+      const prevEl = matched.find((el) =>
         el.getAttribute("aria-label")?.toLowerCase().includes("previous")
-      );
-      let nextEl = matched.find((el) =>
+      ) ?? matched[0];
+      const nextEl = matched.find((el) =>
         el.getAttribute("aria-label")?.toLowerCase().includes("next")
-      );
-
-      if (!prevEl || !nextEl) {
-        prevEl = matched[0];
-        nextEl = matched[1];
-      }
+      ) ?? matched[1];
 
       const prevRect = prevEl.getBoundingClientRect();
       const nextRect = nextEl.getBoundingClientRect();
 
-      const gapExists = prevRect.right < nextRect.left;
-      const baseCenter = gapExists
-        ? prevRect.right + (nextRect.left - prevRect.right) / 2
-        : (prevRect.left + nextRect.right) / 2;
       const top = Math.max(prevRect.bottom, nextRect.bottom) + 6;
 
       setPositionStyle({
         position: "fixed",
         top,
-        left: baseCenter,
-        transform: "translateX(-115px)", // left nudge
+        left: "50%",
+        transform: "translateX(-50%)",
         zIndex: 1000,
       });
     } else if (matched.length === 1) {
@@ -57,7 +48,7 @@ export default function SwipeHintDebug({
       setPositionStyle({
         position: "fixed",
         top: r.bottom + 6,
-        left: r.left + r.width / 2,
+        left: "50%",
         transform: "translateX(-50%)",
         zIndex: 1000,
       });
