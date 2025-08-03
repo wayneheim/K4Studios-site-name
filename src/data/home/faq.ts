@@ -1,73 +1,63 @@
 export const facingFAQ = [
-    //Painterly Fine Art Photography FAQ
- {
-    q: "What is painterly fine art photography?",
+    //Home FAQ
+  {
+    q: "What’s the difference between painterly and traditional fine art photography?",
     a: [
-      "Painterly fine art photography is a distinctive blend of photographic realism and artistic techniques drawn from the world of painting. Wayne Heim’s work channels the tradition of the Pictorialist movement, using soft focus, dramatic lighting, and textured layers to create images that feel timeless, immersive, and evocative.",
-      `Curious how this differs from other styles? <a href="/blog/what-is-painterly-photography">Read Wayne’s full guide to painterly photography</a>.`
+      "Painterly photography is inspired by painting—soft focus, textured layers, and timeless storytelling. Wayne Heim’s painterly work channels the Pictorialist tradition, blending artistic interpretation with photographic realism.",
+      "Traditional fine art photography, on the other hand, embraces crisp clarity and natural lighting, capturing the world with documentary precision while still rooted in artistic intent.",
     ],
   },
   {
-    q: "How does painterly photography differ from AI-generated art or digital illustration?",
+    q: "What kind of subjects does Wayne photograph?",
     a: [
-      "Unlike AI or digital composites, painterly photography relies on real-world composition, lighting, and post-production rooted in traditional fine art techniques. Every image is carefully crafted—from concept and capture to editing and print. There’s no AI trickery, only genuine artistry.",
-      `For a behind-the-scenes look at Wayne’s process, see <a href="/blog/what-is-painterly-photography">What Is Painterly Photography?</a>`
-    ],
-  },
-  {
-    q: "What subjects are featured in the Painterly Fine Art Photography collection?",
-    a: [
-      "The collection spans a range of Americana and storytelling themes, including:",
+      "Wayne’s collections span two complementary styles:",
       `<ul>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Historical reenactment portraits</a> (Civil War, WWII, Roaring 20s)</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Western-Cowboy-Portraits">Western cowboy and frontier art</a></li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Painterly landscapes</a> from the American West and beyond</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation and Americana</a> (trains, vintage cars, boats)</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Miscellaneous">Miscellaneous and experimental works</a></li>
+        <li><strong>Painterly Fine Art:</strong> Historical reenactments (Civil War, WWII, Roaring 20s), Western cowboy portraits, Americana, and atmospheric landscapes.</li>
+        <li><strong>Traditional Fine Art:</strong> Natural landscapes, wildlife, architecture, and candid portraits, all captured with clarity and a deep respect for place and story.</li>
       </ul>`,
-      "Each series invites viewers to step into another era and experience the story behind the image."
+      "Every image—regardless of style—is designed to evoke emotion and invite viewers into a narrative."
     ],
   },
   {
-    q: "Are prints available, and what makes the Engrained Series special?",
+    q: "Are the images digitally illustrated or AI-generated?",
     a: [
-      "Yes — every painterly image is available as an archival fine art print on paper, metal, or as part of the signature <a href='/Other/K4-Select-Series/Engrained'>Engrained Series</a> on wood.",
-      "The Engrained Series uses a unique UV printing process, allowing the natural Baltic Birch grain to show through selected areas, creating a tactile, one-of-a-kind piece ideal for collectors."
+      "No. Every image is crafted from real photography—captured on location or in studio, and hand-edited using traditional techniques. There’s no AI, no digital trickery. Just light, shadow, story, and skill.",
+      `Curious about the painterly process? <a href="/blog/what-is-painterly-photography">Learn more here</a>.`
     ],
   },
   {
-    q: "What makes Wayne Heim’s painterly style unique?",
+    q: "What makes the Engrained Series unique?",
     a: [
-      "Wayne is an award-winning fine art photographer and medical illustrator. His painterly approach combines traditional craftsmanship, historical research, and modern photographic technique. The result is art that looks and feels timeless—each image is a story, not just a scene.",
-      "If you’re seeking <a href='/Galleries/Painterly-Fine-Art-Photography/Western-Cowboy-Portraits'>Western art</a>, <a href='/Galleries/Painterly-Fine-Art-Photography/Landscapes'>mountain landscapes</a>, or <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>historical reenactments</a>, Wayne’s painterly gallery is a curated journey through Americana."
+      "The <a href='/Other/K4-Select-Series/Engrained'>Engrained Series</a> features painterly images printed directly onto Baltic Birch wood using a multi-layer UV process.",
+      "Wayne controls how the white underlayer is applied, allowing the natural wood grain to show through selected areas—creating a one-of-a-kind, tactile print unlike any typical wood photo."
     ],
   },
   {
-    q: "Where can I see painterly fine art prints on display?",
+    q: "Where can I buy prints?",
     a: [
-      "Wayne’s painterly works are collected by private collectors, displayed in historic homes, museums, libraries, boutique hotels, and select gallery exhibits.",
-      "Many clients also commission custom pieces for interior design projects, offices, and hospitality venues."
+      "All images are available as fine art prints on paper, metal, or wood. You can <a href='/prints'>browse print options here</a> or shop directly from each gallery or image page.",
+      "Custom sizing, framing, and collector editions are also available—just <a href='/contact'>get in touch</a> if you have a special request."
     ],
   },
   {
-    q: "Can I commission a custom painterly portrait or themed image?",
+    q: "Do you accept commissions or custom shoots?",
     a: [
-      "Yes! Wayne collaborates with collectors, families, historical societies, and organizations to create custom painterly portraits and narrative scenes.",
-      "Interested in a commission or themed shoot? <a href='/contact'>Contact Wayne here</a> to start a conversation."
+      "Yes! Wayne collaborates with collectors, families, interior designers, and historical groups to create custom portraits or themed image series.",
+      "Want to bring a story to life? <a href='/contact'>Reach out here</a> to discuss your vision."
     ],
   },
   {
-    q: "Why should I choose painterly photography over mass-produced wall art?",
+    q: "What spaces are best for displaying Wayne’s art?",
     a: [
-      "Painterly fine art photography offers emotional depth, artistic intention, and a tactile sense of history. Each print is thoughtfully created—no AI, no generic stock, just one-of-a-kind visual storytelling.",
-      "In a world of mass production, a painterly piece by Wayne Heim is an investment in meaningful, conversation-starting art."
+      "Wayne’s work lives well in heritage homes, libraries, museums, rustic lodges, creative offices, and even hospitality spaces looking to tell a deeper story.",
+      "From modern living rooms to vintage-inspired interiors, there’s a piece that can anchor the mood and start a conversation."
     ],
   },
   {
-    q: "What are the best spaces to display painterly fine art photography?",
+    q: "Why choose Wayne Heim over mass-produced art?",
     a: [
-      "Painterly prints are ideal for homes, libraries, heritage hotels, museums, offices, and anywhere you want to inspire conversation or evoke a sense of history.",
-      "Collectors often showcase these works in living rooms, studies, creative workspaces, and even curated commercial installations."
+      "Every image is a story—not a stock photo. You’re collecting handcrafted, narrative-driven art made with care and intention.",
+      "In an era of AI shortcuts and digital noise, Wayne’s work stands apart: authentic, emotional, and rooted in history and craft."
     ],
   }
 ];

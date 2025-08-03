@@ -1,80 +1,51 @@
 export const westernFAQ = [
  {
-    q: "What makes Wayne Heim’s Roaring 20s portraits different from other 1920s photography?",
+    q: "What makes Wayne Heim’s WWII portraits stand out from other historical photography?",
     a: [
-      `Wayne’s painterly fine art photography doesn’t glamorize the Jazz Age — it captures its grit. As an <a href="https://heimmedicalart.com" target="_blank" rel="noopener">award-winning medical illustrator</a> and fine art photographer, Wayne uses a mix of historical research, lighting mastery, and narrative instinct to create portraits that feel like cinematic stills rather than posed reenactments.`,
-      `These are not simple vintage recreations — they’re expressive, emotionally charged artworks portraying flappers, gangsters, G-Men, and bootleggers with raw, moody character.`
+      `Wayne’s painterly WWII photography captures raw emotion and battlefield atmosphere through a lens shaped by both historical reverence and fine art storytelling.`,
+      `His portraits are not static reenactments — they’re immersive, expressive works crafted from real moments at the largest WWII reenactment in the U.S.`,
     ],
   },
   {
-    q: "Are these flappers and gangsters real people or fictional characters?",
+    q: "Where were these WWII images taken?",
     a: [
-      `Every figure in this series is a real person — often a seasoned reenactor, performer, or historian — photographed in-character and in-context.`,
-      `They’re part of the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> series and help bring the 1920s to life through lived-in expressions and authentic wardrobe detail.`,
+      `Many of these portraits were captured at <a href="https://www.ddayohio.us" target="_blank" rel="noopener">D-Day Conneaut</a> — the largest WWII reenactment in the United States.`,
+      `Wayne served as the main staff photographer for this event for over 15 years, documenting reenactors, battles, camps, and quiet moments with depth and dignity.`,
     ],
   },
   {
-    q: "What’s the meaning behind the phrase 'Painterly Photography of Flappers, Gangsters, and G-Men'?",
+    q: "Are the people in these WWII portraits real veterans?",
     a: [
-      `It reflects Wayne’s unique post-processing technique: a modern nod to pictorialism that prioritizes storytelling, shadow, and texture.`,
-      `Each image in this <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits">Roaring 20s portrait gallery</a> balances fine detail with a painter’s eye — bringing historical characters to life with atmosphere and emotion.`,
+      `The subjects are primarily highly experienced reenactors, many of whom have studied and portrayed specific roles for years. Some are descendants of actual WWII soldiers.`,
+      `Wayne collaborates with them to capture authentic emotion, detail, and humanity — creating portraits that feel lifted from time itself.`,
     ],
   },
   {
-    q: "Are these prints available in black and white as well as color?",
+    q: "Are these images painterly or traditional in style?",
     a: [
-      `Yes. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White">Black & White 20s portrait gallery</a> emphasizes contrast, tension, and timeless character — while the color collection adds warmth and vintage tonality that echoes old film stock.`,
-      `Both formats follow the same painterly style and storytelling emphasis, offering varied aesthetics for collectors or designers.`,
+      `Both. The <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">painterly WWII gallery</a> features textured, atmospheric edits that resemble oil paintings, while the <a href="/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments">traditional gallery</a> maintains sharper realism.`,
+      `Each style is carefully matched to the subject’s tone and story — from intense battlefield moments to quiet camaraderie between soldiers.`,
     ],
   },
   {
-    q: "How are these 1920s fine art portraits printed?",
+    q: "Can I order prints of these WWII reenactment photos?",
     a: [
-      `Each piece is available in multiple premium formats, including:`,
-
-      `<ul>
-        <li>Archival photographic paper — traditional, deckled, or museum-grade</li>
-        <li>Modern aluminum panels for sleek, high-impact display</li>
-        <li>UV-printed wood panels from the <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> — revealing subtle wood grain behind the image</li>
-      </ul>`,
-
-      `All prints preserve painterly detail, moody tonality, and sharp texture, making them ideal for collectors or historically inspired interiors.`,
+      `Yes. Prints are available in archival paper, aluminum, or as part of the <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> — a multi-layered UV print process on wood.`,
+      `Collectors, museums, and designers alike appreciate the tactile detail and narrative power of these WWII works.`,
     ],
   },
   {
-    q: "Where do these Roaring 20s prints fit in interior design?",
+    q: "What types of scenes are captured in the WWII series?",
     a: [
-      `These <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits">Roaring 20s art prints</a> are perfect for adding atmosphere and narrative to:`,
-
-      `<ul>
-        <li>Speakeasy-style bars and restaurants</li>
-        <li>Art deco or vintage-inspired interiors</li>
-        <li>Boutique hotels, cigar lounges, or private studies</li>
-        <li>Museums, galleries, or historical exhibits</li>
-      </ul>`,
-
-      `The <a href="/Other/K4-Select-Series/Engrained">Engrained wood series</a> is especially striking in spaces needing warmth, texture, and visual storytelling.`,
+      `This gallery includes everything from landing beaches and paratroopers to medics, mechanics, chaplains, and prisoners of war.`,
+      `It’s a broad, respectful tribute to the many roles and sacrifices made during the Second World War.`,
     ],
   },
   {
-    q: "How can I purchase a flapper or gangster art print?",
+    q: "Can I request a commissioned WWII portrait or include my unit?",
     a: [
-      `Browse the full collection at the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits">Roaring 20s gallery</a>. Each image page lists available sizes and finishes.`,
-      `For special orders, curated installations, or collector editions, <a href="/Contact">contact Wayne</a> directly.`,
-    ],
-  },
-  {
-    q: "Are custom formats or large-scale installations available?",
-    a: [
-      `Yes. Whether you're curating a themed space or designing a feature wall, Wayne can accommodate:`,
-
-      `<ul>
-        <li>Oversized gallery prints</li>
-        <li>Multi-panel storytelling displays</li>
-        <li>Custom finishes like matte, gloss, metallic, or wood-mounted</li>
-      </ul>`,
-
-      `Let’s build something bold. <a href="/Contact">Reach out to start the conversation</a>.`,
+      `Absolutely. Wayne offers custom portrait sessions for reenactors, veterans, families, and units. If you're attending an event like D-Day Conneaut, reach out in advance.`,
+      `<a href="/Contact">Contact Wayne</a> to plan a session, learn about packages, or inquire about group coverage.`,
     ],
   },
 ];
