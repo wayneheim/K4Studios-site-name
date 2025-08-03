@@ -7,6 +7,8 @@ import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
+import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
@@ -20,15 +22,12 @@ import { westernFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/Faci
 import '@/styles/global.css';
 import '@/styles/oneupheader.css';
 
-
 // ----------------------
 // DYNAMIC LOGIC SECTION
 // ----------------------
 
-// 1. Section Path (temporary until full routing is live)
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits";
 
-// 2. Get matching gallery paths from siteNav (Color & B/W)
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -56,11 +55,38 @@ const galleryDatas = galleryPaths.map(path => {
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
 
-// -----------------------
----
-<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`}>
-  <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+// --- Structured data for this gallery landing
+const structuredData = getStructuredData({
+  type: "gallery",
+  data: {
+    title: landingWestern.title,
+    description: landingWestern.subtitle || landingWestern.description,
+    url: `https://k4studios.com${sectionPath}`,
+    keywords: landingWestern.keywords || [],
+    copyrightNotice: "© Wayne Heim"
+  },
+  images: featheredImages,
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    acquireLicensePage: "https://k4studios.com/prints",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
 
+// --- OG/Twitter meta (central db, url fields auto-set)
+const landingMeta = getLandingMeta(sectionPath);
+if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
+---
+
+<!-- ✅ Structured data JSON-LD injection -->
+<script type="application/ld+json" is:inline set:html={structuredData}></script>
+
+<BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`} meta={landingMeta}>
+  <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader
         client:load
@@ -74,76 +100,131 @@ const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas 
       </div>
     </div>
 
-      <div class="w-full max-w-[1200px] mx-auto px-4">
-  <div class="carousel-fade reveal-on-scroll">
-    <ImageBar2 client:load />
-  </div>
-</div>
+    <div class="w-full max-w-[1200px] mx-auto px-4">
+      <div class="carousel-fade reveal-on-scroll">
+        <ImageBar2 client:load />
+      </div>
+    </div>
 
-      <section class="section-heading-wrap">
-        <div class="section-heading">
-          <h1 class="page-title fade-in reveal-on-scroll">
-            {landingWestern.title}
-          </h1>
-          <h2 class="page-subtitle fade-in reveal-on-scroll">
-            {landingWestern.subtitle}
-          </h2>
-        </div>
-      </section>
+    <section class="section-heading-wrap">
+      <div class="section-heading">
+        <h1 class="page-title fade-in reveal-on-scroll">
+          {landingWestern.title}
+        </h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll">
+          {landingWestern.subtitle}
+        </h2>
+      </div>
+    </section>
 
-      <div class="py-5">
-        <TombstoneNav items={landingWestern.tombstones} />
+    <div class="py-5">
+      <TombstoneNav items={landingWestern.tombstones} />
+    </div>
+
+    <section class="story-layout">
+      <div class="text-column">
+        <section class="story-section">
+          {westernStory.map((section, index) => (
+            <article class="story-block" key={index}>
+              {section.title && (
+                <h2
+                  class="slide-in-left"
+                  set:html={autoLinkKeywordsInText(
+                    section.title,
+                    galleryDatas,
+                    featheredImages,
+                    galleryPaths,
+                    cowboySemantic
+                  )}
+                />
+              )}
+              {section.subhead && (
+                <h3
+                  class="slide-in-left"
+                  set:html={autoLinkKeywordsInText(
+                    section.subhead,
+                    galleryDatas,
+                    featheredImages,
+                    galleryPaths,
+                    cowboySemantic
+                  )}
+                />
+              )}
+              {section.tagline && (
+                <h4
+                  class="tagline reveal-on-scroll"
+                  set:html={autoLinkKeywordsInText(
+                    section.tagline,
+                    galleryDatas,
+                    featheredImages,
+                    galleryPaths,
+                    cowboySemantic
+                  )}
+                />
+              )}
+
+              {section.paragraphs?.map((para, i) => (
+                <p
+                  key={i}
+                  class="reveal-on-scroll"
+                  set:html={autoLinkKeywordsInText(
+                    para,
+                    galleryDatas,
+                    featheredImages,
+                    galleryPaths,
+                    cowboySemantic
+                  )}
+                />
+              ))}
+
+              {section.list && section.list.length > 0 && (
+                <ul>
+                  {section.list.map((item, j) => (
+                    <li
+                      key={j}
+                      class="reveal-on-scroll"
+                      set:html={autoLinkKeywordsInText(
+                        item,
+                        galleryDatas,
+                        featheredImages,
+                        galleryPaths,
+                        cowboySemantic
+                      )}
+                    />
+                  ))}
+                </ul>
+              )}
+            </article>
+          ))}
+        </section>
+
+        <MobileStoryImages client:only="react" images={featheredImages} />
       </div>
 
-      <section class="story-layout">
-        <div class="text-column">
-          <section class="story-section">
-            {westernStory.map((section, index) => (
-              <article class="story-block" key={index}>
-                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-
-                {section.paragraphs?.map((para, i) => (
-                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-                ))}
-
-                {section.list && section.list.length > 0 && (
-                  <ul>
-                    {section.list.map((item, j) => (
-                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
-                    ))}
-                  </ul>
-                )}
-              </article>
-            ))}
-          </section>
-
-          <MobileStoryImages client:only="react" images={featheredImages} />
-        </div>
-
-       <div class="sidebar-column hidden md:block">
-  <div class="sample-fade reveal-on-scroll">
+      <div class="sidebar-column hidden md:block">
+        <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
             heading="Featured Portraits"
             images={featheredImages.slice(0, 5)}
           />
-        </div></div>
-      </section>
-
-      <section class="pb-16">
-        <input type="checkbox" id="faq-toggle" class="more-toggle" />
-        <div class="truncate-container">
-          <div class="truncate-text">
-            <FAQAccordion items={westernFAQ} />
-          </div>
         </div>
-        <label for="faq-toggle" class="more-toggle-label"></label>
-      </section>
+      </div>
+    </section>
 
-      <SiteFooter class="pt-8 pb-12" />
-    </div>
+    <section class="pb-16">
+      <input type="checkbox" id="faq-toggle" class="more-toggle" />
+      <div class="truncate-container">
+        <div class="truncate-text">
+          <FAQAccordion items={westernFAQ} />
+        </div>
+      </div>
+      <label for="faq-toggle" class="more-toggle-label"></label>
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
   </main>
+</BaseLayout>
+
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     // Reveal-on-scroll logic
@@ -176,6 +257,7 @@ const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas 
     }
   });
 </script>
+
 
 
   <style>

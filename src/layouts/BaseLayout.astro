@@ -1,12 +1,15 @@
 ---
 const { title = 'Gallery', structuredDataJSON, meta = {} } = Astro.props;
+
+// Strip any HTML tags if accidentally passed in
+const cleanTitle = title.replace(/<[^>]*>/g, '');
 ---
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <title>{cleanTitle}</title>
 
     {structuredDataJSON && (
       <script type="application/ld+json" set:html={structuredDataJSON} />

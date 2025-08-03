@@ -12,5 +12,9 @@ export const entranceData = {
     alt: "Black and White Painterly Train Photography preview",
     caption: "\"Painterly Steam Engine in Black & White\"",
   },
-  breadcrumb: "Transportation | Trains | Black & White",
-};
+ breadcrumb: `
+<a href="/Galleries/Painterly-Fine-Art-Photography/Transportation"
+   style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+   onmouseover="this.style.color='red'"
+   onmouseout="this.style.color='inherit'">
+  Transportation</a> | Trains | B/W`};

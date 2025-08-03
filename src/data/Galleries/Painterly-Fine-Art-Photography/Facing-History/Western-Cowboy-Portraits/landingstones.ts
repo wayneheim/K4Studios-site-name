@@ -1,7 +1,7 @@
 export const landingWestern = {
   title: "Western Cowboy Portraits",
   subtitle: "Painterly Cowboy & Western Art by Wayne Heim",
-   breadcrumb: "Facing History: Western Cowboy Portraits",
+   breadcrumb: "Facing History | Western Cowboy Portraits",
 
   tombstones: [
     {

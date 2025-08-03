@@ -12,6 +12,14 @@ function useIsMobile() {
   return mobile;
 }
 
+// Helper to safely allow only <a> tags in breadcrumb HTML
+function sanitizeBreadcrumb(html) {
+  if (typeof html !== "string") return "";
+  return html.replace(/<[^>]+>/g, (tag) => {
+    return tag.startsWith("<a ") || tag.startsWith("</a>") ? tag : "";
+  });
+}
+
 export default function LandingHeader({ breadcrumb }) {
   const isMobile = useIsMobile();
   const [animateStripes, setAnimateStripes] = useState(false);
@@ -24,7 +32,7 @@ export default function LandingHeader({ breadcrumb }) {
 
   useEffect(() => {
     if (isMobile) {
-      const timer = setTimeout(() => setShowWHLogo(true), 420); // fade-in delay
+      const timer = setTimeout(() => setShowWHLogo(true), 420);
       return () => clearTimeout(timer);
     } else {
       setShowWHLogo(false);
@@ -37,7 +45,10 @@ export default function LandingHeader({ breadcrumb }) {
       style={{ position: "relative", zIndex: 100 }}
     >
       {/* Breadcrumb (desktop only) */}
-      <div className="breadcrumb-text desktop-only breadcrumb-fade">{breadcrumb}</div>
+      <div
+        className="breadcrumb-text desktop-only breadcrumb-fade"
+        dangerouslySetInnerHTML={{ __html: sanitizeBreadcrumb(breadcrumb) }}
+      />
 
       {/* Center logo */}
       <a href="/" className="logo-slot">
@@ -67,25 +78,17 @@ export default function LandingHeader({ breadcrumb }) {
         }
 
         @keyframes stripeInLeft {
-          from {
-            transform: translateX(-200%);
-          }
-          to {
-            transform: translateX(0);
-          }
+          from { transform: translateX(-200%); }
+          to { transform: translateX(0); }
         }
 
         @keyframes stripeInRight {
-          from {
-            transform: translateX(200%);
-          }
-          to {
-            transform: translateX(0);
-          }
+          from { transform: translateX(200%); }
+          to { transform: translateX(0); }
         }
 
         .landing-header {
-         margin-bottom: 1.25rem; 
+          margin-bottom: 1.25rem;
           margin-top: 1rem;
           font-family: "Glegoo", serif;
           position: relative;
@@ -136,6 +139,7 @@ export default function LandingHeader({ breadcrumb }) {
         .desktop-animate::before {
           animation: stripeInLeft 0.6s ease-out forwards;
         }
+
         .desktop-animate::after {
           animation: stripeInRight 0.6s ease-out forwards;
         }

@@ -30,8 +30,10 @@ export default function GalleryLandingHeader({ breadcrumb }) {
     >
       {/* ── BREADCRUMB ON STRIPE BAR ── */}
       <div className="breadcrumb-toggle-wrapper desktop-only">
-        <div className="breadcrumb-overlay">{breadcrumb}</div>
-        {/* Safe to show toggle if pathname exists */}
+        <div
+          className="breadcrumb-overlay"
+          dangerouslySetInnerHTML={{ __html: breadcrumb }}
+        />
         {pathname && <GalleryToggleButton currentPath={pathname} />}
       </div>
 
@@ -71,71 +73,12 @@ export default function GalleryLandingHeader({ breadcrumb }) {
             textAlign: "center"
           }}
         >
-          <span>{breadcrumb}</span>
+          <span dangerouslySetInnerHTML={{ __html: breadcrumb }} />
           {pathname && <GalleryToggleButton currentPath={pathname} />}
         </div>
       </div>
 
-      {/* — styles that belong only to LandingHeader — */}
       <style jsx>{`
-.breadcrumb-toggle-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding-right: 0.5rem;
-  margin-top: 2px;
-  font-size: 1.1rem;
-}
-.gallery-toggle-button {
-  display: flex;
-  gap: 0.5rem;
-}
-.gallery-toggle-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.65rem;
-  height: 1.65rem;
-  border-radius: 50%;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #f0f0f0;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-.gallery-toggle-pill:hover {
-  transform: scale(1.05);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.gallery-toggle-pill.active {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.k4-watermark {
-border: none!important;
-}
-      /* ─── Mobile entrance animation for the stripes ─── */
-@keyframes slideFromLeft  { from { transform: translateX(-100%); } to { transform: translateX(0); } }
-@keyframes slideFromRight { from { transform: translateX(100%);  } to { transform: translateX(0); } }
-@media (max-width: 768px) {
-  /* only run once per page-load */
-  .mobile-animate::before,
-  .mobile-animate::after {
-    animation-duration: .7s;
-    animation-timing-function: cubic-bezier(.33,1,.68,1);
-    animation-fill-mode: forwards;
-  }
-  .mobile-animate::before {             /* top stripe → from left */
-    transform: translateX(-100%);
-    animation-name: slideFromLeft;
-  }
-  .mobile-animate::after {              /* bottom stripe → from right */
-    transform: translateX(100%);
-    animation-name: slideFromRight;
-  }
-}
         @import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
         :root {
           --dark-brown: rgb(122, 102, 94);
@@ -150,17 +93,16 @@ border: none!important;
           align-items: center;
           justify-content: space-between;
           padding: 0 0.75rem;
-          line-height: 1.4; 
-          letter-spacing: -0.02em;  
-          padding-left: 1.25rem;  /* Hamburger location adjustment */
+          line-height: 1.4;
+          letter-spacing: -0.02em;
+          padding-left: 1.25rem;
           height: 60px;
-            color: white;
-            background: rgb(73, 62, 58);
+          color: white;
+          background: rgb(73, 62, 58);
           border-top: 3px solid var(--dark-brown);
           border-bottom: 3px solid var(--dark-brown);
           z-index: 100;
         }
-        /* stripe background behind logo */
         .landing-header::before,
         .landing-header::after {
           content: "";
@@ -198,15 +140,29 @@ border: none!important;
             #000 100%
           );
         }
-        /* breadcrumb */
+        .breadcrumb-toggle-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 0.65rem;
+          padding-right: 0.5rem;
+          margin-top: 2px;
+          font-size: 1.1rem;
+        }
+        .breadcrumb-link {
+          text-decoration: none;
+          color: inherit;
+          transition: color 0.25s ease;
+        }
+        .breadcrumb-link:hover {
+          color: darkred;
+        }
         .breadcrumb-text {
-        top: 5.3rem;
+          top: 5.3rem;
           font-size: 1.15rem;
-          color:rgb(233, 233, 233);
+          color: rgb(233, 233, 233);
           white-space: nowrap;
           z-index: 300;
         }
-        /* logo badge */
         .logo-slot {
           position: absolute;
           left: 50%;
@@ -237,13 +193,54 @@ border: none!important;
           filter: grayscale(20%);
           opacity: 1;
         }
-        /* Right-hand side wrapper so nav stays right-aligned */
         .rhs {
           display: flex;
           align-items: center;
-          z-index: 3; /* above stripes */
+          z-index: 3;
         }
-        /* Hide breadcrumb & stripes tweak on tablet/mobile */
+        .wh-logo-mobile {
+          position: absolute;
+          right: 4.25%;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0.2;
+          z-index: 10;
+          display: none;
+          align-items: center;
+          justify-content: center;
+        }
+        .wh-logo-mobile img {
+          height: 25px;
+          width: auto;
+          filter: grayscale(100%);
+          transition: opacity 0.3s ease;
+        }
+        .wh-logo-mobile:hover {
+          opacity: 0.45;
+        }
+        .gallery-toggle-pill {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 1.65rem;
+          height: 1.65rem;
+          border-radius: 50%;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: #f0f0f0;
+          border: 1px solid rgba(255, 255, 255, 0.35);
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.25s ease;
+        }
+        .gallery-toggle-pill:hover {
+          transform: scale(1.05);
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+        .gallery-toggle-pill.active {
+          background-color: rgba(255, 255, 255, 0.3);
+          border-color: rgba(255, 255, 255, 0.5);
+        }
         @media (max-width: 1024px) {
           .desktop-only {
             display: none;
@@ -254,43 +251,41 @@ border: none!important;
             transform-origin: center;
             opacity: 0.25;
           }
+          .wh-logo-mobile {
+            display: inline-flex;
+          }
         }
-        body.mobile-open .logo-slot {
-        margin-top: 30px;
-        margin-left: -8px;
-  z-index: 1 !important;  /* lower than drawer z-index 2001 */
-  position: relative;
-}
-.wh-logo-mobile {
-  position: absolute;
-  right: 4.25%;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.2;
-  z-index: 10;
-  display: none; /* Default hidden (desktop) */
-  align-items: center;
-  justify-content: center;
-}
-.wh-logo-mobile img {
-  height: 25px;
-  width: auto;
-  filter: grayscale(100%);
-  transition: opacity 0.3s ease;
-}
-.wh-logo-mobile:hover {
-  opacity: 0.45;
-}
-@media (max-width: 1024px) {
-  .wh-logo-mobile {
-    display: inline-flex;
-  }
-}
-  .hamburger-circle {
-     border: 2px solid rgb(190, 177, 172);
-     }
-      .hamburger-circle .bar {
-          background:  rgb(190, 177, 172);
+        @media (max-width: 768px) {
+          .mobile-animate::before,
+          .mobile-animate::after {
+            animation-duration: 0.7s;
+            animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+            animation-fill-mode: forwards;
+          }
+          .mobile-animate::before {
+            transform: translateX(-100%);
+            animation-name: slideFromLeft;
+          }
+          .mobile-animate::after {
+            transform: translateX(100%);
+            animation-name: slideFromRight;
+          }
+        }
+        @keyframes slideFromLeft {
+          from {
+            transform: translateX(-100%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+        @keyframes slideFromRight {
+          from {
+            transform: translateX(100%);
+          }
+          to {
+            transform: translateX(0);
+          }
         }
       `}</style>
     </header>

@@ -529,6 +529,14 @@ body.react-mounted footer {
   outline-offset: 3px;
 }
 
+.breadcrumb-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s ease;
+}
+.breadcrumb-link:hover {
+  color: darkred;
+}
 
 /* add dynamic top padding only when viewport is taller than ~900px */
 #chapter-section.section-visible {

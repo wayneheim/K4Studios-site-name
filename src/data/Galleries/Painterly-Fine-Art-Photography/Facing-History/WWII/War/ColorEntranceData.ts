@@ -41,5 +41,14 @@ Keywords: WWII art prints, painterly WWII photography, World War II portraits, h
     alt: featured?.alt || featured?.title || "Featured WWII Art of War reenactment in color",
     caption: featured?.title || "WWII Art of War (featured image)",
   },
-  breadcrumb: "WWII | Art of War | Color",
-};
+breadcrumb: `
+<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History"
+   style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+   onmouseover="this.style.color='red'"
+   onmouseout="this.style.color='inherit'">
+  Facing History</a> |
+<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII"
+   style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+   onmouseover="this.style.color='olive'"
+   onmouseout="this.style.color='inherit'">
+  WWII</a> | War | Color`};

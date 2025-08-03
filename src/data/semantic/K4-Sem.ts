@@ -199,6 +199,7 @@ wwiiMenAndMachines: {
       { phrase: "world landscapes fine art", rating: 3, use: true }
     ],
     imagePhrases: [
+      { phrase: "fantastic places", rating: 4, use: true },
       { phrase: "international landscape photography", rating: 5, use: true },
       { phrase: "painterly european landscapes", rating: 4, use: true }
     ]
@@ -287,11 +288,12 @@ wwiiMenAndMachines: {
   landscapeIntTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International",
     landingPhrases: [
-      { phrase: "fantastic places", rating: 4, use: true },
+      
       { phrase: "International Traditional Landscapes", rating: 5, use: true },
       { phrase: "classic international landscape art", rating: 4, use: true }
     ],
     imagePhrases: [
+      
       { phrase: "traditional international landscape photography", rating: 5, use: true },
       { phrase: "european scenery wall art", rating: 4, use: true }
     ]

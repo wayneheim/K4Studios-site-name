@@ -4,6 +4,7 @@ import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-WWIIPortraitsBW.jsx";
 import Footer from "@/components/Footer.astro";
+import GalleryPreviewStrip from "@/components/GalleryPreviewStrip.astro";
 
 import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import { landingWestern } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/landingstones.ts";
@@ -20,6 +21,26 @@ const previewImages = allImages
   .filter(img => img.visibility !== "ghost")
   .slice(0, 8);
 
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White";
+
+// pick one random preview image to replace the featured
+const singlePreviewImage =
+  previewImages && previewImages.length
+    ? previewImages[Math.floor(Math.random() * previewImages.length)]
+    : null;
+
+// create entrance data overriding featured image if available
+const usedEntranceData = {
+  ...entranceData,
+  image: singlePreviewImage
+    ? {
+        src: singlePreviewImage.src,
+        alt: singlePreviewImage.alt || singlePreviewImage.title || entranceData?.image?.alt,
+        caption: singlePreviewImage.title || entranceData?.image?.caption,
+      }
+    : entranceData?.image,
+};
+
 const imageStructuredData = currentImage
   ? getStructuredData({ type: "image", data: currentImage })
   : getStructuredData({
@@ -27,7 +48,7 @@ const imageStructuredData = currentImage
       data: {
         title: landingWestern.title,
         description: landingWestern.subtitle,
-        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White"
+        url: previewPath
       },
       images: previewImages
     });
@@ -37,7 +58,7 @@ function formatBreadcrumbTitle(bc) {
   if (!bc) return "Gallery";
   return bc.split("|").map(s => s.trim()).join(" – ");
 }
-const galleryTitle = formatBreadcrumbTitle(entranceData?.breadcrumb || breadcrumb);
+const galleryTitle = formatBreadcrumbTitle(usedEntranceData?.breadcrumb || breadcrumb);
 const pageTitle = currentImage
   ? (currentImage.title
       ? `${currentImage.title} — ${galleryTitle}`
@@ -61,9 +82,9 @@ const pageTitle = currentImage
     <!-- Spacer to push intro below header visually -->
     <div class="h-0 md:h-5"></div>
 
-    <!-- Intro: Visible initially -->
+    <!-- Intro: Visible initially with overridden featured image -->
     <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-      <GalleryInfo client:load entranceData={entranceData} />
+      <GalleryInfo client:load entranceData={usedEntranceData} />
     </div>
 
     <!-- Chapter Viewer: Hidden initially -->
@@ -77,7 +98,7 @@ const pageTitle = currentImage
 
   <Footer 
     previewImages={previewImages}
-    previewPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White"
+    previewPath={previewPath}
   />
 
   <style>

@@ -2,7 +2,7 @@ export const landingWestern = {
     //Painterly Photogrqphy
   title: "Paintery Fine Art Photography by Wayne Heim",
   subtitle: "Photographs that are not merely images—but windows into worlds that exist beyond my lens.",
-   breadcrumb: "Painterly Photography: Wayne Heim",
+   breadcrumb: "Painterly Photography | Wayne Heim",
 
   tombstones: [
     {

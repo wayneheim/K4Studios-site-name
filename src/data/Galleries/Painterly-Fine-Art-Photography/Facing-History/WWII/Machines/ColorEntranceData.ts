@@ -41,5 +41,15 @@ Keywords: WWII black and white art, military vehicles, tank photography, World W
     alt: featured?.alt || featured?.title || "Featured WWII Men & Machines photograph in black and white",
     caption: featured?.title || "WWII Men & Machines (B/W featured image)",
   },
-  breadcrumb: "WWII | Men & Machines | Black & White",
+breadcrumb: `
+<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History"
+   style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+   onmouseover="this.style.color='red'"
+   onmouseout="this.style.color='inherit'">
+  Facing History</a> |
+<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII"
+   style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+   onmouseover="this.style.color='olive'"
+   onmouseout="this.style.color='inherit'">
+  WWII</a> | Machines | Color`
 };
