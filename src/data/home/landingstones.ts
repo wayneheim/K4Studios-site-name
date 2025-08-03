@@ -13,7 +13,7 @@ export const landingWestern = {
     {
       title: 'Traditional Style Photography',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History',
-      thumb: 'https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs/1/NTmDm8wc225FN8hF3SMLqtnvRp6DwsSSc38VzTGTB/S/Western%20Cowboy%20Portrait%20Photography%20_DSF6899-Edit-Edit-Edit-S.jpg',
+      thumb: 'https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/LMfd4hKLM8FchM8pbdHwfRmRCFb84H3GjzWnwnLhk/S/_IMG2241-S.jpg',
     },
      {
       title: 'Engrained Series',
