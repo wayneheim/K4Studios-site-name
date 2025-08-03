@@ -96,10 +96,9 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </div>
 
     <div class="mobile-breadcrumb-wrapper">
-      <div class="mobile-breadcrumb">
-        {landingWestern.breadcrumb}
-      </div>
-    </div>
+  <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
+</div>
+
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">

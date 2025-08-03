@@ -101,11 +101,10 @@ const structuredData = getStructuredData({
       <div class="mobile-breadcrumb">{landingWestern.breadcrumb}</div>
     </div>
 
-    <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
-      </div>
-    </div>
+    <div class="mobile-breadcrumb-wrapper">
+  <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
+</div>
+
 
     <section class="section-heading-wrap">
       <div class="section-heading">

@@ -182,12 +182,36 @@ export default function SiteNavMenu({ forceMobile = false }) {
                 ))}
               </div>
 
-              <img
-                src="/images/K4Logo-web-c.png"
-                alt="K4 Studios Logo"
-                className="k4-watermark"
-                style={{ opacity: 0.25 }}
-              />
+             <a href="/" aria-label="K4 Studios Home" className="k4-logo-hover">
+  <img
+    src="/images/K4Logo-web-c.png"
+    alt="K4 Studios Logo"
+    className="k4-watermark-opacity"
+  />
+</a>
+
+<style jsx>{`
+  .k4-logo-hover {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional: remove if vertical centering isn’t needed */
+    width: 100%;         /* or use a fixed width container if needed */
+  }
+
+  .k4-watermark-opacity {
+    opacity: 0.25;
+    transition: opacity 0.3s ease;
+    width: 115px;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .k4-logo-hover:hover .k4-watermark-opacity {
+    opacity: 1;
+  }
+`}</style>
+
             </div>
           ) : (
             siteNav.map((root, i) => (
