@@ -1,6 +1,19 @@
 // data/semantic/K4-Sem.ts
 
 export const semantic = {
+  facingHistory: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
+  landingPhrases: [
+    { phrase: "Facing History", rating: 5, use: true },
+    { phrase: "historical portraiture", rating: 5, use: true },
+    { phrase: "story-driven reenactment photography", rating: 5, use: true },
+    { phrase: "living history fine art", rating: 4, use: true },
+    { phrase: "timeless reenactor portraits", rating: 4, use: true },
+    { phrase: "evocative historical imagery", rating: 4, use: true },
+    { phrase: "History in Fine Art", rating: 3, use: true }
+  ],
+  },
+
   // --- PAINTERLY: FACING HISTORY ---
   cowboy: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
@@ -51,18 +64,20 @@ export const semantic = {
       { phrase: "civil war paintings", rating: 3, use: true },
       { phrase: "civil war prints", rating: 3, use: true },
       { phrase: "traditional reenactment photography collection", rating: 3, use: true },
-      { phrase: "legacy portraits for collectors", rating: 3, use: true }
+      { phrase: "legacy portraits for collectors", rating: 3, use: true },
+      
     ]
   },
 
-  wwii: {
+ wwii: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII-Portraits",
     landingPhrases: [
       { phrase: "WWII Portraits", rating: 5, use: true },
       { phrase: "Discover WWII Photography", rating: 5, use: true },
       { phrase: "the Greatest Generation", rating: 5, use: true },
       { phrase: "WWII Sacrifice & Brotherhood", rating: 5, use: true },
-      { phrase: "wartime photography", rating: 4, use: true }
+      { phrase: "wartime photography", rating: 4, use: true },
+      
     ],
     imagePhrases: [
       { phrase: "wwii photography", rating: 5, use: true },
@@ -71,9 +86,71 @@ export const semantic = {
       { phrase: "world war ii art", rating: 3, use: true },
       { phrase: "wartime prints", rating: 3, use: true },
       { phrase: "wwii war room wall art", rating: 3, use: true },
-      { phrase: "Moments of Connection", rating: 3, use: true }
+      { phrase: "understanding of the era", rating: 3, use: true },
+      
+      
     ]
   },
+
+wwiiPortraits: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits",
+  landingPhrases: [
+    { phrase: "WWII Portraits", rating: 5, use: true },
+    { phrase: "Discover WWII Photography", rating: 5, use: true },
+    { phrase: "the Greatest Generation", rating: 5, use: true },
+    { phrase: "WWII Sacrifice & Brotherhood", rating: 5, use: true },
+    { phrase: "wartime photography", rating: 4, use: true },
+    { phrase: "portraits", rating: 4, use: true },
+  ],
+  imagePhrases: [
+    { phrase: "wwii photography", rating: 5, use: true },
+    { phrase: "wartime portraits", rating: 4, use: true },
+    { phrase: "greatest generation photos", rating: 4, use: true },
+    { phrase: "moments of connection", rating: 3, use: true },
+    { phrase: "heroic portraits", rating: 3, use: true },
+    
+  ],
+},
+
+wwiiArtOfWar: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Art-of-War",
+  landingPhrases: [
+    { phrase: "The Art of War", rating: 5, use: true },
+    { phrase: "WWII Battle Photography", rating: 5, use: true },
+    { phrase: "Scenes from the Front", rating: 4, use: true },
+    { phrase: "combat documentary photography", rating: 3, use: true },
+    { phrase: "Art of War", rating: 3, use: true },
+    
+  ],
+  imagePhrases: [
+    { phrase: "war zone photography", rating: 4, use: true },
+    { phrase: "battlefield moments", rating: 4, use: true },
+    { phrase: "WWII action art", rating: 3, use: true },
+    { phrase: "wwii artistic documentary", rating: 3, use: true },
+    { phrase: "WWII battlefield", rating: 3, use: true },
+  ],
+},
+
+wwiiMenAndMachines: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines",
+  landingPhrases: [
+    { phrase: "Men & Machines", rating: 5, use: true },
+    { phrase: "Men and Machines", rating: 5, use: true },
+    { phrase: "WWII Military Equipment", rating: 4, use: true },
+    { phrase: "Life Behind the Lines", rating: 4, use: true },
+    { phrase: "WWII Mechanized Might", rating: 3, use: true },
+    
+  ],
+  imagePhrases: [
+    { phrase: "wwii tanks and trucks", rating: 4, use: true },
+    { phrase: "mechanical war art", rating: 3, use: true },
+    { phrase: "battle-ready machines", rating: 3, use: true },
+    { phrase: "military machinery prints", rating: 2, use: true },
+    { phrase: " history's greatest conflicts", rating: 2, use: true },
+    { phrase: "tense moments before battle", rating: 2, use: true },
+  ],
+},
+
 
   roaring20s: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",

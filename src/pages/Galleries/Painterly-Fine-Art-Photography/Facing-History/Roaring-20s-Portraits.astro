@@ -1,33 +1,32 @@
 ---
-import BaseLayout         from '../../../../layouts/BaseLayout.astro';
-import LandingHeader      from '../../../../components/Landing-Header.jsx';
-import ImageBar2          from '../../../../components/ImageBar2.jsx';
-import TombstoneNav       from '../../../../components/TombstoneNav.jsx';
-import LandingRightImages from '../../../../components/LandingRightImages.jsx';
-import FAQAccordion       from '../../../../components/FAQAccordion.jsx';
-import SiteFooter         from '../../../../components/Footer.astro';
-import MobileStoryImages  from '../../../../components/MobileStoryImages.jsx';
-import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
+import BaseLayout         from '@layouts/BaseLayout.astro';
+import LandingHeader      from '@components/Landing-Header.jsx';
+import ImageBar2          from '@components/ImageBar2.jsx';
+import TombstoneNav       from '@components/TombstoneNav.jsx';
+import LandingRightImages from '@components/LandingRightImages.jsx';
+import FAQAccordion       from '@components/FAQAccordion.jsx';
+import SiteFooter         from '@components/Footer.astro';
+import MobileStoryImages  from '@components/MobileStoryImages.jsx';
+import { getStructuredData } from '@components/utils/getStructuredData.ts';
 
-import { siteNav } from '../../../../data/siteNav.ts';
-import { getSideImages } from '../../../../components/utils/getSideImages.ts';
-import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
-import { semantic as cowboySemantic } from '../../../../data/semantic/K4-Sem.ts';
+import { siteNav } from '@data/siteNav.ts';
+import { getSideImages } from '@components/utils/getSideImages.ts';
+import { autoLinkKeywordsInText } from '@components/utils/autoLinkKeywordsInText.ts';
+import { semantic as cowboySemantic } from '@data/semantic/K4-Sem.ts';
 
-import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts';
-import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/story.ts';
-import { westernFAQ } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/faq.ts';
+import { landingWestern } from '@data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts';
+import { westernStory } from '@data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/story.ts';
+import { westernFAQ } from '@data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/faq.ts';
 
-import { getLandingMeta } from '../../../../data/landingMeta.ts';
+import { getLandingMeta } from '@data/landingMeta.ts';
 
-import '../../../../styles/global.css';
-import '../../../../styles/oneupheader.css';
+import '@styles/global.css';
+import '@styles/oneupheader.css';
 
 // ----------------------
 // DYNAMIC LOGIC SECTION
-// ----------------------
-
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits";
+
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -38,17 +37,23 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
+
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav?.children?.map(c => c.href) || [];
-const allGalleryData = import.meta.glob('../../../../data/Galleries/**/*.mjs', { eager: true });
+
+// NOTE: Using alias in glob; Vite must be configured to resolve @data
+const allGalleryData = import.meta.glob('@data/Galleries/**/*.mjs', { eager: true });
+
 const galleryDatas = galleryPaths.map(path => {
-  const filePath = "../../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  // Normalize to the same alias-keyed path used in the glob
+  const filePath = `@data/Galleries${path.replace(/^\/Galleries/, '')}.mjs`;
   return allGalleryData[filePath]?.galleryData || [];
 });
+
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
 
-// --- OG/Twitter meta from central db (with url fields auto-set)
+// --- OG/Twitter meta
 const landingMeta = getLandingMeta(sectionPath);
 if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
@@ -75,7 +80,7 @@ const structuredData = getStructuredData({
 });
 ---
 
-<!-- ✅ Inject JSON-LD in the head BEFORE layout, with set:html -->
+<!-- ✅ Inject JSON-LD in the head BEFORE layout -->
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
 <BaseLayout
@@ -380,44 +385,3 @@ ul li::marker {
   transition-delay: 1s;
 }
 
----
-const { title = 'Gallery' } = Astro.props;
----
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Glegoo', serif;
-        background:rgb(255, 255, 255);
-        margin: 0;
-        padding: 0;
-        color: #2c2c2c;
-        margin-top: 1rem;
-      }
-      
-
-      .page-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0;
-      }
-
-    </style>
-  </head>
-  <body>
-    <div class="page-container">
-      <slot />
-    </div>
-    <div id="overlay-root"></div>
-  </body>
-</html>
-
-  </style>
-</BaseLayout>
