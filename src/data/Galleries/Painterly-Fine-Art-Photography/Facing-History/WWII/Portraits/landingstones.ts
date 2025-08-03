@@ -25,7 +25,9 @@ const bwImg = pickRandom(bwPool);
 export const landingWestern = {
   title: "The WWII Portraits 1940's: The Greatest Generation",
   subtitle: "Painterly WWII Portraits History Themed Photography by Wayne Heim",
-  breadcrumb: "Facing History: WWII Portraits",
+     breadcrumb: 
+  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> |
+  <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='Olive'" onmouseout="this.style.color='inherit'">WWII</a> | Portraits`,
 
   tombstones: [
     {

@@ -1,7 +1,8 @@
 export const landingWestern = {
   title: "Western Cowboy Portraits",
   subtitle: "Painterly Cowboy & Western Art by Wayne Heim",
-   breadcrumb: "Facing History | Western Cowboy Portraits",
+     breadcrumb: 
+  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | Western Cowboy Portraits`,
 
   tombstones: [
     {

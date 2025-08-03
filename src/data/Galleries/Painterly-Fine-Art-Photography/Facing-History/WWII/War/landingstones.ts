@@ -1,7 +1,10 @@
 export const landingWestern = {
   title: "The WWII: Art of War",
   subtitle: "Painterly WWII Themed War Photography by Wayne Heim",
-   breadcrumb: "Facing History | WWII | Art of War",
+     breadcrumb: 
+  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> |
+  <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='Olive'" onmouseout="this.style.color='inherit'">WWII</a> | Art of War`,
+
 
   tombstones: [
     {

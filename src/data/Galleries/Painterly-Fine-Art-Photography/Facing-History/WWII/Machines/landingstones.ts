@@ -25,7 +25,9 @@ const bwImg = pickRandom(bwPool);
 export const landingWestern = {
   title: "The WWII: Men and Machines",
   subtitle: "Painterly WWII Men and Machines Themed Photography by Wayne Heim",
-  breadcrumb: "Facing History | WWII | Men & Machines",
+     breadcrumb: 
+  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> |
+  <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='Olive'" onmouseout="this.style.color='inherit'">WWII</a> | Men & Machines`,
 
   tombstones: [
     {
