@@ -642,6 +642,7 @@ style={
                      className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
   style={{
     fontSize: "1.55rem",
+    opacity: .5,
     lineHeight: isMobile ? "1.0" : "1.35", // tighter for mobile
     fontFamily: "'Glegoo', serif",
   }}
