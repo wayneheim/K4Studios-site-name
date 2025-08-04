@@ -130,6 +130,35 @@ useEffect(() => {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
+  // ← / → arrow key navigation (ignore when typing in inputs or with modifier keys)
+useEffect(() => {
+  const onKeyDown = (e) => {
+    if (
+      e.metaKey ||
+      e.ctrlKey ||
+      e.altKey ||
+      e.shiftKey ||
+      /(INPUT|TEXTAREA|SELECT)/.test(e.target.tagName)
+    ) {
+      return;
+    }
+
+    if (viewMode !== "flip" || isZoomed) return; // only navigate in flip mode when not zoomed
+
+    if (e.key === "ArrowRight") {
+      setIsExpanded(false);
+      setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1));
+    } else if (e.key === "ArrowLeft") {
+      setIsExpanded(false);
+      setCurrentIndex((i) => Math.max(i - 1, 0));
+    }
+  };
+
+  window.addEventListener("keydown", onKeyDown);
+  return () => window.removeEventListener("keydown", onKeyDown);
+}, [galleryData.length, viewMode, isZoomed]);
+
+
   // 📱 Device + UX handling (no change)
   useEffect(() => {
     document.body.classList.add("react-mounted");
@@ -544,8 +573,8 @@ style={
 >
   <span className="block relative h-[1em]">
     {/* Dash */}
-    <span className="absolute inset-0 flex items-center justify-center transition-all duration-200 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:-translate-y-1">
-      —
+    <span className="absolute inset-0 flex items-center justify-center text-md transition-all duration-200 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:-translate-y-1">
+      X
     </span>
 
     {/* Exit */}
