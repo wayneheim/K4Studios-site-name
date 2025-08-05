@@ -9,6 +9,17 @@ import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Ph
 import { landingWestern } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/landingstones.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 
+// helper to fix common UTF-8→Latin-1 mojibake
+function fixMojibake(str: string) {
+  return str
+    .replace(/â€™/g, "’")
+    .replace(/â€œ/g, "“")
+    .replace(/â€�/g, "”")
+    .replace(/â€“/g, "–")
+    .replace(/â€”/g, "—")
+    .replace(/â€¦/g, "…");
+}
+
 const { breadcrumb, entranceData = {}, initialImageId } = Astro.props;
 
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
@@ -16,14 +27,12 @@ const currentImage = isGhost
   ? null
   : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
 
-const previewImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 8);
-const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White";
-
 // pick one random preview image to act as featured
-const singlePreviewImage =
-  previewImages && previewImages.length
-    ? previewImages[Math.floor(Math.random() * previewImages.length)]
-    : null;
+const previewImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 8);
+const singlePreviewImage = previewImages.length
+  ? previewImages[Math.floor(Math.random() * previewImages.length)]
+  : null;
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White";
 
 const usedEntranceData = {
   ...entranceData,
@@ -44,9 +53,9 @@ const imageStructuredData = currentImage
       data: {
         title: landingWestern.title,
         description: landingWestern.subtitle,
-        url: previewPath
+        url: previewPath,
       },
-      images: previewImages
+      images: previewImages,
     });
 
 // dynamic title logic
@@ -54,22 +63,51 @@ function formatBreadcrumbTitle(bc) {
   if (!bc) return "Gallery";
   return bc.split("|").map(s => s.trim()).join(" – ");
 }
-const galleryTitle = formatBreadcrumbTitle(usedEntranceData?.breadcrumb || breadcrumb);
+const galleryTitle = formatBreadcrumbTitle(usedEntranceData.breadcrumb || breadcrumb);
 const pageTitle = currentImage
-  ? (currentImage.title
-      ? `${currentImage.title} — ${galleryTitle}`
-      : `Chapter ${allImages.findIndex(img => img.id === currentImage.id) + 1} — ${galleryTitle}`
+  ? (
+      currentImage.title
+        ? `${currentImage.title} — ${galleryTitle}`
+        : `Chapter ${allImages.findIndex(img => img.id === currentImage.id) + 1} — ${galleryTitle}`
     )
   : galleryTitle;
+
+// build our Open Graph / Twitter metadata values
+const siteBase = import.meta.env.SITE || "https://k4studios.com";
+const pageUrl = `${siteBase}${Astro.url.pathname}`;
+const ogImage = currentImage ? currentImage.src : usedEntranceData.image?.src;
+const ogAlt = currentImage
+  ? currentImage.alt || currentImage.title || galleryTitle
+  : usedEntranceData.image?.alt || galleryTitle;
+const ogDescription =
+  currentImage?.description ||
+  entranceData?.details ||
+  landingWestern.subtitle ||
+  usedEntranceData.subtitle;
 ---
 
-<BaseLayout 
-  title={pageTitle} 
-  structuredDataJSON={imageStructuredData}
->
+{currentImage && (
+  <head>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogAlt} />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={pageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogAlt} />
+  </head>
+)}
+
+<BaseLayout title={pageTitle} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
-
     <!-- Header stays fixed above intro -->
     <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
       <GalleryHeader client:load breadcrumb={breadcrumb} />
@@ -92,24 +130,14 @@ const pageTitle = currentImage
   <!-- Spacer pushes the footer down -->
   <div class="h-12 md:h-20"></div>
 
-  <Footer 
+  <Footer
     previewImages={previewImages}
     previewPath={previewPath}
   />
-</BaseLayout>
-
 
   <style>
-    .hamburger-circle {
-      display: none !important;
-    }
-
-    @media (max-width: 767px) {
-      #nav-toggle {
-        display: none !important;
-      }
-    }
-
+    .hamburger-circle { display: none !important; }
+    @media (max-width: 767px) { #nav-toggle { display: none !important; } }
     .section-hidden {
       display: none !important;
       opacity: 0;
@@ -123,7 +151,6 @@ const pageTitle = currentImage
       height: 0;
       z-index: 0;
     }
-
     .section-visible {
       opacity: 1;
       transform: translateX(0%);
@@ -132,6 +159,40 @@ const pageTitle = currentImage
       position: relative;
       width: 100%;
       z-index: 2;
+    }
+
+    /* override styles – update if layout changes */
+    #gallery-content *,
+    #gallery-content h1,
+    #gallery-content h2,
+    #gallery-content h3,
+    #gallery-content p,
+    #gallery-content a {
+      font-family: 'Glegoo', serif !important;
+      color: #2c2c2c !important;
+      line-height: 1.5 !important;
+    }
+
+    #gallery-content h1 {
+      font-size: 2.25rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 0.5em !important;
+    }
+
+    #gallery-content h2 {
+      font-size: 1.75rem !important;
+      font-weight: 600 !important;
+      margin-bottom: 0.75em !important;
+    }
+
+    #gallery-content p {
+      font-size: 1rem !important;
+      margin-bottom: 1em !important;
+    }
+
+    #gallery-content a {
+      text-decoration: underline !important;
+      color: #85644b !important;
     }
   </style>
 
@@ -147,6 +208,7 @@ const pageTitle = currentImage
       const topSpacer = document.getElementById('top-spacer');
       let isMenuOpen = false;
 
+      // deep‐link into a specific image
       const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
       if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
         setTimeout(() => {
@@ -181,10 +243,9 @@ const pageTitle = currentImage
       });
     });
 
-    document.addEventListener('contextmenu', function (e) {
-      if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-      }
+    // disable right-click on images
+    document.addEventListener('contextmenu', e => {
+      if (e.target.tagName === 'IMG') e.preventDefault();
     });
   </script>
 </BaseLayout>
