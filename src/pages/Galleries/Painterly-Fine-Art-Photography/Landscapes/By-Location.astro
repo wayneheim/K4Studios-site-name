@@ -14,28 +14,20 @@ import { getSideImages } from '@/components/utils/getSideImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
-import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/landingstones.ts';
-import { facingHistoryStory as westernStory } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/story.ts';
-import { facingFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/faq.ts';
-
 import { getLandingMeta } from '@/data/landingMeta.ts';
+
+import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/landingstones.ts';
+import { westernStory } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/story.ts';
+import { transportationFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/faq.ts';
 
 import '@/styles/global.css';
 
 // ----------------------
-// DYNAMIC IMAGE FEATHERING LOGIC
+// TRANSPORTATION GALLERY DATA GATHERING
 // ----------------------
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
-const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
-
-// --- COLLECT ALL DESCENDANT GALLERIES --- //
-function collectGalleryHrefs(node) {
-  let hrefs = [];
-  if (node.href && node.href.startsWith('/Galleries/')) hrefs.push(node.href);
-  if (node.children) node.children.forEach(child => hrefs.push(...collectGalleryHrefs(child)));
-  return hrefs;
-}
+const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes";
+const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
 function findNavEntry(nav, url) {
   for (const entry of nav) {
@@ -47,10 +39,17 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
-
+function recursivelyGatherAllGalleryHrefs(node) {
+  let result = [];
+  if (!node) return result;
+  if (node.href && node.href.startsWith('/Galleries/')) result.push(node.href);
+  if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
+  return result;
+}
 const landingNav = findNavEntry(siteNav, sectionPath);
-const galleryPaths = landingNav ? collectGalleryHrefs(landingNav) : [];
-
+const galleryPaths = landingNav
+  ? recursivelyGatherAllGalleryHrefs(landingNav)
+  : [];
 const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
@@ -59,12 +58,17 @@ const galleryDatas = galleryPaths.map(path => {
 
 const featheredImages = getSideImages({
   sectionPath,
-  headingCount: mobileCount,
+  headingCount,
   galleryDatas,
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
-// 🟩 STRUCTURED DATA for this landing (uses all feathered images)
+// Get meta info for OG/twitter
+const meta = getLandingMeta(sectionPath);
+meta.ogUrl = `https://k4studios.com${sectionPath}`;
+meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// Structured data (your usual logic)
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -84,19 +88,15 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
-
-// 🟢 OG/Twitter Meta Helper (auto-fills .ogUrl/.twitterUrl fields)
-const landingMeta = getLandingMeta(sectionPath);
-if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
-if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
-<!-- ✅ JSON-LD Structured Data for SEO -->
+<!-- SEO JSON-LD (Structured Data) -->
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
+<!-- BASE LAYOUT — meta prop added! -->
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
-  meta={landingMeta}
+  meta={meta}
 >
 
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
@@ -134,15 +134,9 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
         <section class="story-section">
           {westernStory.map((section, index) => (
             <article class="story-block" key={index}>
-              {section.title && (
-                <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-              )}
-              {section.subhead && (
-                <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-              )}
-              {section.tagline && (
-                <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-              )}
+              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
               {section.paragraphs?.map((para, i) => (
                 <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               ))}
@@ -174,7 +168,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container" style="min-height:0;">
         <div class="truncate-text">
-          <FAQAccordion items={facingFAQ} />
+          <FAQAccordion items={transportationFAQ} />
         </div>
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
@@ -200,7 +194,6 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       const faqToggle = document.getElementById("faq-toggle");
       const truncateContainer = document.querySelector(".truncate-container");
       if (truncateContainer && faqToggle) {
-        const summaryClicked = null;
         truncateContainer.addEventListener("click", (e) => {
           const summary = e.target.closest("summary");
           if (summary && !faqToggle.checked) {
@@ -210,165 +203,165 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       }
     });
   </script>
-</BaseLayout>
 
-<style>
-  ul {
-    list-style-type: disc;
-    padding-left: 1.25em;
-  }
-  ul li {
-    margin-top: 0.15em;
-    margin-left: 1.5em;
-  }
-  ul li::marker {
-    margin-top: 0.15em;
-    font-size: 1.2em;
-    color: gray;
-  }
-  @media (max-width: 768px) {
-    .section-heading .page-title {
-      font-size: 1.5rem;
-      line-height: 1.3;
+  <style>
+    ul {
+      list-style-type: disc;
+      padding-left: 1.25em;
     }
-    .section-heading .page-subtitle {
-      max-width: 42ch;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1.4;
-      letter-spacing: -0.04em;
+    ul li {
+      margin-top: 0.15em;
+      margin-left: 1.5em;
+    }
+    ul li::marker {
+      margin-top: 0.15em;
+      font-size: 1.2em;
+      color: gray;
+    }
+    @media (max-width: 768px) {
+      .section-heading .page-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
+      .section-heading .page-subtitle {
+        max-width: 42ch;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.4;
+        letter-spacing: -0.04em;
+      }
+      .section-heading-wrap {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .sidebar-column {
+        display: none;
+      }
+      .story-section {
+        letter-spacing: -0.03em;
+      }
+      .story-block h2 {
+        letter-spacing: -0.05em;
+        font-size: 1.4rem !important;
+        margin-top: -0.59rem;
+        line-height: 1.15;
+      }
+    }
+    .fade-in {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(1px);
+      transition: opacity 1.75s ease, transform 1.75s ease, visibility .5s linear 1.75s;
+    }
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    .page-title.fade-in {
+      transition-delay: .2s;
     }
     .section-heading-wrap {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
     }
-    .sidebar-column {
-      display: none;
+    .section-heading .page-title {
+      font-size: 2rem;
+      margin-bottom: .4rem;
+    }
+    .section-heading .page-subtitle {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #6d5b4a;
+      opacity: .9;
     }
     .story-section {
-      letter-spacing: -0.03em;
+      line-height: 1.3;
+      padding: 2rem 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      font-family: 'Glegoo', serif;
+    }
+    .story-block {
+      margin-bottom: 2.5rem;
     }
     .story-block h2 {
-      letter-spacing: -0.05em;
-      font-size: 1.4rem !important;
-      margin-top: -0.59rem;
-      line-height: 1.15;
+      font-weight: 500;
+      font-size: 1.65rem;
+      margin-bottom: 0.55rem;
     }
-  }
-  .fade-in {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(1px);
-    transition: opacity 1.75s ease, transform 1.75s ease, visibility .5s linear 1.75s;
-  }
-  .fade-in.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-  .page-title.fade-in {
-    transition-delay: .2s;
-  }
-  .section-heading-wrap {
-    margin: 1.5rem 0;
-    text-align: center;
-  }
-  .section-heading .page-title {
-    font-size: 2rem;
-    margin-bottom: .4rem;
-  }
-  .section-heading .page-subtitle {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #6d5b4a;
-    opacity: .9;
-  }
-  .story-section {
-    line-height: 1.3;
-    padding: 2rem 1.5rem;
-    max-width: 860px;
-    margin: 0 auto;
-    font-family: 'Glegoo', serif;
-  }
-  .story-block {
-    margin-bottom: 2.5rem;
-  }
-  .story-block h2 {
-    font-weight: 500;
-    font-size: 1.65rem;
-    margin-bottom: 0.55rem;
-  }
-  .story-block h3 {
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin-top: -0.5rem;
-    margin-bottom: -.025rem;
-    color: #5a4a3b;
-  }
-  .story-block .tagline {
-    font-size: 1.05rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    color: #7a6250;
-  }
-  .story-block p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
-  .story-block ul {
-    padding-left: 1.4rem;
-    margin-top: 0.5rem;
-  }
-  .story-block li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
-  .page-subtitle.fade-in {
-    opacity: 0 !important;
-    transform: translateY(-12px);
-    visibility: hidden;
-    transition:
-      opacity 1.1s ease-out,
-      transform 1.1s ease-out,
-      visibility 0s linear 1.1s;
-    transition-delay: 1s;
-  }
-  .page-subtitle.fade-in.is-visible {
-    opacity: 1 !important;
-    transform: translateY(0);
-    visibility: visible;
-    transition-delay: 1s;
-  }
-  .carousel-fade {
-    opacity: 0;
-    transform: translateY(0px);
-    transition:
-      opacity 1.5s ease-out,
-      transform 1.5s ease-out;
-    transition-delay: 0.0s;
-    visibility: hidden;
-  }
-  .sample-fade {
-    opacity: 0;
-    transform: translateY(0px);
-    transition:
-      opacity 1.5s ease-out,
-      transform 1.5s ease-out;
-    transition-delay: 0.2s;
-    visibility: hidden;
-    margin-top: -0.75rem;
-  }
-  .sample-fade.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-  .carousel-fade.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-</style>
+    .story-block h3 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-top: -0.5rem;
+      margin-bottom: -.025rem;
+      color: #5a4a3b;
+    }
+    .story-block .tagline {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #7a6250;
+    }
+    .story-block p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .story-block ul {
+      padding-left: 1.4rem;
+      margin-top: 0.5rem;
+    }
+    .story-block li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .page-subtitle.fade-in {
+      opacity: 0 !important;
+      transform: translateY(-12px);
+      visibility: hidden;
+      transition:
+        opacity 1.1s ease-out,
+        transform 1.1s ease-out,
+        visibility 0s linear 1.1s;
+      transition-delay: 1s;
+    }
+    .page-subtitle.fade-in.is-visible {
+      opacity: 1 !important;
+      transform: translateY(0);
+      visibility: visible;
+      transition-delay: 1s;
+    }
+    .carousel-fade {
+      opacity: 0;
+      transform: translateY(0px);
+      transition:
+        opacity 1.5s ease-out,
+        transform 1.5s ease-out;
+      transition-delay: 0.0s;
+      visibility: hidden;
+    }
+    .sample-fade {
+      opacity: 0;
+      transform: translateY(0px);
+      transition:
+        opacity 1.5s ease-out,
+        transform 1.5s ease-out;
+      transition-delay: 0.2s;
+      visibility: hidden;
+      margin-top: -0.75rem;
+    }
+    .sample-fade.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    .carousel-fade.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+  </style>
+</BaseLayout>

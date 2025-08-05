@@ -172,6 +172,7 @@ export const siteNav = [
         "children": [
 {
             "label": "By Location",
+            "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location",
             "children": [
 {
                 "label": "International",
@@ -260,6 +261,7 @@ export const siteNav = [
           },
 {
             "label": "By Theme",
+            "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme",
             "children": [
 {
                 "label": "Mountains",
@@ -593,7 +595,7 @@ export const siteNav = [
   },
 {
     "label": "Contact",
-    "href": "/Other/Contact",
+    "href": "/Contact",
     "code": "O",
     "type": "collection",
     "slug": "contact"

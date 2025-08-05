@@ -1,26 +1,26 @@
 ---
-import BaseLayout         from '../../../layouts/BaseLayout.astro';
-import LandingHeader      from '../../../components/Landing-Header.jsx';
-import ImageBar2          from '../../../components/ImageBar2.jsx';
-import TombstoneNav       from '../../../components/TombstoneNav.jsx';
-import LandingRightImages from '../../../components/LandingRightImages.jsx';
-import FAQAccordion       from '../../../components/FAQAccordion.jsx';
-import SiteFooter         from '../../../components/Footer.astro';
-import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
-import { getStructuredData } from '../../../components/utils/getStructuredData.ts';
+import BaseLayout         from '@/layouts/BaseLayout.astro';
+import LandingHeader      from '@/components/Landing-Header.jsx';
+import ImageBar2          from '@/components/ImageBar2.jsx';
+import TombstoneNav       from '@/components/TombstoneNav.jsx';
+import LandingRightImages from '@/components/LandingRightImages.jsx';
+import FAQAccordion       from '@/components/FAQAccordion.jsx';
+import SiteFooter         from '@/components/Footer.astro';
+import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
+import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 
-import { siteNav } from '../../../data/siteNav.ts';
-import { getSideImages } from '../../../components/utils/getSideImages.ts';
-import { autoLinkKeywordsInText } from '../../../components/utils/autoLinkKeywordsInText.ts';
-import { semantic as k4Semantic } from '../../../data/semantic/K4-Sem.ts';
+import { siteNav } from '@/data/siteNav.ts';
+import { getSideImages } from '@/components/utils/getSideImages.ts';
+import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
+import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
-import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/landingstones.ts';
-import { painterlyLandscapeStory as westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/story.ts';
-import { facingFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/faq.ts';
+import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/landingstones.ts';
+import { painterlyLandscapeStory as westernStory } from '@/data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/story.ts';
+import { facingFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/faq.ts';
 
-import { getLandingMeta } from '../../../data/landingMeta.ts';
+import { getLandingMeta } from '@/data/landingMeta.ts';
 
-import '../../../styles/global.css';
+import '@/styles/global.css';
 
 // --- UNIVERSAL IMAGE FEATHERING LOGIC (ALL DESCENDANTS) ---
 
@@ -47,9 +47,9 @@ function recursivelyGatherAllGalleryHrefs(node) {
 }
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav ? recursivelyGatherAllGalleryHrefs(landingNav) : [];
-const allGalleryData = import.meta.glob('../../../data/Galleries/**/*.mjs', { eager: true });
+const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
-  const filePath = "../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
   return allGalleryData[filePath]?.galleryData || [];
 });
 
@@ -102,9 +102,8 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </div>
 
     <div class="mobile-breadcrumb-wrapper">
-  <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
-</div>
-
+      <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
+    </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
@@ -202,24 +201,23 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     });
   </script>
 
-
   <style>
-  ul {
-  list-style-type: disc;
-  padding-left: 1.25em;
-}
+    ul {
+      list-style-type: disc;
+      padding-left: 1.25em;
+    }
 
-ul li {
-  margin-top: 0.15em;
-  margin-left: 1.5em;
-}
+    ul li {
+      margin-top: 0.15em;
+      margin-left: 1.5em;
+    }
 
-ul li::marker {
-   margin-top: 0.15em;
-  font-size: 1.2em; /* makes bullet bigger */
-  color: gray;      /* or any tone you want */
-}
-  
+    ul li::marker {
+      margin-top: 0.15em;
+      font-size: 1.2em; /* makes bullet bigger */
+      color: gray;
+    }
+
     @media (max-width: 768px) {
       .section-heading .page-title {
         font-size: 1.5rem;
@@ -227,10 +225,10 @@ ul li::marker {
       }
 
       .section-heading .page-subtitle {
-          max-width: 42ch;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+        max-width: 42ch;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
         font-size: 1rem;
         line-height: 1.4;
         letter-spacing: -0.04em;
@@ -339,58 +337,56 @@ ul li::marker {
       margin-bottom: 0.5rem;
       font-size: 1rem;
     }
-.page-subtitle.fade-in {
-  opacity: 0 !important; /* Forces initial hidden state */
-  transform: translateY(-12px);
-  visibility: hidden;
-  transition:
-    opacity 1.1s ease-out,
-    transform 1.1s ease-out,
-    visibility 0s linear 1.1s;
-  transition-delay: 1s;
-}
 
-.page-subtitle.fade-in.is-visible {
-  opacity: 1 !important;
-  transform: translateY(0);
-  visibility: visible;
-  transition-delay: 1s;
-}
+    .page-subtitle.fade-in {
+      opacity: 0 !important;
+      transform: translateY(-12px);
+      visibility: hidden;
+      transition:
+        opacity 1.1s ease-out,
+        transform 1.1s ease-out,
+        visibility 0s linear 1.1s;
+      transition-delay: 1s;
+    }
 
-.carousel-fade {
-  opacity: 0;
-  transform: translateY(0px);
-  transition:
-    opacity 1.5s ease-out,
-    transform 1.5s ease-out;
-  transition-delay: 0.0s;
-  visibility: hidden;
-}
+    .page-subtitle.fade-in.is-visible {
+      opacity: 1 !important;
+      transform: translateY(0);
+      visibility: visible;
+      transition-delay: 1s;
+    }
 
-.sample-fade {
-  opacity: 0;
-  transform: translateY(0px);
-  transition:
-    opacity 1.5s ease-out,
-    transform 1.5s ease-out;
-  transition-delay: 0.2s;
-  visibility: hidden;
-    margin-top: -0.75rem; /* <-- this line does the nudge */
-}
+    .carousel-fade {
+      opacity: 0;
+      transform: translateY(0px);
+      transition:
+        opacity 1.5s ease-out,
+        transform 1.5s ease-out;
+      transition-delay: 0.0s;
+      visibility: hidden;
+    }
 
-.sample-fade.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-}
+    .sample-fade {
+      opacity: 0;
+      transform: translateY(0px);
+      transition:
+        opacity 1.5s ease-out,
+        transform 1.5s ease-out;
+      transition-delay: 0.2s;
+      visibility: hidden;
+      margin-top: -0.75rem; /* <-- this line does the nudge */
+    }
 
+    .sample-fade.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
 
-.carousel-fade.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-}
-
-
+    .carousel-fade.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
   </style>
 </BaseLayout>

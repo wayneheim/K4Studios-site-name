@@ -1,26 +1,26 @@
 ---
-import BaseLayout         from '../../../layouts/BaseLayout.astro';
-import LandingHeader      from '../../../components/Landing-Header.jsx';
-import ImageBar2          from '../../../components/ImageBar2.jsx';
-import TombstoneNav       from '../../../components/TombstoneNav.jsx';
-import LandingRightImages from '../../../components/LandingRightImages.jsx';
-import FAQAccordion       from '../../../components/FAQAccordion.jsx';
-import SiteFooter         from '../../../components/Footer.astro';
-import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
-import { getStructuredData } from '../../../components/utils/getStructuredData.ts';
+import BaseLayout         from '@/layouts/BaseLayout.astro';
+import LandingHeader      from '@/components/Landing-Header.jsx';
+import ImageBar2          from '@/components/ImageBar2.jsx';
+import TombstoneNav       from '@/components/TombstoneNav.jsx';
+import LandingRightImages from '@/components/LandingRightImages.jsx';
+import FAQAccordion       from '@/components/FAQAccordion.jsx';
+import SiteFooter         from '@/components/Footer.astro';
+import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
+import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 
-import { siteNav } from '../../../data/siteNav.ts';
-import { getSideImages } from '../../../components/utils/getSideImages.ts';
-import { autoLinkKeywordsInText } from '../../../components/utils/autoLinkKeywordsInText.ts';
-import { semantic as k4Semantic } from '../../../data/semantic/K4-Sem.ts';
+import { siteNav } from '@/data/siteNav.ts';
+import { getSideImages } from '@/components/utils/getSideImages.ts';
+import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
+import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
-import { landingWestern } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/landingstones.ts';
-import { westernStory } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/story.ts';
-import { facingFAQ } from '../../../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/faq.ts';
+import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/landingstones.ts';
+import { westernStory } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/story.ts';
+import { facingFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/faq.ts';
 
-import { getLandingMeta } from '../../../data/landingMeta.ts';
+import { getLandingMeta } from '@/data/landingMeta.ts';
 
-import '../../../styles/global.css';
+import '@/styles/global.css';
 
 // ----------------------
 // UNIVERSAL IMAGE FEATHERING LOGIC (ALL DESCENDANT GALLERIES)
@@ -51,9 +51,9 @@ function recursivelyGatherAllGalleryHrefs(node) {
 
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav ? recursivelyGatherAllGalleryHrefs(landingNav) : [];
-const allGalleryData = import.meta.glob('../../../data/Galleries/**/*.mjs', { eager: true });
+const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
-  const filePath = "../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
   return allGalleryData[filePath]?.galleryData || [];
 });
 
@@ -105,9 +105,8 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </div>
 
     <div class="mobile-breadcrumb-wrapper">
-  <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
-</div>
-
+      <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
+    </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">

@@ -118,13 +118,17 @@ export default function LandingHeader({ breadcrumb }) {
         <DelayedRH />
       )}
 
-      <a
-        href="mailto:wayne@k4studios.com"
-        className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}
-        aria-label="Email Wayne Heim"
-      >
-        <img src="/images/WH.png" alt="WH logo" />
-      </a>
+    {isMobile && (
+  <a
+    href="mailto:wayne@k4studios.com"
+    className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}
+    aria-label="Email Wayne Heim"
+    rel="external"
+    target="_blank"
+  >
+    <img src="/images/WH.png" alt="WH logo" />
+  </a>
+)}
 
       <div className="header-border-top" />
       <div className="header-border-bottom" />

@@ -48,7 +48,10 @@ export default function GalleryInfo({ entranceData }) {
         >
           <h2>{entranceData.title}</h2>
           <h3>{entranceData.subtitle}</h3>
-          <p>{entranceData.description}</p>
+          <div
+  className="gallery-intro-description"
+  dangerouslySetInnerHTML={{ __html: entranceData.description }}
+/>
           {entranceData.details && (
             <details>
               <summary>

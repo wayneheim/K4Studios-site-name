@@ -165,87 +165,43 @@ export const siteNav = [
         "children": [
 {
             "label": "By Location",
+            "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location",
             "children": [
 {
-                "label": "International",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International",
-                "children": [
+  "label": "International",
+  "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
+  "code": "P-S2-Ss1-Sss1",
+  "slug": "international",
+  "type": "collection"
+},
 {
-                    "label": "Gallery",
-                    "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
-                    "code": "P-S2-Ss1-Sss1-Ssss1",
-                    "slug": "gallery",
-                    "type": "gallery-source"
-                  }
-                ],
-                "code": "P-S2-Ss1-Sss1",
-                "slug": "international",
-                "type": "collection"
-              },
+  "label": "Midwest",
+  "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+  "code": "P-S2-Ss1-Sss2",
+  "slug": "midwest",
+  "type": "collection"
+},
 {
-                "label": "Midwest",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest",
-                "children": [
+  "label": "Northeast",
+  "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+  "code": "P-S2-Ss1-Sss3",
+  "slug": "northeast",
+  "type": "collection"
+},
 {
-                    "label": "Gallery",
-                    "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
-                    "code": "P-S2-Ss1-Sss2-Ssss1",
-                    "slug": "gallery",
-                    "type": "gallery-source"
-                  }
-                ],
-                "code": "P-S2-Ss1-Sss2",
-                "slug": "midwest",
-                "type": "collection"
-              },
+  "label": "South",
+  "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+  "code": "P-S2-Ss1-Sss4",
+  "slug": "south",
+  "type": "collection"
+},
 {
-                "label": "Northeast",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast",
-                "children": [
-{
-                    "label": "Gallery",
-                    "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
-                    "code": "P-S2-Ss1-Sss3-Ssss1",
-                    "slug": "gallery",
-                    "type": "gallery-source"
-                  }
-                ],
-                "code": "P-S2-Ss1-Sss3",
-                "slug": "northeast",
-                "type": "collection"
-              },
-{
-                "label": "South",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South",
-                "children": [
-{
-                    "label": "Gallery",
-                    "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
-                    "code": "P-S2-Ss1-Sss4-Ssss1",
-                    "slug": "gallery",
-                    "type": "gallery-source"
-                  }
-                ],
-                "code": "P-S2-Ss1-Sss4",
-                "slug": "south",
-                "type": "collection"
-              },
-{
-                "label": "West",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West",
-                "children": [
-{
-                    "label": "Gallery",
-                    "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
-                    "code": "P-S2-Ss1-Sss5-Ssss1",
-                    "slug": "gallery",
-                    "type": "gallery-source"
-                  }
-                ],
-                "code": "P-S2-Ss1-Sss5",
-                "slug": "west",
-                "type": "collection"
-              }
+  "label": "West",
+  "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+  "code": "P-S2-Ss1-Sss5",
+  "slug": "west",
+  "type": "gallery-source"
+}
             ],
             "code": "P-S2-Ss1",
             "slug": "by-location",
@@ -253,6 +209,7 @@ export const siteNav = [
           },
 {
             "label": "By Theme",
+            "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme",
             "children": [
 {
                 "label": "Mountains",
@@ -586,7 +543,7 @@ export const siteNav = [
   },
 {
     "label": "Contact",
-    "href": "/Other/Contact",
+    "href": "/Contact",
     "code": "O",
     "type": "collection",
     "slug": "contact"
