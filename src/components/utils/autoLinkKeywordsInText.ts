@@ -8,7 +8,7 @@ import {
 } from '@data/galleryMaps/MasterGalleryData.ts';
 
 function escapeRegex(str: string): string {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return str.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&");
 }
 
 function getSectionForKW(
@@ -205,7 +205,10 @@ export function autoLinkKeywordsInText(
 
         if (poolEntries.length) {
           const pick = poolEntries[Math.floor(Math.random() * poolEntries.length)];
-          href = `/${pick.galleryKey}/${pick.img.id}`;
+          const base = pick.galleryKey.startsWith('/')
+            ? pick.galleryKey
+            : '/' + pick.galleryKey;
+          href = `${base}/${pick.img.id}`;
         }
       }
     }
@@ -258,7 +261,10 @@ export function autoLinkKeywordsInText(
             if (filtered2.length) poolEntries2 = filtered2;
             if (poolEntries2.length) {
               const pick2 = poolEntries2[Math.floor(Math.random() * poolEntries2.length)];
-              href = `/${pick2.galleryKey}/${pick2.img.id}`;
+              const base2 = pick2.galleryKey.startsWith('/')
+                ? pick2.galleryKey
+                : '/' + pick2.galleryKey;
+              href = `${base2}/${pick2.img.id}`;
             }
           }
         }

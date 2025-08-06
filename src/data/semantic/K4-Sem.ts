@@ -202,7 +202,7 @@ wwiiMenAndMachines: {
     ],
     imagePhrases: [
       { phrase: "western landscape photography", rating: 5, use: true },
-      { phrase: "rocky mountain painterly art", rating: 4, use: true }
+      { phrase: "feel every layer of it", rating: 4, use: true }
     ]
   },
   
