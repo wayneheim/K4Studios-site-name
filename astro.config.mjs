@@ -18,7 +18,7 @@ export default defineConfig({
       }
     },
     ssr: {
-      external: ['nodemailer'], // 👈 This tells Vite not to bundle nodemailer
+      external: ['nodemailer'], // 👈 This tells Vite  not to bundle nodemailer
     },
     server: {
       host: true,
