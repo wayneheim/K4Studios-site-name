@@ -1,215 +1,278 @@
-import { semantic as defaultSemantic } from "../../data/semantic/K4-Sem.ts";
+// src/utils/autoLinkKeywordsInText.ts
 
-function escapeRegex(str: string) {
+import { semantic as defaultSemantic } from '@data/semantic/K4-Sem.ts';
+import {
+  galleryDataMap,
+  sectionGalleries,
+  allImages
+} from '@data/galleryMaps/MasterGalleryData.ts';
+
+function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-function getRoundRobinImagePool(galleryDatas, galleryPaths) {
-  if (!Array.isArray(galleryDatas) || galleryDatas.length === 0) return [];
-  const pools = galleryDatas
-    .map((arr, i) => {
-      let images = (arr || []).filter(img => img && img.id !== "i-k4studios");
-      if (images.length > 30) images = images.sort(() => Math.random() - 0.5).slice(0, 30);
-      if (images.length > 20) images = images.sort(() => Math.random() - 0.5).slice(0, 20);
-      return images.map(img => ({ img, galleryPath: galleryPaths[i] }));
-    });
-  const roundRobin = [];
-  let i = 0, added;
-  do {
-    added = false;
-    for (let p = 0; p < pools.length; p++) {
-      if (pools[p][i]) {
-        roundRobin.push(pools[p][i]);
-        added = true;
-      }
+function getSectionForKW(
+  kwLower: string,
+  semantic: typeof defaultSemantic
+): { section: any; type: 'landing' | 'image' | 'universal' } | null {
+  if (
+    semantic.universal?.landingPhrases?.some(
+      p => p.use && p.phrase.toLowerCase() === kwLower
+    )
+  ) {
+    return { section: semantic.universal, type: 'landing' };
+  }
+  for (const key of Object.keys(semantic)) {
+    if (key === 'synonymMap' || key === 'universal') continue;
+    const sec = (semantic as any)[key];
+    if (
+      sec.landingPhrases?.some((p: any) => p.use && p.phrase.toLowerCase() === kwLower)
+    ) {
+      return { section: sec, type: 'landing' };
     }
-    i++;
-  } while (added);
-  return roundRobin;
-}
-
-function getSectionForKW(kwLower, semantic) {
-  for (const sectionName of Object.keys(semantic)) {
-    if (sectionName === "synonymMap" || sectionName === "universal") continue;
-    const section = semantic[sectionName];
-    if ((section.landingPhrases || []).some(p => p.use && p.phrase.toLowerCase() === kwLower)) {
-      return { section, type: "landing" };
-    }
-    if ((section.imagePhrases || []).some(p => p.use && p.phrase.toLowerCase() === kwLower)) {
-      return { section, type: "image" };
+    if (
+      sec.imagePhrases?.some((p: any) => p.use && p.phrase.toLowerCase() === kwLower)
+    ) {
+      return { section: sec, type: 'image' };
     }
   }
-  if ((semantic.universal?.imagePhrases || []).some(p => p.use && p.phrase.toLowerCase() === kwLower)) {
-    return { section: semantic.universal, type: "universal" };
+  if (
+    semantic.universal?.imagePhrases?.some(
+      p => p.use && p.phrase.toLowerCase() === kwLower
+    )
+  ) {
+    return { section: semantic.universal, type: 'universal' };
   }
   return null;
 }
 
-function resolveSynonym(kwLower, semantic) {
-  const synMap = semantic.synonymMap || {};
-  for (const [mainKW, syns] of Object.entries(synMap)) {
-    if (syns.map(s => s.toLowerCase()).includes(kwLower)) {
-      return mainKW.toLowerCase();
+function resolveSynonym(
+  kwLower: string,
+  semantic: typeof defaultSemantic
+): string | null {
+  const map = semantic.synonymMap || {};
+  for (const [main, syns] of Object.entries(map)) {
+    if ((syns as string[]).map(s => s.toLowerCase()).includes(kwLower)) {
+      return main.toLowerCase();
     }
   }
   return null;
 }
 
-function getAllActivePhrases(semantic) {
-  let all = [];
-  for (const sectionKey of Object.keys(semantic)) {
-    if (sectionKey === "synonymMap") continue;
-    const section = semantic[sectionKey];
-    if (section.landingPhrases)
-      all = all.concat(section.landingPhrases.filter(p => p.use).map(p => p.phrase));
-    if (section.imagePhrases)
-      all = all.concat(section.imagePhrases.filter(p => p.use).map(p => p.phrase));
+function getAllActivePhrases(semantic: typeof defaultSemantic): string[] {
+  let phrases: string[] = [];
+  for (const key of Object.keys(semantic)) {
+    if (key === 'synonymMap') continue;
+    const sec = (semantic as any)[key];
+    if (sec.landingPhrases) {
+      phrases.push(
+        ...sec.landingPhrases.filter((p: any) => p.use).map((p: any) => p.phrase)
+      );
+    }
+    if (sec.imagePhrases) {
+      phrases.push(
+        ...sec.imagePhrases.filter((p: any) => p.use).map((p: any) => p.phrase)
+      );
+    }
   }
   if (semantic.synonymMap) {
-    for (const synArr of Object.values(semantic.synonymMap)) {
-      all = all.concat(synArr);
+    for (const syns of Object.values(semantic.synonymMap)) {
+      phrases.push(...(syns as string[]));
     }
   }
-  return all;
+  return phrases;
+}
+
+// New helper: find all sections that list this kwLower as an imagePhrase
+function getAllImageSectionsForKW(
+  kwLower: string,
+  semantic: typeof defaultSemantic
+): string[] {
+  const sections: string[] = [];
+  for (const key of Object.keys(semantic)) {
+    if (key === 'synonymMap' || key === 'universal') continue;
+    const sec = (semantic as any)[key];
+    if (
+      sec.imagePhrases?.some((p: any) => p.use && p.phrase.toLowerCase() === kwLower)
+    ) {
+      sections.push(sec.path);
+    }
+  }
+  if (
+    semantic.universal?.imagePhrases?.some(
+      (p: any) => p.use && p.phrase.toLowerCase() === kwLower
+    )
+  ) {
+    sections.push(semantic.universal.path);
+  }
+  return sections;
 }
 
 export function autoLinkKeywordsInText(
-  html,
-  galleryDatas,
-  featheredImages,
-  galleryPaths,
+  html: string,
+  _galleryDatas: any[],
+  featheredImages: { id: string }[],
+  _galleryPaths: string[],
   semantic = defaultSemantic,
-  sectionPath = "/index"
-) {
-  if (!html) return "";
-  if (!Array.isArray(galleryDatas) || galleryDatas.length === 0) return html;
+  sectionPath = '/index'
+): string {
+  if (!html) return html;
 
-  const universalMode = sectionPath === "/index";
+  const exclude = new Set(featheredImages.map(i => i.id));
 
-  const overrides = {
-    "medical illustration": "https://heimmedicalart.com",
-    "medical illustrator": "https://heimmedicalart.com",
+  // 1) manual overrides
+  const overrides: Record<string, string> = {
+    'medical illustration': 'https://heimmedicalart.com',
+    'medical illustrator': 'https://heimmedicalart.com',
   };
-  const overridePhrases = Object.keys(overrides).sort((a, b) => b.length - a.length);
-
-  // Apply overrides first
-  for (const phrase of overridePhrases) {
-    const overrideRegex = new RegExp(escapeRegex(phrase), "gi");
-    html = html.replace(overrideRegex, (matched) => {
-      return `<a href="${overrides[phrase]}" class="kw-link">${matched}</a>`;
+  Object.keys(overrides)
+    .sort((a, b) => b.length - a.length)
+    .forEach(phrase => {
+      const re = new RegExp(`\\b${escapeRegex(phrase)}\\b`, 'gi');
+      html = html.replace(
+        re,
+        match => `<a href="${overrides[phrase]}" class="kw-link">${match}</a>`
+      );
     });
-  }
 
-  // Prepare linkable images pool
-  const featheredIds = new Set((featheredImages || []).map(img => img.id));
-  const linkableImages = getRoundRobinImagePool(galleryDatas, galleryPaths)
-    .filter(({ img }) => img && !featheredIds.has(img.id));
+  // 2) build regex of all phrases
+  const allKWs = [
+    ...getAllActivePhrases(semantic),
+    ...Object.keys(overrides),
+  ].sort((a, b) => b.length - a.length);
+  const kwRe = new RegExp(`\\b(${allKWs.map(escapeRegex).join('|')})\\b`, 'gi');
 
-  // DEBUG log images available
-  console.log("[KW][DEBUG] Linkable images count:", linkableImages.length);
-
-  // All phrases to match (landing + image + synonyms)
-  let allKeywords = getAllActivePhrases(semantic)
-    .concat(Object.keys(overrides))
-    .sort((a, b) => b.length - a.length);
-
-  // Find all matches
-  const keywordRegex = new RegExp(`\\b(${allKeywords.map(escapeRegex).join('|')})\\b`, "gi");
-  let match, matches = [];
-  while ((match = keywordRegex.exec(html)) !== null) {
-    matches.push({ index: match.index, keyword: match[1] });
+  // 3) collect matches
+  const matches: { index: number; kw: string }[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = kwRe.exec(html))) {
+    matches.push({ index: m.index, kw: m[1] });
   }
   matches.reverse();
 
   let output = html;
-  let alreadyLinked = new Set();
+  const linked = new Set<string>();
 
-  for (const { index, keyword } of matches) {
-    const kwLower = keyword.toLowerCase();
-    if (alreadyLinked.has(kwLower)) continue;
+  for (const { index, kw } of matches) {
+    const lc = kw.toLowerCase();
+    if (linked.has(lc)) continue;
 
-    // Skip if inside existing <a>
-    const before = output.lastIndexOf("<a", index);
-    const after = output.indexOf("</a>", index);
-    if (before !== -1 && after !== -1 && before < index && after > index) continue;
+    const before = output.lastIndexOf('<a', index);
+    const after = output.indexOf('</a>', index);
+    if (before !== -1 && after > before) continue;
 
-    let href = null;
+    let href: string | undefined;
 
-    // Check overrides again (case sensitive + lower)
-    if (overrides[keyword] || overrides[kwLower]) {
-      href = overrides[keyword] || overrides[kwLower];
+    // a) overrides
+    if (overrides[kw] || overrides[lc]) {
+      href = overrides[kw] || overrides[lc];
     }
 
+    // b) semantic landing
     if (!href) {
-      const resolved = getSectionForKW(kwLower, semantic);
+      const res = getSectionForKW(lc, semantic);
+      if (res && res.type === 'landing') {
+        href = res.section.path;
+      }
+    }
 
-      if (resolved) {
-        if (resolved.type === "landing" && resolved.section.path) {
-          href = resolved.section.path;
-        }
-        else if (resolved.type === "image" && resolved.section.path) {
-          // ONLY link if we have images in the pool
-          if (linkableImages.length > 0) {
-            // Pick random image matching section
-            const entry = linkableImages.find(({ galleryPath }) =>
-              galleryPath && galleryPath.startsWith(resolved.section.path)
+    // c) semantic image (multi-section)
+    if (!href) {
+      const imgSecs = getAllImageSectionsForKW(lc, semantic);
+      if (imgSecs.length) {
+        let poolEntries: { img: any; galleryKey: string }[] = [];
+
+        imgSecs.forEach(sec => {
+          const kids = sectionGalleries[sec] || [];
+          if (kids.length) {
+            poolEntries.push(
+              ...kids.flatMap(key =>
+                (galleryDataMap[key] || []).map(img => ({ img, galleryKey: key }))
+              )
             );
-            if (entry) {
-              href = `${entry.galleryPath}/${entry.img.id}`;
-            }
+          } else {
+            const matchPath = sec + '/';
+            poolEntries.push(
+              ...allImages
+                .filter(img => img.src.includes(matchPath))
+                .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
+            );
           }
-        }
-        else if (resolved.type === "universal") {
-          // fallback to first image if any
-          if (linkableImages.length > 0) {
-            const entry = linkableImages[0];
-            href = `${entry.galleryPath}/${entry.img.id}`;
-          }
+        });
+
+        const filtered = poolEntries.filter(e => !exclude.has(e.img.id));
+        if (filtered.length) poolEntries = filtered;
+
+        if (poolEntries.length) {
+          const pick = poolEntries[Math.floor(Math.random() * poolEntries.length)];
+          href = `/${pick.galleryKey}/${pick.img.id}`;
         }
       }
     }
 
+    // d) universal
     if (!href) {
-      // Try synonym resolution
-      const canonical = resolveSynonym(kwLower, semantic);
-      if (canonical) {
-        const resolved = getSectionForKW(canonical, semantic);
-        if (resolved) {
-          if (resolved.type === "landing" && resolved.section.path) {
-            href = resolved.section.path;
-          }
-          else if (resolved.type === "image" && resolved.section.path) {
-            if (linkableImages.length > 0) {
-              const entry = linkableImages.find(({ galleryPath }) =>
-                galleryPath && galleryPath.startsWith(resolved.section.path)
-              );
-              if (entry) {
-                href = `${entry.galleryPath}/${entry.img.id}`;
+      const res = getSectionForKW(lc, semantic);
+      if (res && res.type === 'universal') {
+        let pool = allImages.filter(img => !exclude.has(img.id));
+        if (!pool.length) pool = allImages;
+        const pick = pool[Math.floor(Math.random() * pool.length)];
+        const sec = pick.galleries?.[0] || sectionPath.replace(/^\//, '');
+        href = `/${sec}/${pick.id}`;
+      }
+    }
+
+    // e) synonym fallback as image (same multi-section logic)
+    if (!href) {
+      const syn = resolveSynonym(lc, semantic);
+      if (syn) {
+        // try landing
+        const res2 = getSectionForKW(syn, semantic);
+        if (res2 && res2.type === 'landing') {
+          href = res2.section.path;
+        }
+
+        // try image
+        if (!href) {
+          const imgSecs2 = getAllImageSectionsForKW(syn, semantic);
+          if (imgSecs2.length) {
+            let poolEntries2: { img: any; galleryKey: string }[] = [];
+            imgSecs2.forEach(sec => {
+              const kids = sectionGalleries[sec] || [];
+              if (kids.length) {
+                poolEntries2.push(
+                  ...kids.flatMap(key =>
+                    (galleryDataMap[key] || []).map(img => ({ img, galleryKey: key }))
+                  )
+                );
+              } else {
+                const matchPath = sec + '/';
+                poolEntries2.push(
+                  ...allImages
+                    .filter(img => img.src.includes(matchPath))
+                    .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
+                );
               }
-            }
-          }
-          else if (resolved.type === "universal") {
-            if (linkableImages.length > 0) {
-              const entry = linkableImages[0];
-              href = `${entry.galleryPath}/${entry.img.id}`;
+            });
+            const filtered2 = poolEntries2.filter(e => !exclude.has(e.img.id));
+            if (filtered2.length) poolEntries2 = filtered2;
+            if (poolEntries2.length) {
+              const pick2 = poolEntries2[Math.floor(Math.random() * poolEntries2.length)];
+              href = `/${pick2.galleryKey}/${pick2.img.id}`;
             }
           }
         }
       }
     }
 
-    // Forced dummy link fallback
-    if (!href) {
-      href = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/i-forced";
-      console.log(`[KW][FORCED LINK] ${keyword} → ${href}`);
-    }
+    if (!href) continue;
 
-    // Insert the link
-    output = output.slice(0, index) +
-      `<a href="${href}" class="kw-link">${keyword}</a>` +
-      output.slice(index + keyword.length);
+    output =
+      output.slice(0, index) +
+      `<a href="${href}" class="kw-link">${kw}</a>` +
+      output.slice(index + kw.length);
 
-    alreadyLinked.add(kwLower);
+    linked.add(lc);
   }
 
   return output;

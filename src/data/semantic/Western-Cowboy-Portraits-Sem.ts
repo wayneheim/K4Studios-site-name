@@ -3,7 +3,7 @@ export const semantic = {
     "cowboy art", "western photography", "western art prints", "cowboy art prints",
     "black and white cowboy art", "western wall art", "western décor",
     "painterly cowboy art", "gold rush art", "rustic wall art", "frontier photography",
-    "engrained series", "facing history", "american frontier", "fine art western photography"
+    "engrained series", "Each piece is printed", "american frontier", "fine art western photography"
   ],
   synonymMap: {
     "western wall art": [

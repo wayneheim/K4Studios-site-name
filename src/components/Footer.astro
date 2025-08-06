@@ -1,8 +1,9 @@
 ---
 const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
+import ShareDrawer from '@/components/ShareDrawer.jsx';
 
-const { previewImages, previewPath } = Astro.props;
+const { previewImages = [], previewPath = "", title = "" } = Astro.props;
 
 // Get actual runtime URL
 const currentPath = Astro.url.pathname;
@@ -12,9 +13,12 @@ const isImagePage = /\/i-[a-zA-Z0-9]+$/.test(currentPath);
 
 // ✅ Only show strip if preview data exists AND we are NOT on an /i-xxxxx page
 const showPreviewBar =
-  previewImages?.length > 0 &&
+  previewImages.length > 0 &&
   previewPath &&
   !isImagePage;
+
+// fallback share image if previewImages[0] is undefined
+const shareImage = previewImages?.[0]?.src || undefined;
 ---
 
 <footer
@@ -36,6 +40,17 @@ const showPreviewBar =
   )}
 
   <div class="mx-auto max-w-xl px-4 pt-8 pb-6">
+
+    <!-- 🔗 Share Drawer (with fallback) -->
+    <div class="pb-4">
+      <ShareDrawer
+        client:load
+        imageUrl={shareImage}
+        pageTitle={title}
+      />
+    </div>
+
+    <!-- 🌐 Social Icons -->
     <div class="flex justify-center gap-5 mb-3 opacity-40">
       <a href="https://www.facebook.com/wayne.heim" target="_blank" rel="noopener noreferrer">
         <img class="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" itemprop="sameAs" />
@@ -57,19 +72,19 @@ const showPreviewBar =
       </a>
     </div>
 
+    <!-- 🄯 Copyright -->
     <div class="text-xs text-[#2c2c2c] opacity-70" itemprop="name">
-  <time datetime={currentYear}>© {currentYear}</time> Wayne Heim / <em>
-    <a
-      href="/"
-      rel="noopener noreferrer"
-      className="underline hover:no-underline"
-      title="Home"
-    >
-      K4 Studios
-    </a> /
-  </em> All rights reserved.
-</div>
-
+      <time datetime={currentYear}>© {currentYear}</time> Wayne Heim / <em>
+        <a
+          href="/"
+          rel="noopener noreferrer"
+          class="underline hover:no-underline"
+          title="Home"
+        >
+          K4 Studios
+        </a> /
+      </em> All rights reserved.
+    </div>
   </div>
 
   <style>

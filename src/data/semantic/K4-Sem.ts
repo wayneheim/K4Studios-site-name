@@ -62,7 +62,6 @@ export const semantic = {
       { phrase: "19th-century photography", rating: 3, use: true },
       { phrase: "historic reenactor prints", rating: 3, use: true },
       { phrase: "civil war paintings", rating: 3, use: true },
-      { phrase: "civil war prints", rating: 3, use: true },
       { phrase: "traditional reenactment photography collection", rating: 3, use: true },
       { phrase: "legacy portraits for collectors", rating: 3, use: true },
       
@@ -70,7 +69,7 @@ export const semantic = {
   },
 
  wwii: {
-    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII-Portraits",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII",
     landingPhrases: [
       { phrase: "WWII Portraits", rating: 5, use: true },
       { phrase: "Discover WWII Photography", rating: 5, use: true },
@@ -79,17 +78,6 @@ export const semantic = {
       { phrase: "wartime photography", rating: 4, use: true },
       
     ],
-    imagePhrases: [
-      { phrase: "wwii photography", rating: 5, use: true },
-      { phrase: "wwii fine art", rating: 4, use: true },
-      { phrase: "greatest generation photos", rating: 4, use: true },
-      { phrase: "world war ii art", rating: 3, use: true },
-      { phrase: "wartime prints", rating: 3, use: true },
-      { phrase: "wwii war room wall art", rating: 3, use: true },
-      { phrase: "understanding of the era", rating: 3, use: true },
-      
-      
-    ]
   },
 
 wwiiPortraits: {
@@ -123,7 +111,7 @@ wwiiArtOfWar: {
     
   ],
   imagePhrases: [
-    { phrase: "war zone photography", rating: 4, use: true },
+    { phrase: "war zone photography", rating: 5, use: true },
     { phrase: "battlefield moments", rating: 4, use: true },
     { phrase: "WWII action art", rating: 3, use: true },
     { phrase: "wwii artistic documentary", rating: 3, use: true },
@@ -146,8 +134,8 @@ wwiiMenAndMachines: {
     { phrase: "mechanical war art", rating: 3, use: true },
     { phrase: "battle-ready machines", rating: 3, use: true },
     { phrase: "military machinery prints", rating: 2, use: true },
-    { phrase: " history's greatest conflicts", rating: 2, use: true },
-    { phrase: "tense moments before battle", rating: 2, use: true },
+    { phrase: "history's greatest conflicts", rating: 2, use: true },
+
   ],
 },
 
@@ -194,11 +182,13 @@ wwiiMenAndMachines: {
   landscapeIntPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International",
     landingPhrases: [
+      { phrase: "natural grain", rating: 5, use: true },
       { phrase: "International Painterly Landscapes", rating: 5, use: true },
       { phrase: "european landscape art", rating: 4, use: true },
       { phrase: "world landscapes fine art", rating: 3, use: true }
     ],
     imagePhrases: [
+      { phrase: "International – Across Borders", rating: 4, use: true },
       { phrase: "fantastic places", rating: 4, use: true },
       { phrase: "international landscape photography", rating: 5, use: true },
       { phrase: "painterly european landscapes", rating: 4, use: true }
@@ -215,6 +205,7 @@ wwiiMenAndMachines: {
       { phrase: "rocky mountain painterly art", rating: 4, use: true }
     ]
   },
+  
   landscapeMidwestPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest",
     landingPhrases: [
@@ -229,11 +220,13 @@ wwiiMenAndMachines: {
   landscapeNortheastPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast",
     landingPhrases: [
+
       { phrase: "Northeast Painterly Landscapes", rating: 5, use: true },
       { phrase: "new england landscape art", rating: 4, use: true }
     ],
     imagePhrases: [
-      { phrase: "northeast landscape photography", rating: 5, use: true },
+      { phrase: "The Northeast", rating: 5, use: true },
+      { phrase: "see beauty in simplicity", rating: 5, use: true },
       { phrase: "autumn in new england", rating: 4, use: true }
     ]
   },
@@ -386,21 +379,7 @@ wwiiMenAndMachines: {
      
       { phrase: "fine art landscape prints for collectors", rating: 3, use: true }
     ],
-    imagePhrases: [
-      { phrase: "fine art landscape photography", rating: 5, use: true },
-      { phrase: "painterly landscape photography", rating: 5, use: true },
-      { phrase: "painterly mountain photography for cabins", rating: 4, use: true },
-      { phrase: "canadian rockies photography prints", rating: 3, use: true },
-      { phrase: "timeless waterfall prints for rustic decor", rating: 3, use: true },
-      { phrase: "international landscape photography wall art", rating: 3, use: true },
-      { phrase: "timeless painterly landscape photography", rating: 3, use: true },
-      { phrase: "Western Mountains", rating: 3, use: true },
-      { phrase: "painterly landscapes", rating: 3, use: true },
-      { phrase: "western landscape photography", rating: 4, use: true },
-      { phrase: "american west art", rating: 3, use: true },
-      { phrase: "rugged landscape", rating: 3, use: true },
-      { phrase: "timeless landscape photo", rating: 3, use: true }
-    ]
+
   },
 
   // --- TRANSPORTATION, UNIVERSAL, SYNONYMS (UNCHANGED, CAN EXPAND) ---
@@ -447,13 +426,6 @@ painterly: {
     { phrase: "painterly style wall art", rating: 4, use: true },
     { phrase: "painterly gallery", rating: 4, use: true }
   ],
-  imagePhrases: [
-    { phrase: "fine art painterly photograph", rating: 5, use: true },
-    { phrase: "painterly photo", rating: 4, use: true },
-    { phrase: "artistic painterly prints", rating: 4, use: true },
-    { phrase: "painterly fine art", rating: 4, use: true },
-    { phrase: "painterly landscape image", rating: 3, use: true }
-  ]
 },
 
 // --- TRADITIONAL FINE ART: MAIN LANDING ---
@@ -466,12 +438,7 @@ fineart: {
     { phrase: "classic fine art photos", rating: 4, use: true },
     { phrase: "timeless fine art", rating: 4, use: true }
   ],
-  imagePhrases: [
-    { phrase: "fine art photo", rating: 5, use: true },
-    { phrase: "classic fine art image", rating: 4, use: true },
-    { phrase: "traditional photography", rating: 4, use: true },
-    { phrase: "gallery quality fine art", rating: 4, use: true }
-  ]
+
 },
 
 

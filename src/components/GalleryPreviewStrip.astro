@@ -13,6 +13,9 @@ interface Props {
 
 const { images, path, limit = 6 } = Astro.props;
 
+// ensure we point at the actual gallery folder ending in /Gallery
+const galleryBase = path.endsWith('/Gallery') ? path : `${path}/Gallery`;
+
 function shuffle<T>(arr: T[]): T[] {
   return arr
     .map(value => ({ value, sort: Math.random() }))
@@ -41,7 +44,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       const direction = offset === 0 ? "center" : offset < 0 ? "left" : "right";
       return (
         <a
-          href={`${path}/${img.id}`}
+          href={`${galleryBase}/${img.id}`}
           class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}

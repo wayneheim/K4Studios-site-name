@@ -4,7 +4,7 @@ export const engrainedStory = [
     title: "Engrained by Wayne Heim – Custom Wood Prints of Painterly Western Art, WWII & Historic Scenes",
     subhead: "Fine Art Printed on Nature’s Canvas – Unique, Handcrafted, and Unforgettable.",
     paragraphs: [
-      `Welcome to <strong>Engrained</strong>, a distinctive collection from K4 Studios that transforms painterly fine art photography into custom wood prints. Each piece is printed on hand-selected ½-inch <a href="/Other/Print-Options/Prints-on-Wood">Baltic Birch wood panels</a>, where the natural grain becomes part of the composition. <strong>Wayne Heim’s work employs a custom 5-layer printing technique that fuses each image into the wood itself</strong>, creating a visual and tactile dialogue between image and material.`,
+      `Welcome to <strong>Engrained</strong>, a distinctive collection from K4 Studios that transforms painterly fine art photography into custom wood prints. Each piece is printed on hand-selected ½-inch Baltic Birch wood panels, where the natural grain becomes part of the composition. <strong>Wayne Heim’s work employs a custom 5-layer printing technique that fuses each image into the wood itself</strong>, creating a visual and tactile dialogue between image and material.`,
     ]
   },
 
@@ -15,7 +15,7 @@ export const engrainedStory = [
       `Painterly photography is more than a visual—it’s a story told through light, shadow, and intention. Wayne’s fine art photography evokes emotion and memory, guiding the viewer with subtle nuance and timeless character.`,
     ],
     list: [
-      `Timeless storytelling through <a href="/Galleries/Painterly-Fine-Art-Photography">fine art photography</a> — every piece crafted to evoke emotion and connection.`,
+      `Timeless storytelling through fine art photography — every piece crafted to evoke emotion and connection.`,
       `Selective white layer control — Engrained’s 5-layer printing process merges image and wood grain for enhanced texture and depth.`,
     ]
   },
@@ -52,7 +52,7 @@ export const engrainedStory = [
   {
     subhead: "The Craftsmanship Behind Engrained – The 5-Layer Process",
     paragraphs: [
-      `This isn’t mass production. <strong>Wayne Heim’s 5-layer UV process</strong> carefully balances ink and transparency to create visual harmony. Unlike conventional wood prints that flatten or overpower with white ink, this method invites the wood into the story. White is added or withheld where needed, letting the <strong>natural grain participate</strong> in the final piece.`,
+      `This isn’t mass production. <strong>Wayne Heim’s 5-layer UV process</strong> carefully balances ink and transparency to create visual harmony. Unlike conventional wood prints that flatten or overpower with white ink, this method invites the wood into the story. White is added or withheld where needed, letting the natural grain participate in the final piece.`,
     ]
   },
 
@@ -60,11 +60,11 @@ export const engrainedStory = [
   {
     subhead: "What Art Is Featured in the Engrained Series?",
     list: [
-      `<strong>Wild West Inspired Photography:</strong> Iconic Western moments filled with grit, dust, and drama. See more in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits collection</a>.`,
+      `<strong>Wild West Inspired Photography:</strong> Iconic Western moments filled with grit, dust, and drama. See more in the Western Cowboy Portraits collection.`,
       `<strong>Cowboy Art Prints:</strong> Studio-style and environmental portraits that elevate Americana into art.`,
-      `<strong>Vintage Western Artwork:</strong> Nostalgic, painterly scenes — from Civil War heroes to weathered terrain. Visit the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits">Civil War series</a>.`,
-      `<strong>WWII-Inspired Art:</strong> Evocative moments of wartime courage and camaraderie. See the full <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">Facing History series</a>.`,
-      `<strong>Dramatic Landscapes:</strong> Painterly mountain vistas and windswept plains where the grain amplifies texture and emotion. Visit the <a href="/Galleries/Fine-Art-Photography/Landscapes">Landscapes gallery</a>.`,
+      `<strong>Vintage Western Artwork:</strong> Nostalgic, painterly scenes — from Civil War heroes to weathered terrain. Visit the Civil War series.`,
+      `<strong>WWII-Inspired Art:</strong> Evocative moments of wartime courage and camaraderie. See the full Facing History series.`,
+      `<strong>Dramatic Landscapes:</strong> Painterly mountain vistas and windswept plains where the grain amplifies texture and emotion. Visit the Landscapes gallery.`,
     ]
   },
 
@@ -81,7 +81,7 @@ export const engrainedStory = [
   {
     subhead: "Browse the Collection",
     paragraphs: [
-      `Explore the full <a href="/Other/K4-Select-Series/Engrained">Engrained wood print gallery</a> to find artwork that resonates. Each print merges craft, story, and material in a way that brings history to life — and into your space.`,
+      `Explore the full Engrained wood print gallery to find artwork that resonates. Each print merges craft, story, and material in a way that brings history to life — and into your space.`,
     ]
   }
 ];
