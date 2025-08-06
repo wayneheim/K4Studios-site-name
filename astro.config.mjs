@@ -17,6 +17,9 @@ export default defineConfig({
         '@styles': path.resolve('./src/styles'),
       }
     },
+    ssr: {
+      external: ['nodemailer'], // 👈 This tells Vite not to bundle nodemailer
+    },
     server: {
       host: true,
       port: 4321,
