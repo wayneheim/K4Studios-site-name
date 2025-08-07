@@ -7,7 +7,6 @@ export default function LikeButton({ imageId, pageTitle }) {
 
   useEffect(() => {
     setHasMounted(true);
-
     try {
       const likedImages = JSON.parse(localStorage.getItem("k4-liked-images") || "[]");
       if (likedImages.includes(imageId)) {
@@ -17,31 +16,38 @@ export default function LikeButton({ imageId, pageTitle }) {
     } catch {}
   }, [imageId]);
 
-  useEffect(() => {
-    if (!hasMounted) return;
+  const toggleLike = () => {
+    const newLiked = !liked;
+    setLiked(newLiked);
 
-    const handleBeforeUnload = () => {
-      if (liked && !initiallyLiked) {
-        try {
-          const likedImages = JSON.parse(localStorage.getItem("k4-liked-images") || "[]");
-          likedImages.push(imageId);
-          localStorage.setItem("k4-liked-images", JSON.stringify([...new Set(likedImages)]));
-        } catch {}
+    try {
+      const likedImages = JSON.parse(localStorage.getItem("k4-liked-images") || "[]");
+      let updatedImages;
 
-        navigator.sendBeacon?.("/.netlify/functions/image-like", JSON.stringify({
+      if (newLiked) {
+        updatedImages = [...new Set([...likedImages, imageId])];
+      } else {
+        updatedImages = likedImages.filter((id) => id !== imageId);
+      }
+
+      localStorage.setItem("k4-liked-images", JSON.stringify(updatedImages));
+    } catch (e) {
+      console.error("Error updating localStorage", e);
+    }
+
+    if (newLiked && !initiallyLiked) {
+      fetch("/.netlify/functions/image-like", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           imageId,
           page: window.location.pathname,
           title: pageTitle || document.title,
           timestamp: Date.now(),
-        }));
-      }
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
-  }, [hasMounted, liked, initiallyLiked, imageId, pageTitle]);
-
-  const toggleLike = () => setLiked((prev) => !prev);
+        }),
+      }).catch((err) => console.error("Like send error:", err));
+    }
+  };
 
   return (
     <button
