@@ -27,10 +27,7 @@ export async function handler(event) {
     AIRTABLE_BASE_ID,
   } = process.env;
 
-  // Timestamp for Airtable (ISO) and Email (friendly)
-  const now = new Date(timestamp || Date.now());
-  const isoTime = now.toISOString(); // for Airtable
-  const likeTime = now.toLocaleString('en-US', {
+  const likeTime = new Date(timestamp || Date.now()).toLocaleString('en-US', {
     timeZone: 'America/New_York',
     hour: 'numeric',
     minute: '2-digit',
@@ -41,7 +38,7 @@ export async function handler(event) {
     day: 'numeric',
   });
 
-  // Airtable Logging
+  // 📝 Airtable Logging
   const airtableRes = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Likes`, {
     method: 'POST',
     headers: {
@@ -53,16 +50,19 @@ export async function handler(event) {
         imageID: imageId,
         title: title || 'Untitled',
         Page: page,
-        timestamp: isoTime, // using ISO format
+        timestamp: likeTime,
       },
     }),
   });
 
+  const airtableResponseText = await airtableRes.text();
+  console.log('Airtable response:', airtableResponseText);
+
   if (!airtableRes.ok) {
-    console.error('Airtable logging error:', await airtableRes.text());
+    console.error('Airtable logging error:', airtableResponseText);
   }
 
-  // Email Notification
+  // 📧 Email Notification
   if (!NOTIFY_EMAIL || !NOTIFY_EMAIL_PASS) {
     console.error('Missing NOTIFY_EMAIL or NOTIFY_EMAIL_PASS in environment.');
     return {
