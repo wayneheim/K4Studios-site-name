@@ -1,6 +1,6 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-exports.handler = async (event) => {
+export async function handler(event, context) {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -8,17 +8,7 @@ exports.handler = async (event) => {
     };
   }
 
-  let body;
-  try {
-    body = JSON.parse(event.body);
-  } catch (err) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'Invalid JSON' }),
-    };
-  }
-
-  const { platform, page, title } = body;
+  const { platform, page, title } = JSON.parse(event.body || '{}');
 
   if (!platform || !page) {
     return {
@@ -37,8 +27,8 @@ exports.handler = async (event) => {
     });
 
     await transporter.sendMail({
-      from: `"K4 Share Notification" <${process.env.NOTIFY_EMAIL}>`,
-      to: process.env.NOTIFY_EMAIL,
+      from: `"${process.env.NOTIFY_FROM || 'K4 Share Notification'}" <${process.env.NOTIFY_EMAIL}>`,
+      to: process.env.NOTIFY_TO || process.env.NOTIFY_EMAIL,
       subject: `K4 Share Notification - ${platform}`,
       text: `🔔 A share was triggered from K4 Studios!\n\nPlatform: ${platform}\nTitle: ${title || 'Untitled'}\nPage: ${page}`,
     });
@@ -48,10 +38,10 @@ exports.handler = async (event) => {
       body: JSON.stringify({ success: true }),
     };
   } catch (err) {
-    console.error('Share notify error:', err);
+    console.error('Full error:', err);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Failed to send notification' }),
     };
   }
-};
+}
