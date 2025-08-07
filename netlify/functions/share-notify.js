@@ -1,6 +1,8 @@
 import nodemailer from 'nodemailer';
 
 export async function handler(event, context) {
+  console.log('🔔 share-notify function triggered');
+
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -26,22 +28,29 @@ export async function handler(event, context) {
       },
     });
 
-    await transporter.sendMail({
+    const mailOptions = {
       from: `"${process.env.NOTIFY_FROM || 'K4 Share Notification'}" <${process.env.NOTIFY_EMAIL}>`,
       to: process.env.NOTIFY_TO || process.env.NOTIFY_EMAIL,
       subject: `K4 Share Notification - ${platform}`,
       text: `🔔 A share was triggered from K4 Studios!\n\nPlatform: ${platform}\nTitle: ${title || 'Untitled'}\nPage: ${page}`,
-    });
+    };
+
+    await transporter.sendMail(mailOptions);
 
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true }),
     };
   } catch (err) {
-    console.error('Full error:', err);
+    console.error('❌ Mail send failed:', err);
+
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to send notification' }),
+      body: JSON.stringify({
+        error: 'Failed to send notification',
+        message: err.message,
+        stack: err.stack,
+      }),
     };
   }
 }
