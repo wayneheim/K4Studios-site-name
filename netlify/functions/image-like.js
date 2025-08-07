@@ -56,7 +56,7 @@ export async function handler(event) {
       from: `"${NOTIFY_FROM}" <${NOTIFY_EMAIL}>`,
       to: NOTIFY_TO || NOTIFY_EMAIL,
       subject: `❤️ K4 Image Liked – "${title || 'Untitled'}"`,
-      text: `A like was registered on K4 Studios!
+      text: `A ❤️-like was registered on K4 Studios!
 
 Image Title: ${title || 'Untitled'}
 Image ID: ${imageId}
