@@ -1,6 +1,6 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
-export async function handler(event) {
+exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -8,7 +8,17 @@ export async function handler(event) {
     };
   }
 
-  const { platform, page, title } = JSON.parse(event.body || '{}');
+  let body;
+  try {
+    body = JSON.parse(event.body);
+  } catch (err) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'Invalid JSON' }),
+    };
+  }
+
+  const { platform, page, title } = body;
 
   if (!platform || !page) {
     return {
@@ -44,4 +54,4 @@ export async function handler(event) {
       body: JSON.stringify({ error: 'Failed to send notification' }),
     };
   }
-}
+};
