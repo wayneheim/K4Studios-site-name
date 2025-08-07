@@ -33,7 +33,7 @@ export default function LikeButton({ imageId, pageTitle }) {
       console.error("Error updating localStorage:", err);
     }
 
-    // Fire Netlify notification only once per user
+    // Fire Netlify notification only once per  user
     if (newLiked && !initiallyLiked) {
       try {
         const res = await fetch("/.netlify/functions/image-like", {
