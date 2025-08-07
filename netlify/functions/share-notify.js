@@ -1,14 +1,20 @@
 import nodemailer from 'nodemailer';
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+export async function handler(event) {
+  if (event.httpMethod !== 'POST') {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: 'Method not allowed' }),
+    };
   }
 
-  const { platform, page, title } = req.body;
+  const { platform, page, title } = JSON.parse(event.body || '{}');
 
   if (!platform || !page) {
-    return res.status(400).json({ error: 'Missing platform or page URL' });
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'Missing platform or page URL' }),
+    };
   }
 
   try {
@@ -22,14 +28,20 @@ export default async function handler(req, res) {
 
     await transporter.sendMail({
       from: `"K4 Share Notification" <${process.env.NOTIFY_EMAIL}>`,
-      to: process.env.NOTIFY_EMAIL, // sent back to self, triggers Gmail filter
+      to: process.env.NOTIFY_EMAIL,
       subject: `K4 Share Notification - ${platform}`,
       text: `🔔 A share was triggered from K4 Studios!\n\nPlatform: ${platform}\nTitle: ${title || 'Untitled'}\nPage: ${page}`,
     });
 
-    res.status(200).json({ success: true });
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: true }),
+    };
   } catch (err) {
     console.error('Share notify error:', err);
-    res.status(500).json({ error: 'Failed to send notification' });
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed to send notification' }),
+    };
   }
 }
