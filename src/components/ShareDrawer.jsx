@@ -5,6 +5,8 @@ import { Clipboard } from "lucide-react";
 export default function ShareDrawer({ imageUrl, pageTitle }) {
   const [isOpen, setIsOpen] = useState(false);
   const [pageUrl, setPageUrl] = useState("");
+  const [isClipboardHovered, setIsClipboardHovered] = useState(false); // <— NEW
+
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -42,11 +44,12 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
   // Inline styles
   const overlayStyle = {
     position: "fixed",
-    left: "50%",
-    transform: "translateX(-50%)",
+    marginleft: "auto",
+    marginRight: "auto",
+    transform: "translateX(0)",
     bottom: "2.5rem",
     zIndex: 2147483647, // Maximum possible z-index
-    background: "#fffbe6",
+    background: "#ffffffff",
     border: "1.5px solid #85644b",
     borderRadius: "1rem",
     width: "90vw",
@@ -75,19 +78,20 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
   };
 
   const buttonStyle = {
-    background: "#85644b",
-    color: "#fff",
-    width: 40,
-    height: 40,
-    borderRadius: "9999px",
+    background: "#ffffffff",
+    color: "#7a7876ff",
+    width: 110,
+    height: 35,
+    borderRadius: "60px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     boxShadow: "0 2px 8px rgba(44,44,44,0.12)",
     border: "none",
     cursor: "pointer",
-    fontSize: 22,
-    margin: "0 auto",
+    fontSize: 14,
+    fontWeight: "bold",
+    margin: "0",
     transition: "background 0.18s",
     marginBottom: "0.5rem"
   };
@@ -102,7 +106,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
               <motion.div
                 style={backdropStyle}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.18 }}
                 onClick={() => setIsOpen(false)}
@@ -110,25 +114,27 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
               {/* Overlay Panel */}
               <motion.div
                 style={overlayStyle}
-                initial={{ opacity: 0, y: 32 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 32 }}
+                initial={{ opacity: 0, x: -150, y: 0 }}
+                animate={{ opacity: 1, y: -110 }}
+                exit={{ opacity: 0, y: 22 }}
                 transition={{ duration: 0.22, ease: "easeInOut" }}
               >
-                <p style={{ marginBottom: 14, color: "#2c2c2c", fontWeight: "bold" }}>Share your find:</p>
+                <p style={{ marginBottom: 14, color: "#2c2c2c", fontWeight: "bold" }}>Share!</p>
                 <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 28 }}>
                   {/* Copy */}
-                  <button
+                   <button
                     onClick={() => {
                       navigator.clipboard.writeText(pageUrl);
                       alert("Link copied!");
                       notifyShare("Copy");
                     }}
                     title="Copy link"
+                    onMouseEnter={() => setIsClipboardHovered(true)}
+                    onMouseLeave={() => setIsClipboardHovered(false)}
                     style={{
                       background: "white",
                       border: "none",
-                      color: "#85644b",
+                      color: "#635a53ff",
                       cursor: "pointer",
                       display: "flex",
                       flexDirection: "column",
@@ -136,7 +142,10 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
                       gap: 3,
                     }}
                   >
-                    <Clipboard size={iconSize} />
+                    <Clipboard
+                      size={iconSize}
+                      color={isClipboardHovered ? `#${red}` : `#${gray}`}
+                    />
                     <span style={{ fontSize: 13 }}>Copy</span>
                   </button>
                   {/* Twitter */}
@@ -147,7 +156,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
                     title="Twitter"
                     onClick={() => notifyShare("Twitter")}
                     style={{
-                      color: "#1DA1F2",
+                      color: "#635a53ff",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
@@ -174,7 +183,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
                     title="Facebook"
                     onClick={() => notifyShare("Facebook")}
                     style={{
-                      color: "#1877F2",
+                      color: "#635a53ff",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
@@ -201,7 +210,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
                     title="Pinterest"
                     onClick={() => notifyShare("Pinterest")}
                     style={{
-                      color: "#BD081C",
+                      color: "#635a53ff",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
@@ -228,7 +237,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
                     title="Email"
                     onClick={() => notifyShare("Email")}
                     style={{
-                      color: "#2c2c2c",
+                      color: "#635a53ff",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
@@ -251,9 +260,9 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
                 <button
                   onClick={() => setIsOpen(false)}
                   style={{
-                    background: "#f0e9e1",
+                    background: "#eeeae5ff",
                     border: "none",
-                    color: "#85644b",
+                    color: "#9b9590ff",
                     borderRadius: "16px",
                     padding: "0.25rem 1rem",
                     marginTop: 18,
@@ -275,7 +284,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
           title="Share this page"
           style={buttonStyle}
         >
-          🔗
+          🔗 Share
         </button>
       </div>
     </div>
