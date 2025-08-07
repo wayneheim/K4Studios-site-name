@@ -13,39 +13,48 @@ export default function LikeButton({ imageId, pageTitle }) {
         setLiked(true);
         setInitiallyLiked(true);
       }
-    } catch {}
+    } catch (err) {
+      console.error("Failed to parse liked images from localStorage:", err);
+    }
   }, [imageId]);
 
-  const toggleLike = () => {
+  const toggleLike = async () => {
     const newLiked = !liked;
     setLiked(newLiked);
 
     try {
       const likedImages = JSON.parse(localStorage.getItem("k4-liked-images") || "[]");
-      let updatedImages;
-
-      if (newLiked) {
-        updatedImages = [...new Set([...likedImages, imageId])];
-      } else {
-        updatedImages = likedImages.filter((id) => id !== imageId);
-      }
+      const updatedImages = newLiked
+        ? [...new Set([...likedImages, imageId])]
+        : likedImages.filter((id) => id !== imageId);
 
       localStorage.setItem("k4-liked-images", JSON.stringify(updatedImages));
-    } catch (e) {
-      console.error("Error updating localStorage", e);
+    } catch (err) {
+      console.error("Error updating localStorage:", err);
     }
 
+    // Fire Netlify notification only once per user
     if (newLiked && !initiallyLiked) {
-      fetch("/.netlify/functions/image-like", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          imageId,
-          page: window.location.pathname,
-          title: pageTitle || document.title,
-          timestamp: Date.now(),
-        }),
-      }).catch((err) => console.error("Like send error:", err));
+      try {
+        const res = await fetch("/.netlify/functions/image-like", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            imageId,
+            page: window.location.pathname,
+            title: pageTitle || document.title,
+            timestamp: Date.now(),
+          }),
+        });
+
+        if (!res.ok) {
+          console.error("Like notification failed:", await res.text());
+        } else {
+          console.log("Like notification sent!");
+        }
+      } catch (err) {
+        console.error("Like send error:", err);
+      }
     }
   };
 
