@@ -557,3 +557,9 @@ body.react-mounted footer {
     padding-top: 0 !important;
   }
 }
+
+#share-popup {
+  border-radius: 12 !important;
+  background: rgb(255, 255, 255) !important;
+  z-index: 999999 !important;
+}

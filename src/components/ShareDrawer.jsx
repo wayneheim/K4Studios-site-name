@@ -17,11 +17,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
       await fetch("/.netlify/functions/share-notify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          platform,
-          page: pageUrl,
-          title: pageTitle,
-        }),
+        body: JSON.stringify({ platform, page: pageUrl, title: pageTitle }),
       });
     } catch (err) {
       console.error("Share notify error:", err);
@@ -30,146 +26,258 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
 
   const finalTitle = pageTitle || "Check this out from K4 Studios";
   const encodedTitle = encodeURIComponent(finalTitle);
-  const encodedUrl = encodeURIComponent(pageUrl);
-  const shareText = encodeURIComponent(`${finalTitle}\n\n${pageUrl}`);
+  const encodedUrl   = encodeURIComponent(pageUrl);
+  const shareText    = encodeURIComponent(`${finalTitle}\n\n${pageUrl}`);
   const links = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}%20${encodedUrl}`,
+    twitter:  `https://twitter.com/intent/tweet?text=${encodedTitle}%20${encodedUrl}`,
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-    pinterest: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodeURIComponent(imageUrl || "")}&description=${encodedTitle}`,
-    email: `mailto:?subject=${encodedTitle}&body=${shareText}`,
+    pinterest:`https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodeURIComponent(imageUrl||"")}&description=${encodedTitle}`,
+    email:    `mailto:?subject=${encodedTitle}&body=${shareText}`,
   };
 
   const iconSize = 20;
   const gray = "444444";
-  const red = "8B0000";
+  const red  = "8B0000";
+
+  // Inline styles
+  const overlayStyle = {
+    position: "fixed",
+    left: "50%",
+    transform: "translateX(-50%)",
+    bottom: "2.5rem",
+    zIndex: 2147483647, // Maximum possible z-index
+    background: "#fffbe6",
+    border: "1.5px solid #85644b",
+    borderRadius: "1rem",
+    width: "90vw",
+    maxWidth: 420,
+    boxShadow:
+      "0 8px 32px 0 rgba(44,44,44,0.12),0 1.5px 8px 0 rgba(133,100,75,0.12)",
+    padding: "1.25rem 1.5rem",
+    fontFamily: "'Glegoo', serif",
+    textAlign: "center",
+    opacity: 1,
+    pointerEvents: "auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
+
+  const backdropStyle = {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 2147483640,
+    background: "rgba(44,44,44,0.15)",
+    pointerEvents: "auto",
+  };
+
+  const buttonStyle = {
+    background: "#85644b",
+    color: "#fff",
+    width: 40,
+    height: 40,
+    borderRadius: "9999px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    boxShadow: "0 2px 8px rgba(44,44,44,0.12)",
+    border: "none",
+    cursor: "pointer",
+    fontSize: 22,
+    margin: "0 auto",
+    transition: "background 0.18s",
+    marginBottom: "0.5rem"
+  };
 
   return (
-    <div
-      className="relative inline-block text-center font-serif w-max"
-      style={{ fontFamily: "'Glegoo', serif" }}
-    >
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        title="Share this page"
-        className="bg-[#85644b] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-[#a07556] transition-all"
-      >
-        🔗
-      </button>
-
-      <AnimatePresence>
-        {isOpen && pageUrl && (
-          <motion.div
-            className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-[#fffbe6] border border-[#85644b] rounded-xl px-6 py-4 text-sm w-[90vw] max-w-md shadow-lg z-50"
-            style={{ fontFamily: "'Glegoo', serif" }}
-            initial={{ opacity: 0, y: 10, x: -160 }}
-            animate={{ opacity: 1, y: -10 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-          >
-            <p className="mb-3 text-[#2c2c2c] font-bold">Share your find:</p>
-            <div className="flex justify-center items-center gap-6">
-              {/* Copy */}
-              <button
-                onClick={() => {
-                  navigator.clipboard.writeText(pageUrl);
-                  alert("Link copied!");
-                  notifyShare("Copy");
-                }}
-                title="Copy link"
-                className="group flex flex-col items-center gap-1 text-[#85644b] transition-colors"
+    <div style={{ fontFamily: "'Glegoo', serif", textAlign: "center", width: "100%" }}>
+      <div style={{ display: "inline-block" }}>
+        <AnimatePresence>
+          {isOpen && (
+            <>
+              {/* Backdrop */}
+              <motion.div
+                style={backdropStyle}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.18 }}
+                onClick={() => setIsOpen(false)}
+              />
+              {/* Overlay Panel */}
+              <motion.div
+                style={overlayStyle}
+                initial={{ opacity: 0, y: 32 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 32 }}
+                transition={{ duration: 0.22, ease: "easeInOut" }}
               >
-                <Clipboard
-                  size={iconSize}
-                  className="transition-colors group-hover:text-[#8B0000]"
-                />
-                <span className="text-xs transition-colors group-hover:text-[#8B0000]">
-                  Copy
-                </span>
-              </button>
-
-              {/* Twitter */}
-              <a
-                href={links.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Twitter"
-                className="flex flex-col items-center gap-1"
-                onClick={() => notifyShare("Twitter")}
-              >
-                <img
-                  src={`https://cdn.simpleicons.org/X/${gray}`}
-                  alt="Twitter"
-                  width={iconSize}
-                  height={iconSize}
-                  onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/X/${red}`)}
-                  onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/X/${gray}`)}
-                />
-                <span className="text-xs">Twitter</span>
-              </a>
-
-              {/* Facebook */}
-              <a
-                href={links.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Facebook"
-                className="flex flex-col items-center gap-1"
-                onClick={() => notifyShare("Facebook")}
-              >
-                <img
-                  src={`https://cdn.simpleicons.org/facebook/${gray}`}
-                  alt="Facebook"
-                  width={iconSize}
-                  height={iconSize}
-                  onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/facebook/${red}`)}
-                  onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/facebook/${gray}`)}
-                />
-                <span className="text-xs">Facebook</span>
-              </a>
-
-              {/* Pinterest */}
-              <a
-                href={links.pinterest}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Pinterest"
-                className="flex flex-col items-center gap-1"
-                onClick={() => notifyShare("Pinterest")}
-              >
-                <img
-                  src={`https://cdn.simpleicons.org/pinterest/${gray}`}
-                  alt="Pinterest"
-                  width={iconSize}
-                  height={iconSize}
-                  onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/pinterest/${red}`)}
-                  onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/pinterest/${gray}`)}
-                />
-                <span className="text-xs">Pinterest</span>
-              </a>
-
-              {/* Email */}
-              <a
-                href={links.email}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Email"
-                className="flex flex-col items-center gap-1"
-                onClick={() => notifyShare("Email")}
-              >
-                <img
-                  src={`https://cdn.simpleicons.org/gmail/${gray}`}
-                  alt="Email"
-                  width={iconSize}
-                  height={iconSize}
-                  onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/gmail/${red}`)}
-                  onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/gmail/${gray}`)}
-                />
-                <span className="text-xs">Email</span>
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                <p style={{ marginBottom: 14, color: "#2c2c2c", fontWeight: "bold" }}>Share your find:</p>
+                <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 28 }}>
+                  {/* Copy */}
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(pageUrl);
+                      alert("Link copied!");
+                      notifyShare("Copy");
+                    }}
+                    title="Copy link"
+                    style={{
+                      background: "white",
+                      border: "none",
+                      color: "#85644b",
+                      cursor: "pointer",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 3,
+                    }}
+                  >
+                    <Clipboard size={iconSize} />
+                    <span style={{ fontSize: 13 }}>Copy</span>
+                  </button>
+                  {/* Twitter */}
+                  <a
+                    href={links.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Twitter"
+                    onClick={() => notifyShare("Twitter")}
+                    style={{
+                      color: "#1DA1F2",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 3,
+                      textDecoration: "none",
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.simpleicons.org/X/${gray}`}
+                      alt="Twitter"
+                      width={iconSize}
+                      height={iconSize}
+                      onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/X/${red}`)}
+                      onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/X/${gray}`)}
+                      style={{ transition: "filter 0.2s" }}
+                    />
+                    <span style={{ fontSize: 13 }}>Twitter</span>
+                  </a>
+                  {/* Facebook */}
+                  <a
+                    href={links.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Facebook"
+                    onClick={() => notifyShare("Facebook")}
+                    style={{
+                      color: "#1877F2",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 3,
+                      textDecoration: "none",
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.simpleicons.org/facebook/${gray}`}
+                      alt="Facebook"
+                      width={iconSize}
+                      height={iconSize}
+                      onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/facebook/${red}`)}
+                      onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/facebook/${gray}`)}
+                      style={{ transition: "filter 0.2s" }}
+                    />
+                    <span style={{ fontSize: 13 }}>Facebook</span>
+                  </a>
+                  {/* Pinterest */}
+                  <a
+                    href={links.pinterest}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Pinterest"
+                    onClick={() => notifyShare("Pinterest")}
+                    style={{
+                      color: "#BD081C",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 3,
+                      textDecoration: "none",
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.simpleicons.org/pinterest/${gray}`}
+                      alt="Pinterest"
+                      width={iconSize}
+                      height={iconSize}
+                      onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/pinterest/${red}`)}
+                      onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/pinterest/${gray}`)}
+                      style={{ transition: "filter 0.2s" }}
+                    />
+                    <span style={{ fontSize: 13 }}>Pinterest</span>
+                  </a>
+                  {/* Email */}
+                  <a
+                    href={links.email}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Email"
+                    onClick={() => notifyShare("Email")}
+                    style={{
+                      color: "#2c2c2c",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 3,
+                      textDecoration: "none",
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.simpleicons.org/gmail/${gray}`}
+                      alt="Email"
+                      width={iconSize}
+                      height={iconSize}
+                      onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/gmail/${red}`)}
+                      onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/gmail/${gray}`)}
+                      style={{ transition: "filter 0.2s" }}
+                    />
+                    <span style={{ fontSize: 13 }}>Email</span>
+                  </a>
+                </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  style={{
+                    background: "#f0e9e1",
+                    border: "none",
+                    color: "#85644b",
+                    borderRadius: "16px",
+                    padding: "0.25rem 1rem",
+                    marginTop: 18,
+                    fontFamily: "'Glegoo', serif",
+                    fontWeight: 500,
+                    fontSize: 15,
+                    cursor: "pointer",
+                  }}
+                >
+                  Close
+                </button>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
+        {/* Main Button */}
+        <button
+          onClick={() => setIsOpen((o) => !o)}
+          title="Share this page"
+          style={buttonStyle}
+        >
+          🔗
+        </button>
+      </div>
     </div>
   );
 }
