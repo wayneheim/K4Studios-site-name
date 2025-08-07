@@ -6,7 +6,7 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
-import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs";
+import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
 import SwipeHint from "./SwipeHint";
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
@@ -65,7 +65,7 @@ useEffect(() => {
       const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
       if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains";
+  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color";
  const newUrl = `${basePath}/${imageId}`;
   const currentUrl = window.location.pathname;
 
@@ -82,7 +82,7 @@ useEffect(() => {
     const isViewingImageZero = currentIndex === 0;
 
     if (isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
-      const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains";
+      const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color";
       window.history.replaceState(null, "", cleanUrl);
     }
   }, [currentIndex]);
@@ -262,10 +262,10 @@ useEffect(() => {
                   onTouchStart={handleTouchStart}
                   onTouchEnd={handleTouchEnd}
                 >
-{isMobile && (
+                  {isMobile && (
   // 📱 Mobile Branding Link — shows "⸺ K4 Studios ⸺" and links to the parent section landing page
   <div
-    className="text-center text-md text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
+    className="text-center text-2xl text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
     style={{
       fontFamily: "'Glegoo', serif",
       marginTop: "-2.0rem", // ✅ This is the key line
@@ -289,8 +289,6 @@ useEffect(() => {
     </a> ⸺
   </div>
 )}
-
-
 
                   {/* --- IMAGE + ARROWS COLUMN --- */}
                   <div className="flex flex-col -mt-4 items-center w-full relative">
@@ -569,7 +567,7 @@ style={
   style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
   onClick={() =>
     (window.location.href =
-      "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains")
+      "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color")
   }
 >
   <span className="block relative h-[1em]">
@@ -671,7 +669,7 @@ style={
                      className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
   style={{
     fontSize: "1.55rem",
-    opacity: .5,
+     opacity: .5,
     lineHeight: isMobile ? "1.0" : "1.35", // tighter for mobile
     fontFamily: "'Glegoo', serif",
   }}
@@ -685,7 +683,7 @@ style={
   )}
 </h2>
 
-<p className="italic text-base md:text-lg mb-4 leading-snug text-left">
+<p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
   {galleryData[currentIndex].story}
 </p>
 
@@ -835,7 +833,7 @@ style={
 </>
 )}
 </div>
-      <SwipeHint galleryKey="Painterly-Landscapes-Mountains" />
+      <SwipeHint galleryKey="Painterly-Roaring-20s-Color" />
 </div>
 );
 }

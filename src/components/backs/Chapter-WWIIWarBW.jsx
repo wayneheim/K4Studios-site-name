@@ -6,7 +6,7 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
-import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs";
+import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs";
 import SwipeHint from "./SwipeHint";
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
@@ -28,123 +28,106 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-  
-    // 🔄 Trigger chapter entry mode via custom event
-      useEffect(() => {
-        const handleEnterChapters = () => setHasEnteredChapters(true);
-        window.addEventListener("enterChapters", handleEnterChapters);
-        return () => window.removeEventListener("enterChapters", handleEnterChapters);
-      }, []);
-    
-    // 🔍 Initial load: parse URL or use fallback — safe for static builds
-useEffect(() => {
-  if (!galleryData || galleryData.length === 0) return;
-
-  const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-  const idFromURL = match ? match[1] : initialImageId;
-
-  if (idFromURL) {
-    const index = galleryData.findIndex((entry) => entry.id === idFromURL);
-    if (index !== -1) {
-      setCurrentIndex(index);
-    }
-  }
-}, [galleryData]);
-    
-      // 🟢 Auto-enter chapters if directly loading an image page
+  // 🔄 Trigger chapter entry mode via custom event
     useEffect(() => {
-  const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-  if (match && match[1] !== "i-k4studios") {
-    setHasEnteredChapters(true);
-  }
-}, []);
-    
-      // 🔗 Update URL when navigating *after* entering chapters
-useEffect(() => {
-  const imageId = galleryData[currentIndex]?.id;
-  const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
-  const isGhost = imageId === "i-k4studios" || window.location.pathname.includes("i-k4studios");
-
-  if (!imageId || isGhost || (!hasEnteredChapters && !alreadyOnImage)) return;
-
-  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery";
-  const newUrl = `${basePath}/${imageId}`;
-  const currentUrl = window.location.pathname;
-
-  if (currentUrl !== newUrl) {
-    window.history.pushState(null, "", newUrl);
-  }
-}, [currentIndex, hasEnteredChapters]);
-
-
-
-  // 🧼 Clean up stray ID in URL if landing intro is showing
-  useEffect(() => {
-    const introEl = document.getElementById("intro-section");
-    const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
-    const isViewingImageZero = currentIndex === 0;
-
-    if (
-  isIntroVisible &&
-  isViewingImageZero &&
-  window.location.pathname.includes("/i-") &&
-  !window.location.pathname.includes("i-k4studios")
-) {
-  const cleanUrl = "...";
-  window.history.replaceState(null, "", cleanUrl);
-}
-
-  }, [currentIndex]);
-
-  // ⬅️⬆️ Browser back/forward handler
-  useEffect(() => {
-    const handlePopState = () => {
+      const handleEnterChapters = () => setHasEnteredChapters(true);
+      window.addEventListener("enterChapters", handleEnterChapters);
+      return () => window.removeEventListener("enterChapters", handleEnterChapters);
+    }, []);
+  
+    // 🔍 Initial load: parse URL or use fallback
+    useEffect(() => {
       const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
-      const id = match ? match[1] : null;
-
-      const header = document.getElementById("header-section");
-      const intro = document.getElementById("intro-section");
-      const chapter = document.getElementById("chapter-section");
-
-      if (id && id !== "i-k4studios") {
-  const index = galleryData.findIndex((entry) => entry.id === id);
-  if (index !== -1) {
-    setCurrentIndex(index);
-    if (header) header.classList.add("section-hidden");
-          if (intro) intro.classList.add("section-hidden");
-          if (chapter) {
-            chapter.style.display = "block";
-            chapter.classList.remove("section-hidden");
-            chapter.classList.add("section-visible");
-          }
-          return;
-        }
-      }
-
-      // No image ID = return to intro
-      if (chapter) {
-        chapter.style.display = "none";
-        chapter.classList.add("section-hidden");
-        chapter.classList.remove("section-visible");
-      }
-      if (header) {
-        header.classList.remove("section-hidden", "slide-fade-out");
-      }
-      if (intro) {
-        intro.classList.remove("section-hidden", "slide-fade-out");
-      }
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
-
-  // 📱 Device + UX handling (no change)
+      const id = match ? match[1] : initialImageId;
+      const index = galleryData.findIndex((entry) => entry.id === id);
+      setCurrentIndex(index !== -1 ? index : 0);
+    }, []);
+  
+    // 🟢 Auto-enter chapters if directly loading an image page
   useEffect(() => {
-    document.body.classList.add("react-mounted");
+    if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
+      setHasEnteredChapters(true);
+    }
   }, []);
+  
+    // 🔗 Update URL when navigating *after* entering chapters
+  useEffect(() => {
+    // Only run if hasEnteredChapters is true OR we're already on an /i-xxx page
+    const imageId = galleryData[currentIndex]?.id;
+    const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
+    if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-// ← / → arrow key navigation (ignore when typing in inputs or with modifier keys)
+  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White";
+  const newUrl = `${basePath}/${imageId}`;
+   const currentUrl = window.location.pathname;
+ 
+   if (currentUrl !== newUrl) {
+     window.history.pushState(null, "", newUrl);
+   }
+ }, [currentIndex, hasEnteredChapters]);
+ 
+ 
+   // 🧼 Clean up stray ID in URL if landing intro is showing
+   useEffect(() => {
+     const introEl = document.getElementById("intro-section");
+     const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
+     const isViewingImageZero = currentIndex === 0;
+ 
+     if (isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
+       const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White";
+       window.history.replaceState(null, "", cleanUrl);
+     }
+   }, [currentIndex]);
+ 
+   // ⬅️⬆️ Browser back/forward handler
+   useEffect(() => {
+     const handlePopState = () => {
+       const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
+       const id = match ? match[1] : null;
+ 
+       const header = document.getElementById("header-section");
+       const intro = document.getElementById("intro-section");
+       const chapter = document.getElementById("chapter-section");
+ 
+       if (id) {
+         const index = galleryData.findIndex((entry) => entry.id === id);
+         if (index !== -1) {
+           setCurrentIndex(index);
+           if (header) header.classList.add("section-hidden");
+           if (intro) intro.classList.add("section-hidden");
+           if (chapter) {
+             chapter.style.display = "block";
+             chapter.classList.remove("section-hidden");
+             chapter.classList.add("section-visible");
+           }
+           return;
+         }
+       }
+ 
+       // No image ID = return to intro
+       if (chapter) {
+         chapter.style.display = "none";
+         chapter.classList.add("section-hidden");
+         chapter.classList.remove("section-visible");
+       }
+       if (header) {
+         header.classList.remove("section-hidden", "slide-fade-out");
+       }
+       if (intro) {
+         intro.classList.remove("section-hidden", "slide-fade-out");
+       }
+     };
+ 
+     window.addEventListener("popstate", handlePopState);
+     return () => window.removeEventListener("popstate", handlePopState);
+   }, []);
+ 
+   // 📱 Device + UX handling (no change)
+   useEffect(() => {
+     document.body.classList.add("react-mounted");
+   }, []);
+
+   // ← / → arrow key navigation (ignore when typing in inputs or with modifier keys)
 useEffect(() => {
   const onKeyDown = (e) => {
     if (
@@ -172,53 +155,42 @@ useEffect(() => {
   return () => window.removeEventListener("keydown", onKeyDown);
 }, [galleryData.length, viewMode, isZoomed]);
 
-
-  useEffect(() => {
-    const updateOrientation = () => {
-      setIsLandscapeMobile(window.innerWidth < 900 && window.innerWidth > window.innerHeight);
-    };
-    updateOrientation();
-    window.addEventListener("resize", updateOrientation);
-    window.addEventListener("orientationchange", updateOrientation);
-    return () => {
-      window.removeEventListener("resize", updateOrientation);
-      window.removeEventListener("orientationchange", updateOrientation);
-    };
-  }, []);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  useEffect(() => {
-    if (!showArrows) return;
-    const timeout = setTimeout(() => setShowArrows(false), 4000);
-    return () => clearTimeout(timeout);
-  }, [showArrows]);
-
-  useEffect(() => {
-    if (!localStorage.getItem("scrollFlipIntroSeen")) {
-      setShowArrowHint(true);
-      setTimeout(() => {
-        setShowArrowHint(false);
-        localStorage.setItem("scrollFlipIntroSeen", "true");
-      }, 3000);
-    }
-  }, []);
-
-  useEffect(() => {
-  const path = window.location.pathname;
-  const isGhost = initialImageId === "i-k4studios" || path.endsWith("/i-k4studios");
-
-  const header = document.getElementById("header-section");
-  if (isGhost && header) {
-    header.classList.remove("section-hidden");
-    header.classList.add("section-visible");
-  }
-}, []);
+ 
+   useEffect(() => {
+     const updateOrientation = () => {
+       setIsLandscapeMobile(window.innerWidth < 900 && window.innerWidth > window.innerHeight);
+     };
+     updateOrientation();
+     window.addEventListener("resize", updateOrientation);
+     window.addEventListener("orientationchange", updateOrientation);
+     return () => {
+       window.removeEventListener("resize", updateOrientation);
+       window.removeEventListener("orientationchange", updateOrientation);
+     };
+   }, []);
+ 
+   useEffect(() => {
+     const checkMobile = () => setIsMobile(window.innerWidth < 768);
+     checkMobile();
+     window.addEventListener("resize", checkMobile);
+     return () => window.removeEventListener("resize", checkMobile);
+   }, []);
+ 
+   useEffect(() => {
+     if (!showArrows) return;
+     const timeout = setTimeout(() => setShowArrows(false), 4000);
+     return () => clearTimeout(timeout);
+   }, [showArrows]);
+ 
+   useEffect(() => {
+     if (!localStorage.getItem("scrollFlipIntroSeen")) {
+       setShowArrowHint(true);
+       setTimeout(() => {
+         setShowArrowHint(false);
+         localStorage.setItem("scrollFlipIntroSeen", "true");
+       }, 3000);
+     }
+   }, []);
 
   // 👆 Touch navigation
   const handleTouchStart = (e) => {
@@ -251,7 +223,6 @@ useEffect(() => {
 
     
     <div
-    
       className="min-h- bg-white text-black font-serif px-5 py-8 overflow-hidden"
       style={{ fontFamily: 'Glegoo, serif' }}
        onMouseMove={() => setShowArrows(true)}
@@ -284,7 +255,7 @@ useEffect(() => {
                   onTouchEnd={handleTouchEnd}
                 >
 
-{isMobile && (
+                  {isMobile && (
   // 📱 Mobile Branding Link — shows "⸺ K4 Studios ⸺" and links to the parent section landing page
   <div
     className="text-center text-2xl text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
@@ -337,7 +308,6 @@ useEffect(() => {
 >
   ❮
 </button>
-
 
                       <div className="relative w-full md:w-[340px] flex flex-row">
   {/* Image */}
@@ -582,7 +552,7 @@ style={
                       >
                         <ShoppingCart className="w-4 h-4" />
                       </a>
-                     {/* CLOSE (— to Exit on hover) */}
+                                           {/* CLOSE (— to Exit on hover) */}
 <button
   className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded shadow-sm transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-500 focus:text-gray-900 focus:border-gray-500"
   aria-label="Exit Chapter View"
@@ -590,7 +560,7 @@ style={
   style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
   onClick={() =>
     (window.location.href =
-      "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery")
+      "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White")
   }
 >
   <span className="block relative h-[1em]">
@@ -757,11 +727,7 @@ style={
               aria-labelledby={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
               aria-label="More information about this image"
             >
-              <div
-  className="pb-2"
-  dangerouslySetInnerHTML={{ __html: galleryData[currentIndex].description }}
-/>
-
+              <p className="pb-2">{galleryData[currentIndex].description}</p>
             </motion.div>
           ) : (
             <motion.div
@@ -790,11 +756,7 @@ style={
               aria-labelledby={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
               aria-label="More information about this image"
             >
-              <div
-  className="pb-2"
-  dangerouslySetInnerHTML={{ __html: galleryData[currentIndex].description }}
-/>
-
+              <p className="pb-2">{galleryData[currentIndex].description}</p>
             </motion.div>
           )
         )}
@@ -864,7 +826,7 @@ style={
 </>
 )}
 </div>
-      <SwipeHint galleryKey="Painterly-Landscapes-West" />
+      <SwipeHint galleryKey="Painterly-WWIIWar-Black-White" />
 </div>
 );
 }
