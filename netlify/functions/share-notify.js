@@ -1,8 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export async function handler(event, context) {
-  console.log('🔔 share-notify function triggered');
-
+export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -19,38 +17,50 @@ export async function handler(event, context) {
     };
   }
 
+  const {
+    NOTIFY_EMAIL,
+    NOTIFY_EMAIL_PASS,
+    NOTIFY_TO,
+    NOTIFY_FROM = 'K4 Share Notification'
+  } = process.env;
+
+  if (!NOTIFY_EMAIL || !NOTIFY_EMAIL_PASS) {
+    console.error('Missing NOTIFY_EMAIL or NOTIFY_EMAIL_PASS in environment.');
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Missing email credentials' }),
+    };
+  }
+
   try {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.NOTIFY_EMAIL,
-        pass: process.env.NOTIFY_EMAIL_PASS,
+        user: NOTIFY_EMAIL,
+        pass: NOTIFY_EMAIL_PASS,
       },
     });
 
-    const mailOptions = {
-      from: `"${process.env.NOTIFY_FROM || 'K4 Share Notification'}" <${process.env.NOTIFY_EMAIL}>`,
-      to: process.env.NOTIFY_TO || process.env.NOTIFY_EMAIL,
-      subject: `K4 Share Notification - ${platform}`,
-      text: `🔔 A share was triggered from K4 Studios!\n\nPlatform: ${platform}\nTitle: ${title || 'Untitled'}\nPage: ${page}`,
-    };
+    await transporter.sendMail({
+      from: `"${NOTIFY_FROM}" <${NOTIFY_EMAIL}>`,
+      to: NOTIFY_TO || NOTIFY_EMAIL,
+      subject: `🔔 K4 Share Notification – ${platform}`,
+      text: `A share was triggered from K4 Studios!
 
-    await transporter.sendMail(mailOptions);
+Platform: ${platform}
+Title: ${title || 'Untitled'}
+Page: ${page}`,
+    });
 
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true }),
     };
   } catch (err) {
-    console.error('❌ Mail send failed:', err);
-
+    console.error('Mailer error:', err);
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        error: 'Failed to send notification',
-        message: err.message,
-        stack: err.stack,
-      }),
+      body: JSON.stringify({ error: 'Failed to send email' }),
     };
   }
 }
