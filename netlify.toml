@@ -146,3 +146,8 @@ force = true
 from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/*"
 to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/index.html"
 status = 200
+
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
