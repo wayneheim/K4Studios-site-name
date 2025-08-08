@@ -9,6 +9,8 @@ import "../styles/global.css";
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
+import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
+
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -28,6 +30,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
+  const [showStoryShow, setShowStoryShow] = useState(false);
 
   // 🔄 Trigger chapter entry mode via custom event
   useEffect(() => {
@@ -200,6 +203,17 @@ export default function ScrollFlipGallery({ initialImageId }) {
       }, 3000);
     }
   }, []);
+
+   // no background scroll while slideshow is on
+  useEffect(() => {
+  if (showStoryShow) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+  return () => { document.body.style.overflow = ""; };
+}, [showStoryShow]);
+
 
   // Touch navigation
   const handleTouchStart = (e) => {
@@ -542,6 +556,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         </button>
                       </form>
 
+
                       {/* Cart */}
                       <a
                         href={galleryData[currentIndex].buyLink || "#"}
@@ -585,6 +600,18 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         </span>
                       </button>
                     </div>
+                    
+                    {!showStoryShow && (
+  <button
+    onClick={() => setShowStoryShow(true)}
+    className="bg-black/80 text-white px-4 py-2 rounded hover:bg-black transition-all text-base font-semibold shadow my-3"
+    style={{ minWidth: 180, letterSpacing: "0.03em" }}
+    aria-label="Play cinematic slideshow"
+  >
+    <span className="mr-2 align-middle" role="img" aria-label="play">&#9658;</span>
+    Play Story Show
+  </button>
+)}
 
                     {/* Collector Notes Panel (mobile) */}
                     {galleryData[currentIndex].notes && isMobile && (
@@ -615,6 +642,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       </AnimatePresence>
                     )}
                   </div>
+                  
 
                   {/* DESCRIPTION + DESKTOP NAV COLUMN */}
                   <div className="w-full md:pl-8">
@@ -808,6 +836,16 @@ export default function ScrollFlipGallery({ initialImageId }) {
         )}
       </div>
 
+{showStoryShow && (
+  <StoryShow
+    images={galleryData.map(img => ({
+      ...img,
+      url: img.url || img.src // Prefer url, fallback to src
+    }))}
+    startImageId={galleryData[currentIndex].id}
+    onExit={() => setShowStoryShow(false)}
+  />
+)}
       {/* Swipe Hint */}
       <SwipeHint galleryKey="Painterly-Civil-War-BW" />
     </div>
