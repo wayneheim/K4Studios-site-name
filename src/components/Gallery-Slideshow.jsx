@@ -8,7 +8,48 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const [isPaused, setIsPaused] = useState(false);
   const [isIntro, setIsIntro] = useState(true);
   const [speed, setSpeed] = useState(5000);
+  const [showControls, setShowControls] = useState(true);
+  const [isLandscape, setIsLandscape] = useState(false);
+
   const timer = useRef(null);
+  const hideControlsTimer = useRef(null);
+  const fsRef = useRef(null);
+
+  // Inactivity timer for controls
+  const resetHideTimer = () => {
+    setShowControls(true);
+    clearTimeout(hideControlsTimer.current);
+    hideControlsTimer.current = setTimeout(() => {
+      setShowControls(false);
+    }, 3000);
+  };
+
+  useEffect(() => {
+    resetHideTimer();
+    window.addEventListener("mousemove", resetHideTimer);
+    return () => {
+      window.removeEventListener("mousemove", resetHideTimer);
+      clearTimeout(hideControlsTimer.current);
+    };
+  }, []);
+
+  // Detect landscape orientation on mobile
+  useEffect(() => {
+    const mql = window.matchMedia("(orientation: landscape)");
+    const onChange = (e) => setIsLandscape(e.matches);
+    onChange(mql);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
+
+  // Fullscreen helper
+  const enterFullScreen = () => {
+    const el = fsRef.current;
+    if (!el) return;
+    (el.requestFullscreen ||
+      el.webkitRequestFullscreen ||
+      el.msRequestFullscreen)?.call(el);
+  };
 
   const orderedImages = useMemo(
     () => reorderImages(images, startImageId),
@@ -31,14 +72,10 @@ export default function StoryShow({ images, startImageId, onExit }) {
       const introTimer = setTimeout(() => setIsIntro(false), 3000);
       return () => clearTimeout(introTimer);
     }
-
-    if (!isPaused && index < orderedImages.length - 1) {
-      timer.current = setTimeout(() => setIndex((i) => i + 1), speed);
-      return () => clearTimeout(timer.current);
-    }
-
-    if (!isPaused && index === orderedImages.length - 1 && !isIntro) {
-      timer.current = setTimeout(() => setIndex(0), speed);
+    if (!isPaused) {
+      timer.current = setTimeout(() => {
+        setIndex((i) => (i + 1) % orderedImages.length);
+      }, speed);
       return () => clearTimeout(timer.current);
     }
   }, [index, isPaused, speed, isIntro, orderedImages.length]);
@@ -73,6 +110,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
         rel="stylesheet"
       />
       <div
+        ref={fsRef}
         style={{
           position: "fixed",
           top: 0,
@@ -86,6 +124,17 @@ export default function StoryShow({ images, startImageId, onExit }) {
           fontFamily: "'Glegoo', serif",
         }}
       >
+        {/* Prompt in landscape on mobile */}
+        {isLandscape && !document.fullscreenElement && (
+          <div
+            className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/10 text-white rounded px-4 py-2 text-xs"
+            style={{ cursor: "pointer" }}
+            onClick={enterFullScreen}
+          >
+            Tap to enter full-screen for best experience
+          </div>
+        )}
+
         <AnimatePresence>
           {isIntro ? (
             <PunchInIntro onDone={() => setIsIntro(false)} />
@@ -99,19 +148,33 @@ export default function StoryShow({ images, startImageId, onExit }) {
                 <motion.img
                   src={current.url}
                   alt={current.title || ""}
-                  className="max-w-[100vw] max-h-[100vh] object-contain"
+                  className="max-w-[100vw] max-h-[100vh] object-contain cursor-pointer"
+                  onClick={() => setIsPaused((p) => !p)}
                   {...kenBurns}
                 />
 
                 {current.story && (
                   <motion.div
-                    className={`absolute bg-black/60 p-4 md:p-6 rounded-xl max-w-[90%] md:max-w-[40%] ${
+                    className={`absolute p-4 md:p-6 max-w-[90%] md:max-w-[40%] ${
                       isVertical
                         ? "right-4 top-1/2 -translate-y-1/2"
                         : "bottom-6 left-1/2 -translate-x-1/2"
                     } text-sm md:text-base`}
                     {...fade}
+                    style={{
+                      backgroundColor: "rgba(0, 0, 0, 0.2)",
+                      boxShadow: "0 0 2px 2px rgba(0, 0, 0, 0.2)",
+                      borderRadius: "1rem",
+                    }}
                   >
+                    {isPaused && (
+                      <div
+                        className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-xs uppercase font-semibold px-2 py-0.5 border border-white rounded"
+                        style={{ opacity: 0.9 }}
+                      >
+                        Paused
+                      </div>
+                    )}
                     <div className="font-semibold text-lg mb-2">
                       {current.title}
                     </div>
@@ -125,46 +188,72 @@ export default function StoryShow({ images, startImageId, onExit }) {
           )}
         </AnimatePresence>
 
-        {/* Controls */}
-        <div className="absolute bottom-4 left-4 flex gap-4 items-center text-sm">
-          <button
-            onClick={() => setIsPaused((p) => !p)}
-            className="bg-white/10 px-3 py-1 rounded hover:bg-white/20"
-          >
-            {isPaused ? "Resume" : "Pause"}
-          </button>
-          <div className="relative">
-            <select
-              value={speed}
-              onChange={(e) => setSpeed(Number(e.target.value))}
-              className="appearance-none bg-black border border-white/20 rounded px-3 py-2 pr-8 text-xs flex items-center"
-              style={{
-                minWidth: 56,
-                color: "#fff",
-                fontFamily: "'Glegoo', serif",
-                fontSize: "1.12em",
-              }}
-              aria-label="Slideshow speed"
+        <AnimatePresence>
+          {showControls && !isIntro && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute bottom-4 left-4 border rounded-lg p-2 flex gap-4 items-center bg-black/30"
+              style={{ borderColor: "rgba(255,255,255,0.25)" }}
             >
-              <option value={3000}>Fast</option>
-              <option value={5000}>Medium</option>
-              <option value={9000}>Slow</option>
-            </select>
-            <span
-              className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-white/60"
-              style={{ fontSize: "1em" }}
-            >
-              ▼
-            </span>
-          </div>
-        </div>
+              {/* Pause/Play */}
+              <button
+                onClick={() => setIsPaused((p) => !p)}
+                className="bg-white/10 border border-white/20 text-white rounded px-3 py-1 hover:bg-white/20 transition"
+                aria-label={
+                  isPaused ? "Resume slideshow" : "Pause slideshow"
+                }
+                title={isPaused ? "Resume slideshow" : "Pause slideshow"}
+              >
+                {isPaused ? "▶" : "‖‖"}
+              </button>
 
-        <button
-          onClick={handleExit}
-          className="absolute top-4 right-4 bg-white/10 px-3 py-1 rounded hover:bg-white/20 text-sm"
-        >
-          Exit
-        </button>
+              {/* Speed Selector */}
+              <div
+                className="flex gap-2"
+                role="group"
+                aria-label="Slideshow speed"
+              >
+                {[3000, 5000, 9000].map((s, idx) => {
+                  const label =
+                    idx === 0 ? "Fast" : idx === 1 ? "Medium" : "Slow";
+                  return (
+                    <button
+                      key={s}
+                      onClick={() => setSpeed(s)}
+                      className="bg-white/10 border border-white/20 text-white rounded px-3 py-1 h-8 flex items-center justify-center hover:bg-white/20 transition"
+                      aria-label={`Set speed to ${label}`}
+                      title={`Set speed to ${label}`}
+                    >
+                      <div className="flex gap-1">
+                        {Array.from({ length: idx + 1 }).map((_, i) => (
+                          <span
+                            key={i}
+                            className={`w-2 h-2 rounded-full bg-white ${
+                              speed === s ? "" : "opacity-50"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Exit */}
+              <button
+                onClick={handleExit}
+                className="bg-white/10 border border-white/20 text-whiterounded px-3 py-1 hover:bg-white/20 transition"
+                aria-label="Exit slideshow"
+                title="Exit slideshow"
+              >
+                Exit
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </>,
     document.body
