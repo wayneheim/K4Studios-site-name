@@ -128,6 +128,11 @@ export default function StoryShow({ images, startImageId, onExit }) {
       object-fit: contain; /* Ensure the image fits within its container */
     }
 
+    .gallery-slideshow img.vertical {
+      max-width: 30vw; /* Narrower width for vertical images */
+      max-height: 60vh; /* Taller height for vertical images */
+    }
+
     .gallery-slideshow .text-content {
       max-width: 50%; /* Adjust text width */
       font-size: clamp(0.8rem, 2vw, 1.2rem); /* Dynamically scale text size */
@@ -188,12 +193,14 @@ export default function StoryShow({ images, startImageId, onExit }) {
             >
               <div className="w-screen h-screen flex items-center justify-center relative">
                 <motion.img
-                  src={current.url}
-                  alt={current.title || ""}
-                  className="max-w-[100vw] max-h-[100vh] object-contain cursor-pointer"
-                  onClick={() => setIsPaused((p) => !p)}
-                  {...kenBurns}
-                />
+  src={current.url}
+  alt={current.title || ""}
+  className={`max-w-[100vw] max-h-[100vh] object-contain cursor-pointer ${
+    isVertical ? "vertical" : ""
+  }`}
+  onClick={() => setIsPaused((p) => !p)}
+  {...kenBurns}
+/>
 
                 {current.story && (
                   <motion.div
