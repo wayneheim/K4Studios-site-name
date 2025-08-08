@@ -15,7 +15,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const hideControlsTimer = useRef(null);
   const fsRef = useRef(null);
 
-  // Inactivity timer for controls
+  // ➊ Inactivity timer for controls
   const resetHideTimer = () => {
     setShowControls(true);
     clearTimeout(hideControlsTimer.current);
@@ -33,22 +33,29 @@ export default function StoryShow({ images, startImageId, onExit }) {
     };
   }, []);
 
-  // Detect landscape orientation on mobile
+  // ➋ Landscape detection
   useEffect(() => {
-    const mql = window.matchMedia("(orientation: landscape)");
-    const onChange = (e) => setIsLandscape(e.matches);
-    onChange(mql);
-    mql.addEventListener("change", onChange);
-    return () => mql.removeEventListener("change", onChange);
+    const updateOrientation = () => {
+      setIsLandscape(window.innerWidth > window.innerHeight);
+    };
+    updateOrientation();
+    window.addEventListener("resize", updateOrientation);
+    window.addEventListener("orientationchange", updateOrientation);
+    return () => {
+      window.removeEventListener("resize", updateOrientation);
+      window.removeEventListener("orientationchange", updateOrientation);
+    };
   }, []);
 
-  // Fullscreen helper
+  // ➌ Fullscreen helper
   const enterFullScreen = () => {
     const el = fsRef.current;
     if (!el) return;
-    (el.requestFullscreen ||
+    const request =
+      el.requestFullscreen ||
       el.webkitRequestFullscreen ||
-      el.msRequestFullscreen)?.call(el);
+      el.msRequestFullscreen;
+    request && request.call(el);
   };
 
   const orderedImages = useMemo(
@@ -124,16 +131,18 @@ export default function StoryShow({ images, startImageId, onExit }) {
           fontFamily: "'Glegoo', serif",
         }}
       >
-        {/* Prompt in landscape on mobile */}
-        {isLandscape && !document.fullscreenElement && (
-          <div
-            className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/10 text-white rounded px-4 py-2 text-xs"
-            style={{ cursor: "pointer" }}
-            onClick={enterFullScreen}
-          >
-            Tap to enter full-screen for best experience
-          </div>
-        )}
+        {/* Landscape prompt */}
+       {isLandscape &&
+  !(document.fullscreenElement || document.webkitFullscreenElement) && (
+    <div
+      className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/10 text-white rounded px-4 py-2 text-xs pointer-events-auto"
+      style={{ cursor: "pointer", zIndex: 10001 }}
+      onClick={enterFullScreen}
+      onTouchEnd={enterFullScreen}
+    >
+      Tap to enter full-screen for best experience
+    </div>
+)}
 
         <AnimatePresence>
           {isIntro ? (
@@ -201,10 +210,8 @@ export default function StoryShow({ images, startImageId, onExit }) {
               {/* Pause/Play */}
               <button
                 onClick={() => setIsPaused((p) => !p)}
-                className="bg-white/10 border border-white/20 text-white rounded px-3 py-1 hover:bg-white/20 transition"
-                aria-label={
-                  isPaused ? "Resume slideshow" : "Pause slideshow"
-                }
+                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition"
+                aria-label={isPaused ? "Resume slideshow" : "Pause slideshow"}
                 title={isPaused ? "Resume slideshow" : "Pause slideshow"}
               >
                 {isPaused ? "▶" : "‖‖"}
@@ -223,7 +230,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
                     <button
                       key={s}
                       onClick={() => setSpeed(s)}
-                      className="bg-white/10 border border-white/20 text-white rounded px-3 py-1 h-8 flex items-center justify-center hover:bg-white/20 transition"
+                      className="bg-white/10 text-white rounded px-3 py-1 h-8 flex items-center justify-center hover:bg-white/20 transition"
                       aria-label={`Set speed to ${label}`}
                       title={`Set speed to ${label}`}
                     >
@@ -245,7 +252,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
               {/* Exit */}
               <button
                 onClick={handleExit}
-                className="bg-white/10 border border-white/20 text-whiterounded px-3 py-1 hover:bg-white/20 transition"
+                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition"
                 aria-label="Exit slideshow"
                 title="Exit slideshow"
               >
