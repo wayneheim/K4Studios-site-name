@@ -606,16 +606,22 @@ export default function ScrollFlipGallery({ initialImageId }) {
                     </div>
                     
                     {!showStoryShow && (
-  <button
-    onClick={() => setShowStoryShow(true)}
-    className="bg-black/80 text-white px-4 py-2 rounded hover:bg-black transition-all text-base font-semibold shadow my-3"
-    style={{ minWidth: 180, letterSpacing: "0.03em" }}
-    aria-label="Play K4 slideshow"
-  >
-    <span className="mr-2 align-middle" role="img" aria-label="play">&#9658;</span>
-    Play Story Show
-  </button>
-)}
+                     <button
+  onClick={() => setShowStoryShow(true)}
+  aria-label="Play K4 slideshow"
+  title="Play K4 Story Show"
+  className="group my-3 inline-flex items-center gap-2 rounded-md px-2 py-1 bg-white border border-gray-300 shadow-sm transition-colors"
+  style={{ letterSpacing: '.02em' }}
+>
+  <span className="inline-flex items-center justify-center w-4 h-4 text-gray-300 group-hover:text-red-900 transition-colors">
+    ▶
+  </span>
+  <span className="text-sm font-medium text-gray-300 group-hover:text-red-900 transition-colors">
+    Play Show
+  </span>
+</button>
+
+                    )}
 
                     {/* Collector Notes Panel (mobile) */}
                     {galleryData[currentIndex].notes && isMobile && (

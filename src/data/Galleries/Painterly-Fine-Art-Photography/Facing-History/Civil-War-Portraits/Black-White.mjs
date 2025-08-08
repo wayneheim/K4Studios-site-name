@@ -49,9 +49,9 @@ export const galleryData = [
   },
   {
     "id": "i-GqDJLmF",
-    "title": "Painterly Civil War Portrait: Waiting orders.",
-    "description": "Fine art painterly photograph of Civil War reenactor soldier passing time in camp waiting for his next orders. Historically themed fine art photography of Civil War reenactor at reenactment. © Wayne Heim",
-    "alt": "Painterly Civil War Portrait: Waiting orders.",
+    "title": "Painterly Civil War Portrait – Soldier Waiting in Camp for Orders",
+    "description": "Painterly Civil War portrait of a young soldier waiting for orders, his expression caught between boredom and frustration. Fine art historical reenactment photography by Wayne Heim, capturing the quiet moments of camp life with period-accurate detail.",
+    "alt": "Young Civil War soldier in worn uniform leaning on a rifle, gazing off with a look of frustration and fatigue, waiting for orders or a meal.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-GqDJLmF/0/L6LKtWkK2KJFS38j8Q9w3znM8526NR2FcnR9H2X2g/XL/_HF21069-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-GqDJLmF/A",
     "keywords": [
@@ -69,7 +69,7 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "Fine art painterly photograph of Civil War reenactor soldier passing time in camp waiting for his next orders. Historically themed fine art photography of Civil War reenactor at reenactment. © Wayne Heim",
+    "story": "“If the orders don’t come soon, I swear I’ll march myself to the cook tent… hardtack or not.”",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -81,8 +81,8 @@ export const galleryData = [
   {
     "id": "i-vQXXDRJ",
     "title": "Painterly Civil War Portrait: Passing time.",
-    "description": "Fine art painterly photograph of soldier taking advantage of a slow moment to read new regulations. Historically themed fine art Civil War photography of reenactor at reenactment. © Wayne Heim",
-    "alt": "Painterly Civil War Portrait: Passing time.",
+    "description": Painterly fine art photograph of a Civil War reenactor field medic lying in the grass and reading a book. A rare moment of calm between battles, reflecting the quiet resilience of soldiers during the war. © Wayne Heim",
+    "alt": "Civil War field medic in uniform, reclining in the grass while reading a book to pass the time between battles",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vQXXDRJ/0/Mz6FLNCRrT8dtNvCjNVzkTqzRT9jqB8nfBzjGMBcg/XL/_HF20969-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vQXXDRJ/A",
     "keywords": [
@@ -100,7 +100,7 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "Fine art painterly photograph of soldier taking advantage of a slow moment to read new regulations. Historically themed fine art Civil War photography of reenactor at reenactment. © Wayne Heim",
+    "story": "It’s the quiet moments that are the hardest to endure… you keep the mind busy, or it wanders back to the day.",
     "notes": "",
     "rating": 0,
     "galleries": [
