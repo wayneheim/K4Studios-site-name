@@ -112,6 +112,37 @@ export default function StoryShow({ images, startImageId, onExit }) {
 
   return createPortal(
     <>
+ <style jsx>{`
+      @media (orientation: landscape) and (max-width: 768px) {
+        .gallery-slideshow {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+        }
+
+        .gallery-slideshow img {
+          max-width: 50%;
+          height: auto;
+        }
+
+        .gallery-slideshow .text-content {
+          max-width: 45%;
+          font-size: 0.9rem;
+        }
+      }
+
+      .gallery-slideshow img {
+        width: 100%;
+        height: auto;
+      }
+
+      .gallery-slideshow .text-content {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+      }
+    `}</style>
+
       <link
         href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet"
