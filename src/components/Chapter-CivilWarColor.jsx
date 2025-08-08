@@ -164,7 +164,8 @@ export default function ScrollFlipGallery({ initialImageId }) {
   // Orientation detection
   useEffect(() => {
     const updateOrientation = () => {
-      setIsLandscapeMobile(window.innerWidth < 900 && window.innerWidth > window.innerHeight);
+      // Treat any device in landscape as landscape-mobile for UI placement
+      setIsLandscapeMobile(window.innerWidth > window.innerHeight);
     };
     updateOrientation();
     window.addEventListener("resize", updateOrientation);
@@ -177,7 +178,11 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
   // Mobile check
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const checkMobile = () => {
+      const isCoarse = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
+      const smallish = window.innerWidth <= 1024;
+      setIsMobile(isCoarse || smallish);
+    };
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -347,14 +352,35 @@ export default function ScrollFlipGallery({ initialImageId }) {
                             }}
                           />
 
-                          {/* ❤️ Like Button (Mobile overlay) */}
-                          {isMobile && (
-                            <div className="absolute top-2 right-2 z-30">
-  <LikeButton
-    imageId={galleryData[currentIndex].id}
-    pageTitle={galleryData[currentIndex].title}
-  />
-</div>
+                          {/* ❤️ Like Button (Mobile portrait — bottom-right on image) */}
+                          {isMobile && !isLandscapeMobile && (
+                            <div
+                              className="absolute inset-0"
+                              style={{ zIndex: 30, pointerEvents: "none" }}
+                            >
+                              <div
+                                className="absolute"
+                                style={{
+                                  right: "max(0.5rem, env(safe-area-inset-right))",
+                                  bottom: "max(0.5rem, env(safe-area-inset-bottom))",
+                                  minWidth: 44,
+                                  minHeight: 44,
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  borderRadius: 9999,
+                                  background: "rgba(0,0,0,0.35)",
+                                  backdropFilter: "blur(2px)",
+                                  WebkitBackdropFilter: "blur(2px)",
+                                  pointerEvents: "auto",
+                                }}
+                              >
+                                <LikeButton
+                                  imageId={galleryData[currentIndex].id}
+                                  pageTitle={galleryData[currentIndex].title}
+                                />
+                              </div>
+                            </div>
                           )}
                         </div>
 
@@ -555,6 +581,15 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       >
                         <ShoppingCart className="w-4 h-4" />
                       </a>
+                        {/* ❤️ Like Button (Mobile Landscape — on toolbar, right side) */}
+                        {isMobile && isLandscapeMobile && (
+                          <div className="inline-flex items-center px-1">
+                            <LikeButton
+                              imageId={galleryData[currentIndex].id}
+                              pageTitle={galleryData[currentIndex].title}
+                            />
+                          </div>
+                        )}
  {/* ❤️ Like Button (Desktop in button row) */}
   {!isMobile && (
     <div className="inline-flex items-center px-2">

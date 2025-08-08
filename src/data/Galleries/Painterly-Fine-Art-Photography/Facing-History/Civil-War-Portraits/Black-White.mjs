@@ -18,9 +18,9 @@ export const galleryData = [
 },
 {
     "id": "i-834cDZ8",
-    "title": "Painterly Civil War Portrait: End of the battle.",
-    "description": "Fine art painterly photograph of Civil War soldier assessing the damage after a battle. Historically themed fine art photography of reenactor at reenactment. © Wayne Heim",
-    "alt": "Painterly Civil War Portrait: End of the battle.",
+    "title": "Civil War Portrait: Victory or Survival?",
+    "description": "Painterly Civil War portrait of a weary soldier in the aftermath of battle. Fine art historical photography capturing the grit, uncertainty, and quiet tension of a moment caught between victory and survival. © Wayne Heim",
+    "alt": "Painterly Civil War portrait of a tired soldier standing in the aftermath of battle, embodying the uncertainty between victory and survival.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-834cDZ8/1/Mq2pFD8TcGwz7SKRSQZhJjtgVRkhNj9KdjsvGhCt4/XL/_O2H6854-Enhanced-NR-Edit-2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-834cDZ8/A",
     "keywords": [
@@ -38,7 +38,7 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "Fine art painterly photograph of Civil War soldier assessing the damage after a battle. Historically themed fine art photography of reenactor at reenactment. © Wayne Heim",
+    "story": "Was it victory… or just survival? I can’t help but wonder how history will tell our story.",
     "notes": "",
     "rating": 0,
     "galleries": [

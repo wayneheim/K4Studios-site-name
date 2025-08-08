@@ -28,8 +28,14 @@ export default function StoryShow({ images, startImageId, onExit }) {
   useEffect(() => {
     resetHideTimer();
     window.addEventListener("mousemove", resetHideTimer);
+    window.addEventListener("pointermove", resetHideTimer);
+    window.addEventListener("touchstart", resetHideTimer, { passive: true });
+    window.addEventListener("keydown", resetHideTimer);
     return () => {
       window.removeEventListener("mousemove", resetHideTimer);
+      window.removeEventListener("pointermove", resetHideTimer);
+      window.removeEventListener("touchstart", resetHideTimer);
+      window.removeEventListener("keydown", resetHideTimer);
       clearTimeout(hideControlsTimer.current);
     };
   }, []);
@@ -66,18 +72,19 @@ export default function StoryShow({ images, startImageId, onExit }) {
   );
   const current = orderedImages[index];
   const isVertical = current?.aspectRatio && current.aspectRatio < 1;
+  const isMobile = vp.w <= 768;
 
   // Compute image max sizes to avoid cropping and use more space for portrait
   const imgStyle = useMemo(() => {
     const style = {};
-    const hasText = Boolean(current?.story);
+    const hasText = Boolean(current?.story) && !isMobile; // treat text as hidden on mobile
     if (isLandscape) {
       if (isVertical) {
-        // Fill most of viewport height; let width auto from aspect ratio
-        style.height = `${Math.round(vp.h * 0.92)}px`;
-        style.maxHeight = `${Math.round(vp.h * 0.92)}px`;
+        const maxH = Math.round(vp.h * 0.92);
+        style.height = `${maxH}px`;
+        style.maxHeight = `${maxH}px`;
         style.width = "auto";
-        style.maxWidth = hasText ? `${Math.round(vp.w * 0.7)}px` : "none"; // don't cap unless text shown
+        style.maxWidth = hasText ? `${Math.round(vp.w * 0.7)}px` : "none";
       } else {
         style.maxHeight = `${Math.round(vp.h * 0.92)}px`;
         style.maxWidth = `${Math.round(vp.w * 0.96)}px`;
@@ -87,7 +94,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
       style.maxWidth = "100vw";
     }
     return style;
-  }, [isLandscape, isVertical, vp.h, vp.w, current?.story]);
+  }, [isLandscape, isVertical, vp.h, vp.w, current?.story, isMobile]);
 
   const [kenAngles] = useState(() =>
     images.map((_, idx) => {
@@ -148,6 +155,20 @@ export default function StoryShow({ images, startImageId, onExit }) {
   return createPortal(
     <>
       <style jsx>{`
+        @media (max-width: 768px) {
+          /* Hide story overlay entirely on mobile */
+          .text-content, .story-title, .story-body { display: none !important; }
+          .gallery-slideshow { padding: 0.5rem; }
+
+          /* Center toolbar and lift above safe area */
+          .slideshow-controls {
+            background: #000;
+            left: 50% !important;
+            transform: translateX(-50%);
+            bottom: max(0.75rem, env(safe-area-inset-bottom));
+          }
+        }
+
         @media (orientation: landscape) and (max-width: 768px) {
           .gallery-slideshow {
             display: flex;
@@ -158,17 +179,12 @@ export default function StoryShow({ images, startImageId, onExit }) {
             padding: 0.5rem 0.75rem;
           }
 
-          .gallery-slideshow img {
-            object-fit: contain;
-            transition: transform 0.3s ease-in-out;
-          }
-
+          .gallery-slideshow img { object-fit: contain; transition: transform 0.3s ease-in-out; }
           .text-content { max-width: 45%; }
           .story-title { font-size: 0.95rem; }
           .story-body { font-size: 0.8rem; line-height: 1.3; }
 
-          /* Controls */
-          .slideshow-controls { background: #000; transform: scale(0.9); transform-origin: bottom left; }
+          .slideshow-controls { background: #000; transform: translateX(-50%) scale(0.9); transform-origin: bottom center; left: 50% !important; }
           .slideshow-controls .btn { padding: 0.25rem 0.5rem; font-size: 0.8rem; }
         }
 
@@ -195,20 +211,45 @@ export default function StoryShow({ images, startImageId, onExit }) {
           zIndex: 9999,
           overflow: "hidden",
           fontFamily: "'Glegoo', serif",
+          paddingBottom: 'env(safe-area-inset-bottom)'
         }}
       >
         {/* Landscape prompt */}
         {isLandscape &&
           !(document.fullscreenElement || document.webkitFullscreenElement) && (
-            <div
-              className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/10 text-white rounded px-4 py-2 text-xs pointer-events-auto"
-              style={{ cursor: "pointer", zIndex: 10001 }}
-              onClick={enterFullScreen}
-              onTouchEnd={enterFullScreen}
-            >
-              Tap to enter full-screen for best experience
-            </div>
+            <AnimatePresence>
+              {showControls && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute bg-white/10 text-white rounded px-4 py-2 text-xs pointer-events-auto"
+                  style={{ cursor: "pointer", zIndex: 10001, top: '0.5rem', left: '50%', transform: 'translateX(-50%)' }}
+                  onClick={enterFullScreen}
+                  onTouchEnd={enterFullScreen}
+                >
+                  Use full-screen for best experience.
+                </motion.div>
+              )}
+            </AnimatePresence>
           )}
+
+        {/* Global paused chip, centered above toolbar */}
+        <AnimatePresence>
+          {isPaused && showControls && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 0.95, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute left-1/2 -translate-x-1/2 text-white text-xs uppercase font-semibold px-2 py-0.5 border border-white/80 rounded"
+              style={{ zIndex: 10002, bottom: 'calc(max(0.75rem, env(safe-area-inset-bottom)) + 3.25rem)' }}
+            >
+              Paused
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <AnimatePresence>
           {isIntro ? (
@@ -231,7 +272,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
                   {...kenBurns}
                 />
 
-                {current.story && (
+                {current.story && !isMobile && (
                   <motion.div
                     className={`absolute p-4 md:p-6 max-w-[90%] md:max-w-[40%] ${
                       isVertical
@@ -273,8 +314,14 @@ export default function StoryShow({ images, startImageId, onExit }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute bottom-4 left-4 border rounded-lg p-2 flex gap-4 items-center bg-black/30 slideshow-controls"
-              style={{ borderColor: "rgba(255,255,255,0.25)" }}
+              className="absolute border rounded-lg p-2 flex gap-4 items-center slideshow-controls"
+              style={{
+                borderColor: "rgba(255,255,255,0.25)",
+                backgroundColor: '#000',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                bottom: 'max(0.75rem, env(safe-area-inset-bottom))'
+              }}
             >
               {/* Pause/Play */}
               <button
