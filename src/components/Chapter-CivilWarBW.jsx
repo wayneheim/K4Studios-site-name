@@ -606,7 +606,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     onClick={() => setShowStoryShow(true)}
     className="bg-black/80 text-white px-4 py-2 rounded hover:bg-black transition-all text-base font-semibold shadow my-3"
     style={{ minWidth: 180, letterSpacing: "0.03em" }}
-    aria-label="Play cinematic slideshow"
+    aria-label="Play K4 slideshow"
   >
     <span className="mr-2 align-middle" role="img" aria-label="play">&#9658;</span>
     Play Story Show
