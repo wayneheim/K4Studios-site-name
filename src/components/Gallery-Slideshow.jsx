@@ -10,6 +10,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const [speed, setSpeed] = useState(5000);
   const [showControls, setShowControls] = useState(true);
   const [isLandscape, setIsLandscape] = useState(false);
+  const [vp, setVp] = useState({ w: 0, h: 0 }); // viewport size
 
   const timer = useRef(null);
   const hideControlsTimer = useRef(null);
@@ -37,6 +38,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
   useEffect(() => {
     const updateOrientation = () => {
       setIsLandscape(window.innerWidth > window.innerHeight);
+      setVp({ w: window.innerWidth, h: window.innerHeight });
     };
     updateOrientation();
     window.addEventListener("resize", updateOrientation);
@@ -65,6 +67,28 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const current = orderedImages[index];
   const isVertical = current?.aspectRatio && current.aspectRatio < 1;
 
+  // Compute image max sizes to avoid cropping and use more space for portrait
+  const imgStyle = useMemo(() => {
+    const style = {};
+    const hasText = Boolean(current?.story);
+    if (isLandscape) {
+      if (isVertical) {
+        // Fill most of viewport height; let width auto from aspect ratio
+        style.height = `${Math.round(vp.h * 0.92)}px`;
+        style.maxHeight = `${Math.round(vp.h * 0.92)}px`;
+        style.width = "auto";
+        style.maxWidth = hasText ? `${Math.round(vp.w * 0.7)}px` : "none"; // don't cap unless text shown
+      } else {
+        style.maxHeight = `${Math.round(vp.h * 0.92)}px`;
+        style.maxWidth = `${Math.round(vp.w * 0.96)}px`;
+      }
+    } else {
+      style.maxHeight = "100vh";
+      style.maxWidth = "100vw";
+    }
+    return style;
+  }, [isLandscape, isVertical, vp.h, vp.w, current?.story]);
+
   const [kenAngles] = useState(() =>
     images.map((_, idx) => {
       const amount = 0.4 + Math.random() * 1.8;
@@ -73,6 +97,24 @@ export default function StoryShow({ images, startImageId, onExit }) {
     })
   );
   const kenAngle = kenAngles[index];
+
+  const kenBurns = useMemo(() => {
+    if (isLandscape && isVertical) {
+      // Subtle zoom to avoid cropping in portrait-in-landscape
+      return {
+        initial: { scale: 1, opacity: 0.95, rotate: 0 },
+        animate: { scale: 1.06, opacity: 1, rotate: 0 },
+        exit: { opacity: 0 },
+        transition: { duration: speed / 950, ease: "easeInOut" },
+      };
+    }
+    return {
+      initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
+      animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
+      exit: { opacity: 0 },
+      transition: { duration: speed / 950, ease: "easeInOut" },
+    };
+  }, [isLandscape, isVertical, speed, kenAngle]);
 
   useEffect(() => {
     if (isIntro) {
@@ -103,52 +145,38 @@ export default function StoryShow({ images, startImageId, onExit }) {
     exit: { opacity: 0, transition: { duration: 0.76, ease: "easeIn" } },
   };
 
-  const kenBurns = {
-    initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
-    animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
-    exit: { opacity: 0 },
-    transition: { duration: speed / 950, ease: "easeInOut" },
-  };
-
   return createPortal(
     <>
-<style jsx>{`
-  @media (orientation: landscape) and (max-width: 768px) {
-    .gallery-slideshow {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-    }
+      <style jsx>{`
+        @media (orientation: landscape) and (max-width: 768px) {
+          .gallery-slideshow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0.75rem;
+          }
 
-    .gallery-slideshow img {
-      max-width: 45vw; /* Constrain image width to 45% of viewport */
-      max-height: 40vh; /* Constrain image height to 40% of viewport */
-      object-fit: contain; /* Ensure the image fits within its container */
-    }
+          .gallery-slideshow img {
+            object-fit: contain;
+            transition: transform 0.3s ease-in-out;
+          }
 
-    .gallery-slideshow img.vertical {
-      max-width: 30vw; /* Narrower width for vertical images */
-      max-height: 60vh; /* Taller height for vertical images */
-    }
+          .text-content { max-width: 45%; }
+          .story-title { font-size: 0.95rem; }
+          .story-body { font-size: 0.8rem; line-height: 1.3; }
 
-    .gallery-slideshow .text-content {
-      max-width: 50%; /* Adjust text width */
-      font-size: clamp(0.8rem, 2vw, 1.2rem); /* Dynamically scale text size */
-      line-height: 1.4; /* Improve readability */
-    }
-  }
+          /* Controls */
+          .slideshow-controls { background: #000; transform: scale(0.9); transform-origin: bottom left; }
+          .slideshow-controls .btn { padding: 0.25rem 0.5rem; font-size: 0.8rem; }
+        }
 
-  .gallery-slideshow img {
-    width: 100%;
-    height: auto;
-  }
-
-  .gallery-slideshow .text-content {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-  }
-`}</style>
+        .gallery-slideshow img { width: 100%; height: auto; }
+        /* Base story sizes so title stays larger than body by default */
+        .story-title { font-size: 1.125rem; }
+        .story-body { font-size: 1rem; line-height: 1.5; }
+      `}</style>
 
       <link
         href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap"
@@ -170,17 +198,17 @@ export default function StoryShow({ images, startImageId, onExit }) {
         }}
       >
         {/* Landscape prompt */}
-       {isLandscape &&
-  !(document.fullscreenElement || document.webkitFullscreenElement) && (
-    <div
-      className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/10 text-white rounded px-4 py-2 text-xs pointer-events-auto"
-      style={{ cursor: "pointer", zIndex: 10001 }}
-      onClick={enterFullScreen}
-      onTouchEnd={enterFullScreen}
-    >
-      Tap to enter full-screen for best experience
-    </div>
-)}
+        {isLandscape &&
+          !(document.fullscreenElement || document.webkitFullscreenElement) && (
+            <div
+              className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/10 text-white rounded px-4 py-2 text-xs pointer-events-auto"
+              style={{ cursor: "pointer", zIndex: 10001 }}
+              onClick={enterFullScreen}
+              onTouchEnd={enterFullScreen}
+            >
+              Tap to enter full-screen for best experience
+            </div>
+          )}
 
         <AnimatePresence>
           {isIntro ? (
@@ -191,16 +219,17 @@ export default function StoryShow({ images, startImageId, onExit }) {
               className="absolute inset-0 w-full h-full flex items-center justify-center"
               {...fade}
             >
-              <div className="w-screen h-screen flex items-center justify-center relative">
+              <div className="w-screen h-screen flex items-center justify-center relative gallery-slideshow">
                 <motion.img
-  src={current.url}
-  alt={current.title || ""}
-  className={`max-w-[100vw] max-h-[100vh] object-contain cursor-pointer ${
-    isVertical ? "vertical" : ""
-  }`}
-  onClick={() => setIsPaused((p) => !p)}
-  {...kenBurns}
-/>
+                  src={current.url}
+                  alt={current.title || ""}
+                  className={`object-contain cursor-pointer ${
+                    isVertical ? "vertical" : ""
+                  }`}
+                  style={imgStyle}
+                  onClick={() => setIsPaused((p) => !p)}
+                  {...kenBurns}
+                />
 
                 {current.story && (
                   <motion.div
@@ -208,7 +237,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
                       isVertical
                         ? "right-4 top-1/2 -translate-y-1/2"
                         : "bottom-6 left-1/2 -translate-x-1/2"
-                    } text-sm md:text-base`}
+                    } text-sm md:text-base text-content`}
                     {...fade}
                     style={{
                       backgroundColor: "rgba(0, 0, 0, 0.2)",
@@ -224,10 +253,10 @@ export default function StoryShow({ images, startImageId, onExit }) {
                         Paused
                       </div>
                     )}
-                    <div className="font-semibold text-lg mb-2">
+                    <div className="font-semibold text-lg mb-2 story-title">
                       {current.title}
                     </div>
-                    <div className="opacity-80 whitespace-pre-line">
+                    <div className="opacity-80 whitespace-pre-line story-body">
                       {current.story}
                     </div>
                   </motion.div>
@@ -244,13 +273,13 @@ export default function StoryShow({ images, startImageId, onExit }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute bottom-4 left-4 border rounded-lg p-2 flex gap-4 items-center bg-black/30"
+              className="absolute bottom-4 left-4 border rounded-lg p-2 flex gap-4 items-center bg-black/30 slideshow-controls"
               style={{ borderColor: "rgba(255,255,255,0.25)" }}
             >
               {/* Pause/Play */}
               <button
                 onClick={() => setIsPaused((p) => !p)}
-                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition"
+                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition btn"
                 aria-label={isPaused ? "Resume slideshow" : "Pause slideshow"}
                 title={isPaused ? "Resume slideshow" : "Pause slideshow"}
               >
@@ -270,7 +299,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
                     <button
                       key={s}
                       onClick={() => setSpeed(s)}
-                      className="bg-white/10 text-white rounded px-3 py-1 h-8 flex items-center justify-center hover:bg-white/20 transition"
+                      className="bg-white/10 text-white rounded px-3 py-1 h-8 flex items-center justify-center hover:bg-white/20 transition btn"
                       aria-label={`Set speed to ${label}`}
                       title={`Set speed to ${label}`}
                     >
@@ -292,7 +321,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
               {/* Exit */}
               <button
                 onClick={handleExit}
-                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition"
+                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition btn"
                 aria-label="Exit slideshow"
                 title="Exit slideshow"
               >
