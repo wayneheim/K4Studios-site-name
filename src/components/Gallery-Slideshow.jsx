@@ -261,17 +261,14 @@ const CROSSFADE_LEAD = 0.18; // seconds to wait before the next starts fading in
           )}
         </AnimatePresence>
 
-       <AnimatePresence>
+        <AnimatePresence>
           {isIntro ? (
             <PunchInIntro onDone={() => setIsIntro(false)} />
           ) : (
             <motion.div
               key={current.id}
               className="absolute inset-0 w-full h-full flex items-center justify-center"
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.8 }} // ⬅ longer fade-out for smoother transition
+              {...fade}
             >
               <div className="w-screen h-screen flex items-center justify-center relative gallery-slideshow">
                 <motion.img
@@ -281,7 +278,6 @@ const CROSSFADE_LEAD = 0.18; // seconds to wait before the next starts fading in
                   style={imgStyle}
                   onClick={() => setIsPaused((p) => !p)}
                   {...kenBurns}
-                  transition={{ delay: 0.4 }} // ⬅ waits until old image mostly faded
                 />
 
                 {/* Title + Story: hidden for all phones/phablets via isMobileShort */}
@@ -402,4 +398,3 @@ const CROSSFADE_LEAD = 0.18; // seconds to wait before the next starts fading in
     document.body
   );
 }
-

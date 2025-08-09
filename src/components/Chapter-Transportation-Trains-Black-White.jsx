@@ -9,6 +9,8 @@ import "../styles/global.css";
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White.mjs";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
+import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
+
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -28,6 +30,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
+  const [showStoryShow, setShowStoryShow] = useState(false);
 
   // 🔄 Trigger chapter entry mode via custom event
   useEffect(() => {
@@ -161,10 +164,13 @@ export default function ScrollFlipGallery({ initialImageId }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [viewMode, isZoomed]);
 
-  // Orientation detection
+  // Orientation detection (treat landscape only when device is mobile/tablet)
   useEffect(() => {
     const updateOrientation = () => {
-      setIsLandscapeMobile(window.innerWidth < 900 && window.innerWidth > window.innerHeight);
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const isCoarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+      setIsLandscapeMobile(w > h && (isCoarse || w <= 1024));
     };
     updateOrientation();
     window.addEventListener("resize", updateOrientation);
@@ -175,12 +181,23 @@ export default function ScrollFlipGallery({ initialImageId }) {
     };
   }, []);
 
-  // Mobile check
+  // Mobile check (pointer: coarse OR width <= 1024)
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const mqCoarse = window.matchMedia ? window.matchMedia("(pointer: coarse)") : null;
+    const checkMobile = () => {
+      const coarse = mqCoarse ? mqCoarse.matches : false;
+      setIsMobile(coarse || window.innerWidth <= 1024);
+    };
     checkMobile();
     window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    if (mqCoarse && mqCoarse.addEventListener) mqCoarse.addEventListener("change", checkMobile);
+    // Fallback for older browsers
+    if (mqCoarse && mqCoarse.addListener) mqCoarse.addListener(checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      if (mqCoarse && mqCoarse.removeEventListener) mqCoarse.removeEventListener("change", checkMobile);
+      if (mqCoarse && mqCoarse.removeListener) mqCoarse.removeListener(checkMobile);
+    };
   }, []);
 
   // Arrow hint timeout
@@ -200,6 +217,17 @@ export default function ScrollFlipGallery({ initialImageId }) {
       }, 3000);
     }
   }, []);
+
+   // no background scroll while slideshow is on
+  useEffect(() => {
+  if (showStoryShow) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+  return () => { document.body.style.overflow = ""; };
+}, [showStoryShow]);
+
 
   // Touch navigation
   const handleTouchStart = (e) => {
@@ -347,15 +375,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                             }}
                           />
 
-                          {/* ❤️ Like Button (Mobile overlay) */}
-                          {isMobile && (
-                            <div className="absolute top-2 right-2 z-30">
-  <LikeButton
-    imageId={galleryData[currentIndex].id}
-    pageTitle={galleryData[currentIndex].title}
-  />
-</div>
-                          )}
+                          {/* ❤️ Like Button overlay removed for consistency — heart stays in toolbar */}
                         </div>
 
                         {/* Collector Notes (desktop) */}
@@ -534,13 +554,14 @@ export default function ScrollFlipGallery({ initialImageId }) {
                           min="1"
                           max={galleryData.length}
                           placeholder="Jump #"
-                          className="w-20 border border-gray-300 rounded px-1 py-1 text-center"
-                          style={{ fontSize: "0.95em" }}
+                          className="w-16 border border-gray-300 rounded px-1 py-1 text-center"
+                          style={{ fontSize: "0.9em" }}
                         />
                         <button type="submit" className="bg-gray-100 px-2 py-1 rounded shadow hover:bg-gray-200">
                           Go
                         </button>
                       </form>
+
 
                       {/* Cart */}
                       <a
@@ -555,21 +576,19 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       >
                         <ShoppingCart className="w-4 h-4" />
                       </a>
- {/* ❤️ Like Button (Desktop in button row) */}
-  {!isMobile && (
-    <div className="inline-flex items-center px-2">
-      <LikeButton
-        imageId={galleryData[currentIndex].id}
-        pageTitle={galleryData[currentIndex].title}
-      />
-    </div>
-  )}
+                      {/* ❤️ Like Button (always in toolbar for consistency) */}
+                      <div className="inline-flex items-center px-2">
+                        <LikeButton
+                          imageId={galleryData[currentIndex].id}
+                          pageTitle={galleryData[currentIndex].title}
+                        />
+                      </div>
                       {/* Exit */}
                       <button
                         className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded shadow-sm transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-500 focus:text-gray-900 focus:border-gray-500"
                         aria-label="Exit Chapter View"
                         title="Exit"
-                        style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
+                        style={{ fontWeight: 400, minHeight: 32, minWidth: 30 }}
                         onClick={() =>
                           (window.location.href =
                             "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White")
@@ -585,6 +604,24 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         </span>
                       </button>
                     </div>
+                    
+                    {!showStoryShow && (
+                     <button
+  onClick={() => setShowStoryShow(true)}
+  aria-label="Play K4 Slideshow"
+  title="Play K4 Story Show"
+  className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-300 shadow-sm transition-colors"
+  style={{ letterSpacing: '.02em' }}
+>
+  <span className="inline-flex items-center justify-center w-4 h-4 text-gray-300 group-hover:text-red-900 transition-colors">
+    ▶
+  </span>
+  <span className="text-sm font-medium text-gray-300 group-hover:text-red-900 transition-colors">
+    Play Show
+  </span>
+</button>
+
+                    )}
 
                     {/* Collector Notes Panel (mobile) */}
                     {galleryData[currentIndex].notes && isMobile && (
@@ -615,6 +652,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       </AnimatePresence>
                     )}
                   </div>
+                  
 
                   {/* DESCRIPTION + DESKTOP NAV COLUMN */}
                   <div className="w-full md:pl-8">
@@ -808,8 +846,18 @@ export default function ScrollFlipGallery({ initialImageId }) {
         )}
       </div>
 
+{showStoryShow && (
+  <StoryShow
+    images={galleryData.map(img => ({
+      ...img,
+      url: img.url || img.src // Prefer url, fallback to src
+    }))}
+    startImageId={galleryData[currentIndex].id}
+    onExit={() => setShowStoryShow(false)}
+  />
+)}
       {/* Swipe Hint */}
-      <SwipeHint galleryKey="Transportation-Trains-Black-White" />
+     <SwipeHint galleryKey="Transportation-Trains-Black-White" />
     </div>
   );
 }

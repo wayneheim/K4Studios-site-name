@@ -8,6 +8,8 @@ import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs";
 import SwipeHint from "./SwipeHint";
+import LikeButton from "@/components/LikeButton.jsx";
+import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -24,56 +26,54 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const [showArrows, setShowArrows] = useState(true);
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [showStoryShow, setShowStoryShow] = useState(false);
 
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
 
-  
-    // 🔄 Trigger chapter entry mode via custom event
-      useEffect(() => {
-        const handleEnterChapters = () => setHasEnteredChapters(true);
-        window.addEventListener("enterChapters", handleEnterChapters);
-        return () => window.removeEventListener("enterChapters", handleEnterChapters);
-      }, []);
-    
-    // 🔍 Initial load: parse URL or use fallback — safe for static builds
-useEffect(() => {
-  if (!galleryData || galleryData.length === 0) return;
+  // 🔄 Trigger chapter entry mode via custom event
+  useEffect(() => {
+    const handleEnterChapters = () => setHasEnteredChapters(true);
+    window.addEventListener("enterChapters", handleEnterChapters);
+    return () => window.removeEventListener("enterChapters", handleEnterChapters);
+  }, []);
 
-  const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-  const idFromURL = match ? match[1] : initialImageId;
+  // 🔍 Initial load: parse URL or use fallback — safe for static builds
+  useEffect(() => {
+    if (!galleryData || galleryData.length === 0) return;
 
-  if (idFromURL) {
-    const index = galleryData.findIndex((entry) => entry.id === idFromURL);
-    if (index !== -1) {
-      setCurrentIndex(index);
-    }
-  }
-}, [galleryData]);
-    
-      // 🟢 Auto-enter chapters if directly loading an image page
-    useEffect(() => {
-      if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
-        setHasEnteredChapters(true);
+    const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+    const idFromURL = match ? match[1] : initialImageId;
+
+    if (idFromURL) {
+      const index = galleryData.findIndex(entry => entry.id === idFromURL);
+      if (index !== -1) {
+        setCurrentIndex(index);
       }
-    }, []);
-    
-      // 🔗 Update URL when navigating *after* entering chapters
-    useEffect(() => {
-      // Only run if hasEnteredChapters is true OR we're already on an /i-xxx page
-      const imageId = galleryData[currentIndex]?.id;
-      const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
-      if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
+    }
+  }, [initialImageId]);
 
-  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery";
- const newUrl = `${basePath}/${imageId}`;
-  const currentUrl = window.location.pathname;
+  // 🟢 Auto-enter chapters if directly loading an image page
+  useEffect(() => {
+    if (window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/)) {
+      setHasEnteredChapters(true);
+    }
+  }, []);
 
-  if (currentUrl !== newUrl) {
-    window.history.pushState(null, "", newUrl);
-  }
-}, [currentIndex, hasEnteredChapters]);
+  // 🔗 Update URL when navigating *after* entering chapters
+  useEffect(() => {
+    const imageId = galleryData[currentIndex]?.id;
+    const alreadyOnImage = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+    if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
+    const basePath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery";
+    const newUrl = `${basePath}/${imageId}`;
+    const currentUrl = window.location.pathname;
+
+    if (currentUrl !== newUrl) {
+      window.history.pushState(null, "", newUrl);
+    }
+  }, [currentIndex, hasEnteredChapters]);
 
   // 🧼 Clean up stray ID in URL if landing intro is showing
   useEffect(() => {
@@ -98,7 +98,7 @@ useEffect(() => {
       const chapter = document.getElementById("chapter-section");
 
       if (id) {
-        const index = galleryData.findIndex((entry) => entry.id === id);
+        const index = galleryData.findIndex(entry => entry.id === id);
         if (index !== -1) {
           setCurrentIndex(index);
           if (header) header.classList.add("section-hidden");
@@ -135,38 +135,31 @@ useEffect(() => {
     document.body.classList.add("react-mounted");
   }, []);
 
-  // ← / → arrow key navigation (ignore when typing in inputs or with modifier keys)
-useEffect(() => {
-  const onKeyDown = (e) => {
-    if (
-      e.metaKey ||
-      e.ctrlKey ||
-      e.altKey ||
-      e.shiftKey ||
-      /(INPUT|TEXTAREA|SELECT)/.test(e.target.tagName)
-    ) {
-      return;
-    }
+  // ← / → arrow key navigation
+  useEffect(() => {
+    const onKeyDown = e => {
+      if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey || /(INPUT|TEXTAREA|SELECT)/.test(e.target.tagName)) return;
+      if (viewMode !== "flip" || isZoomed) return;
+      if (e.key === "ArrowRight") {
+        setIsExpanded(false);
+        setCurrentIndex(i => Math.min(i + 1, galleryData.length - 1));
+      } else if (e.key === "ArrowLeft") {
+        setIsExpanded(false);
+        setCurrentIndex(i => Math.max(i - 1, 0));
+      }
+    };
 
-    if (viewMode !== "flip" || isZoomed) return; // only navigate in flip mode when not zoomed
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [viewMode, isZoomed]);
 
-    if (e.key === "ArrowRight") {
-      setIsExpanded(false);
-      setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1));
-    } else if (e.key === "ArrowLeft") {
-      setIsExpanded(false);
-      setCurrentIndex((i) => Math.max(i - 1, 0));
-    }
-  };
-
-  window.addEventListener("keydown", onKeyDown);
-  return () => window.removeEventListener("keydown", onKeyDown);
-}, [galleryData.length, viewMode, isZoomed]);
-
-
+  // 📱 Orientation detection (mobile landscape)
   useEffect(() => {
     const updateOrientation = () => {
-      setIsLandscapeMobile(window.innerWidth < 900 && window.innerWidth > window.innerHeight);
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const isCoarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+      setIsLandscapeMobile(w > h && (isCoarse || w <= 1024));
     };
     updateOrientation();
     window.addEventListener("resize", updateOrientation);
@@ -177,19 +170,32 @@ useEffect(() => {
     };
   }, []);
 
+  // 📱 Mobile check
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const mqCoarse = window.matchMedia ? window.matchMedia("(pointer: coarse)") : null;
+    const checkMobile = () => {
+      const coarse = mqCoarse ? mqCoarse.matches : false;
+      setIsMobile(coarse || window.innerWidth <= 1024);
+    };
     checkMobile();
     window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    if (mqCoarse && mqCoarse.addEventListener) mqCoarse.addEventListener("change", checkMobile);
+    if (mqCoarse && mqCoarse.addListener) mqCoarse.addListener(checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      if (mqCoarse && mqCoarse.removeEventListener) mqCoarse.removeEventListener("change", checkMobile);
+      if (mqCoarse && mqCoarse.removeListener) mqCoarse.removeListener(checkMobile);
+    };
   }, []);
 
+  // Arrow hint timeout
   useEffect(() => {
     if (!showArrows) return;
     const timeout = setTimeout(() => setShowArrows(false), 4000);
     return () => clearTimeout(timeout);
   }, [showArrows]);
 
+  // Swipe hint for first-time
   useEffect(() => {
     if (!localStorage.getItem("scrollFlipIntroSeen")) {
       setShowArrowHint(true);
@@ -200,25 +206,28 @@ useEffect(() => {
     }
   }, []);
 
-  // 👆 Touch navigation
-  const handleTouchStart = (e) => {
-    startX.current = e.touches[0].clientX;
-  };
+  // no background scroll while slideshow is on
+  useEffect(() => {
+    if (showStoryShow) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [showStoryShow]);
 
-  const handleTouchEnd = (e) => {
+  // Touch navigation
+  const handleTouchStart = e => { startX.current = e.touches[0].clientX; };
+  const handleTouchEnd = e => {
     if (startX.current !== null) {
       const endX = e.changedTouches[0].clientX;
       const deltaX = endX - startX.current;
       if (deltaX > 50) {
-        setCurrentIndex((i) => {
-          setIsExpanded(false);
-          return Math.max(i - 1, 0);
-        });
+        setIsExpanded(false);
+        setCurrentIndex(i => Math.max(i - 1, 0));
       } else if (deltaX < -50) {
-        setCurrentIndex((i) => {
-          setIsExpanded(false);
-          return Math.min(i + 1, galleryData.length - 1);
-        });
+        setIsExpanded(false);
+        setCurrentIndex(i => Math.min(i + 1, galleryData.length - 1));
       }
       startX.current = null;
     }
@@ -228,15 +237,11 @@ useEffect(() => {
   prevIndex.current = currentIndex;
 
   return (
-
-    
     <div
       className="min-h- bg-white text-black font-serif px-5 py-8 overflow-hidden"
       style={{ fontFamily: 'Glegoo, serif' }}
-       onMouseMove={() => setShowArrows(true)}
+      onMouseMove={() => setShowArrows(true)}
     >
-      
-
       <link href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
       <div className="relative max-w-6xl mx-auto">
@@ -262,35 +267,33 @@ useEffect(() => {
                   onTouchStart={handleTouchStart}
                   onTouchEnd={handleTouchEnd}
                 >
-{isMobile && (
-  // 📱 Mobile Branding Link — shows "⸺ K4 Studios ⸺" and links to the parent section landing page
-  <div
-    className="text-center text-md text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
-    style={{
-      fontFamily: "'Glegoo', serif",
-      marginTop: "-2.0rem", // ✅ This is the key line
-      opacity: ".6",
-      lineHeight: "1",       // optional tight spacing
-    }}
-  >
-    ⸺ <a
-      href={(() => {
-        const pathParts = window.location.pathname.split("/");
-        const iIndex = pathParts.findIndex((part) => part.startsWith("i-"));
-        if (iIndex > 1) {
-          return pathParts.slice(0, iIndex - 1).join("/");
-        }
-        return pathParts.slice(0, -1).join("/");
-      })()}
-      title="Explore Full Collection"
-      className="text-[#85644b] no-underline hover:underline"
-    >
-      K4 Studios
-    </a> ⸺
-  </div>
-)}
-
-
+                  {isMobile && (
+                    // 📱 Mobile Branding Link — shows "⸺ K4 Studios ⸺" and links to the parent section landing page
+                    <div
+                      className="text-center text-md text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
+                      style={{
+                        fontFamily: "'Glegoo', serif",
+                        marginTop: "-2.0rem", // ✅ This is the key line
+                        opacity: ".6",
+                        lineHeight: "1",       // optional tight spacing
+                      }}
+                    >
+                      ⸺ <a
+                        href={(() => {
+                          const pathParts = window.location.pathname.split("/");
+                          const iIndex = pathParts.findIndex((part) => part.startsWith("i-"));
+                          if (iIndex > 1) {
+                            return pathParts.slice(0, iIndex - 1).join("/");
+                          }
+                          return pathParts.slice(0, -1).join("/");
+                        })()}
+                        title="Explore Full Collection"
+                        className="text-[#85644b] no-underline hover:underline"
+                      >
+                        K4 Studios
+                      </a> ⸺
+                    </div>
+                  )}
 
                   {/* --- IMAGE + ARROWS COLUMN --- */}
                   <div className="flex flex-col -mt-4 items-center w-full relative">
@@ -835,7 +838,19 @@ style={
 </>
 )}
 </div>
-            <SwipeHint galleryKey="Painterly-Landscapes-South" />
-</div>
-);
+
+      {showStoryShow && (
+        <StoryShow
+          images={galleryData.map(img => ({
+            ...img,
+            url: img.url || img.src
+          }))}
+          startImageId={galleryData[currentIndex].id}
+          onExit={() => setShowStoryShow(false)}
+        />
+      )}
+      {/* Swipe Hint */}
+      <SwipeHint galleryKey="Painterly-Landscapes-South" />
+    </div>
+  );
 }

@@ -6,9 +6,11 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
+// Color dataset (data point 1)
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
+import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -28,6 +30,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
+  const [showStoryShow, setShowStoryShow] = useState(false);
 
   // 🔄 Trigger chapter entry mode via custom event
   useEffect(() => {
@@ -58,13 +61,13 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   }, []);
 
-  // 🔗 Update URL when navigating *after* entering chapters
+  // 🔗 Update URL when navigating *after* entering chapters (data point 2: Color path)
   useEffect(() => {
     const imageId = galleryData[currentIndex]?.id;
     const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
     if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-      const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color";
+    const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color";
     const newUrl = `${basePath}/${imageId}`;
     const currentUrl = window.location.pathname;
 
@@ -73,7 +76,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   }, [currentIndex, hasEnteredChapters]);
 
-  // 🧼 Clean up stray ID in URL if landing intro is showing
+  // 🧼 Clean up stray ID in URL if landing intro is showing (data point 3: Color clean URL)
   useEffect(() => {
     const introEl = document.getElementById("intro-section");
     const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
@@ -161,11 +164,13 @@ export default function ScrollFlipGallery({ initialImageId }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [viewMode, isZoomed]);
 
-  // Orientation detection
+  // Orientation detection (treat landscape only when device is mobile/tablet)
   useEffect(() => {
     const updateOrientation = () => {
-      // Treat any device in landscape as landscape-mobile for UI placement
-      setIsLandscapeMobile(window.innerWidth > window.innerHeight);
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const isCoarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+      setIsLandscapeMobile(w > h && (isCoarse || w <= 1024));
     };
     updateOrientation();
     window.addEventListener("resize", updateOrientation);
@@ -176,17 +181,34 @@ export default function ScrollFlipGallery({ initialImageId }) {
     };
   }, []);
 
-  // Mobile check
+  // Mobile check (pointer: coarse OR width <= 1024)
   useEffect(() => {
+    const mqCoarse = window.matchMedia ? window.matchMedia("(pointer: coarse)") : null;
     const checkMobile = () => {
-      const isCoarse = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
-      const smallish = window.innerWidth <= 1024;
-      setIsMobile(isCoarse || smallish);
+      const coarse = mqCoarse ? mqCoarse.matches : false;
+      setIsMobile(coarse || window.innerWidth <= 1024);
     };
     checkMobile();
     window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    if (mqCoarse && mqCoarse.addEventListener) mqCoarse.addEventListener("change", checkMobile);
+    // Fallback for older browsers
+    if (mqCoarse && mqCoarse.addListener) mqCoarse.addListener(checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      if (mqCoarse && mqCoarse.removeEventListener) mqCoarse.removeEventListener("change", checkMobile);
+      if (mqCoarse && mqCoarse.removeListener) mqCoarse.removeListener(checkMobile);
+    };
   }, []);
+
+   // no background scroll while slideshow is on
+  useEffect(() => {
+  if (showStoryShow) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+  return () => { document.body.style.overflow = ""; };
+}, [showStoryShow]);
 
   // Arrow hint timeout
   useEffect(() => {
@@ -352,36 +374,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                             }}
                           />
 
-                          {/* ❤️ Like Button (Mobile portrait — bottom-right on image) */}
-                          {isMobile && !isLandscapeMobile && (
-                            <div
-                              className="absolute inset-0"
-                              style={{ zIndex: 30, pointerEvents: "none" }}
-                            >
-                              <div
-                                className="absolute"
-                                style={{
-                                  right: "max(0.5rem, env(safe-area-inset-right))",
-                                  bottom: "max(0.5rem, env(safe-area-inset-bottom))",
-                                  minWidth: 44,
-                                  minHeight: 44,
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "center",
-                                  borderRadius: 9999,
-                                  background: "rgba(0,0,0,0.35)",
-                                  backdropFilter: "blur(2px)",
-                                  WebkitBackdropFilter: "blur(2px)",
-                                  pointerEvents: "auto",
-                                }}
-                              >
-                                <LikeButton
-                                  imageId={galleryData[currentIndex].id}
-                                  pageTitle={galleryData[currentIndex].title}
-                                />
-                              </div>
-                            </div>
-                          )}
+                          {/* ❤️ Like Button overlay removed for consistency — heart stays in toolbar */}
                         </div>
 
                         {/* Collector Notes (desktop) */}
@@ -560,8 +553,8 @@ export default function ScrollFlipGallery({ initialImageId }) {
                           min="1"
                           max={galleryData.length}
                           placeholder="Jump #"
-                          className="w-20 border border-gray-300 rounded px-1 py-1 text-center"
-                          style={{ fontSize: "0.95em" }}
+                          className="w-16 border border-gray-300 rounded px-1 py-1 text-center"
+                          style={{ fontSize: "0.9em" }}
                         />
                         <button type="submit" className="bg-gray-100 px-2 py-1 rounded shadow hover:bg-gray-200">
                           Go
@@ -581,33 +574,22 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       >
                         <ShoppingCart className="w-4 h-4" />
                       </a>
-                        {/* ❤️ Like Button (Mobile Landscape — on toolbar, right side) */}
-                        {isMobile && isLandscapeMobile && (
-                          <div className="inline-flex items-center px-1">
-                            <LikeButton
-                              imageId={galleryData[currentIndex].id}
-                              pageTitle={galleryData[currentIndex].title}
-                            />
-                          </div>
-                        )}
- {/* ❤️ Like Button (Desktop in button row) */}
-  {!isMobile && (
-    <div className="inline-flex items-center px-2">
-      <LikeButton
-        imageId={galleryData[currentIndex].id}
-        pageTitle={galleryData[currentIndex].title}
-      />
-    </div>
-  )}
+                      {/* ❤️ Like Button (always in toolbar for consistency) */}
+                      <div className="inline-flex items-center px-2">
+                        <LikeButton
+                          imageId={galleryData[currentIndex].id}
+                          pageTitle={galleryData[currentIndex].title}
+                        />
+                      </div>
                       {/* Exit */}
                       <button
                         className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded shadow-sm transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-500 focus:text-gray-900 focus:border-gray-500"
                         aria-label="Exit Chapter View"
                         title="Exit"
-                        style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
+                        style={{ fontWeight: 400, minHeight: 32, minWidth: 30 }}
                         onClick={() =>
                           (window.location.href =
-                            "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color ")
+                            "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color")
                         }
                       >
                         <span className="block relative h-[1em]">
@@ -620,6 +602,24 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         </span>
                       </button>
                     </div>
+
+                    {!showStoryShow && (
+                     <button
+  onClick={() => setShowStoryShow(true)}
+  aria-label="Play K4 Slideshow"
+  title="Play K4 Story Show"
+  className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-300 shadow-sm transition-colors"
+  style={{ letterSpacing: '.02em' }}
+>
+  <span className="inline-flex items-center justify-center w-4 h-4 text-gray-300 group-hover:text-red-900 transition-colors">
+    ▶
+  </span>
+  <span className="text-sm font-medium text-gray-300 group-hover:text-red-900 transition-colors">
+    Play Show
+  </span>
+</button>
+
+                    )}
 
                     {/* Collector Notes Panel (mobile) */}
                     {galleryData[currentIndex].notes && isMobile && (
@@ -843,7 +843,17 @@ export default function ScrollFlipGallery({ initialImageId }) {
         )}
       </div>
 
-      {/* Swipe Hint */}
+{showStoryShow && (
+  <StoryShow
+    images={galleryData.map(img => ({
+      ...img,
+      url: img.url || img.src // Prefer url, fallback to src
+    }))}
+    startImageId={galleryData[currentIndex].id}
+    onExit={() => setShowStoryShow(false)}
+  />
+)}
+      {/* Swipe Hint (data point 5: Color key) */}
       <SwipeHint galleryKey="Painterly-Civil-War-Color" />
     </div>
   );

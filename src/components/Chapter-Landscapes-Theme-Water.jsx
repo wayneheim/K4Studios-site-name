@@ -80,7 +80,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     const isViewingImageZero = currentIndex === 0;
 
     if (isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
-      const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
+      const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water";
       window.history.replaceState(null, "", cleanUrl);
     }
   }, [currentIndex]);
@@ -572,7 +572,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
                         onClick={() =>
                           (window.location.href =
-                            "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White")
+                            "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water")
                         }
                       >
                         <span className="block relative h-[1em]">
@@ -809,7 +809,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
       </div>
 
       {/* Swipe Hint */}
-      <SwipeHint galleryKey="Painterly-Civil-War-BW" />
+      <SwipeHint galleryKey="Painterly-Landscapes-Water" />
     </div>
   );
 }
