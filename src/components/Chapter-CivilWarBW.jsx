@@ -14,6 +14,18 @@ import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
+// --- Simple mojibake fixer (UTF-8 shown as Latin-1)
+function fixMojibake(str) {
+  if (!str) return str;
+  return str
+    .replace(/â€™/g, "’")
+    .replace(/â€œ/g, "“")
+    .replace(/â€�/g, "”")
+    .replace(/â€“/g, "–")
+    .replace(/â€”/g, "—")
+    .replace(/â€¦/g, "…");
+}
+
 export default function ScrollFlipGallery({ initialImageId }) {
   const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,7 +88,16 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   }, [currentIndex, hasEnteredChapters]);
 
-  // 🧼 Clean up stray ID in URL if landing intro is showing
+  // � Update <title> tag to reflect current chapter (simple first pass)
+  useEffect(() => {
+    const base = "Civil War Portraits – Black & White";
+    const entry = galleryData[currentIndex];
+    const chapterLabel = entry?.title ? fixMojibake(entry.title) : `Chapter ${currentIndex + 1}`;
+    const newTitle = `${chapterLabel} — ${base}`;
+    if (document.title !== newTitle) document.title = newTitle;
+  }, [currentIndex]);
+
+  // �🧼 Clean up stray ID in URL if landing intro is showing
   useEffect(() => {
     const introEl = document.getElementById("intro-section");
     const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
@@ -797,12 +818,14 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       <button
                         onClick={() => setCurrentIndex((i) => Math.max(i - 1, 0))}
                         className="bg-gray-100 px-3 py-1 -mt-16 rounded shadow hover:bg-gray-200"
+                        title="Back"
                       >
                         &lt;
                       </button>
                       <button
                         onClick={() => setViewMode("grid")}
                         className="bg-gray-100 p-2 -mt-16 rounded shadow hover:bg-gray-200"
+                        title="Index View"
                       >
                         <Grid className="w-5 h-5" color="#84766d" />
                       </button>
@@ -811,6 +834,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         className={`bg-gray-100 px-3 py-1 -mt-16 rounded shadow hover:bg-gray-200 ${
                           showArrowHint ? "animate-pulse text-yellow-500" : "text-black"
                         }`}
+                        title="Next"
                       >
                         &gt;
                       </button>

@@ -119,7 +119,52 @@ export default function RebuiltScrollGrid({
   return (
     <section className="bg-white py-10 px-6">
       {/* Header with hover/focus effect */}
-      <div className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4">
+      <div
+        className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4"
+        // Remove top space on mobile (colCount===1); keep large offset for centered desktop presentation
+        style={{ paddingTop: colCount === 1 ? '0px' : '150px' }}
+      >
+        {/* Desktop-only circular logo absolutely centered above heading (no structural changes) */}
+        <div
+          className="hidden md:flex flex-col items-center justify-center"
+          style={{
+            position: 'absolute',
+            top: -40,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            marginBottom: 0,
+          }}
+        >
+          <button
+            type="button"
+            onClick={handleClose}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClose(); } }}
+            aria-label="Exit Chapter Index"
+            title="Exit Index View"
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: 'pointer',
+              outline: 'none'
+            }}
+          >
+            <img
+              src="/images/K4Logo-web.jpg"
+              alt="K4 Studios"
+              style={{
+                width: 120,
+                height: 120,
+                borderRadius: '50%',
+                objectFit: 'cover',
+                opacity: .17,
+                filter: 'grayscale(10%)',
+                userSelect: 'none'
+              }}
+              draggable={false}
+            />
+          </button>
+        </div>
         <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
         <h2
           className="watermark-title whitespace-nowrap"
@@ -264,6 +309,7 @@ export default function RebuiltScrollGrid({
     style={{
       backgroundColor: "#d4d4d4", // lighter base
     }}
+  title="Exit Index View"
     onMouseEnter={(e) => {
       e.currentTarget.style.backgroundColor = "#c0c0c0"; // hover slightly darker
     }}

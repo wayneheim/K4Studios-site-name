@@ -794,12 +794,14 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       <button
                         onClick={() => setCurrentIndex((i) => Math.max(i - 1, 0))}
                         className="bg-gray-100 px-3 py-1 -mt-16 rounded shadow hover:bg-gray-200"
+                        title="Back"
                       >
                         &lt;
                       </button>
                       <button
                         onClick={() => setViewMode("grid")}
                         className="bg-gray-100 p-2 -mt-16 rounded shadow hover:bg-gray-200"
+                        title="Index View"
                       >
                         <Grid className="w-5 h-5" color="#84766d" />
                       </button>
@@ -808,6 +810,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         className={`bg-gray-100 px-3 py-1 -mt-16 rounded shadow hover:bg-gray-200 ${
                           showArrowHint ? "animate-pulse text-yellow-500" : "text-black"
                         }`}
+                        title="Next"
                       >
                         &gt;
                       </button>

@@ -28,6 +28,17 @@ import '../../../../styles/oneupheader.css';
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
+// Normalize any mojibake (UTF-8 shown as Latin-1) so titles render with proper punctuation
+function fixMojibake(str) {
+  if (!str) return str;
+  return str
+    .replace(/â€™/g, "’")
+    .replace(/â€œ/g, "“")
+    .replace(/â€�/g, "”")
+    .replace(/â€“/g, "–")
+    .replace(/â€”/g, "—")
+    .replace(/â€¦/g, "…");
+}
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
