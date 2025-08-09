@@ -461,7 +461,7 @@ useEffect(() => {
                     </div>
 
                     {/* --- Unified Nav Row: ☰ | notes | 1–N | grid | jump | go | cart | ⨂ --- */}
-<div className="flex items-center justify-center ml-[0.2rem] gap-1 md:gap-6 mt-3 mb-1 max-w-[340px] mx-auto"
+<div className="flex items-center justify-center ml-[0.2rem] gap-1 md:gap-6 mt-3 mb-1 max-w-[350px] mx-auto"
 style={
     // If on desktop, and notes are present, add right margin to bar
     !isMobile && galleryData[currentIndex].notes
@@ -537,7 +537,7 @@ style={
                           style={{ fontSize: "0.95em" }}
                         />
                         <button type="submit" className="bg-gray-100 px-2 py-1 rounded shadow hover:bg-gray-200">
-                          G
+                          ddd
                         </button>
                       </form>
                       {/* Cart */}

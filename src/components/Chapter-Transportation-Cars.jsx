@@ -476,8 +476,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                     </div>
 
                    
-
-                    {/* Unified Nav Row */}
+ {/* Unified Nav Row */}
                     <div
                      className="flex items-center justify-center ml-[0.1rem] gap-0.5 md:gap-4 mt-1 mb-1 max-w-[370px] mx-auto border border-gray-200 bg-white rounded-md shadow-sm px-1.5 py-1.5"
                       style={
@@ -488,7 +487,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                     >
                       {/* Menu */}
                       <button
-                        className="px-1 py-.5 border border-gray-200 hover:bg-gray-200 bg-white text-gray-400 text-lg rounded shadow-sm transition-colors duration-150 hover:text-gray-900 focus:text-gray-900 hover:border-gray-500 focus:border-gray-500"
+                        className="px-1 py-.5 border border-gray-200 hover:bg-gray-100 bg-white text-gray-400 text-lg rounded shadow-sm transition-colors duration-150 hover:text-gray-600 focus:text-gray-500 hover:border-gray-300 focus:border-gray-300"
                         aria-label="Show Menu"
                         title="Show Menu"
                         style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
@@ -519,7 +518,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       )}
 
                       {/* Chapter count */}
-                      <div className="text-sm text-gray-500 font-medium flex items-center whitespace-nowrap" style={{ letterSpacing: '-0.075em' }}>
+                      <div className="text-sm text-gray-400 font-medium flex items-center whitespace-nowrap" style={{ letterSpacing: '-0.075em' }}>
                         {`${currentIndex + 1} – ${galleryData.length}`}
                       </div>
 
@@ -545,7 +544,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                           }
                         }}
                         className="flex items-center gap-2 text-xs"
-                        style={{ minWidth: 100 }}
+                        style={{ minWidth: 50 }}
                       >
                         <input
                           type="number"
@@ -553,15 +552,14 @@ export default function ScrollFlipGallery({ initialImageId }) {
                           name="chapterNum"
                           min="1"
                           max={galleryData.length}
-                          placeholder="Jump #"
-                          className="w-16 border border-gray-300 rounded px-1 py-1 text-center"
-                          style={{ fontSize: "0.9em" }}
+                          placeholder="#"
+                          className="w-16 border border-gray-200 rounded px-1 py-1 text-center"
+                          style={{ fontSize: "1.0em" }}
                         />
-                        <button type="submit" className="bg-gray-100 px-2 py-1 rounded shadow hover:bg-gray-200">
+                        <button type="submit" className="bg-gray-000 px-1.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:text-gray-500 hover:bg-gray-100">
                           Go
                         </button>
                       </form>
-
 
                       {/* Cart */}
                       <a
@@ -585,13 +583,13 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       </div>
                       {/* Exit */}
                       <button
-                        className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded shadow-sm transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-500 focus:text-gray-900 focus:border-gray-500"
+                        className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded-full shadow-sm transition-colors duration-200 hover:bg-gray-800 hover:text-gray-200 hover:border-gray-400 focus:text-gray-200 focus:border-gray-400"
                         aria-label="Exit Chapter View"
                         title="Exit"
                         style={{ fontWeight: 400, minHeight: 32, minWidth: 30 }}
                         onClick={() =>
                           (window.location.href =
-                            "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars")
+                            "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color")
                         }
                       >
                         <span className="block relative h-[1em]">
@@ -604,7 +602,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         </span>
                       </button>
                     </div>
-                    
+
                     {!showStoryShow && (
                      <button
   onClick={() => setShowStoryShow(true)}
@@ -613,10 +611,10 @@ export default function ScrollFlipGallery({ initialImageId }) {
   className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-300 shadow-sm transition-colors"
   style={{ letterSpacing: '.02em' }}
 >
-  <span className="inline-flex items-center justify-center w-4 h-4 text-gray-300 group-hover:text-red-900 transition-colors">
+  <span className="inline-flex items-center justify-center w-4 h-4 text-gray-300 group-hover:text-red-700 transition-colors">
     ▶
   </span>
-  <span className="text-sm font-medium text-gray-300 group-hover:text-red-900 transition-colors">
+  <span className="text-sm font-medium text-gray-300 group-hover:text-gray-400 transition-colors">
     Play Show
   </span>
 </button>

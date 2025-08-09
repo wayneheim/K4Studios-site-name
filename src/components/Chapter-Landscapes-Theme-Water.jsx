@@ -9,6 +9,8 @@ import "../styles/global.css";
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
+import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
+
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -28,6 +30,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
+  const [showStoryShow, setShowStoryShow] = useState(false);
 
   // 🔄 Trigger chapter entry mode via custom event
   useEffect(() => {
@@ -64,7 +67,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
     if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-  const basePath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water";
+    const basePath = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water";
     const newUrl = `${basePath}/${imageId}`;
     const currentUrl = window.location.pathname;
 
@@ -161,10 +164,13 @@ export default function ScrollFlipGallery({ initialImageId }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [viewMode, isZoomed]);
 
-  // Orientation detection
+  // Orientation detection (treat landscape only when device is mobile/tablet)
   useEffect(() => {
     const updateOrientation = () => {
-      setIsLandscapeMobile(window.innerWidth < 900 && window.innerWidth > window.innerHeight);
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const isCoarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+      setIsLandscapeMobile(w > h && (isCoarse || w <= 1024));
     };
     updateOrientation();
     window.addEventListener("resize", updateOrientation);
@@ -175,12 +181,23 @@ export default function ScrollFlipGallery({ initialImageId }) {
     };
   }, []);
 
-  // Mobile check
+  // Mobile check (pointer: coarse OR width <= 1024)
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const mqCoarse = window.matchMedia ? window.matchMedia("(pointer: coarse)") : null;
+    const checkMobile = () => {
+      const coarse = mqCoarse ? mqCoarse.matches : false;
+      setIsMobile(coarse || window.innerWidth <= 1024);
+    };
     checkMobile();
     window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    if (mqCoarse && mqCoarse.addEventListener) mqCoarse.addEventListener("change", checkMobile);
+    // Fallback for older browsers
+    if (mqCoarse && mqCoarse.addListener) mqCoarse.addListener(checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      if (mqCoarse && mqCoarse.removeEventListener) mqCoarse.removeEventListener("change", checkMobile);
+      if (mqCoarse && mqCoarse.removeListener) mqCoarse.removeListener(checkMobile);
+    };
   }, []);
 
   // Arrow hint timeout
@@ -200,6 +217,17 @@ export default function ScrollFlipGallery({ initialImageId }) {
       }, 3000);
     }
   }, []);
+
+   // no background scroll while slideshow is on
+  useEffect(() => {
+  if (showStoryShow) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+  return () => { document.body.style.overflow = ""; };
+}, [showStoryShow]);
+
 
   // Touch navigation
   const handleTouchStart = (e) => {
@@ -347,15 +375,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                             }}
                           />
 
-                          {/* ❤️ Like Button (Mobile overlay) */}
-                          {isMobile && (
-                            <div className="absolute top-2 right-2 z-30">
-  <LikeButton
-    imageId={galleryData[currentIndex].id}
-    pageTitle={galleryData[currentIndex].title}
-  />
-</div>
-                          )}
+                          {/* ❤️ Like Button overlay removed for consistency — heart stays in toolbar */}
                         </div>
 
                         {/* Collector Notes (desktop) */}
@@ -457,134 +477,150 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
                    
 
-                    {/* Unified Nav Row */}
-                    <div
-                     className="flex items-center justify-center ml-[0.1rem] gap-0.5 md:gap-4 mt-1 mb-1 max-w-[370px] mx-auto border border-gray-200 bg-white rounded-md shadow-sm px-1.5 py-1.5"
-                      style={
-                        !isMobile && galleryData[currentIndex].notes
-                          ? { marginRight: "92px" }
-                          : {}
-                      }
-                    >
-                      {/* Menu */}
-                      <button
-                        className="px-1 py-.5 border border-gray-200 hover:bg-gray-200 bg-white text-gray-400 text-lg rounded shadow-sm transition-colors duration-150 hover:text-gray-900 focus:text-gray-900 hover:border-gray-500 focus:border-gray-500"
-                        aria-label="Show Menu"
-                        title="Show Menu"
-                        style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
-                        onClick={() => setShowMiniMenu(true)}
-                      >
-                        ☰
-                      </button>
+                {/* Unified Nav Row */}
+                                   <div
+                                    className="flex items-center justify-center ml-[0.1rem] gap-0.5 md:gap-4 mt-1 mb-1 max-w-[370px] mx-auto border border-gray-200 bg-white rounded-md shadow-sm px-1.5 py-1.5"
+                                     style={
+                                       !isMobile && galleryData[currentIndex].notes
+                                         ? { marginRight: "92px" }
+                                         : {}
+                                     }
+                                   >
+                                     {/* Menu */}
+                                     <button
+                                       className="px-1 py-.5 border border-gray-200 hover:bg-gray-100 bg-white text-gray-400 text-lg rounded shadow-sm transition-colors duration-150 hover:text-gray-600 focus:text-gray-500 hover:border-gray-300 focus:border-gray-300"
+                                       aria-label="Show Menu"
+                                       title="Show Menu"
+                                       style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
+                                       onClick={() => setShowMiniMenu(true)}
+                                     >
+                                       ☰
+                                     </button>
+               
+                                     {/* Notes (mobile) */}
+                                     {galleryData[currentIndex].notes && isMobile && (
+                                       <button
+                                         onClick={() => setShowNotes((prev) => !prev)}
+                                         aria-label="View Collector Notes"
+                                         title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
+                                         className="inline-flex items-center text-gray-400 hover:bg-gray-200 justify-center w-7 h-7 relative border border-gray-200 bg-white rounded shadow"
+                                       >
+                                         {showNotes ? (
+                                           <span className="text-lg leading-none">✕</span>
+                                         ) : (
+                                           <>
+                                             <span className="absolute left-2 top-[2px] text-[12px] text-red-600 font-semibold">
+                                               *
+                                             </span>
+                                             <Notebook className="w-5 h-5 stroke-[1.75]" />
+                                           </>
+                                         )}
+                                       </button>
+                                     )}
+               
+                                     {/* Chapter count */}
+                                     <div className="text-sm text-gray-400 font-medium flex items-center whitespace-nowrap" style={{ letterSpacing: '-0.075em' }}>
+                                       {`${currentIndex + 1} – ${galleryData.length}`}
+                                     </div>
+               
+                                     {/* Grid icon (mobile) */}
+                                     <button
+                                       onClick={() => setViewMode((prev) => (prev === "flip" ? "grid" : "flip"))}
+                                       aria-label="View Grid Mode"
+                                       title="View Grid Mode"
+                                       className="bg-gray-100 rounded p-1 shadow hover:bg-gray-200 flex items-center justify-center md:hidden"
+                                       style={{ minWidth: 32, minHeight: 32 }}
+                                     >
+                                       <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
+                                     </button>
+               
+                                     {/* Jump form */}
+                                     <form
+                                       onSubmit={(e) => {
+                                         e.preventDefault();
+                                         const num = parseInt(e.target.elements.chapterNum.value, 10);
+                                         if (!isNaN(num) && num >= 1 && num <= galleryData.length) {
+                                           setIsExpanded(false);
+                                           setCurrentIndex(num - 1);
+                                         }
+                                       }}
+                                       className="flex items-center gap-2 text-xs"
+                                       style={{ minWidth: 50 }}
+                                     >
+                                       <input
+                                         type="number"
+                                         id="chapterNum"
+                                         name="chapterNum"
+                                         min="1"
+                                         max={galleryData.length}
+                                         placeholder="#"
+                                         className="w-16 border border-gray-200 rounded px-1 py-1 text-center"
+                                         style={{ fontSize: "1.0em" }}
+                                       />
+                                       <button type="submit" className="bg-gray-000 px-1.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:text-gray-500 hover:bg-gray-100">
+                                         Go
+                                       </button>
+                                     </form>
+               
+                                     {/* Cart */}
+                                     <a
+                                       href={galleryData[currentIndex].buyLink || "#"}
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       title="Click to order prints"
+                                       className="inline-flex items-center gap-2 rounded px-2 py-1.5 text-xs font-semibold shadow transition"
+                                       style={{ backgroundColor: '#bbb6b1', color: '#ffffff' }}
+                                       onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#76807b')}
+                                       onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#bbb6b1')}
+                                     >
+                                       <ShoppingCart className="w-4 h-4" />
+                                     </a>
+                                     {/* ❤️ Like Button (always in toolbar for consistency) */}
+                                     <div className="inline-flex items-center px-2">
+                                       <LikeButton
+                                         imageId={galleryData[currentIndex].id}
+                                         pageTitle={galleryData[currentIndex].title}
+                                       />
+                                     </div>
+                                     {/* Exit */}
+                                     <button
+                                       className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded-full shadow-sm transition-colors duration-200 hover:bg-gray-800 hover:text-gray-200 hover:border-gray-400 focus:text-gray-200 focus:border-gray-400"
+                                       aria-label="Exit Chapter View"
+                                       title="Exit"
+                                       style={{ fontWeight: 400, minHeight: 32, minWidth: 30 }}
+                                       onClick={() =>
+                                         (window.location.href =
+                                           "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color")
+                                       }
+                                     >
+                                       <span className="block relative h-[1em]">
+                                         <span className="absolute inset-0 flex items-center justify-center text-md transition-all duration-200 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:-translate-y-1">
+                                           X
+                                         </span>
+                                         <span className="absolute inset-0 flex items-center justify-center transition-all duration-200 ease-in-out opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0">
+                                           Exit
+                                         </span>
+                                       </span>
+                                     </button>
+                                   </div>
+               
+                                   {!showStoryShow && (
+                                    <button
+                 onClick={() => setShowStoryShow(true)}
+                 aria-label="Play K4 Slideshow"
+                 title="Play K4 Story Show"
+                 className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-300 shadow-sm transition-colors"
+                 style={{ letterSpacing: '.02em' }}
+               >
+                 <span className="inline-flex items-center justify-center w-4 h-4 text-gray-300 group-hover:text-red-700 transition-colors">
+                   ▶
+                 </span>
+                 <span className="text-sm font-medium text-gray-300 group-hover:text-gray-400 transition-colors">
+                   Play Show
+                 </span>
+               </button>
 
-                      {/* Notes (mobile) */}
-                      {galleryData[currentIndex].notes && isMobile && (
-                        <button
-                          onClick={() => setShowNotes((prev) => !prev)}
-                          aria-label="View Collector Notes"
-                          title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
-                          className="inline-flex items-center text-gray-400 hover:bg-gray-200 justify-center w-7 h-7 relative border border-gray-200 bg-white rounded shadow"
-                        >
-                          {showNotes ? (
-                            <span className="text-lg leading-none">✕</span>
-                          ) : (
-                            <>
-                              <span className="absolute left-2 top-[2px] text-[12px] text-red-600 font-semibold">
-                                *
-                              </span>
-                              <Notebook className="w-5 h-5 stroke-[1.75]" />
-                            </>
-                          )}
-                        </button>
-                      )}
-
-                      {/* Chapter count */}
-                      <div className="text-sm text-gray-500 font-medium flex items-center whitespace-nowrap" style={{ letterSpacing: '-0.075em' }}>
-                        {`${currentIndex + 1} – ${galleryData.length}`}
-                      </div>
-
-                      {/* Grid icon (mobile) */}
-                      <button
-                        onClick={() => setViewMode((prev) => (prev === "flip" ? "grid" : "flip"))}
-                        aria-label="View Grid Mode"
-                        title="View Grid Mode"
-                        className="bg-gray-100 rounded p-1 shadow hover:bg-gray-200 flex items-center justify-center md:hidden"
-                        style={{ minWidth: 32, minHeight: 32 }}
-                      >
-                        <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
-                      </button>
-
-                      {/* Jump form */}
-                      <form
-                        onSubmit={(e) => {
-                          e.preventDefault();
-                          const num = parseInt(e.target.elements.chapterNum.value, 10);
-                          if (!isNaN(num) && num >= 1 && num <= galleryData.length) {
-                            setIsExpanded(false);
-                            setCurrentIndex(num - 1);
-                          }
-                        }}
-                        className="flex items-center gap-2 text-xs"
-                        style={{ minWidth: 100 }}
-                      >
-                        <input
-                          type="number"
-                          id="chapterNum"
-                          name="chapterNum"
-                          min="1"
-                          max={galleryData.length}
-                          placeholder="Jump #"
-                          className="w-20 border border-gray-300 rounded px-1 py-1 text-center"
-                          style={{ fontSize: "0.95em" }}
-                        />
-                        <button type="submit" className="bg-gray-100 px-2 py-1 rounded shadow hover:bg-gray-200">
-                          Go
-                        </button>
-                      </form>
-
-                      {/* Cart */}
-                      <a
-                        href={galleryData[currentIndex].buyLink || "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Click to order prints"
-                        className="inline-flex items-center gap-2 rounded px-2 py-1.5 text-xs font-semibold shadow transition"
-                        style={{ backgroundColor: '#bbb6b1', color: '#ffffff' }}
-                        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#76807b')}
-                        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#bbb6b1')}
-                      >
-                        <ShoppingCart className="w-4 h-4" />
-                      </a>
- {/* ❤️ Like Button (Desktop in button row) */}
-  {!isMobile && (
-    <div className="inline-flex items-center px-2">
-      <LikeButton
-        imageId={galleryData[currentIndex].id}
-        pageTitle={galleryData[currentIndex].title}
-      />
-    </div>
-  )}
-                      {/* Exit */}
-                      <button
-                        className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded shadow-sm transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-500 focus:text-gray-900 focus:border-gray-500"
-                        aria-label="Exit Chapter View"
-                        title="Exit"
-                        style={{ fontWeight: 400, minHeight: 32, minWidth: 35 }}
-                        onClick={() =>
-                          (window.location.href =
-                            "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water")
-                        }
-                      >
-                        <span className="block relative h-[1em]">
-                          <span className="absolute inset-0 flex items-center justify-center text-md transition-all duration-200 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:-translate-y-1">
-                            X
-                          </span>
-                          <span className="absolute inset-0 flex items-center justify-center transition-all duration-200 ease-in-out opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0">
-                            Exit
-                          </span>
-                        </span>
-                      </button>
-                    </div>
+                    )}
 
                     {/* Collector Notes Panel (mobile) */}
                     {galleryData[currentIndex].notes && isMobile && (
@@ -615,6 +651,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       </AnimatePresence>
                     )}
                   </div>
+                  
 
                   {/* DESCRIPTION + DESKTOP NAV COLUMN */}
                   <div className="w-full md:pl-8">
@@ -808,8 +845,18 @@ export default function ScrollFlipGallery({ initialImageId }) {
         )}
       </div>
 
+{showStoryShow && (
+  <StoryShow
+    images={galleryData.map(img => ({
+      ...img,
+      url: img.url || img.src // Prefer url, fallback to src
+    }))}
+    startImageId={galleryData[currentIndex].id}
+    onExit={() => setShowStoryShow(false)}
+  />
+)}
       {/* Swipe Hint */}
-      <SwipeHint galleryKey="Painterly-Landscapes-Water" />
+       <SwipeHint galleryKey="Painterly-Landscapes-Water" />
     </div>
   );
 }
