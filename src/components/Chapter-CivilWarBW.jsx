@@ -608,7 +608,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                     {!showStoryShow && (
                      <button
   onClick={() => setShowStoryShow(true)}
-  aria-label="Play K4 slideshow"
+  aria-label="Play K4 Slideshow"
   title="Play K4 Story Show"
   className="group my-3 inline-flex items-center gap-2 rounded-md px-2 py-1 bg-white border border-gray-300 shadow-sm transition-colors"
   style={{ letterSpacing: '.02em' }}

@@ -19,7 +19,7 @@ export const galleryData = [
 {
     "id": "i-834cDZ8",
     "title": "Civil War Portrait: Victory or Survival?",
-    "description": "Painterly Civil War portrait of a weary soldier in the aftermath of battle. Fine art historical photography capturing the grit, uncertainty, and quiet tension of a moment caught between victory and survival. © Wayne Heim",
+    "description": "Painterly Civil War portrait of a tired soldier standing in the aftermath of battle, embodying the uncertainty between victory and survival.",
     "alt": "Painterly Civil War portrait of a tired soldier standing in the aftermath of battle, embodying the uncertainty between victory and survival.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-834cDZ8/1/Mq2pFD8TcGwz7SKRSQZhJjtgVRkhNj9KdjsvGhCt4/XL/_O2H6854-Enhanced-NR-Edit-2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-834cDZ8/A",
@@ -38,7 +38,7 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "Was it victory… or just survival? I can’t help but wonder how history will tell our story.",
+    "story": "FWas it victory… or just survival? I can’t help but wonder how history will tell our story.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -49,8 +49,8 @@ export const galleryData = [
   },
   {
     "id": "i-GqDJLmF",
-    "title": "Painterly Civil War Portrait – Soldier Waiting in Camp for Orders",
-    "description": "Painterly Civil War portrait of a young soldier waiting for orders, his expression caught between boredom and frustration. Fine art historical reenactment photography by Wayne Heim, capturing the quiet moments of camp life with period-accurate detail.",
+    "title": "Soldier Waiting in Camp for Orders",
+    "description": "Painterly Civil War portrait of a young soldier waiting for orders, his expression caught between boredom and frustration. Fine art historical reenactment photography by Wayne Heim, capturing the quiet moments of camp life with period-accurate detail. © Wayne Heim",
     "alt": "Young Civil War soldier in worn uniform leaning on a rifle, gazing off with a look of frustration and fatigue, waiting for orders or a meal.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-GqDJLmF/0/L6LKtWkK2KJFS38j8Q9w3znM8526NR2FcnR9H2X2g/XL/_HF21069-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-GqDJLmF/A",
@@ -69,7 +69,7 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "“If the orders don’t come soon, I swear I’ll march myself to the cook tent… hardtack or not.”",
+    "story": "If the orders don’t come soon, I swear I’ll march myself to the cook tent… hardtack or not.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -81,7 +81,7 @@ export const galleryData = [
   {
     "id": "i-vQXXDRJ",
     "title": "Painterly Civil War Portrait: Passing time.",
-    "description": Painterly fine art photograph of a Civil War reenactor field medic lying in the grass and reading a book. A rare moment of calm between battles, reflecting the quiet resilience of soldiers during the war. © Wayne Heim",
+    "description": "Painterly fine art photograph of a Civil War reenactor field medic lying in the grass and reading a book. A rare moment of calm between battles, reflecting the quiet resilience of soldiers during the war. © Wayne Heim",
     "alt": "Civil War field medic in uniform, reclining in the grass while reading a book to pass the time between battles",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vQXXDRJ/0/Mz6FLNCRrT8dtNvCjNVzkTqzRT9jqB8nfBzjGMBcg/XL/_HF20969-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vQXXDRJ/A",
