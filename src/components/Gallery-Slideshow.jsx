@@ -214,26 +214,32 @@ export default function StoryShow({ images, startImageId, onExit }) {
           paddingBottom: 'env(safe-area-inset-bottom)'
         }}
       >
-        {/* Landscape prompt */}
-        {isLandscape &&
-          !(document.fullscreenElement || document.webkitFullscreenElement) && (
-            <AnimatePresence>
-              {showControls && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute bg-white/10 text-white rounded px-4 py-2 text-xs pointer-events-auto"
-                  style={{ cursor: "pointer", zIndex: 10001, top: '0.5rem', left: '50%', transform: 'translateX(-50%)' }}
-                  onClick={enterFullScreen}
-                  onTouchEnd={enterFullScreen}
-                >
-                  Use full-screen for best experience.
-                </motion.div>
-              )}
-            </AnimatePresence>
-          )}
+       {/* Landscape prompt */}
+{isLandscape &&
+  !(document.fullscreenElement || document.webkitFullscreenElement) && (
+    <AnimatePresence>
+      {showControls && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="absolute bg-black text-white border border-white rounded px-4 py-2 text-xs pointer-events-auto"
+          style={{
+            cursor: "pointer",
+            zIndex: 10001,
+            top: "0.5rem",
+            left: "50%",
+            transform: "translateX(-50%)"
+          }}
+          onClick={enterFullScreen}
+          onTouchEnd={enterFullScreen}
+        >
+          Use full-screen for best experience.
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )}
 
         {/* Global paused chip, centered above toolbar */}
         <AnimatePresence>
