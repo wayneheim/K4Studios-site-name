@@ -74,7 +74,8 @@ const shareImage = previewImages?.[0]?.src || undefined;
 
     <!-- 🄯 Copyright -->
     <div class="text-xs text-[#2c2c2c] opacity-70" itemprop="name">
-      <time datetime={currentYear}>© {currentYear}</time> Wayne Heim / <em>
+     <time datetime={currentYear} aria-label={`Copyright ${currentYear}`}>&copy; {currentYear}</time>
+ Wayne Heim / <em>
         <a
           href="/"
           rel="noopener noreferrer"

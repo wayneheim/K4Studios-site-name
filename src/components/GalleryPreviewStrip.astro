@@ -7,14 +7,20 @@ interface Props {
     src: string;
     visibility?: string;
   }[];
-  path: string;
+  path: string; // exact gallery URL (preferred)
   limit?: number;
 }
 
 const { images, path, limit = 6 } = Astro.props;
 
-// ensure we point at the actual gallery folder ending in /Gallery
-const galleryBase = path.endsWith('/Gallery') ? path : `${path}/Gallery`;
+// CHANGED: take the exact gallery URL if given; otherwise use the current page path as-is
+const baseUrl = (typeof path === "string" && path.length) ? path : Astro.url.pathname;
+
+// CHANGED: minimal join that preserves your URL exactly (no stripping/munging)
+function joinPath(base: string, seg: string) {
+  const b = base.endsWith("/") ? base.slice(0, -1) : base;
+  return `${b}/${seg}`;
+}
 
 function shuffle<T>(arr: T[]): T[] {
   return arr
@@ -44,7 +50,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       const direction = offset === 0 ? "center" : offset < 0 ? "left" : "right";
       return (
         <a
-          href={`${galleryBase}/${img.id}`}
+          href={joinPath(baseUrl, img.id)}  // CHANGED: exact gallery URL + image id
           class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}
@@ -69,11 +75,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     animation-delay: 850ms;
   }
 
-  @keyframes fadeStripIn {
-    to {
-      opacity: 1;
-    }
-  }
+  @keyframes fadeStripIn { to { opacity: 1; } }
 
   .gallery-label-frame {
     display: flex;
@@ -116,25 +118,9 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     animation-delay: 1200ms;
   }
 
-  @keyframes fadeLabelIn {
-    to {
-      opacity: 0.75;
-    }
-  }
-
-  @keyframes lineGrowLeft {
-    to {
-      transform: scaleX(1);
-      opacity: 1;
-    }
-  }
-
-  @keyframes lineGrowRight {
-    to {
-      transform: scaleX(1);
-      opacity: 1;
-    }
-  }
+  @keyframes fadeLabelIn { to { opacity: 0.75; } }
+  @keyframes lineGrowLeft { to { transform: scaleX(1); opacity: 1; } }
+  @keyframes lineGrowRight { to { transform: scaleX(1); opacity: 1; } }
 
   .gallery-strip {
     display: flex;
@@ -167,45 +153,18 @@ const middleIndex = Math.floor(visibleImages.length / 2);
     display: block;
   }
 
-  .anim-left {
-    animation-name: fadeSlideLeft;
-  }
+  .anim-left { animation-name: fadeSlideLeft; }
+  .anim-right { animation-name: fadeSlideRight; }
+  .anim-center { animation-name: fadeInCenter; }
 
-  .anim-right {
-    animation-name: fadeSlideRight;
-  }
-
-  .anim-center {
-    animation-name: fadeInCenter;
-  }
-
-  @keyframes fadeInCenter {
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
+  @keyframes fadeInCenter { to { opacity: 1; transform: scale(1); } }
   @keyframes fadeSlideLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(30px) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
+    0% { opacity: 0; transform: translateX(30px) scale(0.9); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
   }
-
   @keyframes fadeSlideRight {
-    0% {
-      opacity: 0;
-      transform: translateX(-30px) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
+    0% { opacity: 0; transform: translateX(-30px) scale(0.9); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
   }
 </style>
 
@@ -213,32 +172,21 @@ const middleIndex = Math.floor(visibleImages.length / 2);
   const checkAndHidePreview = () => {
     const chapter = document.getElementById("chapter-section");
     const preview = document.querySelector(".gallery-preview-strip");
-
     if (!chapter || !preview) return;
 
     const isVisible = chapter.classList.contains("section-visible");
     if (isVisible) {
       preview.style.transition = "opacity 0.5s ease";
       preview.style.opacity = "0";
-      setTimeout(() => {
-        preview.style.display = "none";
-      }, 500);
+      setTimeout(() => { preview.style.display = "none"; }, 500);
     }
   };
 
   window.addEventListener("DOMContentLoaded", () => {
     checkAndHidePreview();
-
     const chapter = document.getElementById("chapter-section");
     if (!chapter) return;
-
-    const observer = new MutationObserver(() => {
-      checkAndHidePreview();
-    });
-
-    observer.observe(chapter, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
+    const observer = new MutationObserver(() => { checkAndHidePreview(); });
+    observer.observe(chapter, { attributes: true, attributeFilter: ["class"] });
   });
 </script>
