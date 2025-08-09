@@ -77,6 +77,8 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
 
     transition: "background .25s ease, padding .25s ease",
     display: "inline-block",
+  // Provide breathing room so the top edge (shadow/outline) is fully visible
+  marginTop: 10,
   };
 
   const cutEdge = {
@@ -109,6 +111,18 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
       : ["wood", "no-wood"].includes(matColor)
       ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
+
+  // Credit text color / opacity tuned per mat for contrast & subtlety
+  const creditColorMap = {
+    white: { color: '#555', opacity: 0.50 },
+    white2: { color: '#ffffffff', opacity: 0.40 },
+    white3: { color: '#f2f2f2', opacity: 0.40 }, // black background
+    gray: { color: '#f4f4f4', opacity: 0.40 },
+    black: { color: '#f0f0f0', opacity: 0.40 },
+    wood: { color: '#4a3827', opacity: 0.55 },
+    'no-wood': { color: '#4d4d4d', opacity: 0.50 },
+  };
+  const creditStyle = creditColorMap[matColor] || { color: '#2c2c2c', opacity: 0.5 };
 
   // Render
   return (
@@ -144,18 +158,18 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
               />
             </div>
             <div
-  style={{
-    marginTop: 8,
-    marginRight: 12,
-    fontSize: "0.75rem",
-    textAlign: "right",
-    fontFamily: "'Glegoo', serif",
-    opacity: ["black", "white3"].includes(matColor?.trim().toLowerCase()) ? 0.58 : 0.46,
-    color: ["black", "white3"].includes(matColor?.trim().toLowerCase()) ? "#fff" : "#2c2c2c",
-  }}
->
-  © Wayne Heim
-</div>
+              style={{
+                marginTop: 8,
+                marginRight: 12,
+                fontSize: "0.75rem",
+                textAlign: "right",
+                fontFamily: "'Glegoo', serif",
+                ...creditStyle,
+                transition: 'color .25s ease, opacity .25s ease'
+              }}
+            >
+              © Wayne Heim
+            </div>
           </div>
 
           {/* SWATCH ROW */}
@@ -187,6 +201,16 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
             {/* exit */}
             <button
               onClick={onClose}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#e2e2e2';
+                e.currentTarget.style.borderColor = '#999';
+                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = '#f5f5f5';
+                e.currentTarget.style.borderColor = '#ccc';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
               style={{
                 padding: "0.005rem .5rem",
                 border: "1px solid #ccc",
@@ -196,6 +220,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 background: "#f5f5f5",
                 fontSize: "0.8rem",
                 cursor: "pointer",
+                transition: 'background .18s ease, border-color .18s ease, box-shadow .18s ease'
               }}
             >
               Exit
@@ -215,27 +240,35 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
             {context}
           </p>
           <div style={{ marginTop: 10 }}>
-            <a
-              href="mailto:info@k4studios.com?subject=Custom%20Order%20Inquiry"
-              onClick={(e) => e.stopPropagation()}
-              style={{
-                 fontFamily: "'Glegoo', serif",
-                display: 'inline-block',
-                background: '#dbd5d2ff',
-                color: '#a09d98ff',
-                padding: '6px 14px',
-                borderRadius: 6,
-                fontSize: '0.75rem',
-                textDecoration: 'none',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
-                letterSpacing: '.5px',
-                transition: 'background .25s ease'
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = '#7a726dff')}
-              onMouseLeave={(e) => (e.currentTarget.style.background = '#dbd5d2ff')}
-            >
-              Contact Us
-            </a>
+           <a
+  href="mailto:info@k4studios.com?subject=Custom%20Order%20Inquiry"
+  onClick={(e) => e.stopPropagation()}
+  style={{
+    fontFamily: "'Glegoo', serif",
+    display: 'inline-block',
+    background: '#ffffffff',
+    color: '#a09d98ff',
+    padding: '2px 14px',
+    borderRadius: 12,
+    fontSize: '0.75rem',
+    textDecoration: 'none',
+    
+    letterSpacing: '.75px',
+    border: '1px solid #d4d1ccff',
+    transition: 'background .25s ease, color .25s ease'
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.background = '#867d7aff';
+    e.currentTarget.style.color = '#ffffff'; // Change text to white
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.background = '#ffffffff';
+    e.currentTarget.style.color = '#a09d98ff'; // Reset text color
+  }}
+>
+  Contact Us
+</a>
+
           </div>
         </div>
       </div>
