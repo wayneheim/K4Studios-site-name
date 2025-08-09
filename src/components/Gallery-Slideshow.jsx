@@ -18,6 +18,9 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const timer = useRef(null);
   const hideControlsTimer = useRef(null);
   const fsRef = useRef(null);
+  const CROSSFADE_OUT = 0.35;  // seconds to fade old image down to ~10–20%
+const CROSSFADE_LEAD = 0.18; // seconds to wait before the next starts fading in
+
 
   // ➊ Inactivity timer for controls
   const resetHideTimer = () => {
@@ -258,14 +261,17 @@ export default function StoryShow({ images, startImageId, onExit }) {
           )}
         </AnimatePresence>
 
-        <AnimatePresence>
+       <AnimatePresence>
           {isIntro ? (
             <PunchInIntro onDone={() => setIsIntro(false)} />
           ) : (
             <motion.div
               key={current.id}
               className="absolute inset-0 w-full h-full flex items-center justify-center"
-              {...fade}
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8 }} // ⬅ longer fade-out for smoother transition
             >
               <div className="w-screen h-screen flex items-center justify-center relative gallery-slideshow">
                 <motion.img
@@ -275,6 +281,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
                   style={imgStyle}
                   onClick={() => setIsPaused((p) => !p)}
                   {...kenBurns}
+                  transition={{ delay: 0.4 }} // ⬅ waits until old image mostly faded
                 />
 
                 {/* Title + Story: hidden for all phones/phablets via isMobileShort */}
@@ -395,3 +402,4 @@ export default function StoryShow({ images, startImageId, onExit }) {
     document.body
   );
 }
+
