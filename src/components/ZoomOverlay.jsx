@@ -1,4 +1,3 @@
-import { Italic } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor }) {
@@ -106,10 +105,10 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
 
   const context =
     matColor === "no-wood"
-      ? "Paper, Aluminum & Acrylic Prints"
+      ? "Available for order on Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details."
       : ["wood", "no-wood"].includes(matColor)
-      ? "Maple / Baltic-Birch Wood Print"
-      : "Additional Display Ideas";
+      ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
+      : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
 
   // Render
   return (
@@ -207,15 +206,37 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
           <p
             style={{
               marginTop: 7,
-              fontSize: "0.8rem",
+              fontSize: "0.9rem",
               color: "#555",
               opacity: .5,
               fontFamily: "'Glegoo', serif",
-              fontStyle: "italic",
             }}
           >
             {context}
           </p>
+          <div style={{ marginTop: 10 }}>
+            <a
+              href="mailto:info@k4studios.com?subject=Custom%20Order%20Inquiry"
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                 fontFamily: "'Glegoo', serif",
+                display: 'inline-block',
+                background: '#dbd5d2ff',
+                color: '#a09d98ff',
+                padding: '6px 14px',
+                borderRadius: 6,
+                fontSize: '0.75rem',
+                textDecoration: 'none',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
+                letterSpacing: '.5px',
+                transition: 'background .25s ease'
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = '#7a726dff')}
+              onMouseLeave={(e) => (e.currentTarget.style.background = '#dbd5d2ff')}
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </div>
     </div>

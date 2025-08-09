@@ -586,7 +586,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         style={{ fontWeight: 400, minHeight: 32, minWidth: 30 }}
                         onClick={() =>
                           (window.location.href =
-                            "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color")
+                            "/Other/K4-Select-Series/Engrained/Engrained-Series")
                         }
                       >
                         <span className="block relative h-[1em]">

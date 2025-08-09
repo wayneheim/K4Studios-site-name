@@ -590,7 +590,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                                style={{ fontWeight: 400, minHeight: 32, minWidth: 30 }}
                                onClick={() =>
                                  (window.location.href =
-                                   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color")
+                                   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White")
                                }
                              >
                                <span className="block relative h-[1em]">
@@ -619,7 +619,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
            Play Show
          </span>
        </button>
-       
+
                     )}
 
                     {/* Collector Notes Panel (mobile) */}
