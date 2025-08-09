@@ -10,8 +10,9 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const [speed, setSpeed] = useState(5000);
   const [showControls, setShowControls] = useState(true);
   const [isLandscape, setIsLandscape] = useState(false);
-  const [isLandscapeMobile, setIsLandscapeMobile] = useState(false); // NEW: mobile-landscape flag
-  const [vp, setVp] = useState({ w: 0, h: 0 }); // viewport size
+  const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
+  const [isMobileShort, setIsMobileShort] = useState(false); // NEW: phone/phablet (short side ≤ 900)
+  const [vp, setVp] = useState({ w: 0, h: 0 });
   const [isCoarsePointer, setIsCoarsePointer] = useState(false);
 
   const timer = useRef(null);
@@ -22,9 +23,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const resetHideTimer = () => {
     setShowControls(true);
     clearTimeout(hideControlsTimer.current);
-    hideControlsTimer.current = setTimeout(() => {
-      setShowControls(false);
-    }, 3000);
+    hideControlsTimer.current = setTimeout(() => setShowControls(false), 3000);
   };
 
   useEffect(() => {
@@ -42,38 +41,41 @@ export default function StoryShow({ images, startImageId, onExit }) {
     };
   }, []);
 
-// ➋ Orientation + pointer detection (REPLACEMENT)
-useEffect(() => {
-  const updateFlags = () => {
-    const w = window.innerWidth;
-    const h = window.innerHeight;
-    const landscape = w > h;
+  // ➋ Orientation + pointer detection
+  useEffect(() => {
+    const updateFlags = () => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const landscape = w > h;
 
-    // Use the short side so it works in both orientations
-    const shortSide = Math.min(w, h);
-    const isMobileish =
-      shortSide <= 900 ||
-      (window.matchMedia && window.matchMedia("(max-device-width: 768px)").matches);
+      // Use the short side so it works in both orientations
+      const shortSide = Math.min(w, h);
+      const isMobileish =
+        shortSide <= 900 ||
+        (window.matchMedia && window.matchMedia("(max-device-width: 900px)").matches);
 
-    setIsLandscape(landscape);
-    setVp({ w, h });
+      setIsLandscape(landscape);
+      setVp({ w, h });
 
-    // Mobile LANDSCAPE only
-    setIsLandscapeMobile(landscape && isMobileish);
+      // Keep if referenced elsewhere
+      setIsLandscapeMobile(landscape && isMobileish);
 
-    if (window.matchMedia) {
-      setIsCoarsePointer(window.matchMedia("(pointer: coarse)").matches);
-    }
-  };
+      // NEW: phone/phablet in any orientation
+      setIsMobileShort(isMobileish);
 
-  updateFlags();
-  window.addEventListener("resize", updateFlags);
-  window.addEventListener("orientationchange", updateFlags);
-  return () => {
-    window.removeEventListener("resize", updateFlags);
-    window.removeEventListener("orientationchange", updateFlags);
-  };
-}, []);
+      if (window.matchMedia) {
+        setIsCoarsePointer(window.matchMedia("(pointer: coarse)").matches);
+      }
+    };
+
+    updateFlags();
+    window.addEventListener("resize", updateFlags);
+    window.addEventListener("orientationchange", updateFlags);
+    return () => {
+      window.removeEventListener("resize", updateFlags);
+      window.removeEventListener("orientationchange", updateFlags);
+    };
+  }, []);
 
   // ➌ Fullscreen helper
   const enterFullScreen = () => {
@@ -96,7 +98,7 @@ useEffect(() => {
   // Compute image max sizes to avoid cropping and use more space for portrait
   const imgStyle = useMemo(() => {
     const style = {};
-    const hasText = Boolean(current?.story) && !isLandscapeMobile; // hide story ONLY on mobile landscape
+    const hasText = Boolean(current?.story) && !isMobileShort; // hide story on all phones/phablets
 
     if (isLandscape) {
       if (isVertical) {
@@ -114,7 +116,7 @@ useEffect(() => {
       style.maxWidth = "100vw";
     }
     return style;
-  }, [isLandscape, isVertical, vp.h, vp.w, current?.story, isLandscapeMobile]);
+  }, [isLandscape, isVertical, vp.h, vp.w, current?.story, isMobileShort]);
 
   const [kenAngles] = useState(() =>
     images.map((_, idx) => {
@@ -136,10 +138,10 @@ useEffect(() => {
       };
     }
     return {
-      initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
-      animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
-      exit: { opacity: 0 },
-      transition: { duration: speed / 950, ease: "easeInOut" },
+        initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
+        animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
+        exit: { opacity: 0 },
+        transition: { duration: speed / 950, ease: "easeInOut" },
     };
   }, [isLandscape, isVertical, speed, kenAngle]);
 
@@ -175,11 +177,9 @@ useEffect(() => {
   return createPortal(
     <>
       <style jsx>{`
-        /* No blanket hide on all mobile anymore.
-           Only hide story/title on <=768px WHEN in landscape. */
-
-        @media (orientation: landscape) and (max-width: 768px) {
-          .text-content, .story-title, .story-body { display: none !important; }
+        /* Hide narrative on small landscape viewports (visual nicety only);
+           logic-side already hides it for all phones via isMobileShort. */
+        @media (orientation: landscape) and (max-width: 900px) {
           .gallery-slideshow img { object-fit: contain; transition: transform 0.3s ease-in-out; }
           .slideshow-controls {
             background: #000;
@@ -190,10 +190,7 @@ useEffect(() => {
           .slideshow-controls .btn { padding: 0.25rem 0.5rem; font-size: 0.8rem; }
         }
 
-        /* Keep the slideshow image sane */
         .gallery-slideshow img { width: 100%; height: auto; }
-
-        /* Base story sizes so title stays larger than body by default */
         .story-title { font-size: 1.125rem; }
         .story-body { font-size: 1rem; line-height: 1.5; }
       `}</style>
@@ -209,7 +206,7 @@ useEffect(() => {
           top: 0,
           left: 0,
           width: "100vw",
-          height: "100vh",
+          height: "100dvh", // use dynamic viewport to avoid offscreen controls in portrait
           backgroundColor: "black",
           color: "white",
           zIndex: 9999,
@@ -280,37 +277,51 @@ useEffect(() => {
                   {...kenBurns}
                 />
 
-                {/* Title + Story: hidden only on mobile landscape */}
-                {current.story && !isLandscapeMobile && (
-                  <motion.div
-                    className={`absolute p-4 md:p-6 max-w-[90%] md:max-w-[40%] ${
-                      isVertical
-                        ? "right-4 top-1/2 -translate-y-1/2"
-                        : "bottom-6 left-1/2 -translate-x-1/2"
-                    } text-sm md:text-base text-content`}
-                    {...fade}
-                    style={{
-                      backgroundColor: "rgba(0, 0, 0, 0.2)",
-                      boxShadow: "0 0 2px 2px rgba(0, 0, 0, 0.2)",
-                      borderRadius: "1rem",
-                    }}
-                  >
-                    {isPaused && (
-                      <div
-                        className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-xs uppercase font-semibold px-2 py-0.5 border border-white rounded"
-                        style={{ opacity: 0.9 }}
-                      >
-                        Paused
-                      </div>
-                    )}
-                    <div className="font-semibold text-lg mb-2 story-title">
-                      {current.title}
-                    </div>
-                    <div className="opacity-80 whitespace-pre-line story-body">
-                      {current.story}
-                    </div>
-                  </motion.div>
-                )}
+                {/* Title + Story: hidden for all phones/phablets via isMobileShort */}
+{current.story && !isMobileShort && (
+  <motion.div
+    className={`absolute p-4 md:p-6 text-sm md:text-base text-content ${
+      isVertical
+        ? "right-6 top-1/2 -translate-y-1/2"
+        : "bottom-8 right-8"
+    }`}
+    {...fade}
+    style={{
+      // ✅ Cap width to 520px or 92vw (whichever is smaller)
+      maxWidth: "min(92vw, 520px)",
+      // ✅ Prevent the box from stretching wider than the cap
+      width: "auto",
+      backgroundColor: "rgba(0, 0, 0, 0.2)",
+      boxShadow: "0 0 2px 2px rgba(0, 0, 0, 0.2)",
+      borderRadius: "1rem",
+    }}
+  >
+    {isPaused && (
+      <div
+        className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-xs uppercase font-semibold px-2 py-0.5 border border-white rounded"
+        style={{ opacity: 0.9 }}
+      >
+        Paused
+      </div>
+    )}
+    <div className="font-semibold text-lg mb-2 story-title">
+      {current.title}
+    </div>
+
+    {/* ✅ Force line wrapping */}
+    <div
+      className="opacity-80 story-body"
+      style={{
+        whiteSpace: "pre-wrap",        // preserve newlines, wrap lines
+        overflowWrap: "anywhere",       // break long words if needed
+        wordBreak: "break-word"         // extra safety for older browsers
+      }}
+    >
+      {current.story}
+    </div>
+  </motion.div>
+)}
+
               </div>
             </motion.div>
           )}
@@ -326,10 +337,10 @@ useEffect(() => {
               className="absolute border rounded-lg p-2 flex gap-4 items-center slideshow-controls"
               style={{
                 borderColor: "rgba(255,255,255,0.25)",
-                backgroundColor: "#000",
+                backgroundColor: "rgba(0, 0, 0, 0.8)", // 80% opaque black
                 left: "50%",
                 transform: "translateX(-50%)",
-                bottom: "calc(max(0.75rem, env(safe-area-inset-bottom)) + 3rem)", // ← universal lift
+                bottom: "calc(max(0.75rem, env(safe-area-inset-bottom)) + 4rem)",
               }}
             >
               {/* Pause/Play */}
