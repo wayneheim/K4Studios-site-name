@@ -329,7 +329,7 @@ useEffect(() => {
                 backgroundColor: "#000",
                 left: "50%",
                 transform: "translateX(-50%)",
-                bottom: "max(0.75rem, env(safe-area-inset-bottom))",
+                bottom: "calc(max(0.75rem, env(safe-area-inset-bottom)) + 3rem)", // ← universal lift
               }}
             >
               {/* Pause/Play */}
