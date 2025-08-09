@@ -10,7 +10,9 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const [speed, setSpeed] = useState(5000);
   const [showControls, setShowControls] = useState(true);
   const [isLandscape, setIsLandscape] = useState(false);
+  const [isLandscapeMobile, setIsLandscapeMobile] = useState(false); // NEW: mobile-landscape flag
   const [vp, setVp] = useState({ w: 0, h: 0 }); // viewport size
+  const [isCoarsePointer, setIsCoarsePointer] = useState(false);
 
   const timer = useRef(null);
   const hideControlsTimer = useRef(null);
@@ -40,20 +42,38 @@ export default function StoryShow({ images, startImageId, onExit }) {
     };
   }, []);
 
-  // ➋ Landscape detection
-  useEffect(() => {
-    const updateOrientation = () => {
-      setIsLandscape(window.innerWidth > window.innerHeight);
-      setVp({ w: window.innerWidth, h: window.innerHeight });
-    };
-    updateOrientation();
-    window.addEventListener("resize", updateOrientation);
-    window.addEventListener("orientationchange", updateOrientation);
-    return () => {
-      window.removeEventListener("resize", updateOrientation);
-      window.removeEventListener("orientationchange", updateOrientation);
-    };
-  }, []);
+// ➋ Orientation + pointer detection (REPLACEMENT)
+useEffect(() => {
+  const updateFlags = () => {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const landscape = w > h;
+
+    // Use the short side so it works in both orientations
+    const shortSide = Math.min(w, h);
+    const isMobileish =
+      shortSide <= 900 ||
+      (window.matchMedia && window.matchMedia("(max-device-width: 768px)").matches);
+
+    setIsLandscape(landscape);
+    setVp({ w, h });
+
+    // Mobile LANDSCAPE only
+    setIsLandscapeMobile(landscape && isMobileish);
+
+    if (window.matchMedia) {
+      setIsCoarsePointer(window.matchMedia("(pointer: coarse)").matches);
+    }
+  };
+
+  updateFlags();
+  window.addEventListener("resize", updateFlags);
+  window.addEventListener("orientationchange", updateFlags);
+  return () => {
+    window.removeEventListener("resize", updateFlags);
+    window.removeEventListener("orientationchange", updateFlags);
+  };
+}, []);
 
   // ➌ Fullscreen helper
   const enterFullScreen = () => {
@@ -72,12 +92,12 @@ export default function StoryShow({ images, startImageId, onExit }) {
   );
   const current = orderedImages[index];
   const isVertical = current?.aspectRatio && current.aspectRatio < 1;
-  const isMobile = vp.w <= 768;
 
   // Compute image max sizes to avoid cropping and use more space for portrait
   const imgStyle = useMemo(() => {
     const style = {};
-    const hasText = Boolean(current?.story) && !isMobile; // treat text as hidden on mobile
+    const hasText = Boolean(current?.story) && !isLandscapeMobile; // hide story ONLY on mobile landscape
+
     if (isLandscape) {
       if (isVertical) {
         const maxH = Math.round(vp.h * 0.92);
@@ -94,7 +114,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
       style.maxWidth = "100vw";
     }
     return style;
-  }, [isLandscape, isVertical, vp.h, vp.w, current?.story, isMobile]);
+  }, [isLandscape, isVertical, vp.h, vp.w, current?.story, isLandscapeMobile]);
 
   const [kenAngles] = useState(() =>
     images.map((_, idx) => {
@@ -155,40 +175,24 @@ export default function StoryShow({ images, startImageId, onExit }) {
   return createPortal(
     <>
       <style jsx>{`
-        @media (max-width: 768px) {
-          /* Hide story overlay entirely on mobile */
-          .text-content, .story-title, .story-body { display: none !important; }
-          .gallery-slideshow { padding: 0.5rem; }
-
-          /* Center toolbar and lift above safe area */
-          .slideshow-controls {
-            background: #000;
-            left: 50% !important;
-            transform: translateX(-50%);
-            bottom: max(0.75rem, env(safe-area-inset-bottom));
-          }
-        }
+        /* No blanket hide on all mobile anymore.
+           Only hide story/title on <=768px WHEN in landscape. */
 
         @media (orientation: landscape) and (max-width: 768px) {
-          .gallery-slideshow {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            padding: 0.5rem 0.75rem;
-          }
-
+          .text-content, .story-title, .story-body { display: none !important; }
           .gallery-slideshow img { object-fit: contain; transition: transform 0.3s ease-in-out; }
-          .text-content { max-width: 45%; }
-          .story-title { font-size: 0.95rem; }
-          .story-body { font-size: 0.8rem; line-height: 1.3; }
-
-          .slideshow-controls { background: #000; transform: translateX(-50%) scale(0.9); transform-origin: bottom center; left: 50% !important; }
+          .slideshow-controls {
+            background: #000;
+            transform: translateX(-50%) scale(0.9);
+            transform-origin: bottom center;
+            left: 50% !important;
+          }
           .slideshow-controls .btn { padding: 0.25rem 0.5rem; font-size: 0.8rem; }
         }
 
+        /* Keep the slideshow image sane */
         .gallery-slideshow img { width: 100%; height: auto; }
+
         /* Base story sizes so title stays larger than body by default */
         .story-title { font-size: 1.125rem; }
         .story-body { font-size: 1rem; line-height: 1.5; }
@@ -211,35 +215,35 @@ export default function StoryShow({ images, startImageId, onExit }) {
           zIndex: 9999,
           overflow: "hidden",
           fontFamily: "'Glegoo', serif",
-          paddingBottom: 'env(safe-area-inset-bottom)'
+          paddingBottom: "env(safe-area-inset-bottom)",
         }}
       >
-       {/* Landscape prompt */}
-{isLandscape &&
-  !(document.fullscreenElement || document.webkitFullscreenElement) && (
-    <AnimatePresence>
-      {showControls && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="absolute bg-black text-white border border-white rounded px-4 py-2 text-xs pointer-events-auto"
-          style={{
-            cursor: "pointer",
-            zIndex: 10001,
-            top: "0.5rem",
-            left: "50%",
-            transform: "translateX(-50%)"
-          }}
-          onClick={enterFullScreen}
-          onTouchEnd={enterFullScreen}
-        >
-          Use full-screen for best experience.
-        </motion.div>
-      )}
-    </AnimatePresence>
-  )}
+        {/* Landscape prompt */}
+        {isLandscape &&
+          !(document.fullscreenElement || document.webkitFullscreenElement) && (
+            <AnimatePresence>
+              {showControls && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute bg-black text-white border border-white rounded px-4 py-2 text-xs pointer-events-auto"
+                  style={{
+                    cursor: "pointer",
+                    zIndex: 10001,
+                    top: "0.5rem",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }}
+                  onClick={enterFullScreen}
+                  onTouchEnd={enterFullScreen}
+                >
+                  Use full-screen for best experience.
+                </motion.div>
+              )}
+            </AnimatePresence>
+          )}
 
         {/* Global paused chip, centered above toolbar */}
         <AnimatePresence>
@@ -250,7 +254,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.2 }}
               className="absolute left-1/2 -translate-x-1/2 text-white text-xs uppercase font-semibold px-2 py-0.5 border border-white/80 rounded"
-              style={{ zIndex: 10002, bottom: 'calc(max(0.75rem, env(safe-area-inset-bottom)) + 3.25rem)' }}
+              style={{ zIndex: 10002, bottom: "calc(max(0.75rem, env(safe-area-inset-bottom)) + 3.25rem)" }}
             >
               Paused
             </motion.div>
@@ -270,15 +274,14 @@ export default function StoryShow({ images, startImageId, onExit }) {
                 <motion.img
                   src={current.url}
                   alt={current.title || ""}
-                  className={`object-contain cursor-pointer ${
-                    isVertical ? "vertical" : ""
-                  }`}
+                  className={`object-contain cursor-pointer ${isVertical ? "vertical" : ""}`}
                   style={imgStyle}
                   onClick={() => setIsPaused((p) => !p)}
                   {...kenBurns}
                 />
 
-                {current.story && !isMobile && (
+                {/* Title + Story: hidden only on mobile landscape */}
+                {current.story && !isLandscapeMobile && (
                   <motion.div
                     className={`absolute p-4 md:p-6 max-w-[90%] md:max-w-[40%] ${
                       isVertical
@@ -323,10 +326,10 @@ export default function StoryShow({ images, startImageId, onExit }) {
               className="absolute border rounded-lg p-2 flex gap-4 items-center slideshow-controls"
               style={{
                 borderColor: "rgba(255,255,255,0.25)",
-                backgroundColor: '#000',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                bottom: 'max(0.75rem, env(safe-area-inset-bottom))'
+                backgroundColor: "#000",
+                left: "50%",
+                transform: "translateX(-50%)",
+                bottom: "max(0.75rem, env(safe-area-inset-bottom))",
               }}
             >
               {/* Pause/Play */}
@@ -340,14 +343,9 @@ export default function StoryShow({ images, startImageId, onExit }) {
               </button>
 
               {/* Speed Selector */}
-              <div
-                className="flex gap-2"
-                role="group"
-                aria-label="Slideshow speed"
-              >
+              <div className="flex gap-2" role="group" aria-label="Slideshow speed">
                 {[3000, 5000, 9000].map((s, idx) => {
-                  const label =
-                    idx === 0 ? "Fast" : idx === 1 ? "Medium" : "Slow";
+                  const label = idx === 0 ? "Fast" : idx === 1 ? "Medium" : "Slow";
                   return (
                     <button
                       key={s}
@@ -360,9 +358,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
                         {Array.from({ length: idx + 1 }).map((_, i) => (
                           <span
                             key={i}
-                            className={`w-2 h-2 rounded-full bg-white ${
-                              speed === s ? "" : "opacity-50"
-                            }`}
+                            className={`w-2 h-2 rounded-full bg-white ${speed === s ? "" : "opacity-50"}`}
                           />
                         ))}
                       </div>
@@ -374,7 +370,7 @@ export default function StoryShow({ images, startImageId, onExit }) {
               {/* Exit */}
               <button
                 onClick={handleExit}
-                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition btn"
+                className="bg-white/10 text-white rounded px-2 py-1 hover:bg-white/20 transition btn"
                 aria-label="Exit slideshow"
                 title="Exit slideshow"
               >
