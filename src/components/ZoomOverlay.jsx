@@ -112,13 +112,13 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
       ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
 
-  // Credit text color / opacity tuned per mat for contrast & subtlety
+  // Credit text color / opacity tuned per mat for contrast & subtlety (original mapping)
   const creditColorMap = {
-    white: { color: '#555', opacity: 0.50 },
-    white2: { color: '#ffffffff', opacity: 0.40 },
-    white3: { color: '#f2f2f2', opacity: 0.40 }, // black background
-    gray: { color: '#f4f4f4', opacity: 0.40 },
-    black: { color: '#f0f0f0', opacity: 0.40 },
+    white: { color: '#555', opacity: 0.55 },
+    white2: { color: '#2c2c2c', opacity: 0.55 },
+    white3: { color: '#f2f2f2', opacity: 0.62 },
+    gray: { color: '#f4f4f4', opacity: 0.60 },
+    black: { color: '#f0f0f0', opacity: 0.62 },
     wood: { color: '#4a3827', opacity: 0.55 },
     'no-wood': { color: '#4d4d4d', opacity: 0.50 },
   };
@@ -171,7 +171,6 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
               © Wayne Heim
             </div>
           </div>
-
           {/* SWATCH ROW */}
           <div
             style={{
@@ -240,34 +239,27 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
             {context}
           </p>
           <div style={{ marginTop: 10 }}>
-           <a
-  href="mailto:info@k4studios.com?subject=Custom%20Order%20Inquiry"
-  onClick={(e) => e.stopPropagation()}
-  style={{
-    fontFamily: "'Glegoo', serif",
-    display: 'inline-block',
-    background: '#ffffffff',
-    color: '#a09d98ff',
-    padding: '2px 14px',
-    borderRadius: 12,
-    fontSize: '0.75rem',
-    textDecoration: 'none',
-    
-    letterSpacing: '.75px',
-    border: '1px solid #d4d1ccff',
-    transition: 'background .25s ease, color .25s ease'
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.background = '#867d7aff';
-    e.currentTarget.style.color = '#ffffff'; // Change text to white
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.background = '#ffffffff';
-    e.currentTarget.style.color = '#a09d98ff'; // Reset text color
-  }}
->
-  Contact Us
-</a>
+            <a
+              href="mailto:info@k4studios.com?subject=Custom%20Order%20Inquiry"
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                 fontFamily: "'Glegoo', serif",
+                display: 'inline-block',
+                background: '#dbd5d2ff',
+                color: '#a09d98ff',
+                padding: '6px 14px',
+                borderRadius: 6,
+                fontSize: '0.75rem',
+                textDecoration: 'none',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
+                letterSpacing: '.5px',
+                transition: 'background .25s ease'
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = '#7a726dff')}
+              onMouseLeave={(e) => (e.currentTarget.style.background = '#dbd5d2ff')}
+            >
+              Contact Us
+            </a>
 
           </div>
         </div>

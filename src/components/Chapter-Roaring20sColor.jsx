@@ -292,8 +292,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       className="text-center text-2xl text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
                       style={{
                         fontFamily: "'Glegoo', serif",
-                        marginTop: "-0.5rem",
-                        marginBottom: "0.5rem",
+                        marginTop: "-2.0rem",
                         opacity: ".6",
                         lineHeight: "1",
                       }}
