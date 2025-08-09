@@ -6,11 +6,11 @@ import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
-// Cowboy BW dataset (data point 1)
+// Color dataset (data point 1)
 import { galleryData as rawData } from "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
-import StoryShow from "./Gallery-Slideshow.jsx"; // slideshow overlay
+import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -27,10 +27,10 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const [showArrows, setShowArrows] = useState(true);
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [showStoryShow, setShowStoryShow] = useState(false);
 
   const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
+  const [showStoryShow, setShowStoryShow] = useState(false);
 
   // 🔄 Trigger chapter entry mode via custom event
   useEffect(() => {
@@ -61,7 +61,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   }, []);
 
-  // 🔗 Update URL when navigating *after* entering chapters (data point 2 basePath)
+  // 🔗 Update URL when navigating *after* entering chapters (data point 2: Color path)
   useEffect(() => {
     const imageId = galleryData[currentIndex]?.id;
     const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
@@ -70,14 +70,18 @@ export default function ScrollFlipGallery({ initialImageId }) {
     const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
     const newUrl = `${basePath}/${imageId}`;
     const currentUrl = window.location.pathname;
-    if (currentUrl !== newUrl) window.history.pushState(null, "", newUrl);
+
+    if (currentUrl !== newUrl) {
+      window.history.pushState(null, "", newUrl);
+    }
   }, [currentIndex, hasEnteredChapters]);
 
-  // 🧼 Clean up stray ID if landing intro visible (data point 3 cleanUrl)
+  // 🧼 Clean up stray ID in URL if landing intro is showing (data point 3: Color clean URL)
   useEffect(() => {
     const introEl = document.getElementById("intro-section");
     const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
     const isViewingImageZero = currentIndex === 0;
+
     if (isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
       const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
       window.history.replaceState(null, "", cleanUrl);
@@ -187,6 +191,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     checkMobile();
     window.addEventListener("resize", checkMobile);
     if (mqCoarse && mqCoarse.addEventListener) mqCoarse.addEventListener("change", checkMobile);
+    // Fallback for older browsers
     if (mqCoarse && mqCoarse.addListener) mqCoarse.addListener(checkMobile);
     return () => {
       window.removeEventListener("resize", checkMobile);
@@ -195,15 +200,15 @@ export default function ScrollFlipGallery({ initialImageId }) {
     };
   }, []);
 
-  // Prevent background scroll while slideshow active
+   // no background scroll while slideshow is on
   useEffect(() => {
-    if (showStoryShow) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => { document.body.style.overflow = ""; };
-  }, [showStoryShow]);
+  if (showStoryShow) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+  return () => { document.body.style.overflow = ""; };
+}, [showStoryShow]);
 
   // Arrow hint timeout
   useEffect(() => {
@@ -473,10 +478,10 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
                     {/* Unified Nav Row */}
                     <div
-                      className="flex items-center justify-center ml-[0.2rem] gap-1 md:gap-6 mt-3 mb-1 max-w-[340px] mx-auto"
+                     className="flex items-center justify-center ml-[0.1rem] gap-0.5 md:gap-4 mt-1 mb-1 max-w-[370px] mx-auto border border-gray-200 bg-white rounded-md shadow-sm px-1.5 py-1.5"
                       style={
                         !isMobile && galleryData[currentIndex].notes
-                          ? { marginRight: "112px" }
+                          ? { marginRight: "92px" }
                           : {}
                       }
                     >
@@ -569,7 +574,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                       >
                         <ShoppingCart className="w-4 h-4" />
                       </a>
-                      {/* ❤️ Like Button (always in toolbar) */}
+                      {/* ❤️ Like Button (always in toolbar for consistency) */}
                       <div className="inline-flex items-center px-2">
                         <LikeButton
                           imageId={galleryData[currentIndex].id}
@@ -836,7 +841,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
             )}
           </>
         )}
-  </div>
+      </div>
 
 {showStoryShow && (
   <StoryShow
@@ -848,7 +853,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     onExit={() => setShowStoryShow(false)}
   />
 )}
-      {/* Swipe Hint (data point 5 key) */}
+      {/* Swipe Hint (data point 5: Color key) */}
       <SwipeHint galleryKey="Painterly-Cowboy-BW" />
     </div>
   );

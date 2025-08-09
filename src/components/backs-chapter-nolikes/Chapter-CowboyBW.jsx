@@ -537,7 +537,7 @@ style={
                           style={{ fontSize: "0.95em" }}
                         />
                         <button type="submit" className="bg-gray-100 px-2 py-1 rounded shadow hover:bg-gray-200">
-                          Go
+                          G
                         </button>
                       </form>
                       {/* Cart */}

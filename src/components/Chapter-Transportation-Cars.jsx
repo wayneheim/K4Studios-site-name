@@ -67,7 +67,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     const alreadyOnImage = window.location.pathname.match(/\/i-[a-zA-Z0-9_-]+$/);
     if (!imageId || (!hasEnteredChapters && !alreadyOnImage)) return;
 
-    const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
+    const basePath = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars";
     const newUrl = `${basePath}/${imageId}`;
     const currentUrl = window.location.pathname;
 
@@ -83,7 +83,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
     const isViewingImageZero = currentIndex === 0;
 
     if (isIntroVisible && isViewingImageZero && window.location.pathname.includes("/i-")) {
-      const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
+      const cleanUrl = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars";
       window.history.replaceState(null, "", cleanUrl);
     }
   }, [currentIndex]);
@@ -479,10 +479,10 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
                     {/* Unified Nav Row */}
                     <div
-                      className="flex items-center justify-center ml-[0.2rem] gap-1 md:gap-6 mt-3 mb-1 max-w-[340px] mx-auto"
+                     className="flex items-center justify-center ml-[0.1rem] gap-0.5 md:gap-4 mt-1 mb-1 max-w-[370px] mx-auto border border-gray-200 bg-white rounded-md shadow-sm px-1.5 py-1.5"
                       style={
                         !isMobile && galleryData[currentIndex].notes
-                          ? { marginRight: "112px" }
+                          ? { marginRight: "92px" }
                           : {}
                       }
                     >
@@ -591,7 +591,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                         style={{ fontWeight: 400, minHeight: 32, minWidth: 30 }}
                         onClick={() =>
                           (window.location.href =
-                            "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White")
+                            "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars")
                         }
                       >
                         <span className="block relative h-[1em]">
@@ -857,7 +857,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
   />
 )}
       {/* Swipe Hint */}
-      <SwipeHint galleryKey="Painterly-Civil-War-BW" />
+      <SwipeHint galleryKey="Transportation-Cars" />
     </div>
   );
 }

@@ -22,7 +22,7 @@ const shareImage = previewImages?.[0]?.src || undefined;
 ---
 
 <footer
-  class="bg-[#fff] font-serif text-center pb-16 w-full"
+  class="bg-[#fff] font-serif text-center pb-16 w-full footer-fade"
   style="font-family: 'Glegoo', serif;"
   aria-label="Site footer"
   itemscope
@@ -51,7 +51,7 @@ const shareImage = previewImages?.[0]?.src || undefined;
     </div>
 
     <!-- 🌐 Social Icons -->
-    <div class="flex justify-center gap-5 mb-3 opacity-40">
+  <div class="flex justify-center gap-5 mb-3">
       <a href="https://www.facebook.com/wayne.heim" target="_blank" rel="noopener noreferrer">
         <img class="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" itemprop="sameAs" />
       </a>
@@ -75,7 +75,7 @@ const shareImage = previewImages?.[0]?.src || undefined;
     <!-- 🄯 Copyright -->
     <div class="text-xs text-[#2c2c2c] opacity-70" itemprop="name">
      <time datetime={currentYear} aria-label={`Copyright ${currentYear}`}>&copy; {currentYear}</time>
- Wayne Heim / <em>
+ Wayne Heim | 
         <a
           href="/"
           rel="noopener noreferrer"
@@ -83,17 +83,26 @@ const shareImage = previewImages?.[0]?.src || undefined;
           title="Home"
         >
           K4 Studios
-        </a> /
-      </em> All rights reserved.
+        </a> |
+      All rights reserved.
     </div>
   </div>
 
   <style>
-    .social-icon {
-      transition: transform 0.3s ease, filter 0.3s ease;
+    .footer-fade {
+      opacity: 0.5;
+      transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
     }
-
+    .footer-fade:hover,
+    .footer-fade:focus-within {
+      opacity: 1;
+    }
+    .social-icon {
+      opacity: 0.32;
+      transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+    }
     .social-icon:hover {
+      opacity: 1;
       transform: scale(1.2);
       filter: sepia(1) hue-rotate(10deg) saturate(3) brightness(0.8);
     }

@@ -477,11 +477,10 @@ export default function ScrollFlipGallery({ initialImageId }) {
 
                     {/* Unified Nav Row */}
                     <div
-                      className="flex items-center justify-center ml-[0.2rem] gap-1 md:gap-6 mt-3 mb-1 max-w-[340px] mx-auto"
+                      className="flex items-center justify-center ml-[0.1rem] gap-0.5 md:gap-4 mt-1 mb-1 max-w-[370px] mx-auto border border-gray-200 bg-white rounded-md shadow-sm px-1.5 py-1.5"
                       style={
                         !isMobile && galleryData[currentIndex].notes
-                          ? { marginRight: "112px" }
-                          : {}
+                          ? { marginRight: "92px" }
                       }
                     >
                       {/* Menu */}

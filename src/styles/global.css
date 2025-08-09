@@ -563,3 +563,26 @@ body.react-mounted footer {
   background: rgb(255, 255, 255) !important;
   z-index: 999999 !important;
 }
+
+/* Lift chapter column up on desktop – tied to w-full md:pl-8 */
+@media (min-width: 768px) {
+  .w-full.md\:pl-8 {
+    margin-top: -5rem;
+  }
+}
+
+
+
+/* Force More Info panel to use mobile (in-flow) style at all sizes */
+@media (min-width: 768px) {
+  /* target the desktop absolute panel and override it */
+  .left-2\/2.top-12 {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    max-width: 90% !important;
+    width: 100% !important;
+    margin: 1rem auto 0 auto !important;
+  }
+}
