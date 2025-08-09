@@ -14,6 +14,18 @@ import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
+// --- Simple mojibake fixer
+function fixMojibake(str) {
+  if (!str) return str;
+  return str
+    .replace(/â€™/g, "’")
+    .replace(/â€œ/g, "“")
+    .replace(/â€�/g, "”")
+    .replace(/â€“/g, "–")
+    .replace(/â€”/g, "—")
+    .replace(/â€¦/g, "…");
+}
+
 export default function ScrollFlipGallery({ initialImageId }) {
   const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -75,6 +87,15 @@ export default function ScrollFlipGallery({ initialImageId }) {
       window.history.pushState(null, "", newUrl);
     }
   }, [currentIndex, hasEnteredChapters]);
+
+  // 🧾 Update <title> tag
+  useEffect(() => {
+    const base = "Civil War Portraits – Color";
+    const entry = galleryData[currentIndex];
+    const chapterLabel = entry?.title ? fixMojibake(entry.title) : `Chapter ${currentIndex + 1}`;
+    const newTitle = `${chapterLabel} — ${base}`;
+    if (document.title !== newTitle) document.title = newTitle;
+  }, [currentIndex]);
 
   // 🧼 Clean up stray ID in URL if landing intro is showing (data point 3: Color clean URL)
   useEffect(() => {
