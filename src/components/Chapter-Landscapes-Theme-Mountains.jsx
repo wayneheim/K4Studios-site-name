@@ -29,6 +29,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const [isMobile, setIsMobile] = useState(false);
 
   const startX = useRef(null);
+  const startY = useRef(null); // NEW: track vertical to ignore vertical scroll swipes
   const prevIndex = useRef(currentIndex);
   const [showStoryShow, setShowStoryShow] = useState(false);
 
@@ -231,20 +232,45 @@ export default function ScrollFlipGallery({ initialImageId }) {
   // Touch navigation
   const handleTouchStart = (e) => {
     startX.current = e.touches[0].clientX;
+    startY.current  = e.touches[0].clientY;
+  };
+
+  // NEW: continuous detection during move (more responsive than only on end)
+  const handleTouchMove = (e) => {
+    if (startX.current === null || startY.current === null) return;
+    const dx = e.touches[0].clientX - startX.current;
+    const dy = e.touches[0].clientY - startY.current;
+    // if vertical dominates, allow normal scroll
+    if (Math.abs(dy) > Math.abs(dx)) return;
+    if (Math.abs(dx) > 60) {
+      if (dx < 0) {
+        setIsExpanded(false);
+        setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1));
+      } else {
+        setIsExpanded(false);
+        setCurrentIndex((i) => Math.max(i - 1, 0));
+      }
+      startX.current = null;
+      startY.current = null; // reset so a single gesture only advances once
+    }
   };
 
   const handleTouchEnd = (e) => {
-    if (startX.current !== null) {
+    // If gesture already processed in move, refs are null
+    if (startX.current !== null && startY.current !== null) {
       const endX = e.changedTouches[0].clientX;
       const deltaX = endX - startX.current;
-      if (deltaX > 50) {
-        setIsExpanded(false);
-        setCurrentIndex((i) => Math.max(i - 1, 0));
-      } else if (deltaX < -50) {
-        setIsExpanded(false);
-        setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1));
+      if (Math.abs(deltaX) > 50) {
+        if (deltaX < 0) {
+          setIsExpanded(false);
+          setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1));
+        } else {
+          setIsExpanded(false);
+          setCurrentIndex((i) => Math.max(i - 1, 0));
+        }
       }
       startX.current = null;
+      startY.current = null;
     }
   };
 
@@ -284,6 +310,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                   transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
                   className="grid md:grid-cols-2 gap-6 md:gap-12 items-center"
                   onTouchStart={handleTouchStart}
+                  onTouchMove={handleTouchMove}
                   onTouchEnd={handleTouchEnd}
                 >
                   {isMobile && (
