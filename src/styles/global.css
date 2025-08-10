@@ -56,7 +56,8 @@ main {
   text-align: center;
   font-size: 0.85rem;
   opacity: 0.7;
-  margin-top: 8px;
+  /* moved down 4px (was 8px) */
+  margin-top: 12px;
   margin-bottom: -5px;
 
   padding: 0 1rem;
@@ -425,7 +426,8 @@ body.loading * {
     object-fit: cover;
     border-radius: 12px;
   }
-  .aspect-[4/5] {
+  /* Escaped tailwind-style class selector */
+  .aspect-\[4\/5\] {
     max-height: 44vh;
   }
 }

@@ -68,11 +68,18 @@ export default function PunchInIntro({ onDone }) {
       animate={{ opacity: fadeOut ? 0 : 1 }}
       transition={{ duration: 1.7, ease: "fade" }}
       style={{
-        fontSize: "clamp(1.2rem,2.8vw,2.8rem)",
+  // Responsive size: still allows wrap on narrow screens without over-scaling
+  fontSize: "clamp(1.05rem,2.5vw,2.7rem)",
         letterSpacing: ".05em",
         fontFamily: "'Glegoo', serif",
         color: "#f3ecd9",
-        fontWeight: 700
+  fontWeight: 700,
+  // Provide ~5px margin on each side while centering
+  maxWidth: "calc(100% - 10px)",
+  margin: "0 5px",
+  padding: 0,
+  textAlign: "center",
+  lineHeight: 1.12
       }}
     >
       {letters.map((l, i) => (

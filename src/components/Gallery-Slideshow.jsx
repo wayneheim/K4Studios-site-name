@@ -7,7 +7,8 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isIntro, setIsIntro] = useState(true);
-  const [speed, setSpeed] = useState(5000);
+  // Default speed set to slowest (9000ms)
+  const [speed, setSpeed] = useState(9000);
   const [showControls, setShowControls] = useState(true);
   const [isLandscape, setIsLandscape] = useState(false);
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
@@ -18,9 +19,6 @@ export default function StoryShow({ images, startImageId, onExit }) {
   const timer = useRef(null);
   const hideControlsTimer = useRef(null);
   const fsRef = useRef(null);
-  const CROSSFADE_OUT = 0.35;  // seconds to fade old image down to ~10–20%
-const CROSSFADE_LEAD = 0.18; // seconds to wait before the next starts fading in
-
 
   // ➊ Inactivity timer for controls
   const resetHideTimer = () => {
@@ -245,18 +243,25 @@ const CROSSFADE_LEAD = 0.18; // seconds to wait before the next starts fading in
             </AnimatePresence>
           )}
 
-        {/* Global paused chip, centered above toolbar */}
+        {/* Mobile-only paused chip (desktop uses the one in the story panel) */}
         <AnimatePresence>
-          {isPaused && showControls && (
+          {isMobileShort && isPaused && showControls && (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 0.95, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
+              exit={{ opacity: 0, y: 8 }}
               transition={{ duration: 0.2 }}
-              className="absolute left-1/2 -translate-x-1/2 text-white text-xs uppercase font-semibold px-2 py-0.5 border border-white/80 rounded"
-              style={{ zIndex: 10002, bottom: "calc(max(0.75rem, env(safe-area-inset-bottom)) + 3.25rem)" }}
+              className="absolute text-white text-[0.65rem] tracking-wide font-semibold px-2 py-0.5 border border-white/70 rounded"
+              style={{
+                zIndex: 10002,
+                // Raised 35px total and shifted 65px left via calc on left
+                bottom: "calc(max(0.75rem, env(safe-area-inset-bottom)) + 7rem + 35px)",
+                left: "calc(50% - 50px)",
+                background: "rgba(0,0,0,0.55)",
+                backdropFilter: "blur(2px)",
+              }}
             >
-              Paused
+              PAUSED
             </motion.div>
           )}
         </AnimatePresence>
