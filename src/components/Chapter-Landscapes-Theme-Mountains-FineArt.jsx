@@ -9,6 +9,7 @@ import { galleryData as rawData } from "../data/Galleries/Fine-Art-Photography/L
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
 import StoryShow from "./Gallery-Slideshow.jsx";
+import useHorizontalSwipeNav from './hooks/useHorizontalSwipeNav.js';
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
 
@@ -39,26 +40,13 @@ export default function ScrollFlipGallery({ initialImageId }) {
   useEffect(() => { document.body.classList.add("react-mounted"); }, []);
   useEffect(() => { const onKeyDown = (e) => { if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey || /(INPUT|TEXTAREA|SELECT)/.test(e.target.tagName)) return; if (viewMode !== "flip" || isZoomed) return; if (e.key === "ArrowRight") { setIsExpanded(false); setCurrentIndex(i => Math.min(i + 1, galleryData.length - 1)); } else if (e.key === "ArrowLeft") { setIsExpanded(false); setCurrentIndex(i => Math.max(i - 1, 0)); } }; window.addEventListener("keydown", onKeyDown); return () => window.removeEventListener("keydown", onKeyDown); }, [viewMode, isZoomed]);
   useEffect(() => { const onResize = () => { const w = window.innerWidth; const h = window.innerHeight; setIsMobile(w < 870); setIsLandscapeMobile(w < 870 && w > h); }; onResize(); window.addEventListener("resize", onResize); return () => window.removeEventListener("resize", onResize); }, []);
-  const handleTouchStart = (e) => { startX.current = e.touches[0].clientX; startY.current = e.touches[0].clientY; };
-  const handleTouchMove = (e) => {
-    if (startX.current === null || startY.current === null) return;
-    const dx = e.touches[0].clientX - startX.current;
-    const dy = e.touches[0].clientY - startY.current;
-    // If vertical movement dominates, abort swipe logic (let page scroll)
-    if (Math.abs(dy) > Math.abs(dx)) return;
-    if (Math.abs(dx) > 60) {
-      if (dx < 0) {
-        setCurrentIndex(i => Math.min(i + 1, galleryData.length - 1));
-      } else {
-        setCurrentIndex(i => Math.max(i - 1, 0));
-      }
-      startX.current = null; startY.current = null; // reset so only one image per gesture
-    }
-  };
-  const handleTouchEnd = () => { startX.current = null; startY.current = null; };
+  const { containerProps: swipeHandlers } = useHorizontalSwipeNav({
+    onPrev: () => { setCurrentIndex(i => Math.max(i - 1, 0)); },
+    onNext: () => { setCurrentIndex(i => Math.min(i + 1, galleryData.length - 1)); }
+  });
   const currentImage = galleryData[currentIndex];
   const showPrev = currentIndex > 0; const showNext = currentIndex < galleryData.length - 1;
-  return (<div id="chapter-section" className="chapter-section" style={{ display: hasEnteredChapters ? "block" : "none", touchAction: 'pan-y' }} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+  return (<div id="chapter-section" className="chapter-section" style={{ display: hasEnteredChapters ? "block" : "none" }} {...swipeHandlers}>
     <div className="image-navigation-wrapper">
       <div className="image-container" style={{ position: "relative" }}>
         <AnimatePresence mode="wait" initial={false}>

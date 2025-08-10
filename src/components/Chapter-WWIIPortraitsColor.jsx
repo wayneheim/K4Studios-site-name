@@ -10,6 +10,7 @@ import { galleryData as rawData } from "@/data/Galleries/Painterly-Fine-Art-Phot
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
 import StoryShow from "./Gallery-Slideshow.jsx"; // adjust the path if needed
+import useHorizontalSwipeNav from './hooks/useHorizontalSwipeNav.js';
 
 
 const galleryData = rawData.filter(entry => entry.id !== "i-k4studios");
@@ -28,7 +29,6 @@ export default function ScrollFlipGallery({ initialImageId }) {
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  const startX = useRef(null);
   const prevIndex = useRef(currentIndex);
   const [showStoryShow, setShowStoryShow] = useState(false);
 
@@ -249,6 +249,11 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   };
 
+  const { containerProps: swipeHandlers } = useHorizontalSwipeNav({
+    onPrev: () => { setIsExpanded(false); setCurrentIndex(i => Math.max(i - 1, 0)); },
+    onNext: () => { setIsExpanded(false); setCurrentIndex(i => Math.min(i + 1, galleryData.length - 1)); }
+  });
+
   const direction = currentIndex > prevIndex.current ? 1 : -1;
   prevIndex.current = currentIndex;
 
@@ -284,8 +289,7 @@ export default function ScrollFlipGallery({ initialImageId }) {
                   exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
                   transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
                   className="grid md:grid-cols-2 gap-6 md:gap-12 items-center"
-                  onTouchStart={handleTouchStart}
-                  onTouchEnd={handleTouchEnd}
+                  {...swipeHandlers}
                 >
                   {isMobile && (
                     <div

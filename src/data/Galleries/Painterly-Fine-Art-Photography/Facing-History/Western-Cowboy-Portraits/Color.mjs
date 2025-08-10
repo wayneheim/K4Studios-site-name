@@ -432,9 +432,9 @@ export const galleryData = [
   },
   {
     "id": "i-qVZ9m7j",
-    "title": "Cowboy Art:  Lord Help Us All",
-    "description": "Keeper of the faithful. Cowboy stands watch in front of old church with his trusty shotgun. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Lord Help Us All",
+    "title": "Lord Help Us All",
+    "description": "Western fine art photography. A lone cowboy stands as silent sentinel before an old church, his long coat catching wind, his shotgun firm in hand. Wayne Heim’s captivating cowboy art brings timeless emotion and character to life through his painterly style. This photograph echoes themes of protection, faith, and frontier grit—honoring the cowboy spirit and the quiet guardians of the West.",
+    "alt": "Cowboy Art: Armed guardian stands watch outside an old church, coat billowing like a preacher, shotgun at the ready.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j/2/Lbs7RG7xjnNCnssBc4RXqLCL9kM4ZrwxQD8X5ZN37/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8540-Edit-2-Edit-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j/A",
     "keywords": [
@@ -473,8 +473,8 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Keeper of the faithful. Cowboy stands watch in front of old church with his trusty shotgun. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
+    "story": "The faithful have fled, the church long silent—but he remains. No sermons now, just the steady sermon of steel and stare. Some say he used to preach, others say he just believed harder than most. Either way, he stands between what's sacred and what's coming. Lord help us all if that hammer gets cocked.",
+    "notes": "This portrait achieves a powerful sense of symbolism through posture and framing. The vertical emphasis—his body rising like the steeple behind him—establishes a sacred geometry. The palette is restrained, giving weight to his black coat and hat, while the warm tones around him suggest age and dust. Painterly textures soften the scene just enough to keep it from feeling cinematic; instead, it reads like myth. This is not just a figure of the West, but a relic of it—part guardian, part ghost.",
     "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -484,9 +484,9 @@ export const galleryData = [
   },
   {
     "id": "i-ML9dbMj",
-    "title": "Cowboy Art:  Claim Jumpers",
-    "description": "Never a dull moment. Always with your head on a swivel. Panning for gold in these parts can make you rich just as quick as it can make you dead. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Claim Jumpers",
+    "title": "Claim Jumpers: This Ground’s Spoken For",
+    "description": "Western fine art photography of a wary gold prospector, crouched in the woods with a pickaxe. Wayne Heim’s painterly cowboy portraits capture moments of frontier tension and grit, blending historic character with fine art texture. This piece reflects the risks and resolve of gold country life, where every swing of the pick could mean fortune—or a fight. Bring the timeless beauty and storytelling of the Old West into your space with this stunning cowboy print.",
+    "alt": "Cowboy Art: Watchful miner crouches with pickaxe, eyes scanning the woods for danger or opportunity.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ML9dbMj/1/McGRgpsMCQhXtngcLDL73SLqm2LzfrczZWtTz3gMx/XL/Painterly%20Cowboy%20Portrait%20Photography%20Edit%20_DSF9100-Edit-2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ML9dbMj/A",
     "keywords": [
@@ -525,8 +525,8 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Never a dull moment. Always with your head on a swivel. Panning for gold in these parts can make you rich just as quick as it can make you dead. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
+    "story": "There’s no such thing as “just dig” anymore. Not this close to the gold line. Eyes sharp, pick silent in his grip, he listens for twigs snapping under boots that don’t belong. Claim jumping ain’t just a story told around fires—it’s a promise of trouble. And today, he’s ready to keep his word.",
+    "notes": "This composition quietly hums with suspense. The low crouch and weight shift signal alertness, while the sunlit foliage offers a soft contrast to the subject’s tension. Painterly processing gives the image a vintage touch, while the fine detail—creased fabric, dusty boots, and wary expression—grounds it in realism. A rare blend of stillness and threat. Visually, it captures the uneasy peace between ambition and survival that defined life on the frontier.",
     "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -536,8 +536,8 @@ export const galleryData = [
   },
   {
     "id": "i-mJQCXmh",
-    "title": "Cowboy Art:  Wetting the Whistle",
-    "description": "Cowboy drinking coffee? Vintage cowboy in old hat drinking from white cup. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "title": "Wetting the Whistle: Between Sips and Silence",
+    "description": "A cowboy pauses for a drink in this captivating fine art photograph by Wayne Heim. Infused with painterly texture and Western storytelling, the image captures a quiet, contemplative moment that balances solitude and strength. Perfect for collectors of cowboy art, rustic wall décor, and vintage-style Western prints, this image evokes the raw emotion and timeless beauty of the frontier. Bring the essence of the Old West into your space with stunning fine art photography that immortalizes the cowboy spirit. © Wayne Heim",
     "alt": "Cowboy Art:  Wetting the Whistle",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/Ksm3NfftS53k8ZNfFFdBJ82kcFS3M2ZzBQjMcXZJn/XL/cowboy%20art%20_HF26275-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-mJQCXmh/A",
@@ -577,8 +577,8 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Cowboy drinking coffee? Vintage cowboy in old hat drinking from white cup. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
+    "story": "Ain’t the coffee he’s after. Not really.\nIt’s the heat in his hands, the pause it buys, the chance to pretend things still make sense. Out here, a man don’t get many comforts. But for a minute — just one — he can close his eyes, draw in the steam, and hope it fills the spaces Martha left behind.",
+    "notes": "This piece draws from a lineage that spans Remington to Rockwell — storytellers who painted the soul of the frontier in brush or lens. The triangular composition (brow, elbow, glass) roots the figure with quiet purpose, while side lighting casts him in painterly chiaroscuro, evoking the mood of Rembrandt or the grit of early Pictorialist photography.\n\nWhat sets this work apart is its restraint. It’s not spectacle, but suggestion — a story left half-told, pulling the viewer in to finish it. The weathered textures, warm-to-cool palette, and softened edges make this more than a photograph — it's a cinematic moment preserved in pigment and tone.\n",
     "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"

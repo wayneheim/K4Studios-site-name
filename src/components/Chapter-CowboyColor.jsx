@@ -229,26 +229,6 @@ export default function ScrollFlipGallery({ initialImageId }) {
     }
   }, []);
 
-  // Touch navigation
-  const handleTouchStart = (e) => {
-    startX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e) => {
-    if (startX.current !== null) {
-      const endX = e.changedTouches[0].clientX;
-      const deltaX = endX - startX.current;
-      if (deltaX > 50) {
-        setIsExpanded(false);
-        setCurrentIndex((i) => Math.max(i - 1, 0));
-      } else if (deltaX < -50) {
-        setIsExpanded(false);
-        setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1));
-      }
-      startX.current = null;
-    }
-  };
-
   const direction = currentIndex > prevIndex.current ? 1 : -1;
   prevIndex.current = currentIndex;
 
@@ -290,8 +270,6 @@ export default function ScrollFlipGallery({ initialImageId }) {
                   transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
                   className="grid md:grid-cols-2 gap-6 md:gap-12 items-center"
                   {...swipeHandlers}
-                  onTouchStart={handleTouchStart}
-                  onTouchEnd={handleTouchEnd}
                 >
                   {isMobile && (
                     <div
