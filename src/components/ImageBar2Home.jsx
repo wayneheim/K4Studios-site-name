@@ -76,7 +76,7 @@ export default function ImageBar2Home() {
           transform: scale(1);
         }
         @media (max-width: 768px) {
-          .carousel-fade { margin-top: -5 !important; }
+          .carousel-fade { margin-top: -15px !important; }
         }
       `}</style>
     </section>
