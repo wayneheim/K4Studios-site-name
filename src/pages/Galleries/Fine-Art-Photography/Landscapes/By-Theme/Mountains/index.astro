@@ -1,0 +1,16 @@
+---
+import GalleryShell from "@/components/GalleryShell-Landscapes-Theme-Mountains-FineArt.astro";
+import { entranceData as EntranceData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/EntranceData.ts";
+import { galleryData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains.mjs";
+
+const match = Astro.url.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+const initialImageId = match ? match[1] : "i-k4studios";
+
+console.log("🔥 initialImageId:", initialImageId); // ✅ Add this
+---
+
+<GalleryShell
+  breadcrumb={ColorEntranceData.breadcrumb}
+  entranceData={ColorEntranceData}
+  initialImageId={initialImageId}
+/>

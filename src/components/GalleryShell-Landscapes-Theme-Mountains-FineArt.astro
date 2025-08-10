@@ -1,0 +1,18 @@
+---
+import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains.mjs";
+import { landingMountains } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/landingstones.ts";
+import ScrollFlipGallery from "./Chapter-Landscapes-Theme-Mountains-FineArt.jsx";
+import GalleryIntroWrapper from "./GalleryIntroWrapper.jsx";
+import GalleryShellWrapper from "./GalleryShellWrapper.jsx";
+import { entranceData as EntranceData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/EntranceData.ts";
+const { breadcrumb, entranceData, initialImageId } = Astro.props;
+const previewPath = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains";
+---
+<GalleryShellWrapper previewPath={previewPath}>
+  <GalleryIntroWrapper
+    breadcrumb={breadcrumb}
+    entranceData={EntranceData}
+    landingData={landingMountains}
+  />
+  <ScrollFlipGallery initialImageId={initialImageId} />
+</GalleryShellWrapper>

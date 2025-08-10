@@ -61,7 +61,7 @@ function pullGalleryDataAndImagesMultiPass(
   // Collect images per gallery (attach path)
   for (const gallery of gallerySources) {
     const filePath = '../../data' + gallery.href + '.mjs';
-    const mod = allGalleryData[filePath];
+    const mod: any = allGalleryData[filePath]; // dynamic glob import, treat as any
     let images: Image[] = (mod?.galleryData || mod?.default || []).filter(
       (img: Image) =>
         img.id && img.id !== 'i-k4studios'
@@ -84,7 +84,9 @@ function pullGalleryDataAndImagesMultiPass(
       if (gallery.images.length > offset) {
         const img = gallery.images[offset];
         if (img && !excludeIds.has(img.id)) {
-          pickedImages.push({ ...img, href: `${gallery.gallery}/${img.id}` });
+          // FIX: previously used gallery.gallery (undefined) causing missing href on first item
+          const href = `${gallery.gallery || img.galleryPath || ''}/${img.id}`.replace(/\/+/g, '/');
+          pickedImages.push({ ...img, href });
           excludeIds.add(img.id);
           foundAny = true;
           if (pickedImages.length >= maxCount) break;

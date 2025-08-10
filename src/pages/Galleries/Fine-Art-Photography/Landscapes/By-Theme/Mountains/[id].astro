@@ -1,0 +1,12 @@
+---
+import GalleryShell from "@/components/GalleryShell-Landscapes-Theme-Mountains-FineArt.astro";
+import { entranceData as EntranceData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/EntranceData.ts";
+import { galleryData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains.mjs";
+export async function getStaticPaths() { return galleryData.map(img => ({ params: { id: img.id } })); }
+const { id } = Astro.params; const isValidId = galleryData.some(img => img.id === id); if (!isValidId) throw new Error(`Image with id ${id} not found.`);
+---
+<GalleryShell
+  breadcrumb={EntranceData.breadcrumb}
+  entranceData={EntranceData}
+  initialImageId={id}
+/>
