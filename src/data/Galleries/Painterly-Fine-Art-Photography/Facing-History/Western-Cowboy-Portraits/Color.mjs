@@ -159,7 +159,7 @@ export const galleryData = [
   },
   {
     "id": "i-PM4d3g3",
-    "title": "Cowboy Art:  Fire Side Chat",
+    "title": "Fire Side Chat",
     "description": "Western painterly photography portrait of old west traveling salesman who says: Young man... for a sip of your whiskey and a cookie I'll tell you the fantastic tale of this my journey to this delightful slice of Hell you call Hardwood. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "alt": "Cowboy Art:  Fire Side Chat",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-PM4d3g3/2/KTv3WnfSwnkfJws389CHBKvGBTtJSVmCdpwrpSCTJ/XL/cowboy%20photography%20campfire_HF21845-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
@@ -200,7 +200,7 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Western painterly photography portrait of old west traveling salesman who says: Young man... for a sip of your whiskey and a cookie I'll tell you the fantastic tale of this my journey to this delightful slice of Hell you call Hardwood. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "story": "As fire snaps and sweet smell of whiskey warm the air, a haggard voice calls out: “Young man—for another a sip of your fine whiskey and a cookie, and I’ll paint you a picture of the true tale of how I washed up in this delightful slice of Hell you call Hardwood.” ",
     "notes": "",
     "rating": 4,
     "galleries": [
