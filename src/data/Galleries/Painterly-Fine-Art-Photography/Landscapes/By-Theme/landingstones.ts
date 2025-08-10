@@ -1,6 +1,6 @@
 export const landingWestern = {
     //Painterly Landscape Photogrqphy
-  title: "Paintery Landscapes By Theme",
+  title: "Painterly Landscapes By Theme",
   subtitle: "Photographs that are not merely images—but windows into worlds that exist beyond my lens.",
    breadcrumb: `<a href="/Galleries/Painterly-Fine-Art-Photography" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='#444'">Painterly Photography</a> 
    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='#006064'" onmouseout="this.style.color='#444'"> | Landscapes</a> | By Theme`,
