@@ -331,6 +331,13 @@ export default function LandingHeader({ breadcrumb }) {
           }
         }
 
+        /* Mobile-only bottom spacing for header */
+        @media (max-width: 768px) {
+          .landing-header {
+            margin-bottom: 3px;
+          }
+        }
+
         body.mobile-open .logo-slot {
           margin-top: 30px;
           margin-left: -8px;
