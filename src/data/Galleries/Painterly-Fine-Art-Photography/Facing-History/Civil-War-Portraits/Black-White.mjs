@@ -18,8 +18,8 @@ export const galleryData = [
 },
 {
     "id": "i-834cDZ8",
-    "title": "Civil War Portrait: Victory or Survival?",
-    "description": "Painterly Civil War portrait of a tired soldier standing in the aftermath of battle, embodying the uncertainty between victory and survival.",
+    "title": "Victory or Survival: A Civil War Portrait",
+    "description": "A painterly Civil War portrait of a weary Union officer, captured in the quiet aftermath of battle. Wayne Heim’s black and white fine art photography blends texture and tone to explore the emotional line between victory and survival. Ideal for collectors of war photography, Civil War wall art, and historically inspired fine art portraiture.",
     "alt": "Painterly Civil War portrait of a tired soldier standing in the aftermath of battle, embodying the uncertainty between victory and survival.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-834cDZ8/1/Mq2pFD8TcGwz7SKRSQZhJjtgVRkhNj9KdjsvGhCt4/XL/_O2H6854-Enhanced-NR-Edit-2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-834cDZ8/A",
@@ -38,8 +38,8 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "FWas it victory… or just survival? I can’t help but wonder how history will tell our story.",
-    "notes": "",
+    "story": "Was it victory… or just survival?\nI’ve seen too many flags folded, too many names carved.\nThey’ll say we held the line. That we did our duty.\n\nBut duty don’t bury the men.\n\nI just hope history tells it true—for their sake more than mine.",
+    "notes": "Was it victory… or just survival?\n\nI’ve seen too many flags folded, too many names carved.\n\nThey’ll say we held the line. That we did our duty.\n\nBut duty has a cost—\nand now we bury the spoils.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"

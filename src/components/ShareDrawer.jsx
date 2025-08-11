@@ -44,6 +44,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
     <div style={{ position: "relative", display: "inline-block", fontFamily: "'Glegoo', serif" }}>
       {/* Share Button */}
       <button
+        data-share-btn // 👈 TOUR HOOK
         onClick={() => setIsOpen((o) => !o)}
         title="Share this page"
         style={{
