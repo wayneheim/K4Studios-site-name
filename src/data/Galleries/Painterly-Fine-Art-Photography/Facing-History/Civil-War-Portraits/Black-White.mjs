@@ -49,8 +49,8 @@ export const galleryData = [
   },
   {
     "id": "i-GqDJLmF",
-    "title": "Soldier Waiting in Camp for Orders",
-    "description": "Painterly Civil War portrait of a young soldier waiting for orders, his expression caught between boredom and frustration. Fine art historical reenactment photography by Wayne Heim, capturing the quiet moments of camp life with period-accurate detail. © Wayne Heim",
+    "title": "Waiting on Glory… or Hardtack",
+    "description": "A painterly Civil War portrait of a young Union soldier waiting in camp, captured in a quiet moment between boredom and resolve. Wayne Heim’s black and white fine art photography blends period-authentic detail with storytelling realism, offering a glimpse into daily life between the battles. Ideal for collectors of Civil War art, reenactment photography, and historically inspired fine art prints. © Wayne Heim",
     "alt": "Young Civil War soldier in worn uniform leaning on a rifle, gazing off with a look of frustration and fatigue, waiting for orders or a meal.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-GqDJLmF/0/L6LKtWkK2KJFS38j8Q9w3znM8526NR2FcnR9H2X2g/XL/_HF21069-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-GqDJLmF/A",
@@ -69,8 +69,8 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "If the orders don’t come soon, I swear I’ll march myself to the cook tent… hardtack or not.",
-    "notes": "",
+    "story": "If the orders don’t come soon, I swear I’ll march myself to the cook tent—hardtack or not.\n\nI’ve polished this buckle twice and paced this patch of dirt six times. War sure does love to make a man wait. Maybe glory’s just another word for getting sunburned in wool.",
+    "notes": "This portrait captures a side of war rarely seen in traditional depictions: the waiting. The subject’s stance—arms braced, posture casual but alert—suggests a moment suspended between purpose and monotony.\n\nHeim’s control of tonality and contrast recalls the quiet humanism of Edward Steichen, while the worn uniform and textured backdrop anchor the scene in historical realism.\n\nRather than dramatize, the image leans into the subtle: patience, youth, and the uneasy rhythm of soldiering without orders. A reminder that in war, moments of inaction are just as defining as those of heroism.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -80,8 +80,8 @@ export const galleryData = [
   },
   {
     "id": "i-vQXXDRJ",
-    "title": "Painterly Civil War Portrait: Passing time.",
-    "description": "Painterly fine art photograph of a Civil War reenactor field medic lying in the grass and reading a book. A rare moment of calm between battles, reflecting the quiet resilience of soldiers during the war. © Wayne Heim",
+    "title": "A Quiet Page Between the Noise",
+    "description": "A painterly Civil War portrait of a field medic reading quietly in the grass between battles. Wayne Heim’s black and white fine art photography captures a rare moment of calm in the chaos of war—where reflection, escape, and quiet endurance take center stage. Ideal for collectors of Civil War photography, historical reenactment art, and emotionally rich fine art prints. © Wayne Heim",
     "alt": "Civil War field medic in uniform, reclining in the grass while reading a book to pass the time between battles",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vQXXDRJ/0/Mz6FLNCRrT8dtNvCjNVzkTqzRT9jqB8nfBzjGMBcg/XL/_HF20969-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vQXXDRJ/A",
@@ -100,8 +100,8 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "It’s the quiet moments that are the hardest to endure… you keep the mind busy, or it wanders back to the day.",
-    "notes": "",
+    "story": "It’s the quiet moments that are the hardest to endure.\nYou keep the mind busy—or it wanders back to the day.\nOne page leads to another, but the noise always finds its way back.\nSome men pray. I read. It’s all the same when the wounded start calling.",
+    "notes": "This portrait offers a moment of mental refuge—a rare depiction of the interior life of a Civil War medic. The relaxed posture and focused gaze suggest not idleness, but survival through stillness.\n\nHeim’s painterly treatment softens the chaos of war without romanticizing it, echoing the narrative restraint found in the early pictorialist tradition. The tonal range, compositional balance, and emotional ambiguity invite closer study.\n\nIn a genre so often defined by action, this image reminds us that resilience often begins in the quiet—on a page, in the grass, between the noise.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -111,9 +111,9 @@ export const galleryData = [
   },
   {
     "id": "i-TkBf43K",
-    "title": "Painterly Civil War Portrait Photo: Drummer boy.",
-    "description": "Fine art painterly photography of young Civil War soldier practicing his drumming on a log as he waits for his next mission. Historically themed fine art photographs of reenactors at reenactments. © Wayne Heim",
-    "alt": "Painterly Civil War Portrait Photo: Drummer boy.",
+    "title": "Drummer boy: Keeping Time",
+    "description": "A painterly black and white portrait of a young Civil War drummer boy, caught in a moment of quiet focus as he practices in camp. Wayne Heim’s fine art photography blends historical realism with subtle emotional depth, capturing the discipline and vulnerability of youth in wartime. Ideal for collectors of Civil War art, reenactment photography, and narrative-rich fine art prints. © Wayne Heim",
+    "alt": "Young Civil War drummer boy seated on a log, practicing with drumsticks; black and white painterly fine art portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-TkBf43K/0/LGjVSkh563wBJvzBBSs4J4Prvm9SrDtVjwKvbwPSL/XL/_HF20983-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-TkBf43K/A",
     "keywords": [
@@ -131,8 +131,8 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "Fine art painterly photography of young Civil War soldier practicing his drumming on a log as he waits for his next mission. Historically themed fine art photographs of reenactors at reenactments. © Wayne Heim",
-    "notes": "",
+    "story": "The older boys polish rifles. He keeps time. No orders yet—just a log, a stick, and a rhythm to hold the silence back. They say the drummers led the men into battle. He’s trying not to think about that.",
+    "notes": "This portrait invites us into a moment of visual rhythm rather than action. The composition is restrained, yet deliberate—centered not on warfare, but on the quiet rituals that gave soldiers structure and sanity.\n\nThe subject’s youth and focus contrast with the imagined violence just beyond the frame, creating tension through stillness. The painterly tonality and soft contrast recall early pictorialist photography, while the emotional quiet echoes the narrative subtlety found in the work of Edward Steichen and Alfred Stieglitz.\n\nAn image that speaks to endurance without bravado—how sometimes, the most resonant stories are kept in rhythm, not raised in arms.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
