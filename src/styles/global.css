@@ -361,7 +361,7 @@ body.react-mounted footer { opacity: 1; }
   .w-full.md\:pl-8 { margin-top: -5rem; }
 }
 
-/* Force “More Info” panel to in-flow layout on desktop
+/* Force “More Info” panel to in-flow layout on desktddop
    Tailwind utility is left-1/2; escape slash in CSS selector */
 @media (min-width: 768px) {
   .left-1\/2.top-12 {
