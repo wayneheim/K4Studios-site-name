@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Grid, Notebook, ShoppingCart } from 'lucide-react';
+import { Grid, Notebook, ShoppingCart,  CircleX, } from 'lucide-react';
 import ZoomOverlay from './ZoomOverlay.jsx';
 import RebuiltScrollGrid from './RebuiltScrollGrid';
 import MobileMiniDrawer from './MobileMiniDrawer';
@@ -492,14 +492,15 @@ export default function ChapterGalleryBase({
                       <a href={galleryData[currentIndex].buyLink || '#'} target='_blank' rel='noopener noreferrer' title='Click to order prints' className='inline-flex items-center gap-2 rounded px-2 py-1.5 text-xs font-semibold shadow transition' style={{ backgroundColor:'#bbb6b1', color:'#ffffff' }} onMouseEnter={e=>e.currentTarget.style.backgroundColor='#76807b'} onMouseLeave={e=>e.currentTarget.style.backgroundColor='#bbb6b1'} data-cart-btn><ShoppingCart className='w-4 h-4' /></a>
                       <div className='inline-flex items-center px-2' data-like-btn><LikeButton imageId={galleryData[currentIndex].id} pageTitle={galleryData[currentIndex].title} /></div>
                       <button
-                        className='inline-flex items-center justify-center border border-gray-300 bg-white text-gray-500 rounded-full shadow-sm hover:bg-gray-800 hover:text-gray-200 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer'
-                        aria-label='Exit Chapter View'
-                        title='Exit'
-                        style={{ width:30, height:30, lineHeight:'1', fontWeight:600, fontSize:'0.8rem', position:'relative', zIndex:20 }}
-                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href = basePath; }}
-                        data-exit-btn>
-                        X
-                      </button>
+  className='inline-flex items-center justify-center border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-800 hover:text-gray-200 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer'
+  aria-label='Exit Chapter View'
+  title='Exit'
+  style={{ width:30, height:30, position:'relative', zIndex:20 }}
+  onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href = basePath; }}
+  data-exit-btn
+>
+  <CircleX className='w-7 h-7' />
+</button>
                     </div>
                     {!showStoryShow && (
                       <button onClick={() => setShowStoryShow(true)} aria-label='Play K4 Slideshow' title='Play K4 Story Show' className='group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-300 shadow-sm transition-colors' style={{ letterSpacing: '.02em' }} data-slideshow-btn>
