@@ -1,5 +1,4 @@
 ---
-import "@/styles/global.css"; // <-- add this (the file astro add tailwind created)
 const { title = 'Gallery', structuredDataJSON, meta = {} } = Astro.props;
 
 // Strip any HTML tags if accidentally passed in
@@ -42,7 +41,7 @@ const cleanTitle = title.replace(/<[^>]*>/g, '');
     )}
 
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
-    <!-- removed Tailwind CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <style>
       body {
         font-family: 'Glegoo', serif;

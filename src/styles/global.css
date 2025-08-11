@@ -579,3 +579,7 @@ body.react-mounted footer {
     margin: 1rem auto 0 auto !important;
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
