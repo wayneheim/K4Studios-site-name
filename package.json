@@ -28,7 +28,6 @@
     "@types/react-dom": "^19.1.6",
     "airtable": "^0.12.2",
     "astro": "^5.9.2",
-    "autoprefixer": "^10.4.21",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.513.0",
     "nodemailer": "^7.0.5",
@@ -38,6 +37,8 @@
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
     "ts-node": "^10.9.2"
   }
 }
