@@ -551,8 +551,20 @@ export default function ChapterGalleryBase({
                       <div className="relative w-full md:w-[340px] flex flex-row">
                         {/* Image */}
                         <div
-                          className="aspect-[4/5] relative rounded-lg flex items-center justify-center text-gray-500 cursor-pointer overflow-hidden z-10 w-full group"
-                          style={{ marginLeft: isMobile ? "10px" : 0, marginRight: isMobile ? "10px" : 0 }}
+                          className="aspect-[4/5] relative rounded-lg flex items-center justify-center text-gray-500 cursor-pointer z-10 w-full group"
+                          style={{ marginLeft: isMobile ? "10px" : 0, marginRight: isMobile ? "10px" : 0, transition: 'box-shadow .45s ease' }}
+                          onMouseEnter={(e) => {
+                            if (!isMobile) {
+                              e.currentTarget.style.boxShadow = '0 0 0 2px rgba(255,255,255,0.55), 0 4px 15px 4px rgba(120,120,135,0.55)';
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (!isMobile) {
+                              e.currentTarget.style.boxShadow = 'none';
+                            }
+                          }}
+                          onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
+                          data-zoom-btn
                         >
                           <img
                             src={galleryData[currentIndex]?.src}
@@ -563,8 +575,6 @@ export default function ChapterGalleryBase({
                                 ? { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh" }
                                 : { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7" }
                             }
-                            onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
-                            data-zoom-btn
                           />
                         </div>
 
@@ -632,16 +642,20 @@ export default function ChapterGalleryBase({
 
                     {/* Unified Nav Row */}
                     <div
-                      className="flex items-center justify-center ml-[0.1rem] gap-0.5 md:gap-4 mt-1 mb-1 max-w-[370px] mx-auto border border-gray-200 bg-white rounded-md shadow-sm px-1.5 py-1.5"
-                      style={!isMobile && galleryData[currentIndex]?.notes ? { marginRight: "92px" } : {}}
+                      className="w-full flex items-center justify-between ml-[0.1rem] gap-0.5 md:gap-4 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1.5 py-1.5 select-none"
+                      style={
+                        !isMobile && galleryData[currentIndex]?.notes
+                          ? { marginRight: '140px', maxWidth: '420px' }
+                          : { maxWidth: '420px' }
+                      }
                     >
                       {/* Menu */}
                       <button
                         type="button"
-                        className="px-1 py-.5 border border-gray-200 hover:bg-gray-100 bg-white text-gray-400 text-lg rounded shadow-sm transition-colors duration-150 hover:text-gray-600 focus:text-gray-500 hover:border-gray-300 focus:border-gray-300"
+                        className="flex items-center justify-center w-9 h-9 border border-gray-200 hover:bg-gray-100 bg-white text-gray-500 text-lg rounded-full shadow-sm transition-colors duration-150 hover:text-gray-700 focus:text-gray-600 hover:border-gray-300 focus:border-gray-300"
                         aria-label="Show Menu"
                         title="Show Menu"
-                        style={{ minWidth: 32, minHeight: 32, fontWeight: 400 }}
+                        style={{ fontWeight: 400 }}
                         onClick={(e) => { e.stopPropagation(); setShowMiniMenu(true); }}
                         data-menu-btn
                       >
@@ -655,7 +669,7 @@ export default function ChapterGalleryBase({
                           onClick={(e) => { e.stopPropagation(); setShowNotes((p) => !p); }}
                           aria-label="View Collector Notes"
                           title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
-                          className="inline-flex items-center text-gray-400 hover:bg-gray-200 justify-center w-7 h-7 relative border border-gray-200 bg-white rounded shadow"
+                          className="inline-flex items-center justify-center w-9 h-9 relative border border-gray-200 bg-white rounded-full shadow text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors"
                         >
                           {showNotes ? (
                             <span className="text-lg leading-none">✕</span>
@@ -679,8 +693,7 @@ export default function ChapterGalleryBase({
                         onClick={goGrid}
                         aria-label="View Grid Mode"
                         title="View Grid Mode"
-                        className="bg-gray-100 rounded p-1 shadow hover:bg-gray-200 flex items-center justify-center md:hidden"
-                        style={{ minWidth: 32, minHeight: 32 }}
+                        className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 shadow hover:bg-gray-200 transition-colors"
                         data-grid-btn
                       >
                         <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
@@ -724,7 +737,7 @@ export default function ChapterGalleryBase({
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Click to order prints"
-                        className="inline-flex items-center gap-2 rounded px-2 py-1.5 text-xs font-semibold shadow transition"
+                        className="inline-flex items-center justify-center w-9 h-9 rounded-full text-xs font-semibold shadow transition border border-gray-300"
                         style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
                         onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
                         onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
@@ -733,17 +746,17 @@ export default function ChapterGalleryBase({
                       </a>
 
                       {/* ❤️ Like Button */}
-                      <div className="inline-flex items-center px-2" data-like-btn>
+                      <div className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors" data-like-btn>
                         <LikeButton imageId={galleryData[currentIndex]?.id} pageTitle={galleryData[currentIndex]?.title} />
                       </div>
 
                       {/* Exit */}
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-800 hover:text-gray-200 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
+                        className="inline-flex items-center justify-center w-9 h-9 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
                         aria-label="Exit Chapter View"
                         title="Exit"
-                        style={{ width: 30, height: 30, position: 'relative', zIndex: 20 }}
+                        style={{ position: 'relative', zIndex: 20 }}
                         onClick={goExit}
                         data-exit-btn
                       >
@@ -864,7 +877,7 @@ export default function ChapterGalleryBase({
                                 exit={{ opacity: 0, y: 12 }}
                                 transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
                                 className="relative mt-4 mx-auto w-11/12 max-w-lg px-4"
-                                style={{ background: "#f9f6f1", border: "1.5px solid #e1d6c1", borderRadius: 16, boxShadow: "0 8px 48px rgba(130,110,60,0.10)", padding: ".95rem 1.5rem", color: "#564427", minHeight: "4rem", maxHeight: "290px", overflowY: "auto", width: "100%" }}
+                                style={{ background: "#f2f3f4", border: "1.5px solid #d1d5d9", borderRadius: 16, boxShadow: "0 8px 48px rgba(80,80,90,0.10)", padding: ".95rem 1.5rem", color: "#4a4a49", minHeight: "4rem", maxHeight: "290px", overflowY: "auto", width: "100%" }}
                                 id={descPanelId}
                                 role="region"
                                 aria-labelledby={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
@@ -880,7 +893,7 @@ export default function ChapterGalleryBase({
                                 exit={{ opacity: 0, y: 12 }}
                                 transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
                                 className="absolute left-2/2 top-12 z-50"
-                                style={{ transform: "translateX(-50%)", background: "#f9f6f1", border: "1.5px solid #e1d6c1", borderRadius: 16, boxShadow: "0 8px 48px rgba(130,110,60,0.18)", padding: ".45rem 1.05rem", color: "#564427", minWidth: "340px", maxWidth: "75vw", minHeight: "4rem", maxHeight: "260px", overflowY: "auto" }}
+                                style={{ transform: "translateX(-50%)", background: "#f2f3f4", border: "1.5px solid #d1d5d9", borderRadius: 16, boxShadow: "0 8px 48px rgba(80,80,90,0.15)", padding: ".45rem 1.05rem", color: "#4a4a49", minWidth: "340px", maxWidth: "75vw", minHeight: "4rem", maxHeight: "260px", overflowY: "auto" }}
                                 id={descPanelId}
                                 role="region"
                                 aria-labelledby={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
@@ -909,7 +922,7 @@ export default function ChapterGalleryBase({
                         <SquareChevronLeft className="w-5 h-5" color="#84766d" />
                         <span className="sr-only">Previous</span>
                       </button>
-                      <button type="button" onClick={goGrid} className="bg-gray-100 p-2 -mt-16 rounded shadow hover:bg-gray-200" title="Index View" data-grid-btn>
+                      <button type="button" onClick={goGrid} className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow hover:bg-gray-200 flex items-center justify-center" title="Index View" data-grid-btn>
                         <Grid className="w-5 h-5" color="#84766d" />
                       </button>
                       <button
