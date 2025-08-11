@@ -50,7 +50,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
         ? "0vw solid #ffffff"
         : "0vw solid transparent",
 
-    // Responsive padding: smaller on mobile!
+    // Responsive padding: smaller on mobile
     paddingTop:
       ["white", "white2", "white3", "wood", "no-wood"].includes(matColor)
         ? isMobile ? "1.85rem" : "calc(1.5rem + 15px)"
@@ -77,8 +77,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
 
     transition: "background .25s ease, padding .25s ease",
     display: "inline-block",
-  // Provide breathing room so the top edge (shadow/outline) is fully visible
-  marginTop: 10,
+    marginTop: 10, // breathing room for top edge/shadow
   };
 
   const cutEdge = {
@@ -107,12 +106,11 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
 
   const context =
     matColor === "no-wood"
-      ? "Available for order on Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details."
+      ? "Click the color icons above to preview different finishing/display options. All images are available for order on a selection of Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details."
       : ["wood", "no-wood"].includes(matColor)
       ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
 
-  // Credit text color / opacity tuned per mat for contrast & subtlety (original mapping)
   const creditColorMap = {
     white: { color: '#555', opacity: 0.55 },
     white2: { color: '#2c2c2c', opacity: 0.55 },
@@ -124,7 +122,6 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
   };
   const creditStyle = creditColorMap[matColor] || { color: '#2c2c2c', opacity: 0.5 };
 
-  // Render
   return (
     <div
       className="fixed inset-0 z-[9999] bg-white overflow-y-auto"
@@ -171,96 +168,139 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
               © Wayne Heim
             </div>
           </div>
-          {/* SWATCH ROW */}
+
+          {/* SWATCH ROW WITH FRAMING LINES */}
           <div
             style={{
               marginTop: 22,
-              display: "flex",
-              gap: 14,
-              justifyContent: "center",
-              flexWrap: "wrap",
-              width: "100%",
+              maxWidth: isMobile ? '88vw' : '60ch',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 14
             }}
           >
-            {/* no-wood */}
-            <button title="Paper" onClick={(e) => { e.stopPropagation(); setMatColor("no-wood"); }} style={{ width: 20, height: 20, border: "1px solid #777", borderRadius: 4, backgroundImage: "url('/images/materials/White-w.jpg')", backgroundSize: "cover", backgroundPosition: "center", cursor: "pointer" }} />
+            {/* Left line */}
+            <div style={{ flex: 1, height: 1, backgroundColor: '#ccc', opacity: 0.5 }} />
 
-            {/* wood */}
-            <button title="Wood print" onClick={(e) => { e.stopPropagation(); setMatColor("wood"); }} style={{ width: 20, height: 20, border: "1px solid #777", borderRadius: 4, backgroundImage: "url('/images/materials/Maple-w.jpg')", backgroundSize: "cover", backgroundPosition: "center", cursor: "pointer" }} />
+            {/* Button group */}
+            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
+              {/* no-wood */}
+              <button
+                title="Paper"
+                onClick={(e) => { e.stopPropagation(); setMatColor("no-wood"); }}
+                style={{
+                  width: 20, height: 20, border: "1px solid #777", borderRadius: 4,
+                  backgroundImage: "url('/images/materials/White-w.jpg')", backgroundSize: "cover",
+                  backgroundPosition: "center", cursor: "pointer"
+                }}
+              />
 
-            {/* circle mats */}
-            {[
-              ["white", "#ffffff"],
-              ["white2", "#9e9d9d"],
-              ["white3", "#000000"],
-            ].map(([key, bg]) => (
-              <button key={key} title={`${key} mat`} onClick={(e) => { e.stopPropagation(); setMatColor(key); }} style={{ width: 20, height: 20, border: "1px solid #777", borderRadius: "50%", background: bg, cursor: "pointer" }} />
-            ))}
+              {/* wood */}
+              <button
+                title="Wood print"
+                onClick={(e) => { e.stopPropagation(); setMatColor("wood"); }}
+                style={{
+                  width: 20, height: 20, border: "1px solid #777", borderRadius: 4,
+                  backgroundImage: "url('/images/materials/Maple-w.jpg')", backgroundSize: "cover",
+                  backgroundPosition: "center", cursor: "pointer"
+                }}
+              />
 
-            {/* exit */}
-            <button
-              onClick={onClose}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#e2e2e2';
-                e.currentTarget.style.borderColor = '#999';
-                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.15)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = '#f5f5f5';
-                e.currentTarget.style.borderColor = '#ccc';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-              style={{
-                padding: "0.005rem .5rem",
-                border: "1px solid #ccc",
-                marginTop: -2,
-                borderRadius: 8,
-                fontFamily: "'Glegoo', serif",
-                background: "#f5f5f5",
-                fontSize: "0.8rem",
-                cursor: "pointer",
-                transition: 'background .18s ease, border-color .18s ease, box-shadow .18s ease'
-              }}
-            >
-              Exit
-            </button>
+              {/* circle mats */}
+              {[
+                ["white", "#ffffff"],
+                ["white2", "#9e9d9d"],
+                ["white3", "#000000"],
+              ].map(([key, bg]) => (
+                <button
+                  key={key}
+                  title={`${key} mat`}
+                  onClick={(e) => { e.stopPropagation(); setMatColor(key); }}
+                  style={{
+                    width: 20, height: 20, border: "1px solid #777", borderRadius: "50%",
+                    background: bg, cursor: "pointer"
+                  }}
+                />
+              ))}
+
+              {/* exit */}
+              <button
+                onClick={onClose}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#e2e2e2';
+                  e.currentTarget.style.borderColor = '#999';
+                  e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.15)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#f5f5f5';
+                  e.currentTarget.style.borderColor = '#ccc';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+                style={{
+                  padding: "0.005rem .5rem",
+                  border: "1px solid #ccc",
+                  marginTop: -2,
+                  borderRadius: 8,
+                  fontFamily: "'Glegoo', serif",
+                  background: "#f5f5f5",
+                  fontSize: "0.8rem",
+                  cursor: "pointer",
+                  transition: 'background .18s ease, border-color .18s ease, box-shadow .18s ease'
+                }}
+              >
+                Exit
+              </button>
+            </div>
+
+            {/* Right line */}
+            <div style={{ flex: 1, height: 1, backgroundColor: '#ccc', opacity: 0.5 }} />
           </div>
 
           {/* CONTEXT TEXT */}
           <p
             style={{
-              marginTop: 7,
+              marginTop: 10,
               fontSize: "0.9rem",
               color: "#555",
               opacity: .5,
               fontFamily: "'Glegoo', serif",
+              maxWidth: isMobile ? '88vw' : '60ch',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              lineHeight: 1.35,
+              overflowWrap: 'break-word',
+              wordBreak: 'break-word',
+              hyphens: 'auto'
             }}
           >
             {context}
           </p>
+
           <div style={{ marginTop: 10 }}>
             <a
               href="mailto:info@k4studios.com?subject=Custom%20Order%20Inquiry"
               onClick={(e) => e.stopPropagation()}
               style={{
-                 fontFamily: "'Glegoo', serif",
+                fontFamily: "'Glegoo', serif",
                 display: 'inline-block',
-                background: '#dbd5d2ff',
-                color: '#a09d98ff',
+                background: '#ffffff',        // white default
+                color: '#ccc8c0ff',
                 padding: '6px 14px',
-                borderRadius: 6,
+                borderRadius: 29,
                 fontSize: '0.75rem',
                 textDecoration: 'none',
                 boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
                 letterSpacing: '.5px',
-                transition: 'background .25s ease'
+                transition: 'background .25s ease',
+                marginBottom: 10,
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = '#7a726dff')}
-              onMouseLeave={(e) => (e.currentTarget.style.background = '#dbd5d2ff')}
+              onMouseEnter={(e) => (e.currentTarget.style.background = '#a8a5a2ff')}
+              onMouseLeave={(e) => (e.currentTarget.style.background = '#ffffff')}
             >
               Contact Us
             </a>
-
           </div>
         </div>
       </div>
