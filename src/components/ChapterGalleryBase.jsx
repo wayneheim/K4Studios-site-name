@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Grid, Notebook, ShoppingCart } from "lucide-react";
+import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight } from "lucide-react";
 import ZoomOverlay from "./ZoomOverlay.jsx";
 import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
@@ -539,12 +539,13 @@ export default function ChapterGalleryBase({
                         type="button"
                         onClick={goPrev}
                         aria-label="Previous Chapter"
-                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-gray-400 bg-gray-100 rounded-md shadow px-2 py-1 text-xl md:hidden"
-                        style={{ minWidth: 28, minHeight: 28, fontSize: "1.2rem", display: isMobile ? "block" : "none", opacity: showArrows ? 0.8 : 0, transition: "opacity 0.5s ease", pointerEvents: showArrows ? "auto" : "none" }}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-gray-100 rounded-md shadow px-2 py-1 md:hidden"
+                        style={{ minWidth: 28, minHeight: 28, display: isMobile ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', opacity: showArrows ? 0.85 : 0.15, transition: 'opacity .5s ease', pointerEvents: showArrows ? 'auto' : 'none', cursor: 'pointer' }}
                         tabIndex={isMobile ? 0 : -1}
                         data-prev-btn
                       >
-                        ❮
+                        <SquareChevronLeft className="w-6 h-6" color="#84766d" />
+                        <span className="sr-only">Previous</span>
                       </button>
 
                       <div className="relative w-full md:w-[340px] flex flex-row">
@@ -619,12 +620,13 @@ export default function ChapterGalleryBase({
                         type="button"
                         onClick={goNext}
                         aria-label="Next Chapter"
-                        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-gray-400 bg-gray-100 rounded-md shadow px-2 py-1 text-xl md:hidden"
-                        style={{ minWidth: 28, minHeight: 28, fontSize: "1.2rem", display: isMobile ? "block" : "none", opacity: showArrows ? 0.8 : 0, transition: "opacity 0.5s ease", pointerEvents: showArrows ? "auto" : "none" }}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-gray-100 rounded-md shadow px-2 py-1 md:hidden"
+                        style={{ minWidth: 28, minHeight: 28, display: isMobile ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', opacity: showArrows ? 0.85 : 0.15, transition: 'opacity .5s ease', pointerEvents: showArrows ? 'auto' : 'none', cursor: 'pointer' }}
                         tabIndex={isMobile ? 0 : -1}
                         data-next-btn
                       >
-                        ❯
+                        <SquareChevronRight className="w-6 h-6" color="#84766d" />
+                        <span className="sr-only">Next</span>
                       </button>
                     </div>
 
@@ -738,21 +740,14 @@ export default function ChapterGalleryBase({
                       {/* Exit */}
                       <button
                         type="button"
-                        className="group relative inline-block px-1 py-[0.15rem] border border-gray-200 bg-white text-gray-400 text-xs rounded-full shadow-sm transition-colors duration-200 hover:bg-gray-800 hover:text-gray-200 hover:border-gray-400 focus:text-gray-200 focus:border-gray-400"
+                        className="inline-flex items-center justify-center border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-800 hover:text-gray-200 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
                         aria-label="Exit Chapter View"
                         title="Exit"
-                        style={{ fontWeight: 400, minHeight: 32, minWidth: 30 }}
+                        style={{ width: 30, height: 30, position: 'relative', zIndex: 20 }}
                         onClick={goExit}
                         data-exit-btn
                       >
-                        <span className="block relative h-[1em]">
-                          <span className="absolute inset-0 flex items-center justify-center text-md transition-all duration-200 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:-translate-y-1">
-                            X
-                          </span>
-                          <span className="absolute inset-0 flex items-center justify-center transition-all duration-200 ease-in-out opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0">
-                            Exit
-                          </span>
-                        </span>
+                        <CircleX className="w-7 h-7" />
                       </button>
                     </div>
 
@@ -910,8 +905,9 @@ export default function ChapterGalleryBase({
 
                     {/* Desktop Nav Buttons */}
                     <div className="hidden md:flex justify-center items-center gap-4 pt-4" data-image-id={currentId}>
-                      <button type="button" onClick={goPrev} className="bg-gray-100 px-3 py-1 -mt-16 rounded shadow hover:bg-gray-200" title="Back" data-prev-btn>
-                        &lt;
+                      <button type="button" onClick={goPrev} className="bg-gray-100 p-2 -mt-16 rounded shadow hover:bg-gray-200 flex items-center justify-center" title="Back" data-prev-btn>
+                        <SquareChevronLeft className="w-5 h-5" color="#84766d" />
+                        <span className="sr-only">Previous</span>
                       </button>
                       <button type="button" onClick={goGrid} className="bg-gray-100 p-2 -mt-16 rounded shadow hover:bg-gray-200" title="Index View" data-grid-btn>
                         <Grid className="w-5 h-5" color="#84766d" />
@@ -919,11 +915,12 @@ export default function ChapterGalleryBase({
                       <button
                         type="button"
                         onClick={goNext}
-                        className={`bg-gray-100 px-3 py-1 -mt-16 rounded shadow hover:bg-gray-200 ${showArrowHint ? "animate-pulse text-yellow-500" : "text-black"}`}
+                        className={`bg-gray-100 p-2 -mt-16 rounded shadow hover:bg-gray-200 flex items-center justify-center ${showArrowHint ? 'animate-pulse' : ''}`}
                         title="Next"
                         data-next-btn
                       >
-                        &gt;
+                        <SquareChevronRight className="w-5 h-5" color="#84766d" />
+                        <span className="sr-only">Next</span>
                       </button>
                     </div>
                   </div>
