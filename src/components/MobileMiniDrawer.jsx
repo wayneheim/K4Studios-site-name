@@ -138,6 +138,15 @@ export default function MobileMiniDrawer({ onClose }) {
                 height: "auto",
                 opacity: 0.2,
                 filter: "grayscale(100%)",
+                transition: "opacity 0.3s ease, filter 0.3s ease",
+              }}
+              onMouseOver={(e) => {
+                e.target.style.opacity = "1";
+                e.target.style.filter = "none";
+              }}
+              onMouseOut={(e) => {
+                e.target.style.opacity = "0.2";
+                e.target.style.filter = "grayscale(100%)";
               }}
             />
           </a>

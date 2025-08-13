@@ -940,7 +940,10 @@ export default function ChapterGalleryBase({
             {/* Mini Menu Drawer */}
             {showMiniMenu && (
               <div className="fixed top-0 right-0 h-full z-[9999] bg-white overflow-y-auto shadow-xl transition-all duration-300 w-[90vw] md:w-[50vw] lg:w-[25vw]">
-                <MobileMiniDrawer onClose={() => setShowMiniMenu(false)} />
+                <MobileMiniDrawer
+                  onClose={() => setShowMiniMenu(false)}
+                  currentPage={galleryData[currentIndex]?.title?.trim()} // Normalize current page info
+                />
               </div>
             )}
 
