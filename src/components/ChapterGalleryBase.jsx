@@ -761,19 +761,24 @@ export default function ChapterGalleryBase({
                     </div>
 
                     {!showStoryShow && (
-                      <button
-                        type="button"
-                        onClick={() => { if (!tourOpen()) setShowStoryShow(true); }}
-                        aria-label="Play K4 Slideshow"
-                        title="Play K4 Story Show"
-                        className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-300 shadow-sm transition-colors"
-                        style={{ letterSpacing: ".02em" }}
-                        data-slideshow-btn
-                      >
-                        <span className="inline-flex items-center justify-center w-4 h-4 text-gray-300 group-hover:text-red-700 transition-colors">▶</span>
-                        <span className="text-sm font-medium text-gray-300 group-hover:text-gray-400 transition-colors">Play Show</span>
-                      </button>
-                    )}
+  <button
+    type="button"
+    onClick={() => { if (!tourOpen()) setShowStoryShow(true); }}
+    aria-label="Play K4 Slideshow"
+    title="Play K4 Story Show"
+    className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
+    style={{ letterSpacing: ".02em" }}
+    data-slideshow-btn
+  >
+    <span className="inline-flex items-center justify-center w-4 h-4 text-gray-400 group-hover:text-red-700 transition-colors">
+      ▶
+    </span>
+    <span className="text-sm font-medium text-gray-400 group-hover:text-gray-500 transition-colors">
+      Play Show
+    </span>
+  </button>
+)}
+
 
                     {/* Collector Notes Panel (mobile) */}
                     {galleryData[currentIndex]?.notes && isMobile && (
@@ -913,25 +918,40 @@ export default function ChapterGalleryBase({
                     </div>
 
                     {/* Desktop Nav Buttons */}
-                    <div className="hidden md:flex justify-center items-center gap-4 pt-4" data-image-id={currentId}>
-                      <button type="button" onClick={goPrev} className="bg-gray-100 p-2 -mt-16 rounded shadow group flex items-center justify-center" title="Back" data-prev-btn>
-                        <SquareChevronLeft className="w-5 h-5 text-gray-500 group-hover:text-red-800 transition-colors" />
-                        <span className="sr-only">Previous</span>
-                      </button>
-                      <button type="button" onClick={goGrid} className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow group flex items-center justify-center" title="Index View" data-grid-btn>
-                        <Grid className="w-5 h-5 text-gray-500 group-hover:text-red-800 transition-colors" />
-                      </button>
-                      <button
-                        type="button"
-                        onClick={goNext}
-                        className={`bg-gray-100 p-2 -mt-16 rounded shadow group flex items-center justify-center ${showArrowHint ? 'animate-pulse' : ''}`}
-                        title="Next"
-                        data-next-btn
-                      >
-                        <SquareChevronRight className="w-5 h-5 text-gray-500 group-hover:text-red-800 transition-colors" />
-                        <span className="sr-only">Next</span>
-                      </button>
-                    </div>
+<div className="hidden md:flex justify-center items-center gap-4 pt-4" data-image-id={currentId}>
+  <button
+    type="button"
+    onClick={goPrev}
+    className="bg-gray-100 p-2 -mt-16 rounded shadow flex items-center justify-center border border-transparent hover:border-gray-300 transition-colors"
+    title="Back"
+    data-prev-btn
+  >
+    <SquareChevronLeft className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
+    <span className="sr-only">Previous</span>
+  </button>
+
+  <button
+    type="button"
+    onClick={goGrid}
+    className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-transparent hover:border-gray-300 transition-colors"
+    title="Index View"
+    data-grid-btn
+  >
+    <Grid className="w-5 h-5 text-gray-400 hover:text-blue-600 transition-colors" />
+  </button>
+
+  <button
+    type="button"
+    onClick={goNext}
+    className={`bg-gray-100 p-2 -mt-16 rounded shadow flex items-center justify-center border border-transparent hover:border-gray-300 transition-colors ${showArrowHint ? 'animate-pulse' : ''}`}
+    title="Next"
+    data-next-btn
+  >
+    <SquareChevronRight className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
+    <span className="sr-only">Next</span>
+  </button>
+</div>
+
                   </div>
                 </motion.div>
               </AnimatePresence>
