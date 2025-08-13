@@ -135,13 +135,13 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
 
   const creditColorMap = {
-    white: { color: '#555', opacity: 0.55 },
-    white2: { color: '#2c2c2c', opacity: 0.55 },
-    white3: { color: '#f2f2f2', opacity: 0.62 },
+    white: { color: '#888888ff', opacity: 0.55 },
+    white2: { color: '#505050ff', opacity: 0.55 },
+    white3: { color: '#b1b1b1ff', opacity: 0.62 },
     gray: { color: '#f4f4f4', opacity: 0.60 },
     black: { color: '#f0f0f0', opacity: 0.62 },
-    wood: { color: '#4a3827', opacity: 0.55 },
-    'no-wood': { color: '#4d4d4d', opacity: 0.50 },
+    wood: { color: '#4d3c2dff', opacity: 0.55 },
+    'no-wood': { color: '#888888ff', opacity: 0.50 },
   };
   const creditStyle = creditColorMap[matColor] || { color: '#2c2c2c', opacity: 0.5 };
 

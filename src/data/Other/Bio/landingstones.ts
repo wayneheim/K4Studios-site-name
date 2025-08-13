@@ -6,10 +6,10 @@ export const landingWestern = {
 
   tombstones: [
     
-    {
-      title: 'Featured Gallery: The Engrained Series',
-      href: '/Other/K4-Select-Series/Engrained/Engrained-Series',
-      thumb: '/images/tombstones/engrained-ts.jpg',
-    },
+  //  {
+  //    title: 'Featured Gallery: The Engrained Series',
+  //    href: '',
+//      thumb: 'https://photos.smugmug.com/photos/i-NR6g97d/0/MBCPZ8ngQkmwSsTWLpNJJ62gNtRTxv6hqJCDJDQdt/M/i-NR6g97d-M.jpg',
+  //  },
   ]
 };

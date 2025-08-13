@@ -1,52 +1,52 @@
 export const facingFAQ = [
-  {
-    q: "What makes the Engrained Series different from standard wood prints?",
+ {
+    q: "What makes Wayne Heim’s photography different from others in the genre?",
     a: [
-      "Standard wood prints are typically uniform — a single layer of ink sits on top of the board. With the Engrained Series, Wayne Heim uses a proprietary 5-layer UV process where the white underlayer is selectively controlled.",
-      "This allows portions of the image to become translucent, letting the wood’s natural grain show through like a painter’s brushstroke. It’s textured, intentional, and completely unique to each piece."
+      "Wayne’s work isn’t just about the subject — it’s about the **story** behind the subject. His painterly fine art photography fuses narrative, historical context, and emotional tone into each frame.",
+      "While many capture what is, Wayne crafts what could have been. He treats each image like a scene from a forgotten film or an unwritten novel, built with the intention of making the viewer wonder: *Who were they? What happened here?*"
     ],
   },
   {
-    q: "Is each piece one-of-a-kind?",
+    q: "What’s Wayne’s background in art and illustration?",
     a: [
-      "Yes. Because the wood grain is never identical — and because Wayne adjusts print density, tone, and detail individually — no two prints are exactly the same.",
-      "Each image is printed with care and reviewed for balance between subject, texture, and tone before being approved as part of the Engrained collection."
+      "Wayne is an **award-winning medical illustrator** with a BFA from the Cleveland Institute of Art. He’s spent decades distilling anatomy and surgical detail into visuals for doctors and patients — a world where accuracy is everything and storytelling saves lives.",
+      "That background taught him discipline, lighting, and visual hierarchy — all of which now inform his painterly photography. It’s a rare blend of scientific precision and artistic instinct."
     ],
   },
   {
-    q: "What types of subjects work best for Engrained?",
+    q: "Is Wayne classically trained in photography?",
     a: [
-      "Wayne selects subjects that harmonize with wood: weathered cowboy portraits, antique cars, Civil War moments, and wide Western skies all lend themselves beautifully to the format.",
-      "The depth of the grain enhances the timeless mood of the image — turning photography into something tactile and deeply rooted."
+      "Yes — but he doesn’t stay in the box. Wayne trained in traditional photography, darkroom technique, and visual composition before transitioning to modern digital tools.",
+      "He uses the best of both worlds: classical structure and cutting-edge control. Whether sculpting light through digital layers or echoing pictorialist texture, his work nods to the past while breaking open the future."
     ],
   },
   {
-    q: "Are these available in limited editions?",
+    q: "Does Wayne use AI or preset filters in his work?",
     a: [
-      "Most Engrained prints are offered in small, signed editions or as one-off collector pieces.",
-      "Wayne believes this process should remain personal, not mass-produced. Custom sizes or commissions may be available depending on subject and timing."
+      "No. Every image is hand-tuned — layer by layer, choice by choice. Wayne doesn’t believe in automated shortcuts. Instead, he builds tone, texture, and meaning through a painter’s mindset.",
+      "His imagery is deeply rooted in **craft, not code**. The results are timeless — not trend-driven."
     ],
   },
   {
-    q: "How are they mounted or framed?",
+    q: "How does storytelling shape Wayne’s approach to photography?",
     a: [
-      "Engrained prints are mounted on cradled birch panels, ready to hang. Optional barnwood framing is available and complements the rustic, historical tone of the work.",
-      "No glass or acrylic covers the print — it’s a raw, tactile presentation that lets the material speak."
+      "For Wayne, storytelling is the **center of everything**. He approaches each shoot like a scene from a film or a lost page in a history book. Whether he’s photographing a re-enactor, a lone landscape, or a silent machine, there’s always a narrative thread beneath the surface.",
+      "Like great musicians — think Billy Joel or Rod Stewart — who built careers as **lyric storytellers**, Wayne uses imagery to tell stories that stick. His photography doesn’t just show — it invites the viewer to feel, to imagine, and to remember."
     ],
   },
   {
-    q: "Can I request a custom image as part of the Engrained series?",
+    q: "Is this style of painterly photography common?",
     a: [
-      "Yes. Wayne occasionally takes on commissions if the subject fits the spirit of the series — historical, weathered, rooted in story.",
-      "Contact him directly if you have a portrait, heirloom, or visual concept you’d like to see brought to life on wood."
+      "Not at this level of depth. While others may add painterly 'effects,' Wayne’s work is grounded in a full **philosophy** — pulling from classical illustration, pictorialist photography, and narrative filmmaking.",
+      "He’s constantly asking not just *What can I do with this tool?* but *What hasn’t been done yet?* It’s this push — this refusal to settle — that makes the work original, emotional, and enduring."
     ],
   },
   {
-    q: "Where do collectors typically display these pieces?",
+    q: "Why does history play such a big role in his work?",
     a: [
-      "Engrained prints are often found in:",
-      "<ul>\n  <li>Cabins, ranches, or rustic homes</li>\n  <li>Americana-themed restaurants or hotel lobbies</li>\n  <li>Offices with character and story</li>\n  <li>Collector galleries with a focus on Western or vintage themes</li>\n</ul>",
-      "Each piece becomes a conversation starter — part artwork, part artifact."
+      "History holds power — not just as fact, but as feeling. Wayne is drawn to historical subjects because they offer resonance, humanity, and mystery.",
+      "Many of the images in his series feel like echoes from a forgotten time. Some are recreations. Some are reinterpretations. All are rooted in **respect for the past** and a fascination with how its stories still shape us today.",
+      "As Wayne often says: *Sometimes old becomes new again.*"
     ],
-  },
+  }
 ];
