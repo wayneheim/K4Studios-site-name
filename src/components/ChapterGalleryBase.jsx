@@ -552,17 +552,7 @@ export default function ChapterGalleryBase({
                         {/* Image */}
                         <div
                           className="aspect-[4/5] relative rounded-lg flex items-center justify-center text-gray-500 cursor-pointer z-10 w-full group"
-                          style={{ marginLeft: isMobile ? "10px" : 0, marginRight: isMobile ? "10px" : 0, transition: 'box-shadow .45s ease' }}
-                          onMouseEnter={(e) => {
-                            if (!isMobile) {
-                              e.currentTarget.style.boxShadow = '0 0 0 2px rgba(255,255,255,0.55), 0 4px 15px 4px rgba(120,120,135,0.55)';
-                            }
-                          }}
-                          onMouseLeave={(e) => {
-                            if (!isMobile) {
-                              e.currentTarget.style.boxShadow = 'none';
-                            }
-                          }}
+                          style={{ marginLeft: isMobile ? "10px" : 0, marginRight: isMobile ? "10px" : 0 }}
                           onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
                           data-zoom-btn
                         >
@@ -573,13 +563,23 @@ export default function ChapterGalleryBase({
                             style={
                               isMobile
                                 ? { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh" }
-                                : { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7" }
+                                : { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7", transition: 'box-shadow .3s ease' }
                             }
+                            onMouseEnter={(e) => {
+                              if (!isMobile) {
+                                e.currentTarget.style.boxShadow = '0 0 0 2px rgba(255, 255, 255, 0.85), 0 4px 15px 4px rgba(134, 134, 134, 0.85)';
+                              }
+                            }}
+                            onMouseLeave={(e) => {
+                              if (!isMobile) {
+                                e.currentTarget.style.boxShadow = 'none';
+                              }
+                            }}
                           />
                         </div>
 
                         {/* Collector Notes (desktop) */}
-                        {!isMobile && galleryData[currentIndex]?.notes && (
+                        {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
                           <div className="hidden md:flex flex-col items-start relative">
                             <button
                               type="button"
@@ -643,16 +643,12 @@ export default function ChapterGalleryBase({
                     {/* Unified Nav Row */}
                     <div
                       className="w-full flex items-center justify-between ml-[0.1rem] gap-0.5 md:gap-4 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1.5 py-1.5 select-none"
-                      style={
-                        !isMobile && galleryData[currentIndex]?.notes
-                          ? { marginRight: '140px', maxWidth: '420px' }
-                          : { maxWidth: '420px' }
-                      }
+                      style={{ maxWidth: '420px' }}
                     >
                       {/* Menu */}
                       <button
                         type="button"
-                        className="flex items-center justify-center w-9 h-9 border border-gray-200 hover:bg-gray-100 bg-white text-gray-500 text-lg rounded-full shadow-sm transition-colors duration-150 hover:text-gray-700 focus:text-gray-600 hover:border-gray-300 focus:border-gray-300"
+                        className="flex items-center justify-center w-9 h-9 border border-gray-200 hover:bg-gray-100 bg-white text-gray-500 text-lg rounded-full shadow-sm transition-colors duration-150 hover:border-red-200 hover:text-gray-700 focus:text-gray-600 hover:border-gray-300 focus:border-gray-300"
                         aria-label="Show Menu"
                         title="Show Menu"
                         style={{ fontWeight: 400 }}
@@ -725,7 +721,7 @@ export default function ChapterGalleryBase({
                           className="w-16 border border-gray-200 rounded px-1 py-1 text-center"
                           style={{ fontSize: "1.0em" }}
                         />
-                        <button type="submit" className="bg-gray-000 px-1.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:text-gray-500 hover:bg-gray-100">
+                        <button type="submit" className="bg-gray-000 px-1.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
                           Go
                         </button>
                       </form>
@@ -737,7 +733,7 @@ export default function ChapterGalleryBase({
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Click to order prints"
-                        className="inline-flex items-center justify-center w-9 h-9 rounded-full text-xs font-semibold shadow transition border border-gray-300"
+                        className="inline-flex items-center justify-center w-9 h-9 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
                         style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
                         onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
                         onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
@@ -746,14 +742,14 @@ export default function ChapterGalleryBase({
                       </a>
 
                       {/* ❤️ Like Button */}
-                      <div className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors" data-like-btn>
+                      <div className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200" data-like-btn>
                         <LikeButton imageId={galleryData[currentIndex]?.id} pageTitle={galleryData[currentIndex]?.title} />
                       </div>
 
                       {/* Exit */}
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center w-9 h-9 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
+                        className="inline-flex items-center justify-center w-9 h-9 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
                         aria-label="Exit Chapter View"
                         title="Exit"
                         style={{ position: 'relative', zIndex: 20 }}
@@ -918,21 +914,21 @@ export default function ChapterGalleryBase({
 
                     {/* Desktop Nav Buttons */}
                     <div className="hidden md:flex justify-center items-center gap-4 pt-4" data-image-id={currentId}>
-                      <button type="button" onClick={goPrev} className="bg-gray-100 p-2 -mt-16 rounded shadow hover:bg-gray-200 flex items-center justify-center" title="Back" data-prev-btn>
-                        <SquareChevronLeft className="w-5 h-5" color="#84766d" />
+                      <button type="button" onClick={goPrev} className="bg-gray-100 p-2 -mt-16 rounded shadow group flex items-center justify-center" title="Back" data-prev-btn>
+                        <SquareChevronLeft className="w-5 h-5 text-gray-500 group-hover:text-red-800 transition-colors" />
                         <span className="sr-only">Previous</span>
                       </button>
-                      <button type="button" onClick={goGrid} className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow hover:bg-gray-200 flex items-center justify-center" title="Index View" data-grid-btn>
-                        <Grid className="w-5 h-5" color="#84766d" />
+                      <button type="button" onClick={goGrid} className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow group flex items-center justify-center" title="Index View" data-grid-btn>
+                        <Grid className="w-5 h-5 text-gray-500 group-hover:text-red-800 transition-colors" />
                       </button>
                       <button
                         type="button"
                         onClick={goNext}
-                        className={`bg-gray-100 p-2 -mt-16 rounded shadow hover:bg-gray-200 flex items-center justify-center ${showArrowHint ? 'animate-pulse' : ''}`}
+                        className={`bg-gray-100 p-2 -mt-16 rounded shadow group flex items-center justify-center ${showArrowHint ? 'animate-pulse' : ''}`}
                         title="Next"
                         data-next-btn
                       >
-                        <SquareChevronRight className="w-5 h-5" color="#84766d" />
+                        <SquareChevronRight className="w-5 h-5 text-gray-500 group-hover:text-red-800 transition-colors" />
                         <span className="sr-only">Next</span>
                       </button>
                     </div>
