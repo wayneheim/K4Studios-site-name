@@ -203,12 +203,15 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
                 disabled={idx === 0}
                 style={{ pointerEvents: "auto", background: idx === 0 ? "#f2f2f2" : "#fff", color: idx === 0 ? "#999" : "#4a4a4a", border: "1px solid #d0d0d0", borderRadius: 8, padding: "6px 10px", fontSize: 13, cursor: idx === 0 ? "not-allowed" : "pointer" }}>
                 Back
-              </button>
-            )}
-            {idx === 0 && steps[idx].selector == null && (
-              <button type="button" onClick={() => { try { localStorage.setItem(seenKey, "1"); } catch {}; setIsOpen(false); onClose && onClose(); }}
-                title="Don't show this tour again"
-                style={{ pointerEvents: "auto", background: "#eee", color: "#444", border: "1px solid #ccc", borderRadius: 8, padding: "6px 10px", fontSize: 12, cursor: "pointer" }}>
+                              <button
+                                type="button"
+                                onClick={() => setShowNotes(false)}
+                                aria-label="Close Collector Notes"
+                                className="ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full border border-gray-300 bg-white text-gray-400 shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 transition-colors"
+                                style={{ lineHeight: 0 }}
+                              >
+                                <CircleX className="w-6 h-6" />
+                              </button>
                 Don't Show
               </button>
             )}

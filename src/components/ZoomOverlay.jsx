@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor }) {
   const [isMobile, setIsMobile] = useState(false);
+  const [maxImageHeight, setMaxImageHeight] = useState(() => Math.round(window.innerHeight * 0.8));
+  const frameRef = useRef(null); // outer frame (contains image + credit)
+  const bottomRef = useRef(null); // bottom controls + text
 
   // Detect mobile screen
   useEffect(() => {
@@ -19,6 +22,26 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
   }, []);
 
   if (!imageData) return null;
+
+  // Recompute available image height so full UI fits (or shrinks image first) on resize / mat change
+  useLayoutEffect(() => {
+    const compute = () => {
+      const vh = window.innerHeight;
+      const bottomH = bottomRef.current ? bottomRef.current.offsetHeight : 0;
+      // Estimate vertical extras: frame padding + margins above/below, top spacing
+      const topExtras = 40; // tweakable cushion
+      let available = vh - bottomH - topExtras;
+      // If available is large, cap to 90% vh so bottom still feels anchored
+      const upperCap = Math.round(vh * 0.9);
+      available = Math.min(available, upperCap);
+      // Minimum image height so it never disappears
+      available = Math.max(available, 140);
+      setMaxImageHeight(available);
+    };
+    compute();
+    window.addEventListener('resize', compute);
+    return () => window.removeEventListener('resize', compute);
+  }, [matColor]);
 
   // Styles
   const frame = {
@@ -138,16 +161,16 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
           overflowX: "hidden",
         }}
       >
-        <div style={{ all: "unset", maxWidth: 1100, textAlign: "center" }}>
+  <div style={{ all: "unset", maxWidth: 1100, textAlign: "center" }}>
           {/* FRAME */}
-          <div style={{ ...frame, maxWidth: "calc(100vw - 2rem)", boxSizing: "border-box" }}>
+    <div ref={frameRef} style={{ ...frame, maxWidth: "calc(100vw - 2rem)", boxSizing: "border-box" }}>
             <div style={cutEdge}>
               <img
                 src={imageData.src}
                 alt={imageData.title}
                 style={{
-                  maxWidth: "100%",
-                  maxHeight: "80vh",
+      maxWidth: "100%",
+      maxHeight: maxImageHeight + 'px',
                   objectFit: "contain",
                   display: "block",
                   border: "1px solid #bbb",
@@ -171,6 +194,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
 
           {/* SWATCH ROW WITH FRAMING LINES */}
           <div
+            ref={bottomRef}
             style={{
               marginTop: 22,
               maxWidth: isMobile ? '88vw' : '60ch',

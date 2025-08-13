@@ -246,8 +246,11 @@ html, body {
 }
 
 body.zoom-open {
-  overflow: hidden;
-  height: 100vh;
+  /* Allow vertical scrollbar fallback so extremely small windows still can access controls */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* Keep full-viewport context but don't hard lock height to allow OS address bar hide/show */
+  min-height: 100vh;
 }
 
 /*new zoomy things*/
