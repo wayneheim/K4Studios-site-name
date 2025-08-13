@@ -607,7 +607,7 @@ export default function ChapterGalleryBase({
                                   exit={{ opacity: 0, x: -32 }}
                                   transition={{ duration: 0.38, ease: [0.33, 1, 0.68, 1] }}
                                   className="absolute -left-3 top-11 z-50 w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
-                                  style={{ backgroundColor: "#9fa692", border: "1px solid rgb(109, 111, 114)", minWidth: "260px", maxWidth: "90vw", marginLeft: "16px" }}
+                                  style={{ backgroundColor: "#cdd1c5ff", border: "1px solid rgb(109, 111, 114)", minWidth: "260px", maxWidth: "90vw", marginLeft: "16px" }}
                                 >
                                   <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
                                     <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
@@ -642,8 +642,8 @@ export default function ChapterGalleryBase({
 
                     {/* Unified Nav Row */}
                     <div
-                      className="w-full flex items-center justify-between ml-[0.1rem] gap-0.25 md:gap-4 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1.5 py-1.5 select-none"
-                      style={{ maxWidth: '420px' }}
+                      className="w-full flex items-center justify-between ml-[0.1rem] gap-0.5 md:gap-2 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none"
+                      style={{ maxWidth: '340px', minWidth: '0' }}
                     >
                       {/* Menu */}
                       <button
@@ -708,22 +708,22 @@ export default function ChapterGalleryBase({
                             setCurrentIndex(num - 1);
                           }
                         }}
-                        className="flex items-center gap-2 text-xs"
+                        className="flex items-center gap-0 text-xs"
                         style={{ minWidth: 50 }}
                         data-jump-form
                       >
                         <input
-                          type="number"
+                          type="text"
                           id="chapterNum"
                           name="chapterNum"
                           min="1"
                           max={galleryData.length}
                           placeholder="#"
-                          className="w-16 border border-gray-200 rounded px-1 py-1 text-center"
+                          className="w-8 border border-gray-200 rounded px-2 py-1 text-center"
                           style={{ fontSize: "1.0em" }}
                         />
-                        <button type="submit" className="bg-white px-1.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
-                          Go
+                        <button type="submit" className="bg-gray-100 px-1 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
+                          Go!
                         </button>
                       </form>
 
@@ -792,7 +792,7 @@ export default function ChapterGalleryBase({
                             exit={{ opacity: 0, y: -8 }}
                             transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
                             className="w-full mx-auto mt-2 mb-[6px] border border-gray-300 rounded shadow p-4 text-sm text-gray-800 text-left"
-                            style={{ backgroundColor: "#9fa692", border: "1px solid rgb(109, 111, 114)", maxWidth: "98vw", boxSizing: "border-box" }}
+                            style={{ backgroundColor: "#cfd1c8ff", border: "1px solid rgb(109, 111, 114)", maxWidth: "98vw", boxSizing: "border-box" }}
                           >
                             <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
                               <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
@@ -853,7 +853,10 @@ export default function ChapterGalleryBase({
                     {(() => {
                       const descPanelId = `desc-panel-${galleryData[currentIndex]?.id || currentIndex}`;
                       return (
-                        <div className="text-sm text-gray-600 mb-6 text-center group" style={{ position: "relative" }}>
+                        <div
+                          className="text-sm text-gray-600 mb-6 text-center group"
+                          style={{ position: "relative" }}
+                        >
                           <button
                             type="button"
                             onClick={(e) => { e.stopPropagation(); setIsExpanded((p) => !p); }}
@@ -862,7 +865,7 @@ export default function ChapterGalleryBase({
                             aria-controls={descPanelId}
                             aria-label="Toggle more information about this image"
                             id={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
-                            style={{ zIndex: 50, position: "relative" }}
+                            style={{ zIndex: showNotes ? 5 : 50, position: "relative" }}
                           >
                             <span className={`inline-block transform transition-transform duration-300 ${isExpanded ? "rotate-90" : ""}`}>
                               ▼
@@ -919,11 +922,11 @@ export default function ChapterGalleryBase({
                     </div>
 
                     {/* Desktop Nav Buttons */}
-<div className="hidden md:flex justify-center items-center gap-4 pt-4" data-image-id={currentId}>
+<div className="hidden md:flex justify-center items-center gap-6 pt-4" data-image-id={currentId}>
   <button
     type="button"
     onClick={goPrev}
-    className="bg-gray-100 p-2 -mt-16 rounded shadow flex items-center justify-center border border-transparent hover:border-gray-300 transition-colors"
+    className="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
     title="Back"
     data-prev-btn
   >
@@ -934,7 +937,7 @@ export default function ChapterGalleryBase({
   <button
     type="button"
     onClick={goGrid}
-    className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-transparent hover:border-gray-300 transition-colors"
+    className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
     title="Index View"
     data-grid-btn
   >
@@ -944,7 +947,7 @@ export default function ChapterGalleryBase({
   <button
     type="button"
     onClick={goNext}
-    className={`bg-gray-100 p-2 -mt-16 rounded shadow flex items-center justify-center border border-transparent hover:border-gray-300 transition-colors ${showArrowHint ? 'animate-pulse' : ''}`}
+    className={`bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors ${showArrowHint ? 'animate-pulse' : ''}`}
     title="Next"
     data-next-btn
   >
