@@ -580,7 +580,7 @@ export default function ChapterGalleryBase({
 
                         {/* Collector Notes (desktop) */}
                         {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
-                          <div className="hidden md:flex flex-col items-start relative">
+                          <div className="md:flex flex-col items-start relative" style={isMobile ? { visibility: 'hidden' } : {}}>
                             <button
                               type="button"
                               onClick={() => setShowNotes((p) => !p)}
@@ -642,13 +642,13 @@ export default function ChapterGalleryBase({
 
                     {/* Unified Nav Row */}
                     <div
-                      className="w-full flex items-center justify-between ml-[0.1rem] gap-0.5 md:gap-4 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1.5 py-1.5 select-none"
+                      className="w-full flex items-center justify-between ml-[0.1rem] gap-0.25 md:gap-4 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1.5 py-1.5 select-none"
                       style={{ maxWidth: '420px' }}
                     >
                       {/* Menu */}
                       <button
                         type="button"
-                        className="flex items-center justify-center w-9 h-9 border border-gray-200 hover:bg-gray-100 bg-white text-gray-500 text-lg rounded-full shadow-sm transition-colors duration-150 hover:border-red-200 hover:text-gray-700 focus:text-gray-600 hover:border-gray-300 focus:border-gray-300"
+                        className="flex items-center justify-center w-8 h-8 border border-gray-200 hover:bg-gray-100 bg-white text-gray-500 text-lg rounded-full shadow-sm transition-colors duration-150 hover:border-red-200 hover:text-gray-700 focus:text-gray-600 hover:border-gray-300 focus:border-gray-300"
                         aria-label="Show Menu"
                         title="Show Menu"
                         style={{ fontWeight: 400 }}
@@ -665,7 +665,7 @@ export default function ChapterGalleryBase({
                           onClick={(e) => { e.stopPropagation(); setShowNotes((p) => !p); }}
                           aria-label="View Collector Notes"
                           title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
-                          className="inline-flex items-center justify-center w-9 h-9 relative border border-gray-200 bg-white rounded-full shadow text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors"
+                          className="inline-flex items-center justify-center w-8 h-8 relative border border-gray-200 bg-white rounded-full shadow text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors"
                         >
                           {showNotes ? (
                             <span className="text-lg leading-none">✕</span>
@@ -679,7 +679,7 @@ export default function ChapterGalleryBase({
                       )}
 
                       {/* Gallery count */}
-                      <div className="text-sm text-gray-400 font-medium flex items-center whitespace-nowrap" style={{ letterSpacing: "-0.075em" }} data-count>
+                      <div className="text-sm text-gray-400 font-medium flex items-center whitespace-nowrap" style={{ letterSpacing: "-0.085em" }} data-count>
                         {`${currentIndex + 1} – ${galleryData.length}`}
                       </div>
 
@@ -689,7 +689,8 @@ export default function ChapterGalleryBase({
                         onClick={goGrid}
                         aria-label="View Grid Mode"
                         title="View Grid Mode"
-                        className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 shadow hover:bg-gray-200 transition-colors"
+                        className="md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 shadow hover:bg-gray-200 border border-gray-500 transition-colors"
+                        style={{ border: "1px solid #bebbbaff" }}
                         data-grid-btn
                       >
                         <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
@@ -721,7 +722,7 @@ export default function ChapterGalleryBase({
                           className="w-16 border border-gray-200 rounded px-1 py-1 text-center"
                           style={{ fontSize: "1.0em" }}
                         />
-                        <button type="submit" className="bg-gray-000 px-1.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
+                        <button type="submit" className="bg-white px-1.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
                           Go
                         </button>
                       </form>
@@ -733,7 +734,7 @@ export default function ChapterGalleryBase({
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Click to order prints"
-                        className="inline-flex items-center justify-center w-9 h-9 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
+                        className="inline-flex items-center justify-center w-8 h-8 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
                         style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
                         onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
                         onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
@@ -742,14 +743,14 @@ export default function ChapterGalleryBase({
                       </a>
 
                       {/* ❤️ Like Button */}
-                      <div className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200" data-like-btn>
+                      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200" data-like-btn>
                         <LikeButton imageId={galleryData[currentIndex]?.id} pageTitle={galleryData[currentIndex]?.title} />
                       </div>
 
                       {/* Exit */}
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center w-9 h-9 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
+                        className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
                         aria-label="Exit Chapter View"
                         title="Exit"
                         style={{ position: 'relative', zIndex: 20 }}

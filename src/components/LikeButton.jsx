@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Heart } from "lucide-react";
 
 export default function LikeButton({ imageId, pageTitle }) {
   const [liked, setLiked] = useState(false);
@@ -56,16 +57,53 @@ export default function LikeButton({ imageId, pageTitle }) {
     }
   };
 
+  const [hovered, setHovered] = useState(false);
+
   return (
     <button
       onClick={hasMounted ? handleLike : undefined}
-      className={`text-xl transition duration-300 ${
-        liked ? "text-red-600" : "text-gray-400 hover:text-red-500"
-      }`}
+      className={`transition duration-300 flex items-center justify-center focus:outline-none group`}
       aria-label={liked ? "Unlike this image" : "Like this image"}
       type="button"
+      style={{
+        lineHeight: 0,
+        width: 32,
+        height: 32,
+        borderRadius: "50%",
+        background: "#fff",
+        padding: 0,
+        boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative",
+      }}
+      title="Like This Image"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      {hasMounted ? (liked ? "❤️" : "🤍") : "🤍"}
+      <Heart
+        size={22}
+        strokeWidth={2.2}
+        color={liked ? "#dc2626" : hovered ? "#dc2626" : "#9ca3af"}
+        fill={liked ? "#dc2626" : "none"}
+        style={{
+          transition: "all 0.2s",
+          stroke: liked ? "#dc2626" : hovered ? "#dc2626" : "#9ca3af",
+        }}
+        className={
+          liked
+            ? "heart-liked"
+            : "heart-unliked"
+        }
+      />
+      {/* Tooltip text on hover */}
+      <span
+        className="absolute left-1/2 top-full -translate-x-1/2 mt-1 px-2 py-1 text-xs bg-white text-gray-700 rounded shadow opacity-0 group-hover:opacity-100 pointer-events-none transition"
+        style={{ whiteSpace: "nowrap", zIndex: 10 }}
+      >
+        Like This Image
+      </span>
     </button>
   );
 }
