@@ -1,8 +1,20 @@
 ---
-const { title = 'Gallery', structuredDataJSON, meta = {} } = Astro.props;
+const {
+  title = 'Gallery',
+  structuredDataJSON,
+  meta = {},
+  // 👇 add these three (we’ll pass them from the page)
+  lcpSmall,
+  lcpMed,
+  lcpLarge,
+} = Astro.props;
+
+// Load local, pinned Tailwind build
+import "@/styles/global.css";
 
 // Strip any HTML tags if accidentally passed in
 const cleanTitle = title.replace(/<[^>]*>/g, '');
+const lcpFallback = lcpMed || lcpLarge || lcpSmall; // safest single URL
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +46,23 @@ const cleanTitle = title.replace(/<[^>]*>/g, '');
       </>
     )}
 
+    <!-- (optional) quicker font warmup -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    {lcpFallback && (
+      <link
+        rel="preload"
+        as="image"
+        href={lcpFallback}
+        imagesrcset={lcpSmall && lcpMed && lcpLarge
+          ? `${lcpSmall} 640w, ${lcpMed} 1024w, ${lcpLarge} 1600w`
+          : undefined}
+        imagesizes="(min-width: 1024px) 900px, 90vw"
+        fetchpriority="high"
+      />
+    )}
+
     <style>
       body {
         font-family: 'Glegoo', serif;
@@ -52,6 +79,15 @@ const cleanTitle = title.replace(/<[^>]*>/g, '');
       }
     </style>
   </head>
+
+  <body>
+    <div class="page-container">
+      <slot />
+    </div>
+    <div id="overlay-root"></div>
+  </body>
+</html>
+
 
   <body>
     <div class="page-container">
