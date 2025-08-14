@@ -48,8 +48,11 @@ breadcrumb: `
    onmouseout="this.style.color='inherit'">
   Facing History</a> |
 <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII"
-   style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
-   onmouseover="this.style.color='olive'"
-   onmouseout="this.style.color='inherit'">
-  WWII</a> | Machines | B/W`
+  style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+  onmouseover="this.style.color='olive'"
+  onmouseout="this.style.color='inherit'">
+  WWII</a> | <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines"
+  style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+  onmouseover="this.style.color='#4aa8ff'"
+  onmouseout="this.style.color='inherit'">Machines</a> | B/W`
 };

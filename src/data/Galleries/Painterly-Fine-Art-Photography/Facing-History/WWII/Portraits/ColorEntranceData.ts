@@ -51,5 +51,8 @@ Keywords: WWII portraits, fine art color photography, World War II art prints, r
    style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
    onmouseover="this.style.color='olive'"
    onmouseout="this.style.color='inherit'">
-  WWII</a> | Portraits | Color`
+  WWII</a> | <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits"
+   style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
+   onmouseover="this.style.color='#4aa8ff'"
+   onmouseout="this.style.color='inherit'">Portraits</a> | Color`
 };

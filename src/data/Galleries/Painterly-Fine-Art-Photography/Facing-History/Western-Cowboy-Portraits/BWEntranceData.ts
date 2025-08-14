@@ -11,6 +11,6 @@ export const entranceData = {
     caption: "\"Ready for Anything\"",
   },
     breadcrumb: 
-  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='red'" onmouseout="this.style.color='inherit'">Facing History</a> | Cowboys | B/W`,
+  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='red'" onmouseout="this.style.color='inherit'">Facing History</a> | <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='#4aa8ff'" onmouseout="this.style.color='inherit'">Cowboy Portraits</a> | B/W`,
 
 };
