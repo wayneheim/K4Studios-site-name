@@ -1,14 +1,16 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
+import tailwind from '@astrojs/tailwind';
 import path from 'path';
-
-import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   output: 'server',
   adapter: netlify(),
-  integrations: [react()],
+  integrations: [
+    react(),
+    tailwind(),  // <-- Tailwind goes here!
+  ],
   vite: {
     resolve: {
       alias: {
@@ -19,15 +21,13 @@ export default defineConfig({
         '@styles': path.resolve('./src/styles'),
       }
     },
-
     server: {
       host: true,
       port: 4321,
       origin: 'http://localhost:4321',
       hmr: { clientPort: 443 },
       allowedHosts: ['.trycloudflare.com', 'localhost', '127.0.0.1']
-    },
-
-    plugins: [tailwindcss()]
+    }
+    // No need for plugins: [tailwindcss()]!
   }
 });

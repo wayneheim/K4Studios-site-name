@@ -7,11 +7,12 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
   const [pageUrl, setPageUrl] = useState("");
   const [isClipboardHovered, setIsClipboardHovered] = useState(false);
 
+  // Always update pageUrl every time the drawer opens
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (isOpen && typeof window !== "undefined") {
       setPageUrl(window.location.href);
     }
-  }, []);
+  }, [isOpen]);
 
   const notifyShare = async (platform) => {
     try {
@@ -44,7 +45,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
     <div style={{ position: "relative", display: "inline-block", fontFamily: "'Glegoo', serif" }}>
       {/* Share Button */}
       <button
-        data-share-btn // 👈 TOUR HOOK
+        data-share-btn
         onClick={() => setIsOpen((o) => !o)}
         title="Share this page"
         style={{

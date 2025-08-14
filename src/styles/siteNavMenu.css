@@ -21,6 +21,9 @@
 }
 
 @media (max-width: 1024px) {
+  .nav-item{
+  border: 1px solid #ffffff;
+}
   .k4-watermark {
     display: block;
     border-radius: 5px;

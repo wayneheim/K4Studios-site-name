@@ -15,7 +15,7 @@
 
   z-index: 9999;
   transition: transform 0.3s ease;
-  border-right: 1px solid #ddd;
+  border-right: none;
 }
 
 .drawer-container {
@@ -32,7 +32,7 @@
   opacity: 100%;
   z-index: 9999;
   transition: transform 0.3s ease;
-  border-right: 1px solid #ddd;
+  border-right: none;
 }
 
 
@@ -55,7 +55,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: .5rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: none;
 }
 
 .mini-logo {
@@ -70,7 +70,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem 1rem 0.4rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: none;
 }
 
 .mini-header-title {
@@ -108,22 +108,10 @@
   text-decoration: none;
   color: #222;
   transition: background 0.3s, color 0.3s;
-  border-bottom: 1px solid #eee;
+  border-bottom: none;
 }
 
-.mini-menu-link:hover {
-  background: #f2f2f2;
-  color: #703a1d;
-}
-
-/* Submenu Nesting */
-.mini-submenu {
-  margin-left: 1rem;
-  padding-left: 0.75rem;
-  border-left: 2px solid #884b29;
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-}
+.mini-menu-link::after { display:none; }
 
 /* Expand icon */
 .right-arrow {
@@ -271,24 +259,7 @@
   transform: rotate(90deg);
 }
 
-.mini-menu-link {
-  display: block;
-  width: 100%; /* make it span the row */
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 0.24rem 0.75rem 0.6rem;
-  color: #333;
-  text-decoration: none;
-  background: transparent;
-  position: relative;
-  transition: background 0.2s ease, color 0.2s ease;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12); /* persistent underline */
-}
-
-.mini-menu-link:hover {
-  background: #f5f5f5;
-  border-color: #aaa;
-}
+/* removed duplicate .mini-menu-link definition with underline */
 
 /* Add space before titles that include a hammy icon */
 .mini-menu-row.has-ham .mini-menu-link {

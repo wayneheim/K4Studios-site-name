@@ -282,7 +282,7 @@
   background: transparent;
   position: relative;
   transition: background 0.2s ease, color 0.2s ease;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12); /* persistent underline */
+  border-bottom: none; /* removed persistent underline */
 }
 
 .mini-menu-link:hover {
