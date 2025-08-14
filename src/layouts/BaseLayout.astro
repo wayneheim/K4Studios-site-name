@@ -1,15 +1,26 @@
 ---
 const { title = 'Gallery', structuredDataJSON, meta = {} } = Astro.props;
 
-// Strip any HTML tags if accidentally passed in
-const cleanTitle = title.replace(/<[^>]*>/g, '');
+// Safe meta fallbacks for SEO
+const fallbackTitle =
+  meta.metaTitle || meta.title || title || "K4 Studios – Fine Art Photography";
+const fallbackDescription =
+  meta.metaDescription ||
+  meta.description ||
+  "Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.";
+
+// Strip any HTML tags from title if present
+const cleanTitle = fallbackTitle.replace(/<[^>]*>/g, '');
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>{cleanTitle}</title>
+    <meta name="description" content={fallbackDescription} />
 
     {structuredDataJSON && (
       <script type="application/ld+json" set:html={structuredDataJSON} />
@@ -18,7 +29,7 @@ const cleanTitle = title.replace(/<[^>]*>/g, '');
     {meta.ogTitle && (
       <>
         <meta property="og:title" content={meta.ogTitle} />
-        <meta property="og:description" content={meta.ogDescription} />
+        <meta property="og:description" content={meta.ogDescription || fallbackDescription} />
         <meta property="og:image" content={meta.ogImage} />
         <meta property="og:type" content={meta.ogType || "website"} />
         <meta property="og:url" content={meta.ogUrl} />
@@ -28,14 +39,17 @@ const cleanTitle = title.replace(/<[^>]*>/g, '');
       <>
         <meta name="twitter:card" content={meta.twitterCard || "summary_large_image"} />
         <meta name="twitter:title" content={meta.twitterTitle} />
-        <meta name="twitter:description" content={meta.twitterDescription} />
+        <meta name="twitter:description" content={meta.twitterDescription || fallbackDescription} />
         <meta name="twitter:image" content={meta.twitterImage} />
         <meta name="twitter:url" content={meta.twitterUrl} />
       </>
     )}
 
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- Use your local built Tailwind in prod; CDN for fallback/dev only if needed -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" /> -->
+    <!-- Remove the above CDN line if you now use your local Tailwind build -->
+
     <style>
       body {
         font-family: 'Glegoo', serif;
