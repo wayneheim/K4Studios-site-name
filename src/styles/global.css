@@ -35,7 +35,7 @@ main {
   }
 
 .sidebar-column {
-  width: 100%;          /* full‐width on phones            */
+  width: 100%;          /* full‐width on phones    teee        */
   max-width: 320px;     /* cap size so it doesn't stretch  */
   margin: 0 auto;       /* <-- centres the column itself   */
   display: flex;
