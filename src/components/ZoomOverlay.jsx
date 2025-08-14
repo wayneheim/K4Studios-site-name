@@ -135,6 +135,24 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
       ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
 
+  // Smoothly fade context text when it changes to avoid abrupt jump
+  const [displayContext, setDisplayContext] = useState(context);
+  const [contextVisible, setContextVisible] = useState(true);
+  const fadeDuration = 420; // ms (slowed down for a gentler cross-fade)
+
+  useEffect(() => {
+    if (context !== displayContext) {
+      // fade out
+      setContextVisible(false);
+      const t = setTimeout(() => {
+        // swap text then fade back in
+        setDisplayContext(context);
+        requestAnimationFrame(() => setContextVisible(true));
+      }, fadeDuration);
+      return () => clearTimeout(t);
+    }
+  }, [context, displayContext]);
+
   const creditColorMap = {
     white: { color: '#888888ff', opacity: 0.55 },
     white2: { color: '#505050ff', opacity: 0.55 },
@@ -145,6 +163,20 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
     'no-wood': { color: '#888888ff', opacity: 0.50 },
   };
   const creditStyle = creditColorMap[matColor] || { color: '#2c2c2c', opacity: 0.5 };
+
+  // Reserve space for the tallest possible context block to avoid layout jump
+  const longestContext = "Click the color icons above to preview different finishing/display options. All images are available for order on a selection of Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details.";
+  const measureRef = useRef(null);
+  const [reservedHeight, setReservedHeight] = useState(null);
+
+  useLayoutEffect(() => {
+    if (measureRef.current) {
+      const h = measureRef.current.offsetHeight;
+      if (!reservedHeight || Math.abs(h - reservedHeight) > 2) {
+        setReservedHeight(h);
+      }
+    }
+  }, [isMobile]);
 
   return (
     <div
@@ -283,25 +315,47 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
             <div style={{ flex: 1, height: 1, backgroundColor: '#ccc', opacity: 0.5 }} />
           </div>
 
-          {/* CONTEXT TEXT */}
-          <p
-            style={{
-              marginTop: 10,
-              fontSize: "0.9rem",
-              color: "#555",
-              opacity: .5,
-              fontFamily: "'Glegoo', serif",
-              maxWidth: isMobile ? '88vw' : '60ch',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              lineHeight: 1.35,
-              overflowWrap: 'break-word',
-              wordBreak: 'break-word',
-              hyphens: 'auto'
-            }}
-          >
-            {context}
-          </p>
+          {/* CONTEXT TEXT (with cross-fade on change + reserved height) */}
+          <div style={{ minHeight: reservedHeight || undefined }}>
+            <p
+              style={{
+                marginTop: 18,
+                fontSize: "0.9rem",
+                color: "#555",
+                opacity: contextVisible ? .5 : 0,
+                transition: `opacity ${fadeDuration}ms ease`,
+                fontFamily: "'Glegoo', serif",
+                maxWidth: isMobile ? '88vw' : '60ch',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                lineHeight: 1.35,
+                overflowWrap: 'break-word',
+                wordBreak: 'break-word',
+                hyphens: 'auto',
+                willChange: 'opacity'
+              }}
+            >
+              {displayContext}
+            </p>
+            {/* Hidden measurement clone for tallest text */}
+            <p
+              ref={measureRef}
+              aria-hidden="true"
+              style={{
+                position: 'absolute',
+                visibility: 'hidden',
+                pointerEvents: 'none',
+                marginTop: 18,
+                fontSize: "0.9rem",
+                fontFamily: "'Glegoo', serif",
+                maxWidth: isMobile ? '88vw' : '60ch',
+                lineHeight: 1.35,
+                whiteSpace: 'normal'
+              }}
+            >
+              {longestContext}
+            </p>
+          </div>
 
           <div style={{ marginTop: 10 }}>
             <a
