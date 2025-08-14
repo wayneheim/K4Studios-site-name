@@ -60,13 +60,13 @@ function pullGalleryDataAndImagesMultiPass(
 
   // Collect images per gallery (attach path)
   for (const gallery of gallerySources) {
-    const filePath = '../../data' + gallery.href + '.mjs';
-    const mod: any = allGalleryData[filePath]; // dynamic glob import, treat as any
-    let images: Image[] = (mod?.galleryData || mod?.default || []).filter(
-      (img: Image) =>
-        img.id && img.id !== 'i-k4studios'
-    );
-    images.forEach(img => (img.galleryPath = gallery.href));
+      // gallery.href in siteNav already points to the exact variant (includes Color, Black-White, Gallery, etc.)
+      const filePath = '../../data' + gallery.href + '.mjs';
+      const mod: any = allGalleryData[filePath];
+      let images: Image[] = (mod?.galleryData || mod?.default || []).filter(
+        (img: Image) => img.id && img.id !== 'i-k4studios'
+      );
+      images.forEach(img => (img.galleryPath = gallery.href));
     if (images.length) {
       galleryDatas.push(images);
       galleryPaths.push(gallery.href);

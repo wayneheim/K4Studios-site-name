@@ -14,11 +14,48 @@ interface Props {
 const { images, path, limit = 6 } = Astro.props;
 
 // CHANGED: take the exact gallery URL if given; otherwise use the current page path as-is
-const baseUrl = (typeof path === "string" && path.length) ? path : Astro.url.pathname;
+const rawBaseUrl = (typeof path === "string" && path.length) ? path : Astro.url.pathname;
 
-// CHANGED: minimal join that preserves your URL exactly (no stripping/munging)
+// Dynamic resolution using siteNav: if provided base is a parent (collection) node, find first descendant gallery-source
+import { siteNav } from '@/data/siteNav';
+
+type NavNode = { href: string; type?: string; children?: NavNode[] };
+
+function findNode(tree: NavNode[], href: string): NavNode | null {
+  for (const n of tree) {
+    if (n.href === href) return n;
+    if (n.children) {
+      const found = findNode(n.children as NavNode[], href);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+
+function findFirstGallerySource(node: NavNode): NavNode | null {
+  if (node.type === 'gallery-source') return node;
+  if (node.children) {
+    for (const c of node.children) {
+      const gs = findFirstGallerySource(c as NavNode);
+      if (gs) return gs;
+    }
+  }
+  return null;
+}
+
+function resolveGalleryBase(base: string): string {
+  const trimmed = base.replace(/\/$/, '');
+  const node = findNode(siteNav as NavNode[], trimmed);
+  if (!node) return trimmed; // unknown path; leave as-is
+  if (node.type === 'gallery-source') return trimmed; // already a leaf
+  const leaf = findFirstGallerySource(node);
+  return leaf ? leaf.href : trimmed;
+}
+
+const resolvedBaseUrl = resolveGalleryBase(rawBaseUrl);
+
 function joinPath(base: string, seg: string) {
-  const b = base.endsWith("/") ? base.slice(0, -1) : base;
+  const b = base.endsWith('/') ? base.slice(0, -1) : base;
   return `${b}/${seg}`;
 }
 
@@ -50,7 +87,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       const direction = offset === 0 ? "center" : offset < 0 ? "left" : "right";
       return (
         <a
-          href={joinPath(baseUrl, img.id)}  // CHANGED: exact gallery URL + image id
+          href={joinPath(resolvedBaseUrl, img.id)}  // dynamic gallery base + image id
           class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}

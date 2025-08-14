@@ -1,4 +1,4 @@
-// carousel.ts for Machines
+// carousel.ts for WWII Machines (normalized paths)
 
 import { galleryData as colorGallery } from './Color.mjs';
 import { galleryData as bwGallery } from './Black-White.mjs';
@@ -6,13 +6,13 @@ import { galleryData as bwGallery } from './Black-White.mjs';
 // --- Universal filter for visible images ---
 function filterGalleryImages(images) {
   return images.filter(
-    img => img.id !== 'i-k4studios' && img.visibility !== 'ghost'
+    img => img.id !== 'i-k4studios' && (!img.visibility || img.visibility !== 'ghost')
   );
 }
 
 // Prioritize by rating, then shuffle
 function buildRankedPool(images) {
-  const getByRating = (r) => images.filter(img => img.rating === r);
+  const getByRating = (r) => images.filter(img => (img.rating || 0) === r);
   let pool = [
     ...getByRating(5).sort(() => Math.random() - 0.5),
     ...getByRating(4).sort(() => Math.random() - 0.5),
@@ -23,16 +23,33 @@ function buildRankedPool(images) {
 }
 
 function toSlide(img, galleryPath) {
+  // Trim any accidental trailing slash on path and leading slash on id, then join
+  const cleanPath = galleryPath.replace(/\/$/, '');
+  const cleanId = (img.id || '').replace(/^\//, '');
   return {
-    href: `${galleryPath}/${img.id}`,
+    href: `${cleanPath}/${cleanId}`,
     src: img.src || img.url || '',
     alt: img.alt || img.title || '',
     description: img.description || '',
   };
 }
 
-const colorPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color";
-const bwPath    = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White";
+// Dynamic gallery slug from file path (e.g., 'Machines')
+const __fileUrl = (import.meta && import.meta.url) || '';
+let gallerySlug = 'Machines';
+try {
+  const parts = __fileUrl.split(/[/\\]/);
+  const wwiiIdx = parts.lastIndexOf('WWII');
+  if (wwiiIdx !== -1 && wwiiIdx + 1 < parts.length) {
+    const candidate = parts[wwiiIdx + 1];
+    if (candidate && !candidate.endsWith('.ts') && !candidate.endsWith('.js')) {
+      gallerySlug = candidate;
+    }
+  }
+} catch(_) { /* fallback remains 'Machines' */ }
+const baseWWIIPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII';
+const colorPath = `${baseWWIIPath}/${gallerySlug}/Color`;
+const bwPath    = `${baseWWIIPath}/${gallerySlug}/Black-White`;
 
 // --- Filter images before building pools ---
 const colorPool = buildRankedPool(filterGalleryImages(colorGallery));

@@ -8,7 +8,8 @@ const bwModules = import.meta.glob('./**/Black-White.mjs', { eager: true });
 // Collect images WITH their gallery path!
 let allColor = [];
 for (const path in modules) {
-  const gallery = modules[path]?.galleryData || modules[path]?.default || [];
+  const mod: any = modules[path] as any;
+  const gallery = mod?.galleryData || mod?.default || [];
   const galleryPath = path
     .replace(/^\.\//, '')                      // Remove './'
     .replace(/\/Color\.mjs$/, '')              // Remove '/Color.mjs'
@@ -20,7 +21,8 @@ for (const path in modules) {
 
 let allBW = [];
 for (const path in bwModules) {
-  const gallery = bwModules[path]?.galleryData || bwModules[path]?.default || [];
+  const mod: any = bwModules[path] as any;
+  const gallery = mod?.galleryData || mod?.default || [];
   const galleryPath = path
     .replace(/^\.\//, '')
     .replace(/\/Black-White\.mjs$/, '');
@@ -51,8 +53,11 @@ function buildRankedPool(images) {
 
 // Real gallery path in href! (and prefix i- to match your URLs)
 function toSlide(img) {
+  // img.galleryPath example: 'Machines/Color' or 'Portraits/Black-White'
+  const cleanPath = (img.galleryPath || '').replace(/^\//, '').replace(/\/$/, '');
+  const cleanId = (img.id || '').replace(/^\//, '');
   return {
-    href: `/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/${img.galleryPath}/${img.id}`,
+    href: `/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/${cleanPath}/${cleanId}`,
     src: img.src || img.url || '',
     alt: img.alt || img.title || '',
     description: img.description || '',

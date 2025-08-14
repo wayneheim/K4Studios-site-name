@@ -8,6 +8,7 @@ type Image = {
   description?: string;
   alt?: string;
   href?: string;
+  __galleryHref?: string; // internal tracking of source gallery path
 };
 
 function findGallerySourcesRecursive(node: any): any[] {
@@ -78,17 +79,17 @@ function getSmartFeatheredImages({
     group.map(child => {
       const filePath = '../../data' + child.href + '.mjs';
       const fallbackPath = filePath.replace('../../', '../');
-      const mod = allGalleryData[filePath] || allGalleryData[fallbackPath];
+      const mod: any = allGalleryData[filePath] || allGalleryData[fallbackPath];
       if (!mod) {
         console.warn(`❓ No module found for: ${filePath}`);
         return { high: [], low: [] };
       }
-      const allImages: Image[] = (mod.galleryData || mod.default || []).filter(
-        (img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id)
-      );
-      console.log(`📦 ${filePath} → ${allImages.length} images`);
-      const highRated = allImages.filter(img => (img.rating ?? 0) >= 4);
-      const lowRated = allImages.filter(img => (img.rating ?? 0) < 4);
+      const galleryImages: Image[] = (mod.galleryData || mod.default || [])
+        .filter((img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id))
+        .map(img => ({ ...img, __galleryHref: child.href }));
+      console.log(`📦 ${filePath} → ${galleryImages.length} images`);
+      const highRated = galleryImages.filter(img => (img.rating ?? 0) >= 4);
+      const lowRated = galleryImages.filter(img => (img.rating ?? 0) < 4);
       return { high: shuffle(highRated), low: shuffle(lowRated) };
     })
   );
@@ -114,7 +115,7 @@ function getSmartFeatheredImages({
 
   return chosen.map(img => ({
     ...img,
-    href: `${sectionPath}/${img.id}`,
+    href: `${img.__galleryHref || sectionPath}/${img.id}`,
   }));
 }
 
@@ -132,19 +133,21 @@ function getClassicFeatheredImages({
   const allGalleryData = import.meta.glob('../../data/Other/**/*.mjs', { eager: true });
 
   const galleriesWithImages = shuffle(galleryChildren).map(child => {
-    const filePath = '../../data' + child.href + '/Engrained-Series.mjs';
+    // For Engrained we historically point into a specific series file; if this pattern expands, consider generalizing
+    const baseHref = child.href.endsWith('/Engrained-Series') ? child.href : `${child.href}/Engrained-Series`;
+    const filePath = '../../data' + baseHref + '.mjs';
     const fallbackPath = filePath.replace('../../', '../');
-    const mod = allGalleryData[filePath] || allGalleryData[fallbackPath];
+    const mod: any = allGalleryData[filePath] || allGalleryData[fallbackPath];
     if (!mod) {
       console.warn(`❓ No module found for: ${filePath}`);
       return { high: [], low: [] };
     }
-    const allImages: Image[] = (mod.galleryData || mod.default || []).filter(
-      (img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id)
-    );
-    console.log(`📦 ${filePath} → ${allImages.length} images`);
-    const highRated = allImages.filter(img => (img.rating ?? 0) >= 4);
-    const lowRated = allImages.filter(img => (img.rating ?? 0) < 4);
+    const galleryImages: Image[] = (mod.galleryData || mod.default || [])
+      .filter((img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id))
+      .map(img => ({ ...img, __galleryHref: baseHref }));
+    console.log(`📦 ${filePath} → ${galleryImages.length} images`);
+    const highRated = galleryImages.filter(img => (img.rating ?? 0) >= 4);
+    const lowRated = galleryImages.filter(img => (img.rating ?? 0) < 4);
     return { high: shuffle(highRated), low: shuffle(lowRated) };
   });
 
@@ -165,7 +168,7 @@ function getClassicFeatheredImages({
 
   return chosen.map(img => ({
     ...img,
-    href: `${sectionPath}/${img.id}`,
+    href: `${img.__galleryHref || sectionPath}/${img.id}`,
   }));
 }
 

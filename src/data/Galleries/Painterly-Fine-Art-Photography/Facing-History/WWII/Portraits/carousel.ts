@@ -1,4 +1,4 @@
-// carousel.ts for Machines
+// carousel.ts for WWII Portraits
 
 import { galleryData as colorGallery } from './Color.mjs';
 import { galleryData as bwGallery } from './Black-White.mjs';
@@ -24,16 +24,33 @@ function buildRankedPool(images) {
 }
 
 function toSlide(img, galleryPath) {
+  const cleanPath = galleryPath.replace(/\/$/, '');
+  const cleanId = (img.id || '').replace(/^\//, '');
   return {
-    href: `${galleryPath}${img.id}`,
+    href: `${cleanPath}/${cleanId}`,
     src: img.src || img.url || '',
     alt: img.alt || img.title || '',
     description: img.description || '',
   };
 }
 
-const colorPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color";
-const bwPath    = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White";
+// Derive gallery slug (e.g. 'Portraits') from current file path so we don't accidentally reuse 'Machines'
+const __fileUrl = (import.meta && import.meta.url) || '';
+let gallerySlug = 'Portraits';
+try {
+  const parts = __fileUrl.split(/[/\\]/);
+  const wwiiIdx = parts.lastIndexOf('WWII');
+  if (wwiiIdx !== -1 && wwiiIdx + 1 < parts.length) {
+    const candidate = parts[wwiiIdx + 1];
+    if (candidate && !candidate.endsWith('.ts') && !candidate.endsWith('.js')) {
+      gallerySlug = candidate;
+    }
+  }
+} catch (_) { /* fallback to default 'Portraits' */ }
+
+const baseWWIIPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII';
+const colorPath = `${baseWWIIPath}/${gallerySlug}/Color`;
+const bwPath    = `${baseWWIIPath}/${gallerySlug}/Black-White`;
 
 // --- Filter images before building pools ---
 const colorPool = buildRankedPool(filterGalleryImages(colorGallery));

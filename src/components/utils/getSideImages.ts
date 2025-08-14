@@ -8,6 +8,7 @@ type Image = {
   description?: string;
   alt?: string;
   href?: string;
+  __galleryHref?: string; // internal use to remember source gallery path
 };
 
 // Recursive to get all gallery-source descendants (leaf .mjs files)
@@ -76,10 +77,10 @@ function getSmartFeatheredImages({
   const galleriesWithImages = groupArrs.map(group =>
     group.map(child => {
       const filePath = '../../data' + child.href + '.mjs';
-      const mod = allGalleryData[filePath];
-      const allImages: Image[] = (mod?.galleryData || mod?.default || []).filter(
-        (img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id)
-      );
+      const mod: any = allGalleryData[filePath];
+      const allImages: Image[] = (mod?.galleryData || mod?.default || [])
+        .filter((img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id))
+        .map((img: Image) => ({ ...img, __galleryHref: child.href }));
       const highRated = allImages.filter(img => (img.rating ?? 0) >= 4);
       const lowRated = allImages.filter(img => (img.rating ?? 0) < 4);
       return { high: shuffle(highRated), low: shuffle(lowRated) };
@@ -108,7 +109,7 @@ function getSmartFeatheredImages({
   // Set href for each image
   return chosen.map(img => ({
     ...img,
-    href: `${sectionPath}/${img.id}`,
+    href: `${img.__galleryHref || sectionPath}/${img.id}`,
   }));
 }
 
@@ -127,10 +128,10 @@ function getClassicFeatheredImages({
   const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
   const galleriesWithImages = shuffle(galleryChildren).map(child => {
     const filePath = '../../data' + child.href + '.mjs';
-    const mod = allGalleryData[filePath];
-    const allImages: Image[] = (mod?.galleryData || mod?.default || []).filter(
-      (img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id)
-    );
+    const mod: any = allGalleryData[filePath];
+    const allImages: Image[] = (mod?.galleryData || mod?.default || [])
+      .filter((img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id))
+      .map((img: Image) => ({ ...img, __galleryHref: child.href }));
     const highRated = allImages.filter(img => (img.rating ?? 0) >= 4);
     const lowRated = allImages.filter(img => (img.rating ?? 0) < 4);
     return { high: shuffle(highRated), low: shuffle(lowRated) };
@@ -152,7 +153,7 @@ function getClassicFeatheredImages({
   }
   return chosen.map(img => ({
     ...img,
-    href: `${sectionPath}/${img.id}`,
+    href: `${img.__galleryHref || sectionPath}/${img.id}`,
   }));
 }
 
@@ -183,16 +184,16 @@ export function getSideImages({
     const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
     const wcpImages = wcpGalleries.flatMap(child => {
       const filePath = '../../data' + child.href + '.mjs';
-      const mod = allGalleryData[filePath];
-      return (mod?.galleryData || mod?.default || []).filter(
-        (img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id)
-      );
+      const mod: any = allGalleryData[filePath];
+      return (mod?.galleryData || mod?.default || [])
+        .filter((img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id))
+        .map((img: Image) => ({ ...img, __galleryHref: child.href }));
     });
     if (wcpImages.length) {
       const highRated = wcpImages.filter(img => (img.rating ?? 0) >= 4);
       const pick = shuffle(highRated).pop() || shuffle(wcpImages).pop();
       if (pick) {
-        featheredImages.push(pick);
+        featheredImages.push({ ...pick, href: `${pick.__galleryHref || sectionPath}/${pick.id}` });
         excludeIds.add(pick.id);
         slotsLeft--;
       }
