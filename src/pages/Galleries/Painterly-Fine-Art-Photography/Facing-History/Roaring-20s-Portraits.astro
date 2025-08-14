@@ -1,27 +1,27 @@
 ---
-import BaseLayout         from '@layouts/BaseLayout.astro';
-import LandingHeader      from '@components/Landing-Header.jsx';
-import ImageBar2          from '@components/ImageBar2.jsx';
-import TombstoneNav       from '@components/TombstoneNav.jsx';
-import LandingRightImages from '@components/LandingRightImages.jsx';
-import FAQAccordion       from '@components/FAQAccordion.jsx';
-import SiteFooter         from '@components/Footer.astro';
-import MobileStoryImages  from '@components/MobileStoryImages.jsx';
-import { getStructuredData } from '@components/utils/getStructuredData.ts';
+import BaseLayout         from '../../../../layouts/BaseLayout.astro';
+import LandingHeader      from '../../../../components/Landing-Header.jsx';
+import ImageBar2          from '../../../../components/ImageBar2.jsx';
+import TombstoneNav       from '../../../../components/TombstoneNav.jsx';
+import LandingRightImages from '../../../../components/LandingRightImages.jsx';
+import FAQAccordion       from '../../../../components/FAQAccordion.jsx';
+import SiteFooter         from '../../../../components/Footer.astro';
+import MobileStoryImages  from '../../../../components/MobileStoryImages.jsx';
 
-import { siteNav } from '@data/siteNav.ts';
-import { getSideImages } from '@components/utils/getSideImages.ts';
-import { autoLinkKeywordsInText } from '@components/utils/autoLinkKeywordsInText.ts';
-import { semantic as cowboySemantic } from '@data/semantic/K4-Sem.ts';
+import { siteNav } from '../../../../data/siteNav.ts';
+import { getSideImages } from '../../../../components/utils/getSideImages.ts';
+import { autoLinkKeywordsInText } from '../../../../components/utils/autoLinkKeywordsInText.ts';
+import { semantic as k4Semantic } from '../../../../data/semantic/K4-Sem.ts';
 
-import { landingWestern } from '@data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts';
-import { westernStory } from '@data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/story.ts';
-import { westernFAQ } from '@data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/faq.ts';
+import { landingWestern } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts';
+import { westernStory } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/story.ts';
+import { westernFAQ } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/faq.ts';
 
-import { getLandingMeta } from '@data/landingMeta.ts';
+import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
+import { getLandingMeta } from '../../../../data/landingMeta.ts';
 
-import '@styles/global.css';
-import '@styles/oneupheader.css';
+import '../../../../styles/global.css';
+import '../../../../styles/oneupheader.css';
 
 // ----------------------
 // DYNAMIC LOGIC SECTION
@@ -53,12 +53,10 @@ function findNavEntry(nav, url) {
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav?.children?.map(c => c.href) || [];
 
-// NOTE: Using alias in glob; Vite must be configured to resolve @data
-const allGalleryData = import.meta.glob('@data/Galleries/**/*.mjs', { eager: true });
+const allGalleryData = import.meta.glob('../../../../data/Galleries/**/*.mjs', { eager: true });
 
 const galleryDatas = galleryPaths.map(path => {
-  // Normalize to the same alias-keyed path used in the glob
-  const filePath = `@data/Galleries${path.replace(/^\/Galleries/, '')}.mjs`;
+  const filePath = "../../../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
   return allGalleryData[filePath]?.galleryData || [];
 });
 
@@ -102,20 +100,18 @@ const structuredData = getStructuredData({
 
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
-  <LandingHeader
-  client:load
-  breadcrumb={landingWestern.breadcrumb}
-/>
-
+      <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
     </div>
 
     <div class="mobile-breadcrumb-wrapper">
-      <div class="mobile-breadcrumb">{landingWestern.breadcrumb}</div>
+      <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
     </div>
 
-    <div class="mobile-breadcrumb-wrapper">
-  <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
-</div>
+    <div class="w-full max-w-[1200px] mx-auto px-4">
+      <div class="carousel-fade reveal-on-scroll">
+        <ImageBar2 client:load />
+      </div>
+    </div>
 
 
     <section class="section-heading-wrap">
@@ -138,18 +134,18 @@ const structuredData = getStructuredData({
         <section class="story-section">
           {westernStory.map((section, index) => (
             <article class="story-block" key={index}>
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />}
+              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
 
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               ))}
 
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
+                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
                   ))}
                 </ul>
               )}

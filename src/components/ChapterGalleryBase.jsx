@@ -197,32 +197,31 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
               return `Step ${currentNumber} / ${counted.length}`;
             })() : null}
           </div>
-          <div style={{ display: "flex", gap: 6 }}>
+          <div style={{ display: "flex", gap: 6, flexWrap: 'wrap' }}>
             {!(idx === 0 && steps[idx].selector == null) && (
-              <button type="button" onClick={() => setIdx((i) => Math.max(0, i - 1))}
+              <button
+                type="button"
+                onClick={() => setIdx((i) => Math.max(0, i - 1))}
                 disabled={idx === 0}
-                style={{ pointerEvents: "auto", background: idx === 0 ? "#f2f2f2" : "#fff", color: idx === 0 ? "#999" : "#4a4a4a", border: "1px solid #d0d0d0", borderRadius: 8, padding: "6px 10px", fontSize: 13, cursor: idx === 0 ? "not-allowed" : "pointer" }}>
+                style={{ pointerEvents: "auto", background: idx === 0 ? "#f2f2f2" : "#fff", color: idx === 0 ? "#999" : "#4a4a4a", border: "1px solid #d0d0d0", borderRadius: 8, padding: "6px 10px", fontSize: 13, cursor: idx === 0 ? "not-allowed" : "pointer" }}
+              >
                 Back
-                              <button
-                                type="button"
-                                onClick={() => setShowNotes(false)}
-                                aria-label="Close Collector Notes"
-                                className="ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full border border-gray-300 bg-white text-gray-400 shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 transition-colors"
-                                style={{ lineHeight: 0 }}
-                              >
-                                <CircleX className="w-6 h-6" />
-                              </button>
-                Don't Show
               </button>
             )}
             {idx < steps.length - 1 ? (
-              <button type="button" onClick={() => setIdx((i) => Math.min(steps.length - 1, i + 1))}
-                style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}>
+              <button
+                type="button"
+                onClick={() => setIdx((i) => Math.min(steps.length - 1, i + 1))}
+                style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
+              >
                 Next
               </button>
             ) : (
-              <button type="button" onClick={() => closeTour(true)}
-                style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}>
+              <button
+                type="button"
+                onClick={() => closeTour(true)}
+                style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
+              >
                 Done
               </button>
             )}
@@ -230,10 +229,21 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
               type="button"
               title="Skip for now"
               onClick={() => { try { localStorage.setItem(seenKey, JSON.stringify({ ts: Date.now(), ttl: 600000 })); } catch {}; setIsOpen(false); onClose && onClose(); }}
-              style={{ pointerEvents: "auto", background: "transparent", color: "#7b1e1e", border: "1px solid rgba(123,30,30,0.35)", borderRadius: 8, padding: "6px 10px", fontSize: 13, cursor: "pointer" }}
+              style={{ pointerEvents: "auto", background: "transparent", marginLeft: 10, color: "#7b1e1e", border: "1px solid rgba(123,30,30,0.35)", borderRadius: 88, padding: "5px 5px", fontSize: 11, cursor: "pointer" }}
             >
               Skip
             </button>
+            {!steps[idx].selector && (
+              <button
+                type="button"
+                title="Never show again"
+                // Permanently suppress (store simple sentinel "1")
+                onClick={() => { try { localStorage.setItem(seenKey, "1"); } catch {}; setIsOpen(false); onClose && onClose(); }}
+                style={{ pointerEvents: "auto", background: "#fff", color: "#444", border: "1px solid #c0c0c0", borderRadius: 88, padding: "5px 5px", fontSize: 11, cursor: "pointer" }}
+              >
+                Hide
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -535,7 +545,10 @@ export default function ChapterGalleryBase({
                   )}
 
                   {/* IMAGE + ARROWS COLUMN */}
-                  <div className="flex flex-col -mt-4 items-center w-full relative">
+                  <div
+                    className="flex flex-col items-center w-full relative"
+                    style={{ transform: !isMobile ? 'translateY(2rem)' : 'none', transition: 'transform .25s ease' }}
+                  >
                     <div className="w-full relative flex items-center justify-center mb-0">
                       {/* Left Arrow (mobile) */}
                       <button
@@ -562,11 +575,11 @@ export default function ChapterGalleryBase({
                           <img
                             src={galleryData[currentIndex]?.src}
                             alt={galleryData[currentIndex]?.title}
-                            className="chapter-image-mobile border-2 border-gray-400 rounded-lg"
+                            className="chapter-image-mobile rounded-lg"
                             style={
                               isMobile
-                                ? { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh" }
-                                : { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7", transition: 'box-shadow .3s ease' }
+                                ? { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh", border: '1px solid rgba(120,120,120,0.30)', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }
+                                : { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7", transition: 'box-shadow .3s ease', border: '1px solid rgba(110,110,110,0.28)', boxShadow: '0 2px 5px rgba(0,0,0,0.10)' }
                             }
                             onMouseEnter={(e) => {
                               if (!isMobile) {
@@ -755,7 +768,7 @@ export default function ChapterGalleryBase({
                         type="button"
                         className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
                         aria-label="Exit Chapter View"
-                        title="Exit"
+                        title="Exit Viewer"
                         style={{ position: 'relative', zIndex: 20 }}
                         onClick={goExit}
                         data-exit-btn
@@ -1004,7 +1017,10 @@ export default function ChapterGalleryBase({
 
       {/* Swipe hint + Guided Tour */}
       <SwipeHint galleryKey={galleryKey || "k4-gallery"} />
-      <GalleryTour sectionKey={sectionKey} imageId={currentId} autoStart={true} />
+      {/* Show tour only while on the very first slide */}
+      {currentIndex === 0 && (
+        <GalleryTour sectionKey={sectionKey} imageId={currentId} autoStart={true} />
+      )}
     </div>
   );
 }

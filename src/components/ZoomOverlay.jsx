@@ -74,10 +74,11 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
         : "0vw solid transparent",
 
     // Responsive padding: smaller on mobile
+    // Make top padding visually consistent with side padding so mat thickness feels uniform
     paddingTop:
       ["white", "white2", "white3", "wood", "no-wood"].includes(matColor)
-        ? isMobile ? "1.85rem" : "calc(1.5rem + 15px)"
-        : isMobile ? "1.85rem" : "1.5rem",
+        ? isMobile ? "1.95rem" : "calc(1.5rem + 20px)"
+        : isMobile ? "1.95rem" : "1.5rem",
     paddingBottom: isMobile ? ".5rem" : "1.5rem",
     paddingLeft:
       ["white", "white2", "white3", "wood", "no-wood"].includes(matColor)
