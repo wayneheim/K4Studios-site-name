@@ -51,7 +51,7 @@ const shareImage = previewImages?.[0]?.src || undefined;
     </div>
 
     <!-- 🌐 Social Icons -->
-  <div class="flex justify-center gap-5 mb-3">
+    <div class="flex justify-center gap-5 mb-3">
       <a href="https://www.facebook.com/wayne.heim" target="_blank" rel="noopener noreferrer">
         <img class="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" itemprop="sameAs" />
       </a>
@@ -74,17 +74,12 @@ const shareImage = previewImages?.[0]?.src || undefined;
 
     <!-- 🄯 Copyright -->
     <div class="text-xs text-[#2c2c2c] opacity-70" itemprop="name">
-     <time datetime={currentYear} aria-label={`Copyright ${currentYear}`}>&copy; {currentYear}</time>
- Wayne Heim | 
-        <a
-          href="/"
-          rel="noopener noreferrer"
-          class="underline hover:no-underline"
-          title="Home"
-        >
-          K4 Studios-Home
-        </a> |
-      All rights reserved.
+      <time datetime={currentYear} aria-label={`Copyright ${currentYear}`}>&copy; {currentYear}</time>
+      {' '}Wayne Heim |{' '}
+      <a href="/" rel="noopener noreferrer" class="underline hover:no-underline" title="Home">Home</a>
+      {' '}<span class="opacity-50">|</span>{' '}
+      <a href="/Glossary" class="underline hover:no-underline" title="Story Glossary">Story Glossary</a>
+      {' '}| All rights reserved.
     </div>
   </div>
 

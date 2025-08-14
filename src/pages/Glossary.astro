@@ -1,0 +1,486 @@
+---
+import BaseLayout         from '@/layouts/BaseLayout.astro';
+import LandingHeader      from '@/components/Landing-Header.jsx';
+import ImageBar2          from '@/components/ImageBar2.jsx';
+import LandingRightImages from '@/components/LandingRightImages.jsx';
+import FAQAccordion       from '@/components/FAQAccordion.jsx';
+import SiteFooter         from '@/components/Footer.astro';
+import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
+import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getLandingMeta } from '@/data/landingMeta.ts';
+
+import { siteNav } from '@/data/siteNav.ts';
+import { getSideImages } from '@/components/utils/getSideImages.ts';
+import { semantic } from '@/data/semantic/K4-Sem.ts';
+import { galleryDataMap } from '@/data/galleryMaps/MasterGalleryData.ts'; // ← fallback DB
+import { facingFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/faq.ts';
+
+import '@/styles/global.css';
+
+/* =============== utils =============== */
+function toTitleCase(str: string = "") {
+  return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase());
+}
+function joinPath(base: string, seg: string) {
+  const b = base.endsWith('/') ? base.slice(0, -1) : base;
+  return `${b}/${seg}`;
+}
+function ensureImageId(id: string) {
+  return id?.startsWith('i-') ? id : `i-${id}`;
+}
+function normalize(path: string) {
+  return path.replace(/\/+$/, '').toLowerCase();
+}
+function stripSlashes(s: string) {
+  return s.replace(/^\/+|\/+$/g, '');
+}
+function coerceArray<T>(v: T | T[] | undefined | null): T[] {
+  if (v == null) return [];
+  return Array.isArray(v) ? v : [v];
+}
+
+/* ====== deterministic “freshness” (SEO-safe) ====== */
+function hash(s: string) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = ((h << 5) - h) + s.charCodeAt(i) | 0;
+  return Math.abs(h);
+}
+function rotatingIndex(seed: string, len: number, period: 'day'|'week'='day') {
+  if (len <= 0) return 0;
+  const now = new Date();
+  const yyyy = now.getUTCFullYear();
+  const mm = now.getUTCMonth() + 1;
+  const dd = now.getUTCDate();
+  const day = `${yyyy}-${String(mm).padStart(2,'0')}-${String(dd).padStart(2,'0')}`;
+  const week = `${yyyy}-W${Math.ceil((mm*30 + dd)/7)}`;
+  const bucket = period === 'week' ? week : day;
+  return hash(`${seed}|${bucket}`) % len;
+}
+
+/* =============== siteNav helpers (same style as your preview code) =============== */
+type NavNode = { href: string; key?: string; type?: string; children?: NavNode[] };
+
+function findNode(tree: NavNode[], href: string): NavNode | null {
+  for (const n of tree) {
+    if (n.href === href) return n;
+    if (n.children) {
+      const found = findNode(n.children as NavNode[], href);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+function findFirstGallerySource(node: NavNode | null): NavNode | null {
+  if (!node) return null;
+  if (node.type === 'gallery-source') return node;
+  if (node.children) {
+    for (const c of node.children) {
+      const gs = findFirstGallerySource(c as NavNode);
+      if (gs) return gs;
+    }
+  }
+  return null;
+}
+function resolveGalleryBase(base: string): string {
+  const trimmed = base.replace(/\/$/, '');
+  const node = findNode(siteNav as NavNode[], trimmed);
+  if (!node) return trimmed;
+  if (node.type === 'gallery-source') return trimmed;
+  const leaf = findFirstGallerySource(node);
+  return leaf ? leaf.href : trimmed;
+}
+function buildSectionUrlMap(nav: NavNode[], out: Record<string,string> = {}) {
+  for (const entry of nav) {
+    if (entry.key && entry.href) out[entry.key] = entry.href;
+    if (entry.children) buildSectionUrlMap(entry.children as NavNode[], out);
+  }
+  return out;
+}
+const sectionUrlMap = buildSectionUrlMap(siteNav as NavNode[]);
+
+/* ---------- breadcrumb (manual, no landingstones) ---------- */
+const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
+const glossaryBreadcrumb = `
+  <nav class="breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-separator">›</span>
+    <a href="${sectionPath}">Painterly Fine Art Photography</a>
+    <span class="breadcrumb-separator">›</span>
+    <span>Glossary</span>
+  </nav>
+`;
+
+/* =============== datasets =============== */
+// 1) Eager .mjs gallery-source files
+const galleryDataModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
+const mjsDatasets: Record<string, any[]> = {};
+for (const modPath in galleryDataModules) {
+  let p = modPath.replace(/^@\/data/, '').replace(/\.mjs$/, '');
+  p = normalize(p);
+  const imgs = galleryDataModules[modPath]?.galleryData || galleryDataModules[modPath]?.default || [];
+  mjsDatasets[p] = Array.isArray(imgs) ? imgs : [];
+}
+
+// 2) MasterGalleryData fallback collector (keys are canonical gallery paths)
+function collectFromMasterMap(branchBase: string): any[] {
+  const normBranch = normalize(stripSlashes(branchBase));
+  const out: any[] = [];
+  for (const rawKey in galleryDataMap) {
+    const key = normalize(stripSlashes(rawKey.startsWith('/') ? rawKey : `/${rawKey}`));
+    if (key.startsWith(normBranch)) {
+      const arr = galleryDataMap[rawKey] || [];
+      for (const img of arr) {
+        if (!img?.id || img.visibility === 'ghost' || img.id === 'i-k4studios') continue;
+        const canonical = Array.isArray(img.galleries) && img.galleries.length ? img.galleries[0] : `/${rawKey}`;
+        out.push({ ...img, canonicalGallery: canonical });
+      }
+    }
+  }
+  return out;
+}
+
+// Collect leaf hrefs for a branch (from siteNav)
+function collectLeafHrefs(node: NavNode | null, acc: string[] = []): string[] {
+  if (!node) return acc;
+  if (node.type === 'gallery-source') { acc.push(node.href); return acc; }
+  if (node.children) for (const c of node.children) collectLeafHrefs(c as NavNode, acc);
+  return acc;
+}
+
+function collectFromMjs(branchBase: string): any[] {
+  const baseNode = findNode(siteNav as NavNode[], branchBase.replace(/\/$/, ''));
+  if (!baseNode) return [];
+  const leafHrefs = collectLeafHrefs(baseNode);
+  const out: any[] = [];
+  for (const href of leafHrefs) {
+    const key = normalize(href);
+    const arr = mjsDatasets[key] || [];
+    for (const img of arr) {
+      if (!img?.id || img.visibility === 'ghost' || img.id === 'i-k4studios') continue;
+      out.push(img);
+    }
+  }
+  return out;
+}
+
+// Unified branch image pool (mjs + master), dedup by id
+function getBranchImages(baseHref: string): any[] {
+  const fromMjs = collectFromMjs(baseHref);
+  const fromMaster = collectFromMasterMap(baseHref);
+  const byId = new Map<string, any>();
+  for (const img of [...fromMjs, ...fromMaster]) {
+    if (!img?.id) continue;
+    if (!byId.has(img.id)) byId.set(img.id, img);
+  }
+  return [...byId.values()];
+}
+
+/* =============== terms extraction for new K4-Sem structure =============== */
+type PhraseItem = { phrase: string; rating?: number; use?: boolean; };
+type SemanticSection = {
+  path?: string;
+  def?: string;                 // new top-level definition per section
+  landingPhrases?: PhraseItem[];
+  imagePhrases?: PhraseItem[];
+};
+
+type Term = {
+  label: string;
+  rating: number;
+  origin: "landing" | "image";
+  path?: string;
+  parentKey?: string;
+  definition?: string | null;
+  blurbPool?: string[];
+  example?: null | { id: string; src?: string; title?: string; alt?: string; href: string; baseHref: string; };
+};
+
+function extractPhrasesWithType(sem: Record<string, SemanticSection>): Term[] {
+  const all: Term[] = [];
+  for (const key of Object.keys(sem || {})) {
+    if (key === 'synonymMap') continue;
+    const group = sem[key] as SemanticSection;
+    if (!group) continue;
+
+    const secDef = group.def; // pull section-level def
+
+    for (const e of (group.landingPhrases || [])) {
+      if (!e || e.use === false) continue;
+      all.push({
+        label: e.phrase,
+        rating: e.rating ?? 0,
+        origin: "landing",
+        parentKey: key,
+        path: group.path,
+        definition: secDef ?? null,
+        blurbPool: undefined,
+        example: null
+      });
+    }
+    for (const e of (group.imagePhrases || [])) {
+      if (!e || e.use === false) continue;
+      all.push({
+        label: e.phrase,
+        rating: e.rating ?? 0,
+        origin: "image",
+        parentKey: key,
+        path: group.path,
+        definition: secDef ?? null,
+        blurbPool: undefined,
+        example: null
+      });
+    }
+  }
+  // dedupe by label
+  const seen = new Set<string>();
+  return all.filter(({ label }) => {
+    if (!label || seen.has(label)) return false;
+    seen.add(label);
+    return true;
+  });
+}
+
+/* =============== example picker (branch-correct, deterministic) =============== */
+const usedIds = new Set<string>();
+
+function getLandingUrlForTerm(term: { parentKey?: string; path?: string }) {
+  if (term?.parentKey && sectionUrlMap[term.parentKey]) return sectionUrlMap[term.parentKey];
+  if (term?.path && typeof term.path === 'string') return term.path;
+  return "/Galleries/Painterly-Fine-Art-Photography";
+}
+
+function pickExampleFor(termLabel: string, parentKey?: string, termPath?: string) {
+  const landingHref =
+    (parentKey && sectionUrlMap[parentKey]) ||
+    (typeof termPath === 'string' && termPath) ||
+    "/Galleries/Painterly-Fine-Art-Photography";
+
+  const baseHref = resolveGalleryBase(landingHref);
+  const images = getBranchImages(baseHref);
+  if (!images.length) return null;
+
+  const needle = (termLabel || "").toLowerCase();
+
+  const matches = images.filter(img => {
+    if (!img?.id || usedIds.has(img.id)) return false;
+    const blob = [
+      img.title, img.alt, img.description, img.story,
+      ...(Array.isArray(img.keywords) ? img.keywords : [])
+    ].filter(Boolean).join(' ').toLowerCase();
+    return needle && blob.includes(needle);
+  });
+
+  let pool = matches.length ? matches : images.filter(i => i?.id && !usedIds.has(i.id));
+  if (!pool.length) pool = images;
+
+  const choice = pool[rotatingIndex(`${termLabel}|${baseHref}`, pool.length, 'day')] || pool[0];
+  if (!choice) return null;
+
+  usedIds.add(choice.id);
+
+  const baseForHref = (choice as any).canonicalGallery || baseHref;
+  const href = joinPath(baseForHref, ensureImageId(choice.id));
+
+  return { ...choice, href, baseHref: baseForHref };
+}
+
+/* =============== compose terms =============== */
+const FALLBACK_BLURBS = [
+  "See more in this style",
+  "Browse the full collection",
+  "View related works",
+  "Explore more examples",
+  "Discover the gallery",
+];
+
+const RAW_TERMS: Term[] = extractPhrasesWithType(semantic as any).map(p => ({
+  ...p,
+  blurbPool: p.blurbPool && p.blurbPool.length ? p.blurbPool : FALLBACK_BLURBS,
+  example: p.origin === "image" ? pickExampleFor(p.label, p.parentKey, p.path) : null
+}));
+
+RAW_TERMS.sort((a, b) => a.label.localeCompare(b.label));
+const LETTERS = Array.from(new Set(RAW_TERMS.map(t => (t.label?.[0] || "#").toUpperCase()))).sort();
+
+/* =============== page meta / side images =============== */
+const baseMeta = getLandingMeta(sectionPath);
+const meta = {
+  ...baseMeta,
+  // OVERRIDE page/tab title so it doesn't use the Painterly landing title
+  title: "K4 Studios – Story Glossary",
+  ogTitle: "K4 Studios – Story Glossary",
+  ogDescription: "A site-wide glossary of storytelling terms with examples from Painterly and Traditional galleries."
+};
+
+const galleryDatas: any[] = [];
+const headingCount = 1;
+const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
+const featheredImagesSidebar = featheredImages.slice(0, 5);
+
+const structuredData = getStructuredData({
+  type: "gallery",
+  data: {
+    title: "K4 Studios – Story Glossary",
+    description: "Experience the site-wide storytelling glossary with definitions and examples.",
+    url: `https://k4studios.com${sectionPath}`, // leave as-is if you still want Painterly side images context
+    keywords: [],
+    copyrightNotice: "© Wayne Heim"
+  },
+  images: featheredImages,
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    acquireLicensePage: "https://k4studios.com/prints",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+---
+
+<BaseLayout
+  title="K4 Studios – Story Glossary"
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" />
+
+  <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={glossaryBreadcrumb} />
+    </div>
+
+    <div class="mobile-breadcrumb-wrapper">
+      <div class="mobile-breadcrumb" set:html={glossaryBreadcrumb} />
+    </div>
+
+    <div class="w-full max-w-[1200px] mx-auto px-4">
+      <div class="carousel-fade reveal-on-scroll">
+        <ImageBar2 client:load />
+      </div>
+    </div>
+
+    <section class="section-heading-wrap">
+      <div class="section-heading">
+        <h1 class="page-title fade-in reveal-on-scroll">
+          K4 Studios Story Glossary
+        </h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll">
+          Painterly & Traditional Fine Art Terms
+        </h2>
+      </div>
+    </section>
+
+    <section class="story-layout">
+      <div class="text-column">
+        <section class="story-section">
+          <header class="mb-8">
+            <h2 class="text-2xl font-semibold tracking-tight">Painterly Photography Glossary</h2>
+            <p class="mt-2 text-base text-gray-600">
+              “Image” entries show an example from the same branch; if there’s no direct match, we pick a stable example from that branch (rotates daily).
+            </p>
+          </header>
+
+          {LETTERS.length > 0 && (
+            <nav class="mb-8">
+              <ol style="display: flex; gap: 1em;">
+                {LETTERS.map(L => (
+                  <li><a href={`#${L}`}>{L}</a></li>
+                ))}
+              </ol>
+            </nav>
+          )}
+
+          <div class="space-y-12">
+            {LETTERS.map(L => {
+              const group = RAW_TERMS.filter(t => (t.label?.[0] || "#").toUpperCase() === L);
+              if (!group.length) return null;
+              return (
+                <section id={L} class="scroll-mt-24">
+                  <h3 class="text-xl font-semibold mb-4">{L}</h3>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {group.map(t => {
+                      const landingUrl = getLandingUrlForTerm(t);
+                      const mainLink   = (t.origin === "image" && t.example?.href) ? t.example.href : landingUrl;
+                      const blurbPool  = t.blurbPool || [];
+                      const blurb      = blurbPool.length
+                        ? blurbPool[rotatingIndex(`${t.label}|cta`, blurbPool.length, 'day')]
+                        : "Browse the collection";
+
+                      return (
+                        <li class="rounded-2xl border border-gray-200 p-5 shadow-sm hover:shadow transition-shadow">
+                          <div class="flex items-start gap-4">
+                            {t.origin === "image" && t.example && t.example.src && (
+                              <a href={t.example.href} class="shrink-0 rounded-xl overflow-hidden border border-gray-200">
+                                <img
+                                  src={t.example.src}
+                                  alt={t.example.alt || t.example.title || t.label}
+                                  loading="lazy"
+                                  class="block h-20 w-28 object-cover"
+                                />
+                              </a>
+                            )}
+                            <div class="min-w-0">
+                              <div class="flex items-center gap-2 mb-1">
+                                <a href={mainLink} class="text-lg font-medium hover:underline">{toTitleCase(t.label)}</a>
+                                <span class={`ml-2 inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] tracking-wide
+                                  ${t.origin === "landing"
+                                    ? "border-green-300 bg-green-50 text-green-700"
+                                    : "border-blue-300 bg-blue-50 text-blue-700"
+                                  }`
+                                }>
+                                  {t.origin === "landing" ? "Gallery" : "Image"}
+                                </span>
+                              </div>
+
+                              {t.definition && (
+                                <p class="mt-1 text-sm text-gray-700">{t.definition}</p>
+                              )}
+
+                              <div class="mt-2 flex flex-wrap items-center gap-3 text-sm">
+                                <a href={landingUrl} class="underline">{blurb}</a>
+                                {(t.origin === "image" && t.example) && (
+                                  <a href={t.example.href} class="underline">See example image</a>
+                                )}
+                              </div>
+
+                              {/* Rating intentionally removed */}
+                            </div>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              );
+            })}
+          </div>
+        </section>
+
+        <MobileStoryImages client:only="react" images={featheredImages} />
+      </div>
+
+      <div class="sidebar-column hidden md:block">
+        <div class="sample-fade reveal-on-scroll">
+          <LandingRightImages heading="Collection Samples" images={featheredImagesSidebar} />
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-10">
+      <input type="checkbox" id="faq-toggle" class="more-toggle" />
+      <div class="truncate-container" style="min-height:0;">
+        <div class="truncate-text">
+          <FAQAccordion items={facingFAQ} />
+        </div>
+      </div>
+      <label for="faq-toggle" class="more-toggle-label"></label>
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+
+  <style>
+    .story-section { font-family: 'Glegoo', serif; }
+  </style>
+</BaseLayout>

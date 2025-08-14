@@ -2,21 +2,23 @@
 
 export const semantic = {
   facingHistory: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
-  landingPhrases: [
-    { phrase: "Facing History", rating: 5, use: true },
-    { phrase: "historical portraiture", rating: 5, use: true },
-    { phrase: "story-driven reenactment photography", rating: 5, use: true },
-    { phrase: "living history fine art", rating: 4, use: true },
-    { phrase: "timeless reenactor portraits", rating: 4, use: true },
-    { phrase: "evocative historical imagery", rating: 4, use: true },
-    { phrase: "History in Fine Art", rating: 3, use: true }
-  ],
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
+    def: "An ongoing series that blends living history and painterly craft into character-driven portraiture.",
+    landingPhrases: [
+      { phrase: "Facing History", rating: 5, use: true },
+      { phrase: "historical portraiture", rating: 5, use: true },
+      { phrase: "story-driven reenactment photography", rating: 5, use: true },
+      { phrase: "living history fine art", rating: 4, use: true },
+      { phrase: "timeless reenactor portraits", rating: 4, use: true },
+      { phrase: "evocative historical imagery", rating: 4, use: true },
+      { phrase: "History in Fine Art", rating: 3, use: true }
+    ],
   },
 
   // --- PAINTERLY: FACING HISTORY ---
   cowboy: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+    def: "Painterly Western portraits—dust, leather, and long light—balancing grit and myth.",
     landingPhrases: [
       { phrase: "a living journey", rating: 5, use: true },
       { phrase: "Western Cowboy Portraits", rating: 5, use: true },
@@ -45,8 +47,8 @@ export const semantic = {
 
   civilwar: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits",
+    def: "Portraits that echo 19th-century mood and method—duty, brotherhood, and loss.",
     landingPhrases: [
-      
       { phrase: "Civil War Portraits", rating: 5, use: true },
       { phrase: "civil war valor & loss", rating: 5, use: true },
       { phrase: "Faces of Conflict", rating: 4, use: true },
@@ -63,108 +65,107 @@ export const semantic = {
       { phrase: "historic reenactor prints", rating: 3, use: true },
       { phrase: "civil war paintings", rating: 3, use: true },
       { phrase: "traditional reenactment photography collection", rating: 3, use: true },
-      { phrase: "legacy portraits for collectors", rating: 3, use: true },
-      
+      { phrase: "legacy portraits for collectors", rating: 3, use: true }
     ]
   },
 
- wwii: {
+  wwii: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII",
+    def: "Cinematic portraits honoring the Greatest Generation—service, sacrifice, resilience.",
+    landingPhrases: [
+      { phrase: "WWII Portraits", rating: 5, use: true },
+      { phrase: "Discover WWII Photography", rating: 5, use: true },
+      { phrase: "the Greatest Generation", rating: 5, use: true },
+      { phrase: "WWII Sacrifice & Brotherhood", rating: 5, use: true },
+      { phrase: "wartime photography", rating: 4, use: true }
+    ],
+  },
+
+  wwiiPortraits: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits",
+    def: "Faces from a difficult era—quiet strength rendered with painterly tone.",
     landingPhrases: [
       { phrase: "WWII Portraits", rating: 5, use: true },
       { phrase: "Discover WWII Photography", rating: 5, use: true },
       { phrase: "the Greatest Generation", rating: 5, use: true },
       { phrase: "WWII Sacrifice & Brotherhood", rating: 5, use: true },
       { phrase: "wartime photography", rating: 4, use: true },
-      
+      { phrase: "portraits", rating: 4, use: true },
+    ],
+    imagePhrases: [
+      { phrase: "wwii photography", rating: 5, use: true },
+      { phrase: "wartime portraits", rating: 4, use: true },
+      { phrase: "greatest generation photos", rating: 4, use: true },
+      { phrase: "moments of connection", rating: 3, use: true },
+      { phrase: "heroic portraits", rating: 3, use: true },
     ],
   },
 
-wwiiPortraits: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits",
-  landingPhrases: [
-    { phrase: "WWII Portraits", rating: 5, use: true },
-    { phrase: "Discover WWII Photography", rating: 5, use: true },
-    { phrase: "the Greatest Generation", rating: 5, use: true },
-    { phrase: "WWII Sacrifice & Brotherhood", rating: 5, use: true },
-    { phrase: "wartime photography", rating: 4, use: true },
-    { phrase: "portraits", rating: 4, use: true },
-  ],
-  imagePhrases: [
-    { phrase: "wwii photography", rating: 5, use: true },
-    { phrase: "wartime portraits", rating: 4, use: true },
-    { phrase: "greatest generation photos", rating: 4, use: true },
-    { phrase: "moments of connection", rating: 3, use: true },
-    { phrase: "heroic portraits", rating: 3, use: true },
-    
-  ],
-},
+  wwiiArtOfWar: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Art-of-War",
+    def: "Motion, tension, and resolve—fragments from the front rendered as art.",
+    landingPhrases: [
+      { phrase: "The Art of War", rating: 5, use: true },
+      { phrase: "WWII Battle Photography", rating: 5, use: true },
+      { phrase: "Scenes from the Front", rating: 4, use: true },
+      { phrase: "combat documentary photography", rating: 3, use: true },
+      { phrase: "Art of War", rating: 3, use: true },
+    ],
+    imagePhrases: [
+      { phrase: "war zone photography", rating: 5, use: true },
+      { phrase: "battlefield moments", rating: 4, use: true },
+      { phrase: "WWII action art", rating: 3, use: true },
+      { phrase: "wwii artistic documentary", rating: 3, use: true },
+      { phrase: "WWII battlefield", rating: 3, use: true },
+    ],
+  },
 
-wwiiArtOfWar: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Art-of-War",
-  landingPhrases: [
-    { phrase: "The Art of War", rating: 5, use: true },
-    { phrase: "WWII Battle Photography", rating: 5, use: true },
-    { phrase: "Scenes from the Front", rating: 4, use: true },
-    { phrase: "combat documentary photography", rating: 3, use: true },
-    { phrase: "Art of War", rating: 3, use: true },
-    
-  ],
-  imagePhrases: [
-    { phrase: "war zone photography", rating: 5, use: true },
-    { phrase: "battlefield moments", rating: 4, use: true },
-    { phrase: "WWII action art", rating: 3, use: true },
-    { phrase: "wwii artistic documentary", rating: 3, use: true },
-    { phrase: "WWII battlefield", rating: 3, use: true },
-  ],
-},
-
-wwiiMenAndMachines: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines",
-  landingPhrases: [
-    { phrase: "Men & Machines", rating: 5, use: true },
-    { phrase: "Men and Machines", rating: 5, use: true },
-    { phrase: "WWII Military Equipment", rating: 4, use: true },
-    { phrase: "Life Behind the Lines", rating: 4, use: true },
-    { phrase: "WWII Mechanized Might", rating: 3, use: true },
-    
-  ],
-  imagePhrases: [
-    { phrase: "wwii tanks and trucks", rating: 4, use: true },
-    { phrase: "mechanical war art", rating: 3, use: true },
-    { phrase: "battle-ready machines", rating: 3, use: true },
-    { phrase: "military machinery prints", rating: 2, use: true },
-    { phrase: "history's greatest conflicts", rating: 2, use: true },
-
-  ],
-},
-
+  wwiiMenAndMachines: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines",
+    def: "Human presence beside steel and fuel—a study of scale, sound, and craft.",
+    landingPhrases: [
+      { phrase: "Men & Machines", rating: 5, use: true },
+      { phrase: "Men and Machines", rating: 5, use: true },
+      { phrase: "WWII Military Equipment", rating: 4, use: true },
+      { phrase: "Life Behind the Lines", rating: 4, use: true },
+      { phrase: "WWII Mechanized Might", rating: 3, use: true },
+    ],
+    imagePhrases: [
+      { phrase: "wwii tanks and trucks", rating: 4, use: true },
+      { phrase: "mechanical war art", rating: 3, use: true },
+      { phrase: "battle-ready machines", rating: 3, use: true },
+      { phrase: "military machinery prints", rating: 2, use: true },
+      { phrase: "history's greatest conflicts", rating: 2, use: true },
+    ],
+  },
 
   roaring20s: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",
+    def: "Deco mood and velvet light—jazz-age portraits with a modern finish.",
     landingPhrases: [
       { phrase: "Roaring 20s Portraits", rating: 5, use: true },
       { phrase: "The Roaring 20s", rating: 5, use: true },
       { phrase: "Step into the Roaring 20s", rating: 5, use: true },
       { phrase: "gatsby era art", rating: 4, use: true },
       { phrase: "roaring 20s wall art for jazz fans", rating: 4, use: true },
-      { phrase: "Bootleggers", rating: 4, use: true }
+      { phrase: "Bootleggers", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "roaring 20s photography", rating: 5, use: true },
       { phrase: "roaring twenties portraits", rating: 4, use: true },
       { phrase: "1920s portraits", rating: 4, use: true },
-      { phrase: "roaring 20s art", rating: 3, use: true }
-    ]
+      { phrase: "roaring 20s art", rating: 3, use: true },
+    ],
   },
 
   engrained: {
     path: "/Other/K4-Select-Series/Engrained/Engrained-Series",
+    def: "Photographic prints on wood—tone and grain working together for a tactile finish.",
     landingPhrases: [
       { phrase: "engrained series", rating: 5, use: true },
       { phrase: "stories etched in wood", rating: 4, use: true },
       { phrase: "engrained wood prints for rustic interiors", rating: 4, use: true },
-      { phrase: "fine art prints on wood", rating: 3, use: true }
+      { phrase: "fine art prints on wood", rating: 3, use: true },
     ],
     imagePhrases: [
       { phrase: "photography printed on wood", rating: 5, use: true },
@@ -174,224 +175,249 @@ wwiiMenAndMachines: {
       { phrase: "wood-mounted art", rating: 3, use: true },
       { phrase: "historically inspired photo on wood", rating: 3, use: true },
       { phrase: "photo printed on wood panel", rating: 3, use: true },
-      { phrase: "museum quality historical prints", rating: 3, use: true }
-    ]
+      { phrase: "museum quality historical prints", rating: 3, use: true },
+    ],
   },
 
   // --- PAINTERLY: LANDSCAPES BY LOCATION ---
   landscapeIntPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International",
+    def: "Abroad—where light behaves differently enough to make you look twice.",
     landingPhrases: [
       { phrase: "natural grain", rating: 5, use: true },
       { phrase: "International Painterly Landscapes", rating: 5, use: true },
       { phrase: "european landscape art", rating: 4, use: true },
-      { phrase: "world landscapes fine art", rating: 3, use: true }
+      { phrase: "world landscapes fine art", rating: 3, use: true },
     ],
     imagePhrases: [
       { phrase: "International – Across Borders", rating: 4, use: true },
       { phrase: "fantastic places", rating: 4, use: true },
       { phrase: "international landscape photography", rating: 5, use: true },
-      { phrase: "painterly european landscapes", rating: 4, use: true }
-    ]
+      { phrase: "painterly european landscapes", rating: 4, use: true },
+    ],
   },
+
   landscapeWestPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West",
+    def: "Big sky and long light—landscapes that breathe at horizon scale.",
     landingPhrases: [
       { phrase: "Western Painterly Landscapes", rating: 5, use: true },
-      { phrase: "mountain west fine art photography", rating: 4, use: true }
+      { phrase: "mountain west fine art photography", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "western landscape photography", rating: 5, use: true },
-      { phrase: "feel every layer of it", rating: 4, use: true }
-    ]
+      { phrase: "feel every layer of it", rating: 4, use: true },
+    ],
   },
-  
+
   landscapeMidwestPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest",
+    def: "Quiet fields, big weather, and patient color.",
     landingPhrases: [
       { phrase: "Midwest Painterly Landscapes", rating: 5, use: true },
-      { phrase: "midwestern landscape art", rating: 4, use: true }
+      { phrase: "midwestern landscape art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "midwest landscape photography", rating: 5, use: true },
-      { phrase: "heartland painterly landscapes", rating: 4, use: true }
-    ]
+      { phrase: "vivid", rating: 4, use: true },
+    ],
   },
+
   landscapeNortheastPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast",
+    def: "Stone walls, tide, and autumn—rendered with soft detail.",
     landingPhrases: [
-
       { phrase: "Northeast Painterly Landscapes", rating: 5, use: true },
-      { phrase: "new england landscape art", rating: 4, use: true }
+      { phrase: "new england landscape art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "The Northeast", rating: 5, use: true },
       { phrase: "see beauty in simplicity", rating: 5, use: true },
-      { phrase: "autumn in new england", rating: 4, use: true }
-    ]
+      { phrase: "autumn in new england", rating: 4, use: true },
+    ],
   },
+
   landscapeSouthPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South",
+    def: "Humidity, Spanish moss, and late-day glow.",
     landingPhrases: [
       { phrase: "Southern Painterly Landscapes", rating: 5, use: true },
-      { phrase: "southern landscape fine art", rating: 4, use: true }
+      { phrase: "southern landscape fine art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "southern landscape photography", rating: 5, use: true },
-      { phrase: "blue ridge painterly landscapes", rating: 4, use: true }
-    ]
+      { phrase: "blue ridge painterly landscapes", rating: 4, use: true },
+    ],
   },
 
   // --- PAINTERLY: LANDSCAPES BY THEME ---
   mountainsPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    def: "Ridges and weather rendered in layered tone.",
     landingPhrases: [
       { phrase: "Painterly Mountain Photography", rating: 5, use: true },
-      { phrase: "mountain landscapes fine art", rating: 4, use: true }
+      { phrase: "mountain landscapes fine art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "mountain landscape photography", rating: 5, use: true },
-      { phrase: "painterly mountain art", rating: 4, use: true }
-    ]
+      { phrase: "painterly mountain art", rating: 4, use: true },
+    ],
   },
+
   waterPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water",
+    def: "Rivers, falls, and coasts where time looks slower than it felt.",
     landingPhrases: [
       { phrase: "Painterly Water Photography", rating: 5, use: true },
-      { phrase: "fine art waterfall prints", rating: 4, use: true }
+      { phrase: "fine art waterfall prints", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "waterfall landscape photography", rating: 5, use: true },
-      { phrase: "painterly river scenes", rating: 4, use: true }
-    ]
+      { phrase: "painterly river scenes", rating: 4, use: true },
+    ],
   },
+
   sunsetsPainterly: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    def: "Color at the edge of day—softened, not saturated.",
     landingPhrases: [
       { phrase: "Painterly Sunset Photography", rating: 5, use: true },
-      { phrase: "dramatic sunset wall art", rating: 4, use: true }
+      { phrase: "dramatic sunset wall art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "sunset landscape photography", rating: 5, use: true },
-      { phrase: "painterly sunset scenes", rating: 4, use: true }
-    ]
+      { phrase: "painterly sunset scenes", rating: 4, use: true },
+    ],
   },
 
   // --- TRADITIONAL FINE ART LANDSCAPES ---
   landscapeIntTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International",
+    def: "Classic field work abroad—composition and craft first.",
     landingPhrases: [
-      
       { phrase: "International Traditional Landscapes", rating: 5, use: true },
-      { phrase: "classic international landscape art", rating: 4, use: true }
+      { phrase: "classic international landscape art", rating: 4, use: true },
     ],
     imagePhrases: [
-      
       { phrase: "traditional international landscape photography", rating: 5, use: true },
-      { phrase: "european scenery wall art", rating: 4, use: true }
-    ]
+      { phrase: "european scenery wall art", rating: 4, use: true },
+    ],
   },
+
   landscapeWestTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West",
+    def: "A straight photograph—honest light, strong line.",
     landingPhrases: [
       { phrase: "Western Traditional Landscapes", rating: 5, use: true },
-      { phrase: "classic western landscape prints", rating: 4, use: true }
+      { phrase: "classic western landscape prints", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "traditional western landscape photography", rating: 5, use: true },
-      { phrase: "western scenery wall art", rating: 4, use: true }
-    ]
+      { phrase: "western scenery wall art", rating: 4, use: true },
+    ],
   },
+
   landscapeMidwestTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest",
+    def: "Plainspoken scenes—shape, light, and season.",
     landingPhrases: [
       { phrase: "Midwest Traditional Landscapes", rating: 5, use: true },
-      { phrase: "heartland landscape prints", rating: 4, use: true }
+      { phrase: "heartland landscape prints", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "traditional midwest landscape photography", rating: 5, use: true },
-      { phrase: "classic heartland scenery", rating: 4, use: true }
-    ]
+      { phrase: "classic heartland scenery", rating: 4, use: true },
+    ],
   },
+
   landscapeNortheastTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast",
+    def: "Granite, tide, and a certain understatement.",
     landingPhrases: [
       { phrase: "Northeast Traditional Landscapes", rating: 5, use: true },
-      { phrase: "new england scenery wall art", rating: 4, use: true }
+      { phrase: "new england scenery wall art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "traditional northeast landscape photography", rating: 5, use: true },
-      { phrase: "new england landscapes fine art", rating: 4, use: true }
-    ]
+      { phrase: "new england landscapes fine art", rating: 4, use: true },
+    ],
   },
+
   landscapeSouthTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South",
+    def: "Still water, heavy air, and generous shadow.",
     landingPhrases: [
       { phrase: "Southern Traditional Landscapes", rating: 5, use: true },
-      { phrase: "southern scenery wall art", rating: 4, use: true }
+      { phrase: "southern scenery wall art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "traditional southern landscape photography", rating: 5, use: true },
-      { phrase: "southern landscape prints", rating: 4, use: true }
-    ]
+      { phrase: "southern landscape prints", rating: 4, use: true },
+    ],
   },
+
   mountainsTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    def: "Clean lines, honest color, and a long view.",
     landingPhrases: [
       { phrase: "Traditional Mountain Photography", rating: 5, use: true },
-      { phrase: "classic mountain landscape art", rating: 4, use: true }
+      { phrase: "classic mountain landscape art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "mountain landscape photography", rating: 5, use: true },
-      { phrase: "mountain scenery fine art", rating: 4, use: true }
-    ]
+      { phrase: "mountain scenery fine art", rating: 4, use: true },
+    ],
   },
+
   waterTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
+    def: "Water recorded simply and well—composition and tone carry the rest.",
     landingPhrases: [
       { phrase: "Traditional Water Photography", rating: 5, use: true },
-      { phrase: "classic water landscape prints", rating: 4, use: true }
+      { phrase: "classic water landscape prints", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "water landscape photography", rating: 5, use: true },
-      { phrase: "river and waterfall wall art", rating: 4, use: true }
-    ]
+      { phrase: "river and waterfall wall art", rating: 4, use: true },
+    ],
   },
+
   sunsetsTraditional: {
     path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    def: "The end of day in measured color and line.",
     landingPhrases: [
       { phrase: "Traditional Sunset Photography", rating: 5, use: true },
-      { phrase: "sunset landscape wall art", rating: 4, use: true }
+      { phrase: "sunset landscape wall art", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "sunset photography", rating: 5, use: true },
-      { phrase: "classic sunset scenery", rating: 4, use: true }
-    ]
+      { phrase: "classic sunset scenery", rating: 4, use: true },
+    ],
   },
 
   // --- GENERAL ---
   landscape: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes",
+    def: "Landscapes developed for tone, texture, and lyrical depth.",
     landingPhrases: [
       { phrase: "Painterly Landscape Photography", rating: 5, use: true },
       { phrase: "western painterly landscape photography", rating: 4, use: true },
       { phrase: "mountain photography", rating: 4, use: true },
-     
-      { phrase: "fine art landscape prints for collectors", rating: 3, use: true }
+      { phrase: "fine art landscape prints for collectors", rating: 3, use: true },
     ],
-
   },
 
-  // --- TRANSPORTATION, UNIVERSAL, SYNONYMS (UNCHANGED, CAN EXPAND) ---
+  // --- TRANSPORTATION, UNIVERSAL, SYNONYMS ---
   transportation: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Transportation",
+    def: "Classic cars, trucks, and rails—timeworn texture, story-first framing.",
     landingPhrases: [
       { phrase: "visual storytelling", rating: 5, use: true },
       { phrase: "Transportation", rating: 5, use: true },
       { phrase: "Classic Cars & Trucks Collection", rating: 5, use: true },
       { phrase: "Route 66 Photography", rating: 5, use: true },
       { phrase: "Steam Engine Photography", rating: 5, use: true },
-      { phrase: "painterly transportation photography", rating: 4, use: true }
+      { phrase: "painterly transportation photography", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "classic car photography", rating: 5, use: true },
@@ -412,37 +438,39 @@ wwiiMenAndMachines: {
       { phrase: "rust and chrome photography", rating: 3, use: true },
       { phrase: "timeless automotive prints", rating: 3, use: true },
       { phrase: "locomotive painterly photography for home decor", rating: 3, use: true },
-      { phrase: "steam engine wall art for collectors", rating: 3, use: true }
-    ]
+      { phrase: "steam engine wall art for collectors", rating: 3, use: true },
+    ],
   },
 
   // --- PAINTERLY: MAIN LANDING ---
-painterly: {
-  path: "/Galleries/Painterly-Fine-Art-Photography",
-  landingPhrases: [
-    { phrase: "Painterly Fine Art Photography", rating: 5, use: true },
-    { phrase: "painterly photography", rating: 5, use: true },
-    { phrase: "painterly art collection", rating: 4, use: true },
-    { phrase: "painterly style wall art", rating: 4, use: true },
-    { phrase: "painterly gallery", rating: 4, use: true }
-  ],
-},
+  painterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography",
+    def: "A signature blend of photographic realism and painterly depth.",
+    landingPhrases: [
+      { phrase: "Painterly Fine Art Photography", rating: 5, use: true },
+      { phrase: "painterly photography", rating: 5, use: true },
+      { phrase: "painterly art collection", rating: 4, use: true },
+      { phrase: "painterly style wall art", rating: 4, use: true },
+      { phrase: "painterly gallery", rating: 4, use: true },
+    ],
+  },
 
-// --- TRADITIONAL FINE ART: MAIN LANDING ---
-fineart: {
-  path: "/Galleries/Fine-Art-Photography",
-  landingPhrases: [
-    { phrase: "Fine Art Photography", rating: 5, use: true },
-    { phrase: "traditional fine art photography", rating: 5, use: true },
-    { phrase: "fine art gallery", rating: 4, use: true },
-    { phrase: "classic fine art photos", rating: 4, use: true },
-    { phrase: "timeless fine art", rating: 4, use: true }
-  ],
+  // --- TRADITIONAL FINE ART: MAIN LANDING ---
+  fineart: {
+    path: "/Galleries/Fine-Art-Photography",
+    def: "Traditional photographic craft—composition, print, and permanence.",
+    landingPhrases: [
+      { phrase: "Fine Art Photography", rating: 5, use: true },
+      { phrase: "traditional fine art photography", rating: 5, use: true },
+      { phrase: "fine art gallery", rating: 4, use: true },
+      { phrase: "classic fine art photos", rating: 4, use: true },
+      { phrase: "timeless fine art", rating: 4, use: true },
+    ],
+  },
 
-},
-
-
+  // Keep universal.path for branch-based image selection, as expected by the linker
   universal: {
+    path: "/Galleries",
     imagePhrases: [
       { phrase: "every turn of the page", rating: 5, use: true },
       { phrase: "Embrace the Past – Live the Story", rating: 5, use: true },
@@ -452,7 +480,6 @@ fineart: {
       { phrase: "Bring the Story Home", rating: 4, use: true },
       { phrase: "story-driven photography", rating: 5, use: true },
       { phrase: "narrative fine art", rating: 5, use: true },
-      
       { phrase: "timeless photography", rating: 5, use: true },
       { phrase: "collector-worthy prints", rating: 4, use: true },
       { phrase: "handcrafted fine art", rating: 4, use: true },
@@ -464,7 +491,6 @@ fineart: {
       { phrase: "timeless portrait", rating: 3, use: true },
       { phrase: "window into the past", rating: 3, use: true },
       { phrase: "with striking realism", rating: 3, use: true },
-     
       { phrase: "custom painterly portraits", rating: 3, use: true },
       { phrase: "framed photography", rating: 3, use: true },
       { phrase: "wayne heim's work", rating: 3, use: true },
@@ -480,6 +506,7 @@ fineart: {
     ]
   },
 
+  // --- SYNONYMS (unchanged) ---
   synonymMap: {
     "civil war photography": [
       "civil war art", "civil war prints", "civil war reenactment art", "civil war battle art", "historic civil war photo", "valor & loss art"
