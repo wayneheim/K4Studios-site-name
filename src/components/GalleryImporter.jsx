@@ -19,6 +19,13 @@ function cleanPath(p) {
   const s = p.startsWith("/") ? p.slice(1) : p;
   return s.startsWith("src/") ? s : `src/${s}`;
 }
+// normalize a module key to match import.meta.glob keys (they start with /src/…)
+function normalizeKey(p) {
+  if (!p) return "";
+  let s = p.startsWith("/") ? p : `/${p}`;
+  if (!s.startsWith("/src/")) s = `/src/${s.replace(/^\/?/, "")}`;
+  return s.replace(/\\/g, "/");
+}
 function prettyFromPath(p) {
   const rel = (p || "").replace(/^\/?src\//, "").replace(/\.mjs$/i, "");
   return rel
@@ -50,12 +57,12 @@ export default function GalleryImporter({ showTitle = true }) {
   /* destination (to=...) and source selection */
   const [destPath, setDestPath] = useState(() => {
     const q = getParam("to");
-    return q ? (q.startsWith("/") ? q : `/${q}`) : (options[0]?.path || "");
+    return q ? normalizeKey(q) : ""; // wait for options to hydrate if empty
   });
   const [sourcePath, setSourcePath] = useState("");
 
-  const [destFull, setDestFull] = useState([]);      // full array (incl. ghost)
-  const [sourceItems, setSourceItems] = useState([]); // visibles from source
+  const [destFull, setDestFull] = useState([]);       // full array (incl. ghost)
+  const [sourceItems, setSourceItems] = useState([]);  // visibles from source
 
   const [filter, setFilter] = useState("");
   const [showTitles, setShowTitles] = useState(false);
@@ -63,6 +70,33 @@ export default function GalleryImporter({ showTitle = true }) {
 
   /* selection */
   const [selected, setSelected] = useState(() => new Set());
+
+  /* when options arrive, fill in defaults if missing */
+  useEffect(() => {
+    if (!options.length) return;
+
+    setDestPath(prev => {
+      if (prev) return prev;
+      const q = getParam("to");
+      const candidate = q ? normalizeKey(q) : options[0].path;
+      return candidate;
+    });
+
+    setSourcePath(prev => {
+      if (prev) return prev;
+      const fallback = options.find(o => o.path !== (destPath || options[0].path)) || options[0];
+      return fallback.path;
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [options.length]);
+
+  /* keep source different from dest when user changes dest upstream (rare) */
+  useEffect(() => {
+    if (!options.length || !destPath) return;
+    if (sourcePath && sourcePath !== destPath) return;
+    const other = options.find(o => o.path !== destPath) || options[0];
+    setSourcePath(other.path);
+  }, [destPath, options, sourcePath]);
 
   /* load destination once path ready */
   useEffect(() => {
@@ -78,31 +112,22 @@ export default function GalleryImporter({ showTitle = true }) {
     return () => { stop = true; };
   }, [destPath, modules]);
 
-  /* choose a default source (not equal to dest) once options exist */
+  /* load source items */
   useEffect(() => {
-    if (!options.length) return;
-    if (sourcePath) return;
-    const firstOther = options.find(o => o.path !== destPath) || options[0];
-    setSourcePath(firstOther.path);
-  }, [options, destPath, sourcePath]);
+    let stop = false;
+    async function load() {
+      if (!sourcePath) return;
+      const mod = await modules[sourcePath]?.();
+      if (stop) return;
 
- // load source items
-useEffect(() => {
-  let stop = false;
-  async function load() {
-    if (!sourcePath) return;
-    const mod = await modules[sourcePath]?.();
-    if (stop) return;
-
-    // ✅ FIX: filter the module result directly (don’t reference `arr` before it exists)
-    const arr = Array.isArray(mod) ? mod.filter(isReal) : [];
-    setSourceItems(arr);
-    setSelected(new Set()); // reset selection when switching source
-  }
-  load();
-  return () => { stop = true; };
-}, [sourcePath, modules]);
-
+      // filter the module result directly
+      const arr = Array.isArray(mod) ? mod.filter(isReal) : [];
+      setSourceItems(arr);
+      setSelected(new Set()); // reset selection when switching source
+    }
+    load();
+    return () => { stop = true; };
+  }, [sourcePath, modules]);
 
   /* derived sets */
   const destIds = useMemo(() => {
@@ -146,8 +171,9 @@ useEffect(() => {
     const chosen = sourceItems.filter(it => selected.has(it.id));
     if (!chosen.length) { alert("Select one or more images to import."); return; }
 
+    // only import non-duplicates by ID in the destination
     const toAppend = chosen.filter(it => !destIds.has(it.id));
-    const dupCount = chosen.length - toAppend.length;
+    const dupCount  = chosen.length - toAppend.length;
 
     if (!toAppend.length) {
       alert(`0 of ${chosen.length} images imported — ${dupCount} already in this gallery.`);
@@ -155,7 +181,7 @@ useEffect(() => {
     }
 
     // Build final full array: keep ghosts + current visibles, then append new
-    const ghosts = destFull.filter(isGhost);
+    const ghosts   = destFull.filter(isGhost);
     const visibles = destFull.filter(isReal);
     const finalVis = visibles.concat(toAppend);
     const finalFull = ghosts.concat(finalVis);
@@ -182,6 +208,10 @@ useEffect(() => {
   const total = filtered.length;
   const selectedCount = [...selected].length;
   const dupInView = filtered.filter(it => destIds.has(it.id)).length;
+  const importableSelected = useMemo(
+    () => sourceItems.filter(it => selected.has(it.id) && !destIds.has(it.id)).length,
+    [sourceItems, selected, destIds]
+  );
 
   return (
     <div className="p-6 max-w-7xl mx-auto text-sm">
@@ -241,7 +271,12 @@ useEffect(() => {
       <div className="mb-3 flex flex-wrap items-center gap-2">
         <button onClick={selectAllNew} className={`${btn} bg-white ${hover}`}>Select All (new only)</button>
         <button onClick={deselectAll} className={`${btn} bg-white ${hover}`}>Deselect All</button>
-        <button onClick={importSelected} className={`${btn} bg-orange-100 border-orange-300 text-orange-900 ${hover}`}>
+        <button
+          onClick={importSelected}
+          disabled={!importableSelected}
+          className={`${btn} ${importableSelected ? "bg-orange-100 border-orange-300 text-orange-900" : "bg-gray-100 border-gray-300 text-gray-400 cursor-not-allowed"} ${hover}`}
+          title={importableSelected ? "Import selected images" : "Select at least one new image"}
+        >
           Import Selected
         </button>
 
