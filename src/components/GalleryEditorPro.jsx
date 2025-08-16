@@ -1,3 +1,4 @@
+// src/components/GalleryEditorPro.jsx
 import { useEffect, useMemo, useState } from "react";
 
 /* ---------- helpers ---------- */
@@ -75,6 +76,25 @@ function isRealItem(d) {
   return d && d.id !== "i-k4studios";
 }
 
+/* --- Quick Refresh helpers (simple) --- */
+const RESUME_KEY = "k4-editor:resume";
+function writeResumeState({ selectedPath, idx, filter, backupMade }) {
+  try {
+    localStorage.setItem(
+      RESUME_KEY,
+      JSON.stringify({ selectedPath, idx, filter, backupMade, ts: Date.now() })
+    );
+  } catch {}
+}
+function readResumeState() {
+  try {
+    const raw = localStorage.getItem(RESUME_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
 /* ---------- component ---------- */
 export default function GalleryEditorPro() {
   // Discover all .mjs gallery datasets (expects `export const galleryData = [...]`)
@@ -106,8 +126,13 @@ export default function GalleryEditorPro() {
   const [filter, setFilter] = useState("");
   const [dirty, setDirty] = useState(false);
   const [backupMade, setBackupMade] = useState(false);
-
   const [lastAction, setLastAction] = useState(null);
+
+  // full-screen guard after opening reorderer
+  const [showRefreshGuard, setShowRefreshGuard] = useState(false);
+  // apply resume once
+  const [resumeApplied, setResumeApplied] = useState(false);
+
   useEffect(() => {
     if (!lastAction) return;
     const t = setTimeout(() => setLastAction(null), 6000);
@@ -115,6 +140,17 @@ export default function GalleryEditorPro() {
   }, [lastAction]);
 
   const keyLS = (suffix) => `k4-editor:${selectedPath}:${suffix}`;
+
+  // If we have a resume with a specific dataset, switch to it once options are ready
+  useEffect(() => {
+    if (resumeApplied || !options.length) return;
+    const resume = readResumeState();
+    if (resume && options.some((o) => o.path === resume.selectedPath)) {
+      setSelectedPath(resume.selectedPath);
+    }
+    setResumeApplied(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [options.length, resumeApplied]);
 
   // Load dataset when changed
   useEffect(() => {
@@ -124,25 +160,38 @@ export default function GalleryEditorPro() {
       const mod = await modules[selectedPath](); // dynamic import -> array
       const allArr = Array.isArray(mod) ? mod : []; // keep EVERYTHING for saving
       const arr = allArr.filter(isRealItem);       // UI only
-
       if (cancelled) return;
 
       // optional draft restore
       const draftRaw = localStorage.getItem(keyLS("draft"));
       const draft = draftRaw ? JSON.parse(draftRaw) : null;
+      const uiArr = draft && Array.isArray(draft) && draft.length ? draft.filter(isRealItem) : arr;
 
-      setData(draft && Array.isArray(draft) && draft.length ? draft.filter(isRealItem) : arr);
+      setData(uiArr);
       setBackupData(allArr); // full original (incl. ghost)
-      setIdx(0);
-      setFilter("");
+
+      // Apply resume if present for this dataset
+      const resume = readResumeState();
+      if (resume && resume.selectedPath === selectedPath) {
+        setFilter(resume.filter || "");
+        setIdx(Math.max(0, Math.min(resume.idx || 0, uiArr.length - 1)));
+        setBackupMade(!!resume.backupMade); // keep unlocked if it was unlocked
+        localStorage.removeItem(RESUME_KEY);
+      } else {
+        setIdx(0);
+        setFilter("");
+        // check if user previously chose to skip backup for this dataset
+        const skipFlag = localStorage.getItem(keyLS("skipBackup")) === "1";
+        setBackupMade(skipFlag ? true : false);
+      }
+
       setDirty(false);
-      setBackupMade(false); // require backup step per dataset
       setLastAction(null);
+      // Always hide guard on any fresh load
+      setShowRefreshGuard(false);
     }
     load();
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedPath]);
 
@@ -152,7 +201,7 @@ export default function GalleryEditorPro() {
     try {
       localStorage.setItem(keyLS("draft"), JSON.stringify(data));
     } catch {}
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks-exhaustive-deps
   }, [data]);
 
   const filtered = useMemo(() => {
@@ -185,12 +234,27 @@ export default function GalleryEditorPro() {
     const ts = new Date().toISOString().replace(/[:.]/g, "-");
     downloadText(JSON.stringify(backupData, null, 2), `BACKUP-${ts}.json`);
     downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${ts}.mjs`);
+    // clear any previous skip and unlock
+    try { localStorage.removeItem(keyLS("skipBackup")); } catch {}
     setBackupMade(true);
     setLastAction(`Backup created — ${new Date().toLocaleTimeString()}`);
   }
 
+  // NEW: Skip backup with confirm
+  function skipBackupConfirm() {
+    const ok = confirm(
+      "Skip creating a safety backup for this dataset?\n\n" +
+      "Not recommended. If something goes wrong you won’t have a quick rollback file.\n\n" +
+      "Click OK to unlock editing without a backup."
+    );
+    if (!ok) return;
+    try { localStorage.setItem(keyLS("skipBackup"), "1"); } catch {}
+    setBackupMade(true);
+    setLastAction("Backup skipped — editing unlocked");
+  }
+
   function updateField(field, value) {
-    if (!backupMade) return; // locked until backup
+    if (!backupMade) return; // locked until backup/skip
     if (!current) return;
     setData((arr) => {
       const i = arr.findIndex((d) => d.id === current.id);
@@ -203,8 +267,10 @@ export default function GalleryEditorPro() {
           .filter(Boolean);
         copy[i] = { ...copy[i], tags, keywords: tags };
       } else if (field === "collectorNotes" || field === "notes") {
-        // normalize in UI as collectorNotes; file may use 'notes'
         copy[i] = { ...copy[i], collectorNotes: value };
+      } else if (field === "rating") {
+        const n = Number(value);
+        copy[i] = { ...copy[i], rating: Number.isFinite(n) ? n : copy[i].rating };
       } else {
         copy[i] = { ...copy[i], [field]: value };
       }
@@ -221,8 +287,10 @@ export default function GalleryEditorPro() {
       const i = arr.findIndex((d) => d.id === current.id);
       if (i === -1) return arr;
       const copy = [...arr];
-      // strip ghost fields if present (UI never shows ghost anyway)
-      const { id, title, alt, description, story, collectorNotes, notes, tags, keywords, url, src, section, rating, galleries, visibility, sortOrder, buyLink } = orig;
+      const {
+        id, title, alt, description, story, collectorNotes, notes, tags, keywords,
+        url, src, section, rating, galleries, visibility, sortOrder, buyLink
+      } = orig;
       const normalized = {
         id, title, alt, description, story,
         collectorNotes: collectorNotes ?? notes,
@@ -239,7 +307,10 @@ export default function GalleryEditorPro() {
     if (!backupData) return;
     if (!confirm("Revert ALL images to the backed-up data?")) return;
     setData(backupData.filter(isRealItem).map((orig) => {
-      const { id, title, alt, description, story, collectorNotes, notes, tags, keywords, url, src, section, rating, galleries, visibility, sortOrder, buyLink } = orig;
+      const {
+        id, title, alt, description, story, collectorNotes, notes, tags, keywords,
+        url, src, section, rating, galleries, visibility, sortOrder, buyLink
+      } = orig;
       return {
         id, title, alt, description, story,
         collectorNotes: collectorNotes ?? notes,
@@ -263,7 +334,6 @@ export default function GalleryEditorPro() {
   function saveAllAsMjs() {
     if (!selectedPath) return;
     const filename = selectedPath.split("/").pop() || "gallery.mjs";
-    // merge UI edits back into full array (incl. ghost)
     const merged = Array.isArray(backupData) ? backupData.map((item) => {
       if (!item || !item.id) return item;
       const edited = data.find((d) => d.id === item.id);
@@ -297,6 +367,7 @@ export default function GalleryEditorPro() {
               .split(",")
               .map((s) => s.trim())
               .filter(Boolean),
+        rating: typeof current.rating === "number" ? current.rating : undefined,
       },
     };
 
@@ -320,180 +391,248 @@ export default function GalleryEditorPro() {
     }
   }
 
+  // ---- Simple refresh-after-reorder flow ----
+  function refreshAfterReorder() {
+    writeResumeState({ selectedPath, idx, filter, backupMade });
+    window.location.reload();
+  }
+
+  const datasetParam = encodeURIComponent((selectedPath || "").replace(/^\//, ""));
   const total = filtered.length;
   const pos = total ? idx + 1 : 0;
 
   return (
-    <div className="p-6 max-w-6xl mx-auto text-sm">
-      <h1 className="text-2xl font-semibold mb-3">Gallery Editor Pro</h1>
+    <div className="relative p-6 max-w-6xl mx-auto text-sm">
+      {/* MAIN UI (gets dimmed/disabled when guard is active) */}
+      <div className={showRefreshGuard ? "pointer-events-none select-none opacity-40" : ""} aria-hidden={showRefreshGuard ? "true" : undefined}>
+        <h1 className="text-2xl font-semibold mb-3">Gallery Editor Pro</h1>
 
-      {/* dataset picker + backup gate */}
-      <div className="flex flex-wrap items-center gap-2 mb-3">
-        <select
-          className="border rounded-md px-2 py-1 min-w-[22rem]"
-          value={selectedPath}
-          onChange={(e) => setSelectedPath(e.target.value)}
-        >
-          {options.map((o) => (
-            <option key={o.path} value={o.path}>
-              {o.label}
-            </option>
-          ))}
-        </select>
+        {/* dataset picker + backup gate */}
+        <div className="flex flex-wrap items-center gap-2 mb-3">
+          <select
+            className="border rounded-md px-2 py-1 min-w-[22rem]"
+            value={selectedPath}
+            onChange={(e) => setSelectedPath(e.target.value)}
+          >
+            {options.map((o) => (
+              <option key={o.path} value={o.path}>
+                {o.label}
+              </option>
+            ))}
+          </select>
 
-        {!backupMade ? (
-          <button onClick={ensureBackup} className="px-3 py-1 rounded-md border bg-white">
-            1) Make Data Backup
+          {!backupMade ? (
+            <>
+              <button onClick={ensureBackup} className="px-3 py-1 rounded-md border bg-white">
+                1) Make Data Backup
+              </button>
+              <button
+                onClick={skipBackupConfirm}
+                className="px-3 py-1 rounded-md border bg-white text-red-600"
+                title="Unlock editing without writing a safety backup (not recommended)"
+              >
+                Skip Backup (not recommended)
+              </button>
+            </>
+          ) : (
+            <span className="text-green-700">✅ Editing unlocked</span>
+          )}
+
+          {/* Open Reorder — triggers lock overlay */}
+          <a
+            href={`/admin/GalleryReorderer?dataset=${datasetParam}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setShowRefreshGuard(true)}
+            className="px-3 py-1 rounded-md border inline-flex items-center"
+          >
+            Open Reorder
+          </a>
+
+          <div className="ml-auto flex items-center gap-2">
+            <input
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              placeholder="Search id/title/text/keywords…"
+              className="w-72 border rounded-md px-2 py-1"
+            />
+            <button onClick={() => move(-1)} className="px-2 py-1 border rounded-md">
+              Prev
+            </button>
+            <button onClick={() => move(1)} className="px-2 py-1 border rounded-md">
+              Next
+            </button>
+            <span className="opacity-70">
+              {pos}/{total} (of {data.length})
+            </span>
+          </div>
+        </div>
+
+        {/* editor + actions */}
+        <div className="mb-3 flex flex-wrap items-center gap-2">
+          {dirty && <span className="text-red-600 font-medium">Unsaved changes</span>}
+
+          <button onClick={saveCurrentOnly} className="px-3 py-1 rounded-md border">
+            Save This Image (.mjs)
           </button>
+          <button onClick={saveAllAsMjs} className="px-3 py-1 rounded-md border">
+            Save All (.mjs)
+          </button>
+          <button onClick={revertCurrentToBackup} className="px-3 py-1 rounded-md border">
+            Revert This Image
+          </button>
+          <button onClick={revertAllToBackup} className="px-3 py-1 rounded-md border">
+            Revert All
+          </button>
+
+          {lastAction && (
+            <span className="ml-auto text-xs bg-green-50 border border-green-200 text-green-800 px-2 py-1 rounded-md">
+              {lastAction}
+            </span>
+          )}
+        </div>
+
+        {/* editing locked notice */}
+        {!backupMade && (
+          <div className="mb-3 p-3 border rounded-md bg-yellow-50">
+            Editing is locked until you click <strong>“Make Data Backup”</strong> or **Skip Backup** (not recommended).
+          </div>
+        )}
+
+        {/* main form */}
+        {current ? (
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${!backupMade ? "pointer-events-none opacity-60" : ""}`}>
+            {/* Left: image + short fields */}
+            <div className="space-y-3">
+              <div className="mb-1 text-xs uppercase tracking-wide opacity-70">
+                Chapter {idx + 1} of {data.length}
+              </div>
+              {(() => {
+                const imgUrl = pickImage(current);
+                return imgUrl ? (
+                  <img src={imgUrl} alt="" className="w-full rounded-lg shadow" />
+                ) : (
+                  <div className="w-full h-64 grid place-items-center border rounded-lg">No image url</div>
+                );
+              })()}
+
+              <div>
+                <label className="block text-xs opacity-70 mb-1">ID (read-only)</label>
+                <input
+                  value={current.id || ""}
+                  readOnly
+                  className="w-full border rounded-md px-2 py-1 bg-gray-50 text-gray-700 cursor-not-allowed"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs opacity-70 mb-1">Title</label>
+                <input
+                  value={current.title || ""}
+                  onChange={(e) => updateField("title", e.target.value)}
+                  className="w-full border rounded-md px-2 py-1"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs opacity-70 mb-1">Alt Text</label>
+                <input
+                  value={current.alt || ""}
+                  onChange={(e) => updateField("alt", e.target.value)}
+                  className="w-full border rounded-md px-2 py-1"
+                />
+              </div>
+
+              {/* Rating */}
+              <div>
+                <label className="block text-xs opacity-70 mb-1">Rating (0–5)</label>
+                <input
+                  type="number"
+                  min={0}
+                  max={5}
+                  step={1}
+                  value={typeof current.rating === "number" ? current.rating : ""}
+                  onChange={(e) => updateField("rating", e.target.value)}
+                  className="w-32 border rounded-md px-2 py-1"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs opacity-70 mb-1">Keywords (comma separated)</label>
+                <textarea
+                  value={
+                    Array.isArray(current.tags)
+                      ? current.tags.join(", ")
+                      : Array.isArray(current.keywords)
+                      ? current.keywords.join(", ")
+                      : ""
+                  }
+                  onChange={(e) => updateField("keywords", e.target.value)}
+                  className="w-full min-h-[88px] border rounded-md px-2 py-1 resize-y"
+                />
+              </div>
+            </div>
+
+            {/* Right: long text fields — Story first */}
+            <div className="space-y-3">
+              <div>
+                <label className="block text-xs opacity-70 mb-1">The Story — For people’s imagination</label>
+                <textarea
+                  value={current.story || ""}
+                  onChange={(e) => updateField("story", e.target.value)}
+                  className="w-full h-32 border rounded-md px-2 py-1"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs opacity-70 mb-1">Description — Google/SEO Optimized Copy</label>
+                <textarea
+                  value={current.description || ""}
+                  onChange={(e) => updateField("description", e.target.value)}
+                  className="w-full h-32 border rounded-md px-2 py-1"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs opacity-70 mb-1">
+                  Collector Notes — Artistic critique for collector confidence
+                </label>
+                <textarea
+                  value={current.collectorNotes ?? current.notes ?? ""}
+                  onChange={(e) => updateField("collectorNotes", e.target.value)}
+                  className="w-full h-28 border rounded-md px-2 py-1"
+                />
+              </div>
+            </div>
+          </div>
         ) : (
-          <span className="text-green-700">✅ Backup created — editing unlocked</span>
-        )}
-
-        <div className="ml-auto flex items-center gap-2">
-          <input
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            placeholder="Search id/title/text/keywords…"
-            className="w-72 border rounded-md px-2 py-1"
-          />
-          <button onClick={() => move(-1)} className="px-2 py-1 border rounded-md">
-            Prev
-          </button>
-          <button onClick={() => move(1)} className="px-2 py-1 border rounded-md">
-            Next
-          </button>
-          <span className="opacity-70">
-            {pos}/{total} (of {data.length})
-          </span>
-        </div>
-      </div>
-
-      {/* editor + actions */}
-      <div className="mb-3 flex flex-wrap items-center gap-2">
-        {dirty && <span className="text-red-600 font-medium">Unsaved changes</span>}
-
-        <button onClick={saveCurrentOnly} className="px-3 py-1 rounded-md border">
-          Save This Image (.mjs)
-        </button>
-        <button onClick={saveAllAsMjs} className="px-3 py-1 rounded-md border">
-          Save All (.mjs)
-        </button>
-        <button onClick={revertCurrentToBackup} className="px-3 py-1 rounded-md border">
-          Revert This Image
-        </button>
-        <button onClick={revertAllToBackup} className="px-3 py-1 rounded-md border">
-          Revert All
-        </button>
-
-        {lastAction && (
-          <span className="ml-auto text-xs bg-green-50 border border-green-200 text-green-800 px-2 py-1 rounded-md">
-            {lastAction}
-          </span>
+          <div className="p-10 text-center opacity-70">No items match your filter.</div>
         )}
       </div>
 
-      {/* editing locked notice */}
-      {!backupMade && (
-        <div className="mb-3 p-3 border rounded-md bg-yellow-50">
-          Editing is locked until you click <strong>“Make Data Backup”</strong>. This downloads JSON + .mjs
-          snapshots and enables editing. Safety first.
-        </div>
-      )}
-
-      {/* main form */}
-      {current ? (
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${!backupMade ? "pointer-events-none opacity-60" : ""}`}>
-          {/* Left: image + short fields */}
-          <div className="space-y-3">
-            <div className="mb-1 text-xs uppercase tracking-wide opacity-70">
-              Chapter {idx + 1} of {data.length}
-            </div>
-            {(() => {
-              const imgUrl = pickImage(current);
-              return imgUrl ? (
-                <img src={imgUrl} alt="" className="w-full rounded-lg shadow" />
-              ) : (
-                <div className="w-full h-64 grid place-items-center border rounded-lg">No image url</div>
-              );
-            })()}
-
-            <div>
-              <label className="block text-xs opacity-70 mb-1">ID (read-only)</label>
-              <input
-                value={current.id || ""}
-                readOnly
-                className="w-full border rounded-md px-2 py-1 bg-gray-50 text-gray-700 cursor-not-allowed"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs opacity-70 mb-1">Title</label>
-              <input
-                value={current.title || ""}
-                onChange={(e) => updateField("title", e.target.value)}
-                className="w-full border rounded-md px-2 py-1"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs opacity-70 mb-1">Alt Text</label>
-              <input
-                value={current.alt || ""}
-                onChange={(e) => updateField("alt", e.target.value)}
-                className="w-full border rounded-md px-2 py-1"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs opacity-70 mb-1">Keywords (comma separated)</label>
-              <textarea
-                value={
-                  Array.isArray(current.tags)
-                    ? current.tags.join(", ")
-                    : Array.isArray(current.keywords)
-                    ? current.keywords.join(", ")
-                    : ""
-                }
-                onChange={(e) => updateField("keywords", e.target.value)}
-                className="w-full min-h-[88px] border rounded-md px-2 py-1 resize-y"
-              />
-            </div>
-          </div>
-
-          {/* Right: long text fields — Story first */}
-          <div className="space-y-3">
-            <div>
-              <label className="block text-xs opacity-70 mb-1">The Story — For people’s imagination</label>
-              <textarea
-                value={current.story || ""}
-                onChange={(e) => updateField("story", e.target.value)}
-                className="w-full h-32 border rounded-md px-2 py-1"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs opacity-70 mb-1">Description — Google/SEO Optimized Copy</label>
-              <textarea
-                value={current.description || ""}
-                onChange={(e) => updateField("description", e.target.value)}
-                className="w-full h-32 border rounded-md px-2 py-1"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs opacity-70 mb-1">
-                Collector Notes — Artistic critique for collector confidence
-              </label>
-              <textarea
-                value={current.collectorNotes ?? current.notes ?? ""}
-                onChange={(e) => updateField("collectorNotes", e.target.value)}
-                className="w-full h-28 border rounded-md px-2 py-1"
-              />
+      {/* FULL-SCREEN GUARD shown after opening Reorderer */}
+      {showRefreshGuard && (
+        <div className="fixed inset-0 z-50 grid place-items-center bg-black/55 backdrop-blur-[2px]">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 text-center">
+            <h2 className="text-xl font-semibold mb-2">Reorder in progress</h2>
+            <p className="text-sm text-gray-700 mb-5">
+              You opened the Gallery Reorderer in a new tab. To keep the data safe,
+              refresh this editor to load the latest order before continuing to edit.
+            </p>
+            <button
+              onClick={() => {
+                writeResumeState({ selectedPath, idx, filter, backupMade });
+                window.location.reload();
+              }}
+              className="inline-flex items-center justify-center px-4 py-2 rounded-md border bg-black text-white hover:opacity-90"
+            >
+              Refresh after reorder
+            </button>
+            <div className="mt-3 text-xs text-gray-500">
+              This preserves your current gallery, selection, and unlocked state.
             </div>
           </div>
         </div>
-      ) : (
-        <div className="p-10 text-center opacity-70">No items match your filter.</div>
       )}
     </div>
   );
