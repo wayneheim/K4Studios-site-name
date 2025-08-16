@@ -4,6 +4,22 @@ const path = require("path");
 const recast = require("recast");
 const babelParser = require("@babel/parser");
 
+/* ===== new: path guards & helpers ===== */
+const ALLOWED_ROOTS = ["src/data/Galleries", "src/pages/Other"]; // support both trees
+const toPosix = (p = "") => String(p).replace(/\\/g, "/");
+const hasTraversal = (p = "") => p.split(/[\\/]+/).some(seg => seg === "..");
+
+function resolveDatasetAbsolute(datasetPath) {
+  const rel = toPosix(String(datasetPath || "").replace(/^\//, "")); // strip leading "/"
+  if (!rel || hasTraversal(rel) || !rel.endsWith(".mjs")) {
+    throw new Error("Invalid datasetPath");
+  }
+  const ok = ALLOWED_ROOTS.some(root => rel.startsWith(toPosix(root) + "/"));
+  if (!ok) throw new Error("Dataset must be under src/data/Galleries or src/pages/Other");
+  return path.join(process.cwd(), rel);
+}
+/* ====================================== */
+
 function parse(code) {
   return recast.parse(code, {
     parser: {
@@ -57,11 +73,14 @@ exports.handler = async (event) => {
     const { datasetPath, id, patch } = JSON.parse(event.body || "{}");
     if (!datasetPath || !id || !patch) return { statusCode: 400, body: "Missing datasetPath, id, or patch" };
 
-    // allow only src/data/... paths
-    const rel = datasetPath.replace(/^[/\\]+/, "");
-    if (!rel.startsWith("src/data/")) return { statusCode: 400, body: "Refusing to write outside src/data/" };
+    // safe resolve (accepts Galleries + Other, normalizes slashes, blocks traversal)
+    let absPath;
+    try {
+      absPath = resolveDatasetAbsolute(datasetPath);
+    } catch (e) {
+      return { statusCode: 400, body: e.message };
+    }
 
-    const absPath = path.join(process.cwd(), rel);
     const code = await fs.readFile(absPath, "utf8");
     const ast = parse(code);
 
@@ -91,10 +110,7 @@ exports.handler = async (event) => {
       if (el?.type !== "ObjectExpression") continue;
       const idProp = getProp(el, "id");
       const idVal = getStringValue(idProp?.value);
-      if (idVal === id) {
-        target = el;
-        break;
-      }
+      if (idVal === id) { target = el; break; }
     }
     if (!target) return { statusCode: 404, body: `Item id ${id} not found in ${datasetPath}` };
 
@@ -127,13 +143,36 @@ exports.handler = async (event) => {
       }
     }
 
+    // rating (number)
+    if (typeof patch.rating === "number") {
+      const n = Number.isFinite(patch.rating) ? patch.rating : undefined;
+      if (n != null) setProp(target, "rating", b.numericLiteral(n));
+    }
+
+    // visibility ("hidden" to hide; falsy/empty -> remove prop to show)
+    if (Object.prototype.hasOwnProperty.call(patch, "visibility")) {
+      const v = patch.visibility;
+      const existing = getProp(target, "visibility");
+      if (!v) {
+        if (existing) {
+          target.properties = target.properties.filter((p) => p !== existing);
+        }
+      } else {
+        setProp(target, "visibility", makeStringNode(String(v), usesTemplate));
+      }
+    }
+
     // write back
     const output = recast.print(ast, { quote: "double" }).code;
     await fs.writeFile(absPath, output, "utf8");
 
-    return { statusCode: 200, headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ok: true, datasetPath, id }) };
+    return {
+      statusCode: 200,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ok: true, datasetPath, id }),
+    };
   } catch (err) {
     console.error(err);
-    return { statusCode: 500, body: String(err && err.stack || err) };
+    return { statusCode: 500, body: String((err && err.stack) || err) };
   }
 };

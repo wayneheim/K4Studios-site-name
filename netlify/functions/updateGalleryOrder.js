@@ -2,12 +2,24 @@
 const fs = require("fs/promises");
 const path = require("path");
 
-function isGhost(d) {
-  return d && d.id === "i-k4studios";
+/* ===== path guards & helpers (new) ===== */
+const ALLOWED_ROOTS = ["src/data/Galleries", "src/pages/Other"]; // support both trees
+const toPosix = (p = "") => String(p).replace(/\\/g, "/");
+const hasTraversal = (p = "") => p.split(/[\\/]+/).some(seg => seg === "..");
+
+function resolveDatasetAbsolute(datasetPath) {
+  const rel = toPosix(String(datasetPath || "").replace(/^\//, "")); // strip leading "/"
+  if (!rel || hasTraversal(rel) || !rel.endsWith(".mjs")) {
+    throw new Error("Invalid datasetPath");
+  }
+  const ok = ALLOWED_ROOTS.some(root => rel.startsWith(toPosix(root) + "/"));
+  if (!ok) throw new Error("Dataset must be under src/data/Galleries or src/pages/Other");
+  return path.join(process.cwd(), rel);
 }
-function isReal(d) {
-  return d && !isGhost(d);
-}
+
+/* ===== your existing helpers ===== */
+function isGhost(d) { return d && d.id === "i-k4studios"; }
+function isReal(d) { return d && !isGhost(d); }
 
 function normalizeItem(raw) {
   const notes = raw.notes ?? raw.collectorNotes;
@@ -41,6 +53,7 @@ export const ${exportName} = ${json};
 `;
 }
 
+/* ===== handler ===== */
 exports.handler = async (event) => {
   try {
     if (event.httpMethod !== "POST") {
@@ -53,20 +66,22 @@ exports.handler = async (event) => {
     if (!datasetPath || typeof datasetPath !== "string") {
       return { statusCode: 400, body: "Missing datasetPath" };
     }
-    if (!datasetPath.startsWith("src/data/") || !datasetPath.endsWith(".mjs")) {
-      return { statusCode: 400, body: "Invalid datasetPath" };
+
+    // NEW: safe resolve that accepts Galleries + Other
+    let absPath;
+    try {
+      absPath = resolveDatasetAbsolute(datasetPath);
+    } catch (e) {
+      return { statusCode: 400, body: e.message };
     }
 
-    const absPath = path.join(process.cwd(), datasetPath);
-
-    // Ensure the file exists
     try {
       await fs.access(absPath);
     } catch {
       return { statusCode: 404, body: `Dataset not found: ${datasetPath}` };
     }
 
-    // We need a complete array to rebuild the file
+    // Need a complete array to rebuild the file
     let working = Array.isArray(fullArray) ? fullArray.slice() : null;
     if (!working) {
       if (!Array.isArray(sourceArray)) {
@@ -89,16 +104,12 @@ exports.handler = async (event) => {
           used.add(id);
         }
       }
-      for (const it of visibles) {
-        if (!used.has(it.id)) ordered.push(it);
-      }
+      for (const it of visibles) if (!used.has(it.id)) ordered.push(it);
       visibles = ordered;
     }
 
     // resequence sortOrder (0..n-1)
-    visibles.forEach((it, i) => {
-      it.sortOrder = i;
-    });
+    visibles.forEach((it, i) => { it.sortOrder = i; });
 
     const finalArr = ghosts.concat(visibles);
     const outText = buildMjsJson(finalArr, "galleryData");

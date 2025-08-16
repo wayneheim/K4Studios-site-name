@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"; // same layout Reorderer uses
+import GalleryImporter from "../../components/GalleryImporter.jsx";
+---
+
+<BaseLayout title="Image-Gallery Importer">
+  <main class="p-6 max-w-7xl mx-auto text-sm">
+    <h1 class="text-2xl font-semibold mb-3">Image-Gallery Importer</h1>
+    <!-- run the React component on the client -->
+    <GalleryImporter client:only="react" />
+  </main>
+</BaseLayout>

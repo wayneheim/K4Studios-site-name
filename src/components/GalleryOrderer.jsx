@@ -1,6 +1,12 @@
 // src/components/GalleryOrderer.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
 
+/* ========= roots (add more here if needed) ========= */
+const DATA_ROOTS = [
+  "/src/data/Galleries",
+  "/src/pages/Other",
+];
+
 /* ========= helpers ========= */
 function downloadText(text, filename) {
   const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
@@ -30,6 +36,7 @@ function pickImage(d = {}) {
 
 function isGhost(d) { return d && d.id === "i-k4studios"; }
 function isRealItem(d) { return d && !isGhost(d); }
+function isHidden(d) { return d && String(d.visibility).toLowerCase() === "hidden"; }
 
 /** Normalize item -> your JSON-style schema (quoted keys/values) */
 function normalizeItem(raw) {
@@ -73,6 +80,31 @@ function arrayMove(arr, from, to) {
   return copy;
 }
 
+/* --- path helpers --- */
+function normalizePath(p = "") { return p.replace(/\\/g, "/"); }
+
+function stripRoot(p) {
+  const n = normalizePath(p);
+  for (const root of DATA_ROOTS) {
+    const r = normalizePath(root) + "/";
+    if (n.startsWith(r)) return n.slice(r.length);
+  }
+  return n.startsWith("/") ? n.slice(1) : n;
+}
+
+function prettyLabelFromPath(fullPath) {
+  const rel = stripRoot(fullPath).replace(/\.mjs$/i, "");
+  const segs = rel.split("/").map((s) =>
+    s
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (m) => m.toUpperCase())
+  );
+  const rootHint =
+    DATA_ROOTS.find((r) => normalizePath(fullPath).startsWith(normalizePath(r) + "/")) || "";
+  const rootName = rootHint.split("/").pop(); // "Galleries" or "Other"
+  return `[${rootName}] ${segs.join(" / ")}`;
+}
+
 /** Read ?dataset=... from URL (supports hash routers, too) */
 function getDatasetFromUrl() {
   try {
@@ -85,7 +117,8 @@ function getDatasetFromUrl() {
     const raw = params.get("dataset");
     if (!raw) return "";
     const path = raw.startsWith("/") ? raw : `/${raw}`;
-    return path.startsWith("/src/") ? path : `/src/${path}`;
+    const prefixed = path.startsWith("/src/") ? path : `/src/${path}`;
+    return normalizePath(prefixed);
   } catch {
     return "";
   }
@@ -93,26 +126,19 @@ function getDatasetFromUrl() {
 
 /* ========= Component (Grid-only, server save) ========= */
 export default function GalleryOrderer({ datasetPath = "" }) {
-  // discover all datasets
-  const modules = useMemo(
-    () =>
-      import.meta.glob("/src/data/Galleries/**/*.mjs", {
-        eager: false,
-        import: "galleryData",
-      }),
-    []
-  );
+  // discover datasets in BOTH roots
+  const modules = useMemo(() => {
+    const maps = [
+      import.meta.glob("/src/data/Galleries/**/*.mjs", { eager: false, import: "galleryData" }),
+      import.meta.glob("/src/pages/Other/**/*.mjs",     { eager: false, import: "galleryData" }),
+    ];
+    return Object.assign({}, ...maps);
+  }, []);
 
   const options = useMemo(() => {
-    const makeLabel = (p) =>
-      p
-        .replace("/src/data/Galleries/", "")
-        .replace(/\.mjs$/, "")
-        .replace(/-/g, " ")
-        .replace(/\b\w/g, (m) => m.toUpperCase());
     return Object.keys(modules)
-      .sort()
-      .map((path) => ({ path, label: makeLabel(path) }));
+      .sort((a, b) => stripRoot(a).localeCompare(stripRoot(b)))
+      .map((path) => ({ path, label: prettyLabelFromPath(path) }));
   }, [modules]);
 
   const [selectedPath, setSelectedPath] = useState("");
@@ -133,10 +159,8 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   // Choose dataset: prefer prop → URL → first option
   useEffect(() => {
     if (!options.length) return;
-    const fromProp = datasetPath
-      ? (datasetPath.startsWith("/") ? datasetPath : `/${datasetPath}`)
-      : "";
-    const candidate = fromProp || getDatasetFromUrl() || options[0]?.path || "";
+    const fromProp = datasetPath ? (datasetPath.startsWith("/") ? datasetPath : `/${datasetPath}`) : "";
+    const candidate = normalizePath(fromProp || getDatasetFromUrl() || options[0]?.path || "");
     setSelectedPath(options.some(o => o.path === candidate) ? candidate : (options[0]?.path || ""));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [options.length, datasetPath]);
@@ -237,6 +261,21 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     note("Undid last move");
   }
 
+  // toggle visibility for a given item id
+  function toggleVisibility(id, wantHidden) {
+    setItems(arr =>
+      arr.map(it =>
+        it.id === id
+          ? (wantHidden ? { ...it, visibility: "hidden" } : (() => {
+              const { visibility, ...rest } = it;
+              return rest; // remove visibility to "show"
+            })())
+          : it
+      )
+    );
+    setDirty(true);
+  }
+
   // Build final array (ghost first, then reordered items), resequence sortOrder
   function buildFinalArray() {
     if (!backupData) return [];
@@ -246,32 +285,30 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     return ghosts.concat(vis);
   }
 
-  // Save to server (Netlify function) – same pattern as your editor
+  // Save to server (Netlify function) – send FULL ARRAY so visibility persists
   async function saveOrderHere() {
     if (!backupMade) { alert("Please create a backup first."); return; }
     if (!selectedPath) return;
 
     const datasetPathClean = selectedPath.replace(/^\//, ""); // strip leading slash
-    const orderIds = items.map((it) => it.id);
+    const fullArray = buildFinalArray();
 
     try {
       const res = await fetch("/.netlify/functions/updateGalleryOrder", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          datasetPath: datasetPathClean, // e.g. src/data/.../Color.mjs
-          orderIds,                      // the new visual order
-          sourceArray: backupData,       // full original array including ghost (server will normalize)
-          // Or send fullArray: buildFinalArray()
+          datasetPath: datasetPathClean, // e.g. src/data/.../Color.mjs OR src/pages/Other/...
+          fullArray,                     // includes order + visibility + everything normalized on server
         }),
       });
       if (!res.ok) throw new Error(await res.text());
-      note("Saved order in-place");
+      note("Saved order/visibility in-place");
       setDirty(false);
     } catch (err) {
       alert("Server save failed. Falling back to download.\n\n" + err.message);
       const filename = datasetPathClean.split("/").pop() || "gallery.mjs";
-      const text = buildMjsJson(buildFinalArray(), "galleryData");
+      const text = buildMjsJson(fullArray, "galleryData");
       downloadText(text, filename);
       note(`Downloaded → ${filename}`);
       setDirty(false);
@@ -347,7 +384,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
 
       {/* actions */}
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        {dirty && <span className="text-red-600 font-medium">Unsaved order</span>}
+        {dirty && <span className="text-red-600 font-medium">Unsaved changes</span>}
 
         <button onClick={saveOrderHere} className="px-3 py-1 rounded-md border">
           Save Here (server)
@@ -371,18 +408,19 @@ export default function GalleryOrderer({ datasetPath = "" }) {
         )}
       </div>
 
-      {/* grid DnD — inline styles force grid even if Tailwind fails to load */}
+      {/* grid DnD */}
       <div
         className={`${!backupMade ? "pointer-events-none opacity-60" : ""}`}
         style={{
-          display: "grid", // force grid layout
-          gap: "0.75rem",  // ~ gap-3
+          display: "grid",
+          gap: "0.75rem",
           gridTemplateColumns: `repeat(auto-fill, minmax(${thumb}px, 1fr))`,
         }}
       >
         {filtered.map((it) => {
           const img = pickImage(it);
           const i = items.findIndex((x) => x.id === it.id);
+          const hidden = isHidden(it);
           return (
             <div
               key={it.id}
@@ -390,9 +428,30 @@ export default function GalleryOrderer({ datasetPath = "" }) {
               onDragStart={(e) => onDragStart(e, it.id)}
               onDragOver={onDragOver}
               onDrop={(e) => onDrop(e, it.id)}
-              className="border rounded-md bg-white overflow-hidden shadow-sm"
-              title={`#${i + 1} – ${it.id}`}
+              className="relative border rounded-md bg-white overflow-hidden shadow-sm"
+              title={`#${i + 1} – ${it.id}${hidden ? " (hidden)" : ""}`}
+              style={hidden ? { opacity: 0.5, filter: "grayscale(0.35)" } : undefined}
             >
+              {/* S/H tiny toggle */}
+              <div className="absolute top-1 right-1 z-10 flex gap-1">
+                <button
+                  type="button"
+                  className={`px-1.5 h-6 text-[11px] rounded ${hidden ? "bg-white border border-gray-300 text-gray-500" : "bg-green-600 text-white border border-green-700"}`}
+                  title="Show"
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleVisibility(it.id, false); }}
+                >
+                  S
+                </button>
+                <button
+                  type="button"
+                  className={`px-1.5 h-6 text-[11px] rounded ${hidden ? "bg-red-600 text-white border border-red-700" : "bg-white border border-gray-300 text-gray-500"}`}
+                  title="Hide"
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleVisibility(it.id, true); }}
+                >
+                  H
+                </button>
+              </div>
+
               {img ? (
                 <img
                   src={img}
@@ -405,6 +464,8 @@ export default function GalleryOrderer({ datasetPath = "" }) {
                   No image
                 </div>
               )}
+
+              {/* footer */}
               <div className="flex items-center justify-between px-2 py-1 text-xs border-t bg-gray-50">
                 <span className="font-medium">#{i + 1}</span>
                 {showTitles ? (
@@ -414,6 +475,11 @@ export default function GalleryOrderer({ datasetPath = "" }) {
                 ) : (
                   <span className="opacity-60 truncate ml-2">{it.id}</span>
                 )}
+                {hidden && (
+                  <span className="ml-2 inline-flex items-center px-1.5 py-[1px] text-[10px] rounded bg-red-100 text-red-700 border border-red-200">
+                    Hidden
+                  </span>
+                )}
               </div>
             </div>
           );
@@ -421,8 +487,9 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       </div>
 
       <div className="mt-4 text-xs opacity-70">
-        Drag to reorder. Click <strong>Save Here (server)</strong> to overwrite the dataset file via Netlify
-        function (same pattern as your editor). If the server save fails, use <strong>Download .mjs</strong> as a fallback.
+        Drag to reorder. Use the S/H buttons to show/hide items. Click <strong>Save Here (server)</strong> to overwrite
+        the dataset file via Netlify (order + visibility). If the server save fails, use <strong>Download .mjs</strong>
+        as a fallback.
       </div>
     </div>
   );

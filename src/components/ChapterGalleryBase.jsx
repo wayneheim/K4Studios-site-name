@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight } from "lucide-react";
 import ZoomOverlay from "./ZoomOverlay.jsx";
@@ -284,8 +284,15 @@ export default function ChapterGalleryBase({
   galleryKey,
   initialImageId
 }) {
-  // Filter out ghost id
-  const galleryData = (rawData || []).filter((e) => e && e.id !== "i-k4studios");
+ // Filter out ghost + hidden items
+const isGhost  = (e) => e && e.id === "i-k4studios";
+const isHidden = (e) => e?.visibility === "hidden" || e?.show === false || e?.hidden === true;
+
+const galleryData = useMemo(() => {
+  const arr = Array.isArray(rawData) ? rawData : [];
+  return arr.filter((e) => e && !isGhost(e) && !isHidden(e));
+}, [rawData]);
+
 
   const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);

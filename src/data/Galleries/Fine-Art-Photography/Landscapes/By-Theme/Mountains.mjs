@@ -19,12 +19,19 @@ export const galleryData = [
   {
     "id": "i-sTCJ5dz",
     "title": "The Grand    Photography by Wayne Heim",
-    "description": "The Grand is the highest peak in the Grand Teton Mountains of Wyoming.\n ©Wayne Heim",
+    "description": "The Grand, as they call it, is the highest peak in the Grand Teton Mountains of Wyoming.\n ©Wayne Heim",
     "alt": "The Grand    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/NXZgFbRFwKCHjxWRcmSXrnrBsjpPFbqhRsFnHtmMC/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/A",
     "keywords": [
-      "wayne heim", "landscape photography", "landscape", "nature photography", "nature", "mountains", "grand tetons", "k4 studios"
+      "wayne heim",
+      "landscape photography",
+      "landscape",
+      "nature photography",
+      "nature",
+      "mountains",
+      "grand tetons",
+      "k4 studios"
     ],
     "story": "The Grand is the highest peak in the Grand Teton Mountains of Wyoming.\n ©Wayne Heim",
     "notes": "",
