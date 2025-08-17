@@ -237,7 +237,6 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
               <button
                 type="button"
                 title="Never show again"
-                // Permanently suppress (store simple sentinel "1")
                 onClick={() => { try { localStorage.setItem(seenKey, "1"); } catch {}; setIsOpen(false); onClose && onClose(); }}
                 style={{ pointerEvents: "auto", background: "#fff", color: "#444", border: "1px solid #c0c0c0", borderRadius: 88, padding: "5px 5px", fontSize: 11, cursor: "pointer" }}
               >
@@ -284,15 +283,14 @@ export default function ChapterGalleryBase({
   galleryKey,
   initialImageId
 }) {
- // Filter out ghost + hidden items
-const isGhost  = (e) => e && e.id === "i-k4studios";
-const isHidden = (e) => e?.visibility === "hidden" || e?.show === false || e?.hidden === true;
+  // Filter out ghost + hidden items
+  const isGhost  = (e) => e && e.id === "i-k4studios";
+  const isHidden = (e) => e?.visibility === "hidden" || e?.show === false || e?.hidden === true;
 
-const galleryData = useMemo(() => {
-  const arr = Array.isArray(rawData) ? rawData : [];
-  return arr.filter((e) => e && !isGhost(e) && !isHidden(e));
-}, [rawData]);
-
+  const galleryData = useMemo(() => {
+    const arr = Array.isArray(rawData) ? rawData : [];
+    return arr.filter((e) => e && !isGhost(e) && !isHidden(e));
+  }, [rawData]);
 
   const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -553,9 +551,10 @@ const galleryData = useMemo(() => {
 
                   {/* IMAGE + ARROWS COLUMN */}
                   <div
-                    className="flex flex-col items-center w-full relative"
-                    style={{ transform: !isMobile ? 'translateY(2rem)' : 'none', transition: 'transform .25s ease' }}
-                  >
+  className="flex flex-col items-center w-full relative"
+  style={{ marginTop: !isMobile ? '2rem' : 0 }}
+>
+
                     <div className="w-full relative flex items-center justify-center mb-0">
                       {/* Left Arrow (mobile) */}
                       <button
@@ -603,7 +602,7 @@ const galleryData = useMemo(() => {
 
                         {/* Collector Notes (desktop) */}
                         {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
-                          <div className="md:flex flex-col items-start relative" style={isMobile ? { visibility: 'hidden' } : {}}>
+                          <div className="md:flex flex-col items-start relative" style={{ position: 'relative', zIndex: 100 }}>
                             <button
                               type="button"
                               onClick={() => setShowNotes((p) => !p)}
@@ -622,28 +621,42 @@ const galleryData = useMemo(() => {
                               )}
                             </button>
                             <AnimatePresence>
-                              {showNotes && (
-                                <motion.div
-                                  key="collector-notes-desktop"
-                                  initial={{ opacity: 0, x: -32 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  exit={{ opacity: 0, x: -32 }}
-                                  transition={{ duration: 0.38, ease: [0.33, 1, 0.68, 1] }}
-                                  className="absolute -left-3 top-11 z-50 w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
-                                  style={{ backgroundColor: "#cdd1c5ff", border: "1px solid rgb(109, 111, 114)", minWidth: "260px", maxWidth: "90vw", marginLeft: "16px" }}
-                                >
-                                  <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
-                                    <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
-                                      Collector Notes:
-                                    </strong>
-                                    <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px", background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))", filter: "drop-shadow(0 1px 2px #444)" }} />
-                                  </div>
-                                  {galleryData[currentIndex].notes.split("\n\n").map((para, idx) => (
-                                    <p key={idx} className="mb-3 last:mb-0">{para}</p>
-                                  ))}
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
+  {showNotes && (
+    <motion.div
+      key="collector-notes-desktop"
+      initial={{ opacity: 0 }}              // fade only
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.20, ease: [0.33, 1, 0.68, 1] }}
+      className="w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
+      style={{
+        position: 'fixed',                  // true fixed to viewport
+        zIndex: 100000,                     // above everything
+        left: 'calc(50% - 40px)',           // your tweaked horizontal position
+        top: '260px',                       // aligned to button bottom
+        willChange: 'opacity',
+        backgroundColor: '#cdd1c5ff',
+        border: '1px solid rgba(151, 153, 156, 1)',
+        minWidth: '260px',
+        maxWidth: '90vw',
+        marginLeft: '0px'
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
+        <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
+          Collector Notes:
+        </strong>
+        <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px",
+                       background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))",
+                       filter: "drop-shadow(0 1px 2px #444)" }} />
+      </div>
+      {galleryData[currentIndex].notes.split("\n\n").map((para, idx) => (
+        <p key={idx} className="mb-3 last:mb-0">{para}</p>
+      ))}
+    </motion.div>
+  )}
+</AnimatePresence>
+
                           </div>
                         )}
                       </div>
@@ -785,24 +798,23 @@ const galleryData = useMemo(() => {
                     </div>
 
                     {!showStoryShow && (
-  <button
-    type="button"
-    onClick={() => { if (!tourOpen()) setShowStoryShow(true); }}
-    aria-label="Play K4 Slideshow"
-    title="Play K4 Story Show"
-    className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
-    style={{ letterSpacing: ".02em" }}
-    data-slideshow-btn
-  >
-    <span className="inline-flex items-center justify-center w-4 h-4 text-gray-400 group-hover:text-red-700 transition-colors">
-      ▶
-    </span>
-    <span className="text-sm font-medium text-gray-400 group-hover:text-gray-500 transition-colors">
-      Play Show
-    </span>
-  </button>
-)}
-
+                      <button
+                        type="button"
+                        onClick={() => { if (!tourOpen()) setShowStoryShow(true); }}
+                        aria-label="Play K4 Slideshow"
+                        title="Play K4 Story Show"
+                        className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
+                        style={{ letterSpacing: ".02em" }}
+                        data-slideshow-btn
+                      >
+                        <span className="inline-flex items-center justify-center w-4 h-4 text-gray-400 group-hover:text-red-700 transition-colors">
+                          ▶
+                        </span>
+                        <span className="text-sm font-medium text-gray-400 group-hover:text-gray-500 transition-colors">
+                          Play Show
+                        </span>
+                      </button>
+                    )}
 
                     {/* Collector Notes Panel (mobile) */}
                     {galleryData[currentIndex]?.notes && isMobile && (
@@ -945,39 +957,39 @@ const galleryData = useMemo(() => {
                     </div>
 
                     {/* Desktop Nav Buttons */}
-<div className="hidden md:flex justify-center items-center gap-6 pt-4" data-image-id={currentId}>
-  <button
-    type="button"
-    onClick={goPrev}
-    className="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
-    title="Back"
-    data-prev-btn
-  >
-    <SquareChevronLeft className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
-    <span className="sr-only">Previous</span>
-  </button>
+                    <div className="hidden md:flex justify-center items-center gap-6 pt-4" data-image-id={currentId}>
+                      <button
+                        type="button"
+                        onClick={goPrev}
+                        className="bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
+                        title="Back"
+                        data-prev-btn
+                      >
+                        <SquareChevronLeft className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
+                        <span className="sr-only">Previous</span>
+                      </button>
 
-  <button
-    type="button"
-    onClick={goGrid}
-    className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
-    title="Index View"
-    data-grid-btn
-  >
-    <Grid className="w-5 h-5 text-gray-400 hover:text-blue-600 transition-colors" />
-  </button>
+                      <button
+                        type="button"
+                        onClick={goGrid}
+                        className="bg-gray-100 w-11 h-11 -mt-16 rounded-full shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors"
+                        title="Index View"
+                        data-grid-btn
+                      >
+                        <Grid className="w-5 h-5 text-gray-400 hover:text-blue-600 transition-colors" />
+                      </button>
 
-  <button
-    type="button"
-    onClick={goNext}
-    className={`bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors ${showArrowHint ? 'animate-pulse' : ''}`}
-    title="Next"
-    data-next-btn
-  >
-    <SquareChevronRight className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
-    <span className="sr-only">Next</span>
-  </button>
-</div>
+                      <button
+                        type="button"
+                        onClick={goNext}
+                        className={`bg-white p-1 -mt-16 rounded shadow flex items-center justify-center border border-gray-200 hover:border-gray-300 transition-colors ${showArrowHint ? 'animate-pulse' : ''}`}
+                        title="Next"
+                        data-next-btn
+                      >
+                        <SquareChevronRight className="w-5 h-5 text-gray-300 hover:text-gray-500 transition-colors" />
+                        <span className="sr-only">Next</span>
+                      </button>
+                    </div>
 
                   </div>
                 </motion.div>
@@ -989,7 +1001,7 @@ const galleryData = useMemo(() => {
               <div className="fixed top-0 right-0 h-full z-[9999] bg-white overflow-y-auto shadow-xl transition-all duration-300 w-[90vw] md:w-[50vw] lg:w-[25vw]">
                 <MobileMiniDrawer
                   onClose={() => setShowMiniMenu(false)}
-                  currentPage={galleryData[currentIndex]?.title?.trim()} // Normalize current page info
+                  currentPage={galleryData[currentIndex]?.title?.trim()}
                 />
               </div>
             )}
