@@ -119,7 +119,7 @@ const btnHover = "hover:opacity-90";
 const btnGray = "bg-gray-100 border-gray-300 text-gray-800";
 const btnTan = "bg-amber-100 border-amber-300 text-amber-900";
 const btnOrange = "bg-orange-100 border-orange-300 text-orange-900";
-const btnBlue = "bg-blue-600 border-blue-700 text-white";
+const btnBlue = "bg-blue-300 border-blue-700 text-black";
 
 /* ---------- Star Rating (1–5) ---------- */
 function StarRating({ value = 0, onChange }) {
@@ -382,7 +382,7 @@ export default function GalleryEditorPro() {
   }
 
   async function saveCurrentOnly() {
-    if (!selectedPath || !backupData || !current) return;
+    if (!backupMade || !selectedPath || !backupData || !current) return;
     const payload = {
       datasetPath: selectedPath.replace(/^\//, ""),
       id: current.id,
@@ -523,6 +523,9 @@ export default function GalleryEditorPro() {
   const total = filtered.length;
   const pos = total ? idx + 1 : 0;
 
+  // one flag for button locking
+  const itemLocked = !backupMade || !current;
+
   return (
     <div className="relative p-6 max-w-6xl mx-auto text-sm">
       {/* MAIN UI (gets dimmed/disabled when guard is active) */}
@@ -565,12 +568,16 @@ export default function GalleryEditorPro() {
             </>
           ) : null}
 
+
           <a
             href={`/admin/GalleryReorderer?dataset=${datasetParam}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => { clearDraftForCurrent(keyLS); setShowRefreshGuard(true); }}
-            className={`${btnBase} ${btnTan} ${btnHover}`}
+            className={`${btnBase} ${btnHover}`}
+            style={{ background: '#e4dae9ff', borderColor: '#836fa5ff', color: '#31233bff' }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#b4acd4ff')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#e4dae9ff')}
           >
             Open Reorder
           </a>
@@ -580,7 +587,10 @@ export default function GalleryEditorPro() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => { clearDraftForCurrent(keyLS); setShowRefreshGuard(true); }}
-            className={`${btnBase} ${btnOrange} ${btnHover}`}
+            className={`${btnBase} ${btnHover}`}
+            style={{ background: '#ebc3e2ff', borderColor: '#7693beff', color: '#2b1a29ff' }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#b996b6ff')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#ebc3e2ff')}
           >
             Import Images…
           </a>
@@ -592,10 +602,10 @@ export default function GalleryEditorPro() {
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
             placeholder="Search id/title/text/keywords…"
-            className="w-72 border rounded-md px-2 py-1"
+            className="w-72 border  rounded-md px-2 py-1"
           />
-          <button onClick={() => move(-1)} className={`${btnBase} bg-white ${btnHover}`}>Prev</button>
-          <button onClick={() => move(1)} className={`${btnBase} bg-white ${btnHover}`}>Next</button>
+          <button onClick={() => move(-1)} className={`${btnBase} bg-green-100 ${btnHover}`}>Prev</button>
+          <button onClick={() => move(1)} className={`${btnBase} bg-green-300 ${btnHover}`}>Next</button>
           <span className="opacity-70">{pos}/{total} (of {data.length})</span>
         </div>
 
@@ -603,29 +613,37 @@ export default function GalleryEditorPro() {
         <div className="mb-3 flex flex-wrap items-center gap-2">
           {dirty && <span className="text-red-600 font-medium">Unsaved changes</span>}
 
-          {/* NEW: Show/Hide */}
+          {/* Show/Hide */}
           <button
             onClick={toggleVisibility}
-            disabled={!backupMade || !current}
-            className={`${btnBase} bg-yellow-50 border-yellow-300 text-yellow-800 disabled:opacity-50 ${btnHover}`}
+            disabled={itemLocked}
+            className={`${btnBase} bg-yellow-50 border-yellow-300 text-yellow-800 ${itemLocked ? "opacity-50 cursor-not-allowed" : ""} ${btnHover}`}
             title={current?.visibility === "hidden" ? "Show this image on the site" : "Hide this image from the site"}
           >
             {current?.visibility === "hidden" ? "Show On Site" : "Hide From Site"}
           </button>
 
-          {/* NEW: Delete from this gallery */}
+          {/* Delete from this gallery */}
           <button
             onClick={deleteCurrentFromGallery}
-            disabled={!backupMade || !current}
-            className={`${btnBase} bg-red-50 border-red-300 text-red-700 disabled:opacity-50 ${btnHover}`}
+            disabled={itemLocked}
+            className={`${btnBase} bg-red-50 border-red-300 text-red-700 ${itemLocked ? "opacity-50 cursor-not-allowed" : ""} ${btnHover}`}
             title="Remove this image entry from this gallery file (non-destructive elsewhere)"
           >
             Delete Image
           </button>
 
-          <button onClick={saveCurrentOnly} className={`${btnBase} ${btnBlue} ${btnHover}`}>
+          {/* Save THIS image (server patch) */}
+          <button
+            onClick={saveCurrentOnly}
+            disabled={itemLocked}
+            className={`${btnBase} ${btnBlue} ${itemLocked ? "opacity-50 cursor-not-allowed" : ""} ${btnHover}`}
+            title={itemLocked ? "Unlock editing with a backup first" : "Save just this image to the dataset on the server"}
+          >
             Save This Image (.mjs)
           </button>
+
+          {/* These remain available */}
           <button onClick={saveAllAsMjs} className={`${btnBase} bg-white ${btnHover}`}>
             Save All (.mjs)
           </button>
