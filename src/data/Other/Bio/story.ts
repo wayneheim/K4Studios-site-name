@@ -10,7 +10,9 @@ export const painterlyStory = [
   {
     subhead: "The Painterly Philosophy",
     paragraphs: [
-      "My painterly photography blends documentary roots with the expressive brushwork of pictorialist tradition. Each piece is more than a photo—it’s a moment resurrected, sculpted through light, shadow, and intention. I’m not content with merely documenting the world. I aim to shape it, bend time around it, and pull the viewer through a narrative space where imagination and memory collide. This approach has been called cinematic, illustrative, even haunting. I just call it honest."
+      "My painterly photography blends documentary roots with the expressive brushwork of pictorialist tradition. Each piece is more than a photo—it’s a moment resurrected, sculpted through light, shadow, and intention. I’m not content with merely documenting the world. I aim to shape it, bend time around it, and pull the viewer through a narrative space where imagination and memory collide.",
+      "Others may chase painterly effects for surface impact. I distill something deeper: quiet truths, cinematic structure, and the emotional weight of a story not yet fully told. My subjects aren’t costume—they’re character. And the work isn’t about nostalgia—it’s about everything left unsaid.",
+      "Where others mimic, I aim to define."
     ]
   },
 
@@ -53,6 +55,13 @@ export const painterlyStory = [
     subhead: "This Site Is a Conversation",
     paragraphs: [
       "This site is not just a portfolio—it’s a conversation between past and present, a map of the moments I’ve chased, the stories I’ve tried to honor, and the style I’ve worked relentlessly to make my own. If you walk away remembering just one thing, let it be this: *Embrace the Past. Live the Story.*"
+    ]
+  },
+
+  {
+    subhead: "Artist Statement",
+    paragraphs: [
+      "I don’t shoot moments. I shoot meaning. I make images that live at the edge of memory and myth—cinematic, structured, and always in service of story."
     ]
   }
 ];
