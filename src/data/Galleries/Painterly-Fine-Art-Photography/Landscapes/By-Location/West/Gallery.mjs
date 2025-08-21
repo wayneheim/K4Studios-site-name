@@ -19,31 +19,23 @@ export const galleryData = [
   
   {
     "id": "i-G6gftd8",
-    "title": "Painterly Mountain Photography: Don't fence me in.",
-    "description": "Fine art painterly mountain photography of setting sun with fence and yellow golden rod grass. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Don't fence me in.",
+    "title": "Don't fence me in.",
+    "description": "Painterly mountain photography capturing a golden-hour moment of a rustic split-rail fence stretching toward the distant peaks. This fine art image by Wayne Heim evokes a sense of solitude, open space, and nostalgic Americana, with warm light pouring across yellow goldenrod grass and the foothills beyond. Perfect for collectors of Western wall art, mountain home decor, or anyone seeking atmospheric fine art prints rooted in place and time. © Wayne Heim",
+    "alt": "Rustic fence in golden grass at sunset, with painterly mountains in the background.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MxjqGpG95k2VzKb8567hQDzprHc97MBJq8fdxFwBb/XL/Painterly%2520Landscape%2520Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/A",
     "keywords": [
-      "Western Wall art",
-      "western prints",
-      "western photos",
-      "western mountain photography",
-      "western interior design",
-      "western home decor",
-      "western fine art",
-      "rustic mountain photos",
-      "mountain photography",
-      "man cave decor",
-      "Fine art landscape photography",
-      "iconic western photography",
-      "painterly photography",
-      "Western photography prints",
-      "western landscape photography",
-      "painterly landscape photography"
+      "western fine art photography",
+      "painterly mountain photography",
+      "golden hour western landscape",
+      "rustic split-rail fence art",
+      "western wall decor",
+      "open range photography",
+      "mountain home artwork",
+      "solitude in western art"
     ],
-    "story": "Fine art painterly mountain photography of setting sun with fence and yellow golden rod grass. © Wayne Heim",
-    "notes": "",
+    "story": "Crossing the valley. Fencing marking its zones. Mountains watching on, silent and eternal, as the goldenrod of summer restakes its claim.\n\nWaving in the fading light — not asking, not pleading — just saying: It’s always been mine.",
+    "notes": "With a nod to the luminist palette and the compositional stillness of the Hudson River School, this image blends pictorialist sensibilities with frontier grit. The fence — diagonally slicing the frame — offers more than structure; it’s a visual metaphor. Heim’s painterly process softens the realism into memory, letting light and land speak through brush-toned pixels. Like Wyeth or Adams, this work invites contemplation, not spectacle. A quiet masterwork for those who understand that freedom and confinement are often divided by a line of shadow.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -54,30 +46,22 @@ export const galleryData = [
   {
     "id": "i-5BJh8BQ",
     "title": "Closed",
-    "description": "Painterly landscape photography of old white church with \"closed\" sign on front door in South Dakota, the foothills of the Western landscape. © Wayne Heim",
-    "alt": "Closed",
+    "description": "Painterly fine art photograph of an old white clapboard church marked “Closed,” set against the vast prairie sky of South Dakota. This Western landscape captures both the beauty and quiet loss of rural life, with sweeping clouds, subtle color, and rich textures evoking a sense of timelessness and solitude. Ideal for collectors of Western wall art, Americana, or evocative frontier photography. © Wayne Heim",
+    "alt": "Old white church with a “Closed” sign under dramatic skies, framed by prairie grass and wire fence.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/Mb9Zsz9FFpchfHGTBd5qSrWDtpB6dDwVmdHdZj56q/XL/Image%2520s2-2b-490-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/A",
     "keywords": [
-      "Western Wall art",
-      "western prints",
-      "western photos",
-      "western mountain photography",
-      "western interior design",
-      "western home decor",
-      "western fine art",
-      "rustic mountain photos",
-      "mountain photography",
-      "man cave decor",
-      "Fine art landscape photography",
-      "iconic western photography",
-      "painterly photography",
-      "Western photography prints",
-      "western landscape photography",
-      "painterly landscape photography"
+      "western fine art photography",
+      "rural church art",
+      "abandoned western buildings",
+      "painterly western landscape",
+      "closed church photo",
+      "prairie chapel",
+      "South Dakota photography",
+      "americana wall decor"
     ],
-    "story": "Painterly landscape photography of old white church with \"closed\" sign on front door in South Dakota, the foothills of the Western landscape. © Wayne Heim",
-    "notes": "",
+    "story": "God’s country. Endless fields. The sky sings its praise.\n\nA simple cross — a quiet command at the intersection of heaven and earth. Closed, the sign says.\n\nThe journey is ours to make.",
+    "notes": "Heim’s composition plays with contradiction — order and entropy, reverence and vacancy. The church is placed cleanly in a third, yet the open grassland creeps in like time reclaiming space. Painterly soft tones and cloud drama echo the pictorialist tradition, yet the subject resists nostalgia. There's dignity here, but also finality — a visual elegy for forgotten sanctuaries of the West. Think Andrew Wyeth with a Midwestern accent.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -87,31 +71,23 @@ export const galleryData = [
   },
   {
     "id": "i-zwwCqFz",
-    "title": "Painterly Mountain Photography: Buffalo Bill Reservoir",
-    "description": "Photograph of sunset at the Buffalo bill Reservoir in Wyoming outside of Cody. Order Western prints of fine art painterly Western mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Buffalo Bill Reservoir",
+    "title": "Buffalo Bill Reservoir at Sundown",
+    "description": "Painterly fine art photograph of the Buffalo Bill Reservoir at sunset, located just outside Cody, Wyoming. The glowing sky reflects off tranquil water, framed by rolling meadows and rugged cliffs of the American West. Wayne Heim’s painterly landscape photography captures the mood and magic of the open plains, perfect for Western wall decor, rustic home design, or collectors of fine art mountain prints. © Wayne Heim",
+    "alt": "Painterly sunset over Buffalo Bill Reservoir near Cody, Wyoming, with glowing clouds and mirrored reflections in still water.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/MjJgkfqBzNbp4bznBSSmKmVKPgxHgrq4M6F4tL69n/XL/_O1H0149-Enhanced-NR-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/A",
     "keywords": [
-      "Western Wall art",
-      "western prints",
-      "western photos",
-      "western mountain photography",
-      "western interior design",
-      "western home decor",
-      "western fine art",
-      "rustic mountain photos",
-      "mountain photography",
-      "man cave decor",
-      "Fine art landscape photography",
-      "iconic western photography",
-      "painterly photography",
-      "Western photography prints",
-      "western landscape photography",
-      "painterly landscape photography"
+      "western sunset photography",
+      "painterly mountain photography",
+      "Buffalo Bill Reservoir print",
+      "Cody Wyoming fine art",
+      "rustic Western landscape",
+      "tranquil reservoir sunset",
+      "Western wall art",
+      "fine art mountain scene"
     ],
-    "story": "Photograph of sunset at the Buffalo bill Reservoir in Wyoming outside of Cody. Order Western prints of fine art painterly Western mountain photography. © Wayne Heim",
-    "notes": "",
+    "story": "Evening hums. The day exhales. Mountains shift to shadow, but the light refuses to leave — not just yet.\n\nWater holds the last word — mirroring fire, speaking in color. A quiet end.",
+    "notes": "This image blends precision and mood in a way reminiscent of Bierstadt’s later works — expansive yet intimate. The horizontal sweep is grounded by the water’s stillness, anchoring the composition while allowing the sky’s drama to unfold. Heim's signature painterly processing pulls painterly warmth from the clouds and foreground, giving this piece a visual harmony that invites stillness and reflection. Ideal for spaces meant to breathe.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -121,31 +97,28 @@ export const galleryData = [
   },
   {
     "id": "i-SNtZNVm",
-    "title": "Fine art painterly photo: Sunset at Horseshoe Bend.",
-    "description": "Fine art painterly mountain photography of red rocks and river bend. Arizona © Wayne Heim",
-    "alt": "Fine art painterly photo: Sunset at Horseshoe Bend.",
+    "title": "Sunset at Horseshoe Bend",
+    "description": "Fine art painterly photograph of sunset over Horseshoe Bend in Arizona, where the Colorado River winds through red sandstone cliffs. Wayne Heim’s signature painterly treatment enhances the texture and drama of the scene, turning natural beauty into timeless narrative. Perfect for collectors of Western wall art, rustic desert landscapes, and fine art photography rooted in place and myth. © Wayne Heim",
+    "alt": "Painterly photograph of Horseshoe Bend at sunset, with deep canyon walls and river curve bathed in warm light.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/KGr2T5jDwq7DT4RCJ3SWq3SrjKNkdsvZr995xmSc9/XL/_DSF4943-605-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/A",
     "keywords": [
-      "Western Wall art",
-      "western prints",
-      "western photos",
-      "western mountain photography",
-      "western interior design",
-      "western home decor",
-      "western fine art",
-      "rustic mountain photos",
-      "mountain photography",
-      "man cave decor",
-      "Fine art landscape photography",
+      "Horseshoe Bend fine art print",
+      "painterly canyon landscape",
+      "Arizona river photography",
+      "Western desert wall art",
+      "rustic canyon decor",
+      "Colorado River sunset",
+      "red rock art print",
+      "fine art desert photography\nlandscape photography",
       "iconic western photography",
       "painterly photography",
       "Western photography prints",
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Fine art painterly mountain photography of red rocks and river bend. Arizona © Wayne Heim",
-    "notes": "",
+    "story": "Carved slow, like a memory that never fades. Stone pressed by time — and water that never stops asking.\n\nThe light bends too, sinking into every scar. Silence here is not emptiness. It’s awe made visible.",
+    "notes": "This image echoes the tonal mastery of 19th-century luminists, yet feels unmistakably modern in its restraint. The horseshoe curve is rendered not as spectacle, but as symbol — of time, of change, of reverence. Heim’s painterly approach adds warmth and grain, lifting it into the pictorialist tradition. Light meets form in a composition that feels both grounded and monumental. A museum-worthy addition to any fine Western or desert-themed collection.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -155,31 +128,23 @@ export const galleryData = [
   },
   {
     "id": "i-g7SCMTD",
-    "title": "Painterly Mountain Photography: Break in the Storm",
-    "description": "Fine art painterly mountain photography of classic Western mountains in Etna Wyoming in the winter Buy a Western art print today to add the sperit of the old west to your home decor. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Break in the Storm",
+    "title": "Break in the Storm",
+    "description": "Painterly fine art photograph of snow-covered Western mountains in Etna, Wyoming, captured during a fleeting break in a winter storm. Dramatic clouds give way to filtered light, highlighting the ridges and trees with striking contrast. Wayne Heim’s painterly process brings texture and depth to this Western landscape, perfect for rustic home decor, mountain lodges, or collectors of moody fine art photography. © Wayne Heim",
+    "alt": "Snow-covered Western mountains near Etna, Wyoming, under brooding clouds with sunlight breaking through.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/KTqsh5KnVGMGw23x6jw4JT7j886bqrPZmDfjRkJ9L/XL/P1030226-523-548-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/A",
     "keywords": [
-      "Western Wall art",
-      "western prints",
-      "western photos",
       "western mountain photography",
-      "western interior design",
-      "western home decor",
-      "western fine art",
-      "rustic mountain photos",
-      "mountain photography",
-      "man cave decor",
-      "Fine art landscape photography",
-      "iconic western photography",
-      "painterly photography",
-      "Western photography prints",
-      "western landscape photography",
-      "painterly landscape photography"
+      "Wyoming snow storm art",
+      "painterly winter landscape",
+      "Etna Wyoming fine art",
+      "dramatic mountain decor",
+      "stormy Western wall art",
+      "rustic lodge photography",
+      "fine art winter print"
     ],
-    "story": "Fine art painterly mountain photography of classic Western mountains in Etna Wyoming in the winter Buy a Western art print today to add the sperit of the old west to your home decor. © Wayne Heim",
-    "notes": "",
+    "story": "Clouds retreat. Just for a moment. The mountain shows its shape — cut from ice and shadow.\n\nA break in the storm, but not the end of it. Stillness sharp as wind. Light like a warning. Or a promise.",
+    "notes": "A masterclass in tonal restraint, this image captures the cinematic tension of the high mountain West. Heim renders the landscape with quiet drama — dark pines stitched into snowfields, and peaks that emerge like sculpted myths. The painterly technique echoes 19th-century photogravure with a modern sensibility. Ideal for collectors drawn to isolation, clarity, and atmosphere.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -189,9 +154,9 @@ export const galleryData = [
   },
   {
     "id": "i-jWDDpC4",
-    "title": "Western Cotton Candy -  Jackson Hole Wyoming.",
+    "title": "Western Cotton Candy",
     "description": "Painterly Photograph of some iconic Western Cotton Candy- A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign. - Jackson Hole Wyoming. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Western Cotton Candy -  Jackson Hole Wyoming.",
+    "alt": "Painterly sunset cloud floating over open Wyoming fields near Jackson Hole, with soft colors and distant hills.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/NNXq3TdCZcGBDnzwqm65v5j69KWgPmpQWPrg7CgDG/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-jWDDpC4/A",
     "keywords": [
@@ -212,8 +177,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Painterly Photograph of some iconic Western Cotton Candy- A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign. - Jackson Hole Wyoming. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
-    "notes": "",
+    "story": "Pink defiance drifting over the sage.\n\nNo rush. No rules. The sky’s sweet defiance. Just cotton candy at cruising altitude.\n\n55 mph. No speeding here — it’s already miles ahead.",
+    "notes": "A masterclass in restraint and humor, this image distills the vastness of the American West into a single playful gesture — a lone pink cloud, painted like a brushstroke in an otherwise orderly sky. Heim’s painterly process softens the transition between realism and abstraction, evoking tonalism with a wink. The low horizon and vertical orientation emphasize the weight of sky over land, echoing classical landscape framing while letting the mood breathe. A quietly joyful piece that invites the viewer to pause, smile, and wonder what it means to truly drift.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -224,8 +189,8 @@ export const galleryData = [
   {
     "id": "i-6PzCQW9",
     "title": "Painterly Mountain Photography: Mormon Row, Jackson Hole Wyoming",
-    "description": "Western photo of lone cowboy and old barn from Mormon Row in Jackson Hole Wyoming at sunset. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Mormon Row, Jackson Hole Wyoming",
+    "description": "Painterly fine art photograph of a historic Mormon Row barn near Jackson Hole, Wyoming. Captured under dramatic skies with sweeping light, this image pays tribute to the resilience and beauty of the Western frontier. Ideal for collectors of rustic landscape photography, fine art Americana, or Western home décor with timeless character. © Wayne Heim",
+    "alt": "Painterly Western photo of a historic barn on Mormon Row in Jackson Hole, Wyoming, with dramatic sky and mountains in the background.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/KSgLV7GpfGnLTFTRBBDzQ2Z8G6kFdCbBXSsQzTbSd/XL/Painterly%2520Landscape%2520Photo_IMG6307_tonemapped-546-547-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/A",
     "keywords": [
@@ -246,8 +211,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Western photo of lone cowboy and old barn from Mormon Row in Jackson Hole Wyoming at sunset. Fine art painterly mountain photography. © Wayne Heim",
-    "notes": "",
+    "story": "The barn holds its ground. A lone cowboy watches from the edge. No words. No motion.\n\nThe wind, the wood, and the mountains tell the story.",
+    "notes": "This piece is a study in weathered strength — a structure both iconic and personal. Heim’s painterly process emphasizes texture: the layered wood, windblown dust, and a sky that feels brushed in. The barn’s placement obeys classical rules of thirds while anchoring the vast openness. Echoes of Weston, but more romantic; whispers of the pictorialists, but more grounded. An image that feels both rooted and reverent — a cornerstone of any Western art collection.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -258,30 +223,22 @@ export const galleryData = [
   {
     "id": "i-N226DMX",
     "title": "In the Weeds - Tetons in Autumn - Jackson Hole Wyoming.",
-    "description": "Teton mountains reflecting in the stream at Schwabacher Landing in the fall near Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "In the Weeds - Tetons in Autumn - Jackson Hole Wyoming.",
+    "description": "Painterly fine art photograph of the Teton Mountains in autumn, reflected in a quiet stream at Schwabacher Landing near Jackson Hole, Wyoming. Captured amid golden grasses and evergreens, this peaceful Western landscape offers serene texture and balance. Ideal for collectors of fine art mountain photography, rustic home decor, or reflective Western nature scenes. © Wayne Heim",
+    "alt": "Painterly autumn view of the Teton Mountains reflected in still water, framed by golden grasses and evergreen trees near Jackson Hole, Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MQ8DN9x389fFjh3V5b3nDWZP8H7J85tPJLrvHqttn/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-N226DMX/A",
     "keywords": [
-      "Western Wall art",
-      "western prints",
-      "western photos",
-      "western mountain photography",
-      "western interior design",
-      "western home decor",
-      "western fine art",
-      "rustic mountain photos",
-      "mountain photography",
-      "man cave decor",
-      "Fine art landscape photography",
-      "iconic western photography",
-      "painterly photography",
-      "Western photography prints",
-      "western landscape photography",
-      "painterly landscape photography"
+      "Teton autumn photography",
+      "Schwabacher Landing art",
+      "painterly mountain landscape",
+      "Jackson Hole fall print",
+      "golden grasses and river reflection",
+      "peaceful western nature art",
+      "Grand Teton fine art photo",
+      "rustic mountain decor"
     ],
-    "story": "Teton mountains reflecting in the stream at Schwabacher Landing in the fall near Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
-    "notes": "",
+    "story": "Hidden in the reeds, the world slows.\n\nMountains whisper in reflection, clouds drift twice,\nand time forgets to move. No need to chase the wild —\njust listen to the mountain song from the weeds.",
+    "notes": "This piece invites stillness. Wayne Heim’s perspective — low, intimate, and grounded in golden brush — subverts the typical grand vista, instead embracing the quiet edge of the scene. Painterly processing adds warmth and texture, evoking tonalism and early American landscape traditions. The mirrored symmetry of mountain and water is softened by natural imperfection, creating a mood of meditation rather than spectacle. A perfect companion piece for spaces meant to breathe and reflect.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -291,9 +248,9 @@ export const galleryData = [
   },
   {
     "id": "i-NHkKNbH",
-    "title": "Painterly Photo: Schools Out",
-    "description": "Fine art painterly photography of old brick school building and white fence in Georgetown Colorado.",
-    "alt": "Painterly Photo: Schools Out",
+    "title": "Schools Out",
+    "description": "Painterly fine art photograph of an old brick schoolhouse framed by white picket fences in Georgetown, Colorado. Though long closed, the scene carries echoes of learning and memory — where weathered walls and worn paths speak to generations past. Perfect for collectors of nostalgic Americana, historic Western architecture, and fine art photography that captures stories still quietly unfolding.",
+    "alt": "Painterly photo of an old brick schoolhouse and white picket fences in Georgetown, Colorado.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/KqfCwQbSB8vMS4QqhbsGQCS37CW56xRXhMpWrLkq3/XL/test%2520nothing-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/A",
     "keywords": [
@@ -314,8 +271,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Fine art painterly photography of old brick school building and white fence in Georgetown Colorado.",
-    "notes": "",
+    "story": "The bell’s gone silent. The doors long closed.\n\nBut the fences still lean in like they’re listening.\nAnd the walls — they remember everything.\n\nSchool’s out. But the lessons linger on.",
+    "notes": "Schools Out captures the beauty of a moment after the moment — a scene where silence carries weight. Heim’s painterly technique enhances the soft wear of wood and brick, letting light settle into every surface like memory. The composition draws the eye inward with symmetry and stillness, evoking both structure and sentiment. There’s a rhythm to the spacing — fence, window, shadow — like verses to a poem once recited here.\n\nThough the students are long gone, this piece holds the enduring echo of place-based learning — where the building becomes both artifact and storyteller. Ideal for collectors who appreciate Americana with emotional depth and painterly restraint.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -326,8 +283,8 @@ export const galleryData = [
   {
     "id": "i-Q2NXpjG",
     "title": "Yellowstone Falls: After the Storm",
-    "description": "Fine art painterly photo of a waterfall in Yellowstone National Park. © Wayne Heim",
-    "alt": "Yellowstone Falls: After the Storm",
+    "description": "Painterly fine art photograph of Yellowstone Falls in Yellowstone National Park, captured in the aftermath of a storm. Towering cliffs, rushing water, and rising mist create a cinematic Western scene filled with motion and atmosphere. Ideal for collectors of fine art nature photography, rustic home decor, and dramatic landscape prints rooted in iconic American wilderness. © Wayne Heim",
+    "alt": "Painterly photo of Yellowstone Falls cascading into a misty canyon, surrounded by forest and distant cliffs in Yellowstone National Park.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/LV2xRFRMxMjzJ57BxhwWj79D5tc3NFzz3fdMQFRPD/XL/Painterly%2520Landscape%2520Photo_DSF4260-Pano-Edit-480-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/A",
     "keywords": [
@@ -348,8 +305,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Fine art painterly photo of a waterfall in Yellowstone National Park. © Wayne Heim",
-    "notes": "",
+    "story": "Yellowstone. Rugged. Unyielding.\n\nCarved by time, shaped by storm. The water roars.\nThe canyon holds. Not just a place — a legacy\nwritten in stone and carried on the whispers of the wind and mist.",
+    "notes": "This image balances grandeur and intimacy — capturing not just a location, but a moment suspended in elemental power. Heim’s painterly processing heightens the play between texture and light: the soft rise of mist, the razor edge of cliff, the sheer volume of water rendered in brush-toned pixels. Echoes of Hudson River School grandeur meet the tonal tension of pictorialism. A signature piece for those who seek nature not as background, but as force.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -359,9 +316,9 @@ export const galleryData = [
   },
   {
     "id": "i-C2w6Kpb",
-    "title": "Painterly Photography: Break time.",
-    "description": "Painterly photo of old rustic western style stock room with break table, stove, chairs, and checkerboard. Place that time forgot. Fine art painterly photography © Wayne Heim",
-    "alt": "Painterly Photography: Break time.",
+    "title": "Break time long over.",
+    "description": "Painterly fine art photograph of a rustic Western break room, featuring weathered chairs, a wood stove, and a checkerboard left mid-game. Captured in warm, nostalgic tones, this scene from a place long forgotten evokes echoes of work, rest, and the passage of time. Perfect for collectors of vintage Americana, Western interiors, and fine art photography rich with story. © Wayne Heim",
+    "alt": "Painterly photo of an abandoned Western break room with wooden chairs, stove, and a checkerboard left mid-game.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/Ktqp8bknvhn49fQQrkB9jWQdB6pRHx5tQZf6sWhs3/XL/_O1H1144-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/A",
     "keywords": [
@@ -382,8 +339,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Painterly photo of old rustic western style stock room with break table, stove, chairs, and checkerboard. Place that time forgot. Fine art painterly photography © Wayne Heim",
-    "notes": "",
+    "story": "One long break.\n\nA checkered past. The present — skipping, jumping, hopping by. Memories keep watch, quietly waiting\nfor the next move in the dusty game of nostalgia.\n\nNext move? New game? Best two out of three?",
+    "notes": "Break Time Long Over evokes not just a setting, but a silence. Heim’s painterly approach enhances the soft shadows, layered textures, and the mood of abandonment without sorrow. The checkerboard mid-play becomes a visual metaphor — something interrupted, never resumed. With muted earth tones and chiaroscuro light, the image channels the quiet realism of early American painters while maintaining a narrative photographic voice. Ideal for collectors drawn to interiors that tell more than they show.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -393,9 +350,9 @@ export const galleryData = [
   },
   {
     "id": "i-Lk8jWT3",
-    "title": "Painterly Mountain Photography: T. A. Moulton Barn.",
-    "description": "T. A. Moulton Barn. One of the most famous barns in Old West and America. Just outside of Jackson Hole, Wyoming. Sitting on \"Mormon Row\". Add a fine art painterly mountain photograph to your home and bring the essence of Western style and decor to your life. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: T. A. Moulton Barn.",
+    "title": "T.A. Moulton Barn – Framed in Time",
+    "description": "Fine art painterly photograph of the iconic T.A. Moulton Barn on Mormon Row, just outside Jackson Hole, Wyoming. Framed by towering cottonwoods and backed by the Tetons, this Western landscape evokes both history and permanence. Ideal for collectors of rustic Americana, Western heritage, and fine art photography that celebrates the enduring spirit of the land. © Wayne Heim",
+    "alt": "Painterly photograph of the historic T.A. Moulton Barn in Jackson Hole, Wyoming, framed by two old cottonwood trees.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/KP6LZ2Fs2zdCmvRt5VqmdvcX5gCFWrCc2CcBPNrT5/XL/_IMG6384-542-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/A",
     "keywords": [
@@ -416,8 +373,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "T. A. Moulton Barn. One of the most famous barns in Old West and America. Just outside of Jackson Hole, Wyoming. Sitting on \"Mormon Row\". Add a fine art painterly mountain photograph to your home and bring the essence of Western style and decor to your life. © Wayne Heim",
-    "notes": "",
+    "story": "A frame of bark and shadow. And between them — a barn that has seen more seasons than stories told.\n\nSunlight spills across the field, but the past still lingers beneath the roofline. Not just a landmark. A legacy, etched in wood and watched by time.",
+    "notes": "This composition honors one of the most photographed barns in the American West — yet brings a new sense of intimacy through its natural framing. The weathered texture of the cottonwoods in the foreground adds dimensional grounding, inviting the viewer to step into the scene rather than simply observe it. Wayne Heim’s painterly style softens the lines without sacrificing structure, lending a nostalgic patina that echoes pictorialist traditions. A piece that speaks to legacy — of land, labor, and light.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -427,9 +384,9 @@ export const galleryData = [
   },
   {
     "id": "i-7hz5LWz",
-    "title": "Painterly photography: Aspen Fall",
-    "description": "Grove of aspen trees in the fall outside of Jackson Hole Wyoming.  ©Wayne Heim",
-    "alt": "Painterly photography: Aspen Fall",
+    "title": "Aspen Fall",
+    "description": "Painterly fine art photograph of a grove of aspen trees in fall near Jackson Hole, Wyoming. The pale trunks rise in stark vertical rhythm against the glowing warmth of autumn undergrowth, creating a striking Western landscape full of contrast and texture. Ideal for collectors of rustic home décor, fine art photography of the American West, and seasonal landscape prints that capture fleeting beauty. ©Wayne Heim",
+    "alt": "Painterly photograph of a grove of aspen trees in autumn near Jackson Hole, Wyoming, with golden undergrowth and pale trunks.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/LFt4mjqfDJ2Q4bLTGM4mX9zzRMsV8zMC3D3NJmRLK/XL/Painterly%2520Landscape%2520Photo_WHZ7378_tonemapped-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7hz5LWz/A",
     "keywords": [
@@ -450,8 +407,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Grove of aspen trees in the fall outside of Jackson Hole Wyoming.  ©Wayne Heim",
-    "notes": "",
+    "story": "Aspen shed of gold, the final send-off for another season.\n\nWhite bark rising, etched like lines of a story half remembered. Autumn color fading fast — the forest’s last whisper before she sleeps.",
+    "notes": "This composition balances abstraction and realism — the aspens’ vertical rhythm becomes almost musical, while the painterly tones soften their starkness. Heim’s treatment highlights the delicate contrast of pale trunks and fiery underbrush, echoing tonalism with a Western palette. A piece that speaks to impermanence, reflection, and the cyclical beauty of the land. For collectors, it offers both atmosphere and intimacy: autumn not as spectacle, but as memory.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -461,9 +418,9 @@ export const galleryData = [
   },
   {
     "id": "i-NHPCPhP",
-    "title": "Painterly Photography: Yellowstone Waterfall",
-    "description": "Painterly landscape photography of water and waterfalls in Yellowstone Wyoming.",
-    "alt": "Painterly Photography: Yellowstone Waterfall",
+    "title": "Yellowstone Falls",
+    "description": "Yellowstone Falls — rugged, iconic, and layered with both power and time. This painterly fine art photograph captures the force of cascading water against weathered stone, framed by forest and canyon walls in Yellowstone National Park. A timeless Western landscape for collectors of fine art nature photography, rustic décor, and images that embody the enduring spirit of America’s first national park. ",
+    "alt": "Painterly fine art photograph of a waterfall cascading through cliffs and pines in Yellowstone National Park, Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/LgNzjbngDTzTMb6N5f6LzS2v7XwM8p7KCkngNGcPw/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/A",
     "keywords": [
@@ -484,8 +441,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Painterly landscape photography of water and waterfalls in Yellowstone Wyoming.",
-    "notes": "",
+    "story": "Yellowstone Falls. Rugged. Iconic. Layered with both power and time.\n\nStone stands. Water moves. Together they carve a legacy that never fades.",
+    "notes": "Yellowstone Falls embodies the paradox of permanence and change. The canyon walls stand scarred and unyielding, while the water renews itself with every rush — together carving a history older than memory. Heim’s painterly treatment enriches the textures of stone, mist, and pine, lending the scene a timeless quality that echoes the pictorialist tradition. This image is less a view than a monument — rugged, iconic, and layered with both power and time. A cornerstone piece for collectors who value work that connects natural grandeur with artistic legacy.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -495,9 +452,9 @@ export const galleryData = [
   },
   {
     "id": "i-WfrdxRR",
-    "title": "Painterly Mountain Photography - Teton Reflections - Jackson Hole Wyoming.",
-    "description": "Painterly Photograph of the snow capped Teton mountains at Schwabachers Landing outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography done in Wayne's signture style of artful storytelling. Image showcases Western landscape photography of water and waterfalls. This fine art painterly mountain photography is © Wayne Heim.",
-    "alt": "Painterly Mountain Photography - Teton Reflections - Jackson Hole Wyoming.",
+    "title": "Teton Reflections – Jackson Hole",
+    "description": "Painterly fine art photograph of the Teton Mountains reflected in still waters at Schwabacher Landing, just outside Jackson Hole, Wyoming and Grand Teton National Park. Wayne Heim’s painterly style brings timeless beauty to this iconic Western landscape, balancing rugged peaks with serene reflection. Perfect for collectors of fine art mountain photography, rustic home décor, and classic images of the American West. © Wayne Heim.",
+    "alt": "Painterly photograph of the snowcapped Teton Mountains reflected in still waters at Schwabacher Landing near Jackson Hole, Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MTHjGNKd3p85VHRX7tJ45cVRFLCWfh2mSgbQWxT52/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WfrdxRR/A",
     "keywords": [
@@ -518,8 +475,8 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Painterly Photograph of the snow capped Teton mountains at Schwabachers Landing outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography done in Wayne's signture style of artful storytelling. Image showcases Western landscape photography of water and waterfalls. This fine art painterly mountain photography is © Wayne Heim.",
-    "notes": "",
+    "story": "The mountains rise. The water remembers.\n\nSky, stone, and forest held in perfect stillness — a mirror of the West, unbroken, unchanging. Reflections, soft as whispers, keeping the stories and legacies of the past alive.",
+    "notes": "This composition captures both grandeur and stillness — the Tetons rendered in painterly tones, doubled by the mirror of water. Heim’s treatment emphasizes symmetry without rigidity, letting texture and color soften into something timeless. Echoing the romanticism of 19th-century landscape painters while grounded in photographic realism, Teton Reflections offers a contemplative vision of Western legacy. A centerpiece for collectors drawn to both majesty and calm.",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
