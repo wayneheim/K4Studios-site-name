@@ -308,6 +308,9 @@ export default function ChapterGalleryBase({
 
   const prevIndex = useRef(currentIndex);
 
+  // NEW: ref to focus notes button when opened from description panel
+  const notesBtnRef = useRef(null);
+
   // Tour gate helper
   const tourOpen = () =>
     typeof document !== "undefined" &&
@@ -551,9 +554,9 @@ export default function ChapterGalleryBase({
 
                   {/* IMAGE + ARROWS COLUMN */}
                   <div
-  className="flex flex-col items-center w-full relative"
-  style={{ marginTop: !isMobile ? '2rem' : 0 }}
->
+                    className="flex flex-col items-center w-full relative"
+                    style={{ marginTop: !isMobile ? '2rem' : 0 }}
+                  >
 
                     <div className="w-full relative flex items-center justify-center mb-0">
                       {/* Left Arrow (mobile) */}
@@ -604,6 +607,7 @@ export default function ChapterGalleryBase({
                         {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
                           <div className="md:flex flex-col items-start relative" style={{ position: 'relative', zIndex: 100 }}>
                             <button
+                              ref={notesBtnRef}
                               type="button"
                               onClick={() => setShowNotes((p) => !p)}
                               aria-label="View Collector Notes"
@@ -621,41 +625,41 @@ export default function ChapterGalleryBase({
                               )}
                             </button>
                             <AnimatePresence>
-  {showNotes && (
-    <motion.div
-      key="collector-notes-desktop"
-      initial={{ opacity: 0 }}              // fade only
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.20, ease: [0.33, 1, 0.68, 1] }}
-      className="w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
-      style={{
-        position: 'fixed',                  // true fixed to viewport
-        zIndex: 100000,                     // above everything
-        left: 'calc(50% - 40px)',           // your tweaked horizontal position
-        top: '260px',                       // aligned to button bottom
-        willChange: 'opacity',
-        backgroundColor: '#cdd1c5ff',
-        border: '1px solid rgba(151, 153, 156, 1)',
-        minWidth: '260px',
-        maxWidth: '90vw',
-        marginLeft: '0px'
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
-        <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
-          Collector Notes:
-        </strong>
-        <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px",
-                       background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))",
-                       filter: "drop-shadow(0 1px 2px #444)" }} />
-      </div>
-      {galleryData[currentIndex].notes.split("\n\n").map((para, idx) => (
-        <p key={idx} className="mb-3 last:mb-0">{para}</p>
-      ))}
-    </motion.div>
-  )}
-</AnimatePresence>
+                              {showNotes && (
+                                <motion.div
+                                  key="collector-notes-desktop"
+                                  initial={{ opacity: 0 }}              // fade only
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  transition={{ duration: 0.20, ease: [0.33, 1, 0.68, 1] }}
+                                  className="w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
+                                  style={{
+                                    position: 'fixed',                  // true fixed to viewport
+                                    zIndex: 100000,                     // above everything
+                                    left: 'calc(50% - 40px)',           // your tweaked horizontal position
+                                    top: '260px',                       // aligned to button bottom
+                                    willChange: 'opacity',
+                                    backgroundColor: '#cdd1c5ff',
+                                    border: '1px solid rgba(151, 153, 156, 1)',
+                                    minWidth: '260px',
+                                    maxWidth: '90vw',
+                                    marginLeft: '0px'
+                                  }}
+                                >
+                                  <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
+                                    <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
+                                      Collector Notes:
+                                    </strong>
+                                    <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px",
+                                                   background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))",
+                                                   filter: "drop-shadow(0 1px 2px #444)" }} />
+                                  </div>
+                                  {galleryData[currentIndex].notes.split("\n\n").map((para, idx) => (
+                                    <p key={idx} className="mb-3 last:mb-0">{para}</p>
+                                  ))}
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
 
                           </div>
                         )}
@@ -697,6 +701,7 @@ export default function ChapterGalleryBase({
                       {/* Notes (mobile) */}
                       {galleryData[currentIndex]?.notes && isMobile && (
                         <button
+                          ref={notesBtnRef}
                           type="button"
                           onClick={(e) => { e.stopPropagation(); setShowNotes((p) => !p); }}
                           aria-label="View Collector Notes"
@@ -818,30 +823,47 @@ export default function ChapterGalleryBase({
 
                     {/* Collector Notes Panel (mobile) */}
                     {galleryData[currentIndex]?.notes && isMobile && (
-                      <AnimatePresence>
-                        {showNotes && (
-                          <motion.div
-                            key="collector-notes-mobile"
-                            initial={{ opacity: 0, y: -8 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -8 }}
-                            transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
-                            className="w-full mx-auto mt-2 mb-[6px] border border-gray-300 rounded shadow p-4 text-sm text-gray-800 text-left"
-                            style={{ backgroundColor: "#cfd1c8ff", border: "1px solid rgb(109, 111, 114)", maxWidth: "98vw", boxSizing: "border-box" }}
-                          >
-                            <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
-                              <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
-                                Collector Notes:
-                              </strong>
-                              <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px", background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))", filter: "drop-shadow(0 1px 2px #444)" }} />
-                            </div>
-                            {galleryData[currentIndex].notes.split("\n\n").map((para, idx) => (
-                              <p key={idx} className="mb-3 last:mb-0">{para}</p>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    )}
+  <AnimatePresence>
+    {showNotes && (
+      <motion.div
+        key="collector-notes-mobile"
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -8 }}
+        transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
+        className="w-full mx-auto mt-2 mb-[6px] border border-gray-300 rounded shadow p-4 text-sm text-gray-800 text-left"
+        style={{ backgroundColor: "#cfd1c8ff", border: "1px solid rgb(109, 111, 114)", maxWidth: "98vw", boxSizing: "border-box", position: "relative" }}
+      >
+        <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
+          <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
+            Collector Notes:
+          </strong>
+          <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px", background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))", filter: "drop-shadow(0 1px 2px #444)" }} />
+        </div>
+        {galleryData[currentIndex].notes.split("\n\n").map((para, idx) => (
+          <p key={idx} className="mb-3 last:mb-0">{para}</p>
+        ))}
+        {/* Close button in lower right corner */}
+        <button
+          type="button"
+          onClick={(e) => { e.stopPropagation(); setShowNotes(false); }}
+          aria-label="Close Collector Notes"
+className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#b91c1c] text-[#b91c1c] shadow-lg"
+style={{
+  backgroundColor: "rgba(255,255,255,0.95)", // 50% transparent white
+  zIndex: 10001,
+  boxShadow: "0 2px 8px rgba(123,30,30,0.12)",
+}}          style={{
+            zIndex: 10001,
+            boxShadow: "0 2px 8px rgba(123,30,30,0.12)",
+          }}
+        >
+          <span className="text-1xl font-bold" style={{ color: "#b91c1c" }}>✕</span>
+        </button>
+      </motion.div>
+    )}
+  </AnimatePresence>
+)}
                   </div>
 
                   {/* DESCRIPTION + DESKTOP NAV COLUMN */}
@@ -924,6 +946,26 @@ export default function ChapterGalleryBase({
                                 aria-label="More information about this image"
                               >
                                 <p className="pb-2">{galleryData[currentIndex]?.description}</p>
+
+                                {/* NEW: CTA to open Collector Notes (mobile panel) */}
+                                {galleryData[currentIndex]?.notes?.trim() && (
+                                  <div className="mt-3 flex justify-end">
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setShowNotes(true);          // open notes
+                                        setIsExpanded(false);        // close desc panel
+                                        setTimeout(() => notesBtnRef.current?.focus(), 0);
+                                      }}
+                                      className="text-sm underline text-[#7b1e1e] hover:opacity-80"
+                                      aria-haspopup="dialog"
+                                      aria-expanded={showNotes}
+                                    >
+                                      Show Collector Notes
+                                    </button>
+                                  </div>
+                                )}
                               </motion.div>
                             ) : (
                               <motion.div
@@ -940,6 +982,26 @@ export default function ChapterGalleryBase({
                                 aria-label="More information about this image"
                               >
                                 <p className="pb-2">{galleryData[currentIndex]?.description}</p>
+
+                                {/* NEW: CTA to open Collector Notes (desktop panel) */}
+                                {galleryData[currentIndex]?.notes?.trim() && (
+                                  <div className="mt-2 mb-1 flex justify-end">
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setShowNotes(true);
+                                        setIsExpanded(false);
+                                        setTimeout(() => notesBtnRef.current?.focus(), 0);
+                                      }}
+                                      className="text-sm underline text-[#7b1e1e] hover:opacity-80"
+                                      aria-haspopup="dialog"
+                                      aria-expanded={showNotes}
+                                    >
+                                      Show Collector Notes
+                                    </button>
+                                  </div>
+                                )}
                               </motion.div>
                             ))}
                           </AnimatePresence>
