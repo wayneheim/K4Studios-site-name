@@ -883,7 +883,7 @@ style={{
                         src="/images/K4Logo-web-b.jpg"
                         alt="K4 Studios Logo"
                         className="h-16.5 mb-5"
-                        style={{ borderRadius: "50px", maxWidth: "160px", opacity: ".55" }}
+                        style={{ borderRadius: "50px", maxWidth: "160px", opacity: ".20" }}
                       />
                     </div>
 
