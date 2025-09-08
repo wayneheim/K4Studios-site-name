@@ -540,6 +540,11 @@ body.react-mounted footer {
   padding-top: clamp(0px, calc((100vh - 900px) / 2), 160px);
 }
 
+/* Grid view opt-out: attribute added by RebuiltScrollGrid */
+#chapter-section[data-tight-header].section-visible {
+  padding-top: 0 !important;
+}
+
 /* fallback / reduce on narrow heights if you had earlier margin tweaks */
 @media (max-height: 900px) {
   #chapter-section.section-visible {

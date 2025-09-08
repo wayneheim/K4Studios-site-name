@@ -294,7 +294,7 @@ export const galleryData = [
   },
   {
     "id": "i-5HpSkgR",
-    "title": "A",
+    "title": "Unfinished Business",
     "description": "A richly colored Western photograph depicting a tense moment outside a frontier home. A rifle-bearing cowboy stands between two women, their expressions unreadable — somewhere between confrontation and concern.\n\nRendered in painterly detail, this fine art photograph from Wayne Heim’s collection invites layered interpretation. It blends Old West atmosphere with the mood and structure of classic narrative painting. Ideal for collectors of Western wall art, cinematic cowboy imagery, and Americana with emotional weight. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5HpSkgR/0/MgnnjvHdvKWfHT2MD6fwT3kBTGVdKstk5H5VKjWJM/XL/_HF23379-819-2-XL.jpg",

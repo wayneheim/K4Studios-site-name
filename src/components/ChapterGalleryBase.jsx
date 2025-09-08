@@ -574,22 +574,19 @@ export default function ChapterGalleryBase({
                       </button>
 
                       <div className="relative w-full md:w-[340px] flex flex-row">
-                        {/* Image */}
-                        <div
-                          className="aspect-[4/5] relative rounded-lg flex items-center justify-center text-gray-500 cursor-pointer z-10 w-full group"
-                          style={{ marginLeft: isMobile ? "10px" : 0, marginRight: isMobile ? "10px" : 0 }}
-                          onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
-                          data-zoom-btn
-                        >
+                        {/* Image container with absolutely positioned collector notes button outside/right of image edge */}
+                        <div className="relative w-full md:w-[340px]" style={{ display: 'inline-block' }}>
                           <img
                             src={galleryData[currentIndex]?.src}
                             alt={galleryData[currentIndex]?.title}
-                            className="chapter-image-mobile rounded-lg"
+                            className="chapter-image-mobile rounded-lg block"
                             style={
                               isMobile
-                                ? { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh", border: '1px solid rgba(120,120,120,0.30)', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }
-                                : { cursor: "zoom-in", width: "auto", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7", transition: 'box-shadow .3s ease', border: '1px solid rgba(110,110,110,0.28)', boxShadow: '0 2px 5px rgba(0,0,0,0.10)' }
+                                ? { cursor: "zoom-in", width: "100%", height: "auto", objectFit: "contain", maxHeight: "65vh", border: '1px solid rgba(120,120,120,0.30)', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }
+                                : { cursor: "zoom-in", width: "100%", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7", transition: 'box-shadow .3s ease', border: '1px solid rgba(110,110,110,0.28)', boxShadow: '0 2px 5px rgba(0,0,0,0.10)' }
                             }
+                            onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
+                            data-zoom-btn
                             onMouseEnter={(e) => {
                               if (!isMobile) {
                                 e.currentTarget.style.boxShadow = '0 0 0 2px rgba(255, 255, 255, 0.85), 0 4px 15px 4px rgba(134, 134, 134, 0.85)';
@@ -601,22 +598,19 @@ export default function ChapterGalleryBase({
                               }
                             }}
                           />
-                        </div>
-
-                        {/* Collector Notes (desktop) */}
-                        {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
-                          <div className="md:flex flex-col items-start relative" style={{ position: 'relative', zIndex: 100 }}>
+                          {/* Desktop Collector Notes button absolutely positioned outside/right of image edge */}
+                          {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
                             <button
                               ref={notesBtnRef}
                               type="button"
-                              onClick={() => setShowNotes((p) => !p)}
+                              onClick={(e) => { e.stopPropagation(); setShowNotes((p) => !p); }}
                               aria-label="View Collector Notes"
                               title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
-                              className="ml-0 mt-1 w-6 h-8 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition relative z-30"
-                              style={{ boxShadow: "0 2px 6px rgba(80,60,30,0.10)" }}
+                              className="absolute top-2 right-3 w-8 h-9 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition z-30 flex items-center justify-center"
+                              style={{ boxShadow: "0 2px 6px rgba(80,60,30,0.10)", transform: "translateX(50px)" }}
                             >
                               {showNotes ? (
-                                <span className="text-lg leading-none">✕</span>
+                                <span className="text-lg text-red-600 leading-none">✕</span>
                               ) : (
                                 <>
                                   <span className="absolute left-2 top-[2px] text-[12px] text-red-600 font-semibold">*</span>
@@ -624,44 +618,41 @@ export default function ChapterGalleryBase({
                                 </>
                               )}
                             </button>
-                            <AnimatePresence>
-                              {showNotes && (
-                                <motion.div
-                                  key="collector-notes-desktop"
-                                  initial={{ opacity: 0 }}              // fade only
-                                  animate={{ opacity: 1 }}
-                                  exit={{ opacity: 0 }}
-                                  transition={{ duration: 0.20, ease: [0.33, 1, 0.68, 1] }}
-                                  className="w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
-                                  style={{
-                                    position: 'fixed',                  // true fixed to viewport
-                                    zIndex: 100000,                     // above everything
-                                    left: 'calc(50% - 40px)',           // your tweaked horizontal position
-                                    top: '260px',                       // aligned to button bottom
-                                    willChange: 'opacity',
-                                    backgroundColor: '#cdd1c5ff',
-                                    border: '1px solid rgba(151, 153, 156, 1)',
-                                    minWidth: '260px',
-                                    maxWidth: '90vw',
-                                    marginLeft: '0px'
-                                  }}
-                                >
-                                  <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
-                                    <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
-                                      Collector Notes:
-                                    </strong>
-                                    <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px",
-                                                   background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))",
-                                                   filter: "drop-shadow(0 1px 2px #444)" }} />
-                                  </div>
-                                  {galleryData[currentIndex].notes.split("\n\n").map((para, idx) => (
-                                    <p key={idx} className="mb-3 last:mb-0">{para}</p>
-                                  ))}
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
-
-                          </div>
+                          )}
+                        </div>
+                        {/* Desktop Collector Notes panel absolutely positioned 20px down from top, right-aligned to image container */}
+                        {!isMobile && showNotes && galleryData[currentIndex]?.notes?.trim() && (
+                          <AnimatePresence>
+                            <motion.div
+                              key="collector-notes-desktop"
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              transition={{ duration: 0.20, ease: [0.33, 1, 0.68, 1] }}
+                              className="w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
+                              style={{
+                                position: 'absolute',
+                                zIndex: 100000,
+                                top: '46px',
+                                right: '-390px',
+                                willChange: 'opacity',
+                                backgroundColor: '#cdd1c5ff',
+                                border: '1px solid rgba(151, 153, 156, 1)',
+                                minWidth: '260px',
+                                maxWidth: '90vw'
+                              }}
+                            >
+                              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+                                <strong style={{ color: '#fff', textShadow: '0 1px 2px #444', fontWeight: 'bold', marginRight: '0.75em', fontSize: '1em' }}>
+                                  Collector Notes:
+                                </strong>
+                                <span style={{ flex: 1, marginTop: '4px', height: '2px', marginLeft: '0.5em', borderRadius: '2px', background: 'linear-gradient(to right, #fff 65%, rgba(255,255,255,0))', filter: 'drop-shadow(0 1px 2px #444)' }} />
+                              </div>
+                              {galleryData[currentIndex].notes.split('\n\n').map((para, idx) => (
+                                <p key={idx} className="mb-3 last:mb-0">{para}</p>
+                              ))}
+                            </motion.div>
+                          </AnimatePresence>
                         )}
                       </div>
 
@@ -974,13 +965,22 @@ style={{
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 12 }}
                                 transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
-                                className="absolute left-2/2 top-12 z-50"
-                                style={{ transform: "translateX(-50%)", background: "#f2f3f4", border: "1.5px solid #d1d5d9", borderRadius: 16, boxShadow: "0 8px 48px rgba(80,80,90,0.15)", padding: ".45rem 1.05rem", color: "#4a4a49", minWidth: "340px", maxWidth: "75vw", minHeight: "4rem", maxHeight: "260px", overflowY: "auto" }}
+                                className="absolute left-1/2 bottom-0 z-50"
+                                style={{ transform: "translateX(-50%) translateY(-8px)", marginLeft: "-275px", background: "#fff", border: "1.5px solid #d1d5d9", borderRadius: 16, boxShadow: "0 2px 12px rgba(80,80,90,0.10)", padding: ".95rem 1.5rem .95rem 1.5rem", color: "#4a4a49", minWidth: "340px", maxWidth: "75vw", minHeight: "4rem", maxHeight: "320px", overflowY: "auto" }}
                                 id={descPanelId}
                                 role="region"
                                 aria-labelledby={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
                                 aria-label="More information about this image"
                               >
+                                <button
+                                  type="button"
+                                  onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }}
+                                  aria-label="Close More Info"
+                                  className="absolute bottom-3 left-3 px-4 py-1 rounded-full border border-[#b91c1c] text-[#b91c1c] bg-white hover:bg-gray-100 text-sm font-semibold shadow transition-colors"
+                                  style={{ zIndex: 10001 }}
+                                >
+                                  Close
+                                </button>
                                 <p className="pb-2">{galleryData[currentIndex]?.description}</p>
 
                                 {/* NEW: CTA to open Collector Notes (desktop panel) */}
@@ -994,7 +994,7 @@ style={{
                                         setIsExpanded(false);
                                         setTimeout(() => notesBtnRef.current?.focus(), 0);
                                       }}
-                                      className="text-sm underline text-[#7b1e1e] hover:opacity-80"
+                                      className="px-4 py-1 rounded-full border border-[#7b1e1e] text-[#7b1e1e] bg-white hover:bg-gray-100 text-sm font-semibold shadow transition-colors"
                                       aria-haspopup="dialog"
                                       aria-expanded={showNotes}
                                     >

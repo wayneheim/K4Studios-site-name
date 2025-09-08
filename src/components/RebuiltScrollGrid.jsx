@@ -116,6 +116,13 @@ export default function RebuiltScrollGrid({
     });
   }, [start, colCount, galleryData]);
 
+  // Hide large chapter spacer (dynamic top padding) while grid view is active.
+  useEffect(() => {
+    const el = document.getElementById('chapter-section');
+    if (el) el.setAttribute('data-tight-header', '');
+    return () => { if (el) el.removeAttribute('data-tight-header'); };
+  }, []);
+
   return (
     <section className="bg-white py-10 px-6">
       {/* Header with hover/focus effect */}
