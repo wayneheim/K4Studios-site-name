@@ -1,10 +1,10 @@
 // data/galleries/West/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Western Landscape Photography by Wayne Heim – Traditional Fine Art from the American West",
-  subtitle: "Endless Horizons and Timeless Views of the American Frontier",
+  title: "Western Landscape Photography by Wayne Heim – Traditional Fine Art Prints of the American West",
+  subtitle: "Authentic Views of the Frontier – Mountains, Deserts, and Wide-Open Horizons",
   description: `
-    Explore Wayne Heim’s traditional Western landscape photography, featuring authentic fine art prints of towering mountain ranges, vast deserts, wild rivers, and iconic canyons across the American West. These photographs preserve the grandeur of legendary vistas and hidden outposts with clarity and timeless detail—perfect for collectors, interior designers, and all who are inspired by the frontier.
+    Wayne Heim’s traditional Western landscape photography captures the vast scale and spirit of the American frontier. From sunset over desert mesas to alpine lakes reflecting the Grand Tetons, these fine art prints preserve the West with clarity, balance, and timeless detail. Collectors and nature lovers alike will find each piece a testament to the region’s beauty and resilience.
     <br><br>
     For a deeper look at the Old West, visit our 
     <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
@@ -17,10 +17,10 @@ export const entranceData = {
        onmouseover="this.style.color='#a74219'"
        onmouseout="this.style.color='#85644b'">
        Mountains Gallery</a>
-    for a curated collection of majestic mountain landscapes.
+    for a curated collection of majestic alpine views.
   `,
   details:
-    "The American West has long symbolized freedom, scale, and resilience. Wayne Heim’s traditional Western landscape photography presents this region in its truest form: sunlit canyons in Arizona and Utah, wildflower meadows in Colorado, expansive ranchlands in Wyoming and Montana, and the rugged silhouettes of Monument Valley. His photographs also include the iconic Grand Tetons, Yellowstone’s geothermal landscapes, and the red-rock vistas of Utah. Each museum-grade print emphasizes natural light, fine detail, and balanced composition—qualities that make traditional fine art photography timeless. Perfect for rustic or modern Western interiors, these prints bring authenticity and atmosphere to any collection. Available in archival paper, bold metal, or luminous acrylic formats, each piece is designed to last for generations.",
+    "The American West has long symbolized freedom, scale, and endurance. Wayne Heim’s traditional Western landscape photography presents this iconic region with precision and honesty: canyons glowing under desert skies in Arizona and Utah, wildflower meadows in Colorado, the broad ranchlands of Wyoming and Montana, and the timeless buttes of Monument Valley. His photographs also highlight the Grand Tetons, Yellowstone’s geothermal terrain, and the rugged red-rock country of Utah. Each museum-grade fine art print emphasizes natural light, sharp detail, and balanced composition — hallmarks of traditional fine art photography. Perfect for rustic lodges, Western-inspired interiors, or modern spaces seeking atmosphere and authenticity, these Western prints celebrate the legacy of the American frontier. Available in archival paper, bold metal, or luminous acrylic, each piece is crafted for collectors and designed to endure for generations.",
   image: {
     src: "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/i-XXXXXXX.jpg", // Replace with a real Western image URL
     alt: "Traditional fine art landscape photograph of the American West by Wayne Heim",

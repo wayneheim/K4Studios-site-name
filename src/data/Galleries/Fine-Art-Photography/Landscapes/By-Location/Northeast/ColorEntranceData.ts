@@ -1,17 +1,30 @@
-// data/galleries/South/ColorEntranceData.ts
+// data/galleries/Northeast/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Southern Landscape Photography by Wayne Heim – Traditional Fine Art Prints of the American South",
-  subtitle: "Authentic Views of Appalachia and the Southern Countryside in Fine Art Photography",
-  description:
-    "Wayne Heim’s traditional Southern landscape photography captures the spirit of the American South with honesty and detail. From Appalachian ridges in morning haze to golden Tennessee fields and Virginia’s winding rivers, these fine art prints preserve the timeless character of the South for collectors and nature lovers alike.",
+  title: "Northeast Landscape Photography by Wayne Heim – Traditional Fine Art Prints",
+  subtitle: "Authentic Views of New England and the Northeast in Timeless Fine Art",
+  description: `
+    Wayne Heim’s traditional Northeast landscape photography highlights the region’s distinctive beauty — rocky Atlantic coastlines, brilliant fall foliage, mist-draped lakes, and historic towns. Each fine art print preserves the atmosphere of the Northeast with clarity and balance, offering collectors and nature lovers a window into one of America’s most storied regions.
+    <br><br>
+    For those drawn to the history of the Northeast, explore our 
+    <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits"
+       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
+       onmouseover="this.style.color='#a74219'"
+       onmouseout="this.style.color='#85644b'">
+       Civil War Portraits</a>, which echo the era’s landscapes and atmospheres. Or, if you enjoy rustic Americana, don’t miss the 
+    <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
+       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
+       onmouseover="this.style.color='#a74219'"
+       onmouseout="this.style.color='#85644b'">
+       Western Cowboy Portraits</a>, which share the same spirit of resilience and timeless storytelling found in the Northeast’s rugged terrain.
+  `,
   details:
-    "The Southern United States offers a landscape rich in light, heritage, and natural variety. Wayne Heim’s traditional photography captures this region with precision and clarity: sunrise-soaked Appalachian hills, weathered farmsteads in Kentucky and Georgia, mist-covered rivers in Virginia, and the enduring charm of Southern backroads. Each museum-grade print emphasizes detail, balance, and timeless composition, distinguishing traditional fine art landscape photography from interpretive or stylized approaches. Perfect for rustic, historic, or classic interiors, these Southern landscapes bring warmth and authenticity into homes, offices, and collections. Available as archival paper, bold metal, or luminous acrylic prints, each piece is crafted to last for generations.",
+    "The Northeast stands as one of America’s most iconic regions for traditional landscape photography, with its unique blend of coastal edges, dense forests, mountain ridges, and historic small towns. Wayne Heim’s traditional photography captures this diversity with precision and honesty: autumn hillsides glowing in Vermont and Maine, granite shorelines in Massachusetts, mist-wrapped lakes in New York, and storied villages across Pennsylvania. Each museum-grade fine art print emphasizes natural light, crisp detail, and balanced composition — qualities that set traditional landscape photography apart from interpretive or painterly approaches. Collectors, designers, and history enthusiasts will find these Northeast images ideally suited for rustic, coastal, or classic interiors. Prints are available in archival paper, bold metal, or luminous acrylic, designed for longevity and clarity across generations.",
   image: {
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Appalachia/i-XXXXXXX.jpg", // Replace with a real South image URL
-    alt: "Traditional Southern landscape photograph by Wayne Heim",
-    caption: "\"Morning Along the Blue Ridge\"",
+    src: "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/i-XXXXXXX.jpg", // Replace with a real Northeast image URL
+    alt: "Traditional fine art landscape photograph of the Northeast by Wayne Heim",
+    caption: "\"Morning in the Maple Grove\"",
   },
   breadcrumb: 
-    `<a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='red'" onmouseout="this.style.color='inherit'">Landscapes by Location</a> | South`,
+    `<a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='red'" onmouseout="this.style.color='inherit'">Landscapes by Location</a> | Northeast`,
 };

@@ -65,5 +65,18 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
       <slot />
     </div>
     <div id="overlay-root"></div>
+
+        <!-- SVG sharpening filter (for magnifier) -->
+    <svg width="0" height="0" style="position:absolute">
+      <filter id="sharpen">
+        <feConvolveMatrix order="3" kernelMatrix="
+          0 -.5 0
+          -.5 3.2 -.5
+          0 -.5 0
+        " divisor="1.2"/>
+      </filter>
+      
+    </svg>
+    
   </body>
 </html>

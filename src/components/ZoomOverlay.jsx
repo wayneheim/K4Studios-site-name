@@ -2,11 +2,14 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor }) {
   const [isMobile, setIsMobile] = useState(false);
-  const [maxImageHeight, setMaxImageHeight] = useState(() => Math.round(window.innerHeight * 0.8));
-  const frameRef = useRef(null); // outer frame (contains image + credit)
-  const bottomRef = useRef(null); // bottom controls + text
+  const [maxImageHeight, setMaxImageHeight] = useState(() =>
+    Math.round(window.innerHeight * 0.8)
+  );
+  const frameRef = useRef(null);
+  const bottomRef = useRef(null);
+  const lensRef = useRef(null);
 
-  // Detect mobile screen
+  // Detect mobile
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 600);
     checkMobile();
@@ -14,7 +17,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Lock scroll + reset mat color on open
+  // Lock scroll + reset mat color
   useEffect(() => {
     setMatColor("no-wood");
     document.body.classList.add("zoom-open");
@@ -23,27 +26,72 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
 
   if (!imageData) return null;
 
-  // Recompute available image height so full UI fits (or shrinks image first) on resize / mat change
+  // Compute available image height
   useLayoutEffect(() => {
     const compute = () => {
       const vh = window.innerHeight;
       const bottomH = bottomRef.current ? bottomRef.current.offsetHeight : 0;
-      // Estimate vertical extras: frame padding + margins above/below, top spacing
-      const topExtras = 40; // tweakable cushion
+      const topExtras = 40;
       let available = vh - bottomH - topExtras;
-      // If available is large, cap to 90% vh so bottom still feels anchored
       const upperCap = Math.round(vh * 0.9);
       available = Math.min(available, upperCap);
-      // Minimum image height so it never disappears
       available = Math.max(available, 140);
       setMaxImageHeight(available);
     };
     compute();
-    window.addEventListener('resize', compute);
-    return () => window.removeEventListener('resize', compute);
+    window.addEventListener("resize", compute);
+    return () => window.removeEventListener("resize", compute);
   }, [matColor]);
 
-  // Styles
+  // Magnifier lens logic
+  useEffect(() => {
+    if (isMobile) return; // disable loupe on mobile
+
+    const img = frameRef.current?.querySelector("img");
+    const lens = lensRef.current;
+    if (!img || !lens) return;
+
+    const zoom = 1.75;
+    const lensSize = 180;
+
+    const move = (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
+        lens.style.opacity = 0;
+        return;
+      }
+
+      lens.style.opacity = 1;
+
+      let lensX = x - lensSize / 2;
+      let lensY = y - lensSize / 2;
+      lensX = Math.max(0, Math.min(lensX, rect.width - lensSize));
+      lensY = Math.max(0, Math.min(lensY, rect.height - lensSize));
+      lens.style.left = lensX + "px";
+      lens.style.top = lensY + "px";
+
+      const bgW = rect.width * zoom;
+      const bgH = rect.height * zoom;
+      lens.style.backgroundSize = `${bgW}px ${bgH}px`;
+      lens.style.backgroundPosition = `-${x * zoom - lensSize / 2}px -${
+        y * zoom - lensSize / 2
+      }px`;
+    };
+
+    img.addEventListener("mousemove", move);
+    img.addEventListener("mouseenter", move);
+    img.addEventListener("mouseleave", () => (lens.style.opacity = 0));
+
+    return () => {
+      img.removeEventListener("mousemove", move);
+      img.removeEventListener("mouseenter", move);
+    };
+  }, [imageData, isMobile]);
+
+  // Frame styles
   const frame = {
     background:
       matColor === "white"
@@ -61,47 +109,43 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
         : matColor === "black"
         ? "#000000"
         : "transparent",
-
-    border:
-      matColor === "white"
-        ? "0vw solid white"
-        : matColor === "white2"
-        ? "0vw solid white"
-        : matColor === "white3"
-        ? "0vw solid white"
-        : matColor === "wood"
-        ? "0vw solid #ffffff"
-        : "0vw solid transparent",
-
-    // Responsive padding: smaller on mobile
-    // Make top padding visually consistent with side padding so mat thickness feels uniform
+    border: "0vw solid transparent",
     paddingTop:
       ["white", "white2", "white3", "wood", "no-wood"].includes(matColor)
-        ? isMobile ? "1.95rem" : "calc(1.5rem + 20px)"
-        : isMobile ? "1.95rem" : "1.5rem",
+        ? isMobile
+          ? "1.95rem"
+          : "calc(1.5rem + 20px)"
+        : isMobile
+        ? "1.95rem"
+        : "1.5rem",
     paddingBottom: isMobile ? ".5rem" : "1.5rem",
     paddingLeft:
       ["white", "white2", "white3", "wood", "no-wood"].includes(matColor)
-        ? isMobile ? "1.95rem" : "calc(1.5rem + 20px)"
-        : isMobile ? "1.95rem" : "1.5rem",
+        ? isMobile
+          ? "1.95rem"
+          : "calc(1.5rem + 20px)"
+        : isMobile
+        ? "1.95rem"
+        : "1.5rem",
     paddingRight:
       ["white", "white2", "white3", "wood", "no-wood"].includes(matColor)
-        ? isMobile ? "1.95rem" : "calc(1.5rem + 20px)"
-        : isMobile ? "1.95rem" : "1.5rem",
-
+        ? isMobile
+          ? "1.95rem"
+          : "calc(1.5rem + 20px)"
+        : isMobile
+        ? "1.95rem"
+        : "1.5rem",
     boxShadow:
       ["white", "white2", "white3", "gray", "black", "wood"].includes(matColor)
         ? "0 8px 20px rgba(0,0,0,.2)"
         : "none",
-
     outline:
       ["white", "white2", "white3", "gray", "black", "wood"].includes(matColor)
         ? "1px solid #ccc"
         : "none",
-
     transition: "background .25s ease, padding .25s ease",
     display: "inline-block",
-    marginTop: 10, // breathing room for top edge/shadow
+    marginTop: 10,
   };
 
   const cutEdge = {
@@ -114,7 +158,6 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
         : ["no-wood"].includes(matColor)
         ? "rgba(255,255,255,0.25)"
         : "transparent",
-
     boxShadow:
       matColor === "wood"
         ? "none"
@@ -123,7 +166,6 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
         : ["no-wood"].includes(matColor)
         ? "inset -1px 1px 1px rgba(255,255,255,0.25), inset 8px 12px 16px rgba(0,0,0,0)"
         : "none",
-
     border: "1px solid transparent",
     transition: "box-shadow .25s ease, background .25s ease",
   };
@@ -135,17 +177,14 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
       ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
 
-  // Smoothly fade context text when it changes to avoid abrupt jump
   const [displayContext, setDisplayContext] = useState(context);
   const [contextVisible, setContextVisible] = useState(true);
-  const fadeDuration = 420; // ms (slowed down for a gentler cross-fade)
+  const fadeDuration = 420;
 
   useEffect(() => {
     if (context !== displayContext) {
-      // fade out
       setContextVisible(false);
       const t = setTimeout(() => {
-        // swap text then fade back in
         setDisplayContext(context);
         requestAnimationFrame(() => setContextVisible(true));
       }, fadeDuration);
@@ -154,18 +193,21 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
   }, [context, displayContext]);
 
   const creditColorMap = {
-    white: { color: '#888888ff', opacity: 0.55 },
-    white2: { color: '#505050ff', opacity: 0.55 },
-    white3: { color: '#b1b1b1ff', opacity: 0.62 },
-    gray: { color: '#f4f4f4', opacity: 0.60 },
-    black: { color: '#f0f0f0', opacity: 0.62 },
-    wood: { color: '#4d3c2dff', opacity: 0.55 },
-    'no-wood': { color: '#888888ff', opacity: 0.50 },
+    white: { color: "#888888ff", opacity: 0.55 },
+    white2: { color: "#505050ff", opacity: 0.55 },
+    white3: { color: "#b1b1b1ff", opacity: 0.62 },
+    gray: { color: "#f4f4f4", opacity: 0.6 },
+    black: { color: "#f0f0f0", opacity: 0.62 },
+    wood: { color: "#4d3c2dff", opacity: 0.55 },
+    "no-wood": { color: "#888888ff", opacity: 0.5 },
   };
-  const creditStyle = creditColorMap[matColor] || { color: '#2c2c2c', opacity: 0.5 };
+  const creditStyle = creditColorMap[matColor] || {
+    color: "#2c2c2c",
+    opacity: 0.5,
+  };
 
-  // Reserve space for the tallest possible context block to avoid layout jump
-  const longestContext = "Click the color icons above to preview different finishing/display options. All images are available for order on a selection of Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details.";
+  const longestContext =
+    "Click the color icons above to preview different finishing/display options. All images are available for order on a selection of Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details.";
   const measureRef = useRef(null);
   const [reservedHeight, setReservedHeight] = useState(null);
 
@@ -194,19 +236,45 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
           overflowX: "hidden",
         }}
       >
-  <div style={{ all: "unset", maxWidth: 1100, textAlign: "center" }}>
+        <div style={{ all: "unset", maxWidth: 1100, textAlign: "center" }}>
           {/* FRAME */}
-    <div ref={frameRef} style={{ ...frame, maxWidth: "calc(100vw - 2rem)", boxSizing: "border-box" }}>
+          <div
+            ref={frameRef}
+            style={{
+              ...frame,
+              maxWidth: "calc(100vw - 2rem)",
+              boxSizing: "border-box",
+              position: "relative", // needed for lens positioning
+            }}
+          >
             <div style={cutEdge}>
               <img
                 src={imageData.src}
                 alt={imageData.title}
                 style={{
-      maxWidth: "100%",
-      maxHeight: maxImageHeight + 'px',
+                  maxWidth: "100%",
+                  maxHeight: maxImageHeight + "px",
                   objectFit: "contain",
                   display: "block",
                   border: "1px solid #bbb",
+                }}
+              />
+              {/* Magnifier lens */}
+              <div
+                ref={lensRef}
+                style={{
+                  opacity: 0,
+                  transition: "opacity 0.2s ease",
+                  position: "absolute",
+                  border: "2px solid #000",
+                  borderRadius: "50%",
+                  width: "180px",
+                  height: "180px",
+                  background: `url(${imageData.src}) no-repeat`,
+                  pointerEvents: "none",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.6)",
+                  zIndex: 10,
+                  filter: "contrast(1.14) brightness(1.04) url(#sharpen)", // SVG filter here
                 }}
               />
             </div>
@@ -218,54 +286,69 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 textAlign: "right",
                 fontFamily: "'Glegoo', serif",
                 ...creditStyle,
-                transition: 'color .25s ease, opacity .25s ease'
+                transition: "color .25s ease, opacity .25s ease",
               }}
             >
               © Wayne Heim
             </div>
           </div>
 
-          {/* SWATCH ROW WITH FRAMING LINES */}
+          {/* SWATCH ROW */}
           <div
             ref={bottomRef}
             style={{
               marginTop: 22,
-              maxWidth: isMobile ? '88vw' : '60ch',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 14
+              maxWidth: isMobile ? "88vw" : "60ch",
+              marginLeft: "auto",
+              marginRight: "auto",
+              display: "flex",
+              alignItems: "center",
+              gap: 14,
             }}
           >
-            {/* Left line */}
-            <div style={{ flex: 1, height: 1, backgroundColor: '#ccc', opacity: 0.5 }} />
-
-            {/* Button group */}
-            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
-              {/* no-wood */}
+            <div style={{ flex: 1, height: 1, backgroundColor: "#ccc", opacity: 0.5 }} />
+            <div
+              style={{
+                display: "flex",
+                gap: 14,
+                flexWrap: "wrap",
+                justifyContent: "center",
+              }}
+            >
               <button
                 title="Paper"
-                onClick={(e) => { e.stopPropagation(); setMatColor("no-wood"); }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setMatColor("no-wood");
+                }}
                 style={{
-                  width: 20, height: 20, border: "1px solid #777", borderRadius: 4,
-                  backgroundImage: "url('/images/materials/White-w.jpg')", backgroundSize: "cover",
-                  backgroundPosition: "center", cursor: "pointer"
+                  width: 20,
+                  height: 20,
+                  border: "1px solid #777",
+                  borderRadius: 4,
+                  backgroundImage: "url('/images/materials/White-w.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  cursor: "pointer",
                 }}
               />
-
-              {/* wood */}
               <button
                 title="Wood print"
-                onClick={(e) => { e.stopPropagation(); setMatColor("wood"); }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setMatColor("wood");
+                }}
                 style={{
-                  width: 20, height: 20, border: "1px solid #777", borderRadius: 4,
-                  backgroundImage: "url('/images/materials/Maple-w.jpg')", backgroundSize: "cover",
-                  backgroundPosition: "center", cursor: "pointer"
+                  width: 20,
+                  height: 20,
+                  border: "1px solid #777",
+                  borderRadius: 4,
+                  backgroundImage: "url('/images/materials/Maple-w.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  cursor: "pointer",
                 }}
               />
-
-              {/* circle mats */}
               {[
                 ["white", "#ffffff"],
                 ["white2", "#9e9d9d"],
@@ -274,26 +357,31 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 <button
                   key={key}
                   title={`${key} mat`}
-                  onClick={(e) => { e.stopPropagation(); setMatColor(key); }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setMatColor(key);
+                  }}
                   style={{
-                    width: 20, height: 20, border: "1px solid #777", borderRadius: "50%",
-                    background: bg, cursor: "pointer"
+                    width: 20,
+                    height: 20,
+                    border: "1px solid #777",
+                    borderRadius: "50%",
+                    background: bg,
+                    cursor: "pointer",
                   }}
                 />
               ))}
-
-              {/* exit */}
               <button
                 onClick={onClose}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#e2e2e2';
-                  e.currentTarget.style.borderColor = '#999';
-                  e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.15)';
+                  e.currentTarget.style.background = "#e2e2e2";
+                  e.currentTarget.style.borderColor = "#999";
+                  e.currentTarget.style.boxShadow = "0 2px 4px rgba(0,0,0,0.15)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#f5f5f5';
-                  e.currentTarget.style.borderColor = '#ccc';
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.background = "#f5f5f5";
+                  e.currentTarget.style.borderColor = "#ccc";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
                 style={{
                   padding: "0.005rem .5rem",
@@ -304,53 +392,51 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                   background: "#f5f5f5",
                   fontSize: "0.8rem",
                   cursor: "pointer",
-                  transition: 'background .18s ease, border-color .18s ease, box-shadow .18s ease'
+                  transition:
+                    "background .18s ease, border-color .18s ease, box-shadow .18s ease",
                 }}
               >
                 Exit
               </button>
             </div>
-
-            {/* Right line */}
-            <div style={{ flex: 1, height: 1, backgroundColor: '#ccc', opacity: 0.5 }} />
+            <div style={{ flex: 1, height: 1, backgroundColor: "#ccc", opacity: 0.5 }} />
           </div>
 
-          {/* CONTEXT TEXT (with cross-fade on change + reserved height) */}
+          {/* CONTEXT TEXT */}
           <div style={{ minHeight: reservedHeight || undefined }}>
             <p
               style={{
                 marginTop: 18,
                 fontSize: "0.9rem",
                 color: "#555",
-                opacity: contextVisible ? .5 : 0,
+                opacity: contextVisible ? 0.5 : 0,
                 transition: `opacity ${fadeDuration}ms ease`,
                 fontFamily: "'Glegoo', serif",
-                maxWidth: isMobile ? '88vw' : '60ch',
-                marginLeft: 'auto',
-                marginRight: 'auto',
+                maxWidth: isMobile ? "88vw" : "60ch",
+                marginLeft: "auto",
+                marginRight: "auto",
                 lineHeight: 1.35,
-                overflowWrap: 'break-word',
-                wordBreak: 'break-word',
-                hyphens: 'auto',
-                willChange: 'opacity'
+                overflowWrap: "break-word",
+                wordBreak: "break-word",
+                hyphens: "auto",
+                willChange: "opacity",
               }}
             >
               {displayContext}
             </p>
-            {/* Hidden measurement clone for tallest text */}
             <p
               ref={measureRef}
               aria-hidden="true"
               style={{
-                position: 'absolute',
-                visibility: 'hidden',
-                pointerEvents: 'none',
+                position: "absolute",
+                visibility: "hidden",
+                pointerEvents: "none",
                 marginTop: 18,
                 fontSize: "0.9rem",
                 fontFamily: "'Glegoo', serif",
-                maxWidth: isMobile ? '88vw' : '60ch',
+                maxWidth: isMobile ? "88vw" : "60ch",
                 lineHeight: 1.35,
-                whiteSpace: 'normal'
+                whiteSpace: "normal",
               }}
             >
               {longestContext}
@@ -363,20 +449,20 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
               onClick={(e) => e.stopPropagation()}
               style={{
                 fontFamily: "'Glegoo', serif",
-                display: 'inline-block',
-                background: '#ffffff',        // white default
-                color: '#ccc8c0ff',
-                padding: '6px 14px',
+                display: "inline-block",
+                background: "#ffffff",
+                color: "#ccc8c0ff",
+                padding: "6px 14px",
                 borderRadius: 29,
-                fontSize: '0.75rem',
-                textDecoration: 'none',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
-                letterSpacing: '.5px',
-                transition: 'background .25s ease',
+                fontSize: "0.75rem",
+                textDecoration: "none",
+                boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
+                letterSpacing: ".5px",
+                transition: "background .25s ease",
                 marginBottom: 10,
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = '#a8a5a2ff')}
-              onMouseLeave={(e) => (e.currentTarget.style.background = '#ffffff')}
+              onMouseEnter={(e) => (e.currentTarget.style.background = "#a8a5a2ff")}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "#ffffff")}
             >
               Contact Us
             </a>
