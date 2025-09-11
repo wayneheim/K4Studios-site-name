@@ -9,7 +9,7 @@ export const galleryData = [
     "keywords": [],
     "story": "",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -18,31 +18,33 @@ export const galleryData = [
   },
   {
     "id": "i-sGW55ch",
-    "title": "A",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/1/Ms4KPwvCpdWVWBKnncJRxx3s5jSJwLkZTktzfs6rj/XL/_WHO2172-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sGW55ch/A",
+    "title": "Guardians of the Ridge",
+    "description": "A Native American elder rides with quiet strength across the foothills — a portrait that captures the intersection of tradition, dignity, and painterly fine art photography. Part of Wayne Heim’s Facing History series, this image is a tribute to Native American legacy through cinematic lens and historical reverence.",
+      "alt": "Native American elder on horseback in traditional regalia, fine art photograph by Wayne Heim",
+  "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/1/Ms4KPwvCpdWVWBKnncJRxx3s5jSJwLkZTktzfs6rj/XL/_WHO2172-Edit-XL.jpg",
+  "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sGW55ch/A",
     "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy"
+        "native american portrait",
+    "indigenous",
+    "painterly photography",
+    "native american elder",
+    "horseback",
+    "plains indian",
+    "fine art print",
+    "western art",
+    "historical reenactor",
+    "native regalia"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
+   "story": "The mountain air is quiet here, save for the soft breath of the horse and the rustle of feathers. His gaze is not fierce, but fixed — steady with memory, shaped by time. He does not pose. He arrives. And in that arrival, we see the endurance of identity: the old ways, still alive, still proud. Not a performance — a presence.",
+  "notes": "Echoing the spirit of Edward Curtis and the painterly traditions of Catlin and Remington, this portrait elevates beyond documentation. The muted palette, softened textures, and vertical compositional structure draw the eye upward — connecting earth to spirit, figure to landscape. A study in reverence and restraint, the image fuses Wayne Heim’s photographic eye with the emotive storytelling of classical portraiture. Ideal for collectors seeking work that bridges fine art and cultural homage.",
+  "rating": 5,
+   "galleries": [],
     "visibility": "show",
     "sortOrder": 0
   },
   {
     "id": "i-fCSxt3j",
-    "title": "A",
+    "title": "Guardian of the Ridge #2",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/Nfh3T8Cd3gZccThhc2qBkXnKX6bSt2fJj3BDRbpHG/XL/_WHO2172-Edit-2-Edit-XL.jpg",
@@ -59,7 +61,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 1
@@ -83,7 +85,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 2
@@ -107,7 +109,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 3
@@ -131,7 +133,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 4
@@ -155,7 +157,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 5
@@ -179,7 +181,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 6
@@ -203,7 +205,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 7
@@ -227,7 +229,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 8
@@ -251,7 +253,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 9
@@ -275,7 +277,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 10
@@ -299,7 +301,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 11
@@ -323,7 +325,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 12
@@ -347,7 +349,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 13
@@ -371,7 +373,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 14
@@ -395,7 +397,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 15
@@ -419,7 +421,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 16
@@ -443,7 +445,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 17
@@ -467,7 +469,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 18
@@ -491,7 +493,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 19
@@ -515,7 +517,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 20
@@ -539,7 +541,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 21
@@ -563,7 +565,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 22
@@ -587,7 +589,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 23
@@ -611,7 +613,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 24
@@ -635,7 +637,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 25
@@ -659,7 +661,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 26
@@ -683,7 +685,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 27
@@ -707,7 +709,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 28
@@ -731,7 +733,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 29
@@ -755,7 +757,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 30
@@ -779,7 +781,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 31
@@ -803,7 +805,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 32
@@ -827,7 +829,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 33
@@ -851,7 +853,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 34
@@ -875,7 +877,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 35
@@ -899,7 +901,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 36
@@ -923,7 +925,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 37
@@ -947,7 +949,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 38
@@ -971,7 +973,7 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 39
@@ -995,7 +997,7 @@ export const galleryData = [
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 40

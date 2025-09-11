@@ -326,22 +326,6 @@ export const galleryDataMap   = {
   ],
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color": [
     {
-      "id": "i-fM9qmKW",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fM9qmKW/1/M2rT2P6jZhWfZg5B48vVX4VPm5D8zRHT5cq6SsdF8/XL/Cowboy%20photography%20_DSF8979-Enhanced-NR-Edit-Edit-XL.jpg",
-      "rating": 5,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-fCG2nm8",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8/2/LbbqzNXGgvRCJvsrTHwjhZTbhRNTrF353HmQV2c7M/XL/Western%20Cowboy%20Painterly%20Portrait%20_ANA0303-Edit-XL.jpg",
-      "rating": 5,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
       "id": "i-ncFcHDM",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/LMvqcxpXpnw4Hf9Vh8DVDjf3STGPVwm2TBBrf6t3K/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
       "rating": 5,
@@ -358,8 +342,40 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-QB4jLsH",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/LSPjrzL4QmzM8q9x5TQp9NQ2sVwZk9pGTBcq596rb/XL/_O2H3871-871-873-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
       "id": "i-bfKMXS9",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bfKMXS9/1/KrPHVbDJW2Msm6mmGmMkPhH6kPjkQQLGvDjXPTD7Z/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8834-Edit-2-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-VDLVwqr",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-VDLVwqr/0/M7nvQ8RbfLHVdvmvc2rbc4LGKC2vb7v6WwzjmHbNx/XL/_HF23452-644-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-fM9qmKW",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fM9qmKW/1/M2rT2P6jZhWfZg5B48vVX4VPm5D8zRHT5cq6SsdF8/XL/Cowboy%20photography%20_DSF8979-Enhanced-NR-Edit-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-fCG2nm8",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8/2/LbbqzNXGgvRCJvsrTHwjhZTbhRNTrF353HmQV2c7M/XL/Western%20Cowboy%20Painterly%20Portrait%20_ANA0303-Edit-XL.jpg",
       "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -382,16 +398,32 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-PM4d3g3",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-PM4d3g3/2/KTv3WnfSwnkfJws389CHBKvGBTtJSVmCdpwrpSCTJ/XL/cowboy%20photography%20campfire_HF21845-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
+      "id": "i-JKnW497",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/LQ2pWMcDpzhdBLvjMjczvc8PWwnZk27fSzc4wc7sK/XL/cowboy%20photography%20_O2H0496-Edit-Edit-XL.jpg",
       "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
     },
     {
-      "id": "i-JKnW497",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/LQ2pWMcDpzhdBLvjMjczvc8PWwnZk27fSzc4wc7sK/XL/cowboy%20photography%20_O2H0496-Edit-Edit-XL.jpg",
+      "id": "i-qVZ9m7j",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j/2/Lbs7RG7xjnNCnssBc4RXqLCL9kM4ZrwxQD8X5ZN37/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8540-Edit-2-Edit-Edit-XL.jpg",
+      "rating": 4,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-mpfG8XF",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-mpfG8XF/1/LzkNXckL9Cxmr7wM76BCvghk6hsvcm9TgbgL9mpdw/XL/cowboy%20cowgirl%20campfire_HF21818-Enhanced-NR-Edit-2-Edit-XL.jpg",
+      "rating": 4,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-PM4d3g3",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-PM4d3g3/2/KTv3WnfSwnkfJws389CHBKvGBTtJSVmCdpwrpSCTJ/XL/cowboy%20photography%20campfire_HF21845-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
       "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -406,8 +438,8 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-qVZ9m7j",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j/2/Lbs7RG7xjnNCnssBc4RXqLCL9kM4ZrwxQD8X5ZN37/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8540-Edit-2-Edit-Edit-XL.jpg",
+      "id": "i-Dw6Z8ff",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Dw6Z8ff/2/MrBSfbkvjjfgTXpz5Wmbr25xj7vRgNMThKK8PLjTp/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA8462-Edit-Edit-4-XL.jpg",
       "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -438,30 +470,6 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-Dw6Z8ff",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Dw6Z8ff/2/MrBSfbkvjjfgTXpz5Wmbr25xj7vRgNMThKK8PLjTp/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA8462-Edit-Edit-4-XL.jpg",
-      "rating": 4,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-xXQ3gDM",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-xXQ3gDM/2/LXCknCnT4ZT3q9B6pLHpbR8Qrr3wSdtmX24Rwxhxg/XL/painterly%20cowboy%20portrait%20_ANA9586-Edit-Edit-2-Edit-XL.jpg",
-      "rating": 4,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-mpfG8XF",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-mpfG8XF/1/LzkNXckL9Cxmr7wM76BCvghk6hsvcm9TgbgL9mpdw/XL/cowboy%20cowgirl%20campfire_HF21818-Enhanced-NR-Edit-2-Edit-XL.jpg",
-      "rating": 4,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
       "id": "i-V5WcTqg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-V5WcTqg/2/NK3m9jmrchNnKJ5rM8tdX4HprsCTLTq8RBK2WwxP3/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6747-Edit-Edit-Edit-2-XL.jpg",
       "rating": 4,
@@ -470,39 +478,15 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-8BbMZjs",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs/1/KpqxHFDgRssTDPtNDr83cDPhRbt9TFm7vd8PHrz4g/XL/Western%20Cowboy%20Portrait%20Photography%20_DSF6899-Edit-Edit-Edit-XL.jpg",
-      "rating": 3,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-b3vCXwR",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-b3vCXwR/3/KZR52snQ32gsmqPHkNBhBmLwVrPSRJBN38j9Xnh4K/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_DSF7013-Edit--XL.jpg",
-      "rating": 3,
+      "id": "i-FVHm8VJ",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-FVHm8VJ/1/MBdH2gmgtMgNsLFnQWhWngp29ZKsCdvX78cZ7qsrf/XL/cowboy%20portrait%20photo%20_DSF6725-Edit-Edit-Edit-XL.jpg",
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
     }
   ],
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White": [
-    {
-      "id": "i-2VTWJ3R",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-2VTWJ3R/4/KXxMSVnCn8ntRxZSsnzKrFbhMgWGDzQzhDT4gKrZ5/XL/_HF20421-Edit-XL.jpg",
-      "rating": 5,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-BBZjZD6",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/M8XsHLkjrs8m4hbQdffFB6Kzh57rfqX5BJBfgQ5Xb/XL/_ANA0584-Edit-Edit-3-XL.jpg",
-      "rating": 5,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-      ]
-    },
     {
       "id": "i-dLDF4Q6",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dLDF4Q6/1/KFWDHQCvQjRr4QhzjxJt4DcDqnm2zrmF5BW734sTK/XL/_ANA0964-Edit-Edit-2-XL.jpg",
@@ -520,6 +504,30 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-M95HTNH",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-M95HTNH/0/NCk5b8d8XjQsHm6BHVQJR5xq6w3SX6jk7G6vkMMV7/XL/_DSF9690-Edit-2-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-2VTWJ3R",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-2VTWJ3R/4/KXxMSVnCn8ntRxZSsnzKrFbhMgWGDzQzhDT4gKrZ5/XL/_HF20421-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-BBZjZD6",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/M8XsHLkjrs8m4hbQdffFB6Kzh57rfqX5BJBfgQ5Xb/XL/_ANA0584-Edit-Edit-3-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    },
+    {
       "id": "i-6z4gpF7",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6z4gpF7/1/LjvxZMZNK6m4XCPB7BKz6BrzNRvWhPL6V8kMz99p2/XL/_ANA8432-Edit-Edit-2-XL.jpg",
       "rating": 5,
@@ -528,24 +536,8 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-hMJZN2m",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hMJZN2m/1/Lr4zFwNPtzBwGpSNQPTSt5nXkrKr3TBbCxznV7gc7/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
-      "rating": 4,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-KgKZZxg",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KgKZZxg/1/KQJKMxmKJ3PzD3r9LSdmG8zQ4fDZD7DtpCbqBkLjK/XL/_ANA8380-XL.jpg",
-      "rating": 4,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-TpqkCVk",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TpqkCVk/3/MfGt3fgC39bqwSSh6mLgTQR4hMxzksNLMDFbSrdnS/XL/_HF20647-Edit-XL.jpg",
+      "id": "i-Txh4c8k",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Txh4c8k/3/KnKckKb6gBPNHrJPLjzF5djJzn2wZkKRqW8MHSTFq/XL/_HF20275-Edit-XL.jpg",
       "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -560,6 +552,30 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-TpqkCVk",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TpqkCVk/3/MfGt3fgC39bqwSSh6mLgTQR4hMxzksNLMDFbSrdnS/XL/_HF20647-Edit-XL.jpg",
+      "rating": 4,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-KgKZZxg",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KgKZZxg/1/KQJKMxmKJ3PzD3r9LSdmG8zQ4fDZD7DtpCbqBkLjK/XL/_ANA8380-XL.jpg",
+      "rating": 4,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-hMJZN2m",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hMJZN2m/1/Lr4zFwNPtzBwGpSNQPTSt5nXkrKr3TBbCxznV7gc7/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
+      "rating": 4,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    },
+    {
       "id": "i-W5d8Ss8",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-W5d8Ss8/0/MmJxCMw3tVssVGmZZfbD92MHf5NPp9Vjz47b2S9Z2/XL/_ANA0883-Edit-Edit-XL.jpg",
       "rating": 3,
@@ -568,16 +584,8 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-bLHTNNg",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bLHTNNg/1/LBHWGX6Z8rFkhZNmVNqpWsCDRFcPQ5xgGPDTgd3Xx/XL/_ANA8462-Edit-Edit-2-2-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-SwhsL2h",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SwhsL2h/4/K23SSb3fpkppNk9tNK45TRDMWrLjL6mCMzXppJtwP/XL/Western%20Portrait%20Photography_HF29529-Edit-XL.jpg",
+      "id": "i-GSk4JS8",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-GSk4JS8/0/NZ8fTF2fwn6zk7bzmDhDvzBjzSXsxKXHPfGrxdW8c/XL/_HF23379-819-XL.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -600,32 +608,8 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-s5XTxBL",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-s5XTxBL/2/KcBfwLnnG3Z7dGhcvVgJXmXFTZCNLGJQFBXRP7D7r/XL/Western%20Cowboy%20Portrait%20Photo%20_HF20550-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-D2fQjDQ",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-D2fQjDQ/1/KPbTXds2Zw3ZPB7s5F2qDxRNg7brzwNf82HB3sd5R/XL/_ANA9703-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-DQHK8FK",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DQHK8FK/0/Nhg9Vg5GLkPLJCqFX7mnWQMPJxs52TChqzbqRRMhp/XL/_DSF0082-Edit-Edit-Edit-2-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-N77wcxb",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-N77wcxb/1/Mn6NL3Nbbj8zBfbSMmr6k8pk7mKtFXvdbhwLhkbnr/XL/_DSF7600-Edit-Edit-Edit-XL.jpg",
+      "id": "i-kp5NHNw",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/MxHks6MrNmsW8ZtQh6KnppKvK8BwbcGVTmjWDrJHk/XL/_O2H0388-Edit-2-XL.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -640,11 +624,189 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-dTxwFN4",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dTxwFN4/0/MGGFPD4TSvRsjhxZ8KP9h727Lf4znt7gS6cmvmjNK/XL/_DSF8830-Edit-Edit-XL.jpg",
+      "id": "i-rsPNzJr",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-rsPNzJr/0/Md9KttFnFgR5Gnrmn43MMGFbRp3mwRDWsxWhMkkmx/XL/_O2H3127-862-863-XL.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-qwFCjLp",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/LPwQdj6STGMJ6wKBtqbhDGmCL9nKp29LNgRJh8KNP/XL/_HF29384-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-cGDk6Nc",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/KNWWxjrjB74bbvb59CGrSBcgFtMBrkm9d8znxfRjR/XL/_O1H0469-Edit-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+      ]
+    }
+  ],
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color": [
+    {
+      "id": "i-sGW55ch",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/1/Ms4KPwvCpdWVWBKnncJRxx3s5jSJwLkZTktzfs6rj/XL/_WHO2172-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-fCSxt3j",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/Nfh3T8Cd3gZccThhc2qBkXnKX6bSt2fJj3BDRbpHG/XL/_WHO2172-Edit-2-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-69qsFwx",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/KHm9Dj87HLMkg25XGWZQ7dXVV6dQLWHQjg4vnRvHZ/XL/_WHO2423-Edit-Edit-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-4Wsxmqv",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/LLJhkG344ZvvZR5ggmKH6PD4gsXsgx4qt6cRNm3Wc/XL/_HF29032-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-cqT88cp",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cqT88cp/0/KVbPSTXJNmBWwXSZQH3TGmbL7ckcx9szp6pXNVxZD/XL/_HF29032-Edit-2-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-cNbW8wV",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/NZksBbVchvTxDSLSN3bTxTJDvBBh5Q2tkCFDBgzqQ/XL/_WHO3531-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-zt2btJ7",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/0/KtGSzTzN7M7RGkF28VWPc5MJPnQvprL6v2G6jvsHf/XL/_HF29691-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-4Hz6D7k",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/MsJdrrckpVcXShG3JmZRJQTdVJrVGFnCs5X8h87Q8/XL/_HF29701-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-nZbDC9C",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/0/L4CC7kqnPVGzJrbtHNmzzbbjsQff7v9b7d7WVHsDd/XL/_HF20466-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-qLzRgbS",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/K3v8Rd5pnsXJLmwL8pwNfRMJT8fGQ3QbGGjbzczx2/XL/_HF20466-Edit-2-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-WXNSQzk",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MptMFJvWHSXrS5D3pX6tgFcVdjkW8vMF3jQnHqTKs/XL/_WHO0135-Edit-3-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-zZJbbHG",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/KsFHZCPwN4JrGVLp8h6PZC3L9bsfDRhqd9PKZcnbV/XL/_WHO0204-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-h679dhn",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/NKKNnXpPbk3p3C69DkN4FGnnfNkgw7ZmCs8JSpWtm/XL/_WHO0338-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-V96Rgmj",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/0/NV3ZHBB86DZsCssW8rR7jQMVTffKWHkQzvXZsgHGf/XL/_WHO0996-Edit-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-rR76nKr",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/0/Kfk5b7ZFnqwzJxHzbBbHjRxNRthTbk8jh8LgnSbvN/XL/_WHO1224-901-902-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-hHVb4vC",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/0/NPRNp7wm6sWH77KTZ9HcvhNLsLh5W6RGhdvhg8MPT/XL/_WHO1224-901-902-2-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-Z8pZLnt",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/K8N3zdmwPK33V2KTtRGhsdqcTmfxG6dSsKf58XFPL/XL/_WHO1255-896-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-67Qt8WM",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/KsQbFz4JwDGvpXnsx7g56RtMBwtHmCcPP7pTBjwDC/XL/_WHO1255-897-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-sSHtMSC",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/1/NPb5T2vZZSbwF5M9CDVVTTZM2Gc8Hk5HXZQ8MhCnK/XL/_WHO1264-894-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+      ]
+    },
+    {
+      "id": "i-tfZTHXq",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/1/L85rXpbxKbbJtbPDNgxQ2JX4L4nsSmFDV2DjHVtkH/XL/_WHO1264-895-XL.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
       ]
     }
   ],
@@ -1944,558 +2106,6 @@ export const galleryDataMap   = {
       ]
     }
   ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery": [
-    {
-      "id": "i-wqJHvpV",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-wqJHvpV/0/LXcfqDqQ3w6HsbrQwdfwKkVQ5gKGSrbFMjhq6nV8r/XL/_WHZ1207-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-mfMVdnH",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/L5CbNJQcppCb2WGw8gFr7x57Pv3679KZGrDV3KHhp/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-2M68L7c",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-2M68L7c/0/MCmpHVgjkWsZcKwGgvcjZBnBgLTk2kq3HZNnBqWHT/XL/_WHZ7972_tonemapped-Edit-531-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-8sW4rf4",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8sW4rf4/10/KsVTpD9xrtCDn4fDwSMXVgLNH3JLQnVWgRHFcvb4H/XL/_K1W3375-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-7k6tvvL",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/L2f8rqsrxFKvzjxvF7g7dWRC4PW4Dwcq92pcpwC2F/XL/_WHZ2313-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-7GCDqcW",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7GCDqcW/7/KDdCLK23f5N8RTZ8H8RmHmgM3pZzxrqWqx8fBtRD9/XL/_OL34625-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-NH5PD4M",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NH5PD4M/6/M7MxxnDx7KwnLvSc6kTgqwR8Vp6nPzKqbkLJ2pG3P/XL/_DSF2369-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-Rspf84k",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-Rspf84k/0/KwcHKCz6HPwV7nL2NkWRCs3Xv5xMbXzJmfWPMtXGF/XL/_DSF2369_tonemapped-613-614-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-GGmGhkv",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/NfmQMwcBM2k42W6SPGZRpMFrmGzWptXzf5xxFmrsm/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-fZ2J8wr",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NTPCcdph7SXfcTcpZCxhg33s9MJWgb9p9rchwxJHX/XL/_WHZ2247-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-dXHvGd9",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/MBnsD4TJNfKSKWk2gLBQcc7HPMhQ3k9QHSsNSGsXt/XL/_OLY8984-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-WVGNqs6",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LNBZkXq4H6WLDWs6Gn8GgHXqZff9VZM3KvGXVzqrK/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-smCDmvz",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-smCDmvz/0/KQVs7tXsqhDC6DJ66LJ9Qd4ssGFgRh4w5B68T4s9V/XL/_WHZ2734-Pano-Edit-2-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-VPBt3XG",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VPBt3XG/4/Mcpgkb4n8wVbDj3nMFZLWHWhHXBdrptQgk3QSKkZk/XL/_WHZ3206-Pano-Edit-Edit-2-Edit-Exposure-2-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-xfBNqVW",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/M6rdXzLcQK7mxJ2Gbc4wNsv86pRZhrTsx8wx9jwJF/XL/_WHZ3234-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-gvz3xGb",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gvz3xGb/0/MXV9vxd3fZ7227bdMX8x7Xr67tkf4Mjp5pNs5Lrbg/XL/_WHZ3666-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-WSVMnGx",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WSVMnGx/0/MmTnzSJhhVcjmxcR7fK8RtttzprKwwHRwBjN43gtV/XL/_WHZ4304-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    },
-    {
-      "id": "i-WKQS29t",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/M77Hwkvfnfgh4JpgpnPXPFJ7wHQw4RDqfFCCLxk7W/XL/_WHZ4347-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-      ]
-    }
-  ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery": [
-    {
-      "id": "i-GBTSWkW",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NHJNkGcJfZ6QP33p7S9jCCW3f3p6DtG9FrrbrMtH5/XL/_HF20856-Pano-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-zXsjXwN",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/KSgPnQ23vkk4qfHKhbBwQZq4m7XHQdRBCZ2SQXLjm/XL/_igp2989-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-HP6hJm4",
-      "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NX86CFv22dwCxMbqtwc88kXT2vpktMp7ZvXMhHhXT/XL/i-HP6hJm4-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-GmFFsFL",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/MhSp4rdkmSGQDH6Q7FnpfSCFFHdZLGsQnGGjGTNR4/XL/_IMG0137_tonemapped-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-WdNbPqX",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/KMb5t2pNBrKqKBtKqfrF5KBVjt8NxdVKdJKrFsDvJ/XL/_IMG0156_tonemapped-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-fccqTrW",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/MvdxFWsdSt6BcGXBMtvNjTBcpFxVvPmxCPFRzwdVJ/XL/_IMG0159_tonemapped-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-sm7MXM4",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/KnkXBgcVtjCP4hzcqFfK6TZxB4Nr5bhtMZvzts2RD/XL/_OLY0581-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-7LVp5bN",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/KDptzFbZxRFjrsKdPbWSzvstCh3dw2t9dz4SQ9JBJ/XL/_WHZ6681-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-mCJv3RM",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/LqHh3bB6PW5MS5nTfZ3nfmnL6nc3gbJJqjZDx3bDB/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-GV5XPtF",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/NQZm7B799KPVng9vPRwQ89ChLMjmMGZjPHXZV8nJs/XL/_WHZ7498-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-pd6dZCP",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/LhNqmghTV4h7RKhgvFX7hbkGhDnpRk3Rcpw8TNNTH/XL/_ANA0731-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-VHMgr5J",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/KqQqStXbQXJS6SSHqXm7NbHrFb35TJ3zP9RnDMmpd/XL/_ANA1097-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-QsskjT5",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/LzhnR8kSWdcPVNvjgchcwcGvBqvFPpbH25g2sRGvR/XL/_PEN0005-Enhanced-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-f56454D",
-      "src": "https://photos.smugmug.com/photos/i-f56454D/2/LQZm2gX6Cw4GxThXNnrQskNFrW7NNNFLQfQ9FT9xG/XL/i-f56454D-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-KWjsH3B",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/Lmw3KW4Kx3454Cp8r3VBhF8PhddhGC2nM9BWhgFcq/XL/_O1H0465-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-DL6wMc7",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/LrLQPdb5tLTS2cP5tDcsDT9S3vZmTTh9swBKFFWWD/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-5wFxqjj",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/LMVPVsMJHWGzt2JvVvpCfgm4tTwqXJWPZgWNSxFfg/XL/_O1H0478-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-m3V6PZf",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LptFrpgLhgq7b6NWKprRMNNwGCdRsCKCnf7cjBdPF/XL/_O1H0479-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-SCMFzP3",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/KHGKCwVcZfsTrWjH4q55b6PQD6mbm2cJ9fNsw4QNJ/XL/20230706_181805-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    },
-    {
-      "id": "i-84Cqc8J",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/NJVztbJT75n3X4XpCbjFLpxpmQZRtLctNqdFKk3xP/XL/20230706_183048-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-      ]
-    }
-  ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery": [
-    {
-      "id": "i-fgkX7Jn",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/K3WHkRRR8kkRf7bvrDXkNhMPvHhwjkXSVfxgZMVhr/XL/_DSF5884-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-7LZhFkc",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/MV2NZKCZb5LrkrFnhP9CfKCNWgttNdHvLJcXqm7hT/XL/_WHZ6646-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-mSp9WgK",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LnGChwdNw638jTQKmFTcD3TmJNC4StDF2XhgRsfZQ/XL/_WHZ6667_8_9-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-p5ghtLz",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-FpmhtnM",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/KXtH3cJt6DxSBX2nXNFVtM8Cz8dxrfSbhmnXtkWRZ/XL/_DSF5501_tonemapped-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-Jstk9Gx",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/K738tNKcXSmHbtvWzZQVv865DhtMK8XJR8WggdLST/XL/_DSF5516_tonemapped-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-NkNwLM6",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/LXFDHGCGjwMtzJ6BxsDJhC9ztstzSkf7dbCrbnsZ6/XL/_DSF5574_tonemapped-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-nqpGhhX",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-cKsdqTs",
-      "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/Mz5M8mvzTfMfXrTzxFjGzFh77KFFC8xxbHXsfnGnt/XL/i-cKsdqTs-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-RjSqqDt",
-      "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/M3GXBhdQGdVGjBJ7rR7D2NzRVkBjhtJT8sxg6p8Wh/XL/i-RjSqqDt-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-qM9zBVL",
-      "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/L88X9243jxcSVSczNpqx4HRZnVGpJ8RPpGFz8Smtn/XL/i-qM9zBVL-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-5ZsWtSx",
-      "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MB757WTWqZdkccdVzDTz2KdvQVBb8mRcKtrk7DVdX/XL/i-5ZsWtSx-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-fGnNkBL",
-      "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/LtDZ8prBjhG43S2H6ggt6bHJXFxXjcnWgDDmcSTSC/XL/i-fGnNkBL-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-qrS5Ggc",
-      "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/Kh4rjJLjV9fZtTw6DR2W2n2kf4WK9ddGMswJfgtbG/XL/i-qrS5Ggc-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    },
-    {
-      "id": "i-bqnctgw",
-      "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/LWqnqbxws5zmqLGTtkhHCwNGwvRKzStBQxjZpVVhj/XL/i-bqnctgw-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-      ]
-    }
-  ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery": [
-    {
-      "id": "i-fgkX7Jn",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/K3WHkRRR8kkRf7bvrDXkNhMPvHhwjkXSVfxgZMVhr/XL/_DSF5884-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-7LZhFkc",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/MV2NZKCZb5LrkrFnhP9CfKCNWgttNdHvLJcXqm7hT/XL/_WHZ6646-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-mSp9WgK",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LnGChwdNw638jTQKmFTcD3TmJNC4StDF2XhgRsfZQ/XL/_WHZ6667_8_9-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-p5ghtLz",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-FpmhtnM",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/KXtH3cJt6DxSBX2nXNFVtM8Cz8dxrfSbhmnXtkWRZ/XL/_DSF5501_tonemapped-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-Jstk9Gx",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/K738tNKcXSmHbtvWzZQVv865DhtMK8XJR8WggdLST/XL/_DSF5516_tonemapped-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-NkNwLM6",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/LXFDHGCGjwMtzJ6BxsDJhC9ztstzSkf7dbCrbnsZ6/XL/_DSF5574_tonemapped-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-nqpGhhX",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-cKsdqTs",
-      "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/Mz5M8mvzTfMfXrTzxFjGzFh77KFFC8xxbHXsfnGnt/XL/i-cKsdqTs-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-RjSqqDt",
-      "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/M3GXBhdQGdVGjBJ7rR7D2NzRVkBjhtJT8sxg6p8Wh/XL/i-RjSqqDt-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-qM9zBVL",
-      "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/L88X9243jxcSVSczNpqx4HRZnVGpJ8RPpGFz8Smtn/XL/i-qM9zBVL-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-5ZsWtSx",
-      "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MB757WTWqZdkccdVzDTz2KdvQVBb8mRcKtrk7DVdX/XL/i-5ZsWtSx-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-fGnNkBL",
-      "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/LtDZ8prBjhG43S2H6ggt6bHJXFxXjcnWgDDmcSTSC/XL/i-fGnNkBL-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-qrS5Ggc",
-      "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/Kh4rjJLjV9fZtTw6DR2W2n2kf4WK9ddGMswJfgtbG/XL/i-qrS5Ggc-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    },
-    {
-      "id": "i-bqnctgw",
-      "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/LWqnqbxws5zmqLGTtkhHCwNGwvRKzStBQxjZpVVhj/XL/i-bqnctgw-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-      ]
-    }
-  ],
   "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery": [
     {
       "id": "i-G6gftd8",
@@ -3210,231 +2820,167 @@ export const galleryDataMap   = {
       ]
     }
   ],
-  "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains": [
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery": [
     {
-      "id": "i-sTCJ5dz",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/NXZgFbRFwKCHjxWRcmSXrnrBsjpPFbqhRsFnHtmMC/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
+      "id": "i-wqJHvpV",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-wqJHvpV/0/LXcfqDqQ3w6HsbrQwdfwKkVQ5gKGSrbFMjhq6nV8r/XL/_WHZ1207-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-WgGWH9C",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/KkdmKJR2WBpz6MbtCMxpDRFrsJ4VVzDt5zzNdt6mB/XL/P1030226-XL.jpg",
+      "id": "i-mfMVdnH",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/L5CbNJQcppCb2WGw8gFr7x57Pv3679KZGrDV3KHhp/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-TvpKdWW",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-TvpKdWW/9/L85XdtXCRmnWvDXQMMscBz33wPcwgQ7mXQZ69KJ9f/XL/_WEH8926-XL.jpg",
+      "id": "i-2M68L7c",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-2M68L7c/0/MCmpHVgjkWsZcKwGgvcjZBnBgLTk2kq3HZNnBqWHT/XL/_WHZ7972_tonemapped-Edit-531-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-4SmFT2v",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KdbpQB8pn8xDKQ3z9xkVPV3xfDN3MfdTpcvnB6j49/XL/_IGP2847-XL.jpg",
+      "id": "i-8sW4rf4",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8sW4rf4/10/KsVTpD9xrtCDn4fDwSMXVgLNH3JLQnVWgRHFcvb4H/XL/_K1W3375-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-wxLBqLg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
+      "id": "i-7k6tvvL",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/L2f8rqsrxFKvzjxvF7g7dWRC4PW4Dwcq92pcpwC2F/XL/_WHZ2313-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-8WSrqG4",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8WSrqG4/4/MhFRQf4KbnK5VLd6Rs679JS8ps25NZ4SQgn7ZgTLm/XL/Majestic%2520Front-XL.jpg",
+      "id": "i-7GCDqcW",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7GCDqcW/7/KDdCLK23f5N8RTZ8H8RmHmgM3pZzxrqWqx8fBtRD9/XL/_OL34625-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-7zGDNJf",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/Ls837gwrfs643XVhF4QQjZNckBNdBNWwSRBh2sxLQ/XL/_IGP5748-XL.jpg",
+      "id": "i-NH5PD4M",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NH5PD4M/6/M7MxxnDx7KwnLvSc6kTgqwR8Vp6nPzKqbkLJ2pG3P/XL/_DSF2369-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-8hwfnGn",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
+      "id": "i-Rspf84k",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-Rspf84k/0/KwcHKCz6HPwV7nL2NkWRCs3Xv5xMbXzJmfWPMtXGF/XL/_DSF2369_tonemapped-613-614-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-wtHsJGQ",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wtHsJGQ/6/LZzZQH5M5Qvg9mthzpZJ3nWbJZjSZLxNDMHhVMPM9/XL/_IMG6035-XL.jpg",
+      "id": "i-GGmGhkv",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/NfmQMwcBM2k42W6SPGZRpMFrmGzWptXzf5xxFmrsm/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-MXKDnVL",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-MXKDnVL/6/LhtxtxWQh62CXcjxhSnvt5tZK4HzsNnBBKQWDGgTw/XL/_IMG6063-XL.jpg",
+      "id": "i-fZ2J8wr",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NTPCcdph7SXfcTcpZCxhg33s9MJWgb9p9rchwxJHX/XL/_WHZ2247-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-8XNRjZF",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MrgZ3TtkgxdML89hc8668gnZdMr6KcJBGCGpjsGds/XL/_IMG6130-XL.jpg",
+      "id": "i-dXHvGd9",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/MBnsD4TJNfKSKWk2gLBQcc7HPMhQ3k9QHSsNSGsXt/XL/_OLY8984-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-PVbJdpj",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NSd3PDZVPkwnnt43K5xGXSnmDjXcKtLGthvLBZWTF/XL/_IMG6295-XL.jpg",
+      "id": "i-WVGNqs6",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LNBZkXq4H6WLDWs6Gn8GgHXqZff9VZM3KvGXVzqrK/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-74rc8wb",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/LztbDsVg97kCz7h498TWhJzHRBCnSrdB35cF9rBCV/XL/_IMG6310-XL.jpg",
+      "id": "i-smCDmvz",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-smCDmvz/0/KQVs7tXsqhDC6DJ66LJ9Qd4ssGFgRh4w5B68T4s9V/XL/_WHZ2734-Pano-Edit-2-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-xZH95Bj",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/LkZMgr9JHMw2Lzzcf34GfCw86T87gpsZt5445r5ZP/XL/_IMG6333-2-XL.jpg",
+      "id": "i-VPBt3XG",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VPBt3XG/4/Mcpgkb4n8wVbDj3nMFZLWHWhHXBdrptQgk3QSKkZk/XL/_WHZ3206-Pano-Edit-Edit-2-Edit-Exposure-2-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-Bdbf3L9",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LPphtn4MNHxnG56s4XL6C945PXTwcJk8Pc7RTBb94/XL/_IMG6391-XL.jpg",
+      "id": "i-xfBNqVW",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/M6rdXzLcQK7mxJ2Gbc4wNsv86pRZhrTsx8wx9jwJF/XL/_WHZ3234-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-98c9sG9",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-98c9sG9/4/M4HTK6N2kK3wsVrj8b6HjFfRkC3s8pJn4NtwBKnzQ/XL/_IMG6410-XL.jpg",
+      "id": "i-gvz3xGb",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gvz3xGb/0/MXV9vxd3fZ7227bdMX8x7Xr67tkf4Mjp5pNs5Lrbg/XL/_WHZ3666-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-WJvRGjn",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WJvRGjn/4/LbVskRmhdq9xF2F7DqKWcG7kn89FGcCkdVKtZD6Sz/XL/_IMG6448-XL.jpg",
+      "id": "i-WSVMnGx",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WSVMnGx/0/MmTnzSJhhVcjmxcR7fK8RtttzprKwwHRwBjN43gtV/XL/_WHZ4304-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     },
     {
-      "id": "i-Rpvhss3",
-      "src": "https://photos.smugmug.com/photos/i-Rpvhss3/2/NRG5QkG9B8dgb76VdD6sGgcMsJzG9f7HDshfvpCGW/XL/i-Rpvhss3-XL.jpg",
+      "id": "i-WKQS29t",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/M77Hwkvfnfgh4JpgpnPXPFJ7wHQw4RDqfFCCLxk7W/XL/_WHZ4347-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
-      ]
-    },
-    {
-      "id": "i-LgrdsMQ",
-      "src": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/Kg5QWwnDkbfx5rVcBScMspjQhM4L6w9HwxwRxtTtv/XL/i-LgrdsMQ-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
-      ]
-    },
-    {
-      "id": "i-mcrrSZ2",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/LJv7hNzSmJdzQjL8PqDG9sGz6HG2Lk4VvWTT8p4rn/XL/_WHZ7717-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
       ]
     }
   ],
-  "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water": [
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery": [
     {
-      "id": "i-XhWrKdZ",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/KcSG7JCH3s9dRnFBdWf3dKz8PGgWvJZSJCg8L98WP/XL/_WHZ1224-Pano_tonemapped%2520v2-XL.jpg",
+      "id": "i-gr3rsVB",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-gr3rsVB/1/KSJzVZzrCkmBZNxk3QdmG3g8tP7Hv9FcQQbqpFWST/XL/b6d4160a7f0ca7a337974b5c3bcedd9-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-3R8rc7C",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/NS95s4PVS7Mc3smmr7WjkpVp2W3bX9gjJQmKgcdkT/XL/_IMG2241-XL.jpg",
+      "id": "i-2N4ghBL",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/KFx67WN4w4b4FF57ZNQsqHSpbvftjNrh2BHpvMxjr/XL/_IMG0573-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-84LZftr",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/0/KbZTLCZW57npD5bMGdTcKsXCVx6mH2L6pKchGFLC3/XL/_DSF4265-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-SxbNjWC",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/MH4fKLsC3vCwG57fwc9dhknRgKpx6P8Sk2rmsqfrV/XL/_WHZ1847-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-B7S6VwV",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/0/LWVkFnbhQjRvwJs9D7fRDqXwLrzMwPd24MCG3ztmV/XL/_DSF4918-Edit-456-458-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-jMzCqw2",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/MF56LHStmShhtPDCHCkkgLjSCtwgwvzQShHcpHqnf/XL/_IMG0369-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-nVDRCrB",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/0/KwftpDzRh4H9QJXzJZBpdhTJr54sJqN67vZSFxgMF/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-8hwfnGn",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
@@ -3442,193 +2988,47 @@ export const galleryDataMap   = {
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/KwSvfxhwGKX5sWDDZzMm8G3mg3Qfct4gqQ7Th87Ls/XL/_IMG7044-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-tF8fFm4",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/MnzpLFDKBbmcS68D7Pf8wtCWqcXFg8zpX3ZzPb6sV/XL/P1020645-Edit-XL.jpg",
+      "id": "i-b3F54M6",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/MkBrBk29XvPv3QC8NhdwvKdLj2rgRRSmsTMtV2NRm/XL/_WEH7202-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-rh75LzX",
-      "src": "https://photos.smugmug.com/photos/i-rh75LzX/4/L2cdcn6wLGJB5JDZ26gpzXqqJ8MFcBzpHjJQsgVMB/XL/i-rh75LzX-XL.jpg",
+      "id": "i-3dZtNxv",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3dZtNxv/4/KQqHbt46Rj4jqXCW7ctf85DTkcrs9FP8CmTkqbQ4X/XL/_WEH7210-2-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-HzMDDcG",
-      "src": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KdS4VnwmCDXcNN6W4Fwcn8qRVSTqMF8b4k866KxZw/XL/i-HzMDDcG-XL.jpg",
+      "id": "i-VbL6CF7",
+      "src": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MmjHgFbHRVdBjdwQfQMpcv5v7gLZDr7mRmWpMSLCh/XL/i-VbL6CF7-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-rjmZMZt",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/MwStqFs9XmLk5Zf2m6CrqJBXcXPS2Fq72PRvLpkFK/XL/_WHZ1446-Pano-XL.jpg",
+      "id": "i-VN5gQB3",
+      "src": "https://photos.smugmug.com/photos/i-VN5gQB3/4/LjP75vSDF5JrBTNKFRxt6M6Q5wGFSDZnm8fHXwh85/XL/i-VN5gQB3-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-769JJbV",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/L5kxsW3mt9TS6q8QfC2P2LzZM3bmqJ9KNTLd5jQ2B/XL/_WHZ1666_tonemapped2-XL.jpg",
+      "id": "i-fGKx3B6",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/K6sS4Cr3xc2QJp5cZgHFHCxk4XNXNPVNTxZFNr69Q/XL/_W3H9140_tonemapped-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-vTD9xH2",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/MM6zrVLHXvkMqB62jbtRZSrT3dqvVNSHD8MN4Lzgw/XL/_IGP5748-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-BfZH6vR",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-BfZH6vR/2/MBsZKFbqCWnScrtcTVKk7tTHrQvhCzhFqQVbpqHwv/XL/_WHZ9514-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-qphwtVw",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qphwtVw/4/McKnz7VrhPggqq4ZskmPtXMzKDsBvbBMzDG3QJT5S/XL/_W3H9744-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-GTDMD9v",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/Mn63n5d4cvBjGCF9TBBpmTQrHwRGwQZZTFdpCwL6h/XL/_OLY0581-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-BBDdJHb",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/K3283JKW4cn3q4RSV52hRT666msX7gm4q53JwPNK3/XL/_WHZ8737-Pano-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    },
-    {
-      "id": "i-d28cHrD",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-d28cHrD/3/LHPRKNptv6v7d3wRqQrshc8gJFnBsRDsgTdWTzCpz/XL/_IGP4730-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-      ]
-    }
-  ],
-  "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets": [
-    {
-      "id": "i-wxLBqLg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-VScCFDQ",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/NgVCwQMJMVXfjqV3Jn73ShMJFBqHsHPKN5BVG9C7T/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-kcvnCvz",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/L5SQBSBXkkdGB8mq9twvkDTXBSSmgRVBNB8nZszXq/XL/_WEH0101-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-3jXg4hf",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/NXP3L8L95T56ZvvxjCZfwnHSwNmbGb9q4Cmzmgt3q/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-XmVfrdk",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/NR4RfGKcSsS2L6mPZnFRz2FQTfBDG9Xv94GfFxjqr/XL/_O1H0365-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-mcrrSZ2",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/LJv7hNzSmJdzQjL8PqDG9sGz6HG2Lk4VvWTT8p4rn/XL/_WHZ7717-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-hVB6Pxq",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KMCVC3MxV2PB2ZwQXZg3XGBdBmck5SSMfMVqjV2Z6/XL/_O1H1351-Edit-Edit-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-fJTxRJG",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/NZ9v4v6W2vB8FD5Fzw97SCS8p3TxXQDmsTCwGvvKR/XL/_IMG5989-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-zrvTR9s",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/LMSzG6FV5v49kCfc4LqD2RzmccDHT4nGBm4vX68P4/XL/_IMG6008-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-2qqHRQ6",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/KmB9ZzrVwCMqr8Jwq8twx8NrGQbC8xwrvzbfC8jdk/XL/_IMG6094-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-rh75LzX",
-      "src": "https://photos.smugmug.com/photos/i-rh75LzX/4/L2cdcn6wLGJB5JDZ26gpzXqqJ8MFcBzpHjJQsgVMB/XL/i-rh75LzX-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-      ]
-    },
-    {
-      "id": "i-hVvx83K",
-      "src": "https://photos.smugmug.com/photos/i-hVvx83K/3/NjTpFtPtGVZ6fBL5C4LBQNTWWdJhz6R9HdgNswNdR/XL/i-hVvx83K-XL.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
@@ -3636,55 +3036,233 @@ export const galleryDataMap   = {
       "src": "https://photos.smugmug.com/photos/i-LXP3hD7/4/NfXFmrf8NBvnnthT4MmsNhshff2dhRMPhK72nG3w4/XL/i-LXP3hD7-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-6WBNkgx",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/0/NXVRvrDLnBpdRhNwv33RQRFtTcPbd4VQxxmQLZM4V/XL/20230709_211720-Edit-Edit-XL.jpg",
+      "id": "i-GvZBLcv",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/NQ7kPr2F5vkSdtcHgmLDVfbzscGndV5vfnXjPS49v/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-rMTRD6x",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/Kpc3Zc9ZhzNZm8k6M3ptgG9LxHLDQchZkJGj4XcwS/XL/_WHZ1479-XL.jpg",
+      "id": "i-LR3Vr2N",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/MpkSpQg4PK2fMsC3tfJjhtWkHHMGHtsVK6gSHjNbF/XL/_WHZ7433-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-MwsQPKg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KvPnZNR8n3GRX5nbb9VFt6ZwWk5ZZBGKd5Q8sq597/XL/_K1W2573_tonemapped-Edit-XL.jpg",
+      "id": "i-N3ShZHB",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/KsG9QhFMSx4fxVBXcTC4sR6WJJ2PHRXfVgxRscmg4/XL/_ANA0655-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-rWFC3dL",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/MQBKfptM86tKv2S3GvvVNd3Z6gTSZLZKdhnjRRGFb/XL/_ANA2550-Edit-XL.jpg",
+      "id": "i-V92SWJF",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-V92SWJF/2/LKPH2jLvxv4jDc34ZtcqSQFq8536gRFnJ9fZcQqmX/XL/_ANA0731-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-6NKTKgw",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LvNxkG7NPgdFMbbZGLR8xtfdLjxMK9GgdWGbsksRx/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+      "id": "i-KFLXt4D",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LRB5mwWN4pJpk7s9ffX8NNwtPxRv94GcpcxbgVSq6/XL/_ANA0801_tonemapped-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
       ]
     },
     {
-      "id": "i-P7pMnQ9",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/MVj7DFFm4pVxrcFpLF9h5zfnXQXPxfPD8bKCZtpKF/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+      "id": "i-LmTHhDn",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-LmTHhDn/1/LgnDLF6zm3z5Jb4f4q7ZqHtkphPjBVnLNvpsg9TZh/XL/_ANA0893_tonemapped-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+      ]
+    },
+    {
+      "id": "i-KG32NV6",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KG32NV6/1/MsMVLt2L4Hntd3nJhC96DMf985rGW6qxLtgzZ2gFD/XL/_ANA0901_tonemapped-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+      ]
+    },
+    {
+      "id": "i-NMRNtrB",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NMRNtrB/1/LfRVH6QKPkPzfvg8gFDjd5mBTp7CkGQvJS4N9MkxL/XL/_ANA0906_tonemapped-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+      ]
+    },
+    {
+      "id": "i-c4qSzm6",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-c4qSzm6/2/NV8FRwnJZ5Lj3zghWgZ4RcC4D9tm3882pfWt6cFwJ/XL/_ANA0922_tonemapped-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+      ]
+    },
+    {
+      "id": "i-2d2fgNW",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-2d2fgNW/3/MLpP7tZwwgcqxhxwpRH6kQBCxgXCwJ8bDWKMktXSM/XL/_ANA0936_tonemapped-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+      ]
+    },
+    {
+      "id": "i-Vm7vR4f",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Vm7vR4f/1/KH6qfV7dSM2v7xRQ9qbrLZZmXXBs2TC9Nm4kTcKwB/XL/_ANA1025-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+      ]
+    }
+  ],
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery": [
+    {
+      "id": "i-6Vj6H86",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/MF8rg4Pvmcsc9FrnqLB5X8gR4W7rTQ7hW6CJGLF7F/XL/_IMG6809-2-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-BZZRZwC",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/NR6qVhzhxJc892hqbgBZ3rn3tfCMMmppfhqZj2bgh/XL/_IMG6812-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-nVXX6Fn",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/KFQCBMwCnRB6TCqGt7hHMMwTPNTWCgSvnv7zCWPSX/XL/_IMG6823-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-KVgw4cV",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/MDXsST5PkdzhMbZbMcPPdZPvdVxGTPMkZ4PGRN5BC/XL/_IMG7072-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-gHjq9S9",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LRtKqMHnCJPKWDmCFgrT7T4mMgTw3bwttNGMbpJC8/XL/_W3H9702_tonemapped-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-xbVp2GS",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/MwhPGGhLFsLR5pVBLcDPr2RqV5sJKx548Sbx29rhw/XL/_W3H9740-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-QGSJxwc",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/KNbX4XBTBgkps5L8Qr32K48f4KMnjNJkVbVkHsnQG/XL/_W3H9878-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-vqC5jTC",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MDpkHpMZVJS44XkwD8SXtZK4Fd9T9ss87f7dzz7Nm/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-dT6fKnc",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/K7m77774NtqWq8SRJKJkPPLsXPhCJ9GLpFgjTCptQ/XL/_WHZ8329-Pano-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-dmwDS7K",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/L44wmsd5ktjJzWdPQQmC68Z3ZdRgqWPGmddDTqFg7/XL/_DSF5409-Pano-Edit-2-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-s3xXCPH",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/NhsvvVNsPFj3XpXXrd8WGN67sBwMMfD8xpvQhPssP/XL/_DSF5489-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-p5ghtLz",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-rfGP5Zj",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/M535dZSW6rzdcGNx53PScHsFhRPx54PZQkRgZW7Tf/XL/_DSF5537_tonemapped-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-bdSGG9L",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/MF5bj97rmBWfMJLKBWrxK96Tjpb25n2LckChqG8SJ/XL/_DSF5542_tonemapped_tonemapped-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-BqKXR7D",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/MCRwX6dXq26QGz258N9V43QpfTrPVPmPwvk423vSv/XL/_DSF5548_tonemapped-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-nqpGhhX",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-MGNfc8z",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/KQtdm6KwWF6J8QsXkFKzVnqmVfw23R95RjpMwCb92/XL/_DSF5613-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
       ]
     },
     {
@@ -3692,7 +3270,277 @@ export const galleryDataMap   = {
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MJsPjtjWg5Dgx69KNnkvmdP3BG5jRR8TQV3HccK46/XL/_DSF5667-Edit-XL.jpg",
       "rating": 0,
       "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-MwLgJL5",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MGSGFcC6Wpnt2d6bRsZJgWPtNmKqp28qkZ64R3sD7/XL/_DSF5676-Pano-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    },
+    {
+      "id": "i-vSFBSgr",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/NcZxvQSsHvjCPt4mGRTWZ87hhDq4367ZLkDVb3z56/XL/_DSF5690-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+      ]
+    }
+  ],
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery": [
+    {
+      "id": "i-8tvnHvW",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/Mdt8qbBsKr48T4DDXjF86h42bp63bVqZRk3VPW56N/XL/_IGP2186-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+      ]
+    },
+    {
+      "id": "i-R6Zh32H",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-R6Zh32H/1/Lckv3jhGWtKsHzSJdPSM6PDXHdV9fbgtdP3zdg3hq/XL/_WHZ6599-Edit-2-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+      ]
+    },
+    {
+      "id": "i-rH4MSZg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-rH4MSZg/0/NVSm3p8zNXnVJ8WW3zBwkf85884PS9qJmgMmPNmGb/XL/_WHZ6643-Edit-2-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+      ]
+    }
+  ],
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery": [
+    {
+      "id": "i-8XNRjZF",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MrgZ3TtkgxdML89hc8668gnZdMr6KcJBGCGpjsGds/XL/_IMG6130-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-DKjkHL6",
+      "src": "https://photos.smugmug.com/photos/i-DKjkHL6/3/L5JtSkLgDJVk9B3D4MhqW7SxBKjxZqMQVvJXb3D8G/XL/i-DKjkHL6-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-WgGWH9C",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/KkdmKJR2WBpz6MbtCMxpDRFrsJ4VVzDt5zzNdt6mB/XL/P1030226-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-cRWPFSz",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-cRWPFSz/10/LNj849Bdj2wp7L35QZRgWspXsJzms5FGQrtSn8SJN/XL/_WEH7838-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-S7QHbjP",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S7QHbjP/4/LDD8VtZN8ZmFVmX64jHKnLwb49cZZhtxhdhKJ3LC9/XL/P1020533-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-cgSjPmT",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-cgSjPmT/4/KxwGRX5rVF55Q46rvT6KbnNpF8CwP5RwVzXgVCrHj/XL/P1020645-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-tF8fFm4",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/MnzpLFDKBbmcS68D7Pf8wtCWqcXFg8zpX3ZzPb6sV/XL/P1020645-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-R5vHcxf",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-R5vHcxf/4/KQvX2vZqfP477D4VzpSS8pSMdhTZPHQMRQK85H7wm/XL/_IGP2880-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-HgQBk3g",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/NPzwXcZNXxVcd4JrVnQh8zmZJxJc9SCkLhZHPJzv5/XL/fairy%2520tree-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-Dk4tMWB",
+      "src": "https://photos.smugmug.com/photos/i-Dk4tMWB/3/KGxNT42PS6RfmJ7D8WZCcGkSvmjwqzxSzZWtz937n/XL/i-Dk4tMWB-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-vh7p4gv",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-vh7p4gv/4/LCG4XnrwBnbJLBxmRJzrkqXBH88t5ftc4jtnz4tNG/XL/P1020959-b-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-VZ3N4km",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NJktHPKhPttSSp4JxThRsMLdWv4G7JHB6ZmTHNsLs/XL/P1020966-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-nwVhxGk",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/Lqzwv74gj4W53BhNq4snr4f75rs2nBpZMrt8SCFps/XL/white-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-wxLBqLg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-4SmFT2v",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KdbpQB8pn8xDKQ3z9xkVPV3xfDN3MfdTpcvnB6j49/XL/_IGP2847-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-XVdVWhm",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NB7mqSMMST55CR2wQ7hJRw4NZCS5CbV4ghQDfZMR6/XL/_IGP2936-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-jb5HQM7",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jb5HQM7/4/LCmvF4GPdBRTXSMcZMw4KW2xqTdPswtSSG3w6pLVc/XL/_IGP2999-2-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-6Qt5RcK",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6Qt5RcK/3/NcnZsLD55n8DKsHPkFfhJFZKX2m2dc7LSsT4m6dkb/XL/_IGP3890-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-8hwfnGn",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    },
+    {
+      "id": "i-Rh64N3s",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/K7dksVbwgfHQbCs9cv6KXxfDtnKZKWb2HJ4VhCrMf/XL/_IMG6274-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+      ]
+    }
+  ],
+  "/Galleries/Fine-Art-Photography/Transportation/Cars": [
+    {
+      "id": "i-QgkMVvX",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-QgkMVvX/1/LPKGCSkbTmxMHVPfH8Wnj7FFLNM2DcW9LbqRFDDSd/XL/_O1H0427-598-599-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Transportation/Cars"
+      ]
+    },
+    {
+      "id": "i-2S2ZbzK",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-2S2ZbzK/3/NPQZm9P5b243LwZvFJNWvvRH4tk7R42DrGdLN6rZh/XL/_O1H0429-600-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Transportation/Cars"
+      ]
+    },
+    {
+      "id": "i-SPVGpxw",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-SPVGpxw/2/Ld7pFfjqvjCqqPHpSRWnsN5sjnsG5wS2LFtrts685/XL/_O1H0449-601-602-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Transportation/Cars"
+      ]
+    },
+    {
+      "id": "i-7dRzH7F",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-7dRzH7F/1/K87n86kmRv4hVxvXcJ4jzwDNmQM6x6HpWFNWhBkTs/XL/_O1H0454-603-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Transportation/Cars"
+      ]
+    },
+    {
+      "id": "i-cgh854F",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cgh854F/0/LqKvSHtj4zM4CCBZHsBT5rcmgCtfjRmRBnNN7rMPg/XL/_ANA1864-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Transportation/Cars"
+      ]
+    },
+    {
+      "id": "i-Dqn5vGG",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Dqn5vGG/0/M7F7vdfRK5MN5s2SbXvXgqHGnpCnZPMKn4BVFvz5s/XL/_DSF1096-Edit-2-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Transportation/Cars"
+      ]
+    },
+    {
+      "id": "i-ZGNLtgd",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZGNLtgd/0/LGKGNFzwZRFgtHn3rJd8wzSwbDPdzZnNcsb3vzn5H/XL/_HF26139-Edit-Edit-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Transportation/Cars"
+      ]
+    },
+    {
+      "id": "i-wkRb273",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wkRb273/1/LTxbZdQ7nWXszRr7gH2BLGn8LTWwKT7DjLnbXB3pW/XL/_DSF0260-XL.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Transportation/Cars"
       ]
     }
   ]
@@ -3704,6 +3552,7 @@ export const sectionGalleries = {
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
@@ -3712,10 +3561,6 @@ export const sectionGalleries = {
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
     "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
     "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
     "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
@@ -3727,6 +3572,7 @@ export const sectionGalleries = {
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
@@ -3742,7 +3588,8 @@ export const sectionGalleries = {
   ],
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits": [
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
   ],
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits": [
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
@@ -3769,32 +3616,9 @@ export const sectionGalleries = {
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White"
   ],
   "/Galleries/Painterly-Fine-Art-Photography/Landscapes": [
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
     "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
   ],
   "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location": [
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
-  ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International": [
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-  ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest": [
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-  ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast": [
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-  ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South": [
-    "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-  ],
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West": [
     "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
   ],
   "/Galleries/Painterly-Fine-Art-Photography/Transportation": [
@@ -3806,14 +3630,22 @@ export const sectionGalleries = {
     "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits"
   ],
   "/Galleries/Fine-Art-Photography": [
-    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains",
-    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
-    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+    "/Galleries/Fine-Art-Photography/Transportation/Cars"
   ],
   "/Galleries/Fine-Art-Photography/Landscapes": [
-    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains",
-    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
-    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+  ],
+  "/Galleries/Fine-Art-Photography/Transportation": [
+    "/Galleries/Fine-Art-Photography/Transportation/Cars"
   ]
 };
 
@@ -4139,22 +3971,6 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-fM9qmKW",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fM9qmKW/1/M2rT2P6jZhWfZg5B48vVX4VPm5D8zRHT5cq6SsdF8/XL/Cowboy%20photography%20_DSF8979-Enhanced-NR-Edit-Edit-XL.jpg",
-    "rating": 5,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-fCG2nm8",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8/2/LbbqzNXGgvRCJvsrTHwjhZTbhRNTrF353HmQV2c7M/XL/Western%20Cowboy%20Painterly%20Portrait%20_ANA0303-Edit-XL.jpg",
-    "rating": 5,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
     "id": "i-ncFcHDM",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/LMvqcxpXpnw4Hf9Vh8DVDjf3STGPVwm2TBBrf6t3K/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
     "rating": 5,
@@ -4171,8 +3987,40 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-QB4jLsH",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/LSPjrzL4QmzM8q9x5TQp9NQ2sVwZk9pGTBcq596rb/XL/_O2H3871-871-873-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
     "id": "i-bfKMXS9",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bfKMXS9/1/KrPHVbDJW2Msm6mmGmMkPhH6kPjkQQLGvDjXPTD7Z/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8834-Edit-2-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-VDLVwqr",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-VDLVwqr/0/M7nvQ8RbfLHVdvmvc2rbc4LGKC2vb7v6WwzjmHbNx/XL/_HF23452-644-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-fM9qmKW",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fM9qmKW/1/M2rT2P6jZhWfZg5B48vVX4VPm5D8zRHT5cq6SsdF8/XL/Cowboy%20photography%20_DSF8979-Enhanced-NR-Edit-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-fCG2nm8",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8/2/LbbqzNXGgvRCJvsrTHwjhZTbhRNTrF353HmQV2c7M/XL/Western%20Cowboy%20Painterly%20Portrait%20_ANA0303-Edit-XL.jpg",
     "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -4195,16 +4043,32 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-PM4d3g3",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-PM4d3g3/2/KTv3WnfSwnkfJws389CHBKvGBTtJSVmCdpwrpSCTJ/XL/cowboy%20photography%20campfire_HF21845-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
+    "id": "i-JKnW497",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/LQ2pWMcDpzhdBLvjMjczvc8PWwnZk27fSzc4wc7sK/XL/cowboy%20photography%20_O2H0496-Edit-Edit-XL.jpg",
     "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
   },
   {
-    "id": "i-JKnW497",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/LQ2pWMcDpzhdBLvjMjczvc8PWwnZk27fSzc4wc7sK/XL/cowboy%20photography%20_O2H0496-Edit-Edit-XL.jpg",
+    "id": "i-qVZ9m7j",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j/2/Lbs7RG7xjnNCnssBc4RXqLCL9kM4ZrwxQD8X5ZN37/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8540-Edit-2-Edit-Edit-XL.jpg",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-mpfG8XF",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-mpfG8XF/1/LzkNXckL9Cxmr7wM76BCvghk6hsvcm9TgbgL9mpdw/XL/cowboy%20cowgirl%20campfire_HF21818-Enhanced-NR-Edit-2-Edit-XL.jpg",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-PM4d3g3",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-PM4d3g3/2/KTv3WnfSwnkfJws389CHBKvGBTtJSVmCdpwrpSCTJ/XL/cowboy%20photography%20campfire_HF21845-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
     "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -4219,8 +4083,8 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-qVZ9m7j",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j/2/Lbs7RG7xjnNCnssBc4RXqLCL9kM4ZrwxQD8X5ZN37/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8540-Edit-2-Edit-Edit-XL.jpg",
+    "id": "i-Dw6Z8ff",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Dw6Z8ff/2/MrBSfbkvjjfgTXpz5Wmbr25xj7vRgNMThKK8PLjTp/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA8462-Edit-Edit-4-XL.jpg",
     "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -4251,30 +4115,6 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-Dw6Z8ff",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Dw6Z8ff/2/MrBSfbkvjjfgTXpz5Wmbr25xj7vRgNMThKK8PLjTp/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA8462-Edit-Edit-4-XL.jpg",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-xXQ3gDM",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-xXQ3gDM/2/LXCknCnT4ZT3q9B6pLHpbR8Qrr3wSdtmX24Rwxhxg/XL/painterly%20cowboy%20portrait%20_ANA9586-Edit-Edit-2-Edit-XL.jpg",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-mpfG8XF",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-mpfG8XF/1/LzkNXckL9Cxmr7wM76BCvghk6hsvcm9TgbgL9mpdw/XL/cowboy%20cowgirl%20campfire_HF21818-Enhanced-NR-Edit-2-Edit-XL.jpg",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
     "id": "i-V5WcTqg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-V5WcTqg/2/NK3m9jmrchNnKJ5rM8tdX4HprsCTLTq8RBK2WwxP3/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6747-Edit-Edit-Edit-2-XL.jpg",
     "rating": 4,
@@ -4283,35 +4123,11 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-8BbMZjs",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs/1/KpqxHFDgRssTDPtNDr83cDPhRbt9TFm7vd8PHrz4g/XL/Western%20Cowboy%20Portrait%20Photography%20_DSF6899-Edit-Edit-Edit-XL.jpg",
-    "rating": 3,
+    "id": "i-FVHm8VJ",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-FVHm8VJ/1/MBdH2gmgtMgNsLFnQWhWngp29ZKsCdvX78cZ7qsrf/XL/cowboy%20portrait%20photo%20_DSF6725-Edit-Edit-Edit-XL.jpg",
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-b3vCXwR",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-b3vCXwR/3/KZR52snQ32gsmqPHkNBhBmLwVrPSRJBN38j9Xnh4K/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_DSF7013-Edit--XL.jpg",
-    "rating": 3,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-2VTWJ3R",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-2VTWJ3R/4/KXxMSVnCn8ntRxZSsnzKrFbhMgWGDzQzhDT4gKrZ5/XL/_HF20421-Edit-XL.jpg",
-    "rating": 5,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-BBZjZD6",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/M8XsHLkjrs8m4hbQdffFB6Kzh57rfqX5BJBfgQ5Xb/XL/_ANA0584-Edit-Edit-3-XL.jpg",
-    "rating": 5,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
   },
   {
@@ -4331,6 +4147,30 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-M95HTNH",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-M95HTNH/0/NCk5b8d8XjQsHm6BHVQJR5xq6w3SX6jk7G6vkMMV7/XL/_DSF9690-Edit-2-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-2VTWJ3R",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-2VTWJ3R/4/KXxMSVnCn8ntRxZSsnzKrFbhMgWGDzQzhDT4gKrZ5/XL/_HF20421-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-BBZjZD6",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/M8XsHLkjrs8m4hbQdffFB6Kzh57rfqX5BJBfgQ5Xb/XL/_ANA0584-Edit-Edit-3-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
     "id": "i-6z4gpF7",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6z4gpF7/1/LjvxZMZNK6m4XCPB7BKz6BrzNRvWhPL6V8kMz99p2/XL/_ANA8432-Edit-Edit-2-XL.jpg",
     "rating": 5,
@@ -4339,24 +4179,8 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-hMJZN2m",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hMJZN2m/1/Lr4zFwNPtzBwGpSNQPTSt5nXkrKr3TBbCxznV7gc7/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-KgKZZxg",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KgKZZxg/1/KQJKMxmKJ3PzD3r9LSdmG8zQ4fDZD7DtpCbqBkLjK/XL/_ANA8380-XL.jpg",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-TpqkCVk",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TpqkCVk/3/MfGt3fgC39bqwSSh6mLgTQR4hMxzksNLMDFbSrdnS/XL/_HF20647-Edit-XL.jpg",
+    "id": "i-Txh4c8k",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Txh4c8k/3/KnKckKb6gBPNHrJPLjzF5djJzn2wZkKRqW8MHSTFq/XL/_HF20275-Edit-XL.jpg",
     "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -4371,6 +4195,30 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-TpqkCVk",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TpqkCVk/3/MfGt3fgC39bqwSSh6mLgTQR4hMxzksNLMDFbSrdnS/XL/_HF20647-Edit-XL.jpg",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-KgKZZxg",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KgKZZxg/1/KQJKMxmKJ3PzD3r9LSdmG8zQ4fDZD7DtpCbqBkLjK/XL/_ANA8380-XL.jpg",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-hMJZN2m",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hMJZN2m/1/Lr4zFwNPtzBwGpSNQPTSt5nXkrKr3TBbCxznV7gc7/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
     "id": "i-W5d8Ss8",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-W5d8Ss8/0/MmJxCMw3tVssVGmZZfbD92MHf5NPp9Vjz47b2S9Z2/XL/_ANA0883-Edit-Edit-XL.jpg",
     "rating": 3,
@@ -4379,16 +4227,8 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-bLHTNNg",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bLHTNNg/1/LBHWGX6Z8rFkhZNmVNqpWsCDRFcPQ5xgGPDTgd3Xx/XL/_ANA8462-Edit-Edit-2-2-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-SwhsL2h",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SwhsL2h/4/K23SSb3fpkppNk9tNK45TRDMWrLjL6mCMzXppJtwP/XL/Western%20Portrait%20Photography_HF29529-Edit-XL.jpg",
+    "id": "i-GSk4JS8",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-GSk4JS8/0/NZ8fTF2fwn6zk7bzmDhDvzBjzSXsxKXHPfGrxdW8c/XL/_HF23379-819-XL.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -4411,32 +4251,8 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-s5XTxBL",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-s5XTxBL/2/KcBfwLnnG3Z7dGhcvVgJXmXFTZCNLGJQFBXRP7D7r/XL/Western%20Cowboy%20Portrait%20Photo%20_HF20550-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-D2fQjDQ",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-D2fQjDQ/1/KPbTXds2Zw3ZPB7s5F2qDxRNg7brzwNf82HB3sd5R/XL/_ANA9703-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-DQHK8FK",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DQHK8FK/0/Nhg9Vg5GLkPLJCqFX7mnWQMPJxs52TChqzbqRRMhp/XL/_DSF0082-Edit-Edit-Edit-2-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-N77wcxb",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-N77wcxb/1/Mn6NL3Nbbj8zBfbSMmr6k8pk7mKtFXvdbhwLhkbnr/XL/_DSF7600-Edit-Edit-Edit-XL.jpg",
+    "id": "i-kp5NHNw",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/MxHks6MrNmsW8ZtQh6KnppKvK8BwbcGVTmjWDrJHk/XL/_O2H0388-Edit-2-XL.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
@@ -4451,11 +4267,187 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-dTxwFN4",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dTxwFN4/0/MGGFPD4TSvRsjhxZ8KP9h727Lf4znt7gS6cmvmjNK/XL/_DSF8830-Edit-Edit-XL.jpg",
+    "id": "i-rsPNzJr",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-rsPNzJr/0/Md9KttFnFgR5Gnrmn43MMGFbRp3mwRDWsxWhMkkmx/XL/_O2H3127-862-863-XL.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-qwFCjLp",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/LPwQdj6STGMJ6wKBtqbhDGmCL9nKp29LNgRJh8KNP/XL/_HF29384-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-cGDk6Nc",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/KNWWxjrjB74bbvb59CGrSBcgFtMBrkm9d8znxfRjR/XL/_O1H0469-Edit-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-sGW55ch",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/1/Ms4KPwvCpdWVWBKnncJRxx3s5jSJwLkZTktzfs6rj/XL/_WHO2172-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-fCSxt3j",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/Nfh3T8Cd3gZccThhc2qBkXnKX6bSt2fJj3BDRbpHG/XL/_WHO2172-Edit-2-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-69qsFwx",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/KHm9Dj87HLMkg25XGWZQ7dXVV6dQLWHQjg4vnRvHZ/XL/_WHO2423-Edit-Edit-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-4Wsxmqv",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/LLJhkG344ZvvZR5ggmKH6PD4gsXsgx4qt6cRNm3Wc/XL/_HF29032-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-cqT88cp",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cqT88cp/0/KVbPSTXJNmBWwXSZQH3TGmbL7ckcx9szp6pXNVxZD/XL/_HF29032-Edit-2-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-cNbW8wV",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/NZksBbVchvTxDSLSN3bTxTJDvBBh5Q2tkCFDBgzqQ/XL/_WHO3531-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-zt2btJ7",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/0/KtGSzTzN7M7RGkF28VWPc5MJPnQvprL6v2G6jvsHf/XL/_HF29691-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-4Hz6D7k",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/MsJdrrckpVcXShG3JmZRJQTdVJrVGFnCs5X8h87Q8/XL/_HF29701-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-nZbDC9C",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/0/L4CC7kqnPVGzJrbtHNmzzbbjsQff7v9b7d7WVHsDd/XL/_HF20466-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-qLzRgbS",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/K3v8Rd5pnsXJLmwL8pwNfRMJT8fGQ3QbGGjbzczx2/XL/_HF20466-Edit-2-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-WXNSQzk",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MptMFJvWHSXrS5D3pX6tgFcVdjkW8vMF3jQnHqTKs/XL/_WHO0135-Edit-3-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-zZJbbHG",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/KsFHZCPwN4JrGVLp8h6PZC3L9bsfDRhqd9PKZcnbV/XL/_WHO0204-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-h679dhn",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/NKKNnXpPbk3p3C69DkN4FGnnfNkgw7ZmCs8JSpWtm/XL/_WHO0338-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-V96Rgmj",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/0/NV3ZHBB86DZsCssW8rR7jQMVTffKWHkQzvXZsgHGf/XL/_WHO0996-Edit-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-rR76nKr",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/0/Kfk5b7ZFnqwzJxHzbBbHjRxNRthTbk8jh8LgnSbvN/XL/_WHO1224-901-902-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-hHVb4vC",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/0/NPRNp7wm6sWH77KTZ9HcvhNLsLh5W6RGhdvhg8MPT/XL/_WHO1224-901-902-2-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-Z8pZLnt",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/K8N3zdmwPK33V2KTtRGhsdqcTmfxG6dSsKf58XFPL/XL/_WHO1255-896-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-67Qt8WM",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/KsQbFz4JwDGvpXnsx7g56RtMBwtHmCcPP7pTBjwDC/XL/_WHO1255-897-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-sSHtMSC",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/1/NPb5T2vZZSbwF5M9CDVVTTZM2Gc8Hk5HXZQ8MhCnK/XL/_WHO1264-894-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+    ]
+  },
+  {
+    "id": "i-tfZTHXq",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/1/L85rXpbxKbbJtbPDNgxQ2JX4L4nsSmFDV2DjHVtkH/XL/_WHO1264-895-XL.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
     ]
   },
   {
@@ -5739,550 +5731,6 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-wqJHvpV",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-wqJHvpV/0/LXcfqDqQ3w6HsbrQwdfwKkVQ5gKGSrbFMjhq6nV8r/XL/_WHZ1207-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-mfMVdnH",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/L5CbNJQcppCb2WGw8gFr7x57Pv3679KZGrDV3KHhp/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-2M68L7c",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-2M68L7c/0/MCmpHVgjkWsZcKwGgvcjZBnBgLTk2kq3HZNnBqWHT/XL/_WHZ7972_tonemapped-Edit-531-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-8sW4rf4",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8sW4rf4/10/KsVTpD9xrtCDn4fDwSMXVgLNH3JLQnVWgRHFcvb4H/XL/_K1W3375-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-7k6tvvL",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/L2f8rqsrxFKvzjxvF7g7dWRC4PW4Dwcq92pcpwC2F/XL/_WHZ2313-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-7GCDqcW",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7GCDqcW/7/KDdCLK23f5N8RTZ8H8RmHmgM3pZzxrqWqx8fBtRD9/XL/_OL34625-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-NH5PD4M",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NH5PD4M/6/M7MxxnDx7KwnLvSc6kTgqwR8Vp6nPzKqbkLJ2pG3P/XL/_DSF2369-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-Rspf84k",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-Rspf84k/0/KwcHKCz6HPwV7nL2NkWRCs3Xv5xMbXzJmfWPMtXGF/XL/_DSF2369_tonemapped-613-614-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-GGmGhkv",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/NfmQMwcBM2k42W6SPGZRpMFrmGzWptXzf5xxFmrsm/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-fZ2J8wr",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NTPCcdph7SXfcTcpZCxhg33s9MJWgb9p9rchwxJHX/XL/_WHZ2247-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-dXHvGd9",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/MBnsD4TJNfKSKWk2gLBQcc7HPMhQ3k9QHSsNSGsXt/XL/_OLY8984-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-WVGNqs6",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LNBZkXq4H6WLDWs6Gn8GgHXqZff9VZM3KvGXVzqrK/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-smCDmvz",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-smCDmvz/0/KQVs7tXsqhDC6DJ66LJ9Qd4ssGFgRh4w5B68T4s9V/XL/_WHZ2734-Pano-Edit-2-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-VPBt3XG",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VPBt3XG/4/Mcpgkb4n8wVbDj3nMFZLWHWhHXBdrptQgk3QSKkZk/XL/_WHZ3206-Pano-Edit-Edit-2-Edit-Exposure-2-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-xfBNqVW",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/M6rdXzLcQK7mxJ2Gbc4wNsv86pRZhrTsx8wx9jwJF/XL/_WHZ3234-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-gvz3xGb",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gvz3xGb/0/MXV9vxd3fZ7227bdMX8x7Xr67tkf4Mjp5pNs5Lrbg/XL/_WHZ3666-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-WSVMnGx",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WSVMnGx/0/MmTnzSJhhVcjmxcR7fK8RtttzprKwwHRwBjN43gtV/XL/_WHZ4304-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-WKQS29t",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/M77Hwkvfnfgh4JpgpnPXPFJ7wHQw4RDqfFCCLxk7W/XL/_WHZ4347-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-    ]
-  },
-  {
-    "id": "i-GBTSWkW",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NHJNkGcJfZ6QP33p7S9jCCW3f3p6DtG9FrrbrMtH5/XL/_HF20856-Pano-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-zXsjXwN",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/KSgPnQ23vkk4qfHKhbBwQZq4m7XHQdRBCZ2SQXLjm/XL/_igp2989-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-HP6hJm4",
-    "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NX86CFv22dwCxMbqtwc88kXT2vpktMp7ZvXMhHhXT/XL/i-HP6hJm4-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-GmFFsFL",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/MhSp4rdkmSGQDH6Q7FnpfSCFFHdZLGsQnGGjGTNR4/XL/_IMG0137_tonemapped-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-WdNbPqX",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/KMb5t2pNBrKqKBtKqfrF5KBVjt8NxdVKdJKrFsDvJ/XL/_IMG0156_tonemapped-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-fccqTrW",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/MvdxFWsdSt6BcGXBMtvNjTBcpFxVvPmxCPFRzwdVJ/XL/_IMG0159_tonemapped-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-sm7MXM4",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/KnkXBgcVtjCP4hzcqFfK6TZxB4Nr5bhtMZvzts2RD/XL/_OLY0581-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-7LVp5bN",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/KDptzFbZxRFjrsKdPbWSzvstCh3dw2t9dz4SQ9JBJ/XL/_WHZ6681-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-mCJv3RM",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/LqHh3bB6PW5MS5nTfZ3nfmnL6nc3gbJJqjZDx3bDB/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-GV5XPtF",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/NQZm7B799KPVng9vPRwQ89ChLMjmMGZjPHXZV8nJs/XL/_WHZ7498-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-pd6dZCP",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/LhNqmghTV4h7RKhgvFX7hbkGhDnpRk3Rcpw8TNNTH/XL/_ANA0731-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-VHMgr5J",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/KqQqStXbQXJS6SSHqXm7NbHrFb35TJ3zP9RnDMmpd/XL/_ANA1097-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-QsskjT5",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/LzhnR8kSWdcPVNvjgchcwcGvBqvFPpbH25g2sRGvR/XL/_PEN0005-Enhanced-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-f56454D",
-    "src": "https://photos.smugmug.com/photos/i-f56454D/2/LQZm2gX6Cw4GxThXNnrQskNFrW7NNNFLQfQ9FT9xG/XL/i-f56454D-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-KWjsH3B",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/Lmw3KW4Kx3454Cp8r3VBhF8PhddhGC2nM9BWhgFcq/XL/_O1H0465-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-DL6wMc7",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/LrLQPdb5tLTS2cP5tDcsDT9S3vZmTTh9swBKFFWWD/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-5wFxqjj",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/LMVPVsMJHWGzt2JvVvpCfgm4tTwqXJWPZgWNSxFfg/XL/_O1H0478-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-m3V6PZf",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LptFrpgLhgq7b6NWKprRMNNwGCdRsCKCnf7cjBdPF/XL/_O1H0479-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-SCMFzP3",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/KHGKCwVcZfsTrWjH4q55b6PQD6mbm2cJ9fNsw4QNJ/XL/20230706_181805-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-84Cqc8J",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/NJVztbJT75n3X4XpCbjFLpxpmQZRtLctNqdFKk3xP/XL/20230706_183048-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
-    ]
-  },
-  {
-    "id": "i-fgkX7Jn",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/K3WHkRRR8kkRf7bvrDXkNhMPvHhwjkXSVfxgZMVhr/XL/_DSF5884-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-7LZhFkc",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/MV2NZKCZb5LrkrFnhP9CfKCNWgttNdHvLJcXqm7hT/XL/_WHZ6646-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-mSp9WgK",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LnGChwdNw638jTQKmFTcD3TmJNC4StDF2XhgRsfZQ/XL/_WHZ6667_8_9-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-p5ghtLz",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-FpmhtnM",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/KXtH3cJt6DxSBX2nXNFVtM8Cz8dxrfSbhmnXtkWRZ/XL/_DSF5501_tonemapped-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-Jstk9Gx",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/K738tNKcXSmHbtvWzZQVv865DhtMK8XJR8WggdLST/XL/_DSF5516_tonemapped-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-NkNwLM6",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/LXFDHGCGjwMtzJ6BxsDJhC9ztstzSkf7dbCrbnsZ6/XL/_DSF5574_tonemapped-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-nqpGhhX",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-cKsdqTs",
-    "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/Mz5M8mvzTfMfXrTzxFjGzFh77KFFC8xxbHXsfnGnt/XL/i-cKsdqTs-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-RjSqqDt",
-    "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/M3GXBhdQGdVGjBJ7rR7D2NzRVkBjhtJT8sxg6p8Wh/XL/i-RjSqqDt-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-qM9zBVL",
-    "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/L88X9243jxcSVSczNpqx4HRZnVGpJ8RPpGFz8Smtn/XL/i-qM9zBVL-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-5ZsWtSx",
-    "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MB757WTWqZdkccdVzDTz2KdvQVBb8mRcKtrk7DVdX/XL/i-5ZsWtSx-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-fGnNkBL",
-    "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/LtDZ8prBjhG43S2H6ggt6bHJXFxXjcnWgDDmcSTSC/XL/i-fGnNkBL-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-qrS5Ggc",
-    "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/Kh4rjJLjV9fZtTw6DR2W2n2kf4WK9ddGMswJfgtbG/XL/i-qrS5Ggc-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-bqnctgw",
-    "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/LWqnqbxws5zmqLGTtkhHCwNGwvRKzStBQxjZpVVhj/XL/i-bqnctgw-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-    ]
-  },
-  {
-    "id": "i-fgkX7Jn",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/K3WHkRRR8kkRf7bvrDXkNhMPvHhwjkXSVfxgZMVhr/XL/_DSF5884-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-7LZhFkc",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/MV2NZKCZb5LrkrFnhP9CfKCNWgttNdHvLJcXqm7hT/XL/_WHZ6646-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-mSp9WgK",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LnGChwdNw638jTQKmFTcD3TmJNC4StDF2XhgRsfZQ/XL/_WHZ6667_8_9-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-p5ghtLz",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-FpmhtnM",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/KXtH3cJt6DxSBX2nXNFVtM8Cz8dxrfSbhmnXtkWRZ/XL/_DSF5501_tonemapped-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-Jstk9Gx",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/K738tNKcXSmHbtvWzZQVv865DhtMK8XJR8WggdLST/XL/_DSF5516_tonemapped-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-NkNwLM6",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/LXFDHGCGjwMtzJ6BxsDJhC9ztstzSkf7dbCrbnsZ6/XL/_DSF5574_tonemapped-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-nqpGhhX",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-cKsdqTs",
-    "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/Mz5M8mvzTfMfXrTzxFjGzFh77KFFC8xxbHXsfnGnt/XL/i-cKsdqTs-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-RjSqqDt",
-    "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/M3GXBhdQGdVGjBJ7rR7D2NzRVkBjhtJT8sxg6p8Wh/XL/i-RjSqqDt-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-qM9zBVL",
-    "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/L88X9243jxcSVSczNpqx4HRZnVGpJ8RPpGFz8Smtn/XL/i-qM9zBVL-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-5ZsWtSx",
-    "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MB757WTWqZdkccdVzDTz2KdvQVBb8mRcKtrk7DVdX/XL/i-5ZsWtSx-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-fGnNkBL",
-    "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/LtDZ8prBjhG43S2H6ggt6bHJXFxXjcnWgDDmcSTSC/XL/i-fGnNkBL-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-qrS5Ggc",
-    "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/Kh4rjJLjV9fZtTw6DR2W2n2kf4WK9ddGMswJfgtbG/XL/i-qrS5Ggc-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
-    "id": "i-bqnctgw",
-    "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/LWqnqbxws5zmqLGTtkhHCwNGwvRKzStBQxjZpVVhj/XL/i-bqnctgw-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-    ]
-  },
-  {
     "id": "i-G6gftd8",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MxjqGpG95k2VzKb8567hQDzprHc97MBJq8fdxFwBb/XL/Painterly%2520Landscape%2520Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
     "rating": 0,
@@ -6987,227 +6435,163 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-sTCJ5dz",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/NXZgFbRFwKCHjxWRcmSXrnrBsjpPFbqhRsFnHtmMC/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
+    "id": "i-wqJHvpV",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-wqJHvpV/0/LXcfqDqQ3w6HsbrQwdfwKkVQ5gKGSrbFMjhq6nV8r/XL/_WHZ1207-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-WgGWH9C",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/KkdmKJR2WBpz6MbtCMxpDRFrsJ4VVzDt5zzNdt6mB/XL/P1030226-XL.jpg",
+    "id": "i-mfMVdnH",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/L5CbNJQcppCb2WGw8gFr7x57Pv3679KZGrDV3KHhp/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-TvpKdWW",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-TvpKdWW/9/L85XdtXCRmnWvDXQMMscBz33wPcwgQ7mXQZ69KJ9f/XL/_WEH8926-XL.jpg",
+    "id": "i-2M68L7c",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-2M68L7c/0/MCmpHVgjkWsZcKwGgvcjZBnBgLTk2kq3HZNnBqWHT/XL/_WHZ7972_tonemapped-Edit-531-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-4SmFT2v",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KdbpQB8pn8xDKQ3z9xkVPV3xfDN3MfdTpcvnB6j49/XL/_IGP2847-XL.jpg",
+    "id": "i-8sW4rf4",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8sW4rf4/10/KsVTpD9xrtCDn4fDwSMXVgLNH3JLQnVWgRHFcvb4H/XL/_K1W3375-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-wxLBqLg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
+    "id": "i-7k6tvvL",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/L2f8rqsrxFKvzjxvF7g7dWRC4PW4Dwcq92pcpwC2F/XL/_WHZ2313-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-8WSrqG4",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8WSrqG4/4/MhFRQf4KbnK5VLd6Rs679JS8ps25NZ4SQgn7ZgTLm/XL/Majestic%2520Front-XL.jpg",
+    "id": "i-7GCDqcW",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7GCDqcW/7/KDdCLK23f5N8RTZ8H8RmHmgM3pZzxrqWqx8fBtRD9/XL/_OL34625-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-7zGDNJf",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/Ls837gwrfs643XVhF4QQjZNckBNdBNWwSRBh2sxLQ/XL/_IGP5748-XL.jpg",
+    "id": "i-NH5PD4M",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NH5PD4M/6/M7MxxnDx7KwnLvSc6kTgqwR8Vp6nPzKqbkLJ2pG3P/XL/_DSF2369-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-8hwfnGn",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
+    "id": "i-Rspf84k",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-Rspf84k/0/KwcHKCz6HPwV7nL2NkWRCs3Xv5xMbXzJmfWPMtXGF/XL/_DSF2369_tonemapped-613-614-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-wtHsJGQ",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wtHsJGQ/6/LZzZQH5M5Qvg9mthzpZJ3nWbJZjSZLxNDMHhVMPM9/XL/_IMG6035-XL.jpg",
+    "id": "i-GGmGhkv",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/NfmQMwcBM2k42W6SPGZRpMFrmGzWptXzf5xxFmrsm/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-MXKDnVL",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-MXKDnVL/6/LhtxtxWQh62CXcjxhSnvt5tZK4HzsNnBBKQWDGgTw/XL/_IMG6063-XL.jpg",
+    "id": "i-fZ2J8wr",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NTPCcdph7SXfcTcpZCxhg33s9MJWgb9p9rchwxJHX/XL/_WHZ2247-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-8XNRjZF",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MrgZ3TtkgxdML89hc8668gnZdMr6KcJBGCGpjsGds/XL/_IMG6130-XL.jpg",
+    "id": "i-dXHvGd9",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/MBnsD4TJNfKSKWk2gLBQcc7HPMhQ3k9QHSsNSGsXt/XL/_OLY8984-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-PVbJdpj",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NSd3PDZVPkwnnt43K5xGXSnmDjXcKtLGthvLBZWTF/XL/_IMG6295-XL.jpg",
+    "id": "i-WVGNqs6",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LNBZkXq4H6WLDWs6Gn8GgHXqZff9VZM3KvGXVzqrK/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-74rc8wb",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/LztbDsVg97kCz7h498TWhJzHRBCnSrdB35cF9rBCV/XL/_IMG6310-XL.jpg",
+    "id": "i-smCDmvz",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-smCDmvz/0/KQVs7tXsqhDC6DJ66LJ9Qd4ssGFgRh4w5B68T4s9V/XL/_WHZ2734-Pano-Edit-2-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-xZH95Bj",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/LkZMgr9JHMw2Lzzcf34GfCw86T87gpsZt5445r5ZP/XL/_IMG6333-2-XL.jpg",
+    "id": "i-VPBt3XG",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VPBt3XG/4/Mcpgkb4n8wVbDj3nMFZLWHWhHXBdrptQgk3QSKkZk/XL/_WHZ3206-Pano-Edit-Edit-2-Edit-Exposure-2-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-Bdbf3L9",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LPphtn4MNHxnG56s4XL6C945PXTwcJk8Pc7RTBb94/XL/_IMG6391-XL.jpg",
+    "id": "i-xfBNqVW",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/M6rdXzLcQK7mxJ2Gbc4wNsv86pRZhrTsx8wx9jwJF/XL/_WHZ3234-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-98c9sG9",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-98c9sG9/4/M4HTK6N2kK3wsVrj8b6HjFfRkC3s8pJn4NtwBKnzQ/XL/_IMG6410-XL.jpg",
+    "id": "i-gvz3xGb",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gvz3xGb/0/MXV9vxd3fZ7227bdMX8x7Xr67tkf4Mjp5pNs5Lrbg/XL/_WHZ3666-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-WJvRGjn",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WJvRGjn/4/LbVskRmhdq9xF2F7DqKWcG7kn89FGcCkdVKtZD6Sz/XL/_IMG6448-XL.jpg",
+    "id": "i-WSVMnGx",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WSVMnGx/0/MmTnzSJhhVcjmxcR7fK8RtttzprKwwHRwBjN43gtV/XL/_WHZ4304-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-Rpvhss3",
-    "src": "https://photos.smugmug.com/photos/i-Rpvhss3/2/NRG5QkG9B8dgb76VdD6sGgcMsJzG9f7HDshfvpCGW/XL/i-Rpvhss3-XL.jpg",
+    "id": "i-WKQS29t",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/M77Hwkvfnfgh4JpgpnPXPFJ7wHQw4RDqfFCCLxk7W/XL/_WHZ4347-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
     ]
   },
   {
-    "id": "i-LgrdsMQ",
-    "src": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/Kg5QWwnDkbfx5rVcBScMspjQhM4L6w9HwxwRxtTtv/XL/i-LgrdsMQ-XL.jpg",
+    "id": "i-gr3rsVB",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-gr3rsVB/1/KSJzVZzrCkmBZNxk3QdmG3g8tP7Hv9FcQQbqpFWST/XL/b6d4160a7f0ca7a337974b5c3bcedd9-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-mcrrSZ2",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/LJv7hNzSmJdzQjL8PqDG9sGz6HG2Lk4VvWTT8p4rn/XL/_WHZ7717-XL.jpg",
+    "id": "i-2N4ghBL",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/KFx67WN4w4b4FF57ZNQsqHSpbvftjNrh2BHpvMxjr/XL/_IMG0573-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
-    ]
-  },
-  {
-    "id": "i-XhWrKdZ",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/KcSG7JCH3s9dRnFBdWf3dKz8PGgWvJZSJCg8L98WP/XL/_WHZ1224-Pano_tonemapped%2520v2-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-3R8rc7C",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/NS95s4PVS7Mc3smmr7WjkpVp2W3bX9gjJQmKgcdkT/XL/_IMG2241-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-84LZftr",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/0/KbZTLCZW57npD5bMGdTcKsXCVx6mH2L6pKchGFLC3/XL/_DSF4265-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-SxbNjWC",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/MH4fKLsC3vCwG57fwc9dhknRgKpx6P8Sk2rmsqfrV/XL/_WHZ1847-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-B7S6VwV",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/0/LWVkFnbhQjRvwJs9D7fRDqXwLrzMwPd24MCG3ztmV/XL/_DSF4918-Edit-456-458-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-jMzCqw2",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/MF56LHStmShhtPDCHCkkgLjSCtwgwvzQShHcpHqnf/XL/_IMG0369-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-nVDRCrB",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/0/KwftpDzRh4H9QJXzJZBpdhTJr54sJqN67vZSFxgMF/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-8hwfnGn",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
@@ -7215,191 +6599,47 @@ export const allImages        = [
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/KwSvfxhwGKX5sWDDZzMm8G3mg3Qfct4gqQ7Th87Ls/XL/_IMG7044-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-tF8fFm4",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/MnzpLFDKBbmcS68D7Pf8wtCWqcXFg8zpX3ZzPb6sV/XL/P1020645-Edit-XL.jpg",
+    "id": "i-b3F54M6",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/MkBrBk29XvPv3QC8NhdwvKdLj2rgRRSmsTMtV2NRm/XL/_WEH7202-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-rh75LzX",
-    "src": "https://photos.smugmug.com/photos/i-rh75LzX/4/L2cdcn6wLGJB5JDZ26gpzXqqJ8MFcBzpHjJQsgVMB/XL/i-rh75LzX-XL.jpg",
+    "id": "i-3dZtNxv",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3dZtNxv/4/KQqHbt46Rj4jqXCW7ctf85DTkcrs9FP8CmTkqbQ4X/XL/_WEH7210-2-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-HzMDDcG",
-    "src": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KdS4VnwmCDXcNN6W4Fwcn8qRVSTqMF8b4k866KxZw/XL/i-HzMDDcG-XL.jpg",
+    "id": "i-VbL6CF7",
+    "src": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MmjHgFbHRVdBjdwQfQMpcv5v7gLZDr7mRmWpMSLCh/XL/i-VbL6CF7-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-rjmZMZt",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/MwStqFs9XmLk5Zf2m6CrqJBXcXPS2Fq72PRvLpkFK/XL/_WHZ1446-Pano-XL.jpg",
+    "id": "i-VN5gQB3",
+    "src": "https://photos.smugmug.com/photos/i-VN5gQB3/4/LjP75vSDF5JrBTNKFRxt6M6Q5wGFSDZnm8fHXwh85/XL/i-VN5gQB3-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-769JJbV",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/L5kxsW3mt9TS6q8QfC2P2LzZM3bmqJ9KNTLd5jQ2B/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "id": "i-fGKx3B6",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/K6sS4Cr3xc2QJp5cZgHFHCxk4XNXNPVNTxZFNr69Q/XL/_W3H9140_tonemapped-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-vTD9xH2",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/MM6zrVLHXvkMqB62jbtRZSrT3dqvVNSHD8MN4Lzgw/XL/_IGP5748-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-BfZH6vR",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-BfZH6vR/2/MBsZKFbqCWnScrtcTVKk7tTHrQvhCzhFqQVbpqHwv/XL/_WHZ9514-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-qphwtVw",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qphwtVw/4/McKnz7VrhPggqq4ZskmPtXMzKDsBvbBMzDG3QJT5S/XL/_W3H9744-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-GTDMD9v",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/Mn63n5d4cvBjGCF9TBBpmTQrHwRGwQZZTFdpCwL6h/XL/_OLY0581-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-BBDdJHb",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/K3283JKW4cn3q4RSV52hRT666msX7gm4q53JwPNK3/XL/_WHZ8737-Pano-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-d28cHrD",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-d28cHrD/3/LHPRKNptv6v7d3wRqQrshc8gJFnBsRDsgTdWTzCpz/XL/_IGP4730-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ]
-  },
-  {
-    "id": "i-wxLBqLg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-VScCFDQ",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/NgVCwQMJMVXfjqV3Jn73ShMJFBqHsHPKN5BVG9C7T/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-kcvnCvz",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/L5SQBSBXkkdGB8mq9twvkDTXBSSmgRVBNB8nZszXq/XL/_WEH0101-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-3jXg4hf",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/NXP3L8L95T56ZvvxjCZfwnHSwNmbGb9q4Cmzmgt3q/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-XmVfrdk",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/NR4RfGKcSsS2L6mPZnFRz2FQTfBDG9Xv94GfFxjqr/XL/_O1H0365-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-mcrrSZ2",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/LJv7hNzSmJdzQjL8PqDG9sGz6HG2Lk4VvWTT8p4rn/XL/_WHZ7717-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-hVB6Pxq",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KMCVC3MxV2PB2ZwQXZg3XGBdBmck5SSMfMVqjV2Z6/XL/_O1H1351-Edit-Edit-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-fJTxRJG",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/NZ9v4v6W2vB8FD5Fzw97SCS8p3TxXQDmsTCwGvvKR/XL/_IMG5989-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-zrvTR9s",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/LMSzG6FV5v49kCfc4LqD2RzmccDHT4nGBm4vX68P4/XL/_IMG6008-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-2qqHRQ6",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/KmB9ZzrVwCMqr8Jwq8twx8NrGQbC8xwrvzbfC8jdk/XL/_IMG6094-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-rh75LzX",
-    "src": "https://photos.smugmug.com/photos/i-rh75LzX/4/L2cdcn6wLGJB5JDZ26gpzXqqJ8MFcBzpHjJQsgVMB/XL/i-rh75LzX-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ]
-  },
-  {
-    "id": "i-hVvx83K",
-    "src": "https://photos.smugmug.com/photos/i-hVvx83K/3/NjTpFtPtGVZ6fBL5C4LBQNTWWdJhz6R9HdgNswNdR/XL/i-hVvx83K-XL.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
@@ -7407,55 +6647,231 @@ export const allImages        = [
     "src": "https://photos.smugmug.com/photos/i-LXP3hD7/4/NfXFmrf8NBvnnthT4MmsNhshff2dhRMPhK72nG3w4/XL/i-LXP3hD7-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-6WBNkgx",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/0/NXVRvrDLnBpdRhNwv33RQRFtTcPbd4VQxxmQLZM4V/XL/20230709_211720-Edit-Edit-XL.jpg",
+    "id": "i-GvZBLcv",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/NQ7kPr2F5vkSdtcHgmLDVfbzscGndV5vfnXjPS49v/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-rMTRD6x",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/Kpc3Zc9ZhzNZm8k6M3ptgG9LxHLDQchZkJGj4XcwS/XL/_WHZ1479-XL.jpg",
+    "id": "i-LR3Vr2N",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/MpkSpQg4PK2fMsC3tfJjhtWkHHMGHtsVK6gSHjNbF/XL/_WHZ7433-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-MwsQPKg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KvPnZNR8n3GRX5nbb9VFt6ZwWk5ZZBGKd5Q8sq597/XL/_K1W2573_tonemapped-Edit-XL.jpg",
+    "id": "i-N3ShZHB",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/KsG9QhFMSx4fxVBXcTC4sR6WJJ2PHRXfVgxRscmg4/XL/_ANA0655-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-rWFC3dL",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/MQBKfptM86tKv2S3GvvVNd3Z6gTSZLZKdhnjRRGFb/XL/_ANA2550-Edit-XL.jpg",
+    "id": "i-V92SWJF",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-V92SWJF/2/LKPH2jLvxv4jDc34ZtcqSQFq8536gRFnJ9fZcQqmX/XL/_ANA0731-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-6NKTKgw",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LvNxkG7NPgdFMbbZGLR8xtfdLjxMK9GgdWGbsksRx/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "id": "i-KFLXt4D",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LRB5mwWN4pJpk7s9ffX8NNwtPxRv94GcpcxbgVSq6/XL/_ANA0801_tonemapped-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
     ]
   },
   {
-    "id": "i-P7pMnQ9",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/MVj7DFFm4pVxrcFpLF9h5zfnXQXPxfPD8bKCZtpKF/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "id": "i-LmTHhDn",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-LmTHhDn/1/LgnDLF6zm3z5Jb4f4q7ZqHtkphPjBVnLNvpsg9TZh/XL/_ANA0893_tonemapped-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+    ]
+  },
+  {
+    "id": "i-KG32NV6",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KG32NV6/1/MsMVLt2L4Hntd3nJhC96DMf985rGW6qxLtgzZ2gFD/XL/_ANA0901_tonemapped-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+    ]
+  },
+  {
+    "id": "i-NMRNtrB",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NMRNtrB/1/LfRVH6QKPkPzfvg8gFDjd5mBTp7CkGQvJS4N9MkxL/XL/_ANA0906_tonemapped-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+    ]
+  },
+  {
+    "id": "i-c4qSzm6",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-c4qSzm6/2/NV8FRwnJZ5Lj3zghWgZ4RcC4D9tm3882pfWt6cFwJ/XL/_ANA0922_tonemapped-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+    ]
+  },
+  {
+    "id": "i-2d2fgNW",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-2d2fgNW/3/MLpP7tZwwgcqxhxwpRH6kQBCxgXCwJ8bDWKMktXSM/XL/_ANA0936_tonemapped-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+    ]
+  },
+  {
+    "id": "i-Vm7vR4f",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Vm7vR4f/1/KH6qfV7dSM2v7xRQ9qbrLZZmXXBs2TC9Nm4kTcKwB/XL/_ANA1025-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
+    ]
+  },
+  {
+    "id": "i-6Vj6H86",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/MF8rg4Pvmcsc9FrnqLB5X8gR4W7rTQ7hW6CJGLF7F/XL/_IMG6809-2-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-BZZRZwC",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/NR6qVhzhxJc892hqbgBZ3rn3tfCMMmppfhqZj2bgh/XL/_IMG6812-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-nVXX6Fn",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/KFQCBMwCnRB6TCqGt7hHMMwTPNTWCgSvnv7zCWPSX/XL/_IMG6823-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-KVgw4cV",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/MDXsST5PkdzhMbZbMcPPdZPvdVxGTPMkZ4PGRN5BC/XL/_IMG7072-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-gHjq9S9",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LRtKqMHnCJPKWDmCFgrT7T4mMgTw3bwttNGMbpJC8/XL/_W3H9702_tonemapped-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-xbVp2GS",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/MwhPGGhLFsLR5pVBLcDPr2RqV5sJKx548Sbx29rhw/XL/_W3H9740-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-QGSJxwc",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/KNbX4XBTBgkps5L8Qr32K48f4KMnjNJkVbVkHsnQG/XL/_W3H9878-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-vqC5jTC",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MDpkHpMZVJS44XkwD8SXtZK4Fd9T9ss87f7dzz7Nm/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-dT6fKnc",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/K7m77774NtqWq8SRJKJkPPLsXPhCJ9GLpFgjTCptQ/XL/_WHZ8329-Pano-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-dmwDS7K",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/L44wmsd5ktjJzWdPQQmC68Z3ZdRgqWPGmddDTqFg7/XL/_DSF5409-Pano-Edit-2-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-s3xXCPH",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/NhsvvVNsPFj3XpXXrd8WGN67sBwMMfD8xpvQhPssP/XL/_DSF5489-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-p5ghtLz",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-rfGP5Zj",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/M535dZSW6rzdcGNx53PScHsFhRPx54PZQkRgZW7Tf/XL/_DSF5537_tonemapped-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-bdSGG9L",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/MF5bj97rmBWfMJLKBWrxK96Tjpb25n2LckChqG8SJ/XL/_DSF5542_tonemapped_tonemapped-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-BqKXR7D",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/MCRwX6dXq26QGz258N9V43QpfTrPVPmPwvk423vSv/XL/_DSF5548_tonemapped-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-nqpGhhX",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-MGNfc8z",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/KQtdm6KwWF6J8QsXkFKzVnqmVfw23R95RjpMwCb92/XL/_DSF5613-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
     ]
   },
   {
@@ -7463,7 +6879,271 @@ export const allImages        = [
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MJsPjtjWg5Dgx69KNnkvmdP3BG5jRR8TQV3HccK46/XL/_DSF5667-Edit-XL.jpg",
     "rating": 0,
     "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-MwLgJL5",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MGSGFcC6Wpnt2d6bRsZJgWPtNmKqp28qkZ64R3sD7/XL/_DSF5676-Pano-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-vSFBSgr",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/NcZxvQSsHvjCPt4mGRTWZ87hhDq4367ZLkDVb3z56/XL/_DSF5690-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+    ]
+  },
+  {
+    "id": "i-8tvnHvW",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/Mdt8qbBsKr48T4DDXjF86h42bp63bVqZRk3VPW56N/XL/_IGP2186-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+    ]
+  },
+  {
+    "id": "i-R6Zh32H",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-R6Zh32H/1/Lckv3jhGWtKsHzSJdPSM6PDXHdV9fbgtdP3zdg3hq/XL/_WHZ6599-Edit-2-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+    ]
+  },
+  {
+    "id": "i-rH4MSZg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-rH4MSZg/0/NVSm3p8zNXnVJ8WW3zBwkf85884PS9qJmgMmPNmGb/XL/_WHZ6643-Edit-2-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+    ]
+  },
+  {
+    "id": "i-8XNRjZF",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MrgZ3TtkgxdML89hc8668gnZdMr6KcJBGCGpjsGds/XL/_IMG6130-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-DKjkHL6",
+    "src": "https://photos.smugmug.com/photos/i-DKjkHL6/3/L5JtSkLgDJVk9B3D4MhqW7SxBKjxZqMQVvJXb3D8G/XL/i-DKjkHL6-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-WgGWH9C",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/KkdmKJR2WBpz6MbtCMxpDRFrsJ4VVzDt5zzNdt6mB/XL/P1030226-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-cRWPFSz",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-cRWPFSz/10/LNj849Bdj2wp7L35QZRgWspXsJzms5FGQrtSn8SJN/XL/_WEH7838-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-S7QHbjP",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S7QHbjP/4/LDD8VtZN8ZmFVmX64jHKnLwb49cZZhtxhdhKJ3LC9/XL/P1020533-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-cgSjPmT",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-cgSjPmT/4/KxwGRX5rVF55Q46rvT6KbnNpF8CwP5RwVzXgVCrHj/XL/P1020645-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-tF8fFm4",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/MnzpLFDKBbmcS68D7Pf8wtCWqcXFg8zpX3ZzPb6sV/XL/P1020645-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-R5vHcxf",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-R5vHcxf/4/KQvX2vZqfP477D4VzpSS8pSMdhTZPHQMRQK85H7wm/XL/_IGP2880-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-HgQBk3g",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/NPzwXcZNXxVcd4JrVnQh8zmZJxJc9SCkLhZHPJzv5/XL/fairy%2520tree-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-Dk4tMWB",
+    "src": "https://photos.smugmug.com/photos/i-Dk4tMWB/3/KGxNT42PS6RfmJ7D8WZCcGkSvmjwqzxSzZWtz937n/XL/i-Dk4tMWB-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-vh7p4gv",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-vh7p4gv/4/LCG4XnrwBnbJLBxmRJzrkqXBH88t5ftc4jtnz4tNG/XL/P1020959-b-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-VZ3N4km",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NJktHPKhPttSSp4JxThRsMLdWv4G7JHB6ZmTHNsLs/XL/P1020966-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-nwVhxGk",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/Lqzwv74gj4W53BhNq4snr4f75rs2nBpZMrt8SCFps/XL/white-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-wxLBqLg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-4SmFT2v",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KdbpQB8pn8xDKQ3z9xkVPV3xfDN3MfdTpcvnB6j49/XL/_IGP2847-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-XVdVWhm",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NB7mqSMMST55CR2wQ7hJRw4NZCS5CbV4ghQDfZMR6/XL/_IGP2936-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-jb5HQM7",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jb5HQM7/4/LCmvF4GPdBRTXSMcZMw4KW2xqTdPswtSSG3w6pLVc/XL/_IGP2999-2-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-6Qt5RcK",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6Qt5RcK/3/NcnZsLD55n8DKsHPkFfhJFZKX2m2dc7LSsT4m6dkb/XL/_IGP3890-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-8hwfnGn",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-Rh64N3s",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/K7dksVbwgfHQbCs9cv6KXxfDtnKZKWb2HJ4VhCrMf/XL/_IMG6274-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+    ]
+  },
+  {
+    "id": "i-QgkMVvX",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-QgkMVvX/1/LPKGCSkbTmxMHVPfH8Wnj7FFLNM2DcW9LbqRFDDSd/XL/_O1H0427-598-599-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Transportation/Cars"
+    ]
+  },
+  {
+    "id": "i-2S2ZbzK",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-2S2ZbzK/3/NPQZm9P5b243LwZvFJNWvvRH4tk7R42DrGdLN6rZh/XL/_O1H0429-600-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Transportation/Cars"
+    ]
+  },
+  {
+    "id": "i-SPVGpxw",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-SPVGpxw/2/Ld7pFfjqvjCqqPHpSRWnsN5sjnsG5wS2LFtrts685/XL/_O1H0449-601-602-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Transportation/Cars"
+    ]
+  },
+  {
+    "id": "i-7dRzH7F",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-7dRzH7F/1/K87n86kmRv4hVxvXcJ4jzwDNmQM6x6HpWFNWhBkTs/XL/_O1H0454-603-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Transportation/Cars"
+    ]
+  },
+  {
+    "id": "i-cgh854F",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cgh854F/0/LqKvSHtj4zM4CCBZHsBT5rcmgCtfjRmRBnNN7rMPg/XL/_ANA1864-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Transportation/Cars"
+    ]
+  },
+  {
+    "id": "i-Dqn5vGG",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Dqn5vGG/0/M7F7vdfRK5MN5s2SbXvXgqHGnpCnZPMKn4BVFvz5s/XL/_DSF1096-Edit-2-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Transportation/Cars"
+    ]
+  },
+  {
+    "id": "i-ZGNLtgd",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZGNLtgd/0/LGKGNFzwZRFgtHn3rJd8wzSwbDPdzZnNcsb3vzn5H/XL/_HF26139-Edit-Edit-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Transportation/Cars"
+    ]
+  },
+  {
+    "id": "i-wkRb273",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wkRb273/1/LTxbZdQ7nWXszRr7gH2BLGn8LTWwKT7DjLnbXB3pW/XL/_DSF0260-XL.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Transportation/Cars"
     ]
   }
 ];

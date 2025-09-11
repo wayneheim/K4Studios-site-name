@@ -7,7 +7,8 @@ export const westernStory = [
     tagline: "Western Art Prints & Cowboy Art That Tells a Story",
     paragraphs: [
       `Step into the dusty plains of the American frontier — where <strong>Western art</strong> comes alive in shadow and story. In Wayne Heim’s cowboy art prints, the Wild West isn’t just a backdrop — it’s a character with grit, grace, and a voice of its own.`,
-      `Through richly textured compositions, Wayne blurs the line between fine art Western photography and painterly storytelling, inviting you to experience the raw beauty of cowboy artwork, the haunting allure of black and white cowboy art, and the rustic charm of Western wall art and décor.`
+      `Through richly textured compositions, Wayne blurs the line between fine art Western photography and painterly storytelling, inviting you to experience the raw beauty of cowboy artwork, the haunting allure of black and white cowboy art, and the rustic charm of Western wall art and décor.`,
+      `Now, that story deepens — with the addition of <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">Native American portraits</a> that honor the legacy and resilience of Indigenous peoples who shaped the American West alongside cowboys, scouts, and settlers.`
     ]
   },
 
@@ -17,7 +18,7 @@ export const westernStory = [
     tagline: "The Art of Storytelling in Every Frame",
     paragraphs: [
       `The American frontier wasn’t just a place — it was a world of dust and dreams, grit and grandeur. And in Wayne Heim’s work, it’s more than a backdrop — it’s a living, breathing character brought to life through painterly photography that blurs the line between photo and painting.`,
-      `As a trained award-winning medical illustrator, Wayne draws inspiration from legendary Western artists like <strong>Frederic Remington</strong>, Wayne’s work evokes the timeless atmosphere of the Old West while capturing the raw, untamed spirit of the frontier. An award-winning medical illustrator and fine art photographer, Wayne brings a trained eye for anatomy, lighting, and narrative detail to every image.`
+      `As a trained award-winning medical illustrator, Wayne draws inspiration from legendary Western artists like <strong>Frederic Remington</strong>. His work evokes the timeless atmosphere of the Old West while capturing the raw, untamed spirit of the frontier. Wayne brings a trained eye for anatomy, lighting, and narrative detail to every image — whether portraying cowboys on the range or Native American reenactors in regalia.`
     ],
     list: [
       `<strong>Painterly Technique:</strong> Each image is meticulously crafted to echo the emotion and texture of classic Western art — through a fine art lens.`,
@@ -37,6 +38,21 @@ export const westernStory = [
       `<strong>Golden Prairie Sunsets:</strong> Evening light dancing with dust across wide horizons.`,
       `<strong>Crimson Cliffs &amp; Painted Skies:</strong> Red rock backdrops that pulse with the warmth of dusk.`,
       `<strong>Weathered Faces, Bold Stories:</strong> Painterly portraits that reveal every crease, every tale.`
+    ]
+  },
+
+  /* ───────────────────────────────────────────── 3.5 */
+  {
+    subhead: "Native American Portraits",
+    tagline: "Legacy in Focus — Indigenous Fine Art Photography",
+    paragraphs: [
+      `New to this collection are <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">painterly portraits of Native American reenactors</a> — captured with reverence, authenticity, and artistic restraint. These figures are not costumes or characters; they are carriers of story and tradition.`,
+      `With rich regalia, weathered dignity, and cinematic presence, these portraits expand the definition of “Western art” — reclaiming space for the Indigenous experience of the frontier.` 
+    ],
+    list: [
+      `<strong>Truth in Representation:</strong> Real reenactors, not fantasy depictions.`,
+      `<strong>Painterly Honor:</strong> Lighting, texture, and tone crafted to convey legacy and spirit.`,
+      `<strong>Balanced Voice:</strong> These images live alongside cowboy portraits — not behind them.`
     ]
   },
 
@@ -73,7 +89,8 @@ export const westernStory = [
     subhead: "The Engrained Series",
     tagline: "Rustic Wall Art Etched in Wood",
     paragraphs: [
-      `The Engrained Series transforms Wayne’s cowboy photography into handcrafted <strong>Western wall decor</strong> by printing selected pieces directly onto Baltic Birch wood panels. The result is both tactile and timeless — painterly cowboy art that feels carved from the era itself.`
+      `The Engrained Series transforms Wayne’s cowboy photography into handcrafted <strong>Western wall decor</strong> by printing selected pieces directly onto Baltic Birch wood panels. The result is both tactile and timeless — painterly cowboy art that feels carved from the era itself.`,
+      `Select Native American portraits are also featured in this process — where grain meets grit, and legacy becomes tangible.`
     ]
   },
 

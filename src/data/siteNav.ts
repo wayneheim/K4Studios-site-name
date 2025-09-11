@@ -31,28 +31,35 @@ export const siteNav = [
             "type": "collection"
           },
 {
-            "label": "Western Cowboy Portraits",
-            "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
-            "children": [
-{
-                "label": "Color",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-                "code": "P-S1-Ss2-Sss1",
-                "slug": "color",
-                "type": "gallery-source"
-              },
-{
-                "label": "Black & White",
-                "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
-                "code": "P-S1-Ss2-Sss2",
-                "slug": "black--white",
-                "type": "gallery-source"
-              }
-            ],
-            "code": "P-S1-Ss2",
-            "slug": "western-cowboy-portraits",
-            "type": "collection"
-          },
+  "label": "Western Cowboy Portraits",
+  "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
+  "children": [
+    {
+      "label": "Color",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+      "code": "P-S1-Ss2-Sss1",
+      "slug": "color",
+      "type": "gallery-source"
+    },
+    {
+      "label": "Black & White",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+      "code": "P-S1-Ss2-Sss2",
+      "slug": "black--white",
+      "type": "gallery-source"
+    },
+    {
+      "label": "Native American Portraits",
+      "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+      "code": "P-S1-Ss2-Sss3",
+      "slug": "na-color",
+      "type": "gallery-source"
+    }
+  ],
+  "code": "P-S1-Ss2",
+  "slug": "western-cowboy-portraits",
+  "type": "collection"
+},
 {
             "label": "Roaring 20s Portraits",
             "href": "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits",

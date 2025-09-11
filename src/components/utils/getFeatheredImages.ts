@@ -42,26 +42,27 @@ export function getFeatheredImages({
 
   const colorGallery = Array.isArray(galleryDatas[0]) ? galleryDatas[0] : [];
   const bwGallery    = Array.isArray(galleryDatas[1]) ? galleryDatas[1] : [];
+  const naColorGallery = Array.isArray(galleryDatas[2]) ? galleryDatas[2] : [];
 
-  const colorImages = filterAndSort(colorGallery, half + extra);
+  // Distribute images evenly from all three galleries
+  const colorImages = filterAndSort(colorGallery, Math.ceil(headingCount / 3));
   colorImages.forEach(img => excludeIds.add(img.id));
 
-  const bwImages = filterAndSort(bwGallery, half);
+  const bwImages = filterAndSort(bwGallery, Math.ceil(headingCount / 3));
   bwImages.forEach(img => excludeIds.add(img.id));
 
-  const output: Image[] = [];
+  const naColorImages = filterAndSort(naColorGallery, headingCount - colorImages.length - bwImages.length);
+  naColorImages.forEach(img => excludeIds.add(img.id));
 
-  for (let i = 0; i < headingCount; i++) {
-    if (i % 2 === 0 && colorImages.length) {
-      output.push(colorImages.shift()!);
-    } else if (bwImages.length) {
-      output.push(bwImages.shift()!);
-    } else if (colorImages.length) {
-      output.push(colorImages.shift()!);
-    }
+  const output: Image[] = [];
+  // Interleave images from all three galleries
+  while (output.length < headingCount && (colorImages.length || bwImages.length || naColorImages.length)) {
+    if (colorImages.length) output.push(colorImages.shift()!);
+    if (bwImages.length && output.length < headingCount) output.push(bwImages.shift()!);
+    if (naColorImages.length && output.length < headingCount) output.push(naColorImages.shift()!);
   }
 
-  return output.map((img) => ({
+  return output.slice(0, headingCount).map((img) => ({
     ...img,
     href: `${sectionPath}/i-${img.id}`,
   }));

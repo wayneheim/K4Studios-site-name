@@ -16,6 +16,11 @@ export const landingWestern = {
       thumb: '/images/tombstones/cowboy-bw-ts.jpg',
     },
     {
+      title: 'Native Americans',
+      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
+      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/Kt9jcckLMc7gPh89Mk53hJr4z8Cr6PCMgRgwwmPM5/S/_WHO1626-886-S.jpg',
+    },
+    {
       title: 'Engrained Series',
       href: '/Other/Print-Options/Prints-on-Wood',
       thumb: '/images/tombstones/engrained-ts.jpg',
