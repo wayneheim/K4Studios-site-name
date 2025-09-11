@@ -211,6 +211,7 @@ export const siteNav = [
             "label": "By Theme",
             "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme",
             "children": [
+              
 {
                 "label": "Mountains",
                 "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
@@ -218,6 +219,7 @@ export const siteNav = [
                 "slug": "mountains",
                 "type": "gallery-source"
               },
+              
 {
                 "label": "Water & Waterfalls",
                 "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water",
@@ -231,7 +233,8 @@ export const siteNav = [
                 "code": "P-S2-Ss2-Sss3",
                 "slug": "sunsets",
                 "type": "gallery-source"
-              }
+              },
+                
             ],
             "code": "P-S2-Ss2",
             "slug": "by-theme",
@@ -375,7 +378,22 @@ export const siteNav = [
                 "code": "T-S1-Ss2-Sss3",
                 "slug": "sunsets",
                 "type": "gallery-source"
-              }
+              },
+              {
+      "label": "Color",
+      "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color",
+      "code": "P-S2-Ss2-Sss4",
+      "slug": "color",
+      "type": "gallery-source"
+    },
+      {
+      "label": "Black & White",
+      "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White",
+      "code": "P-S2-Ss2-Sss5",
+      "slug": "black-white",
+      "type": "gallery-source"
+    },
+
             ],
             "code": "T-S1-Ss2",
             "slug": "by-theme",

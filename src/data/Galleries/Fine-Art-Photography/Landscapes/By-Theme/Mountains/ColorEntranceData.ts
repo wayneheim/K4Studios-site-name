@@ -1,17 +1,39 @@
-// data/galleries/Civil-War/ColorEntranceData.ts
+// data/galleries/Landscapes/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Mountain Landscape Photography by Wayne Heim – Painterly Fine Art Prints",
-  subtitle: "From the Rockies to Iceland – Discover Nature Reimagined in Painterly Form",
-  description:
-    "Explore painterly mountain landscape photography that captures the spirit and majesty of nature’s most iconic peaks. From the rugged Rockies to the misty Smokies and dramatic Icelandic cliffs, Wayne Heim transforms scenic mountain views into immersive fine art prints for collectors, western wall art lovers, and nature enthusiasts.",
-  details:
-    "Painterly mountain landscape photography prints by Wayne Heim. Featuring dramatic views of the Rocky Mountains, Appalachian ranges, Icelandic peaks, and other iconic landscapes rendered in a painterly photographic style. These fine art mountain prints blend Western decor aesthetics with classical fine art, perfect for rustic interiors, cabin walls, man cave decor, and modern mountain homes. Ideal for collectors of American landscape photography, lovers of western wall art, and fans of moody, atmospheric prints. Available on wood panels, acrylic, metal, and fine art paper. Each piece evokes emotion, depth, and timeless natural beauty — a unique blend of realism and painterly expression.",
+  title: "Traditional Mountain Landscape Photography by Wayne Heim – Fine Art Prints",
+  subtitle: "From the Rockies to Iceland – Timeless Scenes, Classic Process",
+  description: `
+    Discover Wayne Heim’s traditional mountain landscape photography—fine art prints that capture the majesty, serenity, and story of nature’s greatest peaks. 
+    These museum-quality images are created using classic fine art techniques and are ideal for collectors, mountain home decor lovers, and anyone who appreciates the power of an authentic landscape.
+    <br><br>
+    For dramatic Western vistas and iconic canyons, visit our 
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West" 
+      style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;" 
+      onmouseover="this.style.color='#a74219'" 
+      onmouseout="this.style.color='#85644b'">Western Landscapes</a>.
+    Or explore our 
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Waterfalls" 
+      style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;" 
+      onmouseover="this.style.color='#a74219'" 
+      onmouseout="this.style.color='#85644b'">Waterfall Collection</a> 
+    for moving water in painterly scenes.
+  `,
+  details: `
+    Traditional mountain landscape photography prints by Wayne Heim. Featuring sweeping views of the Rocky Mountains, Appalachian Highlands, Smoky Mountains, and dramatic Icelandic peaks—each rendered in a classic fine art style. 
+    These landscape prints blend traditional photographic craft with the visual language of fine painting, making them perfect for Western decor, mountain cabins, rustic interiors, and modern homes. 
+    Ideal for collectors of authentic American landscape photography, fans of timeless scenic wall art, and anyone seeking emotional, atmospheric prints that evoke a sense of place. 
+    Available on wood panels, fine art paper, acrylic, and metal. Every piece captures the grandeur, mood, and story of the mountains—blending realism, depth, and classic artistry for today’s collectors.
+  `,
   image: {
     src: "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/i-XXXXXXX.jpg", // Replace with actual image
-    alt: "Painterly photograph of the Rocky Mountains by Wayne Heim",
+    alt: "traditional mountain landscape photograph by Wayne Heim",
     caption: "\"Mountain Silence\"",
   },
-  breadcrumb: 
-  `<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='red'" onmouseout="this.style.color='inherit'">Landscapes by Theme</a> | Mountains`,
+  breadcrumb: `
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Theme" 
+       style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" 
+       onmouseover="this.style.color='red'" 
+       onmouseout="this.style.color='inherit'">Landscapes by Theme</a> | Mountains
+  `,
 };

@@ -1,26 +1,25 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-  
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1
+  },
   {
     "id": "i-XhWrKdZ",
-    "title": "Kirkjufell  Photography by Wayne Heim",
-    "description": "Kirkjufell Mountain with waterfalls in the foreground. © Wayne Heim",
+    "title": "Kirkjufell  Photography by Wayne HeimKirkjufell Mountain with waterfalls in the foreground.",
+    "description": "© Wayne Heim",
     "alt": "Kirkjufell  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/KcSG7JCH3s9dRnFBdWf3dKz8PGgWvJZSJCg8L98WP/XL/_WHZ1224-Pano_tonemapped%2520v2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/A",
@@ -36,12 +35,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "Kirkjufell Mountain with waterfalls in the foreground. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 0
   },
@@ -67,9 +64,7 @@ export const galleryData = [
     "story": "24 x 36 In Stock  Strasbourg Old town Strasbourg showing canal and colorful buildings in the principal city of Alsace in France. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 1
   },
@@ -95,16 +90,14 @@ export const galleryData = [
     "story": "Upper Yellowstone waterfall after the storm.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 2
   },
   {
     "id": "i-SxbNjWC",
     "title": "Iceland Waterfall.",
-    "description": "",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Iceland Waterfall.",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/MH4fKLsC3vCwG57fwc9dhknRgKpx6P8Sk2rmsqfrV/XL/_WHZ1847-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/A",
@@ -120,12 +113,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 3
   },
@@ -151,9 +142,7 @@ export const galleryData = [
     "story": "Old Chrystal Mill watching over the river below. One of Colorado's finest locations.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 4
   },
@@ -179,9 +168,7 @@ export const galleryData = [
     "story": "Flock of geese seem to be heading south as they pass over the Fairport Lighthouse on Lake Erie.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 5
   },
@@ -207,9 +194,7 @@ export const galleryData = [
     "story": "Photograph of the Buffalo Bill Reservoir in Wyoming at sunset.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 6
   },
@@ -235,9 +220,7 @@ export const galleryData = [
     "story": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 7
   },
@@ -263,9 +246,7 @@ export const galleryData = [
     "story": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 8
   },
@@ -291,9 +272,7 @@ export const galleryData = [
     "story": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 9
   },
@@ -319,9 +298,7 @@ export const galleryData = [
     "story": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 10
   },
@@ -347,9 +324,7 @@ export const galleryData = [
     "story": "18 x 24 In StockWalk to the Lighthouse  - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 11
   },
@@ -375,9 +350,7 @@ export const galleryData = [
     "story": "A more wide open view of Gullfloss in Iceland.\n©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 12
   },
@@ -403,9 +376,7 @@ export const galleryData = [
     "story": "A side vied of Kirkjufellfloss in Iceland.© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 13
   },
@@ -431,9 +402,7 @@ export const galleryData = [
     "story": "A view of Mt. Hood at sunset with the lights of the snow cats on the mountain side. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 14
   },
@@ -459,9 +428,7 @@ export const galleryData = [
     "story": "A view of the Grand teton mountains as seen from a nearby river .  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 15
   },
@@ -487,9 +454,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 16
   },
@@ -515,9 +480,7 @@ export const galleryData = [
     "story": "Angry waves at the Lighthouse at Conneaut harbor in Ohio.\n© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 17
   },
@@ -543,9 +506,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 18
   },
@@ -571,9 +532,7 @@ export const galleryData = [
     "story": "Beautiful waterfall cascades down hillside in Multnomah Falls. Columbia River Gorge. Oregon.  .©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 19
   },
@@ -599,9 +558,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Glacier National Park and Montana.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 20
   },
@@ -627,9 +584,7 @@ export const galleryData = [
     "story": "Canal Balcony - view of hoes along canal in Strasbourg France showing outside balcony overlooking the canal. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 21
   },
@@ -655,9 +610,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 22
   },
@@ -683,9 +636,7 @@ export const galleryData = [
     "story": "Cascading waterfalls flow in a stream full of rocks.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 23
   },
@@ -711,9 +662,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 24
   },
@@ -739,9 +688,7 @@ export const galleryData = [
     "story": "Close up view of Gullfloss waterfall in Iceland.\n©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 25
   },
@@ -767,9 +714,7 @@ export const galleryData = [
     "story": "Close up view of one of  Iceland's many waterfalls.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 26
   },
@@ -795,9 +740,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 27
   },
@@ -823,9 +766,7 @@ export const galleryData = [
     "story": "Clouds hang over the sea like cotton candy. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 28
   },
@@ -851,9 +792,7 @@ export const galleryData = [
     "story": "Debris at the base of the falls looks like a shark lying on its back  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 29
   },
@@ -879,9 +818,7 @@ export const galleryData = [
     "story": "Deck hand secures line during the Parade of  Tall Ships entering Cleveland Harbor on Lake Erie. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 30
   },
@@ -907,9 +844,7 @@ export const galleryData = [
     "story": "Fairport Lighthouse at the mouth of the Grand River on Lake Erie. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 31
   },
@@ -935,9 +870,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 32
   },
@@ -963,9 +896,7 @@ export const galleryData = [
     "story": "Fall in the river in Berea Ohio as the flow under bridge.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 33
   },
@@ -991,9 +922,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 34
   },
@@ -1019,9 +948,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 35
   },
@@ -1047,9 +974,7 @@ export const galleryData = [
     "story": "Flock of Geese fly over the mouth of the Grand River on Lake Erie. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 36
   },
@@ -1075,9 +1000,7 @@ export const galleryData = [
     "story": "Godafoss  is one of the smaller waterfalls in Iceland known for its beauty. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 37
   },
@@ -1103,9 +1026,7 @@ export const galleryData = [
     "story": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 38
   },
@@ -1131,9 +1052,7 @@ export const galleryData = [
     "story": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 39
   },
@@ -1159,9 +1078,7 @@ export const galleryData = [
     "story": "Beautiful waterfall secluded is the forest of the Smokie Mountains. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 40
   },
@@ -1187,9 +1104,7 @@ export const galleryData = [
     "story": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 41
   },
@@ -1215,9 +1130,7 @@ export const galleryData = [
     "story": "Iceberg on shore fights against the battering waves on Iceland's coast.   ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 42
   },
@@ -1243,9 +1156,7 @@ export const galleryData = [
     "story": "Icebergs look like they are coming ashore in Iceland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 43
   },
@@ -1271,9 +1182,7 @@ export const galleryData = [
     "story": "Icelandic waterfall flow from the rocks of Iceland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 44
   },
@@ -1299,9 +1208,7 @@ export const galleryData = [
     "story": "In Stock 18 x 24Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 45
   },
@@ -1327,9 +1234,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 46
   },
@@ -1355,9 +1260,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 47
   },
@@ -1383,9 +1286,7 @@ export const galleryData = [
     "story": "Kirkjufell Mountain with waterfalls in the foreground. ©Wayne Heim  (b/w)",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 48
   },
@@ -1411,9 +1312,7 @@ export const galleryData = [
     "story": "Kirkjufell Mountain with waterfalls in the foreground. ©Wayne Heim  old time treatment",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 49
   },
@@ -1439,9 +1338,7 @@ export const galleryData = [
     "story": "Kirkjufell Mountain with waterfalls in the foreground. ©Wayne Heim (color)",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 50
   },
@@ -1467,9 +1364,7 @@ export const galleryData = [
     "story": "Little Strasbourg - view of Old Town Strasbourg France showing apartments along a canal. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 51
   },
@@ -1495,9 +1390,7 @@ export const galleryData = [
     "story": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 52
   },
@@ -1523,9 +1416,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 53
   },
@@ -1551,9 +1442,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 54
   },
@@ -1579,9 +1468,7 @@ export const galleryData = [
     "story": "Lynx -  the Tall Ship Lynx sails on Lake Erie in a visit to Cleveland, Ohio ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 55
   },
@@ -1607,9 +1494,7 @@ export const galleryData = [
     "story": "Many arches of the Berea Bridge. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 56
   },
@@ -1635,9 +1520,7 @@ export const galleryData = [
     "story": "Mentor Lighthouse - also called the West Fairport Lighthouse at the mouth of the Grand River in Ohio.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 57
   },
@@ -1663,9 +1546,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 58
   },
@@ -1691,9 +1572,7 @@ export const galleryData = [
     "story": "Observation bridge at Multnomah Falls. Columbia River Gorge. Oregon ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 59
   },
@@ -1719,15 +1598,13 @@ export const galleryData = [
     "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 60
   },
   {
     "id": "i-sfdNcst",
-    "title": "",
+    "title": "A",
     "description": "OLYMPUS DIGITAL CAMERA",
     "alt": "OLYMPUS DIGITAL CAMERA",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/2/NRQzNcF6HFrWvTrf3mTFsS2x4DJT32zJL8hcMrfT9/XL/_OLY8957_tonemapped-Edit-XL.jpg",
@@ -1747,9 +1624,7 @@ export const galleryData = [
     "story": "OLYMPUS DIGITAL CAMERA",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 61
   },
@@ -1775,9 +1650,7 @@ export const galleryData = [
     "story": "One of the many waterfalls in Iceland.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 62
   },
@@ -1803,9 +1676,7 @@ export const galleryData = [
     "story": "A view of Mt. Hood at sunset with the lights of the snow cats on the mountain side. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 63
   },
@@ -1831,9 +1702,7 @@ export const galleryData = [
     "story": "One of the many waterfalls in Iceland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 64
   },
@@ -1859,9 +1728,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Iceland in the Fall.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 65
   },
@@ -1887,9 +1754,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 66
   },
@@ -1915,9 +1780,7 @@ export const galleryData = [
     "story": "Panoramic view of one on Iceland's waterfalls. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 67
   },
@@ -1943,9 +1806,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 68
   },
@@ -1971,9 +1832,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 69
   },
@@ -1999,9 +1858,7 @@ export const galleryData = [
     "story": "Rio de Janerio in Brazil ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 70
   },
@@ -2027,9 +1884,7 @@ export const galleryData = [
     "story": "Rocks in Fall -  stream flows through downed trees and rock in Metro Park. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 71
   },
@@ -2055,9 +1910,7 @@ export const galleryData = [
     "story": "Seawall in Fairport - seawall leading to the lighthouse in Fairport, Ohio ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 72
   },
@@ -2083,9 +1936,7 @@ export const galleryData = [
     "story": "Shadows of trees reflect in pond as sunset behind them. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 73
   },
@@ -2111,9 +1962,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 74
   },
@@ -2139,9 +1988,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Glacier National Park and Montana.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 75
   },
@@ -2167,9 +2014,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 76
   },
@@ -2195,9 +2040,7 @@ export const galleryData = [
     "story": "Small waterfalls flows into area of larger falls. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 77
   },
@@ -2223,9 +2066,7 @@ export const galleryData = [
     "story": "SOLD - Tinkers Creek -  view of the Berea Bridge from below the falls in Berea Ohio. ©Wayne Heim Call for ordering options.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 78
   },
@@ -2251,9 +2092,7 @@ export const galleryData = [
     "story": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 79
   },
@@ -2279,9 +2118,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 80
   },
@@ -2307,9 +2144,7 @@ export const galleryData = [
     "story": "Fine art landscape sunset photograph of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 81
   },
@@ -2335,9 +2170,7 @@ export const galleryData = [
     "story": "Swollen river races with water have heavy rains. ©Wayne Heimw",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 82
   },
@@ -2363,9 +2196,7 @@ export const galleryData = [
     "story": "Tall ship Lynx sails in to Cleveland Harbor show a great skyline behind it.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 83
   },
@@ -2391,9 +2222,7 @@ export const galleryData = [
     "story": "Tall ship with all flags flying as it enters Cleveland  Harbor on Lake Erie.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 84
   },
@@ -2419,9 +2248,7 @@ export const galleryData = [
     "story": "The angry sea batters the chunks of ice in the waters off Iceland.   ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 85
   },
@@ -2447,9 +2274,7 @@ export const galleryData = [
     "story": "The Grand  the highest  peak in the Grand Teton Mountains.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 86
   },
@@ -2475,9 +2300,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 87
   },
@@ -2503,9 +2326,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 88
   },
@@ -2531,9 +2352,7 @@ export const galleryData = [
     "story": "Tower Bridge - popular view of the Tower Bridge from across the Thames River in London, England.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 89
   },
@@ -2559,9 +2378,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 90
   },
@@ -2587,9 +2404,7 @@ export const galleryData = [
     "story": "Two waterfalls flow over same rocks. . ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 91
   },
@@ -2615,9 +2430,7 @@ export const galleryData = [
     "story": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 92
   },
@@ -2643,9 +2456,7 @@ export const galleryData = [
     "story": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 93
   },
@@ -2671,9 +2482,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 94
   },
@@ -2699,9 +2508,7 @@ export const galleryData = [
     "story": "Waning  sunset casts reflection of trees in the water.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 95
   },
@@ -2729,9 +2536,7 @@ export const galleryData = [
     "story": "Water flowing out to sea in the sunset scene of Iceland.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 96
   },
@@ -2759,9 +2564,7 @@ export const galleryData = [
     "story": "Waterfall appears to flow out of the hillside in Iceland.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 97
   },
@@ -2789,9 +2592,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 98
   },
@@ -2819,9 +2620,7 @@ export const galleryData = [
     "story": "Waterfall in Iceland flows out of the rocks on  mountain side.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 99
   },
@@ -2849,9 +2648,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 100
   },
@@ -2879,9 +2676,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 101
   },
@@ -2909,17 +2704,15 @@ export const galleryData = [
     "story": "Waves crash against the rocks on the coast of Iceland ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 102
   },
   {
     "id": "i-kqQ26Rw",
-    "title": "",
-    "description": "",
-    "alt": "_ANA1161.jpg",
+    "title": "A",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KL2ZM37TWfGXZk5TpMSWc2Z63x74nG44jb7R7FkcS/XL/_ANA1161-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kqQ26Rw/A",
     "keywords": [
@@ -2936,20 +2729,18 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 103
   },
   {
     "id": "i-8hzdpxL",
-    "title": "",
-    "description": "",
-    "alt": "_ANA1162-Edit.jpg",
+    "title": "A",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/LMzqW4nNjnQX6K4QBG66NTdQcRpd57288H96GgC2z/XL/_ANA1162-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8hzdpxL/A",
     "keywords": [
@@ -2966,20 +2757,18 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 104
   },
   {
     "id": "i-Fr454qG",
-    "title": "",
-    "description": "",
-    "alt": "_ANA1064.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Fr454qG/1/LhB3CSH4qvQpHkv6csvJQmrpzK6bfDDjtsBXMKhNW/XL/_ANA1064-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Fr454qG/A",
     "keywords": [
@@ -2996,20 +2785,18 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 105
   },
   {
     "id": "i-rm2GNVm",
-    "title": "",
-    "description": "",
-    "alt": "_ANA1156.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/KLfbc35XPKN5mkwKtZ5QpqDddjwQD55cxrFZHRL3c/XL/_ANA1156-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rm2GNVm/A",
     "keywords": [
@@ -3026,20 +2813,18 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 106
   },
   {
     "id": "i-NGqssGX",
-    "title": "",
-    "description": "",
-    "alt": "_ANA1162-Edit-2.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NGqssGX/2/NBPp2L9cPjR3XKh6rBqHLzBP8Wt8WLNfFd22ZVN7j/XL/_ANA1162-Edit-2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NGqssGX/A",
     "keywords": [
@@ -3056,12 +2841,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 107
   },
@@ -3089,9 +2872,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 108
   },
@@ -3119,9 +2900,7 @@ export const galleryData = [
     "story": "Dueling Falls -  waterfalls on Chagrin River ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 109
   },
@@ -3149,9 +2928,7 @@ export const galleryData = [
     "story": "Rushing Falls -  rain swollen stream produces rushing falls.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 110
   },
@@ -3179,9 +2956,7 @@ export const galleryData = [
     "story": "Dueling Waterfalls created by slab rock in the middle. Another view of the Chagrin River in Ohio . ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 111
   },
@@ -3209,9 +2984,7 @@ export const galleryData = [
     "story": "Little falls rush over the rocks in the river in Berea Metro Parks.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 112
   },
@@ -3239,9 +3012,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 113
   },
@@ -3269,9 +3040,7 @@ export const galleryData = [
     "story": "Rushing Rapids-  Churning water of rapids  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 114
   },
@@ -3299,9 +3068,7 @@ export const galleryData = [
     "story": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 115
   },
@@ -3329,9 +3096,7 @@ export const galleryData = [
     "story": "Green Lagoon, quiet secluded lagoon in wooded area of Smokie Mountains ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 116
   },
@@ -3359,9 +3124,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 117
   },
@@ -3389,9 +3152,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 118
   },
@@ -3419,9 +3180,7 @@ export const galleryData = [
     "story": "A view of St John's lighthouse in Newfoundland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 119
   },
@@ -3449,9 +3208,7 @@ export const galleryData = [
     "story": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 120
   },
@@ -3479,9 +3236,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of a storm rolling in over Lake Erie in  Conneaut, Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 121
   },
@@ -3509,9 +3264,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 122
   },
@@ -3539,9 +3292,7 @@ export const galleryData = [
     "story": "Optical illusion of lake and sunset.  © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 123
   },
@@ -3569,9 +3320,7 @@ export const galleryData = [
     "story": "One of the many water falls flowing in Ohio rivers. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 124
   },
@@ -3599,9 +3348,7 @@ export const galleryData = [
     "story": "Gone Fishing - view of one of the covered bridges in Conneaut, Ohio with a man fishing in the stream.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 125
   },
@@ -3629,9 +3376,7 @@ export const galleryData = [
     "story": "Fall Stream - stream with little rapids flows through the Metro Parks ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 126
   },
@@ -3659,9 +3404,7 @@ export const galleryData = [
     "story": "Angle of photograph makes white water look like ice as it flows by.  Black & white view ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 127
   },
@@ -3689,9 +3432,7 @@ export const galleryData = [
     "story": "Dueling Waterfalls created by slab rock in the middle. Another view of the Chagrin River in Ohio .  loser view  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 128
   },
@@ -3719,9 +3460,7 @@ export const galleryData = [
     "story": "Lighthouse in Black & White -  view of the Fairport AHarbor Lighthouse on Lake Erie.\n©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 129
   },
@@ -3749,9 +3488,7 @@ export const galleryData = [
     "story": "Reflections in the water appear like sheets of ice below the water fall.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 130
   },
@@ -3779,9 +3516,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 131
   },
@@ -3809,9 +3544,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 132
   },
@@ -3839,9 +3572,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 133
   },
@@ -3869,9 +3600,7 @@ export const galleryData = [
     "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 134
   },
@@ -3899,9 +3628,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 135
   },
@@ -3929,9 +3656,7 @@ export const galleryData = [
     "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 136
   },
@@ -3959,9 +3684,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 137
   },
@@ -3989,9 +3712,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 138
   },
@@ -4019,9 +3740,7 @@ export const galleryData = [
     "story": "Fine art, black & white, landscape photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 139
   },
@@ -4049,9 +3768,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 140
   },
@@ -4079,9 +3796,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Iceland waterfall in the Summer. Painterly Landscape Photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 141
   },
@@ -4109,9 +3824,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Iceland sunset in the Summer.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 142
   },
@@ -4139,9 +3852,7 @@ export const galleryData = [
     "story": "Two waterfalls in the Chagrin River seem to meet as the flow over the rocks. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 143
   },
@@ -4170,17 +3881,15 @@ export const galleryData = [
     "story": "Rushing Rapids-  Berea Falls churning water of rapids  in black & White ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 144
   },
   {
     "id": "i-GvZBLcv",
-    "title": "",
-    "description": "",
-    "alt": "_WHZ7325-Edit-Edit-2.jpg",
+    "title": "A",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/NQ7kPr2F5vkSdtcHgmLDVfbzscGndV5vfnXjPS49v/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GvZBLcv/A",
     "keywords": [
@@ -4198,18 +3907,16 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 145
   },
   {
     "id": "i-LR3Vr2N",
-    "title": "",
+    "title": "A",
     "description": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "alt": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/MpkSpQg4PK2fMsC3tfJjhtWkHHMGHtsVK6gSHjNbF/XL/_WHZ7433-Edit-XL.jpg",
@@ -4232,17 +3939,15 @@ export const galleryData = [
     "story": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 146
   },
   {
     "id": "i-N3ShZHB",
-    "title": "",
-    "description": "",
-    "alt": "_ANA0655-Edit.jpg",
+    "title": "A",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/KsG9QhFMSx4fxVBXcTC4sR6WJJ2PHRXfVgxRscmg4/XL/_ANA0655-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3ShZHB/A",
     "keywords": [
@@ -4260,20 +3965,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 147
   },
   {
     "id": "i-KFLXt4D",
-    "title": "",
-    "description": "",
-    "alt": "_ANA0801_tonemapped-Edit.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LRB5mwWN4pJpk7s9ffX8NNwtPxRv94GcpcxbgVSq6/XL/_ANA0801_tonemapped-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-KFLXt4D/A",
     "keywords": [
@@ -4291,20 +3994,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 148
   },
   {
     "id": "i-ScMsR8H",
-    "title": "",
-    "description": "",
-    "alt": "_ANA1155.jpg",
+    "title": "A",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/K5WhqTww2CksS7hsZdLGLH3qnmPMZ5Dj83HNtnChq/XL/_ANA1155-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ScMsR8H/A",
     "keywords": [
@@ -4322,20 +4023,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 149
   },
   {
     "id": "i-VScCFDQ",
-    "title": "",
-    "description": "",
-    "alt": "_WHZ7317-Edit-Edit-Edit.jpg",
+    "title": "A",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/NgVCwQMJMVXfjqV3Jn73ShMJFBqHsHPKN5BVG9C7T/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VScCFDQ/A",
     "keywords": [
@@ -4353,20 +4052,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 150
   },
   {
     "id": "i-3jXg4hf",
-    "title": "",
-    "description": "",
-    "alt": "_OL31305-Edit-Edit_tonemapped.jpg",
+    "title": "A",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/NXP3L8L95T56ZvvxjCZfwnHSwNmbGb9q4Cmzmgt3q/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3jXg4hf/A",
     "keywords": [
@@ -4384,20 +4081,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 151
   },
   {
     "id": "i-jgkhwcs",
-    "title": "",
-    "description": "",
-    "alt": "_DSF6068_tonemapped-Edit-2.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/KRXtnwgxWXn6ZHWDGcFHqjpMxWPRfFxDjVsjSFcwd/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jgkhwcs/A",
     "keywords": [
@@ -4415,20 +4110,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 152
   },
   {
     "id": "i-sRRJHVz",
-    "title": "",
-    "description": "",
-    "alt": "_DSF6146_tonemapped.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/Nhnp94nFG8VzjM5VmKkVWgsKqJV3xh9LMJbGzGJDV/XL/_DSF6146_tonemapped-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sRRJHVz/A",
     "keywords": [
@@ -4446,20 +4139,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 153
   },
   {
     "id": "i-7pG4nQv",
-    "title": "",
-    "description": "",
-    "alt": "_DSF6187-Edit.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/L9C827hbvfPbMLG8JhTZCWfdbvMghtXD39dFXrXHP/XL/_DSF6187-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7pG4nQv/A",
     "keywords": [
@@ -4477,20 +4168,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 154
   },
   {
     "id": "i-DKPmrRN",
-    "title": "",
-    "description": "",
-    "alt": "_DSF6199.jpg",
+    "title": "A",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/KZN9DRh3VRTjKXS5d59DJk4MFRdnN4q3t9ghf9zzr/XL/_DSF6199-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-DKPmrRN/A",
     "keywords": [
@@ -4508,20 +4197,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 155
   },
   {
     "id": "i-T3fx2pT",
-    "title": "",
-    "description": "",
-    "alt": "_DSF6267-Edit.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/LJcZTxV9ZVwksLQ4Lfhh5Xs59Vvmb6BVtBcXhNKDm/XL/_DSF6267-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-T3fx2pT/A",
     "keywords": [
@@ -4539,20 +4226,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 156
   },
   {
     "id": "i-5RjNxDr",
-    "title": "",
-    "description": "",
-    "alt": "_O1H0012.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/Kc9H99ND7GKJWXmmwrwFr6KfZxfLTHDVBXg7w9vnf/XL/_O1H0012-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5RjNxDr/A",
     "keywords": [
@@ -4570,12 +4255,10 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 157
   },
@@ -4604,9 +4287,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 158
   },
@@ -4635,9 +4316,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 159
   },
@@ -4666,9 +4345,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 160
   },
@@ -4697,9 +4374,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 161
   },
@@ -4728,9 +4403,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 162
   },
@@ -4759,9 +4432,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 163
   },
@@ -4790,9 +4461,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 164
   },
@@ -4821,9 +4490,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 165
   },
@@ -4852,9 +4519,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 166
   },
@@ -4883,9 +4548,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 167
   },
@@ -4914,9 +4577,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 168
   },
@@ -4945,9 +4606,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 169
   },
@@ -4976,9 +4635,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 170
   },
@@ -5007,9 +4664,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 171
   },
@@ -5038,9 +4693,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 172
   },
@@ -5069,17 +4722,15 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 173
   },
   {
     "id": "i-BqLgwDV",
-    "title": "",
-    "description": "",
-    "alt": "_ANA0559.jpg",
+    "title": "A",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-BqLgwDV/2/NX9MwxRJ9Kb9kDbMS5WfWbS9XL4VRTkCjXBFHbpm5/XL/_ANA0559-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BqLgwDV/A",
     "keywords": [
@@ -5097,20 +4748,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 174
   },
   {
     "id": "i-9Tfz9Nk",
-    "title": "",
-    "description": "",
-    "alt": "_WHZ6742-Edit_tonemapped.jpg",
+    "title": "A",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-9Tfz9Nk/0/NL5x8H5X5PnCGLqkLXkB4HpLjrCD4DDdNNc7Jbjqz/XL/_WHZ6742-Edit_tonemapped-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9Tfz9Nk/A",
     "keywords": [
@@ -5128,20 +4777,18 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 175
   },
   {
     "id": "i-QnWtwx3",
-    "title": "",
-    "description": "",
-    "alt": "_WHZ6658-Edit.jpg",
+    "title": "A",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-QnWtwx3/0/L4tCbqCgDMqM42qmCqDMnfL7ZL9WMgJwQdvpXJBfR/XL/_WHZ6658-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QnWtwx3/A",
     "keywords": [
@@ -5159,18 +4806,16 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 176
   },
   {
     "id": "i-R6q57Rs",
-    "title": "",
+    "title": "A",
     "description": "Collection of the Best Iceland fine art landscape photography.",
     "alt": "Collection of the Best Iceland fine art landscape photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-R6q57Rs/6/K2nZcxTq4dKS9gpgCwqkCNDNX3cvR6b84H6TpQz9k/XL/_ANA1736-Edit-Edit-XL.jpg",
@@ -5193,17 +4838,15 @@ export const galleryData = [
     "story": "Collection of the Best Iceland fine art landscape photography.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 177
   },
   {
     "id": "i-RWr4ppX",
-    "title": "",
-    "description": "",
-    "alt": "_ANA1140_tonemapped-2.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/KTbKDdcW73KkvQ6N2b5WcpDzNgtsWTpwgTcLwbshp/XL/_ANA1140_tonemapped-2-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-RWr4ppX/A",
     "keywords": [
@@ -5221,18 +4864,16 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 178
   },
   {
     "id": "i-jJpmmzj",
-    "title": "",
+    "title": "A",
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
     "alt": "Fine art landscape photography of Glacier National Park and Montana.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jJpmmzj/0/KMsk2fXnHXxdTVKBswGDmQ66KG6RvNwb4ppGKj74J/XL/_IGP2891-Edit-XL.jpg",
@@ -5255,9 +4896,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Glacier National Park and Montana.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 179
   },
@@ -5286,9 +4925,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 180
   },
@@ -5317,9 +4954,7 @@ export const galleryData = [
     "story": "Photo from behind one of the many waterfalls in Iceland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 181
   },
@@ -5348,9 +4983,7 @@ export const galleryData = [
     "story": "Road winds down to the water.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 182
   },
@@ -5379,17 +5012,15 @@ export const galleryData = [
     "story": "Shelter situated on the edge of the water in Faroe Islands ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 183
   },
   {
     "id": "i-GbJTFrX",
-    "title": "",
-    "description": "",
-    "alt": "_WHZ2830_tonemapped-topaz-sharpen.jpg",
+    "title": "A",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/0/MfRgsCTD7LM2JZJtC6Jrcj2cmNPPzp69kv6gsZK6R/XL/_WHZ2830_tonemapped-topaz-sharpen-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/A",
     "keywords": [
@@ -5407,12 +5038,10 @@ export const galleryData = [
       "river",
       "rapids"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 184
   },
@@ -5441,9 +5070,7 @@ export const galleryData = [
     "story": "Iceberg on shore fights against the battering waves on Iceland's coast.   ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 185
   },
@@ -5472,9 +5099,7 @@ export const galleryData = [
     "story": "Waterfall flows down to the sea in the Faroes. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 186
   },
@@ -5503,9 +5128,7 @@ export const galleryData = [
     "story": "Small pasture sets by the water in Newfoundland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 187
   },
@@ -5534,9 +5157,7 @@ export const galleryData = [
     "story": "Scene from Iceland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 188
   },
@@ -5565,9 +5186,7 @@ export const galleryData = [
     "story": "Rugged coast of Iceland under a darkening sky. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 189
   },
@@ -5596,9 +5215,7 @@ export const galleryData = [
     "story": "Lagoon created by the Jokulsarlon Glacier .\n ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 190
   },
@@ -5627,9 +5244,7 @@ export const galleryData = [
     "story": "A view of Skogafoss in close so you feel the spray. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 191
   },
@@ -5656,9 +5271,7 @@ export const galleryData = [
     "story": "View of the Skogafoss waterfall from a distance. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 192
   },
@@ -5685,9 +5298,7 @@ export const galleryData = [
     "story": "Full view of the Kirkjufellsfoss area, waterfall, mountain, river in Iceland.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 193
   },
@@ -5714,9 +5325,7 @@ export const galleryData = [
     "story": "Kirkjufellsfoss waterfall flows before the jutting mountain.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 194
   },
@@ -5743,9 +5352,7 @@ export const galleryData = [
     "story": "Small foot bridge spans a water fall in Iceland.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 195
   },
@@ -5772,9 +5379,7 @@ export const galleryData = [
     "story": "Mist hangs over the  roughed coast of the Faroe Islands. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 196
   },
@@ -5801,9 +5406,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 197
   },
@@ -5830,15 +5433,13 @@ export const galleryData = [
     "story": "Berea Bridge -  scene in the metorparks of Cleveland, Ohio shows arches of bridge spanning the Rocky River .©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 198
   },
   {
     "id": "i-hpFHm3G",
-    "title": "",
+    "title": "A",
     "description": "Fine art landscape photography of Iceland in the Summer.",
     "alt": "Fine art landscape photography of Iceland in the Summer.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-hpFHm3G/6/Kr2ZwwMtHRT27bZpt5LggxnVG2pWWxfXFFVkbHMpH/XL/_ANA2559-Enhanced-Edit-XL.jpg",
@@ -5859,17 +5460,15 @@ export const galleryData = [
     "story": "Fine art landscape photography of Iceland in the Summer.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 199
   },
   {
     "id": "i-PV859RK",
-    "title": "",
-    "description": "",
-    "alt": "_DSF5884-Edit.jpg",
+    "title": "A",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PV859RK/2/Kzc58j256pFcGZsjTtLvGv3QnVt8JGTZtGHFxCGSc/XL/_DSF5884-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-PV859RK/A",
     "keywords": [
@@ -5885,20 +5484,18 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 200
   },
   {
     "id": "i-hVB6Pxq",
-    "title": "",
-    "description": "",
-    "alt": "_O1H1351-Edit-Edit.jpg",
+    "title": "A",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KMCVC3MxV2PB2ZwQXZg3XGBdBmck5SSMfMVqjV2Z6/XL/_O1H1351-Edit-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hVB6Pxq/A",
     "keywords": [
@@ -5914,20 +5511,18 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 201
   },
   {
     "id": "i-Bm9GTTT",
-    "title": "",
-    "description": "",
-    "alt": "_OLY8581-Edit-topaz-denoise-sharpen.jpg",
+    "title": "A",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/0/MC4GPRNT6HRLmX2DGRKzT5vxn8jmpwLndgr3p7KV8/XL/_OLY8581-Edit-topaz-denoise-sharpen-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/A",
     "keywords": [
@@ -5943,12 +5538,10 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 202
   },
@@ -5975,9 +5568,7 @@ export const galleryData = [
     "story": "Seawall in Fairport - seawall leading to the lighthouse in Fairport, Ohio ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 203
   },
@@ -6004,9 +5595,7 @@ export const galleryData = [
     "story": "Clouds hang like cotton candy over the sea off Iceland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 204
   },
@@ -6033,9 +5622,7 @@ export const galleryData = [
     "story": "Boat Houses on the shore of the Faroe Islands.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 205
   },
@@ -6062,9 +5649,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 206
   },
@@ -6091,9 +5676,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 207
   },
@@ -6120,9 +5703,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 208
   },
@@ -6149,9 +5730,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 209
   },
@@ -6178,9 +5757,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 210
   },
@@ -6207,9 +5784,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Letchworth State Park in New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 211
   },
@@ -6236,9 +5811,7 @@ export const galleryData = [
     "story": "Gentle Falls -  gently flowing water cascades over rocks in a stream located in the Metroparks. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 212
   },
@@ -6265,9 +5838,7 @@ export const galleryData = [
     "story": "Metro Falls - one of the many waterfalls in the Ohio Metro Park system. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 213
   },
@@ -6294,9 +5865,7 @@ export const galleryData = [
     "story": "Gentle Falls Too - side view of gently cascading falls in the Metroparks. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 214
   },
@@ -6323,9 +5892,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Watkins Glen, New York.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 215
   },
@@ -6352,9 +5919,7 @@ export const galleryData = [
     "story": "Stream with the Teton Mountains in the background. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 216
   },
@@ -6381,9 +5946,7 @@ export const galleryData = [
     "story": "Kirkfell Mountain with waterfalls in the foreground. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 217
   },
@@ -6410,9 +5973,7 @@ export const galleryData = [
     "story": "Gullfoss waterfall fills canyon with mist and spray . One of Iceland's famous attractions.\n©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 218
   },
@@ -6439,9 +6000,7 @@ export const galleryData = [
     "story": "Side view of the Kirkjufellfoss waterfall in Iceland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 219
   },
@@ -6468,9 +6027,7 @@ export const galleryData = [
     "story": "Skogarfoss waterfall one of Iceland's most famous. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 220
   },
@@ -6497,9 +6054,7 @@ export const galleryData = [
     "story": "A close view of the Skogarfoss waterfall but not so close that you get wet. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 221
   },
@@ -6526,9 +6081,7 @@ export const galleryData = [
     "story": "Godafoss is one of the many waterfalls in Iceland. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 222
   },
@@ -6555,9 +6108,7 @@ export const galleryData = [
     "story": "View from behind one of Iceland's many waterfalls  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 223
   },
@@ -6584,9 +6135,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 224
   },
@@ -6613,9 +6162,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 225
   },
@@ -6642,17 +6189,15 @@ export const galleryData = [
     "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 226
   },
   {
     "id": "i-dvccHH3",
-    "title": "",
-    "description": "",
-    "alt": "_WHZ7317-Pano-Edit-Edit.jpg",
+    "title": "A",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/4/Nc8kjdBVzcWbv598zdMfdSbvtJwjGq3GBwp2GNb2d/XL/_WHZ7317-Pano-Edit-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/A",
     "keywords": [
@@ -6668,20 +6213,18 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 227
   },
   {
     "id": "i-GQNxX9S",
-    "title": "",
-    "description": "",
-    "alt": "_ANA0554.jpg",
+    "title": "A",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-GQNxX9S/2/MfWcmjQfJthKF9GPmPZMvnXs5bgxk6LfCJ5pT298T/XL/_ANA0554-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQNxX9S/A",
     "keywords": [
@@ -6697,20 +6240,18 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 228
   },
   {
     "id": "i-vz9W2wM",
-    "title": "",
-    "description": "",
-    "alt": "_ANA0829.jpg",
+    "title": "A",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-vz9W2wM/2/ML38V5JZfX5jJSQ3xS95FH3NdMh4bCCWN79wVPKcr/XL/_ANA0829-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vz9W2wM/A",
     "keywords": [
@@ -6726,12 +6267,10 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 229
   },
@@ -6758,17 +6297,15 @@ export const galleryData = [
     "story": "Rushing Rapids - rushing water on one of the rivers in the Metro Parks. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 230
   },
   {
     "id": "i-Zpwjr25",
-    "title": "",
-    "description": "",
-    "alt": "_O1H0502.jpg",
+    "title": "A",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/0/M5g4QJZfdR3Qg8PbKhdXh2WKPRMHsPZvCDKvwZKKM/XL/_O1H0502-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/A",
     "keywords": [
@@ -6784,20 +6321,18 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 231
   },
   {
     "id": "i-9pskTBh",
-    "title": "",
-    "description": "",
-    "alt": "_DSF4311.jpg",
+    "title": "A",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/0/MT8D8mPzBrBv5J4g3rc6PFFQnpS9pfnHZsmvBmGSd/XL/_DSF4311-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/A",
     "keywords": [
@@ -6813,20 +6348,18 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 232
   },
   {
     "id": "i-Kf2LS9q",
-    "title": "",
-    "description": "",
-    "alt": "_O1H0575-Edit_tonemapped.jpg",
+    "title": "A",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/0/M6V6H66qbNWg7Cf5FHSS9vvdkJN8LDNjHBZWJKhp6/XL/_O1H0575-Edit_tonemapped-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/A",
     "keywords": [
@@ -6842,12 +6375,10 @@ export const galleryData = [
       "waterscape",
       "k4 studios"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 233
   }

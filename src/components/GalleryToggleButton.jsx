@@ -86,9 +86,9 @@ export default function GalleryToggleButton({ currentPath }) {
           border-radius: 50%;
           font-size: 0.75rem;
           font-weight: 600;
-          background: transparent;
-          border: 1.8px solid #c5bdbb;
-          color: #c5bdbb;
+            background: #493e3a;
+            border: 1.8px solid #c2b7afff;
+            color: #fff;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -98,20 +98,21 @@ export default function GalleryToggleButton({ currentPath }) {
         }
 
         .toggle-pill:hover {
-          background: #e3dad4;
-          color: #000;
-          transform: translateY(1px);
+            background: #a7331fff;
+            border: 1.8px solid #a7331fff;
+            color: #fff;
+          
         }
 
         .toggle-pill.active {
-          background: #c5bdbb;
-          color: #000;
+            background: #c5bdbb;
+            color: #000;
           pointer-events: none;
         }
 
         .toggle-pill.active.active-fade {
-          background: transparent;
-          color: #c5bdbb;
+            background: #695748ff;
+            color: #a8a6a3ff;
         }
       `}</style>
     </div>

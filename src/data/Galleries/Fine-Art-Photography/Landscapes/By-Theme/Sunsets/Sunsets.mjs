@@ -3,8 +3,8 @@ export const galleryData = [
     "id": "i-k4studios",
     "title": "Welcome K4 Studios",
     "description": "Explore the grit, grace, and story behind each image.",
-    "alt": "Welcome to the Color Cowboy Gallery",
-    "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
     "buyLink": "",
     "keywords": [],
     "story": "",
@@ -18,8 +18,8 @@ export const galleryData = [
   },
   {
     "id": "i-wxLBqLg",
-    "title": "Grand Sunset Photography by Wayne Heim",
-    "description": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
+    "title": "Grand Sunset Photography by Wayne HeimGrand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Grand Sunset Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-wxLBqLg/A",
@@ -36,20 +36,18 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 0
   },
   {
     "id": "i-VScCFDQ",
-    "title": "",
-    "description": "",
-    "alt": "_WHZ7317-Edit-Edit-Edit.jpg",
+    "title": "A",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/NgVCwQMJMVXfjqV3Jn73ShMJFBqHsHPKN5BVG9C7T/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VScCFDQ/A",
     "keywords": [
@@ -65,12 +63,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 1
   },
@@ -97,17 +93,15 @@ export const galleryData = [
     "story": "18 x 24 In StockSunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 2
   },
   {
     "id": "i-3jXg4hf",
-    "title": "",
-    "description": "",
-    "alt": "_OL31305-Edit-Edit_tonemapped.jpg",
+    "title": "A",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/NXP3L8L95T56ZvvxjCZfwnHSwNmbGb9q4Cmzmgt3q/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-3jXg4hf/A",
     "keywords": [
@@ -123,20 +117,18 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 3
   },
   {
     "id": "i-XmVfrdk",
-    "title": "",
-    "description": "",
-    "alt": "_O1H0365.jpg",
+    "title": "A",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/NR4RfGKcSsS2L6mPZnFRz2FQTfBDG9Xv94GfFxjqr/XL/_O1H0365-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/A",
     "keywords": [
@@ -152,12 +144,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 4
   },
@@ -184,17 +174,15 @@ export const galleryData = [
     "story": "Another view of the famous Moulton Barn in Wyoming.  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 5
   },
   {
     "id": "i-hVB6Pxq",
-    "title": "",
-    "description": "",
-    "alt": "_O1H1351-Edit-Edit.jpg",
+    "title": "A",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KMCVC3MxV2PB2ZwQXZg3XGBdBmck5SSMfMVqjV2Z6/XL/_O1H1351-Edit-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-hVB6Pxq/A",
     "keywords": [
@@ -210,12 +198,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 6
   },
@@ -242,9 +228,7 @@ export const galleryData = [
     "story": "Sunset over a lonely western road. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 7
   },
@@ -271,9 +255,7 @@ export const galleryData = [
     "story": "Sunset at the Farm -  sunsetting behind a rural farm outlining the buildings.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 8
   },
@@ -300,9 +282,7 @@ export const galleryData = [
     "story": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 9
   },
@@ -329,9 +309,7 @@ export const galleryData = [
     "story": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 10
   },
@@ -358,9 +336,7 @@ export const galleryData = [
     "story": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 11
   },
@@ -387,9 +363,7 @@ export const galleryData = [
     "story": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 12
   },
@@ -416,9 +390,7 @@ export const galleryData = [
     "story": "Sunset of Lone Guard tree overlooking Yellowstone River at Artist Point in Yellowstone National Park.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 13
   },
@@ -445,15 +417,13 @@ export const galleryData = [
     "story": "Fine art landscape photography of Iceland Sunset in the Summer.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 14
   },
   {
     "id": "i-MwsQPKg",
-    "title": "",
+    "title": "A",
     "description": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
     "alt": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KvPnZNR8n3GRX5nbb9VFt6ZwWk5ZZBGKd5Q8sq597/XL/_K1W2573_tonemapped-Edit-XL.jpg",
@@ -474,9 +444,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 15
   },
@@ -503,9 +471,7 @@ export const galleryData = [
     "story": "Fine art landscape photography of Iceland sunset in the Summer.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 16
   },
@@ -532,9 +498,7 @@ export const galleryData = [
     "story": "Fine art landscape sunset photograph of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 17
   },
@@ -561,9 +525,7 @@ export const galleryData = [
     "story": "Fine art, black & white, landscape sunset photography of the Faroe Islands.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 18
   },
@@ -590,16 +552,14 @@ export const galleryData = [
     "story": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 19
   },
   {
     "id": "i-MwLgJL5",
     "title": "Eminent Rise",
-    "description": "",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Eminent Rise",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MGSGFcC6Wpnt2d6bRsZJgWPtNmKqp28qkZ64R3sD7/XL/_DSF5676-Pano-Edit-XL.jpg",
     "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-MwLgJL5/A",
@@ -616,12 +576,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 20
   },
@@ -648,9 +606,7 @@ export const galleryData = [
     "story": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 21
   },
@@ -677,9 +633,7 @@ export const galleryData = [
     "story": "Panoramic view of the start of the day. Epic view of mountain valley in Davis West Virginia showcasing the multi-color sunrise that only lasted 5 minutes.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 22
   },
@@ -706,9 +660,7 @@ export const galleryData = [
     "story": "Colorful display of natures colors in the sunset as it reflects off of the meandering stream.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 23
   },
@@ -735,9 +687,7 @@ export const galleryData = [
     "story": "Setting sun colors over the iconic Horse Shoe Bend formation in Arizona.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 24
   },
@@ -764,9 +714,7 @@ export const galleryData = [
     "story": "Capturing the remaining vibrant blue sky of the end of the day as it mixes with the natural red rock colors and orange, yellow and pink of the setting sun at Horse Shoe Bend Park.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 25
   },
@@ -793,9 +741,7 @@ export const galleryData = [
     "story": "Looking across a filed to woods as sun is setting in the west  .Wayne Heim ©2015",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 26
   },
@@ -822,9 +768,7 @@ export const galleryData = [
     "story": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
-    ],
+    "galleries": [],
     "visibility": "show",
     "sortOrder": 27
   }
