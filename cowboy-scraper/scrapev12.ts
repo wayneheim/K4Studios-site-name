@@ -378,6 +378,28 @@ async function main() {
     results.pop();
   }
 
+    // Insert ghost intro image as the first entry
+  const ghostEntry: ImageRecord = {
+    id: "i-k4studios",
+    title: "Welcome K4 Studios",
+    description: "Explore the grit, grace, and story behind each image.",
+    alt: "Welcome to the K4 Studios Gallery",
+    src: "/images/gallery-intro-placeholder.jpg", // update this path if needed
+    buyLink: "",
+    keywords: [],
+    story: "",
+    notes: "",
+    rating: 0,
+    galleries: [
+      PRIMARY_SLUG || "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    visibility: "ghost",
+    sortOrder: -1
+  };
+
+  results.unshift(ghostEntry);
+
+
   const outputPath = path.join(OUT_PATH);
   mkdirpSync(path.dirname(outputPath));
   fs.writeFileSync(outputPath, `export const galleryData = ${JSON.stringify(results, null, 2)};\n`);
