@@ -323,12 +323,42 @@ export const siteNav = [
             "label": "By Location",
             "children": [
 {
-                "label": "International",
-                "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
-                "code": "T-S1-Ss1-Sss1",
-                "slug": "international",
-                "type": "gallery-source"
-              },
+  "label": "International",
+  "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International",
+  "children": [
+    {
+      "label": "Canada – Western",
+      "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+      "code": "P-S2-Ss1-Sss1",
+      "slug": "canada-western",
+      "type": "gallery-source"
+    },
+    {
+      "label": "Iceland",
+      "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
+      "code": "P-S2-Ss1-Sss2",
+      "slug": "iceland",
+      "type": "gallery-source"
+    },
+    {
+      "label": "Newfoundland",
+      "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
+      "code": "P-S2-Ss1-Sss3",
+      "slug": "newfoundland",
+      "type": "gallery-source"
+    },
+    {
+      "label": "The Faroe Islands",
+      "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
+      "code": "P-S2-Ss1-Sss4",
+      "slug": "the-faroe-islands",
+      "type": "gallery-source"
+    }
+  ],
+  "code": "P-S2-Ss1",
+  "slug": "international",
+  "type": "collection"
+},
 {
                 "label": "Midwest",
                 "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
@@ -486,17 +516,22 @@ export const siteNav = [
   "slug": "transportation",
   "type": "collection"
 },
-
-
-
-
 {
-        "label": "Architecture",
-        "href": "/Galleries/Fine-Art-Photography/Architecture/Gallery",
-        "code": "T-S3",
-        "slug": "architecture",
-        "type": "gallery-source"
-      },
+  label: "Architecture",
+  href: "/Galleries/Fine-Art-Photography/Architecture",
+  code: "T-S3",
+  slug: "architecture",
+  type: "collection",           // <— landing/overview page, not the gallery itself!
+  children: [
+    {
+      label: "Gallery",
+      href: "/Galleries/Fine-Art-Photography/Architecture/Gallery",
+      code: "T-S3-Ss1",
+      slug: "gallery",
+      type: "gallery-source"     // <— this is your actual gallery page with images
+    }
+  ]
+},
 {
         "label": "Miscellaneous",
         "children": [

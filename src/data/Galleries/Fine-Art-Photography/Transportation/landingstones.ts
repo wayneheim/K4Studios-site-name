@@ -1,26 +1,75 @@
+import type { ImageData } from "../types";
+
+// ───── Load Gallery Modules ─────
+const galleryModules = import.meta.glob(
+  "/src/data/Galleries/Fine-Art-Photography/Transportation/**/*.mjs",
+  { eager: true }
+);
+
+// Build normalized galleryMap: href path → image[]
+const galleryMap: Record<string, ImageData[]> = {};
+
+for (const [path, mod] of Object.entries(galleryModules)) {
+  const galleryPath = path
+    .replace("/src/data", "") // → /Galleries/...
+    .replace(/\.mjs$/, "")
+    .replace(/\/+$/, "")
+    .toLowerCase();
+
+  const images: ImageData[] = (mod as any).galleryData || [];
+  const valid = images.filter((img) => img?.id && img.id !== "i-k4studios");
+
+  galleryMap[galleryPath] = valid;
+}
+
+// ───── Utility to Pull a Random Image from a Gallery ─────
+function getRandomImage(galleryHref: string): string {
+  const key = galleryHref.replace(/\/+$/, "").toLowerCase();
+  const images = galleryMap[key];
+
+  if (!images?.length) {
+    console.warn(`🚫 No match for: ${key}`);
+    return "/images/fallback.jpg";
+  }
+
+  const pick = images[Math.floor(Math.random() * images.length)];
+  return pick?.src || "/images/fallback.jpg";
+}
+
+// ───── Config: What to Show vs. Where to Look ─────
+const baseHref = "/Galleries/Fine-Art-Photography/Transportation";
+
+const regions = [
+  { title: "Boats", slug: "Boats" },
+  { title: "Cars", slug: "Cars" },
+  { title: "Military", slug: "Military" },
+  { title: "Planes", slug: "Planes" }, 
+  { title: "Trains", slug: "Trains" }, // ← Example: custom display title
+];
+
+// ───── Final Export ─────
 export const landingWestern = {
-    //Painterly Transporation Photogrqphy
-  title: "Painterly Transportation Themed Photography by Wayne Heim",
-  subtitle: "Fine Art Painterly Photos of Vehicles & Motion",
-   breadcrumb: `<a href="/Galleries/Painterly-Fine-Art-Photography" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='#444'">Painterly Photography</a> | Transportation`,
+  title: "Traditional Style Transportation Photography",
+  subtitle: "From steam to steel, from tracks to highways — stories that move us.",
+  breadcrumb: `
+    <a href="/Galleries/Fine-Art-Photography"
+       style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;"
+       onmouseover="this.style.color='darkred'"
+       onmouseout="this.style.color='#444'">Fine Art Photography</a> 
+    <a href="/Galleries/Fine-Art-Photography/Transportation"
+       style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;"
+       onmouseover="this.style.color='#2c3e50'"
+       onmouseout="this.style.color='#444'"> | Transportation</a>
+  `,
 
+tombstones: regions.map(({ title, slug }) => {
+  const dataPath = `${baseHref}/${slug}`;        // used for galleryMap lookup
+  const href = `${dataPath}`;                    // actual link (no /Gallery)
 
-  tombstones: [
-    {
-      title: 'Trains & Locomotives: Color Photos',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color',
-      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-38H7pXm/0/LN6Xwhtp6hzsxJ8x3R735M42KF79fhxsnzv4VCLk4/S/_O1H1398-Edit-S.jpg',
-    },
-    {
-      title: 'Trains & Locomotives: B/W Photos',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White',
-      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/NPsvjrbF8dSwMTDMJbwtW2zcwMXPcVq6VbHnHvGFQ/S/_HF26382-S.jpg',
-    },
-     {
-      title: 'Classic Car Photos',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars',
-      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wkRb273/1/LjTmmDC5fJgXRfRR3p3XM7Kq4s4HQLNb8FBDPhx3J/S/_DSF0260-S.jpg',
-    },
-    
-  ]
+  return {
+    title,
+    href,
+    thumb: getRandomImage(dataPath),
+  };
+}),
 };

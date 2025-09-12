@@ -1,51 +1,51 @@
 export const transportationFAQ = [
-    //Painterly Transporation Photography FAQ
-{
-    q: "What makes your transportation photography 'painterly'?",
+    // Traditional Transportation Photography FAQ
+  {
+    q: "What defines your traditional transportation photography?",
     a: [
-      "Wayne Heim uses a refined post-processing technique inspired by classical painting and pictorialist photography. This painterly style enhances lighting, texture, and mood — transforming steam engines and vintage cars into timeless works of fine art."
+      "Wayne Heim’s traditional transportation work focuses on clarity, composition, and authentic detail. These images preserve locomotives, cars, and trucks exactly as they are, capturing their presence without painterly effects — a pure fine art approach rooted in realism."
     ]
   },
   {
-    q: "Are these actual trains and cars or composites?",
+    q: "Are these real trains and cars or digital creations?",
     a: [
-      "Every image captures real, historically authentic vehicles — from restored steam locomotives to rusted-out relics and classic cars found along Route 66. What you see is what Wayne saw… then brought to life with his signature painterly touch."
+      "Every photograph is of an actual, historically authentic vehicle — from operating steam locomotives to classic cars preserved on back roads and in museums. Nothing is composited or fabricated; what you see is what Wayne captured through the lens."
     ]
   },
   {
-    q: "Do you offer both color and black & white train photography?",
+    q: "Do you feature both color and black & white train photography?",
     a: [
-      `Yes. Our <a href="/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color">Color Train Gallery</a> captures the drama and grit of steam power in vivid hues, while the <a href="/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White">Black & White Gallery</a> offers a more nostalgic, tonal interpretation — perfect for those who love classic contrasts.`
+      `Yes. The <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Color">Color Train Gallery</a> highlights the drama of railroads with sharp tones and vivid detail, while the <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White">Black & White Gallery</a> offers a classic, timeless interpretation for those drawn to traditional monochrome imagery.`
     ]
   },
   {
     q: "Where were these transportation photos taken?",
     a: [
-      "Many images were captured at historic railways like the East Broad Top Railroad in Pennsylvania, while others come from roadside Americana along Route 66. Wayne seeks out locations where machinery meets memory."
+      "Many of the train photographs come from historic railroads such as the East Broad Top in Pennsylvania, while automobile shots range from roadside Americana on Route 66 to regional car shows and small-town streets across the United States."
     ]
   },
   {
-    q: "What kinds of vehicles are in the Classic Cars & Trucks Collection?",
+    q: "What kinds of vehicles appear in the Classic Cars & Trucks Collection?",
     a: [
-      `You’ll find everything from chrome-drenched 1950s classics to rusted pickups weathered by time. The <a href="/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars">Cars Gallery</a> showcases both pristine restorations and rugged beauties — each with its own story to tell.`
+      `The <a href="/Galleries/Fine-Art-Photography/Transportation/Cars">Cars Gallery</a> includes everything from pristine 1950s cruisers to weathered farm trucks. Each image documents the design, history, and endurance of vehicles that helped define modern life.`
     ]
   },
   {
-    q: "Do you offer prints on wood or other unique materials?",
+    q: "Do you offer unique print options beyond paper?",
     a: [
-      `Yes. Select images are available in Wayne’s exclusive <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a>, printed directly onto birch wood panels with painterly transparency control. These museum-quality, ready-to-hang pieces offer a rustic finish perfect for Americana or industrial-themed decor.`
+      "For the traditional series, most images are available as archival paper prints or museum-quality framed pieces. The emphasis is on longevity and clean presentation, ideal for collectors who value classic fine art display."
     ]
   },
   {
-    q: "Are these prints suitable for garages, studios, or man caves?",
+    q: "Are these prints good fits for garages, studies, or offices?",
     a: [
-      "Absolutely. These images resonate with collectors, gearheads, and train lovers alike. Whether you're decorating a garage, home office, or lodge, the art adds motion, grit, and story to any space."
+      "Yes. Traditional transportation photographs bring history and character into personal spaces — from home offices to garages, libraries, and studios. Their crisp detail and authentic subject matter make them versatile for a range of interiors."
     ]
   },
   {
-    q: "How do I start collecting Wayne’s painterly transportation work?",
+    q: "How do I begin collecting Wayne’s traditional transportation work?",
     a: [
-      `Start by exploring the <a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation Gallery</a>. You can purchase museum-quality prints in a variety of sizes and formats — from traditional archival paper to the signature Engrained wood series.`
+      `You can start by exploring the <a href="/Galleries/Fine-Art-Photography/Transportation">Transportation Gallery</a>. Prints are available in multiple sizes and finishes, all produced to museum standards to ensure lasting quality and value.`
     ]
   }
 ];

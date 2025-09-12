@@ -1,0 +1,14 @@
+---
+import GalleryShell from "@/components/GalleryShell-Landscapes-Location-International-Iceland-Traditional.astro";
+import { entranceData as ColorEntranceData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland-ColorEntranceData.ts";
+const match = Astro.url.pathname.match(/\/(i-[a-zA-Z0-9]+)/);
+const initialImageId = match ? match[1] : "i-k4studios";
+
+console.log("🔥 initialImageId:", initialImageId); // ✅ Add this
+---
+
+<GalleryShell
+  breadcrumb={ColorEntranceData.breadcrumb}
+  entranceData={ColorEntranceData}
+  initialImageId={initialImageId}
+/>

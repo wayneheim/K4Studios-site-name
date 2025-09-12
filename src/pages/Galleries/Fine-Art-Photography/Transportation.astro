@@ -16,17 +16,17 @@ import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
-import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/landingstones.ts';
-import { westernStory } from '@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/story.ts';
-import { transportationFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/faq.ts';
+import { landingWestern } from '@/data/Galleries/Fine-Art-Photography/Transportation/landingstones.ts';
+import { westernStory } from '@/data/Galleries/Fine-Art-Photography/Transportation/story.ts';
+import { transportationFAQ } from '@/data/Galleries/Fine-Art-Photography/Transportation/faq.ts';
 
 import '@/styles/global.css';
 
 // ----------------------
-// TRANSPORTATION GALLERY DATA GATHERING
+// Architecture GALLERY DATA GATHERING
 // ----------------------
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Transportation";
+const sectionPath = "/Galleries/Fine-Art-Photography/Transportation";
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
 function findNavEntry(nav, url) {

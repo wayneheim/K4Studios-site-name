@@ -2,11 +2,11 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
-import ChapterViewer from "@/components/Chapter-Landscapes-Location-International-Traditional.jsx";
+import ChapterViewer from "@/components/Chapter-Transportation-Boats-Traditional.jsx";
 import Footer from "@/components/Footer.astro";
 
-import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs";
-import { landingWestern } from "@/data/Galleries/Fine-Art-Photography//Landscapes/By-Location/landingstones.ts";
+import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Transportation/Boats.mjs";
+import { landingWestern } from "@/data/Galleries/Fine-Art-Photography/Transportation/landingstones.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 // helper to fix common UTF-8→Latin-1 mojibake
@@ -27,11 +27,15 @@ const currentImage = isGhost
   ? null
   : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
 
-// pick one random preview image to act as featured
+// select up to 8 non-ghost preview images
 const previewImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 8);
-const singlePreviewImage = previewImages.length
-  ? previewImages[Math.floor(Math.random() * previewImages.length)]
-  : null;
+const previewPath = "/Galleries/Fine-Art-Photography/Transportation/Boats";
+
+// pick one random preview image as featured
+const singlePreviewImage =
+  previewImages.length
+    ? previewImages[Math.floor(Math.random() * previewImages.length)]
+    : null;
 
 const usedEntranceData = {
   ...entranceData,
@@ -45,6 +49,7 @@ const usedEntranceData = {
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
 };
 
+// structured data for SEO
 const imageStructuredData = currentImage
   ? getStructuredData({ type: "image", data: currentImage })
   : getStructuredData({
@@ -52,7 +57,7 @@ const imageStructuredData = currentImage
       data: {
         title: landingWestern.title,
         description: landingWestern.subtitle,
-        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International",
+        url: previewPath,
       },
       images: previewImages,
     });
@@ -71,12 +76,10 @@ const pageTitle = currentImage
     )
   : galleryTitle;
 
-// build our Open Graph / Twitter metadata values
+// build Open Graph / Twitter metadata
 const siteBase = import.meta.env.SITE || "https://k4studios.com";
 const pageUrl = `${siteBase}${Astro.url.pathname}`;
-const ogImage = currentImage
-  ? currentImage.src
-  : usedEntranceData.image?.src;
+const ogImage = currentImage ? currentImage.src : usedEntranceData.image?.src;
 const ogAlt = currentImage
   ? currentImage.alt || currentImage.title || galleryTitle
   : usedEntranceData.image?.alt || galleryTitle;
@@ -89,7 +92,7 @@ const ogDescription =
 
 {currentImage && (
   <head>
-    {/* Open Graph */}
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={pageUrl} />
     <meta property="og:title" content={pageTitle} />
@@ -97,7 +100,7 @@ const ogDescription =
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={ogAlt} />
 
-    {/* Twitter Card */}
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={pageUrl} />
     <meta name="twitter:title" content={pageTitle} />
@@ -107,33 +110,37 @@ const ogDescription =
   </head>
 )}
 
-<BaseLayout title={pageTitle} structuredDataJSON={imageStructuredData}>
+<BaseLayout 
+  title={pageTitle} 
+  structuredDataJSON={imageStructuredData}
+>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
-    {/* Header stays fixed above intro */}
+
+    <!-- Header stays fixed above intro -->
     <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
       <GalleryHeader client:load breadcrumb={breadcrumb} />
     </div>
 
-    {/* Spacer to push intro below header visually */}
+    <!-- Spacer to push intro below header visually -->
     <div class="h-0 md:h-5"></div>
 
-    {/* Intro: Visible initially with overridden featured image */}
+    <!-- Intro: Visible initially with overridden featured image -->
     <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
       <GalleryInfo client:load entranceData={usedEntranceData} />
     </div>
 
-    {/* Chapter Viewer: Hidden initially */}
+    <!-- Chapter Viewer: Hidden initially -->
     <div id="chapter-section" class="section-hidden" style="display: none;">
       <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
     </div>
   </div>
 
-  {/* Spacer pushes the footer down */}
+  <!-- Spacer pushes the footer down -->
   <div class="h-12 md:h-20"></div>
 
-  <Footer
+  <Footer 
     previewImages={previewImages}
-    previewPath="/Galleries/Fine-Art-Photography/Landscapes/By-Location/International"
+    previewPath={previewPath}
   />
 
   <style>
@@ -173,7 +180,6 @@ const ogDescription =
       color: #2c2c2c !important;
       line-height: 1.5 !important;
     }
-
     #gallery-content h1 { font-size: 2.25rem !important; font-weight: 700 !important; margin-bottom: 0.5em !important; }
     #gallery-content h2 { font-size: 1.75rem !important; font-weight: 600 !important; margin-bottom: 0.75em !important; }
     #gallery-content p  { font-size: 1rem !important;   margin-bottom: 1em !important; }
@@ -184,38 +190,49 @@ const ogDescription =
     document.addEventListener('DOMContentLoaded', () => {
       const exploreButton = document.querySelector('.explore-button');
       const header = document.getElementById('header-section');
-      const intro  = document.getElementById('intro-section');
-      const chapter= document.getElementById('chapter-section');
+      const intro = document.getElementById('intro-section');
+      const chapter = document.getElementById('chapter-section');
       const navToggle = document.getElementById('nav-toggle');
+      const floatingHeader = document.getElementById('floating-header');
+      const menuLabel = document.getElementById('menu-label');
+      const topSpacer = document.getElementById('top-spacer');
+
       let isMenuOpen = false;
 
-      // deep‐link into a specific image
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[\w]+)/);
+      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
       if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
         setTimeout(() => exploreButton?.click(), 50);
       }
 
       exploreButton?.addEventListener('click', () => {
-        header.classList.add('section-hidden');
-        intro.classList.add('section-hidden');
+        header?.classList.add('section-hidden');
+        intro?.classList.add('section-hidden');
         chapter.style.display = 'block';
         setTimeout(() => {
           chapter.classList.remove('section-hidden');
           chapter.classList.add('section-visible');
         }, 50);
+
         if (window.innerWidth >= 768) {
-          document.getElementById('nav-toggle')?.classList.remove('hidden');
+          navToggle?.classList.remove('hidden');
+        }
+
+        if (topSpacer) {
+          topSpacer.style.marginTop = "0px";
+          topSpacer.style.height = "0px";
+          topSpacer.style.overflow = "hidden";
         }
       });
 
       navToggle?.addEventListener('click', () => {
         isMenuOpen = !isMenuOpen;
-        document.getElementById('menu-label').textContent = isMenuOpen ? "M−" : "M+";
-        document.getElementById('floating-header')?.classList.toggle('show');
+        menuLabel.textContent = isMenuOpen ? "M−" : "M+";
+        floatingHeader?.classList.toggle('show');
       });
     });
 
-    // disable right-click on images
-    document.addEventListener('contextmenu', e => { if (e.target.tagName === 'IMG') e.preventDefault(); });
+    document.addEventListener('contextmenu', function (e) {
+      if (e.target.tagName === 'IMG') e.preventDefault();
+    });
   </script>
 </BaseLayout>
