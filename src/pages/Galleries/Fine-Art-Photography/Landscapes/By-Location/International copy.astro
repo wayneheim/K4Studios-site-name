@@ -16,9 +16,9 @@ import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
-import { landingWestern } from '@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/landingstones.ts';
-import { westernStory } from '@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/story.ts';
-import { transportationFAQ } from '@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/faq.ts';
+import { landingWestern } from '@/data/Galleries/Fine-Art-Photography/Transportation/landingstones.ts';
+import { westernStory } from '@/data/Galleries/Fine-Art-Photography/Transportation/story.ts';
+import { transportationFAQ } from '@/data/Galleries/Fine-Art-Photography/Transportation/faq.ts';
 
 import '@/styles/global.css';
 
@@ -26,7 +26,7 @@ import '@/styles/global.css';
 // TRANSPORTATION GALLERY DATA GATHERING
 // ----------------------
 
-const sectionPath = "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International";
+const sectionPath = "/Galleries/Fine-Art-Photography/Transportation";
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
 function findNavEntry(nav, url) {
@@ -39,6 +39,7 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
+// Recursively gather all descendant gallery hrefs
 function recursivelyGatherAllGalleryHrefs(node) {
   let result = [];
   if (!node) return result;
@@ -46,10 +47,9 @@ function recursivelyGatherAllGalleryHrefs(node) {
   if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
   return result;
 }
+
 const landingNav = findNavEntry(siteNav, sectionPath);
-const galleryPaths = landingNav
-  ? recursivelyGatherAllGalleryHrefs(landingNav)
-  : [];
+const galleryPaths = landingNav ? recursivelyGatherAllGalleryHrefs(landingNav) : [];
 const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
@@ -63,12 +63,7 @@ const featheredImages = getSideImages({
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
-// Get meta info for OG/twitter
-const meta = getLandingMeta(sectionPath);
-meta.ogUrl = `https://k4studios.com${sectionPath}`;
-meta.twitterUrl = `https://k4studios.com${sectionPath}`;
-
-// Structured data (your usual logic)
+// ✅ Structured Data
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -88,15 +83,19 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+
+// 🟢 OG/Twitter Meta Helper (auto-fills .ogUrl/.twitterUrl fields)
+const landingMeta = getLandingMeta(sectionPath);
+if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
-<!-- SEO JSON-LD (Structured Data) -->
+<!-- ✅ JSON-LD Structured Data for SEO -->
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
-<!-- BASE LAYOUT — meta prop added! -->
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
-  meta={meta}
+  meta={landingMeta}
 >
 
   <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
@@ -132,7 +131,7 @@ const structuredData = getStructuredData({
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {westernStory.map((section, index) => (
+          {internationalStory.map((section, index) => (
             <article class="story-block" key={index}>
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
@@ -168,7 +167,7 @@ const structuredData = getStructuredData({
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container" style="min-height:0;">
         <div class="truncate-text">
-          <FAQAccordion items={transportationFAQ} />
+          <FAQAccordion items={internationalFAQ} />
         </div>
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
@@ -195,8 +194,8 @@ const structuredData = getStructuredData({
       const truncateContainer = document.querySelector(".truncate-container");
       if (truncateContainer && faqToggle) {
         truncateContainer.addEventListener("click", (e) => {
-          const summary = e.target.closest("summary");
-          if (summary && !faqToggle.checked) {
+          const summaryClicked = e.target.closest("summary");
+          if (summaryClicked && !faqToggle.checked) {
             faqToggle.checked = true;
           }
         });
@@ -308,7 +307,7 @@ const structuredData = getStructuredData({
     .story-block p {
       line-height: 1.6;
       margin-bottom: 1rem;
-      font-size: 1rem;
+      font-size: 1.01rem;
     }
     .story-block ul {
       padding-left: 1.4rem;

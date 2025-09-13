@@ -1,4 +1,4 @@
-export const internationalStory = [
+export const westernStory = [
   // International Fine Art Landscape Photography Story
 
   /* ──────────────────────────────────────── 1 */

@@ -1,4 +1,4 @@
-export const internationalFAQ = [
+export const transportationFAQ = [
   {
     q: "What defines Wayne's international landscape photography?",
     a: [
