@@ -333,6 +333,13 @@ export const siteNav = [
       "slug": "canada-western",
       "type": "gallery-source"
     },
+     {
+      "label": "Faroe Islands",
+      "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
+      "code": "P-S2-Ss1-Sss4",
+      "slug": "the-faroe-islands",
+      "type": "gallery-source"
+    },
     {
       "label": "Iceland",
       "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
@@ -347,13 +354,7 @@ export const siteNav = [
       "slug": "newfoundland",
       "type": "gallery-source"
     },
-    {
-      "label": "The Faroe Islands",
-      "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
-      "code": "P-S2-Ss1-Sss4",
-      "slug": "the-faroe-islands",
-      "type": "gallery-source"
-    }
+   
   ],
   "code": "P-S2-Ss1",
   "slug": "international",
@@ -476,6 +477,14 @@ export const siteNav = [
   "label": "Transportation",
   "href": "/Galleries/Fine-Art-Photography/Transportation",
   "children": [
+
+     {
+      "label": "Boats & Watercraft",
+      "href": "/Galleries/Fine-Art-Photography/Transportation/Boats",
+      "code": "T-S5-Ss5",
+      "slug": "boats-watercraft",
+      "type": "gallery-source"
+    },
     {
       "label": "Car Photography",
       "href": "/Galleries/Fine-Art-Photography/Transportation/Cars",
@@ -504,13 +513,7 @@ export const siteNav = [
       "slug": "trains",
       "type": "gallery-source"
     },
-    {
-      "label": "Watercraft Photography",
-      "href": "/Galleries/Fine-Art-Photography/Transportation/Boats",
-      "code": "T-S5-Ss5",
-      "slug": "watercraft",
-      "type": "gallery-source"
-    }
+   
   ],
   "code": "T-S5",
   "slug": "transportation",
@@ -533,13 +536,24 @@ export const siteNav = [
   ]
 },
 {
-        "label": "Miscellaneous",
-        "children": [
+  label: "Miscellaneous",
+  href: "/Galleries/Fine-Art-Photography/Miscellaneous",
+  code: "T-S4",
+  slug: "miscellaneous",
+  type: "collection",
+  children: [
 {
             "label": "Reenactments",
             "href": "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments",
             "code": "T-S4-Ss1",
             "slug": "reenactments",
+            "type": "gallery-source"
+          },
+          {
+            "label": "Pets",
+            "href": "/Galleries/Fine-Art-Photography/Miscellaneous/Pets",
+            "code": "T-S4-Ss3",
+            "slug": "pets",
             "type": "gallery-source"
           },
 {
@@ -549,27 +563,7 @@ export const siteNav = [
             "slug": "wildlife",
             "type": "gallery-source"
           },
-{
-            "label": "Pets",
-            "href": "/Galleries/Fine-Art-Photography/Miscellaneous/Pets",
-            "code": "T-S4-Ss3",
-            "slug": "pets",
-            "type": "gallery-source"
-          },
-{
-            "label": "Kids",
-            "href": "/Galleries/Fine-Art-Photography/Miscellaneous/Kids",
-            "code": "T-S4-Ss4",
-            "slug": "kids",
-            "type": "gallery-source"
-          },
-{
-            "label": "Lights",
-            "href": "/Galleries/Fine-Art-Photography/Miscellaneous/Lights",
-            "code": "T-S4-Ss5",
-            "slug": "lights",
-            "type": "gallery-source"
-          }
+
         ],
         "code": "T-S4",
         "slug": "miscellaneous",
@@ -582,7 +576,7 @@ export const siteNav = [
   },
 {
   "label": "Other",
-  "href": "/Other",
+ 
   "children": [
     {
       "label": "News & Awards",
@@ -628,13 +622,13 @@ export const siteNav = [
             }
           ]
         },
-        {
-          "label": "5x7 Prints",
-          "href": "/Other/K4-Select-Series/5x7-prints",
-          "code": "O-S4-Ss2",
-          "slug": "5x7-prints",
-          "type": "gallery-source"
-        }
+     //   {
+  //        "label": "5x7 Prints",
+    //      "href": "/Other/K4-Select-Series/5x7-prints",
+      //    "code": "O-S4-Ss2",
+      //    "slug": "5x7-prints",
+       //   "type": "gallery-source"
+     //   }
       ]
     }
   ],

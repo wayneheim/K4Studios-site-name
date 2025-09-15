@@ -12,7 +12,7 @@ export const landingWestern = {
     },
     {
       title: 'Traditional Style Photography',
-      href: '/Galleries/Painterly-Fine-Art-Photography',
+      href: '/Galleries/Fine-Art-Photography',
       thumb: 'https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/LMfd4hKLM8FchM8pbdHwfRmRCFb84H3GjzWnwnLhk/S/_IMG2241-S.jpg',
     },
      {

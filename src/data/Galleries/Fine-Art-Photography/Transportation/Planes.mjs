@@ -547,7 +547,7 @@ export const galleryData = [
   },
   {
     "id": "i-n69gkSP",
-    "title": "Bomb Bay --Black & White Photography by Wayne Heim",
+    "title": "Bomb Bay-Black & White Photography by Wayne Heim",
     "description": "Bomb Bay - looking up into the bomb bay of a plane showing the bombs waiting to be dropped.©Wayne Heim",
     "alt": "Bomb Bay --Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cleveland-Piston-Power-Show-2014/i-n69gkSP/5/NggS3K87NXb3x7Xcv928WRR6bxDpTGrwChtVr9r34/XL/_W3H5751-XL.jpg",
@@ -570,7 +570,7 @@ export const galleryData = [
   },
   {
     "id": "i-WhRvxFT",
-    "title": "Bombs Away -  Photography by Wayne Heim",
+    "title": "Bombs Away - Photography by Wayne Heim",
     "description": "B25 bomber flies over with bomb bay doors open. ©Wayne Heim",
     "alt": "Bombs Away -  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-WhRvxFT/3/NgFTZSt2RJ2mb8LkgdC7w7TqXWJRckbGrs5sJsFh4/XL/_WHZ4071-XL.jpg",

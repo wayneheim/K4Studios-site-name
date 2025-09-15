@@ -94,9 +94,12 @@ function buildDefaultFields(
   const urlObj = safeParseURL(pageUrl);
   const urlPath = urlObj?.pathname ?? "";
   const urlLeaf = urlPath.split("/").filter(Boolean).pop() || "";
-  const fromUrlTitle = toTitleCase(
+  let fromUrlTitle = toTitleCase(
     urlLeaf.replace(/i-[A-Za-z0-9]+/, "").replace(/[-_]+/g, " ").trim()
   );
+  if (!fromUrlTitle || fromUrlTitle === "A") {
+    fromUrlTitle = "Untitled";
+  }
   const topic = humanizeSlug(gallerySlugFromCli || PRIMARY_SLUG || urlPath);
 
   const titleVariants = [

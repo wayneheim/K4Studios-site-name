@@ -42,7 +42,7 @@ export const galleryData = [
   },
   {
     "id": "i-X88ZNb4",
-    "title": "A",
+    "title": "Untitled",
     "description": "© Wayne Heim '21",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MWZVT9WzkmpzJjvzJ8G5LwJ9G39LRSxb88tdRTRtw/XL/_ANA3303-Edit-2-2-XL.jpg",
@@ -210,7 +210,7 @@ export const galleryData = [
   },
   {
     "id": "i-DS9wCpW",
-    "title": "A",
+    "title": "Untitled",
     "description": "© Wayne Heim '21",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/LcHLvDD3NSgCzZzzJzDmms9vcgnLCvrm9TkG23sXP/XL/_ANA3291-Edit-Edit-XL.jpg",

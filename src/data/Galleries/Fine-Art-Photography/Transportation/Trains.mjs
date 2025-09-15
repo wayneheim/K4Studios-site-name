@@ -42,7 +42,7 @@ export const galleryData = [
   },
   {
     "id": "i-FpB8ZsN",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpB8ZsN/0/LC4XjFmcfpm6KtgWgkhr98HGN545CrrsCdnfqmDgp/XL/_DSF5222-Edit-XL.jpg",
@@ -66,7 +66,7 @@ export const galleryData = [
   },
   {
     "id": "i-GGK9QtB",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/NTHqCv89LHSr8wp8fmF9WtpWFBRX8d683VqKCbGFh/XL/_DSF5230-Edit-2-XL.jpg",
@@ -90,7 +90,7 @@ export const galleryData = [
   },
   {
     "id": "i-ghKSGpj",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/LxZzmvHXWb7nnpRVL6GkgPLZPQzw7JBSthSvVNx4L/XL/_ANA7248-Edit-Enhanced-XL.jpg",
@@ -138,7 +138,7 @@ export const galleryData = [
   },
   {
     "id": "i-t2FVBZ3",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/NGRs2cVkmHS3WKpSp9n75BBDPbVzDxS4HztppxtNr/XL/_O1H0422-2-XL.jpg",
@@ -186,7 +186,7 @@ export const galleryData = [
   },
   {
     "id": "i-h6rHCkZ",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-h6rHCkZ/0/MDtss7B4kg2NS7B4pVTvGgChkd7hs87DbhhzgmfMh/XL/_DSF0841-XL.jpg",
@@ -210,7 +210,7 @@ export const galleryData = [
   },
   {
     "id": "i-3k97mkw",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3k97mkw/0/MDxgSms45fBF757QCHWtX29PjNrznW8Tc7FTJ5hPK/XL/_O1H1322-XL.jpg",
@@ -258,7 +258,7 @@ export const galleryData = [
   },
   {
     "id": "i-4NQdjBP",
-    "title": "A",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/MhhCWjf8KpgSN92k2nqw2qXLCLgsJkrZRLxrnmpKV/XL/_DSF1881-XL.jpg",
@@ -306,7 +306,7 @@ export const galleryData = [
   },
   {
     "id": "i-fj25sw3",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fj25sw3/0/NLQpQDrGCnWxjgntx2bChX4bWcgKk4825Rwp2msMS/XL/_ANA1965-Enhanced-NR-XL.jpg",
@@ -330,7 +330,7 @@ export const galleryData = [
   },
   {
     "id": "i-3GkJNWF",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3GkJNWF/0/NTfT5WNz6Rcw8CH4nCPgsKS5T32gk5pdPQzhc8ZPs/XL/_ANA1970-XL.jpg",
@@ -354,7 +354,7 @@ export const galleryData = [
   },
   {
     "id": "i-BMTswCg",
-    "title": "A",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/K475SnTJrjsb9PFBpzV6GJVFCjkwgvwQsGN553cK5/XL/_HF25090-XL.jpg",
@@ -426,7 +426,7 @@ export const galleryData = [
   },
   {
     "id": "i-r9rZPqx",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-r9rZPqx/0/MBVdTGzbsWfftjvbj4cnJGVFBdzvVS5p69FT3Hp97/XL/_HF25692-XL.jpg",
@@ -474,7 +474,7 @@ export const galleryData = [
   },
   {
     "id": "i-NXqvv7J",
-    "title": "A",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/LvH2WQVkb4jwsp29vkPZnSwd4MjTZD3KB5ZWZbHtB/XL/_HF26382-XL.jpg",
