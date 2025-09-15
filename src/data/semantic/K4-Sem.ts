@@ -11,6 +11,8 @@ export const semantic = {
       { phrase: "living history fine art", rating: 4, use: true },
       { phrase: "timeless reenactor portraits", rating: 4, use: true },
       { phrase: "evocative historical imagery", rating: 4, use: true },
+      { phrase: "Pictorialism", rating: 4, use: true },
+        { phrase: "Pictorialist movement", rating: 4, use: true },
       { phrase: "History in Fine Art", rating: 3, use: true }
     ],
   },

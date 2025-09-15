@@ -579,27 +579,6 @@ export const siteNav = [
  
   "children": [
     {
-      "label": "News & Awards",
-      "href": "/News-Awards",
-      "code": "O-S1",
-      "slug": "news--awards",
-      "type": "gallery-source"
-    },
-    {
-      "label": "Print Options",
-      "href": "/Other/Print-Options",
-      "code": "O-S2",
-      "slug": "print-options",
-      "type": "gallery-source"
-    },
-    {
-      "label": "Photo Shoots",
-      "href": "/Other/Photo-Shoots",
-      "code": "O-S3",
-      "slug": "photo-shoots",
-      "type": "gallery-source"
-    },
-    {
       "label": "K4 Select Series",
       "href": "/Other/K4-Select-Series",
       "code": "O-S4",
@@ -630,7 +609,36 @@ export const siteNav = [
        //   "type": "gallery-source"
      //   }
       ]
-    }
+    },
+    {
+      "label": "News & Awards",
+      "href": "/News-Awards",
+      "code": "O-S1",
+      "slug": "news--awards",
+      "type": "gallery-source"
+    },
+    {
+      "label": "Print Options",
+      "href": "/Other/Print-Options",
+      "code": "O-S2",
+      "slug": "print-options",
+      "type": "gallery-source"
+    },
+    {
+      "label": "Historical Reenactment Photography",
+      "href": "/Other/Historical-Reenactment-Photography",
+      "code": "O-S3",
+      "slug": "historical-reenactment-photography",
+      "type": "gallery-source"
+    },
+    {
+      "label": "Photo Shoots",
+      "href": "/Other/Photo-Shoots",
+      "code": "O-S4",
+      "slug": "photo-shoots",
+      "type": "gallery-source"
+    },
+    
   ],
   "code": "O",
   "type": "collection",
