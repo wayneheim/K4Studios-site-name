@@ -37,38 +37,50 @@ export const GET: APIRoute = async () => {
   const galleryHrefs = [];
   walkGalleryNav(siteNav, galleryHrefs);
 
+
   // For each gallery-source, try to import its .mjs file and add image links
   const galleryModules = import.meta.glob('/src/data/Galleries/**/*.mjs');
+  // First, do all referenced by siteNav (for completeness)
   for (const href of galleryHrefs) {
-    // Convert href to gallery data path
     let relPath = href.replace(/^\//, '').replace(/\/$/, '');
-    // Remove /Galleries/ prefix if present
     relPath = relPath.replace(/^Galleries\//, '');
-    // Try both with and without /index
     const possiblePaths = [
       `/src/data/Galleries/${relPath}.mjs`,
       `/src/data/Galleries/${relPath}/index.mjs`
     ];
-    let found = false;
     for (const path of possiblePaths) {
       if (galleryModules[path]) {
-        found = true;
         try {
           const mod = await galleryModules[path]();
           const images = (mod as any).default;
           if (Array.isArray(images)) {
             images.forEach((img) => {
               if (img.id && /^i-[\w\d]+$/.test(img.id)) {
-                urls.add(`${baseUrl}/${img.id}`);
+                // Add full gallery path for image
+                urls.add(`${baseUrl}/${href.replace(/^\//, '')}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
               }
             });
           }
-        } catch (e) {
-          // ignore errors
-        }
+        } catch (e) {}
         break;
       }
     }
+  }
+
+  // Now, walk all .mjs files in Galleries and add any i-xxx image links not already present
+  for (const path in galleryModules) {
+    try {
+      const mod = await galleryModules[path]();
+      const images = (mod as any).default;
+      // Derive gallery path from file path
+      let galleryPath = path.replace('/src/data/Galleries/', '').replace(/\/index\.mjs$/, '').replace(/\.mjs$/, '');
+      galleryPath = `Galleries/${galleryPath}`;
+      for (const img of Array.isArray(images) ? images : []) {
+        if (img.id && /^i-[\w\d]+$/.test(img.id)) {
+          urls.add(`${baseUrl}/${galleryPath}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
+        }
+      }
+    } catch (e) {}
   }
 
   const cleanUrls = Array.from(urls);
