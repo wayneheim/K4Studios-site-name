@@ -1,6 +1,5 @@
-
-// --- Carousel: Random Alternating Images from Painterly & Traditional ---
-// Import all gallery .mjs files from both painterly and traditional sections
+// --- Carousel: Images from Painterly Section Only ---
+// Import all gallery .mjs files from the painterly section
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 
 // Helper: Get gallery data from module
@@ -19,19 +18,22 @@ function buildRankedPool(images) {
   return pool;
 }
 
-// Helper: Convert image to slide object
-function toSlide(img, path) {
+// Helper: Convert image to slide object, with loading, width, height, and custom css class
+function toSlide(img, path, idx, loading = "lazy") {
   return {
     href: `${path}/${img.id}`,
     src: img.src || img.url || '',
     alt: img.alt || img.title || '',
-    description: img.description || ''
+    description: img.description || '',
+    width: img.width || undefined,
+    height: img.height || undefined,
+    loading,
+    className: `k4-home-carousel-img k4-home-carousel-img--${idx + 1} fade-in` // add nth-child as a class for stagger support and fade-in effect
   };
 }
 
-// Categorize modules by painterly/traditional using path
+// Categorize modules by painterly section only
 const painterlyPools = [];
-const traditionalPools = [];
 for (const filePath in allModules) {
   const mod = allModules[filePath];
   const data = getGalleryData(mod);
@@ -39,18 +41,14 @@ for (const filePath in allModules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Determine type by path
+  // Include only painterly section
   if (filePath.includes('/Painterly-Fine-Art-Photography/')) {
     painterlyPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
-  } else if (filePath.includes('/Fine-Art-Photography/')) {
-    traditionalPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
   }
 }
 
 // Helper: Convert file path to public gallery route (for slide links)
 function filePathToHref(filePath) {
-  // e.g. '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs'
-  //   => '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'
   return filePath
     .replace(/^.*Galleries/, '/Galleries')
     .replace(/\.mjs$/, '')
@@ -76,10 +74,15 @@ function pickRandomFromPools(pools, n) {
   return picks;
 }
 
-
-// Pick 8 random painterly images from different galleries (one per pool if possible)
+// Pick 8 images from painterly section
 const painterlyPicks = pickRandomFromPools(painterlyPools, 8);
-const slidesArr = painterlyPicks.map(pick => toSlide(pick.img, pick.path));
+const slidesArr = painterlyPicks.map((pick, idx) => toSlide(pick.img, pick.path, idx));
 
-export const slides = slidesArr;
+// Set loading: 'eager' for the first image, 'lazy' for the rest
+const slides = slidesArr.map((slide, idx) => ({
+  ...slide,
+  loading: idx === 0 ? 'eager' : 'lazy',
+  className: slide.className + (idx === 0 ? ' loaded' : '') // Optionally add 'loaded' for the first image
+}));
 
+export { slides };
