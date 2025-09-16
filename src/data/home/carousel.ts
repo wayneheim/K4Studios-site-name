@@ -19,13 +19,14 @@ function buildRankedPool(images) {
   return pool;
 }
 
-// Helper: Convert image to slide object
-function toSlide(img, path) {
+// Helper: Convert image to slide object, with optional loading property
+function toSlide(img, path, loading = "lazy") {
   return {
     href: `${path}/${img.id}`,
     src: img.src || img.url || '',
     alt: img.alt || img.title || '',
-    description: img.description || ''
+    description: img.description || '',
+    loading
   };
 }
 
@@ -85,5 +86,11 @@ for (let i = 0; i < 4; i++) {
   if (traditionalPicks[i]) slidesArr.push(toSlide(traditionalPicks[i].img, traditionalPicks[i].path));
 }
 
-export const slides = slidesArr;
+// Set loading: 'eager' for the first image, 'lazy' for the rest
+const slides = slidesArr.map((slide, idx) => ({
+  ...slide,
+  loading: idx === 0 ? 'eager' : 'lazy'
+}));
+
+export { slides };
 
