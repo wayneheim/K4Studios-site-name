@@ -1,0 +1,43 @@
+/* src/styles/ImageBar2Home.css */
+
+/* Container for your custom homepage carousel */
+.k4-home-carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  overflow-x: auto;
+  /* Add any wrapper styles you want here */
+}
+
+/* Fade-in and stagger for images */
+.k4-home-carousel-img {
+  opacity: 0;
+  transform: translateY(10px) scale(0.97);
+  transition:
+    opacity 0.7s cubic-bezier(.45,0,.4,1),
+    transform 0.8s cubic-bezier(.37,0,.63,1);
+  /* will-change is optional but helps on low-end GPUs */
+  will-change: opacity, transform;
+  /* For layout stability */
+  background: #f7f3ef; /* or whatever matches your palette */
+  border-radius: 12px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.09);
+  /* ...other desired styles */
+}
+
+.k4-home-carousel-img.loaded {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Optional: stagger by nth-child (for extra drama) */
+.k4-home-carousel-img:nth-child(1) { transition-delay: 0.06s; }
+.k4-home-carousel-img:nth-child(2) { transition-delay: 0.19s; }
+.k4-home-carousel-img:nth-child(3) { transition-delay: 0.32s; }
+.k4-home-carousel-img:nth-child(4) { transition-delay: 0.45s; }
+.k4-home-carousel-img:nth-child(5) { transition-delay: 0.58s; }
+.k4-home-carousel-img:nth-child(6) { transition-delay: 0.71s; }
+.k4-home-carousel-img:nth-child(7) { transition-delay: 0.84s; }
+.k4-home-carousel-img:nth-child(8) { transition-delay: 0.97s; }
+/* Add more as needed for higher max images */
+

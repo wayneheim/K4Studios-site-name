@@ -1,3 +1,4 @@
+
 // --- Carousel: Random Alternating Images from Painterly & Traditional ---
 // Import all gallery .mjs files from both painterly and traditional sections
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
@@ -18,17 +19,14 @@ function buildRankedPool(images) {
   return pool;
 }
 
-// Helper: Convert image to slide object, with loading, width, height, and custom css class
-function toSlide(img, path, idx, loading = "lazy") {
+// Helper: Convert image to slide object, with optional loading property
+function toSlide(img, path, loading = "lazy") {
   return {
     href: `${path}/${img.id}`,
     src: img.src || img.url || '',
     alt: img.alt || img.title || '',
     description: img.description || '',
-    width: img.width || undefined,
-    height: img.height || undefined,
-    loading,
-    className: `k4-home-carousel-img k4-home-carousel-img--${idx + 1}` // add nth-child as a class for stagger support
+    loading
   };
 }
 
@@ -52,6 +50,8 @@ for (const filePath in allModules) {
 
 // Helper: Convert file path to public gallery route (for slide links)
 function filePathToHref(filePath) {
+  // e.g. '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs'
+  //   => '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'
   return filePath
     .replace(/^.*Galleries/, '/Galleries')
     .replace(/\.mjs$/, '')
@@ -82,15 +82,15 @@ const painterlyPicks = pickRandomFromPools(painterlyPools, 4);
 const traditionalPicks = pickRandomFromPools(traditionalPools, 4);
 const slidesArr = [];
 for (let i = 0; i < 4; i++) {
-  if (painterlyPicks[i]) slidesArr.push({ ...toSlide(painterlyPicks[i].img, painterlyPicks[i].path, slidesArr.length) });
-  if (traditionalPicks[i]) slidesArr.push({ ...toSlide(traditionalPicks[i].img, traditionalPicks[i].path, slidesArr.length) });
+  if (painterlyPicks[i]) slidesArr.push(toSlide(painterlyPicks[i].img, painterlyPicks[i].path));
+  if (traditionalPicks[i]) slidesArr.push(toSlide(traditionalPicks[i].img, traditionalPicks[i].path));
 }
 
 // Set loading: 'eager' for the first image, 'lazy' for the rest
 const slides = slidesArr.map((slide, idx) => ({
   ...slide,
-  loading: idx === 0 ? 'eager' : 'lazy',
-  className: slide.className + (idx === 0 ? ' loaded' : '') // Optionally add 'loaded' for the first image
+  loading: idx === 0 ? 'eager' : 'lazy'
 }));
 
 export { slides };
+
