@@ -29,7 +29,7 @@ export const galleryData = [
     "description": "WWII reenactment team portrait in color by Wayne Heim. ‘Quality Control Team’ reveals the disciplined humanity beneath the uniform—fine art military photography marrying authenticity with painterly light. Perfect for museum walls or curated historical collections.",
     "alt": "WWII reenactors in team portrait assessing readiness",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8QXD4Cq/4/L56J4zkBVRsFWMcBkkv4HLB34qR5kBfn2kxWFNh5L/XL/_ANA3428-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8QXD4Cq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8QXD4Cq/A",
     "keywords": [
       "WWII fine art prints",
       "Wayne Heim color portraits",
@@ -53,7 +53,7 @@ export const galleryData = [
     "description": "Contemplative WWII color portrait by Wayne Heim. ‘Silent Vigil’ captures a reenactor’s quiet stillness—blending historical accuracy with emotional depth for collectors seeking narrative-rich military fine art.",
     "alt": "WWII reenactor in quiet contemplation before battle",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-JnmQDPd/1/Kf3MKDW3j4Fq9Ctz2RH797GnF85phrhZh7xhCK7sQ/XL/_ANA3483-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-JnmQDPd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-JnmQDPd/A",
     "keywords": [
       "WWII portraiture",
       "color reenactment art",
@@ -77,7 +77,7 @@ export const galleryData = [
     "description": "WWII color portrait by Wayne Heim showing resolve and anticipation. ‘Eyes on the Horizon’ is a reenactment study of a soldier searching for meaning beyond the front lines—ideal for history-focused fine art displays and museum storytelling.",
     "alt": "WWII soldier looking toward the horizon in color",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-wFV22SQ/2/MQCSjQwcXLcNskM8pX88d8BP6PMH7ThKG2mJLRT3h/XL/_ANA3533-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-wFV22SQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-wFV22SQ/A",
     "keywords": [
       "WWII color photography",
       "soldier portrait",
@@ -101,7 +101,7 @@ export const galleryData = [
     "description": "WWII color portrait by Wayne Heim that examines ritual and readiness. ‘Prepared for Duty’ blends reenactment authenticity with painterly narrative, making it a compelling piece for military history collectors and exhibition spaces.",
     "alt": "WWII soldier performing readiness checks",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-KBvWrXf/1/LjRDvwJWsbKd7Zrt7ghhGTdrH7jKNZ5zKRfnLQrFn/XL/_ANA3559-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KBvWrXf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KBvWrXf/A",
     "keywords": [
       "WWII soldier preparation",
       "color reenactment photography",
@@ -125,7 +125,7 @@ export const galleryData = [
     "description": "Color WWII portrait by Wayne Heim capturing the inner moment prior to engagement. ‘Reflections Before Action’ brings historical reenactment into fine art through a study of hesitation, weight, and decision.",
     "alt": "WWII reenactor in deep thought before battle",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/KjKjftcj2RfPjGPdctVnk3sJXqBnK7Q539PTMjRsn/XL/_ANA4673-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/A",
     "keywords": [
       "WWII fine art portrait",
       "color reenactment photography",
@@ -149,7 +149,7 @@ export const galleryData = [
     "description": "WWII color reenactment portrait by Wayne Heim that captures camaraderie and unsaid bonds before conflict. ‘Brothers in Waiting’ speaks to shared purpose and silent promises—perfect for narrative-driven historical collections.",
     "alt": "WWII soldiers sharing silent camaraderie before engagement",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-spgGWcn/0/MQkpMN85f3v9BjDTDWLNTzprq8wfmMPcQ6MT5XZPs/XL/_ANA5778-Edit-2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-spgGWcn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-spgGWcn/A",
     "keywords": [
       "WWII camaraderie portrait",
       "Wayne Heim color photography",
@@ -173,7 +173,7 @@ export const galleryData = [
     "description": "WWII color portrait by Wayne Heim exploring leadership under pressure. ‘Weight of Command’ juxtaposes authority and burden in a historical reenactment fine art context—designed for institutions and collectors who value nuanced military storytelling.",
     "alt": "WWII officer contemplating responsibility",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/2/Lxd3fxGmnjCqXhVbvPQCDKTWZDzrpcnWXH26wrrTc/XL/_ANA6462-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/A",
     "keywords": [
       "WWII leadership portrait",
       "Wayne Heim color portraiture",
@@ -197,7 +197,7 @@ export const galleryData = [
     "description": "WWII color portrait by Wayne Heim capturing that charged pause before orders. ‘Moment Before the Call’ blends intimate reenactment emotion with fine art composition—optimal for collectors who appreciate tension and storytelling.",
     "alt": "WWII soldier in quiet anticipation before receiving orders",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-BWMJW2Z/1/LXgDCkVqcMGngHk7VbbHmbdxwBfrfs3fQMMff5r9s/XL/_ANA6466-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-BWMJW2Z/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-BWMJW2Z/A",
     "keywords": [
       "WWII anticipation portrait",
       "color historical photography",
@@ -221,7 +221,7 @@ export const galleryData = [
     "description": "WWII color portrait by Wayne Heim that conveys the tension between fear and resolve. ‘Edge of Uncertainty’ is a vivid reenactment study of a soldier poised between choice and consequence—built for narrative-driven fine art collections.",
     "alt": "WWII soldier standing at a decision point, uncertain",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-H6jtL93/0/KDL8wDfVSqwxw4HsvZPnrHjN4KXfzSP9JD8LWXvNk/XL/_DSF3798-Edit-Edit-2-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-H6jtL93/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-H6jtL93/A",
     "keywords": [
       "WWII tension portrait",
       "Wayne Heim fine art",
@@ -245,7 +245,7 @@ export const galleryData = [
     "description": "WWII color portrait by Wayne Heim showing calm focus amid looming conflict. ‘Steady Hands’ is a fine art reenactment piece about composure, ideal for installations and collectors valuing quiet strength in historical narrative photography.",
     "alt": "WWII soldier maintaining composure with steady hands",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LcWVBPt/1/MFXFKwXsvBBNTsgVxf386BH3HfR2FQvf5HN9gLQZn/XL/_DSF3803-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LcWVBPt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LcWVBPt/A",
     "keywords": [
       "WWII composure portrait",
       "Wayne Heim color photography",
@@ -269,7 +269,7 @@ export const galleryData = [
     "description": "WWII color portrait by Wayne Heim exploring how conflict echoes in identity. ‘Fragments of Memory’ melds layered reenactment narrative with painterly storytelling—thoughtful fine art for museum curation and contemplative collections.",
     "alt": "WWII reenactor lost in reflective thought",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-RPHDKxF/1/NZpWrK65VfpBVvML4qS7JS3FMc8zfX6TKbHsfNcWc/XL/_DSF3868-Edit-Edit-Edit-5-Edit-Edit-2-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-RPHDKxF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-RPHDKxF/A",
     "keywords": [
       "WWII memory portrait",
       "historical reenactment photography",
@@ -293,7 +293,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'After Action Reflection' by Wayne Heim. A contemplative reenactor in the quiet aftermath—blending historical authenticity with emotional depth. Ideal for museums, collectors, and narrative military fine art displays.",
   "alt": "WWII soldier reflecting after action",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-pX6JVNs/1/LXbRV3rRCjz9TNzZXVcR2T9f3SfjSZZdqs8dBLgG2/XL/_DSF3889-Edit-Edit-4-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-pX6JVNs/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-pX6JVNs/A",
   "keywords": [
     "WWII reflection portrait",
     "Wayne Heim color photography",
@@ -317,7 +317,7 @@ export const galleryData = [
   "description": "Color WWII reenactment portrait 'Quiet Resolve' by Wayne Heim. Captures the steadfast determination of a soldier poised between uncertainty and action. Perfect for narrative-driven historical collections and museum curation.",
   "alt": "WWII soldier with quiet resolve",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-sGQLsK8/1/LhNbtZ3DrctQrBL53LB6BDTkH6L4rCHn9zgvWGXHG/XL/_DSF3899-Edit-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-sGQLsK8/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-sGQLsK8/A",
   "keywords": [
     "WWII determination portrait",
     "Wayne Heim reenactment photography",
@@ -341,7 +341,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Military Police Watch' by Wayne Heim. A striking reenactment image of an MP on duty, balancing authority and vigilance. Excellent for historical collections, museum installations, and fine art storytelling.",
   "alt": "WWII Military Police on watch",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Gz4Jq9R/0/McV5TbHh99btFRx252zDbDsZv2bKbpTzsvJkjKwGV/XL/_FWH5511-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Gz4Jq9R/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Gz4Jq9R/A",
   "keywords": [
     "WWII Military Police portrait",
     "MP reenactment photo",
@@ -365,7 +365,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Camp Sentinel' by Wayne Heim. A reenactor in quiet guardianship, embodying the still vigilance of everyday military life. A compelling piece for historical storytelling and fine art display.",
   "alt": "WWII soldier standing sentinel in camp",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TCM54GK/0/KMm9FkN4TpDSxM8gWGRKBjJFMg2HsrvgG65H8JL4R/XL/_FWH5915-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TCM54GK/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TCM54GK/A",
   "keywords": [
     "WWII camp portrait",
     "sentinel reenactment photography",
@@ -389,7 +389,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'All Smiles' by Wayne Heim. A rare moment of warmth amid reenacted conflict—capturing the softer humanity that persists in wartime. Ideal for emotionally resonant collections and museum exhibits.",
   "alt": "WWII reenactor smiling",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jrpB3bj/0/LbHq8h9zKQRKGT8gdVvS4hbGvLm6jLx7vLg4pNtvP/XL/_FWH5927-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jrpB3bj/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jrpB3bj/A",
   "keywords": [
     "WWII human moment",
     "smiling soldier portrait",
@@ -413,7 +413,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Quiet Watch' by Wayne Heim. A reenactor in the still vigilance of duty, where anticipation and resilience converge. Suited for historical galleries and contemplative installations.",
   "alt": "WWII soldier on quiet watch",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-t9XL2ZG/0/KcPTMSWG9VNZbVQ3gMWkdJqdd4mXq4fHbL7D9PdQg/XL/_FWH6096-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-t9XL2ZG/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-t9XL2ZG/A",
   "keywords": [
     "WWII vigilance portrait",
     "color soldier watch",
@@ -437,7 +437,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Color of Duty' by Wayne Heim. A vivid portrayal of commitment and the human face behind wartime roles—blending reenactment accuracy with painterly perspective. Strong for collectors and exhibit narratives.",
   "alt": "WWII soldier embodying duty",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-V5dwLbs/0/KPw5sVdv7rjkWP3C8g7pnZZBpjjHC8RdBBmTWG292/XL/_FWH6143-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-V5dwLbs/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-V5dwLbs/A",
   "keywords": [
     "WWII commitment portrait",
     "Wayne Heim color reenactment",
@@ -461,7 +461,7 @@ export const galleryData = [
   "description": "Color WWII portrait honoring the French Resistance by Wayne Heim. A powerful reenactment image blending subtle defiance with historical nuance—ideal for European WWII collections and storytelling exhibits.",
   "alt": "Portrait of French Resistance reenactor",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-mtXJmf8/0/M8gs6g98cwcGbRkZVcB6fZWVt8nX5LVjBK9tG4mdV/XL/_FWH6146-Edit-2-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-mtXJmf8/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-mtXJmf8/A",
   "keywords": [
     "French Resistance portrait",
     "WWII European reenactment",
@@ -485,7 +485,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'The Watchful Few' by Wayne Heim. An atmospheric reenactment image of soldiers on alert—balancing tension and solidarity. A powerful addition to historical and narrative-driven art collections.",
   "alt": "WWII soldiers on watch together",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-3NCLt4s/0/NKbFtTwWpFM4sBZbDGW6dPSqmmnv5H6wXdD2x9G53/XL/_FWH6177-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-3NCLt4s/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-3NCLt4s/A",
   "keywords": [
     "WWII alert portrait",
     "watchful soldiers",
@@ -509,7 +509,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Worn Valor' by Wayne Heim. A nuanced study of a soldier whose experience shows in every line—historical reenactment meets human story. Ideal for legacy-focused collections and museum installations.",
   "alt": "WWII soldier showing worn valor",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFMq3s4/0/MWNH5nBdhVkx4cmPbJVFhmsHX9WGRpHctmXxfqPNj/XL/_FWH6216-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFMq3s4/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFMq3s4/A",
   "keywords": [
     "WWII valor portrait",
     "experienced soldier art",
@@ -533,7 +533,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'State Your Business' by Wayne Heim. Dramatic lighting highlights a WAC woman in headquarters, blending authority and quiet competence. A powerful piece for historical exhibits, military portraiture collections, and narrative fine art.",
   "alt": "WAC woman at headquarters",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFDzhBL/0/NKGvXmrCFTcvxs3qsRV3btRMgBdn6Zzkhw6j2Vhwj/XL/_FWH6223-Enhanced-NR-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFDzhBL/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFDzhBL/A",
   "keywords": [
     "WAC portrait",
     "WWII headquarters photography",
@@ -557,7 +557,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Up Next' by Wayne Heim. A moment suspended—an unseen pivot to the next assignment, captured in rich tones that reflect anticipation and resolve. Ideal for storytelling collections and military history interiors.",
   "alt": "Soldier preparing for what's up next",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-F75PGSb/0/L2brJSgdWkW2SjxVpvDHPxXJ3mChWKS47ftQTR5rB/XL/_FWH6305-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-F75PGSb/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-F75PGSb/A",
   "keywords": [
     "WWII anticipation portrait",
     "Wayne Heim color reenactment",
@@ -581,7 +581,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Quiet Duty' by Wayne Heim. A reenactor captured in a thoughtful moment of service—understated strength and the silent rhythm of wartime routines. A contemplative piece for collectors of historical military portraiture.",
   "alt": "WWII soldier in quiet duty",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qkT6tbt/0/MKsjFpc6Nx6QvzkZrrK8M5BPTFXk8KZ4DTFJCsjMM/XL/_HF21578-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qkT6tbt/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qkT6tbt/A",
   "keywords": [
     "WWII quiet service",
     "historical portrait Wayne Heim",
@@ -605,7 +605,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Commanded Silence' by Wayne Heim. An intimate, composed image of a service member caught between orders and internal dialogue. Great for exhibitions exploring leadership, discipline, and personal sacrifice.",
   "alt": "WWII service member in contemplative silence",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KMsgzd3/0/LtWd252KtQhL49cM7Sd8gj4pmB5xDWBNC66bLdSgH/XL/_HF21589-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KMsgzd3/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KMsgzd3/A",
   "keywords": [
     "WWII leadership portrait",
     "Wayne Heim contemplative photography",
@@ -629,7 +629,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Unspoken Strength' by Wayne Heim. A subtle yet powerful depiction of resilience in uniform, where presence alone communicates purpose. Suitable for galleries, historical collections, and narrative wartime art displays.",
   "alt": "WWII soldier showing quiet strength",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jzFxhks/0/L7LvJb5pFf3t9C9Px35zpW2pmGhRbnJNWT58pq7dq/XL/_HF21617-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jzFxhks/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jzFxhks/A",
   "keywords": [
     "WWII resilience portrait",
     "Wayne Heim historical art",
@@ -653,7 +653,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Silent Watch' by Wayne Heim. A reenactor captured in a moment of quiet vigilance, reflecting the unseen guardianship of those who keep watch. Ideal for storytelling exhibits and military history collections.",
   "alt": "WWII soldier on silent watch",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CFxRg4Q/0/NFqM3d5XhcpzdVwxR36J2DkHKzpm9j4RxB6f9kj4Q/XL/_HF21618-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CFxRg4Q/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CFxRg4Q/A",
   "keywords": [
     "WWII vigilance portrait",
     "Wayne Heim watchful soldier",
@@ -677,7 +677,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Frontline Care' by Wayne Heim. A Red Cross nurse portrayed with compassion and quiet intensity, representing the essential human element amid conflict. A perfect addition to medical history, military exhibits, and emotional fine art collections.",
   "alt": "Red Cross nurse tending to soldiers",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NB2VdMF/0/LmZtMfTD5bqnXrs9Bx3XGGkV6r44hfbVZ3BCpCRvB/XL/_HF21621-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NB2VdMF/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NB2VdMF/A",
   "keywords": [
     "Red Cross nurse portrait",
     "WWII medical care art",
@@ -701,7 +701,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Morning Coffee Break' by Wayne Heim. A candid moment of respite captured in warm tones—soldiers and service members grounding themselves before the next wave. Great for humanizing wartime narratives and gallery storytelling.",
   "alt": "WWII service members sharing coffee",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-SVVwgdB/0/LQ2Gp27VXkXWcnK5KTPQmtfjD9CJv29ZqqVFqDm2t/XL/_HF21640-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-SVVwgdB/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-SVVwgdB/A",
   "keywords": [
     "WWII break moment",
     "soldiers coffee portrait",
@@ -725,7 +725,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Vintage G.I.' by Wayne Heim. A nostalgic and respectful portrayal of the classic American soldier, combining authenticity with painterly composition. Excellent for patriotic collections, gallery showcases, and historical reenactment displays.",
   "alt": "Classic American WWII soldier",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4KGPqXG/0/LMSLkZgfpDHzXkDqmwnZrz9Pj4xhR9BRNxdsLsmFP/XL/_HF22411-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4KGPqXG/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4KGPqXG/A",
   "keywords": [
     "Vintage G.I. portrait",
     "WWII American soldier art",
@@ -749,7 +749,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Nursing the Wounded' by Wayne Heim. A poignant image of a nurse tending to casualties while remaining vigilant—captures compassion under pressure. Perfect for medical history collections, museum storytelling, and emotional wartime art.",
   "alt": "WWII nurse caring for wounded",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NPK8xZj/1/LBjFg6NTsPs3j9LTWSpCTrP36TqsZt9KkhvLRdGc8/XL/_HF22969-Enhanced-NR-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NPK8xZj/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NPK8xZj/A",
   "keywords": [
     "WWII nurse portrait",
     "wounded care reenactment",
@@ -773,7 +773,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Drink This Down' by Wayne Heim. A moment of gritty reprieve captured in rich detail—a soldier or medic taking a brief, necessary pause. Perfect for narrative military art collections and historical storytelling exhibits.",
   "alt": "Service member drinking",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TVzzS9r/0/MVgs79Jt3NsWW7q4kjF3P9sCtFSSgrwjz3DK5zhCz/XL/_HF23015-Edit-2-Edit-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TVzzS9r/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TVzzS9r/A",
   "keywords": [
     "WWII pause portrait",
     "Wayne Heim military art",
@@ -797,7 +797,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Quiet Resolve' by Wayne Heim. A contemplative portrayal of a service member gathering inner strength before stepping back into the fray. Ideal for exhibitions on emotional endurance and personal courage during conflict.",
   "alt": "WWII service member with quiet resolve",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-G6zt5mq/0/KDjWKwmFFJDzk2KqKrpRkNCjLGRnqcVRmjx3jzQBg/XL/_HF23124-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-G6zt5mq/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-G6zt5mq/A",
   "keywords": [
     "WWII introspection portrait",
     "Wayne Heim emotional military art",
@@ -821,7 +821,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Steady Hands' by Wayne Heim. A study in focus and careful diligence—captures a moment of preparation or maintenance, underscoring the unseen labor that supports frontline action. Excellent for technical and human-centered military collections.",
   "alt": "Service member with steady hands",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rpdHJRT/0/LsdM8qsq4X8ZfK7B2zkmMX6D7jzp8sh24jZW9M6LZ/XL/_HF23182-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rpdHJRT/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rpdHJRT/A",
   "keywords": [
     "WWII precision portrait",
     "Wayne Heim preparation art",
@@ -845,7 +845,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Moment of Reflection' by Wayne Heim. A solitary figure lost in thought amidst the ongoing demands of war, blending light and mood to evoke the mental landscape of those who served. Suited for psychological and historical exhibits.",
   "alt": "WWII reenactor in reflection",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmNF7xF/0/KgThqpcDV4jhC9BfS32fL42wbFwHwX7PhDfrJRF6P/XL/_HF23236-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmNF7xF/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmNF7xF/A",
   "keywords": [
     "WWII reflection portrait",
     "Wayne Heim thoughtful soldier",
@@ -869,7 +869,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Field Integrity' by Wayne Heim. Portrait of a service member embodying duty and moral resolve under the canvas of conflict. Rich in atmosphere, suitable for gallery displays focusing on ethics, identity, and wartime character studies.",
   "alt": "WWII service member with integrity",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8GPzCR2/0/KFj6w4NBBdMLpdtQtgrMphDKSrRfrZ68n3JZFHqCt/XL/_HF23409-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8GPzCR2/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8GPzCR2/A",
   "keywords": [
     "WWII integrity portrait",
     "Wayne Heim character study",
@@ -893,7 +893,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Awaiting Orders' by Wayne Heim. A subject captured in the charged silence before movement—reflects tension, discipline, and readiness. Ideal for narrative military galleries and themed historical spaces.",
   "alt": "Soldier waiting for orders",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4RqT5V2/0/NcZKbZfdnwKsxpXNJjgWfHpc4KkbzPVXkPRjWxD8L/XL/_HF23526-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4RqT5V2/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4RqT5V2/A",
   "keywords": [
     "WWII readiness portrait",
     "Awaiting Orders",
@@ -917,7 +917,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Tactical Pause' by Wayne Heim. Captures a fleeting strategic moment—service members processing information or recalibrating before the next move. Deeply suited for exhibits on decision-making in warfare and leadership under pressure.",
   "alt": "Strategic thinking in WWII",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KJRfSX6/0/LGJsZTq4gRt57rsrr5CVCL58jBxZ5p5vHT2FRS5bv/XL/_HF23639-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KJRfSX6/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KJRfSX6/A",
   "keywords": [
     "WWII strategy portrait",
     "leadership wartime art",
@@ -941,7 +941,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Silent Preparation' by Wayne Heim. A quiet prelude to action, showing a service member focused and internally aligning before engagement. Great for themes of readiness and inner discipline.",
   "alt": "Preparing in silence",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DdQNwSd/1/KLdnRXkVZRRst52q46zp4ZXjv286wtFfnnvZQQKDp/XL/_HF23710-Edit-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DdQNwSd/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DdQNwSd/A",
   "keywords": [
     "WWII preparation portrait",
     "inner discipline military art",
@@ -965,7 +965,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Field Focus' by Wayne Heim. A service member captured in a concentrated moment, embodying the precision and alertness required in the field. Ideal for curated collections on wartime vigilance and professionalism.",
   "alt": "Focused in the field",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DBKtchF/0/MtbdCRBqJw6LvCN8rD3hc6Z65q2cs3jkz8KmDQczz/XL/_HF23738-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DBKtchF/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DBKtchF/A",
   "keywords": [
     "WWII vigilance portrait",
     "military professionalism art",
@@ -989,7 +989,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Unseen Backbone' by Wayne Heim. A dignified portrayal of a support figure—often invisible in headlines, essential in reality. A tribute to the steady strength behind operations, rendered with painterly clarity.",
   "alt": "Support figure portrait WWII",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-JjdvrPP/0/Kr5QSW5TXXBhg8GHz6CMPR6dNf4twnwwbTHBWmQZF/XL/_HF23820-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-JjdvrPP/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-JjdvrPP/A",
   "keywords": [
     "WWII support portrait",
     "backbone of war art",
@@ -1013,7 +1013,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Weathered Vigil' by Wayne Heim. Captures the fatigue and unwavering attention of those who have stood watch through long campaigns. A layered portrait balancing endurance and quiet vigilance.",
   "alt": "Fatigued yet vigilant soldier",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-g7XMbW7/0/KtpG4VnvL2CRzc26Fb3s6B6XLhWK6Fnr9vgDVdv2G/XL/_HF23836-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-g7XMbW7/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-g7XMbW7/A",
   "keywords": [
     "WWII endurance portrait",
     "vigil fatigue art",
@@ -1037,7 +1037,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Quiet Duty II' by Wayne Heim. A companion piece exploring the same themes of unseen commitment and silent responsibility, rendered with subtle light and composition to emphasize service without spectacle.",
   "alt": "Service member in quiet duty",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmQp8CX/0/Lr85JVRvHdq53qr9qQnP5Bxqs7qsjhzwnc2tt4Xrf/XL/_HF23902-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmQp8CX/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmQp8CX/A",
   "keywords": [
     "WWII quiet service portrait",
     "Wayne Heim reflective military art",
@@ -1060,7 +1060,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Edge of Awareness' by Wayne Heim. This piece examines the thin line between alertness and fatigue in wartime, portraying a soldier whose focus is both sharpened and worn. Strong for psychological and historical collections.",
   "alt": "Soldier at edge of awareness",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Zz2XVGJ/0/NQ36gVFf3wWF6xKCfZqnFkpTCzKfN84vtFhN9HbZb/XL/_HF23987-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Zz2XVGJ/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Zz2XVGJ/A",
   "keywords": [
     "war fatigue portrait",
     "Edge of Awareness",
@@ -1084,7 +1084,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Unseen Burden' by Wayne Heim. A portrait that conveys the weight carried internally by those in uniform—quiet, somber, and profound. Works well in exhibitions exploring mental toll and personal sacrifice during war.",
   "alt": "Soldier bearing unseen burden",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-9Cz4fTQ/0/L2X3x4cLJXkcsp2mzvwCBndrMW6n4jRPdBs69Rj9n/XL/_HF24168-Edit-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-9Cz4fTQ/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-9Cz4fTQ/A",
   "keywords": [
     "mental burden wartime",
     "Unseen Burden",
@@ -1108,7 +1108,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Worn Vigil' by Wayne Heim. A portrait of steadfast endurance, showing a service member marked by time yet unwavering in watchfulness. Ideal for thematic collections on perseverance and duty.",
   "alt": "Veteran on vigil",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-7q5zrqn/0/L2RFVxL373RfxMPrhC2dtmcNJCjbsRjrGPmVKnWXS/XL/_HF24198-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-7q5zrqn/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-7q5zrqn/A",
   "keywords": [
     "Worn Vigil",
     "WWII endurance portrait",
@@ -1132,7 +1132,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Quiet Watch' by Wayne Heim. A contemplative study of a soldier standing vigilant, the weight of duty rendered in painterly detail. Perfect for historical galleries exploring resilience, silent vigilance, and the emotional cost of war.",
   "alt": "Soldier on quiet watch",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-wVWVrJ3/0/M3zd7LwVfcFb6gdQ8PXTvXSNL9MqTQ5VJJMF7dNpB/XL/_HF24223-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-wVWVrJ3/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-wVWVrJ3/A",
   "keywords": [
     "WWII vigilance portrait",
     "Wayne Heim quiet watch",
@@ -1156,7 +1156,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Afterglow Resolve' by Wayne Heim. The light lingers on a service member’s face as quiet determination surfaces after action. A nuanced capture of post-engagement reflection, ideal for narrative war collections and emotional history exhibits.",
   "alt": "Service member in afterglow reflection",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-fmx3qJx/0/MDfpbLQfWmzmzqDmB26LChtzppsXhF6bvc3gSL2CG/XL/_HF24242-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-fmx3qJx/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-fmx3qJx/A",
   "keywords": [
     "WWII reflection portrait",
     "Wayne Heim emotional military art",
@@ -1180,7 +1180,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'D-Day Reflection' by Wayne Heim. A thoughtful capture from a 2024 reenactment, merging historical reverence with present-day introspection. This piece serves collectors and museums seeking evocative narrative imagery tied to D-Day remembrance.",
   "alt": "Reenactor reflecting on D-Day",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kGV7mcx/0/KdRFzCRVZLbpNtdkCvtMn9mqXZKXnMgcj8MLfG3Xn/XL/_HF24647-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kGV7mcx/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kGV7mcx/A",
   "keywords": [
     "D-Day portrait 2024",
     "WWII remembrance art",
@@ -1204,7 +1204,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Steadfast Moment' by Wayne Heim. A service member caught in a pause of unwavering composure, illustrating the calm center amid the chaos of conflict. Excellent for storytelling installations and thematic collections on internal strength.",
   "alt": "Service member in steadfast pause",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-tjk6VD8/0/KjGC7pdN4WQ6TWh4fB5wppdcxvCGvpnjK2TKNmwHr/XL/_HF24651-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-tjk6VD8/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-tjk6VD8/A",
   "keywords": [
     "WWII composure portrait",
     "Wayne Heim strength art",
@@ -1228,7 +1228,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Watchful Calm' by Wayne Heim. A balanced depiction of alertness and serenity, showing a veteran or reenactor maintaining presence with quiet confidence. Ideal for museum walls and curated collections focused on the human side of military vigilance.",
   "alt": "Calm watchful service member",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LbxWb4H/0/LvHGXrQbZKVc8PTC6zQQSvGfpwqQGpLbm34TTqx9p/XL/_HF24856-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LbxWb4H/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LbxWb4H/A",
   "keywords": [
     "WWII calm portrait",
     "Watchful Calm",
@@ -1252,7 +1252,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Enduring Gaze' by Wayne Heim. A powerful visual of someone whose eyes have witnessed the passage of conflict and still remain unbroken. A compelling piece for exhibitions on memory, survival, and the enduring human spirit.",
   "alt": "Veteran with enduring gaze",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-tW6nVS9/0/K2zLWsh8PLpkMTHtpHPv3Bd23MhDqP4BhDW9xPL5x/XL/_HF24863-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-tW6nVS9/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-tW6nVS9/A",
   "keywords": [
     "WWII survivor portrait",
     "Enduring Gaze",
@@ -1276,7 +1276,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Steady Resolve' by Wayne Heim. An evocative depiction of a reenactor absorbing the gravity of history, balancing strength and quiet contemplation. Ideal for collectors and institutions focused on the psychology of duty and remembrance. Keywords: WWII portrait art, historical reenactment photography, Wayne Heim Steady Resolve, military introspection, color fine art WWII.",
   "alt": "Reenactor with steady resolve",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-HHFdrzt/0/KZcpBNL3HvnRKLGGpX3ZMWGVLMSQv2BL54Cpx8wsB/XL/_HF24918-Edit-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-HHFdrzt/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-HHFdrzt/A",
   "keywords": [
     "WWII resolve portrait",
     "Wayne Heim historical art",
@@ -1300,7 +1300,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'After the Line' by Wayne Heim. A pause in the continuum of conflict, capturing a moment where duty and reflection intersect. Rich in narrative tension, this image serves galleries exploring aftermath, memory, and identity in wartime. Keywords: WWII aftermath portrait, Wayne Heim reflective military art, historical reenactment color photography, soldier contemplation, post-conflict emotion.",
   "alt": "Service member reflecting after engagement",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-S94kvfs/0/LKdDfNdVKMNL2xCS9n5JrcX6DxFh8FKRL4pXwDjWM/XL/_HF24923-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-S94kvfs/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-S94kvfs/A",
   "keywords": [
     "WWII reflection portrait",
     "Wayne Heim After the Line",
@@ -1324,7 +1324,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Echoes of D-Day' by Wayne Heim. An image that ties present reenactment to historical resonance, layered with implied stories of sacrifice and remembrance. Strong SEO focus for history enthusiasts, museums, and commemorative exhibits. Keywords: D-Day portrait art, echoing history photography, Wayne Heim WWII reenactment, color military portrait, historical remembrance imagery.",
   "alt": "Portrait reflecting on D-Day echoes",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LmDzb7p/0/LwDHHWLmpdxpPTjHBRwB8QkSPnMnHLhjJTcQQdWWJ/XL/_HF25166-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LmDzb7p/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-LmDzb7p/A",
   "keywords": [
     "D-Day remembrance portrait",
     "Wayne Heim WWII art",
@@ -1348,7 +1348,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Forward Watch' by Wayne Heim. Tension and anticipation coalesce in a soldier’s stance—a visual study of vigilance before action. Optimized for SEO with keywords around watchfulness, historical accuracy, and wartime presence. Keywords: WWII forward watch portrait, military vigilance photography, Wayne Heim historical art, reenactment portrait, color war imagery, anticipation in war.",
   "alt": "Soldier on forward watch",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-VnJvN8G/0/MFNw8HDRX3LchQcznCcKnTS9TzwHqwj8RTGFKFjZx/XL/_HF25315-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-VnJvN8G/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-VnJvN8G/A",
   "keywords": [
     "WWII watchful portrait",
     "Wayne Heim Forward Watch",
@@ -1372,7 +1372,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Quiet Before' by Wayne Heim. A moment of stillness captured just prior to movement, highlighting the internal preparation of those who serve. SEO-rich for themes of readiness, history, and emotional tension. Keywords: pre-action portrait, WWII quiet before, Wayne Heim contemplative military art, reenactment stillness photography, color historical portrait, wartime anticipation.",
   "alt": "Service member in quiet anticipation",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-xfJd8hh/0/KMWcmhdXkQN5RB7ZMRc3hhdQk3jFnZcjd5tfF8Gkh/XL/_HF25370-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-xfJd8hh/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-xfJd8hh/A",
   "keywords": [
     "WWII anticipation portrait",
     "Quiet Before Wayne Heim",
@@ -1396,7 +1396,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Shared Purpose' by Wayne Heim. Captures the unspoken bond between service members, framed in subtle light and compositional tension. Excellent for exhibits on camaraderie, teamwork, and collective memory. Keywords: WWII team portrait, Wayne Heim Shared Purpose, historical reenactment group photography, color military art, bond of soldiers, teamwork in war imagery.",
   "alt": "Service members united in purpose",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CDWgXBG/0/MJrttvNXHnc4TFhzXRr8xJL78Lj4XWX2Zzk9TBvBV/XL/_HF25411-Edit-2-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CDWgXBG/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CDWgXBG/A",
   "keywords": [
     "WWII team portrait",
     "Shared Purpose Wayne Heim",
@@ -1420,7 +1420,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Moment of Pause' by Wayne Heim. A fleeting stillness amid ongoing campaign—this image underscores the humanity behind uniformed resolve. SEO-optimized for emotional depth and historical contexts. Keywords: WWII pause portrait, Wayne Heim humanizing war art, reflective soldier image, color reenactment story, wartime stillness photography, emotional military portrait.",
   "alt": "Soldier taking a brief pause",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-RWPzxRs/0/LbTnrJ2WCVZzjrnq7SNRNNxRhMVJgKB6CFKwHxPBH/XL/_HF25474-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-RWPzxRs/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-RWPzxRs/A",
   "keywords": [
     "WWII reflective portrait",
     "Wayne Heim Moment of Pause",
@@ -1444,7 +1444,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Vigil’s Edge' by Wayne Heim. The tension of watchfulness rendered in subtle hues; a study of the thin line between alertness and fatigue. Perfect for narrative-driven historical installations. Keywords: WWII vigilance art, Wayne Heim Vigil’s Edge, military watch portrait, reenactment photography, color emotional tension, historical presence imagery.",
   "alt": "Soldier on edge of vigilance",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-xqk3VG4/0/KMqZ8S8wqnJpNLmgCjX5fdfVbMNj3zj7CjqwmTc2v/XL/_HF25493-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-xqk3VG4/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-xqk3VG4/A",
   "keywords": [
     "watchful WWII portrait",
     "Vigil’s Edge Wayne Heim",
@@ -1468,7 +1468,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Quiet Cohort' by Wayne Heim. A portrait emphasizing silent solidarity among soldiers, their shared weight and unspoken understanding conveyed through composition and light. SEO-focused for themes of unity, historical connection, and collective memory. Keywords: WWII cohort portrait, Wayne Heim solidarity art, color reenactment group image, silent unity portrait, historical military bond, emotional wartime photography.",
   "alt": "Group portrait of soldiers in quiet solidarity",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-PxMMkLH/0/Lr4SKs2LnCwPLZQdFJcSnDXCpM7x8sj5ft4DvFWcv/XL/_HF25610-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-PxMMkLH/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-PxMMkLH/A",
   "keywords": [
     "WWII group portrait",
     "Quiet Cohort Wayne Heim",
@@ -1492,7 +1492,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Company Line' by Wayne Heim. A panoramic sense of collective identity captured in stillness—portraying the inherent strength in numbers and shared history. Ideal for institutional displays and narrative exhibits. Keywords: WWII company portrait, Wayne Heim Company Line, group military photography, historical reenactment color image, soldiers united art, collective resilience.",
   "alt": "Company of soldiers posed together",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-vX9NGw2/0/Kx8PSdXCZwzRDpHprv8wfrmTrpCXWFtpLPKxhpgTc/XL/_HF25936-Pano-Edit%2520b-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-vX9NGw2/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-vX9NGw2/A",
   "keywords": [
     "WWII company portrait",
     "Company Line Wayne Heim",
@@ -1516,7 +1516,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Quiet Formation' by Wayne Heim. A composed tableau of soldiers in a moment of held breath, merging discipline with vulnerability. SEO keywords oriented toward formation, order, and the unseen emotional undercurrents of war. Keywords: WWII formation portrait, Wayne Heim Quiet Formation, military discipline art, color reenactment portrait, historical group image, wartime composure.",
   "alt": "Soldiers in composed formation",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-WD9SJzR/1/LwQHCntxTNCXSHQtN2cmn92PCkCkmmrk4rkmRBRdG/XL/_HF26106-Edit-2-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-WD9SJzR/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-WD9SJzR/A",
   "keywords": [
     "WWII military formation portrait",
     "Quiet Formation Wayne Heim",
@@ -1540,7 +1540,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Eyes Forward' by Wayne Heim. An intimate portrait of focus and commitment, where the subject’s gaze becomes the narrative anchor—perfect for storytelling exhibits about purpose and perseverance. Keywords: WWII focus portrait, Wayne Heim Eyes Forward, military determination art, historical reenactment gaze imagery, color soldier portrait, wartime purpose.",
   "alt": "Service member looking forward with determination",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-hMc8Dk7/0/NW6rjbD2S3fFct9DjWc4SKbKrFP3Kt7wQrNptTRxn/XL/_HF26125-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-hMc8Dk7/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-hMc8Dk7/A",
   "keywords": [
     "WWII determination portrait",
     "Eyes Forward Wayne Heim",
@@ -1564,7 +1564,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Silent Brotherhood' by Wayne Heim. A subtle, layered portrayal of the unspoken connections between soldiers, emphasizing trust without words. SEO-rich for themes of brotherhood, loyalty, and wartime bonds. Keywords: WWII brotherhood portrait, Wayne Heim Silent Brotherhood, military loyalty art, reenactment emotional connection, color historical portrait, trust in war imagery.",
   "alt": "Two soldiers sharing a silent bond",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-3WPhnsq/0/MLMJmjkkb33kWLKWjmh6Lhs45dm9kF5tLPsQLqMJN/XL/_HF26128-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-3WPhnsq/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-3WPhnsq/A",
   "keywords": [
     "WWII bond portrait",
     "Silent Brotherhood Wayne Heim",
@@ -1588,7 +1588,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Worn Honor' by Wayne Heim. A sensitive rendering of the weight of service, showing the marks left on spirit and expression; suited for reflective and memorial displays. Keywords: WWII honor portrait, Wayne Heim Worn Honor, historical reflection art, reenactment emotional portrait, color military legacy, weight of service imagery.",
   "alt": "Veteran bearing the marks of honor",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-gkTrvFt/0/MFCR7cNrdQGxz8xDqwXt3nBDPszfG4r5dczrQmHCz/XL/_HF26137-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-gkTrvFt/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-gkTrvFt/A",
   "keywords": [
     "WWII legacy portrait",
     "Worn Honor Wayne Heim",
@@ -1612,7 +1612,7 @@ export const galleryData = [
     "description": "Color portrait by Wayne Heim from D-Day Conneaut 2024 portrayal series, capturing a reenactor in a quiet, reflective moment—melding lived-in detail with historical presence. SEO: D-Day Conneaut 2024 reenactor portrait, WWII reflection, color historical photography.",
     "alt": "Reenactor in thoughtful pose, color portrait",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-6bPGKw2/0/Knw35wM84N3fXmHH83RJtKVQRZWc3XbgCL4sdfh6F/XL/_HF26145-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-6bPGKw2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-6bPGKw2/A",
     "keywords": [
       "D-Day Conneaut 2024",
       "WWII reenactment",
@@ -1725,7 +1725,7 @@ export const galleryData = [
   "description": "Color WWII portrait 'Camp Show Tour' by Wayne Heim. USO performers and crew taking a jeep tour of the camp, capturing human moments of morale and movement during wartime reenactment. Great for historical exhibits emphasizing support and community in conflict.",
   "alt": "USO crew on jeep tour of WWII camp",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-zV72KG6/0/Mqp92xCQ2mhD7P44KWVz3L4wChN572Mcr4DQ6LvQ7/XL/_O1H2405-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-zV72KG6/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-zV72KG6/A",
   "keywords": [
     "USO camp tour",
     "WWII morale portrait",
@@ -1748,7 +1748,7 @@ export const galleryData = [
   "description": "Minimal credit image by Wayne Heim. Simple branding shot used as a visual marker or placeholder in WWII portrait collections, reinforcing authorship and provenance.",
   "alt": "© Wayne Heim credit mark",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-ZTS4KNs/0/MdPkM35vhBGnbZwWhFhqZxWVwwCgkDjTtgtWCNGxg/XL/_O2H0025-Edit-2-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-ZTS4KNs/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-ZTS4KNs/A",
   "keywords": [
     "Wayne Heim credit",
     "WWII photography watermark",
@@ -1769,7 +1769,7 @@ export const galleryData = [
   "description": "Credit placeholder image by Wayne Heim. Serves to anchor the collection with author attribution, reinforcing authenticity in WWII reenactment portraiture galleries.",
   "alt": "© Wayne Heim",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Q8VN9bH/0/MzC5jxDPbvdt6sJF64RsZwr2Nz544LQfNdr4GD26S/XL/_O2H1641-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Q8VN9bH/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Q8VN9bH/A",
   "keywords": [
     "Wayne Heim copyright",
     "WWII portrait credit",
@@ -1790,7 +1790,7 @@ export const galleryData = [
   "description": "Wayne Heim credit image used within the WWII color portrait collection. A subtle reminder of authorship and the continuity of storytelling through reenacted history.",
   "alt": "Wayne Heim copyright mark",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-T98FKCW/0/M6K9fP2DbnjnSLCcmvXHGzVZGcjzrvgh49M37wHrf/XL/_O2H1647-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-T98FKCW/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-T98FKCW/A",
   "keywords": [
     "WWII author credit",
     "Wayne Heim mark",

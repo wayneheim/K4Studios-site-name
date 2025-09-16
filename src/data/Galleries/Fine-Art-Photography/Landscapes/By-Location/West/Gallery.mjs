@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "© Wayne Heim",
     "alt": "View from the Past: The Tetons",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MrgZ3TtkgxdML89hc8668gnZdMr6KcJBGCGpjsGds/XL/_IMG6130-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8XNRjZF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8XNRjZF/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -47,7 +47,7 @@ export const galleryData = [
     "description": "Muted rustic colored photograph of T.A. Moulton Barn with a single cowboy looking over the structure. This is one of the barns on Mormon Row near Jackson Hole Wyoming. Rustic textures of the old weathered barn are married with a muted pallet and presentation of the sunset adding the the \"historic\" feeling of the moment. © Wayne Heim",
     "alt": "End of The Day: A Cowboy's Reflection",
     "src": "https://photos.smugmug.com/photos/i-DKjkHL6/3/L5JtSkLgDJVk9B3D4MhqW7SxBKjxZqMQVvJXb3D8G/XL/i-DKjkHL6-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DKjkHL6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DKjkHL6/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -72,7 +72,7 @@ export const galleryData = [
     "description": "Majestic Ridge. Etna Wyoming. snow covered mountain side © Wayne Heim",
     "alt": "Majestic Ridge - After the Storm",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/KkdmKJR2WBpz6MbtCMxpDRFrsJ4VVzDt5zzNdt6mB/XL/P1030226-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WgGWH9C/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WgGWH9C/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -97,7 +97,7 @@ export const galleryData = [
     "description": "Clouds drifting aimlessly over golden plains.",
     "alt": "Drifting over high plains.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-cRWPFSz/10/LNj849Bdj2wp7L35QZRgWspXsJzms5FGQrtSn8SJN/XL/_WEH7838-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cRWPFSz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cRWPFSz/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -122,7 +122,7 @@ export const galleryData = [
     "description": "The Big Question mark is what a stream makes through the trees in this winter scene.©Wayne Heim",
     "alt": "Question River   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S7QHbjP/4/LDD8VtZN8ZmFVmX64jHKnLwb49cZZhtxhdhKJ3LC9/XL/P1020533-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-S7QHbjP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-S7QHbjP/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -147,7 +147,7 @@ export const galleryData = [
     "description": "Puff.",
     "alt": "Puff.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-cgSjPmT/4/KxwGRX5rVF55Q46rvT6KbnNpF8CwP5RwVzXgVCrHj/XL/P1020645-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cgSjPmT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cgSjPmT/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -172,7 +172,7 @@ export const galleryData = [
     "description": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming. ©Wayne Heim",
     "alt": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/MnzpLFDKBbmcS68D7Pf8wtCWqcXFg8zpX3ZzPb6sV/XL/P1020645-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tF8fFm4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tF8fFm4/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -197,7 +197,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
     "alt": "Evening Lake   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-R5vHcxf/4/KQvX2vZqfP477D4VzpSS8pSMdhTZPHQMRQK85H7wm/XL/_IGP2880-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-R5vHcxf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-R5vHcxf/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -222,7 +222,7 @@ export const galleryData = [
     "description": "Crystal: Lone tree with Ice crystals on snow. Idaho.©Wayne Heim",
     "alt": "Crystal  - black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/NPzwXcZNXxVcd4JrVnQh8zmZJxJc9SCkLhZHPJzv5/XL/fairy%2520tree-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-HgQBk3g/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-HgQBk3g/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -247,7 +247,7 @@ export const galleryData = [
     "description": "Approaching Zion- view of two areas approaching Zion National Park, Utah. ©Wayne Heim",
     "alt": "Approaching Zion. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-Dk4tMWB/3/KGxNT42PS6RfmJ7D8WZCcGkSvmjwqzxSzZWtz937n/XL/i-Dk4tMWB-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Dk4tMWB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Dk4tMWB/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -272,7 +272,7 @@ export const galleryData = [
     "description": "Last De-FENCE.  Wyoming - only tops of fence  posts show in this winter scene. © Wayne Heim",
     "alt": "Last De-FENCE  - Springtime in the Rockies",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-vh7p4gv/4/LCG4XnrwBnbJLBxmRJzrkqXBH88t5ftc4jtnz4tNG/XL/P1020959-b-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-vh7p4gv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-vh7p4gv/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -297,7 +297,7 @@ export const galleryData = [
     "description": "Black and white photograph of snow and clouds near Bondurant Wyoming. ©Wayne Heim",
     "alt": "Before and After. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NJktHPKhPttSSp4JxThRsMLdWv4G7JHB6ZmTHNsLs/XL/P1020966-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-VZ3N4km/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-VZ3N4km/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -322,7 +322,7 @@ export const galleryData = [
     "description": "White Paint - grove of aspen trees in the snow with one lone pine tree in background. ©Wayne Heim",
     "alt": "White Paint - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/Lqzwv74gj4W53BhNq4snr4f75rs2nBpZMrt8SCFps/XL/white-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-nwVhxGk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-nwVhxGk/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -347,7 +347,7 @@ export const galleryData = [
     "description": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
     "alt": "Grand Sunset Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wxLBqLg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wxLBqLg/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -372,7 +372,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
     "alt": "Standing Guard   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KdbpQB8pn8xDKQ3z9xkVPV3xfDN3MfdTpcvnB6j49/XL/_IGP2847-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4SmFT2v/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4SmFT2v/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -397,7 +397,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
     "alt": "Giants -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NB7mqSMMST55CR2wQ7hJRw4NZCS5CbV4ghQDfZMR6/XL/_IGP2936-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-XVdVWhm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-XVdVWhm/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -422,7 +422,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
     "alt": "Escarpment    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jb5HQM7/4/LCmvF4GPdBRTXSMcZMw4KW2xqTdPswtSSG3w6pLVc/XL/_IGP2999-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-jb5HQM7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-jb5HQM7/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -447,7 +447,7 @@ export const galleryData = [
     "description": "Deserted Barn with falling down fence. ©Wayne Heim",
     "alt": "Deserted Barn photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6Qt5RcK/3/NcnZsLD55n8DKsHPkFfhJFZKX2m2dc7LSsT4m6dkb/XL/_IGP3890-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6Qt5RcK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6Qt5RcK/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -472,7 +472,7 @@ export const galleryData = [
     "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
     "alt": "\"Meandering Stream\". Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8hwfnGn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8hwfnGn/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -497,7 +497,7 @@ export const galleryData = [
     "description": "Alone on Prairie - lone cabin on the plains in Wyoming ©Wayne Heim",
     "alt": "Alone on Prairie - Black & White Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/K7dksVbwgfHQbCs9cv6KXxfDtnKZKWb2HJ4VhCrMf/XL/_IMG6274-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Rh64N3s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Rh64N3s/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -522,7 +522,7 @@ export const galleryData = [
     "description": "Small  line cabin where men could stay while watching cattle.©Wayne Heim",
     "alt": "Line Cabin   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-SCWP4NP/3/KNL2jwRJNgdn95CbZzG397xgx2kq2Kq6qsz8H7XCm/XL/i-SCWP4NP-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SCWP4NP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SCWP4NP/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -547,7 +547,7 @@ export const galleryData = [
     "description": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming. ©Wayne Heim",
     "alt": "Better Days\". Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/LWtn7cWcpVrfN2rr53vzzpGxR8CWbBDjCbrKBfCZH/XL/_IMG6287-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-PmxqLBs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-PmxqLBs/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -572,7 +572,7 @@ export const galleryData = [
     "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
     "alt": "Old Fence - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NSd3PDZVPkwnnt43K5xGXSnmDjXcKtLGthvLBZWTF/XL/_IMG6295-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-PVbJdpj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-PVbJdpj/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -597,7 +597,7 @@ export const galleryData = [
     "description": "Hayloft - shows opening to the hayloft in an old barn. ©Wayne Heim",
     "alt": "Hayloft - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-X99RLdm/4/Ng7TL9s4L8v8zXv48RzFvvNtPsxQQ2txwvzPg6BX5/XL/_IMG6298-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-X99RLdm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-X99RLdm/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -622,7 +622,7 @@ export const galleryData = [
     "description": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building pears out into the daylight. ©Wayne Heim",
     "alt": "\"Out the Door\"",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/L7ZTVXTXn9Z7LSTqgXV86KWcwJNzDkRHZgDsVhbm6/XL/_IMG6301-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-S6m4mR2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-S6m4mR2/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -647,7 +647,7 @@ export const galleryData = [
     "description": "Old famous barn on Mormon row has weathered the years as seen in black & white. ©Wayne Heim",
     "alt": "Still Standing in Black & white    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8LMkTQg/4/NBBvfGjD4hh97Dkp6dvNhtP3kXK9wj2LrNK2pt3W7/XL/_img6307-edit-edit2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8LMkTQg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8LMkTQg/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -672,7 +672,7 @@ export const galleryData = [
     "description": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming. ©Wayne Heim",
     "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KM5kKrRQK3QzjcHqRmCgzmwSZsbFtMFx7Qcz2Sq3R/XL/_IMG6333-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-RFCHLhg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-RFCHLhg/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -697,7 +697,7 @@ export const galleryData = [
     "description": "Teton Mountain view looking out of the open barn door.. Looking out an old barn door at the Tetons. Dark isolation of inside of barn is shattered by the light streaming inside breaking the silence, while lurking in the distance is a view of the Grand and the Teton mountain range. ©Wayne Heim",
     "alt": "Tetons on the Outside",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/LkZMgr9JHMw2Lzzcf34GfCw86T87gpsZt5445r5ZP/XL/_IMG6333-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xZH95Bj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xZH95Bj/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -722,7 +722,7 @@ export const galleryData = [
     "description": "Old barn stands in front of Tetons.©Wayne Heim",
     "alt": "Alone on Prairie    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-sFJ4hBz/4/M4r3LD6ntPW64Q98xKqqh25FbmMxmcr9mLZsf2FrW/XL/_IMG6379-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sFJ4hBz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sFJ4hBz/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -747,7 +747,7 @@ export const galleryData = [
     "description": "Buttermilk Falls. Idaho",
     "alt": "Buttermilk Falls",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2Jr5X8d/4/NKqP7cC7LL3sm2fdWJrLG7zxWnRV8pFsSm8GDfcQf/XL/P1020471-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2Jr5X8d/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2Jr5X8d/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -772,7 +772,7 @@ export const galleryData = [
     "description": "Between Trees - T.A. Moulton Barn, a famous old barn, is viewed between or guarded by two cottonwood trees. The great golden protectors perfectly frame the scene and focus the attention on the barn and the Tetons in the background.  © Wayne Heim",
     "alt": "The Great Protectors - by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LPphtn4MNHxnG56s4XL6C945PXTwcJk8Pc7RTBb94/XL/_IMG6391-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Bdbf3L9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Bdbf3L9/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -797,7 +797,7 @@ export const galleryData = [
     "description": "Wyoming Road - lonely road across Wyoming with the Grand Tetons in background. ©Wayne Heim",
     "alt": "Wyoming Road - Black  & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/MbvZwgCMcRrdzB7hbtgfK5DpzkWWPxWwdftTH5bBd/XL/_IMG6439-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WmSkQXV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WmSkQXV/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -822,7 +822,7 @@ export const galleryData = [
     "description": "Wyoming road with mountains in background  \n©Wayne Heim",
     "alt": "Country Road   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-VBDWkZV/3/NfCrZKKQVBBMGLJnKh734ksrbGMRHpTvmpbH8GrSS/XL/i-VBDWkZV-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-VBDWkZV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-VBDWkZV/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -847,7 +847,7 @@ export const galleryData = [
     "description": "Western sky candy/ clouds over golden prairie.",
     "alt": "Western Sky Xandy.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-mvV5gWN/9/LpD5WgxmDpMzkF39X9Qq6JbLbRmXqkn3stMdPVhd5/XL/_WEH7842-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-mvV5gWN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-mvV5gWN/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -872,7 +872,7 @@ export const galleryData = [
     "description": "Black and white textures of Brice Canyon.",
     "alt": "Bryce Canyon",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RhMjXGk/8/LxL83mZjcGs63qSdcvd82Gdrddg22jW8gVmkDkwJt/XL/_WEH8022_tonemapped-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-RhMjXGk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-RhMjXGk/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -897,7 +897,7 @@ export const galleryData = [
     "description": "Wyoming highway life.",
     "alt": "On the road again. Wyoming.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-7FnMfnx/10/NKjbgsfBTRLP5QD7FTqtJrt29pkSVHPcV6zndQHB9/XL/_WEH8158-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7FnMfnx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7FnMfnx/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -922,7 +922,7 @@ export const galleryData = [
     "description": "\"Perseverance\" Old gnarled tree survives in Wyoming landscape. ©Wayne Heim",
     "alt": "Perseverance. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-BXnLp72/9/LFmZLQVV2bM37jnM9Bxh8R3spMtSwgRJVFdvkQkdV/XL/_WEH8409-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-BXnLp72/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-BXnLp72/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -947,7 +947,7 @@ export const galleryData = [
     "description": "Over the Hill - shot of a road going over a hill in western states. ©Wayne Heim",
     "alt": "Over the Hill -- Black & White Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/LK4mf7tJ66LJdw7Ph7qVXkBtfN8tLQTQpmbPCWqNV/XL/_WEH8495-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fCx77HN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fCx77HN/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -972,7 +972,7 @@ export const galleryData = [
     "description": "18 x 24 In StockErosion 2 - the eroded landscape of Utah  ©Wayne Heim",
     "alt": "Erosion 2  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-xBJqD6x/3/KQWHbZDdFNB74XnJ2s2zJVRmtkcGrVFKN66mGJ4zd/XL/i-xBJqD6x-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xBJqD6x/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xBJqD6x/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -997,7 +997,7 @@ export const galleryData = [
     "description": "Looking Up, black and white photo of mountain face looking towards the top. ©Wayne Heim",
     "alt": "Looking Up. Photography by Wayne Hein",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/KSGJbRbrxgPVP8GqZCtxT7bPqZ6cSNTHcKCBXF9kg/XL/_WEH9901-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-PPSGJGr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-PPSGJGr/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1022,7 +1022,7 @@ export const galleryData = [
     "description": "Three Peaks poke head up in desolate landscape, black and white photograph  ©Wayne Heim",
     "alt": "Three Peaks. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/LjGDjzkWmrXWsqJCZptxrPwb4TXWfGmdVvwdng2Z6/XL/_WEH9908-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Nj2t7F2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Nj2t7F2/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1047,7 +1047,7 @@ export const galleryData = [
     "description": "Test of Time --old roots of a tree are all that is left. ©Wayne Heim",
     "alt": "Test of Time - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-vsFH6hj/9/Kmx9SJbBkQQWzj4BVpxzwN6TRsm8FLPtn252fWbxT/XL/_WEH9914-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-vsFH6hj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-vsFH6hj/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1072,7 +1072,7 @@ export const galleryData = [
     "description": "Double Arches- view of two of the arches in Arches National Park in Utah. ©Wayne Heim",
     "alt": "Double Arches. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-7S934Ld/10/NNtBTfQsLRxmmmNMfmVdPGXbJmD36TwXPmvWBnjcj/XL/_WEH0011-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7S934Ld/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7S934Ld/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1097,7 +1097,7 @@ export const galleryData = [
     "description": "Sun is setting over the vast landscape of Utah.  ©Wayne Heim",
     "alt": "Sunset in Arches  #1   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-NdL9dGW/11/LnQthhvnJLR776WrJfHNCfpjZCr9zdWvKHwXHTbDC/XL/_WEH0098-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NdL9dGW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NdL9dGW/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1122,7 +1122,7 @@ export const galleryData = [
     "description": "18 x 24 In StockSunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
     "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/L5SQBSBXkkdGB8mq9twvkDTXBSSmgRVBNB8nZszXq/XL/_WEH0101-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-kcvnCvz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-kcvnCvz/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1147,7 +1147,7 @@ export const galleryData = [
     "description": "Canyon lands. Utah.",
     "alt": "Endless texture.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-M8FrQGL/11/MZ3zLGwWP2p3GRLsjVWjmZc9wMZ8Dq5wwgJrHZrjW/XL/_WEH0229-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-M8FrQGL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-M8FrQGL/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1172,7 +1172,7 @@ export const galleryData = [
     "description": "Sunset at Canyon Lands National Park in Utah.  ©Wayne Heim",
     "alt": "Sunset Over the Canyon   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-WvsDG8b/9/KvRHKWjMjZZ4PXcd6FwmbCwVW4pFrLt8GTH9Dkr2W/XL/_WEH0274-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WvsDG8b/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WvsDG8b/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1197,7 +1197,7 @@ export const galleryData = [
     "description": "Rutted road leads to the mountains in the background in Wyoming.  ©Wayne Heim",
     "alt": "Mountain Back Road   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-pVWz7xc/2/NVBG4BXSML3FrqBxLzNm6FzsRtjXNJGPmGtNcnDs8/XL/_WHZ7256-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pVWz7xc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pVWz7xc/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1222,7 +1222,7 @@ export const galleryData = [
     "description": "Stream with the Teton Mountains in the background. ©Wayne Heim",
     "alt": "Stream to the Tetons  Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/KPC64MvwM38vV6ddHM7xWrtPTmpwLrsFQ2Hkk6SFM/XL/_WHZ7505_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-P2MJv28/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-P2MJv28/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1250,7 +1250,7 @@ export const galleryData = [
     "description": "View of the Tetons from a Jenny Lake in Grand Teton National Park.\n©Wayne Heim",
     "alt": "Tetons from the River    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-ZRMbMjx/2/L775tMKqwFqFPCMs6RJmLj2RtJ9Hq8WqZV3s7nNZG/XL/_WHZ7538-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZRMbMjx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZRMbMjx/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1278,7 +1278,7 @@ export const galleryData = [
     "description": "Isolated old ranch house in Wyoming with Grand Tetons in background.  ©Wayne Heim",
     "alt": "Ye Olde Ranch House  Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-2xDqgqS/2/LQw4f72x6NT92SwVV3LbxHnWKT8nWCc4RpFt8KM3h/XL/_WHZ7636-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2xDqgqS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2xDqgqS/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1306,7 +1306,7 @@ export const galleryData = [
     "description": "The Grand  the highest  peak in the Grand Teton Mountains.  ©Wayne Heim",
     "alt": "The Grand  Peak   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/NL2GZBRLJKdjDz8sbBXFCTmbLXTfJVHpCd6bdckGJ/XL/_WHZ7862_tonemapped-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-R5CQpXg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-R5CQpXg/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1334,7 +1334,7 @@ export const galleryData = [
     "description": "Small river meanders through the pines in Wyoming.  ©Wayne Heim",
     "alt": "Meandering River    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-VRxrHwD/3/LKqBMBpSWv2XCfLnVc9V5DJ3k53x63wWFTGgHwfW8/XL/_WHZ8022-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-VRxrHwD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-VRxrHwD/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1362,7 +1362,7 @@ export const galleryData = [
     "description": "In Stock 18 x 24Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
     "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/K7m77774NtqWq8SRJKJkPPLsXPhCJ9GLpFgjTCptQ/XL/_WHZ8329-Pano-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dT6fKnc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dT6fKnc/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1390,7 +1390,7 @@ export const galleryData = [
     "description": "After the Fire. Trees in Wyoming.\n ©Wayne Heim",
     "alt": "Fire trees in Black and White    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/KZFdBGXg7kszhqHcDprn3LK8WJ4gc2JtxnB4R7psN/XL/_WHZ8397-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-p3wwjCQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-p3wwjCQ/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1418,7 +1418,7 @@ export const galleryData = [
     "description": "Looking at the Grand Teton Mountains from a river at the base. ©Wayne Heim",
     "alt": "River Mountain View  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-dt57xrq/2/LK99Wbz4svjVTVKr73M743nTqHBz9Fj9HJhQjg6cX/XL/_WHZ9476_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dt57xrq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dt57xrq/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1446,7 +1446,7 @@ export const galleryData = [
     "description": "Foreground river has flowed from the background mountains.  ©Wayne Heim",
     "alt": "Flows From Mountains   Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ckNQLBL/3/MD948FnPFpwLb6sfwRR5dsvjVcTnJDQmwnB64xTxx/XL/_WHZ9516-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ckNQLBL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ckNQLBL/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1474,7 +1474,7 @@ export const galleryData = [
     "description": "the majestic Grand Teton Mountains of Wyoming. ©Wayne Heim",
     "alt": "Grand Tetons     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-F3tf9C4/2/MWqFbH2rJkJN8882NjM3Gxfh6HWRTt3x7F6x8GpNg/XL/_OLY1274-Pano-Edit-Edit2-final-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-F3tf9C4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-F3tf9C4/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1502,7 +1502,7 @@ export const galleryData = [
     "description": "Famous Moulton Barn seen through two trees. Grand Tetons rise up behind this in Wyoming. ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/LG5HRcg7GntKTcQLbpZkHMSXgXwDxRWmtLfDDh7tP/XL/_WHZ9589-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9Zv7LRm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9Zv7LRm/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1530,7 +1530,7 @@ export const galleryData = [
     "description": "Sliver of a cloud forms a white tail as it appears to be caught on a tree at the foot of the Teton Mountains. Photo taken at sunrise just outside of Jackson Hole Wyoming.",
     "alt": "Cotton Tail",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-QNqpz9W/2/L5fVWhGSQ5FXtSB6ptb3R4R9PFZ7ZxWDt4Db5gztX/XL/_OLY1321-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QNqpz9W/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QNqpz9W/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1558,7 +1558,7 @@ export const galleryData = [
     "description": "The Grand  main summit of the Grand Teton Mountains. ©Wayne Heim",
     "alt": "The Grand    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-5vvB6PH/2/ND68X7j3hZbpPH7ZQthwCx2BnWVcTxmZFHdm4SF5K/XL/_OLY1590-Pano-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5vvB6PH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5vvB6PH/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1586,7 +1586,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-NRsfsrH/2/L2cqBhm5NHd2Rvv8GZRbGQc3ZV5qrD8FHPHsTrfT8/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NRsfsrH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NRsfsrH/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1614,7 +1614,7 @@ export const galleryData = [
     "description": "A herd of buffalo graze on the plains in Wyoming. ©Wayne Heim",
     "alt": "Where Buffalo Roam   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-hmsrXK6/2/NHJNdrkQhzxXkjN9Pb2hpDJPLcL2grXSDRMjFd3C6/XL/_WHZ9816-Edit2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hmsrXK6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hmsrXK6/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1642,7 +1642,7 @@ export const galleryData = [
     "description": "A peaceful river flows through the quiet Wyoming countryside. ©Wayne Heim",
     "alt": "Peaceful River  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-sVT8z89/2/Ng38zmD8X3cRBd768zC88mvMJpLT9dDPFwrWvnz6w/XL/_WHZ9821-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sVT8z89/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sVT8z89/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1670,7 +1670,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-bddbzmJ/2/K29NpP6mS78Jb3Z6r3S9dTdbSZBrqKK7h5QQn8D3G/XL/_WHZ9823-Pano-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-bddbzmJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-bddbzmJ/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1698,7 +1698,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-RHHbQPW/2/LkrGZBv9BVxLvnL4jZHkhzgKNsMWhPVtCz27kGn3Z/XL/_WHZ9829-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-RHHbQPW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-RHHbQPW/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1726,7 +1726,7 @@ export const galleryData = [
     "description": "Footbridge through the canyon.  \n©Wayne Heim",
     "alt": "Foot Bridge    Black & White  Photography  Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-F5qnBrS/3/KZHBS4xCJh4VHmp537S4zQZRp2RPCtxzFwSZVhSkk/XL/_WHZ0198_tonemapped_tonemapped-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-F5qnBrS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-F5qnBrS/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1754,7 +1754,7 @@ export const galleryData = [
     "description": "View of Devils Tower in Wyoming.  ©Wayne Heim",
     "alt": "Devils Tower    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fgtQxKW/2/NLcZKHwmzvMp9hBtmbZHxvKxVZmC99XFR5Zsks3fP/XL/_WHZ0298-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fgtQxKW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fgtQxKW/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1782,7 +1782,7 @@ export const galleryData = [
     "description": "Devil's Tower landmark in Wyoming. ©Wayne Heim",
     "alt": "Devil's Tower   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sbMQznL/7/MnK4DhTPSm8sRjjT3Xp5Mq7KtBZmNDpXN3bGRkP7m/XL/_WHZ0316_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sbMQznL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-sbMQznL/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1810,7 +1810,7 @@ export const galleryData = [
     "description": "What is around the bend in the Wyoming landscape?   ©Wayne Heim",
     "alt": "Around the Bend  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-dwvGWVf/4/M53sMHhvxcQjRMk9FQdkkcTW3CxfKvq9wv2wDwPcZ/XL/_WHZ0405-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dwvGWVf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dwvGWVf/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1838,7 +1838,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-vMNKH96/4/LRL9VkfBDzLv3k8KddBKFM3RqLLtZk8nFdRVcmtKb/XL/_WHZ0408-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-vMNKH96/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-vMNKH96/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1866,7 +1866,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "alt": "Canadian Rockies Peak and Pine Trees Reflecting on the Water",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-f8QrtJp/3/KnPBRzgN9vb7RBkr8Dsrm7M9LmpXD83cqwfBktKc3/XL/_WHZ2738-Pano2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-f8QrtJp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-f8QrtJp/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1894,7 +1894,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Ggkxvm8/0/KhvgMrkz38DRwQVQRdpdPzkqDRSkPGpq2qdFdk4ct/XL/_O1H0264-Edit-464-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Ggkxvm8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Ggkxvm8/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1922,7 +1922,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dGJDdP2/1/LMjfBpp6DtJJSfMGNjgBWNpVBKtGVd3s7Z22Wnmhq/XL/_DSF4943-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dGJDdP2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dGJDdP2/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1950,7 +1950,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WWng23V/0/NJ4FfzbDssVzwDspQg97gJnm8R7C9phxt5sF9RVRG/XL/_DSF4951-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WWng23V/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WWng23V/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -1978,7 +1978,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4Bf2zsv/0/LWGhwhQJhWjXWXvSvqtJKVqhQcSxrhBqpvStwRZpN/XL/_O1H0436-Pano-Enhanced-NR-593-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4Bf2zsv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4Bf2zsv/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -2006,7 +2006,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SSw3qvn/0/KKGRNHd3GpFM5XCq7dq6ZzWFQFjrDM9v4FrtrKk2t/XL/_O1H0422-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SSw3qvn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SSw3qvn/A",
     "keywords": [
       "wyoming",
       "grand tetons",
@@ -2034,7 +2034,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cSFvwcM/0/MGW69bfP2TQqTHHqg7Mj9KncWZdfc3Xjx4rCh438q/XL/_O1H0149-Enhanced-NR-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cSFvwcM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cSFvwcM/A",
     "keywords": [
       "wyoming",
       "grand tetons",

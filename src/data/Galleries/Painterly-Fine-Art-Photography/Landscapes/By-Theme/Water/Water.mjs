@@ -23,7 +23,7 @@ export const galleryData = [
     "description": "Just one of many un-named waterfalls in Iceland in the summer. Featuring Wayne's painterly landscape presentation.in the Summer. Painterly landscape photography style. © Wayne Heim",
     "alt": "Roadside Iceland Waterfall",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/NcWcVkdXcXZxhnV6zDSL7zL6PZp7PLQvX6DdJpV7V/XL/_DSF3048-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-Pgks2np/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-Pgks2np/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -108,7 +108,7 @@ export const galleryData = [
     "description": "Painterly photo of stormy day and lighthouse in Conneaut, OH. by © Wayne Heim Painterly landscape photography of water and waterfalls.",
     "alt": "Painterly Photography:  Lighthouse & Waves",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/KnkXBgcVtjCP4hzcqFfK6TZxB4Nr5bhtMZvzts2RD/XL/_OLY0581-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-sm7MXM4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-sm7MXM4/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -193,7 +193,7 @@ export const galleryData = [
     "description": "Painterly Photograph of the snow capped Teton mountains at Schwabachers Landing outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography done in Wayne's signture style of artful storytelling. Image showcases Western landscape photography of water and waterfalls. This fine art painterly mountain photography is © Wayne Heim.",
     "alt": "Painterly Mountain Photography - Teton Reflections - Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MTHjGNKd3p85VHRX7tJ45cVRFLCWfh2mSgbQWxT52/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-WfrdxRR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-WfrdxRR/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -278,7 +278,7 @@ export const galleryData = [
     "description": "Painterly Landscape Photography of sunrise and clouds over the beach in Conneaut Ohio. © Wayne Heim Painterly landscape photography of water and waterfalls.",
     "alt": "Painterly Photography:  Moring Clouds Over Lake Erie",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/LzhnR8kSWdcPVNvjgchcwcGvBqvFPpbH25g2sRGvR/XL/_PEN0005-Enhanced-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-QsskjT5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-QsskjT5/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -363,7 +363,7 @@ export const galleryData = [
     "description": "Painterly landscape photography of water and waterfalls.",
     "alt": "Painterly Photography: Horseshoe Bend at sunset.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/KnndTdfHQ9LCQCBwtb2MsbWCBbR577cpSZrSbsmjQ/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -448,7 +448,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls. © Wayne Heim",
     "alt": "Waterfall near Stuðlagil basalt Canyon. Iceland",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/NWBWTb7ZGtnGB8chsBTWTSKhj65tTr3g22XFRkBgf/XL/_OL35270-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-s4m4wp5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-s4m4wp5/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -533,7 +533,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls. © Wayne Heim",
     "alt": "Hengifoss Waterfall:  Another Iceland Waterfall",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/K8QtfPsW3RzgNd6VLBd3hTSrWLb3c2dS2xnFPzZPq/XL/_DSF2963-Pano-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-3tdkVSh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-3tdkVSh/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -618,7 +618,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls.",
     "alt": "On the way to Hengifoss.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MqRZPdWV2P4Q5Lp44mwDvX3r4cDz2RNKH3mfjkXgd/XL/_DSF2987-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-RRFGZvS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-RRFGZvS/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -703,7 +703,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls.",
     "alt": "Stuðlagil Canyon Colors",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/Mfq54M5pjT4vSdJNjPqwfMtq65Lq69LRFd3j8BVZL/XL/_ANA2501-Enhanced-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-TgVv6SZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-TgVv6SZ/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -788,7 +788,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls.",
     "alt": "Goðafoss Waterfall at sunset in Iceland",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/MRNgkHnLwGppdBmV3GPSf9TtpwKjmLNJ5SfWJCLBk/XL/_ANA2548-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-JdTbNvz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-JdTbNvz/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -873,7 +873,7 @@ export const galleryData = [
     "description": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Painterly Photography: - Tetons with Autumn Glow - Teton mountains with autumn colors and river - Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/LJrVDMCqCZhWd3kqvmS3G2cnVJDF2Sx454JnQDs6w/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-zk7zXP3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-zk7zXP3/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -958,7 +958,7 @@ export const galleryData = [
     "description": "Teton mountains reflecting in the stream at Schwabacher Landing in the fall near Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "In the Weeds - Tetons in Autumn - Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MQ8DN9x389fFjh3V5b3nDWZP8H7J85tPJLrvHqttn/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-N226DMX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-N226DMX/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1043,7 +1043,7 @@ export const galleryData = [
     "description": "Painterly landscape photography of water and waterfalls.",
     "alt": "Painterly Photography: Old Mill",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/KDptzFbZxRFjrsKdPbWSzvstCh3dw2t9dz4SQ9JBJ/XL/_WHZ6681-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-7LVp5bN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-7LVp5bN/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1128,7 +1128,7 @@ export const galleryData = [
     "description": "Painterly landscape photography of water and waterfalls in Yellowstone Wyoming.",
     "alt": "Painterly Photography: Yellowstone Waterfall",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/LgNzjbngDTzTMb6N5f6LzS2v7XwM8p7KCkngNGcPw/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-NHPCPhP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-NHPCPhP/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1213,7 +1213,7 @@ export const galleryData = [
     "description": "Painterly landscape photography of green canopy in the forest with stream running through the hills of Vermont.",
     "alt": "Forest Brook in Green",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/K3WHkRRR8kkRf7bvrDXkNhMPvHhwjkXSVfxgZMVhr/XL/_DSF5884-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-fgkX7Jn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-fgkX7Jn/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1298,7 +1298,7 @@ export const galleryData = [
     "description": "Old mill and waterfall highlighted by fall colors.",
     "alt": "Old Mill in the Fall",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LnGChwdNw638jTQKmFTcD3TmJNC4StDF2XhgRsfZQ/XL/_WHZ6667_8_9-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-mSp9WgK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-mSp9WgK/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1383,7 +1383,7 @@ export const galleryData = [
     "description": "Hidden waterfall in West Virginia.",
     "alt": "Hidden Falls",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/LXFDHGCGjwMtzJ6BxsDJhC9ztstzSkf7dbCrbnsZ6/XL/_DSF5574_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-NkNwLM6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-NkNwLM6/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1468,7 +1468,7 @@ export const galleryData = [
     "description": "Another hidden waterfall in the forest of West Virginia.",
     "alt": "Hidden Falls x2",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-nqpGhhX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-nqpGhhX/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1553,7 +1553,7 @@ export const galleryData = [
     "description": "Abstract view of waterfall at sunset.  in Vermont.",
     "alt": "Triangles",
     "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/M3GXBhdQGdVGjBJ7rR7D2NzRVkBjhtJT8sxg6p8Wh/XL/i-RjSqqDt-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-RjSqqDt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-RjSqqDt/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1638,7 +1638,7 @@ export const galleryData = [
     "description": "Abstract waterfall view showing the spillway and textures.",
     "alt": "50/50",
     "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/L88X9243jxcSVSczNpqx4HRZnVGpJ8RPpGFz8Smtn/XL/i-qM9zBVL-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-qM9zBVL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-qM9zBVL/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1723,7 +1723,7 @@ export const galleryData = [
     "description": "Waterfall in the woods.",
     "alt": "Down the hill.",
     "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MB757WTWqZdkccdVzDTz2KdvQVBb8mRcKtrk7DVdX/XL/i-5ZsWtSx-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-5ZsWtSx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-5ZsWtSx/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1808,7 +1808,7 @@ export const galleryData = [
     "description": "Cascading waterfall in the green forest.",
     "alt": "Vermont Waterfall",
     "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/LtDZ8prBjhG43S2H6ggt6bHJXFxXjcnWgDDmcSTSC/XL/i-fGnNkBL-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGnNkBL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGnNkBL/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1893,7 +1893,7 @@ export const galleryData = [
     "description": "Cascading waterfall through the forest over black rocks and surrounded by green forest.",
     "alt": "Colors of the forest.",
     "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/Kh4rjJLjV9fZtTw6DR2W2n2kf4WK9ddGMswJfgtbG/XL/i-qrS5Ggc-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-qrS5Ggc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-qrS5Ggc/A",
     "keywords": [
       "Iceland",
       "fine art",

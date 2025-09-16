@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Venice Canal - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/MkFmkKN8wqJsfdXHFPHkrMCLJfzQtTkGxnPm7wq5c/XL/P1000873-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-7VD9zVJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-7VD9zVJ/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -64,7 +64,7 @@ export const galleryData = [
     "description": "Mather Bunks  - one of the seaman's quarters on the William G Mather. ©Wayne Heim",
     "alt": "Mather Bunks -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/LFFhqJvHXJgN3gF3Zd7fz3k6mBb775XD6xCTMCcp6/XL/_IMG0301-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-vbVkS8z/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-vbVkS8z/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -106,7 +106,7 @@ export const galleryData = [
     "description": "Lynx -  the Tall Ship Lynx sails on Lake Erie in a visit to Cleveland, Ohio ©Wayne Heim",
     "alt": "Lynx  - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/Mnp4g58vSHVbGK4wmsgZjXDrmZtVjXKSfhrmtddnp/XL/WAYNE_HEIM_810-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-qXc8XpL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-qXc8XpL/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -148,7 +148,7 @@ export const galleryData = [
     "description": "Parade of the Tall Ship when they visited Cleveland, Ohio on Lake Erie. ©Wayne Heim",
     "alt": "Parade of Tall Ships     photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/NX2hpWVkFG62XHTtXM8gMdtxN32jtRFcTNNv95df3/XL/WAYNE_HEIM_822-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-hQ6LXhh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-hQ6LXhh/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -190,7 +190,7 @@ export const galleryData = [
     "description": "Final ship enters Cleveland Harbor during the Parade of Tall Ship. ©Wayne Heim",
     "alt": "Bringing Up the Rear  Photography  by Wayne hEIM",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/NbXmNnDWSm4nNmMNwCmLSCRpBRxfw9nWjBRQmpf4d/XL/_WEH7035-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-TkMGVM8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-TkMGVM8/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -232,7 +232,7 @@ export const galleryData = [
     "description": "Tall ship mast before the foreboding clouds.\n©Wayne Heim",
     "alt": "Mast Before the Storm   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LPxvDPxb3gWstMfGCJbfNkXNWMxkx739rqjXPscWm/XL/WAYNE_HEIM_827-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-DJqFfsq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-DJqFfsq/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -274,7 +274,7 @@ export const galleryData = [
     "description": "Fishing boats docked in the harbor of a village in the Faroe Islands. ©Wayne Heim",
     "alt": "Row of Fishing Boats   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/MfpZ9NpN5KDKCjMqCbdvKGnvv6kQ46g9k8b4b7dRQ/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -316,7 +316,7 @@ export const galleryData = [
     "description": "Fishing boats sit at rest in Faroe Harbor. \n©Wayne Heim",
     "alt": "The Faroe Boats   Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/KJWT8bpVNdFf2jkGgtMTqPkp6DkCtxBVSSWgNn8Sz/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -358,7 +358,7 @@ export const galleryData = [
     "description": "© Wayne Heim '21",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/MngFJ8MXMGKVprnxGQV5rXpR6Dgrdcjx4T3xm9QvX/XL/_ANA3176-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -400,7 +400,7 @@ export const galleryData = [
     "description": "© Wayne Heim '21",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/LcHLvDD3NSgCzZzzJzDmms9vcgnLCvrm9TkG23sXP/XL/_ANA3291-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-DS9wCpW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-DS9wCpW/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -442,7 +442,7 @@ export const galleryData = [
     "description": "© Wayne Heim '21",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MWZVT9WzkmpzJjvzJ8G5LwJ9G39LRSxb88tdRTRtw/XL/_ANA3303-Edit-2-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X88ZNb4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X88ZNb4/A",
     "keywords": [
       "Italy",
       "Venice",

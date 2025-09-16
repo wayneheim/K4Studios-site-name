@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Little One  - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Pets/i-s3nMQsB/3/K6bvrCvd6K7JgGw28BnJtbJ97dhb5xLDMcfLxpc99/XL/_IMG7650-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-s3nMQsB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-s3nMQsB/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -45,7 +45,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Dog Park - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/NFPB942X7TQrbHsKkPjxB4jH3pSqQ9SqtNbswcNrN/XL/_IMG3082-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-hBdhx6Q/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-hBdhx6Q/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -68,7 +68,7 @@ export const galleryData = [
     "description": "Hi there - young Westie pup looks inquisitively  at the camera. ©Wayne Heim",
     "alt": "Hi There -- Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Pets/i-pZxP9tV/3/LrCzJsQZhRKJzF9Jp28CBKZ5zb9b5v9z6bSK4HKWn/XL/_IMG3645-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-pZxP9tV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-pZxP9tV/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -91,7 +91,7 @@ export const galleryData = [
     "description": "Sydney --rescue Greyhound poses. ©Wayne Heim",
     "alt": "Greyhound    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7tpCc48/3/M92B7NbQc86qWk7dcQhKFh4RPzCk8n8fv7Tc2QxXS/XL/_IMG4090-2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7tpCc48/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7tpCc48/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -114,7 +114,7 @@ export const galleryData = [
     "description": "It Wasn't Me - little dog lays looking at you as if he did something wrong. ©Wayne Heim",
     "alt": "It Wasn't Me - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-SCKPhWW/4/KShTW4kNK5ZZKcnCXPcP3KVTdXwmdRtsLKHvf8XkW/XL/_IMG5510-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-SCKPhWW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-SCKPhWW/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -137,7 +137,7 @@ export const galleryData = [
     "description": "Water Play -  cat stares at stream of  running water getting ready to play with it. ©Wayne Heim",
     "alt": "Water Play - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-7PtnHmz/4/K9Kp2BRWW4kbgnH2qn7RKHFsmczwCFqrwztf2Jpkt/XL/_IMG5567-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7PtnHmz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7PtnHmz/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -160,7 +160,7 @@ export const galleryData = [
     "description": "Can I Go -- cat looks out of a gym bag asking to go too. ©Wayne Heim",
     "alt": "Can I Go - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-5mTvRhD/4/LnsxqS2DwmmzB4j9L29BS2cpF6chShkZvLtxXhtJb/XL/_IMG5576-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5mTvRhD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5mTvRhD/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -183,7 +183,7 @@ export const galleryData = [
     "description": "Chewie - portrait of a Chorkie who looks like Star Wars figure Chewbacca. ©Wayne Heim",
     "alt": "Chewie - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-BZ4RgGh/3/MGx92qb7pWPDjn8DzNj2jqNJtCxQGgqZm8K6gKtKJ/XL/_IGP3936-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-BZ4RgGh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-BZ4RgGh/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -206,7 +206,7 @@ export const galleryData = [
     "description": "Nice Kitty -- little girl holds her kitty while watching the camera.©Wayne Heim",
     "alt": "Nice Kitty - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-NHRCp22/5/KfdgJNrj62LRhZ2vZwCr7TKF7HxdmrbkQ9MWCSbZc/XL/P1050612-Editw-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-NHRCp22/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-NHRCp22/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -229,7 +229,7 @@ export const galleryData = [
     "description": "Peek a Boo - pet rat peeks over carpet. ©Wayne Heim",
     "alt": "Peek a Boo - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-CCNhBwc/3/KwzbWgnNfBcjfQP3khRMcCCJJQBLCTh5CvgqtKrKb/XL/_IMG4381-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-CCNhBwc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-CCNhBwc/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -252,7 +252,7 @@ export const galleryData = [
     "description": "Can I Get Down - a pet rat tries to get down from his bed. ©Wayne Heim",
     "alt": "Can I get Down - Photography by Wayne AHeim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-rhLNhpZ/3/MrcWDfKCV5TrsXQwz4Nrtg227QgtmH4CqpWRhw2Qn/XL/_IMG4392-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-rhLNhpZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-rhLNhpZ/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -275,7 +275,7 @@ export const galleryData = [
     "description": "Twins  - a boy holds his two gerbils. ©Wayne Heim",
     "alt": "Twins -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5JVMpJZ/3/LDS69QKNhhHQnMTBj7Qq7hr4rhgvFKbNGqLW2Z46p/XL/_IMG4442-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5JVMpJZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5JVMpJZ/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -298,7 +298,7 @@ export const galleryData = [
     "description": "Feels Good --cat scratched head on carpet covered stair. ©Wayne Heim",
     "alt": "Feels Good - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-V92pfNN/3/K8mvmtm8Tc7jbbKzxvsTvFr9hpTPjf4dNQhZGrK4D/XL/_IMG4489-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-V92pfNN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-V92pfNN/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -321,7 +321,7 @@ export const galleryData = [
     "description": "Trust  - cat's paw in human hand shows his trust of his owner. ©Wayne Heim",
     "alt": "Trust -- Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-dTH9cj4/3/Nb6dcHsJVMhvLgTmMqFHCPXxZ8v4gjsMXRDNTwPCM/XL/_IMG4528-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-dTH9cj4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-dTH9cj4/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -344,7 +344,7 @@ export const galleryData = [
     "description": "Cat in a Basket --pretty cat sits in a bushel basket looking inquisitively. ©Wayne Heim",
     "alt": "Cat in A Basket - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-tVmdphq/3/LbV3NxGnqZf7B4wxjNX5Tc9f6c4wqpHhdKk8CsTHf/XL/_IMG4543-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-tVmdphq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-tVmdphq/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -367,7 +367,7 @@ export const galleryData = [
     "description": "He is Mine - black and white photo of boy and his black Labrador Retriever. ©Wayne Heim",
     "alt": "He is Mine - Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Kids/i-bkZm3zs/3/LFWDkbbHdnvp2Mh4Fgb9LR926zpNRxgTLgMP6FjmC/XL/_IMG4635-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-bkZm3zs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-bkZm3zs/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -390,7 +390,7 @@ export const galleryData = [
     "description": "Best Friends -  boy and his dog are seen in moment of togetherness.©Wayne Heim",
     "alt": "Best Friends. Black & White Photograph by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-TJLXpHJ/5/LMxTMdZbn4MXMgbNkXNh3GXwRfX8MHF24dSFfTdD2/XL/_IMG4636-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-TJLXpHJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-TJLXpHJ/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -413,7 +413,7 @@ export const galleryData = [
     "description": "It's Mine -- Beagle dog holding a toy and his look is one of defying you to take it away. ©Wayne Heim",
     "alt": "It's Mine - Black and White Photogarphy by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-vPmTJp8/4/Kq62xRTD2wVpjcNg9G2WPsjLjdM8nPpGrK2Ch7FGS/XL/_IMG4744-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-vPmTJp8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-vPmTJp8/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -436,7 +436,7 @@ export const galleryData = [
     "description": "All Mine  - young boy embraces his dog. ©Wayne Heim",
     "alt": "All Mine -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-fMTtsT7/5/MP6bHn7rM4QxWp7rdRQDgxn77fKxRq9rRHVGV7NDc/XL/_IMG5081-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-fMTtsT7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-fMTtsT7/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -459,7 +459,7 @@ export const galleryData = [
     "description": "Cat in a Bag - young cat peeking out on a duffel bag. ©Wayne Heim",
     "alt": "Cat in a Bag _ Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/KKRcMCRsQP76T5KZKx24QjBMVpFhc5wzC6xB7jWBT/XL/_IMG5576-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/A",
     "keywords": [
       "k4 studios",
       "wayne heim",

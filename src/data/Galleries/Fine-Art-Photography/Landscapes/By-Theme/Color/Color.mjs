@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Sand Dunes. Vestrahorn Iceland",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-B3z9hrZ/7/NFDC8fmDK8sQ9hCq7Htzk3vWMLQzvJwSdRhx4QWZ8/XL/_DSF2624-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-B3z9hrZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-B3z9hrZ/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -105,7 +105,7 @@ export const galleryData = [
     "description": "Collection of the Best Iceland fine art landscape photography.",
     "alt": "Lava Fingers",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pLPp6pv/5/KwqjZfbtNmjtQbgBLs4C6LMsdRksHLwRwdSNTpMTg/XL/_OL35470-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-pLPp6pv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-pLPp6pv/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -188,7 +188,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Iceland in the Summer.",
     "alt": "Spring Lupine Flowers",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-VjpvmSB/8/KVp9JTmZLGgs6PgF6fRQFt4wZJgqfZSCzMKmMzWLm/XL/_ANA2004-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VjpvmSB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VjpvmSB/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -271,7 +271,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Vm7vR4f/1/KH6qfV7dSM2v7xRQ9qbrLZZmXXBs2TC9Nm4kTcKwB/XL/_ANA1025-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-Vm7vR4f/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-Vm7vR4f/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -354,7 +354,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-c4qSzm6/2/NV8FRwnJZ5Lj3zghWgZ4RcC4D9tm3882pfWt6cFwJ/XL/_ANA0922_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-c4qSzm6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-c4qSzm6/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -437,7 +437,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NMRNtrB/1/LfRVH6QKPkPzfvg8gFDjd5mBTp7CkGQvJS4N9MkxL/XL/_ANA0906_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-NMRNtrB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-NMRNtrB/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -520,7 +520,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KG32NV6/1/MsMVLt2L4Hntd3nJhC96DMf985rGW6qxLtgzZ2gFD/XL/_ANA0901_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-KG32NV6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-KG32NV6/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -603,7 +603,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ZxWZpmH/4/K3CHz8rf2D46nhLvmCCsnPfTRNqC9ZqLL3rMrP3SC/XL/_ANA0881-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-ZxWZpmH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-ZxWZpmH/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -686,7 +686,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-2d2fgNW/3/MLpP7tZwwgcqxhxwpRH6kQBCxgXCwJ8bDWKMktXSM/XL/_ANA0936_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-2d2fgNW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-2d2fgNW/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -769,7 +769,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-p2Hdrmc/1/NCvJjpMghVM64fPZWhjMc9Z8XFDwHTvDjsNfWH9Rc/XL/_ANA1236-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-p2Hdrmc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-p2Hdrmc/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -852,7 +852,7 @@ export const galleryData = [
     "description": "Fine art painterly photography of light shining through the trees.",
     "alt": "Painterly Landscape Photo: Light through trees.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/KqQqStXbQXJS6SSHqXm7NbHrFb35TJ3zP9RnDMmpd/XL/_ANA1097-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VHMgr5J/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VHMgr5J/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -935,7 +935,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-FGWfXBM/2/MbxdLwcm83V5mXfpfPKPBMDP7sKx6QQ3MzzSrn24v/XL/_ANA1034-Pano-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-FGWfXBM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-FGWfXBM/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1018,7 +1018,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-gr3rsVB/1/KSJzVZzrCkmBZNxk3QdmG3g8tP7Hv9FcQQbqpFWST/XL/b6d4160a7f0ca7a337974b5c3bcedd9-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-gr3rsVB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-gr3rsVB/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1101,7 +1101,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "alt": "The Sun Shining on a Pine Tree Sapling Growing on a Rock",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-V94r3Sb/3/KDNbxRRGGjGNx96SSWcNNTRvQkNtFzjG3VPQchjbW/XL/_WHZ4422-sharpen-stabilize-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-V94r3Sb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-V94r3Sb/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1184,7 +1184,7 @@ export const galleryData = [
     "description": "Colorful row of boat houses in the Faroe Islands. ©Wayne Heim",
     "alt": "Boat Houses     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-tZLkQzn/2/LBqNsQb6WxnhJG72b6TkZPpkBJPwQjmHJLP54scSf/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-tZLkQzn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-tZLkQzn/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1267,7 +1267,7 @@ export const galleryData = [
     "description": "Sheep graze peacefully in a field  of Iceland.\n©Wayne Heim",
     "alt": "Woolly Iceland   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VhDJfhj/7/MhpSVnTh4bLf3dLdGrSvNcTMK6mgZ6TNCVdTDBzm8/XL/_K1W3498_tonemapped-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VhDJfhj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-VhDJfhj/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1350,7 +1350,7 @@ export const galleryData = [
     "description": "Shelters for livestock dot the hillside.  ©Wayne Heim",
     "alt": "Shelters    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-XFRSBrL/6/LRrf4wt5ZCnqp9KRZdWDthMnxv5bTsLXmwZWHbq9B/XL/_WHZ9850-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-XFRSBrL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-XFRSBrL/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1433,7 +1433,7 @@ export const galleryData = [
     "description": "Lighthouse is located in the Faroe Islands.\n©Wayne Heim",
     "alt": "Faroe Lighthouse   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-83tPbLW/6/LBDVDPjzJxDQKbJCgFsWSjPXCng5GX6fdVVsMpfcB/XL/_WHZ9786_tonemapped-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-83tPbLW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-83tPbLW/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1516,7 +1516,7 @@ export const galleryData = [
     "description": "View of sea from walkway blocked by gate. ©Wayne Heim",
     "alt": "Faroe Gate   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-nxGfZNp/6/LMJp49r2GKBjr4z6XhFqBG5S4gxZk3VZnndSM9CG3/XL/_K1W3072_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-nxGfZNp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-nxGfZNp/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1599,7 +1599,7 @@ export const galleryData = [
     "description": "Huge rocks litter the hillside in the Faroe Islands.\n©Wayne Heim",
     "alt": "Big Rocks    PHotogrphy by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-TRtWkLG/6/MrLC3VfcqkcgnKZpWsqJrKjC92RJjp9SzmDd8NvMC/XL/_WHZ8989-Pano_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-TRtWkLG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-TRtWkLG/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1682,7 +1682,7 @@ export const galleryData = [
     "description": "Rainbow in Iceland seem to end at the little house",
     "alt": "End of the Rainbow in Iceland  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-TPsBSVZ/7/MKJsm2jSvwjQPPKJ3DQMqLbvHHsHJTQrPdq2SqRSq/XL/_K1W2950-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-TPsBSVZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-TPsBSVZ/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1765,7 +1765,7 @@ export const galleryData = [
     "description": "Some of the sight you see when hiking the glaciers in Iceland.  ©Wayne Heim",
     "alt": "Hiking the Glacier  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-xh9HRXJ/6/L4FtHZXqJjHhsXt2Jbgfx9NzvRtRZtHQVWVvN22cS/XL/_OLY5146-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-xh9HRXJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-xh9HRXJ/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1848,7 +1848,7 @@ export const galleryData = [
     "description": "You are in an ice cave looking up through a whole in the top of the glacier.  ©Wayne Heim",
     "alt": "Looking Up Through the Ice  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-5xqVf2N/6/KVznFm4L6h5cV3jKKTqXSjXtV4RCB25WjBgh6QP2p/XL/_WHZ2168-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-5xqVf2N/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-5xqVf2N/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -1931,7 +1931,7 @@ export const galleryData = [
     "description": "This dramatic shot is of the inside of a glacier cave in Iceland.   ©Wayne Heim",
     "alt": "Cold Inside     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-HSgTpdm/6/KPvXvSXjCzwmBfwfNkQ5Q5vQpr2WVwpjqQv6ZNgCx/XL/_WHZ2161-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-HSgTpdm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-HSgTpdm/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2014,7 +2014,7 @@ export const galleryData = [
     "description": "Looking out from one of the many glacier caves in Iceland ©Wayne Heim",
     "alt": "Glacier Cave   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-JDqV2sQ/6/MK2fXW5nB8DDCmzP8zx5S7bzXxZpJwqJ6LNmZmLQC/XL/_WHZ2054-Pano-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-JDqV2sQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-JDqV2sQ/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2097,7 +2097,7 @@ export const galleryData = [
     "description": "What is around the bend in the road in Wyoming.  ©Wayne Heim",
     "alt": "Around the Bend 2  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-v33BRwG/7/NZfpPfcNcFcrC2TjBHhmBZGZkkJP5bDzsJqPDHTjh/XL/_WHZ0405-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-v33BRwG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-v33BRwG/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2180,7 +2180,7 @@ export const galleryData = [
     "description": "A peaceful river flows through the quiet Wyoming countryside. ©Wayne Heim",
     "alt": "Peaceful River  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-sVT8z89/2/Ng38zmD8X3cRBd768zC88mvMJpLT9dDPFwrWvnz6w/XL/_WHZ9821-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-sVT8z89/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-sVT8z89/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2263,7 +2263,7 @@ export const galleryData = [
     "description": "Grove of aspen trees in the fall outside of Jackson Hole Wyoming.  ©Wayne Heim",
     "alt": "Painterly photography: Aspen Fall",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/LFt4mjqfDJ2Q4bLTGM4mX9zzRMsV8zMC3D3NJmRLK/XL/Painterly%2520Landscape%2520Photo_WHZ7378_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-7hz5LWz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-7hz5LWz/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2346,7 +2346,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
     "alt": "Stairs to the Lighthouse  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/Mh3kQ2fXD3GPxkHnH2X9gxRs7x2qp2J5BQNn7WZSt/XL/_WHK3201_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-mTV4SXC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-mTV4SXC/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2429,7 +2429,7 @@ export const galleryData = [
     "description": "18 x 24 In StockErosion 2 - the eroded landscape of Utah  ©Wayne Heim",
     "alt": "Erosion 2  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-xBJqD6x/3/KQWHbZDdFNB74XnJ2s2zJVRmtkcGrVFKN66mGJ4zd/XL/i-xBJqD6x-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-xBJqD6x/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-xBJqD6x/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2512,7 +2512,7 @@ export const galleryData = [
     "description": "Sunset at Canyon Lands National Park in Utah.  ©Wayne Heim",
     "alt": "Sunset Over the Canyon   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-WvsDG8b/9/KvRHKWjMjZZ4PXcd6FwmbCwVW4pFrLt8GTH9Dkr2W/XL/_WEH0274-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-WvsDG8b/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-WvsDG8b/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2595,7 +2595,7 @@ export const galleryData = [
     "description": "Double Arches- view of two of the arches in Arches National Park in Utah. ©Wayne Heim",
     "alt": "Double Arches. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-7S934Ld/10/NNtBTfQsLRxmmmNMfmVdPGXbJmD36TwXPmvWBnjcj/XL/_WEH0011-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-7S934Ld/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-7S934Ld/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2678,7 +2678,7 @@ export const galleryData = [
     "description": "One of the many plateaus in Bryce Nation Park  ©Wayne Heim",
     "alt": "Plateau in Sky     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-GH3g3bV/9/KWW7797X4XqrsBwdRHMW5BLkLK7HHLhM5JpkTHfG3/XL/_WEH8021-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-GH3g3bV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-GH3g3bV/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2761,7 +2761,7 @@ export const galleryData = [
     "description": "Looking up from the floor of the Narrows in Zion National Park. ©Wayne Heim",
     "alt": "Looking Up   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-BBj6j4Q/9/NHV3wB7MXZMLSxGmLNS3GbzfJXDWsNwcFFHBRFhCR/XL/_weh8783-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-BBj6j4Q/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-BBj6j4Q/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2844,7 +2844,7 @@ export const galleryData = [
     "description": "18 x 24 In StockSunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
     "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/L5SQBSBXkkdGB8mq9twvkDTXBSSmgRVBNB8nZszXq/XL/_WEH0101-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-kcvnCvz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-kcvnCvz/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -2927,7 +2927,7 @@ export const galleryData = [
     "description": "Painterly photography. Forest Path , quiet path through the woods of Hocking Hills in Ohio ©Wayne Heim",
     "alt": "Forest Path. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/KSgPnQ23vkk4qfHKhbBwQZq4m7XHQdRBCZ2SQXLjm/XL/_igp2989-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-zXsjXwN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-zXsjXwN/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3010,7 +3010,7 @@ export const galleryData = [
     "description": "The Rock Bridge near Old Man's Cave in Hocking Hills Park.©Wayne Heim",
     "alt": "The Rock Bridge   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-gWV8wV3/9/L4G64NKbdmgFvpPQkxNTJS9DQ5XqNTkRbZrvtQB3N/XL/_IGP3307-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-gWV8wV3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-gWV8wV3/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3093,7 +3093,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
     "alt": "Grand Canyon of the East    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-rW68r3t/3/M7Nv3ZdW3pD3zNCMjJ9q3TnX4HNJRmRK3HnVSbSVs/XL/_IMG6723-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-rW68r3t/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-rW68r3t/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3176,7 +3176,7 @@ export const galleryData = [
     "description": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .©Wayne Heim",
     "alt": "Angry Sunset . Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/KmB9ZzrVwCMqr8Jwq8twx8NrGQbC8xwrvzbfC8jdk/XL/_IMG6094-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-2qqHRQ6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-2qqHRQ6/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3259,7 +3259,7 @@ export const galleryData = [
     "description": "Sunset at the Farm -  sunsetting behind a rural farm outlining the buildings.©Wayne Heim",
     "alt": "Sunset at the Farm.  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/LMSzG6FV5v49kCfc4LqD2RzmccDHT4nGBm4vX68P4/XL/_IMG6008-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-zrvTR9s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-zrvTR9s/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3342,7 +3342,7 @@ export const galleryData = [
     "description": "Road sign indicate go left as road foes along a gorge. ©Wayne Heim",
     "alt": "Go Left   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-qmfkzcG/4/KzVHRLBqDFF63GVxvBCFqXjJpg3NSM3xGW8vVcJsF/XL/_IMG6054-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-qmfkzcG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-qmfkzcG/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3425,7 +3425,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-J6CS9dN/1/M2D35bdhgV46DNJ6xVm85DFCHsWqXrSv2DtG7Qqdd/XL/_O1H0454-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-J6CS9dN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-J6CS9dN/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3508,7 +3508,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4rJVZLg/0/KVdKkQVxwN3Ww54dFLLKBHS4tHXvVkgKzbsBTPXqb/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-4rJVZLg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-4rJVZLg/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3591,7 +3591,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4S3C7Hx/0/NKvBxzbqzs84RbR4V4prJ2C5PTCLCCg7R3nvCnxzx/XL/_O1H0485-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-4S3C7Hx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-4S3C7Hx/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3674,7 +3674,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-h7Rcxmr/0/MCgMh8kzWcLNWWKx9KfGQ8qHvNZ4bg2dkdWj3mWHr/XL/_DSF5771_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-h7Rcxmr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-h7Rcxmr/A",
     "keywords": [
       "Iceland",
       "fine art",
@@ -3757,7 +3757,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-68NCBvz/0/KXSMrN2CzwVTHJMDPcptpdcrNm2RpLvR5T9RbrcbJ/XL/_DSF5984_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-68NCBvz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-68NCBvz/A",
     "keywords": [
       "Iceland",
       "fine art",

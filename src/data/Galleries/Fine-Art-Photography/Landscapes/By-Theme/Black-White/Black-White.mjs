@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Grandma's Garage. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/NNtHt7gx8Sk9WGqjPfJw4M2cK8p8dGDTpXRtRxpkj/XL/_IMG0458-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-ZgXTnCV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-ZgXTnCV/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -50,7 +50,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/KSQ49Grhs4DRSZScgCgLqJ4LfnXFVj4wLq6BsHL7P/XL/_DSF5771-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2MmTpqQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2MmTpqQ/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -78,7 +78,7 @@ export const galleryData = [
     "description": "White Paint - grove of aspen trees in the snow with one lone pine tree in background. ©Wayne Heim",
     "alt": "White Paint - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/Lqzwv74gj4W53BhNq4snr4f75rs2nBpZMrt8SCFps/XL/white-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-nwVhxGk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-nwVhxGk/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -106,7 +106,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
     "alt": "Black & White Photo of a Pine Tree Growing on Top of a Rock",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-sNtN8KK/3/LQxkm2DGrGWXKpZzpD2BLT3GXDKvQXCGncM5Xv4bq/XL/_WHZ4422-sharpen-stabilize-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sNtN8KK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sNtN8KK/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -134,7 +134,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-WNk5sxX/1/KN4CPzKhjFVJ9gcVRvx9dQ9nRVz4Cv49FHtTxk2dJ/XL/e6e70fccf9ca06f1695cfbb2d508c994-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-WNk5sxX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-WNk5sxX/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -162,7 +162,7 @@ export const galleryData = [
     "description": "Crystal: Lone tree with Ice crystals on snow. Idaho.©Wayne Heim",
     "alt": "Crystal  - black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/NPzwXcZNXxVcd4JrVnQh8zmZJxJc9SCkLhZHPJzv5/XL/fairy%2520tree-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-HgQBk3g/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-HgQBk3g/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -190,7 +190,7 @@ export const galleryData = [
     "description": "Black and white photograph of snow and clouds near Bondurant Wyoming. ©Wayne Heim",
     "alt": "Before and After. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NJktHPKhPttSSp4JxThRsMLdWv4G7JHB6ZmTHNsLs/XL/P1020966-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VZ3N4km/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VZ3N4km/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -218,7 +218,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
     "alt": "Giants -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NB7mqSMMST55CR2wQ7hJRw4NZCS5CbV4ghQDfZMR6/XL/_IGP2936-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-XVdVWhm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-XVdVWhm/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -246,7 +246,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
     "alt": "Texture -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-VQR6R5v/4/KQhTBBRdWRWn8rqFmDrL7wHTB8vBK3V2GVp3TbLFS/XL/_IGP3066-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VQR6R5v/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VQR6R5v/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -274,7 +274,7 @@ export const galleryData = [
     "description": "Close up view of the lighthouse on Faroe Islands.   ©Wayne Heim",
     "alt": "Faroe Island Lighthouse    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/3/NWjJ3CxnQrvG7hzcSdCpHDBW2v5VjSwV2vqZtqRPk/XL/_WHZ9796_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -302,7 +302,7 @@ export const galleryData = [
     "description": "Snowy Bend, Road along the Chagrin River in Gates Mills, Ohio Heavy snow is falling  ©Wayne Heim",
     "alt": "Snowy Bend. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/KFx67WN4w4b4FF57ZNQsqHSpbvftjNrh2BHpvMxjr/XL/_IMG0573-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2N4ghBL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2N4ghBL/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -330,7 +330,7 @@ export const galleryData = [
     "description": "Alone on Prairie - lone cabin on the plains in Wyoming ©Wayne Heim",
     "alt": "Alone on Prairie - Black & White Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/K7dksVbwgfHQbCs9cv6KXxfDtnKZKWb2HJ4VhCrMf/XL/_IMG6274-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Rh64N3s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Rh64N3s/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -358,7 +358,7 @@ export const galleryData = [
     "description": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming. ©Wayne Heim",
     "alt": "Better Days\". Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/LWtn7cWcpVrfN2rr53vzzpGxR8CWbBDjCbrKBfCZH/XL/_IMG6287-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PmxqLBs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PmxqLBs/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -386,7 +386,7 @@ export const galleryData = [
     "description": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building pears out into the daylight. ©Wayne Heim",
     "alt": "\"Out the Door\"",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/L7ZTVXTXn9Z7LSTqgXV86KWcwJNzDkRHZgDsVhbm6/XL/_IMG6301-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-S6m4mR2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-S6m4mR2/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -414,7 +414,7 @@ export const galleryData = [
     "description": "Black and white photograph of cowboy overseeing the Mormon Row Barn. ©Wayne Heim",
     "alt": "Moulton Barn, Jackson Hole Wyoming. Photograph by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/4/MKdXkLhmdgWr9D6k7dzx52TMc8ZHhM5r3w8Rfbwpb/XL/_img6307-edit-edit2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -442,7 +442,7 @@ export const galleryData = [
     "description": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming. ©Wayne Heim",
     "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KM5kKrRQK3QzjcHqRmCgzmwSZsbFtMFx7Qcz2Sq3R/XL/_IMG6333-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RFCHLhg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RFCHLhg/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -470,7 +470,7 @@ export const galleryData = [
     "description": "Homestead - shows an old homestead in Wyoming. ©Wayne Heim",
     "alt": "Homestead - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/KWB4gKfLCqbcnRBhC4gKVnGVqqk6XJvhTWfmRCbf7/XL/_IMG6414-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-32QwpNJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-32QwpNJ/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -498,7 +498,7 @@ export const galleryData = [
     "description": "Wyoming Road - lonely road across Wyoming with the Grand Tetons in background. ©Wayne Heim",
     "alt": "Wyoming Road - Black  & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/MbvZwgCMcRrdzB7hbtgfK5DpzkWWPxWwdftTH5bBd/XL/_IMG6439-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-WmSkQXV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-WmSkQXV/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -526,7 +526,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
     "alt": "View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-c8XWk8P/4/M5QqCfMrQbfqFqdfwCJKkrT5v6NPtPXbhJSfJd5WZ/XL/_IMG6723-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-c8XWk8P/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-c8XWk8P/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -554,7 +554,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Las Vegas, Nevada.",
     "alt": "Urban Growth    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Las-Vegas/Vegas/i-vjBFwm7/3/LwsqMxd8BX7TPQwtQzzw9rgnHsVKnfHCCgZRDQCHT/XL/_WEH7672-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-vjBFwm7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-vjBFwm7/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -582,7 +582,7 @@ export const galleryData = [
     "description": "\"Erosion\" B/W landscape photo of Bryce Canyon formations and clouds in Bryce Canyon National Park, Utah. ©Wayne Heim",
     "alt": "Erosion",
     "src": "https://photos.smugmug.com/photos/i-cJDBjjD/3/KHB2gGrxdT8MWHsfhdw9vgFKgMWx9fCVTxPRD5q4V/XL/i-cJDBjjD-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-cJDBjjD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-cJDBjjD/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -610,7 +610,7 @@ export const galleryData = [
     "description": "Night Highway - night travel through Utah. ©Wayne Heim",
     "alt": "Night Highway - Black & white Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Jh262Z7/10/KHhxRZd49vnd25HdbwP4CjZhSd9KvxsxcZd8Dshh6/XL/_WEH8126-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Jh262Z7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Jh262Z7/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -638,7 +638,7 @@ export const galleryData = [
     "description": "Over the Hill - shot of a road going over a hill in western states. ©Wayne Heim",
     "alt": "Over the Hill -- Black & White Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/LK4mf7tJ66LJdw7Ph7qVXkBtfN8tLQTQpmbPCWqNV/XL/_WEH8495-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-fCx77HN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-fCx77HN/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -666,7 +666,7 @@ export const galleryData = [
     "description": "Canyon Clouds - shows threatening clouds over Bryce Canyon in Utah. ©Wayne Heim",
     "alt": "Canyon Clouds - Black  & White Photography by Wayne Heinm",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RLJhSZ8/8/LbSHRcfT6xZJTCKLJzdRczCPZSxZGQwmPLwNVVGLm/XL/_WEH8881-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RLJhSZ8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RLJhSZ8/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -694,7 +694,7 @@ export const galleryData = [
     "description": "Looking Up, black and white photo of mountain face looking towards the top. ©Wayne Heim",
     "alt": "Looking Up. Photography by Wayne Hein",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/KSGJbRbrxgPVP8GqZCtxT7bPqZ6cSNTHcKCBXF9kg/XL/_WEH9901-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PPSGJGr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PPSGJGr/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -722,7 +722,7 @@ export const galleryData = [
     "description": "Three Peaks poke head up in desolate landscape, black and white photograph  ©Wayne Heim",
     "alt": "Three Peaks. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/LjGDjzkWmrXWsqJCZptxrPwb4TXWfGmdVvwdng2Z6/XL/_WEH9908-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Nj2t7F2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Nj2t7F2/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -750,7 +750,7 @@ export const galleryData = [
     "description": "Arch View - sunset as see through a rock arch in Zion National Park. ©Wayne Heim",
     "alt": "Arch View - Black  & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fC7SBVp/11/L8sS6Qt7zTd9PbqF7ZPSKw4dqXHpg2CD5WM5K44q9/XL/_WEH0034-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-fC7SBVp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-fC7SBVp/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -778,7 +778,7 @@ export const galleryData = [
     "description": "Aspen Blockade - thick stand of Aspen trees seem to form a blockade. ©Wayne Heim",
     "alt": "Aspen Blockade - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-MdQLNhm/9/MW8CFSVwBntwKBdDmFGVH5VwgTMQtKgwRLnDdzCjh/XL/_WEH0488-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-MdQLNhm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-MdQLNhm/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -806,7 +806,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "alt": "Scenic Walkway. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/MkBrBk29XvPv3QC8NhdwvKdLj2rgRRSmsTMtV2NRm/XL/_WEH7202-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-b3F54M6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-b3F54M6/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -834,7 +834,7 @@ export const galleryData = [
     "description": "Rock Perspective - looking up the sheer rock wall in one area of the Akron Metro Parks. ©Wayne Heim",
     "alt": "Rock Perspective - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-RFkJ7Jz/4/Lk7djWxQskhHFB6z4mqns9bj2Ftj6GN6kRTbz9drc/XL/i-RFkJ7Jz-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RFkJ7Jz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RFkJ7Jz/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -862,7 +862,7 @@ export const galleryData = [
     "description": "Best Walkway -  trail around the Walter C Best Wildlife Preserve in Chardon, Ohio. ©Wayne Heim",
     "alt": "Best Walkway - Black & White Photography by  Wayne Hein",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-XXszFrn/4/KmXwJgSKxhF5fdVGBqrWpKxtj6TfwVV5MFBSJhgkR/XL/_W3H9096-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-XXszFrn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-XXszFrn/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -890,7 +890,7 @@ export const galleryData = [
     "description": "After the Fire. Trees in Wyoming.\n ©Wayne Heim",
     "alt": "Fire trees in Black and White    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/KZFdBGXg7kszhqHcDprn3LK8WJ4gc2JtxnB4R7psN/XL/_WHZ8397-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-p3wwjCQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-p3wwjCQ/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -918,7 +918,7 @@ export const galleryData = [
     "description": "Wide expanse of grassland in Wyoming.\n ©Wayne Heim",
     "alt": "Wide Prairie   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/4/MvwMXRFSSDJ6SJFSLTT7gZJtqTL64f832r9z8gbF2/XL/_WHZ0408-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -946,7 +946,7 @@ export const galleryData = [
     "description": "Church stand apart on the prairie with a few outbuildings. ©Wayne Heim",
     "alt": "Prairie Church   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/5/KPP6BSdrnnhNcbxGjPd3zGq4F6VfD7qdtz7FrNmWK/XL/_WHK3261-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -974,7 +974,7 @@ export const galleryData = [
     "description": "In Stock 9 x 12 AluminiumChurch stands alone on the western Iceland landscape. ©Wayne Heim",
     "alt": "Prairie Church  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/3/L8rD2htv9x679DnzpKLDR8xWrZ3rZs3KdfhWFSjXS/XL/_WHZ0950-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1002,7 +1002,7 @@ export const galleryData = [
     "description": "Lone Church silhouetted against the hills in the background.  ©Wayne Heim",
     "alt": "Distant Church  Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/4/LsS4F55zhpWDrxsFfrPZvfNJH8VZp6P8tjkrhFJhb/XL/_WHZ0981-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1030,7 +1030,7 @@ export const galleryData = [
     "description": "Vik wall on the black sand beaches of Iceland where the Game of  Thrones was filmed.\n©Wayne Heim",
     "alt": "Vik Wall  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/4/MvRdPS8bCvgn7tB9gCbmLCWnJ44mPg88W77Xt2Z9X/XL/_WHZ1939-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1058,7 +1058,7 @@ export const galleryData = [
     "description": "Whole in the wall of the glacier is actually the entrance to a cave.©Wayne Heim",
     "alt": "Hole in the Wall  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/4/MZwNG2rhxfkBShtttwmdphL7Nwk5mKCNqPjWHtZpz/XL/_WHZ2072-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1086,7 +1086,7 @@ export const galleryData = [
     "description": "This is a view looking out of a glacial cave entrance in Iceland. ©Wayne Heim",
     "alt": "Cave Entrance   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/4/MZthVS4VQ84dphdPgW5XrxTDh2XcV9DCpbrh6QwXw/XL/_WHZ2077-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1114,7 +1114,7 @@ export const galleryData = [
     "description": "An Icelandic river runs though a glacial field.\n©Wayne Heim",
     "alt": "River Through Ice    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/3/K2bT7wfNJzqQhP5VsxjPKG4qJTmffV8H2tzQQxRWW/XL/_WHZ2333-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1142,7 +1142,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-L5tx3bd/3/NLFfmVz3b68CsTg23hZxjW7vH4M2TCTHBkfrZ4WKt/XL/_ANA1088-Pano-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-L5tx3bd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-L5tx3bd/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1170,7 +1170,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-GnD9h8S/1/LHnZT5Td4KvWhQt6RRWPPH8hvPCrzPLdWrSKfhCq6/XL/_ANA1193-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-GnD9h8S/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-GnD9h8S/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1198,7 +1198,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-CM9ZWBr/2/LmLh8xLJNwKCMcQ5rQrJXn5h635hxbFKnVzS69LhV/XL/_ANA1236-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-CM9ZWBr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-CM9ZWBr/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",
@@ -1226,7 +1226,7 @@ export const galleryData = [
     "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
     "alt": "Old Fence - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NSd3PDZVPkwnnt43K5xGXSnmDjXcKtLGthvLBZWTF/XL/_IMG6295-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PVbJdpj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PVbJdpj/A",
     "keywords": [
       "Gates Mills",
       "North East Ohio",

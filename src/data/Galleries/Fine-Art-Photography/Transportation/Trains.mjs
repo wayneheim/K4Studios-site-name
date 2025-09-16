@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Progress",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/M4MsHjk8WTFhbcQjTgMSznDWSHdfXZrKQMBkKBrcF/XL/_DSF5219-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-tqSQMQK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-tqSQMQK/A",
     "keywords": [
       "a",
       "fine art",
@@ -46,7 +46,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpB8ZsN/0/LC4XjFmcfpm6KtgWgkhr98HGN545CrrsCdnfqmDgp/XL/_DSF5222-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-FpB8ZsN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-FpB8ZsN/A",
     "keywords": [
       "a",
       "fine art",
@@ -70,7 +70,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/NTHqCv89LHSr8wp8fmF9WtpWFBRX8d683VqKCbGFh/XL/_DSF5230-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-GGK9QtB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-GGK9QtB/A",
     "keywords": [
       "a",
       "fine art",
@@ -94,7 +94,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/LxZzmvHXWb7nnpRVL6GkgPLZPQzw7JBSthSvVNx4L/XL/_ANA7248-Edit-Enhanced-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-ghKSGpj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-ghKSGpj/A",
     "keywords": [
       "a",
       "fine art",
@@ -118,7 +118,7 @@ export const galleryData = [
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "Creature of the darkness.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KcFB9H7RVp7kHVfQpzCncK8K4h9G3FtJR5H7vNJxP/XL/_DSF0462-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-SfsCh3W/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-SfsCh3W/A",
     "keywords": [
       "a",
       "fine art",
@@ -142,7 +142,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/NGRs2cVkmHS3WKpSp9n75BBDPbVzDxS4HztppxtNr/XL/_O1H0422-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-t2FVBZ3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-t2FVBZ3/A",
     "keywords": [
       "a",
       "fine art",
@@ -166,7 +166,7 @@ export const galleryData = [
     "description": "Smoky #16 steam engine passes through the draw of the hillside on it's way to the next town. © Wayne Heim",
     "alt": "Through the Draw.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/Nc2VVnDCgPpzH3J43Fcxn4z8H3N8XDgpM2FQcpHxP/XL/_DSF0650-Enhanced-NR-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-C6DBCqz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-C6DBCqz/A",
     "keywords": [
       "a",
       "fine art",
@@ -190,7 +190,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-h6rHCkZ/0/MDtss7B4kg2NS7B4pVTvGgChkd7hs87DbhhzgmfMh/XL/_DSF0841-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-h6rHCkZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-h6rHCkZ/A",
     "keywords": [
       "a",
       "fine art",
@@ -214,7 +214,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3k97mkw/0/MDxgSms45fBF757QCHWtX29PjNrznW8Tc7FTJ5hPK/XL/_O1H1322-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-3k97mkw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-3k97mkw/A",
     "keywords": [
       "a",
       "fine art",
@@ -238,7 +238,7 @@ export const galleryData = [
     "description": "Smokey steam engine billows black soot as it passes road side travelers out for a walk.© Wayne Heim",
     "alt": "Greetings Friends!",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-BHcNR9T/0/KsRqJzSWhSVm3w4cJVfZCkwCxXk7kNg8Hn3LfNWHn/XL/_DSF1803-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-BHcNR9T/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-BHcNR9T/A",
     "keywords": [
       "a",
       "fine art",
@@ -262,7 +262,7 @@ export const galleryData = [
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/MhhCWjf8KpgSN92k2nqw2qXLCLgsJkrZRLxrnmpKV/XL/_DSF1881-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-4NQdjBP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-4NQdjBP/A",
     "keywords": [
       "a",
       "fine art",
@@ -286,7 +286,7 @@ export const galleryData = [
     "description": "Flagging down the steam engine train by couple by side of the road. © Wayne Heim",
     "alt": "Hitching a Ride",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-hFfHm2C/0/L6hG6JxtF4qZQP4JMXjWFZnTK6B6mCk2L9L3kg9zm/XL/_ANA1507-Enhanced-NR-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-hFfHm2C/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-hFfHm2C/A",
     "keywords": [
       "a",
       "fine art",
@@ -310,7 +310,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fj25sw3/0/NLQpQDrGCnWxjgntx2bChX4bWcgKk4825Rwp2msMS/XL/_ANA1965-Enhanced-NR-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-fj25sw3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-fj25sw3/A",
     "keywords": [
       "a",
       "fine art",
@@ -334,7 +334,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3GkJNWF/0/NTfT5WNz6Rcw8CH4nCPgsKS5T32gk5pdPQzhc8ZPs/XL/_ANA1970-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-3GkJNWF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-3GkJNWF/A",
     "keywords": [
       "a",
       "fine art",
@@ -358,7 +358,7 @@ export const galleryData = [
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/K475SnTJrjsb9PFBpzV6GJVFCjkwgvwQsGN553cK5/XL/_HF25090-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-BMTswCg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-BMTswCg/A",
     "keywords": [
       "a",
       "fine art",
@@ -382,7 +382,7 @@ export const galleryData = [
     "description": "Out of the mist comes the EBT steam engine as it crosses the train yard. © Wayne Heim",
     "alt": "Crossing the yard.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-RLv36z5/0/Mg2s8smfZ3cNRfHppVpksLzKzLjpGx3HMCVkSvKPt/XL/_HF25307-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-RLv36z5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-RLv36z5/A",
     "keywords": [
       "a",
       "fine art",
@@ -406,7 +406,7 @@ export const galleryData = [
     "description": "Vintage car out for a night stroll heads down the road as the vintage #16 steam engine passes behind on the elevated tracks on it's way to the next station. © Wayne Heim",
     "alt": "Night Moves",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KNkCSCdSh3Cr3wQCKJTvM2954r7hGd8C5vJLdwNjd/XL/_HF25580-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-W27q59Q/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-W27q59Q/A",
     "keywords": [
       "a",
       "fine art",
@@ -430,7 +430,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-r9rZPqx/0/MBVdTGzbsWfftjvbj4cnJGVFBdzvVS5p69FT3Hp97/XL/_HF25692-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-r9rZPqx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-r9rZPqx/A",
     "keywords": [
       "a",
       "fine art",
@@ -454,7 +454,7 @@ export const galleryData = [
     "description": "Iconic steam engine horizontally dividing the fall scene in halve. Top showcasing the blue sky and wispy clouds vs the bottom of the scene features colors and textures of the surrounding foliage and grasses. © Wayne Heim",
     "alt": "50/50",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZcRmL6x/0/NMXzqTgTkxNzgqFmMqs5JwnhGwccsV5sxLv96dgPx/XL/_HF26257-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-ZcRmL6x/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-ZcRmL6x/A",
     "keywords": [
       "a",
       "fine art",
@@ -478,7 +478,7 @@ export const galleryData = [
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/LvH2WQVkb4jwsp29vkPZnSwd4MjTZD3KB5ZWZbHtB/XL/_HF26382-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-NXqvv7J/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-NXqvv7J/A",
     "keywords": [
       "a",
       "fine art",

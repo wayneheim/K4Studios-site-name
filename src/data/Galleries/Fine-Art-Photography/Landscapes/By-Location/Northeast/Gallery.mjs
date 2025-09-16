@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/MF8rg4Pvmcsc9FrnqLB5X8gR4W7rTQ7hW6CJGLF7F/XL/_IMG6809-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6Vj6H86/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6Vj6H86/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -64,7 +64,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
     "alt": "Around the Bend. Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/NR6qVhzhxJc892hqbgBZ3rn3tfCMMmppfhqZj2bgh/XL/_IMG6812-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BZZRZwC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BZZRZwC/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -106,7 +106,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
     "alt": "Rushing Water  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/KFQCBMwCnRB6TCqGt7hHMMwTPNTWCgSvnv7zCWPSX/XL/_IMG6823-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nVXX6Fn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nVXX6Fn/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -148,7 +148,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
     "alt": "Log Above Falls  Bllack & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/MDXsST5PkdzhMbZbMcPPdZPvdVxGTPMkZ4PGRN5BC/XL/_IMG7072-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-KVgw4cV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-KVgw4cV/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -190,7 +190,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Watkins Glen, New York.",
     "alt": "Canyon Stream   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LRtKqMHnCJPKWDmCFgrT7T4mMgTw3bwttNGMbpJC8/XL/_W3H9702_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gHjq9S9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gHjq9S9/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -232,7 +232,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Watkins Glen, New York.",
     "alt": "Ravine Waterfalls   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/MwhPGGhLFsLR5pVBLcDPr2RqV5sJKx548Sbx29rhw/XL/_W3H9740-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-xbVp2GS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-xbVp2GS/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -274,7 +274,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Watkins Glen, New York.",
     "alt": "Watkins Glen Canyon. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/KNbX4XBTBgkps5L8Qr32K48f4KMnjNJkVbVkHsnQG/XL/_W3H9878-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-QGSJxwc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-QGSJxwc/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -316,7 +316,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MDpkHpMZVJS44XkwD8SXtZK4Fd9T9ss87f7dzz7Nm/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vqC5jTC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vqC5jTC/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -358,7 +358,7 @@ export const galleryData = [
     "description": "In Stock 18 x 24Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
     "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/K7m77774NtqWq8SRJKJkPPLsXPhCJ9GLpFgjTCptQ/XL/_WHZ8329-Pano-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dT6fKnc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dT6fKnc/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -400,7 +400,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/L44wmsd5ktjJzWdPQQmC68Z3ZdRgqWPGmddDTqFg7/XL/_DSF5409-Pano-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dmwDS7K/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dmwDS7K/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -442,7 +442,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/NhsvvVNsPFj3XpXXrd8WGN67sBwMMfD8xpvQhPssP/XL/_DSF5489-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-s3xXCPH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-s3xXCPH/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -484,7 +484,7 @@ export const galleryData = [
     "description": "Light creating playful shadows through the forest trees and stream. Greens and browns of nature paint the picture of texture and discovery.",
     "alt": "A Path Less Traveled",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -526,7 +526,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/M535dZSW6rzdcGNx53PScHsFhRPx54PZQkRgZW7Tf/XL/_DSF5537_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rfGP5Zj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rfGP5Zj/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -568,7 +568,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/MF5bj97rmBWfMJLKBWrxK96Tjpb25n2LckChqG8SJ/XL/_DSF5542_tonemapped_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bdSGG9L/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bdSGG9L/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -610,7 +610,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/MCRwX6dXq26QGz258N9V43QpfTrPVPmPwvk423vSv/XL/_DSF5548_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BqKXR7D/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BqKXR7D/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -652,7 +652,7 @@ export const galleryData = [
     "description": "Another hidden waterfall in the forest of West Virginia.",
     "alt": "Hidden Falls x2",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nqpGhhX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nqpGhhX/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -694,7 +694,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/KQtdm6KwWF6J8QsXkFKzVnqmVfw23R95RjpMwCb92/XL/_DSF5613-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MGNfc8z/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MGNfc8z/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -736,7 +736,7 @@ export const galleryData = [
     "description": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
     "alt": "Davis West Virginia Sunrise in full show.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MJsPjtjWg5Dgx69KNnkvmdP3BG5jRR8TQV3HccK46/XL/_DSF5667-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-f4Jq6NZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-f4Jq6NZ/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -778,7 +778,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Eminent Rise",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MGSGFcC6Wpnt2d6bRsZJgWPtNmKqp28qkZ64R3sD7/XL/_DSF5676-Pano-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MwLgJL5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MwLgJL5/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -820,7 +820,7 @@ export const galleryData = [
     "description": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
     "alt": "A Painters Pallet",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/NcZxvQSsHvjCPt4mGRTWZ87hhDq4367ZLkDVb3z56/XL/_DSF5690-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vSFBSgr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vSFBSgr/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -862,7 +862,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KMCVC3MxV2PB2ZwQXZg3XGBdBmck5SSMfMVqjV2Z6/XL/_O1H1351-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-hVB6Pxq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-hVB6Pxq/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -904,7 +904,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-R5xvd53/0/NQLQHNJShSLjJJsZ3ZzkdS5S7z9V5nkVjtGmCJt2m/XL/_O1H0031-Pano-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-R5xvd53/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-R5xvd53/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -946,7 +946,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-cQ5DJJL/1/NMXwdSrZBTm5Bh9JCpmmLTcMVLjjRs4hctQhwpzpt/XL/_DSF5750-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cQ5DJJL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cQ5DJJL/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -988,7 +988,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/KSQ49Grhs4DRSZScgCgLqJ4LfnXFVj4wLq6BsHL7P/XL/_DSF5771-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2MmTpqQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2MmTpqQ/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1030,7 +1030,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-h7Rcxmr/0/MCgMh8kzWcLNWWKx9KfGQ8qHvNZ4bg2dkdWj3mWHr/XL/_DSF5771_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-h7Rcxmr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-h7Rcxmr/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1072,7 +1072,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wqjGgt4/0/Mm2bBGpwZt6R5jrwt9fP5v593pVXP82zwzdhQfS6P/XL/_DSF5781-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wqjGgt4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wqjGgt4/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1114,7 +1114,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4WL9kr6/2/KQdsvBdQD94X299Cth6rDm4rfmGHMksW4HCfWN3dz/XL/_DSF5781-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-4WL9kr6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-4WL9kr6/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1156,7 +1156,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-68NCBvz/0/KXSMrN2CzwVTHJMDPcptpdcrNm2RpLvR5T9RbrcbJ/XL/_DSF5984_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-68NCBvz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-68NCBvz/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1198,7 +1198,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/KRXtnwgxWXn6ZHWDGcFHqjpMxWPRfFxDjVsjSFcwd/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jgkhwcs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jgkhwcs/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1240,7 +1240,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6qnzDzx/0/KcRSW7r9FFJbBvGf238Xk9z4Cn9TbKmR749DgHDNm/XL/_DSF6070-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6qnzDzx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6qnzDzx/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1282,7 +1282,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jP9xB7p/0/L3sL5QM586r6s9bfcWcx5cGGqffLHhvtwDmwD3tNp/XL/_DSF6092-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jP9xB7p/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jP9xB7p/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1324,7 +1324,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Qdgw4G5/1/LPVxzZ8DqjmDJNqR5VPcLsDLVtrN9Fq7sLvKRqZhm/XL/_DSF6146-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Qdgw4G5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Qdgw4G5/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1366,7 +1366,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/Nhnp94nFG8VzjM5VmKkVWgsKqJV3xh9LMJbGzGJDV/XL/_DSF6146_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-sRRJHVz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-sRRJHVz/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1408,7 +1408,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2PC8CL2/0/KgM7mQStg9WzJrXLfdpvFHbt35trJm4M57GSmM6HQ/XL/_DSF6176-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2PC8CL2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2PC8CL2/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1450,7 +1450,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HqXtbrD/0/Kj4R4mrQKSDhKwMpmg7cWMX5G5pxg7P4SFFKJFm6m/XL/_DSF6185-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-HqXtbrD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-HqXtbrD/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1492,7 +1492,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/L9C827hbvfPbMLG8JhTZCWfdbvMghtXD39dFXrXHP/XL/_DSF6187-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7pG4nQv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7pG4nQv/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1534,7 +1534,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/KZN9DRh3VRTjKXS5d59DJk4MFRdnN4q3t9ghf9zzr/XL/_DSF6199-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DKPmrRN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DKPmrRN/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1576,7 +1576,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-gM4DZ97/0/KhQs8ntR27wvwSfJ5v98c9pcCdKXVPmHwQm2GHTHJ/XL/_DSF6203_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gM4DZ97/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gM4DZ97/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1618,7 +1618,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-rsKpjQ8/0/LKzZFRJ2WJcWSdhbszV8DGpDCpVRCfSXwrQrP7kRQ/XL/_DSF6267-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rsKpjQ8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rsKpjQ8/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1660,7 +1660,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/LJcZTxV9ZVwksLQ4Lfhh5Xs59Vvmb6BVtBcXhNKDm/XL/_DSF6267-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-T3fx2pT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-T3fx2pT/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1702,7 +1702,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DmxFbF6/0/MfsFqMwnGcxhLGzp9882xSs9GjKfbSH4cgBRNjgM9/XL/_DSF6285-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DmxFbF6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DmxFbF6/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1744,7 +1744,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-VDnpX3W/1/MTCtcn6h3vTKqq33FZ6Kqz5zQLNvTXbsKNkPXqzWn/XL/_DSF6384_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-VDnpX3W/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-VDnpX3W/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1786,7 +1786,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wTXh9Lv/0/KQddgSMFqL48sk6wWmR4h7LkgtGb6sbVgvHD9sWLJ/XL/_O1H0074-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wTXh9Lv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wTXh9Lv/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1828,7 +1828,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/Kc9H99ND7GKJWXmmwrwFr6KfZxfLTHDVBXg7w9vnf/XL/_O1H0012-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5RjNxDr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5RjNxDr/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1870,7 +1870,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Rpxdj4F/0/LFmv2CNhQvkBKvkzLRc9r8TRT8hBLxRbnsH7w4Gbz/XL/_O1H0212-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Rpxdj4F/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Rpxdj4F/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1912,7 +1912,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PhDqRHJ/0/L84Cc96bJspzn3qwSTqWNLh2WP78pmxs5F2HhDpHX/XL/_O1H0212-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-PhDqRHJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-PhDqRHJ/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1954,7 +1954,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-B9pcP9b/0/NTkckbF5PGDXmrRB2363jpkDkHhn34ZXjqF9JmCDp/XL/_DSF6438-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-B9pcP9b/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-B9pcP9b/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -1996,7 +1996,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-WqnXv6B/0/NLVp5sj4F2X99P5FBjQmgSGL34kNcXCtN6LFDL5tq/XL/_O1H0234-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-WqnXv6B/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-WqnXv6B/A",
     "keywords": [
       "New York",
       "Letchworth State Park",
@@ -2038,7 +2038,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-mgSFMf3/0/Kc29W7jVtbtHDHXWTrBHk9738LmTC9MG6HgmNLsfd/XL/_DSF6485_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mgSFMf3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mgSFMf3/A",
     "keywords": [
       "a",
       "fine art",
@@ -2062,7 +2062,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-D7VJ3Nh/0/KZ4xMVZd6pLbjFD5c86vX8k5Q2CCJxJVWjbJ6KK47/XL/_DSF6492-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-D7VJ3Nh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-D7VJ3Nh/A",
     "keywords": [
       "a",
       "fine art",
@@ -2086,7 +2086,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6gXJFDR/0/KVRCnQFG4PMGnw5RtM5jcGsBDC2wWbcrJ6c9TtKC9/XL/_O1H0256-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6gXJFDR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6gXJFDR/A",
     "keywords": [
       "a",
       "fine art",
@@ -2110,7 +2110,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-GjpFSmz/0/LBh8rDdjpmNNhqk6qHdhDKXZXRBfvXC2nCrRkkZZb/XL/_O1H0264-Pano-Pano-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-GjpFSmz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-GjpFSmz/A",
     "keywords": [
       "a",
       "fine art",
@@ -2134,7 +2134,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-bQHXTGL/0/MzjMjbMBt9mr7JXm7tkjQ8ttFr3GCsP42v9sS3kZv/XL/_DSF6565-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bQHXTGL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bQHXTGL/A",
     "keywords": [
       "a",
       "fine art",
@@ -2158,7 +2158,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6GZxKjN/0/Kj3rXBNjQtTQzMvCbhM99XGZT2q3QwCx9wnjwpZQH/XL/_O1H0296-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6GZxKjN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6GZxKjN/A",
     "keywords": [
       "a",
       "fine art",
@@ -2182,7 +2182,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vnRK6nq/0/KNcFpjJnXpW8ctfsCPDMPF3wkPrrZ9dhKZQQp67gt/XL/_O1H0298-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vnRK6nq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vnRK6nq/A",
     "keywords": [
       "a",
       "fine art",
@@ -2206,7 +2206,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-qpPKnkk/0/NJdD8TNTRcFDLDqBMgv399S97VfNPPGrkSLgGsJGX/XL/_O1H0300-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qpPKnkk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qpPKnkk/A",
     "keywords": [
       "a",
       "fine art",
@@ -2230,7 +2230,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6jZxx8J/0/NGtnx6rnF4R4xxHGSFMWJTv2P8grQ5nJrXBs4qkz7/XL/_O1H0300-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6jZxx8J/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6jZxx8J/A",
     "keywords": [
       "a",
       "fine art",

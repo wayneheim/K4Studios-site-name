@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Coming Up the Sand.   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-nFzhgqf/2/MLLwwTKxT5kDbjNtdnrQnsxzP4SWQPPFddM2kxHFp/XL/_WHK1449-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-nFzhgqf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-nFzhgqf/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -46,7 +46,7 @@ export const galleryData = [
     "description": "© Wayne Heim '21",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MWZVT9WzkmpzJjvzJ8G5LwJ9G39LRSxb88tdRTRtw/XL/_ANA3303-Edit-2-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -70,7 +70,7 @@ export const galleryData = [
     "description": "Gun Turret -  WW II bomber protected by gun turret.©Wayne Heim",
     "alt": "Gun Turret -  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/KMjWm3v2fHtgPxzbgjh96cq8stMVdLKJR7sgnwGF4/XL/_IMG8646-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-7PT9GwS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-7PT9GwS/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -94,7 +94,7 @@ export const galleryData = [
     "description": "Ambulance - restored WW II ambulance on display at Liberty Aviation. ©Wayne Heim",
     "alt": "Ambulance - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-6gP4DrL/4/L4vPnX7g44Xcr5LkRFdLHsD4CkwwDSqh6gjrPRKNv/XL/_IMG9075-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-6gP4DrL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-6gP4DrL/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -118,7 +118,7 @@ export const galleryData = [
     "description": "Don't  Go --  GI and his girl sit atop a tank, she seems to say \"Don\"t Go Away\". Reenactors from D Day Conneaut.©Wayne Heim",
     "alt": "Don't Go - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-SDtQKgL/4/LRVGTnHw5ZjRdbR628zmgjwbsN4DKLRtFbN7R5TD5/XL/_WEH4360-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-SDtQKgL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-SDtQKgL/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -142,7 +142,7 @@ export const galleryData = [
     "description": "B25 bomber flies over with bomb bay doors open. ©Wayne Heim",
     "alt": "Bombs Away -  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-WhRvxFT/3/NgFTZSt2RJ2mb8LkgdC7w7TqXWJRckbGrs5sJsFh4/XL/_WHZ4071-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-WhRvxFT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-WhRvxFT/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -166,7 +166,7 @@ export const galleryData = [
     "description": "Tank used in Bulletfest reenactment.  Wayne Heim ©2015",
     "alt": "Small but Mighty in Color   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-mN4NQNP/1/LSWS6bsjHgmHCtbHNBzsdtJ5zpcMFktQLVGK3SRGh/XL/_W3H3910_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-mN4NQNP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-mN4NQNP/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -190,7 +190,7 @@ export const galleryData = [
     "description": "Tank used in Bulletfest reenactment.  Wayne Heim ©2015",
     "alt": "Small but Mighty  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-72mDffp/1/KpkgPPZ4tbds5qMLbgWWTvq67DcpgvzKdBfd9cg66/XL/_W3H3910_tonemapped-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-72mDffp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-72mDffp/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -214,7 +214,7 @@ export const galleryData = [
     "description": "© Wayne Heim '21",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/LcHLvDD3NSgCzZzzJzDmms9vcgnLCvrm9TkG23sXP/XL/_ANA3291-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/A",
     "keywords": [
       "wayne heim",
       "wwii photography",

@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Hudson -- Photography of Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/4/KLKbtrKsbJdvKrhZRZnG8znw8NXV3GjJvsvW2q5ZF/XL/_IMG9668-Edit%25203-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -47,7 +47,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-PfrKwt2/0/LKCqXRjfPwLFV2TwVvzmP9gvQGnxT58KG4mTfFzcX/XL/_HF24082-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PfrKwt2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PfrKwt2/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -72,7 +72,7 @@ export const galleryData = [
     "description": "Model A  -  restored Ford at car show. ©Wayne Heim",
     "alt": "Model A -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-NjL3FKh/4/Kq94xWtCF5mPNGMDHGCJK9qbM9pT2qtczDVBxpT2c/XL/_IMG9628-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NjL3FKh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NjL3FKh/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -97,7 +97,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-Q347VzH/0/MRDSWMGsc8bBqs6b4NJSP3p22qKtFMLpwKFRXq4B7/XL/_HF25953-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Q347VzH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Q347VzH/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -122,7 +122,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cQfBvZN/0/NKPCjDtZRWrF4fM445FCpf7kWQ2nXcFm8QPcdbNGF/XL/_ANA2185-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-cQfBvZN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-cQfBvZN/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -147,7 +147,7 @@ export const galleryData = [
     "description": "Gold Show Car - restored historic car site with others at a show. ©Wayne Heim",
     "alt": "Gold Show Car - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/4/KSTbkK4wg5nhX4PhrNRNPwSNgzBh4q4PGJFtbJ8cR/XL/_IMG9634-Edit2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -172,7 +172,7 @@ export const galleryData = [
     "description": "Plymouth Hood -  photo of the hood of a 1939 Plymouth. ©Wayne Heim",
     "alt": "Plymouth Hood - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-93kRpLv/4/KWmSctwnpjwJSKM4Kq4BdhVTgxFCBvcw6vLXvdqq9/XL/_IMG9636-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-93kRpLv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-93kRpLv/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -197,7 +197,7 @@ export const galleryData = [
     "description": "Vintage Plymouth --very old Plymouth pick up truck sits in a meadow.©Wayne Heim",
     "alt": "Vintage Plymouth - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-xbZS9Zk/4/L2x5mbQP5NJbb5cHrhFm39XGVNLJWSnF3xfDnQNt8/XL/_IMG9641-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-xbZS9Zk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-xbZS9Zk/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -222,7 +222,7 @@ export const galleryData = [
     "description": "Vintage Ford  in the sunset. ©Wayne Heim",
     "alt": "Vintage Ford    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/4/NVWnW5JWrNrk34JGb2r7cVZB8ptqbFzWpR2JbGf4C/XL/_IMG9655-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -247,7 +247,7 @@ export const galleryData = [
     "description": "Red Wheel -- interior of restored antique car showing red steering wheel and dashboard,©Wayne Heim",
     "alt": "Red Wheel  -  Photography  of Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/4/K6Fk6LH8VNbqTTCZLT77H5Ft8VnbZxD2Xkfktb6C9/XL/_IMG9661-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -272,7 +272,7 @@ export const galleryData = [
     "description": "Classic red Chevy at car show in Conneaut. ©Wayne Heim",
     "alt": "Classic Chevy   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/4/M94KxdsXxqgcJjngbcCMzDCjLfJCCvPGjNb6wKJq4/XL/_IMG4203-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -297,7 +297,7 @@ export const galleryData = [
     "description": "Classic turquoise  Buick front end.  ©Wayne Heim",
     "alt": "Buick     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Willoughby-Car-show-2013/i-L4hPXbq/5/Ksnxfr992LLrszLdQbqFKVLKqpGNg2vG6vrgjDjDJ/XL/_WEH6062-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-L4hPXbq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-L4hPXbq/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -322,7 +322,7 @@ export const galleryData = [
     "description": "Vintage red pickup truck driving as East Broad Top steam locomotive passes on the overpass in the background.",
     "alt": "EBT Overpass",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-XW8VLHx/0/KGVKxvbMW2ZFQqxF2QSW8Px9KcdMJqJqx2bcnw5Sp/XL/_HF26151-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XW8VLHx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XW8VLHx/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -347,7 +347,7 @@ export const galleryData = [
     "description": "Hood up on a car at car show. ©Wayne Heim",
     "alt": "Hood Up   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/4/KWN2T2CnGPghcGmzfxLgK8Bzbt49db9qB6f4kQjH8/XL/_IMG9684-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -372,7 +372,7 @@ export const galleryData = [
     "description": "Famous Hudson Terraplane vintage car.    © Wayne Heim",
     "alt": "Hudson Terreplane   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-BJF28jt/4/KZZ6vP5bcQvfpCNQPNdH3N55v9Vgf6rXvc6jL5k4F/XL/_IMG9688-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-BJF28jt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-BJF28jt/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -397,7 +397,7 @@ export const galleryData = [
     "description": "Close up look at the Hudson Terreplane. ©Wayne Heim",
     "alt": "Close up of Terraplane   Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/3/LRPnq8BH2hNBD7KC2fNVwxfjjwc3Lq7XRQf4nhzq9/XL/_IMG9693-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -422,7 +422,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zwNxLnH/0/MPtbnCvZQnJdt2QJZQD8bZdn83jj8Wg5zCmtCTtVD/XL/_HF25968-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-zwNxLnH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-zwNxLnH/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -447,7 +447,7 @@ export const galleryData = [
     "description": "Needs Work - old Chevy needing restoration sits abandoned in a field. ©Wayne Heim",
     "alt": "Needs Work -- Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SjhNDgV/4/M7H4mNftQwPzdqcrS8WKNrbSWMgZSsCmSmV69Wkgq/XL/_IMG5912_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-SjhNDgV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-SjhNDgV/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -472,7 +472,7 @@ export const galleryData = [
     "description": "Old Pontiac sits in yard in Texas.  ©Wayne Heim",
     "alt": "Texas Pontiac  Photography by Wayne HEim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-knwvmNV/4/MGxHJ8FK9ZkmHDH37v9dmKJkbT9TZKbZZC99QRFpk/XL/_IMG5930-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-knwvmNV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-knwvmNV/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -497,7 +497,7 @@ export const galleryData = [
     "description": "View through driver's window shows the center console gear shift.  ©Wayne Heim",
     "alt": "Gear Shirt    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-gpKrXBm/4/LX9c9KqP6vxPMGvMZtxNqLtcqqGBCXTfbDFbWtBdt/XL/_WEH3842-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gpKrXBm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gpKrXBm/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -522,7 +522,7 @@ export const galleryData = [
     "description": "Needs Work -- old Plymouth pickup truck from 1940's in much need of restoring.©Wayne Heim",
     "alt": "Needs Work  -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SbCkpwH/4/K3nBGrfrFDLDBKgJbFp9kH4gvfdTC3PRF37Fx8Pmj/XL/_IMG9641-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-SbCkpwH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-SbCkpwH/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -547,7 +547,7 @@ export const galleryData = [
     "description": "Driver's Seat -- the interior of a restored show car showing steering wheel and fancy gear shift. ©Wayne Heim",
     "alt": "Driver's Seat - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-pqbd83r/4/MLWF6kCszjpKSWRwGxCszchjBt52xhCdxXHRw2XdK/XL/_WEH3899-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pqbd83r/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pqbd83r/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -572,7 +572,7 @@ export const galleryData = [
     "description": "Old Front Seat - shows the front seat of an old car.  ©Wayne Heim",
     "alt": "Old Front Seat - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-gsJ9DLL/8/LwhHSzgk8t9VKZRP9Jn3CDKDLzJHqCvnwtPFNhNsQ/XL/_WEH8194-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gsJ9DLL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gsJ9DLL/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -597,7 +597,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FrmDMQq/0/LGk8sfHdPLTFh2XmDfkM2StLVLnW322F39fdm3sLg/XL/_HF24924-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-FrmDMQq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-FrmDMQq/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -622,7 +622,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-gH4Qd3N/0/KmJwQZDw7TGndKK9B4tQp9KDGSmfGfjKvz3s4TWGK/XL/_HF26010-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gH4Qd3N/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gH4Qd3N/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -647,7 +647,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fr3rcbb/0/M57W9Bf9wM8GXJGXWMtZ7dHqr3Sh2VVxRxQQZtvVp/XL/_HF24936-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fr3rcbb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fr3rcbb/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -672,7 +672,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-336zMPt/0/L5Tkd3q2xGhkMZDLmwkFkvfvrD33tQsqhkxbNFWW3/XL/_HF25453-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-336zMPt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-336zMPt/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -697,7 +697,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-V8xzMjq/0/MHjzfdjfHVNXFSzkkgxPVxBMqS34nG6gwSk9dJjHV/XL/_HF25499-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-V8xzMjq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-V8xzMjq/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -722,7 +722,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-mT37fhN/0/McNh4z2WdMrCT2mJHtbVnX5dXRnTWzPZqWXJNDtCw/XL/_HF25852-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mT37fhN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mT37fhN/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -747,7 +747,7 @@ export const galleryData = [
     "description": "Vintage car out for a night stroll heads down the road as the vintage #16 steam engine passes behind on the elevated tracks on it's way to the next station. © Wayne Heim",
     "alt": "Night Moves",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KNkCSCdSh3Cr3wQCKJTvM2954r7hGd8C5vJLdwNjd/XL/_HF25580-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-W27q59Q/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-W27q59Q/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -772,7 +772,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-tCqCrV5/0/Mzpfs5FmBVcKgK3srvzsvtnfvQjDFPfxZzHGBK27V/XL/_HF24938-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-tCqCrV5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-tCqCrV5/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -797,7 +797,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-kJTR6Bf/0/KNXKJ4jGvbfRpMVfCQ8SRDWHx3bx93MMcqJLDM7Dt/XL/_HF25876-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-kJTR6Bf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-kJTR6Bf/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -822,7 +822,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fgVVLbm/0/MXNfP5bMXxc8tkfGZr69gT2LMgC35CQ86zx2PFVnb/XL/_HF25887-Edit-2-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fgVVLbm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fgVVLbm/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -847,7 +847,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-g8T6jdd/0/KfGQz3R4X4g9h2kQxgcBSfQVFmpDxRcKVjB8s5MKV/XL/_HF26907-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-g8T6jdd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-g8T6jdd/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -872,7 +872,7 @@ export const galleryData = [
     "description": "Front of Liberty Aviation Museum with vintage car in front.   ©Wayne Heim",
     "alt": "Liberty Aviation Museum   Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-JdXPPpF/4/NQGP7Z8pHRdQHBfMHQ95GZ3rFmN8n4x38PRLTKs5p/XL/_IMG9019-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-JdXPPpF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-JdXPPpF/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -897,7 +897,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-ZpwKrbj/9/LGKvgWQ3mPhwwJNWJPTCpdSGwPMnwmM4JP248VWvz/XL/_WEH8186-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-ZpwKrbj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-ZpwKrbj/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -922,7 +922,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-jXXqmN2/9/Lq76DHs33fbTtSTSpKRqQPkDnjXbtzkQdm6NsPXqn/XL/_WEH8188-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-jXXqmN2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-jXXqmN2/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -947,7 +947,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rtPVxVG/9/K2N9cNK8QHff4D3RmCR2VNBFDxnZBfLmXpGRv45tD/XL/_WEH8193-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rtPVxVG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rtPVxVG/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -972,7 +972,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/0/MRhtRbspnGFVBF3pNLXjH8JgHzncRd7Nt9jNkjjfB/XL/_O1H0422-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -997,7 +997,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/0/NLfzNX2zPZtzR4t7TLPHsbSVS2VwSJtkL4XP6Pw5N/XL/_O1H0427-598-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1022,7 +1022,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/0/M83fddgHvQxSMgDQxVm3rjHsKtg7GsJpr4Qbbttxg/XL/_O1H0445-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1047,7 +1047,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/0/KRHVFHG5sS33tzXnR7d85t8Gj4mq7HQR7738d6tvP/XL/_O1H0448-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1072,7 +1072,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/0/MvmDRFgLC5dzjZFLxWxKWN3xssCvwcQRjXNPg3J8T/XL/_O1H0446-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1097,7 +1097,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/0/KJP9RpwTVFCDMP9jQ2kZkGM3JCwGQcTGBtrJ58FDG/XL/_O1H0449-601-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1122,7 +1122,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rT9Kp2K/9/NRr7zvhD8Nbd3q7Mb6fFgqz77h22cGR38pVpBhndK/XL/_WEH8200-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rT9Kp2K/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rT9Kp2K/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1147,7 +1147,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/0/Mz7dMK8mPWzFC5vtKnHwhjGBKSHgc856mTtrb9dgB/XL/_O1H0447-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/A",
     "keywords": [
       "k4 studios",
       "wayne heim",
@@ -1172,7 +1172,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/0/LfXPCKkqtBjndfGhp85gSvNd9nnvx7VVMcrQ7MnCH/XL/_O1H0453-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/A",
     "keywords": [
       "k4 studios",
       "wayne heim",

@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "I Got Him    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nxz6Zxg/1/MZS7nXwmPggqPzRVBt8sfhsb9kGShhQ4ZznVp8fCF/XL/_WHZ5996_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nxz6Zxg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nxz6Zxg/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -46,7 +46,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HKm2xH2/0/LS3rLwhxNMBk2qSdCgt2VfwzDTSWMwdRxq5Vbt5D7/XL/_WHZ0456-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-HKm2xH2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-HKm2xH2/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -70,7 +70,7 @@ export const galleryData = [
     "description": "Woman surprised in photoshoot.\n ©Wayne Heim",
     "alt": "Oh No!  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-kPXCbrd/1/NbFV3XdtsM3J3GSHrsGkWbpFtMszn3VbHSgw9VtWL/XL/_WHZ1083-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-kPXCbrd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-kPXCbrd/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -94,7 +94,7 @@ export const galleryData = [
     "description": "Portrait of a Goth.    ©Wayne Heim",
     "alt": "Goth   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-ZXBnkzr/1/Mhm3h4htC42h54FNh55fGBHhPk4hHLgLZmx4mvc56/XL/_WHZ0868-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-ZXBnkzr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-ZXBnkzr/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -118,7 +118,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Katie/i-xZBJLVP/0/McpkWf7NMFZjs2Hkz5pwv3CvL475wBxksfB93RZmr/XL/_WHZ6947-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-xZBJLVP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-xZBJLVP/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -142,7 +142,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Katie/i-qW6L7dN/1/KfLm4szpKbTPJcSD5QqPBxw6GgGpV3Wv65BpPQt6r/XL/_WHZ6919-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-qW6L7dN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-qW6L7dN/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -166,7 +166,7 @@ export const galleryData = [
     "description": "Crew member of tall ship puzzles at docking. \n ©Wayne Heim",
     "alt": "Can We do This     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-rQKZKdQ/4/KXV4gfb77z38d72NDhDLfXrFzrW3zDh2JxKr8pMHX/XL/WAYNE_HEIM_622-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-rQKZKdQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-rQKZKdQ/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -190,7 +190,7 @@ export const galleryData = [
     "description": "Veteran at awards ceremony at D Day Conneaut.  © Wayne Heim",
     "alt": "Thank You Sir    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-Dv73Z9Z/3/MDBqGtXdWxJtgK6jdwQZrcsSCQqjRmvcFFvrr8Ggc/XL/_WHZ3680_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-Dv73Z9Z/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-Dv73Z9Z/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -214,7 +214,7 @@ export const galleryData = [
     "description": "Newlyweds leave after the ceremony.\n©Wayne Heim",
     "alt": "Mr. & Mrs.    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-ZRSNQvG/1/L4Fsccvb9szSrqhgbx73HQm9BhdfdxdnWnj573H85/XL/_A083857-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-ZRSNQvG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-ZRSNQvG/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -238,7 +238,7 @@ export const galleryData = [
     "description": "Woman with top hat seem to be welcoming us to come in.    ©Wayne Heim",
     "alt": "Welcome to the Show  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-hpMXkWC/1/Mh4pkc2DKc7TMrFHcpLmcsTQcrVnp2CqgQhvGmg9Q/XL/_WHZ0999-0-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-hpMXkWC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-hpMXkWC/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -262,7 +262,7 @@ export const galleryData = [
     "description": "Portrait of woman in blue light dresses in steampunk.    ©Wayne Heim",
     "alt": "Lady in Blue Light   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-3xJqH6t/1/LJvBPjJn257wPS6d8G25TMdWfsxKft9Xfr9RSbdXG/XL/_WHK1461-0-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-3xJqH6t/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-3xJqH6t/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -286,7 +286,7 @@ export const galleryData = [
     "description": "View of woman in full steampunk dress.\n ©Wayne Heim",
     "alt": "Full View   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-4z3tZgc/1/LxNXZMKkMXWZTLFw9f55G5C5ZFVHkXcv5kcjcZKS2/XL/_WHK1438-0-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-4z3tZgc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-4z3tZgc/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -310,7 +310,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-63nPPxF/1/MdFKtnKCKrf4prBq57D8m8DQQWZ5Ft6dDwszcHXVn/XL/_WHZ0509-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-63nPPxF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-63nPPxF/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -334,7 +334,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-n9WGTPS/1/NHMr32QBshhzQRZvd8rhs6VLwWSb2DVmzVhznJ6vR/XL/_WHZ5530-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-n9WGTPS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-n9WGTPS/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -358,7 +358,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-bTt8gx5/1/LNHgPgkn8BSXdNDkZL2RkrSzkqZXrBgSHg2QK48LV/XL/_WHZ5526-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-bTt8gx5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-bTt8gx5/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -382,7 +382,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-Senior-Pictures/i-vbphs5v/1/MTXmQsgP4h2g4LmgCvrBVCRcDRWhvkCjPMwdKctxf/XL/_WHZ6450-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-vbphs5v/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-vbphs5v/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -406,7 +406,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-Senior-Pictures/i-MRwnLT8/0/LxWDWjfFTwVq7nMdhQv8f2Zf2LFkfH97hbVxfqkmw/XL/_WHZ6392-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-MRwnLT8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-MRwnLT8/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -430,7 +430,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-Senior-Pictures/i-SJXqKqR/1/KSKCZkPbWb9KHpZ4MVHmZ4DMpfLKCwsHLjxRKRgM4/XL/_WHZ6322-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-SJXqKqR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-SJXqKqR/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -454,7 +454,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-gTcsrMb/1/LzsCKPMT8CL3XsSsm36SvcNggdMPgRnmJtJZDhW4C/XL/_WHZ5425-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-gTcsrMb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-gTcsrMb/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -478,7 +478,7 @@ export const galleryData = [
     "description": "Formal wedding portrait   ©Wayne Heim",
     "alt": "Formal Portrait  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qfFFV9r/1/L532hk7TXZq2dHwFm9MQ4Qd8PtmRfCgRZrjrgwhW9/XL/_WHZ5947-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-qfFFV9r/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-qfFFV9r/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -502,7 +502,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-NCMRvhT/1/Mm6TRzb79gR4LLPffbr7RTHkRDGPZxrQHGhqSSWnt/XL/_WHZ5840-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-NCMRvhT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-NCMRvhT/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -526,7 +526,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-6GkqmLJ/1/KMKv84FDsTTWjXzcJq5kKMf7PS8XXGGR8XXjq8ZvP/XL/_WHZ5978-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-6GkqmLJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-6GkqmLJ/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -550,7 +550,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Katie/i-M3F8SJn/1/LCP5tf2xwWJf42ZxZjkDxfMGKjq4pJ7vNhvtdJpXR/XL/_WHZ7030-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-M3F8SJn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-M3F8SJn/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -574,7 +574,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-5kwfBPg/1/NJkm2jQqdH6NqFF7rxKsH6ZLznkTX68cDCcF6VsS4/XL/_WHZ5444-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-5kwfBPg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-5kwfBPg/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -598,7 +598,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RfxzLFv/0/KtTBW5nDSXLbSJRsdnqwvM5wFrG5pjf6tT5VfXTgq/XL/_O1H0447-Enhanced-NR-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-RfxzLFv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-RfxzLFv/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -622,7 +622,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-PXLw8g9/0/K5sHsNNSzgKVhqfNm5xZHs3Qf2Dprdz8Xcb8GC3bt/XL/_FWH6830-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-PXLw8g9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-PXLw8g9/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -646,7 +646,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-hSp59Cb/0/KWSphz4cK4BXH39HzDZqvBRbxcpPgK6Rjc37XxDT6/XL/_FWH6856-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-hSp59Cb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-hSp59Cb/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -670,7 +670,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-nnRwtxn/0/Kqgrbfp9fx7kdfpm4PGjkP97DZLwGzSgXScZSN8v6/XL/_FWH6944-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nnRwtxn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nnRwtxn/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -694,7 +694,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/MrTLGGX94tz5rqvFmBhkjJVsdcrnHGM7hHx9ddNRr/XL/_FWH6944-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-T8CQBwG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-T8CQBwG/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -718,7 +718,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-SN7LTzk/0/LgdKJx8FztDfz6cLWgTWRzwj77w4S7Pdr9H8MCQD2/XL/_FWH7005-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-SN7LTzk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-SN7LTzk/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -742,7 +742,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-kwZN26x/0/LNqbZCcrZm8RtZX4fbbF85k8CVQZGDqdB5zdmf52J/XL/_FWH7036-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-kwZN26x/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-kwZN26x/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -766,7 +766,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-7LWGsvH/0/M2Jq7T4JpJK8Nf25HcMK74fZ7Djmbv4FtgRHRmBVH/XL/_O1H0614-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-7LWGsvH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-7LWGsvH/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -790,7 +790,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-XJgt6gK/1/LTGJG89MGZbbcrJ6DgmZWmwb8qgpbFDzQhjCmJXPZ/XL/_O1H1997-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-XJgt6gK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-XJgt6gK/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -814,7 +814,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-3pJD592/0/Ls5wkk279mBhJCsnSmH7kmnJdXF8G5DVRWcmmBZkP/XL/_FWH7365-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-3pJD592/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-3pJD592/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -838,7 +838,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-VkcsxKv/0/KG9V77nCvMqw27bqqLz2QNFFQ2CVBqLLdxCpQSwW4/XL/_O1H2247-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-VkcsxKv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-VkcsxKv/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -862,7 +862,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-mSd5DWR/0/LzWg556DNQw4Bg7MXrxCh59VKq3Hv2ZjC7HBMJwwH/XL/_O1H2292-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-mSd5DWR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-mSd5DWR/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -886,7 +886,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-7HGrjRd/0/KcbQMnCmrwhs4b4vWLb5GGJnx7QXVVpGzLjtjvwdP/XL/_O1H2332-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-7HGrjRd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-7HGrjRd/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -910,7 +910,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-WThMvLG/1/M32x89Qgh3cB4D8fPjTJFnSQxFWFCNrpDVjvKHf8L/XL/_FWH7560-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-WThMvLG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-WThMvLG/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -934,7 +934,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-dRqZjmK/1/KqRp5r7dMBRBtsxbxsrcgs52LbbXGZ883SxLxpHg3/XL/_O1H2419-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-dRqZjmK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-dRqZjmK/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -958,7 +958,7 @@ export const galleryData = [
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/MZn2fpcdXstfb9xwJh2PDjgGJZBWvXPCPb83cssvD/XL/_FWH7908-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-62sCLX4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-62sCLX4/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -982,7 +982,7 @@ export const galleryData = [
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/LNwrNkZLKHgJjhgPrwvghQ62LZV9Kb6SCWwwrWzMN/XL/_FWH7909-Enhanced-NR-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-LcWbnLw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-LcWbnLw/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -1006,7 +1006,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-nbBGhv6/0/LQ86Jv3b6kxkj73qjKn7hxzHnKb5p29sgqdWXDk6b/XL/_DSF4801-Edit-Edit-2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nbBGhv6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nbBGhv6/A",
     "keywords": [
       "wayne heim",
       "wedding",
@@ -1030,7 +1030,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-mMCXK5Q/0/MVvVKdqz6V6vtxxqqGfRfLNgBT2hkN9xwhHz6Sdpt/XL/_DSF4811-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Color/i-mMCXK5Q/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-mMCXK5Q/A",
     "keywords": [
       "wayne heim",
       "wedding",

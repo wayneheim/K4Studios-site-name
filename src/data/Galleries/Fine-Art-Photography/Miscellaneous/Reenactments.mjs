@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "© Wayne Heim",
     "alt": "Take Cover    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Hphs4MG/3/LZSVqFHNphzmX22v6JqZCHWQCSb2Kqw2CdpncLxbd/XL/_IGP1087-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Hphs4MG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Hphs4MG/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -49,7 +49,7 @@ export const galleryData = [
     "description": "Muzzle fire is very evident during reenactment battle. © Wayne Heim",
     "alt": "Muzzle Fire    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Wb83z2F/3/NfLTtP4tsmjFFwXDGF2Bh6LsBjfwNdnf2sg7qxcs9/XL/_IGP1101-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Wb83z2F/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Wb83z2F/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -76,7 +76,7 @@ export const galleryData = [
     "description": "Night time Planning --reenactors are planning the next day's activities at D Day Conneaut. ©Wayne Heim",
     "alt": "Night Time Planning - photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-Lsw8J6B/6/MrLfVwcFm7mKW7dtK6rHTk3fHRv89dMn2R5BJVSvz/XL/_IGP6054-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Lsw8J6B/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Lsw8J6B/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -103,7 +103,7 @@ export const galleryData = [
     "description": "Portrait of radio operator during reenactment.\n©Wayne Heim",
     "alt": "Are You There    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-DGgT2ZK/5/KZJSqrjMTGH6KNt7p9qv5nBccP7vfRH9JVpNVXJZ6/XL/_IGP6114-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-DGgT2ZK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-DGgT2ZK/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -130,7 +130,7 @@ export const galleryData = [
     "description": "Soldier with protected rifle is first to land on the beach for battle. ©Wayne Heim",
     "alt": "First Man Landing  © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-p8JdtJM/5/LsmQvpffXQBDZ5Z2SX7242bTGKtVVgZjJwWPL7HMp/XL/_IGP6535-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-p8JdtJM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-p8JdtJM/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -157,7 +157,7 @@ export const galleryData = [
     "description": "Soldier tries to help fallen comrade at Battle of Normandy reenactment. ©Wayne Heim",
     "alt": "Come On Buddy     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-DZQpf2x/4/L9nnNBJTDN7Vfd96c9L3nQhWs2HNRZfRSbwLXzXPs/XL/_IGP6549-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-DZQpf2x/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-DZQpf2x/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -184,7 +184,7 @@ export const galleryData = [
     "description": "Soldier helps a fallen friend during D Day Conneaut.   ©Wayne Heim",
     "alt": "I'll Get You Out     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-jVbpHzP/4/KwHrxHKH9FfnM2kRPngm925px4srT2DS32gTZgLRT/XL/_IGP6552-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-jVbpHzP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-jVbpHzP/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -211,7 +211,7 @@ export const galleryData = [
     "description": "Soldier tries to help a fallen friend as they land on the beach. ©Wayne Heim",
     "alt": "Helping a Fallen Friend  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-k7bp7Xk/6/L3B5DHRWnrxjFwZhdMRTZqbQNGQpsd8RGF22dnMKZ/XL/_IGP6625-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-k7bp7Xk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-k7bp7Xk/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -238,7 +238,7 @@ export const galleryData = [
     "description": "Portrait of German reenactor who looks like actor  Artie Johnson.  © Wayne Heim",
     "alt": "German Look Alike     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-fpNsP5K/4/NhNbcW6dMkwx6N2776xbTj3ZT62jHdgLCSLXnV8fB/XL/_IGP7129-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-fpNsP5K/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-fpNsP5K/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -265,7 +265,7 @@ export const galleryData = [
     "description": "Four reenactors go for a ride in a jeep in off time during D Day reenactment.  ©Wayne Heim",
     "alt": "Out for a Ride    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-skKpQCV/4/MDN3zcQzQkLdTvGmVN6BXKDmb322VzMtK8jS933cd/XL/_IGP7228-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-skKpQCV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-skKpQCV/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -292,7 +292,7 @@ export const galleryData = [
     "description": "WW II reenactor's rifle called Sweetheart ©Wayne Heim",
     "alt": "My Sweetheart   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-PRmSfJ6/4/LMTbs23GGwGWrsLDHNJt5GJq4h9rtd9dnzVZgtVTX/XL/_IGP7235-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-PRmSfJ6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-PRmSfJ6/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -319,7 +319,7 @@ export const galleryData = [
     "description": "Soldier presents the flag during flag raising at the D Day Conneaut reenactment. ©Wayne Heim",
     "alt": "Holder of the Flag  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-MqTznst/5/MWMrDcn36MkssL6x26S3s43nwf5c6tCwFzPjXrcCj/XL/_IGP7294-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-MqTznst/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-MqTznst/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -346,7 +346,7 @@ export const galleryData = [
     "description": "German tank driver during Battle of La Fier Bridge. ©Wayne Heim",
     "alt": "German Tank Driver   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-FjdrwWV/5/NW2dN7wcb9742r4zNJBZVHpH9x5QWvFcb3K6GQPWD/XL/_IGP8142-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-FjdrwWV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-FjdrwWV/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -373,7 +373,7 @@ export const galleryData = [
     "description": "Salute -GI\"s salute at raising of colors during reenactment at D-Day Conneaut. ©Wayne Heim",
     "alt": "Salute - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/4/L4Ksn5cqfbDLKXDVwQP3mcWQ52VWhmnH4dqnwfQwf/XL/_IMG8520-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-bsQkK6z/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-bsQkK6z/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -400,7 +400,7 @@ export const galleryData = [
     "description": "Two reenactors at D Day Conneaut.  ©Wayne Heim",
     "alt": "Thank You Kiss     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/LqPq65RXZBXnw8D6L2pRpsGg9KFPhQsxz3f2XjjMX/XL/_IMG8678-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-gjVgKTL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-gjVgKTL/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -427,7 +427,7 @@ export const galleryData = [
     "description": "Medic rushes with a fellow soldier to aid those wounded in battle, ©Wayne Heim",
     "alt": "Hey Medic   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-F33M327/3/KhMZqDQpDXmQbDLNtZm76KL34RKpSwMd7QjJsC39b/XL/_IMG8831-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-F33M327/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-F33M327/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -454,7 +454,7 @@ export const galleryData = [
     "description": "Two German reenactors during a battle.©Wayne Heim",
     "alt": "German Reenactors   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/4/Mqt7wQJfwS7TV5th8ww2PPxsNHmDVBvrsj7VB2bLh/XL/_IMG9454-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -481,7 +481,7 @@ export const galleryData = [
     "description": "Troop of soldiers train during a reenactment event. ©Wayne Heim",
     "alt": "Drilling and Training   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3rkF4sr/3/KPWTgMFW3ffLLt6nhVwkdxM575RCQ38CP2w3tKSgH/XL/_IMG9617-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3rkF4sr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3rkF4sr/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -508,7 +508,7 @@ export const galleryData = [
     "description": "Saluting at flag raising.   ©Wayne Heim",
     "alt": "Salute 2   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-c9vMmpR/3/KnCqwBVx9C46r8CmLm2BT5Ps89hZmF86VDJ5F5GS2/XL/_IMG9647-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-c9vMmpR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-c9vMmpR/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -535,7 +535,7 @@ export const galleryData = [
     "description": "Saluting as officer approaches.  ©Wayne Heim",
     "alt": "Attention Salute   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nVRCHfW/3/MHqg58gHtvZHzRMsB7KRsRTRm7N5mCmc362vQ5gcW/XL/_IMG0392-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nVRCHfW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nVRCHfW/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -562,7 +562,7 @@ export const galleryData = [
     "description": "Soldier orders men to cover their flank at D Day Conneaut  reenactment.©Wayne Heim",
     "alt": "Go Over There    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-74wg6VQ/3/M3VkNdsKRtfqGbRfRpqgz7dDfVvPD8R5zBHf3fQVJ/XL/_IMG6226-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-74wg6VQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-74wg6VQ/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -589,7 +589,7 @@ export const galleryData = [
     "description": "Reenactor orders someone to cover their flank on the beach during D Day Conneaut. © Wayne Heim",
     "alt": "Cover  Our Flank    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Kpp5Cng/3/Nb2PjHRxm378HgvsS75rXBzkW8j7Jfg47ZTL2sWRB/XL/_IMG6227-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Kpp5Cng/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Kpp5Cng/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -616,7 +616,7 @@ export const galleryData = [
     "description": "Woman dressed as a reenactor at Rockford WWII Days.  ©Wayne Heim",
     "alt": "Female Reenactor  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7pbm3ZvQvhXK7rcXrXTwLGnWjCrVcgvqTMRtFvgt/XL/_IMG8585-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-zF4sTBK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-zF4sTBK/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -643,7 +643,7 @@ export const galleryData = [
     "description": "German reenactor signals his men during Rockford WWII Days.  ©Wayne Heim",
     "alt": "Wait   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-k7MW66K/4/Lpvw5Z8J7jkT6rpZ5mFwW6rcpFKZt27f744jRwvPb/XL/_IMG8640-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-k7MW66K/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-k7MW66K/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -670,7 +670,7 @@ export const galleryData = [
     "description": "Night Guard Duty - German sentries stand guard duty at reenactment of D Day. ©Wayne Heim",
     "alt": "Night Guard Duty  - Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-krgTQtd/4/NZdgdbmjNCpZXjctPc938wKPR5LTpzC2cwxvFSdVf/XL/_IMG9752-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-krgTQtd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-krgTQtd/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -697,7 +697,7 @@ export const galleryData = [
     "description": "I  Want One Too -  two young boys look at things for sale at a vendor's booth at D Day reenactment.©Wayne Heim",
     "alt": "I Want One Too - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-n92J3KL/4/KTLV69qKnGqKsRchtCtc5Z9fZ9zQ2tL5hFvfbmD8g/XL/_IMG9810-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-n92J3KL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-n92J3KL/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -724,7 +724,7 @@ export const galleryData = [
     "description": "Woman reenactor walks into the German camp during D Day Conneaut.©Wayne Heim",
     "alt": "Lady Reenactor    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-DbfKnNz/4/M3TgJCmCP29tQ5hLcdWNc3FCZv4ZqFHPcvV2D26ZS/XL/_IMG9901-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-DbfKnNz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-DbfKnNz/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -751,7 +751,7 @@ export const galleryData = [
     "description": "GI stands in chow line getting his meal. \n© Wayne Heim",
     "alt": "Getting Chow    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-8LG2fBP/4/LXQh4Ctrw9wmDcFMdtwHXmCz684W4CKTgF63RC7QM/XL/_IMG9976-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8LG2fBP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8LG2fBP/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -778,7 +778,7 @@ export const galleryData = [
     "description": "Reenactor in camouflage paint ready for battle at D Day Conneaut.  ©Wayne Heim",
     "alt": "Ready for Battle   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xnx9RzR/4/KwMW8wHnTRgK8w9SppX6MhSJBKv2BKTQhmzwNMvt8/XL/_IMG0787-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-xnx9RzR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-xnx9RzR/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -805,7 +805,7 @@ export const galleryData = [
     "description": "Allied officer reenactor gets orders  from headquarters during D Day Conneaut. ©Wayne Heim",
     "alt": "Yes Sir Right Away    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-PXcwZNn/5/Mmsdf7mH83M5CJLXhRXCWZX7ndgZbTCQsBQJv4zRf/XL/_IMG0974-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-PXcwZNn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-PXcwZNn/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -832,7 +832,7 @@ export const galleryData = [
     "description": "Woman French Resistance reenactor during D Day Conneaut. ©Wayne Heim",
     "alt": "French Resistance    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xs6MWcM/4/MstPsJMzdxQxMwgNs9t8b5F386vbDzdShQs94knJ3/XL/_IMG1173-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-xs6MWcM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-xs6MWcM/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -859,7 +859,7 @@ export const galleryData = [
     "description": "Medics dress a soldiers wound during reenactment in Conneaut.  © Wayne Heim",
     "alt": "We Got You   Black and White photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-Jd4mgSc/4/K2GbZqZ3K3BRprqwRswLnBf6cbhL6tKx8Scw9qghT/XL/_IMG1386-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Jd4mgSc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Jd4mgSc/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -886,7 +886,7 @@ export const galleryData = [
     "description": "Two medics drag a wounded soldier out of harms way. © Wayne Heim",
     "alt": "Medics to Rescue    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-vQsVSGp/4/KVx8K7c7cJpnqhR72hcSpLdjGfTcnzLhC27kKDHSP/XL/_IMG1752-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-vQsVSGp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-vQsVSGp/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -913,7 +913,7 @@ export const galleryData = [
     "description": "Medic aids wounded soldier during the reenactment of LaFier Bridge Battle at D Day Conneaut. ©Wayne Heim",
     "alt": "Medic to Aid    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-d937J4R/4/LVT9KNBVN3xpdKrtsgGfGqnHNCm9CBmD3cVjQfSZK/XL/_IMG1777-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-d937J4R/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-d937J4R/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -940,7 +940,7 @@ export const galleryData = [
     "description": "A WWII veteran at D Day Conneaut. ©Wayne Heim",
     "alt": "I Served   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/NMNRDW4H5SwthBdPM3LPjhKJ8Qcmzdx23XTv5j8n5/XL/_IMG2073-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kP4wjmp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kP4wjmp/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -967,7 +967,7 @@ export const galleryData = [
     "description": "Picture catches two approaching planes during Beach Battle. © Wayne Heim",
     "alt": "Close Encounter    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-LXZxz7S/4/LPnfMpZM7nQkqbDdPMd5PMj9GxhV6rqRrqMmQJSPR/XL/_IMG2333-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-LXZxz7S/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-LXZxz7S/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -994,7 +994,7 @@ export const galleryData = [
     "description": "B52 flies low over the beach during the Beach Battle reenactment at Conneaut.  © Wayne Heim",
     "alt": "Skimming the Beach    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-C8qnvKm/4/L4rXSwn4LK7hv6XH68DcZ8QP8N2CXxFHtFghmHNRf/XL/_IMG2435-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-C8qnvKm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-C8qnvKm/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1021,7 +1021,7 @@ export const galleryData = [
     "description": "Soldiers in fox holes on beach during reenactment of D Day landing.   © Wayne Heim",
     "alt": "Cover the Flank   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-rhNPRPP/4/LQNdNQjwrpq8wWpFxKmxvBwRvMPxM6xqjkWgz7HD6/XL/_IMG3384-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-rhNPRPP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-rhNPRPP/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1048,7 +1048,7 @@ export const galleryData = [
     "description": "Reenactor as a Canadian Photographer at D Day Conneaut ©Wayne Heim",
     "alt": "Canadian Photographer -  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-4m73xsc/5/MrR6S8qbsWQ2xNHZxfBgf244XKS7VpwGJs95b6wbR/XL/_IMG3802-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4m73xsc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4m73xsc/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1075,7 +1075,7 @@ export const galleryData = [
     "description": "Soldier runs for cover during beach battle at D Day Conneaut.  © Wayne Heim",
     "alt": "Running Soldier    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-j6jm8ZL/4/MLQQtxb8MrDtmn5ZGpD7qF8ztBxnDrMNXP2vKH2HS/XL/_IMG3824-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-j6jm8ZL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-j6jm8ZL/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1102,7 +1102,7 @@ export const galleryData = [
     "description": "Portraito D Day Reenactor  ©Wayne Heim",
     "alt": "Hi Betsy    Photography of Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-364tqsH/4/L2dTjj5N6q7ZZMtTbNdBXnn6jcpqwjrrnDsw3cF9N/XL/_IMG3932-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-364tqsH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-364tqsH/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1129,7 +1129,7 @@ export const galleryData = [
     "description": "Dancers  at the USO dance  of D Day Conneaut.©Wayne Heim",
     "alt": "We'll Meet Again  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/K8H9MbDQCTfFDjMdJQQR3Q9JkWNPwJqsk58ChwsSC/XL/_IMG3978-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-zkVnCjx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-zkVnCjx/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1156,7 +1156,7 @@ export const galleryData = [
     "description": "Reenactor as a USO performer at the USA Dance of D Day Conneaut.©Wayne Heim",
     "alt": "USO Performer     Back & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/KQjg9Q53XVJrd7vccx4QCbvXW59td6FXKDxD3rRv2/XL/_IMG3997-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-TdvK9cd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-TdvK9cd/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1183,7 +1183,7 @@ export const galleryData = [
     "description": "Sailor ready a line for docking during D Day\n© Wayne Heim",
     "alt": "Getting Line Ready   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-QfdV3jw/4/K9nMcm2tFpm3zP24bjJJbdXt2XWHDCVRMhgrs7zSx/XL/_WEH0700-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-QfdV3jw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-QfdV3jw/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1210,7 +1210,7 @@ export const galleryData = [
     "description": "Captain of the landing craft guides the boat during D Day Conneaut  © Wayne Heim",
     "alt": "Guiding the Landing Craft. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/MkBWhw5SnKr5hjc9FF87PghZS7kJRGS2sqdXdkWBz/XL/_WEH0736-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4Gk8HRG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4Gk8HRG/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1237,7 +1237,7 @@ export const galleryData = [
     "description": "Warm coffee tastes good to the reenactor. © Wayne Heim",
     "alt": "Tastes Good     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8wkL7qZ/4/MssSqK6s5Wzqb7T85SN8wckQcqv5XkDgbB8ZvHRMT/XL/_WEH0905-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8wkL7qZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8wkL7qZ/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1264,7 +1264,7 @@ export const galleryData = [
     "description": "Soldier checks uniform for correct arrangement of metals.  © Wayne Heim",
     "alt": "Checking Adornments       Photography by Wayne HeimWayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-7f7NnQg/4/M4hCC9GdttnRrNZHWHPkLBRS3MHwpkk7Wh8mBSbPb/XL/_IMG5842-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-7f7NnQg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-7f7NnQg/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1291,7 +1291,7 @@ export const galleryData = [
     "description": "Young girl in the role of French Resistance fighter during D Day Conneaut. © Wayne Heim",
     "alt": "Young Resistance Fighter    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-FRg6MPm/4/Mv4qSR57ZT9cQC3kcXVs7jQqN8bB8Gc7H4g4rfxMw/XL/_WEH1151-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-FRg6MPm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-FRg6MPm/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1318,7 +1318,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-dsjVXcN/4/KHKXMxzV4F29m6Lrkr5HmH2xr3m8hxgmN4VzLcQFM/XL/_WEH1219-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-dsjVXcN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-dsjVXcN/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1339,7 +1339,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-X3hPqnb/4/MwsC4LSgrvN7Wr7fs3V4LXHNT9v8wc4k5rB7KGF7h/XL/_IMG5995-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-X3hPqnb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-X3hPqnb/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1360,7 +1360,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-9jzcMvD/4/LSsQNxWpswjFhRFWvXBtML7B2CvvJj6dQCnrg8qv8/XL/_IMG6089-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9jzcMvD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9jzcMvD/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1381,7 +1381,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-GXNZRqD/4/KLZcT62fsS3BjT846rJvTXqdSgFt7N8F8fSJMxvWV/XL/_IMG6110-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-GXNZRqD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-GXNZRqD/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1402,7 +1402,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-2Pwm8vt/4/KrsjWXXk3gZRWWzQsjnqqB3JMtz5rsHbRzSKLZ2rD/XL/_IMG6140-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-2Pwm8vt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-2Pwm8vt/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1423,7 +1423,7 @@ export const galleryData = [
     "description": "Fine art photography of World War II troops preparing to disembark landing craft on the beach during D-Day Conneaut WWII reenactment. ©Wayne Heim",
     "alt": "WWII themed photo of beach landing.  © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/L6kKdzKkfvrMG5c6xM65LZG3SbcgdDm3jkXw7N7kP/XL/WWII%2520reenactment%2520photo_IMG6149-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wdnJQwf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wdnJQwf/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1444,7 +1444,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-gzjLhqs/4/LL3RJQtDbWCWQvXCgtdHrmXpFB2qHK8qhf885xSvW/XL/_IMG6197-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-gzjLhqs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-gzjLhqs/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1465,7 +1465,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-N4QB4xk/4/MN4F8KM8jK8F23qdmmZm546Jh4KgqJmJ7BDc5Wt7B/XL/_WEH1635-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-N4QB4xk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-N4QB4xk/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1486,7 +1486,7 @@ export const galleryData = [
     "description": "Soldier shaves in the morning at Allied Camp during D Day Conneaut.  © Wayne Heim",
     "alt": "Shaving     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-zv6zQZr/4/LBC4ngvdzNGLwLGxB2qwBm2ZKtN4DXgvrgRtTR6Vf/XL/_WEH1897-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-zv6zQZr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-zv6zQZr/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1507,7 +1507,7 @@ export const galleryData = [
     "description": "Soldier portrait at D Day Conneaut. © Wayne Heim",
     "alt": "Portrait   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8JSFvtM/4/MXsBF38ZPT5dhxZDw3J7WjWWXSsWSVBL7HTXdFzTb/XL/_WEH1929-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8JSFvtM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8JSFvtM/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1528,7 +1528,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-STXcpKC/4/Ndj7Vpx3d3nngfRZF52SmNTJgMFMfKj55m7Q82pHj/XL/_WEH2312-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-STXcpKC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-STXcpKC/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1549,7 +1549,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-sf9ScQk/4/M9hwj8rRqKZ3Q2xvS2Qf7DCQh99Lgtp2xqxgcTX7K/XL/_WEH3192-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-sf9ScQk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-sf9ScQk/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1570,7 +1570,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-Gp94gcV/4/KF3kjTTDGGHj84KZXg8JvV3JWrPbQBPhJqhGT36P7/XL/_WEH3417-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Gp94gcV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Gp94gcV/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1591,7 +1591,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-9BCV3t9/4/MXvXFxbQJPKmJfZR96gJ7qbfq2TQBFT4qB3G6fkDS/XL/_WEH3421-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9BCV3t9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9BCV3t9/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1612,7 +1612,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-v8PJJ7D/4/MkqzCTnxGrffK3tC5z79kVrVdV8BqM7CtQmmF6GLG/XL/_WEH3426-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-v8PJJ7D/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-v8PJJ7D/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1633,7 +1633,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-ScH5Stf/4/LpFnQD3tkwSjktjs2x7fM7qfPd6QvV46SCphRKCNF/XL/_WEH3427-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-ScH5Stf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-ScH5Stf/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1654,7 +1654,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-V5ffMLv/4/KNFxK6m8c8P7h546LdTKsQdrdvcGzX2zMqrmsF2Rs/XL/_WEH3434-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-V5ffMLv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-V5ffMLv/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1675,7 +1675,7 @@ export const galleryData = [
     "description": "Reenactor at D Day Conneaut seems to be shot during the Battle of Normandy.  © Wayne Heim",
     "alt": "German Casualty   Black & White    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-CXpNRdL/4/Kg8sMQPSB4rhk3g7QTdJS9mPGHfP6g92qdRhtPT7g/XL/_WEH3439-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-CXpNRdL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-CXpNRdL/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1696,7 +1696,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-cRxTSJh/4/K7GbHX5dbxZkvt89CGFP4B8kjr6nML9SNGWfhqHQ5/XL/_WEH3441-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-cRxTSJh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-cRxTSJh/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1717,7 +1717,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-DT5KJHP/4/KfFDGPt2G6Jhztm4vQ4ZS5N2N2sPVQ5g7CRw4nqGt/XL/_WEH3446-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-DT5KJHP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-DT5KJHP/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1738,7 +1738,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-N7vqmDg/5/MGZ9g47XFMWzpPjQ9Mr7QSvxrgP86SrHtpv8xck8n/XL/_WEH3449-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-N7vqmDg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-N7vqmDg/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1759,7 +1759,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8hf43bj/4/MM5WBn89F54pSQ7836ffWFmnmPnTNXhgbCxPJSSGq/XL/_WEH3511-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8hf43bj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8hf43bj/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1780,7 +1780,7 @@ export const galleryData = [
     "description": "Reenactor seems to be daydreaming  during reenactment of D Day. ©Wayne Heim",
     "alt": "Daydreaming      Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-tqwK36V/4/Mwv69VTFWSLtDVWNcQ7c24v8WCs8MJmMgV644wDL6/XL/_WEH3620-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tqwK36V/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tqwK36V/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1801,7 +1801,7 @@ export const galleryData = [
     "description": "Reenactors relax on a tank during D Day Conneaut. © Wayne Heim",
     "alt": "Behind the Scenes   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-8Dc8b5X/4/MnVMVVMB3zsGL9P978NJs7jgTpcjt9V7fbqwVLZzF/XL/_WEH4354-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8Dc8b5X/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8Dc8b5X/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1822,7 +1822,7 @@ export const galleryData = [
     "description": "Don't  Go --  GI and his girl sit atop a tank, she seems to say \"Don\"t Go Away\". Reenactors from D Day Conneaut.©Wayne Heim",
     "alt": "Don't Go - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-SDtQKgL/4/LRVGTnHw5ZjRdbR628zmgjwbsN4DKLRtFbN7R5TD5/XL/_WEH4360-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-SDtQKgL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-SDtQKgL/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1843,7 +1843,7 @@ export const galleryData = [
     "description": "Forward guard spy the enemy approaching in Rockford WWII Days. © Wayne Heim",
     "alt": "The Enemy Approaches   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-TJPdzqv/4/NFfGFwGSt9r3TMXPSRC8fcwNhpm7dtQbF22rfTvps/XL/_WEH4731-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-TJPdzqv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-TJPdzqv/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1864,7 +1864,7 @@ export const galleryData = [
     "description": "Portrait of a Soldier reenactor during D Day Conneaut. © Wayne Heim",
     "alt": "Portrait of a Soldier   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-nD4rzmL/4/MWsGL3Gv5ms254bJzCdjVckkqBMXsMnHvtwHsPfFg/XL/_WEH5001-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nD4rzmL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nD4rzmL/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1885,7 +1885,7 @@ export const galleryData = [
     "description": "Nurse comes to aid of another nurse aiding wounded soldier in reenactment of D Day Conneaut.  © Wayne Heim",
     "alt": "Can I Help     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-kfLfWXf/5/LF4sT8QF8jJngZH7ZKqhNvmdbMNWx6nm3w4J26xnN/XL/_WEH5448-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kfLfWXf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kfLfWXf/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1906,7 +1906,7 @@ export const galleryData = [
     "description": "Nurse wraps head of wounded reenactor during D Day Conneaut. © Wayne Heim",
     "alt": "Tender Care    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-q6fWwtB/4/MmjCzwrLVDnBXFhtK5wfPWxTCVCzNVRLTTMHHB6G5/XL/_WEH5452-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-q6fWwtB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-q6fWwtB/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1927,7 +1927,7 @@ export const galleryData = [
     "description": "Woman stands at kitchen window.   © Wayne Heim",
     "alt": "In the Kitchen   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-csmfwWw/4/KNXSCqxSBKLBwcJpdW6mpT6hNzkztrhVKq87q2F7n/XL/_WEH5836-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-csmfwWw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-csmfwWw/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1948,7 +1948,7 @@ export const galleryData = [
     "description": "Woman waits by window looking for retruning soldiers. © Wayne Heim",
     "alt": "Are They Coming Yet   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/KsmTB4dSRFSTK8N8Rqq6TcRmH5jxB9D729mt3Z6kq/XL/_WEH5839-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-vKxJbtv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-vKxJbtv/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1969,7 +1969,7 @@ export const galleryData = [
     "description": "Woman readies uniform for her husband to wear. © Wayne Heim",
     "alt": "It Is Ready   Black & White Photography by \"Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-8b8wbkc/4/KWfhM49kjzLBnT2grggTrxtbJmrVkKpXQdZ9S3Fcp/XL/_WEH5842-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8b8wbkc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8b8wbkc/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -1990,7 +1990,7 @@ export const galleryData = [
     "description": "Plasma being administered to a wounded soldier. © Wayne Heim",
     "alt": "Plasma Aid   black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-WJhnWDX/4/MtnQrX28p6jv2rpnhQ2hLR3tnW8mXWbjnKmH2DNtk/XL/_WEH6477-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-WJhnWDX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-WJhnWDX/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2011,7 +2011,7 @@ export const galleryData = [
     "description": "Soldier stands in the cold and snow at Rockford WWII Days. ©Wayne Heim",
     "alt": "Standing in the Snow    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-nrHDS6g/2/M6dxnx9J6w8QBwN2mrSLdSz2dcfJnQx5Jj66H3M9h/XL/i-nrHDS6g-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nrHDS6g/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nrHDS6g/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2032,7 +2032,7 @@ export const galleryData = [
     "description": "Medic waits and watches at a tree during Rockford WWII Days  ©Wayne Heim",
     "alt": "Portrait of a Watchful Medic   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-t7z2vTB/2/MwK6JJRknGKP86Jp9Vdsmh73sSm5wpQG3zBNfBwRn/XL/i-t7z2vTB-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-t7z2vTB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-t7z2vTB/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2053,7 +2053,7 @@ export const galleryData = [
     "description": "Tired reenactor poses after battle at Rockford WWII Days.©Wayne Heim",
     "alt": "Portrait of Tired Reenactor     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-tjxwJQm/2/MqQnJFwKs684HNSBc5mTg3XQHcqLpwsZq8nm2GBmL/XL/i-tjxwJQm-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tjxwJQm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tjxwJQm/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2074,7 +2074,7 @@ export const galleryData = [
     "description": "Soldier in full battle gear ready for reenactment.  © Wayne Heim",
     "alt": "Ready for Battle    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-QW5rZBL/2/MJDbfG7fFptT362qMdBpp2ksdspzTk2PD5XZZRnbn/XL/i-QW5rZBL-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-QW5rZBL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-QW5rZBL/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2095,7 +2095,7 @@ export const galleryData = [
     "description": "One soldier gives another soldier a light for his cigarette. © Wayne Heim",
     "alt": "Stopping For a Smoke    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-CjZ9mT4/4/KnwVNz2pzcqKdc9RCbJCfX5p8d23Zf3HGX4hcM8qJ/XL/_W3H4127-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-CjZ9mT4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-CjZ9mT4/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2116,7 +2116,7 @@ export const galleryData = [
     "description": "Stopping for a smoke one soldier lights another's cigarette. © Wayne Heim",
     "alt": "Have a Light   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-9Bwr7np/4/KLVQfSNF6RBgjhs4f5jXKzXjNrdXDHMwTzJP6Mgm8/XL/_W3H4130-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9Bwr7np/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9Bwr7np/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2137,7 +2137,7 @@ export const galleryData = [
     "description": "Reenactor as a German SS officer. © Wayne Heim",
     "alt": "Portrait of an SS Soldier   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-46jrzzz/4/NFTc7DmMZ4FZBfS7GhV6p37MPJpzqqRghTNJQD9Cx/XL/_W3H4232-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-46jrzzz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-46jrzzz/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2158,7 +2158,7 @@ export const galleryData = [
     "description": "Three reenactor look to something in the distance during reenactment.  © Wayne Heim",
     "alt": "What Is That?   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-g2FJ9wX/4/NKKrH5FW8NBkwsWSNDTtnjc5GvF345TPS9j5g6x7k/XL/_W3H4242-4-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-g2FJ9wX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-g2FJ9wX/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2179,7 +2179,7 @@ export const galleryData = [
     "description": "Platoon Leader ready to lead his troops out.  © Wayne Heim",
     "alt": "Getting Ready to March  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-tBWpLHz/4/NQbGn84MR9hVhWZPQHBRXK8S8KhtTfmR92kDWmWLT/XL/_W3H4345-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tBWpLHz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tBWpLHz/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2200,7 +2200,7 @@ export const galleryData = [
     "description": "A reenactor in the role of a German SS Soldier sits at a desk in headquarters. © Wayne Heim",
     "alt": "German SS Soldier at Desk   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-SW8PcnM/4/NGFXBDKHVGWtnjqx8L2fSS92HJ6TTJhkJkCVhq6zS/XL/_W3H4556-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-SW8PcnM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-SW8PcnM/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2221,7 +2221,7 @@ export const galleryData = [
     "description": "Players ready to snap the ball during football game of reenactors. © Wayne Heim",
     "alt": "1,2,3 Hut   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-RctzcDb/4/K9SmPN5dPQn5H5VWZmVnSfZBFtZhSX6nKmH8MDRG8/XL/_W3H4618-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-RctzcDb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-RctzcDb/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2242,7 +2242,7 @@ export const galleryData = [
     "description": "Player looks for opportunity to throw the ball. © Wayne Heim",
     "alt": "Looking to Throw.  Black  & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-tr747gc/4/MnDMZSvkzQ8CctGSm46R6rshhXPMts9xcrMpSrx8v/XL/_W3H4660-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tr747gc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tr747gc/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2263,7 +2263,7 @@ export const galleryData = [
     "description": "The Cheer Leading Squad © Wayne Heim",
     "alt": "Cheer leading Squad  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-3ZF46gQ/4/KdntWhpcd2sSBpgRFxF666vHK84jXt6P5XtcrwRQh/XL/_W3H4663-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3ZF46gQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3ZF46gQ/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2284,7 +2284,7 @@ export const galleryData = [
     "description": "Reenactor is dressed for football game  © Wayne Heim",
     "alt": "Let's Go Team    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfT8Lmh/4/KQCgbd8mr9TJBv92LXb86cc3kL6xztKFmzsS7cv53/XL/_W3H4687-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-qfT8Lmh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-qfT8Lmh/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2305,7 +2305,7 @@ export const galleryData = [
     "description": "Portrait of a soldier waiting for reenactment to begin.   © Wayne Heim",
     "alt": "Waiting Soldier   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-28k5KDN/4/NTCHm2kLCZkFMpXhwjq3hCbD2sGBBjTbMRDF7XCFF/XL/_W3H4992-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-28k5KDN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-28k5KDN/A",
     "keywords": [
       "Allied Camp",
       "Battle Prep  Training",
@@ -2326,7 +2326,7 @@ export const galleryData = [
     "description": "Portrait of the Mayor during civil war reenactment.  © Wayne Heim",
     "alt": "Mr Mayor       Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s5wsLGN/14/LvwgL9zdmxcc5h59rF4P22DBTTv2npbx2mjJZNvNc/XL/_W3H1524-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-s5wsLGN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-s5wsLGN/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2352,7 +2352,7 @@ export const galleryData = [
     "description": "Portrait of young Union soldier during Civil War reenactment. © Wayne Heim",
     "alt": "Young Union Soldier   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/5/M7TQLhZZdCn7g7KdkGwB55LfpnJPjBnrk9gwgkMSJ/XL/_W3H2026-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kvfSCpN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kvfSCpN/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2378,7 +2378,7 @@ export const galleryData = [
     "description": "Charging during battle reenactment.\n© Wayne Heim",
     "alt": "Moving Up     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-qd69GH8/13/Md5Df9Jq2L3gmgTBHCfb7KQnP2rwFCh6PNQ7DSzxb/XL/_W3H2112-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-qd69GH8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-qd69GH8/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2404,7 +2404,7 @@ export const galleryData = [
     "description": "Soldiers return to camp after long day of civil war reenactment.    © Wayne Heim",
     "alt": "After a Long Day    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-P5WkRtg/16/L6R3Rn4V24JNtDXbz5Lc2PztBCqRKTQhTWLP24797/XL/_W3H2247-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-P5WkRtg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-P5WkRtg/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2430,7 +2430,7 @@ export const galleryData = [
     "description": "Reenactors move into position for a battle during Civil War reenactment. \n  © Wayne Heim",
     "alt": "Getting in Formation  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s56kFCX/13/LLvTqmw8TSXHXbzCJW5Kd2NVKcFjnKBwFfHZ3cCpT/XL/_W3H2290-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-s56kFCX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-s56kFCX/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2456,7 +2456,7 @@ export const galleryData = [
     "description": "Soldiers waiting for the beginning of events at Civil 'War reenactment.   © Wayne Heim",
     "alt": "Waiting, Waiting    Photography by  Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-HpXQNJK/13/LTRKtCrNFQ2hfLRdbWHk3wbwKFxtqPFLVjRcfrvCc/XL/_W3H2322-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-HpXQNJK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-HpXQNJK/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2482,7 +2482,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-f4DHCWh/14/MTm88d2nkKpxbBdVj2QRSPCJSt8WC6cWwMnWJf9NV/XL/_W3H2351-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-f4DHCWh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-f4DHCWh/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2508,7 +2508,7 @@ export const galleryData = [
     "description": "Two young ladies share a secret at civil war reenactment.   © Wayne Heim",
     "alt": "I Got A Secret    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/4/NLhF3HZnjNRvChthZSN87TpbPrkxCqr8nxwNH8zzv/XL/_W3H2386-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-VTf5zR7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-VTf5zR7/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2534,7 +2534,7 @@ export const galleryData = [
     "description": "Neighbors chat during civil war reenactment at Hale Farm.   © Wayne Heim",
     "alt": "Neighbor Chat    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-bdxGDBP/14/MMrRWWrbJpkP6VJQNrMVKPbqtLWP23LZm3fBLpLSD/XL/_W3H2432-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-bdxGDBP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-bdxGDBP/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2560,7 +2560,7 @@ export const galleryData = [
     "description": "Young woman knits while her daughter draws during a civil war reenactment. © Wayne Heim",
     "alt": "Knitting    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-KBP9sFz/15/Nc5JB4PM3P9s7xtQvT27MGNbL3ZpNgDCbzwdVnPdZ/XL/_W3H2433-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-KBP9sFz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-KBP9sFz/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2586,7 +2586,7 @@ export const galleryData = [
     "description": "Reenactor poses for portrait during D Day Conneaut.     © Wayne Heim",
     "alt": "Happy Reenactor     Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-kPPLZnK/4/KFTxXPMLLwCcrshBt9DqVsk6Fh3Pr9Mw8PjHPXkD6/XL/_W3H2872-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kPPLZnK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kPPLZnK/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2612,7 +2612,7 @@ export const galleryData = [
     "description": "Red Cross worker mends shirt during reenactment  at D Day Conneaut.  © Wayne Heim",
     "alt": "Repair Job   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q5V5cks/4/NZFBsbT26zNfwC4fJMbm8HbW28565r7M3zRpWwM95/XL/_W3H3186-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q5V5cks/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q5V5cks/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2638,7 +2638,7 @@ export const galleryData = [
     "description": "Portrait of a woman reenactor at D Day Conneaut.  © Wayne Heim",
     "alt": "I Am Waiting   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/MhNMqrfWKmNp4p4Jf5pjCrSsGkKhv5pWmdr9mBbkT/XL/_W3H3194-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9NT8GV4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9NT8GV4/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2664,7 +2664,7 @@ export const galleryData = [
     "description": "Soldiers at parade rest during D Day  reenactment.  © Wayne Heim",
     "alt": "Parade Rest. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-G6V9xZL/4/LBvK9K7swvwt4PVdjRhXz9rv5DK6M5B9bs3z4xZFC/XL/_W3H3250-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-G6V9xZL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-G6V9xZL/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2690,7 +2690,7 @@ export const galleryData = [
     "description": "Soldiers at parade rest from the rear show correct form during D Day Reenactment.\n© Wayne Heim",
     "alt": "Perfect Form     Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-nPhWxjq/4/NGjN5vJzzM9JXmmRZ3LhjVkQbGL38BHJQDzhTVNJv/XL/_W3H3267_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nPhWxjq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-nPhWxjq/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2716,7 +2716,7 @@ export const galleryData = [
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-85t9rqd/4/KfrzFQxfS5MWCpRFnJ6mNZFpTXRNPDDkxgWvJzp8Q/XL/_W3H3898-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-85t9rqd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-85t9rqd/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2742,7 +2742,7 @@ export const galleryData = [
     "description": "Allies soldier takes aim from behind a motorcycle during a reenactment.  © Wayne Heim",
     "alt": "Taking Aim    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-WgTb7t4/4/NGJV5wSmZBctPC3Pm5R2WVPRHrM34WWCL5cpStDZn/XL/_W3H4221-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-WgTb7t4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-WgTb7t4/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2768,7 +2768,7 @@ export const galleryData = [
     "description": "Medic arrives to help wounded soldiers  © Wayne Heim",
     "alt": "Help is Here     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-NZ3HttB/4/L8spJF6gqSwtPpcbw9jkTQDGcK29tvMCMZ625mWqv/XL/_W3H4494-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-NZ3HttB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-NZ3HttB/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2794,7 +2794,7 @@ export const galleryData = [
     "description": "Hunkered down in his sand bag bunker, the WWII radio operator eagerly watches for any signal to come from the beach. Reenactor in role of radio operator during D  Day Conneaut.  © Wayne Heim",
     "alt": "WWII Navy Radio Operator - Watching for Signals",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-tz4T7z9/4/MVGTnWQX6NhvpTSK9kwhBM8VKmNpWnJ84mPPKqdXd/XL/_W3H4585-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tz4T7z9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tz4T7z9/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2820,7 +2820,7 @@ export const galleryData = [
     "description": "WW II Veteran poses with all the metals he earned.   © Wayne Heim",
     "alt": "Highly Decorated PFC   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/NJVkm5nDrd6P4hrDXFnXq3kmXP9bGGth7rxJZRN6t/XL/_W3H4899-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8ZC4vFq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8ZC4vFq/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2846,7 +2846,7 @@ export const galleryData = [
     "description": "Crew gets ready to fire the German 88 gun during D Day Conneaut.  © Wayne Heim",
     "alt": "Getting Ready to Fire     Photography by 'Wayne Hrim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9gF9rCs/4/NRMkHCbgF8fJ8tgdk9zpfwJQgGXNbwLVZWLK5GJmS/XL/_W3H5408-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9gF9rCs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-9gF9rCs/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2872,7 +2872,7 @@ export const galleryData = [
     "description": "Three reenactor sit and chat in the Allied camp of D Day Conneaut.  © Wayne Heim",
     "alt": "Leisure Talk   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-RxjLXGM/4/M3XmgRjPTfMWN5vgKCLL6Qx2bzTXrKb6kvtkdbtQk/XL/_W3H6528-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-RxjLXGM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-RxjLXGM/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2898,7 +2898,7 @@ export const galleryData = [
     "description": "Time Out - Allied reenactors take a rest period during D Day Conneaut reenactment© Wayne Heim",
     "alt": "Time Out  - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-LwdHptZ/4/LtPpHw24LKs45GL33wDbKHkbxvh2BrPLnZnhxZqGW/XL/_W3H6532-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-LwdHptZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-LwdHptZ/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2924,7 +2924,7 @@ export const galleryData = [
     "description": "Swabbie takes a coffee break during D Day Conneaut  © Wayne Heim",
     "alt": "Coffee Time    © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8fbHpXN/4/MLQrrTxKWpFKGtXZkRdzBnCWrzNns4PLKPBqrRqMH/XL/_W3H6584-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8fbHpXN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-8fbHpXN/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2950,7 +2950,7 @@ export const galleryData = [
     "description": "Two reenactors pose during D Day Conneaut.  © Wayne Heim",
     "alt": "Reenactor Couple     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-hjmBkbt/4/LCHcdccVtw6B4BKJCW66NWGFzrFLM5J5xBmXGJRh2/XL/_W3H6590-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-hjmBkbt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-hjmBkbt/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -2976,7 +2976,7 @@ export const galleryData = [
     "description": "Young boy areenactor as a young sailor at the USO Dance during D Day Conneaut.  © Wayne Heim",
     "alt": "Sailor Boy     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/L8bzWQsqH2LfsJRFCrN5NdWNdrLpnNbhXR8hkF7Qr/XL/_W3H6651-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-PtmDWWS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-PtmDWWS/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3002,7 +3002,7 @@ export const galleryData = [
     "description": "Mother and son reenactors atI D Day Conneaut USO Dance.  © Wayne Heim",
     "alt": "Mother & Son  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/MC3qfNVbC5BFzcVtct23FWwbn5TDqPRf2CNBRS2wk/XL/_W3H6653-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q4JpqnD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q4JpqnD/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3028,7 +3028,7 @@ export const galleryData = [
     "description": "Officer entertains at the USO Dance during D  Day Conneaut      © Wayne Heim",
     "alt": "Singing Officer    Black & white Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v83nSC8/4/LRL4vJPrNjK75gL6t8zHNH6jfw63n73zdVJTBjSgG/XL/_W3H6730-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-v83nSC8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-v83nSC8/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3054,7 +3054,7 @@ export const galleryData = [
     "description": "Singing at U.S O Dance.  © Wayne Heim",
     "alt": "Let Me Entertain You.   Black & white Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-xjqktc4/5/MvBD5V86JkBMKsF7nXdMQTpcZg2kKxZRvPnwvPvgq/XL/_W3H6732-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-xjqktc4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-xjqktc4/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3080,7 +3080,7 @@ export const galleryData = [
     "description": "Confederate soldiers relax during Civil War reenactment. © Wayne Heim",
     "alt": "Relaxing in Camp    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-Q4j7kKn/4/MJMtZTNgLbsfGScGZBRh2TsZwSFQDtb68w5PxDDM4/XL/_WHZ0467-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q4j7kKn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q4j7kKn/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3106,7 +3106,7 @@ export const galleryData = [
     "description": "Woman waits in camp to hear news of the battle.   © Wayne Heim",
     "alt": "Portrait of a Woman Waiting   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-kCrfm2s/4/LsBd8Pczfp8BknbFWsqhJZRmgtBWPJjkFD8JVJDKN/XL/_WHZ0494-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kCrfm2s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-kCrfm2s/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3132,7 +3132,7 @@ export const galleryData = [
     "description": "Portrait of a carpetbagger during a civil war reenactment at Hale Farm.   © Wayne Heim",
     "alt": "Carpetbagger   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wfxSxw3/5/MmVxKvpS8nsLzdHW9XJzgDxv25R7Vtxjw589fNtBF/XL/_WHZ0561-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wfxSxw3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wfxSxw3/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3158,7 +3158,7 @@ export const galleryData = [
     "description": "Portrait of a carpetbagger. © Wayne Heim",
     "alt": "Carpetbagger (B/W)    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-phPSsGc/4/NGsHtKMXgx5Sk7NLsvdM7bsNh3QFRhDT6sKmg99qv/XL/_WHZ0561-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-phPSsGc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-phPSsGc/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3184,7 +3184,7 @@ export const galleryData = [
     "description": "Young Reenactor- young girl at Hale Farm in Civil War Reenactmenty ©Wayne Heim",
     "alt": "Young Girl as Reenactor    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-4dmZLCx/5/Mtjts5NNbr3CwcRwsgQFkcMHGgWq7chGJtng8nWhB/XL/_WHZ0657-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4dmZLCx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4dmZLCx/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3210,7 +3210,7 @@ export const galleryData = [
     "description": "Women wonder what they should do around camp while waiting for soldiers to return.  © Wayne Heim",
     "alt": "What Should We Do?     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JzWxtRb/4/MNqRpCMngC9HkXmFTpPKs7LWPxcGHxZpSHnJb8Lr7/XL/_WHZ0782-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-JzWxtRb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-JzWxtRb/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3236,7 +3236,7 @@ export const galleryData = [
     "description": "Civil war reenactor takes a stroll in the fields of Hale farm.  © Wayne Heim",
     "alt": "Out for a Walk    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-Tdc8JSq/4/L6JQCHTqkqCS9HLVCrjDGJZnfpkSLCcgRCm8MPXW4/XL/_WHZ0827-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Tdc8JSq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Tdc8JSq/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3262,7 +3262,7 @@ export const galleryData = [
     "description": "Group of Confederate soldiers march across field during Civil War reenactment.  © Wayne Heim",
     "alt": "Confederate Soldiers on the March     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-bJ6BGzp/4/NH6q4ZhhK6pgQtcVWHkZzcnd8PgWknBhzpCHqTGWp/XL/_WHZ0839-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-bJ6BGzp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-bJ6BGzp/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3288,7 +3288,7 @@ export const galleryData = [
     "description": "Young Civil War reenactor carries the Confederate flag proudly. ©Wayne Heim",
     "alt": "I Hold Her Proudly  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-3KnZChF/4/NGvL2SPT7KC9cCrQmc8h42rMr5tTHFVv8PxHhWshh/XL/_WHZ0842-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3KnZChF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3KnZChF/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3314,7 +3314,7 @@ export const galleryData = [
     "description": "Carrying the Colors soldiers led the way to battle.   © Wayne Heim",
     "alt": "Colors Forward   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-ffHWz97/5/M9CdZPTdK42cWtdXjTT8XTSqK75dvSzbbwcNHNSJ9/XL/_WHZ0946-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-ffHWz97/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-ffHWz97/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3340,7 +3340,7 @@ export const galleryData = [
     "description": "Union line fires a volley of shots during a civil war reenactment.  © Wayne Heim",
     "alt": "Firing A Volley   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-Jhq64bk/4/KDvM7V7Sk3Zh4GF4Bt93GPJrxxVHtJWkRGkFJZW2q/XL/_WHZ0969-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Jhq64bk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Jhq64bk/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3366,7 +3366,7 @@ export const galleryData = [
     "description": "Union soldiers reloading their rifles  during Civil War reenactment. © Wayne Heim",
     "alt": "Reload    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-4sfvnfJ/5/MnhhSMCvQ6j29ND2Jr7JfXm2djXdWKLqBbkVKLfWL/XL/_WHZ0976-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4sfvnfJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4sfvnfJ/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3392,7 +3392,7 @@ export const galleryData = [
     "description": "Union Soldiers firing as they advance in battle. © Wayne Heim",
     "alt": "Fire At Will      Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-7BjxQng/4/LTzTwnhhrvRHQzpTMhNfJBTtDKmKhKjGPcx7wL7ZV/XL/_WHZ1050-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-7BjxQng/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-7BjxQng/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3418,7 +3418,7 @@ export const galleryData = [
     "description": "A wounded soldier is helped from the battle field. © Wayne Heim",
     "alt": "Lending a Hand    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-CCRrM2t/5/Kt37wk7KNZBRvKTMZP4Lsj6z84fzK5N2NSF3FxQ3N/XL/_WHZ1105-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-CCRrM2t/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-CCRrM2t/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3444,7 +3444,7 @@ export const galleryData = [
     "description": "Wife helps her wounded husband behind the lines during civil war reenactment.  © Wayne Heim",
     "alt": "Wife to the Aid    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-6SszcLj/5/M6PMnRP3CL8VJVHQ5pNTWWMsCcgtcnPWbHrNpNcmX/XL/_WHZ1111-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-6SszcLj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-6SszcLj/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3470,7 +3470,7 @@ export const galleryData = [
     "description": "Tired faces of soldiers show it was a long day.  © Wayne Heim",
     "alt": "Long Day    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-Gbndp8M/5/MKRkPZqTSFTddGRn3Wq8Q7Zw6pCq9r5F4Mg3mh5Q7/XL/_WHZ1169-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Gbndp8M/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Gbndp8M/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3496,7 +3496,7 @@ export const galleryData = [
     "description": "Civil War Reenactment  after a hard day   © Wayne Heim",
     "alt": "Hard Day    Photography by Wayne  Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JLdsCWg/5/MmhwVRVKrrBPSq9r8KGQTHkFDhRZzX2xFGNDH3BBm/XL/_WHZ1170-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-JLdsCWg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-JLdsCWg/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3522,7 +3522,7 @@ export const galleryData = [
     "description": "Portrait of Pilot reenactor at D Day Conneaut.  © Wayne Heim",
     "alt": "Pilot    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-V6Z49XZ/3/LQHczFbZ7GMBjT5bknMD82sFdhSBsCjjrzwzn48sH/XL/_WHZ1776-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-V6Z49XZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-V6Z49XZ/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3548,7 +3548,7 @@ export const galleryData = [
     "description": "Woman reenactor poses for a portrait during D  Day Conneaut. © Wayne Heim",
     "alt": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/LpwJkCgBzqstDvfS5GMfJg6J4PhFZn2gjRgGfdznk/XL/_WHZ2607-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-xMxDrS5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-xMxDrS5/A",
     "keywords": [
       "wayne heim",
       "black and white photography",
@@ -3574,7 +3574,7 @@ export const galleryData = [
     "description": "Night time firing of the German 88  during D Day Conneaut. © Wayne Heim",
     "alt": "Night Firing     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-89dTvpV/3/MBxrdX6Q4k54S7XXtL5MqwDgw7nNSFFsKZ7QdncFR/XL/_WHZ2633-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-89dTvpV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-89dTvpV/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3600,7 +3600,7 @@ export const galleryData = [
     "description": "German 88 gun in silhouette against the night sky. © Wayne Heim",
     "alt": "German 88    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-f5TPN83/3/KVkTsPhS4Pmrq5gBB8zdNC399WFpn8Kqdx3rdJCdJ/XL/_WHZ2652-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-f5TPN83/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-f5TPN83/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3626,7 +3626,7 @@ export const galleryData = [
     "description": "Portrait of woman reenactor at D Day Conneaut.  © Wayne Heim",
     "alt": "Hello     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3kHSr6x/3/MxzzrShCsmHrJRt5tWJMkJk6mVLBPNvKLPSHCnPVq/XL/_WHZ2770-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3kHSr6x/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3kHSr6x/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3652,7 +3652,7 @@ export const galleryData = [
     "description": "\"Forward\" is the order for the Commonwealth troops during this reenactment.  Wayne Heim ©2015",
     "alt": "Forward   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/M6qXf3zbw3CpZm97qgwvxLgzsFkCVbXsVGGFFCxJP/XL/_WHZ3907-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-RQDpTBd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-RQDpTBd/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3678,7 +3678,7 @@ export const galleryData = [
     "description": "Veterans tell their story at the USO Dance at D Day Conneaut. © Wayne Heim",
     "alt": "Our Stories    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/NKjZZdFDCdVXC5vzTmWLtPRJVnGhz6nkxb8PSNc6m/XL/_WHZ5358-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3VCCKd2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3VCCKd2/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3704,7 +3704,7 @@ export const galleryData = [
     "description": "Officer offers pencil to someone at USO Dance during  D Day Conneaut. © Wayne Heim",
     "alt": "Take This   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/M2Xt2VJ5BMGzRRdtVTsfkm2Kwjw7q9773KZhbSjw9/XL/_WHZ5370-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-FfQhchB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-FfQhchB/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3730,7 +3730,7 @@ export const galleryData = [
     "description": "Couple dance at USO Dance during D Day Conneaut. © Wayne Heim",
     "alt": "Dancing     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/Mk9R7jgLNQqNvwgTNtmRphCX9v96VJT26sHtcnXjv/XL/_WHZ5391%2520b-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-RTj9HSn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-RTj9HSn/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3756,7 +3756,7 @@ export const galleryData = [
     "description": "Girl tries on sailor's hat during the USO Dance at D Day Conneaut. © Wayne Heim",
     "alt": "Like Your Hat    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VnsXB3/3/K7SDsDwn9PdzKBMWxwT6QNCcb6Z7p3QDsnCstzt4S/XL/_WHZ5416-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3VnsXB3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3VnsXB3/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3782,7 +3782,7 @@ export const galleryData = [
     "description": "Men await their turn to fire their tank while watching other exhibitors at Bulletfest. © Wayne Heim",
     "alt": "WWII Reenactment Photography: Smoke Signals by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/LXnKjDbtpRvwsXJp7RKphGV9XGF5Djvx2Lkc5ZHZZ/XL/_WHZ6931-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wp7KTps/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wp7KTps/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3808,7 +3808,7 @@ export const galleryData = [
     "description": "Tank commander tells men where to fire their guns during Bulletfest. © Wayne Heim",
     "alt": "Aim There    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-Xmg6KXg/1/KtWFdMMXH5vZkPCd8tWDNSQPQq6KT87ZcGhqPb6W4/XL/_WHZ6940b-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Xmg6KXg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Xmg6KXg/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3834,7 +3834,7 @@ export const galleryData = [
     "description": "Portrait of a WWI soldier done in sepia tones . © Wayne Heim",
     "alt": "Portrait of WWI Soldier    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-HK7xfGs/1/McRvpHkqsNZz2mVRwg4nqrwmGBZM26PL3qmprvskQ/XL/_WHZ7232-f-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-HK7xfGs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-HK7xfGs/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3860,7 +3860,7 @@ export const galleryData = [
     "description": "Portrait of German tank driver waiting his turn.  © Wayne Heim",
     "alt": "Just Waiting    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-ZHDn4Vc/1/LT6XNDS74PrgRRjXrZKK5WS3Xxvt7kRDvbjQZhJQS/XL/_WHZ7244-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-ZHDn4Vc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-ZHDn4Vc/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3886,7 +3886,7 @@ export const galleryData = [
     "description": "Young reenactor poses at the Rockford WWII reenactment. © Wayne Heim",
     "alt": "Portrait at Rockford   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-LhVX3Qt/3/KvF8G8bC5sZz3pKc24VV3gTD49BPgVhJ5j4HBDPfS/XL/_WHZ8117-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-LhVX3Qt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-LhVX3Qt/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3912,7 +3912,7 @@ export const galleryData = [
     "description": "Wac serves as a radio operator  at D Day Conneaut reenactment.   © Wayne Heim 2016",
     "alt": "Radio Operator    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-gzc77Jk/1/KgNkbrj3nC5k82zH45xp9QCdrQPJDTJWSHKwMxXkc/XL/_WHZ4149-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-gzc77Jk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-gzc77Jk/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3938,7 +3938,7 @@ export const galleryData = [
     "description": "Woman takes a break at D Day Conneaut   \n© Wayne Heim 2016",
     "alt": "Fun Break   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-md8ZgWw/1/LTHmkgGbRKJbnW86Pb59vSDJ3Z7LmCMs2KS36pKDJ/XL/_WHZ4188-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-md8ZgWw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-md8ZgWw/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3964,7 +3964,7 @@ export const galleryData = [
     "description": "Portrait of a woman reenactor at WWII reenactment.  © Wayne Heim 2016",
     "alt": "Prim and Proper     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-dHgZxHz/1/LdKKMJTNfJcf264rzXGNwxCXfjpH7B8SgMBt2TSmX/XL/_WHK7187-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-dHgZxHz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-dHgZxHz/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -3990,7 +3990,7 @@ export const galleryData = [
     "description": "Wounded soldier receives a helping hand during D Day Conneaut.   © Wayne Heim 2016",
     "alt": "Helping Hand     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-fCLCVTd/1/M5465mP4TqDVWjSfvbnbVs78RS4jqC8xr3g8Bz5Tw/XL/_OWH0068-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-fCLCVTd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-fCLCVTd/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4016,7 +4016,7 @@ export const galleryData = [
     "description": "Medic trying to help wounded soldier during D Day Conneaut.    © Wayne Heim 2016",
     "alt": "Let Me Help      Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tq35N2V/1/M6ZWCz4X775wVLjTSxc84drgJzWFg5DcRbJSBRd52/XL/_WHK7894-Edit-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tq35N2V/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-tq35N2V/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4042,7 +4042,7 @@ export const galleryData = [
     "description": "Portrait of a reenactor as a WAVE.  \n© Wayne Heim 2016",
     "alt": "Portrait of a WAVE    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wdX7NqC/1/KNLDgFNh3mzkwLWgjBQw6JM6JwhqRSBwPz9N3q7kT/XL/_WHK8270-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wdX7NqC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-wdX7NqC/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4068,7 +4068,7 @@ export const galleryData = [
     "description": "Soldier leads the charge during beach battleat D Day Conneaut.    © Wayne Heim 2016",
     "alt": "Let's Go      Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-VwdVQq4/1/KPmrMJrfKdZKRWRKV9Lc9fxFDqFHw3TFJdr7f7925/XL/_WHK0052-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-VwdVQq4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-VwdVQq4/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4094,7 +4094,7 @@ export const galleryData = [
     "description": "Wounded man during reenactment at D Day Conneaut.    © Wayne Heim 2016",
     "alt": "Man Down   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-w5SWcBG/1/KWNkWQhK9qPqBHs4Fb279fgKv7ftKRm8bNGMSQtBz/XL/_WHK0434-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-w5SWcBG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-w5SWcBG/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4120,7 +4120,7 @@ export const galleryData = [
     "description": "Radio operator yells for medic during WWII reenactment.    © Wayne Heim 2016",
     "alt": "Radio Operator   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-qXZcTNM/1/MZBX6Rx4gwBZKpcr9C2jnSNKkwT4FSKjhmBt5TqBH/XL/_WHK0555-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-qXZcTNM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-qXZcTNM/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4146,7 +4146,7 @@ export const galleryData = [
     "description": "Soldiers dug in on the beach during D Day Conneaut beach battle.\n© Wayne Heim 2016",
     "alt": "Dug In    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q8VzmZb/1/KPhsCMccVh6FLDVjvjbc4cWB7vh62vJrNb482s2Lr/XL/_WHK0746-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q8VzmZb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-Q8VzmZb/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4172,7 +4172,7 @@ export const galleryData = [
     "description": "Soldiers walk up the beach into the smoke during D Day Conneaut\n© Wayne Heim 2016",
     "alt": "Into the Smoke    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3Cq3WxQ/1/MzTwGkRPSWCnqbrDzVZPcLvSPv8wJqtjzn285n2xn/XL/_WHK1109-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3Cq3WxQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-3Cq3WxQ/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4198,7 +4198,7 @@ export const galleryData = [
     "description": "Man relaxes on bench overlooking lake.\n ©Wayne Heim",
     "alt": "Relaxing     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-SbwQFsp/1/KSHgsMmpNCR3fDvXV9HdMmmjcMN89nJhkmV7fmsSc/XL/_A012244-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-SbwQFsp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-SbwQFsp/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4224,7 +4224,7 @@ export const galleryData = [
     "description": "Tanks on the roll ready for the tank battle at WWII reenactment.  © Wayne Heim",
     "alt": "Ready for Battle  BlacK & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-D9rGNBw/3/KsVFctvWzfFKKScNDRP484bXggQsxNjnhVQds7hKs/XL/_OLY0470-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-D9rGNBw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-D9rGNBw/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4250,7 +4250,7 @@ export const galleryData = [
     "description": "Woman reenactor at D Day Conneaut\n© Wayne Heim",
     "alt": "Hi There!    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-W7CFHMJ/3/KdLmdD89TSkgPZCvVbtSHvG66gnMjBw9mPH6B54Dd/XL/P8170038-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-W7CFHMJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-W7CFHMJ/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4276,7 +4276,7 @@ export const galleryData = [
     "description": "Reenactor as a pilot who has  parachuted behind enemy lines.    © Wayne Heim",
     "alt": "Pilot    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mdfNg9Z/3/LqxFkNdqRPJp5HgwB5LJb4mr8BjPC7xRxLkGmxSqt/XL/P8180439-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-mdfNg9Z/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-mdfNg9Z/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4302,7 +4302,7 @@ export const galleryData = [
     "description": "Young girl act as aid during WWII reenactment.  © Wayne Heim",
     "alt": "Young Aide   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mmqLB5K/3/Ndp3QjHL78G4xdC56VJcFxJmXq7kQVD6Ck7Hfc9tm/XL/_OLY2867-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-mmqLB5K/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-mmqLB5K/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4328,7 +4328,7 @@ export const galleryData = [
     "description": "War Correspondent takes a rest during D-Day Conneaut.   © Wayne Heim",
     "alt": "War Correspondent  Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7vJM8T5/3/NVszWZv3qtXBGFDvdBP8jsHzWDQqzMVfRrtKHqskt/XL/P8180900-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-7vJM8T5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-7vJM8T5/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4354,7 +4354,7 @@ export const galleryData = [
     "description": "Paratrooper reenactor is hung up in a tree after jumping behind enemy lines at D Day  Conneaut.    © Wayne Heim",
     "alt": "Hung Up     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-6dXLqcb/3/LrwxmpMh5nW3Jk2KQvqF5qFCBgNVxTk3tDsVn6bJk/XL/_OLY3116-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-6dXLqcb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-6dXLqcb/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4380,7 +4380,7 @@ export const galleryData = [
     "description": "Soldier salutes at D Day reenactment in Conneaut, Ohio.  © Wayne Heim",
     "alt": "Yes Sir     Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/KmbmN9DNLVMfc4zqRHDtf2C58pQL4bkCV6QTSG8cX/XL/_OLY1285-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-KHwLvpT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-KHwLvpT/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4406,7 +4406,7 @@ export const galleryData = [
     "description": "Woman reenactor in navy uniform,\n© Wayne Heim",
     "alt": "Portrait of Navy    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-G4zzN4T/3/Lv3XF27PLdJQmG8zdLmNkkMM8Jbhg4sRQKcSDH2m8/XL/_OLY1572-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-G4zzN4T/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-G4zzN4T/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4432,7 +4432,7 @@ export const galleryData = [
     "description": "Haze surrounds a tank after firing it big gun during a WWII reenactment.   © Wayne Heim",
     "alt": "Haze of Fire  black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-SkGBCPg/3/MVbdvrv2ShSnQK2X3mvRXppPQ4bNw4bscXR9jkDgs/XL/_OLY3077-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-SkGBCPg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-SkGBCPg/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",
@@ -4458,7 +4458,7 @@ export const galleryData = [
     "description": "Shadow photography of soldier and tank in battle during reenactment.  © Wayne Heim",
     "alt": "In Shadow  Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fnsQQdz/3/KpGj4WdW6WskjfhrbjvBWFQKCss5McZSVdfXf3mfz/XL/P8191726-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-fnsQQdz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-fnsQQdz/A",
     "keywords": [
       "Weapons_2015",
       "wayne heim",

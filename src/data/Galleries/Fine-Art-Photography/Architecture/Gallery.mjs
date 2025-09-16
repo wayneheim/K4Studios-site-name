@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Venice Flowers",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NZ9g9x2vF5p7MBKnNKsH8MCxWG9Q6CGvJcqBnqL6R/XL/P1000824-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-fsmXzLW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-fsmXzLW/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -64,7 +64,7 @@ export const galleryData = [
     "description": "Fine art landscape photo of old wood Venice front door and seating for 3. Rustic faded colors of the architecture are pierced by the bright colors and lively hood of the plants on the windowsill. Note how the splotchy pink texture of the stucco wall is echoed in the floral pattern of the curtains. © Wayne Heim",
     "alt": "Front Door - Take a Seat. By Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/L25HVwpQsnwxnXRKpMM6d2dTjpFLhKgP5wQSrkz2s/XL/P1010060-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-fszvgmq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-fszvgmq/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -106,7 +106,7 @@ export const galleryData = [
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "alt": "Out to Dry: photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-kdkL5WG/3/LWn77JSbNxqG44DrC6cKKhjhWLhsShCf6tX6vhwB5/XL/P1010018%2520%25281%2529-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-kdkL5WG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-kdkL5WG/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -148,7 +148,7 @@ export const galleryData = [
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "alt": "Rundown      Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/KD2PKWn2CwGH2NpDDvRn8SVRB6rbhsCvFhHGkPPnJ/XL/P1010038-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-d9wMKtJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-d9wMKtJ/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -190,7 +190,7 @@ export const galleryData = [
     "description": "Dome & Windows - complete view of dome of Napoleon's Tomb with windows in Paris. ©Wayne Heim",
     "alt": "Dome and Windows - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-QkG3vmv/4/NXpR88BVq7329gK8fMpcDxjrWCKkSWpLcrtdFpTCp/XL/_IMG3022-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-QkG3vmv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-QkG3vmv/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -232,7 +232,7 @@ export const galleryData = [
     "description": "24 x 36 In Stock  Strasbourg Old town Strasbourg showing canal and colorful buildings in the principal city of Alsace in France. ©Wayne Heim",
     "alt": "Strasbourg - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/NS95s4PVS7Mc3smmr7WjkpVp2W3bX9gjJQmKgcdkT/XL/_IMG2241-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -274,7 +274,7 @@ export const galleryData = [
     "description": "Hotel de Ville - famous hotel in Paris France showing grand architecture.©Wayne Heim",
     "alt": "Hotel de Ville - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-thtMmjm/4/KjB2hSGXW7c4cJDm9KcFp7vVGHKsc3ds7KFdnCh2N/XL/i-thtMmjm-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-thtMmjm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-thtMmjm/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -316,7 +316,7 @@ export const galleryData = [
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "alt": "Lone Boat - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/MzFDdKsFfRb8RhnmRprwjMTd8hk3MXb62tJ77V9NX/XL/P1010052-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-XV5CXk6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-XV5CXk6/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -358,7 +358,7 @@ export const galleryData = [
     "description": "Bed Time. Room in an old log cabin in the Smokie  Mountains showing bed and crib.©Wayne Heim",
     "alt": "Bed Time  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Still-Lifes/i-pDP765B/4/K97bTnPKSbsSPNmWbL9fSvVW6Zvp9993gBjNQBqQ4/XL/_IGP1778-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-pDP765B/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-pDP765B/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -400,7 +400,7 @@ export const galleryData = [
     "description": "Eiffel Tower  - sepia tone photo of the Eiffel Tower in Paris, France. Old bleach pass feeling photo of the Eiffel Tower in Paris France. Sepia tones work well to complement the brown natural color of the metal structure of the tower. ©Wayne Heim",
     "alt": "Eiffel Tower in Sepia",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VX7fW9d/3/K5CrrHnWwDfhfVFRMWx5c9hbTQfSDxPccZVBMjQqz/XL/_IMG2276-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VX7fW9d/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VX7fW9d/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -442,7 +442,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of interworkings and design of the support structure of the Eiffel Tower. Photo in sepia allows viewer to focus on the patterns and not the fact that it is a photo. The strong symmetry of the structure brings harmony and unity to the image.",
     "alt": "Support --Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-DRBBHkV/3/KRSxTxxrWpVtCBCJKttsJmHXqWrM98PJLH6jWJMx2/XL/_IMG2283-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-DRBBHkV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-DRBBHkV/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -484,7 +484,7 @@ export const galleryData = [
     "description": "Bored - Gargoyle seems bored as he looks over Paris, France. ©Wayne Heim",
     "alt": "Bored - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VbsJ838/4/McH4xxfzvXn92hMGqj26kf7LgzVJdG5sBVf24rLLk/XL/_IMG2540-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VbsJ838/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VbsJ838/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -526,7 +526,7 @@ export const galleryData = [
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "alt": "Italian Church   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-cGdLT5v/3/MCBSxM9hRK4Lz2mm98RTwSmfw9BQsMCbZLjk2jG9V/XL/P1000879-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-cGdLT5v/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-cGdLT5v/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -568,7 +568,7 @@ export const galleryData = [
     "description": "Spire of Notre Dame -  looking out on one of the spires of Notre Dame Cathedral in Paris with the Seine River in the background. ©Wayne Heim",
     "alt": "Spire of  Notre Dame - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-JxKNknz/4/NVLD69kR9zJhSSFxNpN3nht9FgJLxZhgNVzbLwbBX/XL/i-JxKNknz-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-JxKNknz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-JxKNknz/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -610,7 +610,7 @@ export const galleryData = [
     "description": "Tower Bridge - popular view of the Tower Bridge from across the Thames River in London, England.©Wayne Heim",
     "alt": "Tower Bridge - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/MpCcC5HRk5V4d3Wcq7sSpzrXLjdMJj4QkTmWHCm2B/XL/IMGP3340-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -652,7 +652,7 @@ export const galleryData = [
     "description": "SOLD - Tinkers Creek -  view of the Berea Bridge from below the falls in Berea Ohio. ©Wayne Heim Call for ordering options.",
     "alt": "Tinkers Creek - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-dkBvtw9/7/Mbkng9tKVLc2WpQqM3gbJk2JcHKp4znpT9SN6QNS6/XL/i-dkBvtw9-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-dkBvtw9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-dkBvtw9/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -694,7 +694,7 @@ export const galleryData = [
     "description": "Fine art architecture photography of a steel forging plant in Illinois.",
     "alt": "Steel  Yard Blues -- Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-sbmJt9r/2/K2CcDxDtnzSsf2XZggFLGhRXjnFMTzsQhrkVR7GrH/XL/_W3H7682_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-sbmJt9r/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-sbmJt9r/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -736,7 +736,7 @@ export const galleryData = [
     "description": "Fine art architecture photography of a steel forging plant in Illinois.",
     "alt": "Corner of Forge - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-8JBjk6p/3/LSZsRV2VJwJXnf3B7fDStmc6n484QTgHCXJpvmT7V/XL/_W3H7744_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-8JBjk6p/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-8JBjk6p/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -778,7 +778,7 @@ export const galleryData = [
     "description": "Small  line cabin where men could stay while watching cattle.©Wayne Heim",
     "alt": "Line Cabin   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-SCWP4NP/3/KNL2jwRJNgdn95CbZzG397xgx2kq2Kq6qsz8H7XCm/XL/i-SCWP4NP-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-SCWP4NP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-SCWP4NP/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -820,7 +820,7 @@ export const galleryData = [
     "description": "Grandma's Garage - Old single car garage in Gates Mills, Ohio is decorated for Christmas. ©Wayne Heim",
     "alt": "Grandma's Garage. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/NNtHt7gx8Sk9WGqjPfJw4M2cK8p8dGDTpXRtRxpkj/XL/_IMG0458-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-ZgXTnCV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-ZgXTnCV/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -862,7 +862,7 @@ export const galleryData = [
     "description": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming. ©Wayne Heim",
     "alt": "Better Days\". Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/LWtn7cWcpVrfN2rr53vzzpGxR8CWbBDjCbrKBfCZH/XL/_IMG6287-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-PmxqLBs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-PmxqLBs/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -904,7 +904,7 @@ export const galleryData = [
     "description": "Black and white high key photo of old barn on the famous Mormon Row with a hipped roof in Jackson Hole Wyoming. Note how the weathered wood creates fantastic patterns and striping when viewed in black and white. ©Wayne Heim",
     "alt": "Barn Textures: Ravages of time in Black and White",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-3grzD9s/4/KwbxdBNhgcR3WtrtLL6cx8H5PBcvZqVbk7h5B9JB5/XL/_IMG6296-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3grzD9s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3grzD9s/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -946,7 +946,7 @@ export const galleryData = [
     "description": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building pears out into the daylight. ©Wayne Heim",
     "alt": "\"Out the Door\"",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/L7ZTVXTXn9Z7LSTqgXV86KWcwJNzDkRHZgDsVhbm6/XL/_IMG6301-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-S6m4mR2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-S6m4mR2/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -988,7 +988,7 @@ export const galleryData = [
     "description": "Teton Mountain view looking out of the open barn door.. Looking out an old barn door at the Tetons. Dark isolation of inside of barn is shattered by the light streaming inside breaking the silence, while lurking in the distance is a view of the Grand and the Teton mountain range. ©Wayne Heim",
     "alt": "Tetons on the Outside",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/LkZMgr9JHMw2Lzzcf34GfCw86T87gpsZt5445r5ZP/XL/_IMG6333-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-xZH95Bj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-xZH95Bj/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1030,7 +1030,7 @@ export const galleryData = [
     "description": "Muted rustic colored photograph of T.A. Moulton Barn with a single cowboy looking over the structure. This is one of the barns on Mormon Row near Jackson Hole Wyoming. Rustic textures of the old weathered barn are married with a muted pallet and presentation of the sunset adding the the \"historic\" feeling of the moment. © Wayne Heim",
     "alt": "End of The Day: A Cowboy's Reflection",
     "src": "https://photos.smugmug.com/photos/i-DKjkHL6/3/L5JtSkLgDJVk9B3D4MhqW7SxBKjxZqMQVvJXb3D8G/XL/i-DKjkHL6-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-DKjkHL6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-DKjkHL6/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1072,7 +1072,7 @@ export const galleryData = [
     "description": "A single cowboy sets the seen as he takes a walk on Mormon Row, Jackson Hole Wyoming- This is the T.A. Moulton Barn, one of the most iconic barns in America on Mormon Row just outside of Jackson Hole Wyoming. Fall is one of the best time to take pictures of this area as the golden hues of the aspens and grass play off of the blue mountains and dramatic Teton backdrop. ©Wayne Heim",
     "alt": "Out for a Walk",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/LztbDsVg97kCz7h498TWhJzHRBCnSrdB35cF9rBCV/XL/_IMG6310-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-74rc8wb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-74rc8wb/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1114,7 +1114,7 @@ export const galleryData = [
     "description": "Between Trees - T.A. Moulton Barn, a famous old barn, is viewed between or guarded by two cottonwood trees. The great golden protectors perfectly frame the scene and focus the attention on the barn and the Tetons in the background.  © Wayne Heim",
     "alt": "The Great Protectors - by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LPphtn4MNHxnG56s4XL6C945PXTwcJk8Pc7RTBb94/XL/_IMG6391-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Bdbf3L9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Bdbf3L9/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1156,7 +1156,7 @@ export const galleryData = [
     "description": "Old homestead in Wyoming mountains in background. ©Wayne Heim",
     "alt": "Old Homesteaded     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-FSKvn59/4/LgWTR3PV7tJsR5BRCNMbHpT7kZRq3xbjq4wX2KzpK/XL/_IMG6414-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FSKvn59/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FSKvn59/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1198,7 +1198,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
     "alt": "Black & White Photo of Chicago & St. Louis Train Car",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-C6srdp6/4/L7Tm2x9RKVTQmQ8R44MMz4bVtCh88wQQcvkfhfdDb/XL/_IMG4856-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-C6srdp6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-C6srdp6/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1240,7 +1240,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
     "alt": "Black & White Photo of the Bar Entryway Arch",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-wS2s9zK/4/MXtmtJ7b8P4q3XFM5LSpwLqwQxLMZp8wq5KDcjr6Q/XL/_IMG5017-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-wS2s9zK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-wS2s9zK/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1282,7 +1282,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
     "alt": "Box Design of the Arched Ceiling",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-gW6Drbm/3/LLsGvhHHBsSXW2QQShzHPPvqWM6HVqCCPD67XRzCN/XL/_IMG5049-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-gW6Drbm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-gW6Drbm/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1324,7 +1324,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of the historic Rose window Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana. Photo highlights the wonderful geometric patterns in the architecture and lighting. Red and gold shadow areas frame and draw the eye into the center where the blues and multi-colors of the grand round rose window become the centerpiece.",
     "alt": "Grand Central Train Station Rose Window",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-BHDHLVB/3/LMvCGnKffRC5QPLnMfdHmFFqRqF7FnDSjSXZth6pb/XL/_IMG5013-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-BHDHLVB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-BHDHLVB/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1366,7 +1366,7 @@ export const galleryData = [
     "description": "Unique view of the iconic Art Nuvu style architecture in the ceiling of the Grand Central Station. Red and gold checkered ceiling is boldly bisected by the arching curves of the light and colors of the stained glass window. Rose window of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
     "alt": "Up Close to the Rose Window Grand Central Station",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-FTxZTPq/3/LxGgbncxLwr2xKCrNm4pxzGX7Fk89zqX92qNfTVBv/XL/_IMG5109-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FTxZTPq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FTxZTPq/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1408,7 +1408,7 @@ export const galleryData = [
     "description": "Illumination - a Paris shop window shows a variety of colorful lights and  lamps.©Wayne Heim",
     "alt": "Illumination -  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Still-Lifes/i-3jzjDGJ/6/NMQpNrCxQqsTrPWd4fJxfRP2TGKP4PchJ3TNX7Krn/XL/_IMG1895-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3jzjDGJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3jzjDGJ/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1450,7 +1450,7 @@ export const galleryData = [
     "description": "Memphis Blues - night scene of historic Beale Street in Memphis, TN ©Wayne Heim",
     "alt": "Memphis Blues - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-hR2z9FK/3/LMbkxdLVc5QBWJh3FQQbtf6w9n6RQTMK3RKkN7fMS/XL/_WEH6329-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-hR2z9FK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-hR2z9FK/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1492,7 +1492,7 @@ export const galleryData = [
     "description": "Colorful  Blues City Cafe -  color picture of the cafe on Beale Street in Memphis. ©Wayne Heim",
     "alt": "Colorful Blues City Cafe - Photography by Wayne Heim,",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-KsG2qNv/4/Kg6WNJ3FxkPmPDqtjvjjRDcNNqXCxvRVtJ2Nf95Cs/XL/_WEH6362-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-KsG2qNv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-KsG2qNv/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1534,7 +1534,7 @@ export const galleryData = [
     "description": "Blues City Cafe - front of the cafe in Memphis, TN. ©Wayne Heim",
     "alt": "Blues City Cafe - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-RwgQ8Sd/2/MnGjdT3JmbQWkbM68t2LhnXsh6W8BD6wBB6s4PsMM/XL/i-RwgQ8Sd-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RwgQ8Sd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RwgQ8Sd/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1576,7 +1576,7 @@ export const galleryData = [
     "description": "Fine art architecture photography of a steel forging plant in Illinois.",
     "alt": "Corner of Forge - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-VBm2bg7/3/Kwdcsm46MZ5HvMZZtSK8PN6ww939ZDJb4Wrh5rrCM/XL/_W3H7745_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VBm2bg7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VBm2bg7/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1618,7 +1618,7 @@ export const galleryData = [
     "description": "Pipes --pipes run along the outside of a factory.©Wayne Heim",
     "alt": "Pipes. Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-4p3VpcQ/3/Mf36ZVLq3KtrhmGps4mRrTGMVNmQ65W2rBbCbbNxX/XL/i-4p3VpcQ-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-4p3VpcQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-4p3VpcQ/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1660,7 +1660,7 @@ export const galleryData = [
     "description": "Fine art architecture photography of a steel forging plant in Illinois.",
     "alt": "Forge Co -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-HRVSDSc/2/LhNtw2LNnkZJvfVLNgqGhXBPgvw5FRSbckkRwjm6V/XL/_W3H7760_1_2_3hdr-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-HRVSDSc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-HRVSDSc/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1702,7 +1702,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
     "alt": "Black & White Photo of Joining Metal Beams",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-2NT6fPf/3/LZmxVNHfMFL9PrGXCm5PBFJ7fdwgtN7XVXVj5DLDb/XL/_IMG4854-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2NT6fPf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2NT6fPf/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1744,7 +1744,7 @@ export const galleryData = [
     "description": "Spring Air - bedroom at Hale Farm is aired out by open window in the spring.©Wayne Heim",
     "alt": "Spring Air - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wST5LzJ/5/NLzmtWrHgT62rW46rVqn8SbRr69rhBG6BmLzf8GGX/XL/_WHZ0599-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-wST5LzJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-wST5LzJ/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1786,7 +1786,7 @@ export const galleryData = [
     "description": "Single light shines in window of Iceland building. ©Wayne Heim",
     "alt": "Light in the Window   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3DWdjDb/0/NBtCB9SQqzXvSvfhGkjVmWKvWX6tnnWtXGnPt4bTf/XL/_WHZ2975-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3DWdjDb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3DWdjDb/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1828,7 +1828,7 @@ export const galleryData = [
     "description": "18 x 24 In StockWalk to the Lighthouse  - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio ©Wayne Heim",
     "alt": "Walk to the Light House . Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KdS4VnwmCDXcNN6W4Fwcn8qRVSTqMF8b4k866KxZw/XL/i-HzMDDcG-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-HzMDDcG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-HzMDDcG/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1870,7 +1870,7 @@ export const galleryData = [
     "description": "Cabots Tower on Signal Hill overlooking harbour in St John's Newfoundland and Labrador, Canada.\n©Wayne Heim",
     "alt": "Cabot's Tower on Signal Hill     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-5gxKbqh/1/K59R7QTfcPKksjskBFcqDqGtNjVHtjpfGzSsGR5cQ/XL/_WHZ3140-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-5gxKbqh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-5gxKbqh/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1912,7 +1912,7 @@ export const galleryData = [
     "description": "Many of Iceland's churches are painted black.\n©Wayne Heim",
     "alt": "Little Black Church   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-54qW72n/0/NJMPZ8fHtzr8WrLL3nm2tm9TVvD8SpDN4zvxGHG89/XL/_WHZ0948-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-54qW72n/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-54qW72n/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1954,7 +1954,7 @@ export const galleryData = [
     "description": "Long rough path leads to church in Iceland.©Wayne Heim",
     "alt": "Long Path to Church    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7wvRTpR/0/MG9PBJB9Tw6X4jQDqn7rdP9vkw7D3T3gDHFLVCgvv/XL/_WHZ0987-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7wvRTpR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7wvRTpR/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -1996,7 +1996,7 @@ export const galleryData = [
     "description": "Stone wall encloses the cemetery beside one of  Iceland's churches. ©Wayne Heim",
     "alt": "Cemetery Wall  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Cm3LPhJ/0/L5fWPGT4cqwK94qS5wZnHRnDJ3kRBSk3Xv2b2w2Q5/XL/_WHZ1006-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Cm3LPhJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Cm3LPhJ/A",
     "keywords": [
       "Italy",
       "Venice",
@@ -2038,7 +2038,7 @@ export const galleryData = [
     "description": "Colorful row of boat houses in the Faroe Islands. ©Wayne Heim",
     "alt": "Boat Houses     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-tZLkQzn/2/LBqNsQb6WxnhJG72b6TkZPpkBJPwQjmHJLP54scSf/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-tZLkQzn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-tZLkQzn/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2062,7 +2062,7 @@ export const galleryData = [
     "description": "Small country church stands by the sea. \n©Wayne Heim",
     "alt": "Church by the Sea    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RgdMkhT/1/NHjFcGRmf2QvDvfqMnrm5NLd8pgB9rxXnb2bHMQtT/XL/_WHZ9733_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RgdMkhT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RgdMkhT/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2086,7 +2086,7 @@ export const galleryData = [
     "description": "Stain Glass - Window in Grand Central Station in Indianapolis, Indiana.©Wayne Heim",
     "alt": "Stain Glass . Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-7wLkrSR/4/Kkw8s7dCLmD7jBJJqVpQTJmRkgmw5zWLjHmSjpksd/XL/i-7wLkrSR-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7wLkrSR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7wLkrSR/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2110,7 +2110,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Gears - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-WwsR9Q8/3/KkJMvDWKzgFppfDfWBQC5wQjMsMtKMnsTjNFN5JCj/XL/_IMG2307-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-WwsR9Q8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-WwsR9Q8/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2134,7 +2134,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Eiffel Gears. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-3XJGN8s/3/MbzJqfsS7ScmCQtTjr23D294FGNzT6HCB42cJJCbq/XL/_IMG2308-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3XJGN8s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3XJGN8s/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2158,7 +2158,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Notre Dame before the devastating fire.",
     "alt": "Notre Dame Cathedral -- Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-kL5zPRR/3/LBWRM6T45BVVKRjWzwNVCdT8hwFFVDLNkRVPxDv23/XL/_IMG2625-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-kL5zPRR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-kL5zPRR/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2182,7 +2182,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Notre Dame before the devastating fire.",
     "alt": "Heavenward - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-7jFd3GL/6/NhzXS9wVj7jP7Tx3bs583frR3N34Ghjv6FhPsfnhH/XL/_IMG2474-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7jFd3GL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7jFd3GL/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2206,7 +2206,7 @@ export const galleryData = [
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
     "alt": "Venice Canal - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/MkFmkKN8wqJsfdXHFPHkrMCLJfzQtTkGxnPm7wq5c/XL/P1000873-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7VD9zVJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-7VD9zVJ/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2230,7 +2230,7 @@ export const galleryData = [
     "description": "Blues Cafe -  one of the many cafes on Beales Street in Memphis Tennessee. ©Wayne Heim",
     "alt": "Blues Cafe - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Memphis/i-Vt563w6/3/M5cbsV923Cm5b3jqKH3CRWhnVJcxHp63ghf5fhk7N/XL/_WEH6362-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Vt563w6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Vt563w6/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2254,7 +2254,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Morning After.  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-pcdT7DZ/3/KZq8wBVTCTksVj92HhbBWqpk2Vzn5KcQDMHDRqnWC/XL/_IMG2693-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-pcdT7DZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-pcdT7DZ/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2278,7 +2278,7 @@ export const galleryData = [
     "description": "View from broken window in one of the old building on Mormon row in Jackson Hole Wyoming. Dark black inside creates the perfect frame inside the frame of the picture of the mountains. Black isolation is perfect balance to the rustic isolation of the Old West.© Wayne Heim",
     "alt": "View from the Past: The Tetons",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MrgZ3TtkgxdML89hc8668gnZdMr6KcJBGCGpjsGds/XL/_IMG6130-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-8XNRjZF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-8XNRjZF/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2302,7 +2302,7 @@ export const galleryData = [
     "description": "Rustic log church looking out window over the altar.  ©Wayne Heim",
     "alt": "Rustic Altar    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-Wf6GRbp/2/Kj63V4pJRKJ8dTMN8QSXbRnLxWSrLBpKSwxz3NKCB/XL/_WHZ7407-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Wf6GRbp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Wf6GRbp/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2326,7 +2326,7 @@ export const galleryData = [
     "description": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming. ©Wayne Heim",
     "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KM5kKrRQK3QzjcHqRmCgzmwSZsbFtMFx7Qcz2Sq3R/XL/_IMG6333-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RFCHLhg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RFCHLhg/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2350,7 +2350,7 @@ export const galleryData = [
     "description": "Window -  Old weathered shack with window to the world ©Wayne Heim",
     "alt": "Window   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-SNVMFJ7/4/KrLGthXZWfDhBTbwW22qt4KLxbmKzm4Rwv9MJsPdM/XL/_IMG6053-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-SNVMFJ7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-SNVMFJ7/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2374,7 +2374,7 @@ export const galleryData = [
     "description": "Red Barn -  Side of old red barn with hayloft door. ©Wayne Heim",
     "alt": "Red Barn. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-sPThR67/4/Kj3qQHfvZr83C7vvFxS3CJcNxkWL595CP5zhfhfFP/XL/i-sPThR67-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-sPThR67/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-sPThR67/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2398,7 +2398,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
     "alt": "Stairs to the Lighthouse  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/Mh3kQ2fXD3GPxkHnH2X9gxRs7x2qp2J5BQNn7WZSt/XL/_WHK3201_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-mTV4SXC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-mTV4SXC/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2422,7 +2422,7 @@ export const galleryData = [
     "description": "Napoleon's Dome 0 view of the ornate dome and side wall of Napoleon's Tomb in Paris. ©Wayne Heim",
     "alt": "Napoleon's Dome - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-qMjzwHC/4/NfsDG3wCs39DhtZmdMXpt7gQ9KnNm6HsZPPcJbXSg/XL/_IMG3006-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-qMjzwHC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-qMjzwHC/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2446,7 +2446,7 @@ export const galleryData = [
     "description": "Angry waves at the Lighthouse at Conneaut harbor in Ohio.\n© Wayne Heim",
     "alt": "Conneaut Lighthouse   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/Mn63n5d4cvBjGCF9TBBpmTQrHwRGwQZZTFdpCwL6h/XL/_OLY0581-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-GTDMD9v/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-GTDMD9v/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2470,7 +2470,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Napoleon's Angel - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-KHbCmS4/3/KZwknTTk6jJHqQK79JSH9HknV5CvfWPqC854HPqqP/XL/_IMG3055-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-KHbCmS4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-KHbCmS4/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2494,7 +2494,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
     "alt": "Black & White Photo of Metal Support Arches",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-XnwwX98/3/LC5CgLPptkxfKVRshq5PsgV83SdHWkSQZsWtbbDmB/XL/_IMG4846-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-XnwwX98/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-XnwwX98/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2518,7 +2518,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
     "alt": "Black & White Photo of the Crowne Bar",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-3JtKnsk/3/KmKsL7fC4MBdL3J2R4gPx8wCRncRwZc9cPs8vT9jp/XL/_IMG5000-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3JtKnsk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3JtKnsk/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2542,7 +2542,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Union Station at the Crowne Plaza Hotel in Indianapolis, Indiana.",
     "alt": "Black & White Photo of the Wheel Window",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Indiana/Union-Station-Crowne-Plaza/i-VpHcxGd/3/NWTJ8cLG7gN8VgwFn3QZCMBkKHpLv5MtBhNLPQ3RD/XL/_IMG5008-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VpHcxGd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VpHcxGd/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2566,7 +2566,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "alt": "Mill Creek Mill    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-GvvsRGb/4/KJ9wpQX358tHnQFsSPNHXmf5Ksk54Mq9z6C74G6zT/XL/_WEH7255-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-GvvsRGb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-GvvsRGb/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2590,7 +2590,7 @@ export const galleryData = [
     "description": "Fine art architecture photography of a steel forging plant in Illinois.",
     "alt": "Check Point - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-4mqhqMP/2/MqSqhJ84bgg4S8vTpXDRHcj6z8TwJSNj52Q3Mcxdq/XL/_W3H7774_1_2_3p-matix%2520hdr-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-4mqhqMP/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-4mqhqMP/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2614,7 +2614,7 @@ export const galleryData = [
     "description": "Haut-Koenigsbourg Castle - located near Strasbourg France view of one of the towers. ©Wayne Heim",
     "alt": "Haut-Koenigsbourg Castle - Photography by Wayne AHeim",
     "src": "https://photos.smugmug.com/photos/i-z7J4HZw/3/Msb2NrkNWHhDQ4mhVKSHW9FQZg4mMvMHSwL7hTPp6/XL/i-z7J4HZw-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-z7J4HZw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-z7J4HZw/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2638,7 +2638,7 @@ export const galleryData = [
     "description": "Fine art architecture photography of a steel forging plant in Illinois.",
     "alt": "Pipes - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Old-Buildings-and-Structures/Modern/i-HwrRpsv/2/KHX7TD3XrQ2h3cxbcVfHX83DgVfJSqjJVNxD6FMKH/XL/_W3H7762_1_2_332%2520merge_tonemapped-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-HwrRpsv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-HwrRpsv/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2662,7 +2662,7 @@ export const galleryData = [
     "description": "Louvre at Night - scene in front of the Louvre in Paris, France.©Wayne Heim",
     "alt": "Louvre at Night - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-tG3cqHk/3/L8dt8NNrXHhLCMVR27bvh9dGvLzRTgbQ2RXmWQ5jK/XL/i-tG3cqHk-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-tG3cqHk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-tG3cqHk/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2686,7 +2686,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Roof Tops of Venice - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-RqPhH9F/3/M9VLkkNn8dnhLP2bsS6GgLQSPvHXMGkVjgWj3xgV9/XL/_IMG2228-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RqPhH9F/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RqPhH9F/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2710,7 +2710,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Misty \"Eiffel - Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-jtJR9Qz/3/McCnjV6QqCcsqPhgS8ZKKGcp8mPkKSgTTzGKx3nM9/XL/_IMG2260-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-jtJR9Qz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-jtJR9Qz/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2734,7 +2734,7 @@ export const galleryData = [
     "description": "Homestead - shows an old homestead in Wyoming. ©Wayne Heim",
     "alt": "Homestead - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/KWB4gKfLCqbcnRBhC4gKVnGVqqk6XJvhTWfmRCbf7/XL/_IMG6414-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-32QwpNJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-32QwpNJ/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2758,7 +2758,7 @@ export const galleryData = [
     "description": "Alone on Prairie - lone cabin on the plains in Wyoming ©Wayne Heim",
     "alt": "Alone on Prairie - Black & White Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/K7dksVbwgfHQbCs9cv6KXxfDtnKZKWb2HJ4VhCrMf/XL/_IMG6274-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Rh64N3s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Rh64N3s/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2782,7 +2782,7 @@ export const galleryData = [
     "description": "Hayloft - shows opening to the hayloft in an old barn. ©Wayne Heim",
     "alt": "Hayloft - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-X99RLdm/4/Ng7TL9s4L8v8zXv48RzFvvNtPsxQQ2txwvzPg6BX5/XL/_IMG6298-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-X99RLdm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-X99RLdm/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2806,7 +2806,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Castle Cross- Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-zNQvqk6/3/KTpf3WWP3BBB29Ngvk6ZhsPJnXFLBhsdtwQD6vS46/XL/_IMG2129-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-zNQvqk6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-zNQvqk6/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2830,7 +2830,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Catacombs of Paris - Photography of Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vF6XNgd/3/M24xVM8tp4s2fWZm3RP9tg9nqfgQ8PmmD9Bpc6rzG/XL/_IMG2711-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-vF6XNgd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-vF6XNgd/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2854,7 +2854,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of the Faroe Islands.",
     "alt": "Window on Faroe  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hNpZZPn/8/MqmPNhQDGsXDdpfD9h7hrFwtZmwWGM74W8CFvrQZx/XL/_WHZ9224-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-hNpZZPn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-hNpZZPn/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2878,7 +2878,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "alt": "Mill House, Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3dZtNxv/4/KQqHbt46Rj4jqXCW7ctf85DTkcrs9FP8CmTkqbQ4X/XL/_WEH7210-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3dZtNxv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3dZtNxv/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2902,7 +2902,7 @@ export const galleryData = [
     "description": "Isolated old ranch house in Wyoming with Grand Tetons in background.  ©Wayne Heim",
     "alt": "Ye Olde Ranch House  Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-2xDqgqS/2/LQw4f72x6NT92SwVV3LbxHnWKT8nWCc4RpFt8KM3h/XL/_WHZ7636-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2xDqgqS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2xDqgqS/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2926,7 +2926,7 @@ export const galleryData = [
     "description": "Sun reflects off old barn on Mormon Row in Wyoming.  ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Painterly Mountain Photography:  Barn Reflection   Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/Mbw3b47fDRzx3NjWvWP37v3PDHWsH7cVkMQP9GgbL/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RBTGb7k/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-RBTGb7k/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2950,7 +2950,7 @@ export const galleryData = [
     "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
     "alt": "Old Fence - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NSd3PDZVPkwnnt43K5xGXSnmDjXcKtLGthvLBZWTF/XL/_IMG6295-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-PVbJdpj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-PVbJdpj/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2974,7 +2974,7 @@ export const galleryData = [
     "description": "Old famous barn on Mormon row has weathered the years as seen in black & white. ©Wayne Heim",
     "alt": "Still Standing in Black & white    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8LMkTQg/4/NBBvfGjD4hh97Dkp6dvNhtP3kXK9wj2LrNK2pt3W7/XL/_img6307-edit-edit2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-8LMkTQg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-8LMkTQg/A",
     "keywords": [
       "wayne heim",
       "architecture",
@@ -2998,7 +2998,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/LgsTbcXhtTCMV7fVBWRpPtv9Sg62dT5PtB4XGkP8K/XL/_O1H0177_tonemapped-596-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/A",
     "keywords": [
       "wayne heim",
       "architecture",

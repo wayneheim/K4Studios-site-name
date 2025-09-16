@@ -23,7 +23,7 @@ export const galleryData = [
     "description": "Painterly Photography of snow covered mountain. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photograph: Break in the Storm -  Mountain Landscape",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/L74Jv5JmLtXVFn6HwNtMjM3wdxQ5HhsbxWvwdCnN3/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -65,7 +65,7 @@ export const galleryData = [
     "description": "Painterly Photograph of some iconic Western Cotton Candy- A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign. - Jackson Hole Wyoming. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Western Cotton Candy -  Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/NNXq3TdCZcGBDnzwqm65v5j69KWgPmpQWPrg7CgDG/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -107,7 +107,7 @@ export const galleryData = [
     "description": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole Wyoming. Painterly landscape mountain photography. © Wayne Heim",
     "alt": "Mountains Photography:  Painterly Photography: - Grand Buffalo - The Grand Tetons and Bison.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/Kr2DD5mcCcZPrCMmNH6t3zVbCvXnpwNX9qBHgvhMT/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -149,7 +149,7 @@ export const galleryData = [
     "description": "Painterly Photograph of the snow capped Teton mountains at Schwabachers Landing outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography done in Wayne's signture style of artful storytelling. Image showcases Western landscape photography of water and waterfalls. This fine art painterly mountain photography is © Wayne Heim.",
     "alt": "Painterly Mountain Photography - Teton Reflections - Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MTHjGNKd3p85VHRX7tJ45cVRFLCWfh2mSgbQWxT52/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -191,7 +191,7 @@ export const galleryData = [
     "description": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Painterly Photography: - Tetons with Autumn Glow - Teton mountains with autumn colors and river - Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/LJrVDMCqCZhWd3kqvmS3G2cnVJDF2Sx454JnQDs6w/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -233,7 +233,7 @@ export const galleryData = [
     "description": "Teton mountains reflecting in the stream at Schwabacher Landing in the fall near Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "In the Weeds - Tetons in Autumn - Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MQ8DN9x389fFjh3V5b3nDWZP8H7J85tPJLrvHqttn/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -275,7 +275,7 @@ export const galleryData = [
     "description": "Painterly Photograph of the T.A. Moulton Barn in Moose Wyoming. Photographed in a unique perspective being framed by the two tree protectors; as if they are there to keep back the hands of time and protect the old barn. Painterly landscape mountain photography.",
     "alt": "Mountains Photography:  Painterly Photography: - T.A. Moulton Barn and Tetons - Moose Wyoming and river - Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/L4vF5jGTKM6JHM4JNKT5KMbV65nLCdWSvVv2QxLLb/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -317,7 +317,7 @@ export const galleryData = [
     "description": "Painterly Photograph of herd of bison (buffalo) grazing on golden fall grasses just outside of Grand Teton National Park - Jackson Hole Wyoming. Painterly landscape mountain photography.",
     "alt": "Mountains Photography: - Breakfast: Bison Grazing - autumn colors and clouds - Jackson Hole Wyoming.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/LS4rGs7mC6M9XN8ZvbGbTqm32tRWfwGdP7d6pFMxc/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -359,7 +359,7 @@ export const galleryData = [
     "description": "Painterly photography by Wayne Heim showcasing photograph of Western Wyoming Teton mountains and dusty trail leading into the hills. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photography: - Teton Trails - Mountain trail and sky.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/NQQXMfhnR6FL3Rs53fTqBS5xFfzkZXRS4jhPVrHhq/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -401,7 +401,7 @@ export const galleryData = [
     "description": "Painterly Photograph of Teton mountains at sunset on Jackson Lake - Grand Teton National Park: Jackson Hole Wyoming. Painterly landscape mountain photography.",
     "alt": "Mountains Photography:  Painterly Photography: - Grand at Sunset: Teton mountains and Jackson Lake.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/NfnVCqssdP3wBkmCwxWmtNQ9FgbmkZWGPQp6tqHrG/XL/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",
@@ -443,7 +443,7 @@ export const galleryData = [
     "description": "Painterly landscape mountain photography at sunrise. Fine art painterly Mt. Moran mountain and Jackson Lake photography. © Wayne Heim",
     "alt": "Painterly Mountain Photography:  Mt. Moran at Sunrise",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KLn5sm92cwfk7jC3GDzzsSPZvWcB8K2Gc3GB2nLQ9/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/A",
     "keywords": [
       "Painterly Photography",
       "Mountain",

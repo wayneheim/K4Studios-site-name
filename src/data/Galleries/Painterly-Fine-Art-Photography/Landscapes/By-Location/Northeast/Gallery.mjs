@@ -23,7 +23,7 @@ export const galleryData = [
     "description": "Painterly landscape photography of green canopy in the forest with stream running through the hills of Vermont.",
     "alt": "Forest Brook in Green",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/K3WHkRRR8kkRf7bvrDXkNhMPvHhwjkXSVfxgZMVhr/XL/_DSF5884-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -50,7 +50,7 @@ export const galleryData = [
     "description": "",
     "alt": "_WHZ6646-Edit-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/MV2NZKCZb5LrkrFnhP9CfKCNWgttNdHvLJcXqm7hT/XL/_WHZ6646-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7LZhFkc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7LZhFkc/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -77,7 +77,7 @@ export const galleryData = [
     "description": "Old mill and waterfall highlighted by fall colors.",
     "alt": "Old Mill in the Fall",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LnGChwdNw638jTQKmFTcD3TmJNC4StDF2XhgRsfZQ/XL/_WHZ6667_8_9-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mSp9WgK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mSp9WgK/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -104,7 +104,7 @@ export const galleryData = [
     "description": "Light creating playful shadows through the forest trees and stream. Greens and browns of nature paint the picture of texture and discovery.",
     "alt": "A Path Less Traveled",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -131,7 +131,7 @@ export const galleryData = [
     "description": "",
     "alt": "_DSF5501_tonemapped-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/KXtH3cJt6DxSBX2nXNFVtM8Cz8dxrfSbhmnXtkWRZ/XL/_DSF5501_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-FpmhtnM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-FpmhtnM/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -158,7 +158,7 @@ export const galleryData = [
     "description": "",
     "alt": "_DSF5516_tonemapped-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/K738tNKcXSmHbtvWzZQVv865DhtMK8XJR8WggdLST/XL/_DSF5516_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Jstk9Gx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Jstk9Gx/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -185,7 +185,7 @@ export const galleryData = [
     "description": "Hidden waterfall in West Virginia.",
     "alt": "Hidden Falls",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/LXFDHGCGjwMtzJ6BxsDJhC9ztstzSkf7dbCrbnsZ6/XL/_DSF5574_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-NkNwLM6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-NkNwLM6/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -212,7 +212,7 @@ export const galleryData = [
     "description": "Another hidden waterfall in the forest of West Virginia.",
     "alt": "Hidden Falls x2",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nqpGhhX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nqpGhhX/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -239,7 +239,7 @@ export const galleryData = [
     "description": "",
     "alt": "_DSF5984_tonemapped.jpg",
     "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/Mz5M8mvzTfMfXrTzxFjGzFh77KFFC8xxbHXsfnGnt/XL/i-cKsdqTs-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cKsdqTs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cKsdqTs/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -266,7 +266,7 @@ export const galleryData = [
     "description": "Abstract view of waterfall at sunset.  in Vermont.",
     "alt": "Triangles",
     "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/M3GXBhdQGdVGjBJ7rR7D2NzRVkBjhtJT8sxg6p8Wh/XL/i-RjSqqDt-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-RjSqqDt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-RjSqqDt/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -293,7 +293,7 @@ export const galleryData = [
     "description": "Abstract waterfall view showing the spillway and textures.",
     "alt": "50/50",
     "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/L88X9243jxcSVSczNpqx4HRZnVGpJ8RPpGFz8Smtn/XL/i-qM9zBVL-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qM9zBVL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qM9zBVL/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -320,7 +320,7 @@ export const galleryData = [
     "description": "Waterfall in the woods.",
     "alt": "Down the hill.",
     "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MB757WTWqZdkccdVzDTz2KdvQVBb8mRcKtrk7DVdX/XL/i-5ZsWtSx-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5ZsWtSx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5ZsWtSx/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -347,7 +347,7 @@ export const galleryData = [
     "description": "Cascading waterfall in the green forest.",
     "alt": "Vermont Waterfall",
     "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/LtDZ8prBjhG43S2H6ggt6bHJXFxXjcnWgDDmcSTSC/XL/i-fGnNkBL-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fGnNkBL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fGnNkBL/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -374,7 +374,7 @@ export const galleryData = [
     "description": "Cascading waterfall through the forest over black rocks and surrounded by green forest.",
     "alt": "Colors of the forest.",
     "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/Kh4rjJLjV9fZtTw6DR2W2n2kf4WK9ddGMswJfgtbG/XL/i-qrS5Ggc-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qrS5Ggc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qrS5Ggc/A",
     "keywords": [
       "Vermont",
       "Green Forest",
@@ -401,7 +401,7 @@ export const galleryData = [
     "description": "Final path of waterfall as it cascades down the black rock slope.",
     "alt": "Final Plunge",
     "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/LWqnqbxws5zmqLGTtkhHCwNGwvRKzStBQxjZpVVhj/XL/i-bqnctgw-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bqnctgw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bqnctgw/A",
     "keywords": [
       "Vermont",
       "Green Forest",

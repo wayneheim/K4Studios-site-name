@@ -23,7 +23,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-gr3rsVB/1/KSJzVZzrCkmBZNxk3QdmG3g8tP7Hv9FcQQbqpFWST/XL/b6d4160a7f0ca7a337974b5c3bcedd9-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-gr3rsVB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-gr3rsVB/A",
     "keywords": [
       "a",
       "fine art",
@@ -47,7 +47,7 @@ export const galleryData = [
     "description": "Snowy Bend, Road along the Chagrin River in Gates Mills, Ohio Heavy snow is falling  ©Wayne Heim",
     "alt": "Snowy Bend. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/KFx67WN4w4b4FF57ZNQsqHSpbvftjNrh2BHpvMxjr/XL/_IMG0573-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-2N4ghBL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-2N4ghBL/A",
     "keywords": [
       "a",
       "fine art",
@@ -71,7 +71,7 @@ export const galleryData = [
     "description": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park. ©Wayne Heim",
     "alt": "Middle Falls. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/KwSvfxhwGKX5sWDDZzMm8G3mg3Qfct4gqQ7Th87Ls/XL/_IMG7044-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-vcmfFCM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-vcmfFCM/A",
     "keywords": [
       "a",
       "fine art",
@@ -95,7 +95,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "alt": "Scenic Walkway. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/MkBrBk29XvPv3QC8NhdwvKdLj2rgRRSmsTMtV2NRm/XL/_WEH7202-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-b3F54M6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-b3F54M6/A",
     "keywords": [
       "a",
       "fine art",
@@ -119,7 +119,7 @@ export const galleryData = [
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
     "alt": "Mill House, Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3dZtNxv/4/KQqHbt46Rj4jqXCW7ctf85DTkcrs9FP8CmTkqbQ4X/XL/_WEH7210-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-3dZtNxv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-3dZtNxv/A",
     "keywords": [
       "a",
       "fine art",
@@ -143,7 +143,7 @@ export const galleryData = [
     "description": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
     "alt": "Shadow Reflection. Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MmjHgFbHRVdBjdwQfQMpcv5v7gLZDr7mRmWpMSLCh/XL/i-VbL6CF7-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VbL6CF7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VbL6CF7/A",
     "keywords": [
       "a",
       "fine art",
@@ -167,7 +167,7 @@ export const galleryData = [
     "description": "Two waterfalls in the Chagrin River seem to meet as the flow over the rocks. ©Wayne Heim",
     "alt": "Meeting of the Falls   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-VN5gQB3/4/LjP75vSDF5JrBTNKFRxt6M6Q5wGFSDZnm8fHXwh85/XL/i-VN5gQB3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VN5gQB3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VN5gQB3/A",
     "keywords": [
       "a",
       "fine art",
@@ -191,7 +191,7 @@ export const galleryData = [
     "description": "Rushing Rapids-  Berea Falls churning water of rapids  in black & White ©Wayne Heim",
     "alt": "Ru   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/K6sS4Cr3xc2QJp5cZgHFHCxk4XNXNPVNTxZFNr69Q/XL/_W3H9140_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-fGKx3B6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-fGKx3B6/A",
     "keywords": [
       "a",
       "fine art",
@@ -215,7 +215,7 @@ export const galleryData = [
     "description": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.©Wayne Heim",
     "alt": "Out of the Rocks - Photography of Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-LXP3hD7/4/NfXFmrf8NBvnnthT4MmsNhshff2dhRMPhK72nG3w4/XL/i-LXP3hD7-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-LXP3hD7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-LXP3hD7/A",
     "keywords": [
       "a",
       "fine art",
@@ -239,7 +239,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/NQ7kPr2F5vkSdtcHgmLDVfbzscGndV5vfnXjPS49v/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-GvZBLcv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-GvZBLcv/A",
     "keywords": [
       "a",
       "fine art",
@@ -263,7 +263,7 @@ export const galleryData = [
     "description": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "alt": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/MpkSpQg4PK2fMsC3tfJjhtWkHHMGHtsVK6gSHjNbF/XL/_WHZ7433-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-LR3Vr2N/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-LR3Vr2N/A",
     "keywords": [
       "a",
       "fine art",
@@ -287,7 +287,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/KsG9QhFMSx4fxVBXcTC4sR6WJJ2PHRXfVgxRscmg4/XL/_ANA0655-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-N3ShZHB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-N3ShZHB/A",
     "keywords": [
       "a",
       "fine art",
@@ -311,7 +311,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-V92SWJF/2/LKPH2jLvxv4jDc34ZtcqSQFq8536gRFnJ9fZcQqmX/XL/_ANA0731-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-V92SWJF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-V92SWJF/A",
     "keywords": [
       "a",
       "fine art",
@@ -335,7 +335,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LRB5mwWN4pJpk7s9ffX8NNwtPxRv94GcpcxbgVSq6/XL/_ANA0801_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-KFLXt4D/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-KFLXt4D/A",
     "keywords": [
       "a",
       "fine art",
@@ -359,7 +359,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-LmTHhDn/1/LgnDLF6zm3z5Jb4f4q7ZqHtkphPjBVnLNvpsg9TZh/XL/_ANA0893_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-LmTHhDn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-LmTHhDn/A",
     "keywords": [
       "a",
       "fine art",
@@ -383,7 +383,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KG32NV6/1/MsMVLt2L4Hntd3nJhC96DMf985rGW6qxLtgzZ2gFD/XL/_ANA0901_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-KG32NV6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-KG32NV6/A",
     "keywords": [
       "a",
       "fine art",
@@ -407,7 +407,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NMRNtrB/1/LfRVH6QKPkPzfvg8gFDjd5mBTp7CkGQvJS4N9MkxL/XL/_ANA0906_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-NMRNtrB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-NMRNtrB/A",
     "keywords": [
       "a",
       "fine art",
@@ -431,7 +431,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-c4qSzm6/2/NV8FRwnJZ5Lj3zghWgZ4RcC4D9tm3882pfWt6cFwJ/XL/_ANA0922_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-c4qSzm6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-c4qSzm6/A",
     "keywords": [
       "a",
       "fine art",
@@ -455,7 +455,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-2d2fgNW/3/MLpP7tZwwgcqxhxwpRH6kQBCxgXCwJ8bDWKMktXSM/XL/_ANA0936_tonemapped-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-2d2fgNW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-2d2fgNW/A",
     "keywords": [
       "a",
       "fine art",
@@ -479,7 +479,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Vm7vR4f/1/KH6qfV7dSM2v7xRQ9qbrLZZmXXBs2TC9Nm4kTcKwB/XL/_ANA1025-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Vm7vR4f/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Vm7vR4f/A",
     "keywords": [
       "a",
       "fine art",
@@ -503,7 +503,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-FGWfXBM/2/MbxdLwcm83V5mXfpfPKPBMDP7sKx6QQ3MzzSrn24v/XL/_ANA1034-Pano-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-FGWfXBM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-FGWfXBM/A",
     "keywords": [
       "a",
       "fine art",
@@ -527,7 +527,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-jd8JMK2/1/NhFLWzwNCVJ7d9bS49VGXh2spgwbJzWtfBvRBQfBJ/XL/_ANA1061-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jd8JMK2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jd8JMK2/A",
     "keywords": [
       "a",
       "fine art",
@@ -551,7 +551,7 @@ export const galleryData = [
     "description": "Fine art painterly photography of light shining through the trees.",
     "alt": "Painterly Landscape Photo: Light through trees.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/KqQqStXbQXJS6SSHqXm7NbHrFb35TJ3zP9RnDMmpd/XL/_ANA1097-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VHMgr5J/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VHMgr5J/A",
     "keywords": [
       "a",
       "fine art",
@@ -575,7 +575,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/KTbKDdcW73KkvQ6N2b5WcpDzNgtsWTpwgTcLwbshp/XL/_ANA1140_tonemapped-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-RWr4ppX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-RWr4ppX/A",
     "keywords": [
       "a",
       "fine art",
@@ -599,7 +599,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/K5WhqTww2CksS7hsZdLGLH3qnmPMZ5Dj83HNtnChq/XL/_ANA1155-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-ScMsR8H/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-ScMsR8H/A",
     "keywords": [
       "a",
       "fine art",
@@ -623,7 +623,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/KLfbc35XPKN5mkwKtZ5QpqDddjwQD55cxrFZHRL3c/XL/_ANA1156-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-rm2GNVm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-rm2GNVm/A",
     "keywords": [
       "a",
       "fine art",
@@ -647,7 +647,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KL2ZM37TWfGXZk5TpMSWc2Z63x74nG44jb7R7FkcS/XL/_ANA1161-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kqQ26Rw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kqQ26Rw/A",
     "keywords": [
       "a",
       "fine art",
@@ -671,7 +671,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/LMzqW4nNjnQX6K4QBG66NTdQcRpd57288H96GgC2z/XL/_ANA1162-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hzdpxL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hzdpxL/A",
     "keywords": [
       "a",
       "fine art",
@@ -695,7 +695,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-p2Hdrmc/1/NCvJjpMghVM64fPZWhjMc9Z8XFDwHTvDjsNfWH9Rc/XL/_ANA1236-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-p2Hdrmc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-p2Hdrmc/A",
     "keywords": [
       "a",
       "fine art",
@@ -719,7 +719,7 @@ export const galleryData = [
     "description": "Old red barn with storm approaching from behind. Painterly landscape photography.",
     "alt": "Red barn and storm clouds.",
     "src": "https://photos.smugmug.com/photos/i-f56454D/2/LQZm2gX6Cw4GxThXNnrQskNFrW7NNNFLQfQ9FT9xG/XL/i-f56454D-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f56454D/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f56454D/A",
     "keywords": [
       "a",
       "fine art",
@@ -743,7 +743,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-J6CS9dN/1/M2D35bdhgV46DNJ6xVm85DFCHsWqXrSv2DtG7Qqdd/XL/_O1H0454-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-J6CS9dN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-J6CS9dN/A",
     "keywords": [
       "a",
       "fine art",
@@ -767,7 +767,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/photos/i-nxp4vKr/0/LsXk8kcQQRPnMvV43nM68qzS29fpsJWPskm8XrdZ8/XL/i-nxp4vKr-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-nxp4vKr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-nxp4vKr/A",
     "keywords": [
       "a",
       "fine art",
@@ -791,7 +791,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-fQCdxsp/0/MDvmzVHtC2LHtskZsQDwSnGcBFMBnxGfGQk8xJpLg/XL/_O1H0465-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-fQCdxsp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-fQCdxsp/A",
     "keywords": [
       "a",
       "fine art",
@@ -815,7 +815,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4rJVZLg/0/KVdKkQVxwN3Ww54dFLLKBHS4tHXvVkgKzbsBTPXqb/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-4rJVZLg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-4rJVZLg/A",
     "keywords": [
       "a",
       "fine art",
@@ -839,7 +839,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jrGJSbH/0/LtNDrvfRrmbpJrPgzHjLrStQpjv39ChSsHzDX29D2/XL/_O1H0478-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jrGJSbH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jrGJSbH/A",
     "keywords": [
       "a",
       "fine art",
@@ -863,7 +863,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-72t3jbT/0/LsnGFffWLbPCb4jzdQ3mgnFrWp588Wf3q5tXJK2bc/XL/_O1H0479-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-72t3jbT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-72t3jbT/A",
     "keywords": [
       "a",
       "fine art",
@@ -887,7 +887,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HmSt4wB/0/LmSCB2TrSskvLg4dqxvtD9tMx5zZXVZzkMm5bB2WJ/XL/_O1H0482-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-HmSt4wB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-HmSt4wB/A",
     "keywords": [
       "a",
       "fine art",
@@ -911,7 +911,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/photos/i-9sP9Qxs/0/LRF69N44sk6KWGF9mMVw6R5LJW5dcXQnj2m7P56m8/XL/i-9sP9Qxs-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-9sP9Qxs/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-9sP9Qxs/A",
     "keywords": [
       "a",
       "fine art",
@@ -935,7 +935,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jt8P6Wg/0/NH8BpGgdV7V89H4L7pRVg3zvDHMTZppCvSpPSFkSd/XL/_O1H0991-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jt8P6Wg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jt8P6Wg/A",
     "keywords": [
       "a",
       "fine art",
@@ -959,7 +959,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Sv7gsQB/0/KJgwHKq6NxsSqVfqVDVtJnnjbHCMJqR28xgr9cppm/XL/_O1H0992-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Sv7gsQB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Sv7gsQB/A",
     "keywords": [
       "a",
       "fine art",
@@ -983,7 +983,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f6BHPxK/0/LZfz64FmWN2x5c4Pb39GdTTb4bWPLdGXLJZ4M88kv/XL/20230727_195121-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f6BHPxK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f6BHPxK/A",
     "keywords": [
       "a",
       "fine art",
@@ -1007,7 +1007,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hTCKbn/0/LWFXs2mKDRMczCJdwdrHg9xLhwMj7wLjf5QT6C7Cg/XL/_O1H1036-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hTCKbn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hTCKbn/A",
     "keywords": [
       "a",
       "fine art",
@@ -1031,7 +1031,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-qLRXb8W/0/KzhQdLpPgrHTQMtb6gKn6DtSGHmNZX2DwXgpmbTgp/XL/_O1H1037-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-qLRXb8W/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-qLRXb8W/A",
     "keywords": [
       "a",
       "fine art",
@@ -1055,7 +1055,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kpzgc6N/0/LcjqhCXVnD252mB3KwZpDj9HgSbMv42wBw6DB9f6m/XL/_O1H1043-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kpzgc6N/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kpzgc6N/A",
     "keywords": [
       "a",
       "fine art",
@@ -1079,7 +1079,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VM79mV2/0/LLK4PmfvLBdKBG633d5mfFH5xjp3vrhpM3WGBNGFN/XL/_O1H1044-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VM79mV2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VM79mV2/A",
     "keywords": [
       "a",
       "fine art",
@@ -1103,7 +1103,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sHqStwk/0/NMTRKHtgRSH2t2Mc6hSX2sdHXJtmGngBpD8gJdSzv/XL/_O1H1045-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sHqStwk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sHqStwk/A",
     "keywords": [
       "a",
       "fine art",
@@ -1127,7 +1127,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-43SfvFJ/0/LgDbGhMShwSntSGhnSMsvdqx6tGprdS3QG8XcMZzg/XL/_O1H1048-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-43SfvFJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-43SfvFJ/A",
     "keywords": [
       "a",
       "fine art",
@@ -1151,7 +1151,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8RHD2km/0/NhMgzPfx9H4MD3DkFSsXQz48zPmdmX9Dbv7TQbjSj/XL/_DSF5226-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8RHD2km/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8RHD2km/A",
     "keywords": [
       "a",
       "fine art",

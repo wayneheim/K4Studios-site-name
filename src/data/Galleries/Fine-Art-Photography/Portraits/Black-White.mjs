@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Megan",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/NMVPTpvBMhPBgrb3nC5GjDBhqnBThWp4pMdrhnSDF/XL/_WHZ1114-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/A",
     "keywords": [
       "BW",
       "blond",
@@ -44,7 +44,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/KPh36N4C4BbXj7D67mc8jvQFV2zRskC69fpCb9ffR/XL/_WHK3073-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-dQbG65F/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-dQbG65F/A",
     "keywords": [
       "BW",
       "blond",
@@ -66,7 +66,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/L9tD7P6DzLCQcX6DS3RNFtX6rR7hp2cfGTBx7Ng43/XL/w_whz5994-edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/A",
     "keywords": [
       "BW",
       "blond",
@@ -88,7 +88,7 @@ export const galleryData = [
     "description": "Pals - black & white photo of a boy and his Black Labrador dog. ©Wayne Heim",
     "alt": "Pals - Black & White  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/Ld29NgDSqr2P8WVGtb6w67kk9zxqcFwGNDZMQLRzH/XL/_IMG4636-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/A",
     "keywords": [
       "BW",
       "blond",
@@ -110,7 +110,7 @@ export const galleryData = [
     "description": "Two reenactors at D Day Conneaut.  ©Wayne Heim",
     "alt": "Thank You Kiss     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/LqPq65RXZBXnw8D6L2pRpsGg9KFPhQsxz3f2XjjMX/XL/_IMG8678-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/A",
     "keywords": [
       "BW",
       "blond",
@@ -132,7 +132,7 @@ export const galleryData = [
     "description": "WW II Veteran poses with all the metals he earned.   © Wayne Heim",
     "alt": "Highly Decorated PFC   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/NJVkm5nDrd6P4hrDXFnXq3kmXP9bGGth7rxJZRN6t/XL/_W3H4899-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-8ZC4vFq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-8ZC4vFq/A",
     "keywords": [
       "BW",
       "blond",
@@ -154,7 +154,7 @@ export const galleryData = [
     "description": "Dancers  at the USO dance  of D Day Conneaut.©Wayne Heim",
     "alt": "We'll Meet Again  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/K8H9MbDQCTfFDjMdJQQR3Q9JkWNPwJqsk58ChwsSC/XL/_IMG3978-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-zkVnCjx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-zkVnCjx/A",
     "keywords": [
       "BW",
       "blond",
@@ -176,7 +176,7 @@ export const galleryData = [
     "description": "Reenactor as a USO performer at the USA Dance of D Day Conneaut.©Wayne Heim",
     "alt": "USO Performer     Back & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/KQjg9Q53XVJrd7vccx4QCbvXW59td6FXKDxD3rRv2/XL/_IMG3997-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TdvK9cd/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TdvK9cd/A",
     "keywords": [
       "BW",
       "blond",
@@ -198,7 +198,7 @@ export const galleryData = [
     "description": "Goth woman poses for a portrait.\n ©Wayne Heim",
     "alt": "Portrait of a Goth   Black & White  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/L8xvjdr2RTXhDhMPjdQmbK5k5RNWQLTZQx9tPQzms/XL/_WHZ0839-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Gf48H98/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Gf48H98/A",
     "keywords": [
       "BW",
       "blond",
@@ -220,7 +220,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/KkLKC6rKDLrVcbvSvJ8B7nTvb2GJfjtwfHHr7LdFP/XL/_WHZ1101-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/A",
     "keywords": [
       "BW",
       "blond",
@@ -242,7 +242,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/KX4kv9KG2s7B3hfZdXstQCRvV7jhBgrfLWZ9mv8rZ/XL/_FWH7478-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-GLhK6TT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-GLhK6TT/A",
     "keywords": [
       "BW",
       "blond",
@@ -264,7 +264,7 @@ export const galleryData = [
     "description": "Young boy in costume.  © Wayne Heim",
     "alt": "Portrait of Young Boy    Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/KTmj8BTFBGzqDFjhFbPz8CW644Kfbpt8Ks3HdhSwQ/XL/_IMG5633-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/A",
     "keywords": [
       "BW",
       "blond",
@@ -286,7 +286,7 @@ export const galleryData = [
     "description": "Young boy dressed as an aviator. © Wayne Heim",
     "alt": "Young Aviator   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/L5pM8bbqfbp39nZTsjhwdN5B7Fj3p3PBRSKCtKrds/XL/_IMG5685-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/A",
     "keywords": [
       "BW",
       "blond",
@@ -308,7 +308,7 @@ export const galleryData = [
     "description": "Portrait of young cowgirl   © Wayne Heim",
     "alt": "Cowgirl     Black & White Photography by  Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/Lc3wHgLGf6WgRQ68NkdtBdggKQmK7FMsjczs6NPcS/XL/_IMG5693-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/A",
     "keywords": [
       "BW",
       "blond",
@@ -330,7 +330,7 @@ export const galleryData = [
     "description": "Bride wipes lipstick from groom's face.\n ©Wayne Heim",
     "alt": "You Got Lipstick  Photography by Wayne Hei",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/MmL5Xh9PZM8n5FDRCJRDw3Hd4mNvd9X4Pxg2h5c6b/XL/_WHZ5945-Edit-2-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9ZnSqzD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9ZnSqzD/A",
     "keywords": [
       "BW",
       "blond",
@@ -352,7 +352,7 @@ export const galleryData = [
     "description": "Woman waits by window looking for retruning soldiers. © Wayne Heim",
     "alt": "Are They Coming Yet   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/KsmTB4dSRFSTK8N8Rqq6TcRmH5jxB9D729mt3Z6kq/XL/_WEH5839-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-vKxJbtv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-vKxJbtv/A",
     "keywords": [
       "BW",
       "blond",
@@ -374,7 +374,7 @@ export const galleryData = [
     "description": "Portrait of a woman reenactor at D Day Conneaut.  © Wayne Heim",
     "alt": "I Am Waiting   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/MhNMqrfWKmNp4p4Jf5pjCrSsGkKhv5pWmdr9mBbkT/XL/_W3H3194-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9NT8GV4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9NT8GV4/A",
     "keywords": [
       "BW",
       "blond",
@@ -396,7 +396,7 @@ export const galleryData = [
     "description": "Black and White Portrait",
     "alt": "Deep in thought.",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/L8jNFqmVS2gdZhQXvdH7Qd6gsgtszq255f92DWkp8/XL/_WHZ1247-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/A",
     "keywords": [
       "BW",
       "blond",
@@ -418,7 +418,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/LDxz7SjrLsWH7C748DNLGFQcPPL2Nzn4Mm8sMG4n4/XL/_WHZ5735-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9WzBrqT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9WzBrqT/A",
     "keywords": [
       "BW",
       "blond",
@@ -440,7 +440,7 @@ export const galleryData = [
     "description": "Young boy areenactor as a young sailor at the USO Dance during D Day Conneaut.  © Wayne Heim",
     "alt": "Sailor Boy     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/L8bzWQsqH2LfsJRFCrN5NdWNdrLpnNbhXR8hkF7Qr/XL/_W3H6651-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-PtmDWWS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-PtmDWWS/A",
     "keywords": [
       "BW",
       "blond",
@@ -462,7 +462,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/LpVJz4Tq7bWKdm9VScRpHQZDhT98NmFJVgFgc95rx/XL/_WHZ5840-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-nZX8jLD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-nZX8jLD/A",
     "keywords": [
       "BW",
       "blond",
@@ -484,7 +484,7 @@ export const galleryData = [
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/KGQG3hXWwfD3tPrWQG97SrVPQ5W4t7WCWkqSZLHL9/XL/_DSF2516-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-BJxw3Dz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-BJxw3Dz/A",
     "keywords": [
       "BW",
       "blond",
@@ -506,7 +506,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/Kb99Nfz7SWNhMVWPDqWCNvj5VJBSzMdw56jd7H59g/XL/_WHZ0521-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-7bxKBFk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-7bxKBFk/A",
     "keywords": [
       "BW",
       "blond",
@@ -528,7 +528,7 @@ export const galleryData = [
     "description": "Woman reenactor poses for a portrait during D  Day Conneaut. © Wayne Heim",
     "alt": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/LpwJkCgBzqstDvfS5GMfJg6J4PhFZn2gjRgGfdznk/XL/_WHZ2607-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-xMxDrS5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-xMxDrS5/A",
     "keywords": [
       "BW",
       "blond",
@@ -550,7 +550,7 @@ export const galleryData = [
     "description": "Bridesmaid ready for the ceremony.\n ©Wayne Heim",
     "alt": "Ready for the Aisle  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/KnnQdc2xbrkpbQFkv6FvG9mNvdxp6h4v67gWJ32ND/XL/_WHZ5860-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qkMT7hL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qkMT7hL/A",
     "keywords": [
       "BW",
       "blond",
@@ -572,7 +572,7 @@ export const galleryData = [
     "description": "Officer offers pencil to someone at USO Dance during  D Day Conneaut. © Wayne Heim",
     "alt": "Take This   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/M2Xt2VJ5BMGzRRdtVTsfkm2Kwjw7q9773KZhbSjw9/XL/_WHZ5370-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FfQhchB/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FfQhchB/A",
     "keywords": [
       "BW",
       "blond",
@@ -594,7 +594,7 @@ export const galleryData = [
     "description": "Veterans tell their story at the USO Dance at D Day Conneaut. © Wayne Heim",
     "alt": "Our Stories    Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/NKjZZdFDCdVXC5vzTmWLtPRJVnGhz6nkxb8PSNc6m/XL/_WHZ5358-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-3VCCKd2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-3VCCKd2/A",
     "keywords": [
       "BW",
       "blond",
@@ -616,7 +616,7 @@ export const galleryData = [
     "description": "Woman waits for time to dress for wedding.  ©Wayne Heim",
     "alt": "Waiting      Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/MtCbmvm7fvxN5gBstBJrTH3jnqthHppbtr5rfXj8x/XL/_WHZ6849-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-pcH8S3J/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-pcH8S3J/A",
     "keywords": [
       "BW",
       "blond",
@@ -638,7 +638,7 @@ export const galleryData = [
     "description": "Couple dance at USO Dance during D Day Conneaut. © Wayne Heim",
     "alt": "Dancing     Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/Mk9R7jgLNQqNvwgTNtmRphCX9v96VJT26sHtcnXjv/XL/_WHZ5391%2520b-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RTj9HSn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RTj9HSn/A",
     "keywords": [
       "BW",
       "blond",
@@ -660,7 +660,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/LWkrSW9ZsST38m2WhQjxgTz2GR8vZcgJXb32pLkXP/XL/_WHZ5829-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Dq6HwJp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Dq6HwJp/A",
     "keywords": [
       "BW",
       "blond",
@@ -682,7 +682,7 @@ export const galleryData = [
     "description": "Mother and son reenactors atI D Day Conneaut USO Dance.  © Wayne Heim",
     "alt": "Mother & Son  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/MC3qfNVbC5BFzcVtct23FWwbn5TDqPRf2CNBRS2wk/XL/_W3H6653-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Q4JpqnD/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Q4JpqnD/A",
     "keywords": [
       "BW",
       "blond",
@@ -704,7 +704,7 @@ export const galleryData = [
     "description": "Sailor is sworn in to the navy. © Wayne Heim",
     "alt": "Swearing In   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/LFv8gxv5c3vFXDJ5trTGf5fhHK8S3v5nv7Gb2FDGW/XL/_WHZ7185-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bVC4M8w/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bVC4M8w/A",
     "keywords": [
       "BW",
       "blond",
@@ -726,7 +726,7 @@ export const galleryData = [
     "description": "Woman dressed as a reenactor at Rockford WWII Days.  ©Wayne Heim",
     "alt": "Female Reenactor  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7pbm3ZvQvhXK7rcXrXTwLGnWjCrVcgvqTMRtFvgt/XL/_IMG8585-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-zF4sTBK/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-zF4sTBK/A",
     "keywords": [
       "BW",
       "blond",
@@ -748,7 +748,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/Kf279LsqXx4tDwJkrcktfBz4KJF8jqKX23W3zQDvw/XL/_WHZ5449-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-t4bq7qj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-t4bq7qj/A",
     "keywords": [
       "BW",
       "blond",
@@ -770,7 +770,7 @@ export const galleryData = [
     "description": "Woman tries on a hat.     ©Wayne Heim",
     "alt": "Looks Good   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/KtdVvZQPZXHWg96PNTBV4Pwd5ZpPQR84KpWjTWMXV/XL/_WHZ5802-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-stghf3f/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-stghf3f/A",
     "keywords": [
       "BW",
       "blond",
@@ -792,7 +792,7 @@ export const galleryData = [
     "description": "Woman in period dress poses for a portrait\n© Wayne Heim",
     "alt": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/MQczNNx78Q56VnMLJLJJxkWFfv32pK6TFL5G3Gf3N/XL/_WHK7187-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/A",
     "keywords": [
       "BW",
       "blond",
@@ -814,7 +814,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/LPNTmrRNVc7qnPGp93vG2g72tc27D4GtLdwfbdMmw/XL/_WHZ0756-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/A",
     "keywords": [
       "BW",
       "blond",
@@ -836,7 +836,7 @@ export const galleryData = [
     "description": "Woman poses in woods looking up.\n ©Wayne Heim",
     "alt": "What's Up There   Black and  White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/NWDr3ZvR383XKbwkvsMjGfG5TK3NmQ74TPhKWBwPw/XL/_WHZ0571-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-m4hMSXM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-m4hMSXM/A",
     "keywords": [
       "BW",
       "blond",
@@ -858,7 +858,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/KNtHsgjfHx4vLM7BM2BTD4Z97XfXXr38qFPgrwwmR/XL/_WHZ0437-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-HTN4w9V/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-HTN4w9V/A",
     "keywords": [
       "BW",
       "blond",
@@ -880,7 +880,7 @@ export const galleryData = [
     "description": "Loving couple pose by lake.   ©Wayne Heim",
     "alt": "Loving Couple  Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/M5Rdc3K8bFcKKhBdrfP8qMf9LF8LkST6wTP4RRjtw/XL/_WHZ5978-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ztNRLR6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ztNRLR6/A",
     "keywords": [
       "BW",
       "blond",
@@ -902,7 +902,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/KXPV6vPgzdprzJmqdsvC8rTKjjkwHrx3xDQdHvL8s/XL/_DSF3185-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/A",
     "keywords": [
       "BW",
       "blond",
@@ -924,7 +924,7 @@ export const galleryData = [
     "description": "A WWII veteran at D Day Conneaut. ©Wayne Heim",
     "alt": "I Served   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/NMNRDW4H5SwthBdPM3LPjhKJ8Qcmzdx23XTv5j8n5/XL/_IMG2073-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-kP4wjmp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-kP4wjmp/A",
     "keywords": [
       "BW",
       "blond",
@@ -946,7 +946,7 @@ export const galleryData = [
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
     "alt": "Comfort  - Black & White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/NPrcVSprxpH2pfgqgRhKF3Frs2Lv3tJgMDbsqBXZT/XL/_IMG3130-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-vsZPHzr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-vsZPHzr/A",
     "keywords": [
       "BW",
       "blond",
@@ -968,7 +968,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/LwPd2ZBWTKcLNWGGscRkXBdSNwWFwPTM8jVT3P9wk/XL/_WHZ0936-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/A",
     "keywords": [
       "BW",
       "blond",
@@ -990,7 +990,7 @@ export const galleryData = [
     "description": "Woman goth poses for photoshoot in woods.\n ©Wayne Heim",
     "alt": "Goth    Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/MfWtrRbPJc39Z5tPFTkNXCQxmCjWKZLZCCF8C7FJg/XL/_WHZ0764-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FwBg8rF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FwBg8rF/A",
     "keywords": [
       "BW",
       "blond",
@@ -1012,7 +1012,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/K5vz4H62s3jzD2zf5Wwrjpct3PMPXJScqJGvHwtRP/XL/_WHZ1118-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/A",
     "keywords": [
       "BW",
       "blond",
@@ -1034,7 +1034,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/L6JPNt64dTqpSJhLgsMsSKvQrmQgpcwLTn5KwHQMt/XL/_WHK1254-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/A",
     "keywords": [
       "BW",
       "blond",
@@ -1056,7 +1056,7 @@ export const galleryData = [
     "description": "Intimate portrait of Father and \nDaughter done in a sepia tone. Companion piece for Mother & Daughter. ©Wayne Heim",
     "alt": "Father & Daughter   Photography by wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/K3cxnfwGkrRnmVJsJtkTg5R4c5n6XXLgpSTsJHr8K/XL/_WHZ7798-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-DNCNfvk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-DNCNfvk/A",
     "keywords": [
       "BW",
       "blond",
@@ -1078,7 +1078,7 @@ export const galleryData = [
     "description": "Intimate portrait of Mother  & Daughter done in sepia tone. Companion piece for Father & Daughter. ©Wayne Heim",
     "alt": "Mother & Daughter   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/Mvvjg6HCRW3WfkZrcNSSVw3SSk8WWFDL38xPZS2hM/XL/_WHZ7804-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-PNs7bP5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-PNs7bP5/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1103,7 +1103,7 @@ export const galleryData = [
     "description": "Young woman contemplates her upcoming wedding.  ©Wayne Heim",
     "alt": "Almost Time   Black and White Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/NBzm7wxKvRzQp5d5kRh3tVNbsNScLLwHx5ZSbQH43/XL/_WHZ6940-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-S5x62Zc/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-S5x62Zc/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1128,7 +1128,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/MVCbBbVPK6sgVkwVWLHWtN2crBHp3D46KGxrKhP8G/XL/_WHZ5899-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VGfBgBn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VGfBgBn/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1153,7 +1153,7 @@ export const galleryData = [
     "description": "Woman poses for a portrait in hat she just got.     ©Wayne Heim",
     "alt": "Posing in Hat   Photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/Lh8D7FRXQCwWNw3mfkSgqX8jZTjTsLhngZXHMVN5Q/XL/_WHZ5838-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-nr48tJT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-nr48tJT/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1178,7 +1178,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/LbzfRNkKfSmSvqfVpgZKxgLhxszXWkLjGrGqG2njj/XL/_FWH6741-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-r7CPZSf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-r7CPZSf/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1203,7 +1203,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/NF8XnSxpVmn4WN2DQTpWfhggBHFLzB5F6xPqnLjZw/XL/_O1H0445-Enhanced-NR-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-QqDQz8x/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-QqDQz8x/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1228,7 +1228,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/KtDnPfBhV3C4Xz7bkDgt6Nk2nc4PGChktsb7HVfK9/XL/_FWH6830-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RR4b3rG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RR4b3rG/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1253,7 +1253,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/NGvf3Bbhvv6r6mW8CSzRPLPCWV3sZCWQ6JSJJbbGx/XL/_FWH6835-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-rZFNBqH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-rZFNBqH/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1278,7 +1278,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/M35pMZKftnqjvKWwCgQfhxgWXQz9C22TtpvSnTVcw/XL/_O1H0460-Enhanced-NR-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-b7FN4Nx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-b7FN4Nx/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1303,7 +1303,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/MrTLGGX94tz5rqvFmBhkjJVsdcrnHGM7hHx9ddNRr/XL/_FWH6944-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-T8CQBwG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-T8CQBwG/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1328,7 +1328,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/MF8nxxnw6CnWXR9QtZvT2jrxVLc9Xg2g6jkCpTq9K/XL/_FWH7038-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Z7ctKfL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Z7ctKfL/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1353,7 +1353,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/LHXgb9BBKLH8xSnfKCvGKBcdx4MK8BkQXX48P7HBX/XL/_FWH7104-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-6hJ8kbm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-6hJ8kbm/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1378,7 +1378,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/KN5dzjxc5qtSDNPDdcP2HKf5n4NJfsx9shPhnk65z/XL/_FWH7216-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-6gnqGf4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-6gnqGf4/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1403,7 +1403,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/Mkq84vJwKpfDMnC8NZx5DLMpqqbG6qx5DFWdRG7sz/XL/_FWH7407-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-DFqr488/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-DFqr488/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1428,7 +1428,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MZdLjxH4QpvS9NrjggN3D9H9TjCrwGwDMghHMNpcV/XL/_O1H2329-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-g9njn76/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-g9njn76/A",
     "keywords": [
       "wayne heim",
       "photos",
@@ -1453,7 +1453,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/KM6nZpSRpzWHxQLrsWbKpp7ssGbKvx3SGxn5pMKf5/XL/_DSF4801-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-QQGxbsp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-QQGxbsp/A",
     "keywords": [
       "wayne heim",
       "photos",
