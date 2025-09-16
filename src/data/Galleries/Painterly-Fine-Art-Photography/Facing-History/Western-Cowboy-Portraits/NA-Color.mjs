@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "A Native American elder rides with quiet strength across the foothills — a portrait that captures the intersection of tradition, dignity, and painterly fine art photography. Part of Wayne Heim’s Facing History series, this image is a tribute to Native American legacy through cinematic lens and historical reverence.",
       "alt": "Native American elder on horseback in traditional regalia, fine art photograph by Wayne Heim",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/1/Ms4KPwvCpdWVWBKnncJRxx3s5jSJwLkZTktzfs6rj/XL/_WHO2172-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sGW55ch/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sGW55ch/A",
     "keywords": [
         "native american portrait",
     "indigenous",
@@ -48,7 +48,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/Nfh3T8Cd3gZccThhc2qBkXnKX6bSt2fJj3BDRbpHG/XL/_WHO2172-Edit-2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-fCSxt3j/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-fCSxt3j/A",
     "keywords": [
       "a",
       "fine art",
@@ -72,7 +72,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/KHm9Dj87HLMkg25XGWZQ7dXVV6dQLWHQjg4vnRvHZ/XL/_WHO2423-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-69qsFwx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-69qsFwx/A",
     "keywords": [
       "a",
       "fine art",
@@ -96,7 +96,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/LLJhkG344ZvvZR5ggmKH6PD4gsXsgx4qt6cRNm3Wc/XL/_HF29032-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Wsxmqv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Wsxmqv/A",
     "keywords": [
       "a",
       "fine art",
@@ -120,7 +120,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cqT88cp/0/KVbPSTXJNmBWwXSZQH3TGmbL7ckcx9szp6pXNVxZD/XL/_HF29032-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-cqT88cp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-cqT88cp/A",
     "keywords": [
       "a",
       "fine art",
@@ -144,7 +144,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/NZksBbVchvTxDSLSN3bTxTJDvBBh5Q2tkCFDBgzqQ/XL/_WHO3531-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-cNbW8wV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-cNbW8wV/A",
     "keywords": [
       "a",
       "fine art",
@@ -168,7 +168,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/0/KtGSzTzN7M7RGkF28VWPc5MJPnQvprL6v2G6jvsHf/XL/_HF29691-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zt2btJ7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zt2btJ7/A",
     "keywords": [
       "a",
       "fine art",
@@ -192,7 +192,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/MsJdrrckpVcXShG3JmZRJQTdVJrVGFnCs5X8h87Q8/XL/_HF29701-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Hz6D7k/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Hz6D7k/A",
     "keywords": [
       "a",
       "fine art",
@@ -216,7 +216,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/0/L4CC7kqnPVGzJrbtHNmzzbbjsQff7v9b7d7WVHsDd/XL/_HF20466-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-nZbDC9C/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-nZbDC9C/A",
     "keywords": [
       "a",
       "fine art",
@@ -240,7 +240,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/K3v8Rd5pnsXJLmwL8pwNfRMJT8fGQ3QbGGjbzczx2/XL/_HF20466-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-qLzRgbS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-qLzRgbS/A",
     "keywords": [
       "a",
       "fine art",
@@ -264,7 +264,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MptMFJvWHSXrS5D3pX6tgFcVdjkW8vMF3jQnHqTKs/XL/_WHO0135-Edit-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-WXNSQzk/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-WXNSQzk/A",
     "keywords": [
       "a",
       "fine art",
@@ -288,7 +288,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/KsFHZCPwN4JrGVLp8h6PZC3L9bsfDRhqd9PKZcnbV/XL/_WHO0204-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zZJbbHG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zZJbbHG/A",
     "keywords": [
       "a",
       "fine art",
@@ -312,7 +312,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/NKKNnXpPbk3p3C69DkN4FGnnfNkgw7ZmCs8JSpWtm/XL/_WHO0338-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-h679dhn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-h679dhn/A",
     "keywords": [
       "a",
       "fine art",
@@ -336,7 +336,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/0/NV3ZHBB86DZsCssW8rR7jQMVTffKWHkQzvXZsgHGf/XL/_WHO0996-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-V96Rgmj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-V96Rgmj/A",
     "keywords": [
       "a",
       "fine art",
@@ -360,7 +360,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/0/Kfk5b7ZFnqwzJxHzbBbHjRxNRthTbk8jh8LgnSbvN/XL/_WHO1224-901-902-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rR76nKr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rR76nKr/A",
     "keywords": [
       "a",
       "fine art",
@@ -384,7 +384,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/0/NPRNp7wm6sWH77KTZ9HcvhNLsLh5W6RGhdvhg8MPT/XL/_WHO1224-901-902-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-hHVb4vC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-hHVb4vC/A",
     "keywords": [
       "a",
       "fine art",
@@ -408,7 +408,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/K8N3zdmwPK33V2KTtRGhsdqcTmfxG6dSsKf58XFPL/XL/_WHO1255-896-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Z8pZLnt/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Z8pZLnt/A",
     "keywords": [
       "a",
       "fine art",
@@ -432,7 +432,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/KsQbFz4JwDGvpXnsx7g56RtMBwtHmCcPP7pTBjwDC/XL/_WHO1255-897-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-67Qt8WM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-67Qt8WM/A",
     "keywords": [
       "a",
       "fine art",
@@ -456,7 +456,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/1/NPb5T2vZZSbwF5M9CDVVTTZM2Gc8Hk5HXZQ8MhCnK/XL/_WHO1264-894-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sSHtMSC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sSHtMSC/A",
     "keywords": [
       "a",
       "fine art",
@@ -480,7 +480,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/1/L85rXpbxKbbJtbPDNgxQ2JX4L4nsSmFDV2DjHVtkH/XL/_WHO1264-895-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-tfZTHXq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-tfZTHXq/A",
     "keywords": [
       "a",
       "fine art",
@@ -504,7 +504,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/0/M8qct4H6z34X9qcVRrBLGzJmgWfkRd3PDDsr6sNtc/XL/_WHO1264-895-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-z4mTWBb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-z4mTWBb/A",
     "keywords": [
       "a",
       "fine art",
@@ -528,7 +528,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/0/NcwhTcgS3LJ3FHSM3CBR9w3RWbLqrMZKbcsLnZGP6/XL/_WHO1458-891-893-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-jWFcDHr/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-jWFcDHr/A",
     "keywords": [
       "a",
       "fine art",
@@ -552,7 +552,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bWw2GPZ/0/L2X46bv7rJk9bpM6x7zBgbSTMgnPXcmcdRkDZh8T6/XL/_WHO1469-889-890-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-bWw2GPZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-bWw2GPZ/A",
     "keywords": [
       "a",
       "fine art",
@@ -576,7 +576,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/LVspsc2mTNNjDMHkJZX4kjBcw9g3rZ5nMZnQQw8gN/XL/_WHO1626-886-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7hD9CCh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7hD9CCh/A",
     "keywords": [
       "a",
       "fine art",
@@ -600,7 +600,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcVr8J7/0/Md8g5sTjz6KQq4cRt6NS6nWgS3HTVmbM92KgvWCxz/XL/_WHO1676-887-888-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-JcVr8J7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-JcVr8J7/A",
     "keywords": [
       "a",
       "fine art",
@@ -624,7 +624,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/0/LHQrmjGMs9mzV5pbRcnCz896mmXDpdNvQNnstk4Wx/XL/_WHO1676-887-888-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KtmPcCf/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KtmPcCf/A",
     "keywords": [
       "a",
       "fine art",
@@ -648,7 +648,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/0/KmF6Z8mhjfLcLGMNQcW9TrRbbsKzT93bxZWFthF6s/XL/_WHO1676-887-888-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KG7ZwXT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KG7ZwXT/A",
     "keywords": [
       "a",
       "fine art",
@@ -672,7 +672,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vj2mkf6/0/NbS2wXkmJGmw8LDwvm6MVbKh3WNpZBKFdx5LJf5F7/XL/_WHO1676-887-888-4-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-vj2mkf6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-vj2mkf6/A",
     "keywords": [
       "a",
       "fine art",
@@ -696,7 +696,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/0/NdzHdWJr8mJWsGJSdrSL6n55bfFx8p7TRx6hKcBCm/XL/_HF24203-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-StJWnTh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-StJWnTh/A",
     "keywords": [
       "a",
       "fine art",
@@ -720,7 +720,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/MkF4JJ6D9FrCm4PSXdh2hN9dMJzGXXZBSr84mQtBd/XL/_HF24217-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zDcr5T3/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zDcr5T3/A",
     "keywords": [
       "a",
       "fine art",
@@ -744,7 +744,7 @@ export const galleryData = [
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/KVSqZQPSqhjpvsZDLV5J3NBm3qgxZQxhqbmVVRkdD/XL/_HF24217-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7CjNq8p/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7CjNq8p/A",
     "keywords": [
       "a",
       "fine art",
@@ -768,7 +768,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/MsNxjSsbBRcJd88LzzCQj26th8hVzkmjDTB8cgqSW/XL/_WHO2117-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-JbWnV3V/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-JbWnV3V/A",
     "keywords": [
       "a",
       "fine art",
@@ -792,7 +792,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/Kc8cbm3Pw5jhjhF6gp97LFqkxgBJp7NJGwPHBtjNF/XL/_WHO2415-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sDZFJ6t/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sDZFJ6t/A",
     "keywords": [
       "a",
       "fine art",
@@ -816,7 +816,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/NcXLVLDsx49CMpZL4L32xQtG2bddgLtT4LwfHgLLL/XL/_WHO2514-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-QJXw3Sj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-QJXw3Sj/A",
     "keywords": [
       "a",
       "fine art",
@@ -840,7 +840,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KTCXPJvSg67ph8ggCP2ns99vVsq6f8PVqcqb4zGGL/XL/_WHO6372-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Gk8bBLn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Gk8bBLn/A",
     "keywords": [
       "a",
       "fine art",
@@ -864,7 +864,7 @@ export const galleryData = [
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/0/K2T9cr9w9bJnt5rwSVsjX2gZtF7QvWLJzRzTXjDZX/XL/_WHO0336-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zjtVmT8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zjtVmT8/A",
     "keywords": [
       "a",
       "fine art",
@@ -888,7 +888,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/0/NHc9RWXsSknFbbknvDpCdSLkcHwG7cjFms9swBwcF/XL/_WHO0707-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-vJSCrqC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-vJSCrqC/A",
     "keywords": [
       "a",
       "fine art",
@@ -912,7 +912,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M3XPN5H4jZgmrtG34jWXZgdhz2kkpXzBCPsNzqcJL/XL/_WHO1062-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rRdrQBg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rRdrQBg/A",
     "keywords": [
       "a",
       "fine art",
@@ -936,7 +936,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/LhhP9QJ2TzpFKFtGSjWrbtVkQtBkdgXbxtWMmp5zb/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-2s2LtQp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-2s2LtQp/A",
     "keywords": [
       "a",
       "fine art",
@@ -960,7 +960,7 @@ export const galleryData = [
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/0/MKgfWpTVrPjnCTgHrqRrn8Pnhw2HStBM89HhV3qk5/XL/_WHO2552-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-9frbWfJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-9frbWfJ/A",
     "keywords": [
       "a",
       "fine art",
@@ -984,7 +984,7 @@ export const galleryData = [
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/0/LR5tTRnfcd59N2STvbTZTG29F469gJhvgNq8jBxth/XL/_HF27324-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-6NQ6hQZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-6NQ6hQZ/A",
     "keywords": [
       "a",
       "fine art",
