@@ -22,7 +22,7 @@ export const galleryData = [
     "description": "A painterly Civil War portrait of a weary Union officer, captured in the quiet aftermath of battle. Wayne Heim’s black and white fine art photography blends texture and tone to explore the emotional line between victory and survival. Ideal for collectors of war photography, Civil War wall art, and historically inspired fine art portraiture.",
     "alt": "Painterly Civil War portrait of a tired soldier standing in the aftermath of battle, embodying the uncertainty between victory and survival.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-834cDZ8/1/Mq2pFD8TcGwz7SKRSQZhJjtgVRkhNj9KdjsvGhCt4/XL/_O2H6854-Enhanced-NR-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-834cDZ8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-834cDZ8/A",
     "keywords": [
       "Civil War",
       "Hale Farm",
@@ -53,7 +53,7 @@ export const galleryData = [
     "description": "A painterly Civil War portrait of a young Union soldier waiting in camp, captured in a quiet moment between boredom and resolve. Wayne Heim’s black and white fine art photography blends period-authentic detail with storytelling realism, offering a glimpse into daily life between the battles. Ideal for collectors of Civil War art, reenactment photography, and historically inspired fine art prints. © Wayne Heim",
     "alt": "Young Civil War soldier in worn uniform leaning on a rifle, gazing off with a look of frustration and fatigue, waiting for orders or a meal.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-GqDJLmF/0/L6LKtWkK2KJFS38j8Q9w3znM8526NR2FcnR9H2X2g/XL/_HF21069-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-GqDJLmF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-GqDJLmF/A",
     "keywords": [
       "Civil War",
       "Hale Farm",
@@ -84,7 +84,7 @@ export const galleryData = [
     "description": "A painterly Civil War portrait of a field medic reading quietly in the grass between battles. Wayne Heim’s black and white fine art photography captures a rare moment of calm in the chaos of war—where reflection, escape, and quiet endurance take center stage. Ideal for collectors of Civil War photography, historical reenactment art, and emotionally rich fine art prints. © Wayne Heim",
     "alt": "Civil War field medic in uniform, reclining in the grass while reading a book to pass the time between battles",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vQXXDRJ/0/Mz6FLNCRrT8dtNvCjNVzkTqzRT9jqB8nfBzjGMBcg/XL/_HF20969-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vQXXDRJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vQXXDRJ/A",
     "keywords": [
       "Civil War",
       "Hale Farm",
@@ -115,7 +115,7 @@ export const galleryData = [
     "description": "A painterly black and white portrait of a young Civil War drummer boy, caught in a moment of quiet focus as he practices in camp. Wayne Heim’s fine art photography blends historical realism with subtle emotional depth, capturing the discipline and vulnerability of youth in wartime. Ideal for collectors of Civil War art, reenactment photography, and narrative-rich fine art prints. © Wayne Heim",
     "alt": "Young Civil War drummer boy seated on a log, practicing with drumsticks; black and white painterly fine art portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-TkBf43K/0/LGjVSkh563wBJvzBBSs4J4Prvm9SrDtVjwKvbwPSL/XL/_HF20983-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-TkBf43K/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-TkBf43K/A",
     "keywords": [
       "Civil War",
       "Hale Farm",
@@ -146,7 +146,7 @@ export const galleryData = [
     "description": "Fine art painterly photo of Civil War Union soldier resting a bit after a long march. Historically themed fine art photography of reenactor at a Civil War reenactment. © Wayne Heim",
     "alt": "Painterly Civil War Portrait: Resting a Spell.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-ShbbBcz/0/Lx4LFvVrhbBpXcMb3NFwz8kFHs3vvqSbHfwnNSzp7/XL/_HF20980-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-ShbbBcz/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-ShbbBcz/A",
     "keywords": [
       "Civil War",
       "Hale Farm",
@@ -177,7 +177,7 @@ export const galleryData = [
     "description": "Fine art painterly photography of a Civil War Union soldier lost in thought and thinking of his wife and family back home. Fine art historically themed painterly photography of reenactor at a reenactment. © Wayne Heim",
     "alt": "Painterly Civil War Portrait: Thinking of Home.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mDZn7Xx/0/LsqnwMPhdDxZ9pZcPttShRNcJVxGbh4779KrwQqvd/XL/_HF21116-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-mDZn7Xx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-mDZn7Xx/A",
     "keywords": [
       "Civil War",
       "Hale Farm",
@@ -208,7 +208,7 @@ export const galleryData = [
   "description": "Black and white Civil War portrait of a weary Union soldier amid the smoky aftermath of battle. This fine art painterly photograph captures a powerful moment of historical reenactment, echoing the grit and emotion of the American Civil War.",
   "alt": "Painterly Civil War Portrait: After the Smoke.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-dWHn77W/0/Kbxk3WrgMWvQ9nw6RT56ckbH7znDhrr98chdbCvht/XL/_O2H0296-Enhanced-NR-Edit-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-dWHn77W/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-dWHn77W/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -229,7 +229,7 @@ export const galleryData = [
    "description": "Fine art black and white portrait of a Civil War soldier staring with unwavering resolve. This museum-quality photograph captures the authenticity and character of a Union reenactor, rendered in a painterly style that speaks to the determination and inner strength of those who served.",
   "alt": "Painterly Civil War Portrait: A Steady Gaze.",
   "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-5jfqH53/0/Kk2vTX4sC9d99MMLjPLgnbKZ9VgWRXP3gmC3HrPz4/XL/_HF22111-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-5jfqH53/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-5jfqH53/A",
     "keywords": [
       "Civil War",
       "Hale Farm",
@@ -260,7 +260,7 @@ export const galleryData = [
   "description": "A fine art black and white Civil War portrait of a Union soldier lost in contemplation at camp. This evocative photograph, rich in painterly detail, invites the viewer to consider the solitude and emotional toll of war. A standout piece for collectors of historic reenactment photography.",
   "alt": "Union Civil War soldier sitting in quiet reflection at camp, black and white painterly portrait.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-qSgZ7zD/0/KTJRgtLCBXZWpCF6P6nwBWWM86WTRmRZCQSTPsF3L/XL/_HF21095-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-qSgZ7zD/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-qSgZ7zD/A",
   "keywords": [
     "Civil War",
     "Hale Farm",
@@ -291,7 +291,7 @@ export const galleryData = [
   "description": "A poignant fine art portrait in black and white, showing a Union Civil War soldier reading a letter from home. The painterly technique and historical detail make this an emotionally charged work of Civil War wall art for enthusiasts and collectors.",
   "alt": "Civil War Union soldier reading a letter from home, black and white painterly portrait.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-qkhr8Nv/0/M283NvnJPT4vvP9vzkH9jpkm2V9zB72zwkxVcWM2R/XL/_HF20924-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-qkhr8Nv/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-qkhr8Nv/A",
   "keywords": [
     "Civil War",
     "Hale Farm",
@@ -322,7 +322,7 @@ export const galleryData = [
   "description": "Painterly black and white Civil War photograph of a vigilant Union soldier standing guard. This fine art portrait, crafted during a reenactment, embodies the discipline and silent strength demanded of men in war, making it a dramatic addition to any historic art collection.",
   "alt": "Union Civil War soldier standing guard, black and white fine art reenactment portrait.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-tHwDWLC/0/NGDTs2jXtNWsPpzdWkZ4wVKDSPprPfmqjxhRwhLC6/XL/_HF21376-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-tHwDWLC/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-tHwDWLC/A",
   "keywords": [
     "Civil War",
     "Hale Farm",
@@ -353,7 +353,7 @@ export const galleryData = [
   "description": "Fine art black and white photograph of a Union Civil War soldier reading a letter at first light. Painterly processing and period detail transport the viewer to a moment of quiet hope during historic reenactment. Perfect for Civil War wall art collections.",
   "alt": "Civil War Union soldier reading a letter in camp at sunrise, painterly black and white photo.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2rXwHbt/0/L8ZhB4hSKJqZpCZFgwckK8tTqDnbTzCdb6CdpC8CX/XL/_O2H0028-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-2rXwHbt/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-2rXwHbt/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -374,7 +374,7 @@ export const galleryData = [
   "description": "Historic reenactment photograph in black and white of a Civil War drummer boy taking a rare break. This painterly fine art portrait captures youth and exhaustion, telling the story of those who marched to the beat of war.",
   "alt": "Civil War drummer boy seated and resting, black and white fine art portrait.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-jHxmb55/0/MB7vSpmLMrGWCf54scmzSk92zbTchRNxHhmpDXM2S/XL/_O2H0365-Enhanced-NR-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-jHxmb55/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-jHxmb55/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -395,7 +395,7 @@ export const galleryData = [
   "description": "Moody black and white portrait of a Civil War soldier deep in thought, crafted with painterly technique and historic accuracy. This dramatic fine art photo from a reenactment brings the weight of the conflict to life.",
   "alt": "Civil War soldier sitting in the shadows, painterly black and white historic portrait.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-7PMTVGg/0/KjMvWPJZjjVhMRQv9gc4XBdhn8Xp7KcttRDGSRftW/XL/_HF21108-Edit-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-7PMTVGg/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-7PMTVGg/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -416,7 +416,7 @@ export const galleryData = [
   "description": "Fine art black and white image of a Union soldier on sentry duty, captured with painterly realism at a Civil War reenactment. This photograph celebrates the discipline and solitude of military service during the American Civil War.",
   "alt": "Civil War Union soldier standing watch, black and white painterly portrait.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4xLxQpk/0/Lqqwxv5JqBFNb7drCT7bxRJtsKBghZ8G874TGWmS7/XL/_HF21158-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-4xLxQpk/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-4xLxQpk/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -437,7 +437,7 @@ export const galleryData = [
   "description": "Painterly black and white photograph of a Civil War Union soldier resting in camp before another march. The atmospheric style and historic reenactment detail make this fine art print a compelling tribute to the ordinary moments of wartime.",
   "alt": "Union soldier reclining at camp, Civil War black and white painterly fine art photo.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-gF8ZqQS/0/NdwhZq3SkwjHTKmSTTnz5HMz3W7h6BKcHJ4Q9b7LZ/XL/_HF21237-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-gF8ZqQS/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-gF8ZqQS/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -459,7 +459,7 @@ export const galleryData = [
   "description": "Atmospheric black and white fine art photograph of Civil War reenactors gathered around a smoky campfire. This painterly image captures the camaraderie and hardship faced by soldiers during the American Civil War, perfect for collectors of historic reenactment art.",
   "alt": "Civil War soldiers huddled around a campfire, painterly black and white fine art photograph.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-bcHKgfx/1/Mx82FcJPr3JqTMhwTpH6w5jnTDnHDrDgZgbHJQgtR/XL/_O2H6798-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-bcHKgfx/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-bcHKgfx/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -480,7 +480,7 @@ export const galleryData = [
   "description": "Dramatic black and white fine art photograph of a Civil War soldier preparing for morning roll call. This painterly portrait, created at a historic reenactment, highlights discipline, anticipation, and the quiet strength of the Union army.",
   "alt": "Civil War Union soldier standing in early morning light, painterly black and white portrait.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-bCzTRRB/1/Mt2GbvkVbPVPnBqvxKzhHgZ5qWwVPhtPTSB862ZmD/XL/_O2H6866-Enhanced-NR-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-bCzTRRB/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-bCzTRRB/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -501,7 +501,7 @@ export const galleryData = [
   "description": "Fine art black and white photo of a Civil War sentry making his rounds at dusk. The painterly style and historical accuracy of this reenactment image evoke the watchful moments before darkness fully settles on camp.",
   "alt": "Civil War sentry on patrol at sunset, painterly black and white historic photo.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QW5C48m/0/MGxqXCz5h9Pg87rVG5PCdPGs8BqMzsr6hcfC9cwnK/XL/_O2H6871-Enhanced-NR-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-QW5C48m/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-QW5C48m/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -522,7 +522,7 @@ export const galleryData = [
   "description": "Introspective black and white painterly portrait of a weathered Civil War reenactor. This fine art photograph honors the sacrifices and enduring spirit of those who lived through the war, blending realism and emotion.",
   "alt": "Civil War veteran in thoughtful reflection, painterly black and white portrait.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKnSff2/0/LsTsjdKB9mTZtFBLV3ptvVhKk5rZKqHBZf7pGRrpD/XL/_HF21359-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-xKnSff2/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-xKnSff2/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -543,7 +543,7 @@ export const galleryData = [
   "description": "Painterly black and white photograph of a Civil War officer reading fresh orders in the field. Captured during a detailed reenactment, this fine art image connects viewers with the decisions and uncertainties of wartime command.",
   "alt": "Civil War officer reading military orders, black and white painterly reenactment photo.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vztmrNx/0/KGTsNbsVPTNSTH8xtzBmnzH63L7pC5G7Kr63TLW66/XL/_HF21543-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vztmrNx/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vztmrNx/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -565,7 +565,7 @@ export const galleryData = [
   "description": "Dramatic black and white fine art photograph depicting a wounded Civil War reenactor. The painterly style highlights resilience and the somber realities of 19th-century battlefield medicine—an evocative work for history and fine art collectors.",
   "alt": "Civil War soldier resting after battle, wounded but determined, painterly black and white photo.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vRTfLrV/0/MDPT6RxBf9j7ZKDFkgd8F4TDJK6RL5J92tgjQKNRH/XL/_HF21366-Edit-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vRTfLrV/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vRTfLrV/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -586,7 +586,7 @@ export const galleryData = [
   "description": "Expressive black and white fine art image of a Civil War reenactor writing a letter from camp. This painterly photo captures the deep longing for home and family, evoking both solitude and hope amid conflict.",
   "alt": "Civil War soldier writing a heartfelt letter by lamplight, black and white fine art.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-q5tM4bH/0/MHD6xxbRtfBPBVWZGd65ppXVvD8xPGt8fPVC9PKDb/XL/_HF21450-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-q5tM4bH/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-q5tM4bH/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -607,7 +607,7 @@ export const galleryData = [
   "description": "Black and white fine art photograph of a Union officer studying orders in the field. Painterly processing and historic detail draw viewers into the tension of battlefield command and decision-making during the Civil War.",
   "alt": "Civil War Union officer reading military orders, black and white painterly photograph.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WDPZRGD/0/NFwxDj527Vw6zKdtQcJZvWrNGqnZLrTrM4Mbx9Jjc/XL/_O2H6822-Edit-Edit-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-WDPZRGD/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-WDPZRGD/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -628,7 +628,7 @@ export const galleryData = [
   "description": "Historic black and white fine art image of a Civil War reenactor standing firm in formation. Painterly lighting and period detail honor the steadfast courage and discipline of soldiers on both sides of the conflict.",
   "alt": "Civil War soldier standing in formation, black and white fine art reenactment photo.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-ScfTV48/0/KwctVnbb2ZmZ8CwnfF7NNq89qNdrzRNTL3j3wknBR/XL/_HF20914-Edit-2-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-ScfTV48/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-ScfTV48/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -649,7 +649,7 @@ export const galleryData = [
   "description": "Powerful black and white fine art photograph of a Civil War cannon firer preparing to launch artillery during a dramatic reenactment. The painterly style immerses the viewer in the anticipation and thunder of 19th-century battle.",
   "alt": "Civil War reenactor aiming cannon, black and white painterly fine art photo.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-CvnVxzQ/2/LfZtjNSGNLT3LcNpSXvhkrKK6HCtvWNWzFtCS4vPn/XL/_WHZ6811-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-CvnVxzQ/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-CvnVxzQ/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -670,7 +670,7 @@ export const galleryData = [
   "description": "Black and white fine art photograph of a weary Civil War Union soldier resting after a long march, captured in a painterly style. The historic detail and dramatic lighting evoke the hardship and exhaustion of soldiers during the American Civil War. Ideal for collectors of Civil War photography and historic reenactment art.",
   "alt": "Civil War Union soldier resting after a long march, black and white painterly photograph.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-m5CqBfM/0/LHQqML9mP5GnVthWdwx527rdBxvwHmtTDqT7GnrsQ/XL/_O2H1564-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-m5CqBfM/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-m5CqBfM/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -691,7 +691,7 @@ export const galleryData = [
   "description": "Atmospheric black and white fine art photo of a Civil War soldier preparing for the next advance. Painterly light and historical accuracy create an immersive glimpse into camp life during America’s defining conflict. A must for fans of historical reenactment photography and Civil War art prints.",
   "alt": "Civil War reenactor preparing for the next advance, black and white painterly image.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-JdswJLd/0/MkJs9rG8G8KbQHJcMJ7jHT2FJHWDr3v9ghSx2gVcX/XL/_O2H6749-Enhanced-NR-Edit-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-JdswJLd/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-JdswJLd/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
@@ -712,7 +712,7 @@ export const galleryData = [
   "description": "Stirring black and white portrait of a Civil War reenactor, rendered in Wayne Heim’s signature painterly style. This historic fine art photograph brings out the courage, discipline, and humanity of soldiers who shaped America’s past.",
   "alt": "Civil War soldier in formal portrait, black and white historic fine art image.",
   "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-N3945FQ/2/LGN2ZBsZHdwChLJzLVrgcStt2Vp2GsT2L36LnZvnw/XL/_W3H4013b-XL.jpg",
-  "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-N3945FQ/A",
+  "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-N3945FQ/A",
   "keywords": [
     "Civil War", "Hale Farm", "reenactment", "black and white photography",
     "civil war photography", "civil war reenactment", "portrait", "reenactors",
