@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 import path from 'path';
 
 export default defineConfig({
+ site: 'https://www.k4studios.com',   // 👈 Add this
   output: 'server',
   adapter: netlify(),
   integrations: [
