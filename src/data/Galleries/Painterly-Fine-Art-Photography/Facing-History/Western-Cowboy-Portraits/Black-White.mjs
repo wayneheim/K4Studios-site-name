@@ -468,7 +468,7 @@ export const galleryData = [
   },
   {
     "id": "i-RK9HRjR",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-RK9HRjR/0/LdPFGmmTswfktSzMfhwDpzFMRK9Z9GHLf6pj2tBFk/XL/_HF23341-816-XL.jpg",
@@ -1027,7 +1027,7 @@ export const galleryData = [
   },
   {
     "id": "i-5s8Zkrb",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5s8Zkrb/0/MNs97b7nVGw6xWsb2SqkmpZFN6Qq354JdnLkwmGkj/XL/_HF23527-Edit-2-XL.jpg",
@@ -1376,7 +1376,7 @@ export const galleryData = [
   },
   {
     "id": "i-MTX8mmk",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-MTX8mmk/0/KQrxsKGw88hmMGjQ4BWw87QkcgJR3PbghtXsQZKP2/XL/_O2H2856-855-XL.jpg",
@@ -3810,7 +3810,7 @@ export const galleryData = [
   },
   {
     "id": "i-zShFkKV",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-zShFkKV/0/LfFzPd4SsXgTBzcQCs7kbXLhNJx5h7ht4QxvjLqVf/XL/_O2H0706-783-XL.jpg",
@@ -3947,7 +3947,7 @@ export const galleryData = [
   },
   {
     "id": "i-LZNLWf9",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-LZNLWf9/0/MG9VJxnZ7gt2QXtkHTHRJD5KzhrsZhRZvk5htjvxw/XL/_O2H0586-Edit-Edit-Edit-XL.jpg",
@@ -4024,7 +4024,7 @@ export const galleryData = [
   },
   {
     "id": "i-w3n5cvx",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-w3n5cvx/0/MJLbJj4x8j2h483tpmFgZBVvzSS4G3TdcXKsw4GLD/XL/_O2H3505-866-867-869-XL.jpg",
@@ -5248,7 +5248,7 @@ export const galleryData = [
   },
   {
     "id": "i-QsNP7mR",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QsNP7mR/0/KFGq3Dj3J9KSZZ6Z3Gnsvs4XmP4R64xTkkPrxdGxL/XL/_O2H2798-853-XL.jpg",
@@ -5272,7 +5272,7 @@ export const galleryData = [
   },
   {
     "id": "i-2tXvL9T",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-2tXvL9T/0/LZGTHXVwZqSM4N9xb469GS3rfNLDWCHTC9ntwQJRL/XL/_O2H2481-841-842-XL.jpg",
@@ -6496,7 +6496,7 @@ export const galleryData = [
   },
   {
     "id": "i-Mmszz6d",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Mmszz6d/0/KnRq5rMQWWW86xVCgQB94WJM2w9fQcmnkbbBKQzg8/XL/_O2H1672-XL.jpg",
@@ -7234,7 +7234,7 @@ export const galleryData = [
   },
   {
     "id": "i-d7DbWRC",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-d7DbWRC/0/KVjHNwnDhWnSL74tJMsB2Mg99MHSP6J266DsVfRc2/XL/_HF23855-738-XL.jpg",
@@ -7258,7 +7258,7 @@ export const galleryData = [
   },
   {
     "id": "i-Q9hVLPk",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Q9hVLPk/0/MNDNR2r9mZf5tFbt86dcdVFzNQWZMsrq9jsSLstLg/XL/_O2H0605-781-XL.jpg",
@@ -7395,7 +7395,7 @@ export const galleryData = [
   },
   {
     "id": "i-B2H9fFs",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-B2H9fFs/0/KzzrRfxBzkKfRZ7QS5D7WcjVcnWLcpNq43h7dVrsP/XL/_HF24190-705-XL.jpg",
@@ -7539,7 +7539,7 @@ export const galleryData = [
   },
   {
     "id": "i-863RbPv",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-863RbPv/0/KkvMdKHVgqDQq7JZHBnK7LGFk5nWXJsJBRPPw9vL8/XL/_O2H3934-719-720-XL.jpg",
@@ -8283,7 +8283,7 @@ export const galleryData = [
   },
   {
     "id": "i-6rCCMf9",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-6rCCMf9/0/LGMXNxBJrKG3q9R9kSPmmks9WGkQxHKh2Kr5tNkWP/XL/_O2H0605-780-XL.jpg",
@@ -8660,7 +8660,7 @@ export const galleryData = [
   },
   {
     "id": "i-s5VRFGH",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-s5VRFGH/0/MbHk53VKzJPz7n8XKsWC8JXMQ2mwh7KLSGRsHJZkw/XL/_HF23326-811-XL.jpg",
@@ -8738,7 +8738,7 @@ export const galleryData = [
   },
   {
     "id": "i-qVVVQPH",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-qVVVQPH/0/LCPZpRjST7czZscbLP9cBsVkDqHLMZK2mgf2NS82b/XL/_HF23480-828-XL.jpg",
@@ -8816,7 +8816,7 @@ export const galleryData = [
   },
   {
     "id": "i-X8DBDJS",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X8DBDJS/0/L6fG3xR2FQg22hNWzMg4B5tskjJZFQvhkNsHz9B4L/XL/_O2H0601-779-XL.jpg",
