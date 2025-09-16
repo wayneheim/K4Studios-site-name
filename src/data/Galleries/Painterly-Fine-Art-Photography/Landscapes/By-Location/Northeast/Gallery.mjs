@@ -46,7 +46,7 @@ export const galleryData = [
   },
   {
     "id": "i-7LZhFkc",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_WHZ6646-Edit-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/MV2NZKCZb5LrkrFnhP9CfKCNWgttNdHvLJcXqm7hT/XL/_WHZ6646-Edit-Edit-XL.jpg",
@@ -127,7 +127,7 @@ export const galleryData = [
   },
   {
     "id": "i-FpmhtnM",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_DSF5501_tonemapped-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/KXtH3cJt6DxSBX2nXNFVtM8Cz8dxrfSbhmnXtkWRZ/XL/_DSF5501_tonemapped-Edit-XL.jpg",
@@ -154,7 +154,7 @@ export const galleryData = [
   },
   {
     "id": "i-Jstk9Gx",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_DSF5516_tonemapped-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/K738tNKcXSmHbtvWzZQVv865DhtMK8XJR8WggdLST/XL/_DSF5516_tonemapped-Edit-XL.jpg",
@@ -235,7 +235,7 @@ export const galleryData = [
   },
   {
     "id": "i-cKsdqTs",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_DSF5984_tonemapped.jpg",
     "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/Mz5M8mvzTfMfXrTzxFjGzFh77KFFC8xxbHXsfnGnt/XL/i-cKsdqTs-XL.jpg",

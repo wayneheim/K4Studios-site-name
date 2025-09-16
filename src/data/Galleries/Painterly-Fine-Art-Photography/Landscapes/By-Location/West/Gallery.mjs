@@ -1698,7 +1698,7 @@ export const galleryData = [
   },
   {
     "id": "i-2hZwZ6C",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_IMG5600-Enhanced-NR-611-612.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/LkzGJVW7pJRkfx6PZVJznHrqFrskZGjRFBDjL8v2B/XL/_IMG5600-Enhanced-NR-611-612-XL.jpg",
@@ -1968,7 +1968,7 @@ export const galleryData = [
   },
   {
     "id": "i-KKkLwvR",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_IMG6056-Enhanced-NR-609-610.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/KSkKHm9BfNjwJDPswWPT6hmVzxWDDJNgjqdsBvdM2/XL/_IMG6056-Enhanced-NR-609-610-XL.jpg",

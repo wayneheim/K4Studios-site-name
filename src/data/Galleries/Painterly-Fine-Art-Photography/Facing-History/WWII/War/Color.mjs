@@ -1314,7 +1314,7 @@ export const galleryData = [
   },
   {
     "id": "i-V695Dp6",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/KH7DLGP7KnvDqN6sn6P765MdFLwbZW8tSQs9vCRcT/XL/_OLY8725-Edit-XL.jpg",
@@ -1331,7 +1331,7 @@ export const galleryData = [
   },
   {
     "id": "i-kJd5ZV5",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/McFmgxxnrbjFq9BcTqV243vjp9rdnLQk9jwqX3DRK/XL/_OLY8775-Edit-2-XL.jpg",
@@ -1348,7 +1348,7 @@ export const galleryData = [
   },
   {
     "id": "i-PXRF9TX",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/LP4CN8Xrd4VWmq6zFnTCNGnVFhf9jkLjrq3VMNLGz/XL/_OLY8776-Edit-XL.jpg",
@@ -1365,7 +1365,7 @@ export const galleryData = [
   },
   {
     "id": "i-TFnxp39",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/MZZXHHHQcPt3pPHz8N7hSj9rFmHpLJ2K9RS369q2J/XL/_OLY8791-Edit-XL.jpg",
@@ -1433,7 +1433,7 @@ export const galleryData = [
   },
   {
     "id": "i-w8SFWQT",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/LF5z9fJJCFWxDb7Ncs7zmrBWSfsh4dNhVjr9WtGVf/XL/_OLY9007-Edit-XL.jpg",
@@ -1450,7 +1450,7 @@ export const galleryData = [
   },
   {
     "id": "i-kFG6fSc",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/LNpfHTqBPjrn55JhtxzsN7zG9XgCH4Vbm3C5sCrCB/XL/_OLY9032-Edit-XL.jpg",
@@ -1467,7 +1467,7 @@ export const galleryData = [
   },
   {
     "id": "i-dLCkS26",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/MnzgwBcksDWKSwKXjHJR8MgLLSBkCb2wbWHpTW7Nd/XL/_OLY9032-Edit-2-XL.jpg",
@@ -1484,7 +1484,7 @@ export const galleryData = [
   },
   {
     "id": "i-ZwPshf2",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/MwkXqh2G2rW5VZ9hKHJd2TqtPDWpnwBwcLscW53tP/XL/_OLY9127-Edit-XL.jpg",
@@ -1501,7 +1501,7 @@ export const galleryData = [
   },
   {
     "id": "i-8MFcm9N",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/Kqbd6jQfwXwwtDsqzxPDzVQPQ76qnxJpQtCS2RKHC/XL/_OLY9696-Edit-XL.jpg",
@@ -1518,7 +1518,7 @@ export const galleryData = [
   },
   {
     "id": "i-gL2CxV7",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gL2CxV7/3/K32KSSMpTPdzkxJ8XzG2qcqr5VP2vDDFtVCRSJV9G/XL/_PEN0762-Edit-XL.jpg",
@@ -1552,7 +1552,7 @@ export const galleryData = [
   },
   {
     "id": "i-n3N8NRr",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LQ5LqQftrthtChL4LT7pFghr2sknzN587QRxZwZZK/XL/_PEN0791-Edit-2-XL.jpg",
@@ -1620,7 +1620,7 @@ export const galleryData = [
   },
   {
     "id": "i-vZNLBNp",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/K5cXZGcmrq7W4tMxXjmKqnSSSvJmhzJnN3t9mpXGN/XL/_PEN0836-Edit-XL.jpg",
@@ -1637,7 +1637,7 @@ export const galleryData = [
   },
   {
     "id": "i-2XSdvtV",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2XSdvtV/2/KMWQn8CSS5MswxCSPjhm9Lqm4bnCzRxv6r7vXvjd9/XL/_OL37211-Edit-XL.jpg",
@@ -1654,7 +1654,7 @@ export const galleryData = [
   },
   {
     "id": "i-rTVRQJQ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rTVRQJQ/2/L6xfDwDL6hfpfJtjfmjD2wDDmb4zrd3vXcXt9G9T3/XL/_OL37229-Edit-XL.jpg",
@@ -1671,7 +1671,7 @@ export const galleryData = [
   },
   {
     "id": "i-hwZmvKw",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hwZmvKw/1/M9Qsf3KrqGQRrF6GXZCF8SGMnx99zbgpgBL8DKvpd/XL/_OL37236-Enhanced-Edit-XL.jpg",
@@ -1688,7 +1688,7 @@ export const galleryData = [
   },
   {
     "id": "i-cnKRrrH",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cnKRrrH/2/MCf3ffJkSzJJP8D9vLRrsC8GkLt8hDRGmNXsk9tfs/XL/_OL37236-Enhanced-Edit-XL.jpg",
@@ -1705,7 +1705,7 @@ export const galleryData = [
   },
   {
     "id": "i-NBvV5CH",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBvV5CH/1/K4sWpLsLgXKDb88nDQXMzrJNBkzNf5fbGzXPcZvZc/XL/_OL37276-Edit-XL.jpg",
@@ -1722,7 +1722,7 @@ export const galleryData = [
   },
   {
     "id": "i-gbcTnJp",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gbcTnJp/1/NNph9SW4M3NdJfFSPgxT6Gzqkhxd9vWP3Fth57Ts4/XL/_OL37291-Edit-XL.jpg",
@@ -1739,7 +1739,7 @@ export const galleryData = [
   },
   {
     "id": "i-4CDbNZW",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4CDbNZW/2/Mxd2L3kmTLrxCDk7h8cZRbtFCQPvJ4WXLNLNPDBJ8/XL/_OL37291-Edit-XL.jpg",
@@ -1756,7 +1756,7 @@ export const galleryData = [
   },
   {
     "id": "i-nNR9s8N",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-nNR9s8N/1/LHhNG6pqGmzBQrc7kCfBHrSgBrmRM8Mxms7ZXCNGW/XL/_OL37340-Edit-2-XL.jpg",
@@ -1773,7 +1773,7 @@ export const galleryData = [
   },
   {
     "id": "i-CFM4PGm",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-CFM4PGm/1/MXmMvCSxNhPZDQPCk8G58b4tBFHTp6Xt3knBTW6rJ/XL/_OL37347-Edit-XL.jpg",
@@ -1790,7 +1790,7 @@ export const galleryData = [
   },
   {
     "id": "i-zgFkMj7",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zgFkMj7/1/KxnBPd2BhnSrRxDngvxvWqrGpMNJfPkzS3R4PSNwb/XL/_OL37416-Edit-XL.jpg",
@@ -1807,7 +1807,7 @@ export const galleryData = [
   },
   {
     "id": "i-cFcMB2h",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cFcMB2h/2/LPWxTQfd84h2Z69Jb27STNzPLxtHHnBHXpSv6L6XF/XL/_OL37443-Edit-Edit-2-XL.jpg",
@@ -1824,7 +1824,7 @@ export const galleryData = [
   },
   {
     "id": "i-NPkLTtP",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPkLTtP/2/KsHFnC26vMtvSxGGkcMq2mGx3Sgx67vLfrbtnzR46/XL/_OL37500-Edit-2-XL.jpg",
@@ -1841,7 +1841,7 @@ export const galleryData = [
   },
   {
     "id": "i-3gH2xgz",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3gH2xgz/2/McSxS2BFP7gGfGjpL7cgw6gxwBkmnXWgrMgHtKdJs/XL/_OL37508-Edit-Edit-2-XL.jpg",
@@ -1858,7 +1858,7 @@ export const galleryData = [
   },
   {
     "id": "i-dBLHKzn",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dBLHKzn/1/MxJsCSNHCzrN3q53xbbndCKt48ZB2jZVLH5tnqjd3/XL/_OL37524-Edit-XL.jpg",
@@ -1875,7 +1875,7 @@ export const galleryData = [
   },
   {
     "id": "i-m7Pp5fs",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-m7Pp5fs/2/NhcZtPCq7M4cKHrmJmxds3vSJ4vMhkjk9fzNkVscV/XL/_OL37524-Edit-Edit-XL.jpg",
@@ -1892,7 +1892,7 @@ export const galleryData = [
   },
   {
     "id": "i-t8sGcrF",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t8sGcrF/2/MptPtsm6tvq6kJCZZTgtK5BPR2W66824nbtt76smX/XL/_OL37554-Edit-XL.jpg",
@@ -1909,7 +1909,7 @@ export const galleryData = [
   },
   {
     "id": "i-fDfPWtf",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fDfPWtf/3/KD7WtckcTfhKvzD7hQPdQXrgTWkfP3tqkfgXmmdtq/XL/_OL37554-Edit-XL.jpg",
@@ -1926,7 +1926,7 @@ export const galleryData = [
   },
   {
     "id": "i-VKd9tKt",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-VKd9tKt/2/KbVhnv74n3t6Tkq6HTmmpDfbgg63QvrMgXSpHttnG/XL/_OL37560-Edit-XL.jpg",
@@ -1943,7 +1943,7 @@ export const galleryData = [
   },
   {
     "id": "i-qtpJ9Rc",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qtpJ9Rc/1/M9hkM3LRVkDh2SCvnJw9RbrmmpKbbRJvJXPHWCh5m/XL/_OL37566-Edit-XL.jpg",
@@ -1960,7 +1960,7 @@ export const galleryData = [
   },
   {
     "id": "i-7GhbvWS",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7GhbvWS/3/MPTmT2z4TDHTf6FWx6cWjVWLtpMJrv4QNc5NmnJhg/XL/_OL37566-Edit-XL.jpg",
@@ -1977,7 +1977,7 @@ export const galleryData = [
   },
   {
     "id": "i-nDF3Jmx",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nDF3Jmx/2/K8MGMKLQnptnd5WRqjrNK2R82fJpV2cNQvKqQLL7h/XL/_OL37570-Edit-2-XL.jpg",
@@ -1994,7 +1994,7 @@ export const galleryData = [
   },
   {
     "id": "i-XPk7zrk",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XPk7zrk/2/MZPfd5ZZZk6M84LdL9PMXpwSCqBLNqm8nzQ3LskJq/XL/_OL37753-Edit-XL.jpg",
@@ -2011,7 +2011,7 @@ export const galleryData = [
   },
   {
     "id": "i-sw7GKqP",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sw7GKqP/2/NThjgVRwLJp34NNgNhQX4N7Dg5fQNbLNHS8rDPgrw/XL/_OL37783-Enhanced-Edit-Edit-XL.jpg",
@@ -2028,7 +2028,7 @@ export const galleryData = [
   },
   {
     "id": "i-hX6B3rV",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hX6B3rV/2/LTZ6JXgkpmcJgzsg3CcdzNT7sLJvGTvwnd6CN9LBv/XL/_OL37855-Edit-XL.jpg",
@@ -2045,7 +2045,7 @@ export const galleryData = [
   },
   {
     "id": "i-mx6vDgR",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mx6vDgR/1/LhKVtcPnJQZqg7GZ3xcM2gFq4HzDCDDD7qnG28gWG/XL/_OL37899-Edit-Edit-2-XL.jpg",
@@ -2062,7 +2062,7 @@ export const galleryData = [
   },
   {
     "id": "i-2nrKDf9",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-2nrKDf9/2/MDQNks5nvkZkhBgqvgLC7Qq6KcFJn8P7Vxp983qf6/XL/_OL38459-Edit-2-XL.jpg",
@@ -2079,7 +2079,7 @@ export const galleryData = [
   },
   {
     "id": "i-pvpwdBx",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pvpwdBx/1/MKd6CqQScwkPTM2ZvPSjjpCDcwJCzQPrJLc2SCJFX/XL/_OL38491-Edit-2-XL.jpg",
@@ -2096,7 +2096,7 @@ export const galleryData = [
   },
   {
     "id": "i-xJ2ncLF",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/Kh2Z5s9Jjn52CgJdVwb88Mn4hFGs7VqCZ5b7FCCKH/XL/_OL38494-Edit-XL.jpg",
@@ -2113,7 +2113,7 @@ export const galleryData = [
   },
   {
     "id": "i-rh4WHJh",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rh4WHJh/2/Mk2QkDcPHkGpLnDcFrkQDwtxV6scdz2bKPJTXJLRd/XL/_OL38907-Edit-XL.jpg",
@@ -2130,7 +2130,7 @@ export const galleryData = [
   },
   {
     "id": "i-x3ZPvH9",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LfqdvWpPW47nh6rs5xK9T9vX8qs29Whbdx6VTKcVd/XL/_PEN0264-Edit-XL.jpg",
@@ -2147,7 +2147,7 @@ export const galleryData = [
   },
   {
     "id": "i-Bfbggnq",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Bfbggnq/1/KtVFJL6PDx5fw79GSgF5CD6xXLc66w5b72xSZjbwP/XL/_ANA4472-Edit2-XL.jpg",
@@ -2164,7 +2164,7 @@ export const galleryData = [
   },
   {
     "id": "i-Rb3fQ5d",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/NTkvFfbGJSzVK7BsRNCHQN8WJScZxc7LBQ4Bx3gW5/XL/_ANA4472-Edit2-XL.jpg",
@@ -2181,7 +2181,7 @@ export const galleryData = [
   },
   {
     "id": "i-jDntD39",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jDntD39/2/LGPmZJcr55D5gJ6Jznz7HBtXpVrt2gR3kmc5fMFCJ/XL/_ANA4477-Edit-2-XL.jpg",
@@ -2198,7 +2198,7 @@ export const galleryData = [
   },
   {
     "id": "i-9DrbLRG",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/NcfRZC2tsWCMd49xnCjvMbWhfQpPQZkrDZSrnMpSw/XL/_PEN0411-Edit-XL.jpg",
@@ -2215,7 +2215,7 @@ export const galleryData = [
   },
   {
     "id": "i-NzVgz27",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/KjKjftcj2RfPjGPdctVnk3sJXqBnK7Q539PTMjRsn/XL/_ANA4673-Edit-XL.jpg",
@@ -2232,7 +2232,7 @@ export const galleryData = [
   },
   {
     "id": "i-QdTk3tx",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/LQsp8KgqWcZS3NhGmbZDRpPF8LDWtM87FD7h4gMqj/XL/_ANA4940-Edit-XL.jpg",
@@ -2249,7 +2249,7 @@ export const galleryData = [
   },
   {
     "id": "i-qrfsSnK",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qrfsSnK/2/MtVnT3q4wJG6t9K9j6hTmHNFKWZZksM63spWbdhNb/XL/_OL30095-Edit-Edit-XL.jpg",
@@ -2266,7 +2266,7 @@ export const galleryData = [
   },
   {
     "id": "i-6GXtnFS",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6GXtnFS/1/KGMzk3K2rvNDSLwBN99b7SSvQHqbV9BKNkGssXKW2/XL/_OL30186-Edit-Edit-2-XL.jpg",
@@ -2283,7 +2283,7 @@ export const galleryData = [
   },
   {
     "id": "i-zQCt9xG",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zQCt9xG/1/KspWCprdXKrqPVM2Ptd8tHqvm7N5fKMtcmZgKc9q9/XL/_OL30279-Edit-2-XL.jpg",
@@ -2300,7 +2300,7 @@ export const galleryData = [
   },
   {
     "id": "i-sZ9Bfsh",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sZ9Bfsh/2/K5n2L6sM4H4P5x2Bbm4pnDcXcq2p53r38V7FGZNmS/XL/_OL30369-Edit-XL.jpg",
@@ -2317,7 +2317,7 @@ export const galleryData = [
   },
   {
     "id": "i-SQhmH23",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SQhmH23/3/KXwfFkHppzzVhmBWFBwXs4FPNgmSx4zNwPZhPR79z/XL/_OL30373-Edit-Edit-2-XL.jpg",
@@ -2334,7 +2334,7 @@ export const galleryData = [
   },
   {
     "id": "i-gDqZPrV",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gDqZPrV/3/LNSgr2Bkh4dMFmL74Qf2SVfjgBzsC8MQtwjX8pV6r/XL/_OL30957-Edit-XL.jpg",
@@ -2351,7 +2351,7 @@ export const galleryData = [
   },
   {
     "id": "i-mZhwrsq",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mZhwrsq/1/LG3jLkPQXHnztVXN3f4pqXcFc65bZFMLFNgzWpq8f/XL/_OL31468-Edit-2-XL.jpg",
@@ -2368,7 +2368,7 @@ export const galleryData = [
   },
   {
     "id": "i-X6K2nTX",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6K2nTX/2/Lc44MhjLpvQ7SNQhQBqPvzjfsZL445H9WHrzmTKsT/XL/_OL31665-Edit-XL.jpg",
@@ -2385,7 +2385,7 @@ export const galleryData = [
   },
   {
     "id": "i-x66BqR2",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/K7wPnsjwpZJtsDgR9wxWZ7mGhvbXPDVKH7p4D76pg/XL/_OL31665-Edit-XL.jpg",
@@ -2402,7 +2402,7 @@ export const galleryData = [
   },
   {
     "id": "i-pcgbbVD",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pcgbbVD/1/LM9nPzQw6pdPXLLwHCHXSF3xZmNf8FXSL9gfqpH9W/XL/_OL32116-Enhanced-Edit-2-XL.jpg",
@@ -2419,7 +2419,7 @@ export const galleryData = [
   },
   {
     "id": "i-LqvLkRk",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LqvLkRk/2/NFFF4J2DfWfgfSwg3NQnPLBxLtdR2dJwHCdvz4ML7/XL/_OL32264-Edit-2-XL.jpg",
@@ -2436,7 +2436,7 @@ export const galleryData = [
   },
   {
     "id": "i-fT66LMh",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fT66LMh/1/KLkJw5c49LGFFhXHM5khpVc8sZRwnR8VJt8kWGmfZ/XL/_OL32268-Edit-XL.jpg",
@@ -2453,7 +2453,7 @@ export const galleryData = [
   },
   {
     "id": "i-FDHCvzp",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LkwBNVsMDzj4jCf5D87nkrT5MFzkn42Zf5Kkvz9dJ/XL/_OL33286-Edit-Edit-XL.jpg",
@@ -2470,7 +2470,7 @@ export const galleryData = [
   },
   {
     "id": "i-j8MSWCQ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-j8MSWCQ/2/K875pCGrtrkzgfhSfTx93bT6xD8gVLTqFW6cHj47r/XL/_OL35105-Enhanced-Edit-Edit-XL.jpg",
@@ -2487,7 +2487,7 @@ export const galleryData = [
   },
   {
     "id": "i-LPGK6GQ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LPGK6GQ/1/LCtRgH7MbrxnQf3g8Ks6gSDZ4xnckrZgKnrD9ZMQb/XL/_OL37673-Edit-2-2-XL.jpg",
@@ -2504,7 +2504,7 @@ export const galleryData = [
   },
   {
     "id": "i-DBhHNsx",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-DBhHNsx/2/LgM5c42S9rGfCBFjDLQMb2CCmdVDVVH8hDcVvMC5M/XL/_OL38216-Edit-Edit-2-XL.jpg",
@@ -2521,7 +2521,7 @@ export const galleryData = [
   },
   {
     "id": "i-xfVsJSw",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-xfVsJSw/1/MFZm84fTcLMdprLBXg9g9P2sQtCf48znQSV7sBxCX/XL/_ANA6138-Enhanced-Edit-XL.jpg",
@@ -2538,7 +2538,7 @@ export const galleryData = [
   },
   {
     "id": "i-ZsvXGsZ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZsvXGsZ/1/K4p5f4gBT9BZx4p5t8c6kXcRbtrJBjBCs8s2pMKrs/XL/_ANA6168-Enhanced-Edit-2-XL.jpg",
@@ -2555,7 +2555,7 @@ export const galleryData = [
   },
   {
     "id": "i-n7KMpt6",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-n7KMpt6/1/KqGggr2sjCdgwCgtjGBtPjGnBvKz84gT6CbNc5HKg/XL/_ANA6205-Edit-XL.jpg",
@@ -2572,7 +2572,7 @@ export const galleryData = [
   },
   {
     "id": "i-7nSpMCH",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7nSpMCH/1/Nc6dvrBNgGQ9742JCdSpg9cXc5c4tbm3N6XZ6n64M/XL/_ANA6212-Edit-XL.jpg",
@@ -2589,7 +2589,7 @@ export const galleryData = [
   },
   {
     "id": "i-6C3HdJL",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6C3HdJL/2/M3XhDDtWnWJF8dKRj9fWkjBnBpkGCtwRrGz4BbvJ6/XL/_ANA6214-Edit-2-XL.jpg",
@@ -2606,7 +2606,7 @@ export const galleryData = [
   },
   {
     "id": "i-qv2v6Hd",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qv2v6Hd/3/LsVzBPgRCG72PfmQ9vtc4Zf2SQSHh7MmgFb9GhBLq/XL/_ANA6222-Edit-XL.jpg",
@@ -2623,7 +2623,7 @@ export const galleryData = [
   },
   {
     "id": "i-cn52Pv8",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cn52Pv8/1/LmRD7nmgdd93tRZtgL5rBpL78zmWDtLjfQtjvcXbZ/XL/_ANA6239-Edit-2-XL.jpg",
@@ -2640,7 +2640,7 @@ export const galleryData = [
   },
   {
     "id": "i-qD8wNrk",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/2/Lxd3fxGmnjCqXhVbvPQCDKTWZDzrpcnWXH26wrrTc/XL/_ANA6462-Edit-XL.jpg",
@@ -2657,7 +2657,7 @@ export const galleryData = [
   },
   {
     "id": "i-8fG4Cw6",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H0486-Edit-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-8fG4Cw6/1/K397J8dzNpRKJPWqn9kgLXJmB2NRcKnkTZsdNwrrZ/XL/_O1H0486-Edit-Edit-XL.jpg",
@@ -2674,7 +2674,7 @@ export const galleryData = [
   },
   {
     "id": "i-n3DfmhH",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1106-Edit-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-n3DfmhH/1/LQzPqHGHdxHr4cvGNBCSW9J2kBr7LPcjvP7gWZhvP/XL/_O1H1106-Edit-Edit-XL.jpg",
@@ -2691,7 +2691,7 @@ export const galleryData = [
   },
   {
     "id": "i-4dJHTwW",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1117-Edit-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-4dJHTwW/1/KZWhdzgV983j3V7GGKGrtc5ZGQjrkbDKZfTN4Wmvv/XL/_O1H1117-Edit-Edit-XL.jpg",
@@ -2708,7 +2708,7 @@ export const galleryData = [
   },
   {
     "id": "i-qXXc38X",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1118-Enhanced-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-qXXc38X/1/L76G9mGVjqhTgK9zVGMKNDZJ9LxC3g4FpLCJscH7T/XL/_O1H1118-Enhanced-Edit-XL.jpg",
@@ -2725,7 +2725,7 @@ export const galleryData = [
   },
   {
     "id": "i-VvNJkLt",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1122-Enhanced-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VvNJkLt/1/Lxt9SHCWZjKzfPDwrkMtVQ8d6VJGtHwq5tHgRRK39/XL/_O1H1122-Enhanced-Edit-XL.jpg",
@@ -2742,7 +2742,7 @@ export const galleryData = [
   },
   {
     "id": "i-LbjX2Cp",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1124-Enhanced-Edit-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-LbjX2Cp/1/LZH8NgG6D85FQwmpmVrJWzxcCXSVq9vd44x3LvtTh/XL/_O1H1124-Enhanced-Edit-Edit-XL.jpg",
@@ -2759,7 +2759,7 @@ export const galleryData = [
   },
   {
     "id": "i-mgtzMfv",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1126-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-mgtzMfv/0/MVdC5m9ssDTmBLZgbLxr6SpbWFTzWtWGzK757QRCZ/XL/_O1H1126-Edit-XL.jpg",
@@ -2776,7 +2776,7 @@ export const galleryData = [
   },
   {
     "id": "i-HpjgX48",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1127-Enhanced-Edit-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-HpjgX48/1/MKZQWqvNzRpcFGfpqwV72pbc9T9d7P8nsKRP9KTKs/XL/_O1H1127-Enhanced-Edit-Edit-XL.jpg",
@@ -2793,7 +2793,7 @@ export const galleryData = [
   },
   {
     "id": "i-DtGgkq6",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1169-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DtGgkq6/1/K2GhGcQsdJD3Rz7C9PQsFT3R5KnK9MctBmMQVbM5r/XL/_O1H1169-Edit-XL.jpg",
@@ -2810,7 +2810,7 @@ export const galleryData = [
   },
   {
     "id": "i-PJjLRDx",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1169-Edit-2.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-PJjLRDx/1/LpvgSmZrbc5XQQkZg4MKcc8zmmXBqDD3ZXMvR7sfc/XL/_O1H1169-Edit-2-XL.jpg",
@@ -2827,7 +2827,7 @@ export const galleryData = [
   },
   {
     "id": "i-P8fzNch",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1176-Edit-Edit-2.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-P8fzNch/1/KD3SDKZfNCb4NkL2P6dST37hCf7xKpKvxrGvpQg6S/XL/_O1H1176-Edit-Edit-2-XL.jpg",
@@ -2844,7 +2844,7 @@ export const galleryData = [
   },
   {
     "id": "i-w3XjwMB",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1253-Edit-2.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-w3XjwMB/1/L9rmRRrbvmnnFLBrh6vNL4LvrZjXb3KtCWZX2n3TC/XL/_O1H1253-Edit-2-XL.jpg",
@@ -2861,7 +2861,7 @@ export const galleryData = [
   },
   {
     "id": "i-DBBbvKP",
-    "title": "",
+   "title": "Untitled",
     "description": "",
     "alt": "_O1H1314-Enhanced-Edit-Edit.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DBBbvKP/1/LKMSMMP5z5JtkfbG3tV93XFMsnwDQR2LqDbJpwtdW/XL/_O1H1314-Enhanced-Edit-Edit-XL.jpg",
@@ -2878,7 +2878,7 @@ export const galleryData = [
   },
   {
     "id": "i-8VzRGRk",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8VzRGRk/0/Lg57hRtt6j5TXN2dB39JC2mb4TRf4svxKnRjSMpWV/XL/_O1H0566-XL.jpg",
@@ -2895,7 +2895,7 @@ export const galleryData = [
   },
   {
     "id": "i-22hf958",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958/0/KwLbKw7BbJF6BJXDNHVSgMgg5L4XjgfVwncVcL2CG/XL/_O1H1251-Edit-XL.jpg",
@@ -2912,7 +2912,7 @@ export const galleryData = [
   },
   {
     "id": "i-dSCsqSC",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dSCsqSC/0/LcWMsVfmC46Xck8Kn9cJB4tMcg43B8rBNZqkMShB9/XL/_PEN0184-Edit-Edit-XL.jpg",
@@ -2929,7 +2929,7 @@ export const galleryData = [
   },
   {
     "id": "i-RFpMwFx",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-RFpMwFx/0/KtSg5SWCqNjHhPbQD8KZR2ZXWn5FJCtWKS3Zvcc2v/XL/_O1H1449-Edit-Edit-3-Edit-XL.jpg",
@@ -2946,7 +2946,7 @@ export const galleryData = [
   },
   {
     "id": "i-N2gT9Qw",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N2gT9Qw/0/KJLBvhPBLhRnqNQFHdDGFxG9w9JCfnSvprsp53JNr/XL/_PEN0564-Edit-2-XL.jpg",
@@ -2965,7 +2965,7 @@ export const galleryData = [
   },
   {
     "id": "i-9FsxDzV",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9FsxDzV/0/LZzR4Mhbjv9PKSR8dZFDJLfh7LdChLTpmGr9vRHWC/XL/_PEN0819-Edit-XL.jpg",
@@ -2984,7 +2984,7 @@ export const galleryData = [
   },
   {
     "id": "i-jkN6Q3B",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jkN6Q3B/0/K3TZJQrcMKXTrnBPL4dWFBZfZr4MwgRWDr4F3WRz2/XL/_PEN0935-Edit-2-XL.jpg",
@@ -3003,7 +3003,7 @@ export const galleryData = [
   },
   {
     "id": "i-rhRQtTn",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rhRQtTn/0/KLzXp3pGGHGzTqZcvVKSrkB6jBPTg7qTdHXrxSpCt/XL/_PEN0975-Edit-XL.jpg",
@@ -3022,7 +3022,7 @@ export const galleryData = [
   },
   {
     "id": "i-WM8czGM",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-WM8czGM/0/LPP4xxNm7fsmBbbj4RdTwC7nMbX46cHHJfsnmskXT/XL/_O1H1633-XL.jpg",
@@ -3041,7 +3041,7 @@ export const galleryData = [
   },
   {
     "id": "i-2LZq7Wn",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2LZq7Wn/0/KbhXqhm6P8n7nRVJnVwnSXMHD32nfD8Twx2kZvcGk/XL/_O1H2350-Edit-2-Edit-XL.jpg",
@@ -3060,7 +3060,7 @@ export const galleryData = [
   },
   {
     "id": "i-wzkNsnZ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzkNsnZ/0/LdBdrsMw4WwhHCp9FQphvcp3Fwds9FZM9NbzXPcr4/XL/_O1H2634-Enhanced-NR-Edit-Edit-XL.jpg",
@@ -3079,7 +3079,7 @@ export const galleryData = [
   },
   {
     "id": "i-hn3SFCW",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hn3SFCW/0/NcxgQZjFMrQC3vGn4rmPwWM44Mbs9NrqZ3tJ25MgR/XL/_O1H2581-Enhanced-NR-XL.jpg",
@@ -3117,7 +3117,7 @@ export const galleryData = [
   },
   {
     "id": "i-5vzkHgL",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5vzkHgL/0/MFNKgBxpjjL3qhcPmqqV733pwQhWtWPC5S9R6J4QC/XL/_O1H2816-XL.jpg",
@@ -3136,7 +3136,7 @@ export const galleryData = [
   },
   {
     "id": "i-zkZ4vmZ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zkZ4vmZ/0/KWhTcNm23j2fJG2j86T4nx9rZmQ7VhG85gQRLgM3b/XL/_O1H2833-XL.jpg",
@@ -3155,7 +3155,7 @@ export const galleryData = [
   },
   {
     "id": "i-jBD68qM",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jBD68qM/0/K7QX2ZtZTnzSsV5PjWjFJ5PHNHzcFHmJMKnSnPsGz/XL/_O1H2873-Edit-XL.jpg",
@@ -3174,7 +3174,7 @@ export const galleryData = [
   },
   {
     "id": "i-jR2v25J",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jR2v25J/0/MgstjsmtLjV6LGxT3qsC6f3sZsfT5kw8Q6RN44sKG/XL/_PEN0989-Enhanced-NR-Edit-XL.jpg",
@@ -3193,7 +3193,7 @@ export const galleryData = [
   },
   {
     "id": "i-qjLpZPg",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qjLpZPg/0/Kd23cs6s6PnD5JSfz3pzWPkCQMHF8PxKp2dS6LNTJ/XL/_O1H2889-Edit-XL.jpg",
@@ -3212,7 +3212,7 @@ export const galleryData = [
   },
   {
     "id": "i-ggLrXkW",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ggLrXkW/0/K3hpZRcqM8bM4BKqnqg3Vc9TSb2tQMNVT64QDF6Ch/XL/_PEN1050-Edit-XL.jpg",
@@ -3231,7 +3231,7 @@ export const galleryData = [
   },
   {
     "id": "i-qpX8Gxp",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qpX8Gxp/0/Kr3V3DNkqwQRBzBm8xfjg9HzpWT7RL37BjT3GCZRH/XL/_PEN1155-Edit-XL.jpg",
@@ -3250,7 +3250,7 @@ export const galleryData = [
   },
   {
     "id": "i-XSB5fVp",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XSB5fVp/0/NHtp8bGHHbhWqzcfJwm9ZWJxQfjHFLGJkJPqLxKBf/XL/_O1H3177-XL.jpg",
@@ -3269,7 +3269,7 @@ export const galleryData = [
   },
   {
     "id": "i-VgGXHr3",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VgGXHr3/0/NT5CNVbM24pT2v3NVpKv7tmRkCSr8xT4kc6fWZbhV/XL/_O1H3457-XL.jpg",
@@ -3288,7 +3288,7 @@ export const galleryData = [
   },
   {
     "id": "i-NPK4j4w",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPK4j4w/0/MpsNz6T6G3HDM7xB6gKbf9mmWBFnXx2gnkn4CgtM6/XL/_PEN1423-Edit-XL.jpg",
@@ -3307,7 +3307,7 @@ export const galleryData = [
   },
   {
     "id": "i-KNQnJpx",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KNQnJpx/0/K95mmMTTJndkDnbgjQWpSvLSpWKSGbgpfdg4fCstB/XL/_PEN1433-Enhanced-NR-Edit-XL.jpg",
@@ -3326,7 +3326,7 @@ export const galleryData = [
   },
   {
     "id": "i-2PNTFjQ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2PNTFjQ/0/L3jzfns5QQG6wb4gKxXgMKB2qCdwJMM5PGkDngbXG/XL/_O1H4133-XL.jpg",
@@ -3345,7 +3345,7 @@ export const galleryData = [
   },
   {
     "id": "i-ZrS6Hpm",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZrS6Hpm/0/LMhTJvH4BS2DQccQmTH55T4VHCd2VjSGK8978NZSx/XL/_O1H5810-XL.jpg",
@@ -3364,7 +3364,7 @@ export const galleryData = [
   },
   {
     "id": "i-8QK8f9C",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8QK8f9C/0/MbxdXHMqQqd3wN7DLXjGpQhct6jRPNKCQt2NfJBt3/XL/_O1H0187-Edit-XL.jpg",
@@ -3383,7 +3383,7 @@ export const galleryData = [
   },
   {
     "id": "i-n9FrVQG",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n9FrVQG/0/LgD6DHrg4ZkKbnWzpqKdtWR6Thvnxq2qVJQn732MR/XL/_O1H0898-Edit-XL.jpg",
@@ -3402,7 +3402,7 @@ export const galleryData = [
   },
   {
     "id": "i-BHDwMmG",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-BHDwMmG/0/L6V3CLrXXgXQpRX555TrGBCrzCwSGBCcMF4vpt9Qz/XL/_O1H0914-Edit-XL.jpg",
@@ -3421,7 +3421,7 @@ export const galleryData = [
   },
   {
     "id": "i-5Bt3Kxx",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5Bt3Kxx/0/Kkw3k2Fxf6W2G2GZF3933ZVRbzjfP3jbV7xBtgzdH/XL/_PEN1119-Edit-XL.jpg",
@@ -3440,7 +3440,7 @@ export const galleryData = [
   },
   {
     "id": "i-tL9CW7Q",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tL9CW7Q/0/KfgshLTHBxXFkGfXNq59f7FrbNCHsfBsmWD8GCHCT/XL/_PEN1134-Edit-Edit-2-XL.jpg",
@@ -3459,7 +3459,7 @@ export const galleryData = [
   },
   {
     "id": "i-tRkQxSw",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tRkQxSw/0/NMs923q9Gm9wnVVm366VLKmVDwjbLd3fGZR6z8t8N/XL/_O1H2670-Edit-Edit-Edit-XL.jpg",
@@ -3478,7 +3478,7 @@ export const galleryData = [
   },
   {
     "id": "i-5bvTQ93",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5bvTQ93/0/MFBW7VXfrhJDCGZQFWrtWK4KF7j4xkLd4p9gz9xQs/XL/_O2H4178-Edit-XL.jpg",
@@ -3497,7 +3497,7 @@ export const galleryData = [
   },
   {
     "id": "i-hPDVVf4",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hPDVVf4/0/KLfvNJWtVdZQrNSFQwSG6wpgmtJRTw3PXJWpH5ZQR/XL/_O2H7579-XL.jpg",
@@ -3516,7 +3516,7 @@ export const galleryData = [
   },
   {
     "id": "i-mRcjcQx",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mRcjcQx/0/Nb9CKrKnwcRB6WCfLrk6mmfBgHKXjLRMWdsXJPZ8x/XL/_O2H8042-Edit-XL.jpg",
@@ -3535,7 +3535,7 @@ export const galleryData = [
   },
   {
     "id": "i-29bkHrX",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-29bkHrX/0/L3T7MnG8Lw75g672xxTHVxMmsK88NLnj4hZwmL4VK/XL/_O2H8908-Edit-Edit-2-XL.jpg",
@@ -3554,7 +3554,7 @@ export const galleryData = [
   },
   {
     "id": "i-XXnPLmQ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XXnPLmQ/0/M7gn4R9gGkGR8q75JVBNrWqqQS4CKtPFBcNFLBbc6/XL/_O2H8933-Enhanced-NR-Edit-Edit-XL.jpg",
@@ -3573,7 +3573,7 @@ export const galleryData = [
   },
   {
     "id": "i-KQ2M2Qj",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KQ2M2Qj/0/M3Z4NJ9FKPL2XtnpkHPVGt6gzmNSPXnRpxMH9V7rB/XL/_O2H0906-Enhanced-NR-Edit-XL.jpg",
@@ -3592,7 +3592,7 @@ export const galleryData = [
   },
   {
     "id": "i-v8GHpWG",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-v8GHpWG/0/KJfccKkMJHnn4vkDfSQBNgPhXwm2Fz6VFvFJtnWCs/XL/_O2H3632-Edit-2-XL.jpg",
@@ -3611,7 +3611,7 @@ export const galleryData = [
   },
   {
     "id": "i-D33PVtv",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-D33PVtv/0/MJH849TCjQtR8qjZrLjLQr7Bbxv63zrfJTfzhHsCh/XL/_O2H3676-Enhanced-NR-Edit-Edit-2-XL.jpg",
@@ -3630,7 +3630,7 @@ export const galleryData = [
   },
   {
     "id": "i-W3z4Wch",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-W3z4Wch/0/MNtp4hKdB8MHh6GwnNF5J24gDL3Wm2FDD8zN9Ln9M/XL/_O2H4042-Edit-XL.jpg",
@@ -3649,7 +3649,7 @@ export const galleryData = [
   },
   {
     "id": "i-H73gQ4P",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-H73gQ4P/0/Mxmp4r9PGN7KKPxMw3PX9736nC8XT2RkCCjw9cKhv/XL/_O2H4137-XL.jpg",
@@ -3668,7 +3668,7 @@ export const galleryData = [
   },
   {
     "id": "i-GdMFBGc",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GdMFBGc/0/KDhWkcF6h5HGcpTRmp9Q5PGswGWfMhPMLWzc4NSmF/XL/_O2H4145-XL.jpg",
@@ -3687,7 +3687,7 @@ export const galleryData = [
   },
   {
     "id": "i-gRqMNCH",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gRqMNCH/0/MVgDgcQWbmmNzQJvXvGSvvrFdHXLs728Btm4NWR5z/XL/_O2H4159-XL.jpg",
@@ -3706,7 +3706,7 @@ export const galleryData = [
   },
   {
     "id": "i-Cw72C3b",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cw72C3b/0/M9krzCQKdcCVTMhGLrFpBQCxR24mVHw3tDQJkWVCL/XL/_O2H4162-Edit-XL.jpg",
@@ -3725,7 +3725,7 @@ export const galleryData = [
   },
   {
     "id": "i-wpZr6sV",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wpZr6sV/0/MjmZ5Bc4M6hm8Lb5QNkwWt8SM34ZQVskT2sBVNLG4/XL/_O2H9288-Edit-Edit-XL.jpg",
@@ -3744,7 +3744,7 @@ export const galleryData = [
   },
   {
     "id": "i-G95TtRW",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-G95TtRW/0/MgJSfCsjKHT5rNqc2wm95LwvpxBXGQCrhHNmpnHhw/XL/_O2H1820-Enhanced-NR-Edit-Edit-2-XL.jpg",
@@ -3763,7 +3763,7 @@ export const galleryData = [
   },
   {
     "id": "i-n5GxNj6",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n5GxNj6/0/KmV5KQ6RzN6DBPCSXFGfJMDF4sngCvxrSmHD9jdR7/XL/_O2H3261-Enhanced-NR-Edit-Edit-XL.jpg",
@@ -3782,7 +3782,7 @@ export const galleryData = [
   },
   {
     "id": "i-cvxNjbV",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cvxNjbV/0/Msj4GMDQ6KcPkwxmZpfLP7qQh8wkQLS6PxWkHGQqG/XL/_O2H0699-XL.jpg",
@@ -3801,7 +3801,7 @@ export const galleryData = [
   },
   {
     "id": "i-J7nsQtj",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-J7nsQtj/0/McwGHhhHq9zqFQ5xh4sdJFbPDfFDMjJ8MgJjTfGPQ/XL/_O2H1221-Enhanced-NR-Edit-2-XL.jpg",
@@ -3820,7 +3820,7 @@ export const galleryData = [
   },
   {
     "id": "i-ST6R4S3",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ST6R4S3/0/KDmjGdM9rHJ5fdwPwkgxgBJ5NhfmJDJM6rhZmQnk4/XL/_O2H1683-Enhanced-NR-Edit-Edit-Edit-2-XL.jpg",
@@ -3839,7 +3839,7 @@ export const galleryData = [
   },
   {
     "id": "i-32xbMtQ",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-32xbMtQ/0/NfnncmCZMbssFZhkL6QN6MxRS22bBjmXKwM4SdTZP/XL/_O2H2181-Edit-2-XL.jpg",
@@ -3858,7 +3858,7 @@ export const galleryData = [
   },
   {
     "id": "i-GtX9w4B",
-    "title": "",
+   "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GtX9w4B/1/NNVcWCRXvDKhg9b5gMvMZzNnHKDhHXcvM5X78cgfX/XL/_O2H1628-Edit-XL.jpg",
