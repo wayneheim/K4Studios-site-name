@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 
-// Your live site URL
+// 1. Live site domain
 const baseUrl = 'https://www.k4studios.com';
 
 export const prerender = true;
@@ -8,7 +8,7 @@ export const prerender = true;
 export const GET: APIRoute = async () => {
   const urls: string[] = [];
 
-  // --- 1. Static pages ---
+  // 2. Static top-level pages
   const staticPaths = [
     '',
     'Glossary',
@@ -17,30 +17,30 @@ export const GET: APIRoute = async () => {
     'Galleries/Painterly-Fine-Art-Photography',
     'Galleries/Fine-Art-Photography'
   ];
-  staticPaths.forEach(path => {
+  staticPaths.forEach((path) => {
     urls.push(`${baseUrl}/${path}`);
   });
 
-  // --- 2. Gallery landing pages and image IDs ---
-  const galleryModules = import.meta.glob('../../data/galleries/**/*.mjs');
+  // 3. Dynamic gallery pages + image deep links
+  const galleryModules = import.meta.glob('/src/data/galleries/**/*.mjs');
 
   for (const path in galleryModules) {
     const mod: any = await galleryModules[path]();
     const images = mod.default;
 
-    // Build route from file path: e.g. ../../data/galleries/Facing-History/Civil-War-Color.mjs
-    const route = path
-      .replace('../../data/galleries/', '')
+    // Strip the path and normalize it to URL format
+    const galleryPath = path
+      .replace('/src/data/galleries/', '')
       .replace('.mjs', '')
-      .replace(/\/index$/, '') // optional: strip index
+      .replace(/\/index$/, '')
       .split('/')
       .map(encodeURIComponent)
       .join('/');
 
-    const galleryUrl = `${baseUrl}/Galleries/${route}`;
+    const galleryUrl = `${baseUrl}/Galleries/${galleryPath}`;
     urls.push(galleryUrl);
 
-    // Add each image ID as its own <url>
+    // For each image, generate its /i-xxxxx page
     if (Array.isArray(images)) {
       images.forEach((img) => {
         if (img.id && /^i-[\w\d]+$/.test(img.id)) {
@@ -50,13 +50,13 @@ export const GET: APIRoute = async () => {
     }
   }
 
-  // --- 3. Format as XML ---
+  // 4. Final cleanup: dedupe and remove blanks
+  const cleanUrls = Array.from(new Set(urls.filter(Boolean)));
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset 
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
-  .map(url => `  <url><loc>${url}</loc></url>`)
-  .join('\n')}
+${cleanUrls.map((url) => `  <url><loc>${url}</loc></url>`).join('\n')}
 </urlset>`;
 
   return new Response(xml, {
