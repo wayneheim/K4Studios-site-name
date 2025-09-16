@@ -438,7 +438,7 @@ export const galleryData = [
   },
   {
     "id": "i-X88ZNb4",
-    "title": "Untitled",
+    "title": "USS Cod",
     "description": "© Wayne Heim '21",
     "alt": "© Wayne Heim '21",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MWZVT9WzkmpzJjvzJ8G5LwJ9G39LRSxb88tdRTRtw/XL/_ANA3303-Edit-2-2-XL.jpg",

@@ -1,52 +1,85 @@
-// File: data/Galleries/Painterly-Fine-Art-Photography/carousel.ts
 
-export const slides = [
-  {
-    src: "https://photos.smugmug.com/photos/i-m8Rmm9P/0/NHcGJw5JBGc9FWfL9snp4dP3d3zRSqmZ6p8Cw7KSR/O/i-m8Rmm9P.jpg",
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-QgkMVvX",
-    alt: "Classic vintage car illuminated by green neon outside historic Wigwam Motel on Route 66. Fine art photo by K4 Studios.",
-    description: "Painterly photograph of a vintage car glowing in motel neon—an evocative scene along Route 66."
-  },
-  {
-    src: "https://photos.smugmug.com/photos/i-dXKVkVK/0/Lm9wmkrSDFnDwjfbf5CLQ84P2dGcJXmwNB4tzN5nf/O/i-dXKVkVK.jpg",
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j",
-    alt: "Emotive fine art WWII soldier portrait—his final moment before leaving for the front lines. © Wayne Heim",
-    description: "WWII era soldier pauses for a powerful portrait—one last look before deployment. Painterly photography by Wayne Heim."
-  },
-  {
-    src: "https://photos.smugmug.com/photos/i-3kww2DF/0/M65cZmXTkD2BJDHPKgKBJX36vWtBDwjJTDFCrBKD4/O/i-3kww2DF.jpg",
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-VzhZFL7",
-    alt: "Historic East Broad Top steam locomotive crossing bridge in atmospheric painterly photo. © Wayne Heim",
-    description: "Painterly fine art train photo of East Broad Top’s steam engine #16 forging across the bridge after rainfall."
-  },
-  {
-    src: "https://photos.smugmug.com/photos/i-MfC8hGS/0/MBzbLmqWvVbJV6dzCsNKVRbZXjMnRnGkK2gC8GGf6/O/i-MfC8hGS.jpg",
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k",
-    alt: "Painterly photograph of southern farmers on a wooden porch in the 1920s. Fine art by Wayne Heim.",
-    description: "Lazy afternoon on a Southern porch—rocking chairs, dusty boots, and timeless conversation captured in painterly style."
-  },
-  {
-    src: "https://photos.smugmug.com/photos/i-kc4fJmm/1/LBjwjsG6ChM33fBDPfpsRm3XnhK8p84Nf8WcCN6Tg/O/i-kc4fJmm.jpg",
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ",
-    alt: "Dramatic fine art photo of a Western cowboy with rifle at wooden cabin window. Painterly frontier mood by K4 Studios.",
-    description: "Western cowboy in quiet vigilance—framed in rustic light with rifle in hand. A frontier moment rendered painterly."
-  },
-  {
-    src: "https://photos.smugmug.com/photos/i-Qxf3qKt/0/NMssgzFbK6WhNwLpJgzHGGpXnwwxrmt9vLNzrjgQT/O/i-Qxf3qKt.jpg",
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG",
-    alt: "Painterly fine art landscape of Upper Falls in Yellowstone National Park after a summer storm. © Wayne Heim",
-    description: "Water tumbles through storm-soaked cliffs—Upper Falls of the Yellowstone in dramatic painterly style."
-  },
-  {
-    src: "https://photos.smugmug.com/photos/i-94k3KPN/0/LJ5Vhxcqn8Znm3xBnXN6nD34TvZBxznXzkf5JLDHp/O/i-94k3KPN.jpg",
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7wSnzbn",
-    alt: "WWII soldier in field recon peers through binoculars under gunfire. Painterly historic war scene.",
-    description: "War-weary soldier scans for hope—binoculars raised through chaos. Painterly moment of WWII peril."
-  },
-  {
-    src: "https://photos.smugmug.com/photos/i-BxBRr4Q/0/Lrv3NLzdWGLN9VPxPt8MBpBnWCgCgFm4gvGp5bL6B/O/i-BxBRr4Q.jpg",
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V",
-    alt: "Painterly style Civil War rider on horseback during reenactment. Fine art by K4 Studios.",
-    description: "A Civil War hero rides through history—horse and haze captured in rich painterly layers."
+// --- Carousel: Random Alternating Images from Painterly & Traditional ---
+// Import all gallery .mjs files from both painterly and traditional sections
+const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
+
+// Helper: Get gallery data from module
+function getGalleryData(mod) {
+  return mod.galleryData || (mod.default && mod.default.galleryData) || [];
+}
+
+// Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating
+function buildRankedPool(images) {
+  const ratings = [5, 4, 3];
+  let pool = [];
+  ratings.forEach(r => {
+    pool.push(...images.filter(img => img.rating === r).sort(() => Math.random() - 0.5));
+  });
+  pool.push(...images.filter(img => !ratings.includes(img.rating)).sort(() => Math.random() - 0.5));
+  return pool;
+}
+
+// Helper: Convert image to slide object
+function toSlide(img, path) {
+  return {
+    href: `${path}/${img.id}`,
+    src: img.src || img.url || '',
+    alt: img.alt || img.title || '',
+    description: img.description || ''
+  };
+}
+
+// Categorize modules by painterly/traditional using path
+const painterlyPools = [];
+const traditionalPools = [];
+for (const filePath in allModules) {
+  const mod = allModules[filePath];
+  const data = getGalleryData(mod);
+  if (!Array.isArray(data) || data.length === 0) continue;
+  // Filter out ghost and placeholder images
+  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  if (visible.length === 0) continue;
+  // Determine type by path
+  if (filePath.includes('/Painterly-Fine-Art-Photography/')) {
+    painterlyPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
+  } else if (filePath.includes('/Fine-Art-Photography/')) {
+    traditionalPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
   }
-];
+}
+
+// Helper: Convert file path to public gallery route (for slide links)
+function filePathToHref(filePath) {
+  // e.g. '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs'
+  //   => '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'
+  return filePath
+    .replace(/^.*Galleries/, '/Galleries')
+    .replace(/\.mjs$/, '')
+    .replace(/\\/g, '/');
+}
+
+// Helper: Randomly pick N images from different pools (one per pool, if possible)
+function pickRandomFromPools(pools, n) {
+  const picks = [];
+  const usedPools = new Set();
+  while (picks.length < n && usedPools.size < pools.length) {
+    // Pick a random pool not yet used
+    const available = pools.filter((_, i) => !usedPools.has(i));
+    if (available.length === 0) break;
+    const poolIdx = Math.floor(Math.random() * available.length);
+    const realIdx = pools.indexOf(available[poolIdx]);
+    if (pools[realIdx].images.length === 0) continue;
+    // Pick a random image from this pool
+    const imgIdx = Math.floor(Math.random() * pools[realIdx].images.length);
+    picks.push({ img: pools[realIdx].images[imgIdx], path: pools[realIdx].path });
+    usedPools.add(realIdx);
+  }
+  return picks;
+}
+
+
+// Pick 8 random painterly images from different galleries (one per pool if possible)
+const painterlyPicks = pickRandomFromPools(painterlyPools, 8);
+const slidesArr = painterlyPicks.map(pick => toSlide(pick.img, pick.path));
+
+export const slides = slidesArr;
+

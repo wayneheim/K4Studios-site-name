@@ -30,7 +30,7 @@ export const galleryData = [
     "native american elder",
     "horseback",
     "plains indian",
-    "fine art print",
+    "fine art prints",
     "western art",
     "historical reenactor",
     "native regalia"
