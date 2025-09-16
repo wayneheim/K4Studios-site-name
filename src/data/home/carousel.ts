@@ -1,14 +1,40 @@
+// carousel.ts universal interleaved homepage pooler (Painterly vs Traditional)
 
-// --- Carousel: Random Alternating Images from Painterly & Traditional ---
-// Import all gallery .mjs files from both painterly and traditional sections
-const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
+// Import all painterly and traditional gallery data (children included)
+const painterlyModules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/*/*.mjs', { eager: true });
+const traditionalModules = import.meta.glob('@/data/Galleries/Fine-Art-Photography/*/*.mjs', { eager: true });
 
-// Helper: Get gallery data from module
-function getGalleryData(mod) {
-  return mod.galleryData || (mod.default && mod.default.galleryData) || [];
+function extractGallery(filePath, mod, sectionType) {
+  const data = mod.galleryData || (mod.default && mod.default.galleryData);
+  if (!Array.isArray(data)) return null;
+  // Filter out ghost and placeholder images
+  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  if (visible.length === 0) return null;
+  // Build section/gallery label
+  const match = filePath.match(/Fine-Art-Photography\/([^/]+)\//) || filePath.match(/Painterly-Fine-Art-Photography\/([^/]+)\//);
+  const section = match ? match[1] : sectionType;
+  // Path for gallery (case sensitive)
+  const basePath = filePath
+    .replace(/^.*\/data/, '')
+    .replace(/\.mjs$/, '')
+    .replace(/\/galleryData$/i, '');
+  return {
+    section,
+    images: visible,
+    galleryPath: basePath
+  };
 }
 
-// Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating
+// Build painterly and traditional pools
+const painterlyPools = Object.entries(painterlyModules)
+  .map(([filePath, mod]) => extractGallery(filePath, mod, 'painterly'))
+  .filter(Boolean);
+
+const traditionalPools = Object.entries(traditionalModules)
+  .map(([filePath, mod]) => extractGallery(filePath, mod, 'traditional'))
+  .filter(Boolean);
+
+// Helper: Build ranked pool for a gallery, highest rated first, then random
 function buildRankedPool(images) {
   const ratings = [5, 4, 3];
   let pool = [];
@@ -19,78 +45,57 @@ function buildRankedPool(images) {
   return pool;
 }
 
-// Helper: Convert image to slide object, with optional loading property
-function toSlide(img, path, loading = "lazy") {
+// Helper: Convert image to slide object
+function toSlide(img, path) {
   return {
     href: `${path}/${img.id}`,
     src: img.src || img.url || '',
     alt: img.alt || img.title || '',
-    description: img.description || '',
-    loading
+    description: img.description || ''
   };
 }
 
-// Categorize modules by painterly/traditional using path
-const painterlyPools = [];
-const traditionalPools = [];
-for (const filePath in allModules) {
-  const mod = allModules[filePath];
-  const data = getGalleryData(mod);
-  if (!Array.isArray(data) || data.length === 0) continue;
-  // Filter out ghost and placeholder images
-  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
-  if (visible.length === 0) continue;
-  // Determine type by path
-  if (filePath.includes('/Painterly-Fine-Art-Photography/')) {
-    painterlyPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
-  } else if (filePath.includes('/Fine-Art-Photography/')) {
-    traditionalPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
+// Build universal alternating carousel
+export const slides = (() => {
+  // Build one image per child gallery (prioritized and randomized), shuffle galleries
+  function pullOnePerGallery(pools) {
+    // Shuffle galleries
+    const galleryOrder = pools.slice().sort(() => Math.random() - 0.5);
+    const picks = [];
+    for (const gallery of galleryOrder) {
+      const ranked = buildRankedPool(gallery.images);
+      if (ranked.length) {
+        picks.push({
+          ...toSlide(ranked[0], gallery.galleryPath)
+        });
+      }
+    }
+    return picks;
   }
-}
 
-// Helper: Convert file path to public gallery route (for slide links)
-function filePathToHref(filePath) {
-  // e.g. '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs'
-  //   => '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'
-  return filePath
-    .replace(/^.*Galleries/, '/Galleries')
-    .replace(/\.mjs$/, '')
-    .replace(/\\/g, '/');
-}
+  const painterlyPicks = pullOnePerGallery(painterlyPools);
+  const traditionalPicks = pullOnePerGallery(traditionalPools);
 
-// Helper: Randomly pick N images from different pools (one per pool, if possible)
-function pickRandomFromPools(pools, n) {
-  const picks = [];
-  const usedPools = new Set();
-  while (picks.length < n && usedPools.size < pools.length) {
-    // Pick a random pool not yet used
-    const available = pools.filter((_, i) => !usedPools.has(i));
-    if (available.length === 0) break;
-    const poolIdx = Math.floor(Math.random() * available.length);
-    const realIdx = pools.indexOf(available[poolIdx]);
-    if (pools[realIdx].images.length === 0) continue;
-    // Pick a random image from this pool
-    const imgIdx = Math.floor(Math.random() * pools[realIdx].images.length);
-    picks.push({ img: pools[realIdx].images[imgIdx], path: pools[realIdx].path });
-    usedPools.add(realIdx);
+  // Alternate between painterly/traditional pools
+  const maxSlides = 10;
+  const result = [];
+  let p = 0, t = 0, i = 0;
+  while (result.length < maxSlides && (p < painterlyPicks.length || t < traditionalPicks.length)) {
+    if (i % 2 === 0 && p < painterlyPicks.length) {
+      result.push(painterlyPicks[p++]);
+    } else if (i % 2 === 1 && t < traditionalPicks.length) {
+      result.push(traditionalPicks[t++]);
+    } else if (p < painterlyPicks.length) {
+      result.push(painterlyPicks[p++]);
+    } else if (t < traditionalPicks.length) {
+      result.push(traditionalPicks[t++]);
+    }
+    i++;
   }
-  return picks;
-}
 
-// Pick 4 from each, alternate painterly/traditional, shuffle order
-const painterlyPicks = pickRandomFromPools(painterlyPools, 4);
-const traditionalPicks = pickRandomFromPools(traditionalPools, 4);
-const slidesArr = [];
-for (let i = 0; i < 4; i++) {
-  if (painterlyPicks[i]) slidesArr.push(toSlide(painterlyPicks[i].img, painterlyPicks[i].path));
-  if (traditionalPicks[i]) slidesArr.push(toSlide(traditionalPicks[i].img, traditionalPicks[i].path));
-}
-
-// Set loading: 'eager' for the first image, 'lazy' for the rest
-const slides = slidesArr.map((slide, idx) => ({
-  ...slide,
-  loading: idx === 0 ? 'eager' : 'lazy'
-}));
-
-export { slides };
-
+  // Add loading attribute
+  return result.map((slide, idx) => ({
+    ...slide,
+    loading: idx === 0 ? 'eager' : 'lazy'
+  }));
+})();
