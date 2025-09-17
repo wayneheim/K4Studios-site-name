@@ -20,9 +20,15 @@ function buildRankedPool(images) {
 
 // Helper: Convert image to slide object, with loading, width, height, and custom css class
 function toSlide(img, path, idx, loading = "lazy") {
+  // Use srcM, then srcS, then srcL, then src as fallback
+  let src = img.srcM || img.srcS || img.srcL || img.src || '';
+  // If src ends with 'L.jpg' and srcS exists, use srcS instead (else fallback to src)
+  if (src && src.endsWith('L.jpg')) {
+    src = img.srcS || img.src || src;
+  }
   return {
     href: `${path}/${img.id}`,
-    src: img.src || img.url || '',
+    src,
     alt: img.alt || img.title || '',
     description: img.description || '',
     width: img.width || undefined,
