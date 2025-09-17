@@ -5,10 +5,10 @@ export default function LandingRightImages({ heading = "", images = [] }) {
         <h3 className="thumb-heading">{heading}</h3>
       </div>
 
-      {images.map(({ href, src, srcS, srcM, srcL, alt, title }) => (
+      {images.map(({ href, src, alt, title }) => (
         <a href={href} target="_blank" rel="noopener" key={href}>
           <img
-            src={srcS || srcM || srcL || src}
+            src={src}
             alt={alt}
             title={title}
             className="thumb-img"
