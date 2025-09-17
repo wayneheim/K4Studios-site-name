@@ -1,7 +1,7 @@
 // carousel.ts for Painterly Landscapes → By-Theme
 
-// Import all gallery mjs modules for By-Location from data directory
-const modules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/*/*.mjs', { eager: true });
+// Import all gallery mjs modules for By-Theme from data directory
+const modules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/*/*.mjs', { eager: true });
 
 // Collect gallery datasets and URL paths
 const galleryDatas = [];
@@ -14,11 +14,11 @@ for (const filePath in modules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Extract location folder name from file path
-  const match = filePath.match(/By-Location\/([^/]+)\//);
-  const location = match ? match[1] : '';
+  // Extract theme folder name from file path
+  const match = filePath.match(/By-Theme\/([^/]+)\//);
+  const theme = match ? match[1] : '';
   galleryDatas.push(visible);
-  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/${location}`);
+  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/${theme}`);
 }
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating
@@ -34,15 +34,9 @@ function buildRankedPool(images) {
 
 // Helper: Convert image to slide object
 function toSlide(img, path) {
-  // Use srcM, then srcS, then src, then url as fallback
-  let src = img.srcM || img.srcS || img.src || img.url || '';
-  // If src ends with 'L.jpg' and srcS exists, use srcS instead
-  if (src && src.endsWith('L.jpg') && img.srcS) {
-    src = img.srcS;
-  }
   return {
     href: `${path}/${img.id}`,
-    src,
+    src: img.src || img.url || '',
     alt: img.alt || img.title || '',
     description: img.description || ''
   };

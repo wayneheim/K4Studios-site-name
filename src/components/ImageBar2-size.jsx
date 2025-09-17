@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "../styles/ImageBar2.css";
+import "../styles/ImageBar3.css";
 
 // Glob import: grabs all carousel slide data files from both Galleries and Other
 // rename to cap
@@ -70,7 +70,13 @@ export default function ImageBar2({ slides }) {
             itemType="https://schema.org/ImageObject"
           >
             <a href={s.href} title={s.alt} aria-label={s.alt}>
-              <img src={s.srcS || s.srcM || s.srcL || s.src} alt={s.alt} loading="lazy" itemProp="contentUrl" />
+              <img
+                src={s.srcS || s.srcM || s.srcL || s.src}
+                alt={s.alt}
+                loading="lazy"
+                itemProp="contentUrl"
+                style={{ height: '390px', minHeight: '390px', width: 'auto', display: 'block' }}
+              />
             </a>
             <figcaption itemProp="description">{s.description}</figcaption>
           </figure>

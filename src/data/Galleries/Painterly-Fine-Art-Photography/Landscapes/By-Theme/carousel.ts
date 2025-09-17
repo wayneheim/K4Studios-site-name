@@ -34,9 +34,15 @@ function buildRankedPool(images) {
 
 // Helper: Convert image to slide object
 function toSlide(img, path) {
+  // Use srcM, then srcS, then src, then url as fallback
+  let src = img.srcM || img.srcS || img.src || img.url || '';
+  // If src ends with 'L.jpg' and srcS exists, use srcS instead
+  if (src && src.endsWith('L.jpg') && img.srcS) {
+    src = img.srcS;
+  }
   return {
     href: `${path}/${img.id}`,
-    src: img.src || img.url || '',
+    src,
     alt: img.alt || img.title || '',
     description: img.description || ''
   };

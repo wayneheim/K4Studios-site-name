@@ -1,42 +1,93 @@
-export const slides = [
-  {
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-C6DBCqz/A",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/MK6V9CG57WHLDwhCqXMKL92QPSGRxq2NmwmxLqQbd/M/_DSF0650-Enhanced-NR-M.jpg",
-    alt: "Painterly color train photography of steam engine #16 moving through a rural hillside draw",
-    title: "Through the Draw – Steam in Motion",
-    ariaLabel: "Painterly photo of steam engine #16 cutting through a countryside draw",
-    description: "Painterly train photography featuring steam engine #16 chugging through a rural hillside cut. Moody lighting and natural textures evoke a bygone era of American rail."
-  },
-  {
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-VzhZFL7/A",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/LBjtC4wZXZjsbwRTn74Ld9D2ZM9NKvQcZkcffgHng/M/_HF26382-Edit-M.jpg",
-    alt: "Painterly fine art train photo of steam engine crossing a stone bridge under clear blue skies",
-    title: "This Too Shall Pass",
-    ariaLabel: "Painterly train photo of a steam locomotive crossing stone overpass",
-    description: "Fine art painterly image of a classic steam engine rolling across a stone overpass. Framed by a vibrant blue sky, this piece captures both elegance and grit in motion. © Wayne Heim"
-  },
-  {
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-FLtxbvc/A",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FLtxbvc/0/Mh3NdRfKwtbrDK9WbmP8vVGbsm9Mrng7TqMXGtMLs/M/_ANA1965-Enhanced-NR-Edit-2-M.jpg",
-    alt: "Painterly photo of steam engine preparing to hook up to passenger cars in train yard under moody sky",
-    title: "Yard Work – Hooking Up",
-    ariaLabel: "Painterly steam engine reversing to connect with passenger cars in the yard",
-    description: "Rust-toned painterly image of a steam locomotive maneuvering through the yard, lining up to connect with vintage passenger cars. Overcast sky adds atmospheric drama to this nostalgic moment."
-  },
-  {
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n6ktVfH/A",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6ktVfH/0/KNkdzDpvW7jhqkVKnKpjNbG3QrVWdj5kFDJqvQbkw/M/_DSF0468-M.jpg",
-    alt: "Black and white painterly train photography of steam engine approaching coal station as worker guides switch",
-    title: "Switching for Coal",
-    ariaLabel: "Black and white steam train photography of locomotive and rail worker at coal yard",
-    description: "B/W painterly railroad image of a steam engine preparing to take on coal. A solitary yard worker mans the switch — a quiet moment of connection between man and machine in the age of steam."
-  },
-  {
-    href: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-QgkMVvX/A",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-QgkMVvX/1/MtSn2ZZMcNSHGZ9Rnm6JzWwqv9Sh79whXjjx9xFJm/M/_O1H0427-598-599-M.jpg",
-    alt: "Painterly Americana photography featuring classic car glowing under green neon at Wigwam Motel on Route 66",
-    title: "Wigwam in Neon",
-    ariaLabel: "Classic car parked under green neon sign at Wigwam Motel, Route 66",
-    description: "Classic Americana meets painterly style as a vintage car sits glowing under neon lights at the Wigwam Motel. A cinematic tribute to roadside nostalgia along historic Route 66."
+// --- Carousel: Images from Painterly Transportation Section Only ---
+// Import all gallery .mjs files from the Transportation branch only
+const allModules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Transportation/*.mjs', { eager: true });
+
+// Helper: Get gallery data from module
+function getGalleryData(mod) {
+  return mod.galleryData || (mod.default && mod.default.galleryData) || [];
+}
+
+// Helper: Shuffle array
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
-];
+  return array;
+}
+
+// Helper: Convert image to slide object, with loading, width, height, and custom css class
+function toSlide(img, path, idx, loading = "lazy") {
+  return {
+    href: `${path}/${img.id}`,
+    src: img.srcM || img.src || img.url || '', // Use srcM for carousel, fallback to src
+    alt: img.alt || img.title || '',
+    description: img.description || '',
+    width: img.width || undefined,
+    height: img.height || undefined,
+    loading,
+    className: `k4-home-carousel-img k4-home-carousel-img--${idx + 1} fade-in`
+  };
+}
+
+// Collect visible images from each gallery
+const galleryImages = [];
+const galleryPaths = [];
+for (const filePath in allModules) {
+  const mod = allModules[filePath];
+  const data = getGalleryData(mod);
+  if (!Array.isArray(data) || data.length === 0) continue;
+  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  if (visible.length === 0) continue;
+  galleryImages.push(shuffle([...visible])); // shuffle images in each gallery
+  galleryPaths.push(filePathToHref(filePath));
+}
+
+// Helper: Convert file path to public gallery route (for slide links)
+function filePathToHref(filePath) {
+  return filePath
+    .replace(/^.*Galleries/, '/Galleries')
+    .replace(/\.mjs$/, '')
+    .replace(/\\/g, '/');
+}
+
+// Number of slides to show
+const SLIDE_COUNT = 8;
+let slidesArr = [];
+let usedIds = new Set();
+let round = 0;
+while (slidesArr.length < SLIDE_COUNT && galleryImages.length > 0) {
+  let addedThisRound = false;
+  for (let g = 0; g < galleryImages.length && slidesArr.length < SLIDE_COUNT; g++) {
+    const images = galleryImages[g];
+    const path = galleryPaths[g];
+    // Find the first unused image in this gallery
+    const img = images.find(image => !usedIds.has(image.id));
+    if (img) {
+      slidesArr.push(toSlide(img, path, slidesArr.length));
+      usedIds.add(img.id);
+      addedThisRound = true;
+    }
+  }
+  // If no new images were added in this round, break to avoid infinite loop
+  if (!addedThisRound) break;
+}
+// If not enough images, start over and allow repeats
+while (slidesArr.length < SLIDE_COUNT && galleryImages.length > 0) {
+  for (let g = 0; g < galleryImages.length && slidesArr.length < SLIDE_COUNT; g++) {
+    const images = galleryImages[g];
+    const path = galleryPaths[g];
+    // Pick next image, even if already used
+    const idx = (slidesArr.length - usedIds.size) % images.length;
+    slidesArr.push(toSlide(images[idx], path, slidesArr.length));
+  }
+}
+
+// Set loading: 'eager' for the first image, 'lazy' for the rest
+const slides = slidesArr.map((slide, idx) => ({
+  ...slide,
+  loading: idx === 0 ? 'eager' : 'lazy',
+  className: slide.className + (idx === 0 ? ' loaded' : '')
+}));
+
+export { slides };
