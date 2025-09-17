@@ -44,7 +44,7 @@ const regions = [
   { title: "Cars", slug: "Cars" },
   { title: "Military", slug: "Military" },
   { title: "Planes", slug: "Planes" }, 
-  { title: "Trains", slug: "Trains-Color" }, // ← Example: custom display title
+  { title: "Trains", slug: "Trains" }, // ← Example: custom display title
 ];
 
 // ───── Final Export ─────
