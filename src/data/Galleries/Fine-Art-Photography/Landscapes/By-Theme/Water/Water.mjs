@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-XhWrKdZ",
-    "title": "Kirkjufell  Photography by Wayne HeimKirkjufell Mountain with waterfalls in the foreground.",
-    "description": "© Wayne Heim",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Kirkjufell  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/KcSG7JCH3s9dRnFBdWf3dKz8PGgWvJZSJCg8L98WP/XL/_WHZ1224-Pano_tonemapped%2520v2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/A",
     "keywords": [
       "wayne heim",
@@ -35,19 +39,24 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "© Wayne Heim",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/MR7BcLL3DfbX425ddbk8dQQQPHvrnhtg9gqwjp35N/XL/_WHZ1224-Pano_tonemapped%20v2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/MR7BcLL3DfbX425ddbk8dQQQPHvrnhtg9gqwjp35N/XL/_WHZ1224-Pano_tonemapped%20v2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/NWDQBzptsMrz2wSRx9dm9fjnBGTKJxwWp4Nn8gS7D/L/_WHZ1224-Pano_tonemapped%20v2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/KPDWFVwK7kL2JCFrNvTpM96JWWC2PXjstQNBv98vf/M/_WHZ1224-Pano_tonemapped%20v2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/LF6FG2jCjptDRPsm9MsR8rpVNndZxP6B4jC7D9Tkn/S/_WHZ1224-Pano_tonemapped%20v2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3R8rc7C",
     "title": "Strasbourg - Photography by Wayne Heim",
     "description": "24 x 36 In Stock  Strasbourg Old town Strasbourg showing canal and colorful buildings in the principal city of Alsace in France. ©Wayne Heim",
-    "alt": "Strasbourg - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/NS95s4PVS7Mc3smmr7WjkpVp2W3bX9gjJQmKgcdkT/XL/_IMG2241-XL.jpg",
+    "alt": "Kirkjufell  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3R8rc7C/A",
     "keywords": [
       "wayne heim",
@@ -66,14 +75,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/KHWWRK86KRnzZkQxB5wVQCzHRwvncXtjgMrM9TFwR/XL/_IMG2241-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/KHWWRK86KRnzZkQxB5wVQCzHRwvncXtjgMrM9TFwR/XL/_IMG2241-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/MBLsnq3KnS8sbBN5nz2rbcTL2Mg5ck69N4QMJXQwD/L/_IMG2241-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/KDs8vdppBwxHJqCx7vMH9DPMVHXSDMsrddc8XZSqR/M/_IMG2241-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/LMfd4hKLM8FchM8pbdHwfRmRCFb84H3GjzWnwnLhk/S/_IMG2241-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-84LZftr",
     "title": "Upper Yellowstone Falls.",
     "description": "Upper Yellowstone waterfall after the storm.",
-    "alt": "Upper Yellowstone Falls.",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/0/KbZTLCZW57npD5bMGdTcKsXCVx6mH2L6pKchGFLC3/XL/_DSF4265-XL.jpg",
+    "alt": "Strasbourg - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/A",
     "keywords": [
       "wayne heim",
@@ -92,14 +106,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/0/KWrJ8QfZR23p6tQ9g5qrM9mq2Cc6b3MDjfCD6hVSK/XL/_DSF4265-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/0/KWrJ8QfZR23p6tQ9g5qrM9mq2Cc6b3MDjfCD6hVSK/XL/_DSF4265-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/0/KWrJ8QfZR23p6tQ9g5qrM9mq2Cc6b3MDjfCD6hVSK/XL/_DSF4265-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/0/MJXDRL4bjMpmHbzGs4rhH2z6WMjc5xVBRvVCvw3fj/L/_DSF4265-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-84LZftr/0/MDNFxHBPpK5SRb2cbzk2MDrkhxF7bK9pbFVGD3XVR/S/_DSF4265-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SxbNjWC",
     "title": "Iceland Waterfall.",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Iceland Waterfall.",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/MH4fKLsC3vCwG57fwc9dhknRgKpx6P8Sk2rmsqfrV/XL/_WHZ1847-XL.jpg",
+    "alt": "Upper Yellowstone Falls.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/A",
     "keywords": [
       "wayne heim",
@@ -118,14 +137,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/NFcbCRftJSvL968n4stcw2f6j5JgH9K38sKvhpdjJ/XL/_WHZ1847-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/NFcbCRftJSvL968n4stcw2f6j5JgH9K38sKvhpdjJ/XL/_WHZ1847-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/LhWpDmvFpKZ7n2PxQPR5GGmMctptRxNZZMND7ZVxF/L/_WHZ1847-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/K4sDXVc9LWRX4h638TK7rQLtXpMVDMs8RWz52JcGq/M/_WHZ1847-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/KWR6prWRkLNj55cdQmmzrQX2JfLdLWJVr2B5jnRqF/S/_WHZ1847-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-B7S6VwV",
     "title": "Chrystal Mill - Black and White",
     "description": "Old Chrystal Mill watching over the river below. One of Colorado's finest locations.",
-    "alt": "Chrystal Mill - Black and White",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/0/LWVkFnbhQjRvwJs9D7fRDqXwLrzMwPd24MCG3ztmV/XL/_DSF4918-Edit-456-458-XL.jpg",
+    "alt": "Iceland Waterfall.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/A",
     "keywords": [
       "wayne heim",
@@ -144,14 +168,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/0/NRchnRqNtswZhmcpwCQVTtR8Fh2vdh6crCK9znqWf/XL/_DSF4918-Edit-456-458-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/0/NRchnRqNtswZhmcpwCQVTtR8Fh2vdh6crCK9znqWf/XL/_DSF4918-Edit-456-458-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/0/NRchnRqNtswZhmcpwCQVTtR8Fh2vdh6crCK9znqWf/XL/_DSF4918-Edit-456-458-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/0/KZB3B2jgFKswwhNFNNNHRJKKTZPP85QSTgVZ4pBKS/L/_DSF4918-Edit-456-458-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B7S6VwV/0/LVNCjvLX7gWqhTjCcfqjjgm5Hk2WbZTRqSQ2gbKRw/S/_DSF4918-Edit-456-458-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jMzCqw2",
     "title": "Flying over Fairport Lighthouse     Photography by Wayne Heim",
     "description": "Flock of geese seem to be heading south as they pass over the Fairport Lighthouse on Lake Erie.  ©Wayne Heim",
-    "alt": "Flying over Fairport Lighthouse     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/MF56LHStmShhtPDCHCkkgLjSCtwgwvzQShHcpHqnf/XL/_IMG0369-XL.jpg",
+    "alt": "Chrystal Mill - Black and White",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jMzCqw2/A",
     "keywords": [
       "wayne heim",
@@ -170,14 +199,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/Kq5gwjJ8nsDcqXJmchvDkRWrcxzDGx2ZC39LZLBBH/XL/_IMG0369-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/Kq5gwjJ8nsDcqXJmchvDkRWrcxzDGx2ZC39LZLBBH/XL/_IMG0369-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/LZjZF4vrfZ5GrFmbdDxPpJvSkwsDSVKx8hZFWtcT5/L/_IMG0369-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/LBxjTCb3F6BLMBVVWBgkHHdMxnG6msDttvm4qT6MW/M/_IMG0369-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/Mn2rGShtVXLZpdszm5zv49Xq2qP55wKPh3JQnBCQq/S/_IMG0369-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nVDRCrB",
     "title": "Buffalo Bill Reservoir at sunset.",
     "description": "Photograph of the Buffalo Bill Reservoir in Wyoming at sunset.",
-    "alt": "Buffalo Bill Reservoir at sunset.",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/0/KwftpDzRh4H9QJXzJZBpdhTJr54sJqN67vZSFxgMF/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Flying over Fairport Lighthouse     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/A",
     "keywords": [
       "wayne heim",
@@ -196,14 +230,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/0/LNcFBxvrBP8WBhFjhLKkv6wN4c4SvdQJbrr777pBv/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/0/LNcFBxvrBP8WBhFjhLKkv6wN4c4SvdQJbrr777pBv/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/0/KQtxSL83Bc3ZMPDWr6MJVz5xQrDMtJJZz4KGz6Tc3/L/_DSF4073-Pano_tonemapped-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/0/KTgrTzTrz4S97SDCHDVTcnTB6KM4Ft45CdKrm33d5/M/_DSF4073-Pano_tonemapped-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVDRCrB/0/LBZGrndfJQFjKP4j5G9jPkcrPsw9nLjfPvhGhR862/S/_DSF4073-Pano_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8hwfnGn",
     "title": "\"Meandering Stream\". Photography by Wayne Heim",
     "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
-    "alt": "\"Meandering Stream\". Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
+    "alt": "Buffalo Bill Reservoir at sunset.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8hwfnGn/A",
     "keywords": [
       "wayne heim",
@@ -222,14 +261,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MbqLKWfq7zjCHr6zwbgbKzsRZGpkMFWzwCnKXnSxx/XL/_IMG6007-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MbqLKWfq7zjCHr6zwbgbKzsRZGpkMFWzwCnKXnSxx/XL/_IMG6007-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/LwpFV4ScdtmDKskWgV3bvwS8TwQvXhQRqZVXhHmHs/L/_IMG6007-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MR4QTwLSHppQ52vGGFVhrtZ4HMmVNbbCsSLvczD4Z/M/_IMG6007-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MXCtw7kCqmnt6xMWdWGngrFHQMRd7QBNGnr7WR73N/S/_IMG6007-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vcmfFCM",
     "title": "Middle Falls. Photography by Wayne Heim",
     "description": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park. ©Wayne Heim",
-    "alt": "Middle Falls. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/KwSvfxhwGKX5sWDDZzMm8G3mg3Qfct4gqQ7Th87Ls/XL/_IMG7044-Edit-XL.jpg",
+    "alt": "\"Meandering Stream\". Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vcmfFCM/A",
     "keywords": [
       "wayne heim",
@@ -248,14 +292,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/MzWw7JHnqStF99TFh2K3cTQmGcknnqNdk65WRG2hw/XL/_IMG7044-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/MzWw7JHnqStF99TFh2K3cTQmGcknnqNdk65WRG2hw/XL/_IMG7044-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/MzWw7JHnqStF99TFh2K3cTQmGcknnqNdk65WRG2hw/XL/_IMG7044-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/NX5FGcczMzQNddzXDQ7hbm35W87DxdfMfLxP42QkF/L/_IMG7044-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/KrwR7mpxDdPJLVKwQLmHQSRdzQkTmvfnbZqsfmZVq/S/_IMG7044-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tF8fFm4",
     "title": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
     "description": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming. ©Wayne Heim",
-    "alt": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/MnzpLFDKBbmcS68D7Pf8wtCWqcXFg8zpX3ZzPb6sV/XL/P1020645-Edit-XL.jpg",
+    "alt": "Middle Falls. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-tF8fFm4/A",
     "keywords": [
       "wayne heim",
@@ -274,14 +323,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/LwMwRjdzKv4GHQwmkQRVfWdkvxr6b2gsJfSkXvQht/XL/P1020645-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/LwMwRjdzKv4GHQwmkQRVfWdkvxr6b2gsJfSkXvQht/XL/P1020645-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/MDJ47ZnS4JfsHf256vXN64ZhTD5ZKHrdg7WKGSnF2/L/P1020645-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/Lw93LTGwNXgQ7wC3rBxWg58GmvX9PfPjTHGdJb3FQ/M/P1020645-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/NHx7mjfWPBhqtF7xPQNggSfwMDLHmjHFK39CCKWCW/S/P1020645-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rh75LzX",
     "title": "Tiny Bubbles  Photography by Wayne Heim",
     "description": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
-    "alt": "Tiny Bubbles  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-rh75LzX/4/L2cdcn6wLGJB5JDZ26gpzXqqJ8MFcBzpHjJQsgVMB/XL/i-rh75LzX-XL.jpg",
+    "alt": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rh75LzX/A",
     "keywords": [
       "wayne heim",
@@ -300,14 +354,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/photos/i-rh75LzX/4/NVtPMHM362S54F3ZLmjcP43qRwVMPdhqLC9ZCNStF/XL/i-rh75LzX-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-rh75LzX/4/NVtPMHM362S54F3ZLmjcP43qRwVMPdhqLC9ZCNStF/XL/i-rh75LzX-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-rh75LzX/4/NVtPMHM362S54F3ZLmjcP43qRwVMPdhqLC9ZCNStF/XL/i-rh75LzX-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-rh75LzX/4/LcnXGZksnBMnSqJgGTVM6HJmnxCGrtkL5zK694TBD/L/i-rh75LzX-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-rh75LzX/4/KQWJMN7d6xrDDgvrRx7CFKpGQG4qfHmGMpxcQxDff/S/i-rh75LzX-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HzMDDcG",
     "title": "Walk to the Light House . Photography by Wayne Heim",
     "description": "18 x 24 In StockWalk to the Lighthouse  - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio ©Wayne Heim",
-    "alt": "Walk to the Light House . Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KdS4VnwmCDXcNN6W4Fwcn8qRVSTqMF8b4k866KxZw/XL/i-HzMDDcG-XL.jpg",
+    "alt": "Tiny Bubbles  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HzMDDcG/A",
     "keywords": [
       "wayne heim",
@@ -326,14 +385,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KVqmwJz5ZtffS4gGtKr8MPVBhLNzr5HGnkfmDqRnM/XL/i-HzMDDcG-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KVqmwJz5ZtffS4gGtKr8MPVBhLNzr5HGnkfmDqRnM/XL/i-HzMDDcG-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KVqmwJz5ZtffS4gGtKr8MPVBhLNzr5HGnkfmDqRnM/XL/i-HzMDDcG-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-HzMDDcG/4/M5j376mpvDMS5zHt8XMscBjXwV5T7h3kK5vkCk8pJ/L/i-HzMDDcG-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KNWTXhGXnSxjfw4sq5Z7gPBnnk6nNnNc88jfPL9Zj/S/i-HzMDDcG-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rjmZMZt",
     "title": "Gullfloss  Black & White Photography by Wayne Heim",
     "description": "A more wide open view of Gullfloss in Iceland.\n©Wayne Heim",
-    "alt": "Gullfloss  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/MwStqFs9XmLk5Zf2m6CrqJBXcXPS2Fq72PRvLpkFK/XL/_WHZ1446-Pano-XL.jpg",
+    "alt": "Walk to the Light House . Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/A",
     "keywords": [
       "wayne heim",
@@ -352,14 +416,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/L778LVrnHbh7Vj3FRTKzvXz9R8LWMZDXbL4BKZ7nw/XL/_WHZ1446-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/L778LVrnHbh7Vj3FRTKzvXz9R8LWMZDXbL4BKZ7nw/XL/_WHZ1446-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/L778LVrnHbh7Vj3FRTKzvXz9R8LWMZDXbL4BKZ7nw/XL/_WHZ1446-Pano-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/Mh9ggfPKGcp4jSkpT2ZvQshxchsKXs5xZxGgk5PCQ/L/_WHZ1446-Pano-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/LnSvhWXw5wHvDSzcJXrtzBdsZrJ2WsXXtPs9DDQKs/S/_WHZ1446-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-769JJbV",
     "title": "Kirkjufellfloss  Black & White Photography",
     "description": "A side vied of Kirkjufellfloss in Iceland.© Wayne Heim",
-    "alt": "Kirkjufellfloss  Black & White Photography",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/L5kxsW3mt9TS6q8QfC2P2LzZM3bmqJ9KNTLd5jQ2B/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "alt": "Gullfloss  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/A",
     "keywords": [
       "wayne heim",
@@ -378,14 +447,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/KqVjkH8DnXK3rzFmMgQc8ksx8CtvDpnrp2BBZ38vF/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/KqVjkH8DnXK3rzFmMgQc8ksx8CtvDpnrp2BBZ38vF/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/KqVjkH8DnXK3rzFmMgQc8ksx8CtvDpnrp2BBZ38vF/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/Ld9r4CMCZfR3tqG9mVGMZfJrZWt45Hjf9rTQsxhTF/L/_WHZ1666_tonemapped2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/LtbBhTTxxTnhxRChbr8CqmftxJz5cx4DxNkHqj6mK/S/_WHZ1666_tonemapped2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vTD9xH2",
     "title": "Sunset on the Hood(V)  Photography by Wayne Heim",
     "description": "A view of Mt. Hood at sunset with the lights of the snow cats on the mountain side. ©Wayne Heim",
-    "alt": "Sunset on the Hood(V)  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/MM6zrVLHXvkMqB62jbtRZSrT3dqvVNSHD8MN4Lzgw/XL/_IGP5748-XL.jpg",
+    "alt": "Kirkjufellfloss  Black & White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vTD9xH2/A",
     "keywords": [
       "wayne heim",
@@ -404,14 +478,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/KhTkvtQQTRnN9TfssRttLTR3VwZGPGn43wCsNVxRz/XL/_IGP5748-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/KhTkvtQQTRnN9TfssRttLTR3VwZGPGn43wCsNVxRz/XL/_IGP5748-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/KhTkvtQQTRnN9TfssRttLTR3VwZGPGn43wCsNVxRz/XL/_IGP5748-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/L5mjj5dXLGZzShwjPQF928cTL3LMvq7F2cSsRwQZz/L/_IGP5748-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/Lvd3G42wHRs3rz2kvG7C2FLbhBqsbN6Pdwzx7PGsQ/S/_IGP5748-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BfZH6vR",
     "title": "River Mountain View -   Black and White Photography by Wayne Heim",
     "description": "A view of the Grand teton mountains as seen from a nearby river .  ©Wayne Heim",
-    "alt": "River Mountain View -   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-BfZH6vR/2/MBsZKFbqCWnScrtcTVKk7tTHrQvhCzhFqQVbpqHwv/XL/_WHZ9514-Edit-XL.jpg",
+    "alt": "Sunset on the Hood(V)  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BfZH6vR/A",
     "keywords": [
       "wayne heim",
@@ -430,14 +509,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-BfZH6vR/2/L4tVNdNnJNBGhHZ4VpF74SBfnxjTxJQN4fKQ3Lzkr/XL/_WHZ9514-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-BfZH6vR/2/L4tVNdNnJNBGhHZ4VpF74SBfnxjTxJQN4fKQ3Lzkr/XL/_WHZ9514-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-BfZH6vR/2/LFj42x5pr9xvSSQxJ6C6DBR5vZM4NMHtqgDB3RqkH/L/_WHZ9514-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-BfZH6vR/2/LgptRssNGWWWtf6kD3JLTfd4BfSMmG4XHgwNN5dh4/M/_WHZ9514-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-BfZH6vR/2/KvqfnGWm4hVfJBQv79m4n22c9DjGpSWwbpB5qtCpk/S/_WHZ9514-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qphwtVw",
     "title": "Angel Veil. Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Angel Veil. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qphwtVw/4/McKnz7VrhPggqq4ZskmPtXMzKDsBvbBMzDG3QJT5S/XL/_W3H9744-Edit-XL.jpg",
+    "alt": "River Mountain View -   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qphwtVw/A",
     "keywords": [
       "wayne heim",
@@ -456,14 +540,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qphwtVw/4/K6HFHszGLmCHDw4LZtRts5MZFvQnmTN8sgHMpWBMW/XL/_W3H9744-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qphwtVw/4/K6HFHszGLmCHDw4LZtRts5MZFvQnmTN8sgHMpWBMW/XL/_W3H9744-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qphwtVw/4/K6HFHszGLmCHDw4LZtRts5MZFvQnmTN8sgHMpWBMW/XL/_W3H9744-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qphwtVw/4/LNVRKpNmv7Wchxp9ZJmf2pJztfqdbMbRHRXNkdw4S/L/_W3H9744-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qphwtVw/4/MtWJwH6sXSwgt75RGnP3v3pNfR2h4Ltb3NkwLF6nH/S/_W3H9744-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GTDMD9v",
     "title": "Conneaut Lighthouse   Photography by Wayne Heim",
     "description": "Angry waves at the Lighthouse at Conneaut harbor in Ohio.\n© Wayne Heim",
-    "alt": "Conneaut Lighthouse   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/Mn63n5d4cvBjGCF9TBBpmTQrHwRGwQZZTFdpCwL6h/XL/_OLY0581-Edit-XL.jpg",
+    "alt": "Angel Veil. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GTDMD9v/A",
     "keywords": [
       "wayne heim",
@@ -482,14 +571,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/LNP432kBfxFHTjhmsnDnLZbqF9tHr8WVwhzNT3zNk/XL/_OLY0581-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/LNP432kBfxFHTjhmsnDnLZbqF9tHr8WVwhzNT3zNk/XL/_OLY0581-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/M9xJJsKm37SFgRkzfCCz2Zz9K3mCv5fgdPJxBqvpJ/L/_OLY0581-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/LnGDK8gdG7M7nRpkTHkg4QwPNNjX2fnBJ5V6rQrNH/M/_OLY0581-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-GTDMD9v/5/Ljh2vJQS9q5MNK9BVKnQXjCs3hDpX6fbS7tHWM8Cp/S/_OLY0581-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BBDdJHb",
     "title": "Coast of Faroe 3   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe 3   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/K3283JKW4cn3q4RSV52hRT666msX7gm4q53JwPNK3/XL/_WHZ8737-Pano-XL.jpg",
+    "alt": "Conneaut Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BBDdJHb/A",
     "keywords": [
       "wayne heim",
@@ -508,14 +602,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/NTpf8wgNdF6StVQDcQxQ2GFTzKwZXjPXpdD9M4qhG/XL/_WHZ8737-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/NTpf8wgNdF6StVQDcQxQ2GFTzKwZXjPXpdD9M4qhG/XL/_WHZ8737-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/KGVxpT29m7NJfWz82N6wbTFWQDDGSq8Lh6ZpMS5qv/L/_WHZ8737-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/KthKBwPkc4jSvMG78qSjLZ79QD3WxTk8MjnVnQLLG/M/_WHZ8737-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/NZ74f3xXVwwHztz5xD4XNNcpsqffZRD4mgmFLwW5r/S/_WHZ8737-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-d28cHrD",
     "title": "Tall Falls    Photography by Wayne Heim",
     "description": "Beautiful waterfall cascades down hillside in Multnomah Falls. Columbia River Gorge. Oregon.  .©Wayne Heim",
-    "alt": "Tall Falls    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-d28cHrD/3/LHPRKNptv6v7d3wRqQrshc8gJFnBsRDsgTdWTzCpz/XL/_IGP4730-XL.jpg",
+    "alt": "Coast of Faroe 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d28cHrD/A",
     "keywords": [
       "wayne heim",
@@ -534,14 +633,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-d28cHrD/3/MbgcX2qdXdwFqm59pvQ59TPn6GsvD37LXFwJLCvm9/XL/_IGP4730-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-d28cHrD/3/MbgcX2qdXdwFqm59pvQ59TPn6GsvD37LXFwJLCvm9/XL/_IGP4730-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-d28cHrD/3/MbgcX2qdXdwFqm59pvQ59TPn6GsvD37LXFwJLCvm9/XL/_IGP4730-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-d28cHrD/3/KQg4gTKBDnp9cRjwd8BM7Cg2XS9t8Vj2KCnPLbN4c/L/_IGP4730-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-d28cHrD/3/LgcsSBZtzw6h59M2RHMpTLNqXDcZt2xDhM2FJzBHw/S/_IGP4730-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BzsKZNR",
     "title": "Canoe s for Rent.    Photography by Wayne Heim",
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
-    "alt": "Canoe s for Rent.    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/KZmvVMCWfb2XkM9L8DMQnLxv22hsHtgKN8pnvrPJM/XL/_IGP2891-XL.jpg",
+    "alt": "Tall Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BzsKZNR/A",
     "keywords": [
       "wayne heim",
@@ -560,14 +664,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LXCBHG6RkSKxJgsq5hrFVTXjLPX3dZCqP2MkTwjXM/XL/_IGP2891-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LXCBHG6RkSKxJgsq5hrFVTXjLPX3dZCqP2MkTwjXM/XL/_IGP2891-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LtfKxSmmVzGT22L6QXfQCMxTvL9XddMXXzdQ463rK/L/_IGP2891-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/M6XVHdwnssBqnmfQDDCFJ85c2fm2JtvpWX62TTPCb/M/_IGP2891-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/KSzZHw6V2gH8tJkfHVVxMW4VGBqV6WwgQ5n7p8M8D/S/_IGP2891-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f24c6mK",
     "title": "Canal Balcony - Photography by Wayne Heim",
     "description": "Canal Balcony - view of hoes along canal in Strasbourg France showing outside balcony overlooking the canal. ©Wayne Heim",
-    "alt": "Canal Balcony - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-f24c6mK/3/NFXhw7Ww4xkDX44vB537VHSHqQxzTp42p2wJNvjCB/XL/i-f24c6mK-XL.jpg",
+    "alt": "Canoe s for Rent.    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-f24c6mK/A",
     "keywords": [
       "wayne heim",
@@ -586,14 +695,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/photos/i-f24c6mK/3/KLVFkRh5K8T89TXzhJwBcJx6skkSKmvrJgrWBMDgp/XL/i-f24c6mK-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-f24c6mK/3/KLVFkRh5K8T89TXzhJwBcJx6skkSKmvrJgrWBMDgp/XL/i-f24c6mK-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-f24c6mK/3/KLVFkRh5K8T89TXzhJwBcJx6skkSKmvrJgrWBMDgp/XL/i-f24c6mK-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-f24c6mK/3/MS7VCwM2RDtP4kSB9rGCzwZ2Bf8dmqTCxKBj8JpT8/L/i-f24c6mK-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-f24c6mK/3/KfLC8XV29DRsrLHqGQMDMFzsdsjwJwgsFJxH5K3XH/S/i-f24c6mK-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jpptgFS",
     "title": "Stormy Cape  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Stormy Cape  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/LgvrkzGghXJstHss5cZdNNzk4Cr6jQDfjq9zH3kz3/XL/_WHZ2834_tonemapped-XL.jpg",
+    "alt": "Canal Balcony - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jpptgFS/A",
     "keywords": [
       "wayne heim",
@@ -612,14 +726,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/LKsGsh5rGC28S28f4wDpPxPkqv2C6jsLR9k2WCX9q/XL/_WHZ2834_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/LKsGsh5rGC28S28f4wDpPxPkqv2C6jsLR9k2WCX9q/XL/_WHZ2834_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/Mgg24JJVP4MRcsjNbgTCws2hjMJjqxNNSGGmtvnxv/L/_WHZ2834_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/Kf65FXg7XDR6rGrwnj6PXNTTmS6BbZKVh5dbbgwBk/M/_WHZ2834_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/MwGtprJQ8tb8CR8Gv6qt8vrWB6CjJmD74TVDkndzP/S/_WHZ2834_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hNxQgK3",
     "title": "Water Falls in Park  Black & White Photography by Wayne Heim",
     "description": "Cascading waterfalls flow in a stream full of rocks.©Wayne Heim",
-    "alt": "Water Falls in Park  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-hNxQgK3/3/K6gFQPjMjg9tk8h84SXXgcrL5fXpzbLz9pjZ4bVMn/XL/i-hNxQgK3-XL.jpg",
+    "alt": "Stormy Cape  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hNxQgK3/A",
     "keywords": [
       "wayne heim",
@@ -638,14 +757,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/photos/i-hNxQgK3/3/L9qKQdMPtw6dnLpSw5RhgL7BzjmR2KKZ5FZfKL8qP/XL/i-hNxQgK3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-hNxQgK3/3/L9qKQdMPtw6dnLpSw5RhgL7BzjmR2KKZ5FZfKL8qP/XL/i-hNxQgK3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-hNxQgK3/3/MtbJ2Vvbz47JLZShJRdWhV5C22BgsJmS2DtSXh39J/L/i-hNxQgK3-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-hNxQgK3/3/MkpQ95TDMPC5bz2RXtwJ88tP7JxsCNF8f8KHkGkqT/M/i-hNxQgK3-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-hNxQgK3/3/MxSrfjpVmkXMp6sNdcRHNGHQFm6VbsfG85NVCCQLc/S/i-hNxQgK3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fGW57XR",
     "title": "Waterfalls in Mill Creek   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
-    "alt": "Waterfalls in Mill Creek   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-fGW57XR/5/MKXgWNss6kM8q5WP9TSh2RTRH8D23Sqkm6mJMkssZ/XL/_WEH7050-XL.jpg",
+    "alt": "Water Falls in Park  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGW57XR/A",
     "keywords": [
       "wayne heim",
@@ -664,14 +788,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-fGW57XR/5/NLb2LVtGbQC3WZJhsFRjdbpfVWr48tmdFgTtTdf35/XL/_WEH7050-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-fGW57XR/5/NLb2LVtGbQC3WZJhsFRjdbpfVWr48tmdFgTtTdf35/XL/_WEH7050-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-fGW57XR/5/NLb2LVtGbQC3WZJhsFRjdbpfVWr48tmdFgTtTdf35/XL/_WEH7050-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-fGW57XR/5/LgzHWgbR9CvnpF28qhQLRZbZ4X4jqMZLSsWczCMSQ/L/_WEH7050-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-fGW57XR/5/Kpqv9VmN7cm4tGXPNM7BdsQXcNNNqSTRSWvDBB9vJ/S/_WEH7050-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-d6pmNSC",
     "title": "Gullfloss   Black & White Photography by Wayne Heim",
     "description": "Close up view of Gullfloss waterfall in Iceland.\n©Wayne Heim",
-    "alt": "Gullfloss   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d6pmNSC/0/LZ23mXcVZSF5v6njj54kx935PmSrHnGwVdtLqcsXM/XL/_WHK3522_tonemapped-XL.jpg",
+    "alt": "Waterfalls in Mill Creek   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d6pmNSC/A",
     "keywords": [
       "wayne heim",
@@ -690,14 +819,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d6pmNSC/0/LwFnFbB32nBKxf5N9RDBcM5gjdWHN5nrxgHH5Bz7z/XL/_WHK3522_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d6pmNSC/0/LwFnFbB32nBKxf5N9RDBcM5gjdWHN5nrxgHH5Bz7z/XL/_WHK3522_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d6pmNSC/0/LwFnFbB32nBKxf5N9RDBcM5gjdWHN5nrxgHH5Bz7z/XL/_WHK3522_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d6pmNSC/0/KWZ2qgSHZMPnfvLmGTWG28XMHz3MCHMHP5Qcww8n3/L/_WHK3522_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d6pmNSC/0/KdmSrMCSffr86B9tvHH2jMDs8KRhLgvz6MFdVVSZt/S/_WHK3522_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zKFhFwm",
     "title": "Closer to the Falls    black and White Photography by Wayne Heim",
     "description": "Close up view of one of  Iceland's many waterfalls.  ©Wayne Heim",
-    "alt": "Closer to the Falls    black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zKFhFwm/0/NB98ZS6sknxmHC58ZBwhvkv2mWkt7zgB3xZGdqKvQ/XL/_WHZ1898-XL.jpg",
+    "alt": "Gullfloss   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zKFhFwm/A",
     "keywords": [
       "wayne heim",
@@ -716,14 +850,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zKFhFwm/0/LzqjvSkqD2w62JH3hGmjh3TFnK5sDppkZwSF7kgVR/XL/_WHZ1898-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zKFhFwm/0/LzqjvSkqD2w62JH3hGmjh3TFnK5sDppkZwSF7kgVR/XL/_WHZ1898-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zKFhFwm/0/LzqjvSkqD2w62JH3hGmjh3TFnK5sDppkZwSF7kgVR/XL/_WHZ1898-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zKFhFwm/0/MWNs9Hdqrbm3H6tk6NPH9qqBbWmzJTR677KRfdDkC/L/_WHZ1898-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zKFhFwm/0/KDkgjmMBmh6mjTCFPnWqBp52DgWnshMgkCVwDC5PK/S/_WHZ1898-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4b73W23",
     "title": "Close to St John's       Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Close to St John's       Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/LCW84ZCSxqXMn2LHzNw3Zr7crdjLBZfZsmcFctHsD/XL/_WHZ2938-XL.jpg",
+    "alt": "Closer to the Falls    black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-4b73W23/A",
     "keywords": [
       "wayne heim",
@@ -742,14 +881,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/NJQDDZ4TqrbXg2Dz9Spnnc2ZwFGbQkGQ3Mr2pfrfC/XL/_WHZ2938-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/NJQDDZ4TqrbXg2Dz9Spnnc2ZwFGbQkGQ3Mr2pfrfC/XL/_WHZ2938-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/MQw8sFbszqJ3WqFj2T4HmLDLbMpWtqJdN2m4gnJF4/L/_WHZ2938-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/KgvJPxXVtg9pK6P66dFLjtT4XWXQgrdZsMHNMcv8b/M/_WHZ2938-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/NH4DSn6JPssg75LFMsjJf4kVVBJLdcC2LWcqHgWkb/S/_WHZ2938-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hbpLcDk",
     "title": "Cotton Candy   Photography by Wayne Heim",
     "description": "Clouds hang over the sea like cotton candy. ©Wayne Heim",
-    "alt": "Cotton Candy   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hbpLcDk/1/NJMLtN4Z749nqHwXjRCcGM4MXtk8hc93x4PwfzLWJ/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
+    "alt": "Close to St John's       Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hbpLcDk/A",
     "keywords": [
       "wayne heim",
@@ -768,14 +912,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hbpLcDk/1/LKhMGnDkbxHWv46CHvfrQ23ggvQT9cm9GdKRQBJfb/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hbpLcDk/1/LKhMGnDkbxHWv46CHvfrQ23ggvQT9cm9GdKRQBJfb/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hbpLcDk/1/KWmNjf6Cp29qhtx4Smtr4vNPTqrSF553vsznbWRKz/L/_WHZ0338_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hbpLcDk/1/KfXDLPBcXWj8f3MQwXLwPjSJVkPsKw3vwwdGKxDvC/M/_WHZ0338_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hbpLcDk/1/MDnp5xgmzGbfqzvLskmcKGgjfZKtfSnf838vQPD4w/S/_WHZ0338_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zhtZj7N",
     "title": "Shark at the Falls   Photography by Wayne Heim",
     "description": "Debris at the base of the falls looks like a shark lying on its back  ©Wayne Heim",
-    "alt": "Shark at the Falls   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-zhtZj7N/5/MJHV989vqgcVjmJcBDNHBvb9LHsTJqvMk7ShxMwX6/XL/_IMG0286_tonemapped%2520falls-XL.jpg",
+    "alt": "Cotton Candy   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zhtZj7N/A",
     "keywords": [
       "wayne heim",
@@ -794,14 +943,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-zhtZj7N/5/KtgkkchXFMH45nZR8XftWTvCPcWFmVq2kxDmPnGrh/XL/_IMG0286_tonemapped%20falls-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-zhtZj7N/5/KtgkkchXFMH45nZR8XftWTvCPcWFmVq2kxDmPnGrh/XL/_IMG0286_tonemapped%20falls-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-zhtZj7N/5/KtgkkchXFMH45nZR8XftWTvCPcWFmVq2kxDmPnGrh/XL/_IMG0286_tonemapped%20falls-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-zhtZj7N/5/MkRMqWdkXZ6nfmRBQmLrP2j5XQ4ZwCHVVDwJWj8nB/L/_IMG0286_tonemapped%20falls-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-zhtZj7N/5/LnDxJSRg4XdjCCPP7SkFZ5DTJks4BMgX8g3CCRSLP/S/_IMG0286_tonemapped%20falls-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2tDDPr7",
     "title": "Securing the Line   Photography by Wayne Heim",
     "description": "Deck hand secures line during the Parade of  Tall Ships entering Cleveland Harbor on Lake Erie. ©Wayne Heim",
-    "alt": "Securing the Line   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-2tDDPr7/4/Lfvzcpwwtzzv3TwQHR5ZqKhh8QvWQxQx28hj8fvpG/XL/_WEH7049-XL.jpg",
+    "alt": "Shark at the Falls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-2tDDPr7/A",
     "keywords": [
       "wayne heim",
@@ -820,14 +974,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-2tDDPr7/4/LvpsnfLh4HkzR6FfTj364BqTR7x62w6XZ3WGW8qnL/XL/_WEH7049-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-2tDDPr7/4/LvpsnfLh4HkzR6FfTj364BqTR7x62w6XZ3WGW8qnL/XL/_WEH7049-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-2tDDPr7/4/KZRBkvCRS4wnHQQ8WGgv4ZZ73W4vRhjTFNRRgzZrw/L/_WEH7049-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-2tDDPr7/4/NjNb9sN6D9qHWffVXWxqqVnvz5LrTSCGBbbZ4j7Hf/M/_WEH7049-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-2tDDPr7/4/LbXzPsQThxrRrQbfzG2RzB8MVhWBbPT2RD9XtnwVc/S/_WEH7049-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9R79MVB",
     "title": "Approach to Lighthouse(V)    Photography by Wayne Heim",
     "description": "Fairport Lighthouse at the mouth of the Grand River on Lake Erie. © Wayne Heim",
-    "alt": "Approach to Lighthouse(V)    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9R79MVB/4/NgWqFbG5Rf2DtCsXkRxSvDK6n594VvkTzVwhjZcMm/XL/_W3H9228-XL.jpg",
+    "alt": "Securing the Line   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9R79MVB/A",
     "keywords": [
       "wayne heim",
@@ -846,14 +1005,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9R79MVB/4/KFxrQ6FKBSFx38KH5k6mtVdMrk45w57G9Fss8p7v5/XL/_W3H9228-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9R79MVB/4/KFxrQ6FKBSFx38KH5k6mtVdMrk45w57G9Fss8p7v5/XL/_W3H9228-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9R79MVB/4/KFxrQ6FKBSFx38KH5k6mtVdMrk45w57G9Fss8p7v5/XL/_W3H9228-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9R79MVB/4/Lb68pb56XRKjpVZQ85QdpK9dPZTbsRdzJdwswcn52/L/_W3H9228-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9R79MVB/4/KVv2rfFXgn3nXNLDQsQN7kgK8gCvmKHdhN77vw63k/S/_W3H9228-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dQPHNF9",
     "title": "Fall in Letchworth  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Fall in Letchworth  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-dQPHNF9/3/MbcXqTRxptwFRTdSX7K7cCmL8K3FKQtp3zMZqwhKx/XL/_IMG6818-XL.jpg",
+    "alt": "Approach to Lighthouse(V)    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dQPHNF9/A",
     "keywords": [
       "wayne heim",
@@ -872,14 +1036,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-dQPHNF9/3/MKbzQqhN93PZbtMpsm7dczjcqDHgtQcVRtNdk7z3F/XL/_IMG6818-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-dQPHNF9/3/MKbzQqhN93PZbtMpsm7dczjcqDHgtQcVRtNdk7z3F/XL/_IMG6818-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-dQPHNF9/3/MKbzQqhN93PZbtMpsm7dczjcqDHgtQcVRtNdk7z3F/XL/_IMG6818-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-dQPHNF9/3/Lnq6QnFK4q2NdVd9RjqPcKbH39xgHD8znzLs5rddq/L/_IMG6818-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-dQPHNF9/3/K8DHCJ7jP5nmQWrGh3vjZVHv56Mk6mpf6bFkvZqNd/S/_IMG6818-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2fQqHxW",
     "title": "Falls before the Bridge   Photography by Wayne Heim",
     "description": "Fall in the river in Berea Ohio as the flow under bridge.  ©Wayne Heim",
-    "alt": "Falls before the Bridge   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-2fQqHxW/5/K7bFphdMCdh3gvSdv7B9LwCGLJ9KTg3K9hD4cxdHC/XL/_WHZ6385-XL.jpg",
+    "alt": "Fall in Letchworth  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-2fQqHxW/A",
     "keywords": [
       "wayne heim",
@@ -898,14 +1067,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-2fQqHxW/5/Nc2B9vkdrv8JgfzkpxvhPGMstgQgZt7q5dVMtt4LG/XL/_WHZ6385-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-2fQqHxW/5/Nc2B9vkdrv8JgfzkpxvhPGMstgQgZt7q5dVMtt4LG/XL/_WHZ6385-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-2fQqHxW/5/Nc2B9vkdrv8JgfzkpxvhPGMstgQgZt7q5dVMtt4LG/XL/_WHZ6385-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-2fQqHxW/5/MHqbpvnNQPSKrd3NDRnJ5gQRMbnnXgDgQWXXqVBwZ/L/_WHZ6385-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-2fQqHxW/5/NZdsH59JvBjXBs9tQZ864tkDH23VtD79wnZj3tmZW/S/_WHZ6385-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2pwdXXJ",
     "title": "Fishing Boats in Faroe   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Fishing Boats in Faroe   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/MBLr9SggkTGskVBGfD9482fHjqgFm9P9t6rsvmdS3/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
+    "alt": "Falls before the Bridge   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-2pwdXXJ/A",
     "keywords": [
       "wayne heim",
@@ -924,14 +1098,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/NFTqw22SDKFz2J3sQVPcBndKZfrjvZPNgSJdT7gjk/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/NFTqw22SDKFz2J3sQVPcBndKZfrjvZPNgSJdT7gjk/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/NFTqw22SDKFz2J3sQVPcBndKZfrjvZPNgSJdT7gjk/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/Kw98DDpQQdxFWkfpP98mjXRtQZRFtt3v8M4PSQszZ/L/_WHZ9797_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/MG7fV3drTgR46gSVsmFRCpKChCtRD7GmB8Dp5SRjB/S/_WHZ9797_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7bDfPwf",
     "title": "Boats  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Boats  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/MCRmkvNCZ6mn8P3zL7phN9wtNPVRgN2ZJ28P55r65/XL/_WHZ9798_tonemapped-Edit-XL.jpg",
+    "alt": "Fishing Boats in Faroe   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7bDfPwf/A",
     "keywords": [
       "wayne heim",
@@ -950,14 +1129,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/MtMrqT9bdXzGzD5n9hN4RQvZzZmtfVdgFtSgXxwmM/XL/_WHZ9798_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/MtMrqT9bdXzGzD5n9hN4RQvZzZmtfVdgFtSgXxwmM/XL/_WHZ9798_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/MtMrqT9bdXzGzD5n9hN4RQvZzZmtfVdgFtSgXxwmM/XL/_WHZ9798_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/KPdb2MS2X28LwmNL2wbhj8McrhpQfTFnJK8wfJFZM/L/_WHZ9798_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/NfKgCwhMgPhWSgfCKx2pxpdNt43h8Czd9nZs36mjx/S/_WHZ9798_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pGmvKSB",
     "title": "Over Flight   Photography by Wayne Heim",
     "description": "Flock of Geese fly over the mouth of the Grand River on Lake Erie. ©Wayne Heim",
-    "alt": "Over Flight   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-pGmvKSB/4/KNKxnqrWrPVX75TCF5wXmZWwFjJDkVRLqx8MgShWq/XL/_IMG0366-XL.jpg",
+    "alt": "Boats  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pGmvKSB/A",
     "keywords": [
       "wayne heim",
@@ -976,14 +1160,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-pGmvKSB/4/M89rCgWkS3dSHdNKMhxHzk5bcZ5nFW6t9RbpcbqB6/XL/_IMG0366-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-pGmvKSB/4/M89rCgWkS3dSHdNKMhxHzk5bcZ5nFW6t9RbpcbqB6/XL/_IMG0366-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-pGmvKSB/4/L6pV6BrspmZP6rvb48pJDcL4kmKg2JftdNf5MWp5h/L/_IMG0366-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-pGmvKSB/4/L52qMdHhjbxb3ntzrmfXMSgBcVcGK39kHK7BPqhDP/M/_IMG0366-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-pGmvKSB/4/MjH6fLrNCS49q3GnNTJJ3KzvcwGLKbkHr4CnL5DNt/S/_IMG0366-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dFpB9q5",
     "title": "Godafoss  Black & White Photography by Wayne Heim",
     "description": "Godafoss  is one of the smaller waterfalls in Iceland known for its beauty. ©Wayne Heim",
-    "alt": "Godafoss  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dFpB9q5/0/MTB8LbMgGHC7VWVCMRJLBFnTqd8PDcks64sb4Bpvd/XL/_WHZ1590-XL.jpg",
+    "alt": "Over Flight   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dFpB9q5/A",
     "keywords": [
       "wayne heim",
@@ -1002,14 +1191,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dFpB9q5/0/MDJLXG3sBDvFCkF65qMLntShN73mzfb9r4hQsT3MR/XL/_WHZ1590-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dFpB9q5/0/MDJLXG3sBDvFCkF65qMLntShN73mzfb9r4hQsT3MR/XL/_WHZ1590-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dFpB9q5/0/MDJLXG3sBDvFCkF65qMLntShN73mzfb9r4hQsT3MR/XL/_WHZ1590-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dFpB9q5/0/L2gKQzVp6DwZ29r3qfc3LSwQF238GJqsvhspChS6j/L/_WHZ1590-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dFpB9q5/0/MCdN6f8JFWPWW5zJzC6RfszMXnd5Rb9RXwxP4nKVW/S/_WHZ1590-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MhCq8Qk",
     "title": "Going to Lunch   Photography by Wayne Heim",
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
-    "alt": "Going to Lunch   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-MhCq8Qk/4/NMTT4rxJjbwjhqRhVVzrZXdDhmjqGq7qFDhz4jc5Z/XL/P1010090-XL.jpg",
+    "alt": "Godafoss  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MhCq8Qk/A",
     "keywords": [
       "wayne heim",
@@ -1028,14 +1222,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-MhCq8Qk/4/KPZZdQKFDZ9fTFC37zfhM5pN7CMHRTCZJNp7KPC5K/XL/P1010090-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-MhCq8Qk/4/KPZZdQKFDZ9fTFC37zfhM5pN7CMHRTCZJNp7KPC5K/XL/P1010090-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-MhCq8Qk/4/LGhSfTvWhn2pK6qcMZQGtKBcM82NwxsW8HVTrZLS3/L/P1010090-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-MhCq8Qk/4/KJ8rW7nNq4MXFwNN7PGVcfnhQgVrG2rxfZpgbMwn4/M/P1010090-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-MhCq8Qk/4/KTg3q8SFVkR5frHdRGkMQhptdG48T9L48XHfzZwnx/S/P1010090-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CpzLgtc",
     "title": "Gondolas at Rest    Photography by Wayne Heim",
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
-    "alt": "Gondolas at Rest    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-CpzLgtc/3/KhvCpspS89V7rJ8kMTbT6LtFQdg8JzqvVHP8HqbQp/XL/P1000830-XL.jpg",
+    "alt": "Going to Lunch   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-CpzLgtc/A",
     "keywords": [
       "wayne heim",
@@ -1054,14 +1253,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-CpzLgtc/3/NdWsrB54xZKTscLZKpZk4RjQhkQCMvhjgk6mdjzzc/XL/P1000830-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-CpzLgtc/3/NdWsrB54xZKTscLZKpZk4RjQhkQCMvhjgk6mdjzzc/XL/P1000830-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-CpzLgtc/3/KNbfBRr62tJq7WKvtrFwG6bF85d5FRQJ8fNXdJpB9/L/P1000830-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-CpzLgtc/3/NRS839NTn653Z23XJCvVRcBwp4wGB5tBXSdKtJ9G8/M/P1000830-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-CpzLgtc/3/LVk47bJ3D5XRS8dB2VFkch5tsVNcRkNsvJmnkhJk2/S/P1000830-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NcmRLfC",
     "title": "Secluded Waterfall    Photography by Wayne Heim",
     "description": "Beautiful waterfall secluded is the forest of the Smokie Mountains. ©Wayne Heim",
-    "alt": "Secluded Waterfall    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcmRLfC/3/KjScnr6vCTWfLhg5tDBXhMkjwv62dqqJq2C7xBcw2/XL/_IGP1862-XL.jpg",
+    "alt": "Gondolas at Rest    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcmRLfC/A",
     "keywords": [
       "wayne heim",
@@ -1080,14 +1284,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcmRLfC/3/NGdMcz3dz2JB7mgPSj7s24tgGhGR32wj86sZhCJmW/XL/_IGP1862-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcmRLfC/3/NGdMcz3dz2JB7mgPSj7s24tgGhGR32wj86sZhCJmW/XL/_IGP1862-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcmRLfC/3/NGdMcz3dz2JB7mgPSj7s24tgGhGR32wj86sZhCJmW/XL/_IGP1862-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcmRLfC/3/MJSXD84vzzST3mMXqCcxZFMHjhjKS3gQnTtc7h524/L/_IGP1862-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcmRLfC/3/K6Z4KLLpm4gVHWZwkrjJcbQBGX8s2RzNSkprr2t9X/S/_IGP1862-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hVvx83K",
     "title": "Heading Out   Photography by Wayn Heim",
     "description": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio ©Wayne Heim",
-    "alt": "Heading Out   Photography by Wayn Heim",
-    "src": "https://photos.smugmug.com/photos/i-hVvx83K/3/NjTpFtPtGVZ6fBL5C4LBQNTWWdJhz6R9HdgNswNdR/XL/i-hVvx83K-XL.jpg",
+    "alt": "Secluded Waterfall    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hVvx83K/A",
     "keywords": [
       "wayne heim",
@@ -1106,14 +1315,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/photos/i-hVvx83K/3/MqZ3kKt7qP2ZHx8fGjm2WjqjPdfcW4g4qvTTXgKTB/XL/i-hVvx83K-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-hVvx83K/3/MqZ3kKt7qP2ZHx8fGjm2WjqjPdfcW4g4qvTTXgKTB/XL/i-hVvx83K-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-hVvx83K/3/KSkrqMXG7WHPw5PbRkkSzD2GtLDjZjgLrrSXMj7HH/L/i-hVvx83K-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-hVvx83K/3/LNKgDJw5jp83WX4hqnnm3pCvq89X6WJz7hBC4PjD3/M/i-hVvx83K-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-hVvx83K/3/KVwG7sWPX5ZND99TfcFJgv6ThM9VJS2c4p9NvKQvK/S/i-hVvx83K-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xLRF9pS",
     "title": "Fighting the Waves   Photography by Wayne Heim",
     "description": "Iceberg on shore fights against the battering waves on Iceland's coast.   ©Wayne Heim",
-    "alt": "Fighting the Waves   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xLRF9pS/0/MzXkxrhpkFKTvnrz6stTQtXjBXhWm2hWrX7wwgCZL/XL/_WHZ2913-XL.jpg",
+    "alt": "Heading Out   Photography by Wayn Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xLRF9pS/A",
     "keywords": [
       "wayne heim",
@@ -1132,14 +1346,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xLRF9pS/0/M454qrTVgGW2wLQ2TG5LpR253G4JWFH99XnD8Hb7C/XL/_WHZ2913-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xLRF9pS/0/M454qrTVgGW2wLQ2TG5LpR253G4JWFH99XnD8Hb7C/XL/_WHZ2913-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xLRF9pS/0/KkxkPxFm5b4Pgx9h8FJQqXn3sfL5xCk6DTBsvkF63/L/_WHZ2913-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xLRF9pS/0/NDp4HfWs8DhF8DH85mq4xw936WbN3fCp5xrXN9nkT/M/_WHZ2913-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xLRF9pS/0/KKqWVJGVnL7xM3N3LnKBVPdw36gz9thMBmCQ2wdM5/S/_WHZ2913-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-w9Hk7c3",
     "title": "Coming Ashore    Photography by Wayne Heim",
     "description": "Icebergs look like they are coming ashore in Iceland. ©Wayne Heim",
-    "alt": "Coming Ashore    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-w9Hk7c3/0/KrjQnZSCPxv9rsM67xgLRX5T9n7RjLjPn522KxGWR/XL/_WHZ2915-XL.jpg",
+    "alt": "Fighting the Waves   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-w9Hk7c3/A",
     "keywords": [
       "wayne heim",
@@ -1158,14 +1377,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-w9Hk7c3/0/M4MFvb4tNfNk9PBm9kcD7pJSWvQMdLdsrnSWWdQd4/XL/_WHZ2915-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-w9Hk7c3/0/M4MFvb4tNfNk9PBm9kcD7pJSWvQMdLdsrnSWWdQd4/XL/_WHZ2915-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-w9Hk7c3/0/Nd3D3z6cvqxTSSkh2ZwTFjzhdtjLJVS7BGmZWBvXL/L/_WHZ2915-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-w9Hk7c3/0/KP6Nk5pzLMVdhQxB374wPq8gHt86LCv4Mp4CnNVpp/M/_WHZ2915-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-w9Hk7c3/0/KJfp6ks3Cfzk68Jp6dpqpLCRPMmQRmXxcXW3pt6gq/S/_WHZ2915-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NcT4vCM",
     "title": "Keilir Lower    Black & White Photography by Wayne Heim",
     "description": "Icelandic waterfall flow from the rocks of Iceland. ©Wayne Heim",
-    "alt": "Keilir Lower    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcT4vCM/0/K62Pf7R9xRXNbshtzGqBdsRSRxqJvLc9XJQMSSDNg/XL/_WHK3388-Pano-2-XL.jpg",
+    "alt": "Coming Ashore    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcT4vCM/A",
     "keywords": [
       "wayne heim",
@@ -1184,14 +1408,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcT4vCM/0/K8rL4hcNpr8VCrwNKXwfX5zxLrxTM7qqTmM8C2tCp/XL/_WHK3388-Pano-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcT4vCM/0/K8rL4hcNpr8VCrwNKXwfX5zxLrxTM7qqTmM8C2tCp/XL/_WHK3388-Pano-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcT4vCM/0/K8rL4hcNpr8VCrwNKXwfX5zxLrxTM7qqTmM8C2tCp/XL/_WHK3388-Pano-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcT4vCM/0/KKM9WmnwxmCmfqN6Mg4F7LhT7mvjBZ48hVVM2HBhL/L/_WHK3388-Pano-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NcT4vCM/0/M6h6Q7rdcNTzVnqCQ7jsvxtmwPCdG5vLCh5n8FsFj/S/_WHK3388-Pano-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dT6fKnc",
     "title": "Yellowstone Hotspots   Photography by Wayne Heim",
     "description": "In Stock 18 x 24Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
-    "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/K7m77774NtqWq8SRJKJkPPLsXPhCJ9GLpFgjTCptQ/XL/_WHZ8329-Pano-Edit-XL.jpg",
+    "alt": "Keilir Lower    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dT6fKnc/A",
     "keywords": [
       "wayne heim",
@@ -1210,14 +1439,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/NfJKpbpJqL9jDJjD5SKNT4R97Rj4vSjrJrhp4gvkw/XL/_WHZ8329-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/NfJKpbpJqL9jDJjD5SKNT4R97Rj4vSjrJrhp4gvkw/XL/_WHZ8329-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/M6h3FHDnVgDCVk5jmhH3Wwqk8gXpGTgcJnppCLRWF/L/_WHZ8329-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/NNwjtLt7qvvpKnm4wv7LNrbVkLxptLCMrx2J6tbpb/M/_WHZ8329-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/MNqzrPqrQdrrRTjpDVVcVq3cD6sNJNcsjQtCwfvCC/S/_WHZ8329-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VMGBjHW",
     "title": "Hidden Bridge    Photography by Wayne Heim",
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
-    "alt": "Hidden Bridge    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-VMGBjHW/4/LvgmPTn6PSQT76HdWgRvLHZqM3qVk43Sm5KQPHT5G/XL/_WEH7214-XL.jpg",
+    "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VMGBjHW/A",
     "keywords": [
       "wayne heim",
@@ -1236,14 +1470,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-VMGBjHW/4/Mx3g96W4Kkf7mkcFKznmDMnBj8bzvXnxfSFDFD2qd/XL/_WEH7214-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-VMGBjHW/4/Mx3g96W4Kkf7mkcFKznmDMnBj8bzvXnxfSFDFD2qd/XL/_WEH7214-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-VMGBjHW/4/MCXk47HdXJtSJTr87xqD8RRfJs6fKFsGRmPskBZLN/L/_WEH7214-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-VMGBjHW/4/KnjmW4ktfgPJRLRRr6ftSJN7cd3VRBwqdppsRsKWP/M/_WEH7214-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-VMGBjHW/4/NTSHZs5pzMR5WwN8QvXkBhBsc5X4st9xKZbTnqNzg/S/_WEH7214-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zLXHHCN",
     "title": "Rock Going Swimming  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Rock Going Swimming  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/MtjhDB566Wx3n4X9g4Cp5gQZ9msw5g4GhRG9G62qv/XL/_WHZ2369-XL.jpg",
+    "alt": "Hidden Bridge    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zLXHHCN/A",
     "keywords": [
       "wayne heim",
@@ -1262,14 +1501,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/KRjQkWZRvSvx55LS9349NN3mbrDhf3sbfrDhmDHx8/XL/_WHZ2369-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/KRjQkWZRvSvx55LS9349NN3mbrDhf3sbfrDhmDHx8/XL/_WHZ2369-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/NgQNwxfzXvrtK8NvmVt4SbWqJnCV32W3LHNsWjr7z/L/_WHZ2369-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/MswMM5QNbV4hVZrcmmdLpMzmZZzNvRZwDLW6nR2DK/M/_WHZ2369-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/LQzpm4d254xHShS5gtVjsVXp6VVj2j7mGXG8gcsdJ/S/_WHZ2369-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hJgwV5X",
     "title": "Kirkjufell Mountain    Black and White photography by Wayne Heim",
     "description": "Kirkjufell Mountain with waterfalls in the foreground. ©Wayne Heim  (b/w)",
-    "alt": "Kirkjufell Mountain    Black and White photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hJgwV5X/1/NLNrDkFdM6DBP8qgwLt5sZGqVBzkkS4DsJRCpcc4X/XL/_WHZ1207-Edit-2-XL.jpg",
+    "alt": "Rock Going Swimming  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hJgwV5X/A",
     "keywords": [
       "wayne heim",
@@ -1288,14 +1532,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hJgwV5X/1/NSJGr2TVhhdtqtXNfBvjDK8f9CmBx48HZX6rpB5gn/XL/_WHZ1207-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hJgwV5X/1/NSJGr2TVhhdtqtXNfBvjDK8f9CmBx48HZX6rpB5gn/XL/_WHZ1207-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hJgwV5X/1/NSJGr2TVhhdtqtXNfBvjDK8f9CmBx48HZX6rpB5gn/XL/_WHZ1207-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hJgwV5X/1/KN6x4RGxtKTs6pm7jqqbshFDNQ55JNcLSwH2fdksZ/L/_WHZ1207-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hJgwV5X/1/MPKxW76XgmJbbB6vtnHTR2RwfmHGMrW3JDW5fq6jt/S/_WHZ1207-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sB8KkPF",
     "title": "Kirkjufell Mountain  Photography by Wayne Heim",
     "description": "Kirkjufell Mountain with waterfalls in the foreground. ©Wayne Heim  old time treatment",
-    "alt": "Kirkjufell Mountain  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/0/Lt9MTKBfcTmPLN3B2xjfvp7fZ3qSfJZsR82TL5srg/XL/_WHZ1207-Edit-XL.jpg",
+    "alt": "Kirkjufell Mountain    Black and White photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/A",
     "keywords": [
       "wayne heim",
@@ -1314,14 +1563,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/0/LcZzWT68WHPszDmQ2tDkdtH4RMH9MG2QKm7kDWjKP/XL/_WHZ1207-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/0/LcZzWT68WHPszDmQ2tDkdtH4RMH9MG2QKm7kDWjKP/XL/_WHZ1207-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/0/LcZzWT68WHPszDmQ2tDkdtH4RMH9MG2QKm7kDWjKP/XL/_WHZ1207-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/0/KTvKRRf6WLbrMqcH4hfbmZBTJQmm8HsSXZvNjhxwk/L/_WHZ1207-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sB8KkPF/0/LWw7TmtGTSNJVgh539rP5c345hVTR6T5LVSKzDKZL/S/_WHZ1207-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8CNn2ms",
     "title": "Kirkjufell  Photography by Wayne Heim",
     "description": "Kirkjufell Mountain with waterfalls in the foreground. ©Wayne Heim (color)",
-    "alt": "Kirkjufell  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8CNn2ms/0/LM8KXRXhHq7C559phjF4PvjVmvZwnmMp8sjJznVPp/XL/_WHZ1202-HDR_tonemapped-XL.jpg",
+    "alt": "Kirkjufell Mountain  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8CNn2ms/A",
     "keywords": [
       "wayne heim",
@@ -1340,14 +1594,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8CNn2ms/0/MhJ6PsNR9pgTsLvRRJG3hZcpGRvHhtjJHsv84N8rz/XL/_WHZ1202-HDR_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8CNn2ms/0/MhJ6PsNR9pgTsLvRRJG3hZcpGRvHhtjJHsv84N8rz/XL/_WHZ1202-HDR_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8CNn2ms/0/MhJ6PsNR9pgTsLvRRJG3hZcpGRvHhtjJHsv84N8rz/XL/_WHZ1202-HDR_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8CNn2ms/0/KZXCcx9zDTfNJ792rkWSFjs3WKF7XXxTQQQtsPCvT/L/_WHZ1202-HDR_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8CNn2ms/0/KXh68KPtHDCpvks7PPMNDBqsdndHSfhhNmZKR7pLX/S/_WHZ1202-HDR_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dJqxSRv",
     "title": "Little Strasbourg - Photography by Wayne Heim",
     "description": "Little Strasbourg - view of Old Town Strasbourg France showing apartments along a canal. ©Wayne Heim",
-    "alt": "Little Strasbourg - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-dJqxSRv/3/NG4nS4JNm8TRbn2fGJSKTcf8Pw9V37KvRMN9hFBBV/XL/i-dJqxSRv-XL.jpg",
+    "alt": "Kirkjufell  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dJqxSRv/A",
     "keywords": [
       "wayne heim",
@@ -1366,14 +1625,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/photos/i-dJqxSRv/3/KN5X9MhFq5jPn2gJPCHGXNsRp6DRHcMkRK9JwL7q5/XL/i-dJqxSRv-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-dJqxSRv/3/KN5X9MhFq5jPn2gJPCHGXNsRp6DRHcMkRK9JwL7q5/XL/i-dJqxSRv-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-dJqxSRv/3/LZDg9DMNVbKGMW8GLhZ8QjXGtvqScKVkDvcpRPBRs/L/i-dJqxSRv-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-dJqxSRv/3/Lqx9MXkmZ3kLmDWWjCLScg4F6jwjjTgjXfcNDdPdV/M/i-dJqxSRv-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-dJqxSRv/3/NTjpp3H6SFTCZ6q32khTpBLQq6c4LM8CrpdmRbzkq/S/i-dJqxSRv-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XV5CXk6",
     "title": "Lone Boat - Photography by Wayne Heim",
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
-    "alt": "Lone Boat - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/MzFDdKsFfRb8RhnmRprwjMTd8hk3MXb62tJ77V9NX/XL/P1010052-XL.jpg",
+    "alt": "Little Strasbourg - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XV5CXk6/A",
     "keywords": [
       "wayne heim",
@@ -1392,14 +1656,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/NMk5pPrgtjDB84Tsz2rsGWtGhPKtcpCkmdMxzFzw5/XL/P1010052-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/NMk5pPrgtjDB84Tsz2rsGWtGhPKtcpCkmdMxzFzw5/XL/P1010052-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/NMk5pPrgtjDB84Tsz2rsGWtGhPKtcpCkmdMxzFzw5/XL/P1010052-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/KsRrHbD4sCjmt5H6t9pPVrCRWg5vn9PqhfXvkmxLV/L/P1010052-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/LXhfJ7jTdZRFmMM69TXpstMrwgRvZxp9sR3g3KF6N/S/P1010052-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QFpd2x4",
     "title": "Looking Outward   Black and White Photography",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Looking Outward   Black and White Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/LknqbQfb87Vs7zPtrrscV57wjQFpGjNpnWJb4FgwD/XL/_WHZ9555-Pano-Edit-XL.jpg",
+    "alt": "Lone Boat - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QFpd2x4/A",
     "keywords": [
       "wayne heim",
@@ -1418,14 +1687,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/Ld6rXd7mngGwz6sBT8PDQK5nCWVtr5rgDmJLmGNg2/XL/_WHZ9555-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/Ld6rXd7mngGwz6sBT8PDQK5nCWVtr5rgDmJLmGNg2/XL/_WHZ9555-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/LqWp8SPcmS45P7xQJRZh4th4kftQJNpjV4bfJBmbT/L/_WHZ9555-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/KmWT8Wm6BL6dNvcD5CvJcTWmzZFPh98jr4LgjVpck/M/_WHZ9555-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/Lf7C2RCNGkg88Xxw9kzXpxvvbX9W5P6K7t8RjcLw7/S/_WHZ9555-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bgwcgXg",
     "title": "Below the Falls  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Below the Falls  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-bgwcgXg/3/NdXnxhqhrdrQ7KRPgxVL6shdgTVDBQ43W7D6w3f28/XL/_W3H0015-2-XL.jpg",
+    "alt": "Looking Outward   Black and White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bgwcgXg/A",
     "keywords": [
       "wayne heim",
@@ -1444,14 +1718,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-bgwcgXg/3/KmkkLWkNRMB89fqTP32MrftHBPpPWbKXxcrmjPzk3/XL/_W3H0015-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-bgwcgXg/3/KmkkLWkNRMB89fqTP32MrftHBPpPWbKXxcrmjPzk3/XL/_W3H0015-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-bgwcgXg/3/KmkkLWkNRMB89fqTP32MrftHBPpPWbKXxcrmjPzk3/XL/_W3H0015-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-bgwcgXg/3/LDsKxkNV72HS54nXN4vmGsNkgW4Gq7vvXfhhtwKvK/L/_W3H0015-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-bgwcgXg/3/Mw8pPwPLgsFBLPZNW8nkMSnPwQptSh9R2S2XTtKDp/S/_W3H0015-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qXc8XpL",
     "title": "Lynx  - Photography by Wayne Heim",
     "description": "Lynx -  the Tall Ship Lynx sails on Lake Erie in a visit to Cleveland, Ohio ©Wayne Heim",
-    "alt": "Lynx  - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/Mnp4g58vSHVbGK4wmsgZjXDrmZtVjXKSfhrmtddnp/XL/WAYNE_HEIM_810-Edit-XL.jpg",
+    "alt": "Below the Falls  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qXc8XpL/A",
     "keywords": [
       "wayne heim",
@@ -1470,14 +1749,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NcPkgcJX5WrSv4bbcDLxMnMvJTFdKZCJXQC44C6br/L/WAYNE_HEIM_810-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NF6CmfvmJfrRPvvJLHgM4NgWdcCNJ2pH4WXx4vmcN/M/WAYNE_HEIM_810-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/L9Tz6WMxp3k4s2wg2hS6N7F58whgrS7j8rT7Fdznr/S/WAYNE_HEIM_810-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WdNbPqX",
     "title": "Berea Bridge  1   Photography by Wayne Heim",
     "description": "Many arches of the Berea Bridge. ©Wayne Heim",
-    "alt": "Berea Bridge  1   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/KMb5t2pNBrKqKBtKqfrF5KBVjt8NxdVKdJKrFsDvJ/XL/_IMG0156_tonemapped-XL.jpg",
+    "alt": "Lynx  - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WdNbPqX/A",
     "keywords": [
       "wayne heim",
@@ -1496,14 +1780,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/LCP6DnrZ5ZhdwVh6jxLT99zFhT37jtZgDZktwxPmF/XL/_IMG0156_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/LCP6DnrZ5ZhdwVh6jxLT99zFhT37jtZgDZktwxPmF/XL/_IMG0156_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/L4TjMVfwtsbxhwKtF8XpxmMXzQsFJ7jSrK5crH6GZ/L/_IMG0156_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/LXr3QD2FsKqJNBqPnpgPKd96Z4drGQ6m9Bp4PNTsR/M/_IMG0156_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/MHMHfJB9DWZShXkr4vTVVhnxPtqTLGvhzMJfMkCV8/S/_IMG0156_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fxNXk2L",
     "title": "Mentor Lighthouse - Black and White Photography by Wayne Heim",
     "description": "Mentor Lighthouse - also called the West Fairport Lighthouse at the mouth of the Grand River in Ohio.©Wayne Heim",
-    "alt": "Mentor Lighthouse - Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fxNXk2L/4/K5PzdqvZnS2VSKj7bxfzVSs4R6PDRQWzkzwDQbtfL/XL/_IMG0378-XL.jpg",
+    "alt": "Berea Bridge  1   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fxNXk2L/A",
     "keywords": [
       "wayne heim",
@@ -1522,14 +1811,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fxNXk2L/4/LVX6xvMcLvf5MhFhN2JRmnjxdMhHFvmWGnCvtb2Gx/XL/_IMG0378-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fxNXk2L/4/LVX6xvMcLvf5MhFhN2JRmnjxdMhHFvmWGnCvtb2Gx/XL/_IMG0378-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fxNXk2L/4/KzkGt7FnH47dPVfNFkMt62dxzTLLz3hgb8hzdQCfb/L/_IMG0378-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fxNXk2L/4/KNNztKK5mD6pHzvFm7mbSrDhXN7RQBDBfpLCpqpPd/M/_IMG0378-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fxNXk2L/4/KPFMC56zJ4VV9SqGtDxfsBk8xKxXLv6mvTxLTCNT5/S/_IMG0378-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jn6w2tL",
     "title": "Faroe Islands 2  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Islands 2  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jn6w2tL/10/Kg9jGJVbb7K2BbD5Cc2BLd8zSdxxgPtzqf6SBMVc8/XL/_OLY8992_tonemapped-Edit-XL.jpg",
+    "alt": "Mentor Lighthouse - Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jn6w2tL/A",
     "keywords": [
       "wayne heim",
@@ -1548,14 +1842,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jn6w2tL/10/KDfB5X9L9ZjBmcwLvMBN77JCnssHNHhqjx6CFpjBw/XL/_OLY8992_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jn6w2tL/10/KDfB5X9L9ZjBmcwLvMBN77JCnssHNHhqjx6CFpjBw/XL/_OLY8992_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jn6w2tL/10/NjQGJkZkqFtn5pThVcJg4RZPWb9gZXffJCWNVFwxJ/L/_OLY8992_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jn6w2tL/10/KmH9CTDPZF4cVrdGbd68bqg4TBLDBbdSq5CTKPb2b/M/_OLY8992_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jn6w2tL/10/K5swZvBp2Xp93vJFPWk6NMgJzb8Q3JKQqFT6fjnnd/S/_OLY8992_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QXKpsCV",
     "title": "Falls Bridge    Photography by Wayne Heim",
     "description": "Observation bridge at Multnomah Falls. Columbia River Gorge. Oregon ©Wayne Heim",
-    "alt": "Falls Bridge    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QXKpsCV/3/KwSBBV5qRwh3n9w4NHWwTV6ZP6gDbdGwNxkN4jBDC/XL/_IGP4739-XL.jpg",
+    "alt": "Faroe Islands 2  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QXKpsCV/A",
     "keywords": [
       "wayne heim",
@@ -1574,14 +1873,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QXKpsCV/3/MVTmn26ntK22SxccF2tzvqZFPW6Kb5zPbxDSkGKF3/XL/_IGP4739-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QXKpsCV/3/MVTmn26ntK22SxccF2tzvqZFPW6Kb5zPbxDSkGKF3/XL/_IGP4739-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QXKpsCV/3/MVTmn26ntK22SxccF2tzvqZFPW6Kb5zPbxDSkGKF3/XL/_IGP4739-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QXKpsCV/3/L8bTKhJJ8Jmrg67ZvnM6jCBDjTFNjHNk6QpVrrPth/L/_IGP4739-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QXKpsCV/3/MMTS6hbtZWQKgjTN5SZvSxtf6TqzkZDSzPdk5Bmdk/S/_IGP4739-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7k6tvvL",
     "title": "Beached   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Beached   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/L2f8rqsrxFKvzjxvF7g7dWRC4PW4Dwcq92pcpwC2F/XL/_WHZ2313-XL.jpg",
+    "alt": "Falls Bridge    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7k6tvvL/A",
     "keywords": [
       "wayne heim",
@@ -1600,14 +1904,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/LGvgj4hXLzvm6QbGtVVxTPVj9KKMN6D9N4RsgVRhC/XL/_WHZ2313-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/LGvgj4hXLzvm6QbGtVVxTPVj9KKMN6D9N4RsgVRhC/XL/_WHZ2313-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/LGvgj4hXLzvm6QbGtVVxTPVj9KKMN6D9N4RsgVRhC/XL/_WHZ2313-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/M73BdsFzWcwBBWrFx3SmqNWs26SNkMhrvxvvLWkgL/L/_WHZ2313-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/NXq3P6g8brC3V63rG9mSCqQPCNKhx3DtGmsvk8C6s/S/_WHZ2313-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sfdNcst",
-    "title": "A",
+    "title": "Untitled",
     "description": "OLYMPUS DIGITAL CAMERA",
-    "alt": "OLYMPUS DIGITAL CAMERA",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/2/NRQzNcF6HFrWvTrf3mTFsS2x4DJT32zJL8hcMrfT9/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "alt": "Beached   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/A",
     "keywords": [
       "wayne heim",
@@ -1626,14 +1935,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/2/NXtSdV9FKtWND2LVNh296BJ7vxzxNm5z9HwFjmM4G/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/2/NXtSdV9FKtWND2LVNh296BJ7vxzxNm5z9HwFjmM4G/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/2/NDtwvJXS9kVDBhmQHVV87pMH8sP4wWDWq4nMqq49C/L/_OLY8957_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/2/LkvbDRmLgFpWGxpDLgZhNCpPFmssFQ5Cb5xhhVcmb/M/_OLY8957_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sfdNcst/2/Lp78DcnhK9LJN7XPTvP6sJPK9M22bvztd3WmjNbnm/S/_OLY8957_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cXx8mjF",
     "title": "Waterfall in Iceland  Photography by Wayne Heim",
     "description": "One of the many waterfalls in Iceland.  ©Wayne Heim",
-    "alt": "Waterfall in Iceland  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cXx8mjF/0/MVjDPgngGvPZsZHWSpMp5wGNLLW7sPrcn4FTWxndC/XL/_WHZ1840-XL.jpg",
+    "alt": "OLYMPUS DIGITAL CAMERA",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cXx8mjF/A",
     "keywords": [
       "wayne heim",
@@ -1652,14 +1966,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 62,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cXx8mjF/0/KDdXTbFTrqRPKz5rMKJ3XWChLSg5SZcQtLGVTzKDF/XL/_WHZ1840-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cXx8mjF/0/KDdXTbFTrqRPKz5rMKJ3XWChLSg5SZcQtLGVTzKDF/XL/_WHZ1840-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cXx8mjF/0/KDdXTbFTrqRPKz5rMKJ3XWChLSg5SZcQtLGVTzKDF/XL/_WHZ1840-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cXx8mjF/0/L3TzfLvPCTR4zxvBz9f9zTfvgLcQJvzDV5tFtWJBP/L/_WHZ1840-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cXx8mjF/0/NZs5VKWZRTZFPX6Bk5xTJW35tBK8QsGcDVqv5vD5m/S/_WHZ1840-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5Jcmr7n",
     "title": "Sunset on  the Hood(H)    Photography by Wayne Heim",
     "description": "A view of Mt. Hood at sunset with the lights of the snow cats on the mountain side. ©Wayne Heim",
-    "alt": "Sunset on  the Hood(H)    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-5Jcmr7n/3/NbTzvsRztvcq42ksqs8SKz2Cqf2s4GxnmZqXz7b8C/XL/_IGP5742-Edit-Edit-XL.jpg",
+    "alt": "Waterfall in Iceland  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5Jcmr7n/A",
     "keywords": [
       "wayne heim",
@@ -1678,14 +1997,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 63,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-5Jcmr7n/3/KGTq4XbmZWXGWvwBCgtK6jsHFM6pDPb9qQzKnNTbj/XL/_IGP5742-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-5Jcmr7n/3/KGTq4XbmZWXGWvwBCgtK6jsHFM6pDPb9qQzKnNTbj/XL/_IGP5742-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-5Jcmr7n/3/MGrdDPSxCSdNZmDFqV6xQ9tZGmsMdkQsmXKZQZNXP/L/_IGP5742-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-5Jcmr7n/3/K6QhXwGXDQLjFRZXG6WD2cJhwDHxBp8qqnz68XzQG/M/_IGP5742-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-5Jcmr7n/3/NJBhBbkf2n5gJGdGdJvLGsMLDThxjS7bMwpDcVWtL/S/_IGP5742-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ffMkqcf",
     "title": "Misty Waterfall   Photography by Wayne Heim",
     "description": "One of the many waterfalls in Iceland. ©Wayne Heim",
-    "alt": "Misty Waterfall   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ffMkqcf/1/L5KRSv9MhvP3BtZvjXDpVp7NGBDhS2jRh3V5gRtX9/XL/_WHZ0413-Edit-XL.jpg",
+    "alt": "Sunset on  the Hood(H)    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ffMkqcf/A",
     "keywords": [
       "wayne heim",
@@ -1704,14 +2028,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 64,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ffMkqcf/1/L2VD4tdXg8FXZ3QS2ZdbxZwnnH5JCN9QQwRKQFfQX/XL/_WHZ0413-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ffMkqcf/1/L2VD4tdXg8FXZ3QS2ZdbxZwnnH5JCN9QQwRKQFfQX/XL/_WHZ0413-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ffMkqcf/1/MLcw5KLBwv7LM5kJRnTnDCWZ7RMvPwhdpgRWmpDPw/L/_WHZ0413-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ffMkqcf/1/MK4FxS2s4Z78drNvjkbQt4HbBgrrT9Xz3P3QSfqCX/M/_WHZ0413-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ffMkqcf/1/NbK84DcXf3hn5fzFH89HfxTjvXKWzfcBGprrrXHVD/S/_WHZ0413-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kpHk9bS",
     "title": "Little Waterfall   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Iceland in the Fall.",
-    "alt": "Little Waterfall   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-kpHk9bS/6/MJwP6VLJzr2KvW4xb5JMktdS2mTCpw5JLtF64VdHp/XL/_WHZ7972_tonemapped-Edit-XL.jpg",
+    "alt": "Misty Waterfall   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kpHk9bS/A",
     "keywords": [
       "wayne heim",
@@ -1730,14 +2059,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 65,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-kpHk9bS/6/MjvVpNM4P86fRKqbCqGqdgV9CFtSPRfmC55Tq8M5z/XL/_WHZ7972_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-kpHk9bS/6/MjvVpNM4P86fRKqbCqGqdgV9CFtSPRfmC55Tq8M5z/XL/_WHZ7972_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-kpHk9bS/6/MjvVpNM4P86fRKqbCqGqdgV9CFtSPRfmC55Tq8M5z/XL/_WHZ7972_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-kpHk9bS/6/MSdX2bC8PnFDzjv28jX8GJXdfS54BGBXcsGPFCQv5/L/_WHZ7972_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-kpHk9bS/6/NJPxdzs8q6ZF27GKshZNG8ZvpzTMPqVz6JKwSPGqb/S/_WHZ7972_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bQ5rkvz",
     "title": "Faroe Waterfall   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waterfall   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/NPp9kfn6rrGctp3Sx74cvsdmnsZxpZ6cGBrP3cTtW/XL/_WHZ9144-HDR_tonemapped-Edit-XL.jpg",
+    "alt": "Little Waterfall   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bQ5rkvz/A",
     "keywords": [
       "wayne heim",
@@ -1756,14 +2090,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 66,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/M2VBv3LTW8P96QtxPNkwbX6J8vVGvTVVX3RhbqPmM/XL/_WHZ9144-HDR_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/M2VBv3LTW8P96QtxPNkwbX6J8vVGvTVVX3RhbqPmM/XL/_WHZ9144-HDR_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/M2VBv3LTW8P96QtxPNkwbX6J8vVGvTVVX3RhbqPmM/XL/_WHZ9144-HDR_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/M8kwvCwfk5CNscPHwXDShWVCBJsD6qwtkd6V96bHL/L/_WHZ9144-HDR_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/Lc2x8DHk7TWptmPH9PhDNPg2XZRWWFL2sdH69jhsd/S/_WHZ9144-HDR_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HZfr8Pp",
     "title": "Misty Waterfall 2   Photography by Wayne Heim",
     "description": "Panoramic view of one on Iceland's waterfalls. ©Wayne Heim",
-    "alt": "Misty Waterfall 2   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HZfr8Pp/0/LpPB6fncdPnMKTFcT8ZSZ2C2hMMcx6XnJ5z6Sw2Gz/XL/_WHZ1828_932-XL.jpg",
+    "alt": "Faroe Waterfall   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HZfr8Pp/A",
     "keywords": [
       "wayne heim",
@@ -1782,14 +2121,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 67,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HZfr8Pp/0/MBSfv943SWZggDQ7FL6dPqSCVdHgJ3sNXg2PLBrTr/XL/_WHZ1828_932-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HZfr8Pp/0/MBSfv943SWZggDQ7FL6dPqSCVdHgJ3sNXg2PLBrTr/XL/_WHZ1828_932-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HZfr8Pp/0/MtMzd2sWHvfjPkvtNt38ndrG9HFTQ5fn4MwtwD6Hq/L/_WHZ1828_932-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HZfr8Pp/0/LWctXrF3dnfBtwCjV8VtXxhr3R6N9pKfGMcXc7SmK/M/_WHZ1828_932-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HZfr8Pp/0/KPF8Jr9BfhdvL3v3FvmSpzxRNXspzTkxKpJpRHZn2/S/_WHZ1828_932-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-K6gmDTQ",
     "title": "Reaching for the Heavens  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Reaching for the Heavens  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-K6gmDTQ/8/LM6VX5CSf5cg53j79R3M2mWQnGphmsGRsxXJ9bxPW/XL/_WHZ8287-Edit-XL.jpg",
+    "alt": "Misty Waterfall 2   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-K6gmDTQ/A",
     "keywords": [
       "wayne heim",
@@ -1808,14 +2152,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 68,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-K6gmDTQ/8/LgV5RxgsZfL3TPbGssBbfkxDgQLh9MrMv5Mn8nX4G/XL/_WHZ8287-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-K6gmDTQ/8/LgV5RxgsZfL3TPbGssBbfkxDgQLh9MrMv5Mn8nX4G/XL/_WHZ8287-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-K6gmDTQ/8/LgV5RxgsZfL3TPbGssBbfkxDgQLh9MrMv5Mn8nX4G/XL/_WHZ8287-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-K6gmDTQ/8/Kg2Sk95M7hhnwdddN6TsDFW4Wbj9pTfRw7mTcZNdK/L/_WHZ8287-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-K6gmDTQ/8/KG3R6xkqBTrDNmKXw2NwDGppCXCvDXtcR7vgKXfxZ/S/_WHZ8287-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PTKKNJK",
     "title": "Glen Waterfall  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Glen Waterfall  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-PTKKNJK/4/NN9xSBXVhFPhG9CfPQwSswdnntkfdX6XWsHSdZJzS/XL/_W3H0276-HDR_tonemapped-XL.jpg",
+    "alt": "Reaching for the Heavens  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-PTKKNJK/A",
     "keywords": [
       "wayne heim",
@@ -1834,14 +2183,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 69,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-PTKKNJK/4/Lc2JQtKWN6m2kzFm3qPT6PjJT7WVzGzq8mVCGdgD4/XL/_W3H0276-HDR_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-PTKKNJK/4/Lc2JQtKWN6m2kzFm3qPT6PjJT7WVzGzq8mVCGdgD4/XL/_W3H0276-HDR_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-PTKKNJK/4/MKQb8wgvztf5ChxPKqB6ph9BsHXjHx3Z8bZH9jBDj/L/_W3H0276-HDR_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-PTKKNJK/4/KhHrQZt2fqw8nPgd54PFFTLkcbwV4Sdj8PVcJ8xxX/M/_W3H0276-HDR_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-PTKKNJK/4/KtmnGzpt2zTJQVJRxMGr389xFNLJtbnm7t7WhGDH7/S/_W3H0276-HDR_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LgrdsMQ",
     "title": "Rio    Black and White Photography by Wayne Heim",
     "description": "Rio de Janerio in Brazil ©Wayne Heim",
-    "alt": "Rio    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/Kg5QWwnDkbfx5rVcBScMspjQhM4L6w9HwxwRxtTtv/XL/i-LgrdsMQ-XL.jpg",
+    "alt": "Glen Waterfall  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LgrdsMQ/A",
     "keywords": [
       "wayne heim",
@@ -1860,14 +2214,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 70,
+    "src": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/L7CJMB9MHVBBCDPFFkwFZnL7ZvFfMtMNgD3pH7BHS/XL/i-LgrdsMQ-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/L7CJMB9MHVBBCDPFFkwFZnL7ZvFfMtMNgD3pH7BHS/XL/i-LgrdsMQ-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/KhkKMK76LfZ4sjttDjqcBVt5SPJ6fP2ktCBNqWK8Q/L/i-LgrdsMQ-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/Mm7TGzb2rq6zMTmmFf2GCLXgsMbnnhx8kDxGDqh9g/M/i-LgrdsMQ-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/L8mSWnJ4pKW8X4mWT4nf2Z9n3WTXFDnd3J9zWxCW8/S/i-LgrdsMQ-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HP6hJm4",
     "title": "Rocks in Fall  Photography by Wayne Heim",
     "description": "Rocks in Fall -  stream flows through downed trees and rock in Metro Park. ©Wayne Heim",
-    "alt": "Rocks in Fall  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NX86CFv22dwCxMbqtwc88kXT2vpktMp7ZvXMhHhXT/XL/i-HP6hJm4-XL.jpg",
+    "alt": "Rio    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HP6hJm4/A",
     "keywords": [
       "wayne heim",
@@ -1886,14 +2245,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 71,
+    "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/MgwSH4QV7FhZrDjnmMkzdTqd465wpZnVC3ksMnMJ2/XL/i-HP6hJm4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-HP6hJm4/4/MgwSH4QV7FhZrDjnmMkzdTqd465wpZnVC3ksMnMJ2/XL/i-HP6hJm4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NRWjg2Tc3M6HWwr8K7mxpNDWZP9JbMBCCqLCCLtnf/L/i-HP6hJm4-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NT8pkBJtPHHP3pmHrwjkzb94ZCT6RcrZ8MTpHwKxq/M/i-HP6hJm4-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-HP6hJm4/4/LtRWbwt7jM4G6dnHDq5xQ2QdVCdZhRCMFtwsvj3Jb/S/i-HP6hJm4-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6kJRDSJ",
     "title": "Seawall in Fairport.  Photography by Wayne Heim",
     "description": "Seawall in Fairport - seawall leading to the lighthouse in Fairport, Ohio ©Wayne Heim",
-    "alt": "Seawall in Fairport.  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6kJRDSJ/5/Kz9W8xSkZfZSxQJkpGdfdQ5RHPZzXRdwmZVCf6qLk/XL/_IMG0331-HDR_tonemapped-XL.jpg",
+    "alt": "Rocks in Fall  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6kJRDSJ/A",
     "keywords": [
       "wayne heim",
@@ -1912,14 +2276,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 72,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6kJRDSJ/5/Mm4x3qjckGtDDkCQCmfZWK5V5cQMv9SbPfM7NphqW/XL/_IMG0331-HDR_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6kJRDSJ/5/Mm4x3qjckGtDDkCQCmfZWK5V5cQMv9SbPfM7NphqW/XL/_IMG0331-HDR_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6kJRDSJ/5/Mm4x3qjckGtDDkCQCmfZWK5V5cQMv9SbPfM7NphqW/XL/_IMG0331-HDR_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6kJRDSJ/5/LbcGxMtRvqqWFZ6LTdLCpZZXvg3RXQhbk6KXrwxwb/L/_IMG0331-HDR_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6kJRDSJ/5/M97TtVZMGwxTfsMPV4KNKrKg8BbcXTrV7k4DDT5sm/S/_IMG0331-HDR_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sX47tNp",
     "title": "Sunset Reflections - Photography by Wayne Heim",
     "description": "Shadows of trees reflect in pond as sunset behind them. ©Wayne Heim",
-    "alt": "Sunset Reflections - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-sX47tNp/5/LDSfqQLLDwD4wrBTQptMNLvZwcHhZKcvRF34zmzJh/XL/_IMG0074-XL.jpg",
+    "alt": "Seawall in Fairport.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sX47tNp/A",
     "keywords": [
       "wayne heim",
@@ -1938,14 +2307,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 73,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-sX47tNp/5/LJtKQCmLjW2gLXJH84hCKv4K7NVKpz33v9XMnX9Df/XL/_IMG0074-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-sX47tNp/5/LJtKQCmLjW2gLXJH84hCKv4K7NVKpz33v9XMnX9Df/XL/_IMG0074-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-sX47tNp/5/LMLwc7HggCP8Q6LWnJRDvqxKQTkfXhrsK7Dp9Khhk/L/_IMG0074-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-sX47tNp/5/NFpfphdb63sqnzJmZVDzjWDFhkFTvJwTPmRZF6Zsq/M/_IMG0074-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-sX47tNp/5/NBpDHc9XL7fRzPKf7QHVTMsnd8mb9T7VTvvx3BjKP/S/_IMG0074-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6SVzMTv",
     "title": "Faroe Shelters  3   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Shelters  3   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6SVzMTv/9/K7HFfKxM8ghQNFNN88p2LKXBQrL6cFfd2W69tmfvN/XL/_WHZ9854_tonemapped-Edit-XL.jpg",
+    "alt": "Sunset Reflections - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6SVzMTv/A",
     "keywords": [
       "wayne heim",
@@ -1964,14 +2338,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 74,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6SVzMTv/9/MHcs7bjZq6N6VDZrq2w5CvXd2z2Qm2XhrK2m2V4Pc/XL/_WHZ9854_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6SVzMTv/9/MHcs7bjZq6N6VDZrq2w5CvXd2z2Qm2XhrK2m2V4Pc/XL/_WHZ9854_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6SVzMTv/9/NG6Dkx9t3jwggHJwGcVTD6xNrXMjXgnTvFXSNxSMG/L/_WHZ9854_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6SVzMTv/9/NZRZ5KMHwk628mvzRPgD6QNm8hXZXN4hnQ6FVprns/M/_WHZ9854_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6SVzMTv/9/MjWWnk472HP2fQjMGwpHwJKm5nD5rBpMGJP9rzPCh/S/_WHZ9854_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kcgmSq6",
     "title": "Mountain Lake  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
-    "alt": "Mountain Lake  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-kcgmSq6/4/NdpR5LnGNbtpJZvKtvxqQ4ddh2gQvjQv2kNjxnRnm/XL/_IGP2929-XL.jpg",
+    "alt": "Faroe Shelters  3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kcgmSq6/A",
     "keywords": [
       "wayne heim",
@@ -1990,14 +2369,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 75,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-kcgmSq6/4/LfcnS3VrpmC7CvbJHXcx6Q2QwbV5bqCm3wr2DXcbL/XL/_IGP2929-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-kcgmSq6/4/LfcnS3VrpmC7CvbJHXcx6Q2QwbV5bqCm3wr2DXcbL/XL/_IGP2929-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-kcgmSq6/4/Mrj9nBCxWZrwKMqz5DWw9ZD7SR3mrZhGMbJLmqC5W/L/_IGP2929-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-kcgmSq6/4/M9wGb5PQjVXJzzncb3jZ6qJRNcD4LXpQdcXGJXLSr/M/_IGP2929-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-kcgmSq6/4/LhV2mrm3FJpgTtpvCNSxMKX8Q4MPVK8RVS2hXNj56/S/_IGP2929-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PbBpwRz",
     "title": "Little Stream    Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Little Stream    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-PbBpwRz/4/KRMJ49b4xnHCHxVqQ7rDKQThrMBQstqnkbBHnHH6c/XL/_IMG7143-XL.jpg",
+    "alt": "Mountain Lake  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-PbBpwRz/A",
     "keywords": [
       "wayne heim",
@@ -2016,14 +2400,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 76,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-PbBpwRz/4/L9cFFn3wzX9mFmz9sgNZ2kqxFg5PJLwddwrKQbtGV/XL/_IMG7143-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-PbBpwRz/4/L9cFFn3wzX9mFmz9sgNZ2kqxFg5PJLwddwrKQbtGV/XL/_IMG7143-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-PbBpwRz/4/L9cFFn3wzX9mFmz9sgNZ2kqxFg5PJLwddwrKQbtGV/XL/_IMG7143-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-PbBpwRz/4/NRdBsKv4LR7cx6VfkthvvBBc6WTK4CRNbv2R2DVTw/L/_IMG7143-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-PbBpwRz/4/LWSrL7WRjt8pHH9gbKjz6fzSB9fszfZCKjxjdQ4dK/S/_IMG7143-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DTwrn3n",
     "title": "Side Falls    Photography by Wayne Heim",
     "description": "Small waterfalls flows into area of larger falls. ©Wayne Heim",
-    "alt": "Side Falls    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-DTwrn3n/4/NTnbZJ2c9q289WpHcFz6Jh6QRhwtmkP6B7QX4dz6L/XL/i-DTwrn3n-XL.jpg",
+    "alt": "Little Stream    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-DTwrn3n/A",
     "keywords": [
       "wayne heim",
@@ -2042,14 +2431,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 77,
+    "src": "https://photos.smugmug.com/photos/i-DTwrn3n/4/Lz73b3FCs7M6dg2vZzxPgnQrfp8N65vFcNCW8QgZN/XL/i-DTwrn3n-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-DTwrn3n/4/Lz73b3FCs7M6dg2vZzxPgnQrfp8N65vFcNCW8QgZN/XL/i-DTwrn3n-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-DTwrn3n/4/Lz73b3FCs7M6dg2vZzxPgnQrfp8N65vFcNCW8QgZN/XL/i-DTwrn3n-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-DTwrn3n/4/MCQzkTpn6xbgnrBFVX5ZzC7cfvjKjjZPTJDb6hg3D/L/i-DTwrn3n-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-DTwrn3n/4/Mx9VFbnTSktF57TGdw7wbJqhwRtFc5P9j46HbQw8H/S/i-DTwrn3n-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dkBvtw9",
     "title": "Tinkers Creek - Photography by Wayne Heim",
     "description": "SOLD - Tinkers Creek -  view of the Berea Bridge from below the falls in Berea Ohio. ©Wayne Heim Call for ordering options.",
-    "alt": "Tinkers Creek - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-dkBvtw9/7/Mbkng9tKVLc2WpQqM3gbJk2JcHKp4znpT9SN6QNS6/XL/i-dkBvtw9-XL.jpg",
+    "alt": "Side Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dkBvtw9/A",
     "keywords": [
       "wayne heim",
@@ -2068,14 +2462,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 78,
+    "src": "https://photos.smugmug.com/photos/i-dkBvtw9/7/MjJHK73fpNBxTLNfxpB9PfmTHqWCrGKsNscHpgrLS/XL/i-dkBvtw9-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-dkBvtw9/7/MjJHK73fpNBxTLNfxpB9PfmTHqWCrGKsNscHpgrLS/XL/i-dkBvtw9-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-dkBvtw9/7/LQmnStrhbMTKp97pWtXQjbGLG3KdH9PqnBDCMQGhd/L/i-dkBvtw9-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-dkBvtw9/7/KJwLbngrPsPqdFZCwVbZw2NFZsbT7hqD2gw2hLHDB/M/i-dkBvtw9-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-dkBvtw9/7/MwjtPqdNSP62GBVbX5pzhSbSvXMk6kzfMhHqpWLbh/S/i-dkBvtw9-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-d9wMKtJ",
     "title": "Rundown      Photography by Wayne Heim",
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
-    "alt": "Rundown      Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/KD2PKWn2CwGH2NpDDvRn8SVRB6rbhsCvFhHGkPPnJ/XL/P1010038-XL.jpg",
+    "alt": "Tinkers Creek - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d9wMKtJ/A",
     "keywords": [
       "wayne heim",
@@ -2094,14 +2493,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 79,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/NKZQ6RhTCD4BTMKxDqrXw97qqjBfLQkpn4GT7N8KR/XL/P1010038-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/NKZQ6RhTCD4BTMKxDqrXw97qqjBfLQkpn4GT7N8KR/XL/P1010038-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/Lm75f8nctVSjD4PCCRv43mJgK2ZbvRJV9d4MMRWxd/L/P1010038-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/Kd3XTBdv9kVv6Zg89Rjfk9vGSHrnt55jk5PXmZBwR/M/P1010038-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/LSrLs37WMgWQbWvQLhNxSXnThfgnPJDnxCmC36H2j/S/P1010038-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gHjq9S9",
     "title": "Canyon Stream   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Canyon Stream   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LRtKqMHnCJPKWDmCFgrT7T4mMgTw3bwttNGMbpJC8/XL/_W3H9702_tonemapped-XL.jpg",
+    "alt": "Rundown      Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-gHjq9S9/A",
     "keywords": [
       "wayne heim",
@@ -2120,14 +2524,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 80,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LgDQr5SnM2ZrHZkM9DDfwHMshQc4xRxhcXS4HbJkj/XL/_W3H9702_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LgDQr5SnM2ZrHZkM9DDfwHMshQc4xRxhcXS4HbJkj/XL/_W3H9702_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LgDQr5SnM2ZrHZkM9DDfwHMshQc4xRxhcXS4HbJkj/XL/_W3H9702_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/M6dkfdGjdk7BBzQgGR4N6SRQbJ3Rfp42Gf6hrTcmt/L/_W3H9702_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/MgBGh2Rcp6qtBkMsxXR9rJLdMjtWJxBC6TJscCNKg/S/_W3H9702_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6NKTKgw",
     "title": "Sunset Rays on the Village",
     "description": "Fine art landscape sunset photograph of the Faroe Islands.",
-    "alt": "Sunset Rays on the Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LvNxkG7NPgdFMbbZGLR8xtfdLjxMK9GgdWGbsksRx/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "alt": "Canyon Stream   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6NKTKgw/A",
     "keywords": [
       "wayne heim",
@@ -2146,14 +2555,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 81,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LNkpWw9W6SmS6xHWjgRjzsT66RFQ524FFFHCmtqRq/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LNkpWw9W6SmS6xHWjgRjzsT66RFQ524FFFHCmtqRq/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LTx77ZBxFgJFdvDdhMQhZmF3PPKXztqTbBn7z2wFb/L/_WHZ9486_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LFDsVXz5zJx7XZ4WvHMndVWC5gKpR7x5V4Ptrt9SB/M/_WHZ9486_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/KRZNDLSV4RFqZZtmQQ58x229CWZctWDmHT9td9HBW/S/_WHZ9486_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mspb6K6",
     "title": "Rushing Water  Black and White Photography by Wayne Heim",
     "description": "Swollen river races with water have heavy rains. ©Wayne Heimw",
-    "alt": "Rushing Water  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-mspb6K6/4/LGR79bjPWq6WjmH6BDNqCVHzqjNCn8H9SdcDk56BM/XL/i-mspb6K6-XL.jpg",
+    "alt": "Sunset Rays on the Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mspb6K6/A",
     "keywords": [
       "wayne heim",
@@ -2172,14 +2586,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 82,
+    "src": "https://photos.smugmug.com/photos/i-mspb6K6/4/MhLHX3qcp2wvfDQznQPsdLZ2kKJRp4v6CLt3Kt3KB/XL/i-mspb6K6-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-mspb6K6/4/MhLHX3qcp2wvfDQznQPsdLZ2kKJRp4v6CLt3Kt3KB/XL/i-mspb6K6-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-mspb6K6/4/NW8bvNLBX7v3tVvWnj78mNxQBpMDmWF5zGG3mFdxw/L/i-mspb6K6-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-mspb6K6/4/NXv2TzSdj9hwqBMx5qmm9W7ZVbPdPvJdXpN3TqCN7/M/i-mspb6K6-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-mspb6K6/4/Nb9p9X2DrSzjHJ45R3thKmGHvDTgm8kkwWfFgz3dF/S/i-mspb6K6-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zvSVN2x",
     "title": "Lynx in Harbor   Photography by Wayne Heim",
     "description": "Tall ship Lynx sails in to Cleveland Harbor show a great skyline behind it.  ©Wayne Heim",
-    "alt": "Lynx in Harbor   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-zvSVN2x/5/K4HfrHK9frBnp2QMXhsB2mWrJkCGpBD46JVL6Dhdr/XL/WAYNE_HEIM_235-XL.jpg",
+    "alt": "Rushing Water  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zvSVN2x/A",
     "keywords": [
       "wayne heim",
@@ -2198,14 +2617,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 83
+    "sortOrder": 83,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-zvSVN2x/5/KqNbQ2Sf6ndxGmrqDjDq48Fqw8MFZzwmSrjPSCNGW/XL/WAYNE_HEIM_235-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-zvSVN2x/5/KqNbQ2Sf6ndxGmrqDjDq48Fqw8MFZzwmSrjPSCNGW/XL/WAYNE_HEIM_235-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-zvSVN2x/5/KSmff6DNnfJV2gZXNXWhrjrtvwqXLmTkwrnTzrxnK/L/WAYNE_HEIM_235-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-zvSVN2x/5/NPpHMWqsQQgHChJXXZVMFDxFcGQQb4VHnZZ3Lbt93/M/WAYNE_HEIM_235-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-zvSVN2x/5/NBNZdNVqDJfCWS7C3JN6g8FQF78X5LK7kTNfS2q2d/S/WAYNE_HEIM_235-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N9LmP3j",
     "title": "Flags a Flying  Black and White Photography by Wayne Heim",
     "description": "Tall ship with all flags flying as it enters Cleveland  Harbor on Lake Erie.©Wayne Heim",
-    "alt": "Flags a Flying  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-N9LmP3j/4/M2ckK8wWP7WLzV4WpdmGjB9zxQZxXt4dW5h9Z5DVp/XL/WAYNE_HEIM_197-XL.jpg",
+    "alt": "Lynx in Harbor   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N9LmP3j/A",
     "keywords": [
       "wayne heim",
@@ -2224,14 +2648,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 84
+    "sortOrder": 84,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-N9LmP3j/4/KQvBwN4fpvrsRvzB37kPNS2HHz368Pgm4QHF4gMbN/XL/WAYNE_HEIM_197-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-N9LmP3j/4/KQvBwN4fpvrsRvzB37kPNS2HHz368Pgm4QHF4gMbN/XL/WAYNE_HEIM_197-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-N9LmP3j/4/Kt67XzzL8ChpchcCN6Hvjj4t7Rn8sVQDBPts6HTJ7/L/WAYNE_HEIM_197-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-N9LmP3j/4/KcnhN5Sv5qjXxKfMrMrZMTsjRTjR8fmdw5N2CGznD/M/WAYNE_HEIM_197-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-N9LmP3j/4/NV2tBDz2Bpc6mr7LM9pnFHp8p3rDHnTxTqV4wCT4f/S/WAYNE_HEIM_197-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hmB6HFt",
     "title": "Angry Waves on Ice   Photography by Wayne Heim",
     "description": "The angry sea batters the chunks of ice in the waters off Iceland.   ©Wayne Heim",
-    "alt": "Angry Waves on Ice   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/MZN9bXKXcSBxTFR4SdSbjMjHvHcgqcVXrJvTjNxcr/XL/_WHZ2830_tonemapped-XL.jpg",
+    "alt": "Flags a Flying  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hmB6HFt/A",
     "keywords": [
       "wayne heim",
@@ -2250,14 +2679,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 85,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/M77KSxtxK9q6D8rqZcf6McZ59BxL9PppmrcxZtLn5/XL/_WHZ2830_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/M77KSxtxK9q6D8rqZcf6McZ59BxL9PppmrcxZtLn5/XL/_WHZ2830_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/MkVzT5B4C8sQWdQhDzqS6zSXtJRcjGdvpQNd88c3r/L/_WHZ2830_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/KhBmv5XWtBzhH7LfGpxm6CDNPB55r8qDkrQgqvxzT/M/_WHZ2830_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/NJf6HFvrgZC9TLgtxbZM9X3qx4RGWgMfjKsGNbLMG/S/_WHZ2830_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-R5CQpXg",
     "title": "The Grand  Peak   Photography by Wayne Heim",
     "description": "The Grand  the highest  peak in the Grand Teton Mountains.  ©Wayne Heim",
-    "alt": "The Grand  Peak   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/NL2GZBRLJKdjDz8sbBXFCTmbLXTfJVHpCd6bdckGJ/XL/_WHZ7862_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Angry Waves on Ice   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-R5CQpXg/A",
     "keywords": [
       "wayne heim",
@@ -2276,14 +2710,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 86,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/LcZbsHbf5fsNQLzBHrZbhWh7RLqkgS79bsvbpTpnm/XL/_WHZ7862_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/LcZbsHbf5fsNQLzBHrZbhWh7RLqkgS79bsvbpTpnm/XL/_WHZ7862_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/LcZbsHbf5fsNQLzBHrZbhWh7RLqkgS79bsvbpTpnm/XL/_WHZ7862_tonemapped-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/KbqkdCSXH2KLPsTZddTvrVXQZDFKjNnCFKhSW8m6J/L/_WHZ7862_tonemapped-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-R5CQpXg/2/NhNm8nBJf3kPFNTfh4k4jHDWbx4tH4GxF8q6XWpDZ/S/_WHZ7862_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QZc2RsH",
     "title": "Faroe Island 3    Photography  by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Island 3    Photography  by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QZc2RsH/8/LMjN8CwBkVpmT4tG8S7vckbNMrHfmMsgDH5qPSGSp/XL/_WHZ9558-XL.jpg",
+    "alt": "The Grand  Peak   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QZc2RsH/A",
     "keywords": [
       "wayne heim",
@@ -2302,14 +2741,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 87,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QZc2RsH/8/LbVhqnWNR67XG4VMcKNs9xXffxgmgSFTR8nXZGVr5/XL/_WHZ9558-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QZc2RsH/8/LbVhqnWNR67XG4VMcKNs9xXffxgmgSFTR8nXZGVr5/XL/_WHZ9558-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QZc2RsH/8/MqZVmRdKmvJ8BVQsVc9Qf865fs2r3ZnGRv6NB8W9t/L/_WHZ9558-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QZc2RsH/8/MbMZqTJDqWxffGdDvjVfcbnHkBrMF9RzCNNSWhNLw/M/_WHZ9558-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QZc2RsH/8/MbdQNGbfFdLvhCv8qxMZXcD9w27hQJQTQHqkjJDzN/S/_WHZ9558-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-r2MwGcQ",
     "title": "Upper Mills Falls   Photography by Wayne heim",
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
-    "alt": "Upper Mills Falls   Photography by Wayne heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-r2MwGcQ/5/NWQHKwdz2kLwjHvWC2TTk6bKQX9ZtDhZzdWsXwqG8/XL/_WEH7213-XL.jpg",
+    "alt": "Faroe Island 3    Photography  by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-r2MwGcQ/A",
     "keywords": [
       "wayne heim",
@@ -2328,14 +2772,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 88
+    "sortOrder": 88,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-r2MwGcQ/5/MwDKr7N3MpzKR3gvNcg45KH4WFLTN58CSrRmbZxmT/XL/_WEH7213-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-r2MwGcQ/5/MwDKr7N3MpzKR3gvNcg45KH4WFLTN58CSrRmbZxmT/XL/_WEH7213-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-r2MwGcQ/5/L9PpNp87Sn78sBkBBVbB8jSdW5W89drHzJS7gpqcj/L/_WEH7213-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-r2MwGcQ/5/NPFKWRcwv4jjRBnhwRLZ7SGpqv2SPq4rzvLVKGfBT/M/_WEH7213-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-r2MwGcQ/5/NjL72dMGnH72sQjktvPqh7FjPx5FVrkSGHqJjzkh9/S/_WEH7213-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rQDRZP2",
     "title": "Tower Bridge - Photography by Wayne Heim",
     "description": "Tower Bridge - popular view of the Tower Bridge from across the Thames River in London, England.©Wayne Heim",
-    "alt": "Tower Bridge - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/MpCcC5HRk5V4d3Wcq7sSpzrXLjdMJj4QkTmWHCm2B/XL/IMGP3340-XL.jpg",
+    "alt": "Upper Mills Falls   Photography by Wayne heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rQDRZP2/A",
     "keywords": [
       "wayne heim",
@@ -2354,14 +2803,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 89
+    "sortOrder": 89,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/MZDPgQx4rT7SFH8kjNJf5q5CHgT25pL6BtCP42G7L/XL/IMGP3340-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/MZDPgQx4rT7SFH8kjNJf5q5CHgT25pL6BtCP42G7L/XL/IMGP3340-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/MbWSxL4rj4xRWd4b9sVNBFs3v7R6QwvcvXCNS8CPc/L/IMGP3340-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/Mr9xZxPRhxCRrBXKL7gQVnn5ZjsVkb8PZRxNBGSR5/M/IMGP3340-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-rQDRZP2/4/KjJ6bPz9ZX5mPFs7WkQwwHsS2fdML8x2bq8JBQfr9/S/IMGP3340-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kvxfbSH",
     "title": "Arms into the Sea  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Arms into the Sea  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/NNH3Kvn5ncMmdpQFJc6Krh5hRcHxs6gPCvqnBr2nN/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "alt": "Tower Bridge - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kvxfbSH/A",
     "keywords": [
       "wayne heim",
@@ -2380,14 +2834,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 90
+    "sortOrder": 90,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/Kkh5SKqtbfkFPDjQcNkWbfVzGJ38bBP6df9mFRFTG/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/Kkh5SKqtbfkFPDjQcNkWbfVzGJ38bBP6df9mFRFTG/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/LGnwz7fqL6HvxKgk9D4dnTM3gCpSMfzfxpG8LdTWv/L/_K1W2659-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/KL9JP4sq8gpzm3BmSP6gtVZxtrwBSLBZtv3C2GmG3/M/_K1W2659-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/MjD77L5Zgb8wZ9Jg2xXJhG5Tq3b65hFLRG7cL4Z7s/S/_K1W2659-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GmFFsFL",
     "title": "Dueling Falls    Photography by Wayne Heim",
     "description": "Two waterfalls flow over same rocks. . ©Wayne Heim",
-    "alt": "Dueling Falls    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/MhSp4rdkmSGQDH6Q7FnpfSCFFHdZLGsQnGGjGTNR4/XL/_IMG0137_tonemapped-XL.jpg",
+    "alt": "Arms into the Sea  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GmFFsFL/A",
     "keywords": [
       "wayne heim",
@@ -2406,14 +2865,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 91
+    "sortOrder": 91,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/NRjbN7mHtSJpMkmRqZhLM5DnscfSJvGmWHMmNGbjr/L/_IMG0137_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/NBRWLq8McGBNq4bMp8MRF7hcsCkcL37rZ5PKCnWpv/S/_IMG0137_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7VD9zVJ",
     "title": "Venice Canal - Photography by Wayne Heim",
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
-    "alt": "Venice Canal - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/MkFmkKN8wqJsfdXHFPHkrMCLJfzQtTkGxnPm7wq5c/XL/P1000873-XL.jpg",
+    "alt": "Dueling Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7VD9zVJ/A",
     "keywords": [
       "wayne heim",
@@ -2432,14 +2896,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 92
+    "sortOrder": 92,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/L2tj3sK8kjDF7Dxqp5QDFK3bzZWdqscZjbSd9VwSM/L/P1000873-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/NZF7FfMrxKfr8NntNRJmNcvWsQ73XP5jpCSnK6nDW/M/P1000873-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KDLZHH3dKDzJpRjLpnW3drTLg4C7Zpp2VHpNgkXjd/S/P1000873-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fsmXzLW",
     "title": "Venice Flowers",
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
-    "alt": "Venice Flowers",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NZ9g9x2vF5p7MBKnNKsH8MCxWG9Q6CGvJcqBnqL6R/XL/P1000824-XL.jpg",
+    "alt": "Venice Canal - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fsmXzLW/A",
     "keywords": [
       "wayne heim",
@@ -2458,14 +2927,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 93
+    "sortOrder": 93,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NMKw2LqhC7SGBFFSmJdJXs53gfnCczXGgGcj8P3dr/XL/P1000824-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NMKw2LqhC7SGBFFSmJdJXs53gfnCczXGgGcj8P3dr/XL/P1000824-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NMKw2LqhC7SGBFFSmJdJXs53gfnCczXGgGcj8P3dr/XL/P1000824-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/LvXZqzKVz44QknjDfn76W7mGQ2mb4xNjbMPpC4KZ6/L/P1000824-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/LqvCdXCvBXcgmbQDGRzbr96qpBGsGvdD8fCNcvPXb/S/P1000824-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Jhzph7p",
     "title": "Grand Canyon of the East.  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Grand Canyon of the East.  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-Jhzph7p/3/L7J5FRK9CWh8W3WQdt6gQJKtzH82h8ZR7sdCPsjkg/XL/16%2520x%252024-XL.jpg",
+    "alt": "Venice Flowers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Jhzph7p/A",
     "keywords": [
       "wayne heim",
@@ -2484,14 +2958,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 94
+    "sortOrder": 94,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-Jhzph7p/3/LqZ3Mn3mVdXh3XzVp56fkGdKSqpDPPzv7mt425jHW/XL/16%20x%2024-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-Jhzph7p/3/LqZ3Mn3mVdXh3XzVp56fkGdKSqpDPPzv7mt425jHW/XL/16%20x%2024-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-Jhzph7p/3/MF8G9cBBKnbPLSnfcvBs5Q2HHzpCnmhLQPXxG7DDJ/L/16%20x%2024-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-Jhzph7p/3/LkcVhCmSHwL2sM52bqMVdjjNbXDTtKMqJsCRs6d2J/M/16%20x%2024-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-Jhzph7p/3/KjRrqNs7QDkxHDxjVpPPcwBp5DhchDXCv6Pj7TsbK/S/16%20x%2024-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-D3vBXTM",
     "title": "Shadow Reflections     Photography by Wayne Heim",
     "description": "Waning  sunset casts reflection of trees in the water.  ©Wayne Heim",
-    "alt": "Shadow Reflections     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-D3vBXTM/5/MKvpPkj4DK9dZcbLczzMS7DrCQFWhKH3Bprw6f48f/XL/_IMG0097-XL.jpg",
+    "alt": "Grand Canyon of the East.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-D3vBXTM/A",
     "keywords": [
       "wayne heim",
@@ -2510,14 +2989,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 95
+    "sortOrder": 95,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-D3vBXTM/5/MWJhLxtNF9rrMVZHdPW4jN8VQpDw55BpdjmQQLKBm/XL/_IMG0097-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-D3vBXTM/5/MWJhLxtNF9rrMVZHdPW4jN8VQpDw55BpdjmQQLKBm/XL/_IMG0097-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-D3vBXTM/5/MWJhLxtNF9rrMVZHdPW4jN8VQpDw55BpdjmQQLKBm/XL/_IMG0097-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-D3vBXTM/5/LNVKwVFf2cRqmGMF5t6Cp9xJSGKWC7MT2GzWbf7tR/L/_IMG0097-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-D3vBXTM/5/KNdP22bSrh68rSLcFS2nf6RdTNCPgRzr8bKc3qwrQ/S/_IMG0097-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N3tD58d",
     "title": "Flowing to the Sun in Iceland   Photography by Wayne Heim",
     "description": "Water flowing out to sea in the sunset scene of Iceland.  ©Wayne Heim",
-    "alt": "Flowing to the Sun in Iceland   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3tD58d/0/Ln3LPB47rXLV2SfMztwhxBXQfRxpVKLnrSvqktkBD/XL/_WHZ1261-HDR-XL.jpg",
+    "alt": "Shadow Reflections     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3tD58d/A",
     "keywords": [
       "wayne heim",
@@ -2538,14 +3022,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 96
+    "sortOrder": 96,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3tD58d/0/Mc3sQ4kSwr5RL3ZpVPw5rSzxWCFzmh48Qd4j9JPt6/XL/_WHZ1261-HDR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3tD58d/0/Mc3sQ4kSwr5RL3ZpVPw5rSzxWCFzmh48Qd4j9JPt6/XL/_WHZ1261-HDR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3tD58d/0/L7NjnQRwZjZfMq4Pk6bvMj8jMN59cFBMrcj8C2g3X/L/_WHZ1261-HDR-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3tD58d/0/KDdjHpWT6qwx2Z5kgxcwRbV5Mb59gbTGN3wcmLJtp/M/_WHZ1261-HDR-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3tD58d/0/NCwZLQ2sQ57bS2QVt94vx8ZWzgkCnNgDTrVZVkwNP/S/_WHZ1261-HDR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wQbPWRb",
     "title": "Out of the Hillside   Photography by Wayne Heim",
     "description": "Waterfall appears to flow out of the hillside in Iceland.  ©Wayne Heim",
-    "alt": "Out of the Hillside   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wQbPWRb/1/Kb4NRZCCR35Vg3NQvnhFSJtMkVB2zVMFhnZbWKWBL/XL/_WHZ0330_tonemapped-Edit-XL.jpg",
+    "alt": "Flowing to the Sun in Iceland   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wQbPWRb/A",
     "keywords": [
       "wayne heim",
@@ -2566,14 +3055,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 97
+    "sortOrder": 97,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wQbPWRb/1/MTP8ZTwFsbFxXJVXfntPKrdD9Pz8j2jq3N33Cvdzb/XL/_WHZ0330_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wQbPWRb/1/MTP8ZTwFsbFxXJVXfntPKrdD9Pz8j2jq3N33Cvdzb/XL/_WHZ0330_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wQbPWRb/1/LWJ9wwWXGDsZDBMnhWJRXBZktjx9SxmcNxndcXfDS/L/_WHZ0330_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wQbPWRb/1/LXj84RPBxzCwBcv8WfFmzTZ6jRfB7DtcBKhJx45KK/M/_WHZ0330_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wQbPWRb/1/Lq3M9FTWQfjcM7j3nsN8c3KM7GvNb4BNhcF7xqmWS/S/_WHZ0330_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n22Pjjd",
     "title": "Waterfall to the Sea  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Waterfall to the Sea  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n22Pjjd/8/LdCNDJcFP563cL54Q2qFhzdsVXMCw74fDdPhtP9sD/XL/_WHZ8471-Edit-2-XL.jpg",
+    "alt": "Out of the Hillside   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-n22Pjjd/A",
     "keywords": [
       "wayne heim",
@@ -2594,14 +3088,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 98
+    "sortOrder": 98,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n22Pjjd/8/MFqckzhVfWCksHhkh5zBrtRfxJCQVqGTjVtKmx895/XL/_WHZ8471-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n22Pjjd/8/MFqckzhVfWCksHhkh5zBrtRfxJCQVqGTjVtKmx895/XL/_WHZ8471-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n22Pjjd/8/MFqckzhVfWCksHhkh5zBrtRfxJCQVqGTjVtKmx895/XL/_WHZ8471-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n22Pjjd/8/KscKGgLM4zM2Sqx6zSgtSDwKhK8tC354KL5QLKg3j/L/_WHZ8471-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n22Pjjd/8/M5zSDRwqtLhht4bK7h2kvXRC8S5KNsbpMbhNfJM4c/S/_WHZ8471-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-388rDcL",
     "title": "Out of the Rocks   Photography by Wayne Heim",
     "description": "Waterfall in Iceland flows out of the rocks on  mountain side.",
-    "alt": "Out of the Rocks   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-388rDcL/0/K6MVG8t25NVxvmVR5F35PN4Vn4c8Drk5XRvN9VW6V/XL/_WHK3632_tonemapped-XL.jpg",
+    "alt": "Waterfall to the Sea  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-388rDcL/A",
     "keywords": [
       "wayne heim",
@@ -2622,14 +3121,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 99
+    "sortOrder": 99,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-388rDcL/0/NRjHSp3tX3XcxQZk8xntwdW2JhxQdDJjFpcFvV6wc/XL/_WHK3632_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-388rDcL/0/NRjHSp3tX3XcxQZk8xntwdW2JhxQdDJjFpcFvV6wc/XL/_WHK3632_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-388rDcL/0/NRjHSp3tX3XcxQZk8xntwdW2JhxQdDJjFpcFvV6wc/XL/_WHK3632_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-388rDcL/0/NPz7cjxBQ2LnVZcrVrZkfQrM83z8BBRjn432JcTDV/L/_WHK3632_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-388rDcL/0/M6rbJJQR9S87DXTRjVVk36ZDHsjn3bPX2KxJQZXmv/S/_WHK3632_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xbVp2GS",
     "title": "Ravine Waterfalls   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Ravine Waterfalls   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/MwhPGGhLFsLR5pVBLcDPr2RqV5sJKx548Sbx29rhw/XL/_W3H9740-XL.jpg",
+    "alt": "Out of the Rocks   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xbVp2GS/A",
     "keywords": [
       "wayne heim",
@@ -2650,14 +3154,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 100
+    "sortOrder": 100,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/KLKrfzKHC9XQgnJZm8QPMFXW2XZkj8vcN53G9bPzp/XL/_W3H9740-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/KLKrfzKHC9XQgnJZm8QPMFXW2XZkj8vcN53G9bPzp/XL/_W3H9740-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/KLKrfzKHC9XQgnJZm8QPMFXW2XZkj8vcN53G9bPzp/XL/_W3H9740-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/NgV7NwNMKjG8G5Fb2dgFssbn3jK7RZSrkRxFdGSrS/L/_W3H9740-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/MRvxfHJ5GMb7rpSpbP7hWtZkFHgBZgwBTmFNB6vwM/S/_W3H9740-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LDhHKV5",
     "title": "Watkins Peaceful  Falls . Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Watkins Peaceful  Falls . Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-LDhHKV5/5/NQCLX8ghsMBRVVsZk3WsCGFnXBT6mGw8Pqk8cXdVB/XL/_W3H0260-XL.jpg",
+    "alt": "Ravine Waterfalls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LDhHKV5/A",
     "keywords": [
       "wayne heim",
@@ -2678,14 +3187,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 101
+    "sortOrder": 101,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-LDhHKV5/5/NgLV6m5TzP9FdVpj5LGzjHKjcXFd9dj6kxvJVdD6v/XL/_W3H0260-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-LDhHKV5/5/NgLV6m5TzP9FdVpj5LGzjHKjcXFd9dj6kxvJVdD6v/XL/_W3H0260-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-LDhHKV5/5/LkgCvTxj5qfGGSFMFTVNM565MpMWpqXVHXtNnWR3R/L/_W3H0260-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-LDhHKV5/5/M7T8gMK2fn8fTg4M3cGz8FsWmNNbQqScm9qQ5wrxp/M/_W3H0260-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-LDhHKV5/5/LhgK5MXFRKQxkw42Wb4XqQVkjz8979DwGjSnTvngV/S/_W3H0260-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Cpxtcp3",
     "title": "Big Splash in Iceland    Photography by Wayne Heim",
     "description": "Waves crash against the rocks on the coast of Iceland ©Wayne Heim",
-    "alt": "Big Splash in Iceland    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Cpxtcp3/1/MhtP6krmK9rWmQv57ndJhRrBP8Hm2DStxQP3XhG5d/XL/_OLY8581-Edit-XL.jpg",
+    "alt": "Watkins Peaceful  Falls . Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Cpxtcp3/A",
     "keywords": [
       "wayne heim",
@@ -2706,14 +3220,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 102
+    "sortOrder": 102,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Cpxtcp3/1/MSnG7rntSdHTD5d6k6zzqR8WGV7NVZh4WRHkTbRpn/XL/_OLY8581-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Cpxtcp3/1/MSnG7rntSdHTD5d6k6zzqR8WGV7NVZh4WRHkTbRpn/XL/_OLY8581-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Cpxtcp3/1/NQ3J7f82LGg2rz3jkvtPSj5nDkz6MLZWTXZg4p9MN/L/_OLY8581-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Cpxtcp3/1/LPn5VjdCqZLDp4thnr9RSprdztVHv4zkMQR8Z7bvF/M/_OLY8581-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Cpxtcp3/1/LrfVmDbTLwXBB6B6cPpBzn4FpVjrSmZW5JsFmZBXz/S/_OLY8581-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kqQ26Rw",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KL2ZM37TWfGXZk5TpMSWc2Z63x74nG44jb7R7FkcS/XL/_ANA1161-XL.jpg",
+    "alt": "Big Splash in Iceland    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-kqQ26Rw/A",
     "keywords": [
       "wayne heim",
@@ -2734,14 +3253,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 103
+    "sortOrder": 103,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KQJFznnbbJjrLm6s9nvFdjJvvZNJHPn8bMxgtK9Mh/XL/_ANA1161-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KQJFznnbbJjrLm6s9nvFdjJvvZNJHPn8bMxgtK9Mh/XL/_ANA1161-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/KQJFznnbbJjrLm6s9nvFdjJvvZNJHPn8bMxgtK9Mh/XL/_ANA1161-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/MP4WqwR7qPGzGXTVtLvxXmxjDGB53VVrg27sVHNQn/L/_ANA1161-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-kqQ26Rw/1/LLNtfQ5dgGBHrS5xGPGGd27NcjHzkDGkTr3mmNTtj/S/_ANA1161-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8hzdpxL",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/LMzqW4nNjnQX6K4QBG66NTdQcRpd57288H96GgC2z/XL/_ANA1162-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8hzdpxL/A",
     "keywords": [
       "wayne heim",
@@ -2762,14 +3286,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 104
+    "sortOrder": 104,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/Lk4rQNLGmhsSDP743qKRNPvF3dsRsGQdR6W2VrpRT/XL/_ANA1162-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/Lk4rQNLGmhsSDP743qKRNPvF3dsRsGQdR6W2VrpRT/XL/_ANA1162-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/Lk4rQNLGmhsSDP743qKRNPvF3dsRsGQdR6W2VrpRT/XL/_ANA1162-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/NfCLj43LxpVsS7rVvRmhXQZfZcV855pJw4JdFxKpj/L/_ANA1162-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-8hzdpxL/3/KFkBfRRrrxmXGmH2zVk8sdLX8M5v34mVnr8kJcDrw/S/_ANA1162-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Fr454qG",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Fr454qG/1/LhB3CSH4qvQpHkv6csvJQmrpzK6bfDDjtsBXMKhNW/XL/_ANA1064-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Fr454qG/A",
     "keywords": [
       "wayne heim",
@@ -2790,14 +3319,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 105
+    "sortOrder": 105,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Fr454qG/1/L5jJx3rvDZ2CjshgZ5td2V7bjvvRBwP6ptrVNPWDJ/XL/_ANA1064-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Fr454qG/1/L5jJx3rvDZ2CjshgZ5td2V7bjvvRBwP6ptrVNPWDJ/XL/_ANA1064-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Fr454qG/1/L5jJx3rvDZ2CjshgZ5td2V7bjvvRBwP6ptrVNPWDJ/XL/_ANA1064-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Fr454qG/1/MzcvBhbq5g7TKg6gVkqWb7mV6WLqRjW7knnkh5Hq7/L/_ANA1064-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-Fr454qG/1/LpW6xvhSTsgVm6qc5hNxF6XGG595Xs8Hsgd7rSdrw/S/_ANA1064-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rm2GNVm",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/KLfbc35XPKN5mkwKtZ5QpqDddjwQD55cxrFZHRL3c/XL/_ANA1156-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rm2GNVm/A",
     "keywords": [
       "wayne heim",
@@ -2818,14 +3352,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 106
+    "sortOrder": 106,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/NdSmTXLJQCQB88TGBZcft2f2NxhD3jTPcqmR2dDCc/XL/_ANA1156-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/NdSmTXLJQCQB88TGBZcft2f2NxhD3jTPcqmR2dDCc/XL/_ANA1156-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/M9bd55ZHcSx4gNrmrzJ67jfBhqWG4xqgMBbtxNWwn/L/_ANA1156-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/Ng8xmX2fPR5RhK3BwCv5hqBZXhg53ZnrqVWnmVH4H/M/_ANA1156-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-rm2GNVm/2/MVhN8bjTKFmmCxQKLntghWVW43MTrsCWmhcKbkq2v/S/_ANA1156-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NGqssGX",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NGqssGX/2/NBPp2L9cPjR3XKh6rBqHLzBP8Wt8WLNfFd22ZVN7j/XL/_ANA1162-Edit-2-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NGqssGX/A",
     "keywords": [
       "wayne heim",
@@ -2846,14 +3385,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 107
+    "sortOrder": 107,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NGqssGX/2/KW3bMNXBSGfx7tvZqnH36XkRMKCQWJdbqH92mgF8Q/XL/_ANA1162-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NGqssGX/2/KW3bMNXBSGfx7tvZqnH36XkRMKCQWJdbqH92mgF8Q/XL/_ANA1162-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NGqssGX/2/KW3bMNXBSGfx7tvZqnH36XkRMKCQWJdbqH92mgF8Q/XL/_ANA1162-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NGqssGX/2/KJdPG9XSKKPk6qXPxBcvv8v6gTKcdWZhd5sGLQswc/L/_ANA1162-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-NGqssGX/2/L3tRC4JG6ngH9WQ42z3339VxDs2zjFb4j6GSqDW9Q/S/_ANA1162-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-S5VXSLg",
     "title": "Canyon Walk  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Canyon Walk  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-S5VXSLg/3/LrtMRHCPWZJFssf8ksD9KZNvvsBqLkG7xRRrWD8jF/XL/_W3H9773-2-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-S5VXSLg/A",
     "keywords": [
       "wayne heim",
@@ -2874,14 +3418,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 108
+    "sortOrder": 108,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-S5VXSLg/3/KSH2dD7B7xxFdzQkTrCfGzR7CZg657636zpBGJKzX/XL/_W3H9773-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-S5VXSLg/3/KSH2dD7B7xxFdzQkTrCfGzR7CZg657636zpBGJKzX/XL/_W3H9773-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-S5VXSLg/3/MgPQ2VS83NwwHXb8c8W95GDq3wD6vnPKMBx5PC2s8/L/_W3H9773-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-S5VXSLg/3/LDFNf8WxRgbpHbLWwhsrRfhFSF3QM4CJ8xsvGsHbz/M/_W3H9773-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-S5VXSLg/3/NbHcnb5jFBzt2dmn74jgDkSfkK9TW2WfhJ78tkgFr/S/_W3H9773-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nfC5sqV",
     "title": "Dueling Falls.  Photography by Wayne Heim",
     "description": "Dueling Falls -  waterfalls on Chagrin River ©Wayne Heim",
-    "alt": "Dueling Falls.  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-nfC5sqV/3/KD4ZzcZt6d5sLpt44G3rfS2w3fDBHt636Pnz22FTV/XL/i-nfC5sqV-XL.jpg",
+    "alt": "Canyon Walk  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nfC5sqV/A",
     "keywords": [
       "wayne heim",
@@ -2902,14 +3451,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 109
+    "sortOrder": 109,
+    "src": "https://photos.smugmug.com/photos/i-nfC5sqV/3/KHKJPgB9VVKMJxW4DWdnqDTj2gMHvrmShK5MH2VXM/XL/i-nfC5sqV-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-nfC5sqV/3/KHKJPgB9VVKMJxW4DWdnqDTj2gMHvrmShK5MH2VXM/XL/i-nfC5sqV-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-nfC5sqV/3/KHKJPgB9VVKMJxW4DWdnqDTj2gMHvrmShK5MH2VXM/XL/i-nfC5sqV-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-nfC5sqV/3/MvzPkXGkZrZrQGgzjxBjzTjD8KPxk26khNVgNwxQX/L/i-nfC5sqV-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-nfC5sqV/3/KbWF7pGQG2QCNSdpRJnCWRJ7PxD8rPZnbvDkGFqNs/S/i-nfC5sqV-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-J9MbKXc",
     "title": "Rushing Falls - Black & White Photography by Wayne Heim",
     "description": "Rushing Falls -  rain swollen stream produces rushing falls.©Wayne Heim",
-    "alt": "Rushing Falls - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-J9MbKXc/4/MpcHMsmCPBgvXWhNzZbDpv4Rx63VrPpt25FxFJLpz/XL/_IMG0184_tonemapped-XL.jpg",
+    "alt": "Dueling Falls.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-J9MbKXc/A",
     "keywords": [
       "wayne heim",
@@ -2930,14 +3484,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 110,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-J9MbKXc/4/NRCXdFMQzkmPQWXZCmSS8Sm52wvfbQNGwFC3kfGMk/XL/_IMG0184_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-J9MbKXc/4/NRCXdFMQzkmPQWXZCmSS8Sm52wvfbQNGwFC3kfGMk/XL/_IMG0184_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-J9MbKXc/4/KhK6fcgMvFCkB5j2w63RJnttfV39JLWcPSvttVqRn/L/_IMG0184_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-J9MbKXc/4/KZSHTDNR3trGxBsmhnPJ6bvpHsrrXJVV8RrBm653D/M/_IMG0184_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-J9MbKXc/4/MBwd4p27w3qnfJcr3VHvZSPNqvJDBZrGRDGMX22x9/S/_IMG0184_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-crsCCbk",
     "title": "Dueling Falls 2   Photography by Wayne Heim",
     "description": "Dueling Waterfalls created by slab rock in the middle. Another view of the Chagrin River in Ohio . ©Wayne Heim",
-    "alt": "Dueling Falls 2   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-crsCCbk/5/MN7SNHtXWkbT2SmD3PVkZJ7rP5HPL7xtrWGSw3k3v/XL/_IMG0281_tinkers%2520creek%2520falls-XL.jpg",
+    "alt": "Rushing Falls - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-crsCCbk/A",
     "keywords": [
       "wayne heim",
@@ -2958,14 +3517,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 111
+    "sortOrder": 111,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-crsCCbk/5/NdS9pFs88mNnZsWg4XX27Ms76rsMWGxdhVtLLf96L/XL/_IMG0281_tinkers%20creek%20falls-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-crsCCbk/5/NdS9pFs88mNnZsWg4XX27Ms76rsMWGxdhVtLLf96L/XL/_IMG0281_tinkers%20creek%20falls-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-crsCCbk/5/L4rqkLNsgqvwGLhqLXsZtSpnFcvbWS9FxQvC6B4Rm/L/_IMG0281_tinkers%20creek%20falls-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-crsCCbk/5/MfzjgWZ7RK69rmBnpcrNSdjDS9kr7tDSwFdLWP7bb/M/_IMG0281_tinkers%20creek%20falls-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-crsCCbk/5/MKjBVhdczBCrhxggtcH3fXkbFNpXq9g6HN5TLgBSF/S/_IMG0281_tinkers%20creek%20falls-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nVCwPRj",
     "title": "Rushing Berea Falls    Photography by Wayne Heim",
     "description": "Little falls rush over the rocks in the river in Berea Metro Parks.  ©Wayne Heim",
-    "alt": "Rushing Berea Falls    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-nVCwPRj/4/LRfL439gk2wHvJG3drk7gmJcS2tvzmFFDbvPDzfCd/XL/_WHZ6381x2-2-XL.jpg",
+    "alt": "Dueling Falls 2   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-nVCwPRj/A",
     "keywords": [
       "wayne heim",
@@ -2986,14 +3550,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 112
+    "sortOrder": 112,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-nVCwPRj/4/KnQGNmbPND8ZRRXk8KgZ7VMqHqBW32rCHsvTnZn4j/XL/_WHZ6381x2-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-nVCwPRj/4/KnQGNmbPND8ZRRXk8KgZ7VMqHqBW32rCHsvTnZn4j/XL/_WHZ6381x2-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-nVCwPRj/4/KnQGNmbPND8ZRRXk8KgZ7VMqHqBW32rCHsvTnZn4j/XL/_WHZ6381x2-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-nVCwPRj/4/NZ2ChW9jcW4NHFNj3CHmZ4GmPkkdtkGZNcWqQ8T5P/L/_WHZ6381x2-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-nVCwPRj/4/MD7nBGfkhdGdb54PRCcMSXWjBfqwz7TDZpMShvKvH/S/_WHZ6381x2-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qBQrF2V",
     "title": "Paradise. Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Paradise. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qBQrF2V/5/K8f3pcpHXZSGb8f4mXrPM98TddBKdjVqvScgwHgLq/XL/_W3H9903-Edit-XL.jpg",
+    "alt": "Rushing Berea Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qBQrF2V/A",
     "keywords": [
       "wayne heim",
@@ -3014,14 +3583,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 113
+    "sortOrder": 113,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qBQrF2V/5/MJmsBPkrG9KMQzjkxkGNvXjBfvMKGbzz6zpv2KnJL/XL/_W3H9903-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qBQrF2V/5/MJmsBPkrG9KMQzjkxkGNvXjBfvMKGbzz6zpv2KnJL/XL/_W3H9903-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qBQrF2V/5/MJmsBPkrG9KMQzjkxkGNvXjBfvMKGbzz6zpv2KnJL/XL/_W3H9903-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qBQrF2V/5/LqFKjkRkxJb9CkQ83C5XnV8sF6zrpgzfmPMfWDx5h/L/_W3H9903-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-qBQrF2V/5/KpswGq23p6sDMQQfBtTQbDcGRTTQj5SZpFj62XK9X/S/_W3H9903-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FH9Hz8S",
     "title": "Rushing Rapids. Photography by Wayne Heim",
     "description": "Rushing Rapids-  Churning water of rapids  ©Wayne Heim",
-    "alt": "Rushing Rapids. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-FH9Hz8S/3/LkBtXKwdzFMdm793CLhQkcDHJzgv9PKxQVPLQQLs2/XL/i-FH9Hz8S-XL.jpg",
+    "alt": "Paradise. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-FH9Hz8S/A",
     "keywords": [
       "wayne heim",
@@ -3042,14 +3616,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 114
+    "sortOrder": 114,
+    "src": "https://photos.smugmug.com/photos/i-FH9Hz8S/3/KfNMvTgbNgxxdS3Zvgwpx29g9K4JsKhxn68hJQjhn/XL/i-FH9Hz8S-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-FH9Hz8S/3/KfNMvTgbNgxxdS3Zvgwpx29g9K4JsKhxn68hJQjhn/XL/i-FH9Hz8S-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-FH9Hz8S/3/KfNMvTgbNgxxdS3Zvgwpx29g9K4JsKhxn68hJQjhn/XL/i-FH9Hz8S-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-FH9Hz8S/3/MnBcnMD8QgSjBbxzhJNBCH3Q4pk7grFJS348dmFCG/L/i-FH9Hz8S-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-FH9Hz8S/3/MHGWkKqxxHzc8FbMFMKMsd8xb5nSd5qTssBq9GPrK/S/i-FH9Hz8S-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7zGDNJf",
     "title": "Mount Hood at Sunset  Photo by Wayne Heim",
     "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
-    "alt": "Mount Hood at Sunset  Photo by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/Ls837gwrfs643XVhF4QQjZNckBNdBNWwSRBh2sxLQ/XL/_IGP5748-XL.jpg",
+    "alt": "Rushing Rapids. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7zGDNJf/A",
     "keywords": [
       "wayne heim",
@@ -3070,14 +3649,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 115
+    "sortOrder": 115,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/K2fPCN3r4834b9KP8xXC6cW7Z6jwxVM983kh42f5j/L/_IGP5748-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/KD2T3DV4wdnXMLzHWRwGrBFLHB25LjCNH6tLTn6mM/S/_IGP5748-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8tvnHvW",
     "title": "Green Lagoon  Photography by Wayne Heim",
     "description": "Green Lagoon, quiet secluded lagoon in wooded area of Smokie Mountains ©Wayne Heim",
-    "alt": "Green Lagoon  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/Mdt8qbBsKr48T4DDXjF86h42bp63bVqZRk3VPW56N/XL/_IGP2186-XL.jpg",
+    "alt": "Mount Hood at Sunset  Photo by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8tvnHvW/A",
     "keywords": [
       "wayne heim",
@@ -3098,14 +3682,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 116
+    "sortOrder": 116,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/NhrftR6ChN9tqr4j2vRhBdZTs7w2fBdj6dH2jgpCb/XL/_IGP2186-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/NhrftR6ChN9tqr4j2vRhBdZTs7w2fBdj6dH2jgpCb/XL/_IGP2186-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/K5FrFZvRWKXC4rmRt4H9jrqT4n8xkCshLFfZ45CpT/L/_IGP2186-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/KzSBmgm3KXLtb4mVWrx2SD2MJG89gwGkb32dbSDj3/M/_IGP2186-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/KDTK5x7HBtNSG8BVcsZS8LJ7gD6tFsZW5RLdhHtpb/S/_IGP2186-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QGSJxwc",
     "title": "Watkins Glen Canyon. Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Watkins Glen Canyon. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/KNbX4XBTBgkps5L8Qr32K48f4KMnjNJkVbVkHsnQG/XL/_W3H9878-Edit-XL.jpg",
+    "alt": "Green Lagoon  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QGSJxwc/A",
     "keywords": [
       "wayne heim",
@@ -3126,14 +3715,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 117
+    "sortOrder": 117,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/Mq5gFwMvhPQmcZkKt9fFDKsSRjfjmq8Gjd8MqRbqD/XL/_W3H9878-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/Mq5gFwMvhPQmcZkKt9fFDKsSRjfjmq8Gjd8MqRbqD/XL/_W3H9878-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/Mq5gFwMvhPQmcZkKt9fFDKsSRjfjmq8Gjd8MqRbqD/XL/_W3H9878-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/MPM2W4t5KJ5t2DsL8LKrPXCCt3s2rHWcxDcFhPHsv/L/_W3H9878-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/LgrPPtVtFMtR5CK3QL6zR8jN4tSq6BtnLTVPJgQJm/S/_W3H9878-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZzfQpTX",
     "title": "Breakers  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Breakers  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/KM3m6BD48mVD3bqZkfSGJ88F9Sk68Nh27gdKLXZLL/XL/_WHZ2406-XL.jpg",
+    "alt": "Watkins Glen Canyon. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZzfQpTX/A",
     "keywords": [
       "wayne heim",
@@ -3154,14 +3748,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 118
+    "sortOrder": 118,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/Kngk7C6PTMwQsQ6Bn5vGWbpLXj4CCnPP9whCZSs8M/XL/_WHZ2406-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/Kngk7C6PTMwQsQ6Bn5vGWbpLXj4CCnPP9whCZSs8M/XL/_WHZ2406-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/NFcqX9WCQfZ2BmVG9sm4Ggd73nRbgrgjTGHggcmPP/L/_WHZ2406-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/Lm6M9bmsNdhvBd4bQX25vFnvPXrLsrxTv5sCDzf4J/M/_WHZ2406-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/K7WKZsQH3x3qMRLprPGQFdgqj57CxBTZPpvJWLNL4/S/_WHZ2406-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZPSdpnH",
     "title": "St John's Lighthouse  Photography by Wayne Heim",
     "description": "A view of St John's lighthouse in Newfoundland. ©Wayne Heim",
-    "alt": "St John's Lighthouse  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZPSdpnH/1/Mt4n5T339FFRbNf9kjwJNrHC5mSKcmqSH9X5RBgPm/XL/_WHZ2894_tonemapped-XL.jpg",
+    "alt": "Breakers  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZPSdpnH/A",
     "keywords": [
       "wayne heim",
@@ -3182,14 +3781,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 119
+    "sortOrder": 119,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZPSdpnH/1/MfphkwbpNJzx3zp6qbscmFfFxqNMMqBRKXKQKhXbS/XL/_WHZ2894_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZPSdpnH/1/MfphkwbpNJzx3zp6qbscmFfFxqNMMqBRKXKQKhXbS/XL/_WHZ2894_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZPSdpnH/1/MfphkwbpNJzx3zp6qbscmFfFxqNMMqBRKXKQKhXbS/XL/_WHZ2894_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZPSdpnH/1/Mm2NTFzJHvGDXGrqTpxMPXfcZf78NzvJXrj88bmDL/L/_WHZ2894_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZPSdpnH/1/LDmTc4KdDpFMjJCbdcZQqs9nCJnL5fSs3z9WFtfKZ/S/_WHZ2894_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-X35gPrM",
     "title": "Canal Boat   Photography by Wayne Heim",
     "description": "Fine art landscape & architectural photography of the Alps, Venice, Murano and Burano, Italy.",
-    "alt": "Canal Boat   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-X35gPrM/3/NDqjZDPkpGcS7d3TLhL4ZS6F2mQZhZvskd9sCjLVZ/XL/P1010046-XL.jpg",
+    "alt": "St John's Lighthouse  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-X35gPrM/A",
     "keywords": [
       "wayne heim",
@@ -3210,14 +3814,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 120
+    "sortOrder": 120,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-X35gPrM/3/KVjNrCsk9JgCc68cfK6sLj6M7J3Tgx2N8HsP6w3CK/XL/P1010046-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-X35gPrM/3/KVjNrCsk9JgCc68cfK6sLj6M7J3Tgx2N8HsP6w3CK/XL/P1010046-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-X35gPrM/3/KVjNrCsk9JgCc68cfK6sLj6M7J3Tgx2N8HsP6w3CK/XL/P1010046-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-X35gPrM/3/KjK9KPxh7nbWtzQhCckwbN6d5ZtRNb2L3kSVfz48x/L/P1010046-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-X35gPrM/3/NPhdvVJ67dX6xF4rG65S6RQMv7wCjm6x5vj8vkzPk/S/P1010046-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CGFb5Cs",
     "title": "Getting Closer   Photography by Wayne Heim",
     "description": "Fine art landscape photography of a storm rolling in over Lake Erie in  Conneaut, Ohio.",
-    "alt": "Getting Closer   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Storm/i-CGFb5Cs/5/KDbTQ3HRBTtGVW8mN8PbRtqqsWWp8k4prfM9S8XQZ/XL/Lightning%2520blend-XL.jpg",
+    "alt": "Canal Boat   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-CGFb5Cs/A",
     "keywords": [
       "wayne heim",
@@ -3238,14 +3847,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 121
+    "sortOrder": 121,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Storm/i-CGFb5Cs/5/MVsWFMLrHQjWLmKQgdGDd3whrN5TqBdLnxVhLDnkZ/XL/Lightning%20blend-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Storm/i-CGFb5Cs/5/MVsWFMLrHQjWLmKQgdGDd3whrN5TqBdLnxVhLDnkZ/XL/Lightning%20blend-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Storm/i-CGFb5Cs/5/MWs4T3fZXrZgzg8rCGc4W3GLgX5nKRrDVMMFTDpJh/L/Lightning%20blend-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Storm/i-CGFb5Cs/5/LKvz7RGVChMH86d9tjn5f24pRMqjGRthsbqWhPpwf/M/Lightning%20blend-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Storm/i-CGFb5Cs/5/LJr8KJvbNgsKrKQPdwFN4jcbDWmmnQMZR4R5LGW7T/S/Lightning%20blend-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3cMpkdH",
     "title": "Mill House   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
-    "alt": "Mill House   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3cMpkdH/4/MVV9SdC9tGFhSZLjvKMS9SvMLnJv3pj4NFf9QmVqt/XL/_WEH7013-XL.jpg",
+    "alt": "Getting Closer   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3cMpkdH/A",
     "keywords": [
       "wayne heim",
@@ -3266,14 +3880,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 122
+    "sortOrder": 122,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3cMpkdH/4/NQbjfCsZgtVW4LBWnj2Qbmgr2cvFj8mVSSr5wWQmf/XL/_WEH7013-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3cMpkdH/4/NQbjfCsZgtVW4LBWnj2Qbmgr2cvFj8mVSSr5wWQmf/XL/_WEH7013-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3cMpkdH/4/MT5wZJNXbhXgJrgs9DxvMcBLHpnqMzG9kpDGhzdR7/L/_WEH7013-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3cMpkdH/4/NdDnGQ6rxfzD24fwPVsnWbDMk4CcFdGgq8zPMwDh6/M/_WEH7013-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-3cMpkdH/4/KdjF6TSfFwcRS8Qpw3wPZVVG7TSm5vVk6vchHFqTW/S/_WEH7013-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CFrvwKD",
     "title": "Illusion at Sunset   Photography by Wayne heim",
     "description": "Optical illusion of lake and sunset.  © Wayne Heim",
-    "alt": "Illusion at Sunset   Photography by Wayne heim",
-    "src": "https://photos.smugmug.com/photos/i-CFrvwKD/3/LNsv5wvVZPmPMj36jxGRmkc7fhcvbCGRVpHWHVK4h/XL/i-CFrvwKD-XL.jpg",
+    "alt": "Mill House   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-CFrvwKD/A",
     "keywords": [
       "wayne heim",
@@ -3294,14 +3913,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 123
+    "sortOrder": 123,
+    "src": "https://photos.smugmug.com/photos/i-CFrvwKD/3/NT5pRft84N8K2wXPKBJCZcv87zTq8p3gxMwtJdZkH/XL/i-CFrvwKD-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-CFrvwKD/3/NT5pRft84N8K2wXPKBJCZcv87zTq8p3gxMwtJdZkH/XL/i-CFrvwKD-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-CFrvwKD/3/NT5pRft84N8K2wXPKBJCZcv87zTq8p3gxMwtJdZkH/XL/i-CFrvwKD-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-CFrvwKD/3/LrTx22W9f62BGRzCnDRTQ39cbCz2hhr5dMWK8FnPV/L/i-CFrvwKD-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-CFrvwKD/3/NSLQ2LPR6bLMfqw8bBvzMfzm7g2FbFKfSBgpDtFvn/S/i-CFrvwKD-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZZgRqGG",
     "title": "Over the Edge   Photography by Wayne Heim",
     "description": "One of the many water falls flowing in Ohio rivers. ©Wayne Heim",
-    "alt": "Over the Edge   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-ZZgRqGG/4/Lk45Vc7q3SS6L6NCd87ZDxjHC7gDgrbn9DFLKJ5jM/XL/_IMG0128-XL.jpg",
+    "alt": "Illusion at Sunset   Photography by Wayne heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ZZgRqGG/A",
     "keywords": [
       "wayne heim",
@@ -3322,14 +3946,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 124
+    "sortOrder": 124,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-ZZgRqGG/4/KPXW7V232Rw6jqwhCL4pR9xN5rvZBCR5JwwQLRdgv/XL/_IMG0128-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-ZZgRqGG/4/KPXW7V232Rw6jqwhCL4pR9xN5rvZBCR5JwwQLRdgv/XL/_IMG0128-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-ZZgRqGG/4/KPXW7V232Rw6jqwhCL4pR9xN5rvZBCR5JwwQLRdgv/XL/_IMG0128-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-ZZgRqGG/4/LMZzVdTM9hqhfFB3t6WL9fK8xHd9SmRc6GmJDV9FK/L/_IMG0128-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-ZZgRqGG/4/MmFJRd4L8wBPLLVQch27mZZLVpZZJZr5whmsFwvtX/S/_IMG0128-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-T3SRpvm",
     "title": "Gone Fishing - Photography by Wayne Heim",
     "description": "Gone Fishing - view of one of the covered bridges in Conneaut, Ohio with a man fishing in the stream.©Wayne Heim",
-    "alt": "Gone Fishing - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-T3SRpvm/3/MD9c8tHC2sNkv8vxkvq9QwRMHHPMCd5bL6b9JLJT3/XL/i-T3SRpvm-XL.jpg",
+    "alt": "Over the Edge   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-T3SRpvm/A",
     "keywords": [
       "wayne heim",
@@ -3350,14 +3979,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 125
+    "sortOrder": 125,
+    "src": "https://photos.smugmug.com/photos/i-T3SRpvm/3/LtMnk3wpGK8g784MCbTHMpSrM73Mwzq9QzXhfrDvj/XL/i-T3SRpvm-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-T3SRpvm/3/LtMnk3wpGK8g784MCbTHMpSrM73Mwzq9QzXhfrDvj/XL/i-T3SRpvm-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-T3SRpvm/3/M398TFGDdC3xxCk8sKLDW9XLzjjLzR8RgR5scD4jp/L/i-T3SRpvm-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-T3SRpvm/3/L7PVSNnTgCsVD2pZvB7XG3cZHfQHpV385v6ftPKj3/M/i-T3SRpvm-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-T3SRpvm/3/MDmPrq9dz6WdWBKBhhQkzFBg9T78QxSczg5qp82JJ/S/i-T3SRpvm-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N5kKwLn",
     "title": "Fall Stream - Photography by Wayne Heim",
     "description": "Fall Stream - stream with little rapids flows through the Metro Parks ©Wayne Heim",
-    "alt": "Fall Stream - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-N5kKwLn/4/M5W6SJHjhWZGzF7H99zBS9gDMgZBGKtSwV6D2zrcM/XL/i-N5kKwLn-XL.jpg",
+    "alt": "Gone Fishing - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N5kKwLn/A",
     "keywords": [
       "wayne heim",
@@ -3378,14 +4012,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 126
+    "sortOrder": 126,
+    "src": "https://photos.smugmug.com/photos/i-N5kKwLn/4/LBwrSZb74K3PSBqH5mb6C5n6k7PmrRm7JWQwdr5tq/XL/i-N5kKwLn-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-N5kKwLn/4/LBwrSZb74K3PSBqH5mb6C5n6k7PmrRm7JWQwdr5tq/XL/i-N5kKwLn-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-N5kKwLn/4/MWp89kFp7r46N8QFXbqnN4tHjncQkW3BjdTZ44sPh/L/i-N5kKwLn-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-N5kKwLn/4/MbW6swpMSFBNnzrv2vL6Jm654p9PFJMPh8Qs2wxQD/M/i-N5kKwLn-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-N5kKwLn/4/MV8cD5rr6tPnVsFdD6tMcvmCCBcWPZZDk3tF3JhQp/S/i-N5kKwLn-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6mVwQ85",
     "title": "Looks Like Ice   Black & White Photography by Wayne Heim",
     "description": "Angle of photograph makes white water look like ice as it flows by.  Black & white view ©Wayne Heim",
-    "alt": "Looks Like Ice   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6mVwQ85/4/KMKczKPNtbgJtBwZZFj63PZ3qFQFzvBcnh4B7dGnQ/XL/_IMG0272-XL.jpg",
+    "alt": "Fall Stream - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6mVwQ85/A",
     "keywords": [
       "wayne heim",
@@ -3406,14 +4045,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 127
+    "sortOrder": 127,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6mVwQ85/4/MjdknXh6PX9dVBdZ67nsFQnfS7nc7rCcV4L5xpQ9T/XL/_IMG0272-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6mVwQ85/4/MjdknXh6PX9dVBdZ67nsFQnfS7nc7rCcV4L5xpQ9T/XL/_IMG0272-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6mVwQ85/4/MjdknXh6PX9dVBdZ67nsFQnfS7nc7rCcV4L5xpQ9T/XL/_IMG0272-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6mVwQ85/4/KJmsbzSrBksZ9Czshd27TQ5FzgWxn82Q385CNsLq4/M/_IMG0272-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-6mVwQ85/4/Lpd64VBtnQhwSvLtFDGzVQTHW9zxLM9HqGn9krGrf/S/_IMG0272-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SFZKKFt",
     "title": "Dueling Falls closer   Photography by Wayne Heim",
     "description": "Dueling Waterfalls created by slab rock in the middle. Another view of the Chagrin River in Ohio .  loser view  ©Wayne Heim",
-    "alt": "Dueling Falls closer   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-SFZKKFt/4/MG28H2qF2TNPNzvW6vqpJmqZQSxjqQCg52tC6NHSG/XL/_IMG0275_tonemapped-XL.jpg",
+    "alt": "Looks Like Ice   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SFZKKFt/A",
     "keywords": [
       "wayne heim",
@@ -3434,14 +4078,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 128
+    "sortOrder": 128,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-SFZKKFt/4/KH5KDhcqsnSCbwRdfcK8zkj5CnZWCH3n4QV3h3xpG/XL/_IMG0275_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-SFZKKFt/4/KH5KDhcqsnSCbwRdfcK8zkj5CnZWCH3n4QV3h3xpG/XL/_IMG0275_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-SFZKKFt/4/NPV8DKBH2KQzrJVJc9vHJg4GdNsBCsMj7Dc9C3Q9J/L/_IMG0275_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-SFZKKFt/4/NHBTxPCgkskJ2fDddNBbqwN6pj9vHXDJTbWhZtx6r/M/_IMG0275_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-SFZKKFt/4/MF7FLZg7WbVw8nnTwKnPXMWPZWdcVqPMvw8jtdbjh/S/_IMG0275_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WmfkrcW",
     "title": "Mentor Lighthouse      Black & White Photography by Wayne  Heim",
     "description": "Lighthouse in Black & White -  view of the Fairport AHarbor Lighthouse on Lake Erie.\n©Wayne Heim",
-    "alt": "Mentor Lighthouse      Black & White Photography by Wayne  Heim",
-    "src": "https://photos.smugmug.com/photos/i-WmfkrcW/3/KMJBzfc26pVHvTsCPnKD8pVtbFQNHSKqf8vRLZGPd/XL/i-WmfkrcW-XL.jpg",
+    "alt": "Dueling Falls closer   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WmfkrcW/A",
     "keywords": [
       "wayne heim",
@@ -3462,14 +4111,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 129
+    "sortOrder": 129,
+    "src": "https://photos.smugmug.com/photos/i-WmfkrcW/3/M7kxqBwRNSnTXcJgdk4g3s3sPTDhnB95CF7HwdHPM/XL/i-WmfkrcW-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-WmfkrcW/3/M7kxqBwRNSnTXcJgdk4g3s3sPTDhnB95CF7HwdHPM/XL/i-WmfkrcW-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-WmfkrcW/3/LKzMhb22kJTfhg5H2V3WZ3NNC5rtD4bVPV8qvM6JT/L/i-WmfkrcW-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-WmfkrcW/3/MRr8b6wvW9fq2bw37JXbM3Bsw7G6J2FPkvcqt5pWn/M/i-WmfkrcW-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-WmfkrcW/3/MzG3fHv8VTstqqXzxq46TGp7BqjBVpbmLJ2bKmm3Z/S/i-WmfkrcW-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-v27kDnS",
     "title": "Is It Ice?   Photography by Wayne Heim",
     "description": "Reflections in the water appear like sheets of ice below the water fall.  ©Wayne Heim",
-    "alt": "Is It Ice?   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-v27kDnS/5/LgWBvpjsLK3FJdX8JgRWKs3mm8VQW3hH7HQ8dTFq7/XL/_WHZ6410-XL.jpg",
+    "alt": "Mentor Lighthouse      Black & White Photography by Wayne  Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-v27kDnS/A",
     "keywords": [
       "wayne heim",
@@ -3490,14 +4144,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 130
+    "sortOrder": 130,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-v27kDnS/5/KGQWKTwxzNLqC2gQfP2t9kqQT9x2wMRZm8xrqRCcC/XL/_WHZ6410-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-v27kDnS/5/KGQWKTwxzNLqC2gQfP2t9kqQT9x2wMRZm8xrqRCcC/XL/_WHZ6410-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-v27kDnS/5/KGQWKTwxzNLqC2gQfP2t9kqQT9x2wMRZm8xrqRCcC/XL/_WHZ6410-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-v27kDnS/5/Ncz4nvX8g2NS4hL5JGkbjH3CRZhNzfPfs8VT8f69k/L/_WHZ6410-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls/i-v27kDnS/5/K3XfCSBxfqhVfNM7q53XV6bjJxjV5RcnqrQNmprV5/S/_WHZ6410-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SFHZKkz",
     "title": "Faroe Waves 3   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves 3   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/NMD5J8g6VG54TzLQq2RMvgmQ79tBJJcHxJgBTK3xm/XL/_OLY8446-XL.jpg",
+    "alt": "Is It Ice?   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SFHZKkz/A",
     "keywords": [
       "wayne heim",
@@ -3518,14 +4177,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 131
+    "sortOrder": 131,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/MDKZN9Th9vFQQk6FpzcwzTHxGFqth48pT9WKxPCBK/XL/_OLY8446-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/MDKZN9Th9vFQQk6FpzcwzTHxGFqth48pT9WKxPCBK/XL/_OLY8446-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/LqSrCwXFf3t8zFNSC88X6KDpQWtHR3hwgq3qBH5sw/L/_OLY8446-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/K43VmjK9Vr3j9tX79ZpQjDPqSG45MtNhZNVwMBbZ4/M/_OLY8446-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/NC5MqsDSGQd55jWQFHhD8nr9GX3fmNRx3sf2MKDsf/S/_OLY8446-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6q5gXJP",
     "title": "Faroe Waves 4   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves 4   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/NCMwpRhGhbN2PTvS8345D4wJbRxpXxzvXFBd9nKvG/XL/_OLY8459_tonemapped-XL.jpg",
+    "alt": "Faroe Waves 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6q5gXJP/A",
     "keywords": [
       "wayne heim",
@@ -3546,14 +4210,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 132
+    "sortOrder": 132,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/LGb33ntrM2Sp7zTqNkdSpg59M8Lh4TF66mxZGLgV2/XL/_OLY8459_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/LGb33ntrM2Sp7zTqNkdSpg59M8Lh4TF66mxZGLgV2/XL/_OLY8459_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/NKhqwLLbRK3G6XpHzPj6RCsvWG7J3ZzQJJX77hTt3/L/_OLY8459_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/Mkv2jKStCrhBMTNbr6jsFsfvrXCJ3K5C5ndmzJ4qd/M/_OLY8459_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/Ld7BKTtJhmvdzwRVvVhkMWhrbCD2jPGW4fRNxkS73/S/_OLY8459_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zSqxXtw",
     "title": "Faroe Waves  5    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves  5    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/LVf7VmrNPjGXWZkGDFvCLLqW2MRhBhBGXDbzz9CC9/XL/_OLY8517-XL.jpg",
+    "alt": "Faroe Waves 4   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zSqxXtw/A",
     "keywords": [
       "wayne heim",
@@ -3574,14 +4243,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 133
+    "sortOrder": 133,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/NFpWDnzvVFVXnJgSKwZxXJ7H5F6mkpMDvVMfdcPDM/XL/_OLY8517-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/NFpWDnzvVFVXnJgSKwZxXJ7H5F6mkpMDvVMfdcPDM/XL/_OLY8517-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/NKrWpNwsLb9sxvWKZNtmgsZDHJqCBQ6Vq8jTfnPSm/L/_OLY8517-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/LPPbDG9dwfVMrPtsxx938N2z3q8fTS79kSD6sCtW3/M/_OLY8517-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/LStNv2WBDdFLrwmKsWcPGNtBd2GPJNLqkc678fRnq/S/_OLY8517-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-m2wzGs2",
     "title": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/NTDVwKvKmDtTsZLPCMPbZLcvvBRLGWW8J96gL5vqM/XL/_OLY8522-XL.jpg",
+    "alt": "Faroe Waves  5    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-m2wzGs2/A",
     "keywords": [
       "wayne heim",
@@ -3602,14 +4276,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 134
+    "sortOrder": 134,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/NSMCNhSwKX5S47bms22LdJ2MNLxNKxkZs5MD25ZbG/XL/_OLY8522-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/NSMCNhSwKX5S47bms22LdJ2MNLxNKxkZs5MD25ZbG/XL/_OLY8522-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/LqLzS9tWMHppfNGhkJbQ3bJZnRNndL6RXCV7qgVCd/L/_OLY8522-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/KPwRfTSHzVzPTZRDxNjLV4KHsBkLQBPgV3FqZfPZt/M/_OLY8522-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/Kj7MLVQS9cqQZZTtFQdCrbpBXstNxCZHbVzH6KLGr/S/_OLY8522-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wSx559f",
     "title": "Faroe Waves 6   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves 6   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/LD3qGCNDgjLDLQFn7tc9LqvmxQJXbJRrqPH5qj8zF/XL/_OLY8581-Edit-XL.jpg",
+    "alt": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wSx559f/A",
     "keywords": [
       "wayne heim",
@@ -3630,14 +4309,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 135
+    "sortOrder": 135,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/LCQHGWJFtrCwfQ8wNvRQ4w8Zc576fXdbZ2xFW9wBT/XL/_OLY8581-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/LCQHGWJFtrCwfQ8wNvRQ4w8Zc576fXdbZ2xFW9wBT/XL/_OLY8581-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/LzTC8D8kHkZDtrqg8vpM759sVD63rkhjTbSDgLbVb/L/_OLY8581-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/KK8BCv6RCM5TgjnWp9h3NWXGwdCs8B9bQkgbfzC4X/M/_OLY8581-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/Mxnr3rgkP4nLcdCDmKXVgQSr3PjFDLm5kqvKHc6zV/S/_OLY8581-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fGsWc5H",
     "title": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/LDqhwrXNXkk6SzLkwpBCrmMVSDcxNjX7WxSdmcCVQ/XL/_OLY8581-Edit-XL.jpg",
+    "alt": "Faroe Waves 6   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGsWc5H/A",
     "keywords": [
       "wayne heim",
@@ -3658,14 +4342,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 136
+    "sortOrder": 136,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/LvLXP47gztsmmPTSJW9WdzGzpWBxSFC5cGZZGBKqG/XL/_OLY8581-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/LvLXP47gztsmmPTSJW9WdzGzpWBxSFC5cGZZGBKqG/XL/_OLY8581-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/LkrLGQmHTCFVG7dnNVdwtXM7QZFgk6TdvbCLJFMZZ/L/_OLY8581-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/K83RbkgVBGCnrgPgNz5nTsXhGRqkgVk6cjtXHGb2d/M/_OLY8581-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/KHb5qwhsSWCGTcFQ2tW5pxWtjtKKzDqvzbph8rWTs/S/_OLY8581-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6HH4L3v",
     "title": "Faroe Waves 7   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves 7   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/Kb82PbXsPpnct9JsMPvGp5dKFG4Jb5R52ZB2xR9Nw/XL/_OLY8602-XL.jpg",
+    "alt": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6HH4L3v/A",
     "keywords": [
       "wayne heim",
@@ -3686,14 +4375,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 137
+    "sortOrder": 137,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/NRGf5hJkXVqtQM8X2M32xmRWB27PwPx9tnhVpBFBn/XL/_OLY8602-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/NRGf5hJkXVqtQM8X2M32xmRWB27PwPx9tnhVpBFBn/XL/_OLY8602-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/KdSPZX7g5JpmVCCZ5zzSNc7GBnSgCkH4nHvtr9HzX/L/_OLY8602-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/LFHsqnH2CPKCX4KL5F2Z4t9GHWgV8sF2GHwg4qpPQ/M/_OLY8602-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/L3bzdxKnjmj8BJDC2d9hm4n22HncRfQhBdJpMLfcc/S/_OLY8602-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Wf6337s",
     "title": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/MS7d9nKcg463W2j6MZFtWwG4HhrHNTrLbBP49Bczt/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Waves 7   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Wf6337s/A",
     "keywords": [
       "wayne heim",
@@ -3714,14 +4408,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 138
+    "sortOrder": 138,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/MPpxFVQ8GmSgWntgfGCLCWrf9nrD6G5VP63PPZfHP/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/MPpxFVQ8GmSgWntgfGCLCWrf9nrD6G5VP63PPZfHP/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/Mf2fSSgKwMXjq7pq7jrxzFKrKBSnJ6QMBPNgLJRCM/L/_OLY8957_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/KDnBmPQT7qWk96Csb8jmvNZ5WDZLP8R98MrrsdXbb/M/_OLY8957_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/LdZGKkJ5vpLtMHZ3S9pFdZDwW4jMsf6xsNXncbFk4/S/_OLY8957_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FxL2Ktq",
     "title": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/Kmxb5DnxFfsqtRzG2G5qSvkKDzB7zB3m5dDWzttqc/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "alt": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-FxL2Ktq/A",
     "keywords": [
       "wayne heim",
@@ -3742,14 +4441,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 139
+    "sortOrder": 139,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/MWhtBjSddfCRPgbt3kCgxBZdmNCHvJP2Vj6Jr3Q8P/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/MWhtBjSddfCRPgbt3kCgxBZdmNCHvJP2Vj6Jr3Q8P/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/NXP4P2JN2NJtMQBbQQGfLxQc2Lh9F3Q2zJ6w7qtZB/L/_OLY8957_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/Nfvrz6TP8bPq95WVb8WPqGR7NhNDR3rjZFrq7F9xR/M/_OLY8957_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/M6D6x4cH4VqBP2M5qHPtkcm6JVFf3849Wff2xDCvZ/S/_OLY8957_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JdTbNvz",
     "title": "Goðafoss Waterfall at sunset in Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls.",
-    "alt": "Goðafoss Waterfall at sunset in Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/MRNgkHnLwGppdBmV3GPSf9TtpwKjmLNJ5SfWJCLBk/XL/_ANA2548-XL.jpg",
+    "alt": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-JdTbNvz/A",
     "keywords": [
       "wayne heim",
@@ -3770,14 +4474,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 140
+    "sortOrder": 140,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/Ktf4CTT4mLZH727Wp4Lp4HJg2jRZhXmpkVSGQm6DL/XL/_ANA2548-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/Ktf4CTT4mLZH727Wp4Lp4HJg2jRZhXmpkVSGQm6DL/XL/_ANA2548-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/NDXHZB8vxpsJpHqgbng3tsZtg9gL5fPGsTXbk46qj/L/_ANA2548-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/M6WTCg2Q2bRq5tNTLNhtPhGPsjQSSSntM4qwp4tvc/M/_ANA2548-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/NHGCTMCW5J69DDMrcGL3jTZLPjjwJMfV6vhzJj6mk/S/_ANA2548-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GGmGhkv",
     "title": "Goðafoss - Iceland waterfall sunset.",
     "description": "Fine art landscape photography of Iceland waterfall in the Summer. Painterly Landscape Photography. © Wayne Heim",
-    "alt": "Goðafoss - Iceland waterfall sunset.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/NfmQMwcBM2k42W6SPGZRpMFrmGzWptXzf5xxFmrsm/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
+    "alt": "Goðafoss Waterfall at sunset in Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GGmGhkv/A",
     "keywords": [
       "wayne heim",
@@ -3798,14 +4507,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 141
+    "sortOrder": 141,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LSQFhkSSMq6V6gwMX4nTTRQNZMXx9SvGRpqfNWgR7/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LSQFhkSSMq6V6gwMX4nTTRQNZMXx9SvGRpqfNWgR7/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LNrNzwvNgqJJZGFKcwrq48Q7GP6gs3tWdzNGnKT8x/L/_ANA2548-Enhanced-Edit-2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/Lv6spHCZ55fRgfpL38X6m5x7wt2Hcd5DjmPkJCbRF/M/_ANA2548-Enhanced-Edit-2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LWQRG9BZJBCSkmqmMTCRqdsMxzC4p6dNzmRfqqChX/S/_ANA2548-Enhanced-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rWFC3dL",
     "title": "Goðafoss waterfall Iceland",
     "description": "Fine art landscape photography of Iceland sunset in the Summer.",
-    "alt": "Goðafoss waterfall Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/MQBKfptM86tKv2S3GvvVNd3Z6gTSZLZKdhnjRRGFb/XL/_ANA2550-Edit-XL.jpg",
+    "alt": "Goðafoss - Iceland waterfall sunset.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rWFC3dL/A",
     "keywords": [
       "wayne heim",
@@ -3826,14 +4540,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 142
+    "sortOrder": 142,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/LNx9jPqH4jVfK42zjjcGK79M2BZqxVxPbs2DXGVp3/L/_ANA2550-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Lhs3m7PjzH2FQ6ShmrmDGfDJDK87v2cKz4MBV82tV/S/_ANA2550-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VN5gQB3",
     "title": "Meeting of the Falls   Photography by Wayne Heim",
     "description": "Two waterfalls in the Chagrin River seem to meet as the flow over the rocks. ©Wayne Heim",
-    "alt": "Meeting of the Falls   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-VN5gQB3/4/LjP75vSDF5JrBTNKFRxt6M6Q5wGFSDZnm8fHXwh85/XL/i-VN5gQB3-XL.jpg",
+    "alt": "Goðafoss waterfall Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VN5gQB3/A",
     "keywords": [
       "wayne heim",
@@ -3854,14 +4573,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 143
+    "sortOrder": 143,
+    "src": "https://photos.smugmug.com/photos/i-VN5gQB3/4/MDtvR3xwsMDvTCccFL2MV3bD62c2xT6Bjm6bJRjP3/XL/i-VN5gQB3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-VN5gQB3/4/MDtvR3xwsMDvTCccFL2MV3bD62c2xT6Bjm6bJRjP3/XL/i-VN5gQB3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-VN5gQB3/4/MDtvR3xwsMDvTCccFL2MV3bD62c2xT6Bjm6bJRjP3/XL/i-VN5gQB3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-VN5gQB3/4/MwdT5bXG5zrqQZPFVKr2dPQGGzCGRG45dPWnSznjM/L/i-VN5gQB3-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-VN5gQB3/4/MvK9RQ224WVkhT546tZF3gNZwMvwcQWWGmDqP3HV6/S/i-VN5gQB3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fGKx3B6",
     "title": "Ru   Black & White Photography by Wayne Heim",
     "description": "Rushing Rapids-  Berea Falls churning water of rapids  in black & White ©Wayne Heim",
-    "alt": "Ru   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/K6sS4Cr3xc2QJp5cZgHFHCxk4XNXNPVNTxZFNr69Q/XL/_W3H9140_tonemapped-XL.jpg",
+    "alt": "Meeting of the Falls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGKx3B6/A",
     "keywords": [
       "wayne heim",
@@ -3883,14 +4607,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 144
+    "sortOrder": 144,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/L2CwF66LGT3KsKtfwCMgn8VL5RPBwhs4J3HKJnv4x/XL/_W3H9140_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/L2CwF66LGT3KsKtfwCMgn8VL5RPBwhs4J3HKJnv4x/XL/_W3H9140_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/L2CwF66LGT3KsKtfwCMgn8VL5RPBwhs4J3HKJnv4x/XL/_W3H9140_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/M3Q6TmmpTffqVMw2C9dXr4sXg8Hpt7WLjBJj8CNXk/L/_W3H9140_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fGKx3B6/5/ML8zd8jcgcQgQWCTnrkdx8Tq965CrLRcxzHkxX4R2/S/_W3H9140_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GvZBLcv",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/NQ7kPr2F5vkSdtcHgmLDVfbzscGndV5vfnXjPS49v/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
+    "alt": "Ru   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GvZBLcv/A",
     "keywords": [
       "wayne heim",
@@ -3912,14 +4641,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 145
+    "sortOrder": 145,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/LJHjhv9hTSm9Xf4G7h7tHwfRx5DTTd4kk9j2cFN9D/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/LJHjhv9hTSm9Xf4G7h7tHwfRx5DTTd4kk9j2cFN9D/XL/_WHZ7325-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/Kkk5BQfSWp767PgnnmzH3dDM56G7pCqjvqfPKswgD/L/_WHZ7325-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/LShncPD4FLcrtKGMq6pwh9rRVv4sHjBFKg95Kgmdj/M/_WHZ7325-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-GvZBLcv/4/LXbggTnTZwntjhKfsvZ9tzPHTdx5B9G78wgWnj6Nn/S/_WHZ7325-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LR3Vr2N",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
-    "alt": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/MpkSpQg4PK2fMsC3tfJjhtWkHHMGHtsVK6gSHjNbF/XL/_WHZ7433-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LR3Vr2N/A",
     "keywords": [
       "wayne heim",
@@ -3941,14 +4675,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 146
+    "sortOrder": 146,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/Khgs6T3t84nZwpGHQBw5ZZzJTKbHtNxgj9F5DPBs2/XL/_WHZ7433-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/Khgs6T3t84nZwpGHQBw5ZZzJTKbHtNxgj9F5DPBs2/XL/_WHZ7433-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/NdSjzwCwfv4mrP64DcBn73v7dJhFWdgZSdzXD6LP7/L/_WHZ7433-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/LQQNTLNr99NSLx2r9stHqFrCp4KCLtVX86kfRTRdw/M/_WHZ7433-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-LR3Vr2N/2/NHkCQ9wML8c8t6v7MN9Ph97dDD7PDpnM838gzPd4F/S/_WHZ7433-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N3ShZHB",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/KsG9QhFMSx4fxVBXcTC4sR6WJJ2PHRXfVgxRscmg4/XL/_ANA0655-Edit-XL.jpg",
+    "alt": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-N3ShZHB/A",
     "keywords": [
       "wayne heim",
@@ -3970,14 +4709,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 147
+    "sortOrder": 147,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/LnCtQQBh79Lzdnns9fFPcQH3LzQz5bFZZVkDbWr5n/XL/_ANA0655-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/LnCtQQBh79Lzdnns9fFPcQH3LzQz5bFZZVkDbWr5n/XL/_ANA0655-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/LnCtQQBh79Lzdnns9fFPcQH3LzQz5bFZZVkDbWr5n/XL/_ANA0655-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/LD7MwnzNrgJdxRHMPXRMvj6twm7BZxpL39tVdCzmB/L/_ANA0655-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-N3ShZHB/2/KgxrH9NJK28NNz4DT9756T4tb67fmdwCspTNgvmMG/S/_ANA0655-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KFLXt4D",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LRB5mwWN4pJpk7s9ffX8NNwtPxRv94GcpcxbgVSq6/XL/_ANA0801_tonemapped-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-KFLXt4D/A",
     "keywords": [
       "wayne heim",
@@ -3999,14 +4743,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 148
+    "sortOrder": 148,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LPSzpWPNhZMW2phKsRm6L6W4F3bKCKDGhM5Vt5sTf/XL/_ANA0801_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LPSzpWPNhZMW2phKsRm6L6W4F3bKCKDGhM5Vt5sTf/XL/_ANA0801_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/LPSzpWPNhZMW2phKsRm6L6W4F3bKCKDGhM5Vt5sTf/XL/_ANA0801_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/MC56dXFP5HMzzDbz3cCVczsPgZf7ssgLMpXHCrQjD/L/_ANA0801_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-KFLXt4D/3/MVZXzvvcQfR5FzxcZF7j2Vs8k3zB3WW47C3StpCLS/S/_ANA0801_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ScMsR8H",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/K5WhqTww2CksS7hsZdLGLH3qnmPMZ5Dj83HNtnChq/XL/_ANA1155-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ScMsR8H/A",
     "keywords": [
       "wayne heim",
@@ -4028,14 +4777,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 149
+    "sortOrder": 149,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/MVk4K6K4BgdVhQT8Fg6pmStBzCV35SHwkVLQ7nFVs/XL/_ANA1155-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/MVk4K6K4BgdVhQT8Fg6pmStBzCV35SHwkVLQ7nFVs/XL/_ANA1155-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/M6ZjC9jSsG7qwdGZzZh6pH6ZLPNmBqNspq4cpfKhp/L/_ANA1155-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/K559LthVgs98H7g865ntZhFccpzxkW7ZT3cfwsBXD/M/_ANA1155-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-ScMsR8H/2/KRTJMWz8gn7xK36s3KRxcKQ3z3b5mXGSgBGG4Gqdg/S/_ANA1155-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VScCFDQ",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/NgVCwQMJMVXfjqV3Jn73ShMJFBqHsHPKN5BVG9C7T/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VScCFDQ/A",
     "keywords": [
       "wayne heim",
@@ -4057,14 +4811,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 150
+    "sortOrder": 150,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/LcFcxvw4NktPpK2JPcsxn3qkgdq8mmRCfWSWqkt5P/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/LcFcxvw4NktPpK2JPcsxn3qkgdq8mmRCfWSWqkt5P/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/M85tmDppH8PSTPhXbwMMDZFDkgnm7NCRb9rkJZWvq/L/_WHZ7317-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/KRrR6vTZ2S8ZGjXcsCBNDfVtQQpsNfjqS3R8gLSqg/M/_WHZ7317-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/MX2fJ7W3VzkvHvwdmxgBN54RscXqFxbbk2jB7MVsM/S/_WHZ7317-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3jXg4hf",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/NXP3L8L95T56ZvvxjCZfwnHSwNmbGb9q4Cmzmgt3q/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3jXg4hf/A",
     "keywords": [
       "wayne heim",
@@ -4086,14 +4845,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 151
+    "sortOrder": 151,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/MZ8PNmMfcCrL7SV8WrcRXf8FgFwq2XfXdbcNVz4hW/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/MZ8PNmMfcCrL7SV8WrcRXf8FgFwq2XfXdbcNVz4hW/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/MZ8PNmMfcCrL7SV8WrcRXf8FgFwq2XfXdbcNVz4hW/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/M94TQRqWdNNKS6q4zmM7TL69HTk3Z5GWsZb6LDnKw/L/_OL31305-Edit-Edit_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/M5hfGp4spMJj8VsjttL4S2n8bnnfMkQS59WhJ36MZ/S/_OL31305-Edit-Edit_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jgkhwcs",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/KRXtnwgxWXn6ZHWDGcFHqjpMxWPRfFxDjVsjSFcwd/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jgkhwcs/A",
     "keywords": [
       "wayne heim",
@@ -4115,14 +4879,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 152
+    "sortOrder": 152,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/MPNv3XJdRN6V3HSwbsTbMZQr6k6HrjdxfQqNWXbRq/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/MPNv3XJdRN6V3HSwbsTbMZQr6k6HrjdxfQqNWXbRq/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/MPNv3XJdRN6V3HSwbsTbMZQr6k6HrjdxfQqNWXbRq/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/NRd86msN2snBZ6DrjBZgfMR9L8xqJWj2rmHLct67L/L/_DSF6068_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/LqtL5GxPp8SwHP6b6WW6jMhB4cVcMXs89ppJR46Lj/S/_DSF6068_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sRRJHVz",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/Nhnp94nFG8VzjM5VmKkVWgsKqJV3xh9LMJbGzGJDV/XL/_DSF6146_tonemapped-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-sRRJHVz/A",
     "keywords": [
       "wayne heim",
@@ -4144,14 +4913,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 153
+    "sortOrder": 153,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/MK3jsps5Rft8KBR7rMxzNNTHrVRQzwVZjChNXqjrF/XL/_DSF6146_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/MK3jsps5Rft8KBR7rMxzNNTHrVRQzwVZjChNXqjrF/XL/_DSF6146_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/MK3jsps5Rft8KBR7rMxzNNTHrVRQzwVZjChNXqjrF/XL/_DSF6146_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/MBG3mCp4BRLXgxF6vxBLxmZzfQbpWfsnwHt6zqsx7/L/_DSF6146_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/KbfzLPnfMmHWCLmDfhwMf2Ft7R7QdDJGkGTLFLMph/S/_DSF6146_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7pG4nQv",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/L9C827hbvfPbMLG8JhTZCWfdbvMghtXD39dFXrXHP/XL/_DSF6187-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7pG4nQv/A",
     "keywords": [
       "wayne heim",
@@ -4173,14 +4947,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 154
+    "sortOrder": 154,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/MhdnBsCQM85kXRCpVcHCjLW2xmQVC8GFTzzGjFR5M/XL/_DSF6187-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/MhdnBsCQM85kXRCpVcHCjLW2xmQVC8GFTzzGjFR5M/XL/_DSF6187-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/LN3kt3c7WTmrrvtw8gcncHmkWDhTgxsbbpz5wNJ8v/L/_DSF6187-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/NKHsMhZH8GwnV9xtLbLwC6ZkhQtVLs2g5TRgpGFtr/M/_DSF6187-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/NZnp63NcR6ssQ6qHM9S4tXqjg8qFDJzvbbFZF8j3Q/S/_DSF6187-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DKPmrRN",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/KZN9DRh3VRTjKXS5d59DJk4MFRdnN4q3t9ghf9zzr/XL/_DSF6199-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-DKPmrRN/A",
     "keywords": [
       "wayne heim",
@@ -4202,14 +4981,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 155
+    "sortOrder": 155,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/LvM2BGd5SdBsf759f69DFTSgnrMxB7KbKh6N36TPk/XL/_DSF6199-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/LvM2BGd5SdBsf759f69DFTSgnrMxB7KbKh6N36TPk/XL/_DSF6199-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/LzTqLHqLZvHgDnwvwjrpQcbS3dNzk82mDnC2rDHNd/L/_DSF6199-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/M27d7M7H7Ks27gSVT9tjc92sDzkhV3nxcPSnfFnwd/M/_DSF6199-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/KZ7S6DFhKmd5Q9mMsvHFMdW2VCLFKhVhXsfv5Cwj6/S/_DSF6199-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-T3fx2pT",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/LJcZTxV9ZVwksLQ4Lfhh5Xs59Vvmb6BVtBcXhNKDm/XL/_DSF6267-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-T3fx2pT/A",
     "keywords": [
       "wayne heim",
@@ -4231,14 +5015,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 156
+    "sortOrder": 156,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/LVfL49RjQQPLZhS3wbnRBJcsVCPFSgPStP7Xm8g34/XL/_DSF6267-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/LVfL49RjQQPLZhS3wbnRBJcsVCPFSgPStP7Xm8g34/XL/_DSF6267-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/K8Jpqpsn9SFr7qX79dzZgQBgPZMkjkjc2V7RC5hC3/L/_DSF6267-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/MR2XDbV4TBvNjT8GSBCxp3Q7J26NJBKSKQ8Jkg2mW/M/_DSF6267-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/MN2TMt2zfmdH2rcg9JGgC3P8zf5TN5Pq9n87C5hvM/S/_DSF6267-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5RjNxDr",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/Kc9H99ND7GKJWXmmwrwFr6KfZxfLTHDVBXg7w9vnf/XL/_O1H0012-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5RjNxDr/A",
     "keywords": [
       "wayne heim",
@@ -4260,14 +5049,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 157
+    "sortOrder": 157,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/KSs5ZDDqKZvfjTQ3z59KfXQK7WTXtP4T2rhNk5KKv/XL/_O1H0012-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/KSs5ZDDqKZvfjTQ3z59KfXQK7WTXtP4T2rhNk5KKv/XL/_O1H0012-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/NJKzdrD6DQrpxKTCGDn3dxHM6hnMbKkfHVtqbpRR8/L/_O1H0012-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/NfgJHr66mBLDDHcgvS9MgC9KcqzdnX2jPFQnHk8zF/M/_O1H0012-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/MfPwWGfPdPX46w3TCRLwbpf4xRMsQp29fTmsDTCZS/S/_O1H0012-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Wkmt5Jm",
     "title": "Pine Trees Along the Lake Edge",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Pine Trees Along the Lake Edge",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/Ms8Fd3RgCxcLk7pJpKW4SbrkkSwkWXvRBd57zNZPq/XL/_K1W5132_tonemapped-Edit-2-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Wkmt5Jm/A",
     "keywords": [
       "wayne heim",
@@ -4289,14 +5083,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 158,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/Nfmb3GPhrVmnfSVk9wHzc2ZDwBmqHC6XNbqW79qVJ/XL/_K1W5132_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/Nfmb3GPhrVmnfSVk9wHzc2ZDwBmqHC6XNbqW79qVJ/XL/_K1W5132_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/NMDTNJWBQKdh4DdDgnVfrzSWnDLzxJf233MgvLqqK/L/_K1W5132_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/K8xHhvGCCBMJ6rvWfPfjzm6cVJgLvxGWTS8XPf2B7/M/_K1W5132_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/LtsFn4VgqcHb4rbX7swX3wr4R6vpQ4HBDMcb5sJ5J/S/_K1W5132_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ScxVg7H",
     "title": "Sunrise at Emerald Lake Lodge in British Columbia",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Sunrise at Emerald Lake Lodge in British Columbia",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/KNWqQ6TzxdMd9Dz6fCD6CSWXwjLs5RhWsgVMT8r4z/XL/Emerald%2520Lake%2520Lodge%2520-%2520Wayne%2520Heim-XL.jpg",
+    "alt": "Pine Trees Along the Lake Edge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-ScxVg7H/A",
     "keywords": [
       "wayne heim",
@@ -4318,14 +5117,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 159
+    "sortOrder": 159,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/M83N7gCX9zkvR7JzcwdfDkCfhmmqQTQmtqDwSrR4R/XL/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/M83N7gCX9zkvR7JzcwdfDkCfhmmqQTQmtqDwSrR4R/XL/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/M83N7gCX9zkvR7JzcwdfDkCfhmmqQTQmtqDwSrR4R/XL/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/Kgf4r5rRMH8PsxnfSgspm7qM26C8cvs9TdDZBrh5s/L/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/LsbdRjXPkVsFxvZtsRPDqXFXwFdSjr5VPZNvM22pG/S/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dBd5pHx",
     "title": "Morning Fog at Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Morning Fog at Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/MFtZHWfmFkDqVgwWxBJhzkGQ8bz8KDCST6LxD2Hkk/XL/_WHZ4286-Edit-XL.jpg",
+    "alt": "Sunrise at Emerald Lake Lodge in British Columbia",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dBd5pHx/A",
     "keywords": [
       "wayne heim",
@@ -4347,14 +5151,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 160
+    "sortOrder": 160,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/NVQ7qg4Hm6D2rFfLfm9wgmWR5QStZxpX9bWSpBscM/XL/_WHZ4286-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/NVQ7qg4Hm6D2rFfLfm9wgmWR5QStZxpX9bWSpBscM/XL/_WHZ4286-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/LKZgc84Fmcs5T7j2C75VN7ZCP5RnSvZMrnrsnsH7c/L/_WHZ4286-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/LvhcSsjdLd4pxsbMVRQDPV6nP7h4kFzFgddbDRDTc/M/_WHZ4286-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/KtQ9BKNn3kLt7jWmfsmSnw6GDNVz4J88fJhzLM88S/S/_WHZ4286-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-86Nsnnc",
     "title": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/KdsRQNQ2k8ZgGFPV5zMjCNDRhKF7RgPd6VBWr2hHd/XL/_WHZ4242-Edit-XL.jpg",
+    "alt": "Morning Fog at Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-86Nsnnc/A",
     "keywords": [
       "wayne heim",
@@ -4376,14 +5185,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 161
+    "sortOrder": 161,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/MDHgnwBdjnntsPDRQGhvrsvmGZpdfvdKndk6ZbVf7/XL/_WHZ4242-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/MDHgnwBdjnntsPDRQGhvrsvmGZpdfvdKndk6ZbVf7/XL/_WHZ4242-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/MzpJQ9Q6dRGJZT3NMK7t45nbQ9fVh9SNDbzzNPNPd/L/_WHZ4242-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/LBkmg8hcBXDtv7xQfHLLJjcRNSrxVGRHjWsqVQ6pS/M/_WHZ4242-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/Mrfh2ZqB49B5N84PXhhfmqdGr8zWxL2dNzW8Nv5nb/S/_WHZ4242-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Nvn4r5N",
     "title": "Sunset on Emerald Lake and the Lodge",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Sunset on Emerald Lake and the Lodge",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/KL9JmtMrWJD3pXv2RgSR7XxM7FmvkDczwNJsNS8SZ/XL/_WHZ4226-Edit2-sharpen-stabilize-XL.jpg",
+    "alt": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Nvn4r5N/A",
     "keywords": [
       "wayne heim",
@@ -4405,14 +5219,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 162
+    "sortOrder": 162,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/LckTM9NsBhppDzmpwd4KdgGnHZvRqrJttVbrhjTmT/XL/_WHZ4226-Edit2-sharpen-stabilize-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/LckTM9NsBhppDzmpwd4KdgGnHZvRqrJttVbrhjTmT/XL/_WHZ4226-Edit2-sharpen-stabilize-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/NjHzD843CW29b5JW9qN6pcrhJWpnjP62DGspMskPr/L/_WHZ4226-Edit2-sharpen-stabilize-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/NC6kGVqQBFCHv47KprFZtxPwpFbRgrjpPLrzQPVjr/M/_WHZ4226-Edit2-sharpen-stabilize-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/MRhS257R8Jb2v3nhjfJF9kVR32Lpj334Gtmx6CgKT/S/_WHZ4226-Edit2-sharpen-stabilize-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rPXvXBk",
     "title": "Rock Ledges of Athabasca Falls",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Rock Ledges of Athabasca Falls",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rPXvXBk/4/MkfphBvmZDsj8PdSsF894pzRZ4ncPDFW9dX8JB5mm/XL/_WHZ3672-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Sunset on Emerald Lake and the Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rPXvXBk/A",
     "keywords": [
       "wayne heim",
@@ -4434,14 +5253,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 163
+    "sortOrder": 163,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rPXvXBk/4/LhLKZ2jfkrDnkwQrwhBBBNtDDzhtDHkwMMt3M7dmd/XL/_WHZ3672-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rPXvXBk/4/LhLKZ2jfkrDnkwQrwhBBBNtDDzhtDHkwMMt3M7dmd/XL/_WHZ3672-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rPXvXBk/4/NFtJ3kRTZnwQ2ScFqHd8hwWD8NnkRvd5J6rSqtdmH/L/_WHZ3672-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rPXvXBk/4/Kkc3NT92mpKSmn2J6SFsL2dgxzszm9DDZ6xDnpHRt/M/_WHZ3672-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rPXvXBk/4/NgbxFWQCBh9MrmS58T26PhPhckStq9L9fGThvFHR4/S/_WHZ3672-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-g6pX48d",
     "title": "The Milky Way Over Sunwapta Falls",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Milky Way Over Sunwapta Falls",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/KfwmVMMMtXHmML8Z2JfS3kVb833FRxnCXpWh2B84r/XL/_WHZ3489-Edit-sharpen-focus-XL.jpg",
+    "alt": "Rock Ledges of Athabasca Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6pX48d/A",
     "keywords": [
       "wayne heim",
@@ -4463,14 +5287,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 164
+    "sortOrder": 164,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/NDTspmpGQzW7Vxx9B82SKp8gNrv9GvXZhGd6cXrZ6/XL/_WHZ3489-Edit-sharpen-focus-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/NDTspmpGQzW7Vxx9B82SKp8gNrv9GvXZhGd6cXrZ6/XL/_WHZ3489-Edit-sharpen-focus-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/NDTspmpGQzW7Vxx9B82SKp8gNrv9GvXZhGd6cXrZ6/XL/_WHZ3489-Edit-sharpen-focus-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/KFtGmKPQV3mztQp3Mb3JGw3bfgLnbtR4wHhS6rZLX/L/_WHZ3489-Edit-sharpen-focus-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/Ndkb5pf2BLBrdqtPD3TdHxBwD99dzWWpLCQSJm3P8/S/_WHZ3489-Edit-sharpen-focus-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-h8WQFDs",
     "title": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/MFQjwwP36vdbMB5xTsQt6mdPVNDnrJvF3jTSVBg4X/XL/_WHZ4622-Edit-XL.jpg",
+    "alt": "The Milky Way Over Sunwapta Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-h8WQFDs/A",
     "keywords": [
       "wayne heim",
@@ -4492,14 +5321,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 165
+    "sortOrder": 165,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/Ms3xG8zv5W27X89ZMFQP3BRdMkkLMF4BJX7SKz3tR/XL/_WHZ4622-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/Ms3xG8zv5W27X89ZMFQP3BRdMkkLMF4BJX7SKz3tR/XL/_WHZ4622-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/KxfMWtn8DCKLGbqFxZdkp9ShZ2CCq545LGGmjSD3f/L/_WHZ4622-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/KrxRJV7xGdS6HWFKhXGW73Dkm4qDzBRZsB4MVvntq/M/_WHZ4622-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/MH2xBQgsCt5X9DwXvNMDbHgDCp9HV49Q2TMv4SwVZ/S/_WHZ4622-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vfxQXDw",
     "title": "Evidence of Landslides on the Mountains",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Evidence of Landslides on the Mountains",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/MDND8mfLxgPvzn2WqNV4QM9XN9T8rrT3hkfCj2Rgm/XL/_WHZ4485-Edit-sharpen-stabilize-XL.jpg",
+    "alt": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vfxQXDw/A",
     "keywords": [
       "wayne heim",
@@ -4521,14 +5355,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 166
+    "sortOrder": 166,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/LhdxJjsxsKjfKFDJzpHn9DnTLfjc5G6Z4jpmdcbnp/XL/_WHZ4485-Edit-sharpen-stabilize-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/LhdxJjsxsKjfKFDJzpHn9DnTLfjc5G6Z4jpmdcbnp/XL/_WHZ4485-Edit-sharpen-stabilize-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/L9m7kx2Kh8qLLk6vn55QQ6Lrbf5mtn4v2JdZKwSk9/L/_WHZ4485-Edit-sharpen-stabilize-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/MRPNXSWRbc6g7899n9Lg6Xj2k7Ms3r9X6jsZ2nR5S/M/_WHZ4485-Edit-sharpen-stabilize-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/LJCnnVjB23tLqHFcPZWvKLQKB9xcF2stqkHd5DhJ3/S/_WHZ4485-Edit-sharpen-stabilize-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SChqMBC",
     "title": "A Storm Rolling in at Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "A Storm Rolling in at Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-SChqMBC/4/MxZjtFMFkNmhVcW6C9mxCBMQHVR4G52QJNvbH2bXq/XL/_WHZ4466-Edit-XL.jpg",
+    "alt": "Evidence of Landslides on the Mountains",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SChqMBC/A",
     "keywords": [
       "wayne heim",
@@ -4550,14 +5389,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 167
+    "sortOrder": 167,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-SChqMBC/4/K4nZjQwmCgrStrWwkZqLfbRhpXwSgRCStJzFPhLKj/XL/_WHZ4466-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-SChqMBC/4/K4nZjQwmCgrStrWwkZqLfbRhpXwSgRCStJzFPhLKj/XL/_WHZ4466-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-SChqMBC/4/K4nZjQwmCgrStrWwkZqLfbRhpXwSgRCStJzFPhLKj/XL/_WHZ4466-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-SChqMBC/4/K9jhwx9bVc2zBF3K6sQCN8FVXSKczWhH5PCpWSxD3/L/_WHZ4466-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-SChqMBC/4/KnfWRZXkxTFM5TkSTqC9KFJ97sT9LQW9VbHSgKcnH/S/_WHZ4466-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MmGfvfX",
     "title": "The Canadian Rockies from the Edge of Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Canadian Rockies from the Edge of Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LvkVshVMr9fqvgFQCMXBTBC59M5VtGWQ99xTk5ztz/XL/_WHZ4428-Pano-Edit-sharpen-stabilize-XL.jpg",
+    "alt": "A Storm Rolling in at Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MmGfvfX/A",
     "keywords": [
       "wayne heim",
@@ -4579,14 +5423,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 168
+    "sortOrder": 168,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LbQpNpKZftzC5MzznFXb2nTLP5KvKnw2cHpQSLZTv/XL/_WHZ4428-Pano-Edit-sharpen-stabilize-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LbQpNpKZftzC5MzznFXb2nTLP5KvKnw2cHpQSLZTv/XL/_WHZ4428-Pano-Edit-sharpen-stabilize-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LbQpNpKZftzC5MzznFXb2nTLP5KvKnw2cHpQSLZTv/XL/_WHZ4428-Pano-Edit-sharpen-stabilize-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LnzXKHmR6wRsXwwtsR4JsMmf79cvhW3VWwMkShbpr/M/_WHZ4428-Pano-Edit-sharpen-stabilize-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LDqDFJ4JN4Vn9G6LNKxK8VB6khcpt2gnCZJcvjHMm/S/_WHZ4428-Pano-Edit-sharpen-stabilize-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-93dnGFW",
     "title": "An Eerie, Foggy Morning at Emerald Lake Lodge",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "An Eerie, Foggy Morning at Emerald Lake Lodge",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-93dnGFW/3/KzP82qPbxtBrBK5Lr8SM2rVk3pnDZcd65CCCvfKhJ/XL/_WHZ4356-Edit-2-XL.jpg",
+    "alt": "The Canadian Rockies from the Edge of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-93dnGFW/A",
     "keywords": [
       "wayne heim",
@@ -4608,14 +5457,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 169
+    "sortOrder": 169,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-93dnGFW/3/L9D4m2qFc6TMmZkGS4KzqsWGSVcj7KtzC4KkwcB8H/XL/_WHZ4356-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-93dnGFW/3/L9D4m2qFc6TMmZkGS4KzqsWGSVcj7KtzC4KkwcB8H/XL/_WHZ4356-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-93dnGFW/3/Mjx4LJdp3XLnTTwpstTnSHwW2zJrjWPJkC8DQKsGw/L/_WHZ4356-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-93dnGFW/3/NZsJFs7nBbFBNvNXFq37LcqWXW2D9VRCLgJVM2TqP/M/_WHZ4356-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-93dnGFW/3/Kx8HrW9DThq2GdpF3JZ5Vb7qDsWnpTMxV89MZQ7Bb/S/_WHZ4356-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-d4pjWhk",
     "title": "Morning Fog Sweeping Across Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Morning Fog Sweeping Across Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/Nh9pTQc9Vt63q7bDDqB7h9KMrxgzHLRt33JDLWX8n/XL/_WHZ4304-Edit-XL.jpg",
+    "alt": "An Eerie, Foggy Morning at Emerald Lake Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d4pjWhk/A",
     "keywords": [
       "wayne heim",
@@ -4637,14 +5491,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 170
+    "sortOrder": 170,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/MJtshtqwG6tGsDmFc8JHtVk2cFMtWDzHVRPPqc65W/XL/_WHZ4304-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/MJtshtqwG6tGsDmFc8JHtVk2cFMtWDzHVRPPqc65W/XL/_WHZ4304-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/LRNc5HWLhr6MgtmGjxBH6C4kZhXTdVPBW4MTLw5HG/L/_WHZ4304-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/MPR7StwJd4V9BGgcxghrbBSPb7JbW5sS2jbwKtGfJ/M/_WHZ4304-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/NJMnn4WMNpbkXSp9776rP5D2BkRtFkD8gMdTq6w2H/S/_WHZ4304-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XQmGrxd",
     "title": "The Sun Breaking Through a Foggy Morning",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Sun Breaking Through a Foggy Morning",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/MkP4vMrTMbNTmPRsp2KwTPtPx23km98TrGq9BPpqD/XL/_WHZ4303-Edit-XL.jpg",
+    "alt": "Morning Fog Sweeping Across Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XQmGrxd/A",
     "keywords": [
       "wayne heim",
@@ -4666,14 +5525,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 171
+    "sortOrder": 171,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/MtLKxM4GN4jPfZ3T3CgnZPhRM5CfwnkspSbWJ28nW/XL/_WHZ4303-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/MtLKxM4GN4jPfZ3T3CgnZPhRM5CfwnkspSbWJ28nW/XL/_WHZ4303-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/MtLKxM4GN4jPfZ3T3CgnZPhRM5CfwnkspSbWJ28nW/XL/_WHZ4303-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/KSRkF43jLp6K77RGDMwMFzmktZ43FQsPL8gNjFsrz/L/_WHZ4303-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/Kr4N2HVkhfcF477zCnwhzZDnHMdr6dN8mpndjTsgF/S/_WHZ4303-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-G8SjQHw",
     "title": "Fog Rolling in Over the Pier of Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Fog Rolling in Over the Pier of Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/KFXbzxMsPHGktw44C5vZqk36jrqqN4RwDjv6CCLZ5/XL/_WHZ4301-Edit-XL.jpg",
+    "alt": "The Sun Breaking Through a Foggy Morning",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-G8SjQHw/A",
     "keywords": [
       "wayne heim",
@@ -4695,14 +5559,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 172
+    "sortOrder": 172,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/NQWPTs8SNxGS5pcpf6STz3MCbNZ9jXxk23WPjDTHj/XL/_WHZ4301-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/NQWPTs8SNxGS5pcpf6STz3MCbNZ9jXxk23WPjDTHj/XL/_WHZ4301-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/LG7DjCxdqc4GVqw3kzNXTgKDssDVwP2ZLT7hRvsqM/L/_WHZ4301-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/K9pmDNhPQSWwJckhxrG9gWKrf38GCSMCbRp7gqnX6/M/_WHZ4301-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/M28ggbmZvkLkkd34frDXhRgc8MTXvMStBW97Z6wDH/S/_WHZ4301-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MWfpZWw",
     "title": "Pine Trees Reflecting on Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Pine Trees Reflecting on Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/KKQJs38zZ4rC9p8gkGp9NfP7tPThp4VSc5c53XjSS/XL/_WHZ4291_tonemapped-Edit-XL.jpg",
+    "alt": "Fog Rolling in Over the Pier of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MWfpZWw/A",
     "keywords": [
       "wayne heim",
@@ -4724,14 +5593,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 173
+    "sortOrder": 173,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/LSrwMs8fQDpJWmqhqg2zHG9SCrJVrnrKBMb6kLkXQ/XL/_WHZ4291_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/LSrwMs8fQDpJWmqhqg2zHG9SCrJVrnrKBMb6kLkXQ/XL/_WHZ4291_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/LSrwMs8fQDpJWmqhqg2zHG9SCrJVrnrKBMb6kLkXQ/XL/_WHZ4291_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/LWNnvvhskhX9QdpgVzPL3QQ4pcJ8wtj8LC4G7GbHz/L/_WHZ4291_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/L8RXNDs5FWQmwcMLLXHVwxSbhJ59MLRjMjVwBmJQH/S/_WHZ4291_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BqLgwDV",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-BqLgwDV/2/NX9MwxRJ9Kb9kDbMS5WfWbS9XL4VRTkCjXBFHbpm5/XL/_ANA0559-XL.jpg",
+    "alt": "Pine Trees Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BqLgwDV/A",
     "keywords": [
       "wayne heim",
@@ -4753,14 +5627,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 174
+    "sortOrder": 174,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-BqLgwDV/2/MC2djP76bzgFhVv9ppMjLV2NV8HVB7QH76TZfBXRR/XL/_ANA0559-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-BqLgwDV/2/MC2djP76bzgFhVv9ppMjLV2NV8HVB7QH76TZfBXRR/XL/_ANA0559-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-BqLgwDV/2/Ndck76NSSTCMkR7dXCHJX7RZ96P2LZ86H3N993Shh/L/_ANA0559-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-BqLgwDV/2/MsRCgKM42DkMtfQHZ5prnZth6MWMRmqDpkBBMrz6p/M/_ANA0559-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-BqLgwDV/2/LFjZ2cLN9jr9tN8GsBfsdqFzCTdkcvZSmMMVkFgJQ/S/_ANA0559-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9Tfz9Nk",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-9Tfz9Nk/0/NL5x8H5X5PnCGLqkLXkB4HpLjrCD4DDdNNc7Jbjqz/XL/_WHZ6742-Edit_tonemapped-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9Tfz9Nk/A",
     "keywords": [
       "wayne heim",
@@ -4782,14 +5661,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 175
+    "sortOrder": 175,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-9Tfz9Nk/0/NKtQZNdSNgqz2XHBMQ48vGh6GsJV52M92np6R7pNC/XL/_WHZ6742-Edit_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-9Tfz9Nk/0/NKtQZNdSNgqz2XHBMQ48vGh6GsJV52M92np6R7pNC/XL/_WHZ6742-Edit_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-9Tfz9Nk/0/NKtQZNdSNgqz2XHBMQ48vGh6GsJV52M92np6R7pNC/XL/_WHZ6742-Edit_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-9Tfz9Nk/0/Nbt8Qznf8nqQwJR2Bk2XzM8nqNZDN5Rk7XFvTCGtW/L/_WHZ6742-Edit_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-9Tfz9Nk/0/NbTRHCPRwhTM7V3wwkkcPRQXWT9xkNF24xPQWFWzQ/S/_WHZ6742-Edit_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QnWtwx3",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-QnWtwx3/0/L4tCbqCgDMqM42qmCqDMnfL7ZL9WMgJwQdvpXJBfR/XL/_WHZ6658-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-QnWtwx3/A",
     "keywords": [
       "wayne heim",
@@ -4811,14 +5695,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 176
+    "sortOrder": 176,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-QnWtwx3/0/LfQLRthjkSZKLRTQLnwT7LpvFkhB6P9GxW2dmng5V/XL/_WHZ6658-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-QnWtwx3/0/LfQLRthjkSZKLRTQLnwT7LpvFkhB6P9GxW2dmng5V/XL/_WHZ6658-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-QnWtwx3/0/LfQLRthjkSZKLRTQLnwT7LpvFkhB6P9GxW2dmng5V/XL/_WHZ6658-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-QnWtwx3/0/LGNJVBvmqMv27Wk36cZgkGMFm6mnzqSsbWHgbLgDg/L/_WHZ6658-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-QnWtwx3/0/Ksv7DdNS2NJMD74LWD2DR9khdtwQzwvFHW3bWHGhQ/S/_WHZ6658-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-R6q57Rs",
-    "title": "A",
+    "title": "Untitled",
     "description": "Collection of the Best Iceland fine art landscape photography.",
-    "alt": "Collection of the Best Iceland fine art landscape photography.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-R6q57Rs/6/K2nZcxTq4dKS9gpgCwqkCNDNX3cvR6b84H6TpQz9k/XL/_ANA1736-Edit-Edit-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-R6q57Rs/A",
     "keywords": [
       "wayne heim",
@@ -4840,14 +5729,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 177
+    "sortOrder": 177,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-R6q57Rs/6/MsjskMQcqMt4BkNdKjN78TzjST7mv8NVGL3tTqfGK/XL/_ANA1736-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-R6q57Rs/6/MsjskMQcqMt4BkNdKjN78TzjST7mv8NVGL3tTqfGK/XL/_ANA1736-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-R6q57Rs/6/MsjskMQcqMt4BkNdKjN78TzjST7mv8NVGL3tTqfGK/XL/_ANA1736-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-R6q57Rs/6/LtwVVHG2gSTNmrgTCVcSb58gtPW23HfdWwbfL45Ls/L/_ANA1736-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-R6q57Rs/6/KfHGFj8MStXVSXnjt9L7KnxwD7jFFSPz26QWnvzVg/S/_ANA1736-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RWr4ppX",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/KTbKDdcW73KkvQ6N2b5WcpDzNgtsWTpwgTcLwbshp/XL/_ANA1140_tonemapped-2-XL.jpg",
+    "alt": "Collection of the Best Iceland fine art landscape photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-RWr4ppX/A",
     "keywords": [
       "wayne heim",
@@ -4869,14 +5763,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 178
+    "sortOrder": 178,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/Lf22GWtD8Xn8mMpvkqDN9S4QbVPkvfRwKSfZZCtsV/XL/_ANA1140_tonemapped-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/Lf22GWtD8Xn8mMpvkqDN9S4QbVPkvfRwKSfZZCtsV/XL/_ANA1140_tonemapped-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/Lf22GWtD8Xn8mMpvkqDN9S4QbVPkvfRwKSfZZCtsV/XL/_ANA1140_tonemapped-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/M3PdLxb8Vtx3RDFCTfB9d4qdnL6KLZ3dsg2zWN7HV/L/_ANA1140_tonemapped-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-RWr4ppX/0/Mkwhk5k7RPk8r9NPf8DTtZf3QdSkMhngFsMpM63H9/S/_ANA1140_tonemapped-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jJpmmzj",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
-    "alt": "Fine art landscape photography of Glacier National Park and Montana.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jJpmmzj/0/KMsk2fXnHXxdTVKBswGDmQ66KG6RvNwb4ppGKj74J/XL/_IGP2891-Edit-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jJpmmzj/A",
     "keywords": [
       "wayne heim",
@@ -4898,14 +5797,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 179
+    "sortOrder": 179,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jJpmmzj/0/L5K8f8wpdhGhMbPRNgRQXtVjTdrrRpGFmhXvCWrF6/XL/_IGP2891-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jJpmmzj/0/L5K8f8wpdhGhMbPRNgRQXtVjTdrrRpGFmhXvCWrF6/XL/_IGP2891-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jJpmmzj/0/MZVhBvPTFz9L4S5pcWcrJq2MNprgK7X8zr8nr3vCL/L/_IGP2891-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jJpmmzj/0/LHmGz9gDrTX7XVv2cg9sQSfPxZvJKX4sNdD6SmQCm/M/_IGP2891-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-jJpmmzj/0/NSHSKKqhtCGhp4CKQqtv7sXGrwHmT8rnGXkVRtL7x/S/_IGP2891-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NPKG2Mz",
     "title": "Emerald Lake Lodge at Night",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Emerald Lake Lodge at Night",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NPKG2Mz/5/KQGtmw9f9bg497J9b2vVn5QhpGM6jmGwjkjFqZsqL/XL/_WHZ4261-Pano-2-Edit-sharpen-sharpen-Edit-XL.jpg",
+    "alt": "Fine art landscape photography of Glacier National Park and Montana.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-NPKG2Mz/A",
     "keywords": [
       "wayne heim",
@@ -4927,14 +5831,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 180
+    "sortOrder": 180,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NPKG2Mz/5/Kx2RsjmSKdHBGSfXVVcg9hTZ3gLwNV55h5HcsXRDZ/XL/_WHZ4261-Pano-2-Edit-sharpen-sharpen-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NPKG2Mz/5/Kx2RsjmSKdHBGSfXVVcg9hTZ3gLwNV55h5HcsXRDZ/XL/_WHZ4261-Pano-2-Edit-sharpen-sharpen-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NPKG2Mz/5/LrNFXgZzjtQ8bxdxV567dH37nZ8bTW5Q9n8mLCd8K/L/_WHZ4261-Pano-2-Edit-sharpen-sharpen-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NPKG2Mz/5/KkKJ29SDZszT5V4Qsgp8BzDSVpNBb52nNzj6bwpRC/M/_WHZ4261-Pano-2-Edit-sharpen-sharpen-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NPKG2Mz/5/MwB2J63FmbVQcKhJ8sCpHnTtkHzbmGVk8xbMzqTfp/S/_WHZ4261-Pano-2-Edit-sharpen-sharpen-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5rfQTgH",
     "title": "Behind the Falls 2  Photography by Wayne Heim",
     "description": "Photo from behind one of the many waterfalls in Iceland. ©Wayne Heim",
-    "alt": "Behind the Falls 2  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5rfQTgH/6/K3hMJvknQNzMDRhSTfSHFf4sWmHK6ZhM8t7j7hJr4/XL/_WHZ0208-Pano-Edit-XL.jpg",
+    "alt": "Emerald Lake Lodge at Night",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5rfQTgH/A",
     "keywords": [
       "wayne heim",
@@ -4956,14 +5865,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 181
+    "sortOrder": 181,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5rfQTgH/6/NgM6hPd6Zvh44cw8VFVV8MwXBg4TSG6QzwcLqS4cf/XL/_WHZ0208-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5rfQTgH/6/NgM6hPd6Zvh44cw8VFVV8MwXBg4TSG6QzwcLqS4cf/XL/_WHZ0208-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5rfQTgH/6/NgM6hPd6Zvh44cw8VFVV8MwXBg4TSG6QzwcLqS4cf/XL/_WHZ0208-Pano-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5rfQTgH/6/NCLC8dB2bBScDj2Vh8f5CPRvnPzDsT6GFbPtKBvq6/L/_WHZ0208-Pano-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-5rfQTgH/6/KfFT5TdVFJwJJ9g8J2wSvBRpVx6Pmh76KgrG742Cw/S/_WHZ0208-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-x4ZHpcB",
     "title": "Road to the Water  Photography by Wayne Heim",
     "description": "Road winds down to the water.  ©Wayne Heim",
-    "alt": "Road to the Water  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-x4ZHpcB/7/MR63fTM5FrFVrCX46cnrr2gcgJXVxnSGkD8HnXDhG/XL/_K1W3449_tonemapped-XL.jpg",
+    "alt": "Behind the Falls 2  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-x4ZHpcB/A",
     "keywords": [
       "wayne heim",
@@ -4985,14 +5899,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 182
+    "sortOrder": 182,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-x4ZHpcB/7/MtN2QNpF828N3hMrX9qxmdk92MDbstz9n84jstqzN/XL/_K1W3449_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-x4ZHpcB/7/MtN2QNpF828N3hMrX9qxmdk92MDbstz9n84jstqzN/XL/_K1W3449_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-x4ZHpcB/7/MfNzCM9j3DckMbLSds9rsjBnL68r688jv4xF5DSPG/L/_K1W3449_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-x4ZHpcB/7/MFGCjRt6vKLCqTjR4ZFBkRfpn98NT9FtHt26jBKg6/M/_K1W3449_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-x4ZHpcB/7/MC99BfDKkMRx5KT6VHdrJbqVBHfx3fFFwR2VQ8NWG/S/_K1W3449_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bVZTc34",
     "title": "Shelter  In Faroe    Photography by Wayne Heim",
     "description": "Shelter situated on the edge of the water in Faroe Islands ©Wayne Heim",
-    "alt": "Shelter  In Faroe    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bVZTc34/6/KLtdfGr2vTcPJ8s9xzsWXHD3vX55HTbwZCGwNjZCM/XL/_WHZ9864_tonemapped-Edit-XL.jpg",
+    "alt": "Road to the Water  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bVZTc34/A",
     "keywords": [
       "wayne heim",
@@ -5014,14 +5933,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 183
+    "sortOrder": 183,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bVZTc34/6/K87JpkxPXPg3d6cwzkvtj2j2D9KpLDkxBcLGm3pTq/XL/_WHZ9864_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bVZTc34/6/K87JpkxPXPg3d6cwzkvtj2j2D9KpLDkxBcLGm3pTq/XL/_WHZ9864_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bVZTc34/6/K87JpkxPXPg3d6cwzkvtj2j2D9KpLDkxBcLGm3pTq/XL/_WHZ9864_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bVZTc34/6/MGJTCdBTW9NqK22V8RsB7r2wxNWwVSDTLQPdJmrm5/L/_WHZ9864_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-bVZTc34/6/LxRdGQh6ZqbHjB6xw2kff9Snj8DSSVpWm8wTLqpb5/S/_WHZ9864_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GbJTFrX",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/0/MfRgsCTD7LM2JZJtC6Jrcj2cmNPPzp69kv6gsZK6R/XL/_WHZ2830_tonemapped-topaz-sharpen-XL.jpg",
+    "alt": "Shelter  In Faroe    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/A",
     "keywords": [
       "wayne heim",
@@ -5043,14 +5967,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 184
+    "sortOrder": 184,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/0/LXTb3SZxQpwKpgxFjbHvGDwxbJpskF59nRswrSRcG/XL/_WHZ2830_tonemapped-topaz-sharpen-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/0/LXTb3SZxQpwKpgxFjbHvGDwxbJpskF59nRswrSRcG/XL/_WHZ2830_tonemapped-topaz-sharpen-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/0/KgpjtnXtWgWvG4kvs7vW4XJBFq2MJLH5vWpFncX66/L/_WHZ2830_tonemapped-topaz-sharpen-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/0/Kd8rNgD3VBFgc6TVhdSnb894HPjCNhvsmTqFbFpjG/M/_WHZ2830_tonemapped-topaz-sharpen-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GbJTFrX/0/MnrJPfMTGdmzM3ckLps8qMv5tQn8jxmBGFrpjQNGK/S/_WHZ2830_tonemapped-topaz-sharpen-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-d97Lvs5",
     "title": "Fighting the Waves    Photography by Wayne Heim",
     "description": "Iceberg on shore fights against the battering waves on Iceland's coast.   ©Wayne Heim",
-    "alt": "Fighting the Waves    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d97Lvs5/6/KcBnTCLDpQxQ3zHVLfKKGnhfGFFhQ8kjd6pPj8gsq/XL/_WHZ2891-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d97Lvs5/A",
     "keywords": [
       "wayne heim",
@@ -5072,14 +6001,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 185
+    "sortOrder": 185,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d97Lvs5/6/MQqtjkGtFS2Zt9Dg6M76dfvbVWR3bcVk8MCMGstCg/XL/_WHZ2891-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d97Lvs5/6/MQqtjkGtFS2Zt9Dg6M76dfvbVWR3bcVk8MCMGstCg/XL/_WHZ2891-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d97Lvs5/6/NK6H7cdL2wNTxhknHGCfQqSskjHZpSSFzVs3p7xPP/L/_WHZ2891-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d97Lvs5/6/LLb8zh4DMBVVrLXQm9H4fP9VjHg28StPGfVJ24sBL/M/_WHZ2891-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-d97Lvs5/6/Kgwr9674q5TnrJsKm683m9MCw9xBLzGrD5QC5LzMp/S/_WHZ2891-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9rpxxN9",
     "title": "Into the Sea  Photography by Wayne Heim",
     "description": "Waterfall flows down to the sea in the Faroes. ©Wayne Heim",
-    "alt": "Into the Sea  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rpxxN9/6/KFkTfxdBBgFHrs3bkjrf9bTSGFFSBnFpsQnLhKRHt/XL/_WHZ8519-Edit-XL.jpg",
+    "alt": "Fighting the Waves    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rpxxN9/A",
     "keywords": [
       "wayne heim",
@@ -5101,14 +6035,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 186
+    "sortOrder": 186,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rpxxN9/6/KcV3gRdrzh8KCrz4sC4cFBBtTrMvC7fDXsMNjXpCF/XL/_WHZ8519-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rpxxN9/6/KcV3gRdrzh8KCrz4sC4cFBBtTrMvC7fDXsMNjXpCF/XL/_WHZ8519-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rpxxN9/6/LHkpRjGMG4DRc7n8JMKvz4FHLNkQDPGRmKWbpzzdT/L/_WHZ8519-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rpxxN9/6/LLCqP7bTkgffp3VRGgr2crqtJH6XKd9ckW45zwdGQ/M/_WHZ8519-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rpxxN9/6/NVcLdmZ9S6W4xVNcQVQKHbt8FVRDrpK5TNFgdSqZh/S/_WHZ8519-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VrhMdzV",
     "title": "Seaside Pasture     Photography by Wayne Heim",
     "description": "Small pasture sets by the water in Newfoundland. ©Wayne Heim",
-    "alt": "Seaside Pasture     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VrhMdzV/6/Kpk7BMkNKWHF3WRbZCvqL8nzDx69Jtq8KZcF6bNqB/XL/_WHZ8303_tonemapped-Edit-3-XL.jpg",
+    "alt": "Into the Sea  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VrhMdzV/A",
     "keywords": [
       "wayne heim",
@@ -5130,14 +6069,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 187
+    "sortOrder": 187,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VrhMdzV/6/KN27ZNqqgkRpWWrssjS5MpzmTRHdvT3R44wgg6JqL/XL/_WHZ8303_tonemapped-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VrhMdzV/6/KN27ZNqqgkRpWWrssjS5MpzmTRHdvT3R44wgg6JqL/XL/_WHZ8303_tonemapped-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VrhMdzV/6/KN27ZNqqgkRpWWrssjS5MpzmTRHdvT3R44wgg6JqL/XL/_WHZ8303_tonemapped-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VrhMdzV/6/LMzV7ZMgZMtdfStmS56mt4kKNwWc6mSsZRq4CtMTq/L/_WHZ8303_tonemapped-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VrhMdzV/6/KcdzWBgMHpQ7ggQhgsLDxPfMkX78bhvHcXLLXQ3FG/S/_WHZ8303_tonemapped-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pnp5Z79",
     "title": "Purple Waterfall",
     "description": "Scene from Iceland. ©Wayne Heim",
-    "alt": "Purple Waterfall",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pnp5Z79/7/KPZqs6RJHRbScL3KqmKH7gVD9KZqKmkbPVgSpd6Fj/XL/_WHZ8173-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Seaside Pasture     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pnp5Z79/A",
     "keywords": [
       "wayne heim",
@@ -5159,14 +6103,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 188
+    "sortOrder": 188,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pnp5Z79/7/KHSScStXSGq3NN9mVMPttXNZ7rcstP6fwTShQGXpq/XL/_WHZ8173-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pnp5Z79/7/KHSScStXSGq3NN9mVMPttXNZ7rcstP6fwTShQGXpq/XL/_WHZ8173-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pnp5Z79/7/NPCCF64Mj75TFdhkWTx4kc6Kg73WVn9pQJWdJkV4d/L/_WHZ8173-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pnp5Z79/7/LFXPmT9DvW9xLChsbHwDQJhCzrgqRzpZqqnBfWX8f/M/_WHZ8173-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-pnp5Z79/7/Lr9QrJGDpM78tNqwrkmDJJ9pSttCSxtjSV9L67Dps/S/_WHZ8173-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jCWwbVC",
     "title": "Iceland Coast  Photography by Wayne Heim",
     "description": "Rugged coast of Iceland under a darkening sky. ©Wayne Heim",
-    "alt": "Iceland Coast  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jCWwbVC/8/LgKhFRHDcrQFK6CgxKGt3VJB6jXtPHgQXqmjCM9P5/XL/_K1W2881-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Purple Waterfall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jCWwbVC/A",
     "keywords": [
       "wayne heim",
@@ -5188,14 +6137,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 189
+    "sortOrder": 189,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jCWwbVC/8/Ngw5KZLSfqMGtqvT7Kw3r2X7L3fczT9fbmbssShV8/XL/_K1W2881-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jCWwbVC/8/Ngw5KZLSfqMGtqvT7Kw3r2X7L3fczT9fbmbssShV8/XL/_K1W2881-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jCWwbVC/8/Ngw5KZLSfqMGtqvT7Kw3r2X7L3fczT9fbmbssShV8/XL/_K1W2881-Pano_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jCWwbVC/8/L8P5rh7JLT4VvRLgXV4fcbhKBQnHHthr8qjHcTcxx/L/_K1W2881-Pano_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jCWwbVC/8/KW9wHss4CfPZ9mSj9s5Gn8dbK58qdSPFScgNtvmgZ/S/_K1W2881-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MrcXxgX",
     "title": "Jokulsarlon Glacier Lagoon  Photography by Wayne Heim",
     "description": "Lagoon created by the Jokulsarlon Glacier .\n ©Wayne Heim",
-    "alt": "Jokulsarlon Glacier Lagoon  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MrcXxgX/7/LK3hhPXVcR7Qc8dCGSMr6Cbr3R7S9XgHJWwTvCcnk/XL/_WHZ2324-Pano-XL.jpg",
+    "alt": "Iceland Coast  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MrcXxgX/A",
     "keywords": [
       "wayne heim",
@@ -5217,14 +6171,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 190
+    "sortOrder": 190,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MrcXxgX/7/Mft6n2Ht263WhgxkC3wHz73vdfJxXRLGK5Xnxcz3n/XL/_WHZ2324-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MrcXxgX/7/Mft6n2Ht263WhgxkC3wHz73vdfJxXRLGK5Xnxcz3n/XL/_WHZ2324-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MrcXxgX/7/MXjqtbb2ND43WgBz2T2DRhbkb3vGpjQzLFqbFjRZt/L/_WHZ2324-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MrcXxgX/7/NVFs5zTbJhwbHDScFVmM65RN4tKLtXZnZchbHThmR/M/_WHZ2324-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MrcXxgX/7/NZMbCg69t6zxt5tBkVPhFMhD4vdqvL2RmsR8Zbfrw/S/_WHZ2324-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WTzWmSr",
     "title": "Getting Close   Photography by Wayne Heim",
     "description": "A view of Skogafoss in close so you feel the spray. ©Wayne Heim",
-    "alt": "Getting Close   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WTzWmSr/7/NP5rxFfdgCGFQcHX98knV6txPq2BL6ZZDZxLZfTwz/XL/_WHZ1839-XL.jpg",
+    "alt": "Jokulsarlon Glacier Lagoon  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WTzWmSr/A",
     "keywords": [
       "wayne heim",
@@ -5246,14 +6205,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 191
+    "sortOrder": 191,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WTzWmSr/7/L47VRL6NRBwQkKq3FhRHxGtPfLXMvzL44Dr5vHg7Z/XL/_WHZ1839-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WTzWmSr/7/L47VRL6NRBwQkKq3FhRHxGtPfLXMvzL44Dr5vHg7Z/XL/_WHZ1839-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WTzWmSr/7/MvvsJfdffzhKTxb3jhJQ5S3wTqSgHSZvHwKr3K7hz/L/_WHZ1839-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WTzWmSr/7/LWD4z9phphGLdtwT79xBbwTLmFcvRkKqM6MjgK8DS/M/_WHZ1839-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-WTzWmSr/7/NVFTsqVSk4bg9PsbsvDzKqNkvmCdS4Csvf8Ttpxh9/S/_WHZ1839-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qTZBmxD",
     "title": "Skogafoss Waterfall From a Far   Photography by Wayne Heim",
     "description": "View of the Skogafoss waterfall from a distance. ©Wayne Heim",
-    "alt": "Skogafoss Waterfall From a Far   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qTZBmxD/6/MR7rsvSSRKDdrt4Fd4RnRxr2J3CrmJfB8Tfcftqbc/XL/_WHZ1828_932-XL.jpg",
+    "alt": "Getting Close   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qTZBmxD/A",
     "keywords": [
       "wayne heim",
@@ -5273,14 +6237,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 192
+    "sortOrder": 192,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qTZBmxD/6/L3bd366dswbqXcvB78knZfxFvPcnkccbzn9NbFV4X/XL/_WHZ1828_932-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qTZBmxD/6/L3bd366dswbqXcvB78knZfxFvPcnkccbzn9NbFV4X/XL/_WHZ1828_932-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qTZBmxD/6/K39G6j2WwWwvx4dQ9c9bxBHrtzkK5g2XKmhWpTBhL/L/_WHZ1828_932-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qTZBmxD/6/MvVqTWmnLcrZfxkps9HnxnMQSLWtQ6SQJHVQWxcCc/M/_WHZ1828_932-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qTZBmxD/6/KrGCwrDX6s6Kc5CVpnXnkjL739LcCgcpq624K5W3s/S/_WHZ1828_932-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mKkQhqC",
     "title": "Full View of Kirkjufellsfoss    Photography by Wayne Heim",
     "description": "Full view of the Kirkjufellsfoss area, waterfall, mountain, river in Iceland.  ©Wayne Heim",
-    "alt": "Full View of Kirkjufellsfoss    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mKkQhqC/6/K6NhNxHqvsthWbVfbNKcgrjX57GgFjtf2FZfkNPxC/XL/_WHZ1224-Pano_tonemapped%2520v2-XL.jpg",
+    "alt": "Skogafoss Waterfall From a Far   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mKkQhqC/A",
     "keywords": [
       "wayne heim",
@@ -5300,14 +6269,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 193
+    "sortOrder": 193,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mKkQhqC/6/KQvjBHqPrcgnmbCLx7NK2BGr3jbz8sBHGXcMfzmGJ/XL/_WHZ1224-Pano_tonemapped%20v2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mKkQhqC/6/KQvjBHqPrcgnmbCLx7NK2BGr3jbz8sBHGXcMfzmGJ/XL/_WHZ1224-Pano_tonemapped%20v2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mKkQhqC/6/MDx4xRwztnfdtwjTh9bnJ6CQ94G4QvD9Mn6ZJsg8j/L/_WHZ1224-Pano_tonemapped%20v2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mKkQhqC/6/Kq6x2nKM4RmTzwSN8C5fQhx3JhdqhhTgdXT6gPfKF/M/_WHZ1224-Pano_tonemapped%20v2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-mKkQhqC/6/LfHpGjPFgz8fftxmmsbNWd652D5XxDb6VKMbdNW9d/S/_WHZ1224-Pano_tonemapped%20v2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dG5zDPC",
     "title": "Kirkjufells Mountain  Photography by Wayne Heim",
     "description": "Kirkjufellsfoss waterfall flows before the jutting mountain.  ©Wayne Heim",
-    "alt": "Kirkjufells Mountain  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dG5zDPC/6/NNdDR3L8x3p4LwsvNBw7XGHwnHrhWDQnVSzs7NHRm/XL/_WHZ1202-HDR_tonemapped-XL.jpg",
+    "alt": "Full View of Kirkjufellsfoss    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dG5zDPC/A",
     "keywords": [
       "wayne heim",
@@ -5327,14 +6301,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 194
+    "sortOrder": 194,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dG5zDPC/6/MXjz5VZ5kwc7vFsxwrSPJfxJqcnBgc9WJmrsxFRC2/XL/_WHZ1202-HDR_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dG5zDPC/6/MXjz5VZ5kwc7vFsxwrSPJfxJqcnBgc9WJmrsxFRC2/XL/_WHZ1202-HDR_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dG5zDPC/6/MXjz5VZ5kwc7vFsxwrSPJfxJqcnBgc9WJmrsxFRC2/XL/_WHZ1202-HDR_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dG5zDPC/6/KwPptQRgrcQFq6gBVQNjQBp6MgLPR6ZPH5z7TjzbZ/L/_WHZ1202-HDR_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dG5zDPC/6/NJPTnShs8fXBNzZQwZMQXGxgxK4vPsq4BNHqHvwJL/S/_WHZ1202-HDR_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wmVjBm8",
     "title": "Waterfall Bridge   Photography by Wayne Heim",
     "description": "Small foot bridge spans a water fall in Iceland.  ©Wayne Heim",
-    "alt": "Waterfall Bridge   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wmVjBm8/6/NJXd55jF3L7cZkjRbvmKdwbhTSjQCQnNRDzXtB2KL/XL/_WHZ1193-HDR-XL.jpg",
+    "alt": "Kirkjufells Mountain  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wmVjBm8/A",
     "keywords": [
       "wayne heim",
@@ -5354,14 +6333,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 195
+    "sortOrder": 195,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wmVjBm8/6/LBgrnf5HTLmfXHhjbBMhHcMz9r3wDHV2vVn44rpfR/XL/_WHZ1193-HDR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wmVjBm8/6/LBgrnf5HTLmfXHhjbBMhHcMz9r3wDHV2vVn44rpfR/XL/_WHZ1193-HDR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wmVjBm8/6/LBgrnf5HTLmfXHhjbBMhHcMz9r3wDHV2vVn44rpfR/XL/_WHZ1193-HDR-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wmVjBm8/6/NC6rTsBJbSqLDNQBjmM8kvCBrdhSzgb4HHZccJRTF/L/_WHZ1193-HDR-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-wmVjBm8/6/MTQgnfCFH25PCxDpkrk8mt35VrZZDqjxkXDx2xNW5/S/_WHZ1193-HDR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-B8MhZMS",
     "title": "Faroe Coast  Photography by Wayne Heim",
     "description": "Mist hangs over the  roughed coast of the Faroe Islands. ©Wayne Heim",
-    "alt": "Faroe Coast  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B8MhZMS/6/LkWLTCSp83c9cwwGnjxfdZV6hCdc6jH8pWcFPVjvp/XL/_OLY8984-Edit-XL.jpg",
+    "alt": "Waterfall Bridge   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B8MhZMS/A",
     "keywords": [
       "wayne heim",
@@ -5381,14 +6365,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 196
+    "sortOrder": 196,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B8MhZMS/6/MBZ4Lz7ws8c63CWFdHcvKSxxbSvgmpnXcJxwGdxnV/XL/_OLY8984-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B8MhZMS/6/MBZ4Lz7ws8c63CWFdHcvKSxxbSvgmpnXcJxwGdxnV/XL/_OLY8984-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B8MhZMS/6/M8TKtPGhwf9bDMf63JzHt6KdfKFnTQTFQCGT9nHGp/L/_OLY8984-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B8MhZMS/6/LLD3xWwn7D9ZkcnChqTSLwRkz6DdRWSgtxMsBXZT8/M/_OLY8984-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-B8MhZMS/6/MF9rJxBkD5zVW6hSMKkfFqm8VznvZ6P9qpTgNkvBR/S/_OLY8984-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8t6Gg8h",
     "title": "Looking Up at Watkins Glen   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Looking Up at Watkins Glen   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-8t6Gg8h/4/L6mjLGpvdfzVgp8F8x5TfF4xbqm6QDVmnqVDXrGc4/XL/_W3H0014-XL.jpg",
+    "alt": "Faroe Coast  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8t6Gg8h/A",
     "keywords": [
       "wayne heim",
@@ -5408,14 +6397,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 197
+    "sortOrder": 197,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-8t6Gg8h/4/K8dxmWnWgBd6XDQrgdmb3hS6B4nn8PxxZTr7Zh66C/XL/_W3H0014-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-8t6Gg8h/4/K8dxmWnWgBd6XDQrgdmb3hS6B4nn8PxxZTr7Zh66C/XL/_W3H0014-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-8t6Gg8h/4/Mx8wdtB4bWFkLTPxFgqCmLC3HgGWgWvW639q7rbww/L/_W3H0014-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-8t6Gg8h/4/KV9QdF53jZGBChs25GG4fkRRhX7mwC26q4b5Fz2Sh/M/_W3H0014-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-8t6Gg8h/4/KZ6qbBWDW55rVvwDFP7sSTwnNZHs6GxK8gfV8zWCs/S/_W3H0014-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3mbhR5S",
     "title": "Berea Bridge = Photography by Wayne Heim",
     "description": "Berea Bridge -  scene in the metorparks of Cleveland, Ohio shows arches of bridge spanning the Rocky River .©Wayne Heim",
-    "alt": "Berea Bridge = Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-3mbhR5S/3/KhLCkgcqpxG5Q3NmSkXFnPKSqnqJKjmNsK5H4wq7C/XL/i-3mbhR5S-XL.jpg",
+    "alt": "Looking Up at Watkins Glen   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3mbhR5S/A",
     "keywords": [
       "wayne heim",
@@ -5435,14 +6429,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 198
+    "sortOrder": 198,
+    "src": "https://photos.smugmug.com/photos/i-3mbhR5S/3/NQnnctMH8fSfKPMcn3N5NXp7xXcKNGmgXPLRJhqcR/XL/i-3mbhR5S-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-3mbhR5S/3/NQnnctMH8fSfKPMcn3N5NXp7xXcKNGmgXPLRJhqcR/XL/i-3mbhR5S-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-3mbhR5S/3/L8ST34253KcbQNGr2qwFghHMzvKFkFjWRMkGb2xXH/L/i-3mbhR5S-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-3mbhR5S/3/KpFgN5QtG6RQxHrgS7gNfQkQJdnkwdhdZpRKbh4pf/M/i-3mbhR5S-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-3mbhR5S/3/MzxpZtzfWH9GL5hxmVHVpzPXH8wTvgkJBCrtJ5m5r/S/i-3mbhR5S-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hpFHm3G",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Fine art landscape photography of Iceland in the Summer.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-hpFHm3G/6/Kr2ZwwMtHRT27bZpt5LggxnVG2pWWxfXFFVkbHMpH/XL/_ANA2559-Enhanced-Edit-XL.jpg",
+    "alt": "Berea Bridge = Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hpFHm3G/A",
     "keywords": [
       "wayne heim",
@@ -5462,14 +6461,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 199
+    "sortOrder": 199,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-hpFHm3G/6/Nd94zRQ6xx4TLGFzqM3gHTdcD9LDGMK7LsHKXHprr/XL/_ANA2559-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-hpFHm3G/6/Nd94zRQ6xx4TLGFzqM3gHTdcD9LDGMK7LsHKXHprr/XL/_ANA2559-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-hpFHm3G/6/L2gDBtNqRZFGPcqQch5CNpw7mrNcnFWXJCN65xWdr/L/_ANA2559-Enhanced-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-hpFHm3G/6/LMzHpNNzWVkqLzMH2dnZ29TXR7h9RhK4LTc3sz7jv/M/_ANA2559-Enhanced-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-hpFHm3G/6/NKt3KbkbjNxfBT7XdgbpSBwxjfR238TJg2Zr6HDtm/S/_ANA2559-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PV859RK",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PV859RK/2/Kzc58j256pFcGZsjTtLvGv3QnVt8JGTZtGHFxCGSc/XL/_DSF5884-Edit-XL.jpg",
+    "alt": "Fine art landscape photography of Iceland in the Summer.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-PV859RK/A",
     "keywords": [
       "wayne heim",
@@ -5489,14 +6493,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 200
+    "sortOrder": 200,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PV859RK/2/M64P8ThJNmXQBpvbZpGCLmpcQ8xH9jjBk3KSKDWG6/XL/_DSF5884-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PV859RK/2/M64P8ThJNmXQBpvbZpGCLmpcQ8xH9jjBk3KSKDWG6/XL/_DSF5884-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PV859RK/2/LqVvWwFZ3mbXbJp9gPTWGMFZhv4mkDttqg3CQbvW5/L/_DSF5884-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PV859RK/2/K9zj8GZn35dzm3wtBHt32QpsgRmQrqHBX5hCB7Swm/M/_DSF5884-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PV859RK/2/K6MdmsTPPXxqHjqpz9Xsm869NM74dX8R5zxDfGq4q/S/_DSF5884-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hVB6Pxq",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KMCVC3MxV2PB2ZwQXZg3XGBdBmck5SSMfMVqjV2Z6/XL/_O1H1351-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-hVB6Pxq/A",
     "keywords": [
       "wayne heim",
@@ -5516,14 +6525,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 201
+    "sortOrder": 201,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NZHwxFMgxNh8LsmGTW5rQ3CtvQHxJvGQqLHGHN6dc/XL/_O1H1351-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NZHwxFMgxNh8LsmGTW5rQ3CtvQHxJvGQqLHGHN6dc/XL/_O1H1351-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KDWp7935CN6Rs2F2hSKjQR5bfxvqDZP52X5qrBMZq/L/_O1H1351-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/LZzNMqJMRMhmBB8VMrn7FkMJKpBTg5CpzV2QfnjpJ/M/_O1H1351-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NKqPSvXvrL93mHSNHJ2mMPCxRG74nXNbBrGCm9sw9/S/_O1H1351-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Bm9GTTT",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/0/MC4GPRNT6HRLmX2DGRKzT5vxn8jmpwLndgr3p7KV8/XL/_OLY8581-Edit-topaz-denoise-sharpen-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/A",
     "keywords": [
       "wayne heim",
@@ -5543,14 +6557,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 202
+    "sortOrder": 202,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/0/KJvjnWDjKNbwpJSk5tCBFHjsLwWzgpzgFsSZ39Xtg/XL/_OLY8581-Edit-topaz-denoise-sharpen-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/0/KJvjnWDjKNbwpJSk5tCBFHjsLwWzgpzgFsSZ39Xtg/XL/_OLY8581-Edit-topaz-denoise-sharpen-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/0/KMKdVzHjLdPTdg9BqGg9JZgM6jGSqrw687gGWtVrs/L/_OLY8581-Edit-topaz-denoise-sharpen-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/0/KqwGjWmnRJ6q7B3fdr8XbkkxWsGDzCXXdjjCsq7m7/M/_OLY8581-Edit-topaz-denoise-sharpen-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Bm9GTTT/0/NdZQh7ChHNWHBvnc6cqj3RshNVd7kmgjq2LZXPDZz/S/_OLY8581-Edit-topaz-denoise-sharpen-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Fz6B7bw",
     "title": "Seawall in Fairport-2.  Photography by Wayne Heim",
     "description": "Seawall in Fairport - seawall leading to the lighthouse in Fairport, Ohio ©Wayne Heim",
-    "alt": "Seawall in Fairport-2.  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-Fz6B7bw/6/Lt4qtVJFzBLQ49TMnw7Pt3KMdmj9ffrmz7z2rRZpg/XL/i-Fz6B7bw-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Fz6B7bw/A",
     "keywords": [
       "wayne heim",
@@ -5570,14 +6589,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 203
+    "sortOrder": 203,
+    "src": "https://photos.smugmug.com/photos/i-Fz6B7bw/6/NCsWhGd2WtDCgjHxrGTkJvdvn56W5LRwNFdvHFknX/XL/i-Fz6B7bw-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-Fz6B7bw/6/NCsWhGd2WtDCgjHxrGTkJvdvn56W5LRwNFdvHFknX/XL/i-Fz6B7bw-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-Fz6B7bw/6/NCsWhGd2WtDCgjHxrGTkJvdvn56W5LRwNFdvHFknX/XL/i-Fz6B7bw-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-Fz6B7bw/6/Lrz8TZ4VnQ2CjCfWT43m4MbNFgbcV7xbH4g9jt7tv/L/i-Fz6B7bw-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-Fz6B7bw/6/K5GsXx8DK4Rz4bWcvk5pb7C6QjsCpHRrGfPrPQW7r/S/i-Fz6B7bw-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6brnssc",
     "title": "Cotton Candy    Photography by Wayne Heim",
     "description": "Clouds hang like cotton candy over the sea off Iceland. ©Wayne Heim",
-    "alt": "Cotton Candy    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6brnssc/7/KGcM2ZzDpqDbHmXHBXZGQ9V4DHBKvFfhBd8vcV4gX/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
+    "alt": "Seawall in Fairport-2.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6brnssc/A",
     "keywords": [
       "wayne heim",
@@ -5597,14 +6621,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 204
+    "sortOrder": 204,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6brnssc/7/M2DsVbxqxkHFL3tpstMChbgNTwPhTCSCccG6L3sPz/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6brnssc/7/M2DsVbxqxkHFL3tpstMChbgNTwPhTCSCccG6L3sPz/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6brnssc/7/LHvH4HQjMkj64mzqrZtpkDd4NdVhLxhtNq77ZrwZS/L/_WHZ0338_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6brnssc/7/KVmrnQBPH783tw73rMJvQXxznBhC3PsG7LPzLRm4P/M/_WHZ0338_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6brnssc/7/MFJDFV4t6WszpqNSrw67NkgvHbKmJBw8shxGPvSGC/S/_WHZ0338_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VtTWVJf",
     "title": "Boat Houses   Photography by Wayne Heim",
     "description": "Boat Houses on the shore of the Faroe Islands.  ©Wayne Heim",
-    "alt": "Boat Houses   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VtTWVJf/6/M44bM4fTpKjk6rGpgC34ZL7sMHsWc8VjGhqKcDgrt/XL/_K1W3374_tonemapped-Edit-2-XL.jpg",
+    "alt": "Cotton Candy    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VtTWVJf/A",
     "keywords": [
       "wayne heim",
@@ -5624,14 +6653,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 205
+    "sortOrder": 205,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VtTWVJf/6/LVSQDjPwkJgZhbZJpkDqtLKVn5MkdG7XrpnCSprF7/XL/_K1W3374_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VtTWVJf/6/LVSQDjPwkJgZhbZJpkDqtLKVn5MkdG7XrpnCSprF7/XL/_K1W3374_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VtTWVJf/6/MCBJhpMGwX8CgRgmbtJPvfqpMKPQHp7HBsDjzL9Vw/L/_K1W3374_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VtTWVJf/6/Lrzg5z2CLnKPmdHDz6HTPVTzzxCm8RXsNPh363vnW/M/_K1W3374_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-VtTWVJf/6/KX66KvtmdDSpTdVKPcc5nPpm33TLBr2cn9xdhcv9F/S/_K1W3374_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6Vj6H86",
     "title": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/MF8rg4Pvmcsc9FrnqLB5X8gR4W7rTQ7hW6CJGLF7F/XL/_IMG6809-2-XL.jpg",
+    "alt": "Boat Houses   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-6Vj6H86/A",
     "keywords": [
       "wayne heim",
@@ -5651,14 +6685,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 206
+    "sortOrder": 206,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/KcW3xZTDbhNHWH3vq996zHQCPrZgGP2RnjWjCW9hN/XL/_IMG6809-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/KcW3xZTDbhNHWH3vq996zHQCPrZgGP2RnjWjCW9hN/XL/_IMG6809-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/L36mrF8Lw3WmXFK8cQxPpMBJGx9j4Gpv7GZRkfnFW/L/_IMG6809-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/NbHmWSHTw4Zspn59pWjCH9T4bgSKtmW5f7vz8zGNN/M/_IMG6809-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/NHvqDBwRSL3NWCfNTXXWbtWMfRbnSHhv5M9b2d2VG/S/_IMG6809-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BZZRZwC",
     "title": "Around the Bend. Black and White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Around the Bend. Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/NR6qVhzhxJc892hqbgBZ3rn3tfCMMmppfhqZj2bgh/XL/_IMG6812-XL.jpg",
+    "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BZZRZwC/A",
     "keywords": [
       "wayne heim",
@@ -5678,14 +6717,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 207
+    "sortOrder": 207,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MjQfGjZDFmc4jsWfQR6JNXW9SMmcjrwHS9XzBC7xZ/XL/_IMG6812-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MjQfGjZDFmc4jsWfQR6JNXW9SMmcjrwHS9XzBC7xZ/XL/_IMG6812-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MjQfGjZDFmc4jsWfQR6JNXW9SMmcjrwHS9XzBC7xZ/XL/_IMG6812-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MJ4bJtNbV7RXrhGG9XTRbDMxCcgjZtFfcr9x8FzXc/L/_IMG6812-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MC94xdnwtmSbZgT5hW5f6nd7D69XL2JwvPmqJ3Gsf/S/_IMG6812-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zdsdnTv",
     "title": "One Falls in Letchworth  Black & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "One Falls in Letchworth  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-zdsdnTv/3/MvX6j4FPTZM9VNHwJ6znRVQgQ229mZn6CBTsfFpBQ/XL/_IMG6818-2-XL.jpg",
+    "alt": "Around the Bend. Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-zdsdnTv/A",
     "keywords": [
       "wayne heim",
@@ -5705,14 +6749,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 208
+    "sortOrder": 208,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-zdsdnTv/3/K58QXQ3G875B7VVXXbjnw5q2k4VzMBMfTMtGb3cFc/XL/_IMG6818-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-zdsdnTv/3/K58QXQ3G875B7VVXXbjnw5q2k4VzMBMfTMtGb3cFc/XL/_IMG6818-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-zdsdnTv/3/K58QXQ3G875B7VVXXbjnw5q2k4VzMBMfTMtGb3cFc/XL/_IMG6818-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-zdsdnTv/3/NJMgsx8FmMFBmt7m68TKXX47Kv8HjpBsnDbNJjnz2/L/_IMG6818-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-zdsdnTv/3/KmWcHbTmPHRnjBMVrSKzDTgcWNrHm6KDvS485TN4X/S/_IMG6818-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MZXx696",
     "title": "B & W Bridge  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "B & W Bridge  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-MZXx696/3/MkpV6V7wm79bBGznwhRZmVtH4BXtQNR9M8qmsX9hq/XL/_IMG6850-2-XL.jpg",
+    "alt": "One Falls in Letchworth  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MZXx696/A",
     "keywords": [
       "wayne heim",
@@ -5732,14 +6781,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 209
+    "sortOrder": 209,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-MZXx696/3/K3M5sjR39KCJZfxxwt5RxLNB9Nv97xX2fjczSkkNQ/XL/_IMG6850-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-MZXx696/3/K3M5sjR39KCJZfxxwt5RxLNB9Nv97xX2fjczSkkNQ/XL/_IMG6850-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-MZXx696/3/K3M5sjR39KCJZfxxwt5RxLNB9Nv97xX2fjczSkkNQ/XL/_IMG6850-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-MZXx696/3/MQV6pD45Hr59xDM47rRQS2fMKmgMQtBZvvvpCxbtK/L/_IMG6850-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-MZXx696/3/M38gPcRqTwQkzFF6ZCqNTMKXD5RcmgJKj5fcmFsMh/S/_IMG6850-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f9xQRZJ",
     "title": "Flowing Falls    Photography by Wayne HEim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Flowing Falls    Photography by Wayne HEim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-f9xQRZJ/3/LTH2djBD4tmxGtdWWXJhLT7FCVtLS9gJk4ff9cXM9/XL/_IMG7015-XL.jpg",
+    "alt": "B & W Bridge  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-f9xQRZJ/A",
     "keywords": [
       "wayne heim",
@@ -5759,14 +6813,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 210
+    "sortOrder": 210,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-f9xQRZJ/3/NfxzNJwrQjKzTgVzS6VM8VJ5hTPcMdGHBQjGxjBfR/XL/_IMG7015-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-f9xQRZJ/3/NfxzNJwrQjKzTgVzS6VM8VJ5hTPcMdGHBQjGxjBfR/XL/_IMG7015-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-f9xQRZJ/3/KQm4V29L6C6vWdZWpHLwwg3k68BRrHZwv52HDf35q/L/_IMG7015-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-f9xQRZJ/3/LqQFdWrn9vqQ53LN7X7ksWDFpDnhDWNCqrrC6dT69/M/_IMG7015-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-f9xQRZJ/3/NLDBqQzp6cBBGWpqsCHNKsKrtsW3TGMxSBF5B3x3J/S/_IMG7015-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KVgw4cV",
     "title": "Log Above Falls  Bllack & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Log Above Falls  Bllack & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/MDXsST5PkdzhMbZbMcPPdZPvdVxGTPMkZ4PGRN5BC/XL/_IMG7072-XL.jpg",
+    "alt": "Flowing Falls    Photography by Wayne HEim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-KVgw4cV/A",
     "keywords": [
       "wayne heim",
@@ -5786,14 +6845,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 211
+    "sortOrder": 211,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/NNKNfLQbdQxKhLRVkQwCJvbBQKxwQW2XM4r2DpQsK/XL/_IMG7072-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/NNKNfLQbdQxKhLRVkQwCJvbBQKxwQW2XM4r2DpQsK/XL/_IMG7072-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/MBvS2WC9HF3TqPTwFZMPwV3HCTQNgkcRG49fjWJSq/L/_IMG7072-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/M4B7vdDsSzPPsVjCCjVJZjX7R9L3LhbcNBsmj7vDT/M/_IMG7072-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/LSc8wQVDBntBZfvwXW3vxs5c2qFPhS4C4ZCdJ7SNq/S/_IMG7072-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cLWCRPG",
     "title": "Gentle Falls - Black & White Photography by Wayne Heim",
     "description": "Gentle Falls -  gently flowing water cascades over rocks in a stream located in the Metroparks. ©Wayne Heim",
-    "alt": "Gentle Falls - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-cLWCRPG/4/MXj9bxq93tTZTJM5rQmgCKKTfMxRTK4NKKXp77S54/XL/_IMG0261_tonemapped-Edit-2-XL.jpg",
+    "alt": "Log Above Falls  Bllack & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-cLWCRPG/A",
     "keywords": [
       "wayne heim",
@@ -5813,14 +6877,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 212
+    "sortOrder": 212,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-cLWCRPG/4/LPXXhg7kRWR4H3WCsrLM3P8XFQTSxHZN8VRNqB35T/XL/_IMG0261_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-cLWCRPG/4/LPXXhg7kRWR4H3WCsrLM3P8XFQTSxHZN8VRNqB35T/XL/_IMG0261_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-cLWCRPG/4/Lv86crd6tnSrx2Qm5cqhXPDVtWx5qDt39XxbvZpx2/L/_IMG0261_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-cLWCRPG/4/NV94s9b65g2tM8t5853ZnSWD27sg3bjWVwmhnHWfM/M/_IMG0261_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-cLWCRPG/4/Lv2N84tWtF365mFmGdNXWcDFSXcjsxSnFpXMwq5xJ/S/_IMG0261_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7Wshb7S",
     "title": "Metro Falls - Black & White Photography by Wayne Heim",
     "description": "Metro Falls - one of the many waterfalls in the Ohio Metro Park system. ©Wayne Heim",
-    "alt": "Metro Falls - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-7Wshb7S/6/MvmCKQP6rZVpKJJnsmq5BkgRFrB9TGhDhWtwtJDXR/XL/i-7Wshb7S-XL.jpg",
+    "alt": "Gentle Falls - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-7Wshb7S/A",
     "keywords": [
       "wayne heim",
@@ -5840,14 +6909,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 213
+    "sortOrder": 213,
+    "src": "https://photos.smugmug.com/photos/i-7Wshb7S/6/L7zF7GDv3NVkrc6DtQTqPHhfTf458qMxKx4KkKJHJ/XL/i-7Wshb7S-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-7Wshb7S/6/L7zF7GDv3NVkrc6DtQTqPHhfTf458qMxKx4KkKJHJ/XL/i-7Wshb7S-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-7Wshb7S/6/L7zF7GDv3NVkrc6DtQTqPHhfTf458qMxKx4KkKJHJ/XL/i-7Wshb7S-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-7Wshb7S/6/MGc2rkjdhbsR2KTKV8skhLmpXhjMrX3zjhnnf6T4D/L/i-7Wshb7S-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-7Wshb7S/6/LSdbW6X7g6hWsHZDpWw4GRHS9g4wdn6kGHH53zDfs/S/i-7Wshb7S-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9rhB5Vr",
     "title": "Gentle Falls Too - Black & White Photography by Wayne Heim",
     "description": "Gentle Falls Too - side view of gently cascading falls in the Metroparks. ©Wayne Heim",
-    "alt": "Gentle Falls Too - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9rhB5Vr/4/NSgZ4frkSthmjbTrm8XZ6QwbRDdQ7RZC4TLnS3KvK/XL/_IMG0285_tonemapped-2-XL.jpg",
+    "alt": "Metro Falls - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9rhB5Vr/A",
     "keywords": [
       "wayne heim",
@@ -5867,14 +6941,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 214
+    "sortOrder": 214,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9rhB5Vr/4/MpwbSXKnwqSg7nwssBPHKfvn4CLJLGp5X9cJmc55J/XL/_IMG0285_tonemapped-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9rhB5Vr/4/MpwbSXKnwqSg7nwssBPHKfvn4CLJLGp5X9cJmc55J/XL/_IMG0285_tonemapped-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9rhB5Vr/4/MpwbSXKnwqSg7nwssBPHKfvn4CLJLGp5X9cJmc55J/XL/_IMG0285_tonemapped-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9rhB5Vr/4/KrKvcMVrgXFFm64tq9z33qcJjxz64WpTmzkHQZ2qh/L/_IMG0285_tonemapped-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-9rhB5Vr/4/Lctrmr2j3NzLG9rfmkJvH8NDz2tb8pDq8JWrxXSMf/S/_IMG0285_tonemapped-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MTB6xvk",
     "title": "Falls in the Glen - Black & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Falls in the Glen - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-MTB6xvk/4/MGMffjcQXqM4qTgkHQJgGbMJg6tm6wkCvPLKxQPRC/XL/_W3H0276-XL.jpg",
+    "alt": "Gentle Falls Too - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MTB6xvk/A",
     "keywords": [
       "wayne heim",
@@ -5894,14 +6973,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 215
+    "sortOrder": 215,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-MTB6xvk/4/M5SCtpLNhKSRbWZSc9z6GCTZwJCKVNJ8PjBh3Pv8w/XL/_W3H0276-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-MTB6xvk/4/M5SCtpLNhKSRbWZSc9z6GCTZwJCKVNJ8PjBh3Pv8w/XL/_W3H0276-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-MTB6xvk/4/LhmXXB3fhCzHPWpDrs8hDmP52czk7fh5gK9nPxp8C/L/_W3H0276-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-MTB6xvk/4/MWnkFZthZ8pMGMWRQpQDrQZ653qzGhZXvZkdcvj7d/M/_W3H0276-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-MTB6xvk/4/KVM6J424DprkVKtHnfckH2Qz9HfNvwQSTmJTS9g9Z/S/_W3H0276-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-P2MJv28",
     "title": "Stream to the Tetons  Black and White Photography by Wayne Heim",
     "description": "Stream with the Teton Mountains in the background. ©Wayne Heim",
-    "alt": "Stream to the Tetons  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/KPC64MvwM38vV6ddHM7xWrtPTmpwLrsFQ2Hkk6SFM/XL/_WHZ7505_tonemapped-XL.jpg",
+    "alt": "Falls in the Glen - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-P2MJv28/A",
     "keywords": [
       "wayne heim",
@@ -5921,14 +7005,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 216
+    "sortOrder": 216,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/LfGr4bMBwT5vzSLqGsTxxXXvf66wFnr7rXXTftGsP/XL/_WHZ7505_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/LfGr4bMBwT5vzSLqGsTxxXXvf66wFnr7rXXTftGsP/XL/_WHZ7505_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/LfGr4bMBwT5vzSLqGsTxxXXvf66wFnr7rXXTftGsP/XL/_WHZ7505_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/LWhkSKhPSzz8ZDGdGzj7GwRM2XBnzW8B8H8sGm8cS/L/_WHZ7505_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-P2MJv28/2/Mmzz8JrG6KzDLrNGKbrKDxsG6skdRShpB6hS9dgnQ/S/_WHZ7505_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9BJXt7k",
     "title": "Kirkfell Mountain    Black & White Photography by Wayne Heim",
     "description": "Kirkfell Mountain with waterfalls in the foreground. ©Wayne Heim",
-    "alt": "Kirkfell Mountain    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9BJXt7k/6/Mx3vphB2Rchg3LrDPp9JhNW7FHsX3cfLLK8MdGVBF/XL/_WHZ1214-Edit-XL.jpg",
+    "alt": "Stream to the Tetons  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9BJXt7k/A",
     "keywords": [
       "wayne heim",
@@ -5948,14 +7037,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 217
+    "sortOrder": 217,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9BJXt7k/6/NHVJjXMQVnxHKzRcvBm3tBPzBHbkJLC7CqmQnH6Gg/XL/_WHZ1214-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9BJXt7k/6/NHVJjXMQVnxHKzRcvBm3tBPzBHbkJLC7CqmQnH6Gg/XL/_WHZ1214-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9BJXt7k/6/KWPf5crj7rsg6MShVQbh8W22kjSfx9JvfJ8gbBsDc/L/_WHZ1214-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9BJXt7k/6/K7B9cT6rBQTNhCgHKRD9x9psptrKG8gT8RjzxdnsK/M/_WHZ1214-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9BJXt7k/6/NNNPpVVK34hSq8LrLKKjxn58w7k4sCVXdgWVHKMPK/S/_WHZ1214-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-736PQff",
     "title": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
     "description": "Gullfoss waterfall fills canyon with mist and spray . One of Iceland's famous attractions.\n©Wayne Heim",
-    "alt": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-736PQff/6/McpBzcP4NrmzpJPqBk7kBvTb4DdwdCNTWNCCN6ZQb/XL/_WHK3522_tonemapped-XL.jpg",
+    "alt": "Kirkfell Mountain    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-736PQff/A",
     "keywords": [
       "wayne heim",
@@ -5975,14 +7069,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 218
+    "sortOrder": 218,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-736PQff/6/Lj6xQNvTHg7rwfxGCs25DFbLFbwMVXQLBrz6xkCLK/XL/_WHK3522_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-736PQff/6/Lj6xQNvTHg7rwfxGCs25DFbLFbwMVXQLBrz6xkCLK/XL/_WHK3522_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-736PQff/6/Lj6xQNvTHg7rwfxGCs25DFbLFbwMVXQLBrz6xkCLK/XL/_WHK3522_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-736PQff/6/L6BCZnqDjCCJVmgzLbZXKxr9qNq7Qhc5qZWftScck/L/_WHK3522_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-736PQff/6/KM9k86Hxjxbc7QJk4vrmKBFDJCPhzmMFK38dqXjpW/S/_WHK3522_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BcfMhpJ",
     "title": "Side View of Kirkjufellfoss  Black and White Photography by Wayne Heim",
     "description": "Side view of the Kirkjufellfoss waterfall in Iceland. ©Wayne Heim",
-    "alt": "Side View of Kirkjufellfoss  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcfMhpJ/5/MvsXcmDbKn9ZTfKf4KDSd6rPRjWSLk6fsXbdVfrv5/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "alt": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcfMhpJ/A",
     "keywords": [
       "wayne heim",
@@ -6002,14 +7101,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 219
+    "sortOrder": 219,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcfMhpJ/5/LW4LhZLPzRH6vGstdhbPB8mFgDZRXHdqqhRj6hrJC/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcfMhpJ/5/LW4LhZLPzRH6vGstdhbPB8mFgDZRXHdqqhRj6hrJC/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcfMhpJ/5/LW4LhZLPzRH6vGstdhbPB8mFgDZRXHdqqhRj6hrJC/XL/_WHZ1666_tonemapped2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcfMhpJ/5/Kpq77pBkSgJxhv6RkncW922r7NHhrz7bDFkW2nqtx/L/_WHZ1666_tonemapped2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcfMhpJ/5/LWJgxMZFq6TJFPWNf2VKQn23m4NDVQKBTtm6DHh9c/S/_WHZ1666_tonemapped2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BcKsHPB",
     "title": "Skogarfoss Waterfalls  Black & White Photography by Wayne Heim",
     "description": "Skogarfoss waterfall one of Iceland's most famous. ©Wayne Heim",
-    "alt": "Skogarfoss Waterfalls  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcKsHPB/4/McRwK5B8NwcGLggPX9cZqmzChZ3JwVZt7W3hHdstZ/XL/_WHZ1828_932-XL.jpg",
+    "alt": "Side View of Kirkjufellfoss  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcKsHPB/A",
     "keywords": [
       "wayne heim",
@@ -6029,14 +7133,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 220
+    "sortOrder": 220,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcKsHPB/4/KLgSB2NxDmJjvZsJJntzn4RSKD6f9gKRfWMqbz83t/XL/_WHZ1828_932-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcKsHPB/4/KLgSB2NxDmJjvZsJJntzn4RSKD6f9gKRfWMqbz83t/XL/_WHZ1828_932-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcKsHPB/4/NFwns33775mRb6W85VZ5fhpgQmTQP255mHsmNqtMw/L/_WHZ1828_932-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcKsHPB/4/MdksTrFBMh3qJjRSxwCXJ6VVcDkwLHK3rNsgBgHHm/M/_WHZ1828_932-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-BcKsHPB/4/K78GWKd2GDZJw6gMLQdNRXFpd2V3fZVdnfhTV7kJk/S/_WHZ1828_932-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GQj3L9p",
     "title": "Closer Skogarfoss  Black and White Photography by Wayne Heim",
     "description": "A close view of the Skogarfoss waterfall but not so close that you get wet. ©Wayne Heim",
-    "alt": "Closer Skogarfoss  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQj3L9p/4/KkNX4T9RvfT3sT3vHmHqDFqmtbrLJh8Hbh7J6GX5W/XL/_WHZ1859-XL.jpg",
+    "alt": "Skogarfoss Waterfalls  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQj3L9p/A",
     "keywords": [
       "wayne heim",
@@ -6056,14 +7165,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 221
+    "sortOrder": 221,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQj3L9p/4/KbLvrk5L6qq7zW8FjmtVcWg7JTgSbQs4nLbgw64hX/XL/_WHZ1859-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQj3L9p/4/KbLvrk5L6qq7zW8FjmtVcWg7JTgSbQs4nLbgw64hX/XL/_WHZ1859-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQj3L9p/4/KR4G982RPmFBGmfBjxxvQn55tV5XJCtW3dMGvqqJ6/L/_WHZ1859-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQj3L9p/4/MmmFJBKghjWSCRmqCNbnq8W5mf9M95ZLj9bCbpMV6/M/_WHZ1859-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQj3L9p/4/LQGdG9D7S5PVbqcFPDGqwB6R5B4BJDqHt9XRQZHHq/S/_WHZ1859-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qJt7BwZ",
     "title": "Godafoss   Black and White Photography by Wayne Heim",
     "description": "Godafoss is one of the many waterfalls in Iceland. ©Wayne Heim",
-    "alt": "Godafoss   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qJt7BwZ/4/LMQN65n79c77zjHSrdKpbsTQ5VcH2RfFhWRdhDkSJ/XL/_WHZ0189-Pano_tonemapped-Edit-2-XL.jpg",
+    "alt": "Closer Skogarfoss  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qJt7BwZ/A",
     "keywords": [
       "wayne heim",
@@ -6083,14 +7197,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 222
+    "sortOrder": 222,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qJt7BwZ/4/Mv2H2zKDKLxKvWMCMK4PsCzXfTsxKCwhMmP39Q5rF/XL/_WHZ0189-Pano_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qJt7BwZ/4/Mv2H2zKDKLxKvWMCMK4PsCzXfTsxKCwhMmP39Q5rF/XL/_WHZ0189-Pano_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qJt7BwZ/4/Mv2H2zKDKLxKvWMCMK4PsCzXfTsxKCwhMmP39Q5rF/XL/_WHZ0189-Pano_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qJt7BwZ/4/K9N2ZZxBJttXBkB8VSqR8WkWqqjmksTXQzWgwpKL5/L/_WHZ0189-Pano_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-qJt7BwZ/4/ND6J8PthXDmDTKVJ8dM5VHXT7SvhwtbPkgBPvTQSj/S/_WHZ0189-Pano_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-t9xpbJg",
     "title": "Behind the Falls    Black and White Photography by Wayne Heim",
     "description": "View from behind one of Iceland's many waterfalls  ©Wayne Heim",
-    "alt": "Behind the Falls    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-t9xpbJg/3/LJmKbDfcxN3Rtb3LBszp522pNbbdc4HcLkthsHcxP/XL/_WHZ0208-Pano-Edit-Edit-XL.jpg",
+    "alt": "Godafoss   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-t9xpbJg/A",
     "keywords": [
       "wayne heim",
@@ -6110,14 +7229,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 223
+    "sortOrder": 223,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-t9xpbJg/3/Kx3j2vk54CS7ZLD8RW8hCnVgzFCCgWkgV4985R66s/XL/_WHZ0208-Pano-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-t9xpbJg/3/Kx3j2vk54CS7ZLD8RW8hCnVgzFCCgWkgV4985R66s/XL/_WHZ0208-Pano-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-t9xpbJg/3/Kx3j2vk54CS7ZLD8RW8hCnVgzFCCgWkgV4985R66s/XL/_WHZ0208-Pano-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-t9xpbJg/3/MGfsZS4HG5zJZ7sWRs8fh5Gvn6LNzx6zKHFGNSBDJ/L/_WHZ0208-Pano-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-t9xpbJg/3/M8D9f898WGs9hkJbWzdqs7GBCVBwZPNrkq992c5dc/S/_WHZ0208-Pano-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3LqFBdB",
     "title": "Black & White Photo of Mountain Peaks on a Foggy Morning",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of Mountain Peaks on a Foggy Morning",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/Lnp8Kp2XtCZBgLmmp3Xtd8bDDqHtF9nBcFgcr5Kmj/XL/_WHZ4283-Edit-denoise-XL.jpg",
+    "alt": "Behind the Falls    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3LqFBdB/A",
     "keywords": [
       "wayne heim",
@@ -6137,14 +7261,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 224
+    "sortOrder": 224,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/MnFzQkxJqqmJWHjHprrzLpPHxpXznR2wL8Kx5WVg2/XL/_WHZ4283-Edit-denoise-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/MnFzQkxJqqmJWHjHprrzLpPHxpXznR2wL8Kx5WVg2/XL/_WHZ4283-Edit-denoise-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/MnFzQkxJqqmJWHjHprrzLpPHxpXznR2wL8Kx5WVg2/XL/_WHZ4283-Edit-denoise-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/M8wH3QrRGF4NDbzXd6Fmjz2b7HbTXn3vHnQF4rsj4/L/_WHZ4283-Edit-denoise-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/Lbq99sJL2cZScsPHJfMGTpvW9ch52JKZDfZsFrTzq/S/_WHZ4283-Edit-denoise-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gx8rvz5",
     "title": "Black & White Photo of Fog Over Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of Fog Over Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gx8rvz5/2/LZgKk2C7HChs9tJQTDbW9hs4JBkhX4WV9MpWV4jxV/XL/_WHZ4288-Edit-XL.jpg",
+    "alt": "Black & White Photo of Mountain Peaks on a Foggy Morning",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-gx8rvz5/A",
     "keywords": [
       "wayne heim",
@@ -6164,14 +7293,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 225
+    "sortOrder": 225,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gx8rvz5/2/NZjFkfwnXJJq6ZzRmc5jV6XQwsVMC52Nbg6P6qrjh/XL/_WHZ4288-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gx8rvz5/2/NZjFkfwnXJJq6ZzRmc5jV6XQwsVMC52Nbg6P6qrjh/XL/_WHZ4288-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gx8rvz5/2/K7nVCJkrJn2PPD3S9dPTD2ZT6t6Xp42rq2zxhjbdH/L/_WHZ4288-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gx8rvz5/2/LZKK83kgXtvk35spzMNdBJtdd9F8v7CxXrzV6Gm5n/M/_WHZ4288-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gx8rvz5/2/Kqj4Dxj4TThxL67dLrC89rhcmDLqfGqfBf4X8BMDz/S/_WHZ4288-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MXJNMMn",
     "title": "Black & White Photo of Fog Resting Over Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of Fog Resting Over Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MXJNMMn/2/Ngp8xt3CtS2WD8dqPkQhMPMVBZx6RKXPjvXj7Mctc/XL/_WHZ4356-Edit-XL.jpg",
+    "alt": "Black & White Photo of Fog Over Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-MXJNMMn/A",
     "keywords": [
       "wayne heim",
@@ -6191,14 +7325,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 226
+    "sortOrder": 226,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MXJNMMn/2/M4zwrpbDZ94dt9VMgF3DDSTzPxTWLfcQHRpqXfRV4/XL/_WHZ4356-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MXJNMMn/2/M4zwrpbDZ94dt9VMgF3DDSTzPxTWLfcQHRpqXfRV4/XL/_WHZ4356-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MXJNMMn/2/MpgNXsfJRZqqZFMn9P36dHWGWxP3x37bBdvg4TLxN/L/_WHZ4356-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MXJNMMn/2/MhK97T2p3gF6PB6xf9jqzVPRRh6pxjnSzQrdtbNtM/M/_WHZ4356-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MXJNMMn/2/Mtxg8LxB7sqrJzFqb9QT77kxgM2XPdpxzszk3HQp5/S/_WHZ4356-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dvccHH3",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/4/Nc8kjdBVzcWbv598zdMfdSbvtJwjGq3GBwp2GNb2d/XL/_WHZ7317-Pano-Edit-Edit-XL.jpg",
+    "alt": "Black & White Photo of Fog Resting Over Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/A",
     "keywords": [
       "wayne heim",
@@ -6218,14 +7357,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 227
+    "sortOrder": 227,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/4/L2PmMSD3V8txg3PVJgQfWRHQgFMqcKGHWtNhR5D65/XL/_WHZ7317-Pano-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/4/L2PmMSD3V8txg3PVJgQfWRHQgFMqcKGHWtNhR5D65/XL/_WHZ7317-Pano-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/4/Mm5NCPL4CmRHsQ9N89CGKt7BNFkRGzqKdKBfLmBHz/L/_WHZ7317-Pano-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/4/MJVfdfLn7JLjF3GHfHRt6G9xnVjgRNwNzKS3hPZG9/M/_WHZ7317-Pano-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-dvccHH3/4/KnQfPtbNZrhRzmqd5F7Lr6zgb7Bgj8xwjFwt2nWnT/S/_WHZ7317-Pano-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GQNxX9S",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-GQNxX9S/2/MfWcmjQfJthKF9GPmPZMvnXs5bgxk6LfCJ5pT298T/XL/_ANA0554-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-GQNxX9S/A",
     "keywords": [
       "wayne heim",
@@ -6245,14 +7389,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 228
+    "sortOrder": 228,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-GQNxX9S/2/LgBcpFx3SnrLdx7XjZ9qnZnPLvtPdpm5bFRGZ5h9B/XL/_ANA0554-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-GQNxX9S/2/LgBcpFx3SnrLdx7XjZ9qnZnPLvtPdpm5bFRGZ5h9B/XL/_ANA0554-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-GQNxX9S/2/KVcszkpGLvTVqtLV8qKSSDBMT4zDHqzNMTmtDZHDf/L/_ANA0554-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-GQNxX9S/2/MNmCRBhnFfV3fVzvnVxjJRWQhV5msLCmbs5p8THqC/M/_ANA0554-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-GQNxX9S/2/M2pkCTTSFGQx8PDRVpGH8NsqLHZH3FDxzNcTq7kkg/S/_ANA0554-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vz9W2wM",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-vz9W2wM/2/ML38V5JZfX5jJSQ3xS95FH3NdMh4bCCWN79wVPKcr/XL/_ANA0829-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vz9W2wM/A",
     "keywords": [
       "wayne heim",
@@ -6272,14 +7421,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 229
+    "sortOrder": 229,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-vz9W2wM/2/L8C7R7htB8KJrpSMcWNStSnRffmnNMvjGLgVXn8Pw/XL/_ANA0829-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-vz9W2wM/2/L8C7R7htB8KJrpSMcWNStSnRffmnNMvjGLgVXn8Pw/XL/_ANA0829-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-vz9W2wM/2/L8C7R7htB8KJrpSMcWNStSnRffmnNMvjGLgVXn8Pw/XL/_ANA0829-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-vz9W2wM/2/MJbwzWcCtkhkzvcFkRHn2SSC59VHFJK25GCJBpsf4/L/_ANA0829-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-vz9W2wM/2/KD4Nsnc9D5VrDzCWsQdJVZVhjtJgxVRtmWWrVVNgg/S/_ANA0829-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xP2GvWW",
     "title": "Rushing Rapids - Black & White Photography by Wayne Hein",
     "description": "Rushing Rapids - rushing water on one of the rivers in the Metro Parks. ©Wayne Heim",
-    "alt": "Rushing Rapids - Black & White Photography by Wayne Hein",
-    "src": "https://photos.smugmug.com/photos/i-xP2GvWW/3/LvppJL6hmjg4D5HJPfbFjGB5jkKtCzKx75G3cWd9T/XL/i-xP2GvWW-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-xP2GvWW/A",
     "keywords": [
       "wayne heim",
@@ -6299,14 +7453,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 230
+    "sortOrder": 230,
+    "src": "https://photos.smugmug.com/photos/i-xP2GvWW/3/NSQC35ckrLv8tDtXxP4cHh6GRb8SZ2q2RGsxdhLrs/XL/i-xP2GvWW-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-xP2GvWW/3/NSQC35ckrLv8tDtXxP4cHh6GRb8SZ2q2RGsxdhLrs/XL/i-xP2GvWW-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-xP2GvWW/3/NSQC35ckrLv8tDtXxP4cHh6GRb8SZ2q2RGsxdhLrs/XL/i-xP2GvWW-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-xP2GvWW/3/MmQTcK5vnjRGgNdXs7RCgbPdrsX3fZ3Gg7xZjHtCF/L/i-xP2GvWW-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-xP2GvWW/3/MNTF9VVJRG82nrnHQWPBJPqw8P7SbZGMrhSHBTjqP/S/i-xP2GvWW-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Zpwjr25",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/0/M5g4QJZfdR3Qg8PbKhdXh2WKPRMHsPZvCDKvwZKKM/XL/_O1H0502-XL.jpg",
+    "alt": "Rushing Rapids - Black & White Photography by Wayne Hein",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/A",
     "keywords": [
       "wayne heim",
@@ -6326,14 +7485,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 231
+    "sortOrder": 231,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/0/MCMjc7trLDstH6rjTtVKfBbv8jwwK9MRrDZKXTHKB/XL/_O1H0502-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/0/MCMjc7trLDstH6rjTtVKfBbv8jwwK9MRrDZKXTHKB/XL/_O1H0502-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/0/MCMjc7trLDstH6rjTtVKfBbv8jwwK9MRrDZKXTHKB/XL/_O1H0502-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/0/M4tfCKkbVMcds87Td68FjG4BxCPpQsqFQZdDsHp8B/L/_O1H0502-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Zpwjr25/0/KGzG78LdWf8LgZmLgkNZqnDH2JkTSdRwx5gFKsHW9/S/_O1H0502-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9pskTBh",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/0/MT8D8mPzBrBv5J4g3rc6PFFQnpS9pfnHZsmvBmGSd/XL/_DSF4311-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/A",
     "keywords": [
       "wayne heim",
@@ -6353,14 +7517,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 232
+    "sortOrder": 232,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/0/MMJLt5sJmfX9mrGQhBxT6jG2tGqnCfmbMgVP6sGfX/XL/_DSF4311-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/0/MMJLt5sJmfX9mrGQhBxT6jG2tGqnCfmbMgVP6sGfX/XL/_DSF4311-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/0/MMJLt5sJmfX9mrGQhBxT6jG2tGqnCfmbMgVP6sGfX/XL/_DSF4311-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/0/NPVFQQxsVX37nSJGrg8nb2b2t2s5FbTPz36dwMwx9/L/_DSF4311-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-9pskTBh/0/MRXWf8mbTgxZpx2CV9HZ2D7JKrNxTbJZFnwWM4TCT/S/_DSF4311-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Kf2LS9q",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/0/M6V6H66qbNWg7Cf5FHSS9vvdkJN8LDNjHBZWJKhp6/XL/_O1H0575-Edit_tonemapped-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/A",
     "keywords": [
       "wayne heim",
@@ -6380,6 +7549,44 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 233
+    "sortOrder": 233,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/0/MsGvQdRLrprSK62J3Dxq4mwcPjkHvtLZZG4N6XKwC/XL/_O1H0575-Edit_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/0/MsGvQdRLrprSK62J3Dxq4mwcPjkHvtLZZG4N6XKwC/XL/_O1H0575-Edit_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/0/MsGvQdRLrprSK62J3Dxq4mwcPjkHvtLZZG4N6XKwC/XL/_O1H0575-Edit_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/0/LHn7GJsD2rrpgcTJJZtrsBtW5rv49Xgg75tZm7c9r/L/_O1H0575-Edit_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-Kf2LS9q/0/K3hWLJ3WKtSD64Gx4k2FNPm3LNz6XnGkH5qLctDBV/S/_O1H0575-Edit_tonemapped-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-LP5x7MS",
+    "title": "Haystack Rock  Potography by Wayne Heim",
+    "description": "Hazy morning at Cannon Beach - Haystack Rock. Oregon ©Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LP5x7MS/A",
+    "keywords": [
+      "wayne heim",
+      "waterfalls",
+      "iceland",
+      "skogafoss",
+      "landscape photography",
+      "landscape",
+      "nature",
+      "nature photography",
+      "water",
+      "waterscape",
+      "k4 studios"
+    ],
+    "story": "Hazy morning at Cannon Beach - Haystack Rock. Oregon ©Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 234,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

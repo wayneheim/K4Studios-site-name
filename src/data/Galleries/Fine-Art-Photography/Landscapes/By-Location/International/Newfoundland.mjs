@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-QfHn5BW",
-    "title": "Walt to the Other Side     Black & White Photography by Wayne HeimFine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Walt to the Other Side     Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-QfHn5BW/4/MBxpJD4Zqk4spZngdPRFmxbGMfg4P9F2vB3JSmzrD/XL/_WHZ1385-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-QfHn5BW/A",
     "keywords": [
       "Canada",
@@ -44,14 +48,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-QfHn5BW/4/NVPD7GpFKkKFWPrKrCPvbMcbdrMB8dB5nVCsvpfsr/XL/_WHZ1385-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-QfHn5BW/4/NVPD7GpFKkKFWPrKrCPvbMcbdrMB8dB5nVCsvpfsr/XL/_WHZ1385-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-QfHn5BW/4/MNw34qCtPd8zWb9r7g8TVD5wgVh8QWqNd5MBkbgRq/L/_WHZ1385-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-QfHn5BW/4/NJ4SkNS6bq7KFDgVsQSSkrqGVfXxNqHNsJFTWdpG4/M/_WHZ1385-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-QfHn5BW/4/KQT84SSGrJMmZ9vHbCXTHdGPMstZ36PkCb3nfrrdf/S/_WHZ1385-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HG9sdF8",
     "title": "Beached   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Beached   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HG9sdF8/3/KRKsw8WTJPgSFJ24CjFHC8P4bFs3RjR7gnQDvhnDQ/XL/_WHZ2317-XL.jpg",
+    "alt": "Walt to the Other Side     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-HG9sdF8/A",
     "keywords": [
       "Canada",
@@ -74,14 +83,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HG9sdF8/3/KPd6RVfnHVJX2843XNvwtp5cK6TNLt9bMh8kw52xj/XL/_WHZ2317-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HG9sdF8/3/KPd6RVfnHVJX2843XNvwtp5cK6TNLt9bMh8kw52xj/XL/_WHZ2317-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HG9sdF8/3/KPd6RVfnHVJX2843XNvwtp5cK6TNLt9bMh8kw52xj/XL/_WHZ2317-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HG9sdF8/3/NTzwxmhBBK8fT5q2VnCPkT3XXH95Qp48b32rMGMJV/L/_WHZ2317-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HG9sdF8/3/NFdgSJ5NZC3hKH2kMj96fv82kbdS5GrFxTmhPrGC8/S/_WHZ2317-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MW6s3bR",
     "title": "Let's Fish    Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Let's Fish    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MW6s3bR/3/KwB7ZsjCNzgQSLFXzSx2tgG63v44GqTXBBzXtTsRt/XL/_WHZ1447-XL.jpg",
+    "alt": "Beached   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-MW6s3bR/A",
     "keywords": [
       "Canada",
@@ -104,14 +118,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MW6s3bR/3/LLTKDQ9NjDjCcJCV5WVwcQvGTtqTpgg7BBdb9w3CQ/XL/_WHZ1447-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MW6s3bR/3/LLTKDQ9NjDjCcJCV5WVwcQvGTtqTpgg7BBdb9w3CQ/XL/_WHZ1447-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MW6s3bR/3/LtRgb3BKdtzhvrMwgVqXVWxbrVC9SkB9nDCF5Cwph/L/_WHZ1447-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MW6s3bR/3/KPfNNXG6f67vFZ2F74xHHsKJ5HgH2FSPTBw5BWdPr/M/_WHZ1447-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MW6s3bR/3/Ld2XkJ7mCfN2q9xXNS7sGHkRj2N2cRrbR5XBdmdrL/S/_WHZ1447-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fFXHHbL",
     "title": "At Anchor   Black and White Photography by wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "At Anchor   Black and White Photography by wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fFXHHbL/5/MJkkq9dfPMXNLjnStQNVxVRH3NWZbRhMJPKp6Gt6J/XL/_WHK2126-XL.jpg",
+    "alt": "Let's Fish    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-fFXHHbL/A",
     "keywords": [
       "Canada",
@@ -134,14 +153,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fFXHHbL/5/KKb79DnvGZrLGrsRZDm97kkZbs3zHqLbwXGRvKHtt/XL/_WHK2126-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fFXHHbL/5/KKb79DnvGZrLGrsRZDm97kkZbs3zHqLbwXGRvKHtt/XL/_WHK2126-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fFXHHbL/5/KKb79DnvGZrLGrsRZDm97kkZbs3zHqLbwXGRvKHtt/XL/_WHK2126-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fFXHHbL/5/KN5Q96mCdXZN9G4xvktcrPGVtCVxHJvwMRKmrDv3j/L/_WHK2126-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fFXHHbL/5/NNkztntzLhM8RxJQ8NJcj6mPJLX3HkghppTzJhmMH/S/_WHK2126-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zWLGTKr",
     "title": "Way to the Lighthouse   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Way to the Lighthouse   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zWLGTKr/4/Lgf2HdkHG2hCCsPKMq57WmH85mSTMMVmxVQqch9TR/XL/_WHZ2833-2-XL.jpg",
+    "alt": "At Anchor   Black and White Photography by wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-zWLGTKr/A",
     "keywords": [
       "Canada",
@@ -164,14 +188,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zWLGTKr/4/LBMJqNSb9GjBFrJMRm6tGZFPxFbmZWCS89vxPpZ8h/XL/_WHZ2833-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zWLGTKr/4/LBMJqNSb9GjBFrJMRm6tGZFPxFbmZWCS89vxPpZ8h/XL/_WHZ2833-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zWLGTKr/4/LBMJqNSb9GjBFrJMRm6tGZFPxFbmZWCS89vxPpZ8h/XL/_WHZ2833-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zWLGTKr/4/Lc6Jkzb7QK6schttvgqMFVvzsRf6jvHdnNdNmdKcK/L/_WHZ2833-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zWLGTKr/4/LMWt8FKScXCP86fdX5F5v3LsTQcdCCs6D4p98MvGw/S/_WHZ2833-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mTV4SXC",
     "title": "Stairs to the Lighthouse  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Stairs to the Lighthouse  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/Mh3kQ2fXD3GPxkHnH2X9gxRs7x2qp2J5BQNn7WZSt/XL/_WHK3201_tonemapped-XL.jpg",
+    "alt": "Way to the Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-mTV4SXC/A",
     "keywords": [
       "Canada",
@@ -194,14 +223,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/M9KPP397BfgSLS888vdBGbVtm2sNmVkLj94XWJ3Cw/XL/_WHK3201_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/M9KPP397BfgSLS888vdBGbVtm2sNmVkLj94XWJ3Cw/XL/_WHK3201_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/M9KPP397BfgSLS888vdBGbVtm2sNmVkLj94XWJ3Cw/XL/_WHK3201_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/MG586CLNkCccFCrBMpsGgFs64cv7zMtszGzXNwP3b/L/_WHK3201_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-mTV4SXC/3/KQXg7MKsw6ppdn8ZN3kDkpcQ7MJSsbLfttGFV6hQn/S/_WHK3201_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jpptgFS",
     "title": "Stormy Cape  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Stormy Cape  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/LgvrkzGghXJstHss5cZdNNzk4Cr6jQDfjq9zH3kz3/XL/_WHZ2834_tonemapped-XL.jpg",
+    "alt": "Stairs to the Lighthouse  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-jpptgFS/A",
     "keywords": [
       "Canada",
@@ -224,14 +258,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/LKsGsh5rGC28S28f4wDpPxPkqv2C6jsLR9k2WCX9q/XL/_WHZ2834_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/LKsGsh5rGC28S28f4wDpPxPkqv2C6jsLR9k2WCX9q/XL/_WHZ2834_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/Mgg24JJVP4MRcsjNbgTCws2hjMJjqxNNSGGmtvnxv/L/_WHZ2834_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/Kf65FXg7XDR6rGrwnj6PXNTTmS6BbZKVh5dbbgwBk/M/_WHZ2834_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-jpptgFS/3/MwGtprJQ8tb8CR8Gv6qt8vrWB6CjJmD74TVDkndzP/S/_WHZ2834_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KJ8CCgP",
     "title": "Lighthouse   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Lighthouse   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-KJ8CCgP/2/LcpPMLmdPX6QtqrLv9DqfKTv9dn99FdLqBHk84Wnw/XL/_WHZ2912_tonemapped-2-XL.jpg",
+    "alt": "Stormy Cape  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-KJ8CCgP/A",
     "keywords": [
       "Canada",
@@ -254,14 +293,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-KJ8CCgP/2/MZWQjHgTRmnnd6CVLRMKW2v6H8cRJBV6mfjGpVL44/XL/_WHZ2912_tonemapped-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-KJ8CCgP/2/MZWQjHgTRmnnd6CVLRMKW2v6H8cRJBV6mfjGpVL44/XL/_WHZ2912_tonemapped-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-KJ8CCgP/2/MZWQjHgTRmnnd6CVLRMKW2v6H8cRJBV6mfjGpVL44/XL/_WHZ2912_tonemapped-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-KJ8CCgP/2/Md5zhGLPtqS3GVnRS8NsDBdd77dkqVdq3zXXRRcSh/L/_WHZ2912_tonemapped-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-KJ8CCgP/2/K7sTVggj7Bcfp5qVMMT2bjmkfhGphzbMZnFJzHmrN/S/_WHZ2912_tonemapped-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4DspwhB",
     "title": "Holding It Back  B/W    Black and White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Holding It Back  B/W    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4DspwhB/5/MdVVM7LFjnVRmsjg2zDGndbZHnVxqhDXCjSJxKmV4/XL/_WHZ1464-XL.jpg",
+    "alt": "Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-4DspwhB/A",
     "keywords": [
       "Canada",
@@ -284,14 +328,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4DspwhB/5/M5gHdJfvQwnWhDtbjHxWFzVVjCK5LNXpQnr4sr6w8/XL/_WHZ1464-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4DspwhB/5/M5gHdJfvQwnWhDtbjHxWFzVVjCK5LNXpQnr4sr6w8/XL/_WHZ1464-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4DspwhB/5/M5gHdJfvQwnWhDtbjHxWFzVVjCK5LNXpQnr4sr6w8/XL/_WHZ1464-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4DspwhB/5/Mrjgzbbq9mFfBqFR8TBBfMRFMB4ZgQLk9VsBxwBRh/L/_WHZ1464-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4DspwhB/5/NPF9MfwXRp7KzSbF7dTDXLHkm49NmH7kZT2wTjGXm/S/_WHZ1464-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-S4NsS8J",
     "title": "Mining in Sleepy Cove   Black and White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Mining in Sleepy Cove   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-S4NsS8J/2/MdQJvVkVcn3HkqB8LKJhLtjvhvQTb9S3M4D8zrdJ8/XL/_WHZ1513-XL.jpg",
+    "alt": "Holding It Back  B/W    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-S4NsS8J/A",
     "keywords": [
       "Canada",
@@ -314,14 +363,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-S4NsS8J/2/MCn5XqPCgFwQ8JbDz6HZKB6htjCxPX5LQxLR9vHhr/XL/_WHZ1513-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-S4NsS8J/2/MCn5XqPCgFwQ8JbDz6HZKB6htjCxPX5LQxLR9vHhr/XL/_WHZ1513-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-S4NsS8J/2/MCn5XqPCgFwQ8JbDz6HZKB6htjCxPX5LQxLR9vHhr/XL/_WHZ1513-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-S4NsS8J/2/LrQNGfZJKKQxrjPpnTRkCVg78MkbLKLbX2LRmq4PN/L/_WHZ1513-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-S4NsS8J/2/KtPnkH4nZHFNmtw2pwWrNqWGqRGjnqJMRGqZGH3Kg/S/_WHZ1513-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VpQXM8V",
     "title": "Rocky Beach    Black and White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Rocky Beach    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-VpQXM8V/5/MK9zhFbDk7ZZNCRvrJWkFFz9S45PSBzf8fkgd6C9F/XL/_WHZ1540-Pano-XL.jpg",
+    "alt": "Mining in Sleepy Cove   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-VpQXM8V/A",
     "keywords": [
       "Canada",
@@ -344,14 +398,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-VpQXM8V/5/K6psQt2NhhHqQ3zL9rdRcnP47RBZwWwGNSBHdR6gT/XL/_WHZ1540-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-VpQXM8V/5/K6psQt2NhhHqQ3zL9rdRcnP47RBZwWwGNSBHdR6gT/XL/_WHZ1540-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-VpQXM8V/5/K4dZNp6mxH3mVQk9TVFHrSv5sJDgGL8vMfv2D7H48/L/_WHZ1540-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-VpQXM8V/5/KpNdTG7VDtRzRFDZCBp5qWwvGHjDXswJr33sDZdds/M/_WHZ1540-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-VpQXM8V/5/MQNSwvWVQSKJbM7zgdxdWrBvscXLTSXwXk3LPzzhH/S/_WHZ1540-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NVCw96z",
     "title": "The Point   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "The Point   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-NVCw96z/2/KRFFppXnGwGNMBnhV2NZ85x4hWHKhw6DdjdqqNWpp/XL/_WHZ1701_tonemapped-XL.jpg",
+    "alt": "Rocky Beach    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-NVCw96z/A",
     "keywords": [
       "Canada",
@@ -374,14 +433,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-NVCw96z/2/KVT8zb7Bn3SLhZrHHppnhNNP2dRmrK6BcMM6qgBQN/XL/_WHZ1701_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-NVCw96z/2/KVT8zb7Bn3SLhZrHHppnhNNP2dRmrK6BcMM6qgBQN/XL/_WHZ1701_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-NVCw96z/2/KVT8zb7Bn3SLhZrHHppnhNNP2dRmrK6BcMM6qgBQN/XL/_WHZ1701_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-NVCw96z/2/KhNkWncpj8rBLwLR538kSPgpt4sfKxz2PnjsnsxRX/L/_WHZ1701_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-NVCw96z/2/KSScMX7rPJtghdvJcSwfp6RFpN9SWqzxL335DHDFg/S/_WHZ1701_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CGTT8xr",
     "title": "Kitty  Looks Up Black and White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Kitty  Looks Up Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-CGTT8xr/2/MmSgkns5TKgRzwxnSX6Hr5T3KxzRPdvVM6CQb792X/XL/_WHZ1829-2-XL.jpg",
+    "alt": "The Point   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-CGTT8xr/A",
     "keywords": [
       "Canada",
@@ -404,14 +468,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-CGTT8xr/2/MJMGFmM9PVNWt4dFvjZnLtbkRqdxf7NntGfn9kpPz/XL/_WHZ1829-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-CGTT8xr/2/MJMGFmM9PVNWt4dFvjZnLtbkRqdxf7NntGfn9kpPz/XL/_WHZ1829-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-CGTT8xr/2/NXfBzB729bmcfWM3Prcd472qwqtfx7DFcKqGPqGLV/L/_WHZ1829-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-CGTT8xr/2/MspswNwWdDRfcfbd3rrThJ6wzNS5sSTf86XKvRDdC/M/_WHZ1829-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-CGTT8xr/2/MB2b6jbj947ghFKGLGkvdV4KqTQCCnDwbrBDhsQK6/S/_WHZ1829-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6v5353T",
     "title": "Snow Cone   Black and White  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Snow Cone   Black and White  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-6v5353T/2/MfMttXDpxqGp4gLKzXzMHSgCTJnpL3Vdr9RNLD7xt/XL/_WHZ1829-3-XL.jpg",
+    "alt": "Kitty  Looks Up Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-6v5353T/A",
     "keywords": [
       "Canada",
@@ -434,14 +503,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-6v5353T/2/MgH9fXsHWRZj7LvtknbtqJVdmJMWhP4GckNjvTJSS/XL/_WHZ1829-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-6v5353T/2/MgH9fXsHWRZj7LvtknbtqJVdmJMWhP4GckNjvTJSS/XL/_WHZ1829-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-6v5353T/2/MgH9fXsHWRZj7LvtknbtqJVdmJMWhP4GckNjvTJSS/XL/_WHZ1829-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-6v5353T/2/LM9j6sRqrvbTbrJV3QN7HqR4JSxDcGQrtFFx4NmWd/L/_WHZ1829-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-6v5353T/2/MpQDmSRPLBdNKhBGxbmPmB47ngN9dp9q9ZVJhpVMG/S/_WHZ1829-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MrMvnZL",
     "title": "Getting Close  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Getting Close  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MrMvnZL/4/KtGgksMV462pNGJNTS8N9hFg9dDZHzPbqh9S9pK6p/XL/_WHZ1843-XL.jpg",
+    "alt": "Snow Cone   Black and White  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-MrMvnZL/A",
     "keywords": [
       "Canada",
@@ -464,14 +538,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MrMvnZL/4/KwjRH59Lw6cTvKp6GFDXJtMhJHF22r39qfsGQvqWh/XL/_WHZ1843-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MrMvnZL/4/KwjRH59Lw6cTvKp6GFDXJtMhJHF22r39qfsGQvqWh/XL/_WHZ1843-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MrMvnZL/4/KxqHQPTCS8NzTSgHvHqrd8MxHs34NSqRQmN5WKJTX/L/_WHZ1843-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MrMvnZL/4/LpC9727kMD3CFPsX6LfStpng7xjqc2NrkSbmk9cJW/M/_WHZ1843-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-MrMvnZL/4/KvgbzSQRztGxG9NX6F23fSC7r9CkBVC4ZJzCXnH25/S/_WHZ1843-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rkfH3Nc",
     "title": "Eerie Moon   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Eerie Moon   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-rkfH3Nc/4/KMZpng98PsrgkCRgRfd6KKmnNKhBvh82m2n35kXkp/XL/_WHZ2246-XL.jpg",
+    "alt": "Getting Close  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-rkfH3Nc/A",
     "keywords": [
       "Canada",
@@ -494,14 +573,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-rkfH3Nc/4/LGtPnqqHQZzjQVq6fdcWH9bnF97TmRJrHLXDmK2mg/XL/_WHZ2246-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-rkfH3Nc/4/LGtPnqqHQZzjQVq6fdcWH9bnF97TmRJrHLXDmK2mg/XL/_WHZ2246-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-rkfH3Nc/4/LJ9swkc3rFZ6VBFHMfnLgtjZNMh562S8gKJqZC7NP/L/_WHZ2246-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-rkfH3Nc/4/LJ766V5Fs4qJXM5jkpD2XtnVgbSvxLfHkrNJTNhXQ/M/_WHZ2246-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-rkfH3Nc/4/LL5BM9PCQCWJzmR9q8grxn47dFRzNDBDFzMsHwTq9/S/_WHZ2246-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fZ2J8wr",
     "title": "Eerie Moon Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Eerie Moon Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NTPCcdph7SXfcTcpZCxhg33s9MJWgb9p9rchwxJHX/XL/_WHZ2247-XL.jpg",
+    "alt": "Eerie Moon   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-fZ2J8wr/A",
     "keywords": [
       "Canada",
@@ -524,14 +608,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NWhvsJFMBTDVw9rsdRz77M7ZRd5RcjXpGv2HqtGVj/XL/_WHZ2247-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NWhvsJFMBTDVw9rsdRz77M7ZRd5RcjXpGv2HqtGVj/XL/_WHZ2247-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NWhvsJFMBTDVw9rsdRz77M7ZRd5RcjXpGv2HqtGVj/XL/_WHZ2247-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/K4Dz5zk6gjHWzrnV8x4QCpfSvNq85T564xncVJzgP/L/_WHZ2247-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/MHCwdnrjwkSdk34Gq2SZhBj3fmHnKmP4S9HRJvqDX/S/_WHZ2247-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BTPWxsz",
     "title": "Out There     Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Out There     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BTPWxsz/2/MF8trLqLQ9WhnzBxfgWGrd7nLFLR4nmHCC7f3jgSM/XL/_WHZ2878-XL.jpg",
+    "alt": "Eerie Moon Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-BTPWxsz/A",
     "keywords": [
       "Canada",
@@ -554,14 +643,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BTPWxsz/2/L3F5MRdCRZs3vJpFRS78CbpfQpvXLSQg4fTFn4RDs/XL/_WHZ2878-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BTPWxsz/2/L3F5MRdCRZs3vJpFRS78CbpfQpvXLSQg4fTFn4RDs/XL/_WHZ2878-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BTPWxsz/2/L3F5MRdCRZs3vJpFRS78CbpfQpvXLSQg4fTFn4RDs/XL/_WHZ2878-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BTPWxsz/2/M6vQhRZn7VFnq97GH7Ss45Rbtmcfx8V8mFhgnqSSG/L/_WHZ2878-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BTPWxsz/2/NLzd22nL8d7Z86MPTNfpw5QcVJJPqMnqWMw3q9864/S/_WHZ2878-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HCG5PRx",
     "title": "Bonavista Lighthouse    Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Bonavista Lighthouse    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HCG5PRx/2/L5fZwjvwcNPT6gQtr8JGv4dN3VKdh6x8MSk8dgS3t/XL/_WHZ2901-XL.jpg",
+    "alt": "Out There     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-HCG5PRx/A",
     "keywords": [
       "Canada",
@@ -584,14 +678,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HCG5PRx/2/NWdr5b7GxzWRD9RTz5SXvBhTZT7mVgd5kpTF5PxS7/XL/_WHZ2901-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HCG5PRx/2/NWdr5b7GxzWRD9RTz5SXvBhTZT7mVgd5kpTF5PxS7/XL/_WHZ2901-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HCG5PRx/2/NWdr5b7GxzWRD9RTz5SXvBhTZT7mVgd5kpTF5PxS7/XL/_WHZ2901-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HCG5PRx/2/LSHw4NZ9HCP9jsFZfFg9gfP8XrJQmzmtZbJSL7g2c/L/_WHZ2901-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HCG5PRx/2/MMdpVgLbsLbkNPWh7WjjJ4XXk9nk3RcPcR4gB24B2/S/_WHZ2901-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4b73W23",
     "title": "Close to St John's       Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Close to St John's       Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/LCW84ZCSxqXMn2LHzNw3Zr7crdjLBZfZsmcFctHsD/XL/_WHZ2938-XL.jpg",
+    "alt": "Bonavista Lighthouse    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-4b73W23/A",
     "keywords": [
       "Canada",
@@ -614,14 +713,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/NJQDDZ4TqrbXg2Dz9Spnnc2ZwFGbQkGQ3Mr2pfrfC/XL/_WHZ2938-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/NJQDDZ4TqrbXg2Dz9Spnnc2ZwFGbQkGQ3Mr2pfrfC/XL/_WHZ2938-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/MQw8sFbszqJ3WqFj2T4HmLDLbMpWtqJdN2m4gnJF4/L/_WHZ2938-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/KgvJPxXVtg9pK6P66dFLjtT4XWXQgrdZsMHNMcv8b/M/_WHZ2938-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-4b73W23/2/NH4DSn6JPssg75LFMsjJf4kVVBJLdcC2LWcqHgWkb/S/_WHZ2938-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Mcbt4wC",
     "title": "Lighthouse   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Lighthouse   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-Mcbt4wC/2/NZbxPp8kV2XJwrTPR7zQbSWtGpwJ8wPH7RhFGbmMn/XL/_WHZ2949-XL.jpg",
+    "alt": "Close to St John's       Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-Mcbt4wC/A",
     "keywords": [
       "Canada",
@@ -644,14 +748,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-Mcbt4wC/2/NhHbqSB7VkKFxrP5xC8WkbcN4cMf4k6S3qFGnNFdh/XL/_WHZ2949-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-Mcbt4wC/2/NhHbqSB7VkKFxrP5xC8WkbcN4cMf4k6S3qFGnNFdh/XL/_WHZ2949-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-Mcbt4wC/2/NLvfH8J4KWsWdwSDqJRLgWcB5L8vwnBp472s9nMzb/L/_WHZ2949-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-Mcbt4wC/2/NV2pjQVfmR34vPWHjzsdFLBZfCWB2j45mmkLvwZjG/M/_WHZ2949-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-Mcbt4wC/2/KPZmTcKcrTmR2xW2trcjD3JQGVPgw2Qzk3swBgzkR/S/_WHZ2949-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7k6tvvL",
     "title": "Beached   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Beached   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/L2f8rqsrxFKvzjxvF7g7dWRC4PW4Dwcq92pcpwC2F/XL/_WHZ2313-XL.jpg",
+    "alt": "Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-7k6tvvL/A",
     "keywords": [
       "Canada",
@@ -674,14 +783,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/LGvgj4hXLzvm6QbGtVVxTPVj9KKMN6D9N4RsgVRhC/XL/_WHZ2313-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/LGvgj4hXLzvm6QbGtVVxTPVj9KKMN6D9N4RsgVRhC/XL/_WHZ2313-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/LGvgj4hXLzvm6QbGtVVxTPVj9KKMN6D9N4RsgVRhC/XL/_WHZ2313-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/M73BdsFzWcwBBWrFx3SmqNWs26SNkMhrvxvvLWkgL/L/_WHZ2313-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/NXq3P6g8brC3V63rG9mSCqQPCNKhx3DtGmsvk8C6s/S/_WHZ2313-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zLXHHCN",
     "title": "Rock Going Swimming  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Rock Going Swimming  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/MtjhDB566Wx3n4X9g4Cp5gQZ9msw5g4GhRG9G62qv/XL/_WHZ2369-XL.jpg",
+    "alt": "Beached   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-zLXHHCN/A",
     "keywords": [
       "Canada",
@@ -704,14 +818,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/KRjQkWZRvSvx55LS9349NN3mbrDhf3sbfrDhmDHx8/XL/_WHZ2369-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/KRjQkWZRvSvx55LS9349NN3mbrDhf3sbfrDhmDHx8/XL/_WHZ2369-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/NgQNwxfzXvrtK8NvmVt4SbWqJnCV32W3LHNsWjr7z/L/_WHZ2369-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/MswMM5QNbV4hVZrcmmdLpMzmZZzNvRZwDLW6nR2DK/M/_WHZ2369-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-zLXHHCN/4/LQzpm4d254xHShS5gtVjsVXp6VVj2j7mGXG8gcsdJ/S/_WHZ2369-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZzfQpTX",
     "title": "Breakers  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Breakers  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/KM3m6BD48mVD3bqZkfSGJ88F9Sk68Nh27gdKLXZLL/XL/_WHZ2406-XL.jpg",
+    "alt": "Rock Going Swimming  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-ZzfQpTX/A",
     "keywords": [
       "Canada",
@@ -734,14 +853,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/Kngk7C6PTMwQsQ6Bn5vGWbpLXj4CCnPP9whCZSs8M/XL/_WHZ2406-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/Kngk7C6PTMwQsQ6Bn5vGWbpLXj4CCnPP9whCZSs8M/XL/_WHZ2406-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/NFcqX9WCQfZ2BmVG9sm4Ggd73nRbgrgjTGHggcmPP/L/_WHZ2406-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/Lm6M9bmsNdhvBd4bQX25vFnvPXrLsrxTv5sCDzf4J/M/_WHZ2406-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-ZzfQpTX/5/K7WKZsQH3x3qMRLprPGQFdgqj57CxBTZPpvJWLNL4/S/_WHZ2406-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BFBxLHw",
     "title": "Jewels   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Jewels   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BFBxLHw/2/KkqThZ59cmZDQb6n9SzSn59JB8vF4tr3fmtCZ9Hgr/XL/_WHZ2444-XL.jpg",
+    "alt": "Breakers  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-BFBxLHw/A",
     "keywords": [
       "Canada",
@@ -764,14 +888,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BFBxLHw/2/MPXRGTxt9Lr7VBgrrn2TSjjGtJgmwkqzLFwwQXf6h/XL/_WHZ2444-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BFBxLHw/2/MPXRGTxt9Lr7VBgrrn2TSjjGtJgmwkqzLFwwQXf6h/XL/_WHZ2444-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BFBxLHw/2/MPXRGTxt9Lr7VBgrrn2TSjjGtJgmwkqzLFwwQXf6h/XL/_WHZ2444-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BFBxLHw/2/MLKfrFsZLKH7pgxNbmJGgkXxqxqDL8GxrVDD6Pb7C/L/_WHZ2444-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-BFBxLHw/2/MdZHfW546BmmLmwJKgpqRn9FxDC8BhXwt9QN2PgqP/S/_WHZ2444-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HskLV54",
     "title": "Angry Waves.   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Angry Waves.   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HskLV54/4/MSgJxMwjGCKKGLCz2VKKxtQRdR3Sgh9N79STvKxwP/XL/_WHK2639-2-XL.jpg",
+    "alt": "Jewels   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-HskLV54/A",
     "keywords": [
       "Canada",
@@ -794,14 +923,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HskLV54/4/NQFbnpXNRwZZtcZLmsphdWwBrXrRsbPKCb4gWcRz9/XL/_WHK2639-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HskLV54/4/NQFbnpXNRwZZtcZLmsphdWwBrXrRsbPKCb4gWcRz9/XL/_WHK2639-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HskLV54/4/KnrdZWnx8s5qdSBgk7NhZHxsRPvndj3dwx3BK3Cdc/L/_WHK2639-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HskLV54/4/LK7PT4HrkWmfGvF5RspPP3LPX7DvrPcfVx8J6H22L/M/_WHK2639-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-HskLV54/4/KWxD6RpJrCSDVkbGVf2SWStqnPz965z9BQmP7QzNw/S/_WHK2639-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-j3wMxB9",
     "title": "Boat in Harbor  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Boat in Harbor  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-j3wMxB9/2/KdJPnrr2gRJ3fGcwPXJ9fhj6gCKrxSzV6mWzVhxVb/XL/_WHZ3219-XL.jpg",
+    "alt": "Angry Waves.   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-j3wMxB9/A",
     "keywords": [
       "Canada",
@@ -824,14 +958,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-j3wMxB9/2/MZLB9cfr34NmnV6H97GXSQQfZnSCfKg3C23G9kvq6/XL/_WHZ3219-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-j3wMxB9/2/MZLB9cfr34NmnV6H97GXSQQfZnSCfKg3C23G9kvq6/XL/_WHZ3219-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-j3wMxB9/2/LjpQPSJq6ZCZ6FJfgHkfCs8MMSGRwq3zRtz9bctPN/L/_WHZ3219-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-j3wMxB9/2/L7r5pcpKgDHzpw6mBRzmXKDfZBbqgFrLrZNg4Q2qd/M/_WHZ3219-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-j3wMxB9/2/LPK4QmQL4XNPk9RxXL7zFHgHDHbnPTjJrXvtCLxZh/S/_WHZ3219-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5JKmkZd",
     "title": "Newfoundland Harbor    Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Newfoundland Harbor    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-5JKmkZd/2/KzZSsmnbX5CHcZ3pr7CLdB45wn2Q8Q4nKpMP29Svg/XL/_WHK3287-XL.jpg",
+    "alt": "Boat in Harbor  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-5JKmkZd/A",
     "keywords": [
       "Canada",
@@ -854,14 +993,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-5JKmkZd/2/NDxMRFWHLpLLPX2M2SdrKNBC2cjhgvGJB5PvnxKcw/XL/_WHK3287-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-5JKmkZd/2/NDxMRFWHLpLLPX2M2SdrKNBC2cjhgvGJB5PvnxKcw/XL/_WHK3287-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-5JKmkZd/2/LdRHLNQsvJHg65LqQzDFpBzv8gw6QKzRWBsPzfsLt/L/_WHK3287-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-5JKmkZd/2/LG2N4w4ncGZKZhX56VSHprrqvX888FfFRw6vXfKJf/M/_WHK3287-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-5JKmkZd/2/MhQtGTmrLBs5tz3MVKD8nWMwvD63CnFw6HVBsmFSz/S/_WHK3287-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bRGTmKv",
     "title": "Little Cove  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
-    "alt": "Little Cove  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-bRGTmKv/5/MqC4SdC3KHHLwSZFwdQBHSvGth2zHTqhw7CFWqcnM/XL/_WHZ1535-Pano-XL.jpg",
+    "alt": "Newfoundland Harbor    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-bRGTmKv/A",
     "keywords": [
       "Canada",
@@ -884,6 +1028,47 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-bRGTmKv/5/Mdm2jSBDxNqnjfLshS3QWfbPbVHrpXKGhfVTZb9qm/XL/_WHZ1535-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-bRGTmKv/5/Mdm2jSBDxNqnjfLshS3QWfbPbVHrpXKGhfVTZb9qm/XL/_WHZ1535-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-bRGTmKv/5/Lgg4S5xWXwxdk6Dwf6dbp8R9t795L5KWwXL8VX48p/L/_WHZ1535-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-bRGTmKv/5/K26bFKSxmQGCXhGLZHFS96H7D2hgmRJc5h5PMgqVm/M/_WHZ1535-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-bRGTmKv/5/LsczWCzrSVK5PzZhrWbV7B7rzRDNqZsZskJQzCZ6F/S/_WHZ1535-Pano-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-JW39KK8",
+    "title": "Cabot Tower on Signal Hill 5    Photography by Wayne Heim",
+    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "alt": "Little Cove  Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-JW39KK8/A",
+    "keywords": [
+      "Canada",
+      "Newfoundland",
+      "lakes",
+      "water",
+      "icebergs",
+      "seashore",
+      "churches",
+      "boats",
+      "lighthouses",
+      "ocean",
+      "rocks",
+      "fine art",
+      "photography",
+      "landscape"
+    ],
+    "story": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 29,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

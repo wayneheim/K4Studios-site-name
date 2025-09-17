@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-wxLBqLg",
-    "title": "Grand Sunset Photography by Wayne HeimGrand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Grand Sunset Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-wxLBqLg/A",
     "keywords": [
       "K4Studios",
@@ -41,14 +45,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Mm5fwXCtgHGHkMzKqnnLCR7KZcBvWQD7SQ37xbMGT/XL/P1030095-c-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Mm5fwXCtgHGHkMzKqnnLCR7KZcBvWQD7SQ37xbMGT/XL/P1030095-c-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Nd9tfNXBDcmB62LHtxrQKxhMHQMrzMctf5CCmP32f/L/P1030095-c-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/M2jNXLjQtQ2RtSS9CbzNhRgsNWSTX8K62tJNqbwPc/M/P1030095-c-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/KGq92CzBPQt6RQMVCSkZLpMd34hKc3hnmvpPQ6JrX/S/P1030095-c-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VScCFDQ",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/NgVCwQMJMVXfjqV3Jn73ShMJFBqHsHPKN5BVG9C7T/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "alt": "Grand Sunset Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VScCFDQ/A",
     "keywords": [
       "K4Studios",
@@ -68,14 +77,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/LcFcxvw4NktPpK2JPcsxn3qkgdq8mmRCfWSWqkt5P/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/LcFcxvw4NktPpK2JPcsxn3qkgdq8mmRCfWSWqkt5P/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/M85tmDppH8PSTPhXbwMMDZFDkgnm7NCRb9rkJZWvq/L/_WHZ7317-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/KRrR6vTZ2S8ZGjXcsCBNDfVtQQpsNfjqS3R8gLSqg/M/_WHZ7317-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/MX2fJ7W3VzkvHvwdmxgBN54RscXqFxbbk2jB7MVsM/S/_WHZ7317-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kcvnCvz",
     "title": "Sunset in Arches. #2 Photography by Wayne Heim",
     "description": "18 x 24 In StockSunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
-    "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/L5SQBSBXkkdGB8mq9twvkDTXBSSmgRVBNB8nZszXq/XL/_WEH0101-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-kcvnCvz/A",
     "keywords": [
       "K4Studios",
@@ -95,14 +109,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/LPQbLScpc8SGNH4mnfqzpZvFW479Z2kXswNzPFbRP/XL/_WEH0101-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/LPQbLScpc8SGNH4mnfqzpZvFW479Z2kXswNzPFbRP/XL/_WEH0101-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/Lr9gSndB2Ft9ZRXwn9jG9JSjx8cW44NCtDBKpDLVd/L/_WEH0101-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/LP98Pq44tjjxxRxH9rTkW5VL9BksmqX69QrmKMHc6/M/_WEH0101-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/LXKZQTcjF5LTD24BLC98VwsLZDp8GwQVKjQxtdxcc/S/_WEH0101-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3jXg4hf",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/NXP3L8L95T56ZvvxjCZfwnHSwNmbGb9q4Cmzmgt3q/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
+    "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-3jXg4hf/A",
     "keywords": [
       "K4Studios",
@@ -122,14 +141,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/MZ8PNmMfcCrL7SV8WrcRXf8FgFwq2XfXdbcNVz4hW/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/MZ8PNmMfcCrL7SV8WrcRXf8FgFwq2XfXdbcNVz4hW/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/MZ8PNmMfcCrL7SV8WrcRXf8FgFwq2XfXdbcNVz4hW/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/M94TQRqWdNNKS6q4zmM7TL69HTk3Z5GWsZb6LDnKw/L/_OL31305-Edit-Edit_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/M5hfGp4spMJj8VsjttL4S2n8bnnfMkQS59WhJ36MZ/S/_OL31305-Edit-Edit_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XmVfrdk",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/NR4RfGKcSsS2L6mPZnFRz2FQTfBDG9Xv94GfFxjqr/XL/_O1H0365-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/A",
     "keywords": [
       "K4Studios",
@@ -149,14 +173,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/LqXTcQnZSh7Pghkj48QPHQ3H7zkN6jqbvXb4sf9ZS/XL/_O1H0365-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/LqXTcQnZSh7Pghkj48QPHQ3H7zkN6jqbvXb4sf9ZS/XL/_O1H0365-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/NLDJv8BqmZ4r2gmPQXPsLpS2TbfWLRQHZBwnbHpFV/L/_O1H0365-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/KcqJFrhF86kcsTMX94HfrQzBG2rbh7M4qpS65Nh4b/M/_O1H0365-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/Ls7Rq6SZ3KZn7q34TJpQcbfWh7PSxSdPvnpjXjJwh/S/_O1H0365-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mcrrSZ2",
     "title": "Another View    Photography by Wayne Heim",
     "description": "Another view of the famous Moulton Barn in Wyoming.  ©Wayne Heim",
-    "alt": "Another View    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/LJv7hNzSmJdzQjL8PqDG9sGz6HG2Lk4VvWTT8p4rn/XL/_WHZ7717-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-mcrrSZ2/A",
     "keywords": [
       "K4Studios",
@@ -176,14 +205,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/NfdMxK4xr34Fq3h8PBNh6W39K5HbB3Xv2pvvZ7n6V/XL/_WHZ7717-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/NfdMxK4xr34Fq3h8PBNh6W39K5HbB3Xv2pvvZ7n6V/XL/_WHZ7717-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/M6HLRGqB7Nhpv7L7CXCc7vHt6VTwxsv5QGj7c3KRS/L/_WHZ7717-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/LDnKL2WXKSDVMcHjnkZDr82K2r55SdS78d52GhMjk/M/_WHZ7717-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/KSG4xdkVPDLQdskbXS7MjNjFn7wjBRLFpkMFBzzsw/S/_WHZ7717-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hVB6Pxq",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KMCVC3MxV2PB2ZwQXZg3XGBdBmck5SSMfMVqjV2Z6/XL/_O1H1351-Edit-Edit-XL.jpg",
+    "alt": "Another View    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-hVB6Pxq/A",
     "keywords": [
       "K4Studios",
@@ -203,14 +237,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NZHwxFMgxNh8LsmGTW5rQ3CtvQHxJvGQqLHGHN6dc/XL/_O1H1351-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NZHwxFMgxNh8LsmGTW5rQ3CtvQHxJvGQqLHGHN6dc/XL/_O1H1351-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KDWp7935CN6Rs2F2hSKjQR5bfxvqDZP52X5qrBMZq/L/_O1H1351-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/LZzNMqJMRMhmBB8VMrn7FkMJKpBTg5CpzV2QfnjpJ/M/_O1H1351-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NKqPSvXvrL93mHSNHJ2mMPCxRG74nXNbBrGCm9sw9/S/_O1H1351-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fJTxRJG",
     "title": "Sunset Road   Photography by Wayne Heim",
     "description": "Sunset over a lonely western road. ©Wayne Heim",
-    "alt": "Sunset Road   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/NZ9v4v6W2vB8FD5Fzw97SCS8p3TxXQDmsTCwGvvKR/XL/_IMG5989-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-fJTxRJG/A",
     "keywords": [
       "K4Studios",
@@ -230,14 +269,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/KJgrF2Sw5KKVvGj5DjphWmJHQ6SZGmHMxJxD8HkTR/XL/_IMG5989-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/KJgrF2Sw5KKVvGj5DjphWmJHQ6SZGmHMxJxD8HkTR/XL/_IMG5989-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/KRMPzTZ4mqLt3mZTQJBdT48McS6TzWSxz3vnq2GbH/L/_IMG5989-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/M2WtrTB4PCFKpHTX2T9LKPKMdVZvMfMznndRmN3bm/M/_IMG5989-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/MxX429ps3QQCX2GsFSrWTJVgtZzmSd32R3BWJ3TNS/S/_IMG5989-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zrvTR9s",
     "title": "Sunset at the Farm.  Photography by Wayne Heim",
     "description": "Sunset at the Farm -  sunsetting behind a rural farm outlining the buildings.©Wayne Heim",
-    "alt": "Sunset at the Farm.  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/LMSzG6FV5v49kCfc4LqD2RzmccDHT4nGBm4vX68P4/XL/_IMG6008-XL.jpg",
+    "alt": "Sunset Road   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-zrvTR9s/A",
     "keywords": [
       "K4Studios",
@@ -257,14 +301,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/LgjTRbDfzMxTdz68kNmF53CNSWmRVBqxd2ZmVGXk4/XL/_IMG6008-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/LgjTRbDfzMxTdz68kNmF53CNSWmRVBqxd2ZmVGXk4/XL/_IMG6008-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/NgmBM6GRmRP4FrWHgmVZjk8LBdsDqg63ZKctqRpbR/L/_IMG6008-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/NMGXZCvXvHrTBtjLTCxw9BPh96LD6J8dFZbJRrrNS/M/_IMG6008-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/NShVrFDZfVXrSP56VqtgbBkHvSxXcDcwRMtXjx4sj/S/_IMG6008-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2qqHRQ6",
     "title": "Angry Sunset . Photography by Wayne Heim",
     "description": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .©Wayne Heim",
-    "alt": "Angry Sunset . Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/KmB9ZzrVwCMqr8Jwq8twx8NrGQbC8xwrvzbfC8jdk/XL/_IMG6094-XL.jpg",
+    "alt": "Sunset at the Farm.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-2qqHRQ6/A",
     "keywords": [
       "K4Studios",
@@ -284,14 +333,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/K3pbxpXpDk8bwL78jTmnnNrxQkL4CMFvHqwjSknSw/XL/_IMG6094-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/K3pbxpXpDk8bwL78jTmnnNrxQkL4CMFvHqwjSknSw/XL/_IMG6094-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/MJQ4DkBVVrc9nPvH5Kd384kz63rkDXS8PRh9FvNdt/L/_IMG6094-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/KWcFMV2xL7dnSFzSRnRkkRLMX3pQLmJBmDZZf2Cqr/M/_IMG6094-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/MWQMW8bfrSFwtWTXDZbQrkJtBZMXD5wNvBmhgtSZq/S/_IMG6094-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rh75LzX",
     "title": "Tiny Bubbles  Photography by Wayne Heim",
     "description": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
-    "alt": "Tiny Bubbles  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-rh75LzX/4/L2cdcn6wLGJB5JDZ26gpzXqqJ8MFcBzpHjJQsgVMB/XL/i-rh75LzX-XL.jpg",
+    "alt": "Angry Sunset . Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-rh75LzX/A",
     "keywords": [
       "K4Studios",
@@ -311,14 +365,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/photos/i-rh75LzX/4/NVtPMHM362S54F3ZLmjcP43qRwVMPdhqLC9ZCNStF/XL/i-rh75LzX-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-rh75LzX/4/NVtPMHM362S54F3ZLmjcP43qRwVMPdhqLC9ZCNStF/XL/i-rh75LzX-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-rh75LzX/4/NVtPMHM362S54F3ZLmjcP43qRwVMPdhqLC9ZCNStF/XL/i-rh75LzX-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-rh75LzX/4/LcnXGZksnBMnSqJgGTVM6HJmnxCGrtkL5zK694TBD/L/i-rh75LzX-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-rh75LzX/4/KQWJMN7d6xrDDgvrRx7CFKpGQG4qfHmGMpxcQxDff/S/i-rh75LzX-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hVvx83K",
     "title": "Heading Out   Photography by Wayn Heim",
     "description": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio ©Wayne Heim",
-    "alt": "Heading Out   Photography by Wayn Heim",
-    "src": "https://photos.smugmug.com/photos/i-hVvx83K/3/NjTpFtPtGVZ6fBL5C4LBQNTWWdJhz6R9HdgNswNdR/XL/i-hVvx83K-XL.jpg",
+    "alt": "Tiny Bubbles  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-hVvx83K/A",
     "keywords": [
       "K4Studios",
@@ -338,14 +397,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/photos/i-hVvx83K/3/MqZ3kKt7qP2ZHx8fGjm2WjqjPdfcW4g4qvTTXgKTB/XL/i-hVvx83K-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-hVvx83K/3/MqZ3kKt7qP2ZHx8fGjm2WjqjPdfcW4g4qvTTXgKTB/XL/i-hVvx83K-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-hVvx83K/3/KSkrqMXG7WHPw5PbRkkSzD2GtLDjZjgLrrSXMj7HH/L/i-hVvx83K-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-hVvx83K/3/LNKgDJw5jp83WX4hqnnm3pCvq89X6WJz7hBC4PjD3/M/i-hVvx83K-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-hVvx83K/3/KVwG7sWPX5ZND99TfcFJgv6ThM9VJS2c4p9NvKQvK/S/i-hVvx83K-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LXP3hD7",
     "title": "Out of the Rocks - Photography of Wayne Heim",
     "description": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.©Wayne Heim",
-    "alt": "Out of the Rocks - Photography of Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-LXP3hD7/4/NfXFmrf8NBvnnthT4MmsNhshff2dhRMPhK72nG3w4/XL/i-LXP3hD7-XL.jpg",
+    "alt": "Heading Out   Photography by Wayn Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-LXP3hD7/A",
     "keywords": [
       "K4Studios",
@@ -365,14 +429,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/photos/i-LXP3hD7/4/KP9hz4z4hJqQ6Jfrq6QSNkX5MxRRRHvMVj4XzkPch/XL/i-LXP3hD7-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-LXP3hD7/4/KP9hz4z4hJqQ6Jfrq6QSNkX5MxRRRHvMVj4XzkPch/XL/i-LXP3hD7-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-LXP3hD7/4/KP9hz4z4hJqQ6Jfrq6QSNkX5MxRRRHvMVj4XzkPch/XL/i-LXP3hD7-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-LXP3hD7/4/Kn85HQbBRcWtcvRTB5cfJx8KfS2zCvkwW7ZknPZTH/L/i-LXP3hD7-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-LXP3hD7/4/NH3QJBWpw7c2fLJxzFSPGnBJxsSHFS24LpdGCrStg/S/i-LXP3hD7-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6WBNkgx",
     "title": "Lone Guard: Artist Point at Sunset",
     "description": "Sunset of Lone Guard tree overlooking Yellowstone River at Artist Point in Yellowstone National Park.",
-    "alt": "Lone Guard: Artist Point at Sunset",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/0/NXVRvrDLnBpdRhNwv33RQRFtTcPbd4VQxxmQLZM4V/XL/20230709_211720-Edit-Edit-XL.jpg",
+    "alt": "Out of the Rocks - Photography of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/A",
     "keywords": [
       "K4Studios",
@@ -392,14 +461,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/0/KmW7VFbPzdkr3rr7WkMjGstbP6xcd7xcQq33Dxzb2/XL/20230709_211720-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/0/KmW7VFbPzdkr3rr7WkMjGstbP6xcd7xcQq33Dxzb2/XL/20230709_211720-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/0/MfDC5z8jBhkJ9Vqd48GdmnGqxBbswWd48K7mR5zJJ/L/20230709_211720-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/0/MdS8J58G67g6TScSSgzDG2TZn3DJmd4wVFHsJ7JdG/M/20230709_211720-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6WBNkgx/0/L7KZG5pm2mq9hqPhtkJjK6qTcpvWxKcwVkV9kbRK7/S/20230709_211720-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rMTRD6x",
     "title": "Midnight Sun Sunset",
     "description": "Fine art landscape photography of Iceland Sunset in the Summer.",
-    "alt": "Midnight Sun Sunset",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/Kpc3Zc9ZhzNZm8k6M3ptgG9LxHLDQchZkJGj4XcwS/XL/_WHZ1479-XL.jpg",
+    "alt": "Lone Guard: Artist Point at Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-rMTRD6x/A",
     "keywords": [
       "K4Studios",
@@ -419,14 +493,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/LHH82bfqGKWnz6DFBJ7Wx38KvXrjgMhGQFVwBBzR2/XL/_WHZ1479-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/LHH82bfqGKWnz6DFBJ7Wx38KvXrjgMhGQFVwBBzR2/XL/_WHZ1479-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/LHH82bfqGKWnz6DFBJ7Wx38KvXrjgMhGQFVwBBzR2/XL/_WHZ1479-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/M6FtgSrKJqkxXwstBXZMwPSv63Nk3Q6prVD2DGT64/M/_WHZ1479-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/LPZh5LwvhQcCBQbZTHtSPcgbmB4TWQHDvzFLHjGBp/S/_WHZ1479-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MwsQPKg",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
-    "alt": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KvPnZNR8n3GRX5nbb9VFt6ZwWk5ZZBGKd5Q8sq597/XL/_K1W2573_tonemapped-Edit-XL.jpg",
+    "alt": "Midnight Sun Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-MwsQPKg/A",
     "keywords": [
       "K4Studios",
@@ -446,14 +525,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KFMd67xsswJ6VntHSXQD8j6ZfsVj5RVZ9wHQ8gM87/XL/_K1W2573_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KFMd67xsswJ6VntHSXQD8j6ZfsVj5RVZ9wHQ8gM87/XL/_K1W2573_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/LBC3997ZWnzqknRd7qPfG8DT6cQbRGwwDqSJhxpt4/L/_K1W2573_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/MGBL9nsW42LjXGnrM8T32MHkMv6kTVH5T6tLWWPvF/M/_K1W2573_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KHW25wK67c4nF8trQtnpD2KwLbTJt73txZmJNnKWD/S/_K1W2573_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rWFC3dL",
     "title": "Goðafoss waterfall Iceland",
     "description": "Fine art landscape photography of Iceland sunset in the Summer.",
-    "alt": "Goðafoss waterfall Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/MQBKfptM86tKv2S3GvvVNd3Z6gTSZLZKdhnjRRGFb/XL/_ANA2550-Edit-XL.jpg",
+    "alt": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-rWFC3dL/A",
     "keywords": [
       "K4Studios",
@@ -473,14 +557,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/LNx9jPqH4jVfK42zjjcGK79M2BZqxVxPbs2DXGVp3/L/_ANA2550-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Lhs3m7PjzH2FQ6ShmrmDGfDJDK87v2cKz4MBV82tV/S/_ANA2550-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6NKTKgw",
     "title": "Sunset Rays on the Village",
     "description": "Fine art landscape sunset photograph of the Faroe Islands.",
-    "alt": "Sunset Rays on the Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LvNxkG7NPgdFMbbZGLR8xtfdLjxMK9GgdWGbsksRx/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "alt": "Goðafoss waterfall Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-6NKTKgw/A",
     "keywords": [
       "K4Studios",
@@ -500,14 +589,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LNkpWw9W6SmS6xHWjgRjzsT66RFQ524FFFHCmtqRq/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LNkpWw9W6SmS6xHWjgRjzsT66RFQ524FFFHCmtqRq/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LTx77ZBxFgJFdvDdhMQhZmF3PPKXztqTbBn7z2wFb/L/_WHZ9486_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LFDsVXz5zJx7XZ4WvHMndVWC5gKpR7x5V4Ptrt9SB/M/_WHZ9486_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/KRZNDLSV4RFqZZtmQQ58x229CWZctWDmHT9td9HBW/S/_WHZ9486_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-P7pMnQ9",
     "title": "Faroe Island Coastal Town",
     "description": "Fine art, black & white, landscape sunset photography of the Faroe Islands.",
-    "alt": "Faroe Island Coastal Town",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/MVj7DFFm4pVxrcFpLF9h5zfnXQXPxfPD8bKCZtpKF/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "alt": "Sunset Rays on the Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-P7pMnQ9/A",
     "keywords": [
       "K4Studios",
@@ -527,14 +621,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KgjdwcfrQCQWz8xqfjqftPdkqB5WPQxZkhqdsPFNR/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KgjdwcfrQCQWz8xqfjqftPdkqB5WPQxZkhqdsPFNR/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KMzM2rDKVs2RPFLchDqsG7KDSCw27c4g276MxWzRh/L/_WHZ9486_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KJmwwbXJ8rbZ97jDkGL4T6wzrZF4QZF3MBj9VQ6xC/M/_WHZ9486_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KGj4qksgnLqQ8LRfrLfLDZS6HttrQjpLFbzcT2mzs/S/_WHZ9486_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f4Jq6NZ",
     "title": "Davis West Virginia Sunrise in full show.",
     "description": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
-    "alt": "Davis West Virginia Sunrise in full show.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MJsPjtjWg5Dgx69KNnkvmdP3BG5jRR8TQV3HccK46/XL/_DSF5667-Edit-XL.jpg",
+    "alt": "Faroe Island Coastal Town",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-f4Jq6NZ/A",
     "keywords": [
       "K4Studios",
@@ -554,14 +653,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MC3qNTMKTv7bTw7vWBjns6XPr3v9PBQ8857LBbsjG/XL/_DSF5667-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MC3qNTMKTv7bTw7vWBjns6XPr3v9PBQ8857LBbsjG/XL/_DSF5667-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/NdZ5j26d7gbnPCX8dBZQPL3bXKjCvJX8RdGZBmgvp/L/_DSF5667-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/KqgbPgm4FZH7kTQtJLL625jVBDpHLkVnRzBS3VVbc/M/_DSF5667-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/KnnBkt5xW7HNDCdMkMQ5LrqqPPRN6v3KjLTjsMSD6/S/_DSF5667-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MwLgJL5",
     "title": "Eminent Rise",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Eminent Rise",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MGSGFcC6Wpnt2d6bRsZJgWPtNmKqp28qkZ64R3sD7/XL/_DSF5676-Pano-Edit-XL.jpg",
+    "alt": "Davis West Virginia Sunrise in full show.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-MwLgJL5/A",
     "keywords": [
       "K4Studios",
@@ -581,14 +685,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MXQr7jm6ktC945qvLB87jpcqMnxmxwnxsqgjSH8VG/XL/_DSF5676-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MXQr7jm6ktC945qvLB87jpcqMnxmxwnxsqgjSH8VG/XL/_DSF5676-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/KXTZgQsDv4KT9knQQmbq6CvVkqDXP5PJcqsvff967/L/_DSF5676-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/M8VrrfQBGM93f8HP3MJwWgmL6wnTsCNz8zWhSPxvg/M/_DSF5676-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/KPv3cQnc5MnQz8946Gbcx5Ndt8SxWdm86bPJwt5S2/S/_DSF5676-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vSFBSgr",
     "title": "A Painters Pallet",
     "description": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
-    "alt": "A Painters Pallet",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/NcZxvQSsHvjCPt4mGRTWZ87hhDq4367ZLkDVb3z56/XL/_DSF5690-XL.jpg",
+    "alt": "Eminent Rise",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-vSFBSgr/A",
     "keywords": [
       "K4Studios",
@@ -608,14 +717,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/KNvMjRFhhRLGB5tS3CsqV3hLWM5PfSRMZTxsC4Hzn/XL/_DSF5690-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/KNvMjRFhhRLGB5tS3CsqV3hLWM5PfSRMZTxsC4Hzn/XL/_DSF5690-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/L7FpT74jpTv4VVHpvrV2WM6qW57L7sj5d9s9sHSMp/L/_DSF5690-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/LZcJqg24BDgpfPD2DdbjPWP3cJRrNfsDvN96XP6mq/M/_DSF5690-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/Kj99dBvbkXK7Z9g8CwtdXXV9P3wbNtzZG9dqz8MNn/S/_DSF5690-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NSj5zsB",
     "title": "Full Valley View",
     "description": "Panoramic view of the start of the day. Epic view of mountain valley in Davis West Virginia showcasing the multi-color sunrise that only lasted 5 minutes.",
-    "alt": "Full Valley View",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/MvsJpDNTKzSMCsSFN4zcBF9v3CMbx8fgZFTmqcKGx/XL/_DSF5690-Enhanced-NR-Pano-XL.jpg",
+    "alt": "A Painters Pallet",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-NSj5zsB/A",
     "keywords": [
       "K4Studios",
@@ -635,14 +749,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/MrmThrqFLPQMXGhBJNQFdpgF5mbBL32QRK8wmqXn7/XL/_DSF5690-Enhanced-NR-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/MrmThrqFLPQMXGhBJNQFdpgF5mbBL32QRK8wmqXn7/XL/_DSF5690-Enhanced-NR-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/MP9k4DZcSbQKCmM9MpjCwk4BrznVbgsBPVwfjhMRb/L/_DSF5690-Enhanced-NR-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/Mgn2b7b6GX5GxPKk77D5mTN42RL99Pjnn7XbVjLsw/M/_DSF5690-Enhanced-NR-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/KcxZ2MfcZgvdfvJ6gdZZDQt72FQsnpDZDjGfHfjk8/S/_DSF5690-Enhanced-NR-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZNSFtRg",
     "title": "End of the Day Color Show",
     "description": "Colorful display of natures colors in the sunset as it reflects off of the meandering stream.",
-    "alt": "End of the Day Color Show",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-ZNSFtRg/1/KMdXsqG5jKxjbgvSJwhFFpftvmbZPh4JmRZstKKKP/XL/_O1H1357-Edit-XL.jpg",
+    "alt": "Full Valley View",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-ZNSFtRg/A",
     "keywords": [
       "K4Studios",
@@ -662,14 +781,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-ZNSFtRg/1/KNTd7CLzV36cCKD5S9nLmmk9Hw9JKcCcVRkgTfLdW/XL/_O1H1357-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-ZNSFtRg/1/KNTd7CLzV36cCKD5S9nLmmk9Hw9JKcCcVRkgTfLdW/XL/_O1H1357-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-ZNSFtRg/1/K9NFXBrTVvn4mqVzsVxPhfvLcZLVJM7KKzsrZcfSB/L/_O1H1357-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-ZNSFtRg/1/Kt64Sv8pW6SJqWt4s47H93GQzhPHjb3LKK8qJXK3p/M/_O1H1357-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-ZNSFtRg/1/LVZbm8KJcfxnVF2hMc4RfMr3BNbfHS8PV376nQ7Tr/S/_O1H1357-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QNc3gRK",
     "title": "Sun Setting Over The Bend",
     "description": "Setting sun colors over the iconic Horse Shoe Bend formation in Arizona.",
-    "alt": "Sun Setting Over The Bend",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-QNc3gRK/0/MnTtvwpR9LpGFSQcXBDK2cLVpcxgrkGVx75ZTD3St/XL/_DSF5012-XL.jpg",
+    "alt": "End of the Day Color Show",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-QNc3gRK/A",
     "keywords": [
       "K4Studios",
@@ -689,14 +813,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-QNc3gRK/0/MHVLG2fzxH5qL9k98FXn72D9nH5qWvNmzfdMzNLMF/XL/_DSF5012-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-QNc3gRK/0/MHVLG2fzxH5qL9k98FXn72D9nH5qWvNmzfdMzNLMF/XL/_DSF5012-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-QNc3gRK/0/MHVLG2fzxH5qL9k98FXn72D9nH5qWvNmzfdMzNLMF/XL/_DSF5012-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-QNc3gRK/0/MwSDdfkHq3c65MCpVZPQXJ7j6VD7LkpfRXdLnSDCc/L/_DSF5012-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-QNc3gRK/0/Lj7BJRZktRSGzxGW9S7dLwpVpzXxKSLgLpWM4JLwS/S/_DSF5012-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bKgqLF7",
     "title": "Remaining Blue",
     "description": "Capturing the remaining vibrant blue sky of the end of the day as it mixes with the natural red rock colors and orange, yellow and pink of the setting sun at Horse Shoe Bend Park.",
-    "alt": "Remaining Blue",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-bKgqLF7/0/LsbtLLxHNBZqhLPPGCrQFPZsx7wpvchnwj3mn2C5K/XL/_DSF5014-Pano-Enhanced-NR-XL.jpg",
+    "alt": "Sun Setting Over The Bend",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-bKgqLF7/A",
     "keywords": [
       "K4Studios",
@@ -716,14 +845,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-bKgqLF7/0/NCznxx3LTnXVQ8pc9v6f4jHD8gvML3NzSnPhW3X6C/XL/_DSF5014-Pano-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-bKgqLF7/0/NCznxx3LTnXVQ8pc9v6f4jHD8gvML3NzSnPhW3X6C/XL/_DSF5014-Pano-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-bKgqLF7/0/NCznxx3LTnXVQ8pc9v6f4jHD8gvML3NzSnPhW3X6C/XL/_DSF5014-Pano-Enhanced-NR-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-bKgqLF7/0/LQJ7kVZSSKnfXvkt6BgRVngDDK4wfkWTMxxP7nwjJ/L/_DSF5014-Pano-Enhanced-NR-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-bKgqLF7/0/MC8p885DNmhbHrw6tS5BkGTDgt982Q4S7C7NZgXfM/S/_DSF5014-Pano-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2hVf7F4",
     "title": "Field at Sunset     Photography by Wayne Heim",
     "description": "Looking across a filed to woods as sun is setting in the west  .Wayne Heim ©2015",
-    "alt": "Field at Sunset     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/KfBZjcgLnnVcPbPhqMjVbtm2KKZhGwdkLzzrccPd5/XL/_WHZ6765-Pano%2520v2-XL.jpg",
+    "alt": "Remaining Blue",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-2hVf7F4/A",
     "keywords": [
       "K4Studios",
@@ -743,14 +877,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MSQWvXFk5hvP6FqSzCDZhJ7hhH2TKGVpvXKDMCdvP/XL/_WHZ6765-Pano%20v2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MSQWvXFk5hvP6FqSzCDZhJ7hhH2TKGVpvXKDMCdvP/XL/_WHZ6765-Pano%20v2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MnrTdr2PSNxHHcbVqCPZ8NF8MFf5H32b7jtHR23t9/L/_WHZ6765-Pano%20v2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MkGpbCqb4T3rGVhWTfQ9wKkFCVKbvNrR4V6T2bZTg/M/_WHZ6765-Pano%20v2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MBkdXxQz2B9tfmwqWQw46N9rJSqcQsgQ43TwJc3XL/S/_WHZ6765-Pano%20v2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7zGDNJf",
     "title": "Mount Hood at Sunset  Photo by Wayne Heim",
     "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
-    "alt": "Mount Hood at Sunset  Photo by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/Ls837gwrfs643XVhF4QQjZNckBNdBNWwSRBh2sxLQ/XL/_IGP5748-XL.jpg",
+    "alt": "Field at Sunset     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-7zGDNJf/A",
     "keywords": [
       "K4Studios",
@@ -770,6 +909,44 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/K2fPCN3r4834b9KP8xXC6cW7Z6jwxVM983kh42f5j/L/_IGP5748-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/KD2T3DV4wdnXMLzHWRwGrBFLHB25LjCNH6tLTn6mM/S/_IGP5748-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-VbL6CF7",
+    "title": "Shadow Reflection. Photography by Wayne Heim",
+    "description": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
+    "alt": "Mount Hood at Sunset  Photo by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VbL6CF7/A",
+    "keywords": [
+      "K4Studios",
+      "Wayne Heim",
+      "Jackson Hole",
+      "Wyoming",
+      "Teton Mountsins",
+      "snow covered",
+      "winter",
+      "Western scene",
+      "mountains",
+      "sunset",
+      "color photography"
+    ],
+    "story": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 28,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

@@ -14,15 +14,19 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-nrtRrhM",
-    "title": "WWII Reenactor Photography: War News. Photography by Wayne HeimWoman reads paper with headlines that tell of the D-Day landings of World War II.",
-    "description": "© Wayne Heim",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "WWII Reenactor Photography: War News. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/NJKNkm6RMfCJ4f74t82j4PSFDR8Vp62gkBKnQ4QMk/XL/P8180283-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nrtRrhM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nrtRrhM/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -35,20 +39,25 @@ export const galleryData = [
       "war news",
       "k4 studios"
     ],
-    "story": "© Wayne Heim",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/MqCRWwTjrG7k2hmtZFLctQTkz28MtxSJczDRpMq8F/XL/P8180283-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/MqCRWwTjrG7k2hmtZFLctQTkz28MtxSJczDRpMq8F/XL/P8180283-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/L8j2G3PKx3SbdW3BM8JFPks2KCmMgPtcbLSqqWwJ6/L/P8180283-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/KWqJ2J8phCHDx3HcrtCszhkmjTDmBQDZj9G39bw4x/M/P8180283-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/LSXdqPKCDKxXvxCkdNjTwZMvTj49nhdnFvvW8FkR8/S/P8180283-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3kHSr6x",
     "title": "Hello     Photography by Wayne Heim",
     "description": "Portrait of woman reenactor at D Day Conneaut.  © Wayne Heim",
-    "alt": "Hello     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3kHSr6x/3/MxzzrShCsmHrJRt5tWJMkJk6mVLBPNvKLPSHCnPVq/XL/_WHZ2770-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-3kHSr6x/A",
+    "alt": "WWII Reenactor Photography: War News. Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-3kHSr6x/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -66,15 +75,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3kHSr6x/3/LFR3gFbtV7F49XzQCTRxtMd2qDWXRM7JdjLLTGvvN/XL/_WHZ2770-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3kHSr6x/3/LFR3gFbtV7F49XzQCTRxtMd2qDWXRM7JdjLLTGvvN/XL/_WHZ2770-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3kHSr6x/3/LFR3gFbtV7F49XzQCTRxtMd2qDWXRM7JdjLLTGvvN/XL/_WHZ2770-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3kHSr6x/3/Lc39hbtSPkC9GX8B8kNvQJfsNfQccnCHSKsDB5gcj/L/_WHZ2770-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3kHSr6x/3/LRgvtvbHxqWv5CSncWj2dM5qzCcwSDvfGwS5pmNWH/S/_WHZ2770-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8JSFvtM",
     "title": "Portrait   Photography by Wayne Heim",
     "description": "Soldier portrait at D Day Conneaut. © Wayne Heim",
-    "alt": "Portrait   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8JSFvtM/4/MXsBF38ZPT5dhxZDw3J7WjWWXSsWSVBL7HTXdFzTb/XL/_WEH1929-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8JSFvtM/A",
+    "alt": "Hello     Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8JSFvtM/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -92,15 +106,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8JSFvtM/4/L5FTH3gmsV892L56T4HDnZ4rdK2DfTfBLzMhTvKbL/XL/_WEH1929-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8JSFvtM/4/L5FTH3gmsV892L56T4HDnZ4rdK2DfTfBLzMhTvKbL/XL/_WEH1929-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8JSFvtM/4/L5FTH3gmsV892L56T4HDnZ4rdK2DfTfBLzMhTvKbL/XL/_WEH1929-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8JSFvtM/4/MWccWBTMXcx4NsmWh9h6frp3nq49d2JHG2h9QnqVp/L/_WEH1929-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-8JSFvtM/4/NK6WXJnzmnHXQj894kkNgxXfMftqRMC2HPfCP2GKq/S/_WEH1929-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Q5V5cks",
     "title": "Repair Job   Photography by Wayne Heim",
     "description": "Red Cross worker mends shirt during reenactment  at D Day Conneaut.  © Wayne Heim",
-    "alt": "Repair Job   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q5V5cks/4/NZFBsbT26zNfwC4fJMbm8HbW28565r7M3zRpWwM95/XL/_W3H3186-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q5V5cks/A",
+    "alt": "Portrait   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q5V5cks/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -118,15 +137,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q5V5cks/4/NPrKzKrK9xgqKLFSFm5c9mPXWB9Ck9BZ3mPr3K3DT/XL/_W3H3186-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q5V5cks/4/NPrKzKrK9xgqKLFSFm5c9mPXWB9Ck9BZ3mPr3K3DT/XL/_W3H3186-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q5V5cks/4/NPrKzKrK9xgqKLFSFm5c9mPXWB9Ck9BZ3mPr3K3DT/XL/_W3H3186-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q5V5cks/4/LmSzH4cjnWmzkxcthXxcBPjtZCgQvSJd4SzDnxT9B/L/_W3H3186-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q5V5cks/4/L2FtnCNZfszKJ9HbhbfBsKB4hspWbghb7KhzzhgBV/S/_W3H3186-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xnx9RzR",
     "title": "Ready for Battle   Photography by Wayne Heim",
     "description": "Reenactor in camouflage paint ready for battle at D Day Conneaut.  ©Wayne Heim",
-    "alt": "Ready for Battle   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xnx9RzR/4/KwMW8wHnTRgK8w9SppX6MhSJBKv2BKTQhmzwNMvt8/XL/_IMG0787-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xnx9RzR/A",
+    "alt": "Repair Job   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xnx9RzR/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -144,15 +168,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xnx9RzR/4/L6H4RB2V8TMr8TxWMMgdJSX9LNbmqNJd583ndnbcW/XL/_IMG0787-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xnx9RzR/4/L6H4RB2V8TMr8TxWMMgdJSX9LNbmqNJd583ndnbcW/XL/_IMG0787-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xnx9RzR/4/NC8xtRfhvKvtS3zNLGKWhjkNVnsfxGwnctNVtLXfD/L/_IMG0787-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xnx9RzR/4/LbmQ46zrkgTPc8tqv63xrB6hpd2HvB778Pbjmd3Jx/M/_IMG0787-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-xnx9RzR/4/M9cP8ht9gG9NRXXPZQ7q7gwN9jdhDVwpKt2RnDvCB/S/_IMG0787-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MqTznst",
     "title": "Holder of the Flag  Photography by Wayne Heim",
     "description": "Soldier presents the flag during flag raising at the D Day Conneaut reenactment. ©Wayne Heim",
-    "alt": "Holder of the Flag  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-MqTznst/5/MWMrDcn36MkssL6x26S3s43nwf5c6tCwFzPjXrcCj/XL/_IGP7294-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-MqTznst/A",
+    "alt": "Ready for Battle   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-MqTznst/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -170,15 +199,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-MqTznst/5/M3bkrRz3JmWNmzCWt5QCpB9RBC7rFPWC4b4ZXgpvD/XL/_IGP7294-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-MqTznst/5/M3bkrRz3JmWNmzCWt5QCpB9RBC7rFPWC4b4ZXgpvD/XL/_IGP7294-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-MqTznst/5/M3bkrRz3JmWNmzCWt5QCpB9RBC7rFPWC4b4ZXgpvD/XL/_IGP7294-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-MqTznst/5/KqHvvjWFWDq3xXLc3gxmmBqjSGWSbdBN5WqMMDjNV/L/_IGP7294-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-MqTznst/5/MCx995ZGw5SQbNtgVdxNQSvzFX7tr73kkR9j3dBw4/S/_IGP7294-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FRg6MPm",
     "title": "Young Resistance Fighter    Photography by Wayne Heim",
     "description": "Young girl in the role of French Resistance fighter during D Day Conneaut. © Wayne Heim",
-    "alt": "Young Resistance Fighter    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-FRg6MPm/4/Mv4qSR57ZT9cQC3kcXVs7jQqN8bB8Gc7H4g4rfxMw/XL/_WEH1151-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-FRg6MPm/A",
+    "alt": "Holder of the Flag  Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-FRg6MPm/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -196,15 +230,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-FRg6MPm/4/MNvwvZvJDpP3VGpHn9ggCLGsN5QcZQbBtNT835ZZv/XL/_WEH1151-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-FRg6MPm/4/MNvwvZvJDpP3VGpHn9ggCLGsN5QcZQbBtNT835ZZv/XL/_WEH1151-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-FRg6MPm/4/NRd9szgL4BnkH9S4XKfpwQgHzzRTfmh7RphjKPm7Z/L/_WEH1151-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-FRg6MPm/4/K2T9Bwvh5WnRtvPb3vS7hZ6VNhvNb2sZxsmH6cmpN/M/_WEH1151-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-FRg6MPm/4/KrN9WMdzW4jLn2MrvMZVMXFmg4HkMDXNSLGp5Kj2D/S/_WEH1151-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fpNsP5K",
     "title": "German Look Alike     Photography by Wayne Heim",
     "description": "Portrait of German reenactor who looks like actor  Artie Johnson.  © Wayne Heim",
-    "alt": "German Look Alike     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-fpNsP5K/4/NhNbcW6dMkwx6N2776xbTj3ZT62jHdgLCSLXnV8fB/XL/_IGP7129-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fpNsP5K/A",
+    "alt": "Young Resistance Fighter    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fpNsP5K/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -222,15 +261,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-fpNsP5K/4/NfNQqz6npHcS3974CWMHKDkWkXxL5Jrc647b2X7hC/XL/_IGP7129-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-fpNsP5K/4/NfNQqz6npHcS3974CWMHKDkWkXxL5Jrc647b2X7hC/XL/_IGP7129-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-fpNsP5K/4/KtG8Dmdgf2rpRDx8zmbNsTJSf7cTtc3VTNMfzNJt2/L/_IGP7129-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-fpNsP5K/4/KGQDWd8wpMFcnLmcDGDbnBVFZZrBCHjXGxcfdcPsJ/M/_IGP7129-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-fpNsP5K/4/LZ67g7Pff86s8bqVQvKGHXWJ53cDx9dQ3ZJJGpSQW/S/_IGP7129-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4gKdf3V",
     "title": "German Reenactors   Photography by Wayne Heim",
     "description": "Two German reenactors during a battle.©Wayne Heim",
-    "alt": "German Reenactors   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/4/Mqt7wQJfwS7TV5th8ww2PPxsNHmDVBvrsj7VB2bLh/XL/_IMG9454-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4gKdf3V/A",
+    "alt": "German Look Alike     Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4gKdf3V/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -248,15 +292,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/4/NfCMrwJgtZDWXdjBQQrdC4GTBN8cXfZrqK2HrTPVV/XL/_IMG9454-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/4/NfCMrwJgtZDWXdjBQQrdC4GTBN8cXfZrqK2HrTPVV/XL/_IMG9454-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/4/LXTxK26dscctDt3vkR4Svt6KfWF2mmJMqrthGsftV/L/_IMG9454-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/4/L9RfxfB3b5CT2t9Xnmd7vs2zX5HVZ8jBzHDxsT3Ht/M/_IMG9454-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-4gKdf3V/4/LXZWcxSRfQDCMDmDwJHDQwQxvxjPnwKd5zcjVS2MV/S/_IMG9454-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-v4rqtKD",
     "title": "Portrait in Camp  Black & White Photography by Wayne Heim",
     "description": "German reenactor sits in his tent in the Axis camp during D Day Conneaut.\n© Wayne Heim",
-    "alt": "Portrait in Camp  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v4rqtKD/4/Lnq95Z2BQVLxfjDw6gWh84pj72Q2nq2Pmmvw7k2pj/XL/_W3H3041-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-v4rqtKD/A",
+    "alt": "German Reenactors   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-v4rqtKD/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -274,15 +323,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v4rqtKD/4/LRSwwv7GNmf2FtqmNkXWCk9CR5RQbPz9NHGXj5Ddz/XL/_W3H3041-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v4rqtKD/4/LRSwwv7GNmf2FtqmNkXWCk9CR5RQbPz9NHGXj5Ddz/XL/_W3H3041-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v4rqtKD/4/LpMKgHZgtrnHbsC9cmKjpbjR5snVrN5hp57MtzgjF/L/_W3H3041-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v4rqtKD/4/KXJ38xS2HHFfz3gtK6zqLR8tZjx8FrnRWV4S28KtX/M/_W3H3041-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v4rqtKD/4/KF69cct8kVSDSz4Txp9g7GnM4VmKW6SmPNJdZ7BWk/S/_W3H3041-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9bZ5Jvm",
     "title": "Untitled",
     "description": "© Wayne Heim 2016",
-    "alt": "© Wayne Heim 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9bZ5Jvm/2/KHQGPT5L6HdJHKZnX4HsVD2Nk7wwKLf4hNcw5ptkP/XL/_OWH0437-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9bZ5Jvm/A",
+    "alt": "Portrait in Camp  Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9bZ5Jvm/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -300,15 +354,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9bZ5Jvm/2/LsLMCmcKWMGZDKWKT4j3CdrRX8pcv8pcW7ZwVFcBS/XL/_OWH0437-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9bZ5Jvm/2/LsLMCmcKWMGZDKWKT4j3CdrRX8pcv8pcW7ZwVFcBS/XL/_OWH0437-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9bZ5Jvm/2/LsLMCmcKWMGZDKWKT4j3CdrRX8pcv8pcW7ZwVFcBS/XL/_OWH0437-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9bZ5Jvm/2/LsHxPGK6cWKVRRBfQtfxchqMGHnZQgcRwwMQ3bmJd/L/_OWH0437-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-9bZ5Jvm/2/L7FvmXXcCBqzTKbfjWQXNB9DLJ4rGzdFNmVhH47xX/S/_OWH0437-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9NT8GV4",
     "title": "I Am Waiting   Black & White Photography by Wayne Heim",
     "description": "Portrait of a woman reenactor at D Day Conneaut.  © Wayne Heim",
-    "alt": "I Am Waiting   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/MhNMqrfWKmNp4p4Jf5pjCrSsGkKhv5pWmdr9mBbkT/XL/_W3H3194-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9NT8GV4/A",
+    "alt": "© Wayne Heim 2016",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9NT8GV4/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -326,15 +385,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/M9J2qbRVcjqv6JTkbHF46ZgGxJSXXHWd569kdGPQG/L/_W3H3194-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/MfzVBWD3bX3WMKCWLpmGZHKWBV8WkgdMVFt5B36vv/M/_W3H3194-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/LkNSWQ49hvJBDm6xCz3QsJ7VQvM8LjpZgbPsRH8Gw/S/_W3H3194-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tz4T7z9",
     "title": "WWII Navy Radio Operator - Watching for Signals",
     "description": "Hunkered down in his sand bag bunker, the WWII radio operator eagerly watches for any signal to come from the beach. Reenactor in role of radio operator during D  Day Conneaut.  © Wayne Heim",
-    "alt": "WWII Navy Radio Operator - Watching for Signals",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-tz4T7z9/4/MVGTnWQX6NhvpTSK9kwhBM8VKmNpWnJ84mPPKqdXd/XL/_W3H4585-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tz4T7z9/A",
+    "alt": "I Am Waiting   Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tz4T7z9/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -352,15 +416,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-tz4T7z9/4/KgrzfLNfrdgMpt9T74fgTXNDf9H9n6v8McFNVRGSH/XL/_W3H4585-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-tz4T7z9/4/KgrzfLNfrdgMpt9T74fgTXNDf9H9n6v8McFNVRGSH/XL/_W3H4585-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-tz4T7z9/4/KgrzfLNfrdgMpt9T74fgTXNDf9H9n6v8McFNVRGSH/XL/_W3H4585-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-tz4T7z9/4/NZrprvLptn9NJBBFpPS5JkDMv7Z3tMsxdgTHnVGDm/L/_W3H4585-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-tz4T7z9/4/LBfP5SbdTbz7xzNd2WBrbzD9n4XM55zHgKw6kL8hg/S/_W3H4585-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8ZC4vFq",
     "title": "Highly Decorated PFC   Photography by Wayne Heim",
     "description": "WW II Veteran poses with all the metals he earned.   © Wayne Heim",
-    "alt": "Highly Decorated PFC   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/NJVkm5nDrd6P4hrDXFnXq3kmXP9bGGth7rxJZRN6t/XL/_W3H4899-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8ZC4vFq/A",
+    "alt": "WWII Navy Radio Operator - Watching for Signals",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8ZC4vFq/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -378,15 +447,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/LwtNgwV32DszLqMmMdL7ZLpqPLQMph2kqKDcMXh5s/L/_W3H4899-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/MJFZv3R3Qp7DkXX8FjsJDqtJwTP4cRjJNQcWfcNN4/S/_W3H4899-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LwdHptZ",
     "title": "Time Out  - Photography by Wayne Heim",
     "description": "Time Out - Allied reenactors take a rest period during D Day Conneaut reenactment© Wayne Heim",
-    "alt": "Time Out  - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-LwdHptZ/4/LtPpHw24LKs45GL33wDbKHkbxvh2BrPLnZnhxZqGW/XL/_W3H6532-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-LwdHptZ/A",
+    "alt": "Highly Decorated PFC   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-LwdHptZ/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -404,15 +478,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-LwdHptZ/4/MQP8MtJMbnBJCzdkGJMMXGgKwfMsqBhqhQjjXgxKn/XL/_W3H6532-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-LwdHptZ/4/MQP8MtJMbnBJCzdkGJMMXGgKwfMsqBhqhQjjXgxKn/XL/_W3H6532-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-LwdHptZ/4/MQP8MtJMbnBJCzdkGJMMXGgKwfMsqBhqhQjjXgxKn/XL/_W3H6532-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-LwdHptZ/4/NCPgSQvkFkDnxdk5SStV63d5nDSFZF4JsPLRDzgr9/M/_W3H6532-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-LwdHptZ/4/NKTdSPWWQVXpGG6L66RPmWNsckmxkHHG8GKjqSqhk/S/_W3H6532-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hjmBkbt",
     "title": "Reenactor Couple     Black & White Photography by Wayne Heim",
     "description": "Two reenactors pose during D Day Conneaut.  © Wayne Heim",
-    "alt": "Reenactor Couple     Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-hjmBkbt/4/LCHcdccVtw6B4BKJCW66NWGFzrFLM5J5xBmXGJRh2/XL/_W3H6590-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hjmBkbt/A",
+    "alt": "Time Out  - Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hjmBkbt/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -430,15 +509,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-hjmBkbt/4/M43nDngVtDzZKQkGzxwmHdwXn4QhXM7vthBTNRpxQ/XL/_W3H6590-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-hjmBkbt/4/M43nDngVtDzZKQkGzxwmHdwXn4QhXM7vthBTNRpxQ/XL/_W3H6590-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-hjmBkbt/4/MCFFhSG2wZfvQ6HRGJQ3CKhNSB4nDMqkf7HJ5XMdk/L/_W3H6590-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-hjmBkbt/4/KM555PVZbWhWzWDkZfkM8pjdbw7WzM8QZ986tdfbC/M/_W3H6590-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-hjmBkbt/4/NTTQwbdxcjpdqS9DwT7jMrRpwxgdM8s5k6W7MhvGb/S/_W3H6590-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-v83nSC8",
     "title": "Singing Officer    Black & white Photography by Wayne Heim",
     "description": "Officer entertains at the USO Dance during D  Day Conneaut      © Wayne Heim",
-    "alt": "Singing Officer    Black & white Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v83nSC8/4/LRL4vJPrNjK75gL6t8zHNH6jfw63n73zdVJTBjSgG/XL/_W3H6730-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-v83nSC8/A",
+    "alt": "Reenactor Couple     Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-v83nSC8/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -456,15 +540,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v83nSC8/4/MwQTTMHsFS4gGx2mmZ4wkW684mvPStHnv3s79k3JV/XL/_W3H6730-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v83nSC8/4/MwQTTMHsFS4gGx2mmZ4wkW684mvPStHnv3s79k3JV/XL/_W3H6730-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v83nSC8/4/MMggmb6n38VnQJtBNzb2bHm5rnwH8pnMnHpm8sBMS/L/_W3H6730-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v83nSC8/4/MpKfDSdnhnJpczXJzNfzqk3nCDzgQ23JtN8kJjmCS/M/_W3H6730-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-v83nSC8/4/MPFjWH2V86ZLTrNJKqfqrTHMpCRFdZnrTJ6JWFNwf/S/_W3H6730-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xjqktc4",
     "title": "Let Me Entertain You.   Black & white Photography by Wayne Heim",
     "description": "Singing at U.S O Dance.  © Wayne Heim",
-    "alt": "Let Me Entertain You.   Black & white Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-xjqktc4/5/MvBD5V86JkBMKsF7nXdMQTpcZg2kKxZRvPnwvPvgq/XL/_W3H6732-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xjqktc4/A",
+    "alt": "Singing Officer    Black & white Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xjqktc4/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -482,15 +571,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-xjqktc4/5/K9hDSMBdH3XGMKgG2G85LCg24DB2vfhzGCMXGJBck/XL/_W3H6732-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-xjqktc4/5/K9hDSMBdH3XGMKgG2G85LCg24DB2vfhzGCMXGJBck/XL/_W3H6732-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-xjqktc4/5/K9hDSMBdH3XGMKgG2G85LCg24DB2vfhzGCMXGJBck/XL/_W3H6732-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-xjqktc4/5/Kd66dp2cZz234FRPBKz4hXr3LWHsrx4Zw2p9Gsmgx/L/_W3H6732-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-xjqktc4/5/LnJftck4KVg6L9wBwkvrJ47K5wps3T8bT8Z4KfzDf/S/_W3H6732-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JLdsCWg",
     "title": "Hard Day    Photography by Wayne  Heim",
     "description": "Civil War Reenactment  after a hard day   © Wayne Heim",
-    "alt": "Hard Day    Photography by Wayne  Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JLdsCWg/5/MmhwVRVKrrBPSq9r8KGQTHkFDhRZzX2xFGNDH3BBm/XL/_WHZ1170-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JLdsCWg/A",
+    "alt": "Let Me Entertain You.   Black & white Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JLdsCWg/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -508,15 +602,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JLdsCWg/5/Lhs26QFqp8Qb8J9sBR3WmDrdRc7T2mZFRB5xz3D9M/XL/_WHZ1170-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JLdsCWg/5/Lhs26QFqp8Qb8J9sBR3WmDrdRc7T2mZFRB5xz3D9M/XL/_WHZ1170-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JLdsCWg/5/KnqrGzDc4RX9sFWTmhg49wgzCKcjG7pcMWFqWPnkp/L/_WHZ1170-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JLdsCWg/5/MX2cg53sBmZ5gqL2rPjQKmqFxghfB5n846KMMpzdS/M/_WHZ1170-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-JLdsCWg/5/Ln6z5pCqgzJT5jpChhw2DHndVwsQkgXhF95hMWsB6/S/_WHZ1170-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-V6Z49XZ",
     "title": "Pilot    Black & White Photography by Wayne Heim",
     "description": "Portrait of Pilot reenactor at D Day Conneaut.  © Wayne Heim",
-    "alt": "Pilot    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-V6Z49XZ/3/LQHczFbZ7GMBjT5bknMD82sFdhSBsCjjrzwzn48sH/XL/_WHZ1776-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-V6Z49XZ/A",
+    "alt": "Hard Day    Photography by Wayne  Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-V6Z49XZ/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -534,15 +633,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-V6Z49XZ/3/K7jBxphkNxNL88gXkjVLx5ggP8RNVNKf9md43Fz2S/XL/_WHZ1776-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-V6Z49XZ/3/K7jBxphkNxNL88gXkjVLx5ggP8RNVNKf9md43Fz2S/XL/_WHZ1776-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-V6Z49XZ/3/K7jBxphkNxNL88gXkjVLx5ggP8RNVNKf9md43Fz2S/XL/_WHZ1776-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-V6Z49XZ/3/LzHBtqLtcvTjJ2FZNTD5Xt9XqQNBgCMwNvCLGn2G9/L/_WHZ1776-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-V6Z49XZ/3/MVLgHszh6JtCrzhkG4DC3cW8QH2hxRN3m9S3NqJkq/S/_WHZ1776-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xMxDrS5",
     "title": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
     "description": "Woman reenactor poses for a portrait during D  Day Conneaut. © Wayne Heim",
-    "alt": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/LpwJkCgBzqstDvfS5GMfJg6J4PhFZn2gjRgGfdznk/XL/_WHZ2607-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xMxDrS5/A",
+    "alt": "Pilot    Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xMxDrS5/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -560,15 +664,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/LBgwtHVHNGcg5BvPs7Qmgx7LddQcX3GcQFNw6VBmM/L/_WHZ2607-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/LWQQCRwzTN64DLxSX496DPwc6wBrbGG6VfWh4534C/S/_WHZ2607-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RTj9HSn",
     "title": "Dancing     Photography by Wayne Heim",
     "description": "Couple dance at USO Dance during D Day Conneaut. © Wayne Heim",
-    "alt": "Dancing     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/Mk9R7jgLNQqNvwgTNtmRphCX9v96VJT26sHtcnXjv/XL/_WHZ5391%2520b-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RTj9HSn/A",
+    "alt": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RTj9HSn/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -586,15 +695,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/NbKF357RZ6nHkDtCLGgp9V34J8DW9S3sTNHNj4h9r/L/_WHZ5391%20b-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KHgFDf6MT59PqvJcJz54ZJ4GdKr5zPKDfbzvt93gb/S/_WHZ5391%20b-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2ZFJZNj",
     "title": "Portrait of Tank Commander    Photography by Wayne Heim",
     "description": "Portrait of tank commander during Bulletfest.   © Wayne Heim",
-    "alt": "Portrait of Tank Commander    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2ZFJZNj/1/K6cMGQfkx62mQxXLcjxT2t8RvDm4GLG4FW3KqQkvQ/XL/_W3H4218c-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2ZFJZNj/A",
+    "alt": "Dancing     Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2ZFJZNj/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -612,15 +726,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2ZFJZNj/1/Lnm4ZK962b4krmCG4KQcs4v4K7c2N56LpTnjRNtXr/XL/_W3H4218c-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2ZFJZNj/1/Lnm4ZK962b4krmCG4KQcs4v4K7c2N56LpTnjRNtXr/XL/_W3H4218c-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2ZFJZNj/1/Lnm4ZK962b4krmCG4KQcs4v4K7c2N56LpTnjRNtXr/XL/_W3H4218c-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2ZFJZNj/1/NZXrt8z42LBGnxtZwXsbDqNbtcCs8KCm3Pj6fQBfd/L/_W3H4218c-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2ZFJZNj/1/MVSVXqPbHTVxdfF9Q7Fp7mJHzkcZNSMs6HV7FLSTf/S/_W3H4218c-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KVf62F2",
     "title": "Untitled",
     "description": "© Wayne Heim 2016",
-    "alt": "© Wayne Heim 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-KVf62F2/2/M3LTKT2kjcXHkpDcMGsx3bkGgtN2K2tvFCjSHN7BX/XL/_OWH0441-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KVf62F2/A",
+    "alt": "Portrait of Tank Commander    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KVf62F2/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -638,15 +757,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-KVf62F2/2/MjrW57J6THhpGBq63G4xQMjLt9Bsc7V5rfzt4txSX/XL/_OWH0441-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-KVf62F2/2/MjrW57J6THhpGBq63G4xQMjLt9Bsc7V5rfzt4txSX/XL/_OWH0441-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-KVf62F2/2/LhqnPkjXHBbSv5fkvVmh7nHsgVSsjzd99w5CwMdDn/L/_OWH0441-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-KVf62F2/2/MSZdx2W2whKhCMrW6fRkxTnRcDzVNStz9Mzkv3sZ3/M/_OWH0441-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-KVf62F2/2/M4G665ZkvwbrLMNBhpRSKLGk5KwrHMrXPpnhSXjBD/S/_OWH0441-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HZWL29h",
     "title": "Untitled",
     "description": "© Wayne Heim 2016",
     "alt": "© Wayne Heim 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-HZWL29h/2/Lp9MTJWrx7WVTVNMJV5T2ZQXBNK4X56kjZKfn3Zn9/XL/_OWH0576-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HZWL29h/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HZWL29h/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -664,15 +788,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-HZWL29h/2/NdbGk4t9tRdjRHDJsGQtjkQBZL4mwNPPwf8Z8DmCP/XL/_OWH0576-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-HZWL29h/2/NdbGk4t9tRdjRHDJsGQtjkQBZL4mwNPPwf8Z8DmCP/XL/_OWH0576-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-HZWL29h/2/LqjHmKFq9nLJHP7D6Qd3hfRpHWbf4nVqTJmgTshm3/L/_OWH0576-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-HZWL29h/2/LxgNgS5bJPMxZ6CrpxSnfdW687Qdphfg6xccmWV2F/M/_OWH0576-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-HZWL29h/2/K9x6xjLW3XbDmcpwCQX7q5H6ZhMX7WWbdLWM9NRVg/S/_OWH0576-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JB8X7Dx",
     "title": "Untitled",
     "description": "© Wayne Heim 2016",
     "alt": "© Wayne Heim 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JB8X7Dx/3/LWRSG6Twr3BKGqXwCgNh2g8f5tJVftFBtPdBF5V8N/XL/_WHZ4147-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JB8X7Dx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JB8X7Dx/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -690,15 +819,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JB8X7Dx/3/LKkt6ZmBg5rwn5x45jSpDHcZp66MT5bRTSNjVBLjb/XL/_WHZ4147-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JB8X7Dx/3/LKkt6ZmBg5rwn5x45jSpDHcZp66MT5bRTSNjVBLjb/XL/_WHZ4147-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JB8X7Dx/3/LKkt6ZmBg5rwn5x45jSpDHcZp66MT5bRTSNjVBLjb/XL/_WHZ4147-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JB8X7Dx/3/NfSXLKbkBqSM7BM47wchgnnNQVTszvnk3khtnkTxP/L/_WHZ4147-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-JB8X7Dx/3/MHtKBPCGM9tkCPbFCCNZLzjhv6PPMkvpr9WwS255P/S/_WHZ4147-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qBH8D5h",
     "title": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
     "description": "Woman in period dress poses for a portrait\n© Wayne Heim",
-    "alt": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/MQczNNx78Q56VnMLJLJJxkWFfv32pK6TFL5G3Gf3N/XL/_WHK7187-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qBH8D5h/A",
+    "alt": "© Wayne Heim 2016",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qBH8D5h/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -716,15 +850,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/NBf8DcKcbbZbvpwQwhFvTMjx2GKVBLmkRMBj9spNN/L/_WHK7187-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/LxF9k2PcVvXDfSKv3vXgTWszVXL8sGsWxzQfKW4vf/S/_WHK7187-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-W7CFHMJ",
     "title": "Hi There!    Photography by Wayne Heim",
     "description": "Woman reenactor at D Day Conneaut\n© Wayne Heim",
-    "alt": "Hi There!    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-W7CFHMJ/3/KdLmdD89TSkgPZCvVbtSHvG66gnMjBw9mPH6B54Dd/XL/P8170038-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-W7CFHMJ/A",
+    "alt": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-W7CFHMJ/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -742,15 +881,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-W7CFHMJ/3/KcvzJ2w94Vd6XxWFRS7D4c26sHMh8k8VTC5xQp8S4/XL/P8170038-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-W7CFHMJ/3/KcvzJ2w94Vd6XxWFRS7D4c26sHMh8k8VTC5xQp8S4/XL/P8170038-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-W7CFHMJ/3/KcvzJ2w94Vd6XxWFRS7D4c26sHMh8k8VTC5xQp8S4/XL/P8170038-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-W7CFHMJ/3/MchV8pC4BDHTdvNtmQVL9dLnjtgP4xk2Nj8PX9Xfs/L/P8170038-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-W7CFHMJ/3/NKnT7BzvGZD4ZMTBn5cP3ngszxJgBTSGs2Ws8hHs3/S/P8170038-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mdfNg9Z",
     "title": "Pilot    Black & White Photography by Wayne Heim",
     "description": "Reenactor as a pilot who has  parachuted behind enemy lines.    © Wayne Heim",
-    "alt": "Pilot    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mdfNg9Z/3/LqxFkNdqRPJp5HgwB5LJb4mr8BjPC7xRxLkGmxSqt/XL/P8180439-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mdfNg9Z/A",
+    "alt": "Hi There!    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mdfNg9Z/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -768,15 +912,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mdfNg9Z/3/KFdnVM2gmWN7BPmSdZJ7dDBrCL8g3ZqXMVJrSwDDf/XL/P8180439-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mdfNg9Z/3/KFdnVM2gmWN7BPmSdZJ7dDBrCL8g3ZqXMVJrSwDDf/XL/P8180439-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mdfNg9Z/3/MwCVfnWG7hfB996h4xdq7dHgMvK78c6tbNmgH4MD3/L/P8180439-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mdfNg9Z/3/LZp7w5Jv2jxpS2fKtssb9vnwzshfHqXpnkV6tprSf/M/P8180439-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mdfNg9Z/3/Ncz6sFSMjPR8gS9fqFMsT8bDzBtwdz72Ctzq3LcjB/S/P8180439-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6dXLqcb",
     "title": "Hung Up     Photography by Wayne Heim",
     "description": "Paratrooper reenactor is hung up in a tree after jumping behind enemy lines at D Day  Conneaut.    © Wayne Heim",
-    "alt": "Hung Up     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-6dXLqcb/3/LrwxmpMh5nW3Jk2KQvqF5qFCBgNVxTk3tDsVn6bJk/XL/_OLY3116-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-6dXLqcb/A",
+    "alt": "Pilot    Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-6dXLqcb/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -794,15 +943,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-6dXLqcb/3/LGjh76cHrrNCnLZ8PnFpBMFgD6fFWvXBRxv5dfnzz/XL/_OLY3116-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-6dXLqcb/3/LGjh76cHrrNCnLZ8PnFpBMFgD6fFWvXBRxv5dfnzz/XL/_OLY3116-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-6dXLqcb/3/LGjh76cHrrNCnLZ8PnFpBMFgD6fFWvXBRxv5dfnzz/XL/_OLY3116-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-6dXLqcb/3/MfhHsDxtf23xXcMbCQw5FcWtBR3V6fVWpwXnPnB8g/L/_OLY3116-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-6dXLqcb/3/Lgc66FFxV6kxVQQH6QfbNgxQ2ZSQTZ2VX6MZZBzrH/S/_OLY3116-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8hqzX95",
     "title": "Giving Orders  Black and White Photography by Wayne Heim",
     "description": "Commander gives orders to his men.\n© Wayne Heim",
-    "alt": "Giving Orders  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-8hqzX95/5/LzchS4bXFKSJQzvW3FLnFjMdXRK7rZPw4Nd5XQ8r8/XL/_OLY3243-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8hqzX95/A",
+    "alt": "Hung Up     Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8hqzX95/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -820,15 +974,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-8hqzX95/5/NPf9j8QBfCFJHHHksz4vHbKsKWRv7WNBZP4n6CML7/XL/_OLY3243-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-8hqzX95/5/NPf9j8QBfCFJHHHksz4vHbKsKWRv7WNBZP4n6CML7/XL/_OLY3243-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-8hqzX95/5/NPf9j8QBfCFJHHHksz4vHbKsKWRv7WNBZP4n6CML7/XL/_OLY3243-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-8hqzX95/5/MtMHPk4xkKLPML9T2DdsSQVCq2G5nLNnxRNx98cVt/L/_OLY3243-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-8hqzX95/5/KXvT7qGLv24hsJxKVHTCrpTHqbgBkVjWG3n7Bn7fz/S/_OLY3243-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5XfJ6WV",
     "title": "Portrait of Old Time Photographer   Photography by Wayne Heim",
     "description": "Gentleman with original WWII photography equipment poses for a portrait at D Day Conneaut.     © Wayne Heim",
-    "alt": "Portrait of Old Time Photographer   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5XfJ6WV/5/NfkQxz2f6MNXKZQ7R3jFvvpd5Gj4JzMQpMC7vZBgp/XL/_OLY3265-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-5XfJ6WV/A",
+    "alt": "Giving Orders  Black and White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-5XfJ6WV/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -846,15 +1005,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5XfJ6WV/5/NTTk2v3MqkD5s9fQVP7smKZ2zc4v89PXHmcFvKNpV/XL/_OLY3265-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5XfJ6WV/5/NTTk2v3MqkD5s9fQVP7smKZ2zc4v89PXHmcFvKNpV/XL/_OLY3265-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5XfJ6WV/5/NTTk2v3MqkD5s9fQVP7smKZ2zc4v89PXHmcFvKNpV/XL/_OLY3265-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5XfJ6WV/5/L9drCmPjV2Hw2S6T46K2ZKdRGtS9ZVMFKgJ2XJwVn/L/_OLY3265-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5XfJ6WV/5/MGRW5Zb6P6rs6SCN2CWVKpZCCX9JqTqJr8LZkdkgx/S/_OLY3265-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KHwLvpT",
     "title": "Yes Sir     Black & White Photography by Wayne Heim",
     "description": "Soldier salutes at D Day reenactment in Conneaut, Ohio.  © Wayne Heim",
-    "alt": "Yes Sir     Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/KmbmN9DNLVMfc4zqRHDtf2C58pQL4bkCV6QTSG8cX/XL/_OLY1285-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KHwLvpT/A",
+    "alt": "Portrait of Old Time Photographer   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KHwLvpT/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -872,15 +1036,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LrHQCFqwHPmj9w54H7RnRd7SKRncpcRKd8jj38tfc/XL/_OLY1285-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LrHQCFqwHPmj9w54H7RnRd7SKRncpcRKd8jj38tfc/XL/_OLY1285-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LrHQCFqwHPmj9w54H7RnRd7SKRncpcRKd8jj38tfc/XL/_OLY1285-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LPMMmgCbMxqszJwRdrHNpHJncDsNFX6JQwN7FDGh6/L/_OLY1285-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LPGg7zg8jxdcWsHCn6g8hM2FvZKb9SdQ75JWSfTCJ/S/_OLY1285-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xPMsGwF",
     "title": "Untitled",
     "description": "© Wayne Heim",
-    "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-xPMsGwF/4/Mk7tfb3LQ6BxQ5fD3nLKBFD2wQWKHJjwRFT3dLmZn/XL/P8190993-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xPMsGwF/A",
+    "alt": "Yes Sir     Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xPMsGwF/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -898,15 +1067,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-xPMsGwF/4/MKJBNvqtkRdpLFzw8KbbpjF9Kx2mfDGWsL8ZvK2d7/XL/P8190993-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-xPMsGwF/4/MKJBNvqtkRdpLFzw8KbbpjF9Kx2mfDGWsL8ZvK2d7/XL/P8190993-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-xPMsGwF/4/MKJBNvqtkRdpLFzw8KbbpjF9Kx2mfDGWsL8ZvK2d7/XL/P8190993-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-xPMsGwF/4/LrFn6mkRrm9GzVSdF5XnMSKTGWzP6GNK6k2MxNhzp/L/P8190993-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-xPMsGwF/4/Lrt3TDdgnP6hCHJdLCmmxSBVsdQQCFbmKQjg6TTMJ/S/P8190993-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Z3xcgPq",
     "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Z3xcgPq/4/L2v7nZKMLFQJWvbGVVL69c3Cj6JRkNdpR8xHDKjkF/XL/P8191033-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Z3xcgPq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Z3xcgPq/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -924,15 +1098,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Z3xcgPq/4/KK5Z8j2wSHGNmwHsnvzwpXLc765x5mr9RwRp6JNjZ/XL/P8191033-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Z3xcgPq/4/KK5Z8j2wSHGNmwHsnvzwpXLc765x5mr9RwRp6JNjZ/XL/P8191033-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Z3xcgPq/4/KK5Z8j2wSHGNmwHsnvzwpXLc765x5mr9RwRp6JNjZ/XL/P8191033-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Z3xcgPq/4/Lmpgtt8mM84bWKPg9HdT7hmBGk5LK64nc5PJvbWSQ/L/P8191033-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Z3xcgPq/4/LSJk5zMmRZ4NJCbs9gBJzKrKQ7VcrHb6vM39NC5hk/S/P8191033-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KtG6P6R",
     "title": "Writing Home    Black and White Photography by Wayne Heim",
     "description": "Brother and sister writing a letter during reenactment.       © Wayne Heim",
-    "alt": "Writing Home    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KtG6P6R/5/Lnd4kHJ5PfCL4x49Bt5r6KLfRDhkbqZwrzNvHXBHM/XL/_OLY4084-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KtG6P6R/A",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KtG6P6R/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -950,15 +1129,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KtG6P6R/5/Lkg5PkQPkbJpxsfdWsTtqf9L5JssgWTdHJDNT6bKQ/XL/_OLY4084-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KtG6P6R/5/Lkg5PkQPkbJpxsfdWsTtqf9L5JssgWTdHJDNT6bKQ/XL/_OLY4084-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KtG6P6R/5/LsKC5h2NNjV4cP37VKTm6t49Mjjs4cp6Qn7PQTZpH/L/_OLY4084-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KtG6P6R/5/MftsmDSvwJTRSgQ6DQbtjKxxfZNhQdKnwWxGBGpPB/M/_OLY4084-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KtG6P6R/5/Mh4X3KLP2T5SDbMqndpck54gCmR67srwZBgfTFDmM/S/_OLY4084-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Q9FtWZH",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
-    "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/0/LBb6qFvNRkCxQwxGVVKVQbsGB9zLkn88ThvpgV6Wq/XL/_OLY2320-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/A",
+    "alt": "Writing Home    Black and White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -976,15 +1160,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/0/MCMtDgBdCFtTx9LPCXvN4vG3DG4LHsXb7gjjH4N6k/XL/_OLY2320-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/0/MCMtDgBdCFtTx9LPCXvN4vG3DG4LHsXb7gjjH4N6k/XL/_OLY2320-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/0/KwvnrhnbQMJJj9Rf59BRz5hLBCSRVvzbhdN8jKsdQ/L/_OLY2320-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/0/Mz6N428LQb5cNPRnLd5ztc4gpJhqLwdFLxSpNnt6K/M/_OLY2320-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Q9FtWZH/0/LS6Xffn9zQQQTPPz7sC4gvGdL4Kgs4DRhKLVQ4k7S/S/_OLY2320-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RQDpTBd",
     "title": "Forward   Photography by Wayne Heim",
     "description": "\"Forward\" is the order for the Commonwealth troops during this reenactment.  Wayne Heim ©2015",
-    "alt": "Forward   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/M6qXf3zbw3CpZm97qgwvxLgzsFkCVbXsVGGFFCxJP/XL/_WHZ3907-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RQDpTBd/A",
+    "alt": "© Wayne Heim 2018",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RQDpTBd/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1002,15 +1191,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/Kq74Sst5NRXcPPd7tVBSXn9zBCbxnFQL58Nxnw9f4/XL/_WHZ3907-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/Kq74Sst5NRXcPPd7tVBSXn9zBCbxnFQL58Nxnw9f4/XL/_WHZ3907-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/Lh8SFVmTvJxpChjJGbXsrchFZ4gBCQ6bkshT3xSfM/L/_WHZ3907-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/L5MPG4t54sFCFm535MR4pvbmQXmPhdS76GK3KGjss/M/_WHZ3907-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RQDpTBd/3/LWBBgzPHsnthhqTDZwxwLtWzwrRZMvLB7BzXmPVGs/S/_WHZ3907-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TFGwMrt",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
-    "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/MBX3jM64x4fJzccfJZNxDZHk5BxqXfTwkzxvwdpS6/XL/_OL31657-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/A",
+    "alt": "Forward   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1028,15 +1222,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/Kr729g2QJFcDggMjVrLJXkFK35zDqWRbbjm557mmG/XL/_OL31657-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/Kr729g2QJFcDggMjVrLJXkFK35zDqWRbbjm557mmG/XL/_OL31657-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/MVwprFsR75r9BhWnPrTGhVz3rpTthdcsTxJ4fBQNg/L/_OL31657-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/NZRWZkHVnWXF3xnnCzCvcm42G8ks79zJQrvNRz9jk/M/_OL31657-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TFGwMrt/1/NGsbrfwGCdrZpvnpX9CZQ2kcs4mmnP7jRKznZSnBc/S/_OL31657-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-x66BqR2",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/K7wPnsjwpZJtsDgR9wxWZ7mGhvbXPDVKH7p4D76pg/XL/_OL31665-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1054,15 +1253,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/MP2pSqhtm35JftBzNkz5JkhDsVkcXrCwMQMDh7gKG/XL/_OL31665-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/MP2pSqhtm35JftBzNkz5JkhDsVkcXrCwMQMDh7gKG/XL/_OL31665-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/NZN2KkBKBXvsTPZ4bPC3FNBs2K6g6xspkTf83b5hd/L/_OL31665-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/LkqfLCPGX8ZHX45qG8pBMGNWW2thQNLWKXM9nxmk6/M/_OL31665-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/Kp2XJ26233XwxSRhKxD86c4vBhrnSfMkf6Hh5WPCF/S/_OL31665-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2KDvpNm",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/0/LDqcgcvPgFzhZ795PmjMqFwsKdTJ3VxL4HrMqX7Nt/XL/_ANA5778-Edit-2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1080,15 +1284,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/0/LP8GwcX9kTXvWPmmknF6ftbv65b5khxGmfdt5RtK6/XL/_ANA5778-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/0/LP8GwcX9kTXvWPmmknF6ftbv65b5khxGmfdt5RtK6/XL/_ANA5778-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/0/LP8GwcX9kTXvWPmmknF6ftbv65b5khxGmfdt5RtK6/XL/_ANA5778-Edit-2-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/0/MW6D5STBWk8Z3XQ89FLhBnKSS5Sc9PmXKp5sJc3wJ/L/_ANA5778-Edit-2-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2KDvpNm/0/Mx5T7GBHvNGBG5qJ6qPNtkcTnWRWRXbPL4MGZrH4B/S/_ANA5778-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mtJrXvg",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/0/Lj7SqJjnLCwgcBTZNgqCTRJHsTVSbbgTTGmpnKgtR/XL/_ANA5778-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1106,15 +1315,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/0/L8P7mNVpzf5CMd7PvHdqrF4jgGcKwgs6SV5tbVbFN/XL/_ANA5778-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/0/L8P7mNVpzf5CMd7PvHdqrF4jgGcKwgs6SV5tbVbFN/XL/_ANA5778-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/0/L8P7mNVpzf5CMd7PvHdqrF4jgGcKwgs6SV5tbVbFN/XL/_ANA5778-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/0/LF32mb7BDkK8cLMtsdRmGwv3Kv9N352rgZK7qbbmf/L/_ANA5778-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mtJrXvg/0/KtM4wdGtB3cknW8mBvPWBwpJmPrM4pf6m3sTwF6bj/S/_ANA5778-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-krZ5VMv",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/0/MrghbZXbJk75DrPsGDBSSpS2JmPQHp3FnzsZj8rVg/XL/_PEN0072-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1132,15 +1346,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/0/K36LZBPnfFNWM8rM2JpdGjk7jGt5n6xBqK6jwPwjf/XL/_PEN0072-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/0/K36LZBPnfFNWM8rM2JpdGjk7jGt5n6xBqK6jwPwjf/XL/_PEN0072-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/0/K36LZBPnfFNWM8rM2JpdGjk7jGt5n6xBqK6jwPwjf/XL/_PEN0072-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/0/LBZHvN8fS4QvMnrgFV4Bkmf88gsZRgKjJwKf3wzqR/L/_PEN0072-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-krZ5VMv/0/Khx6WrPtzbsdxD2PZvj9v35rC6wrh79spRDKT9jdG/S/_PEN0072-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-47ZthJv",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/1/Kp6VPnN7ZfswzPvCZdchJbnh2vKMqJpfxBbS2mMPG/XL/_ANA5826-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1158,15 +1377,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/1/K854Fk6ztzVBZ4zxWbC7xR5BDMTLJxqjsv4VGbc8W/XL/_ANA5826-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/1/K854Fk6ztzVBZ4zxWbC7xR5BDMTLJxqjsv4VGbc8W/XL/_ANA5826-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/1/K854Fk6ztzVBZ4zxWbC7xR5BDMTLJxqjsv4VGbc8W/XL/_ANA5826-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/1/KvMmzb7GvpKW5P24kZ9zqLsD4RNjdkwWCV4frRKbr/L/_ANA5826-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-47ZthJv/1/MrQ7XgpLLSVX5G2TTNgnwkc8rmGtzjLDrLvbbgNx4/S/_ANA5826-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mL3cFDF",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/1/LCFQz6nnTZ57N72wnVp5CtNtg2Zb3PtrtcP8M8Lpn/XL/_PEN0088-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1184,15 +1408,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/1/MsrH5Zg9qVg3kpDtHBWn58qMFNF3zLTKQphbgHqm2/XL/_PEN0088-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/1/MsrH5Zg9qVg3kpDtHBWn58qMFNF3zLTKQphbgHqm2/XL/_PEN0088-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/1/MsrH5Zg9qVg3kpDtHBWn58qMFNF3zLTKQphbgHqm2/XL/_PEN0088-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/1/MWC9B6D6Q9SgLnGsZHzZxgbHPbLv5Q6M87PPhNJXL/L/_PEN0088-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mL3cFDF/1/KhrkR8Jmw53mZTBtnkvvTxWgrgqKHVgtZtB3xDRBB/S/_PEN0088-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Ph9wSQ2",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/1/LnQQ9hCr6PD37KZzpngBSmWgjjHgp4mMx8sjDJCR4/XL/_ANA6503-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1210,15 +1439,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/1/MqkPmrcwCXXNX5N6NH3WX5cGRBjmMrxpvFQjTfzXw/XL/_ANA6503-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/1/MqkPmrcwCXXNX5N6NH3WX5cGRBjmMrxpvFQjTfzXw/XL/_ANA6503-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/1/MqkPmrcwCXXNX5N6NH3WX5cGRBjmMrxpvFQjTfzXw/XL/_ANA6503-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/1/Kq2kRTP5ttDdV9FrMrjF7P3cDwsKM7bj5V6Ckv4hs/L/_ANA6503-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Ph9wSQ2/1/MPB3qxh9dBc7XDnxNRtfx9hmHzFJjfnsx2X5ftqBr/S/_ANA6503-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-q9gwvwQ",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/LzsVhLrV2kq7VP3cKmkvRjQc4sGSvSBZt793vbnss/XL/_OL38761-Edit-4-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1236,15 +1470,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/LnGp3xXMwn78QkJn3v4jzdNWGpjnbgWw6k9Mdqdw7/XL/_OL38761-Edit-4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/LnGp3xXMwn78QkJn3v4jzdNWGpjnbgWw6k9Mdqdw7/XL/_OL38761-Edit-4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/K3FwB8xqNMkX8smp4L46p9qnGJWbQSDdcfwqzMbhG/L/_OL38761-Edit-4-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/Nfgd6xr5Jwzfbxp47Tq3n4QTbqRPHtz5dJ42p4bBF/M/_OL38761-Edit-4-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-q9gwvwQ/1/M958QJSMCKCsnqCKxzvBp6xfTNJZHQZCS7d65hGFk/S/_OL38761-Edit-4-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XtFSMcg",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/0/Lqjbp565CR3nw3SN4gHnrvD368b3sLg9TSmt9rNPd/XL/_OL38784-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/A",
     "keywords": [
       "wayne heim",
       "wwii photography",
@@ -1262,15 +1501,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/0/MQVhDTSzbMzMsJSsmm3kncmTb2WLgbN8C9cjf4xnQ/XL/_OL38784-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/0/MQVhDTSzbMzMsJSsmm3kncmTb2WLgbN8C9cjf4xnQ/XL/_OL38784-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/0/Mtr625PKXZhPsdmCkxnKDCnWdPK3GskRSBdm5R3Vq/L/_OL38784-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/0/KKPgtNdGpStLpcZ3rtQCxF8FJVrmNTqtVNczrTBmv/M/_OL38784-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XtFSMcg/0/Kw27Cq8V3hwWbJT2mn3HF4HvFb5GBsNcgHn54wHX8/S/_OL38784-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KvVGmvX",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/1/M5C5VS7dMcLFZBfpb9g347hfF6qt5qVtXzBzBmDD2/XL/_OL30103-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/A",
     "keywords": [
       "a",
       "fine art",
@@ -1286,15 +1530,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/1/LrjWqwM3v3CJXLrjLXhFqf8kPgfjRzzGkwBBtrqnm/XL/_OL30103-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/1/LrjWqwM3v3CJXLrjLXhFqf8kPgfjRzzGkwBBtrqnm/XL/_OL30103-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/1/KsPLk6w9CrmkFKj7vrq9nMm4xX4HQSqWGPwD2Qw2j/L/_OL30103-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/1/MSVJRPncR8hDvz9SQp5tcZhnJqVdbKV3m8SVpwMZT/M/_OL30103-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KvVGmvX/1/MNdjMZm7h2MQZ2CzdKw8sg2TmbVxxzfmqjzj4FLtj/S/_OL30103-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ft5fC69",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/1/MP3Hn933rZSmcHWt9xCLHW86THXkJ9z8DrmjK9T75/XL/_ANA4477-Edit-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/A",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/A",
     "keywords": [
       "a",
       "fine art",
@@ -1310,15 +1559,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/1/KT5RJCJ7XKkkpbkFjZnpzjkthDkhk2brSHnCpkv6M/XL/_ANA4477-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/1/KT5RJCJ7XKkkpbkFjZnpzjkthDkhk2brSHnCpkv6M/XL/_ANA4477-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/1/NGWN2FWkTc6Cq4rCFzdqjZxMwS95L9cDHVQDVhvSb/L/_ANA4477-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/1/NX2dQhqvbsFgXLw3JhrCtrnC38cTmrKTHBdgT4fn8/M/_ANA4477-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ft5fC69/1/KDh7S3zfsDPGZF89DbRbs7rrG9c8P3q3BPRGdLQ65/S/_ANA4477-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TD5LPgq",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
-    "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/K6gd9FzFKXWZcncmMQH5pbx274ssXH42n8ZrhhDHJ/XL/_ANA4478-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/A",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/A",
     "keywords": [
       "a",
       "fine art",
@@ -1334,15 +1588,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MhHFvsDzCz3cVNt2vZvs39WkCXXXxwjFPj752vVq6/L/_ANA4478-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MwqxvQLzr2bq2RPdvPkGs2hBVPmJckXLCn4GRT4fr/S/_ANA4478-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9DrbLRG",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/NcfRZC2tsWCMd49xnCjvMbWhfQpPQZkrDZSrnMpSw/XL/_PEN0411-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/A",
     "keywords": [
       "a",
       "fine art",
@@ -1358,15 +1617,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/Lr2kCGbxBHDP65CMzhNcTQ2tq6wC7ZG4wtLWfXnpv/XL/_PEN0411-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/Lr2kCGbxBHDP65CMzhNcTQ2tq6wC7ZG4wtLWfXnpv/XL/_PEN0411-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/NFbsW6KvM2CHXW33Lsm5rWNtbTsJr6FwqnkSLmDJr/L/_PEN0411-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/K3zgQHqskk9cKF24b2r9J3hRD8TTG482HLzCx3Hr5/M/_PEN0411-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/MXCt6SS9vdSSm5LWhx9scVVW3Tq2N8CJDxzKWmcXt/S/_PEN0411-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pk47rW4",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/1/LtD6PNpkS9srWXNZJ4wn2HR95wvdmvbvvhgCN8Tdh/XL/_PEN0418-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/A",
     "keywords": [
       "a",
       "fine art",
@@ -1382,15 +1646,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/1/LJPNf4ZV5Tm7mLk9pkskq3bfdmRtv7Nmj2hmFSwG9/XL/_PEN0418-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/1/LJPNf4ZV5Tm7mLk9pkskq3bfdmRtv7Nmj2hmFSwG9/XL/_PEN0418-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/1/Kbc4RhbsPGN6tc5TjKKKmk4t3PDFGbStDGRXcTsr2/L/_PEN0418-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/1/MzxxLTcp5Pqz5LXcx3CPvhXPXM5Wjm46HLckmzfPV/M/_PEN0418-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pk47rW4/1/NMDW8n9tJgwJ9d5q7cvR8nxMt6j8KdMWMHDdLj5gw/S/_PEN0418-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Wd8cVgw",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/KH2xB3H8Q6Gn9SG9NZCdzcn8KXWSksKRLs7P7ktZr/XL/_ANA4940-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/A",
     "keywords": [
       "a",
       "fine art",
@@ -1406,15 +1675,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/LrPwb9VcR4MW6vw8H9hBHxHXKCtsLjjT3nwmLM3st/XL/_ANA4940-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/LrPwb9VcR4MW6vw8H9hBHxHXKCtsLjjT3nwmLM3st/XL/_ANA4940-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/NfzrDLqjCnFGQ34RJJgfgqP5JzP3p9qVBzQ28jDKT/L/_ANA4940-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/M4J9v3n2tT9pQzhnbPXxPmkb5spG7fqxdT5kGHSPv/M/_ANA4940-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Wd8cVgw/1/NCJ3TwnwFX7Lq9fKg9CkhWQZX9kWVk7Q9fhDpF6xX/S/_ANA4940-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QdTk3tx",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/LQsp8KgqWcZS3NhGmbZDRpPF8LDWtM87FD7h4gMqj/XL/_ANA4940-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/A",
     "keywords": [
       "a",
       "fine art",
@@ -1430,15 +1704,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/K84Kx8PnzJDKKkDtSFdggr543fkQTfZ5dKptkhSNC/XL/_ANA4940-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/K84Kx8PnzJDKKkDtSFdggr543fkQTfZ5dKptkhSNC/XL/_ANA4940-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/MRGTLpXrhCk5nGBVm4SqxNg5rw2rfTZLBrR3j4dLm/L/_ANA4940-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/Lz8wL8C33ZCXCBzDjcs5ZSzkVvtJGMhBzcbqwjnmd/M/_ANA4940-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/NN8nJx9qcnd6mF2mnJn57wM8j42Q2GxtcBjswv34m/S/_ANA4940-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QR9ctvg",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/0/MrX7M6kJmG4WWDsWjT7hNtLBD75ZBb7sbPXd6mnDz/XL/_OL37783-Enhanced-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/A",
     "keywords": [
       "a",
       "fine art",
@@ -1454,15 +1733,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/0/MVkSHjVh6GP8Lm3ML3cCMrcNPVKznGvrmmkKLpZKp/XL/_OL37783-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/0/MVkSHjVh6GP8Lm3ML3cCMrcNPVKznGvrmmkKLpZKp/XL/_OL37783-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/0/LdsVKT4hGffR5DCCS5BHnCDw2V223665LkFkjct54/L/_OL37783-Enhanced-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/0/McPdrHBWPp5XjGZrB8BzftRbxnjf8mQbJb2rKT4ML/M/_OL37783-Enhanced-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QR9ctvg/0/KMM43BrtvCwM48z925QVMHwfzQgrCqZNPR6cx8d68/S/_OL37783-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-k7s8Zg4",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/0/NJNgShrKgHRmB89jfJxJsQhcx95W5cSqcCmM9wgmS/XL/_OL37899-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/A",
     "keywords": [
       "a",
       "fine art",
@@ -1478,15 +1762,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/0/M5KFSxZ9SmSPGzMb82d4XKFhDzHXXDXT5Stbfc5qs/XL/_OL37899-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/0/M5KFSxZ9SmSPGzMb82d4XKFhDzHXXDXT5Stbfc5qs/XL/_OL37899-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/0/M5KFSxZ9SmSPGzMb82d4XKFhDzHXXDXT5Stbfc5qs/XL/_OL37899-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/0/KXw7TQHqnNTd4Pnjs67bDWdxwGGKbqQLJHZmW62Xj/L/_OL37899-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7s8Zg4/0/LJCzWkz7sQpkHCQV5pR6Rk6PgBPkxT2vVNBTGZfjw/S/_OL37899-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9n8DJRb",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/0/KMzXbB6BjjQKptBvn7BRDVLx7ngGRngmZrH9zd5mn/XL/_OL38491-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/A",
     "keywords": [
       "a",
       "fine art",
@@ -1502,15 +1791,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/0/Kv8VJCbpgsTV83ggwJLT98qC8pxFjVPmK7pSFnswZ/XL/_OL38491-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/0/Kv8VJCbpgsTV83ggwJLT98qC8pxFjVPmK7pSFnswZ/XL/_OL38491-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/0/NWsLSrpccvfZB3D792QqfPkHk2KCk3p3GkJbHsQ9s/L/_OL38491-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/0/M7tKmBwgdmVMxr8DM7kNJZgPQRdLc9RZfxCg3jNjQ/M/_OL38491-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9n8DJRb/0/L7fjrZTQ7FjZDp7Dv95CpJqM675Sj3WM559hmJHmP/S/_OL38491-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vQ9LLVL",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/1/KQc7W47F6PTVhM5NmdqBQZmC4W3xXMkJzxmvVq4Vr/XL/_ANA3399-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/A",
     "keywords": [
       "a",
       "fine art",
@@ -1526,15 +1820,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/1/LWQnzTB3V9dTkw8RCjm3d6Qp9t2C73vNMwd2WRWTC/XL/_ANA3399-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/1/LWQnzTB3V9dTkw8RCjm3d6Qp9t2C73vNMwd2WRWTC/XL/_ANA3399-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/1/LWQnzTB3V9dTkw8RCjm3d6Qp9t2C73vNMwd2WRWTC/XL/_ANA3399-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/1/KpqXPtQkDhq3kXXHjB9T7mFRmMHzSQt4d4DgbjWnZ/L/_ANA3399-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-vQ9LLVL/1/NMB6fx9FXbCrhc8K79JmKKw2Gf3cwTrbkrRJLVXRH/S/_ANA3399-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-z7QmfM5",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/K9fRSD7SQC7pCpbMfgkQPjcNFLMTWw69LXpQStJK6/XL/_PEN0758-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/A",
     "keywords": [
       "a",
       "fine art",
@@ -1550,15 +1849,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/K8mvdvbN5ngHL26zLQ5Xq7vqvQnCvWhCrws9VgRZD/XL/_PEN0758-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/K8mvdvbN5ngHL26zLQ5Xq7vqvQnCvWhCrws9VgRZD/XL/_PEN0758-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/LKXsdk5mH5MkxcLkkHhMzRmKVn4Nb9pxxZZJx85m2/L/_PEN0758-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/NFgcwZfM5xQwZ8vt27TMvncmmQ3ntLZPGx5Wcf3bX/M/_PEN0758-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/Mh8DFPFrPRw7btqGKCWHwXkhz86J5zTxH8BRrCnbD/S/_PEN0758-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pg52Vcg",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/0/MLdNskZCdJRqpdBZpSgv3dZGLPMR7C39nQ4TgK38d/XL/_OL35924-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/A",
     "keywords": [
       "a",
       "fine art",
@@ -1574,15 +1878,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/0/L8CCnZxjZcD5kMH6BSh9KDvfxtW5WnmMGhrpWjJg8/XL/_OL35924-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/0/L8CCnZxjZcD5kMH6BSh9KDvfxtW5WnmMGhrpWjJg8/XL/_OL35924-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/0/MTW9wJqn2NFqRC44HkHm6WgsMN85n4J99FSW7D6QB/L/_OL35924-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/0/M7kBrKmgHqrPGr2g3cvhVwdNhJ6n6FtTj9vp5FtL9/M/_OL35924-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pg52Vcg/0/KqvknP79fQh2mLBSX3Bz83vC974ZnCnHXxB3zJgX6/S/_OL35924-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dDgBwcp",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/0/MV8TFV7cd29tgFB8SzGpVV4DGgN7njrWHNhpBb8Ss/XL/_OL38418-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/A",
     "keywords": [
       "a",
       "fine art",
@@ -1598,15 +1907,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/0/KVL7QqXH7CFzGjvXqfj46WQnsHBGXnCF7Q3nxkdj3/XL/_OL38418-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/0/KVL7QqXH7CFzGjvXqfj46WQnsHBGXnCF7Q3nxkdj3/XL/_OL38418-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/0/NFPmT2pwSCBfSGNnf2Hd3VPrPVjpV45JTDShVSdCX/L/_OL38418-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/0/Ks5xsqdcrVBbqJMCfWc459vb256dTj5KSfFJr7Z42/M/_OL38418-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-dDgBwcp/0/KvsFxF6NmjpNNkxSgmdLxc88pcmLpFxBr5jsBrZzL/S/_OL38418-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xJ2ncLF",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/Kh2Z5s9Jjn52CgJdVwb88Mn4hFGs7VqCZ5b7FCCKH/XL/_OL38494-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/A",
     "keywords": [
       "a",
       "fine art",
@@ -1622,15 +1936,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 62,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/KxXg6kLLbLZRR5tp586fTb4mH3fPXWvfpptdzdKTn/XL/_OL38494-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/KxXg6kLLbLZRR5tp586fTb4mH3fPXWvfpptdzdKTn/XL/_OL38494-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/NHGF9WD9dHBQHDz2Pzk8HG8V9mf2wxkBfhP5P5v9m/L/_OL38494-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/LWbMjDDBSTQwDRzjB3X2qNqhqkmNzx3qW7R7GGzhW/M/_OL38494-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/NVfWt6VTBn6tkM4vhCbzVrfq7M9HgZKFMSFCx3hck/S/_OL38494-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kvdDsK8",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/NgrnVwfKzmZc6JNpZhwSTgvvkcsNTJjbFQq8WCcnQ/XL/_PEN0762-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/A",
     "keywords": [
       "a",
       "fine art",
@@ -1646,15 +1965,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 63,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/MpbnGPsZjrJWmwtfRfQhsg5MgfRnD7Wmx4pwQBznt/XL/_PEN0762-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/MpbnGPsZjrJWmwtfRfQhsg5MgfRnD7Wmx4pwQBznt/XL/_PEN0762-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/MZWFBH5X8QwdPqPBHtzRrpv76HnsTJsgQPMzD9znB/L/_PEN0762-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/LcjTwHmmFxLQvH5njHHC68LGTNcTgRdBDMvMjHmkk/M/_PEN0762-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvdDsK8/0/MjwPJxxTKqfPB69PgsbrPxs9L7Gk2k5XQtRCkkkvd/S/_PEN0762-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HWWSkqG",
     "title": "Too far gone.",
     "description": "Medical can't save this one.",
-    "alt": "Too far gone.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/KPrDQV7M7x5s2Kc9xZPrk8djbB8hs4kznw6qNhvDt/XL/_OLY4622-Edit-3-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HWWSkqG/A",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HWWSkqG/A",
     "keywords": [
       "a",
       "fine art",
@@ -1670,15 +1994,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 64,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/Nd8MMS66ZJ4RKjCcgVR6Fz4nXsV56xbVjjcDpn6DG/XL/_OLY4622-Edit-3-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/Nd8MMS66ZJ4RKjCcgVR6Fz4nXsV56xbVjjcDpn6DG/XL/_OLY4622-Edit-3-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/KPXPjGFSZM3fdtRbVqHKr89wMsZPnRc2VfmN5Qdxf/L/_OLY4622-Edit-3-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/MJqZG6LJhzWKz2dxb4tbgcqFqTtRzrT5MmKVg5c3j/M/_OLY4622-Edit-3-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/L53WnZ8hTL3TDkmmFP3LgGpfmhjhxJrJ3MRv8nTJj/S/_OLY4622-Edit-3-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qfk69f2",
     "title": "Commandant   Photography by Wayne Heim",
     "description": "Portrait of a German Commandant at Rockford WWII Days.   © Wayne Heim",
-    "alt": "Commandant   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfk69f2/4/K8CZMFxNGqPjBKPDTrjvWJFHzXWWmFMTCPJvnkLk5/XL/_W3H4558-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfk69f2/A",
+    "alt": "Too far gone.",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfk69f2/A",
     "keywords": [
       "a",
       "fine art",
@@ -1694,15 +2023,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 65,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfk69f2/4/KGTgmcQszswW9GJvM8mTqkcpQ5vDGck8Dp9bJWkfz/XL/_W3H4558-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfk69f2/4/KGTgmcQszswW9GJvM8mTqkcpQ5vDGck8Dp9bJWkfz/XL/_W3H4558-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfk69f2/4/Mmqdm7rhWcq5hDBspCPZxVRQD7rfW3Hn4b7xH2HH9/L/_W3H4558-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfk69f2/4/KpPMBCWGDCsPhgnp6jbmQZxjPpSGSdhtFGThcchVv/M/_W3H4558-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfk69f2/4/KTMsmpzMM966GkzMM2R4vpdtLRXQKdJptxxk96gFF/S/_W3H4558-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f8CRdFh",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/2/LGLNDtchrVD5B7DB97Rrf6V6MsJgcjwvPbNcC5RL4/XL/_O1H0377-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/A",
+    "alt": "Commandant   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/A",
     "keywords": [
       "a",
       "fine art",
@@ -1718,15 +2052,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 66,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/2/KbCmBNg5W5NB8ZdKBTJcMgXx6mTVsRzM46cXTFWKv/XL/_O1H0377-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/2/KbCmBNg5W5NB8ZdKBTJcMgXx6mTVsRzM46cXTFWKv/XL/_O1H0377-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/2/NZcLnJTnzRJZsWH9TfhV9cQ5zvMWGRmV39rgHS3qW/L/_O1H0377-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/2/NVHcNZHS8dpFdjZSvNHxNCbMqCdW4WQ3khnbBf9KN/M/_O1H0377-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-f8CRdFh/2/Mw5NM6jkrhs2xFvrxfRVMm3nHct6bNXjPMtDc6mH4/S/_O1H0377-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bsQkK6z",
     "title": "Salute - Photography by Wayne Heim",
     "description": "Salute -GI\"s salute at raising of colors during reenactment at D-Day Conneaut. ©Wayne Heim",
-    "alt": "Salute - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/4/L4Ksn5cqfbDLKXDVwQP3mcWQ52VWhmnH4dqnwfQwf/XL/_IMG8520-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/A",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/A",
     "keywords": [
       "a",
       "fine art",
@@ -1742,15 +2081,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 67,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/4/LdzGpHCQcqj35w3hMrSPH2WsrVFcfCCVXsbzFwb2g/XL/_IMG8520-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/4/LdzGpHCQcqj35w3hMrSPH2WsrVFcfCCVXsbzFwb2g/XL/_IMG8520-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/4/KskgGzSSXmf3sWPp4TpXGcCcpMNp2RNgbNcsXvKZK/L/_IMG8520-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/4/Nhn8PpkR6SFNbsBcsKhR7bbr9MZK3dpp5kB6RX3ns/M/_IMG8520-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bsQkK6z/4/LcmqsvcMb9LSht7LN6QndFTrqbtcdkwfXd98cxS97/S/_IMG8520-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-k5t6JSt",
     "title": "General's Wife  Photography by Wayne Heim",
     "description": "Portrait of a woman reenactiog a general's wife© Wayne Heim",
-    "alt": "General's Wife  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-k5t6JSt/4/K4WwTMVjksgbhtdwbhS3sDFMqfkdMRxhm9thJ5M3G/XL/_W3H3193-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k5t6JSt/A",
+    "alt": "Salute - Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k5t6JSt/A",
     "keywords": [
       "a",
       "fine art",
@@ -1766,15 +2110,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 68,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-k5t6JSt/4/NV4XdGd9rGMnTxHD5NTJTZ2P8jZdzZ2TsVLrTZp7q/XL/_W3H3193-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-k5t6JSt/4/NV4XdGd9rGMnTxHD5NTJTZ2P8jZdzZ2TsVLrTZp7q/XL/_W3H3193-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-k5t6JSt/4/MQMC9JgZSPJcvdWw22XSj3BW8wjFZFF4Tfc8dqbPh/L/_W3H3193-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-k5t6JSt/4/Mfj29bWg7KCt5PtfPzhgL9vSLwjCDc8tMXhcdrXgr/M/_W3H3193-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-k5t6JSt/4/KgDqgq35JrHzczwNj3WfwhjFHK394mmDXxtx5JsF8/S/_W3H3193-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nRvvWrZ",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
-    "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/1/LDLLD45545nxz6HBD9Kr7nnrGMtn7RrS6QqMnCCs7/XL/_OLY7493-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/A",
+    "alt": "General's Wife  Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/A",
     "keywords": [
       "a",
       "fine art",
@@ -1790,15 +2139,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 69,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/1/KTR4hZgZzXM73DMQ46rxrvNCxLCMGt3nGK4tG5pVm/XL/_OLY7493-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/1/KTR4hZgZzXM73DMQ46rxrvNCxLCMGt3nGK4tG5pVm/XL/_OLY7493-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/1/KTR4hZgZzXM73DMQ46rxrvNCxLCMGt3nGK4tG5pVm/XL/_OLY7493-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/1/NPHS9h9ZKJMBSG5TQqLWWP98kgrNhqZ4CdkHscLnp/L/_OLY7493-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nRvvWrZ/1/KbmztNW2W8KPLDnpVBf6SKxLJ3W5gkCbjGVftk6C2/S/_OLY7493-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4dq9DBD",
     "title": "Artist At Work     Photography by Wayne Heim",
     "description": "Reenactor relaxes by drawing during time off at D Day Conneaut . © Wayne Heim",
-    "alt": "Artist At Work     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4dq9DBD/4/KbkXgKnSSrwGwvRzTXgZtRCwdb2rN8MhqZRHFsv9F/XL/_IMG6550-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4dq9DBD/A",
+    "alt": "© Wayne Heim 2018",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4dq9DBD/A",
     "keywords": [
       "a",
       "fine art",
@@ -1814,15 +2168,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 70,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4dq9DBD/4/MWQtPNd8Cw9xMRcwNg5vmkqQwGg8sZcKwZssQmQgv/XL/_IMG6550-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4dq9DBD/4/MWQtPNd8Cw9xMRcwNg5vmkqQwGg8sZcKwZssQmQgv/XL/_IMG6550-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4dq9DBD/4/MWQtPNd8Cw9xMRcwNg5vmkqQwGg8sZcKwZssQmQgv/XL/_IMG6550-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4dq9DBD/4/LB6W7jKfjVk7hGQX8ztJKRWMpmTSpQSGvsThcMGT3/L/_IMG6550-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4dq9DBD/4/LSPRSWPgzWMRRMWrZfnn7B4nMpcRmnHc6cTbf7C48/S/_IMG6550-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QW5rZBL",
     "title": "Ready for Battle    Photography by Wayne Heim",
     "description": "Soldier in full battle gear ready for reenactment.  © Wayne Heim",
-    "alt": "Ready for Battle    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-QW5rZBL/2/MJDbfG7fFptT362qMdBpp2ksdspzTk2PD5XZZRnbn/XL/i-QW5rZBL-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QW5rZBL/A",
+    "alt": "Artist At Work     Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QW5rZBL/A",
     "keywords": [
       "a",
       "fine art",
@@ -1838,15 +2197,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 71,
+    "src": "https://photos.smugmug.com/photos/i-QW5rZBL/2/KPS94XGkGqSPnk4XfRpJzzQ9rsrbP7QJp9NCBD3H4/XL/i-QW5rZBL-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-QW5rZBL/2/KPS94XGkGqSPnk4XfRpJzzQ9rsrbP7QJp9NCBD3H4/XL/i-QW5rZBL-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-QW5rZBL/2/KPS94XGkGqSPnk4XfRpJzzQ9rsrbP7QJp9NCBD3H4/XL/i-QW5rZBL-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-QW5rZBL/2/M5ZgXFMhs5QtQjNDRL2KWPKSPzBfxwpjdjpgBPLsR/L/i-QW5rZBL-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-QW5rZBL/2/LV88zR7qH485qzSrLt5GQ7hZJj324XfjmFdCv9zgX/S/i-QW5rZBL-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VTf5zR7",
     "title": "I Got A Secret    Photography by Wayne Heim",
     "description": "Two young ladies share a secret at civil war reenactment.   © Wayne Heim",
-    "alt": "I Got A Secret    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/4/NLhF3HZnjNRvChthZSN87TpbPrkxCqr8nxwNH8zzv/XL/_W3H2386-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/A",
+    "alt": "Ready for Battle    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/A",
     "keywords": [
       "a",
       "fine art",
@@ -1862,15 +2226,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 72,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/4/NHXZFSCs4j3hrcGhqcMfDjrss7XT6VdgpMFWPWj2R/XL/_W3H2386-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/4/NHXZFSCs4j3hrcGhqcMfDjrss7XT6VdgpMFWPWj2R/XL/_W3H2386-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/4/KfKqb7smN7zs47WfvR5rv8drCp4VfKXH88HqjNrtR/L/_W3H2386-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/4/K4Gx9FqbQFqQX5X4hDT7XDJFBPZ3d4pzdDkSXxvJs/M/_W3H2386-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VTf5zR7/4/LSfLQwgkws82sMfDK8NcxGSk9fB8rhGqqKcQ9kS4c/S/_W3H2386-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kr4C6mL",
     "title": "A Flapper     Photography by Wayne Heim",
     "description": "Portrait of a 20's Flapper in sepia tones.         © Wayne Heim",
-    "alt": "A Flapper     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Merzke-Wedding/Merzke-Wedding/i-kr4C6mL/1/L7gVg46cRRSxSq2DJvqsPTLMtpGHL7t7QdrRHcpR4/XL/_WEH7512-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kr4C6mL/A",
+    "alt": "I Got A Secret    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kr4C6mL/A",
     "keywords": [
       "a",
       "fine art",
@@ -1886,15 +2255,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 73,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Merzke-Wedding/Merzke-Wedding/i-kr4C6mL/1/MTbVtpLtpnDBNQD6Vw7Fh9WK6dSn2wqKhb5P43T7T/XL/_WEH7512-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Merzke-Wedding/Merzke-Wedding/i-kr4C6mL/1/MTbVtpLtpnDBNQD6Vw7Fh9WK6dSn2wqKhb5P43T7T/XL/_WEH7512-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Merzke-Wedding/Merzke-Wedding/i-kr4C6mL/1/MTbVtpLtpnDBNQD6Vw7Fh9WK6dSn2wqKhb5P43T7T/XL/_WEH7512-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Merzke-Wedding/Merzke-Wedding/i-kr4C6mL/1/KpdMMpLf33vp7TvP3R6k8mkKjwk4R4dts6NkmxbHC/L/_WEH7512-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Merzke-Wedding/Merzke-Wedding/i-kr4C6mL/1/KPWzhxr6wrvWgHqDhzXqXz88RRFhpsdFT3fRxwhxm/S/_WEH7512-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8ShsBMH",
     "title": "Pretty in Blue   Photography by Wayne Heim",
     "description": "Lady reenactor poses for picture  during D Day Conneaut.  © Wayne Heim",
-    "alt": "Pretty in Blue   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-8ShsBMH/3/LJdvxr7cmbh6dhhSqLDWF87NSkLgdbGQWBrNZD8zK/XL/_WHZ2604-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8ShsBMH/A",
+    "alt": "A Flapper     Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8ShsBMH/A",
     "keywords": [
       "a",
       "fine art",
@@ -1910,15 +2284,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 74,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-8ShsBMH/3/KrXmsB47qzw7ggcMkGt4c3mv7fTqCKLrmk8RFsjH3/XL/_WHZ2604-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-8ShsBMH/3/KrXmsB47qzw7ggcMkGt4c3mv7fTqCKLrmk8RFsjH3/XL/_WHZ2604-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-8ShsBMH/3/KrXmsB47qzw7ggcMkGt4c3mv7fTqCKLrmk8RFsjH3/XL/_WHZ2604-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-8ShsBMH/3/M9bkP4TR5mD3kd3HH4sn9HbfFLJMM2c4kqRbkHsB2/L/_WHZ2604-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-8ShsBMH/3/Nc9wrVrh5b7kmHHz869sTnKMNCffCpkxHT6gWzKRH/S/_WHZ2604-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TDvHhm3",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TDvHhm3/1/Nc6zj5JJjHCvW5mV64txqMhtQJ8PtVbGsP2vN4qvN/XL/_OLY3644-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TDvHhm3/A",
+    "alt": "Pretty in Blue   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TDvHhm3/A",
     "keywords": [
       "a",
       "fine art",
@@ -1934,15 +2313,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 75,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TDvHhm3/1/NL3gZPD5gTvjxb3V34kBKKP7j4wCMsbT8GKtPtprz/XL/_OLY3644-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TDvHhm3/1/NL3gZPD5gTvjxb3V34kBKKP7j4wCMsbT8GKtPtprz/XL/_OLY3644-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TDvHhm3/1/NN734VzHxRw5JBxJMK4v5qv5gc6drnvwfM4WP9kdt/L/_OLY3644-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TDvHhm3/1/Kcj7sRfq3VXX2Q8fgDpQW3KJFSfsGRWhxpjcnXj33/M/_OLY3644-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TDvHhm3/1/MRCpbxGS4vLSX75VLZnZ6mzvGvxvG7TWncWMjHTLV/S/_OLY3644-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CJcQsxw",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-CJcQsxw/6/NCmmL9VK5kBPSwWRTT93dzpsPVGPC9PkRJtcFJ2mM/XL/_DSF9874-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-CJcQsxw/A",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-CJcQsxw/A",
     "keywords": [
       "a",
       "fine art",
@@ -1958,15 +2342,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 76,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-CJcQsxw/6/LdhvsPQgL7XV9f5BxcKF7tHZV24BjqGzd7QWkq4td/XL/_DSF9874-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-CJcQsxw/6/LdhvsPQgL7XV9f5BxcKF7tHZV24BjqGzd7QWkq4td/XL/_DSF9874-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-CJcQsxw/6/Lkzmdc5gVC9gkKNMQbxtCWK7pWs4tjWnZK8cmFbhp/L/_DSF9874-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-CJcQsxw/6/NfHKqPDWRbQjMCfkCCKLrqgMZtBmXVvw5xPK9DjFw/M/_DSF9874-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-CJcQsxw/6/NZRCMFC3c8T6m9QTmhmRd4tHhbv7SrmcWVgsKvLhz/S/_DSF9874-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rffQS2z",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-rffQS2z/6/KZ37sfGSngg86kqfFPgv7gcZVgRWhQ6RXmxfWSG9v/XL/_DSF9947-Edit-Enhanced-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-rffQS2z/A",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-rffQS2z/A",
     "keywords": [
       "a",
       "fine art",
@@ -1982,15 +2371,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 77,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-rffQS2z/6/LLS96GpcWv4GPLbj4psjvSxDhDx32wfSRvFgCJ3qV/XL/_DSF9947-Edit-Enhanced-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-rffQS2z/6/LLS96GpcWv4GPLbj4psjvSxDhDx32wfSRvFgCJ3qV/XL/_DSF9947-Edit-Enhanced-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-rffQS2z/6/LLS96GpcWv4GPLbj4psjvSxDhDx32wfSRvFgCJ3qV/XL/_DSF9947-Edit-Enhanced-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-rffQS2z/6/KkVd5DBnbk4zMB8CDvx9fmPdfgxfCc5pxKBv23h3s/L/_DSF9947-Edit-Enhanced-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-rffQS2z/6/K3LprkmG5NbqvjJqBWKj8X3bTspzCMFV4w5cV5NVZ/S/_DSF9947-Edit-Enhanced-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-r4pwPkf",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-r4pwPkf/6/KLwQ3JQpmBQW8mJ9xggc7ZXqwDj8bCGd8vXFZ7Hjz/XL/_DSF0046-Edit-Edit-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r4pwPkf/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r4pwPkf/A",
     "keywords": [
       "a",
       "fine art",
@@ -2006,15 +2400,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 78,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-r4pwPkf/6/MQ2tMcRpNm4z89QbhDthtWbS5n4Cs4xm37LxZGHp9/XL/_DSF0046-Edit-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-r4pwPkf/6/MQ2tMcRpNm4z89QbhDthtWbS5n4Cs4xm37LxZGHp9/XL/_DSF0046-Edit-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-r4pwPkf/6/KNG9rZSsmRN3xbZF5pXxbkhsRpnStv8mqQ56cLWWk/L/_DSF0046-Edit-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-r4pwPkf/6/LD79gnBMppNvjZdvDKPbvw3xJpxPtpWfkHKzdhMc9/M/_DSF0046-Edit-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-r4pwPkf/6/LwH9WCQRFnPJWNHQDnTKKRgsgCRJF6fmkPzjbpgrk/S/_DSF0046-Edit-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JX4qCWv",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-JX4qCWv/2/NHdJwjHZDcP49ZBgR6h72K3bDXQ87xnVDmDGgvnZt/XL/_O1H0390-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JX4qCWv/A",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-JX4qCWv/A",
     "keywords": [
       "a",
       "fine art",
@@ -2030,15 +2429,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 79,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-JX4qCWv/2/Km9qr6g2rRxqt2KCqj7rZrfJrPGzD4hKTkC6dPQCw/XL/_O1H0390-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-JX4qCWv/2/Km9qr6g2rRxqt2KCqj7rZrfJrPGzD4hKTkC6dPQCw/XL/_O1H0390-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-JX4qCWv/2/Km9qr6g2rRxqt2KCqj7rZrfJrPGzD4hKTkC6dPQCw/XL/_O1H0390-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-JX4qCWv/2/MRTtJQ7mw8D944pDqfBzDKjgHp2cFtGvwMjPKqFVm/L/_O1H0390-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-JX4qCWv/2/K6kCRBD96J9TNPRt6xD7KzQ2pvKDfGBBxfv6N4D3F/S/_O1H0390-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mMB9r4J",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-mMB9r4J/2/KM5Vvvk5Vz3XvhLPMBckgmRSQqwgSxmsSBj862Ms7/XL/_O1H0234-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mMB9r4J/A",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mMB9r4J/A",
     "keywords": [
       "a",
       "fine art",
@@ -2054,15 +2458,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 80,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-mMB9r4J/2/NLF5dc2WVkGbz3zqfvgZSZmtqcWxG5hLbTGVC3xsf/XL/_O1H0234-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-mMB9r4J/2/NLF5dc2WVkGbz3zqfvgZSZmtqcWxG5hLbTGVC3xsf/XL/_O1H0234-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-mMB9r4J/2/NLF5dc2WVkGbz3zqfvgZSZmtqcWxG5hLbTGVC3xsf/XL/_O1H0234-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-mMB9r4J/2/LGVwwPtrwtG6Vs6sr3VqVrGM6L9vV4D9HKp3D2zHj/L/_O1H0234-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-mMB9r4J/2/M6Q2phM3QfhG2xz4qmkzP2tgTsXS8tpMxVr4HC6wv/S/_O1H0234-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qTWkrsx",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-qTWkrsx/1/K6ZPZXhhWnBpCmKLXXZWLFNRDvBTgQ7q6Tx7XkjpG/XL/_O1H0323-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qTWkrsx/A",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qTWkrsx/A",
     "keywords": [
       "a",
       "fine art",
@@ -2078,15 +2487,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 81,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-qTWkrsx/1/MZKSzSgKMLWwrvKmbgDtXV9pSvmRB96TtkK3nxpSW/XL/_O1H0323-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-qTWkrsx/1/MZKSzSgKMLWwrvKmbgDtXV9pSvmRB96TtkK3nxpSW/XL/_O1H0323-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-qTWkrsx/1/LmwN9Lr3pj3w4M8h38dPXBnvG5nPXBhx5n6JqgdJQ/L/_O1H0323-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-qTWkrsx/1/M5NH85cjn8vqXk56pqK5RgFQKP5XZdwjjsLm9cnZw/M/_O1H0323-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-qTWkrsx/1/NBvMF9QgGXtrpnR6kvFWjXtMJsH86pWjcM49mrZL6/S/_O1H0323-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XdNc5xz",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XdNc5xz/8/KKhC8jMv3z7S3pvZgtHV2fshhth4gHx8XtdPTkQtp/XL/_DSF2623-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XdNc5xz/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XdNc5xz/A",
     "keywords": [
       "a",
       "fine art",
@@ -2102,15 +2516,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 82,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XdNc5xz/8/KJh6HsPG6qVfptsG5VLFgJDqLQnbm6rxsrVvgKhH3/XL/_DSF2623-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XdNc5xz/8/KJh6HsPG6qVfptsG5VLFgJDqLQnbm6rxsrVvgKhH3/XL/_DSF2623-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XdNc5xz/8/KJh6HsPG6qVfptsG5VLFgJDqLQnbm6rxsrVvgKhH3/XL/_DSF2623-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XdNc5xz/8/LVbsdr6gCtKftPdS6Xq4tzZLk72SvNjMZqjsK6D9T/L/_DSF2623-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XdNc5xz/8/LdSm39NrqKqjBqzCn2c6jfMC9BSrBz3kR2DFDTPKh/S/_DSF2623-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KSjJXBB",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/3/KwDXSL8s2SdvGFpRmfPcL5bZQdznMQbWd7dhcwxrn/XL/_O1H0295-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/A",
+    "alt": "1920's  at Old Bedford Village",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/A",
     "keywords": [
       "a",
       "fine art",
@@ -2126,15 +2545,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 83
+    "sortOrder": 83,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/3/MPNw2SVHB7HThfmKHgn3nz6MR6NSMKLCxzmGJW8Tv/XL/_O1H0295-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/3/MPNw2SVHB7HThfmKHgn3nz6MR6NSMKLCxzmGJW8Tv/XL/_O1H0295-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/3/MPNw2SVHB7HThfmKHgn3nz6MR6NSMKLCxzmGJW8Tv/XL/_O1H0295-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/3/KZ6tpMSKGJjQmQXbBfhZ3jmXzjDGFDJndFsthS26g/L/_O1H0295-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KSjJXBB/3/MHHw7xNkrJxrDxbzrsWxRKCsHQnv8QN3SWtF7tXP7/S/_O1H0295-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GmFFNMG",
     "title": "Couple Portrait   Photography by Wayne Heim",
     "description": "Couple portrait of reenactors att D Day Conneaut.  © Wayne Heim",
-    "alt": "Couple Portrait   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-GmFFNMG/4/LPQptxCHXgDqLc6Cb5w5mXj4Q4BB8HGqgjcvktNgH/XL/_W3H6590-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-GmFFNMG/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-GmFFNMG/A",
     "keywords": [
       "a",
       "fine art",
@@ -2150,15 +2574,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 84
+    "sortOrder": 84,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-GmFFNMG/4/NWjTXLg7GP8vQmXrKK4ZtsCwPWsVz3DpSBbQxr6vp/XL/_W3H6590-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-GmFFNMG/4/NWjTXLg7GP8vQmXrKK4ZtsCwPWsVz3DpSBbQxr6vp/XL/_W3H6590-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-GmFFNMG/4/KjNSQDtmJFvPNJzw9cqjp6SKGrgxSsTVZLSnJ4Vd6/L/_W3H6590-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-GmFFNMG/4/M8HcZVpnW8dSm93q8RNnK5xVk2VJNgkkCzhX8gc3F/M/_W3H6590-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-GmFFNMG/4/KTZGsrsjvRdPzg64LKKThSKMpzLS5Tgdb4xkFbzVH/S/_W3H6590-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wfxSxw3",
     "title": "Carpetbagger   Photography by Wayne Heim",
     "description": "Portrait of a carpetbagger during a civil war reenactment at Hale Farm.   © Wayne Heim",
-    "alt": "Carpetbagger   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wfxSxw3/5/MmVxKvpS8nsLzdHW9XJzgDxv25R7Vtxjw589fNtBF/XL/_WHZ0561-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wfxSxw3/A",
+    "alt": "Couple Portrait   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wfxSxw3/A",
     "keywords": [
       "a",
       "fine art",
@@ -2174,15 +2603,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 85,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wfxSxw3/5/KKRc3VXVxGp4nfSGkFVk9GtnWsT2BPFCx8mV4zzF6/XL/_WHZ0561-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wfxSxw3/5/KKRc3VXVxGp4nfSGkFVk9GtnWsT2BPFCx8mV4zzF6/XL/_WHZ0561-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wfxSxw3/5/KKRc3VXVxGp4nfSGkFVk9GtnWsT2BPFCx8mV4zzF6/XL/_WHZ0561-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wfxSxw3/5/MmS4pdcm5GwwdKLGcF5FrKfWQk4D3RLMC94MTPrMT/L/_WHZ0561-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-wfxSxw3/5/LLzBJtCVTmxbZp7Nk5XQMCDNrz5pPxBMspR26dtBX/S/_WHZ0561-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MG2RBSQ",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
-    "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/KGb8NBfPfzWv4hdrttkdb4PmrbzfxGtz9pZ9dhqKs/XL/_K1W0867-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-MG2RBSQ/A",
+    "alt": "Carpetbagger   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-MG2RBSQ/A",
     "keywords": [
       "a",
       "fine art",
@@ -2198,15 +2632,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 86,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/K89XfPfJkjNC2dpnRhrkn5xXP669pqjCtj2LHRsqC/XL/_K1W0867-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/K89XfPfJkjNC2dpnRhrkn5xXP669pqjCtj2LHRsqC/XL/_K1W0867-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/K89XfPfJkjNC2dpnRhrkn5xXP669pqjCtj2LHRsqC/XL/_K1W0867-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/NRcN2HBbJ32DWtMqBVMxBV7ZHG9ksHBNjdVCsnqHp/L/_K1W0867-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-MG2RBSQ/0/NMX7jL5GDhjRK7Kqrct5HMJqPzdcb2xJxbw4rK755/S/_K1W0867-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-k7bp7Xk",
     "title": "Helping a Fallen Friend  Photography by Wayne Heim",
     "description": "Soldier tries to help a fallen friend as they land on the beach. ©Wayne Heim",
-    "alt": "Helping a Fallen Friend  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-k7bp7Xk/6/L3B5DHRWnrxjFwZhdMRTZqbQNGQpsd8RGF22dnMKZ/XL/_IGP6625-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7bp7Xk/A",
+    "alt": "© Wayne Heim 2018",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-k7bp7Xk/A",
     "keywords": [
       "a",
       "fine art",
@@ -2222,15 +2661,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 87,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-k7bp7Xk/6/LNFd9sdrbFFZPBbsD38P3VxTtv2zG2vvrznnZ6Cxt/XL/_IGP6625-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-k7bp7Xk/6/LNFd9sdrbFFZPBbsD38P3VxTtv2zG2vvrznnZ6Cxt/XL/_IGP6625-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-k7bp7Xk/6/MjxDWpFvLvSS4BGMh4KhrCC77tzdXJBjfWcrHNFBd/L/_IGP6625-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-k7bp7Xk/6/KN5mVMFRvxRkzBBkRpS8Js9Svmmbqsw5q4tw4cRMg/M/_IGP6625-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-k7bp7Xk/6/LWNsSptMLSmxFbVd5bmL8pz7f57NmbVwwZmwFpvp2/S/_IGP6625-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FjdrwWV",
     "title": "German Tank Driver   Photography by Wayne Heim",
     "description": "German tank driver during Battle of La Fier Bridge. ©Wayne Heim",
-    "alt": "German Tank Driver   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-FjdrwWV/5/NW2dN7wcb9742r4zNJBZVHpH9x5QWvFcb3K6GQPWD/XL/_IGP8142-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-FjdrwWV/A",
+    "alt": "Helping a Fallen Friend  Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-FjdrwWV/A",
     "keywords": [
       "a",
       "fine art",
@@ -2246,15 +2690,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 88
+    "sortOrder": 88,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-FjdrwWV/5/LrVr4D98L6vDp8DgLdP9XGjsxpFQk2dz7FSPxqBDW/XL/_IGP8142-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-FjdrwWV/5/LrVr4D98L6vDp8DgLdP9XGjsxpFQk2dz7FSPxqBDW/XL/_IGP8142-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-FjdrwWV/5/LrVr4D98L6vDp8DgLdP9XGjsxpFQk2dz7FSPxqBDW/XL/_IGP8142-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-FjdrwWV/5/K6RXSS9fb8G398Vd5MSFtT4Qs3RvLB9TwHK4V4J2b/L/_IGP8142-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-FjdrwWV/5/M6RSCgWQBvgbCc8BBxzWLRchktT88N8wrDL7H5KhP/S/_IGP8142-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PXcwZNn",
     "title": "Yes Sir Right Away    Photography by Wayne Heim",
     "description": "Allied officer reenactor gets orders  from headquarters during D Day Conneaut. ©Wayne Heim",
-    "alt": "Yes Sir Right Away    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-PXcwZNn/5/Mmsdf7mH83M5CJLXhRXCWZX7ndgZbTCQsBQJv4zRf/XL/_IMG0974-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-PXcwZNn/A",
+    "alt": "German Tank Driver   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-PXcwZNn/A",
     "keywords": [
       "a",
       "fine art",
@@ -2270,15 +2719,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 89
+    "sortOrder": 89,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-PXcwZNn/5/KtStdLF5h4TQ3xCx59K2vDCXgpMJgHpP2WQFtVgwT/XL/_IMG0974-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-PXcwZNn/5/KtStdLF5h4TQ3xCx59K2vDCXgpMJgHpP2WQFtVgwT/XL/_IMG0974-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-PXcwZNn/5/Mt4B3DH8xwQsxTtmvzfj8N8BMWd2kJmsjZv7H3N6W/L/_IMG0974-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-PXcwZNn/5/LDDht67cgq6m9cw76XZVjhdmbMsVGTjHVfFhCDNTz/M/_IMG0974-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-PXcwZNn/5/NhkC6528n64fVcMBf9ZDzBdSMGLkXs4sHMgSpzBJN/S/_IMG0974-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4Gk8HRG",
     "title": "Guiding the Landing Craft. Photography by Wayne Heim",
     "description": "Captain of the landing craft guides the boat during D Day Conneaut  © Wayne Heim",
-    "alt": "Guiding the Landing Craft. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/MkBWhw5SnKr5hjc9FF87PghZS7kJRGS2sqdXdkWBz/XL/_WEH0736-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4Gk8HRG/A",
+    "alt": "Yes Sir Right Away    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-4Gk8HRG/A",
     "keywords": [
       "a",
       "fine art",
@@ -2294,15 +2748,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 90
+    "sortOrder": 90,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/KfDfN44Ntdq3wnTVcmvsX6LGD3qLTMhsxNdr4p4r8/XL/_WEH0736-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/KfDfN44Ntdq3wnTVcmvsX6LGD3qLTMhsxNdr4p4r8/XL/_WEH0736-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/M387w2JMknrDfPGSftW6Xsgq3bkpFP7DpJPjrXhjC/L/_WEH0736-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/LFgsKQkxBFTRf5RTnBg96PR4tw4Ns9k9jPtpC8WKP/M/_WEH0736-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-4Gk8HRG/4/Kq3QGzWLg2szFxHbKGgkHxghkGxw9tNjmKVggtWvB/S/_WEH0736-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bMSrCFg",
     "title": "Young Reenactor  Photography by Wayne Heim",
     "description": "Young Reenactor- young girl at Hale Farm in Civil War Reenactmenty ©Wayne Heim",
-    "alt": "Young Reenactor  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-bMSrCFg/5/NK8BzbcQtFz4LDWgtmw4VVvx4r672rkSwLrtFxmtX/XL/_WHZ0659-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bMSrCFg/A",
+    "alt": "Guiding the Landing Craft. Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-bMSrCFg/A",
     "keywords": [
       "a",
       "fine art",
@@ -2318,15 +2777,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 91
+    "sortOrder": 91,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-bMSrCFg/5/MDf7shLZfGZrg787DNSXvtmCwcwp9GxN97gmwFMh5/XL/_WHZ0659-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-bMSrCFg/5/MDf7shLZfGZrg787DNSXvtmCwcwp9GxN97gmwFMh5/XL/_WHZ0659-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-bMSrCFg/5/MDf7shLZfGZrg787DNSXvtmCwcwp9GxN97gmwFMh5/XL/_WHZ0659-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-bMSrCFg/5/LN7BzTz4t64QS4g6xq9q2q4VLWNKcjT493kvKQtXM/L/_WHZ0659-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment/i-bMSrCFg/5/NZndpHMssRNXmb63BcBBr27x8DXm6NHmw86qF83fS/S/_WHZ0659-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7f7NnQg",
     "title": "Checking Adornments       Photography by Wayne HeimWayne Heim",
     "description": "Soldier checks uniform for correct arrangement of metals.  © Wayne Heim",
-    "alt": "Checking Adornments       Photography by Wayne HeimWayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-7f7NnQg/4/M4hCC9GdttnRrNZHWHPkLBRS3MHwpkk7Wh8mBSbPb/XL/_IMG5842-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7f7NnQg/A",
+    "alt": "Young Reenactor  Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7f7NnQg/A",
     "keywords": [
       "a",
       "fine art",
@@ -2342,15 +2806,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 92
+    "sortOrder": 92,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-7f7NnQg/4/LBwZDSdTr9Qs3Rg9t2qSB3wdRvhqJgpdCM7GHFMjN/XL/_IMG5842-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-7f7NnQg/4/LBwZDSdTr9Qs3Rg9t2qSB3wdRvhqJgpdCM7GHFMjN/XL/_IMG5842-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-7f7NnQg/4/LBwZDSdTr9Qs3Rg9t2qSB3wdRvhqJgpdCM7GHFMjN/XL/_IMG5842-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-7f7NnQg/4/MWfF65kNFfbXwZHRkkhjRK4QXX5F3ZT95GckPWmwd/L/_IMG5842-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-7f7NnQg/4/KJXx7jBCVkcvDbqNJzfmRxDPvnN72CQZRNkZfLvd2/S/_IMG5842-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZkL52bP",
     "title": "Finishing Chow    Photography by Wayne Heim",
     "description": "Young soldier in his tent finishing his meal. © Wayne Heim",
-    "alt": "Finishing Chow    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-ZkL52bP/4/NPFckmhTJ3g4CrqkPrFN7vJHH7hD9cN8NqdWV3mPw/XL/_IMG5924-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkL52bP/A",
+    "alt": "Checking Adornments       Photography by Wayne HeimWayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkL52bP/A",
     "keywords": [
       "a",
       "fine art",
@@ -2366,15 +2835,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 93
+    "sortOrder": 93,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-ZkL52bP/4/K6F2qssnp4jkVWr4k9fWLfcpPwXs6tFJtkXG8cfGz/XL/_IMG5924-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-ZkL52bP/4/K6F2qssnp4jkVWr4k9fWLfcpPwXs6tFJtkXG8cfGz/XL/_IMG5924-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-ZkL52bP/4/K6F2qssnp4jkVWr4k9fWLfcpPwXs6tFJtkXG8cfGz/XL/_IMG5924-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-ZkL52bP/4/Kfg9tvNR2zWzXbXh3G7p4GDgfVBB728C385nWKmP6/L/_IMG5924-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-ZkL52bP/4/NgnRFfW82HkmQBrdWcdswT3BKPGM6BQQSqBfTvCtK/S/_IMG5924-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sZDB6pL",
     "title": "French Girl    Black & White Photography by Wayne Heim",
     "description": "Girl reenactor as a French Resistance fighter. © Wayne Heim",
-    "alt": "French Girl    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-sZDB6pL/4/NdTPsjZHtMWZ7fNCFbgtFK4wwBpPS3RhjvSFQ8RV8/XL/_WEH1175-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-sZDB6pL/A",
+    "alt": "Finishing Chow    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-sZDB6pL/A",
     "keywords": [
       "a",
       "fine art",
@@ -2390,15 +2864,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 94
+    "sortOrder": 94,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-sZDB6pL/4/K5nM9LFVfBCB4s5zVPt5Vzq5V92Z2xQS9TssxNWQj/XL/_WEH1175-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-sZDB6pL/4/K5nM9LFVfBCB4s5zVPt5Vzq5V92Z2xQS9TssxNWQj/XL/_WEH1175-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-sZDB6pL/4/MW2qxzt4sTwbgDGfCBtrW8DwC5xDdnRXSQ7W3dcdq/L/_WEH1175-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-sZDB6pL/4/Mxxs6vfVGMz9rm3ZM2n48fmmV2bZ8SNT6V3vb3mhr/M/_WEH1175-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-sZDB6pL/4/KwC6Q5h2nCZCGhrTDwQKcvvB3tQqFH7vXHCc9dB5n/S/_WEH1175-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-G7HRV64",
     "title": "Portrait of a Young G I   Black & White Photography by Wayne Heim",
     "description": "Young reenactor at D Day Conneaut reenactment.  © Wayne Heim",
-    "alt": "Portrait of a Young G I   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-G7HRV64/4/LpVzfGD5Z93f73PdnKNMGbgn998dVfHDRHgP6GxKC/XL/_IMG6105-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-G7HRV64/A",
+    "alt": "French Girl    Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-G7HRV64/A",
     "keywords": [
       "a",
       "fine art",
@@ -2414,15 +2893,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 95
+    "sortOrder": 95,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-G7HRV64/4/LD4KMvgxBHcn4vQ2sBPKmBfgbksfBJzbq63pRZc9R/XL/_IMG6105-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-G7HRV64/4/LD4KMvgxBHcn4vQ2sBPKmBfgbksfBJzbq63pRZc9R/XL/_IMG6105-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-G7HRV64/4/NjVtdrLm59Hxs4fpMv6s6bBk8BfN3kxhPPFCmkh74/L/_IMG6105-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-G7HRV64/4/MRCHX5SQ3b8khMN9jzT883T8gZwKQRgBFctTfhvLq/M/_IMG6105-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-G7HRV64/4/Kzbp5gDz8jDHk34HJLL5F7CqzPpX3ccR53mkmCTrZ/S/_IMG6105-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zv6zQZr",
     "title": "Shaving     Black & White Photography by Wayne Heim",
     "description": "Soldier shaves in the morning at Allied Camp during D Day Conneaut.  © Wayne Heim",
-    "alt": "Shaving     Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-zv6zQZr/4/LBC4ngvdzNGLwLGxB2qwBm2ZKtN4DXgvrgRtTR6Vf/XL/_WEH1897-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-zv6zQZr/A",
+    "alt": "Portrait of a Young G I   Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-zv6zQZr/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2442,15 +2926,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 96
+    "sortOrder": 96,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-zv6zQZr/4/Kg28cdSMQZWgZNSFL48j62SgpZnr7gZg4JmsZBdC4/XL/_WEH1897-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-zv6zQZr/4/Kg28cdSMQZWgZNSFL48j62SgpZnr7gZg4JmsZBdC4/XL/_WEH1897-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-zv6zQZr/4/NLqGdwX5rPShS5FqqJrrTKB9MvCjTwzspWwkWFPGq/L/_WEH1897-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-zv6zQZr/4/NgwDJG8XmrNsnDxNLN53T58dQSd4Gh7vWWX5Z463v/M/_WEH1897-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-zv6zQZr/4/Mg4T85c6xPW2nRVP8q8Bbc9x8nNcZZhdZ2bms8t2B/S/_WEH1897-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nD4rzmL",
     "title": "Portrait of a Soldier   Black & White Photography by Wayne Heim",
     "description": "Portrait of a Soldier reenactor during D Day Conneaut. © Wayne Heim",
-    "alt": "Portrait of a Soldier   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-nD4rzmL/4/MWsGL3Gv5ms254bJzCdjVckkqBMXsMnHvtwHsPfFg/XL/_WEH5001-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nD4rzmL/A",
+    "alt": "Shaving     Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nD4rzmL/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2470,15 +2959,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 97
+    "sortOrder": 97,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-nD4rzmL/4/LbcbvRJvCXV7wcrnXZ2nS5rSgDCsdvXM8RBgvdDcC/XL/_WEH5001-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-nD4rzmL/4/LbcbvRJvCXV7wcrnXZ2nS5rSgDCsdvXM8RBgvdDcC/XL/_WEH5001-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-nD4rzmL/4/Mfrz9VtpK4fmphCrGpMWTFRrtLnmzpPpjQqhLL5vL/L/_WEH5001-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-nD4rzmL/4/LDnsKqV8zhhbWK5SbbMJ6H8m6nwwqGDz8tzQ3vxZR/M/_WEH5001-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-nD4rzmL/4/MvQ5n8D3XW44Sgkh6CPsFbNJCmHNHDq7cxWKhxkkQ/S/_WEH5001-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-g2FJ9wX",
     "title": "What Is That?   Photography by Wayne Heim",
     "description": "Three reenactor look to something in the distance during reenactment.  © Wayne Heim",
-    "alt": "What Is That?   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-g2FJ9wX/4/NKKrH5FW8NBkwsWSNDTtnjc5GvF345TPS9j5g6x7k/XL/_W3H4242-4-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-g2FJ9wX/A",
+    "alt": "Portrait of a Soldier   Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-g2FJ9wX/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2498,15 +2992,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 98
+    "sortOrder": 98,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-g2FJ9wX/4/KhCB3bWdmp77pjDBfHBnj4mthVTk8Ns93jNT8QT5W/XL/_W3H4242-4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-g2FJ9wX/4/KhCB3bWdmp77pjDBfHBnj4mthVTk8Ns93jNT8QT5W/XL/_W3H4242-4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-g2FJ9wX/4/Lpj6QSSbJ4VfxShBQn3jB4cZRsWLJrpbNBHcjhjDf/L/_W3H4242-4-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-g2FJ9wX/4/LpLbkw8mTTqMV9xPLJ7mQxBDjKfVjJ8sVV7MP4bB2/M/_W3H4242-4-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-g2FJ9wX/4/KPm35XjMpMVnzPxqFCDKm7MLZDjb5bKjkBScqHcBk/S/_W3H4242-4-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qfT8Lmh",
     "title": "Let's Go Team    Photography by Wayne Heim",
     "description": "Reenactor is dressed for football game  © Wayne Heim",
-    "alt": "Let's Go Team    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfT8Lmh/4/KQCgbd8mr9TJBv92LXb86cc3kL6xztKFmzsS7cv53/XL/_W3H4687-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfT8Lmh/A",
+    "alt": "What Is That?   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfT8Lmh/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2526,15 +3025,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 99
+    "sortOrder": 99,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfT8Lmh/4/NVKLpkFG7gxVjD5fKPsDZtzRDXfDc8vg2FHPPS2Qx/XL/_W3H4687-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfT8Lmh/4/NVKLpkFG7gxVjD5fKPsDZtzRDXfDc8vg2FHPPS2Qx/XL/_W3H4687-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfT8Lmh/4/NVKLpkFG7gxVjD5fKPsDZtzRDXfDc8vg2FHPPS2Qx/XL/_W3H4687-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfT8Lmh/4/LHFzHSdsKdFNvvP4c4kc744gvBHNVSc7G3mW7VrJp/L/_W3H4687-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2014/i-qfT8Lmh/4/L3SZJM8VwnDJN35MRxkVTtvJG4vRbWP5VvRH6Cspw/S/_W3H4687-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-s5wsLGN",
     "title": "Mr Mayor       Photography by Wayne Heim",
     "description": "Portrait of the Mayor during civil war reenactment.  © Wayne Heim",
-    "alt": "Mr Mayor       Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s5wsLGN/14/LvwgL9zdmxcc5h59rF4P22DBTTv2npbx2mjJZNvNc/XL/_W3H1524-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-s5wsLGN/A",
+    "alt": "Let's Go Team    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-s5wsLGN/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2554,15 +3058,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 100
+    "sortOrder": 100,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s5wsLGN/14/NV8wBmLZ4tfV5w5RGJNsdmV7LJ6HwvCXzqk2GTwnD/XL/_W3H1524-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s5wsLGN/14/NV8wBmLZ4tfV5w5RGJNsdmV7LJ6HwvCXzqk2GTwnD/XL/_W3H1524-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s5wsLGN/14/NV8wBmLZ4tfV5w5RGJNsdmV7LJ6HwvCXzqk2GTwnD/XL/_W3H1524-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s5wsLGN/14/KsRmQmLdhBtJSw3qcq428CbsGxr5SPgPjwpTmHBVv/L/_W3H1524-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Hale-Farm-Civil-War-Reenactment-/i-s5wsLGN/14/NZ9k3CjCMxxx4Z4RJbX4QJB4ft7Z49SFBJNtBZDzQ/S/_W3H1524-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kvfSCpN",
     "title": "Young Union Soldier   Photography by Wayne Heim",
     "description": "Portrait of young Union soldier during Civil War reenactment. © Wayne Heim",
-    "alt": "Young Union Soldier   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/5/M7TQLhZZdCn7g7KdkGwB55LfpnJPjBnrk9gwgkMSJ/XL/_W3H2026-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/A",
+    "alt": "Mr Mayor       Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2582,15 +3091,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 101
+    "sortOrder": 101,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/5/LBpzdtjDgtxSfMpc6cnd9Q3GcnVDN5p69qzrsSd2f/XL/_W3H2026-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/5/LBpzdtjDgtxSfMpc6cnd9Q3GcnVDN5p69qzrsSd2f/XL/_W3H2026-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/5/LBpzdtjDgtxSfMpc6cnd9Q3GcnVDN5p69qzrsSd2f/XL/_W3H2026-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/5/LSStc4RpX6hDV4zpMjXRQHB7Cp8BCnfChsbwpw8HK/L/_W3H2026-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kvfSCpN/5/KdKdPXzL8qJ9sRfKQ7B8FtdR33wMscpQDWzStp3LQ/S/_W3H2026-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pqBnWFd",
     "title": "Union Troops Charge     Photography by Wayne Heim",
     "description": "Union troops charge during a civil war reenactment. © Wayne Heim",
-    "alt": "Union Troops Charge     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/4/Mn7k48CPWv3n93b9VLzQg8bQzNFbcH6qjkqz7thsn/XL/_W3H2112-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/A",
+    "alt": "Young Union Soldier   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2610,15 +3124,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 102
+    "sortOrder": 102,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/4/K3333MRMQkPvStwKQxGGNDc6D9zB7kVBk8sqqG7cv/XL/_W3H2112-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/4/K3333MRMQkPvStwKQxGGNDc6D9zB7kVBk8sqqG7cv/XL/_W3H2112-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/4/KVMgbvFJ25HGf9HVPnnfLTDbNcHqRThQJvhJxxzNS/L/_W3H2112-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/4/LNGZ9m9vM7nkw2DJ5X68DLpHf9zd2W3C56mkhS5xg/M/_W3H2112-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pqBnWFd/4/MVNR9mpfq5mDnMjZs8RBwWrsTnXVGhJ4g5D6XVxrw/S/_W3H2112-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Lwg8bsX",
     "title": "Checking the Rules    Photography by Wayne Heim",
     "description": "Reenactor appears to be checking rules of encounter at reenactment   © Wayne Heim",
-    "alt": "Checking the Rules    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Lwg8bsX/6/NRJKDzs5vX8dsXb3sxmtLDkqk5sfWksPWS2R28zvq/XL/_W3H3897-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Lwg8bsX/A",
+    "alt": "Union Troops Charge     Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Lwg8bsX/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2638,15 +3157,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 103
+    "sortOrder": 103,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Lwg8bsX/6/LhKQtcTc7Jm7fqHgZMzcfRWMRkZBHQhsnSSh2b6hR/XL/_W3H3897-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Lwg8bsX/6/LhKQtcTc7Jm7fqHgZMzcfRWMRkZBHQhsnSSh2b6hR/XL/_W3H3897-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Lwg8bsX/6/LhKQtcTc7Jm7fqHgZMzcfRWMRkZBHQhsnSSh2b6hR/XL/_W3H3897-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Lwg8bsX/6/KxRkfb7TQdLb9mvP7m6XW9NkjbdppPwq8FCZBBpbT/L/_W3H3897-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Lwg8bsX/6/K4vQLz76BmwrTdv9QHHN9W3HdvXBhwDrsjvQTbCSM/S/_W3H3897-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RxjLXGM",
     "title": "Leisure Talk   Black & White Photography by Wayne Heim",
     "description": "Three reenactor sit and chat in the Allied camp of D Day Conneaut.  © Wayne Heim",
-    "alt": "Leisure Talk   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-RxjLXGM/4/M3XmgRjPTfMWN5vgKCLL6Qx2bzTXrKb6kvtkdbtQk/XL/_W3H6528-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RxjLXGM/A",
+    "alt": "Checking the Rules    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RxjLXGM/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2666,15 +3190,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 104
+    "sortOrder": 104,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-RxjLXGM/4/LzRCRKCh8sVgbfKJpDvHsTqfmpdtZhgr3qgWjLrNJ/XL/_W3H6528-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-RxjLXGM/4/LzRCRKCh8sVgbfKJpDvHsTqfmpdtZhgr3qgWjLrNJ/XL/_W3H6528-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-RxjLXGM/4/LzRCRKCh8sVgbfKJpDvHsTqfmpdtZhgr3qgWjLrNJ/XL/_W3H6528-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-RxjLXGM/4/MrvX3RgZVFfgzs8FsVMQbf4VLqDx73f5LVJRkgMdK/L/_W3H6528-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-RxjLXGM/4/KX64XBw5J8CS6DZXg9LtLTCP7ZKRxfXstrXVqNdnB/S/_W3H6528-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LhVX3Qt",
     "title": "Portrait at Rockford   Black & White Photography by Wayne Heim",
     "description": "Young reenactor poses at the Rockford WWII reenactment. © Wayne Heim",
-    "alt": "Portrait at Rockford   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-LhVX3Qt/3/KvF8G8bC5sZz3pKc24VV3gTD49BPgVhJ5j4HBDPfS/XL/_WHZ8117-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-LhVX3Qt/A",
+    "alt": "Leisure Talk   Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-LhVX3Qt/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2694,15 +3223,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 105
+    "sortOrder": 105,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-LhVX3Qt/3/K9sVwgRkC2ZHxXDTJ2xgZPC4RfqGs8LR2XZgNfWVj/XL/_WHZ8117-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-LhVX3Qt/3/K9sVwgRkC2ZHxXDTJ2xgZPC4RfqGs8LR2XZgNfWVj/XL/_WHZ8117-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-LhVX3Qt/3/K9sVwgRkC2ZHxXDTJ2xgZPC4RfqGs8LR2XZgNfWVj/XL/_WHZ8117-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-LhVX3Qt/3/KTr988MvGrzhcVSHXMzvL3dTc73TzskQwwWTp2Jrm/L/_WHZ8117-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-LhVX3Qt/3/M6xxSx9qgwtKX83SQPfnccDcpzmWkdpqmgcpRkfMh/S/_WHZ8117-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7VwVNCk",
     "title": "That's Funny    Black & White Photography by Wayne Heim",
     "description": "Woman reenactor laughs at a joke during\n D Day  reenactment.   © Wayne Heim",
-    "alt": "That's Funny    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/2/KzZ2PbSwdLg96MKq9t3v4WzVJ9MttGgLnXv4hZdPr/XL/_WHZ4188-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/A",
+    "alt": "Portrait at Rockford   Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2722,15 +3256,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 106
+    "sortOrder": 106,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/2/KqjCqJrwBr9KS6MVzNhvrSZSHRnhTvJdGXdXdSD9m/XL/_WHZ4188-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/2/KqjCqJrwBr9KS6MVzNhvrSZSHRnhTvJdGXdXdSD9m/XL/_WHZ4188-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/2/KqjCqJrwBr9KS6MVzNhvrSZSHRnhTvJdGXdXdSD9m/XL/_WHZ4188-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/2/L3jmGT6KTc8pH3JW7TzjjfwHFf7sHCnvT9s53zZ9q/L/_WHZ4188-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7VwVNCk/2/LHxL88WKHLPsg5MPqmK5jD67tWMnR33SbRcsdqcmH/S/_WHZ4188-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mmqLB5K",
     "title": "Young Aide   Photography by Wayne Heim",
     "description": "Young girl act as aid during WWII reenactment.  © Wayne Heim",
-    "alt": "Young Aide   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mmqLB5K/3/Ndp3QjHL78G4xdC56VJcFxJmXq7kQVD6Ck7Hfc9tm/XL/_OLY2867-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mmqLB5K/A",
+    "alt": "That's Funny    Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-mmqLB5K/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2750,15 +3289,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 107
+    "sortOrder": 107,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mmqLB5K/3/NDKtNm2pFLRkM4xSxsR7gkMq5gZGbNhHJnTZJKSZM/XL/_OLY2867-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mmqLB5K/3/NDKtNm2pFLRkM4xSxsR7gkMq5gZGbNhHJnTZJKSZM/XL/_OLY2867-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mmqLB5K/3/NDKtNm2pFLRkM4xSxsR7gkMq5gZGbNhHJnTZJKSZM/XL/_OLY2867-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mmqLB5K/3/L64JJkVVSx69kqhhCCxM8fVq4bfdR4NKWvL8r2nN9/L/_OLY2867-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mmqLB5K/3/Nf6DtjQxhKg29NZcdCwkFwtvnDCJbmJrBBLgmsvdT/S/_OLY2867-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7vJM8T5",
     "title": "War Correspondent  Black and White Photography by Wayne Heim",
     "description": "War Correspondent takes a rest during D-Day Conneaut.   © Wayne Heim",
-    "alt": "War Correspondent  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7vJM8T5/3/NVszWZv3qtXBGFDvdBP8jsHzWDQqzMVfRrtKHqskt/XL/P8180900-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7vJM8T5/A",
+    "alt": "Young Aide   Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7vJM8T5/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2778,15 +3322,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 108
+    "sortOrder": 108,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7vJM8T5/3/NPX4zkbGSnpCFw9PZH7PD3mt4XknG2hcQ5rtwfPF6/XL/P8180900-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7vJM8T5/3/NPX4zkbGSnpCFw9PZH7PD3mt4XknG2hcQ5rtwfPF6/XL/P8180900-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7vJM8T5/3/NPX4zkbGSnpCFw9PZH7PD3mt4XknG2hcQ5rtwfPF6/XL/P8180900-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7vJM8T5/3/LvzhWD8B7PjM9KLPrTjw9FVPx3D9rzLzKW9FnPPRG/L/P8180900-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7vJM8T5/3/MvsjJM3NqLsBXrbPLn2GG95pTF537GJbCrJXDW5SG/S/P8180900-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VC8KtTj",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
-    "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/1/K8X5cR82nhFrWSKkxffXjXhK8TMJwdT2NFDX6b88m/XL/_K1W1064-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/A",
+    "alt": "War Correspondent  Black and White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2806,15 +3355,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 109
+    "sortOrder": 109,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/1/KRNcNQBWLn2TKwMQTTGDF2bx3ZxHs443hhMPzv9kR/XL/_K1W1064-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/1/KRNcNQBWLn2TKwMQTTGDF2bx3ZxHs443hhMPzv9kR/XL/_K1W1064-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/1/KRNcNQBWLn2TKwMQTTGDF2bx3ZxHs443hhMPzv9kR/XL/_K1W1064-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/1/M8k97zjkCKKhWV6ZhC3w3cjWmMCHmJ8zBhKzwWP3P/L/_K1W1064-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VC8KtTj/1/NBpWngpJn7F2TM5Tv6G5BK9p8mDpzffzfGF79k77D/S/_K1W1064-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qfPmmsJ",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/1/KTHhm88tGj5gQ8v7HZcNhVF7BHXjVPd7HmSG7K7VX/XL/_K1W1360-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2834,15 +3388,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 110,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/1/LXptSMsRjWVWgr7PDvXZRQNRmgRjDxcHtjcNqF52B/XL/_K1W1360-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/1/LXptSMsRjWVWgr7PDvXZRQNRmgRjDxcHtjcNqF52B/XL/_K1W1360-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/1/MfLDZmSm3TjbGRt5fKfpGj3dFSdk36CbSH5mrXdpb/L/_K1W1360-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/1/NDZRtDXxNgFDNGr459kWT4mzRHGXpVWn6JxV39hDv/M/_K1W1360-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qfPmmsJ/1/LDBBmdrtdCX7mwgSsWS789H67qnbXFW4LwrJ9pB3Z/S/_K1W1360-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tpBwQzL",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/1/NKdmKrfhF36gcqt24wKxpSvq9Pp9dCRDW57Zwcp84/XL/_8171247-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2862,15 +3421,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 111
+    "sortOrder": 111,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/1/Kg6r3Gz5CV6xPTzSx32z4gG8CPWHBwHpvSdjHsx64/XL/_8171247-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/1/Kg6r3Gz5CV6xPTzSx32z4gG8CPWHBwHpvSdjHsx64/XL/_8171247-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/1/Kg6r3Gz5CV6xPTzSx32z4gG8CPWHBwHpvSdjHsx64/XL/_8171247-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/1/MK8sqGJZJ2wjLzdTP4QFC3SRxgdDwsDtMR6NRLx87/L/_8171247-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tpBwQzL/1/KMTXNcWvkXvmzrWrkBgLq62k2jcbKLwjmvmNqvJXk/S/_8171247-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tKZP3Hq",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/1/Lz6RBkCWCFdJkfj3hdzn7d3nrwWQkPkXSQ7fSVPw9/XL/_OLY2320-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2890,15 +3454,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 112
+    "sortOrder": 112,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/1/KQFhkv5HC8wrXskcqRBQmhf2VzQXNvj43HmMcXMJZ/XL/_OLY2320-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/1/KQFhkv5HC8wrXskcqRBQmhf2VzQXNvj43HmMcXMJZ/XL/_OLY2320-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/1/NNdFkbp8TfNKSPGtSj6dfq7Nkrt8wN7p6bDMsJ2R9/L/_OLY2320-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/1/KW2LwRRWh996WLJkss43JBXwF9dDCmLrsXXFnwbgk/M/_OLY2320-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-tKZP3Hq/1/L9GSxB7F9VVNDBnn7tzK4T5kFRScJg4CdX6RCJV9g/S/_OLY2320-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nVVdKFm",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/LLPxL6P5H6gDdFSLGVtsCD9NwwhbTFmRpLG2FhnKf/XL/_K1W1423-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2918,15 +3487,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 113
+    "sortOrder": 113,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/MhrZrdDwm3n4bxdPHvL5xvkbsznG2MnTT5Q2P7xj5/XL/_K1W1423-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/MhrZrdDwm3n4bxdPHvL5xvkbsznG2MnTT5Q2P7xj5/XL/_K1W1423-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/MhrZrdDwm3n4bxdPHvL5xvkbsznG2MnTT5Q2P7xj5/XL/_K1W1423-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/NGxDsgjpNhJSDMZhW6d5DQFvtzKm5Bg5hFbnwFxF4/L/_K1W1423-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nVVdKFm/1/KV2VZwh3F4L9ZmL7mRw3pKF2dpJgrqD6DrR8TrQZg/S/_K1W1423-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-39mSbkS",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/1/MMJHT5vhhLSRR9JfHbZDsJGg72NmnxbkJ8VcGVVRH/XL/_K1W1441-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2946,15 +3520,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 114
+    "sortOrder": 114,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/1/LvxXBqP3vBvMKqHwVQLVrWqsbmMNMGnrKrR37RnvQ/XL/_K1W1441-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/1/LvxXBqP3vBvMKqHwVQLVrWqsbmMNMGnrKrR37RnvQ/XL/_K1W1441-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/1/LvxXBqP3vBvMKqHwVQLVrWqsbmMNMGnrKrR37RnvQ/XL/_K1W1441-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/1/KbCnkG4wgWNBsJZktXfDmM28stG7SbMXKxLHr7cHn/L/_K1W1441-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-39mSbkS/1/LZbFJGBfC3gWXZ7Pcjx9QDBSBdbsg78Cm7wrzZ757/S/_K1W1441-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-djZrQxQ",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/2/KthSBmR8rpBBTLdX8jgwmzGtWzhcpPKTbXb2GLs8q/XL/_OLY7510-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -2974,15 +3553,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 115
+    "sortOrder": 115,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/2/KzTTFvt3cJPS4KZVZCRc3cwqm2rTbxmd8zDnJ98rT/XL/_OLY7510-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/2/KzTTFvt3cJPS4KZVZCRc3cwqm2rTbxmd8zDnJ98rT/XL/_OLY7510-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/2/KzTTFvt3cJPS4KZVZCRc3cwqm2rTbxmd8zDnJ98rT/XL/_OLY7510-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/2/LpzSD5sNLtbDn97Vndvv7TS9c2nq54cKV8WZkjjm2/L/_OLY7510-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-djZrQxQ/2/KZWtxD4fcRcMv2GZpxw89XSnTJfBpw5nmgh7TBXPX/S/_OLY7510-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jFZMg3C",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/1/NRcKC4TcVtznmVCNcBfVgkP35gWTgJDBHxCkRHT3z/XL/_OLY7602-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3002,15 +3586,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 116
+    "sortOrder": 116,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/1/KQ6FRfXd5pnFzjdzQHpH8T7xCkLn9qdWPHFFKztB3/XL/_OLY7602-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/1/KQ6FRfXd5pnFzjdzQHpH8T7xCkLn9qdWPHFFKztB3/XL/_OLY7602-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/1/KQ6FRfXd5pnFzjdzQHpH8T7xCkLn9qdWPHFFKztB3/XL/_OLY7602-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/1/KwGjCHgcsGMQ67gZK3GBx4T9Kfb8TDhkFJrxJ7MkR/L/_OLY7602-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jFZMg3C/1/MbbTZXLdVrknFf8BZ9SpLNdLsR4X8pmc3d8XVWF2L/S/_OLY7602-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pBMmvMZ",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/1/KRVRkS9CW4ZmDqXbXfW4qjRPknvRGpGQjw6xdWZHV/XL/_8182447-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3030,15 +3619,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 117
+    "sortOrder": 117,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/1/NVDWDnFw4SLJrbmVT79F7hXSN3T225sSfTvzGxSJg/XL/_8182447-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/1/NVDWDnFw4SLJrbmVT79F7hXSN3T225sSfTvzGxSJg/XL/_8182447-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/1/NVDWDnFw4SLJrbmVT79F7hXSN3T225sSfTvzGxSJg/XL/_8182447-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/1/NcDWLxqPPgvQR6V5Rg22WQzmz8C7K3jJDdxvGXDpf/L/_8182447-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pBMmvMZ/1/NcDWLxqPPgvQR6V5Rg22WQzmz8C7K3jJDdxvGXDpf/L/_8182447-L.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fjmNj9W",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/1/LfVBFnMnwCcctpG9rK9nJtZSMn77gkgvxbSx4jxpn/XL/_K1W1094-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3058,15 +3652,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 118
+    "sortOrder": 118,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/1/L4xS2cbKWzjMPP6HHz6VLqSrvBLBctQ2jSNJLkttb/XL/_K1W1094-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/1/L4xS2cbKWzjMPP6HHz6VLqSrvBLBctQ2jSNJLkttb/XL/_K1W1094-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/1/L4xS2cbKWzjMPP6HHz6VLqSrvBLBctQ2jSNJLkttb/XL/_K1W1094-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/1/KT5wMK8zpbHmGmQfS3xXwFMgx2kd45HMF2Gzvn8vf/L/_K1W1094-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-fjmNj9W/1/Lhhrp4h7b6QgR7gLTqmBFv2Lw2ZvqjtSxbJRxXQxw/S/_K1W1094-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7rkr8Z6",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/1/MWCrMckg3SSzRhqRLQkGxcNfFKwVNgK4Z3FDjwC9j/XL/_WHZ5754-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3086,15 +3685,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 119
+    "sortOrder": 119,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/1/KZPXnp4J25SWJvNzwpXZ8zBC64CbTFswvqMN7kp93/XL/_WHZ5754-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/1/KZPXnp4J25SWJvNzwpXZ8zBC64CbTFswvqMN7kp93/XL/_WHZ5754-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/1/MbxhcDPSTVHKXd2ph4dJcK4GG8G739XF5J6WZgbHQ/L/_WHZ5754-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/1/KXF98sSgKm5vQ74QMQq8scJDKhDw2FBnXR6kLwH4N/M/_WHZ5754-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-7rkr8Z6/1/MfmHxd4Vtfs6zcJ25GLBrdSghBZWHhMvkq2j2GXWK/S/_WHZ5754-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XNtPzD7",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/1/Kf4W4kWFxqjWqVVjLgJ4988KQ3c6Nt6zrFtRw3BrV/XL/_WHZ5821-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3114,15 +3718,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 120
+    "sortOrder": 120,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/1/L35ng4cSm5N2KK847cz9Sw54rjVQ6BppwsvDn73LQ/XL/_WHZ5821-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/1/L35ng4cSm5N2KK847cz9Sw54rjVQ6BppwsvDn73LQ/XL/_WHZ5821-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/1/L35ng4cSm5N2KK847cz9Sw54rjVQ6BppwsvDn73LQ/XL/_WHZ5821-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/1/LTWhBR8RhFsbLRmZ4ZmXDVCXbSDfmj8dHG5N33vJz/L/_WHZ5821-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XNtPzD7/1/LSMD7pspmWvNCXJtbfcVLMRQt6cT6GGhrBv8MXCVK/S/_WHZ5821-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qpKS7tN",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/1/MsrwCsGtXtc4jL47BdLpSK5xzgXM7sQzsBfFqfbbK/XL/_WHZ5796-Edit-3_pp-Edit-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3142,15 +3751,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 121
+    "sortOrder": 121,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/1/K6w2T26bF7wTTMZmXs62S7pFRkNDPZ2PqD5W9zMDK/XL/_WHZ5796-Edit-3_pp-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/1/K6w2T26bF7wTTMZmXs62S7pFRkNDPZ2PqD5W9zMDK/XL/_WHZ5796-Edit-3_pp-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/1/K6w2T26bF7wTTMZmXs62S7pFRkNDPZ2PqD5W9zMDK/XL/_WHZ5796-Edit-3_pp-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/1/Kb9ZSQFvF2hkkMpPkgVjDqCvMM8sCmBpPfD6wjfHq/L/_WHZ5796-Edit-3_pp-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qpKS7tN/1/LcjgPB272gxQrK3Gdv7Q4MJTDGcr2J8DXRJgnDCDB/S/_WHZ5796-Edit-3_pp-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZkcTsDM",
     "title": "Untitled",
     "description": "© Wayne Heim 2018",
     "alt": "© Wayne Heim 2018",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/1/NgPpV8wnmF4SJb76dJCnHfcWBxX8VxZtHnJ6swxZm/XL/_WHZ5823-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3170,15 +3784,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 122
+    "sortOrder": 122,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/1/MSvX2HTgzrhzGWn7r7zbN9fRDVkmnLMgBZ6vcMnxG/XL/_WHZ5823-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/1/MSvX2HTgzrhzGWn7r7zbN9fRDVkmnLMgBZ6vcMnxG/XL/_WHZ5823-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/1/MSvX2HTgzrhzGWn7r7zbN9fRDVkmnLMgBZ6vcMnxG/XL/_WHZ5823-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/1/KL5f3GShKL5FWjQhcM8Qm4zK9dXfHfZdTSsXb7kkt/L/_WHZ5823-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-ZkcTsDM/1/MzR2kGB3Qsk74NLsjf9j46vSBDLGqR7cpvV2kT8F4/S/_WHZ5823-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3VnsXB3",
     "title": "Like Your Hat    Photography by Wayne Heim",
     "description": "Girl tries on sailor's hat during the USO Dance at D Day Conneaut. © Wayne Heim",
-    "alt": "Like Your Hat    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VnsXB3/3/K7SDsDwn9PdzKBMWxwT6QNCcb6Z7p3QDsnCstzt4S/XL/_WHZ5416-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-3VnsXB3/A",
+    "alt": "© Wayne Heim 2018",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-3VnsXB3/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3198,15 +3817,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 123
+    "sortOrder": 123,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VnsXB3/3/M2zZPc86JJ3p5xBkRNrWDSN6L8ZMVmxXd9mc4CWcS/XL/_WHZ5416-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VnsXB3/3/M2zZPc86JJ3p5xBkRNrWDSN6L8ZMVmxXd9mc4CWcS/XL/_WHZ5416-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VnsXB3/3/Kg263VX87MLNfcDFJMJZvTCbfLpzs76wsTkpZ7v3V/L/_WHZ5416-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VnsXB3/3/L8S6v6qTB4QJvgpH6KzfGDZmmn3GVM4q4wqZhWKhG/M/_WHZ5416-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VnsXB3/3/MFsgtcWfMW82KxB8wqkQvfQMg9W6gN4nxqbsnfdzK/S/_WHZ5416-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qNCs79W",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/1/KbXQBhsNZcKdtSJqQxQXqWVcBGTf6wNzLkgVqJfFj/XL/_IMG8552-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/A",
+    "alt": "Like Your Hat    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3226,15 +3850,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 124
+    "sortOrder": 124,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/1/L5gG7vtVTGsCcQ6fK23wF4gm3RZTXg8k6gx5xCPNx/XL/_IMG8552-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/1/L5gG7vtVTGsCcQ6fK23wF4gm3RZTXg8k6gx5xCPNx/XL/_IMG8552-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/1/Mc4gM94rtbq5sdfJPkDtjnxRMwgrtzjk972Rvd4xf/L/_IMG8552-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/1/KZTdXVBfbwwxTJ3TrPvq7HqZjqpHpkVC79KCg2b53/M/_IMG8552-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-qNCs79W/1/KQ5Pw96Tz25JSqZgHQ6KZgd3fvQT6ZHG54wcWgnSM/S/_IMG8552-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pjp2Fn2",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
-    "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/1/KNkn5JT8VBHkgvPp4DRvmvV8CFBg5GMrsTX23wNZv/XL/_ANA5778-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3254,15 +3883,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 125
+    "sortOrder": 125,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/1/Kr2hCHW9b4qqLcZXHFJ5GCTBrDnLFM9n2w8K29XXv/XL/_ANA5778-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/1/Kr2hCHW9b4qqLcZXHFJ5GCTBrDnLFM9n2w8K29XXv/XL/_ANA5778-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/1/Kr2hCHW9b4qqLcZXHFJ5GCTBrDnLFM9n2w8K29XXv/XL/_ANA5778-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/1/M6rKspKmVgxhwVX7SdrtK89TbFZscsn6qRDhF8Z28/L/_ANA5778-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pjp2Fn2/1/MwKxDVQtWZ6mdGHswWh3wMpF6gsBJHgVCqZxXdGdG/S/_ANA5778-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kBjb67r",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/2/M8DhWLTnJjMWq7fJznGX6sLvdp9KKf8bFm7gxkj65/XL/_PEN0595-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3282,15 +3916,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 126
+    "sortOrder": 126,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/2/LvL6tkfS3hhkh9Bt8qFGN8ThtrbvRHnkMvFqpgFjK/XL/_PEN0595-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/2/LvL6tkfS3hhkh9Bt8qFGN8ThtrbvRHnkMvFqpgFjK/XL/_PEN0595-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/2/NZkpt52KRKwGx8p4x5GqrsgWRNH3nf76DSGzC9m4C/L/_PEN0595-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/2/NDkCx4hNQ9JjKCP75f798MQhqwpHxXFxXGVjSx9vR/M/_PEN0595-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kBjb67r/2/KD4kRkVVKBGnVh7MNwTqNK862xVTbWcCf4gLjRG94/S/_PEN0595-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-r6sLgbF",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/1/KQ3k7H7Ws7K5SdWZn8FjjZwpwZD7Xb3gmS2cKNHwD/XL/_OL38491-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3310,15 +3949,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 127
+    "sortOrder": 127,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/1/MsZb5fGdHv4s4N3jrwRjGdJgM9D5mhM9BFqjwXK6f/XL/_OL38491-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/1/MsZb5fGdHv4s4N3jrwRjGdJgM9D5mhM9BFqjwXK6f/XL/_OL38491-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/1/Mj2znXGnpbqQxHPRFzsQrrs8SbPQH3Xc3bSCn9T83/L/_OL38491-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/1/L7k6JsZdwG89jsfCQWdx5tFJcThtBJNR3RvhmKn48/M/_OL38491-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-r6sLgbF/1/Lx8r6dn3Mr2cr3FjMpVJtxXNMgCq9Wkvt3PpBVxR9/S/_OL38491-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2mLnKzM",
     "title": "Dancing Not Flying    Photography by Wayne Heim",
     "description": "Airborne soldier dance instead of flying.  © Wayne Heim",
-    "alt": "Dancing Not Flying    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2mLnKzM/3/KvwjhkQZjw2TcDqnKPmBHwJ9tQsXzrvzpv2HQSPZw/XL/_WHZ5385-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2mLnKzM/A",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-2mLnKzM/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3338,15 +3982,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 128
+    "sortOrder": 128,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2mLnKzM/3/KMHpFV2z8GPQQb5hvLpB9dWnmF6FNcXDtxhPJp7hj/XL/_WHZ5385-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2mLnKzM/3/KMHpFV2z8GPQQb5hvLpB9dWnmF6FNcXDtxhPJp7hj/XL/_WHZ5385-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2mLnKzM/3/Nb5Jcr8WqJZtTH8MvM5HxSzsGt2MLfzbp897BZqVm/L/_WHZ5385-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2mLnKzM/3/MMQss6jfBjLXfQTTFzXrsZWqhMkq9pzMvxR9s3HDT/M/_WHZ5385-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2mLnKzM/3/MJB53VwX9dhw46J7jbbLkkN6NbvRzVLNKnVmqrsSk/S/_WHZ5385-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XGxmxvJ",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XGxmxvJ/2/Mcv8bZ5cq6vCWDH7HSf66GZ73NfSTTfXNvGWszdDr/XL/_DSF3060-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XGxmxvJ/A",
+    "alt": "Dancing Not Flying    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XGxmxvJ/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3366,15 +4015,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 129
+    "sortOrder": 129,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XGxmxvJ/2/MfC7gw2NF7RvTkwFfx8Gb8XxcGH2Bbm2d3QLXqwdJ/XL/_DSF3060-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XGxmxvJ/2/MfC7gw2NF7RvTkwFfx8Gb8XxcGH2Bbm2d3QLXqwdJ/XL/_DSF3060-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XGxmxvJ/2/MfC7gw2NF7RvTkwFfx8Gb8XxcGH2Bbm2d3QLXqwdJ/XL/_DSF3060-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XGxmxvJ/2/LD4Sp7Js6kNWXdZnCRKxdCvvhqv8thx6FWDKMXFJK/L/_DSF3060-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-XGxmxvJ/2/MJxRPhfFj8qKCC6bTRGfjfv3sbLx7kh677pqTwRRN/S/_DSF3060-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nktmGwh",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nktmGwh/9/LHrj5BZ9wqrqsmX5ndz9H2dTBPDkkWXwNB9jnB9Z4/XL/_DSF2451-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nktmGwh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nktmGwh/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3394,15 +4048,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 130
+    "sortOrder": 130,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nktmGwh/9/NRHXMhG76F4RqfmXrbF4j6jgrpcCcb4WpJf98cHLP/XL/_DSF2451-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nktmGwh/9/NRHXMhG76F4RqfmXrbF4j6jgrpcCcb4WpJf98cHLP/XL/_DSF2451-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nktmGwh/9/Mjc7DV6V3T3BxBkP878xFNPKS8khzWMtDGkg6mMQT/L/_DSF2451-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nktmGwh/9/L8snVMRvpXFjChQsgVrF6pmgJMBD2PLrLhgp237Bp/M/_DSF2451-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nktmGwh/9/MxKskcP5Mdj655B7htSZgk4kQdRHwBXVvkvssWxM5/S/_DSF2451-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gSLFRvV",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-gSLFRvV/2/K26v8pQqNpZtnZ3DNkFf5dcTdJF68VJ7MpVK2GcdS/XL/_DSF3141-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-gSLFRvV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-gSLFRvV/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3422,15 +4081,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 131
+    "sortOrder": 131,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-gSLFRvV/2/Mg9zBXxLBVmWqhbLDmJg2ckPdfM7KjHtdV2pbwPfr/XL/_DSF3141-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-gSLFRvV/2/Mg9zBXxLBVmWqhbLDmJg2ckPdfM7KjHtdV2pbwPfr/XL/_DSF3141-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-gSLFRvV/2/Mg9zBXxLBVmWqhbLDmJg2ckPdfM7KjHtdV2pbwPfr/XL/_DSF3141-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-gSLFRvV/2/KmXGS8cNr34q5vZVPH35CzvDZVxHhDjvWWSnF8z5F/L/_DSF3141-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-gSLFRvV/2/L3hd6wFSg6bRJVHkdCc9P9fGTv4nmdGNrz4KDswjS/S/_DSF3141-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NfHK4bH",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-NfHK4bH/7/LBdrXng6ChZGN77899Gd8NpgTc7N8JnmCpL24WGKb/XL/_DSF2514-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-NfHK4bH/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-NfHK4bH/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3450,15 +4114,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 132
+    "sortOrder": 132,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-NfHK4bH/7/LWqrXQBJKk9knfgkBBRTHfM9qqhjt8jGM9J3qHKjz/XL/_DSF2514-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-NfHK4bH/7/LWqrXQBJKk9knfgkBBRTHfM9qqhjt8jGM9J3qHKjz/XL/_DSF2514-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-NfHK4bH/7/LWqrXQBJKk9knfgkBBRTHfM9qqhjt8jGM9J3qHKjz/XL/_DSF2514-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-NfHK4bH/7/LJwd3rC6w54dLQfLmZj2gtH9cFhBcRQFjRspBWK8N/L/_DSF2514-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-NfHK4bH/7/NXZjm3h3CHz6bPRs5ctK7c228vJScRwQRmSN6Kwrp/S/_DSF2514-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HpPSqDN",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-HpPSqDN/8/MSF9TtKKxpVhwnJ8Jv4RbSgW5cqpMtQrJjLF5Zsbp/XL/_DSF3300-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HpPSqDN/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HpPSqDN/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3478,15 +4147,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 133
+    "sortOrder": 133,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-HpPSqDN/8/NSLBw5tPthMRS8p85Db3x7VMNShRxZVcDv6wxwFjx/XL/_DSF3300-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-HpPSqDN/8/NSLBw5tPthMRS8p85Db3x7VMNShRxZVcDv6wxwFjx/XL/_DSF3300-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-HpPSqDN/8/NSLBw5tPthMRS8p85Db3x7VMNShRxZVcDv6wxwFjx/XL/_DSF3300-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-HpPSqDN/8/KF7ZsBPmK6nZLGBF8MhtZMX6tvT5sf2MBq7Hc7nvK/L/_DSF3300-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-HpPSqDN/8/KTcsNrD3h6JDwFnvxpxvPcmL3zzDV5Rgd9n82MC9D/S/_DSF3300-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-54pbbvZ",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-54pbbvZ/8/MPxhBT5TjHwZqQv7Fp4bxpf4pfmG8gpnmKvwZ42f7/XL/_DSF3362-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-54pbbvZ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-54pbbvZ/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3506,15 +4180,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 134
+    "sortOrder": 134,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-54pbbvZ/8/LVxhQzpX4pdssMsDpTG52qZv8bsJg6NgggnkvqWFF/XL/_DSF3362-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-54pbbvZ/8/LVxhQzpX4pdssMsDpTG52qZv8bsJg6NgggnkvqWFF/XL/_DSF3362-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-54pbbvZ/8/LVxhQzpX4pdssMsDpTG52qZv8bsJg6NgggnkvqWFF/XL/_DSF3362-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-54pbbvZ/8/KMhz2BmkGj4NWcTjcQZpNdK6LGrB8Szk57ZCnF34q/L/_DSF3362-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-54pbbvZ/8/MXwbbrpFx9D8PjC3GTRNsT4C5SxJK7DkHz6x727Bs/S/_DSF3362-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-t9JXs5s",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-t9JXs5s/1/KwDbDTTC8ZNPg2BLgLZTWfGb82rpn6RbQpQhrf959/XL/_DSF3444-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-t9JXs5s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-t9JXs5s/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3534,15 +4213,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 135
+    "sortOrder": 135,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-t9JXs5s/1/Mk2tJkNvPMfTK2dDBbzCn3PFLdQSh6kvN6DzNcDBv/XL/_DSF3444-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-t9JXs5s/1/Mk2tJkNvPMfTK2dDBbzCn3PFLdQSh6kvN6DzNcDBv/XL/_DSF3444-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-t9JXs5s/1/LgzsjZLPWpdzcWLbxQQx7bvzL4mV2tddmQG8f8BRf/L/_DSF3444-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-t9JXs5s/1/Kdt77wnVX5nhTJ9hq7Btqc47sT3wK8LVhqR9sJ94p/M/_DSF3444-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-t9JXs5s/1/KfqKv22mkKJ394vBdbwn2m8m6qNcQtmT4Lzf8smFb/S/_DSF3444-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9Nxnvfb",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9Nxnvfb/8/LLBC5Kq4VPq9Skhn2F7vDzVDhkQhdr2CV2dzKf3SR/XL/_DSF2590-Enhanced-NR-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9Nxnvfb/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9Nxnvfb/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3562,15 +4246,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 136
+    "sortOrder": 136,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9Nxnvfb/8/MsNZZd8NWBF8Nm9RmX6XZXsZm8jvSt6sc7TCS3C99/XL/_DSF2590-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9Nxnvfb/8/MsNZZd8NWBF8Nm9RmX6XZXsZm8jvSt6sc7TCS3C99/XL/_DSF2590-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9Nxnvfb/8/MsNZZd8NWBF8Nm9RmX6XZXsZm8jvSt6sc7TCS3C99/XL/_DSF2590-Enhanced-NR-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9Nxnvfb/8/KcHXfRmqSjzSKzgDvZQP3zVM2WxvGkGG87zWqBZSB/L/_DSF2590-Enhanced-NR-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9Nxnvfb/8/MNTBcsw8WWn5bp3k9QJrDTcScbDxtDsVv6cQbWMZL/S/_DSF2590-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KFt8HPV",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-KFt8HPV/9/NMWHn7kdPv5Qn3g5tVqSdN6Rgqx7jFJct7QTxTbt7/XL/_O1H0933-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KFt8HPV/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-KFt8HPV/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3590,15 +4279,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 137
+    "sortOrder": 137,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-KFt8HPV/9/MRjMjjz4523H3NFLjNLpSnwNhTZPnsVNzDC3jW6NZ/XL/_O1H0933-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-KFt8HPV/9/MRjMjjz4523H3NFLjNLpSnwNhTZPnsVNzDC3jW6NZ/XL/_O1H0933-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-KFt8HPV/9/MRjMjjz4523H3NFLjNLpSnwNhTZPnsVNzDC3jW6NZ/XL/_O1H0933-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-KFt8HPV/9/KSmKXtcBzvwPvTfwBZnWcQ9xfV8dBMTrLRpBszLzZ/L/_O1H0933-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-KFt8HPV/9/KshsKv6mQV29CRbNd4XL83sTVFpgvVpdBxgKLkJCJ/S/_O1H0933-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6CG4M79",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-6CG4M79/8/LhRDRMjj7HZ5v8JwBNCvF4HR5xzGbccVW2D8s43Dn/XL/_DSF2623-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-6CG4M79/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-6CG4M79/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3618,15 +4312,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 138
+    "sortOrder": 138,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-6CG4M79/8/LQbQ7SxNq2KdkTK499RdRHMWjjbC3CZVJkdxDw2pW/XL/_DSF2623-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-6CG4M79/8/LQbQ7SxNq2KdkTK499RdRHMWjjbC3CZVJkdxDw2pW/XL/_DSF2623-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-6CG4M79/8/LQbQ7SxNq2KdkTK499RdRHMWjjbC3CZVJkdxDw2pW/XL/_DSF2623-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-6CG4M79/8/NJBNtRP82LQjGtC5L2xZ5zQ63dtT6f5QnDgLqb5zj/L/_DSF2623-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-6CG4M79/8/LjTQvBWtJw9D3xTkzzqWLk8j5dFKv4fKVnFKKnWPX/S/_DSF2623-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nvrqCNC",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nvrqCNC/8/KxK86JX994KLQPXd3rGBP6q5NBsgWbR3tDsz2Sq3D/XL/_DSF2791-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nvrqCNC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-nvrqCNC/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3646,15 +4345,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 139
+    "sortOrder": 139,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nvrqCNC/8/NbH3Nw2mkmjQDS62MHXx8rm3bRSBpHhK8G4LGpZMK/XL/_DSF2791-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nvrqCNC/8/NbH3Nw2mkmjQDS62MHXx8rm3bRSBpHhK8G4LGpZMK/XL/_DSF2791-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nvrqCNC/8/MGwB3n4HgBswKz5PmmvPMMtz3TC9B5vBmtGq9qdNz/L/_DSF2791-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nvrqCNC/8/LHv8D3cjmhRCPdxHsswsGKxDWj48BBC6RCHdfFHKD/M/_DSF2791-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nvrqCNC/8/LkGQvNpdGb5ZHrJD7DRPX6q66zbCZxH4ttwjK2dQz/S/_DSF2791-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8NFCwF9",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-8NFCwF9/3/MCnkdtCb9Rj5SfJB4Pqncw5PZzdZ3t8n6fF6KkZfR/XL/_DSF3049-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8NFCwF9/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-8NFCwF9/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3674,15 +4378,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 140
+    "sortOrder": 140,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-8NFCwF9/3/NBNxW8PG2fvf7LtDtzNCmpLTHfS3DHQ9w5swwsW9N/XL/_DSF3049-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-8NFCwF9/3/NBNxW8PG2fvf7LtDtzNCmpLTHfS3DHQ9w5swwsW9N/XL/_DSF3049-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-8NFCwF9/3/NBNxW8PG2fvf7LtDtzNCmpLTHfS3DHQ9w5swwsW9N/XL/_DSF3049-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-8NFCwF9/3/KNq6DnCF5xDZ49qpX8FpQDMxKPg4XnkRVW5nTn5D9/L/_DSF3049-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-8NFCwF9/3/Mnv5kjq8w75xBwgqMz5CmXnTmbG3gbHWZ7pWZB2b5/S/_DSF3049-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Pq9zH8k",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Pq9zH8k/3/NTjwZns3jdnmmgbvmTBDR66QdH7XWG42FN67GPDxc/XL/_HF20097-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Pq9zH8k/A",
+    "alt": "1920's  at Old Bedford Village",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Pq9zH8k/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3702,15 +4411,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 141
+    "sortOrder": 141,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Pq9zH8k/3/Mdw7F2FZfjfH5xkcxmT9kvqPMXrxpnWDxHM2VgB2p/XL/_HF20097-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Pq9zH8k/3/Mdw7F2FZfjfH5xkcxmT9kvqPMXrxpnWDxHM2VgB2p/XL/_HF20097-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Pq9zH8k/3/NHDxVJn67br4Xp5PzXVztqsbvXJJd8VwjSVStBVNj/L/_HF20097-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Pq9zH8k/3/NWCLZBtcC9Qh3m8zxn688nPWNgJw5XNHL3XFQQqcN/M/_HF20097-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Pq9zH8k/3/KrVw7zSbQxCN5KbVZHWxNFX6gPzRDLKv5Qv4Rq56b/S/_HF20097-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SQLp9tD",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SQLp9tD/3/KTXRFrTdXQCHSCbrXD78s7hQR8BnrLtvsms6hGMkb/XL/_HF20143-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-SQLp9tD/A",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-SQLp9tD/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3730,15 +4444,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 142
+    "sortOrder": 142,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SQLp9tD/3/LGrPN8pJhR8zVVHbsFmgb7TMggL4bkCL4fkQd8m77/XL/_HF20143-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SQLp9tD/3/LGrPN8pJhR8zVVHbsFmgb7TMggL4bkCL4fkQd8m77/XL/_HF20143-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SQLp9tD/3/LGrPN8pJhR8zVVHbsFmgb7TMggL4bkCL4fkQd8m77/XL/_HF20143-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SQLp9tD/3/Kj4GgJsdwB5Nmn8gwQ3ZgZFZXWVGwxDhKwCRCRQMf/L/_HF20143-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SQLp9tD/3/NQcd9z3HwNd6LDf2bc2pSH3K2x4kdXfTbwJqZqRsF/S/_HF20143-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hF6kxcd",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hF6kxcd/4/LPNL2TxX5B3ZVLDDs8BjZq3vwF3DWcNMjkhH9RVPH/XL/_HF29857-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hF6kxcd/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hF6kxcd/A",
     "keywords": [
       "Allied Camp",
       "Spotlight on Reenactors",
@@ -3758,15 +4477,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 143
+    "sortOrder": 143,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hF6kxcd/4/NKp98ccqRrvK2h6wkjmPgQvXJwSvr82b4n8L2nhRG/XL/_HF29857-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hF6kxcd/4/NKp98ccqRrvK2h6wkjmPgQvXJwSvr82b4n8L2nhRG/XL/_HF29857-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hF6kxcd/4/NKp98ccqRrvK2h6wkjmPgQvXJwSvr82b4n8L2nhRG/XL/_HF29857-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hF6kxcd/4/KmsnRM4HqgCrCS74c4fFV8Bh2zWwJsrF7g92cLzG5/L/_HF29857-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hF6kxcd/4/KrvkMpg2sGMWJ68B4PmThJSTjrGwx5pMPpxcdSDj7/S/_HF29857-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XncvD6D",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/3/K5RfQghfdQ3KxQ7bbhTFL37LV4mNmkZhvDsGCTHrx/XL/_O1H1884-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/A",
     "keywords": [
       "a",
       "fine art",
@@ -3782,15 +4506,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 144
+    "sortOrder": 144,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/3/NbGjWtCb8NHG9Rw2FdRnJq3rWdJnxMtzT3S8Wdfn4/XL/_O1H1884-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/3/NbGjWtCb8NHG9Rw2FdRnJq3rWdJnxMtzT3S8Wdfn4/XL/_O1H1884-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/3/KzLP6BqN2Sz4HXTRXB7TWSGfgW6QcnjRHfxR6j6S4/L/_O1H1884-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/3/MPmjjbTZFcXvLt47TpTZPsPs5GP9Jv8mX44Qc7Wgm/M/_O1H1884-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-XncvD6D/3/MvTg75b4nfWJJhjktfGMqmpqSKG7FHwMcss3wRZgD/S/_O1H1884-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wm9Z2Mw",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/2/MWRbLF4T6XZNvhPq6LJfQtHs397ct7rVQKQFkrzgb/XL/_HF21557-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/A",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/A",
     "keywords": [
       "a",
       "fine art",
@@ -3806,15 +4535,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 145
+    "sortOrder": 145,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/2/LcpdhwXXdJbMbssskSmfS7MJr85bkLtjTfgJjt28X/XL/_HF21557-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/2/LcpdhwXXdJbMbssskSmfS7MJr85bkLtjTfgJjt28X/XL/_HF21557-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/2/LcpdhwXXdJbMbssskSmfS7MJr85bkLtjTfgJjt28X/XL/_HF21557-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/2/LKZZwJ7FQHN9SWZxF827PTG5vGmNLBXRtF943r9s6/L/_HF21557-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wm9Z2Mw/2/LJn38Vb5VdkqMSsLW9DFKDmtbQ8JZSdmsXBc2mJMC/S/_HF21557-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HLmtBMq",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-HLmtBMq/3/Mv3cVSZmzVCpWF7g3MLBCtF6RBhFqP497HJZNsTZp/XL/_HF29452-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HLmtBMq/A",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HLmtBMq/A",
     "keywords": [
       "a",
       "fine art",
@@ -3830,15 +4564,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 146
+    "sortOrder": 146,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-HLmtBMq/3/KfknZk3cbq2jGfCQpJH5vFQgH7BGNWQhnhFz4WngB/XL/_HF29452-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-HLmtBMq/3/KfknZk3cbq2jGfCQpJH5vFQgH7BGNWQhnhFz4WngB/XL/_HF29452-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-HLmtBMq/3/KQW5fdVBN2k8qzRSXRdrL4V6H6SdtLNVcztzQZhZr/L/_HF29452-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-HLmtBMq/3/NTWS7L9HfHvRv3dW3FfbbMnxK3r5k9r2Kp285zC7C/M/_HF29452-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-HLmtBMq/3/LQ2QX3WWtsbvS3spZ75pWv38P5zHLSj9t3KpmBTw5/S/_HF29452-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n7gMS6W",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-n7gMS6W/3/MbqggWpqZZKmh75WfWR2dZ9NP7HTFQptQt7pXNqXt/XL/_O2H3157-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-n7gMS6W/A",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-n7gMS6W/A",
     "keywords": [
       "a",
       "fine art",
@@ -3854,15 +4593,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 147
+    "sortOrder": 147,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-n7gMS6W/3/KXvTVptxFLBL4VtNTRCqsmB4LsTMF7z9PLMG8QHrd/XL/_O2H3157-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-n7gMS6W/3/KXvTVptxFLBL4VtNTRCqsmB4LsTMF7z9PLMG8QHrd/XL/_O2H3157-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-n7gMS6W/3/KXvTVptxFLBL4VtNTRCqsmB4LsTMF7z9PLMG8QHrd/XL/_O2H3157-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-n7gMS6W/3/LR8stJgVtRXPZKBzT4XkKZCzCRCQttpMQr5JqR8zc/L/_O2H3157-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-n7gMS6W/3/MffRMLsmB9TdXSp7LDhNDtmqmZH2T8XL6TkgDGzVz/S/_O2H3157-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wM4s2Dg",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-wM4s2Dg/2/NBjBBGZjxSW9rc27skmZzt2DHqTzRg4kWVxkRcGB7/XL/_O1H5410-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wM4s2Dg/A",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-wM4s2Dg/A",
     "keywords": [
       "a",
       "fine art",
@@ -3878,15 +4622,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 148
+    "sortOrder": 148,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-wM4s2Dg/2/NGCG2SDfrPbDPMCpff2xKKn3wZ4Pg2QPPXJwQNM72/XL/_O1H5410-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-wM4s2Dg/2/NGCG2SDfrPbDPMCpff2xKKn3wZ4Pg2QPPXJwQNM72/XL/_O1H5410-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-wM4s2Dg/2/L4VqhMZhbxcHRQbb3w9HNTQLxFbkj2nvwzrdpT3Db/L/_O1H5410-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-wM4s2Dg/2/L5h6wwr2w5rCHwZMtXr5rBJnDfRgjZzcrxRzbFGJ3/M/_O1H5410-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-wM4s2Dg/2/LdTFWnxP372KwsfBWZhFK4Jpbx9SQBXcQzqDDt65H/S/_O1H5410-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RxHPZHr",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
-    "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RxHPZHr/1/MPgS5jvzDcmmxDk42n5ghszzChSC9hbKQTntj4Ndd/XL/_O1H5507-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RxHPZHr/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-RxHPZHr/A",
     "keywords": [
       "a",
       "fine art",
@@ -3902,15 +4651,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 149
+    "sortOrder": 149,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RxHPZHr/1/Lgsz5zsC8zxgTRkMf9cDzkZMbwjhVpD249TrGLf5G/XL/_O1H5507-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RxHPZHr/1/Lgsz5zsC8zxgTRkMf9cDzkZMbwjhVpD249TrGLf5G/XL/_O1H5507-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RxHPZHr/1/Lgsz5zsC8zxgTRkMf9cDzkZMbwjhVpD249TrGLf5G/XL/_O1H5507-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RxHPZHr/1/NbdPSS4dZM7spXR2PFhLHCV8gvsWrx49dDJbFqLxj/L/_O1H5507-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RxHPZHr/1/KZkDCT4rPxm3jTS5qFsH9P3vbXZ49hzdtJvjQx4pD/S/_O1H5507-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-P5C9sqm",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
     "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-P5C9sqm/0/MGdLBhPGv6gnJPGH8f9cmdqmLZ95Mx5TJCDdHGJzh/XL/_ANA8462-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-P5C9sqm/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-P5C9sqm/A",
     "keywords": [
       "a",
       "fine art",
@@ -3926,15 +4680,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 150
+    "sortOrder": 150,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-P5C9sqm/0/LrJjdzBPdR2x4wmPbL2hCT9sSVftD3Jq75trLXbVf/XL/_ANA8462-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-P5C9sqm/0/LrJjdzBPdR2x4wmPbL2hCT9sSVftD3Jq75trLXbVf/XL/_ANA8462-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-P5C9sqm/0/LrJjdzBPdR2x4wmPbL2hCT9sSVftD3Jq75trLXbVf/XL/_ANA8462-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-P5C9sqm/0/LqfFdW4rP6BmQfDqfvtNMxS77fBrLjD2kvJTJj6N2/L/_ANA8462-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-P5C9sqm/0/KF4Swx6BzWzd66z35mcLDj8Gg5GwWfSn54TjZH2SM/S/_ANA8462-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gsQ8mdb",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-gsQ8mdb/1/Mkc5gj9zPPVMdhh6mNqgZ5rMsPxrbJZKHP9VzGpHW/XL/_ANA0964-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-gsQ8mdb/A",
+    "alt": "Wild West at Old Bedford Village",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-gsQ8mdb/A",
     "keywords": [
       "a",
       "fine art",
@@ -3950,15 +4709,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 151
+    "sortOrder": 151,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-gsQ8mdb/1/NGckVmRH7JN77tmRVXZVLZpDjWqmWGvD4vLRBj7Q7/XL/_ANA0964-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-gsQ8mdb/1/NGckVmRH7JN77tmRVXZVLZpDjWqmWGvD4vLRBj7Q7/XL/_ANA0964-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-gsQ8mdb/1/NGckVmRH7JN77tmRVXZVLZpDjWqmWGvD4vLRBj7Q7/XL/_ANA0964-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-gsQ8mdb/1/MrRSr9Z8kDDK9RLmkt84JLML5vWD265QxSBkT6WZX/L/_ANA0964-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-gsQ8mdb/1/MWXgXzkLKjBk8xnB8D7HVMwbJQ3rmL5BL2khSW2mq/S/_ANA0964-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hNb2Pxn",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-hNb2Pxn/1/MFSMqrXqRjmf9rbKW9pgcrvh8grjtfPb7rKPVqdp3/XL/_DSF7668-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hNb2Pxn/A",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-hNb2Pxn/A",
     "keywords": [
       "a",
       "fine art",
@@ -3974,15 +4738,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 152
+    "sortOrder": 152,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-hNb2Pxn/1/NTvKvZX22TKJNsKmn5RxJ8cFLbQc7QDKq2vm78wtj/XL/_DSF7668-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-hNb2Pxn/1/NTvKvZX22TKJNsKmn5RxJ8cFLbQc7QDKq2vm78wtj/XL/_DSF7668-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-hNb2Pxn/1/NTvKvZX22TKJNsKmn5RxJ8cFLbQc7QDKq2vm78wtj/XL/_DSF7668-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-hNb2Pxn/1/KGGgSjScDLvt6qGfKt7SMSdhxgn4Bkg5wNwW3Gwv7/L/_DSF7668-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-hNb2Pxn/1/KgMKXkL78XjpHf8P5X3SzfHvXsWNBPNzVM5rJs93N/S/_DSF7668-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Fps6pmx",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Fps6pmx/1/NFPvwdv5XW6fc9bWVhw5z2NkfV6mXqFPj4PxVBw8G/XL/_O1H0377-Edit-Edit-3-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Fps6pmx/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-Fps6pmx/A",
     "keywords": [
       "a",
       "fine art",
@@ -3998,15 +4767,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 153
+    "sortOrder": 153,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Fps6pmx/1/LHCD8Mzh82VrQrRCXX6fZ42C7mhwc4vpnLLdBbfcf/XL/_O1H0377-Edit-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Fps6pmx/1/LHCD8Mzh82VrQrRCXX6fZ42C7mhwc4vpnLLdBbfcf/XL/_O1H0377-Edit-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Fps6pmx/1/Lq7LSRXWhjznrVkBGwxgc4zJW9mtG5j2SVZt3SKft/L/_O1H0377-Edit-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Fps6pmx/1/Ng7xVtfHpXC3WBjLcnn655hJSg9CKbFHdFpzSB9dr/M/_O1H0377-Edit-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Fps6pmx/1/KMB2xvmtL2Z35tkN8MtGPKSxxWt93DdkJVgvpJxn9/S/_O1H0377-Edit-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HcCXGGq",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
-    "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-HcCXGGq/1/KGwLrMCnSCrPcnN9cmnCXPnKCTL2rkRhkKxmtVKg7/XL/_O1H0121-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HcCXGGq/A",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-HcCXGGq/A",
     "keywords": [
       "a",
       "fine art",
@@ -4022,15 +4796,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 154
+    "sortOrder": 154,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-HcCXGGq/1/LghGBFtvtMj2BLZjBHZHQGc2xpT6nQqpgJC9hGSt3/XL/_O1H0121-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-HcCXGGq/1/LghGBFtvtMj2BLZjBHZHQGc2xpT6nQqpgJC9hGSt3/XL/_O1H0121-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-HcCXGGq/1/LBP3MtNKLN4GrwxR5zLJpH6CSZfRSBZv83wJPp7zJ/L/_O1H0121-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-HcCXGGq/1/NPtnqzCqKdhqnNsmmgkb2jdM6zX6G4V5wsfnjRV2w/M/_O1H0121-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-HcCXGGq/1/KbVmDXfVWdNR6Czm5ZZd4k4T9nGTmGK2hDVsKfcdK/S/_O1H0121-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-G9pvq8g",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-G9pvq8g/1/Kkm8v3zMwNt7SsGMZxNt4MhmSPpTWHGgPZ98F7w6R/XL/_O1H0487-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-G9pvq8g/A",
+    "alt": "Wild West at Old Bedford Village",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-G9pvq8g/A",
     "keywords": [
       "a",
       "fine art",
@@ -4046,15 +4825,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 155
+    "sortOrder": 155,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-G9pvq8g/1/K4r4pP5jnbVhjf3k6kJRgXdpZSDBqMXt9QKMF4LKm/XL/_O1H0487-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-G9pvq8g/1/K4r4pP5jnbVhjf3k6kJRgXdpZSDBqMXt9QKMF4LKm/XL/_O1H0487-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-G9pvq8g/1/MGjXjs3ShknhVmd7CXSRLpqZjRk2QBjxhq8MDxHPm/L/_O1H0487-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-G9pvq8g/1/K7Bh3Vn4jNDVLn4Q5MGFfvS2Zz2WtWg9JQ2NNnJ4q/M/_O1H0487-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-G9pvq8g/1/MPntZKH3bGL5HtQXxvVTD3BkGWdPFzLbMJghTWDfk/S/_O1H0487-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CPSbBTp",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
-    "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-CPSbBTp/1/M35BZDVqzsSXFHqfbwfhfRgrCqvzwcDxWvFC7rCqw/XL/_O1H0365-Enhanced-Edit-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-CPSbBTp/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-CPSbBTp/A",
     "keywords": [
       "a",
       "fine art",
@@ -4070,15 +4854,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 156
+    "sortOrder": 156,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-CPSbBTp/1/LfjHFqXLVpjvgLPWRPHpxLzwm5wcq6TkZ6gZXnQFV/XL/_O1H0365-Enhanced-Edit-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-CPSbBTp/1/LfjHFqXLVpjvgLPWRPHpxLzwm5wcq6TkZ6gZXnQFV/XL/_O1H0365-Enhanced-Edit-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-CPSbBTp/1/MSnTsxDcKHdcRVhgWXSw9LWdHPcVsvq7gsx6pxJfz/L/_O1H0365-Enhanced-Edit-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-CPSbBTp/1/MBzGG54VQqT4mH7GNqqpPPZxwHcgGwLJbDZXGFrMc/M/_O1H0365-Enhanced-Edit-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-CPSbBTp/1/KDzn7q5QgDrN9zk92Q2hjRhkBh82cpWhz82zCf7Q9/S/_O1H0365-Enhanced-Edit-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jKj7pq5",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jKj7pq5/2/Nf2NJNkMPhGB7gqCVwbxX2kr9XbwxLqVPDLq68k9s/XL/_O1H0568-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jKj7pq5/A",
+    "alt": "Wild West at Old Bedford Village",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jKj7pq5/A",
     "keywords": [
       "a",
       "fine art",
@@ -4094,15 +4883,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 157
+    "sortOrder": 157,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jKj7pq5/2/LRbLgqrCF7rhk9TsrnF3Q8krBKLs2NPK4xSTPh54h/XL/_O1H0568-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jKj7pq5/2/LRbLgqrCF7rhk9TsrnF3Q8krBKLs2NPK4xSTPh54h/XL/_O1H0568-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jKj7pq5/2/LRbLgqrCF7rhk9TsrnF3Q8krBKLs2NPK4xSTPh54h/XL/_O1H0568-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jKj7pq5/2/M9wqJxqNRwRXN4hHLCwJFDjGvVvjSdxNQdsjDpx4v/L/_O1H0568-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jKj7pq5/2/K6ZzqGX4LMZjm8p4LVfHntrhBSbrzNndJfKbqpSX4/S/_O1H0568-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kcMTXwj",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
-    "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-kcMTXwj/0/MJWBWKLXXXBWbN23RvmpnPfqXXC2Rt7N6CZdJ6DWC/XL/_ANA0010-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kcMTXwj/A",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-kcMTXwj/A",
     "keywords": [
       "a",
       "fine art",
@@ -4118,15 +4912,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 158,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-kcMTXwj/0/Kxbt3KRFPSZPGdsX5PvzSJNcWs5j5TQZTXGwnD6b5/XL/_ANA0010-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-kcMTXwj/0/Kxbt3KRFPSZPGdsX5PvzSJNcWs5j5TQZTXGwnD6b5/XL/_ANA0010-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-kcMTXwj/0/Kxbt3KRFPSZPGdsX5PvzSJNcWs5j5TQZTXGwnD6b5/XL/_ANA0010-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-kcMTXwj/0/KcBQVBdRfvcBdxTsRWvqZWGXd9MVND5qBv5hbwgPV/L/_ANA0010-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-kcMTXwj/0/MFDHqw2p8HkC5SLMZ6jNhRwBwNCsXBGbWHbhW5jD5/S/_ANA0010-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VS9Dwjj",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
     "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VS9Dwjj/1/NJVXXvtjxgN4q5mgXgkwB47PHKZkhvwpMV5Srt4dv/XL/_O1H0900-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VS9Dwjj/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VS9Dwjj/A",
     "keywords": [
       "a",
       "fine art",
@@ -4142,15 +4941,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 159
+    "sortOrder": 159,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VS9Dwjj/1/NWPN8pz8cgK2XQvnmjK8mjw23TwXrQ59PjHDQgMq3/XL/_O1H0900-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VS9Dwjj/1/NWPN8pz8cgK2XQvnmjK8mjw23TwXrQ59PjHDQgMq3/XL/_O1H0900-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VS9Dwjj/1/NWPN8pz8cgK2XQvnmjK8mjw23TwXrQ59PjHDQgMq3/XL/_O1H0900-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VS9Dwjj/1/LPqM8hxxkDJMWzMJRdjVCW3pTdH8JkR6gTLTvFXVm/L/_O1H0900-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VS9Dwjj/1/L5FCPPB9Dp6JMkVw7ntdbkTJXjPMFNkR2JTqR4TvZ/S/_O1H0900-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jvX9wRM",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
     "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jvX9wRM/0/KbTcJmdm5r7BkK29xfVsB6xn87X4RNMGhFSr9C5nW/XL/_ANA0368-Edit-2-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jvX9wRM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-jvX9wRM/A",
     "keywords": [
       "a",
       "fine art",
@@ -4166,15 +4970,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 160
+    "sortOrder": 160,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jvX9wRM/0/Kz4dpcKz9j6488DfCwfH4xcw224XgqGTcDfCjLTMT/XL/_ANA0368-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jvX9wRM/0/Kz4dpcKz9j6488DfCwfH4xcw224XgqGTcDfCjLTMT/XL/_ANA0368-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jvX9wRM/0/KWdCpkbgqGkpwSsCTcwhzwLtTFSwDzKxsx9x9SxRP/L/_ANA0368-Edit-2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jvX9wRM/0/MwGzjb8BTD36cH6v3ZdB5RsLdthztrWkqLDVqD9sg/M/_ANA0368-Edit-2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-jvX9wRM/0/Kj4mpxZdXmHDJfpWTK8BTDtxwP6DdJDxN3xHV9mqW/S/_ANA0368-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VFBgL3h",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VFBgL3h/2/LQvJwRf5VZRX2khdLppmtLfJN7fTtkf3BjfLZGNfW/XL/_O1H0948-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VFBgL3h/A",
+    "alt": "Wild West at Old Bedford Village",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-VFBgL3h/A",
     "keywords": [
       "a",
       "fine art",
@@ -4190,15 +4999,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 161
+    "sortOrder": 161,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VFBgL3h/2/LS9kdkL89zC5x2NkmrLVL8pTNbbGXpGW8hmhqQ5pn/XL/_O1H0948-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VFBgL3h/2/LS9kdkL89zC5x2NkmrLVL8pTNbbGXpGW8hmhqQ5pn/XL/_O1H0948-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VFBgL3h/2/LS9kdkL89zC5x2NkmrLVL8pTNbbGXpGW8hmhqQ5pn/XL/_O1H0948-Edit-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VFBgL3h/2/M5dvZbvdn48r7xTTGLjgSgGPQtrFNDDD8S7Sdsk9C/L/_O1H0948-Edit-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-VFBgL3h/2/LDSfPQRcwSZRFXfwDTb572jVzrnGbNdLfqwM9Bknq/S/_O1H0948-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pJjV7XZ",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-pJjV7XZ/1/K3hNPdfFsK5TMgG4FvS6cqQrFXkQWP6mJGMjzsq8X/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pJjV7XZ/A",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-pJjV7XZ/A",
     "keywords": [
       "a",
       "fine art",
@@ -4214,15 +5028,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 162
+    "sortOrder": 162,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-pJjV7XZ/1/Kqq2C6FrR8G7N2tJmN3XQkpJhLgJSN73TmpX8H7dx/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-pJjV7XZ/1/Kqq2C6FrR8G7N2tJmN3XQkpJhLgJSN73TmpX8H7dx/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-pJjV7XZ/1/Kqq2C6FrR8G7N2tJmN3XQkpJhLgJSN73TmpX8H7dx/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-pJjV7XZ/1/KmfWXG8G8nThBm3qqLHpGb9WRnK5XxvvJT6czTXr5/L/_ANA0574-Enhanced-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-pJjV7XZ/1/MJ6frXBpRvSj5WRKnSLwQtCbnJxKkd2PbX3dfmjbz/S/_ANA0574-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-b6wmrzx",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
-    "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-b6wmrzx/0/Mk6v5KgtjkzqXbrLDJBcCJsTFnKFQHPbmPRQH9rtN/XL/_ANA0610-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b6wmrzx/A",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b6wmrzx/A",
     "keywords": [
       "a",
       "fine art",
@@ -4238,15 +5057,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 163
+    "sortOrder": 163,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-b6wmrzx/0/KcqjZ37hrGSTS4TZMd7r27SKTz7C269cWGxdjqmw4/XL/_ANA0610-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-b6wmrzx/0/KcqjZ37hrGSTS4TZMd7r27SKTz7C269cWGxdjqmw4/XL/_ANA0610-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-b6wmrzx/0/KcqjZ37hrGSTS4TZMd7r27SKTz7C269cWGxdjqmw4/XL/_ANA0610-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-b6wmrzx/0/KkkzwdCM2pd8nTWgKTMWFSnhCzzbNnsP9zCN8MJFf/L/_ANA0610-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-b6wmrzx/0/M4PH9WBNSgzkwXh3Xg7stMfrMh2CVznG9XDbMQfNv/S/_ANA0610-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-65GWjcq",
     "title": "Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village",
     "alt": "Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-65GWjcq/0/MZ4cPLMpr8ftTR3LKNMQCGPFwnGFzKx2NZBBFS62p/XL/_O1H1825-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-65GWjcq/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-65GWjcq/A",
     "keywords": [
       "a",
       "fine art",
@@ -4262,15 +5086,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 164
+    "sortOrder": 164,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-65GWjcq/0/LMh79Qnz2N48mgtWqCxvqfrS9prNJ2tNTJb6Vnfpz/XL/_O1H1825-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-65GWjcq/0/LMh79Qnz2N48mgtWqCxvqfrS9prNJ2tNTJb6Vnfpz/XL/_O1H1825-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-65GWjcq/0/NGsjNZvrKSRgWfQK8HxfVks6kK5q2FcvpWjGXMcDd/L/_O1H1825-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-65GWjcq/0/MC6kKvKz5Br2j2RH2QVJqZHkCDv6BCnv2sMc48CHf/M/_O1H1825-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-65GWjcq/0/L4KPxwkKpsRtQ2SBGXjW7v67qL3cxjRvfVf2znGLC/S/_O1H1825-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-J4CGdsN",
     "title": "1920's  at Old Bedford Village",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-J4CGdsN/8/NRFTgfFXQWjhwSfvGsggnfkc9tbZCLjCP2MVt8QFm/XL/_DSF2399-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-J4CGdsN/A",
+    "alt": "Wild West at Old Bedford Village",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-J4CGdsN/A",
     "keywords": [
       "a",
       "fine art",
@@ -4286,15 +5115,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 165
+    "sortOrder": 165,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-J4CGdsN/8/KkqG2R3rTq2MqMXBDqRbGf7s57kJBnthWghN7NKJX/XL/_DSF2399-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-J4CGdsN/8/KkqG2R3rTq2MqMXBDqRbGf7s57kJBnthWghN7NKJX/XL/_DSF2399-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-J4CGdsN/8/KkqG2R3rTq2MqMXBDqRbGf7s57kJBnthWghN7NKJX/XL/_DSF2399-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-J4CGdsN/8/LxQDDpGxQqCsQvGnWSmQxrVzqqTghFVKPJmBPGQBZ/L/_DSF2399-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-J4CGdsN/8/NLHLsPnFNR9bw4FNF6Z8vrRZdkv7TsKScgXbrZwnq/S/_DSF2399-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-w9C8ZWP",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
-    "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/1/NQ3RTvLkktF5LKSNS73CXtkwCV2kRstKGhjppCrHF/XL/_PEN0072-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/A",
+    "alt": "1920's  at Old Bedford Village",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/A",
     "keywords": [
       "a",
       "fine art",
@@ -4310,15 +5144,20 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 166
+    "sortOrder": 166,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/1/MkpXczQ58bTFdwMhpsrXrgtMh4pfJ4np4vM8q3fdH/XL/_PEN0072-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/1/MkpXczQ58bTFdwMhpsrXrgtMh4pfJ4np4vM8q3fdH/XL/_PEN0072-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/1/MkpXczQ58bTFdwMhpsrXrgtMh4pfJ4np4vM8q3fdH/XL/_PEN0072-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/1/KRhG2zP7264pX3R87xDTGZP8PhSQpLjMGBz3R5prz/L/_PEN0072-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-w9C8ZWP/1/M3JXwpJzJ2mc3XsPfMQTgzHgrtHDBQt8478zcLd35/S/_PEN0072-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-b3jMQNM",
     "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/1/LXHLqgGh2vd3BC9LvxhbfZSzHZQxG7J7Bd32CStsv/XL/_ANA5826-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/A",
     "keywords": [
       "a",
       "fine art",
@@ -4334,6 +5173,41 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 167
+    "sortOrder": 167,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/1/KTV4qL3pN2Rf5V9Fzx92vgkD77QQg2tCrbf66r3bH/XL/_ANA5826-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/1/KTV4qL3pN2Rf5V9Fzx92vgkD77QQg2tCrbf66r3bH/XL/_ANA5826-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/1/KTV4qL3pN2Rf5V9Fzx92vgkD77QQg2tCrbf66r3bH/XL/_ANA5826-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/1/MCc3KMjPnX3Z5dSzw9xWh6DKM5RFgqzDCdBjzZ28S/L/_ANA5826-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-b3jMQNM/1/MzLwc4bk5cnKJFGCWwbcbXkWwhfb75SQFCBRNTsvq/S/_ANA5826-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-364tqsH",
+    "title": "Hi Betsy    Photography of Wayne Heim",
+    "description": "Portraito D Day Reenactor  ©Wayne Heim",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-364tqsH/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Portraito D Day Reenactor  ©Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 168,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

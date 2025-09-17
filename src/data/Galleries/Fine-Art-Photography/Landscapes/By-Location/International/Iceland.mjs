@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-j4PxV9D",
-    "title": "Low TideView of tidal shore with majestic mountains and clouds in the background. Play on color and texture sets the theme. Only sign of humans is the dock on the right; seeming out of place in this rustic environment.",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Low Tide",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-j4PxV9D/6/MgdHfBkKWFX94jNPsM5WPjfVCrmVpxh2xWHznnZH5/XL/_WHZ0901_tonemapped-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-j4PxV9D/A",
     "keywords": [
       "Iceland",
@@ -97,14 +101,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-j4PxV9D/6/Mrpcs5BkG2GPGhsqdhg4Ldbfgd9hFVDk3qpCQ8ZLN/XL/_WHZ0901_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-j4PxV9D/6/Mrpcs5BkG2GPGhsqdhg4Ldbfgd9hFVDk3qpCQ8ZLN/XL/_WHZ0901_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-j4PxV9D/6/KrtjDGP9GqQ4hdpp259NqGsPSwRsQs4Bzq5f3GKZX/L/_WHZ0901_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-j4PxV9D/6/NFHtdGbWJQgfRXgk5dGPBQDSnW8vMRv7PRvWp9LFw/M/_WHZ0901_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-j4PxV9D/6/LHJQxPb8Kn7h45p832J4st4jpNHfntcSJ5ZLPJ4DJ/S/_WHZ0901_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-X2gSwwB",
     "title": "The Way to Church     Photography by Wayne Heim",
     "description": "Country church in Iceland seems to be in the middle of nowhere. ©Wayne Heim",
-    "alt": "The Way to Church     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-X2gSwwB/0/Mcz2bs3scSVcQnGVfnNgGXghtXtZ7dXrVF6CKLZJC/XL/_WHZ0996-XL.jpg",
+    "alt": "Low Tide",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-X2gSwwB/A",
     "keywords": [
       "Iceland",
@@ -180,14 +189,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-X2gSwwB/0/Lg9bRSnQn7fSHHNMBLkRZtmKsCbLsLbrsfTH7hbpg/XL/_WHZ0996-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-X2gSwwB/0/Lg9bRSnQn7fSHHNMBLkRZtmKsCbLsLbrsfTH7hbpg/XL/_WHZ0996-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-X2gSwwB/0/LKFnX6MQDVhR7Gx5LmzXm4V4NQvVjXQQqZB8qL6q9/L/_WHZ0996-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-X2gSwwB/0/KFxVPzDhnqk5m5nbFDh43RpkJnKkSFvw2TWJgR6L7/M/_WHZ0996-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-X2gSwwB/0/LB5kRDpBzrdf6QGLVrRR3JN6tQwdT7K2THdPwLnG9/S/_WHZ0996-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SfChdG7",
     "title": "Volcanic Rock on Coast of Iceland.   Photography by Wayne Heim",
     "description": "Volcanic rock off the coat of Iceland gets pounded by the sea.  ©Wayne Heim",
-    "alt": "Volcanic Rock on Coast of Iceland.   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SfChdG7/0/KH8h5K5bGvCvz2RKKGRzZwwH4fDVp6gccnmQJDG5z/XL/_WHZ1099-Pano-XL.jpg",
+    "alt": "The Way to Church     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SfChdG7/A",
     "keywords": [
       "Iceland",
@@ -263,14 +277,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SfChdG7/0/MqpgTWjvF8CQ7N2zVKq6gzDQwxzKWFQmSPcmTPzR9/XL/_WHZ1099-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SfChdG7/0/MqpgTWjvF8CQ7N2zVKq6gzDQwxzKWFQmSPcmTPzR9/XL/_WHZ1099-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SfChdG7/0/KWFCQSgSS9xV3PNbzcFTLMbPtCZFwjKfvWQmQVZCH/L/_WHZ1099-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SfChdG7/0/KH3L4KRBbJGJMJd2dcZQ4RkkJqCdKJx83HvtfLMC4/M/_WHZ1099-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SfChdG7/0/McdBhHddWWSRXz2WZgdRjqGTVrzbLG8Gbd4m77rp7/S/_WHZ1099-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RSbm8WZ",
     "title": "Kirkjufellsoss Waterfall  Black and White Photography by Wayne Heim",
     "description": "Icelandic waterfall flow from the rocks of Iceland. ©Wayne Heim",
-    "alt": "Kirkjufellsoss Waterfall  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RSbm8WZ/3/Lzgj7tb6C8b37fGMj9k6F4N5tJcfbSwrXSfkTR3hR/XL/_WHK3388-Pano-2-XL.jpg",
+    "alt": "Volcanic Rock on Coast of Iceland.   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RSbm8WZ/A",
     "keywords": [
       "Iceland",
@@ -346,14 +365,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RSbm8WZ/3/MH9xG2H8VwDQKhs7G4MtNxhzSCwqxbH7wFRRPVgpQ/XL/_WHK3388-Pano-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RSbm8WZ/3/MH9xG2H8VwDQKhs7G4MtNxhzSCwqxbH7wFRRPVgpQ/XL/_WHK3388-Pano-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RSbm8WZ/3/MH9xG2H8VwDQKhs7G4MtNxhzSCwqxbH7wFRRPVgpQ/XL/_WHK3388-Pano-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RSbm8WZ/3/LRmWfbGMvrcDDXCHfZ6w7p3x3tj4s5sfNVf5Nn92V/L/_WHK3388-Pano-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RSbm8WZ/3/LSLv5MM65jMpFDtPWDQ2bn4hmnSXnc4Lz3SZFVQtD/S/_WHK3388-Pano-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KmSDnWP",
     "title": "Black Falls   Photography by Wayne Heim",
     "description": "One of the many waterfalls in Iceland.\n©Wayne Heim",
-    "alt": "Black Falls   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KmSDnWP/0/LQw9dn42qdq6rhxdC6bbgPtzKmVMzdNvkGkmJjTHp/XL/_OLY3900_tonemapped-XL.jpg",
+    "alt": "Kirkjufellsoss Waterfall  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KmSDnWP/A",
     "keywords": [
       "Iceland",
@@ -429,14 +453,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KmSDnWP/0/MFcw8n7Ft9bHbR3z6xfm9558TfKzVZMFBRZPxWzht/XL/_OLY3900_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KmSDnWP/0/MFcw8n7Ft9bHbR3z6xfm9558TfKzVZMFBRZPxWzht/XL/_OLY3900_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KmSDnWP/0/MFcw8n7Ft9bHbR3z6xfm9558TfKzVZMFBRZPxWzht/XL/_OLY3900_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KmSDnWP/0/MVBDSKQpFQ4hGQPvt8JL8mKc683rzjdGBfBCn5Ths/L/_OLY3900_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KmSDnWP/0/M6J62HcRzh53PcSW96rvqDN642CrjCrGmMpzH5Shv/S/_OLY3900_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SDNCNQ5",
     "title": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
     "description": "View of the Gullfoss waterfall canyon. \n©Wayne Heim",
-    "alt": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SDNCNQ5/1/K6nJqLbqw25jqHhfZ6mKmNsKDBDnGpbJQmBknwCMr/XL/_WHZ1445-Pano_tonemapped-XL.jpg",
+    "alt": "Black Falls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SDNCNQ5/A",
     "keywords": [
       "Iceland",
@@ -512,14 +541,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SDNCNQ5/1/NjL9Mt3L8VnPkDZRVzFRRsdbWkfmnDM6jJSpmmmxT/XL/_WHZ1445-Pano_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SDNCNQ5/1/NjL9Mt3L8VnPkDZRVzFRRsdbWkfmnDM6jJSpmmmxT/XL/_WHZ1445-Pano_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SDNCNQ5/1/NjL9Mt3L8VnPkDZRVzFRRsdbWkfmnDM6jJSpmmmxT/XL/_WHZ1445-Pano_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SDNCNQ5/1/K46SNNMzBzfkdTwPzRGNdGx2BJd5KgbzftW2rpJkS/M/_WHZ1445-Pano_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SDNCNQ5/1/NhHxSSTCmSkD8DMGGtQ8d965XxM85pzG5qsbZ9mrc/S/_WHZ1445-Pano_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7ZQqVws",
     "title": "Waterfall Gullfoss  Black & White Iceland",
     "description": "View of Gullfoss waterfall in Iceland.\n©Wayne Heim",
-    "alt": "Waterfall Gullfoss  Black & White Iceland",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7ZQqVws/2/LCSX6dHn3kmSXKstSgTBSmBtpwrk9ssGfLW3jJKd2/XL/_WHZ1446-Pano-XL.jpg",
+    "alt": "Gullfoss Waterfall   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7ZQqVws/A",
     "keywords": [
       "Iceland",
@@ -595,14 +629,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7ZQqVws/2/MZStvrschSN87XfcJJ5BgQ3qN5FKMZFCxnF9dkTNS/XL/_WHZ1446-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7ZQqVws/2/MZStvrschSN87XfcJJ5BgQ3qN5FKMZFCxnF9dkTNS/XL/_WHZ1446-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7ZQqVws/2/MZStvrschSN87XfcJJ5BgQ3qN5FKMZFCxnF9dkTNS/XL/_WHZ1446-Pano-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7ZQqVws/2/MdXb94Hq2KKfbTXkwJQsqrWWdLFCP47TNrn9f4hDW/L/_WHZ1446-Pano-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7ZQqVws/2/KWBCfKgS8brssznNv33wkkPZ6d546jg2Kr4kqGkCD/S/_WHZ1446-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bxc3S9M",
     "title": "View of the Gullfoss   Photography by Wayne Heim",
     "description": "View looking down river of the Gullfoss waterfall  and gorge in Iceland. ©Wayne Heim",
-    "alt": "View of the Gullfoss   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bxc3S9M/0/MbLcZ9h8bscqjqcB8dmN3jjsfSWmZMDcmk3JdkXFd/XL/_WHK3536-Pano_tonemapped-XL.jpg",
+    "alt": "Waterfall Gullfoss  Black & White Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bxc3S9M/A",
     "keywords": [
       "Iceland",
@@ -678,14 +717,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bxc3S9M/0/LsDRSTmZkd6XWbJvWp5HnLgZPzzbTm6HJK6KhR4gR/XL/_WHK3536-Pano_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bxc3S9M/0/LsDRSTmZkd6XWbJvWp5HnLgZPzzbTm6HJK6KhR4gR/XL/_WHK3536-Pano_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bxc3S9M/0/MGsZZHJZsgprq94ZLCjDn4h5SQbw36grn3HkHf3xC/L/_WHK3536-Pano_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bxc3S9M/0/NZj46RZPpMgSqP9kJKkmrbP7p9CtjgDrd32dngRkV/M/_WHK3536-Pano_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bxc3S9M/0/KWpchV2n9PZTpqBtw6Hq5NtSg2nc6bT9tLWr7ZKtm/S/_WHK3536-Pano_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CNhJtLS",
     "title": "Barn in the Land of Midnight Sun  Photography by Wayne Heim",
     "description": "Old Icelandic barn and silo stand out against the midnight sun. ©Wayne Heim",
-    "alt": "Barn in the Land of Midnight Sun  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-CNhJtLS/0/NJjT5rxMvsDx7JdH63sNKG5t9DzkkKSJ93J67zSbr/XL/_WHZ1476-XL.jpg",
+    "alt": "View of the Gullfoss   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-CNhJtLS/A",
     "keywords": [
       "Iceland",
@@ -761,14 +805,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-CNhJtLS/0/KNJnZF2vFgXDB9jWxfNF45RcXLNN4hMB335Z9n2b8/XL/_WHZ1476-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-CNhJtLS/0/KNJnZF2vFgXDB9jWxfNF45RcXLNN4hMB335Z9n2b8/XL/_WHZ1476-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-CNhJtLS/0/MkLw8V3f7d7Dvnj37Hv9GdKsTxhPdDpkCKK25dPCQ/L/_WHZ1476-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-CNhJtLS/0/LRMM9SW8Ck5dTWNqq7FPt4q9hndXFfnvnRZ79w9kJ/M/_WHZ1476-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-CNhJtLS/0/MWC3254QfLPbgct8fMwBFFWKZncKcs3dt2JqMHdHq/S/_WHZ1476-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9jfFZxt",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Fine art landscape photography of Iceland in the Summer.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-9jfFZxt/6/M2cb3GFcBbmFT7SrKxFGfMq94xVG8VnWGdpSKdM67/XL/_WHK3290_tonemapped-XL.jpg",
+    "alt": "Barn in the Land of Midnight Sun  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-9jfFZxt/A",
     "keywords": [
       "Iceland",
@@ -844,14 +893,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-9jfFZxt/6/LdzBBpz3zcc5C6fghHxKM6L2cjLTMKcn5tNhp2Pxj/XL/_WHK3290_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-9jfFZxt/6/LdzBBpz3zcc5C6fghHxKM6L2cjLTMKcn5tNhp2Pxj/XL/_WHK3290_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-9jfFZxt/6/Lzfj2Zbm9C7PC5CXQCSvpsfScmdP8LKd3wWcFSFF3/L/_WHK3290_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-9jfFZxt/6/LRmdhKcL7Z95zmj76WjSTgfrbNcMCwQMtRZMwfqjt/M/_WHK3290_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-9jfFZxt/6/MSzWxLPpVBmKcsN2tNDBWhhKwrPxn5fWNR3rRVPdM/S/_WHK3290_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rMTRD6x",
     "title": "Midnight Sun Sunset",
     "description": "Fine art landscape photography of Iceland Sunset in the Summer.",
-    "alt": "Midnight Sun Sunset",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/Kpc3Zc9ZhzNZm8k6M3ptgG9LxHLDQchZkJGj4XcwS/XL/_WHZ1479-XL.jpg",
+    "alt": "Fine art landscape photography of Iceland in the Summer.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rMTRD6x/A",
     "keywords": [
       "Iceland",
@@ -927,14 +981,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/LHH82bfqGKWnz6DFBJ7Wx38KvXrjgMhGQFVwBBzR2/XL/_WHZ1479-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/LHH82bfqGKWnz6DFBJ7Wx38KvXrjgMhGQFVwBBzR2/XL/_WHZ1479-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/LHH82bfqGKWnz6DFBJ7Wx38KvXrjgMhGQFVwBBzR2/XL/_WHZ1479-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/M6FtgSrKJqkxXwstBXZMwPSv63Nk3Q6prVD2DGT64/M/_WHZ1479-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-rMTRD6x/6/LPZh5LwvhQcCBQbZTHtSPcgbmB4TWQHDvzFLHjGBp/S/_WHZ1479-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bb6zG8J",
     "title": "Seljalandfoss    Black & White Photography by Wayne Heim",
     "description": "One of the many Waterfalls of Iceland.\n©Wayne Heim",
-    "alt": "Seljalandfoss    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bb6zG8J/1/LQcR6BjgxdMZmGb3pvhpwqzxVkzsF4394NZ2zsr6c/XL/_WHZ1543-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Midnight Sun Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bb6zG8J/A",
     "keywords": [
       "Iceland",
@@ -1010,14 +1069,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bb6zG8J/1/LD9tnsPmNZnGj77J7HLvxFDkJ8KDRjpGBJ2M4GFh2/XL/_WHZ1543-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bb6zG8J/1/LD9tnsPmNZnGj77J7HLvxFDkJ8KDRjpGBJ2M4GFh2/XL/_WHZ1543-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bb6zG8J/1/LD9tnsPmNZnGj77J7HLvxFDkJ8KDRjpGBJ2M4GFh2/XL/_WHZ1543-Pano_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bb6zG8J/1/Lnt9hLN6D8SZXBjX6hR873qHHjGrcdWFB58PDzcCn/L/_WHZ1543-Pano_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bb6zG8J/1/NBC7XJTCZZ9FSvmDMNWRg3ZBDtT9z6jx94kjmTHRJ/S/_WHZ1543-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WMnSL5c",
     "title": "Side Seljalandfoss   Black & White Photography by Wayne Heim",
     "description": "A side view of the Seljalandfoss waterfall in Iceland. ©Wayne Heim",
-    "alt": "Side Seljalandfoss   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-WMnSL5c/1/LpwC29hd5Gh3KN6Z4ZTz423jPzZ7qHSRhLgdCQNtS/XL/_WHZ1550-Pano-XL.jpg",
+    "alt": "Seljalandfoss    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-WMnSL5c/A",
     "keywords": [
       "Iceland",
@@ -1093,14 +1157,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-WMnSL5c/1/MFJg8cPbbHxSGzHddLgX9vnSkcdsg8zt5MCN4Wtt8/XL/_WHZ1550-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-WMnSL5c/1/MFJg8cPbbHxSGzHddLgX9vnSkcdsg8zt5MCN4Wtt8/XL/_WHZ1550-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-WMnSL5c/1/MFJg8cPbbHxSGzHddLgX9vnSkcdsg8zt5MCN4Wtt8/XL/_WHZ1550-Pano-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-WMnSL5c/1/LCdg6N9HRQPKxL4d99kHbJFHZcnTw3MgCR4hxrGFv/L/_WHZ1550-Pano-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-WMnSL5c/1/LJhcwbRLZpVcKDF4qfnK5Mcrv8xDb9zK4JrgdW7rL/S/_WHZ1550-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4D9zZXP",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Fine art landscape photography of Iceland in the Summer.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-4D9zZXP/6/MjFBrJ8CjLzzxW4dNWjPJsZwwPZdG8VqTTxKgd7QH/XL/_WHZ1792-XL.jpg",
+    "alt": "Side Seljalandfoss   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-4D9zZXP/A",
     "keywords": [
       "Iceland",
@@ -1176,14 +1245,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-4D9zZXP/6/KR6PnqLgCPFwCF9v9Bgg3Bf7C6Qp9dXSNjhS8897d/XL/_WHZ1792-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-4D9zZXP/6/KR6PnqLgCPFwCF9v9Bgg3Bf7C6Qp9dXSNjhS8897d/XL/_WHZ1792-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-4D9zZXP/6/LdcpB6Dn4c2WSxkCp9s5jn6JRfh8tSHZ4XKSkW49g/L/_WHZ1792-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-4D9zZXP/6/LfqdM4J56tXwRfrfZdcTKJzDk4KtTKXTvGCrttsPL/M/_WHZ1792-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-4D9zZXP/6/KNC3LfFGcN445sdtD3s9CNFZGXNwbNhkj4gHHnWBb/S/_WHZ1792-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Z6JpCvW",
     "title": "Looking up at Vik  Black & White Photography by Wayne Heim",
     "description": "Looking up a wall at the Beach at Vik Iceland.\n©Wayne Heim",
-    "alt": "Looking up at Vik  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z6JpCvW/1/KXCPFPHQ5HqCTNP7dkRq9wcqsckS8TmHnmr2Wdm6K/XL/_WHZ1942-Pano-XL.jpg",
+    "alt": "Fine art landscape photography of Iceland in the Summer.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z6JpCvW/A",
     "keywords": [
       "Iceland",
@@ -1259,14 +1333,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z6JpCvW/1/KthVCr6PjNtm8Q5RqCK4cqjbNXs28hj5LQcvSQMTt/XL/_WHZ1942-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z6JpCvW/1/KthVCr6PjNtm8Q5RqCK4cqjbNXs28hj5LQcvSQMTt/XL/_WHZ1942-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z6JpCvW/1/KthVCr6PjNtm8Q5RqCK4cqjbNXs28hj5LQcvSQMTt/XL/_WHZ1942-Pano-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z6JpCvW/1/MMQSKRRFrR8bfCW3J8rGfNbDsvwkRKhHTGNS6VzMp/M/_WHZ1942-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z6JpCvW/1/Lmqb4vcc2BVdtcZFRBZ4tHB2w9qmN6LD7sJWVzFgC/S/_WHZ1942-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vLs8Ngj",
     "title": "Lava Rocks  and distant Glacier",
     "description": "Icelandic landscape of lava rocks, hills, and vegetation. ©Wayne Heim",
-    "alt": "Lava Rocks  and distant Glacier",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vLs8Ngj/0/NNHVCzBs42dvnRxx92dVNDn842S6XL2ksHfBrnpgh/XL/_WHZ1990-XL.jpg",
+    "alt": "Looking up at Vik  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vLs8Ngj/A",
     "keywords": [
       "Iceland",
@@ -1342,14 +1421,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vLs8Ngj/0/ND7B2FxVVC64hkN8ZpVM4nLh2BkDgQdPKZfPKF89k/XL/_WHZ1990-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vLs8Ngj/0/ND7B2FxVVC64hkN8ZpVM4nLh2BkDgQdPKZfPKF89k/XL/_WHZ1990-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vLs8Ngj/0/MGJ5QmsPCxcpQ7Djhn73SjCxzZSx9rfWmMwcJcHmm/L/_WHZ1990-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vLs8Ngj/0/LkfwV6gCbVF76hNPxvCjVMvPbNPxVk5K2qTtQ3Rzn/M/_WHZ1990-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vLs8Ngj/0/MrfmDZqvLFsq9CfVbGjB6CxZGhHCJCkQMFCScb4hr/S/_WHZ1990-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vZC2GK7",
     "title": "Icelandic Coast Lighthouse",
     "description": "Cliff rises above the coast of Iceland.\n©Wayne Heim",
-    "alt": "Icelandic Coast Lighthouse",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vZC2GK7/0/LDxhZsfwZx3vCbnkJ6VJKjHs8tHNKJnv6Nk28Wsvb/XL/_OLY4980-Pano-XL.jpg",
+    "alt": "Lava Rocks  and distant Glacier",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vZC2GK7/A",
     "keywords": [
       "Iceland",
@@ -1425,14 +1509,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vZC2GK7/0/LV2rFcsVczb6HfnNZVbtPL4sGDdMxXHSmTpR7sfnV/XL/_OLY4980-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vZC2GK7/0/LV2rFcsVczb6HfnNZVbtPL4sGDdMxXHSmTpR7sfnV/XL/_OLY4980-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vZC2GK7/0/L9KNkHD3KDBhqRdcsjrhxtStz5w7VFch68MLhhzzv/L/_OLY4980-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vZC2GK7/0/NRST9rFjkr63BLDwNGB9CXK2NFsRz58tvJbzmtr9r/M/_OLY4980-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-vZC2GK7/0/K4WmbBJdxNdV4Q7Ggt99qPzqm63CNXbnP2jQmFDjn/S/_OLY4980-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-C42pbCN",
     "title": "Snaefellsjoekull Path   Black & White Photography by Wayne Heim",
     "description": "Hiking path in Snaefellsjoekull National Park.\n©Wayne Heim",
-    "alt": "Snaefellsjoekull Path   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-C42pbCN/2/Lzz5FbSmD8PbBDL8rGVpzxsFfKgfsp5BZXJ83K9gp/XL/_WHZ1994-Edit-XL.jpg",
+    "alt": "Icelandic Coast Lighthouse",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-C42pbCN/A",
     "keywords": [
       "Iceland",
@@ -1508,14 +1597,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-C42pbCN/2/MsRPrm8HRWpNrKvcDF2WB2tpDHrBVdMQ2mmVd2sfr/XL/_WHZ1994-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-C42pbCN/2/MsRPrm8HRWpNrKvcDF2WB2tpDHrBVdMQ2mmVd2sfr/XL/_WHZ1994-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-C42pbCN/2/MsRPrm8HRWpNrKvcDF2WB2tpDHrBVdMQ2mmVd2sfr/XL/_WHZ1994-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-C42pbCN/2/MfTRPGwjKbNshj8LXNsxxCkQzpk9Wft36qcPRN9bt/L/_WHZ1994-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-C42pbCN/2/LggDfcRJQ3bcZW3Cd9QSzFJL7KJhRZftMVVt7fKb6/S/_WHZ1994-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f82Jczr",
     "title": "Looking Out    Photography by Wayne Heim",
     "description": "View looking out of a glacier cave in Iceland.\n©Wayne Heim",
-    "alt": "Looking Out    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f82Jczr/6/NK9hx8N9MqnFLGKDbvWQpGQKK6XVrr3ktCd4sfbfX/XL/_WHZ2051-XL.jpg",
+    "alt": "Snaefellsjoekull Path   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f82Jczr/A",
     "keywords": [
       "Iceland",
@@ -1591,14 +1685,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f82Jczr/6/LCgPqgp3sNrf7qT7Ck9fcxqVbp8pDxJpMrfgDzKX7/XL/_WHZ2051-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f82Jczr/6/LCgPqgp3sNrf7qT7Ck9fcxqVbp8pDxJpMrfgDzKX7/XL/_WHZ2051-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f82Jczr/6/LCgPqgp3sNrf7qT7Ck9fcxqVbp8pDxJpMrfgDzKX7/XL/_WHZ2051-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f82Jczr/6/KvqFMNcC8d7m2fxt7BtXWDNKSDzwBvwQhK2mmP8rs/L/_WHZ2051-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f82Jczr/6/LrBGTrfdQ8js3v448RLzQJT67JLBhwbRQPnVnTkPp/S/_WHZ2051-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gBPsDtv",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Fine art landscape photography of Iceland in the Summer.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-gBPsDtv/6/M8TCFzndTzKRh478ZPQGP57GkjdT6nNmFcNSQVL6w/XL/_WHZ2054-Pano-XL.jpg",
+    "alt": "Looking Out    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-gBPsDtv/A",
     "keywords": [
       "Iceland",
@@ -1674,14 +1773,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-gBPsDtv/6/Kf92BVrG2Q7JjqqSHCbJwBF4bbVMjnbVhKs6LNpQ3/XL/_WHZ2054-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-gBPsDtv/6/Kf92BVrG2Q7JjqqSHCbJwBF4bbVMjnbVhKs6LNpQ3/XL/_WHZ2054-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-gBPsDtv/6/Kf92BVrG2Q7JjqqSHCbJwBF4bbVMjnbVhKs6LNpQ3/XL/_WHZ2054-Pano-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-gBPsDtv/6/MVFRswkFW9dKZ4sw8mfqcc6kGNMCxZR3fbfrnp2Wk/L/_WHZ2054-Pano-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-gBPsDtv/6/MScKWFQ63rq2RgNbpBnv6823dZ4JCD8gMNpf2f2hf/S/_WHZ2054-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SCgDCs2",
     "title": "Glacier Wall     Black & White Photography by Wayne Heim",
     "description": "Glacier wall in Iceland looks like solid rock.\n©Wayne Heim",
-    "alt": "Glacier Wall     Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SCgDCs2/1/Kp8BGWt4dLtqwzc2C9gvFdrgtpTKhN86sjjGTL2rc/XL/20180617_071507-XL.jpg",
+    "alt": "Fine art landscape photography of Iceland in the Summer.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SCgDCs2/A",
     "keywords": [
       "Iceland",
@@ -1757,14 +1861,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SCgDCs2/1/LGdDshXvLNcJ6DxPQfxM2Qdk64SWR9gbSJBsMKx9h/XL/20180617_071507-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SCgDCs2/1/LGdDshXvLNcJ6DxPQfxM2Qdk64SWR9gbSJBsMKx9h/XL/20180617_071507-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SCgDCs2/1/LGdDshXvLNcJ6DxPQfxM2Qdk64SWR9gbSJBsMKx9h/XL/20180617_071507-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SCgDCs2/1/LdNk92f2z2rs2WCd8cq9zjRtkdGQpvhpxrcBkht4F/L/20180617_071507-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-SCgDCs2/1/LLWpwZPhC6LkdGHQmZc5zccp6xTd9DCDr7hmLWgpb/S/20180617_071507-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fTtjrxB",
     "title": "Skaftafell Glacier   Photography by Wayne Heim",
     "description": "The black glacier Skaftafell looks more like rock than ice.  ©Wayne Heim",
-    "alt": "Skaftafell Glacier   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-fTtjrxB/0/MQx548R6gkVDD2k27djGkP8rRbqsSJvMgwrvbcfPR/XL/_WHZ2121-Pano-XL.jpg",
+    "alt": "Glacier Wall     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-fTtjrxB/A",
     "keywords": [
       "Iceland",
@@ -1840,14 +1949,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-fTtjrxB/0/KWvghWC4Qktz52Kdm2pTdp8m2BCM7mRDsQtmMwgbL/XL/_WHZ2121-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-fTtjrxB/0/KWvghWC4Qktz52Kdm2pTdp8m2BCM7mRDsQtmMwgbL/XL/_WHZ2121-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-fTtjrxB/0/MhSGmrCMmbnd7HJLTQjxskNVF2SnRSRhShHCWh2qn/L/_WHZ2121-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-fTtjrxB/0/MbKR7CQcDQ5SPZTwW3d8WdgcZsTbcSFCQqpn9bvrW/M/_WHZ2121-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-fTtjrxB/0/MVSndpHGDbT8xn5snmCcqRt5KBJjD7Ck2M5Dwhg2q/S/_WHZ2121-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DzgFdS2",
     "title": "Mountains and Black Sands of Glacial Field - Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Mountains and Black Sands of Glacial Field - Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-DzgFdS2/5/L3jF7CZJbMhCnwMw6gWrrr46mpDCmqZ6DFxfFzqTR/XL/_WHZ2144-XL.jpg",
+    "alt": "Skaftafell Glacier   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-DzgFdS2/A",
     "keywords": [
       "Iceland",
@@ -1923,14 +2037,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-DzgFdS2/5/MB57DPMBWgbK9XCdhNVFW2PkkVpLf2SprrZkPrJGp/XL/_WHZ2144-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-DzgFdS2/5/MB57DPMBWgbK9XCdhNVFW2PkkVpLf2SprrZkPrJGp/XL/_WHZ2144-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-DzgFdS2/5/KF9rwDJcLsfvKR3cS3ZHmw8MJCjr9m2H3XbN2R4nD/L/_WHZ2144-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-DzgFdS2/5/MhHDPVbCtHJSBzmGntw7b59Dc9fvTD2tNNpwfbMtW/M/_WHZ2144-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-DzgFdS2/5/LTZCTZjRLHx9HDGRWNXDWZRGktp4SCWd8vnqbP5kd/S/_WHZ2144-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bHsxCJ9",
     "title": "Mountain Glacier   Black & White Photography  by Wayne Heim",
     "description": "Outside of glaciers look like mountains with all the dirt which is trapped in the ice.\n©Wayne Heim",
-    "alt": "Mountain Glacier   Black & White Photography  by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bHsxCJ9/1/MkHCSD5WndprB6TpWG4S7FwDdCxqg8krpnzctHJSc/XL/_WHZ2157-XL.jpg",
+    "alt": "Mountains and Black Sands of Glacial Field - Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bHsxCJ9/A",
     "keywords": [
       "Iceland",
@@ -2006,14 +2125,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bHsxCJ9/1/M936NJmpMV4KmbHxz3mDwhT6v37vN2Qtxjf54v5D6/XL/_WHZ2157-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bHsxCJ9/1/M936NJmpMV4KmbHxz3mDwhT6v37vN2Qtxjf54v5D6/XL/_WHZ2157-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bHsxCJ9/1/M936NJmpMV4KmbHxz3mDwhT6v37vN2Qtxjf54v5D6/XL/_WHZ2157-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bHsxCJ9/1/MsPmMQvWdb32XwwQ2Hn5DdwGrcLQPSrwMDG7Pzk6J/L/_WHZ2157-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-bHsxCJ9/1/LJTHkvq6m5FVPRqTp9NWsnssCCMSTxm5PjmMnmHFk/S/_WHZ2157-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f4pz8mB",
     "title": "Jonah - Inside the Glacier.",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Jonah - Inside the Glacier.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-f4pz8mB/6/NQQstfCnTkQJqfmHc6pJjPRN89Lp3mrKwF3H7x924/XL/_WHZ2161-XL.jpg",
+    "alt": "Mountain Glacier   Black & White Photography  by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f4pz8mB/A",
     "keywords": [
       "Iceland",
@@ -2089,14 +2213,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-f4pz8mB/6/Lvm6gQcTLkBcvqnHTMqtQF38F535h2QJT5vdGt9TP/XL/_WHZ2161-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-f4pz8mB/6/Lvm6gQcTLkBcvqnHTMqtQF38F535h2QJT5vdGt9TP/XL/_WHZ2161-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-f4pz8mB/6/Lvm6gQcTLkBcvqnHTMqtQF38F535h2QJT5vdGt9TP/XL/_WHZ2161-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-f4pz8mB/6/KsRjgCsW94RwWxXt79q56pznNXhQgphn5xDRmZv5F/L/_WHZ2161-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-f4pz8mB/6/Mz59kPQf6qwbKtdP3C2njL3cPrFRQ3CrtK3d8QQ2N/S/_WHZ2161-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JzJQ9fz",
     "title": "Black & Blue   Photography by Wayne Heim",
     "description": "Ice cave combines both lack and blue ice for an interesting effect.  ©Wayne Heim",
-    "alt": "Black & Blue   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JzJQ9fz/0/KjJZ2MpDCgdttzsPCQvG55XgztgXfbvZLrvhVD3QD/XL/_WHZ2181-XL.jpg",
+    "alt": "Jonah - Inside the Glacier.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JzJQ9fz/A",
     "keywords": [
       "Iceland",
@@ -2172,14 +2301,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JzJQ9fz/0/Mt8fCwXLNztSbgwPvsX9TRXtSxpB7v8dcCK5z8HrD/XL/_WHZ2181-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JzJQ9fz/0/Mt8fCwXLNztSbgwPvsX9TRXtSxpB7v8dcCK5z8HrD/XL/_WHZ2181-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JzJQ9fz/0/Mt8fCwXLNztSbgwPvsX9TRXtSxpB7v8dcCK5z8HrD/XL/_WHZ2181-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JzJQ9fz/0/M9Vkg3HXgZsxz6dtjJbPkvBHXCRVLtjKhWd4VGVqR/L/_WHZ2181-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JzJQ9fz/0/MZzbMqzkWtNH8ZCcjx2JP6Lxr4sBS2Z7N78dn69b6/S/_WHZ2181-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rbB747M",
     "title": "Lava Field   Photography by Wayne Heim",
     "description": "Lava field around Krafla.  ©Wayne Heim",
-    "alt": "Lava Field   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rbB747M/0/NWPjTDzC7RvtLStnWNjZTHwKsHXpBgFfZ3kxc25dW/XL/20180617_081033-XL.jpg",
+    "alt": "Black & Blue   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rbB747M/A",
     "keywords": [
       "Iceland",
@@ -2255,14 +2389,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rbB747M/0/LwNRr3tB3SwG6qd7NvKSQpZgKJ23ZFrDq6ptWnGnb/XL/20180617_081033-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rbB747M/0/LwNRr3tB3SwG6qd7NvKSQpZgKJ23ZFrDq6ptWnGnb/XL/20180617_081033-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rbB747M/0/Lt73ZfQWCVjVqQX2Z5c77Pm5x8JskxMsFH7J3QV5H/L/20180617_081033-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rbB747M/0/NbMC3vgBWbvdJQpVBDMqhR6ps3g5SP9thk3C9jpvP/M/20180617_081033-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rbB747M/0/Mk3bVNCKHzTmpjDSwcDqpHdW8M37CcH6dRJWZDSrP/S/20180617_081033-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VZtrKd5",
     "title": "Breidamerkurjokull Glacier  Photography by  Wayne Heim",
     "description": "Sides of the glacier that are criss crossed with volcanic sand.  ©Wayne Heim",
-    "alt": "Breidamerkurjokull Glacier  Photography by  Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VZtrKd5/0/Khjwx5kss4XjRqHKmX2nBDNhC8L3NtD8PvKj42dCB/XL/_OLY5150-XL.jpg",
+    "alt": "Lava Field   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VZtrKd5/A",
     "keywords": [
       "Iceland",
@@ -2338,14 +2477,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VZtrKd5/0/LVPhXKxDQML9ZG6sw8pmcgWrKtKrmkZLh2BWGQxB6/XL/_OLY5150-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VZtrKd5/0/LVPhXKxDQML9ZG6sw8pmcgWrKtKrmkZLh2BWGQxB6/XL/_OLY5150-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VZtrKd5/0/LVPhXKxDQML9ZG6sw8pmcgWrKtKrmkZLh2BWGQxB6/XL/_OLY5150-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VZtrKd5/0/NbFJQnQkqWQhZjHB38BfqdF22p7ndQSc7WTRvsqZ3/L/_OLY5150-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VZtrKd5/0/LWsD4bRnQNFS3BBCDvwSZbBpQc6MXcRGh7wkhtbQn/S/_OLY5150-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XJDcZSr",
     "title": "Fish in Ice  Photography by Wayne Heim",
     "description": "Iceberg looks like it has a fish between its layers.  ©Wayne Heim",
-    "alt": "Fish in Ice  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-XJDcZSr/0/MF2wRrkVRMqj7TP2DF9rnJvZqdVMhQ7hqH6MKcmRM/XL/_WHK3911-XL.jpg",
+    "alt": "Breidamerkurjokull Glacier  Photography by  Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-XJDcZSr/A",
     "keywords": [
       "Iceland",
@@ -2421,14 +2565,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-XJDcZSr/0/KNhJkKB43twB3frnvs3DZss9CLHGnsKTFJb9LT6Xz/XL/_WHK3911-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-XJDcZSr/0/KNhJkKB43twB3frnvs3DZss9CLHGnsKTFJb9LT6Xz/XL/_WHK3911-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-XJDcZSr/0/MK39GQ8N574z4JgCMdKL7NCRbhrp5kFFvxMz8T8ts/L/_WHK3911-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-XJDcZSr/0/KkC8mk3GJ94qdrkmd38WjT9HKRZPSzhmWNQTXJ6nk/M/_WHK3911-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-XJDcZSr/0/MX5HVqT9nPg9PNVpNgHkxrrrmQKBkw3HcgwxJqX3z/S/_WHK3911-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hmB6HFt",
     "title": "Angry Waves on Ice   Photography by Wayne Heim",
     "description": "The angry sea batters the chunks of ice in the waters off Iceland.   ©Wayne Heim",
-    "alt": "Angry Waves on Ice   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/MZN9bXKXcSBxTFR4SdSbjMjHvHcgqcVXrJvTjNxcr/XL/_WHZ2830_tonemapped-XL.jpg",
+    "alt": "Fish in Ice  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/A",
     "keywords": [
       "Iceland",
@@ -2504,14 +2653,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/M77KSxtxK9q6D8rqZcf6McZ59BxL9PppmrcxZtLn5/XL/_WHZ2830_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/M77KSxtxK9q6D8rqZcf6McZ59BxL9PppmrcxZtLn5/XL/_WHZ2830_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/MkVzT5B4C8sQWdQhDzqS6zSXtJRcjGdvpQNd88c3r/L/_WHZ2830_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/KhBmv5XWtBzhH7LfGpxm6CDNPB55r8qDkrQgqvxzT/M/_WHZ2830_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hmB6HFt/6/NJf6HFvrgZC9TLgtxbZM9X3qx4RGWgMfjKsGNbLMG/S/_WHZ2830_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MwsQPKg",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
-    "alt": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KvPnZNR8n3GRX5nbb9VFt6ZwWk5ZZBGKd5Q8sq597/XL/_K1W2573_tonemapped-Edit-XL.jpg",
+    "alt": "Angry Waves on Ice   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-MwsQPKg/A",
     "keywords": [
       "Iceland",
@@ -2587,14 +2741,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KFMd67xsswJ6VntHSXQD8j6ZfsVj5RVZ9wHQ8gM87/XL/_K1W2573_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KFMd67xsswJ6VntHSXQD8j6ZfsVj5RVZ9wHQ8gM87/XL/_K1W2573_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/LBC3997ZWnzqknRd7qPfG8DT6cQbRGwwDqSJhxpt4/L/_K1W2573_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/MGBL9nsW42LjXGnrM8T32MHkMv6kTVH5T6tLWWPvF/M/_K1W2573_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KHW25wK67c4nF8trQtnpD2KwLbTJt73txZmJNnKWD/S/_K1W2573_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3fR8r7r",
-    "title": "A",
+    "title": "Untitled",
     "description": "Collection of the Best Iceland fine art landscape photography.",
-    "alt": "Collection of the Best Iceland fine art landscape photography.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-3fR8r7r/5/Mnz5LVF8wQXzdcT23b8B3gPLfQCGbvs8kJDdwKMND/XL/_WHZ8219-XL.jpg",
+    "alt": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-3fR8r7r/A",
     "keywords": [
       "Iceland",
@@ -2670,14 +2829,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-3fR8r7r/5/K4cM2D3wWTTVw9P2XXrXfqQQczPkkf7CGbf5MmcKC/XL/_WHZ8219-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-3fR8r7r/5/K4cM2D3wWTTVw9P2XXrXfqQQczPkkf7CGbf5MmcKC/XL/_WHZ8219-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-3fR8r7r/5/M92GqwWWCvQPK59ngb6VhPbfMGn4JW5QbVbMDcFkp/L/_WHZ8219-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-3fR8r7r/5/LHm4CK3LXkBj3Hv8tfmqfRLDpR7SzNtpVDDsSPs9M/M/_WHZ8219-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-3fR8r7r/5/LRsmPLjK3mq8vJnQtQGK7PKTHBDKvhQb7X2c26JHF/S/_WHZ8219-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HqpbFxF",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland in the Fall.",
-    "alt": "Fine art landscape photography of Iceland in the Fall.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-HqpbFxF/6/KRGLs5nhZVkZgbbKjqLNK5swFQFJb7stCVXbXMvCT/XL/_K1W3449_tonemapped-XL.jpg",
+    "alt": "Collection of the Best Iceland fine art landscape photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-HqpbFxF/A",
     "keywords": [
       "Iceland",
@@ -2753,14 +2917,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-HqpbFxF/6/KxZW8n6vRNMTDt5FT8DJDJ3RjNwHFBVqPjDW7xBdh/XL/_K1W3449_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-HqpbFxF/6/KxZW8n6vRNMTDt5FT8DJDJ3RjNwHFBVqPjDW7xBdh/XL/_K1W3449_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-HqpbFxF/6/KrnzcNn9Vs4PjZZnRKJKxHsZssLt8BbJj5hnwMWg9/L/_K1W3449_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-HqpbFxF/6/Kqg4tTFcbPwbPB5swf2zRPPjt589n47x3W7Hk97g2/M/_K1W3449_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-HqpbFxF/6/KKJwbwLJVLXdPQSB8XtLCWFLHFxmZxmTRKdh26SK6/S/_K1W3449_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xjv9Dv9",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland in the Fall.",
     "alt": "Fine art landscape photography of Iceland in the Fall.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-xjv9Dv9/6/KWtvfQgNX3d8nC37F7pSnrrvcDV53bpDLBz8Z3Zbd/XL/_WHZ0004_tonemapped-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-xjv9Dv9/A",
     "keywords": [
       "Iceland",
@@ -2836,14 +3005,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-xjv9Dv9/6/MrSTr5fLtVqvqTS7sz753RX827p6CFFm8sTfspzJg/XL/_WHZ0004_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-xjv9Dv9/6/MrSTr5fLtVqvqTS7sz753RX827p6CFFm8sTfspzJg/XL/_WHZ0004_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-xjv9Dv9/6/LmCRnXBkKJnvXX8BKdBn2bszphT7fxhx9Z4SfXxhR/L/_WHZ0004_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-xjv9Dv9/6/M99rvRKwwxLQkPK5nv76WNPFrzxdDbJF85tBtXz7Z/M/_WHZ0004_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-xjv9Dv9/6/MXM6dgm6z4bMQgR3dsVDQxnXzL5ccz62brrwpKmqv/S/_WHZ0004_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VWcV6vv",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland in the Fall.",
     "alt": "Fine art landscape photography of Iceland in the Fall.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-VWcV6vv/6/Lrfj9SpWx4DPv8KcN5SMnZSKfMHPWcTMfdPtvL5vD/XL/_WHZ0113_tonemapped-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VWcV6vv/A",
     "keywords": [
       "Iceland",
@@ -2919,14 +3093,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-VWcV6vv/6/MZVvZ5RzD76nKs3G8ptHSFWmggCKt93cF6GWkxzZB/XL/_WHZ0113_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-VWcV6vv/6/MZVvZ5RzD76nKs3G8ptHSFWmggCKt93cF6GWkxzZB/XL/_WHZ0113_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-VWcV6vv/6/MC8FmXnwNVLBgXS2RbZ4sMN663WNwwBQXJrhTqxzS/L/_WHZ0113_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-VWcV6vv/6/M99SbDrwXhCsdwNNpZ3S5svL6xj9pV8hJpB8tqV6c/M/_WHZ0113_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-VWcV6vv/6/KRJNFFFcdjBvzmHBrh78FRTfvSBC766gXg8RpFvbt/S/_WHZ0113_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Sm5wgc8",
-    "title": "A",
+    "title": "Untitled",
     "description": "Collection of the Best Iceland fine art landscape photography.",
-    "alt": "Collection of the Best Iceland fine art landscape photography.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Sm5wgc8/7/KvgjdWBcgfm43qhFjcQgRGKjwjsZ8P4hGV9mwWrXS/XL/_WHZ0134-Edit-XL.jpg",
+    "alt": "Fine art landscape photography of Iceland in the Fall.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Sm5wgc8/A",
     "keywords": [
       "Iceland",
@@ -3002,14 +3181,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Sm5wgc8/7/L5FbLFCmVSVRNRDcZZRCnt2WSwDMttkx5GJx8TgJq/XL/_WHZ0134-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Sm5wgc8/7/L5FbLFCmVSVRNRDcZZRCnt2WSwDMttkx5GJx8TgJq/XL/_WHZ0134-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Sm5wgc8/7/ND7SwSzktZCgGTzdmFLDFpnhkW32SzzPwX4dPz99d/L/_WHZ0134-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Sm5wgc8/7/MnVP5vKch5HkhjRBxNQQMQn6P9Z7nXctkFd3qzsvm/M/_WHZ0134-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Sm5wgc8/7/Mzk4pxS9JQZtKjWzWdWF3KXR9NZnw9XPJpMG4LqKQ/S/_WHZ0134-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-z3JwmQT",
-    "title": "A",
+    "title": "Untitled",
     "description": "Collection of the Best Iceland fine art landscape photography.",
     "alt": "Collection of the Best Iceland fine art landscape photography.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-z3JwmQT/6/Lxdzt2jKpBPCD3DRdvMbZdH55mZQwvFncWSMbRGGV/XL/_WHZ0208-Pano-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-z3JwmQT/A",
     "keywords": [
       "Iceland",
@@ -3085,14 +3269,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-z3JwmQT/6/LJK346Jd7tzpmZBMMdV4GRR2mfqFTV8mF3X5THJGb/XL/_WHZ0208-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-z3JwmQT/6/LJK346Jd7tzpmZBMMdV4GRR2mfqFTV8mF3X5THJGb/XL/_WHZ0208-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-z3JwmQT/6/LJK346Jd7tzpmZBMMdV4GRR2mfqFTV8mF3X5THJGb/XL/_WHZ0208-Pano-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-z3JwmQT/6/MPSbFhGqsRTDQPCbrK6M3tM7KrdH4TLnBH5TMgttr/L/_WHZ0208-Pano-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-z3JwmQT/6/M7LpKGkCMC5RR6TtdqgwS7VmmCczqPkXTMFmdKRg8/S/_WHZ0208-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BGbC6wT",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine art landscape photography of Iceland in the Fall.",
-    "alt": "Fine art landscape photography of Iceland in the Fall.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-BGbC6wT/6/Lc9nq42MRz5rZ5jL5P9kMJpZjqBT3zQ3gQtcMKBDD/XL/_WHZ0218_tonemapped-Edit-XL.jpg",
+    "alt": "Collection of the Best Iceland fine art landscape photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-BGbC6wT/A",
     "keywords": [
       "Iceland",
@@ -3168,14 +3357,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-BGbC6wT/6/MrHK5qbbfxvKWpJ6Frg2J9Dt9CjsPHPNNhHkMtgH6/XL/_WHZ0218_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-BGbC6wT/6/MrHK5qbbfxvKWpJ6Frg2J9Dt9CjsPHPNNhHkMtgH6/XL/_WHZ0218_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-BGbC6wT/6/MrHK5qbbfxvKWpJ6Frg2J9Dt9CjsPHPNNhHkMtgH6/XL/_WHZ0218_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-BGbC6wT/6/LRMvbHKZ22tCn7gbpkKncGhgCGGQCCgpZ43VkthQg/L/_WHZ0218_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-BGbC6wT/6/L7zmt4Hsgsb3bX7Vpb45C4fTZbLdVhFm8ssRwh5BJ/S/_WHZ0218_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FhRjnhW",
     "title": "Gljúfrabúi",
     "description": "Fine art landscape photography of Iceland in the Fall.",
-    "alt": "Gljúfrabúi",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-FhRjnhW/6/Khqz7tmfVNFsSQ8MfzbwNVGBJkmrMqmXdtzTHPCj7/XL/_WHZ0304-Edit-XL.jpg",
+    "alt": "Fine art landscape photography of Iceland in the Fall.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-FhRjnhW/A",
     "keywords": [
       "Iceland",
@@ -3251,14 +3445,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-FhRjnhW/6/LZqH7w72wgBHXwPB5n8p5DcCBC93F8QW2sVJBMf3P/XL/_WHZ0304-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-FhRjnhW/6/LZqH7w72wgBHXwPB5n8p5DcCBC93F8QW2sVJBMf3P/XL/_WHZ0304-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-FhRjnhW/6/NT7PMcgqMC8L9gTshwdpv6fLrkCS5Z22R57xnMRMk/L/_WHZ0304-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-FhRjnhW/6/KsK2CsQtBNpVZjhZJVJFkMCXJKS44WH757CN4jG9z/M/_WHZ0304-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-FhRjnhW/6/LsxZ6MTcL6kNRqCnDDcTfqWJDq7vcj2DgkQSTh5pH/S/_WHZ0304-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4PJ9Tq6",
-    "title": "A",
+    "title": "Untitled",
     "description": "Collection of the Best Iceland fine art landscape photography.",
-    "alt": "Collection of the Best Iceland fine art landscape photography.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-4PJ9Tq6/5/M8v7RxH9Lk7rDvN3XH95Tjg3SWFMnG7ChbCWLKGJw/XL/_WHZ0327_tonemapped-Edit-2-XL.jpg",
+    "alt": "Gljúfrabúi",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-4PJ9Tq6/A",
     "keywords": [
       "Iceland",
@@ -3334,14 +3533,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-4PJ9Tq6/5/MxT5dmM2pS5qWpLC93GDZ3ZR9DGB78dtRhb4x86Km/XL/_WHZ0327_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-4PJ9Tq6/5/MxT5dmM2pS5qWpLC93GDZ3ZR9DGB78dtRhb4x86Km/XL/_WHZ0327_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-4PJ9Tq6/5/LsvnwgknNGq7mNpMbtQRG3wHfstwwf3Hpgsjkj5fC/L/_WHZ0327_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-4PJ9Tq6/5/KWTgLFBw6FM272wJJ8CzzWGg36gsnq2CF2q8kFRXj/M/_WHZ0327_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-4PJ9Tq6/5/LxbcqZ7P8xS2BJFn68zXgtkHxRK7hjnvR2XWLXHj2/S/_WHZ0327_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hz2cL2D",
-    "title": "A",
+    "title": "Untitled",
     "description": "Collection of the Best Iceland fine art landscape photography.",
     "alt": "Collection of the Best Iceland fine art landscape photography.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-hz2cL2D/6/M7tHHzK6wKqkhHwDQfk4Fh249vC4GS3CTpXdQF6Hr/XL/_WHZ0330_tonemapped-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hz2cL2D/A",
     "keywords": [
       "Iceland",
@@ -3417,14 +3621,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-hz2cL2D/6/LnzXdvzfcJZL6DFK2bs9fZ4b62wHffVCKNFhdvhNV/XL/_WHZ0330_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-hz2cL2D/6/LnzXdvzfcJZL6DFK2bs9fZ4b62wHffVCKNFhdvhNV/XL/_WHZ0330_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-hz2cL2D/6/MjLRpHdrP9ZfGgXbQ2V8BxmkMZWhNGQ9nN8JWHMJ4/L/_WHZ0330_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-hz2cL2D/6/Kpb5sSHMQXvrFgBL8WbqrMJHqpbhJw8PHrchn79Ch/M/_WHZ0330_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-hz2cL2D/6/Ld3DjLD9qBpkPghFxJjnzmpH2FqQWS4zZpKdXQvVk/S/_WHZ0330_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Z83L9NS",
-    "title": "A",
+    "title": "Untitled",
     "description": "Collection of the Best Iceland fine art landscape photography.",
     "alt": "Collection of the Best Iceland fine art landscape photography.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Z83L9NS/6/M9N98NSLv4qZ3hTBSpL55W3WvfRHG7JVP59b2CcFs/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Z83L9NS/A",
     "keywords": [
       "Iceland",
@@ -3500,14 +3709,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Z83L9NS/6/MdFBRBQPwshQHqPjnkWvcgR3PkH5w7QZHwb7CTFF5/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Z83L9NS/6/MdFBRBQPwshQHqPjnkWvcgR3PkH5w7QZHwb7CTFF5/XL/_WHZ0338_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Z83L9NS/6/MmsWpHVQ3wfsmv7ChZZTdHcRDrB3pLdV6HgdqpCzq/L/_WHZ0338_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Z83L9NS/6/LZmvM9JF9f72kBK3Gj7wmM6PzTQ939S9svjgTCTX5/M/_WHZ0338_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-Z83L9NS/6/NHkS5TDF9zjpDfBV2GhFSnXxWR7Ps7fjtX2Rnms7M/S/_WHZ0338_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hRwVLbb",
-    "title": "A",
+    "title": "Untitled",
     "description": "Collection of the Best Iceland fine art landscape photography.",
     "alt": "Collection of the Best Iceland fine art landscape photography.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-hRwVLbb/1/NXDJNk33SJPTMgmd7WnH87ZPWWqmXWr6gfsHsHw6S/XL/_WHZ0413-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-hRwVLbb/A",
     "keywords": [
       "Iceland",
@@ -3583,14 +3797,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-hRwVLbb/1/LLKq9ffsFchv9NqwDMzN3LwDtbXdwf4LgzHNR52PB/XL/_WHZ0413-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-hRwVLbb/1/LLKq9ffsFchv9NqwDMzN3LwDtbXdwf4LgzHNR52PB/XL/_WHZ0413-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-hRwVLbb/1/KfBQxs6C5ZTcNTwrNtBJ549tx4JxjmPJm59svFbLT/L/_WHZ0413-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-hRwVLbb/1/NbXjVgVcGvSRzg2PQsLvJvzvkzKVj3h84pjV6H39D/M/_WHZ0413-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-hRwVLbb/1/LFRFCbtZjKG4QzVqRvrQ67JK2Nz54ZWg5WJR9Z9hV/S/_WHZ0413-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tnFbsvM",
     "title": "Skógafoss Falls in the Fall",
     "description": "Fine art landscape photography of Iceland in the Fall.",
-    "alt": "Skógafoss Falls in the Fall",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-tnFbsvM/6/MjTKRbpJ4jBhFkhDcHGjJRQ3kRjv2Q3JNrFVMb5cN/XL/_WHZ0417-Edit-XL.jpg",
+    "alt": "Collection of the Best Iceland fine art landscape photography.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-tnFbsvM/A",
     "keywords": [
       "Iceland",
@@ -3666,14 +3885,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-tnFbsvM/6/K9kjMgsP94sKwfv9sTzwKPCpR7JMcknzkBwcV5zrL/XL/_WHZ0417-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-tnFbsvM/6/K9kjMgsP94sKwfv9sTzwKPCpR7JMcknzkBwcV5zrL/XL/_WHZ0417-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-tnFbsvM/6/KpZGnzBZsw979LkSQRfHvnbQMVr4JWvDSpcdJpnDQ/L/_WHZ0417-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-tnFbsvM/6/MNCCPx7r9FCBKjdQtZPxqLzSndftnGBzVHk2bDrPS/M/_WHZ0417-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-tnFbsvM/6/M5b9F7r5m2zRbdGHWV4k3QRCV6T4XLDkb2Sxnb7GM/S/_WHZ0417-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zQrCP2v",
     "title": "Iceland's Skógafoss",
     "description": "Iceland fine art landscape photography including waterfalls and scenes from around Iceland.",
-    "alt": "Iceland's Skógafoss",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-zQrCP2v/1/MJVGXZNjmXgcmdmz3xNKWnC7MtTWmxRD6ZMgv5qdS/XL/_WHZ0424-Edit-XL.jpg",
+    "alt": "Skógafoss Falls in the Fall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-zQrCP2v/A",
     "keywords": [
       "Iceland",
@@ -3749,14 +3973,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-zQrCP2v/1/NghBCgkWxmSMBLXhXWrb5PGgvGgzzP9dZc9vV6zSx/XL/_WHZ0424-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-zQrCP2v/1/NghBCgkWxmSMBLXhXWrb5PGgvGgzzP9dZc9vV6zSx/XL/_WHZ0424-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-zQrCP2v/1/NghBCgkWxmSMBLXhXWrb5PGgvGgzzP9dZc9vV6zSx/XL/_WHZ0424-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-zQrCP2v/1/LHr3Tg5xMrBHmbQGxw5ds2kc3FmQPLvXtLgsd5Lpj/L/_WHZ0424-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Black-White/i-zQrCP2v/1/K2qPDJV48fjFdVqsvFLgm3q42pd9X49Hksx4r8p9M/S/_WHZ0424-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-czrBwzH",
     "title": "Puffin",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Puffin",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-czrBwzH/2/L7VpQtQRqwcxWtDq2VvWXRbBpDMmPQvNRV3vJtRJj/XL/_OL33996-Enhanced-Edit-XL.jpg",
+    "alt": "Iceland's Skógafoss",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-czrBwzH/A",
     "keywords": [
       "Iceland",
@@ -3832,14 +4061,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-czrBwzH/2/MZLhZ6CQm46cPxKX56nP49p9vGbjLv79M2D6Wr9kL/XL/_OL33996-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-czrBwzH/2/MZLhZ6CQm46cPxKX56nP49p9vGbjLv79M2D6Wr9kL/XL/_OL33996-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-czrBwzH/2/LX5CC6nN34Wwg9k8646WkzVhW3HtpKRmvjS6Cp9xD/L/_OL33996-Enhanced-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-czrBwzH/2/Lc9fkXfN3Xd62Cn9Cq8LsrLztB74gfxSwbBLcBvtm/M/_OL33996-Enhanced-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-czrBwzH/2/Kw6JkmvLqFjFP42LwN4XJzbG6zhj89drpCq7T6WzS/S/_OL33996-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-td4TJFn",
     "title": "Lava",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Lava",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-td4TJFn/6/McMzjfV7DgMLk3vWTNfScQDnMxKgQV3x9jrqZtV4K/XL/_OL32845-XL.jpg",
+    "alt": "Puffin",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-td4TJFn/A",
     "keywords": [
       "Iceland",
@@ -3915,14 +4149,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-td4TJFn/6/MjwbTDsvqmdn3qxS6B9Wm8xhtKhxCDtBj45vrFbcX/XL/_OL32845-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-td4TJFn/6/MjwbTDsvqmdn3qxS6B9Wm8xhtKhxCDtBj45vrFbcX/XL/_OL32845-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-td4TJFn/6/LQXgFbz3TSh7BxHWQxz2WjBXv667PX8K6LhTjRtd2/L/_OL32845-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-td4TJFn/6/LSwptkb5W9JGFd7CdZPJqDW7JvtPJfJC5qr9VxNdk/M/_OL32845-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-td4TJFn/6/L6wrhfMvTLVDcNmJ3N89bhTJfLnJVLvjKCvnbtfTB/S/_OL32845-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jH75mBX",
     "title": "Sculpture on Shore Walk",
     "description": "This sculpture can be seen on the shore walk in Iceland.  ©Wayne Heim",
-    "alt": "Sculpture on Shore Walk",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jH75mBX/0/L9SQS3x9TRDGjCFPNwPNqpRfWNv2R3nKz5hmpfZTJ/XL/_WHZ2986-XL.jpg",
+    "alt": "Lava",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jH75mBX/A",
     "keywords": [
       "Iceland",
@@ -3998,14 +4237,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jH75mBX/0/Mc92b2rqrC4gvcVbRMvTPwXmF23DGShM6TDxvxfvR/XL/_WHZ2986-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jH75mBX/0/Mc92b2rqrC4gvcVbRMvTPwXmF23DGShM6TDxvxfvR/XL/_WHZ2986-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jH75mBX/0/NWSRpc2PKWrsQw6PPqd4p5wNDVVD3rdhCCwkS3f8Z/L/_WHZ2986-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jH75mBX/0/KtXsrtTKp4kxrS8Fqw5G8P77gT38QtZ4FD7rsX7bZ/M/_WHZ2986-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jH75mBX/0/LVbSn94gP6s2pkVKTkqXKWQR4kDtwrbx6ckvQfvDT/S/_WHZ2986-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tM7nXPd",
     "title": "Overlook",
     "description": "Collection of the Best Iceland fine art landscape photography.",
-    "alt": "Overlook",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/MHhRdfkgQc3HK6LCmD8jfn5t9v6szdG9zzLpKSqBL/XL/_DSF1636-Edit-2-XL.jpg",
+    "alt": "Sculpture on Shore Walk",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-tM7nXPd/A",
     "keywords": [
       "Iceland",
@@ -4081,14 +4325,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/Lr63zc9cspD7vbPbqsRVpdS74BK9KXH9kVMtCB4rq/XL/_DSF1636-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/Lr63zc9cspD7vbPbqsRVpdS74BK9KXH9kVMtCB4rq/XL/_DSF1636-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/KvBZNzLttJrVTN5ZTZqcVmJpLZprbDjNqwb2jBtTM/L/_DSF1636-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/M2bBZWGrNGSndZfK49kWTtRgBhFzJzNjR6jMCCdZ8/M/_DSF1636-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/MHdwqMZ3s3GmCLHxcQ54Hc4vqtpvG4bv6mG3khrXb/S/_DSF1636-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gvhHBMm",
     "title": "On the beach",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "On the beach",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gvhHBMm/2/M9SwMXfj57TxQxWjhVm5wLzp3VcGjzqZ5JkTJrndR/XL/_DSF1897-XL.jpg",
+    "alt": "Overlook",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-gvhHBMm/A",
     "keywords": [
       "Iceland",
@@ -4164,14 +4413,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gvhHBMm/2/MzqVShC3LcGrdS3Sdt6j9779B6bvfsjx6zdMJtFkT/XL/_DSF1897-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gvhHBMm/2/MzqVShC3LcGrdS3Sdt6j9779B6bvfsjx6zdMJtFkT/XL/_DSF1897-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gvhHBMm/2/MzqVShC3LcGrdS3Sdt6j9779B6bvfsjx6zdMJtFkT/XL/_DSF1897-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gvhHBMm/2/KZJKsv337jMB89k8QfSfgLTpbR79SbkZ9cbMhSR96/L/_DSF1897-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gvhHBMm/2/KgXwzBJgrxQ9mBQjBkksnhjHnJGZRZB5c7PKHM6Fr/S/_DSF1897-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-c3RK5G4",
     "title": "Fjaðrárgljúfur Canyon",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Fjaðrárgljúfur Canyon",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-c3RK5G4/3/MscMvL86wfG8LRKPFDCWqFVJBFq5FKCxTLFMJWNkf/XL/_DSF2031-Edit-XL.jpg",
+    "alt": "On the beach",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-c3RK5G4/A",
     "keywords": [
       "Iceland",
@@ -4247,14 +4501,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-c3RK5G4/3/KzSWgHqvJRbgXV9dXMBn8sxwWRwJWtKgjbStR2cj3/XL/_DSF2031-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-c3RK5G4/3/KzSWgHqvJRbgXV9dXMBn8sxwWRwJWtKgjbStR2cj3/XL/_DSF2031-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-c3RK5G4/3/KzSWgHqvJRbgXV9dXMBn8sxwWRwJWtKgjbStR2cj3/XL/_DSF2031-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-c3RK5G4/3/KDV5gvzcmzpPfZHnXTvVQxWw4HTX2bT4DPXmZqsXq/L/_DSF2031-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-c3RK5G4/3/KrfT53kQRNKN3P7QRRKvqvZrXMZ7JrpkMFkpgvQKw/S/_DSF2031-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KVnLdHz",
     "title": "Fjaðrárgljúfur Canyon Black and White",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Fjaðrárgljúfur Canyon Black and White",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVnLdHz/2/LMrJGSMpGCbTjQhbD34xCNfq9ZVnbrFRC64vZKgx7/XL/_DSF2052-XL.jpg",
+    "alt": "Fjaðrárgljúfur Canyon",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KVnLdHz/A",
     "keywords": [
       "Iceland",
@@ -4330,14 +4589,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVnLdHz/2/KpdQh76gLSZf6fXbwhqx4QPVfSqn52PXFR8665Bts/XL/_DSF2052-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVnLdHz/2/KpdQh76gLSZf6fXbwhqx4QPVfSqn52PXFR8665Bts/XL/_DSF2052-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVnLdHz/2/KpdQh76gLSZf6fXbwhqx4QPVfSqn52PXFR8665Bts/XL/_DSF2052-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVnLdHz/2/MX24rqjkc7kDkT9VDWp2Z9vLjBWWJdML6wgTkMRRW/L/_DSF2052-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVnLdHz/2/MLsJJN5ZpTHN8zh2DxQtGQPgttF5pbKCwrMTL5nhQ/S/_DSF2052-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f8GTnnN",
     "title": "Middle Falls, Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Middle Falls, Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-f8GTnnN/2/KZKjzSdSBw3KbNbKPBKTrdb6pKXTzkZWxxGJ939LC/XL/_ANA1942-Edit-Edit-XL.jpg",
+    "alt": "Fjaðrárgljúfur Canyon Black and White",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-f8GTnnN/A",
     "keywords": [
       "Iceland",
@@ -4413,14 +4677,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-f8GTnnN/2/KZ82NMkDd9hsBQHQLwFDLkHc5R8LKKcXCmtbLRxrZ/XL/_ANA1942-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-f8GTnnN/2/KZ82NMkDd9hsBQHQLwFDLkHc5R8LKKcXCmtbLRxrZ/XL/_ANA1942-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-f8GTnnN/2/MrznXRG2wLPSGGjcvqq98hC6xpST6wqxzKdfGKvSP/L/_ANA1942-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-f8GTnnN/2/Lc4HCZgMCtLMsGg9XFmj8L47mH6945ZFj8bTfnxV2/M/_ANA1942-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-f8GTnnN/2/NWCsBB2cQGsgDtr4Tgw5PSxrKLWCMNvgv9djJ3K6t/S/_ANA1942-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9Tv44Gf",
     "title": "No More Power",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "No More Power",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-9Tv44Gf/7/MqjDvzhGf9gLMDVbbHTDrV675bWZ2xvbGs4Ch6C7R/XL/_DSF2241-Edit-Edit-XL.jpg",
+    "alt": "Middle Falls, Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-9Tv44Gf/A",
     "keywords": [
       "Iceland",
@@ -4496,14 +4765,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-9Tv44Gf/7/LLD82StjBdCxbpVK6Z8DNf98WR86fK8C8BXJ2Pnkn/XL/_DSF2241-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-9Tv44Gf/7/LLD82StjBdCxbpVK6Z8DNf98WR86fK8C8BXJ2Pnkn/XL/_DSF2241-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-9Tv44Gf/7/Mq9hqw2XXXjSFtCcL6xxQsRXsxPtkBL7jfxKdn5J2/L/_DSF2241-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-9Tv44Gf/7/KjXXFzwWVZGQNS9jbQk8RDgFmwWFQ7VmkVCsPfDcC/M/_DSF2241-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-9Tv44Gf/7/Mh9wLkV6jtMzwrcdrFjTn9FMQBVmf2xZVZdThtc7B/S/_DSF2241-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VjpvmSB",
     "title": "Spring Lupine Flowers",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Spring Lupine Flowers",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-VjpvmSB/8/KVp9JTmZLGgs6PgF6fRQFt4wZJgqfZSCzMKmMzWLm/XL/_ANA2004-Edit-XL.jpg",
+    "alt": "No More Power",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-VjpvmSB/A",
     "keywords": [
       "Iceland",
@@ -4579,14 +4853,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-VjpvmSB/8/L8kbVnLQn6DR9zJkVvWFJjQ58xR4WCLwrqD449rQh/XL/_ANA2004-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-VjpvmSB/8/L8kbVnLQn6DR9zJkVvWFJjQ58xR4WCLwrqD449rQh/XL/_ANA2004-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-VjpvmSB/8/L4Ts6nqMC3Ms6PrCZPfczBcdBQNRsZHqsKkzST4vb/L/_ANA2004-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-VjpvmSB/8/M7w9LRtdm8XcDdkn2GCGn2zVmDZSRMmD9QSWfHTb5/M/_ANA2004-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-VjpvmSB/8/NWmb7DSwJbxDwdmCxLMr3tjjwLNHTVfjVCHZ3tTCv/S/_ANA2004-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KhvPX7W",
     "title": "Black and White Lupines",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Black and White Lupines",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KhvPX7W/3/MjbSN9RXfzhkhFLqPf4LBDkgWnsW6FqDtZpVGct7d/XL/_ANA2004-Edit-b-XL.jpg",
+    "alt": "Spring Lupine Flowers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KhvPX7W/A",
     "keywords": [
       "Iceland",
@@ -4662,14 +4941,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KhvPX7W/3/MH6Xz6Jnk2RgcfdXFfrR9mJwbWxdsBmcqNQC83KZR/XL/_ANA2004-Edit-b-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KhvPX7W/3/MH6Xz6Jnk2RgcfdXFfrR9mJwbWxdsBmcqNQC83KZR/XL/_ANA2004-Edit-b-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KhvPX7W/3/MRTgV9zdqPXgjww5sq4LdM4xmSS3SjxvXQXB6J6JN/L/_ANA2004-Edit-b-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KhvPX7W/3/NhN2MmbWHn5dfH457ZdBwJqrNGKgzHNVF5QbppBJs/M/_ANA2004-Edit-b-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KhvPX7W/3/LnpntQxCBPwCJsnS4tWzGzCH8Q6jDdvNcDmTxGCT6/S/_ANA2004-Edit-b-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JnGs2kd",
     "title": "Setting Sun",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Setting Sun",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JnGs2kd/7/MvpGdLk9NPsWvmxSXRqQCR3SZK78kKTXd9TZ8p7pL/XL/_ANA2019-Edit-Edit-XL.jpg",
+    "alt": "Black and White Lupines",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JnGs2kd/A",
     "keywords": [
       "Iceland",
@@ -4745,14 +5029,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JnGs2kd/7/K6HJwHDWRPSjH5mjBFWHKP5BVshCnc37W3G4mvWH4/XL/_ANA2019-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JnGs2kd/7/K6HJwHDWRPSjH5mjBFWHKP5BVshCnc37W3G4mvWH4/XL/_ANA2019-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JnGs2kd/7/K645cTJXgLNcNG9sWxBBq6LBH6wwpVxFjH3wTC49Q/L/_ANA2019-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JnGs2kd/7/LHKXwjkN6vPv2BjMsktC9rQG58CH6W86HVdWk8VH9/M/_ANA2019-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JnGs2kd/7/MvNxbQsVLNJrJX9mPSxgMz7h4W2wjn43hMXxK4Xgp/S/_ANA2019-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZzQrBnX",
     "title": "Evening Sun in Contrast",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Evening Sun in Contrast",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-ZzQrBnX/2/MT5TW5mkr4bv3SqWT2bdJP56PgR6FhgTWjs7TH85k/XL/_DSF2370-XL.jpg",
+    "alt": "Setting Sun",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-ZzQrBnX/A",
     "keywords": [
       "Iceland",
@@ -4828,14 +5117,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-ZzQrBnX/2/KXn6QFrZ5hFCGp6rJ35hzFXPSHSwg3tcZfHhVWJdV/XL/_DSF2370-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-ZzQrBnX/2/KXn6QFrZ5hFCGp6rJ35hzFXPSHSwg3tcZfHhVWJdV/XL/_DSF2370-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-ZzQrBnX/2/MWjVVpjh5xDmqs4gQ28gcSkXLtwvw8xnQjSZ2WDd3/L/_DSF2370-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-ZzQrBnX/2/LvP8LV984hrrBsjG3SLM5ntbkBKCWgw9CHgG97JPt/M/_DSF2370-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-ZzQrBnX/2/MxJgn29KVCdpVn9F8cH8BXtXx9kSzpntwPBRNzk72/S/_DSF2370-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6GxGFH8",
     "title": "Blue Ice",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Blue Ice",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-6GxGFH8/2/MqFmFjPXf6zVwcTwfnpDSqLPxCsBVwDrDv6JMwr9M/XL/_DSF2382-Enhanced-XL.jpg",
+    "alt": "Evening Sun in Contrast",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-6GxGFH8/A",
     "keywords": [
       "Iceland",
@@ -4911,14 +5205,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-6GxGFH8/2/NgK7Kw3xTdgrgXVTRf3PctgVdc6Wjt6TNVT3XZtwv/XL/_DSF2382-Enhanced-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-6GxGFH8/2/NgK7Kw3xTdgrgXVTRf3PctgVdc6Wjt6TNVT3XZtwv/XL/_DSF2382-Enhanced-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-6GxGFH8/2/Kng4BWLt4fKHszdwdxvThzs9KfcZzWhr76cN8rBxC/L/_DSF2382-Enhanced-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-6GxGFH8/2/LfbKp22sR9DLmrRbRbHZPr4GJV8CRBpBc3F2ZdLq5/M/_DSF2382-Enhanced-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-6GxGFH8/2/M3tQvL7HLjxVt3gZG4nsnn5w7c5GPqpg3TmcSQHVF/S/_DSF2382-Enhanced-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-95Sm25K",
     "title": "Diamond Beach",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Diamond Beach",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-95Sm25K/2/M7Ghtpk4WFJkn4NKhtCxpcHRqc8GwQC6QGgfNSfHR/XL/_DSF2438-Edit-XL.jpg",
+    "alt": "Blue Ice",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-95Sm25K/A",
     "keywords": [
       "Iceland",
@@ -4994,14 +5293,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-95Sm25K/2/KhjvgLWT7xwZ8GDmbVh3jXxrDsrJJgdHmjnbXzfKL/XL/_DSF2438-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-95Sm25K/2/KhjvgLWT7xwZ8GDmbVh3jXxrDsrJJgdHmjnbXzfKL/XL/_DSF2438-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-95Sm25K/2/KhjvgLWT7xwZ8GDmbVh3jXxrDsrJJgdHmjnbXzfKL/XL/_DSF2438-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-95Sm25K/2/LQxhDMMDTB6zCF5M4MHzZktPKXBmWhCjdjzhsRTRT/L/_DSF2438-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-95Sm25K/2/L8vCxvRSnXW8jTWdS83rLF46LDMdt4vPxzMgqbfPc/S/_DSF2438-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5RjfgGf",
     "title": "Vestrahorn",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Vestrahorn",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-5RjfgGf/3/LgTfZXzVQ3FZZ6PcLKftb6MJZ9PqWJJDmhKWfPwdN/XL/_DSF2521-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Diamond Beach",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-5RjfgGf/A",
     "keywords": [
       "Iceland",
@@ -5077,14 +5381,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-5RjfgGf/3/KGGprWHZkR37QDhW6LLqFz4QwQcK5zn9sjm4xgWCR/XL/_DSF2521-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-5RjfgGf/3/KGGprWHZkR37QDhW6LLqFz4QwQcK5zn9sjm4xgWCR/XL/_DSF2521-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-5RjfgGf/3/KTjVDDdJQbZSMJF4p568cjJbRzLXSKTwCk4LfNxLm/L/_DSF2521-Pano_tonemapped-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-5RjfgGf/3/LfgBb4cgwm8cGVBNgw6qq7MT6tn9kjNkHBdnSV6bV/M/_DSF2521-Pano_tonemapped-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-5RjfgGf/3/Nb48qK8JFppQLXg684CbZWX8Fs9P4pXRBvJTcq6Sc/S/_DSF2521-Pano_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BBnrHNk",
     "title": "Green Puffs. Vestrahorn Iceland",
     "description": "Visual symmetry. Blue sky, dark clouds, black sand beach. Horizontal striping is broken up with random green tuffs of grass, dotting the landscape like dabs of paint.",
-    "alt": "Green Puffs. Vestrahorn Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBnrHNk/2/LJV2r75q8xDv8zNPzHBP56b8Rn3KQw8hHTQRVhnVD/XL/_DSF2563-XL.jpg",
+    "alt": "Vestrahorn",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-BBnrHNk/A",
     "keywords": [
       "Iceland",
@@ -5160,14 +5469,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBnrHNk/2/M59vzpMcfzSMGRcSwcPSC5HVHVVtvDNCcnshL6Qj4/XL/_DSF2563-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBnrHNk/2/M59vzpMcfzSMGRcSwcPSC5HVHVVtvDNCcnshL6Qj4/XL/_DSF2563-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBnrHNk/2/LfXCG9kMsDR6XKbgB9N2mzmQx5qLPzJXPczFrtxw9/L/_DSF2563-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBnrHNk/2/LC5xQdcVwBZjzxV5mGBq2FTM8QhfjfbdQ7RXRm2Kq/M/_DSF2563-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBnrHNk/2/NVJkcMnxtx53cGJWhvcxjGKSqtWXwxb4jDhK6mD2Z/S/_DSF2563-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-B3z9hrZ",
     "title": "Sand Dunes. Vestrahorn Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Sand Dunes. Vestrahorn Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-B3z9hrZ/7/NFDC8fmDK8sQ9hCq7Htzk3vWMLQzvJwSdRhx4QWZ8/XL/_DSF2624-XL.jpg",
+    "alt": "Green Puffs. Vestrahorn Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-B3z9hrZ/A",
     "keywords": [
       "Iceland",
@@ -5243,14 +5557,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 62,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-B3z9hrZ/7/LFkchfdr6rCQVHFBGtvbczNBjTDmKLSnxrhBrx3cW/XL/_DSF2624-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-B3z9hrZ/7/LFkchfdr6rCQVHFBGtvbczNBjTDmKLSnxrhBrx3cW/XL/_DSF2624-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-B3z9hrZ/7/K28NwsGRs85RFm42XQPKJPvkdHMFMLt9tLVRRD5x3/L/_DSF2624-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-B3z9hrZ/7/L6xkj7z65d4Ww3rRfHCXtMHjGdQ8xSRvt77WR5Dqf/M/_DSF2624-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-B3z9hrZ/7/LMVwXWDjFMdzwLLsR6SQZxVPZZRNZLQRjjR88dPL7/S/_DSF2624-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BBvdb2k",
     "title": "Vestrahorn Beach",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Vestrahorn Beach",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBvdb2k/6/LpD752JSSQFf9cFSXpBvwczmH6CR4zD4pzcpN9j46/XL/_DSF2639-Pano-XL.jpg",
+    "alt": "Sand Dunes. Vestrahorn Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-BBvdb2k/A",
     "keywords": [
       "Iceland",
@@ -5326,14 +5645,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 63,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBvdb2k/6/MP347kDc4sT6w7xvDQ4w4zv9dB2nM6jv4p57DZmZb/XL/_DSF2639-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBvdb2k/6/MP347kDc4sT6w7xvDQ4w4zv9dB2nM6jv4p57DZmZb/XL/_DSF2639-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBvdb2k/6/LczDT8sZffQVMT6zzbXRsMtsMCBkLgBkCVHLHnp49/L/_DSF2639-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBvdb2k/6/M7cNT8dhgxZPts2WPvrVrsdqxkx4ncS2dS7VcXS4M/M/_DSF2639-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-BBvdb2k/6/LkBwKC9nzRqFnDz4HVP9Ttj3GWWr4QxRr4kdZBj4m/S/_DSF2639-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pzm8nxG",
     "title": "Vestrahorn Camp",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Vestrahorn Camp",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pzm8nxG/2/MTJfP7F7m43sFKtNjkLz9Wnpwm92wWK2KR6nrbqTM/XL/_DSF2655-XL.jpg",
+    "alt": "Vestrahorn Beach",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-pzm8nxG/A",
     "keywords": [
       "Iceland",
@@ -5409,14 +5733,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 64,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pzm8nxG/2/MdhSsWM6LzQjMsrJ2hzfGswCFT9sfj7L8qL4wDmdK/XL/_DSF2655-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pzm8nxG/2/MdhSsWM6LzQjMsrJ2hzfGswCFT9sfj7L8qL4wDmdK/XL/_DSF2655-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pzm8nxG/2/NjQvKvnpxZkdZFhN4P4cw7HZPGzGLQ39XMBp33rgg/L/_DSF2655-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pzm8nxG/2/NW2BLz4sCpmDV8Fzsvc6ttnCqSqXnNhzLTCM77KtV/M/_DSF2655-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pzm8nxG/2/KpPbq4K3tn7cMpnjKs6k9NQNMXBwWW6ks7THwDdvQ/S/_DSF2655-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N84vx6j",
     "title": "Viking Village at Vestrahorn. Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Viking Village at Vestrahorn. Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-N84vx6j/5/KZQPMWR9gLDQ2csKnWFXk8MVfgmj8sRPpz9WpTfQP/XL/_DSF2684-XL.jpg",
+    "alt": "Vestrahorn Camp",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-N84vx6j/A",
     "keywords": [
       "Iceland",
@@ -5492,14 +5821,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 65,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-N84vx6j/5/LB7fK9pRdVdXLw37BLKTksLppcZG4mGjNjhLgVgSg/XL/_DSF2684-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-N84vx6j/5/LB7fK9pRdVdXLw37BLKTksLppcZG4mGjNjhLgVgSg/XL/_DSF2684-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-N84vx6j/5/LB7fK9pRdVdXLw37BLKTksLppcZG4mGjNjhLgVgSg/XL/_DSF2684-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-N84vx6j/5/Lqnfz8kwbvrQCXnWvnVzCWbf2PGB5VP7qmq5hrLDF/L/_DSF2684-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-N84vx6j/5/NFmwCCJk5tz3jRftpHLMG9n4jhDk7WsB9r6Nd4h43/S/_DSF2684-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3kpwVkG",
     "title": "Sand Trails. Vestrahorn Beach",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Sand Trails. Vestrahorn Beach",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3kpwVkG/2/KGJWHvDPBVMbs22KrLpDp3J3KZ5Jp5b5v6Mz7DwdS/XL/_ANA2335-XL.jpg",
+    "alt": "Viking Village at Vestrahorn. Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-3kpwVkG/A",
     "keywords": [
       "Iceland",
@@ -5575,14 +5909,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 66,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3kpwVkG/2/LWgGQ8WsHKfTt374DStCJwDjfqLLxcW2jqjSNjxDF/XL/_ANA2335-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3kpwVkG/2/LWgGQ8WsHKfTt374DStCJwDjfqLLxcW2jqjSNjxDF/XL/_ANA2335-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3kpwVkG/2/KwxbcSm8NLNvbDwh6Hm3Hz9rxKDSmMPthqZbxk4x5/L/_ANA2335-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3kpwVkG/2/KjNPTzntpG3jsj4Tgzg2jjqC4FrrzxHngXMc5j5V9/M/_ANA2335-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3kpwVkG/2/LWs5Xx2St3wv7kzcXqh6tHPJzgdhJzp9T2BMgnfM2/S/_ANA2335-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KVJCjJ8",
     "title": "Sand tails. Windy Vestrahorn",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Sand tails. Windy Vestrahorn",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVJCjJ8/2/LTgPNzDjRPDrnH3Sh4CnVNK5HtsmC57ffjFHbTRvg/XL/_ANA2337-XL.jpg",
+    "alt": "Sand Trails. Vestrahorn Beach",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-KVJCjJ8/A",
     "keywords": [
       "Iceland",
@@ -5658,14 +5997,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 67,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVJCjJ8/2/Ktm4hHdFf37jRpScxqh3gRz2bVRpnw88HWWN6ggv4/XL/_ANA2337-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVJCjJ8/2/Ktm4hHdFf37jRpScxqh3gRz2bVRpnw88HWWN6ggv4/XL/_ANA2337-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVJCjJ8/2/KQBwR26qppgxXCFfGGWQHcqJGC4kTVq2jZ2wLxghX/L/_ANA2337-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVJCjJ8/2/NB387558tphbFSq5qwQJFW26PqvmwnL4Ddq3vLhg3/M/_ANA2337-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-KVJCjJ8/2/KDqXnw7g5RRRJkfSTCcdHx4PMKZVsMtSm8mdfvfdr/S/_ANA2337-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dhmXp5T",
     "title": "Vestrahorn and Batman mountan.",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Vestrahorn and Batman mountan.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-dhmXp5T/2/K5FF74xw9c6RT8V8Rwg2q73gTK3QBwx2DjF6pQk5C/XL/_DSF2718-Pano-XL.jpg",
+    "alt": "Sand tails. Windy Vestrahorn",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-dhmXp5T/A",
     "keywords": [
       "Iceland",
@@ -5741,14 +6085,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 68,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-dhmXp5T/2/KX9m6kcwQwpMmz9RD6XQdNmpFcbmK9pZfjpsXzG2s/XL/_DSF2718-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-dhmXp5T/2/KX9m6kcwQwpMmz9RD6XQdNmpFcbmK9pZfjpsXzG2s/XL/_DSF2718-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-dhmXp5T/2/KTsVTG7rSGNhVKrVR83VqmVs4b5QJvDJbcn6SB77h/L/_DSF2718-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-dhmXp5T/2/MwjpjCH45Ld2gzzsJvsqtBbcLZKVsKdJXfsPPB8fb/M/_DSF2718-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-dhmXp5T/2/NGbpf8xpTmSpc8d8gm35dcw4ZQm8ZzT3pZSnqN2Kw/S/_DSF2718-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tXhKFfZ",
     "title": "Sand Patterns",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Sand Patterns",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tXhKFfZ/5/M252MLqjz7WbmjMZv3BVVvQT9FNV5rNzjQvW5Xr4w/XL/_DSF2719-XL.jpg",
+    "alt": "Vestrahorn and Batman mountan.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-tXhKFfZ/A",
     "keywords": [
       "Iceland",
@@ -5824,14 +6173,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 69,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tXhKFfZ/5/Kf5J2NGLnbnSQS3w2K2h5mx2Tp4ZMnr8Nhq4gDbDQ/XL/_DSF2719-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tXhKFfZ/5/Kf5J2NGLnbnSQS3w2K2h5mx2Tp4ZMnr8Nhq4gDbDQ/XL/_DSF2719-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tXhKFfZ/5/Kf5J2NGLnbnSQS3w2K2h5mx2Tp4ZMnr8Nhq4gDbDQ/XL/_DSF2719-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tXhKFfZ/5/LfHWXjxQVJdLGWHM2nTfSdcdKGrxGZZgPN3TFg2HP/L/_DSF2719-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tXhKFfZ/5/MjNb9FhQqjHJx3V9HQS8B2F7jdz2LSsTq9jcxQh5h/S/_DSF2719-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7b7dkrw",
     "title": "Rocks with Tails",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Rocks with Tails",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7b7dkrw/5/NVPgq2LKtWdDKLg9G4jX33skq5kWhvcxzkLpbjwMT/XL/_DSF2722-XL.jpg",
+    "alt": "Sand Patterns",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-7b7dkrw/A",
     "keywords": [
       "Iceland",
@@ -5907,14 +6261,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 70,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7b7dkrw/5/NB2S8GbsHVkvXmCM28nRkVXSbj2CNZ3xqsVhdGCZq/XL/_DSF2722-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7b7dkrw/5/NB2S8GbsHVkvXmCM28nRkVXSbj2CNZ3xqsVhdGCZq/XL/_DSF2722-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7b7dkrw/5/NB2S8GbsHVkvXmCM28nRkVXSbj2CNZ3xqsVhdGCZq/XL/_DSF2722-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7b7dkrw/5/MLdHgdfr7XRdt7TBHzXJm9qK62bJLVW5tvWvCPjwB/L/_DSF2722-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7b7dkrw/5/KdQfJJsVj8HWnJcVzzhG2PGqHLSCqC8MfjN4jQVHj/S/_DSF2722-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gftBDfP",
     "title": "Hengifoss Waterfall. Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Hengifoss Waterfall. Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gftBDfP/2/NZGRt94Hpw6mBcN6wgGdQTCBC52FbP3d5khdQr57V/XL/_OL35143-XL.jpg",
+    "alt": "Rocks with Tails",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-gftBDfP/A",
     "keywords": [
       "Iceland",
@@ -5990,14 +6349,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 71,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gftBDfP/2/LvKCZL2QnkrDWk2MLVnrhgH2BQ5Wdt5R5BpszHgfh/XL/_OL35143-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gftBDfP/2/LvKCZL2QnkrDWk2MLVnrhgH2BQ5Wdt5R5BpszHgfh/XL/_OL35143-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gftBDfP/2/L6L3c4Ps2JVjJdr7q2NtfznkmFhDvnVvTBKQFtdTS/L/_OL35143-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gftBDfP/2/ML6rLTd57gN5mJ5RMFmQXsqGSBsGWmHZSbMkJ2rkS/M/_OL35143-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-gftBDfP/2/Mwk8ZPn8xJmcB2TJ7BCTGxhW9dRbr4z96Ftghc2gD/S/_OL35143-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-s4m4wp5",
     "title": "Waterfall near Stuðlagil basalt Canyon. Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls. © Wayne Heim",
-    "alt": "Waterfall near Stuðlagil basalt Canyon. Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/NWBWTb7ZGtnGB8chsBTWTSKhj65tTr3g22XFRkBgf/XL/_OL35270-XL.jpg",
+    "alt": "Hengifoss Waterfall. Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-s4m4wp5/A",
     "keywords": [
       "Iceland",
@@ -6073,14 +6437,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 72,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/KzQvchVgfvJ9s7qmC5kmTBdsJXnQ3qRBhMBW7Vvgg/L/_OL35270-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/M7hjHzGfswTh7KxZFLnRhRwRRjvpgpsLmhPzcX46z/S/_OL35270-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3tdkVSh",
     "title": "Hengifoss Waterfall:  Another Iceland Waterfall",
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls. © Wayne Heim",
-    "alt": "Hengifoss Waterfall:  Another Iceland Waterfall",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/K8QtfPsW3RzgNd6VLBd3hTSrWLb3c2dS2xnFPzZPq/XL/_DSF2963-Pano-2-XL.jpg",
+    "alt": "Waterfall near Stuðlagil basalt Canyon. Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-3tdkVSh/A",
     "keywords": [
       "Iceland",
@@ -6156,14 +6525,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 73,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KJ4Mq3b3t6tkJWSbDbvFjbfh7vZnGV7D8qvR7WzrV/XL/_DSF2963-Pano-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KJ4Mq3b3t6tkJWSbDbvFjbfh7vZnGV7D8qvR7WzrV/XL/_DSF2963-Pano-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KDgJs9WjqJgTCF8jQdZp6HXHwG3Jv9QwLxfCDrBFd/L/_DSF2963-Pano-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/Mrm5G9ND44wG3k62DDGk22cd9SSVkTDDJfVzTg8TD/M/_DSF2963-Pano-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/MnhhW4NQgn8kdT693SZPzGpgzNzBB922jvDxdwnmX/S/_DSF2963-Pano-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RRFGZvS",
     "title": "On the way to Hengifoss.",
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls.",
-    "alt": "On the way to Hengifoss.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MqRZPdWV2P4Q5Lp44mwDvX3r4cDz2RNKH3mfjkXgd/XL/_DSF2987-XL.jpg",
+    "alt": "Hengifoss Waterfall:  Another Iceland Waterfall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RRFGZvS/A",
     "keywords": [
       "Iceland",
@@ -6239,14 +6613,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 74,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/KjHsD6zm5Hb42rvbQcQTknDj9rSHPjcLbB2r97N5c/L/_DSF2987-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/KQm3CjBrvd377WPSDnWCdpqtBqk9vZBP2S7MrzfzL/S/_DSF2987-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Pgks2np",
     "title": "Roadside Iceland Waterfall",
     "description": "Just one of many un-named waterfalls in Iceland in the summer. Featuring Wayne's painterly landscape presentation.in the Summer. Painterly landscape photography style. © Wayne Heim",
-    "alt": "Roadside Iceland Waterfall",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/NcWcVkdXcXZxhnV6zDSL7zL6PZp7PLQvX6DdJpV7V/XL/_DSF3048-Edit-Edit-XL.jpg",
+    "alt": "On the way to Hengifoss.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-Pgks2np/A",
     "keywords": [
       "Iceland",
@@ -6322,14 +6701,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 75,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/NDfSH5R9fSPQgdMmz8BhMdsVmXrhjjLgJtW4JhC7S/L/_DSF3048-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/K7QGqcM3WdWFgPSTdKTqFw6JFFLqcM2KqrfpGGrxV/S/_DSF3048-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TgVv6SZ",
     "title": "Stuðlagil Canyon Colors",
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls.",
-    "alt": "Stuðlagil Canyon Colors",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/Mfq54M5pjT4vSdJNjPqwfMtq65Lq69LRFd3j8BVZL/XL/_ANA2501-Enhanced-Edit-Edit-XL.jpg",
+    "alt": "Roadside Iceland Waterfall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-TgVv6SZ/A",
     "keywords": [
       "Iceland",
@@ -6405,14 +6789,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 76,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NXxGndGQhNt5j4rv5rNDgSD2DJCxgtdfrPqJr8HqL/XL/_ANA2501-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NXxGndGQhNt5j4rv5rNDgSD2DJCxgtdfrPqJr8HqL/XL/_ANA2501-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/Mgvrx9nh5kxGLD8h8fkbzXWkPVL9SXH5JsQtQfPzk/L/_ANA2501-Enhanced-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/Kx6SK2z5CgXtMWZWTZSWwNPDsvNWdSbBkCc2Gg2vj/M/_ANA2501-Enhanced-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NJVkR69PMT2rH8m328RxTxzsDMtVgPHd3zXHBGvdW/S/_ANA2501-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jvKjdZd",
     "title": "Stuðlagil Canyon God Rays",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Stuðlagil Canyon God Rays",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-jvKjdZd/2/KXJBs8tXzm87BgWrvwHjqPxTvFK85sLWwpzSpx4MK/XL/_ANA2518-XL.jpg",
+    "alt": "Stuðlagil Canyon Colors",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-jvKjdZd/A",
     "keywords": [
       "Iceland",
@@ -6488,14 +6877,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 77,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-jvKjdZd/2/K3HT3tQd4JwNf5CTn9B8ZXNGFrn2BJgWn65dFM4b6/XL/_ANA2518-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-jvKjdZd/2/K3HT3tQd4JwNf5CTn9B8ZXNGFrn2BJgWn65dFM4b6/XL/_ANA2518-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-jvKjdZd/2/K6hVDCz4Jjrmwwx6BzwMcmPTZXNsVqJLN66thb4B7/L/_ANA2518-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-jvKjdZd/2/Kp2TQCtr4HHbMLg84b9Z3sWzKCKdQgjz9Dt24QDvb/M/_ANA2518-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-jvKjdZd/2/LxPKzK9ddpthbgXMF9q9GxQ4xKqJdjF3JfjTLjzj5/S/_ANA2518-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GxjLPhS",
     "title": "Stuðlagil Canyon View",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Stuðlagil Canyon View",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GxjLPhS/2/LF48cqndBz8xGBrBCjvkqC7mj4nnLLB5pkgcvTFN6/XL/_DSF3076-XL.jpg",
+    "alt": "Stuðlagil Canyon God Rays",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-GxjLPhS/A",
     "keywords": [
       "Iceland",
@@ -6571,14 +6965,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 78,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GxjLPhS/2/KXcQgDVLTs7nRWQWG88xsJkpVsc5tnsQgb4bjprJn/XL/_DSF3076-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GxjLPhS/2/KXcQgDVLTs7nRWQWG88xsJkpVsc5tnsQgb4bjprJn/XL/_DSF3076-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GxjLPhS/2/LCSnJTzk6P5v8gSVGntsdMkwMTgqrT7MGhLFFWv6m/L/_DSF3076-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GxjLPhS/2/L9Gh5dwkCvLwn676Vfrb276KFfX94hSz8hGw6zXT8/M/_DSF3076-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GxjLPhS/2/ND7Qc6d7p3Wt6xJkwjdD6ZftdT6vRhm83ZDrWjwtZ/S/_DSF3076-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JdTbNvz",
     "title": "Goðafoss Waterfall at sunset in Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer. Painterly landscape photography of water and waterfalls.",
-    "alt": "Goðafoss Waterfall at sunset in Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/MRNgkHnLwGppdBmV3GPSf9TtpwKjmLNJ5SfWJCLBk/XL/_ANA2548-XL.jpg",
+    "alt": "Stuðlagil Canyon View",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-JdTbNvz/A",
     "keywords": [
       "Iceland",
@@ -6654,14 +7053,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 79,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/Ktf4CTT4mLZH727Wp4Lp4HJg2jRZhXmpkVSGQm6DL/XL/_ANA2548-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/Ktf4CTT4mLZH727Wp4Lp4HJg2jRZhXmpkVSGQm6DL/XL/_ANA2548-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/NDXHZB8vxpsJpHqgbng3tsZtg9gL5fPGsTXbk46qj/L/_ANA2548-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/M6WTCg2Q2bRq5tNTLNhtPhGPsjQSSSntM4qwp4tvc/M/_ANA2548-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/NHGCTMCW5J69DDMrcGL3jTZLPjjwJMfV6vhzJj6mk/S/_ANA2548-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GGmGhkv",
     "title": "Goðafoss - Iceland waterfall sunset.",
     "description": "Fine art landscape photography of Iceland waterfall in the Summer. Painterly Landscape Photography. © Wayne Heim",
-    "alt": "Goðafoss - Iceland waterfall sunset.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/NfmQMwcBM2k42W6SPGZRpMFrmGzWptXzf5xxFmrsm/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
+    "alt": "Goðafoss Waterfall at sunset in Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-GGmGhkv/A",
     "keywords": [
       "Iceland",
@@ -6737,14 +7141,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 80,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LSQFhkSSMq6V6gwMX4nTTRQNZMXx9SvGRpqfNWgR7/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LSQFhkSSMq6V6gwMX4nTTRQNZMXx9SvGRpqfNWgR7/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LNrNzwvNgqJJZGFKcwrq48Q7GP6gs3tWdzNGnKT8x/L/_ANA2548-Enhanced-Edit-2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/Lv6spHCZ55fRgfpL38X6m5x7wt2Hcd5DjmPkJCbRF/M/_ANA2548-Enhanced-Edit-2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LWQRG9BZJBCSkmqmMTCRqdsMxzC4p6dNzmRfqqChX/S/_ANA2548-Enhanced-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rWFC3dL",
     "title": "Goðafoss waterfall Iceland",
     "description": "Fine art landscape photography of Iceland sunset in the Summer.",
-    "alt": "Goðafoss waterfall Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/MQBKfptM86tKv2S3GvvVNd3Z6gTSZLZKdhnjRRGFb/XL/_ANA2550-Edit-XL.jpg",
+    "alt": "Goðafoss - Iceland waterfall sunset.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-rWFC3dL/A",
     "keywords": [
       "Iceland",
@@ -6820,14 +7229,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 81,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Nhv5gtQ29SScxV8vC2HQsLkwK7N3g2Zhn4Mq5TcvP/XL/_ANA2550-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/LNx9jPqH4jVfK42zjjcGK79M2BZqxVxPbs2DXGVp3/L/_ANA2550-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-rWFC3dL/3/Lhs3m7PjzH2FQ6ShmrmDGfDJDK87v2cKz4MBV82tV/S/_ANA2550-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8qwrBSd",
     "title": "Windy",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Windy",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-8qwrBSd/2/LWWVHD6DtWhnb47fWpPgCkJ9gg8dCZVXXbzpg3BZh/XL/_ANA2612-Edit-XL.jpg",
+    "alt": "Goðafoss waterfall Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-8qwrBSd/A",
     "keywords": [
       "Iceland",
@@ -6903,14 +7317,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 82,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-8qwrBSd/2/KgQ68sKFxtNSQbgC6dvcPL28gdKRSZ52QXJ9nBfrW/XL/_ANA2612-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-8qwrBSd/2/KgQ68sKFxtNSQbgC6dvcPL28gdKRSZ52QXJ9nBfrW/XL/_ANA2612-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-8qwrBSd/2/KgQ68sKFxtNSQbgC6dvcPL28gdKRSZ52QXJ9nBfrW/XL/_ANA2612-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-8qwrBSd/2/MRDXQ7kSjF7bbQ2f6PL9XnFg5Pj6DJ5DthVHNWSKT/L/_ANA2612-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-8qwrBSd/2/Kt6xKHSWCvDS8CBB8Jhz4vGXVMx5WNDP3Pm4QtH46/S/_ANA2612-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RFKdTLj",
     "title": "Lava Flow",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Lava Flow",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RFKdTLj/2/MD9WJXSJ7z7bGdSjXN6Q2BnW7ZKbvnXv9dpXZDPTv/XL/_OL35392-XL.jpg",
+    "alt": "Windy",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-RFKdTLj/A",
     "keywords": [
       "Iceland",
@@ -6986,14 +7405,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 83
+    "sortOrder": 83,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RFKdTLj/2/NdG6p3QC9FDLzvbvcVnzbMtcxFDD9m34R87ktBLPh/XL/_OL35392-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RFKdTLj/2/NdG6p3QC9FDLzvbvcVnzbMtcxFDD9m34R87ktBLPh/XL/_OL35392-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RFKdTLj/2/M9TmBTW6JtC7bWc7hnFSnfk9QtfZqDGbjdF5FVFSb/L/_OL35392-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RFKdTLj/2/M4mnxxkxhWXdpKqrzbbc8K5H5PrCDXPb6fWJPtTvk/M/_OL35392-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RFKdTLj/2/Lzp8bHgNV6jXzKBdzbv8QKfm9RKNkJ3wnCSRw8xz4/S/_OL35392-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pLPp6pv",
     "title": "Lava Fingers",
     "description": "Collection of the Best Iceland fine art landscape photography.",
-    "alt": "Lava Fingers",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pLPp6pv/5/KwqjZfbtNmjtQbgBLs4C6LMsdRksHLwRwdSNTpMTg/XL/_OL35470-XL.jpg",
+    "alt": "Lava Flow",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-pLPp6pv/A",
     "keywords": [
       "Iceland",
@@ -7069,14 +7493,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 84
+    "sortOrder": 84,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pLPp6pv/5/Mr7XxCwgCP4nbk5q2MPLrhBmqkSL2WkKrVHZWf3nv/XL/_OL35470-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pLPp6pv/5/Mr7XxCwgCP4nbk5q2MPLrhBmqkSL2WkKrVHZWf3nv/XL/_OL35470-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pLPp6pv/5/Mr7XxCwgCP4nbk5q2MPLrhBmqkSL2WkKrVHZWf3nv/XL/_OL35470-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pLPp6pv/5/KxgfNpGS5g2xfvF9Kd2FgbNvbVBRG7JrDnnF73NcN/L/_OL35470-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-pLPp6pv/5/K5DFkLxN5jSz7wWRmcQgwfLCmF8V454HprkvZvvQX/S/_OL35470-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-L8xPVfV",
     "title": "Eruption Iceland",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Eruption Iceland",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-L8xPVfV/2/NH75vT9vJV558mDjNkCVrw8jT2qrsDPvcfJc2NmRC/XL/_OL35521-Edit-XL.jpg",
+    "alt": "Lava Fingers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-L8xPVfV/A",
     "keywords": [
       "Iceland",
@@ -7152,14 +7581,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 85,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-L8xPVfV/2/MmTrkpGcZpwnzGbLbV6XDtsPCCJnGRQ8cGqtXDDjB/XL/_OL35521-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-L8xPVfV/2/MmTrkpGcZpwnzGbLbV6XDtsPCCJnGRQ8cGqtXDDjB/XL/_OL35521-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-L8xPVfV/2/LNHKKQq6XFsTx7b9hPCn9Z5X7Sn3k893VFZTrT386/L/_OL35521-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-L8xPVfV/2/MPLPzg3RLQ8tKdLgdpMWtkrKz9srqhv8VgmLKJLNP/M/_OL35521-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-L8xPVfV/2/NXf4kRfHBdrMgWXsPqz36sh8SX7FZtNSMfMTHb999/S/_OL35521-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NTLGTsc",
     "title": "Iceland: Land of Fire and Ice",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Iceland: Land of Fire and Ice",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NTLGTsc/2/NXKfpQSsnJrDNd6GnPj4dBmzP4HdTmNhdKhKxJnNS/XL/_DSF3326-Edit-XL.jpg",
+    "alt": "Eruption Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-NTLGTsc/A",
     "keywords": [
       "Iceland",
@@ -7235,14 +7669,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 86,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NTLGTsc/2/NfZ8Nh5Xxf3wRT6LDqqfjHjcR2QGV332HckmBW7BK/XL/_DSF3326-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NTLGTsc/2/NfZ8Nh5Xxf3wRT6LDqqfjHjcR2QGV332HckmBW7BK/XL/_DSF3326-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NTLGTsc/2/NPNjndbjL8BWSBSJcb2VCW29pV2sCnPb8BS7M4k4Z/L/_DSF3326-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NTLGTsc/2/MFMvwfNR7Gwk4zXDFV9K7F3rRmPNkVg5kX4GPZRnT/M/_DSF3326-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NTLGTsc/2/KcqT5h2ZVMVjBNgkwcwscq5H2Tt7CpwmHvKtNSjrz/S/_DSF3326-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PMB2nk4",
     "title": "Fire and Ice",
     "description": "Fine art landscape photography of Iceland in the Summer.",
-    "alt": "Fire and Ice",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-PMB2nk4/2/M9SbbcpvngXzPx2w6FgP5H22rZGTVH9b3wzRJk4sg/XL/_DSF3346-Edit-XL.jpg",
+    "alt": "Iceland: Land of Fire and Ice",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-PMB2nk4/A",
     "keywords": [
       "Iceland",
@@ -7318,6 +7757,100 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 87,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-PMB2nk4/2/KzrFfPtNzT7JsH9CC9QQfF5pFkt5xzQXPmsz5jBsb/XL/_DSF3346-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-PMB2nk4/2/KzrFfPtNzT7JsH9CC9QQfF5pFkt5xzQXPmsz5jBsb/XL/_DSF3346-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-PMB2nk4/2/KL7z92smWXRXLdtBvcmPRgzQx8JvX5zcXNJDh3CVm/L/_DSF3346-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-PMB2nk4/2/LmDSkZjR8rrkvN8XsNgFKg4SPJJ8f2j74p4Svpf6C/M/_DSF3346-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-PMB2nk4/2/LwQ65dn3QJmMkJ97mrjhFF7DHzDdrSJrq794r557X/S/_DSF3346-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-5TtKShN",
+    "title": "HALLGRIMSKIRKJA and Ericson  Photography by Wayne Heim",
+    "description": "Fine art landscape photography of Iceland in the Summer.",
+    "alt": "Fire and Ice",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/i-5TtKShN/A",
+    "keywords": [
+      "Iceland",
+      "fine art",
+      "photography",
+      "landscape",
+      "Golden Circle",
+      "waterfalls",
+      "water",
+      "mountains",
+      "ice",
+      "black sand",
+      "Vik",
+      "Reykjavik",
+      "Skogafoss",
+      "Gullfoss",
+      "Seljalandsfoss",
+      "Hengifoss",
+      "Kirkjufellsfoss",
+      "Svartifoss",
+      "Oxararfoss",
+      "Pingvellir",
+      "lupine",
+      "volcano",
+      "lava",
+      "puffin",
+      "seashore",
+      "ocean",
+      "beach",
+      "cliffs",
+      "rock formations",
+      "rocks",
+      "sunset",
+      "Vestrahorn",
+      "Brunnhorn",
+      "basalt",
+      "river",
+      "church",
+      "bridge",
+      "Kirkjufell",
+      "glacier",
+      "icebergs",
+      "Svinafellsjokull",
+      "Keilir",
+      "geyser",
+      "Strokkur",
+      "cave",
+      "snow",
+      "fields",
+      "Fagradalsfjall",
+      "Dyrhólaey",
+      "lighthouse",
+      "Hálsanefshellir",
+      "Myrdal",
+      "Fjaðrárgljúfur",
+      "canyon",
+      "Skaftafell",
+      "Múlagljúfur",
+      "Diamond",
+      "Jökulsárlón",
+      "viking",
+      "village",
+      "Stokksnes",
+      "Hvalnes",
+      "Nykurhylsfoss",
+      "Sveinsstekksfoss",
+      "Litlanesfoss",
+      "Stuðlagil",
+      "Goðafoss"
+    ],
+    "story": "Fine art landscape photography of Iceland in the Summer.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 88,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

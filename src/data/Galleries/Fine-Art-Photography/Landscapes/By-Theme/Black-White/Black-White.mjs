@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZgXTnCV",
-    "title": "Grandma's Garage. Photography by Wayne HeimGrandma's Garage - Old single car garage in Gates Mills, Ohio is decorated for Christmas. ©Wayne Heim",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Grandma's Garage. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/NNtHt7gx8Sk9WGqjPfJw4M2cK8p8dGDTpXRtRxpkj/XL/_IMG0458-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-ZgXTnCV/A",
     "keywords": [
       "Gates Mills",
@@ -42,14 +46,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/LzL2RJHt9WvC8xVrJjZHZZ9SbXmcP5pb8qw7cKn8d/XL/_IMG0458-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/LzL2RJHt9WvC8xVrJjZHZZ9SbXmcP5pb8qw7cKn8d/XL/_IMG0458-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/LzL2RJHt9WvC8xVrJjZHZZ9SbXmcP5pb8qw7cKn8d/XL/_IMG0458-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/KRhhbNfdpRXXGCZ3KDNB8HQP7ZfRh9S628CVGcxdc/L/_IMG0458-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-ZgXTnCV/10/L3cZCK8Pqx52Tx6dCkgdr8h6wVhLhJ5rx5MjpJPX6/S/_IMG0458-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2MmTpqQ",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/KSQ49Grhs4DRSZScgCgLqJ4LfnXFVj4wLq6BsHL7P/XL/_DSF5771-Edit-XL.jpg",
+    "alt": "Grandma's Garage. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2MmTpqQ/A",
     "keywords": [
       "Gates Mills",
@@ -70,14 +79,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/Kx2MTwwX53rvwszBgbptb9xcmmz9m5TXf8qPJfq2X/XL/_DSF5771-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/Kx2MTwwX53rvwszBgbptb9xcmmz9m5TXf8qPJfq2X/XL/_DSF5771-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/NhfpK9vrRTjW9MwSWbB3rX47wvW6NqnLKZ6XDDtTM/L/_DSF5771-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/KzbP6zwZPt74GWhDfXPfhPXfhFCpdjzBkt8V4V2K9/M/_DSF5771-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/LChQrkBBpv8zdjCm5cBvVsJ6VNcbXtTJPwwzQbxKZ/S/_DSF5771-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nwVhxGk",
     "title": "White Paint - Black & White Photography by Wayne Heim",
     "description": "White Paint - grove of aspen trees in the snow with one lone pine tree in background. ©Wayne Heim",
-    "alt": "White Paint - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/Lqzwv74gj4W53BhNq4snr4f75rs2nBpZMrt8SCFps/XL/white-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-nwVhxGk/A",
     "keywords": [
       "Gates Mills",
@@ -98,14 +112,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/MTV6JrkTrgtDdnMGwvwdfmcpnktqnSc9J8LNNZGB3/XL/white-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/MTV6JrkTrgtDdnMGwvwdfmcpnktqnSc9J8LNNZGB3/XL/white-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/LGwqsX5Rc6rjNrBmXXTL7cDKgPkDTLPbPJbjMNdLS/L/white-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/Mhs6tCvvj35dSfVzbnzjbW6BHXtfBVvT9mVGkmKCm/M/white-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-nwVhxGk/4/K3tMVL8Ns4F7BrhvcvTr3Tj4bsFRq3TD7cxc6b4gh/S/white-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sNtN8KK",
     "title": "Black & White Photo of a Pine Tree Growing on Top of a Rock",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of a Pine Tree Growing on Top of a Rock",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-sNtN8KK/3/LQxkm2DGrGWXKpZzpD2BLT3GXDKvQXCGncM5Xv4bq/XL/_WHZ4422-sharpen-stabilize-Edit-XL.jpg",
+    "alt": "White Paint - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sNtN8KK/A",
     "keywords": [
       "Gates Mills",
@@ -126,14 +145,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-sNtN8KK/3/MZjnLBDppFWDq8f6dSLfMtF9w6RKLM3vg5vkrrDvJ/XL/_WHZ4422-sharpen-stabilize-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-sNtN8KK/3/MZjnLBDppFWDq8f6dSLfMtF9w6RKLM3vg5vkrrDvJ/XL/_WHZ4422-sharpen-stabilize-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-sNtN8KK/3/MZjnLBDppFWDq8f6dSLfMtF9w6RKLM3vg5vkrrDvJ/XL/_WHZ4422-sharpen-stabilize-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-sNtN8KK/3/LBpX2kHfn7B5v3LMqPKps5XqXmzrmggL23tgRjJ9P/L/_WHZ4422-sharpen-stabilize-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-sNtN8KK/3/KpqTV9WfhRJxPBVfFH8ZwXBVhGK4qqpXCHkFqW6bg/S/_WHZ4422-sharpen-stabilize-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WNk5sxX",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-WNk5sxX/1/KN4CPzKhjFVJ9gcVRvx9dQ9nRVz4Cv49FHtTxk2dJ/XL/e6e70fccf9ca06f1695cfbb2d508c994-XL.jpg",
+    "alt": "Black & White Photo of a Pine Tree Growing on Top of a Rock",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-WNk5sxX/A",
     "keywords": [
       "Gates Mills",
@@ -154,14 +178,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-WNk5sxX/1/KThvSfGDLzKQMwhwDMCJn44kRS2PWWXBSWtZjCDrC/XL/e6e70fccf9ca06f1695cfbb2d508c994-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-WNk5sxX/1/KThvSfGDLzKQMwhwDMCJn44kRS2PWWXBSWtZjCDrC/XL/e6e70fccf9ca06f1695cfbb2d508c994-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-WNk5sxX/1/KThvSfGDLzKQMwhwDMCJn44kRS2PWWXBSWtZjCDrC/XL/e6e70fccf9ca06f1695cfbb2d508c994-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-WNk5sxX/1/MPLrD3tZntvSNrWLgkH3NCZF78qfS7W7ND3fvSC6t/L/e6e70fccf9ca06f1695cfbb2d508c994-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Winter-2021/Winter-202021/i-WNk5sxX/1/NGq63w8vDVsdckQzBvrKTnZSxBD8c94QpvfBjmp2B/S/e6e70fccf9ca06f1695cfbb2d508c994-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HgQBk3g",
     "title": "Crystal  - black & White Photography by Wayne Heim",
     "description": "Crystal: Lone tree with Ice crystals on snow. Idaho.©Wayne Heim",
-    "alt": "Crystal  - black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/NPzwXcZNXxVcd4JrVnQh8zmZJxJc9SCkLhZHPJzv5/XL/fairy%2520tree-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-HgQBk3g/A",
     "keywords": [
       "Gates Mills",
@@ -182,14 +211,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/LKj69cZBGJPPDxg6fkxwVLbfLSWVWtbTx8qGjVffk/XL/fairy%20tree-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/LKj69cZBGJPPDxg6fkxwVLbfLSWVWtbTx8qGjVffk/XL/fairy%20tree-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/LKj69cZBGJPPDxg6fkxwVLbfLSWVWtbTx8qGjVffk/XL/fairy%20tree-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/MP6KshNkFR2PMszqk534jWcmS4d4FG9WCpvBZqCBt/L/fairy%20tree-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HgQBk3g/4/KKzhnBTq5zjnvwWXhGrRHWZB8gHDcvPzfR8zLZwR5/S/fairy%20tree-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VZ3N4km",
     "title": "Before and After. Photography by Wayne Heim",
     "description": "Black and white photograph of snow and clouds near Bondurant Wyoming. ©Wayne Heim",
-    "alt": "Before and After. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NJktHPKhPttSSp4JxThRsMLdWv4G7JHB6ZmTHNsLs/XL/P1020966-XL.jpg",
+    "alt": "Crystal  - black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VZ3N4km/A",
     "keywords": [
       "Gates Mills",
@@ -210,14 +244,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NF2PcFvX6HcL4DpT9pchq2QGdq8PJ4cHCJcv4TQ2H/XL/P1020966-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/NF2PcFvX6HcL4DpT9pchq2QGdq8PJ4cHCJcv4TQ2H/XL/P1020966-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/MjnRMfddXF45mjNSbchNKMkwVqjzRLfmp4vKBFW2b/L/P1020966-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/LVjhfqBxgjBt3DCGV8sTfJFGzKTJBhD4xs7PmkC8L/M/P1020966-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-VZ3N4km/4/LhRX9JSSLfFbR29nCRBP7XNNs3SCQj63nz63RxL9H/S/P1020966-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XVdVWhm",
     "title": "Giants -- Black & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
-    "alt": "Giants -- Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NB7mqSMMST55CR2wQ7hJRw4NZCS5CbV4ghQDfZMR6/XL/_IGP2936-XL.jpg",
+    "alt": "Before and After. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-XVdVWhm/A",
     "keywords": [
       "Gates Mills",
@@ -238,14 +277,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NLfWnxBqV7bSHkLCdxNpVNtBg2B9wzqz9KnFLQNq2/XL/_IGP2936-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NLfWnxBqV7bSHkLCdxNpVNtBg2B9wzqz9KnFLQNq2/XL/_IGP2936-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/NLfWnxBqV7bSHkLCdxNpVNtBg2B9wzqz9KnFLQNq2/XL/_IGP2936-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/LppXDCWnm8KxRLkbQzLDZ5cZ6nsGJrmbBLtCmSSFQ/L/_IGP2936-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-XVdVWhm/4/KTdjLJnQZfkGCGjmPRSc8GV6M6Z8GMRCBGrdhDR5D/S/_IGP2936-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VQR6R5v",
     "title": "Texture -- Black & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
-    "alt": "Texture -- Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-VQR6R5v/4/KQhTBBRdWRWn8rqFmDrL7wHTB8vBK3V2GVp3TbLFS/XL/_IGP3066-2-XL.jpg",
+    "alt": "Giants -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VQR6R5v/A",
     "keywords": [
       "Gates Mills",
@@ -266,14 +310,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-VQR6R5v/4/M35z4vJpHbB6NcJtTjhQm5D7v4pmz4t5tpdF68tZP/XL/_IGP3066-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-VQR6R5v/4/M35z4vJpHbB6NcJtTjhQm5D7v4pmz4t5tpdF68tZP/XL/_IGP3066-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-VQR6R5v/4/M8HV465Ht4sZhNB7phFm5NqftvS58qn3dsGj29TCK/L/_IGP3066-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-VQR6R5v/4/NFwj9HPtdtMfnXsjx76QDSgDQ9bRPSR2PWDS78dPn/M/_IGP3066-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-VQR6R5v/4/L7PmCnPN9L7NrHwsr7jBSQX7djJ9VzZtVCSP9kMHg/S/_IGP3066-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sLbdc7W",
     "title": "Faroe Island Lighthouse    Black and White Photography by Wayne Heim",
     "description": "Close up view of the lighthouse on Faroe Islands.   ©Wayne Heim",
-    "alt": "Faroe Island Lighthouse    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/3/NWjJ3CxnQrvG7hzcSdCpHDBW2v5VjSwV2vqZtqRPk/XL/_WHZ9796_tonemapped-Edit-XL.jpg",
+    "alt": "Texture -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/A",
     "keywords": [
       "Gates Mills",
@@ -294,14 +343,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/3/KGFqpn4qvDpmcmVps42Lz3ZDL2hbQvF4VfBpr4z34/XL/_WHZ9796_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/3/KGFqpn4qvDpmcmVps42Lz3ZDL2hbQvF4VfBpr4z34/XL/_WHZ9796_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/3/Mqdbxf2Md3H2rx4nMGhbhCHXZjXCf3qnpzBxXMLhV/L/_WHZ9796_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/3/MpmHtBK5QmZ8xrsRPhMqz8SF8KTLtSHzMWkBMXBC2/M/_WHZ9796_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sLbdc7W/3/MjVjBSfxMFvHs6jvLCptJwPCcNbzBg57s26k6zn8v/S/_WHZ9796_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2N4ghBL",
     "title": "Snowy Bend. Photography by Wayne Heim",
     "description": "Snowy Bend, Road along the Chagrin River in Gates Mills, Ohio Heavy snow is falling  ©Wayne Heim",
-    "alt": "Snowy Bend. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/KFx67WN4w4b4FF57ZNQsqHSpbvftjNrh2BHpvMxjr/XL/_IMG0573-XL.jpg",
+    "alt": "Faroe Island Lighthouse    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-2N4ghBL/A",
     "keywords": [
       "Gates Mills",
@@ -322,14 +376,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/LMwGpRJ3QKsKjdFXNSvHPXKtJq7Ts8fhCHXZvDbkK/XL/_IMG0573-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/LMwGpRJ3QKsKjdFXNSvHPXKtJq7Ts8fhCHXZvDbkK/XL/_IMG0573-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/KTHnnB66M8QSnGKz7NpZq3CmMj4Vfmcjd4ZJJFgNS/L/_IMG0573-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/KGQnC7wx5mcpVBgCCNx6CLNXJ9vLWfXSwbLDJgg7g/M/_IMG0573-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Gates-Mills/i-2N4ghBL/9/KqBtNjpHnqwRQXBt5fPkP5Sp4fHTwBTmbXTTPFzrs/S/_IMG0573-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Rh64N3s",
     "title": "Alone on Prairie - Black & White Photography",
     "description": "Alone on Prairie - lone cabin on the plains in Wyoming ©Wayne Heim",
-    "alt": "Alone on Prairie - Black & White Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/K7dksVbwgfHQbCs9cv6KXxfDtnKZKWb2HJ4VhCrMf/XL/_IMG6274-Edit-XL.jpg",
+    "alt": "Snowy Bend. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Rh64N3s/A",
     "keywords": [
       "Gates Mills",
@@ -350,14 +409,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/NRP87LNCQvVHDc7NJj5kh4hjbcqSb4sLHjBmzTgbf/XL/_IMG6274-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/NRP87LNCQvVHDc7NJj5kh4hjbcqSb4sLHjBmzTgbf/XL/_IMG6274-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/L88BT5272WWrhsdQZnsK79rMshbvJWd2T2TP8tdL3/L/_IMG6274-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/MVDc4ZL5wFqNw9PVj3Gq7WQbtnWwCRkmLx4QLT8J2/M/_IMG6274-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Rh64N3s/4/LL6ppx8KsC9fP2gjzZM5WKhz9LjHSqw42LQRgNTbJ/S/_IMG6274-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PmxqLBs",
     "title": "Better Days\". Photography by Wayne Heim",
     "description": "\"Better Days\". Black and white nature photo of old barn on \"Mormon Row\", North of Jackson Hole Wyoming. ©Wayne Heim",
-    "alt": "Better Days\". Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/LWtn7cWcpVrfN2rr53vzzpGxR8CWbBDjCbrKBfCZH/XL/_IMG6287-XL.jpg",
+    "alt": "Alone on Prairie - Black & White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PmxqLBs/A",
     "keywords": [
       "Gates Mills",
@@ -378,14 +442,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/NBFrN3VNTbGmSNHXmT5CxtrPsLzNNFv3DB38JdbfT/XL/_IMG6287-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/NBFrN3VNTbGmSNHXmT5CxtrPsLzNNFv3DB38JdbfT/XL/_IMG6287-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/NBFrN3VNTbGmSNHXmT5CxtrPsLzNNFv3DB38JdbfT/XL/_IMG6287-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/NPfW29hgLL9Ltv5mDc9Wtr285LBrTXdrF5bXWTzHm/L/_IMG6287-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PmxqLBs/4/MVKPKgm65CPhF4JhvP9X8m3VrnRHLwGCMFW9CPF67/S/_IMG6287-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-S6m4mR2",
     "title": "\"Out the Door\"",
     "description": "B/W high key photo from inside an old log barn at the foot of the Teton on \"Mormon Row\" just outside of Jackson Hole Wyoming. Voyeuristic view from inside the dark building pears out into the daylight. ©Wayne Heim",
-    "alt": "\"Out the Door\"",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/L7ZTVXTXn9Z7LSTqgXV86KWcwJNzDkRHZgDsVhbm6/XL/_IMG6301-XL.jpg",
+    "alt": "Better Days\". Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-S6m4mR2/A",
     "keywords": [
       "Gates Mills",
@@ -406,14 +475,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/Mqpppt5R4qgpCnP68JNZJgW9W4zwFfgbHqBh2jw5j/XL/_IMG6301-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/Mqpppt5R4qgpCnP68JNZJgW9W4zwFfgbHqBh2jw5j/XL/_IMG6301-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/Mqpppt5R4qgpCnP68JNZJgW9W4zwFfgbHqBh2jw5j/XL/_IMG6301-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/MLvjwvDNzJWLZbX54R9RSKqDvXrhLQRrqVvLHbKCC/L/_IMG6301-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-S6m4mR2/4/KG7zp55McTdhP4czF5GJg5FgD8VT78vRJdXxSHKxD/S/_IMG6301-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8qbxTWM",
     "title": "Moulton Barn, Jackson Hole Wyoming. Photograph by Wayne Heim",
     "description": "Black and white photograph of cowboy overseeing the Mormon Row Barn. ©Wayne Heim",
-    "alt": "Moulton Barn, Jackson Hole Wyoming. Photograph by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/4/MKdXkLhmdgWr9D6k7dzx52TMc8ZHhM5r3w8Rfbwpb/XL/_img6307-edit-edit2-Edit-XL.jpg",
+    "alt": "\"Out the Door\"",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/A",
     "keywords": [
       "Gates Mills",
@@ -434,14 +508,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/4/KxxsTQ3nrtNt2mPM26XNG5dMr658P6ksGHHpN5bsD/XL/_img6307-edit-edit2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/4/KxxsTQ3nrtNt2mPM26XNG5dMr658P6ksGHHpN5bsD/XL/_img6307-edit-edit2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/4/NfR5WgPm6JmN5hNPR3zDSXhmgfcqLS8k422sTXGxG/L/_img6307-edit-edit2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/4/LLqbHH2kvHTgM444353SgkvrHhQ9zC6MrbwT5MW6M/M/_img6307-edit-edit2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-8qbxTWM/4/M2FgwsrRFTP2vK7MdsBHhQJbz6GCvHQb5Z97LzzjX/S/_img6307-edit-edit2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RFCHLhg",
     "title": "Tetons Peek - Black & White Photography by Wayne Heim",
     "description": "Tetons Peek -- peeking out the barn door at the Grand Tetons in Jackson Hole, Wyoming. ©Wayne Heim",
-    "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KM5kKrRQK3QzjcHqRmCgzmwSZsbFtMFx7Qcz2Sq3R/XL/_IMG6333-XL.jpg",
+    "alt": "Moulton Barn, Jackson Hole Wyoming. Photograph by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RFCHLhg/A",
     "keywords": [
       "Gates Mills",
@@ -462,14 +541,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KVDZnx3Tf2r2dwNVMcjMWqgF39SQFwhfccjDcWtqX/XL/_IMG6333-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KVDZnx3Tf2r2dwNVMcjMWqgF39SQFwhfccjDcWtqX/XL/_IMG6333-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/KVDZnx3Tf2r2dwNVMcjMWqgF39SQFwhfccjDcWtqX/XL/_IMG6333-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/NQMv2R5M9HcfP5RCTj376zx72sx48hGGnVnXstWRs/L/_IMG6333-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-RFCHLhg/4/NMptf3ZBWxCN6NcFpPhzmMB5P8znffZjg5x3vf9m2/S/_IMG6333-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-32QwpNJ",
     "title": "Homestead - Black & White Photography by Wayne Heim",
     "description": "Homestead - shows an old homestead in Wyoming. ©Wayne Heim",
-    "alt": "Homestead - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/KWB4gKfLCqbcnRBhC4gKVnGVqqk6XJvhTWfmRCbf7/XL/_IMG6414-Edit-XL.jpg",
+    "alt": "Tetons Peek - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-32QwpNJ/A",
     "keywords": [
       "Gates Mills",
@@ -490,14 +574,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/Ndpq9Q8LmZJW26RFvck5Q89nJBwJ2Ntg7W2mLbS4k/XL/_IMG6414-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/Ndpq9Q8LmZJW26RFvck5Q89nJBwJ2Ntg7W2mLbS4k/XL/_IMG6414-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/MgMgWMGCrwHn5CFh948tmxPhTPgBwd3Lj55G9JStg/L/_IMG6414-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/NCcGPtbjTt7hCxr63MdXMgT6qczNc55nqvd659Nk2/M/_IMG6414-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-32QwpNJ/4/MRKVcL2WNDm6JTsH2Hk2t7M9S9WsrqZGkL2tKcXVD/S/_IMG6414-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WmSkQXV",
     "title": "Wyoming Road - Black  & White Photography by Wayne Heim",
     "description": "Wyoming Road - lonely road across Wyoming with the Grand Tetons in background. ©Wayne Heim",
-    "alt": "Wyoming Road - Black  & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/MbvZwgCMcRrdzB7hbtgfK5DpzkWWPxWwdftTH5bBd/XL/_IMG6439-XL.jpg",
+    "alt": "Homestead - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-WmSkQXV/A",
     "keywords": [
       "Gates Mills",
@@ -518,14 +607,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/KvHmv6B9ZFTmpQhsk8x3rw9VcBsqgFfLVdzkvhMM4/XL/_IMG6439-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/KvHmv6B9ZFTmpQhsk8x3rw9VcBsqgFfLVdzkvhMM4/XL/_IMG6439-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/MW2HNJG4GLDSXdNrxgm8pZ5TgnxBKH3rmvvrrqhtT/L/_IMG6439-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/KxpkpwHTSjShmf9DLDSdCLxS8VNPcP92gTVdx5dkZ/M/_IMG6439-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WmSkQXV/4/M6ZT5t5XHr9BGqtDTv7Dhdbnx7Jw5z7bkBJbqJHdX/S/_IMG6439-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-c8XWk8P",
     "title": "View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "View of Letchworth Canyon   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-c8XWk8P/4/M5QqCfMrQbfqFqdfwCJKkrT5v6NPtPXbhJSfJd5WZ/XL/_IMG6723-XL.jpg",
+    "alt": "Wyoming Road - Black  & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-c8XWk8P/A",
     "keywords": [
       "Gates Mills",
@@ -546,14 +640,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-c8XWk8P/4/LRxBgD3nsTL79j5p2vtMQDMdqs47H3CNQCX7dFZsq/XL/_IMG6723-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-c8XWk8P/4/LRxBgD3nsTL79j5p2vtMQDMdqs47H3CNQCX7dFZsq/XL/_IMG6723-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-c8XWk8P/4/NTLXfhwwj99927rdtKgQsHGkDq5G8TGpntjBWThdr/L/_IMG6723-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-c8XWk8P/4/LHQQCmnCVnCRf4j824QBbnbVdSM926NrTg6n3XvJS/M/_IMG6723-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-c8XWk8P/4/KcTRvjFBk3cN7r3dtzwvGVc7DpGZj2rBJ3sdDDFS3/S/_IMG6723-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vjBFwm7",
     "title": "Urban Growth    Photography by Wayne Heim",
     "description": "Fine art architectural photography of Las Vegas, Nevada.",
-    "alt": "Urban Growth    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Las-Vegas/Vegas/i-vjBFwm7/3/LwsqMxd8BX7TPQwtQzzw9rgnHsVKnfHCCgZRDQCHT/XL/_WEH7672-XL.jpg",
+    "alt": "View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-vjBFwm7/A",
     "keywords": [
       "Gates Mills",
@@ -574,14 +673,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Las-Vegas/Vegas/i-vjBFwm7/3/KmhgSZrg2hmkWShNvHT65fsggTFsbQWsj9z3RQ8h6/XL/_WEH7672-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Las-Vegas/Vegas/i-vjBFwm7/3/KmhgSZrg2hmkWShNvHT65fsggTFsbQWsj9z3RQ8h6/XL/_WEH7672-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Las-Vegas/Vegas/i-vjBFwm7/3/KPQwkpfFcLXw52TZRx3jhdv9rZhvc9NKXn3k7FW9m/L/_WEH7672-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Las-Vegas/Vegas/i-vjBFwm7/3/K5djjv8wZDBQKdJjKfmQrbh7Sb5KqpsVPnNnpdcXN/M/_WEH7672-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Las-Vegas/Vegas/i-vjBFwm7/3/K6cqqVSGmwntrxqpMc9KBV2dzcj8wt5THnwmX49gS/S/_WEH7672-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cJDBjjD",
     "title": "Erosion",
     "description": "\"Erosion\" B/W landscape photo of Bryce Canyon formations and clouds in Bryce Canyon National Park, Utah. ©Wayne Heim",
-    "alt": "Erosion",
-    "src": "https://photos.smugmug.com/photos/i-cJDBjjD/3/KHB2gGrxdT8MWHsfhdw9vgFKgMWx9fCVTxPRD5q4V/XL/i-cJDBjjD-XL.jpg",
+    "alt": "Urban Growth    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-cJDBjjD/A",
     "keywords": [
       "Gates Mills",
@@ -602,14 +706,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/photos/i-cJDBjjD/3/KPDmXmdTt2wG3ntVLJKm296GfCsPcXrnBbp9b9CbK/XL/i-cJDBjjD-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-cJDBjjD/3/KPDmXmdTt2wG3ntVLJKm296GfCsPcXrnBbp9b9CbK/XL/i-cJDBjjD-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-cJDBjjD/3/KdNzjWgP9vLgXPKxKkckLBXcGTztbjR2NRc2qNd7h/L/i-cJDBjjD-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-cJDBjjD/3/LwXcNhNkPjsHZPT3X9CR4347VG6rVC4Xnr96VHDjK/M/i-cJDBjjD-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-cJDBjjD/3/NMccLVFvpgK9vp47sGWgqvGNcM8CFq69JjQmZKxwV/S/i-cJDBjjD-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Jh262Z7",
     "title": "Night Highway - Black & white Photography by Wayne Heim",
     "description": "Night Highway - night travel through Utah. ©Wayne Heim",
-    "alt": "Night Highway - Black & white Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Jh262Z7/10/KHhxRZd49vnd25HdbwP4CjZhSd9KvxsxcZd8Dshh6/XL/_WEH8126-XL.jpg",
+    "alt": "Erosion",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Jh262Z7/A",
     "keywords": [
       "Gates Mills",
@@ -630,14 +739,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Jh262Z7/10/LzbbrFVLQ5CHXsstWsBK77jXSM2FfM82t8s35w3hr/XL/_WEH8126-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Jh262Z7/10/LzbbrFVLQ5CHXsstWsBK77jXSM2FfM82t8s35w3hr/XL/_WEH8126-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Jh262Z7/10/LKcXWpwsxQSvczGcBfKpqW3cnCpM3v7RLSmn92H8F/L/_WEH8126-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Jh262Z7/10/L2FcV3qD6pxJdJZWXgs9DpHwfwW2H9pDgRv246Tcd/M/_WEH8126-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Jh262Z7/10/MR9dL7RHvLZCT8HNRf7QS3T4G6FpDX7DZfghS9qN6/S/_WEH8126-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fCx77HN",
     "title": "Over the Hill -- Black & White Photography",
     "description": "Over the Hill - shot of a road going over a hill in western states. ©Wayne Heim",
-    "alt": "Over the Hill -- Black & White Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/LK4mf7tJ66LJdw7Ph7qVXkBtfN8tLQTQpmbPCWqNV/XL/_WEH8495-3-XL.jpg",
+    "alt": "Night Highway - Black & white Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-fCx77HN/A",
     "keywords": [
       "Gates Mills",
@@ -658,14 +772,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/LVRCT2fggMw6CSQ5kxK2Mv9xGhtT5GcRVkBQMmvJV/XL/_WEH8495-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/LVRCT2fggMw6CSQ5kxK2Mv9xGhtT5GcRVkBQMmvJV/XL/_WEH8495-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/LVRCT2fggMw6CSQ5kxK2Mv9xGhtT5GcRVkBQMmvJV/XL/_WEH8495-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/Lp9NCPh5nkQKTSFGSK7CgBVj2FnMgJrdzmFfWW3Pd/L/_WEH8495-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fCx77HN/10/KdSDCbtmkzG6hVzmN6wq3k6BX3tsJtRcNnNNXmJS4/S/_WEH8495-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RLJhSZ8",
     "title": "Canyon Clouds - Black  & White Photography by Wayne Heinm",
     "description": "Canyon Clouds - shows threatening clouds over Bryce Canyon in Utah. ©Wayne Heim",
-    "alt": "Canyon Clouds - Black  & White Photography by Wayne Heinm",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RLJhSZ8/8/LbSHRcfT6xZJTCKLJzdRczCPZSxZGQwmPLwNVVGLm/XL/_WEH8881-XL.jpg",
+    "alt": "Over the Hill -- Black & White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RLJhSZ8/A",
     "keywords": [
       "Gates Mills",
@@ -686,14 +805,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RLJhSZ8/8/KnkgRnbKwMHfG7HS47PQhfGp9GxGn7GGwS5xMPGBL/XL/_WEH8881-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RLJhSZ8/8/KnkgRnbKwMHfG7HS47PQhfGp9GxGn7GGwS5xMPGBL/XL/_WEH8881-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RLJhSZ8/8/MdjXB9RFVNdCN899Z7cqxDJmqmGDqkmwnjWggTj2C/L/_WEH8881-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RLJhSZ8/8/MQQm9KK9bC7X3qq9Tp79RnwPmZ6TW3qSc735SZhz8/M/_WEH8881-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-RLJhSZ8/8/M2m2GMrBZ7r9jJWC6tmzCgsx2wJGChLgbFr4gKrFL/S/_WEH8881-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PPSGJGr",
     "title": "Looking Up. Photography by Wayne Hein",
     "description": "Looking Up, black and white photo of mountain face looking towards the top. ©Wayne Heim",
-    "alt": "Looking Up. Photography by Wayne Hein",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/KSGJbRbrxgPVP8GqZCtxT7bPqZ6cSNTHcKCBXF9kg/XL/_WEH9901-XL.jpg",
+    "alt": "Canyon Clouds - Black  & White Photography by Wayne Heinm",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PPSGJGr/A",
     "keywords": [
       "Gates Mills",
@@ -714,14 +838,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/Mt49CqMCDR8nHfqRRN4dCP6zxMMvzZgjrS6dBFDC9/XL/_WEH9901-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/Mt49CqMCDR8nHfqRRN4dCP6zxMMvzZgjrS6dBFDC9/XL/_WEH9901-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/Mt49CqMCDR8nHfqRRN4dCP6zxMMvzZgjrS6dBFDC9/XL/_WEH9901-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/L4sMwzTq9N8nnpCsPm5Tp9jGGr3WncF5Hhr7bpQw4/L/_WEH9901-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-PPSGJGr/11/LrTMbZtCJWvXN444WCvNWDZHLwx5tbFcT9CX5HgBq/S/_WEH9901-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Nj2t7F2",
     "title": "Three Peaks. Photography by Wayne Heim",
     "description": "Three Peaks poke head up in desolate landscape, black and white photograph  ©Wayne Heim",
-    "alt": "Three Peaks. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/LjGDjzkWmrXWsqJCZptxrPwb4TXWfGmdVvwdng2Z6/XL/_WEH9908-XL.jpg",
+    "alt": "Looking Up. Photography by Wayne Hein",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-Nj2t7F2/A",
     "keywords": [
       "Gates Mills",
@@ -742,14 +871,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/L78xKR3D6J2srXzJvR542mkKHN5Qvb5mXV6J34DKs/XL/_WEH9908-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/L78xKR3D6J2srXzJvR542mkKHN5Qvb5mXV6J34DKs/XL/_WEH9908-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/KMrsSXJTbNhrNv6PGDCmQkWzcFJbMMW88JCgZ5trM/L/_WEH9908-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/MhNSPrKfKmnQL9BNG2W6ZTzjKVhVJxsjrnvQ5X4Hw/M/_WEH9908-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-Nj2t7F2/11/MSxzdKpK4HqLf7P5b6t2QDcN7XVfmDmQDWHXWrNQt/S/_WEH9908-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fC7SBVp",
     "title": "Arch View - Black  & White Photography by Wayne Heim",
     "description": "Arch View - sunset as see through a rock arch in Zion National Park. ©Wayne Heim",
-    "alt": "Arch View - Black  & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fC7SBVp/11/L8sS6Qt7zTd9PbqF7ZPSKw4dqXHpg2CD5WM5K44q9/XL/_WEH0034-2-XL.jpg",
+    "alt": "Three Peaks. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-fC7SBVp/A",
     "keywords": [
       "Gates Mills",
@@ -770,14 +904,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fC7SBVp/11/KnjnnQPXJzFMmrdGHsZp6DPwpXFxCTjVMbv8WjNnc/XL/_WEH0034-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fC7SBVp/11/KnjnnQPXJzFMmrdGHsZp6DPwpXFxCTjVMbv8WjNnc/XL/_WEH0034-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fC7SBVp/11/Nf4TBVxSc7Dbfj7NtDhWKHX65vvbJwR69Z7HrfKFP/L/_WEH0034-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fC7SBVp/11/NSSDvC3WmxSZhcDfhtkxGwFNSPm98Ng96tchPFctH/M/_WEH0034-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-fC7SBVp/11/MS3FrhCN7jjpwbWM2pJKKTkqVXzzVWsmJ5bbNQXpX/S/_WEH0034-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MdQLNhm",
     "title": "Aspen Blockade - Black & White Photography by Wayne Heim",
     "description": "Aspen Blockade - thick stand of Aspen trees seem to form a blockade. ©Wayne Heim",
-    "alt": "Aspen Blockade - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-MdQLNhm/9/MW8CFSVwBntwKBdDmFGVH5VwgTMQtKgwRLnDdzCjh/XL/_WEH0488-Edit-XL.jpg",
+    "alt": "Arch View - Black  & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-MdQLNhm/A",
     "keywords": [
       "Gates Mills",
@@ -798,14 +937,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-MdQLNhm/9/KDZWtgQQLzqjnBHL8w2ttw6TBsZ99h53RxSkvnwbB/XL/_WEH0488-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-MdQLNhm/9/KDZWtgQQLzqjnBHL8w2ttw6TBsZ99h53RxSkvnwbB/XL/_WEH0488-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-MdQLNhm/9/NjJgbxVFF7kBJ3DMVdZQqhJ8hQ7pwx2WR6vQsjq7P/L/_WEH0488-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-MdQLNhm/9/NKxkBnzJCV88Krhf637zLGCj3999vvgBgDbBDH55L/M/_WEH0488-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-MdQLNhm/9/LcV9PBC4sMm5t9HQrXDbFQZQq6dXWRZwdv5HDNZKr/S/_WEH0488-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-b3F54M6",
     "title": "Scenic Walkway. Photography by Wayne Heim",
     "description": "Fine art landscape photography of Lanterman's Mill in the Mill Creek Metroparks of Youngstown, Ohio.",
-    "alt": "Scenic Walkway. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/MkBrBk29XvPv3QC8NhdwvKdLj2rgRRSmsTMtV2NRm/XL/_WEH7202-XL.jpg",
+    "alt": "Aspen Blockade - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-b3F54M6/A",
     "keywords": [
       "Gates Mills",
@@ -826,14 +970,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/KLJRkVxDw2wvpPS4xJ3xZNKd7CXLzJmx7kp5wV2qp/XL/_WEH7202-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/KLJRkVxDw2wvpPS4xJ3xZNKd7CXLzJmx7kp5wV2qp/XL/_WEH7202-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/KLJRkVxDw2wvpPS4xJ3xZNKd7CXLzJmx7kp5wV2qp/XL/_WEH7202-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/KGT7TP9sWHvTZv55fSvdhnDGvkdbzFWbbvzRMcZJ3/L/_WEH7202-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/MillCreek-Metropark/i-b3F54M6/5/KNx3D6s5kqrjRZGcSfsGMJvhmLKpL6DDMsQmR9Fn6/S/_WEH7202-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RFkJ7Jz",
     "title": "Rock Perspective - Black & White Photography by Wayne Heim",
     "description": "Rock Perspective - looking up the sheer rock wall in one area of the Akron Metro Parks. ©Wayne Heim",
-    "alt": "Rock Perspective - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-RFkJ7Jz/4/Lk7djWxQskhHFB6z4mqns9bj2Ftj6GN6kRTbz9drc/XL/i-RFkJ7Jz-XL.jpg",
+    "alt": "Scenic Walkway. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-RFkJ7Jz/A",
     "keywords": [
       "Gates Mills",
@@ -854,14 +1003,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/photos/i-RFkJ7Jz/4/MFLrsj5vvsZSW9fQJPmxGvpfxp6rcH2BNDTs9xpmb/XL/i-RFkJ7Jz-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-RFkJ7Jz/4/MFLrsj5vvsZSW9fQJPmxGvpfxp6rcH2BNDTs9xpmb/XL/i-RFkJ7Jz-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-RFkJ7Jz/4/MFLrsj5vvsZSW9fQJPmxGvpfxp6rcH2BNDTs9xpmb/XL/i-RFkJ7Jz-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-RFkJ7Jz/4/LDQgXLF64GpxDpk96T3rKkxqrbWQ9W77TBgPtKnRR/L/i-RFkJ7Jz-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-RFkJ7Jz/4/LG5THcnkrpVLrDhTh8vrF7MKmCj9LgTSCRcMCvwqt/S/i-RFkJ7Jz-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XXszFrn",
     "title": "Best Walkway - Black & White Photography by  Wayne Hein",
     "description": "Best Walkway -  trail around the Walter C Best Wildlife Preserve in Chardon, Ohio. ©Wayne Heim",
-    "alt": "Best Walkway - Black & White Photography by  Wayne Hein",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-XXszFrn/4/KmXwJgSKxhF5fdVGBqrWpKxtj6TfwVV5MFBSJhgkR/XL/_W3H9096-XL.jpg",
+    "alt": "Rock Perspective - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-XXszFrn/A",
     "keywords": [
       "Gates Mills",
@@ -882,14 +1036,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-XXszFrn/4/LDTjVcbQf3h53RkXbTvqWM8N7ZVT5ZjQZ42cZRWGg/XL/_W3H9096-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-XXszFrn/4/LDTjVcbQf3h53RkXbTvqWM8N7ZVT5ZjQZ42cZRWGg/XL/_W3H9096-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-XXszFrn/4/LDTjVcbQf3h53RkXbTvqWM8N7ZVT5ZjQZ42cZRWGg/XL/_W3H9096-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-XXszFrn/4/LjkGzS7wPRcNdrkp5fkvdcTJM6Dkx9MDR56zVDbTG/L/_W3H9096-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-XXszFrn/4/L9MtqZ626Td8cdfGtCcMwgdBdgwcPvpHkZDcnVX22/S/_W3H9096-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-p3wwjCQ",
     "title": "Fire trees in Black and White    Photography by Wayne Heim",
     "description": "After the Fire. Trees in Wyoming.\n ©Wayne Heim",
-    "alt": "Fire trees in Black and White    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/KZFdBGXg7kszhqHcDprn3LK8WJ4gc2JtxnB4R7psN/XL/_WHZ8397-Edit-XL.jpg",
+    "alt": "Best Walkway - Black & White Photography by  Wayne Hein",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-p3wwjCQ/A",
     "keywords": [
       "Gates Mills",
@@ -910,14 +1069,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/KwCkHhgWph4GXgN24Mgx3smSd4p94hm3CNVQvqsX5/XL/_WHZ8397-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/KwCkHhgWph4GXgN24Mgx3smSd4p94hm3CNVQvqsX5/XL/_WHZ8397-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/MQLf343XXs4Nrg5vPhJk24tJbVtrg79PzSsFJDxst/L/_WHZ8397-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/KwDSV7ZmjLbhZ3cDWkkGJ89DLDN3xSDMVGgkR6LSn/M/_WHZ8397-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-p3wwjCQ/2/LrBvr4hSrdT2GSqncp8p8HdP8Xt2W67sRd2C3LWgG/S/_WHZ8397-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sBk6VHd",
     "title": "Wide Prairie   Black & White Photography by Wayne Heim",
     "description": "Wide expanse of grassland in Wyoming.\n ©Wayne Heim",
-    "alt": "Wide Prairie   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/4/MvwMXRFSSDJ6SJFSLTT7gZJtqTL64f832r9z8gbF2/XL/_WHZ0408-XL.jpg",
+    "alt": "Fire trees in Black and White    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/A",
     "keywords": [
       "Gates Mills",
@@ -938,14 +1102,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/4/NSkb6tfFgFDZXSTFz7tXzgZK3X9nN6kRMXSwB8CLd/XL/_WHZ0408-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/4/NSkb6tfFgFDZXSTFz7tXzgZK3X9nN6kRMXSwB8CLd/XL/_WHZ0408-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/4/L7s87M6PMd6whRJ9cRzpKFhLv5rRF2fJ3KbKGqqS7/L/_WHZ0408-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/4/LNsgFnQdJpdV8c3ggpx769zrLbNfphPvddxTGqwzb/M/_WHZ0408-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-sBk6VHd/4/KP2PppxDbVs4m3DMXvDJhh9FqvsLnmgMz6QqGJjhR/S/_WHZ0408-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4QFPzCL",
     "title": "Prairie Church   Black & White Photography by Wayne Heim",
     "description": "Church stand apart on the prairie with a few outbuildings. ©Wayne Heim",
-    "alt": "Prairie Church   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/5/KPP6BSdrnnhNcbxGjPd3zGq4F6VfD7qdtz7FrNmWK/XL/_WHK3261-XL.jpg",
+    "alt": "Wide Prairie   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/A",
     "keywords": [
       "Gates Mills",
@@ -966,14 +1135,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/5/NjMhkf4FHrhSzNXdC5J6grQSS8cjnwJP547qmL2WG/XL/_WHK3261-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/5/NjMhkf4FHrhSzNXdC5J6grQSS8cjnwJP547qmL2WG/XL/_WHK3261-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/5/LXz7q3bsMRRTCTGRcvp5jZz8hxCCzqFm7nJ6NJ7r2/L/_WHK3261-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/5/LxzZ7jtV5LXHKpLC4NcWQJtLWFPnbhVkzBcwrkdLx/M/_WHK3261-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-4QFPzCL/5/LQBkCdKV55X5LkBVwnrrdH9LwVzGSbXC7dqjS5WZR/S/_WHK3261-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qCQD7DJ",
     "title": "Prairie Church  Black & White Photography by Wayne Heim",
     "description": "In Stock 9 x 12 AluminiumChurch stands alone on the western Iceland landscape. ©Wayne Heim",
-    "alt": "Prairie Church  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/3/L8rD2htv9x679DnzpKLDR8xWrZ3rZs3KdfhWFSjXS/XL/_WHZ0950-XL.jpg",
+    "alt": "Prairie Church   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/A",
     "keywords": [
       "Gates Mills",
@@ -994,14 +1168,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/3/Mr5jZ8bmCk864GxNPSkNRjj5VZcFB4VjMtS39dFkP/XL/_WHZ0950-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/3/Mr5jZ8bmCk864GxNPSkNRjj5VZcFB4VjMtS39dFkP/XL/_WHZ0950-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/3/NjKKjnhVdgVbcNtHdHqHqrt7Vz2fg7KpkzVJpxs4t/L/_WHZ0950-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/3/LjBpt7s2qgwDFKvjwxsGtRrSV2HmDbF2qWjpBWqFL/M/_WHZ0950-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-qCQD7DJ/3/NG4WbgTNwWt9c2JDW4dGkkqKcKnNsmjnLfb4w6Btj/S/_WHZ0950-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-46W9gTN",
     "title": "Distant Church  Black and White Photography by Wayne Heim",
     "description": "Lone Church silhouetted against the hills in the background.  ©Wayne Heim",
-    "alt": "Distant Church  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/4/LsS4F55zhpWDrxsFfrPZvfNJH8VZp6P8tjkrhFJhb/XL/_WHZ0981-XL.jpg",
+    "alt": "Prairie Church  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/A",
     "keywords": [
       "Gates Mills",
@@ -1022,14 +1201,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/4/L72jzWc8XdnL3QGtR7x8k9sC4CjjmDq4nxpx3gG8G/XL/_WHZ0981-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/4/L72jzWc8XdnL3QGtR7x8k9sC4CjjmDq4nxpx3gG8G/XL/_WHZ0981-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/4/NHZWNGW2W8bgtC7xzPxMnH7jWV8Vkbs6CWXZQBWNX/L/_WHZ0981-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/4/KzGvRbtJt3fd69nsTgKtmTBmKFP54Jx62hXc5fbLw/M/_WHZ0981-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-46W9gTN/4/MhNgj5qpjPTj3LQnc9McrgfKSkFTLw5nZtGpf6Ms2/S/_WHZ0981-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bjNrsSx",
     "title": "Vik Wall  Black & White Photography by Wayne Heim",
     "description": "Vik wall on the black sand beaches of Iceland where the Game of  Thrones was filmed.\n©Wayne Heim",
-    "alt": "Vik Wall  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/4/MvRdPS8bCvgn7tB9gCbmLCWnJ44mPg88W77Xt2Z9X/XL/_WHZ1939-XL.jpg",
+    "alt": "Distant Church  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/A",
     "keywords": [
       "Gates Mills",
@@ -1050,14 +1234,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/4/MpDT9M2KhPkrBsK6mmMvmXcNRHtKjSmg6v7XWkNqt/XL/_WHZ1939-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/4/MpDT9M2KhPkrBsK6mmMvmXcNRHtKjSmg6v7XWkNqt/XL/_WHZ1939-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/4/MpDT9M2KhPkrBsK6mmMvmXcNRHtKjSmg6v7XWkNqt/XL/_WHZ1939-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/4/KTq6NbvZm9pq26RPc4vcZCwjdDHwPK3MvTktg2Fqw/L/_WHZ1939-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-bjNrsSx/4/MQjbQS6SMds947BW6gnPpbgxCfm5Q3MSf2r8b5Vmt/S/_WHZ1939-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xg8gr3k",
     "title": "Hole in the Wall  Black & White Photography by Wayne Heim",
     "description": "Whole in the wall of the glacier is actually the entrance to a cave.©Wayne Heim",
-    "alt": "Hole in the Wall  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/4/MZwNG2rhxfkBShtttwmdphL7Nwk5mKCNqPjWHtZpz/XL/_WHZ2072-XL.jpg",
+    "alt": "Vik Wall  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/A",
     "keywords": [
       "Gates Mills",
@@ -1078,14 +1267,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/4/Lbcd9HZ7k8x4vfj4DmsSrRjMjHDR2nmBbz9Zqpc4R/XL/_WHZ2072-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/4/Lbcd9HZ7k8x4vfj4DmsSrRjMjHDR2nmBbz9Zqpc4R/XL/_WHZ2072-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/4/Lbcd9HZ7k8x4vfj4DmsSrRjMjHDR2nmBbz9Zqpc4R/XL/_WHZ2072-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/4/KNgzcSDhvmhHHMKxS2BhpjDmV8LQrXmjDrRmDdJCJ/L/_WHZ2072-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-xg8gr3k/4/NfPjDdV5PnnBnFz7Z8fqz9pFS7tMJTtsj7TDQD7b9/S/_WHZ2072-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-K6dkwFH",
     "title": "Cave Entrance   Black & White Photography by Wayne Heim",
     "description": "This is a view looking out of a glacial cave entrance in Iceland. ©Wayne Heim",
-    "alt": "Cave Entrance   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/4/MZthVS4VQ84dphdPgW5XrxTDh2XcV9DCpbrh6QwXw/XL/_WHZ2077-XL.jpg",
+    "alt": "Hole in the Wall  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/A",
     "keywords": [
       "Gates Mills",
@@ -1106,14 +1300,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/4/LmDWtBL4Xs4ks3jSvRr9857rgpC899TdzBCFkLHFK/XL/_WHZ2077-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/4/LmDWtBL4Xs4ks3jSvRr9857rgpC899TdzBCFkLHFK/XL/_WHZ2077-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/4/KD4Vdcsgvz6xFLmSr4sR9cRcWvG7763Pcnnxt9Qx6/L/_WHZ2077-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/4/LQqM3RfB3q6BpBKjMgMTw3JMHH96vvhwDF42pLZrH/M/_WHZ2077-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-K6dkwFH/4/M7f7rdx4bw3QrrVRn3rFF6RGGnLbLRxRR5btnGdQS/S/_WHZ2077-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VtCT6nZ",
     "title": "River Through Ice    Black & White Photography by Wayne Heim",
     "description": "An Icelandic river runs though a glacial field.\n©Wayne Heim",
-    "alt": "River Through Ice    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/3/K2bT7wfNJzqQhP5VsxjPKG4qJTmffV8H2tzQQxRWW/XL/_WHZ2333-XL.jpg",
+    "alt": "Cave Entrance   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/A",
     "keywords": [
       "Gates Mills",
@@ -1134,14 +1333,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/3/LXT2RwPJHWHzkQJ9TVs8qdwHt34vSKRhD8zNMnxDb/XL/_WHZ2333-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/3/LXT2RwPJHWHzkQJ9TVs8qdwHt34vSKRhD8zNMnxDb/XL/_WHZ2333-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/3/LzfKSN765KVHzLFh4vnd6SFLdVpRcFPmxRv2RsLNQ/L/_WHZ2333-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/3/NgchXHNkWJLjkMjvd3gVL6RVFWBkMFjqLsZf6ZNjJ/M/_WHZ2333-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-VtCT6nZ/3/K5RWBRsvL6v3sbjnB8CrRvqHz8VGjdSbzKnmZzHrv/S/_WHZ2333-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-L5tx3bd",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-L5tx3bd/3/NLFfmVz3b68CsTg23hZxjW7vH4M2TCTHBkfrZ4WKt/XL/_ANA1088-Pano-Edit-XL.jpg",
+    "alt": "River Through Ice    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-L5tx3bd/A",
     "keywords": [
       "Gates Mills",
@@ -1162,14 +1366,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-L5tx3bd/3/MPpkVhf4G5bdpfmtm9Xq7TX59CBtBnj2BrXgbNhRF/XL/_ANA1088-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-L5tx3bd/3/MPpkVhf4G5bdpfmtm9Xq7TX59CBtBnj2BrXgbNhRF/XL/_ANA1088-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-L5tx3bd/3/MPpkVhf4G5bdpfmtm9Xq7TX59CBtBnj2BrXgbNhRF/XL/_ANA1088-Pano-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-L5tx3bd/3/NSrfVb5JhLjLRJZFsS4hGFQDT98Sf5qTLF2vMbRhL/L/_ANA1088-Pano-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-L5tx3bd/3/KsdVjDVM3cpSQtNctXCt9w7T2RW8gS2RtRvdMCsXQ/S/_ANA1088-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GnD9h8S",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-GnD9h8S/1/LHnZT5Td4KvWhQt6RRWPPH8hvPCrzPLdWrSKfhCq6/XL/_ANA1193-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-GnD9h8S/A",
     "keywords": [
       "Gates Mills",
@@ -1190,14 +1399,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-GnD9h8S/1/NGRdJghWDPHVNvXm2x6vpF69rnFst2ZFMH8BDx979/XL/_ANA1193-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-GnD9h8S/1/NGRdJghWDPHVNvXm2x6vpF69rnFst2ZFMH8BDx979/XL/_ANA1193-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-GnD9h8S/1/NGRdJghWDPHVNvXm2x6vpF69rnFst2ZFMH8BDx979/XL/_ANA1193-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-GnD9h8S/1/LJPWrkJBCBFK83wCmGNXJR4JS623v9Gpd4g9SwjHq/L/_ANA1193-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-GnD9h8S/1/MDwh6GGRWRjzzsnBBF7v6srvzDmKjxhrdssbpCq5f/S/_ANA1193-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CM9ZWBr",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-CM9ZWBr/2/LmLh8xLJNwKCMcQ5rQrJXn5h635hxbFKnVzS69LhV/XL/_ANA1236-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-CM9ZWBr/A",
     "keywords": [
       "Gates Mills",
@@ -1218,14 +1432,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-CM9ZWBr/2/KcP9Hcx5d3bt5qvzgHkxvF3LT9h7wBwCCpRcw5mXJ/XL/_ANA1236-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-CM9ZWBr/2/KcP9Hcx5d3bt5qvzgHkxvF3LT9h7wBwCCpRcw5mXJ/XL/_ANA1236-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-CM9ZWBr/2/KVR4SP3sgPCk8hL42mXnwczHkjT6LvCZwnND9HKfZ/L/_ANA1236-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-CM9ZWBr/2/MVGL54mwFP7qmZq8HFBsTqGtWgQTgbCJV2mNsqXqJ/M/_ANA1236-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-CM9ZWBr/2/LJ4N8dTmfnXbxRpMpx5x7wmggFS7PFnvkfxtbDWw9/S/_ANA1236-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PVbJdpj",
     "title": "Old Fence - Black & White Photography by Wayne Heim",
     "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
-    "alt": "Old Fence - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NSd3PDZVPkwnnt43K5xGXSnmDjXcKtLGthvLBZWTF/XL/_IMG6295-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-PVbJdpj/A",
     "keywords": [
       "Gates Mills",
@@ -1246,6 +1465,45 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NbVPgnZ82nCvN6mKLcKHsR2PjThBHGPMG4q2BbZCz/L/_IMG6295-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/L9jwRQT3W7wbCLdPcwXTdNTPPMkC9xVRtRT9hMxpm/S/_IMG6295-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-wzJRjp5",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Old Fence - Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-wzJRjp5/A",
+    "keywords": [
+      "Gates Mills",
+      "North East Ohio",
+      "Snow",
+      "Winter 2011",
+      "garage",
+      "Christmas",
+      "wreath",
+      "winter",
+      "winter photo",
+      "k4 studios",
+      "wayne heim",
+      "winter scene"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 44,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

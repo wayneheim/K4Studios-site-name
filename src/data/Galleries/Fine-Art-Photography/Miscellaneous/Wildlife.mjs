@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-Vq3RmbR",
-    "title": "Motherly Love - Photography by Wayne HeimMotherly Love - a fox and her kit show affection.©Wayne Heim",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Motherly Love - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-Vq3RmbR/3/KwCgFkHdLZCJ4hP4XCwnQphB6BH8bFDt3KKkLqRW9/XL/_IGP3802-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-Vq3RmbR/A",
     "keywords": [
       "k4 studios",
@@ -38,14 +42,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-Vq3RmbR/3/NDZFB9H4M5mmgMKcFF8hGVNfj7LZkW2hdHKx7mBwM/XL/_IGP3802-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-Vq3RmbR/3/NDZFB9H4M5mmgMKcFF8hGVNfj7LZkW2hdHKx7mBwM/XL/_IGP3802-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-Vq3RmbR/3/LLZq3Kp8RtchGnLgKMzFH8qLbRtTtHL7jB8k3HRmw/L/_IGP3802-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-Vq3RmbR/3/NjjZ58gqQrQdhvh9B552KN69RP5M4bVZmf7zbdpHH/M/_IGP3802-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-Vq3RmbR/3/K5swSKwXTgKLF9jQMbZ4zBd8CRGk9jKWWCnzHJ5KR/S/_IGP3802-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n8bjD4g",
     "title": "On My Own - Photography by Wayne Heim",
     "description": "On My Own - lone fax in a meadow looks around for company. ©Wayne Heim",
-    "alt": "On My Own - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n8bjD4g/3/LXBFFJM67DQmJ4JfWwxRz8f3rW5RdwSdqxBntqd7H/XL/_IGP3812-XL.jpg",
+    "alt": "Motherly Love - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n8bjD4g/A",
     "keywords": [
       "k4 studios",
@@ -62,14 +71,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n8bjD4g/3/MfghDKPMTh2w9CSSrqTfQ38gwDndhP4shxqTxJcF9/XL/_IGP3812-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n8bjD4g/3/MfghDKPMTh2w9CSSrqTfQ38gwDndhP4shxqTxJcF9/XL/_IGP3812-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n8bjD4g/3/MpHzCvsB7XVz3dtj2Dvp7vpGwn5vwdhNf9n4TNzZD/L/_IGP3812-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n8bjD4g/3/LGrqghx66MKPTjHN9BqTP78spq7kJrRWHkjhw8KbD/M/_IGP3812-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n8bjD4g/3/LFkx4pLXL4jrZJLGVdf3sgB75bJ7kMXVLP359JnRH/S/_IGP3812-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JNGBnsD",
     "title": "Got an Itch - Photography by Wayne Heim",
     "description": "Got an Itch - bull moose scratches in the woods of Wyoming.©Wayne Heim",
-    "alt": "Got an Itch - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-JNGBnsD/4/NQvCkGRMsQLHPzrPRbjN83CkhCF7qQkSHpT8gSp6v/XL/_IMG5428-XL.jpg",
+    "alt": "On My Own - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-JNGBnsD/A",
     "keywords": [
       "k4 studios",
@@ -86,14 +100,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-JNGBnsD/4/KJcHKZXx7Hzn5XPKt65J8SbXXnGFRbPTXt8346tj3/XL/_IMG5428-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-JNGBnsD/4/KJcHKZXx7Hzn5XPKt65J8SbXXnGFRbPTXt8346tj3/XL/_IMG5428-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-JNGBnsD/4/KJCNtPjB9B4RMmMkJK9h68XdvcHJx5FF3Xmd4KvfP/L/_IMG5428-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-JNGBnsD/4/KVnzDVstB9DKht6sCcPz9TXQK7s5JBHVxtn7pHmd5/M/_IMG5428-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-JNGBnsD/4/NBDsHqLZkCcT76mKs9HQTPjW8CLRzVCmXt5nqXdKN/S/_IMG5428-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n2CpJ8n",
     "title": "I See You - Photography by Wayne Heim",
     "description": "I See You - close up of a dragon fly as it sits on a thistle. ©Wayne Heim",
-    "alt": "I See You - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-n2CpJ8n/4/Kr9fcg6VmbvxWfhP89bqF6jfxVFRCPJVGs4PLd35f/XL/_IMG7103-2-XL.jpg",
+    "alt": "Got an Itch - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-n2CpJ8n/A",
     "keywords": [
       "k4 studios",
@@ -110,14 +129,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-n2CpJ8n/4/M63JT2cGzKNDccDLxkbWJ6pd8HDGBjjNG2DLMqxDK/XL/_IMG7103-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-n2CpJ8n/4/M63JT2cGzKNDccDLxkbWJ6pd8HDGBjjNG2DLMqxDK/XL/_IMG7103-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-n2CpJ8n/4/Nf62pSvmZgZdkP4VdxwJjBpvr2cXfDDvFBJHJzxvK/L/_IMG7103-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-n2CpJ8n/4/MRNBH7343ZBW7fjhSRGxz5H9QrngsRpn7SmtgfK92/M/_IMG7103-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-n2CpJ8n/4/NR92bBgZz75SHqLj7ZnXm9ZVp6wfPvWjD7bwsCDwx/S/_IMG7103-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GDgGnbJ",
     "title": "Holding On - Photography by Wayne Heim",
     "description": "Holding On - close up of a dragon fly holding on to the end of a twig. ©Wayne Heim",
-    "alt": "Holding On - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-GDgGnbJ/4/K5n6CNnv9zmDL7cJp4k2HhNTWXMzT6LvxNcVf63xv/XL/_IMG7166-XL.jpg",
+    "alt": "I See You - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-GDgGnbJ/A",
     "keywords": [
       "k4 studios",
@@ -134,14 +158,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-GDgGnbJ/4/MKxF4cBxBPzbFFpXPsJj6gk76hNqDnLg3LXW7cf97/XL/_IMG7166-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-GDgGnbJ/4/MKxF4cBxBPzbFFpXPsJj6gk76hNqDnLg3LXW7cf97/XL/_IMG7166-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-GDgGnbJ/4/KSkF3BM3fNtT6kgvGkF8HWPq3fQcX5GXZxx64T6Qq/L/_IMG7166-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-GDgGnbJ/4/MNf3BTgGk3dC8mpTtCNVLXrmSmbgdn85wsc28BzRc/M/_IMG7166-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Critters/Bugs/i-GDgGnbJ/4/LN9HZJMHbXp8bZcZDMsK67VfpBM4NFC54VQxkKR9h/S/_IMG7166-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZwgGZbg",
     "title": "Big Boy - Photography by Wayne Heim",
     "description": "Big Boy _ Close up of a bull moose . ©Wayne Heim",
-    "alt": "Big Boy - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-ZwgGZbg/4/Mv8mvXxBrWrdRJQRKV88WxWTXxVvD7fXtsLcCqWFH/XL/_IMG6488-XL.jpg",
+    "alt": "Holding On - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-ZwgGZbg/A",
     "keywords": [
       "k4 studios",
@@ -158,14 +187,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-ZwgGZbg/4/MGBv3RPF6BVBbSfKKjGFZFRtjqZ9D4TD7KtRtjbSq/XL/_IMG6488-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-ZwgGZbg/4/MGBv3RPF6BVBbSfKKjGFZFRtjqZ9D4TD7KtRtjbSq/XL/_IMG6488-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-ZwgGZbg/4/NSrQdMnL8b5MTBh7wxs2pS58NZZRMMS7S7grvCTX9/L/_IMG6488-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-ZwgGZbg/4/KDQ8FfTDrwrKkWgPLfhHnzkGHFFnGjDFtcVFX6P3q/M/_IMG6488-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-ZwgGZbg/4/NGBQrvL7rjxPGt5ZHQRkH8XTCqHGtLr4KfpfwPKds/S/_IMG6488-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NNmzZph",
     "title": "Watching     Photography by Wayne Heim",
     "description": "Moose stands in field watching something in distance.  ©Wayne Heim",
-    "alt": "Watching     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-NNmzZph/4/MTJ68cp7vsSkWbf2pvQTxX3vpXd8NsD7KbVKW9wWW/XL/_IMG6493-XL.jpg",
+    "alt": "Big Boy - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-NNmzZph/A",
     "keywords": [
       "k4 studios",
@@ -182,14 +216,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-NNmzZph/4/LQpdMMjJmMCz5bgrMbGBXg2dJ5Ctj3pQ928ZRctr6/XL/_IMG6493-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-NNmzZph/4/LQpdMMjJmMCz5bgrMbGBXg2dJ5Ctj3pQ928ZRctr6/XL/_IMG6493-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-NNmzZph/4/LTDPbBR9p8jZ5tKGzQHSkRQXv5xLd56m2PPpWFNQc/L/_IMG6493-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-NNmzZph/4/KvdsQKx9d9JhWdH2FVwt5ckhcbFK7DNs4ZgBLBk5G/M/_IMG6493-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-NNmzZph/4/MkQdv59k7vnNsG3LVrqsN9hbS3TcdXFrbbgHd84DG/S/_IMG6493-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-K9X6wsx",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-K9X6wsx/4/MmZ7Zq97h8vp32kkWmhtF6gm8PnhpFfw8SNJHBrRW/XL/_IMG6511-XL.jpg",
+    "alt": "Watching     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-K9X6wsx/A",
     "keywords": [
       "k4 studios",
@@ -206,14 +245,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-K9X6wsx/4/MZhd4QMm8vmHCzKtJjk3q2FJkBZN6gFxS3SGgx4Lc/XL/_IMG6511-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-K9X6wsx/4/MZhd4QMm8vmHCzKtJjk3q2FJkBZN6gFxS3SGgx4Lc/XL/_IMG6511-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-K9X6wsx/4/MfVzRz9tNwc2wxxxwW55DnwsDLH9nV8DtNq3CVWBp/L/_IMG6511-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-K9X6wsx/4/MDc6Ltz6bVwBGHCvhCvc59TJ7gTGrs63nCCZPjF9Q/M/_IMG6511-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-K9X6wsx/4/M2MV9SwVnM8QkzbQp7QVNxKZZDmrxCcm6PPBTDxMs/S/_IMG6511-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HVvng4J",
     "title": "Getting a Drink     Photography by Wayne Heim",
     "description": "Moose by pond getting a drink.  ©Wayne Heim",
-    "alt": "Getting a Drink     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HVvng4J/4/LZFfpQSdS5HMd4MXNJGx74w2Hnr8JK43J2Lsgnw3V/XL/_IMG6519-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-HVvng4J/A",
     "keywords": [
       "k4 studios",
@@ -230,14 +274,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HVvng4J/4/Nc3vVvtvpkPnshf96Bvhmgz7KHMB3wjNpXgQLttdn/XL/_IMG6519-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HVvng4J/4/Nc3vVvtvpkPnshf96Bvhmgz7KHMB3wjNpXgQLttdn/XL/_IMG6519-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HVvng4J/4/MbWh88QLZmZwFQdxv4L8GmJbtwt7VZZpjbF6Sg6dD/L/_IMG6519-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HVvng4J/4/K4q8bwh9JPsQgQPTSrtb3Brsb58C8c5RSh7TB59qB/M/_IMG6519-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-HVvng4J/4/MPwzKfxTkPXPfkMMFn2vC8VsMM4RVNJgLzzxVKKFq/S/_IMG6519-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kw4LCrd",
     "title": "Cool Water    Photography by Wayne Heim",
     "description": "Moose stands in the cool water of a stream.\n©Wayne Heim",
-    "alt": "Cool Water    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-kw4LCrd/4/Lfht7dxwWnFfFSPBXTgwbdNCds7HmMQ2jkG93LXZw/XL/_IMG6521-XL.jpg",
+    "alt": "Getting a Drink     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-kw4LCrd/A",
     "keywords": [
       "k4 studios",
@@ -254,14 +303,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-kw4LCrd/4/LCvjrVFbmJQC9GzJ7qgPNzH5djLZcH9dfGChPGqWQ/XL/_IMG6521-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-kw4LCrd/4/LCvjrVFbmJQC9GzJ7qgPNzH5djLZcH9dfGChPGqWQ/XL/_IMG6521-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-kw4LCrd/4/NLJs7XCBCtQXg2nVPxdzr4vQ2HWzNxhqmgD3zZqzS/L/_IMG6521-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-kw4LCrd/4/MdgV8t2BxnRh4Lq6XbpVt6HmnZ858XWGLMMsqSFcj/M/_IMG6521-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-kw4LCrd/4/M9rSCm3mZN3nb9XwtdsJgN84BDH8Xkzrw9wcDB4qp/S/_IMG6521-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vqC5jTC",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MDpkHpMZVJS44XkwD8SXtZK4Fd9T9ss87f7dzz7Nm/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "alt": "Cool Water    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-vqC5jTC/A",
     "keywords": [
       "k4 studios",
@@ -278,14 +332,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/LMKHvLBzsvgHjkP4CDGfp9qQMT9qGp7x2bghGQGFN/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/LMKHvLBzsvgHjkP4CDGfp9qQMT9qGp7x2bghGQGFN/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/LMKHvLBzsvgHjkP4CDGfp9qQMT9qGp7x2bghGQGFN/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MKMn5J4dF9kJb7FGbCNkVfK6gw29gPKQ96RddMmXc/L/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MjGdDQ9DrtgN67wxffG7ffD4889vMN76gSdzTmZ3m/S/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fHxpx2c",
     "title": "Untitled",
     "description": "OLYMPUS DIGITAL CAMERA",
-    "alt": "OLYMPUS DIGITAL CAMERA",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fHxpx2c/4/MzbbSVMRKcBzsdC7hnWNj6XQb3X6PDrZxQdsVprjW/XL/_OLY1337-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-fHxpx2c/A",
     "keywords": [
       "k4 studios",
@@ -302,6 +361,41 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fHxpx2c/4/LnVV6nH3W9VkH2hNC9MvxBJ6nPf2jQ6TFRWLR2gkV/XL/_OLY1337-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fHxpx2c/4/LnVV6nH3W9VkH2hNC9MvxBJ6nPf2jQ6TFRWLR2gkV/XL/_OLY1337-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fHxpx2c/4/NCJsSFzNzXmNHM4qPGgPPpKrwN4GvfCJNzrBVhdL7/L/_OLY1337-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fHxpx2c/4/M2F6NHbPKg4xnKVDwzHNmtc6h9qnqXdfq6FfCvLtn/M/_OLY1337-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fHxpx2c/4/Mmvb64XnpKPjfK2X8bspxmSXBtrxCHVmDpknnqQKN/S/_OLY1337-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-zM8tjW7",
+    "title": "Untitled",
+    "description": "OLYMPUS DIGITAL CAMERA",
+    "alt": "OLYMPUS DIGITAL CAMERA",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife/i-zM8tjW7/A",
+    "keywords": [
+      "k4 studios",
+      "wayne heim",
+      "animals",
+      "animal photography",
+      "nature photography",
+      "nature",
+      "fox",
+      "kit"
+    ],
+    "story": "OLYMPUS DIGITAL CAMERA",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 12,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

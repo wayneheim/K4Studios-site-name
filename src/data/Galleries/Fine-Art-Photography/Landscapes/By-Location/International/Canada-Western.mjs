@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-VJfbx5Z",
-    "title": "Geological Wonderment of the Canadian RockiesFine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Geological Wonderment of the Canadian Rockies",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VJfbx5Z/0/LwZxW6GNWVQsj7PWNqtbzkKC45dSPBkXSGk4R23ks/XL/_WHZ2674-Pano-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-VJfbx5Z/A",
     "keywords": [
       "Canada",
@@ -49,14 +53,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VJfbx5Z/0/LNvQGjP7CCv3fsj63dLZzKSptp49gm96MDZPwt793/XL/_WHZ2674-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VJfbx5Z/0/LNvQGjP7CCv3fsj63dLZzKSptp49gm96MDZPwt793/XL/_WHZ2674-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VJfbx5Z/0/Lv6B3D5bDf5F2Wfs94rxWBx6cVvXTtQHwBFxHZHQ7/L/_WHZ2674-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VJfbx5Z/0/MMKWMZgTdQpTzWkMTpbBptL9KnDGtrPTdnTc3WKLv/M/_WHZ2674-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VJfbx5Z/0/LNqMBKdkHdsVkMZGbDbRkdZKXTkGgG6PXvJBMPHCm/S/_WHZ2674-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NQBsdSD",
     "title": "The Start of Winter in the Canadian Rockies",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Start of Winter in the Canadian Rockies",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NQBsdSD/0/L3hMXxLpmvrGNd5V26ZzPWZKWkp4QjvFxcs6Qz4Mg/XL/_WHZ2857-Pano-Edit-2-XL.jpg",
+    "alt": "Geological Wonderment of the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-NQBsdSD/A",
     "keywords": [
       "Canada",
@@ -84,14 +93,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NQBsdSD/0/LKjLjVRsGNwdbxDzpVgxgSPRKSwx5Fbj8bPKpMhpN/XL/_WHZ2857-Pano-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NQBsdSD/0/LKjLjVRsGNwdbxDzpVgxgSPRKSwx5Fbj8bPKpMhpN/XL/_WHZ2857-Pano-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NQBsdSD/0/L8JTRj9fRH2TB5dwSVPJhdmvQkcCn7QcNCbgsnDmG/L/_WHZ2857-Pano-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NQBsdSD/0/KPSRsdT2q9dVV6SRTSfwhGmJq3x4Mf6t9XdkkhZ5n/M/_WHZ2857-Pano-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NQBsdSD/0/MgRq7QJbVqpH8L6vpD4gsfg2d97PXzhMvZ2fDVf8f/S/_WHZ2857-Pano-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TVtxcrX",
     "title": "Black & White Photo of a Snow Covered Mountain Peak",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of a Snow Covered Mountain Peak",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-TVtxcrX/0/NQpRgtK9vct9VJLgB6n2vd52cNznvwsccLkxHHDSv/XL/_WHZ2897-Edit-2-XL.jpg",
+    "alt": "The Start of Winter in the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-TVtxcrX/A",
     "keywords": [
       "Canada",
@@ -119,14 +133,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-TVtxcrX/0/L9gCgpZx9tQ8MGmtncpHW9TpHP9Skb5bzrkBMb4Wm/XL/_WHZ2897-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-TVtxcrX/0/L9gCgpZx9tQ8MGmtncpHW9TpHP9Skb5bzrkBMb4Wm/XL/_WHZ2897-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-TVtxcrX/0/NZHt2s32nDHjRKTzHrDKFd9ZGTVW6PxjjQdz5HH9J/L/_WHZ2897-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-TVtxcrX/0/Njbk62Lpjsjct78vzHjg9xmBkrNZh3d66LTWVQWgb/M/_WHZ2897-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-TVtxcrX/0/K9Lc76cHqQBwrj769dZrJNjzZVsqjvsMtdkFP6pHp/S/_WHZ2897-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JrzzGDD",
     "title": "A Sunny Winter Day in the Canadian Rockies",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "A Sunny Winter Day in the Canadian Rockies",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-JrzzGDD/0/LqCKLSTz2cJMMS5CbpJ2p7hMKfKxhmhqkZv3Kxxj8/XL/_WHZ2913-Edit-XL.jpg",
+    "alt": "Black & White Photo of a Snow Covered Mountain Peak",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-JrzzGDD/A",
     "keywords": [
       "Canada",
@@ -154,14 +173,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-JrzzGDD/0/KLcPHhw8JTsCVZ6C8Q7BLjq7n6zPGsVqDRK43HsBx/XL/_WHZ2913-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-JrzzGDD/0/KLcPHhw8JTsCVZ6C8Q7BLjq7n6zPGsVqDRK43HsBx/XL/_WHZ2913-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-JrzzGDD/0/KccRJBrvZV79PHs649PWh8vN5jLtbzMPbt6MbQTbM/L/_WHZ2913-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-JrzzGDD/0/LPLj4Msvvw3grZQrBv3q955qMzbjFjPFTC6QSzp84/M/_WHZ2913-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-JrzzGDD/0/NSxkDFCrMBRwmqDGmMnh2tjH2MpVSXLZGVw27nhxM/S/_WHZ2913-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rDTVGSF",
     "title": "Mountain Peaks Reflecting on a Crystal Clear Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Mountain Peaks Reflecting on a Crystal Clear Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rDTVGSF/0/NBqnrGq5dJwcMt2KLgWJSmp2bGvfJHR6k78GhWzgm/XL/_WHZ2947-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "A Sunny Winter Day in the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-rDTVGSF/A",
     "keywords": [
       "Canada",
@@ -189,14 +213,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rDTVGSF/0/KvNDfXDTh3zW2q3xkdQqpSZL5vCZxR2c5z6BvKxxv/XL/_WHZ2947-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rDTVGSF/0/KvNDfXDTh3zW2q3xkdQqpSZL5vCZxR2c5z6BvKxxv/XL/_WHZ2947-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rDTVGSF/0/Kk9RLRWj4VXxxZksvvCdgB9Rwgff6GHBRgJWcphfh/L/_WHZ2947-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rDTVGSF/0/LZgKJQQJVjsQmh495GZsbxwjwHSDC5xFxJLzv6Tcq/M/_WHZ2947-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-rDTVGSF/0/MCPgdSPtjQHThFSgZKpN2VRBpSBWPBT7LQRJ7Vf8q/S/_WHZ2947-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Wkmt5Jm",
     "title": "Pine Trees Along the Lake Edge",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Pine Trees Along the Lake Edge",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/Ms8Fd3RgCxcLk7pJpKW4SbrkkSwkWXvRBd57zNZPq/XL/_K1W5132_tonemapped-Edit-2-XL.jpg",
+    "alt": "Mountain Peaks Reflecting on a Crystal Clear Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-Wkmt5Jm/A",
     "keywords": [
       "Canada",
@@ -224,14 +253,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/Nfmb3GPhrVmnfSVk9wHzc2ZDwBmqHC6XNbqW79qVJ/XL/_K1W5132_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/Nfmb3GPhrVmnfSVk9wHzc2ZDwBmqHC6XNbqW79qVJ/XL/_K1W5132_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/NMDTNJWBQKdh4DdDgnVfrzSWnDLzxJf233MgvLqqK/L/_K1W5132_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/K8xHhvGCCBMJ6rvWfPfjzm6cVJgLvxGWTS8XPf2B7/M/_K1W5132_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Wkmt5Jm/4/LtsFn4VgqcHb4rbX7swX3wr4R6vpQ4HBDMcb5sJ5J/S/_K1W5132_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WHdcCJt",
     "title": "Black & White Photo of a Weathered Mountain Peak",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of a Weathered Mountain Peak",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WHdcCJt/0/Kck8T8CQfsMpgGLJ9f5J94DDrZfTWVND6PqvtgGpQ/XL/_WHZ3042-Edit-XL.jpg",
+    "alt": "Pine Trees Along the Lake Edge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-WHdcCJt/A",
     "keywords": [
       "Canada",
@@ -259,14 +293,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WHdcCJt/0/NRRP47KJJhxzcZ4WDjL6xkRRt8t3dgGffcvLmnrbF/XL/_WHZ3042-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WHdcCJt/0/NRRP47KJJhxzcZ4WDjL6xkRRt8t3dgGffcvLmnrbF/XL/_WHZ3042-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WHdcCJt/0/KgZ4nLV689ZRFdvqjrJNL8BgLSpMpP7ckJhVCkTjf/L/_WHZ3042-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WHdcCJt/0/K5RNHp3LxR9LZ2jrZ3JBG4MkzvjfjVhZ97V8Vzg9f/M/_WHZ3042-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WHdcCJt/0/Lqp9DG8WGtrH4h2PsJHXt8LXJdzLb37brP8WBcTvh/S/_WHZ3042-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BQzssgZ",
     "title": "A Flattened Mountain Peak in the Canadian Rockies",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "A Flattened Mountain Peak in the Canadian Rockies",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BQzssgZ/0/NZmSr3Fp2mp7DnLPrptxJqS7LmJnvbD5QW3H4RBJW/XL/_WHZ3042_tonemapped-XL.jpg",
+    "alt": "Black & White Photo of a Weathered Mountain Peak",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-BQzssgZ/A",
     "keywords": [
       "Canada",
@@ -294,14 +333,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BQzssgZ/0/McWsrDb6k2dHFGWVF9H4KFtJD9Sfmz4fmNK2SPHbX/XL/_WHZ3042_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BQzssgZ/0/McWsrDb6k2dHFGWVF9H4KFtJD9Sfmz4fmNK2SPHbX/XL/_WHZ3042_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BQzssgZ/0/M4k29SL3MCgrZMLpkW2vz8X9gjmjR7zQQ5sbqBnhN/L/_WHZ3042_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BQzssgZ/0/NQffmP9NnKS3Q7fTcmqvtwNXfwzxqmbGmDNP4T6Pr/M/_WHZ3042_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BQzssgZ/0/Knz5ZHn7v46msq3J3gDCKs2kCm73nC66kwbMgvB83/S/_WHZ3042_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gr9Wk8W",
     "title": "Parallel Mountain Peaks in the Canadian Rockies",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Parallel Mountain Peaks in the Canadian Rockies",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gr9Wk8W/0/NMS5cPmf98SFTrsjDwdmW4N8fMQPMTMf9mfB8bJNf/XL/_WHZ3206-Pano-Edit-XL.jpg",
+    "alt": "A Flattened Mountain Peak in the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-gr9Wk8W/A",
     "keywords": [
       "Canada",
@@ -329,14 +373,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gr9Wk8W/0/NB68WWH7F8NXPZC8RTNwnbBF5bKrFfVVQSSpCLT99/XL/_WHZ3206-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gr9Wk8W/0/NB68WWH7F8NXPZC8RTNwnbBF5bKrFfVVQSSpCLT99/XL/_WHZ3206-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gr9Wk8W/0/NWqN3VCXdrJdZz974BhjDhmhSQhnGQ5fFHBzv6dZG/L/_WHZ3206-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gr9Wk8W/0/NPjfQrRDqzP7Q4s9dD69JtS3dw6vqkKz7b4J7rR2g/M/_WHZ3206-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gr9Wk8W/0/MJ45zC48bs2ZpzQqMG6tCCwZGKSfbs2jGkqsN4tp7/S/_WHZ3206-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xfBNqVW",
     "title": "The Sun Reflecting Through the Trees in Canada",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Sun Reflecting Through the Trees in Canada",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/M6rdXzLcQK7mxJ2Gbc4wNsv86pRZhrTsx8wx9jwJF/XL/_WHZ3234-Edit-XL.jpg",
+    "alt": "Parallel Mountain Peaks in the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-xfBNqVW/A",
     "keywords": [
       "Canada",
@@ -364,14 +413,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/Kd8rhsR6M3kK32ZMzrRsCfVWQVfBXXhxgwNCBqpjT/XL/_WHZ3234-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/Kd8rhsR6M3kK32ZMzrRsCfVWQVfBXXhxgwNCBqpjT/XL/_WHZ3234-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/Kd8rhsR6M3kK32ZMzrRsCfVWQVfBXXhxgwNCBqpjT/XL/_WHZ3234-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/MMKCDWHwBCJpmksx3fxKVmWK5mXSvxxMXqmzpvPS6/L/_WHZ3234-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/KrsgGqVtWFk43J5QRSXtt9xNKkwsPGVH4rjG22cbz/S/_WHZ3234-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2KLWL8W",
     "title": "Black & White Photo of the Sun Illuminating Snow Covered Mountain Tops",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of the Sun Illuminating Snow Covered Mountain Tops",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-2KLWL8W/0/KpLDrJX4zcfHqngMdPXPSvwxcVsm6XNwsZcWnDK94/XL/_WHZ3303-Pano-Edit-XL.jpg",
+    "alt": "The Sun Reflecting Through the Trees in Canada",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-2KLWL8W/A",
     "keywords": [
       "Canada",
@@ -399,14 +453,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-2KLWL8W/0/Kws5GXmF4ZFbZk8QDPqzJgqTgxZqhV6qpCxfv5ZZf/XL/_WHZ3303-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-2KLWL8W/0/Kws5GXmF4ZFbZk8QDPqzJgqTgxZqhV6qpCxfv5ZZf/XL/_WHZ3303-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-2KLWL8W/0/LdshZWzDpmW9629z4Psgw3457ZT4k4mmLvvwDLsSX/L/_WHZ3303-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-2KLWL8W/0/LSgKhpPtCwJpZRx2DJHBTfwgWkdjDXnBBpxzLtDKL/M/_WHZ3303-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-2KLWL8W/0/M4hP2c4z7LnjxrkW87VVdrdRPtq75Zhwd66WRXcKP/S/_WHZ3303-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hFQ68vN",
     "title": "Mountain Shadows on the Glaciers",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Mountain Shadows on the Glaciers",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-hFQ68vN/0/LSMsJ56psMgKJ9cmrkHNhbG6mzhHKbTWdWJBCNttj/XL/_WHZ3303-Pano-Edit-2-XL.jpg",
+    "alt": "Black & White Photo of the Sun Illuminating Snow Covered Mountain Tops",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-hFQ68vN/A",
     "keywords": [
       "Canada",
@@ -434,14 +493,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-hFQ68vN/0/NLnSHpPT5ckrSdNTFC7fNKdxfQZ555WHnDhRMf7c8/XL/_WHZ3303-Pano-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-hFQ68vN/0/NLnSHpPT5ckrSdNTFC7fNKdxfQZ555WHnDhRMf7c8/XL/_WHZ3303-Pano-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-hFQ68vN/0/Mwck2DjB7kJ8P4CMsjKTw5G5Xj3vFnFQRKgMwDfBm/L/_WHZ3303-Pano-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-hFQ68vN/0/NTPdWch5kKVZjGM5pZCB3qMhXrTMcwsp474SzCZdn/M/_WHZ3303-Pano-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-hFQ68vN/0/L3dths8RsFv8s8tpZRd98Rpp9nkgzbwmJ427D7hk7/S/_WHZ3303-Pano-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qf3vXpX",
     "title": "Sunwapta Falls at Night",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Sunwapta Falls at Night",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-qf3vXpX/0/L2p52CxXr4NWqGHFWT9wDwMZ2SB6MVCc5v2X4cvt2/XL/_K1W5186-XL.jpg",
+    "alt": "Mountain Shadows on the Glaciers",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-qf3vXpX/A",
     "keywords": [
       "Canada",
@@ -469,14 +533,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-qf3vXpX/0/K97VHSg8NSQ5hKkWttJzvtzcbkScLqSTmvsRJKjvz/XL/_K1W5186-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-qf3vXpX/0/K97VHSg8NSQ5hKkWttJzvtzcbkScLqSTmvsRJKjvz/XL/_K1W5186-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-qf3vXpX/0/K97VHSg8NSQ5hKkWttJzvtzcbkScLqSTmvsRJKjvz/XL/_K1W5186-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-qf3vXpX/0/Ln6QV5D9xgH2f8TNjSKjg2KHLBWNwvrsMT7f9NxZM/L/_K1W5186-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-qf3vXpX/0/M3zQZsj73pqK54VxRrxqBTnhdfFL8GDFsJn54wfHw/S/_K1W5186-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BHzqrcT",
     "title": "Illuminated Pine Trees at Sunwapta Falls",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Illuminated Pine Trees at Sunwapta Falls",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BHzqrcT/4/MXpZzCFNPFWnH5QM9225bBvWDQczK7zmgGfrFKfj8/XL/_K1W5195-Edit-Edit-XL.jpg",
+    "alt": "Sunwapta Falls at Night",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-BHzqrcT/A",
     "keywords": [
       "Canada",
@@ -504,14 +573,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BHzqrcT/4/MXjGfVBNHCHktwHdMWPkznSzNBKv492bfjfKfzm6F/XL/_K1W5195-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BHzqrcT/4/MXjGfVBNHCHktwHdMWPkznSzNBKv492bfjfKfzm6F/XL/_K1W5195-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BHzqrcT/4/KFB3nsHkFs3qnDq72Hw6kztJRqNhLw65dpdFzRGFZ/L/_K1W5195-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BHzqrcT/4/NV4gLmCPBkjjBR86TbTKnKsWGQ5mzxGb3Vh9WdZdx/M/_K1W5195-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-BHzqrcT/4/L2v3DBBk3RL8t9RMh6prhPr5FZVq5wWT3xf4zJS99/S/_K1W5195-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-g6pX48d",
     "title": "The Milky Way Over Sunwapta Falls",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Milky Way Over Sunwapta Falls",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/KfwmVMMMtXHmML8Z2JfS3kVb833FRxnCXpWh2B84r/XL/_WHZ3489-Edit-sharpen-focus-XL.jpg",
+    "alt": "Illuminated Pine Trees at Sunwapta Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-g6pX48d/A",
     "keywords": [
       "Canada",
@@ -539,14 +613,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/NDTspmpGQzW7Vxx9B82SKp8gNrv9GvXZhGd6cXrZ6/XL/_WHZ3489-Edit-sharpen-focus-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/NDTspmpGQzW7Vxx9B82SKp8gNrv9GvXZhGd6cXrZ6/XL/_WHZ3489-Edit-sharpen-focus-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/NDTspmpGQzW7Vxx9B82SKp8gNrv9GvXZhGd6cXrZ6/XL/_WHZ3489-Edit-sharpen-focus-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/KFtGmKPQV3mztQp3Mb3JGw3bfgLnbtR4wHhS6rZLX/L/_WHZ3489-Edit-sharpen-focus-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-g6pX48d/3/Ndkb5pf2BLBrdqtPD3TdHxBwD99dzWWpLCQSJm3P8/S/_WHZ3489-Edit-sharpen-focus-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wGPKrn9",
     "title": "A Rocky Water's Edge with the Canadian Rockies in the Distance",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "A Rocky Water's Edge with the Canadian Rockies in the Distance",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-wGPKrn9/0/LZF2HNL5JX7tTfjhdKnbfdKSGLQMMfgwWKRqgG45F/XL/_WHZ3576_tonemapped-XL.jpg",
+    "alt": "The Milky Way Over Sunwapta Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-wGPKrn9/A",
     "keywords": [
       "Canada",
@@ -574,14 +653,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-wGPKrn9/0/KQZSg9X9PcSNxpbdQqqbnp7DFCfXb5Lh62Bw2QMkT/XL/_WHZ3576_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-wGPKrn9/0/KQZSg9X9PcSNxpbdQqqbnp7DFCfXb5Lh62Bw2QMkT/XL/_WHZ3576_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-wGPKrn9/0/LnL9Tw9hcLrFWHpwb8VgSzwdGCZdpn4H8jj74wmFJ/L/_WHZ3576_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-wGPKrn9/0/KFwXdHLfrRzTkGmXpJMzwG8hd9jN5j4jM7Nfw6FVc/M/_WHZ3576_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-wGPKrn9/0/M5KnNzFsRVr4Zv7FH9X2pVdgSXF6kXRndzC4qbQRJ/S/_WHZ3576_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tV4GpBb",
     "title": "Black & White Photo of the Road Through the Canadian Rockies",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of the Road Through the Canadian Rockies",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-tV4GpBb/0/KsG3zPqN7vjBDBnWqnpq28GZ6ZrdSDrMBzZNNqgNP/XL/_WHZ3793_tonemapped-Edit-XL.jpg",
+    "alt": "A Rocky Water's Edge with the Canadian Rockies in the Distance",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-tV4GpBb/A",
     "keywords": [
       "Canada",
@@ -609,14 +693,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-tV4GpBb/0/KDV2FP2JHcGMBBWK69q5HbrXJQk3Z7WL6BZhTjjV9/XL/_WHZ3793_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-tV4GpBb/0/KDV2FP2JHcGMBBWK69q5HbrXJQk3Z7WL6BZhTjjV9/XL/_WHZ3793_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-tV4GpBb/0/KSTcbs6TF2CLvh23dFZswGwwNQgdT96qgZmQ7G8Fb/L/_WHZ3793_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-tV4GpBb/0/MCwRvKjn28gKC7cqkndGxRdtrFZdmKcHZ522tKwDv/M/_WHZ3793_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-tV4GpBb/0/MKpCTdtmLVqxQpsVhK6hHjj4NP8WJ5NwGXbq5Pg5W/S/_WHZ3793_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VWxTZH4",
     "title": "A Mountain Peak Reflecting on Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "A Mountain Peak Reflecting on Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VWxTZH4/2/NGS7hM6mCwVPhhLHmfwHfkg2f2QLwMXHCTCQC92Fx/XL/_WHZ4189-XL.jpg",
+    "alt": "Black & White Photo of the Road Through the Canadian Rockies",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-VWxTZH4/A",
     "keywords": [
       "Canada",
@@ -644,14 +733,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VWxTZH4/2/LZX39jpMBNchJbFCTkbpp4JKFH34GwNJxXK6bW2NZ/XL/_WHZ4189-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VWxTZH4/2/LZX39jpMBNchJbFCTkbpp4JKFH34GwNJxXK6bW2NZ/XL/_WHZ4189-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VWxTZH4/2/LZX39jpMBNchJbFCTkbpp4JKFH34GwNJxXK6bW2NZ/XL/_WHZ4189-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VWxTZH4/2/LjJjC8ZDrZHBVF9s9vFfdx4DLrNmGjjbXkc2ZPfjF/L/_WHZ4189-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VWxTZH4/2/L5FJtBckN7CFq9zBzVpwdRRBfKkdm7vg9sNJ6t98j/S/_WHZ4189-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Nvn4r5N",
     "title": "Sunset on Emerald Lake and the Lodge",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Sunset on Emerald Lake and the Lodge",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/KL9JmtMrWJD3pXv2RgSR7XxM7FmvkDczwNJsNS8SZ/XL/_WHZ4226-Edit2-sharpen-stabilize-XL.jpg",
+    "alt": "A Mountain Peak Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-Nvn4r5N/A",
     "keywords": [
       "Canada",
@@ -679,14 +773,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/LckTM9NsBhppDzmpwd4KdgGnHZvRqrJttVbrhjTmT/XL/_WHZ4226-Edit2-sharpen-stabilize-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/LckTM9NsBhppDzmpwd4KdgGnHZvRqrJttVbrhjTmT/XL/_WHZ4226-Edit2-sharpen-stabilize-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/NjHzD843CW29b5JW9qN6pcrhJWpnjP62DGspMskPr/L/_WHZ4226-Edit2-sharpen-stabilize-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/NC6kGVqQBFCHv47KprFZtxPwpFbRgrjpPLrzQPVjr/M/_WHZ4226-Edit2-sharpen-stabilize-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Nvn4r5N/3/MRhS257R8Jb2v3nhjfJF9kVR32Lpj334Gtmx6CgKT/S/_WHZ4226-Edit2-sharpen-stabilize-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-86Nsnnc",
     "title": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/KdsRQNQ2k8ZgGFPV5zMjCNDRhKF7RgPd6VBWr2hHd/XL/_WHZ4242-Edit-XL.jpg",
+    "alt": "Sunset on Emerald Lake and the Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-86Nsnnc/A",
     "keywords": [
       "Canada",
@@ -714,14 +813,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/MDHgnwBdjnntsPDRQGhvrsvmGZpdfvdKndk6ZbVf7/XL/_WHZ4242-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/MDHgnwBdjnntsPDRQGhvrsvmGZpdfvdKndk6ZbVf7/XL/_WHZ4242-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/MzpJQ9Q6dRGJZT3NMK7t45nbQ9fVh9SNDbzzNPNPd/L/_WHZ4242-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/LBkmg8hcBXDtv7xQfHLLJjcRNSrxVGRHjWsqVQ6pS/M/_WHZ4242-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-86Nsnnc/4/Mrfh2ZqB49B5N84PXhhfmqdGr8zWxL2dNzW8Nv5nb/S/_WHZ4242-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9FJgtJJ",
     "title": "A Moonlit Evening at Emerald Lake Lodge",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "A Moonlit Evening at Emerald Lake Lodge",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-9FJgtJJ/5/KL8NpJk2t85XhS77PL9BfLxRtCcgT3nvnCnqdwjbS/XL/_WHZ4267-Edit-Edit-XL.jpg",
+    "alt": "Landslide and Mountain Peaks Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-9FJgtJJ/A",
     "keywords": [
       "Canada",
@@ -749,14 +853,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-9FJgtJJ/5/MQxm8GZSdC4WFMV94m9hbJchbPLV2xhTfB5ZLHJZP/XL/_WHZ4267-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-9FJgtJJ/5/MQxm8GZSdC4WFMV94m9hbJchbPLV2xhTfB5ZLHJZP/XL/_WHZ4267-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-9FJgtJJ/5/L9cgC6sP4kD6dHHsFvLDx7z5SPFSBtc3RgJ6PzHWp/L/_WHZ4267-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-9FJgtJJ/5/NF5pKGPBWWxzMs8P4ZdTJS9cwpq5mpgjr64t9MFTF/M/_WHZ4267-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-9FJgtJJ/5/Kz3VFKP7sTVKTzs69ZxMSPzTNGdrGcdv2j68W35PV/S/_WHZ4267-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3LqFBdB",
     "title": "Black & White Photo of Mountain Peaks on a Foggy Morning",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of Mountain Peaks on a Foggy Morning",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/Lnp8Kp2XtCZBgLmmp3Xtd8bDDqHtF9nBcFgcr5Kmj/XL/_WHZ4283-Edit-denoise-XL.jpg",
+    "alt": "A Moonlit Evening at Emerald Lake Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-3LqFBdB/A",
     "keywords": [
       "Canada",
@@ -784,14 +893,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/MnFzQkxJqqmJWHjHprrzLpPHxpXznR2wL8Kx5WVg2/XL/_WHZ4283-Edit-denoise-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/MnFzQkxJqqmJWHjHprrzLpPHxpXznR2wL8Kx5WVg2/XL/_WHZ4283-Edit-denoise-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/MnFzQkxJqqmJWHjHprrzLpPHxpXznR2wL8Kx5WVg2/XL/_WHZ4283-Edit-denoise-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/M8wH3QrRGF4NDbzXd6Fmjz2b7HbTXn3vHnQF4rsj4/L/_WHZ4283-Edit-denoise-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-3LqFBdB/3/Lbq99sJL2cZScsPHJfMGTpvW9ch52JKZDfZsFrTzq/S/_WHZ4283-Edit-denoise-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dBd5pHx",
     "title": "Morning Fog at Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Morning Fog at Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/MFtZHWfmFkDqVgwWxBJhzkGQ8bz8KDCST6LxD2Hkk/XL/_WHZ4286-Edit-XL.jpg",
+    "alt": "Black & White Photo of Mountain Peaks on a Foggy Morning",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-dBd5pHx/A",
     "keywords": [
       "Canada",
@@ -819,14 +933,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/NVQ7qg4Hm6D2rFfLfm9wgmWR5QStZxpX9bWSpBscM/XL/_WHZ4286-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/NVQ7qg4Hm6D2rFfLfm9wgmWR5QStZxpX9bWSpBscM/XL/_WHZ4286-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/LKZgc84Fmcs5T7j2C75VN7ZCP5RnSvZMrnrsnsH7c/L/_WHZ4286-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/LvhcSsjdLd4pxsbMVRQDPV6nP7h4kFzFgddbDRDTc/M/_WHZ4286-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-dBd5pHx/4/KtQ9BKNn3kLt7jWmfsmSnw6GDNVz4J88fJhzLM88S/S/_WHZ4286-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MWfpZWw",
     "title": "Pine Trees Reflecting on Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Pine Trees Reflecting on Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/KKQJs38zZ4rC9p8gkGp9NfP7tPThp4VSc5c53XjSS/XL/_WHZ4291_tonemapped-Edit-XL.jpg",
+    "alt": "Morning Fog at Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-MWfpZWw/A",
     "keywords": [
       "Canada",
@@ -854,14 +973,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/LSrwMs8fQDpJWmqhqg2zHG9SCrJVrnrKBMb6kLkXQ/XL/_WHZ4291_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/LSrwMs8fQDpJWmqhqg2zHG9SCrJVrnrKBMb6kLkXQ/XL/_WHZ4291_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/LSrwMs8fQDpJWmqhqg2zHG9SCrJVrnrKBMb6kLkXQ/XL/_WHZ4291_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/LWNnvvhskhX9QdpgVzPL3QQ4pcJ8wtj8LC4G7GbHz/L/_WHZ4291_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MWfpZWw/2/L8RXNDs5FWQmwcMLLXHVwxSbhJ59MLRjMjVwBmJQH/S/_WHZ4291_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-G8SjQHw",
     "title": "Fog Rolling in Over the Pier of Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Fog Rolling in Over the Pier of Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/KFXbzxMsPHGktw44C5vZqk36jrqqN4RwDjv6CCLZ5/XL/_WHZ4301-Edit-XL.jpg",
+    "alt": "Pine Trees Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-G8SjQHw/A",
     "keywords": [
       "Canada",
@@ -889,14 +1013,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/NQWPTs8SNxGS5pcpf6STz3MCbNZ9jXxk23WPjDTHj/XL/_WHZ4301-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/NQWPTs8SNxGS5pcpf6STz3MCbNZ9jXxk23WPjDTHj/XL/_WHZ4301-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/LG7DjCxdqc4GVqw3kzNXTgKDssDVwP2ZLT7hRvsqM/L/_WHZ4301-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/K9pmDNhPQSWwJckhxrG9gWKrf38GCSMCbRp7gqnX6/M/_WHZ4301-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-G8SjQHw/3/M28ggbmZvkLkkd34frDXhRgc8MTXvMStBW97Z6wDH/S/_WHZ4301-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ChMPCf2",
     "title": "Black & White Photo of a Foggy Morning at Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Black & White Photo of a Foggy Morning at Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ChMPCf2/2/LNtM5wTGsBzqkkzZ5SpWXQthVLmpxfSgRvNN3n4Bm/XL/_WHZ4301-Edit-2-XL.jpg",
+    "alt": "Fog Rolling in Over the Pier of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-ChMPCf2/A",
     "keywords": [
       "Canada",
@@ -924,14 +1053,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ChMPCf2/2/MMf9GvCRJVZLNBSRpZLqWrKjz3PTTkBjtWtjnCMMv/XL/_WHZ4301-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ChMPCf2/2/MMf9GvCRJVZLNBSRpZLqWrKjz3PTTkBjtWtjnCMMv/XL/_WHZ4301-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ChMPCf2/2/Kt23rtvrzPWrDknz5qcgjksjrVXf7G8bR9xbm2Dz9/L/_WHZ4301-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ChMPCf2/2/NQBmGw6LcmWGPB6xPsmFhgsGPCLkq4rj8PXmzQgx2/M/_WHZ4301-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ChMPCf2/2/NDJGHKNF5SqCxH8rcF3bHxc2vG9zFms79C2cFZsTd/S/_WHZ4301-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XQmGrxd",
     "title": "The Sun Breaking Through a Foggy Morning",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Sun Breaking Through a Foggy Morning",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/MkP4vMrTMbNTmPRsp2KwTPtPx23km98TrGq9BPpqD/XL/_WHZ4303-Edit-XL.jpg",
+    "alt": "Black & White Photo of a Foggy Morning at Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-XQmGrxd/A",
     "keywords": [
       "Canada",
@@ -959,14 +1093,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/MtLKxM4GN4jPfZ3T3CgnZPhRM5CfwnkspSbWJ28nW/XL/_WHZ4303-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/MtLKxM4GN4jPfZ3T3CgnZPhRM5CfwnkspSbWJ28nW/XL/_WHZ4303-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/MtLKxM4GN4jPfZ3T3CgnZPhRM5CfwnkspSbWJ28nW/XL/_WHZ4303-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/KSRkF43jLp6K77RGDMwMFzmktZ43FQsPL8gNjFsrz/L/_WHZ4303-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-XQmGrxd/2/Kr4N2HVkhfcF477zCnwhzZDnHMdr6dN8mpndjTsgF/S/_WHZ4303-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-d4pjWhk",
     "title": "Morning Fog Sweeping Across Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Morning Fog Sweeping Across Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/Nh9pTQc9Vt63q7bDDqB7h9KMrxgzHLRt33JDLWX8n/XL/_WHZ4304-Edit-XL.jpg",
+    "alt": "The Sun Breaking Through a Foggy Morning",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-d4pjWhk/A",
     "keywords": [
       "Canada",
@@ -994,14 +1133,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/MJtshtqwG6tGsDmFc8JHtVk2cFMtWDzHVRPPqc65W/XL/_WHZ4304-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/MJtshtqwG6tGsDmFc8JHtVk2cFMtWDzHVRPPqc65W/XL/_WHZ4304-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/LRNc5HWLhr6MgtmGjxBH6C4kZhXTdVPBW4MTLw5HG/L/_WHZ4304-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/MPR7StwJd4V9BGgcxghrbBSPb7JbW5sS2jbwKtGfJ/M/_WHZ4304-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-d4pjWhk/3/NJMnn4WMNpbkXSp9776rP5D2BkRtFkD8gMdTq6w2H/S/_WHZ4304-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ScxVg7H",
     "title": "Sunrise at Emerald Lake Lodge in British Columbia",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Sunrise at Emerald Lake Lodge in British Columbia",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/KNWqQ6TzxdMd9Dz6fCD6CSWXwjLs5RhWsgVMT8r4z/XL/Emerald%2520Lake%2520Lodge%2520-%2520Wayne%2520Heim-XL.jpg",
+    "alt": "Morning Fog Sweeping Across Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-ScxVg7H/A",
     "keywords": [
       "Canada",
@@ -1029,14 +1173,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/M83N7gCX9zkvR7JzcwdfDkCfhmmqQTQmtqDwSrR4R/XL/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/M83N7gCX9zkvR7JzcwdfDkCfhmmqQTQmtqDwSrR4R/XL/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/M83N7gCX9zkvR7JzcwdfDkCfhmmqQTQmtqDwSrR4R/XL/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/Kgf4r5rRMH8PsxnfSgspm7qM26C8cvs9TdDZBrh5s/L/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/LsbdRjXPkVsFxvZtsRPDqXFXwFdSjr5VPZNvM22pG/S/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Mh8j6BG",
     "title": "A Single Canoe Sitting in Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "A Single Canoe Sitting in Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Mh8j6BG/2/KHPQpxNVJ72hLXwPdtqkrrL5m2NFk9T2ddWgNztBS/XL/_WHZ4351-Edit-XL.jpg",
+    "alt": "Sunrise at Emerald Lake Lodge in British Columbia",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-Mh8j6BG/A",
     "keywords": [
       "Canada",
@@ -1064,14 +1213,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Mh8j6BG/2/LqkKTvbdW6xvGhkGbkLVNJ9ML8QLPDT2d5nbFTtmX/XL/_WHZ4351-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Mh8j6BG/2/LqkKTvbdW6xvGhkGbkLVNJ9ML8QLPDT2d5nbFTtmX/XL/_WHZ4351-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Mh8j6BG/2/LqkKTvbdW6xvGhkGbkLVNJ9ML8QLPDT2d5nbFTtmX/XL/_WHZ4351-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Mh8j6BG/2/KJcZ8pdVjR7bTVxHbcGb74ztw2SQ7snVKG2BqSSDG/L/_WHZ4351-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-Mh8j6BG/2/LVHGdWMg6z8bt9XCZxd9WFh5L2bJDCP9dZG9xKpDL/S/_WHZ4351-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-w4dqJMm",
     "title": "The Canadian Rockies Surrounding Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Canadian Rockies Surrounding Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-w4dqJMm/0/MhpWB9RR3DWmDHQnT3KN8GhXnDGCdwVRDgrhmhHhp/XL/_WHZ4428-Edit-XL.jpg",
+    "alt": "A Single Canoe Sitting in Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-w4dqJMm/A",
     "keywords": [
       "Canada",
@@ -1099,14 +1253,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-w4dqJMm/0/MGfPcw5GXZ4L9HWGX89SvfpskNmRXxwTt6gDwB2GW/XL/_WHZ4428-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-w4dqJMm/0/MGfPcw5GXZ4L9HWGX89SvfpskNmRXxwTt6gDwB2GW/XL/_WHZ4428-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-w4dqJMm/0/LSnHvxtJnc3PHQfzzNcK2jTGZP2Gq5NLfhpRDxCPz/L/_WHZ4428-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-w4dqJMm/0/M3tqQzkf5H47t6gWRmZGBNF2sn4vrqLW8PKXxCg7N/M/_WHZ4428-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-w4dqJMm/0/LdfQwzGPL4z99zcG4HVfzLsw3MwHxBnGKm3mjM6Ww/S/_WHZ4428-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MmGfvfX",
     "title": "The Canadian Rockies from the Edge of Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Canadian Rockies from the Edge of Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LvkVshVMr9fqvgFQCMXBTBC59M5VtGWQ99xTk5ztz/XL/_WHZ4428-Pano-Edit-sharpen-stabilize-XL.jpg",
+    "alt": "The Canadian Rockies Surrounding Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-MmGfvfX/A",
     "keywords": [
       "Canada",
@@ -1134,14 +1293,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LbQpNpKZftzC5MzznFXb2nTLP5KvKnw2cHpQSLZTv/XL/_WHZ4428-Pano-Edit-sharpen-stabilize-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LbQpNpKZftzC5MzznFXb2nTLP5KvKnw2cHpQSLZTv/XL/_WHZ4428-Pano-Edit-sharpen-stabilize-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LbQpNpKZftzC5MzznFXb2nTLP5KvKnw2cHpQSLZTv/XL/_WHZ4428-Pano-Edit-sharpen-stabilize-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LnzXKHmR6wRsXwwtsR4JsMmf79cvhW3VWwMkShbpr/M/_WHZ4428-Pano-Edit-sharpen-stabilize-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-MmGfvfX/3/LDqDFJ4JN4Vn9G6LNKxK8VB6khcpt2gnCZJcvjHMm/S/_WHZ4428-Pano-Edit-sharpen-stabilize-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WM6RF9v",
     "title": "Wood Adrift on Emerald Lake in Yoho National Park",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Wood Adrift on Emerald Lake in Yoho National Park",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WM6RF9v/2/MRGWJVbXCNn3Vw47kS6BVXtBp2PpKkc4cG7FxHp7h/XL/_WHZ4435-Edit-XL.jpg",
+    "alt": "The Canadian Rockies from the Edge of Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-WM6RF9v/A",
     "keywords": [
       "Canada",
@@ -1169,14 +1333,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WM6RF9v/2/Ng82hSTJts4PzCLsvjHttwkN8tKBnZpr8S4R2BbpV/XL/_WHZ4435-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WM6RF9v/2/Ng82hSTJts4PzCLsvjHttwkN8tKBnZpr8S4R2BbpV/XL/_WHZ4435-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WM6RF9v/2/Ng82hSTJts4PzCLsvjHttwkN8tKBnZpr8S4R2BbpV/XL/_WHZ4435-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WM6RF9v/2/NfGKZ9tSrc75237RJ8fn5vs6ZJfQmDbqSfz37vWc9/L/_WHZ4435-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WM6RF9v/2/Kp7JPR3HmbNxDS2pcXqkM8bGqjGfMkzSbPgVRFcBJ/S/_WHZ4435-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VcX798j",
     "title": "The Mountain Peaks and Clouds Reflecting on Emerald Lake",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "The Mountain Peaks and Clouds Reflecting on Emerald Lake",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VcX798j/0/KbLDbfwCKdxdFjg2vLNvwQnzNNkxS8PP3xd4mVT5L/XL/_WHZ4448-Pano-Edit-XL.jpg",
+    "alt": "Wood Adrift on Emerald Lake in Yoho National Park",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-VcX798j/A",
     "keywords": [
       "Canada",
@@ -1204,14 +1373,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VcX798j/0/Mftd7ghn7TGRrckdxGT5wnbCXKPgGHwGSrfjcqVqQ/XL/_WHZ4448-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VcX798j/0/Mftd7ghn7TGRrckdxGT5wnbCXKPgGHwGSrfjcqVqQ/XL/_WHZ4448-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VcX798j/0/NC26Qt9CNd3QhdxqVTmhjFPtJ54WT3wFv563z6cM4/L/_WHZ4448-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VcX798j/0/MmFkVWPV56FMmhsZz4xCPV5H6GHXpwC6p5Rp2Z3cr/M/_WHZ4448-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VcX798j/0/Lbqx23W4ZSjpNp7g5xpTCZsckBzW6hcTb3qtqTzcr/S/_WHZ4448-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vfxQXDw",
     "title": "Evidence of Landslides on the Mountains",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Evidence of Landslides on the Mountains",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/MDND8mfLxgPvzn2WqNV4QM9XN9T8rrT3hkfCj2Rgm/XL/_WHZ4485-Edit-sharpen-stabilize-XL.jpg",
+    "alt": "The Mountain Peaks and Clouds Reflecting on Emerald Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-vfxQXDw/A",
     "keywords": [
       "Canada",
@@ -1239,14 +1413,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/LhdxJjsxsKjfKFDJzpHn9DnTLfjc5G6Z4jpmdcbnp/XL/_WHZ4485-Edit-sharpen-stabilize-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/LhdxJjsxsKjfKFDJzpHn9DnTLfjc5G6Z4jpmdcbnp/XL/_WHZ4485-Edit-sharpen-stabilize-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/L9m7kx2Kh8qLLk6vn55QQ6Lrbf5mtn4v2JdZKwSk9/L/_WHZ4485-Edit-sharpen-stabilize-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/MRPNXSWRbc6g7899n9Lg6Xj2k7Ms3r9X6jsZ2nR5S/M/_WHZ4485-Edit-sharpen-stabilize-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-vfxQXDw/4/LJCnnVjB23tLqHFcPZWvKLQKB9xcF2stqkHd5DhJ3/S/_WHZ4485-Edit-sharpen-stabilize-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-P6dZbqC",
     "title": "Cargo Train Riding Along the River's Edge",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Cargo Train Riding Along the River's Edge",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-P6dZbqC/0/LRwF3mJTLWxVPpVN825x5djs2FVWwgXGRMPqcnHMm/XL/_WHZ4597-XL.jpg",
+    "alt": "Evidence of Landslides on the Mountains",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-P6dZbqC/A",
     "keywords": [
       "Canada",
@@ -1274,14 +1453,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-P6dZbqC/0/LWfjh7Bzc8g4zFwHbTFHsZDPPsRxH3xSKXWdRLKXs/XL/_WHZ4597-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-P6dZbqC/0/LWfjh7Bzc8g4zFwHbTFHsZDPPsRxH3xSKXWdRLKXs/XL/_WHZ4597-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-P6dZbqC/0/KDW6gxzKC2QwfCGnsHHg4rwrbJtvNSHWDJ5h7ghWx/L/_WHZ4597-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-P6dZbqC/0/NfgCjd9TCtBFkgxn7rxJRG994rLgRHChnrwsXSGvV/M/_WHZ4597-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-P6dZbqC/0/KSpndHzCczCxP9sN8mkwmZwwSH9x4T4XnQTzBRsSV/S/_WHZ4597-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-h8WQFDs",
     "title": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
     "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
-    "alt": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/MFQjwwP36vdbMB5xTsQt6mdPVNDnrJvF3jTSVBg4X/XL/_WHZ4622-Edit-XL.jpg",
+    "alt": "Cargo Train Riding Along the River's Edge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-h8WQFDs/A",
     "keywords": [
       "Canada",
@@ -1309,6 +1493,52 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/Ms3xG8zv5W27X89ZMFQP3BRdMkkLMF4BJX7SKz3tR/XL/_WHZ4622-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/Ms3xG8zv5W27X89ZMFQP3BRdMkkLMF4BJX7SKz3tR/XL/_WHZ4622-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/KxfMWtn8DCKLGbqFxZdkp9ShZ2CCq545LGGmjSD3f/L/_WHZ4622-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/KrxRJV7xGdS6HWFKhXGW73Dkm4qDzBRZsB4MVvntq/M/_WHZ4622-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-h8WQFDs/4/MH2xBQgsCt5X9DwXvNMDbHgDCp9HV49Q2TMv4SwVZ/S/_WHZ4622-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-NJ5gGw7",
+    "title": "Early Winter Snow Covering the Wild Grass",
+    "description": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
+    "alt": "Standing on the Ice-Covered Moraine Lake in Banff National Park",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-NJ5gGw7/A",
+    "keywords": [
+      "Canada",
+      "Jasper",
+      "Banff",
+      "national",
+      "parks",
+      "lakes",
+      "Emerald",
+      "Yoho",
+      "British Columbia",
+      "Alberta",
+      "Lake Moraine",
+      "Sunwapta Falls",
+      "waterfalls",
+      "water",
+      "Athabasca Falls",
+      "Rockies",
+      "fine art",
+      "photography",
+      "landscape"
+    ],
+    "story": "Fine art landscape photography of the Canadian Rockies including Banff, Jasper and Emerald Lake.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 37,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

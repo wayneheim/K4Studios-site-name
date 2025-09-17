@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-9nbhQs2",
-    "title": "Faroe Panorama    Photography by Wayne HeimFine art landscape photography of the Faroe Islands.",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Faroe Panorama    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/KMLdQ9LGrM2sPLx6rQ7MSFk8SWg992JjVRz9FzgnN/XL/20180923_123031_tonemapped-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-9nbhQs2/A",
     "keywords": [
       "Faroe Islands",
@@ -48,14 +52,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/NRrCdLFfLGnw8XjnZMTGMXz8v4hP5LCJBjxNrJ7sb/XL/20180923_123031_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/NRrCdLFfLGnw8XjnZMTGMXz8v4hP5LCJBjxNrJ7sb/XL/20180923_123031_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/Nc4NzHf7Lh5vJZNB5wwJpBmvGLpDpmjXSR3XThsNw/L/20180923_123031_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/Kbqb9bgsv5NMtTvGPnZHnq66BGjG56GvMrSwBckxt/M/20180923_123031_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/Kk8f84mgmmMKCzhDcfPdsKxHLbC85zpSBdZw35Jtk/S/20180923_123031_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8fp2dv2",
     "title": "Waterfall in Faroe   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Waterfall in Faroe   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8fp2dv2/7/KdxzmqC2PZH3XbS8dXWDpGV4wSGPSRjRQKTDVdQRZ/XL/20180923_162652_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Panorama    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-8fp2dv2/A",
     "keywords": [
       "Faroe Islands",
@@ -82,14 +91,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8fp2dv2/7/MtRs59vc3Zr3rhfzvFk5cTPKSsDpZtmxvSZ7GvVvm/XL/20180923_162652_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8fp2dv2/7/MtRs59vc3Zr3rhfzvFk5cTPKSsDpZtmxvSZ7GvVvm/XL/20180923_162652_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8fp2dv2/7/Lz2VdMK4cVjRmZXtcdGZPnBDP2KgsmWzfrC3qR8NK/L/20180923_162652_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8fp2dv2/7/KqRV5r456NBTKqbj9R5JRd4QTskQVWQnbGkBDtMQT/M/20180923_162652_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8fp2dv2/7/M2XzxJPGD6SB4BbZmTshQR6MKfBkN2nvdgrqCGF5h/S/20180923_162652_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vGqmqRv",
     "title": "Faroe Coast   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-vGqmqRv/1/NPC3sGpsjcNTwTG5PTdBTtv9Lhr8hHgRrznjbwqMS/XL/_WHZ8257_tonemapped-Edit-XL.jpg",
+    "alt": "Waterfall in Faroe   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-vGqmqRv/A",
     "keywords": [
       "Faroe Islands",
@@ -116,14 +130,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-vGqmqRv/1/KxNmwFRhprhmfvVkwPVLw7bMmGrnR9FRVcJ43HJjN/XL/_WHZ8257_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-vGqmqRv/1/KxNmwFRhprhmfvVkwPVLw7bMmGrnR9FRVcJ43HJjN/XL/_WHZ8257_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-vGqmqRv/1/MwLngG5GBHXp6WCmNzbXcmjNRG7pd7mzj3qh3wcB6/L/_WHZ8257_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-vGqmqRv/1/NQ4ng8LDL4z7xdrW48gbbgjdw66SwB96z3hcGnPCB/M/_WHZ8257_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-vGqmqRv/1/KwXVcvPkJFQFr6qhT9kR38zwC2hZfF23x6vxnj9Pf/S/_WHZ8257_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XFfkRMj",
     "title": "Coastline of Faroes 3 Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coastline of Faroes 3 Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XFfkRMj/7/KHKzsMHjfpSMt8L58kHJKCc4xPTCg7HSpwrdcZx4t/XL/_WHZ8257_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Coast   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-XFfkRMj/A",
     "keywords": [
       "Faroe Islands",
@@ -150,14 +169,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XFfkRMj/7/LzVbjfpmb8tZ2mGXwPbjW3vPT85b32C3bkSvZscxx/XL/_WHZ8257_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XFfkRMj/7/LzVbjfpmb8tZ2mGXwPbjW3vPT85b32C3bkSvZscxx/XL/_WHZ8257_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XFfkRMj/7/NhjMdW32sH9MFTGZJBkDdJPxGT2r7ps2k5G3NBrL2/L/_WHZ8257_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XFfkRMj/7/MJRpbvxxGTMrR399PTdMbzrQgP299435DxXFJFgrS/M/_WHZ8257_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XFfkRMj/7/LzrDmzsF745NMZRsBQQFN4bNXPWFwHZFngcwRzjTH/S/_WHZ8257_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-d7Lpt4h",
     "title": "Coastline of Faroes  21   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coastline of Faroes  21   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-d7Lpt4h/8/L5mX5qxPXcBRTKjxh978wGQRbLkFzShJvrFSvMsvw/XL/_WHZ8270-Edit-XL.jpg",
+    "alt": "Coastline of Faroes 3 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-d7Lpt4h/A",
     "keywords": [
       "Faroe Islands",
@@ -184,14 +208,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-d7Lpt4h/8/LWwSGS8GXmX3WdXpBgznF7NTjZpHmf5pHs2D9GsdW/XL/_WHZ8270-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-d7Lpt4h/8/LWwSGS8GXmX3WdXpBgznF7NTjZpHmf5pHs2D9GsdW/XL/_WHZ8270-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-d7Lpt4h/8/LWwSGS8GXmX3WdXpBgznF7NTjZpHmf5pHs2D9GsdW/XL/_WHZ8270-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-d7Lpt4h/8/K8vW78FsrBxBTdWsBv2VW79jXMSppB64BWJ8fjSGX/L/_WHZ8270-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-d7Lpt4h/8/MV6sVD88jtCxgXvRMcptQ3X8pKcDJ5LpjNpL23GVr/S/_WHZ8270-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZWmNjfX",
     "title": "Faroe Coast 2  Black and white  Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 2  Black and white  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-ZWmNjfX/0/KjkKgB6sbcgz44dtgDvxRgm58ZTPRvRhfJrw9zq6x/XL/_WHZ8270-Edit-2-XL.jpg",
+    "alt": "Coastline of Faroes  21   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-ZWmNjfX/A",
     "keywords": [
       "Faroe Islands",
@@ -218,14 +247,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-ZWmNjfX/0/Nd5LLVMvrJf6GFLD2nSwvDLhfWBCcVmkBzDpBSQqc/XL/_WHZ8270-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-ZWmNjfX/0/Nd5LLVMvrJf6GFLD2nSwvDLhfWBCcVmkBzDpBSQqc/XL/_WHZ8270-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-ZWmNjfX/0/Nd5LLVMvrJf6GFLD2nSwvDLhfWBCcVmkBzDpBSQqc/XL/_WHZ8270-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-ZWmNjfX/0/LRpFXBBV2ttDb2xGKnzJv3t24gJJmv4RFjBHJZLn9/L/_WHZ8270-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-ZWmNjfX/0/K5JSNJCnWBQwRpJRhfpvS9QLF6PQC5dG6X8MmLQch/S/_WHZ8270-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cX5zWPd",
     "title": "Faroe Coast 5     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 5     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cX5zWPd/1/Kxz6JNQdGH6HmBj479rGRq7FGHR4PSrr7RjWk7ZPr/XL/_WHZ8303_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Coast 2  Black and white  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-cX5zWPd/A",
     "keywords": [
       "Faroe Islands",
@@ -252,14 +286,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cX5zWPd/1/KJkmsCrnfCNt7ZGJtF69K7wng4H2rV9zKkmxMPgwt/XL/_WHZ8303_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cX5zWPd/1/KJkmsCrnfCNt7ZGJtF69K7wng4H2rV9zKkmxMPgwt/XL/_WHZ8303_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cX5zWPd/1/KJkmsCrnfCNt7ZGJtF69K7wng4H2rV9zKkmxMPgwt/XL/_WHZ8303_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cX5zWPd/1/NRCcb5pWNS4Nv2zs95dgdfcgCrmB2tb8DnP3Bxq7R/L/_WHZ8303_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cX5zWPd/1/MpQsFPZ2sZ95qPR8Q5bKhBdtxkdv7d9B5NFBVZBSb/S/_WHZ8303_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wPM5mcx",
     "title": "Coastline of Faroes 5  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coastline of Faroes 5  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wPM5mcx/8/NgBmXLp4WfLqSwmvWgxfmjkVf6cJq8CD4FKL7vwzQ/XL/_WHZ8303_tonemapped-Edit-3-XL.jpg",
+    "alt": "Faroe Coast 5     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-wPM5mcx/A",
     "keywords": [
       "Faroe Islands",
@@ -286,14 +325,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wPM5mcx/8/MzSFQFD7D8cdGJr3g7jFw3TFdgBxTqC4ssdR2x4zT/XL/_WHZ8303_tonemapped-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wPM5mcx/8/MzSFQFD7D8cdGJr3g7jFw3TFdgBxTqC4ssdR2x4zT/XL/_WHZ8303_tonemapped-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wPM5mcx/8/MzSFQFD7D8cdGJr3g7jFw3TFdgBxTqC4ssdR2x4zT/XL/_WHZ8303_tonemapped-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wPM5mcx/8/MM7hmpVQnTT3t8mRD8jTZFrjVJQH9HN5W2pMNRsnk/L/_WHZ8303_tonemapped-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wPM5mcx/8/LL6nLT89tHdHFWpSGDGwpVcrg9kK6V6gLv3kbBv3H/S/_WHZ8303_tonemapped-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qXm2HJW",
     "title": "Faroe Coast with Houses    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast with Houses    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qXm2HJW/0/NWL7WnNLknt5Lcgn2F348v5K4Mr9SRX7bD4rzbhdp/XL/_WHZ8365-Pano-Edit-XL.jpg",
+    "alt": "Coastline of Faroes 5  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-qXm2HJW/A",
     "keywords": [
       "Faroe Islands",
@@ -320,14 +364,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qXm2HJW/0/K4h84BCzBkBLw3jPKZ84PtLZH2x8htKGSnhDwksFn/XL/_WHZ8365-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qXm2HJW/0/K4h84BCzBkBLw3jPKZ84PtLZH2x8htKGSnhDwksFn/XL/_WHZ8365-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qXm2HJW/0/MrnJ4qwtpQ8jQTLmMh44Q5HZVShLLLZjh2RLJMhsS/L/_WHZ8365-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qXm2HJW/0/L6MT37CqG7FSjr99vfWd9NTS7P9ktJKvK3wrgvcmG/M/_WHZ8365-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qXm2HJW/0/M9sbB3mrzN3gsrnkZXmTrTHdn7NTBHtvDRbG5cBXG/S/_WHZ8365-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-X48TWHK",
     "title": "Coastline Faroes  8   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coastline Faroes  8   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-X48TWHK/6/LkrPcfDdrBMsL4nsQqWNhhNMH5Rq57dFrnG5bD4Qq/XL/_WHZ8365-Pano-Edit2-XL.jpg",
+    "alt": "Faroe Coast with Houses    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-X48TWHK/A",
     "keywords": [
       "Faroe Islands",
@@ -354,14 +403,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-X48TWHK/6/KQrRLh2mCRcsXGQDHsfwhsfr7ZzQCKKk42vGZQjHJ/XL/_WHZ8365-Pano-Edit2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-X48TWHK/6/KQrRLh2mCRcsXGQDHsfwhsfr7ZzQCKKk42vGZQjHJ/XL/_WHZ8365-Pano-Edit2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-X48TWHK/6/MLV4Lfv7gt29Sc9G9JWLZbqzDmRGm2gB654Q8CxbM/L/_WHZ8365-Pano-Edit2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-X48TWHK/6/LqRKV4V74R9P4VLL2HvHT3XVgV6hLKpC2qFKRzpBx/M/_WHZ8365-Pano-Edit2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-X48TWHK/6/KtXdGp86BWK9t2LDHTbhMbqtJxGNVQ2CDxSbmGxx9/S/_WHZ8365-Pano-Edit2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wSSQBMx",
     "title": "Faroe Coast 6  Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 6  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-wSSQBMx/0/MLkChgcDJXSQBXCN4cfV8dZjz2zdXkwM2wWLsz6vc/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "alt": "Coastline Faroes  8   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-wSSQBMx/A",
     "keywords": [
       "Faroe Islands",
@@ -388,14 +442,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-wSSQBMx/0/M3LHg52MfVGK2ddXQQwcSsNMvNG9QXdgDSTcF8cxK/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-wSSQBMx/0/M3LHg52MfVGK2ddXQQwcSsNMvNG9QXdgDSTcF8cxK/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-wSSQBMx/0/Mqt4fJnbMnTcFnVvwzVhB9sSk5XzDxNGBmqDDcSvM/L/_K1W2659-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-wSSQBMx/0/LNShdpzj2bSFTVQ6Lbnf3MKTgstCDFtJxNQrVszPT/M/_K1W2659-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-wSSQBMx/0/M4GMkdLFbP37Nn4Cd37pSLKhcLfvhVKDH22ZntWG3/S/_K1W2659-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kvxfbSH",
     "title": "Arms into the Sea  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Arms into the Sea  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/NNH3Kvn5ncMmdpQFJc6Krh5hRcHxs6gPCvqnBr2nN/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "alt": "Faroe Coast 6  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-kvxfbSH/A",
     "keywords": [
       "Faroe Islands",
@@ -422,14 +481,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/Kkh5SKqtbfkFPDjQcNkWbfVzGJ38bBP6df9mFRFTG/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/Kkh5SKqtbfkFPDjQcNkWbfVzGJ38bBP6df9mFRFTG/XL/_K1W2659-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/LGnwz7fqL6HvxKgk9D4dnTM3gCpSMfzfxpG8LdTWv/L/_K1W2659-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/KL9JP4sq8gpzm3BmSP6gtVZxtrwBSLBZtv3C2GmG3/M/_K1W2659-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-kvxfbSH/9/MjD77L5Zgb8wZ9Jg2xXJhG5Tq3b65hFLRG7cL4Z7s/S/_K1W2659-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-swc5Gjw",
     "title": "Faroe Coast 7   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 7   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-swc5Gjw/0/MsRqp969TMzwfz8f5PsG8s86S9PFtGCdFLLfqv3Gz/XL/_K1W2666-Pano-Edit-XL.jpg",
+    "alt": "Arms into the Sea  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-swc5Gjw/A",
     "keywords": [
       "Faroe Islands",
@@ -456,14 +520,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-swc5Gjw/0/KKzgKXQK6NQfGQqd329XK3JFkXPXTNW5mvbGV4cZP/XL/_K1W2666-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-swc5Gjw/0/KKzgKXQK6NQfGQqd329XK3JFkXPXTNW5mvbGV4cZP/XL/_K1W2666-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-swc5Gjw/0/KssfgPcLcKR6QRH8V5gb5kVGxz5W9Srp2VhGTgXsG/L/_K1W2666-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-swc5Gjw/0/K6H3XmThZGjdzKrQCLMjFPpTH2LGQ2gMc3cCTDXPr/M/_K1W2666-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-swc5Gjw/0/K9DJF43q33RtpCxttfBtNXGMk66kqpLGj3LM8Mz7d/S/_K1W2666-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PzdV5BK",
     "title": "Coastline of Faroes 12  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coastline of Faroes 12  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-PzdV5BK/8/ML3RVXDST8WHMkNLMDwMt72rjvjvfLwZ3HJmFW4TN/XL/_K1W2666-Pano-Edit-XL.jpg",
+    "alt": "Faroe Coast 7   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-PzdV5BK/A",
     "keywords": [
       "Faroe Islands",
@@ -490,14 +559,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-PzdV5BK/8/MJTbMLvbvDPjjZz7p57kXmtpX4FBbHk6GCZdbBV8s/XL/_K1W2666-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-PzdV5BK/8/MJTbMLvbvDPjjZz7p57kXmtpX4FBbHk6GCZdbBV8s/XL/_K1W2666-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-PzdV5BK/8/LR2NhvKDhPt42jnsTB52Khx4N6qqPhGTvnzqG7nvb/L/_K1W2666-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-PzdV5BK/8/MMqtHxmpW7f49TPMbJgMGHkTvQDrJt4Sb7cXvdz9P/M/_K1W2666-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-PzdV5BK/8/L54DHsBM2cKZxnGK7cZLs85GtVk2S9bcK3p6wTsQN/S/_K1W2666-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sT8vtJS",
     "title": "Faroe Landscape 2  Black and White    Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Landscape 2  Black and White    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sT8vtJS/0/MF7NcfvwZjWJsP5pSWXCwLm6TGw7Pk8xdWK72m5tC/XL/_WHZ8517-Edit-XL.jpg",
+    "alt": "Coastline of Faroes 12  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-sT8vtJS/A",
     "keywords": [
       "Faroe Islands",
@@ -524,14 +598,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sT8vtJS/0/KvNBKxBnSsQ3JtDHQN7QQxsvQmXWGPqwkqtzmvCfW/XL/_WHZ8517-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sT8vtJS/0/KvNBKxBnSsQ3JtDHQN7QQxsvQmXWGPqwkqtzmvCfW/XL/_WHZ8517-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sT8vtJS/0/KvNBKxBnSsQ3JtDHQN7QQxsvQmXWGPqwkqtzmvCfW/XL/_WHZ8517-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sT8vtJS/0/NPTGzcQqF9d5M8wNSxRvthwhwVXLsCbZPpxXgQ4Jg/L/_WHZ8517-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sT8vtJS/0/NgNWbBjxXz9Tr39f24GxwL85LvTssWx8M3N9d3zgq/S/_WHZ8517-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DNRRnjT",
     "title": "Coastline of Faroes 16   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coastline of Faroes 16   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DNRRnjT/7/LZVHKVhmqqmG7zTzh7qkVckxrPc9PxTVT9bHTWt7M/XL/_WHZ8517-Edit-XL.jpg",
+    "alt": "Faroe Landscape 2  Black and White    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-DNRRnjT/A",
     "keywords": [
       "Faroe Islands",
@@ -558,14 +637,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DNRRnjT/7/LdQmfCZnjgWSDngWLPPqBtsnVbprM7SGJ6gCThvjP/XL/_WHZ8517-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DNRRnjT/7/LdQmfCZnjgWSDngWLPPqBtsnVbprM7SGJ6gCThvjP/XL/_WHZ8517-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DNRRnjT/7/LdQmfCZnjgWSDngWLPPqBtsnVbprM7SGJ6gCThvjP/XL/_WHZ8517-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DNRRnjT/7/MpzSN93GJkf67jxRxfQLQ3bGp7RsrkdGbsnPzcMzt/L/_WHZ8517-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DNRRnjT/7/LX65hGZ2tM7VbBFcF7GNSq8qc4Q6DnFQ5894w24nV/S/_WHZ8517-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kFxHpZn",
     "title": "Faroe Landscape 2a  Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Landscape 2a  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kFxHpZn/1/LzHnkPT7VkxknRXfbmkTPPNt3ktt8g6WsbGvBZT9q/XL/_WHZ8519-Edit-XL.jpg",
+    "alt": "Coastline of Faroes 16   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-kFxHpZn/A",
     "keywords": [
       "Faroe Islands",
@@ -592,14 +676,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kFxHpZn/1/LZbqLZ5H3ngmNBdW977JFm7N934zMqTR7mW5PdDt2/XL/_WHZ8519-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kFxHpZn/1/LZbqLZ5H3ngmNBdW977JFm7N934zMqTR7mW5PdDt2/XL/_WHZ8519-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kFxHpZn/1/Lw53rBGdtvWT8dMNHgqHZFFh99LHMrHpvPCwPCWRx/L/_WHZ8519-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kFxHpZn/1/LMcgDKVxvj7PLbq9D3NBLHx343hMQmJBfJgMTWGJV/M/_WHZ8519-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kFxHpZn/1/NfxBTThJqkH6fW375QTSpxmCXr5SSBCMV4hmbGG8w/S/_WHZ8519-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zG7QGxD",
     "title": "Coastline of Faroes  17     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coastline of Faroes  17     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zG7QGxD/8/KHk5Tmkj8kn99fZPpXQXwwCmWbfDgLpC2VBFdmbNF/XL/_WHZ8519-Edit-XL.jpg",
+    "alt": "Faroe Landscape 2a  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zG7QGxD/A",
     "keywords": [
       "Faroe Islands",
@@ -626,14 +715,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zG7QGxD/8/Mnx5JNbfnxXt7VPcqvbxWBr2DRz5ZcNPFZsHFb7Hn/XL/_WHZ8519-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zG7QGxD/8/Mnx5JNbfnxXt7VPcqvbxWBr2DRz5ZcNPFZsHFb7Hn/XL/_WHZ8519-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zG7QGxD/8/MR4BLDSsMj5gw44cNkFpbHF6D856NQXKX62TxfrkX/L/_WHZ8519-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zG7QGxD/8/LmsQCJnvVVbjQMKkJXxb4SNgWbpWmz6zP9ZW6KXM9/M/_WHZ8519-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zG7QGxD/8/NbVjQXwHKdTL8CXhr5NJWG8TdnNRvNR5RWH2GBHqg/S/_WHZ8519-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NNPr3tv",
     "title": "Coastline of Faroes  19  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coastline of Faroes  19  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-NNPr3tv/8/MMJnNvwR62cN67bhTV2HnBfdjvb66qW7wpJcfCGPc/XL/_WHZ8541-Edit-2-XL.jpg",
+    "alt": "Coastline of Faroes  17     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-NNPr3tv/A",
     "keywords": [
       "Faroe Islands",
@@ -660,14 +754,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-NNPr3tv/8/MXsWDf5TspHf229ZgBgvkVzgzSBGHHGZ2zxS9LzPK/XL/_WHZ8541-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-NNPr3tv/8/MXsWDf5TspHf229ZgBgvkVzgzSBGHHGZ2zxS9LzPK/XL/_WHZ8541-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-NNPr3tv/8/NXXZvC33gHzFP2XXKMjfFGVp3Kf9TLtch7v3nDqBz/L/_WHZ8541-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-NNPr3tv/8/MHjfzpDXNqNmXN2VgXpWHBVHhDxxpMrQHjBQQtQrq/M/_WHZ8541-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-NNPr3tv/8/MXRcK7qJFpjQSjkjXztC8C6hZqKvWZ6mjt2xGhQxP/S/_WHZ8541-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4xwHLKT",
     "title": "Faroe Waterfall  6      Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waterfall  6      Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-4xwHLKT/2/NBz2skZVtW2SVPzMtk2j9dSnMTjvnvGGTqZh2v2Nt/XL/_OLY7935-XL.jpg",
+    "alt": "Coastline of Faroes  19  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-4xwHLKT/A",
     "keywords": [
       "Faroe Islands",
@@ -694,14 +793,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-4xwHLKT/2/K8q9KcdjcMG4FrswJSzL8hrnqvkPRHX7H72zNjQjZ/XL/_OLY7935-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-4xwHLKT/2/K8q9KcdjcMG4FrswJSzL8hrnqvkPRHX7H72zNjQjZ/XL/_OLY7935-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-4xwHLKT/2/K8q9KcdjcMG4FrswJSzL8hrnqvkPRHX7H72zNjQjZ/XL/_OLY7935-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-4xwHLKT/2/KQFNJdRNR87dD3Gs9mHKJzXqs6h96fr3B3rpmmGbj/L/_OLY7935-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-4xwHLKT/2/LHLqXsPGMGKD2xTGbLzFKcrkJgqNfjTjGzF5sdK65/S/_OLY7935-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dTscGvh",
     "title": "Faroe Waterfall     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waterfall     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-dTscGvh/2/MvPDTsMG8XF3jdVnXK5GpkFkNDbQg4TfQktnGgb6W/XL/_OLY7971-Edit-XL.jpg",
+    "alt": "Faroe Waterfall  6      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-dTscGvh/A",
     "keywords": [
       "Faroe Islands",
@@ -728,14 +832,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-dTscGvh/2/LgTgPNJCF23t3bQ8qVj8pQLkzMgzT8VbKXBvh5nWv/XL/_OLY7971-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-dTscGvh/2/LgTgPNJCF23t3bQ8qVj8pQLkzMgzT8VbKXBvh5nWv/XL/_OLY7971-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-dTscGvh/2/LgTgPNJCF23t3bQ8qVj8pQLkzMgzT8VbKXBvh5nWv/XL/_OLY7971-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-dTscGvh/2/KMzPfGvGqTjXnxd5rR7g3kQWSBxbqZMVkR9p2Jgvb/L/_OLY7971-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-dTscGvh/2/MGFc3rvvLfJgMDL34zrZVJXSq9zbPZSt4vrfKCGsw/S/_OLY7971-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Sx3Tj3N",
     "title": "Faroe Waves    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Sx3Tj3N/7/KwLBv2kzBcqkF464XXDZqSQ7DqfXRG2hDsS29XrVm/XL/_OLY8048-XL.jpg",
+    "alt": "Faroe Waterfall     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Sx3Tj3N/A",
     "keywords": [
       "Faroe Islands",
@@ -762,14 +871,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Sx3Tj3N/7/LjMM9wrHBQcht3X7TvTP98ZWKxdHPKmmP3w3zGNWv/XL/_OLY8048-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Sx3Tj3N/7/LjMM9wrHBQcht3X7TvTP98ZWKxdHPKmmP3w3zGNWv/XL/_OLY8048-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Sx3Tj3N/7/LjMM9wrHBQcht3X7TvTP98ZWKxdHPKmmP3w3zGNWv/XL/_OLY8048-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Sx3Tj3N/7/MpnTCFdkkp8MG44Z8rTDNXBnfX25BzBPgjmjQqtkz/L/_OLY8048-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Sx3Tj3N/7/KhhG9pwKdNg7DZCvvLDsdFdnsjL7WZfcMjPqtZvPS/S/_OLY8048-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tMP9Lz2",
     "title": "Wavers Crash in the Faroes 7    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Wavers Crash in the Faroes 7    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tMP9Lz2/2/KLTcrzZMBXpPRWvC6gg9XJ8HmHFwp24CXNvzBLRB9/XL/_OLY8048-Edit-XL.jpg",
+    "alt": "Faroe Waves    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-tMP9Lz2/A",
     "keywords": [
       "Faroe Islands",
@@ -796,14 +910,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tMP9Lz2/2/LLgZ7bvh2MGtBhXshdSSXTFDXSqHX3cTRNC4c2RLQ/XL/_OLY8048-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tMP9Lz2/2/LLgZ7bvh2MGtBhXshdSSXTFDXSqHX3cTRNC4c2RLQ/XL/_OLY8048-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tMP9Lz2/2/LLgZ7bvh2MGtBhXshdSSXTFDXSqHX3cTRNC4c2RLQ/XL/_OLY8048-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tMP9Lz2/2/Ld4LWV4VvLhB3NWDLk8fw33S9jg98pMDgfm56TD6T/L/_OLY8048-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tMP9Lz2/2/KsbG9M27MRfgh8zh6sVGz9wDJtgSzW5NckFhFMgtg/S/_OLY8048-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FGb4VCC",
     "title": "Faroe Wave 2    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Wave 2    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-FGb4VCC/8/KTwbXZF83zr8srzLW9xkMh6w9fCq3TkQrKZdS9DRW/XL/_OLY8078-XL.jpg",
+    "alt": "Wavers Crash in the Faroes 7    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-FGb4VCC/A",
     "keywords": [
       "Faroe Islands",
@@ -830,14 +949,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-FGb4VCC/8/LCRbsxfpKZhLKcmr3xbhZ8q274Z8mngQJbGJwmVt9/XL/_OLY8078-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-FGb4VCC/8/LCRbsxfpKZhLKcmr3xbhZ8q274Z8mngQJbGJwmVt9/XL/_OLY8078-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-FGb4VCC/8/Mfrm8p4nQ5swn3TjkvZfVmxsCQ92ZQcjH9Gd5564H/L/_OLY8078-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-FGb4VCC/8/NVWMt3T7kCMck66JVMsgvxdR3SbSTMZ6Sj9XPhmv4/M/_OLY8078-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-FGb4VCC/8/MMLPX4g2tqBgNSf7LkRBnQCbtBc3DzbxNr3nbxgxC/S/_OLY8078-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Csb9jdC",
     "title": "Crash Waves in Faroe Islands   5   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Crash Waves in Faroe Islands   5   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Csb9jdC/0/NJDvjxP8PwL5P4tVKW33sNgWqjrqdGhBfkFqqj3tC/XL/_OLY8078-Edit-XL.jpg",
+    "alt": "Faroe Wave 2    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Csb9jdC/A",
     "keywords": [
       "Faroe Islands",
@@ -864,14 +988,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Csb9jdC/0/Mg7TTVn368TtL9DJSLHXDCp9LbBVPJWgBNcnCcj3V/XL/_OLY8078-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Csb9jdC/0/Mg7TTVn368TtL9DJSLHXDCp9LbBVPJWgBNcnCcj3V/XL/_OLY8078-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Csb9jdC/0/Kpmcp9h4GZhJjPmzQmqdDLMfbmsrjcNJhwMf6R6bf/L/_OLY8078-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Csb9jdC/0/NfPXRgxSSLJgMVf6wWPHqf8vTJT4JnBc7thxks4BL/M/_OLY8078-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Csb9jdC/0/KmTGnQCNWH9qNwgS2hhBZDxKqXn2cq2VFHDr482wt/S/_OLY8078-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3zX2HFQ",
     "title": "Faroe Cattle   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Cattle   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3zX2HFQ/1/MJCJHb8TRJCZ4NRqRw46v5tQz7XMhV76BpwcVNvtk/XL/_OLY8113-XL.jpg",
+    "alt": "Crash Waves in Faroe Islands   5   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-3zX2HFQ/A",
     "keywords": [
       "Faroe Islands",
@@ -898,14 +1027,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3zX2HFQ/1/K4wNGF8CMGGk8HdjnpBZFFFJs6LVfggBgMQhqmtDw/XL/_OLY8113-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3zX2HFQ/1/K4wNGF8CMGGk8HdjnpBZFFFJs6LVfggBgMQhqmtDw/XL/_OLY8113-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3zX2HFQ/1/NNzrvs9F9kRGdb7HbfdR4CD25qJTv6QwS8M4NZN6r/L/_OLY8113-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3zX2HFQ/1/KjSrLDNqHLtLBvnL3h86sq5KTkBPVsVgng6f6qKWk/M/_OLY8113-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3zX2HFQ/1/KGfxtpCnrnSskzqGq3jBbNHxS6RnDv6KbLsZdcnKd/S/_OLY8113-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5x6QThQ",
     "title": "Tindholmur Islet off Faroe Islands",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Tindholmur Islet off Faroe Islands",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5x6QThQ/9/LbrpH2X32VZx777mFfwLj7rkvmpL8BdQtn3hqfbBH/XL/_OLY8200-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Cattle   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-5x6QThQ/A",
     "keywords": [
       "Faroe Islands",
@@ -932,14 +1066,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5x6QThQ/9/NLvZwpXkqRHmJCTGNxv6FVWvTDptmJvZZbrbb3tMM/XL/_OLY8200-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5x6QThQ/9/NLvZwpXkqRHmJCTGNxv6FVWvTDptmJvZZbrbb3tMM/XL/_OLY8200-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5x6QThQ/9/MpnntfwxwRdFww24bjsZFCb642jGqxgdDQhJhwRJP/L/_OLY8200-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5x6QThQ/9/MrvPvn54CKmbMgMDBmN2QL42Lkr3wJmgHRfzDdZQn/M/_OLY8200-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5x6QThQ/9/K5kR3mS3LJmFRcnXSgtcn3tLRrk7F4Zch53r4prTH/S/_OLY8200-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hwcm6hw",
     "title": "Grazing Faroe Sheep   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Grazing Faroe Sheep   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hwcm6hw/7/LLrDBw2PK2tmPk33PmmZSs4DxxSqxDMJwrQwz9X8v/XL/_K1W2811-Edit-XL.jpg",
+    "alt": "Tindholmur Islet off Faroe Islands",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-hwcm6hw/A",
     "keywords": [
       "Faroe Islands",
@@ -966,14 +1105,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hwcm6hw/7/LzxnjPpssBCcHTgg7trwZhq4pMGbGndTLr6C3rzwB/XL/_K1W2811-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hwcm6hw/7/LzxnjPpssBCcHTgg7trwZhq4pMGbGndTLr6C3rzwB/XL/_K1W2811-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hwcm6hw/7/KtdSbCKWVjp5PgmKdqWPX74hc4R45X4q9QNx7LrpF/L/_K1W2811-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hwcm6hw/7/NcKGv8JWTSgHK9xfkD4fXN9btdsxffhbjk76snj6X/M/_K1W2811-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hwcm6hw/7/Lm9638sNxxfKMBtpmxTWnFSDDNwv6s34WkWGp8GTc/S/_K1W2811-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NwtcFR6",
     "title": "Faroe Sheep     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Sheep     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-NwtcFR6/1/M8jKBdSMmZMSMDvVV6Bw5SmQgcXzXFQLZC3pT79ph/XL/_K1W2815-Edit-XL.jpg",
+    "alt": "Grazing Faroe Sheep   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-NwtcFR6/A",
     "keywords": [
       "Faroe Islands",
@@ -1000,14 +1144,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-NwtcFR6/1/K3r7G9JLVVBfK48dGgXggtXwxbjnDrjchFRqrffVc/XL/_K1W2815-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-NwtcFR6/1/K3r7G9JLVVBfK48dGgXggtXwxbjnDrjchFRqrffVc/XL/_K1W2815-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-NwtcFR6/1/NZLqxSQMWnxKZtBTDVt7kvMmj7HJPw2z4DMDnqF7w/L/_K1W2815-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-NwtcFR6/1/Kpx3RZkxgR8zxtRkqBTZJ8DW4NsGQbHTCZwsKBKG5/M/_K1W2815-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-NwtcFR6/1/Lc987WdJJggJkf6D4mrMMFdV4SJGVZHh2RQHMzLGK/S/_K1W2815-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VSfpDWt",
     "title": "Faroe Coast 12    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 12    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-VSfpDWt/0/KMQ3m8W6kn2fWqfBskPpGjCTZTgvwn6rWM2KbW2Jr/XL/_WHZ8699-XL.jpg",
+    "alt": "Faroe Sheep     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-VSfpDWt/A",
     "keywords": [
       "Faroe Islands",
@@ -1034,14 +1183,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-VSfpDWt/0/M3j3TN4q385NPrXVfsmHDKP5ttGWtpf6VGrrcDH6r/XL/_WHZ8699-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-VSfpDWt/0/M3j3TN4q385NPrXVfsmHDKP5ttGWtpf6VGrrcDH6r/XL/_WHZ8699-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-VSfpDWt/0/M3j3TN4q385NPrXVfsmHDKP5ttGWtpf6VGrrcDH6r/XL/_WHZ8699-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-VSfpDWt/0/MV53mvG5zqV7wcFkxr3ntF2RqTTMBfCQGNFw3Nt4f/L/_WHZ8699-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-VSfpDWt/0/MpqN8BhkJhmbPq2PLztNZpWMt8gH6Tjsxd5N5PKrm/S/_WHZ8699-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3rMjx2z",
     "title": "Faroe Coast 13     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 13     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3rMjx2z/1/MHWcVgv4KsJnzjfkGCChdxj8D3k3Zw5nHWxRhXv98/XL/_WHZ8723-Pano-XL.jpg",
+    "alt": "Faroe Coast 12    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-3rMjx2z/A",
     "keywords": [
       "Faroe Islands",
@@ -1068,14 +1222,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3rMjx2z/1/NH2633P9zpw4PM5HpXxTmTGZLPNtNPMcjp3LQdtgC/XL/_WHZ8723-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3rMjx2z/1/NH2633P9zpw4PM5HpXxTmTGZLPNtNPMcjp3LQdtgC/XL/_WHZ8723-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3rMjx2z/1/L2KCd3bTxG55ccSCwjV8c36dgrfpFZQfhh53RpzKf/L/_WHZ8723-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3rMjx2z/1/MjxkLS95jwcqd4Q3NBFD927sL22qPJJwvHxF5TkJr/M/_WHZ8723-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-3rMjx2z/1/KnjPsnBtzWth7fnXGC2mrGN2PXSvR9fHd22QnBC6v/S/_WHZ8723-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mz2ZGbZ",
     "title": "Coast of Faroe  2     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  2     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mz2ZGbZ/8/KDcZ7xGshWzjZZTfQFJcwsRVMc6DQ8Gq6Jn4rP2Xb/XL/_WHZ8723-Pano-XL.jpg",
+    "alt": "Faroe Coast 13     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-mz2ZGbZ/A",
     "keywords": [
       "Faroe Islands",
@@ -1102,14 +1261,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mz2ZGbZ/8/MTLFPqm38qNwNnhswQbMvkpswZfc9S47xV8RpV8kK/XL/_WHZ8723-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mz2ZGbZ/8/MTLFPqm38qNwNnhswQbMvkpswZfc9S47xV8RpV8kK/XL/_WHZ8723-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mz2ZGbZ/8/NTDjq52Gz4PT7RcGjpXWwdsHFmFdxxpbnwt64pxvk/L/_WHZ8723-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mz2ZGbZ/8/KpFPmq6FDsBVf7z6HVHpKPWbQHnpjPqvQNbjbpcTN/M/_WHZ8723-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mz2ZGbZ/8/KLNV3Dj35xMFQMTgXTxcKQRzrCKjhtkkzmLZ8W4hd/S/_WHZ8723-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BBDdJHb",
     "title": "Coast of Faroe 3   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe 3   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/K3283JKW4cn3q4RSV52hRT666msX7gm4q53JwPNK3/XL/_WHZ8737-Pano-XL.jpg",
+    "alt": "Coast of Faroe  2     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-BBDdJHb/A",
     "keywords": [
       "Faroe Islands",
@@ -1136,14 +1300,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/NTpf8wgNdF6StVQDcQxQ2GFTzKwZXjPXpdD9M4qhG/XL/_WHZ8737-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/NTpf8wgNdF6StVQDcQxQ2GFTzKwZXjPXpdD9M4qhG/XL/_WHZ8737-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/KGVxpT29m7NJfWz82N6wbTFWQDDGSq8Lh6ZpMS5qv/L/_WHZ8737-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/KthKBwPkc4jSvMG78qSjLZ79QD3WxTk8MjnVnQLLG/M/_WHZ8737-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BBDdJHb/7/NZ74f3xXVwwHztz5xD4XNNcpsqffZRD4mgmFLwW5r/S/_WHZ8737-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2hM9WmS",
     "title": "Faroe Coast 14    Black and White Photography by Wayne Heim",
     "description": "Large Format fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 14    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-2hM9WmS/2/KLCZBqHhWRTWFjFmxBMmhmkSrQPfFLZXt2xrV8DK9/XL/_WHZ8737-Pano-Edit-XL.jpg",
+    "alt": "Coast of Faroe 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-2hM9WmS/A",
     "keywords": [
       "Faroe Islands",
@@ -1170,14 +1339,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-2hM9WmS/2/K6JL7Q496kc6nkZ564wFCBRS3Pd7GNBjJGHDMbWJm/XL/_WHZ8737-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-2hM9WmS/2/K6JL7Q496kc6nkZ564wFCBRS3Pd7GNBjJGHDMbWJm/XL/_WHZ8737-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-2hM9WmS/2/LR4s4fK92rGHPkk6G5GDn3Wt4GsCjDZZDGKfv9Mm6/L/_WHZ8737-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-2hM9WmS/2/KsbMdGWgP26jJVpvxpV9cjqQHQLfR6xLLKTWJ7sqz/M/_WHZ8737-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-2hM9WmS/2/MtRPMnMLTdMm86CwCrMfq3gbtwDtSrxrp7gtMFMhC/S/_WHZ8737-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zfDT2n9",
     "title": "Coast of Faroe 5   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe 5   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zfDT2n9/8/KSgQcw9VrgZd6vQB9M6HsVMfT7ks24rpfFhbhnmnP/XL/_WHZ8760-Edit-XL.jpg",
+    "alt": "Faroe Coast 14    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zfDT2n9/A",
     "keywords": [
       "Faroe Islands",
@@ -1204,14 +1378,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zfDT2n9/8/K5ZZJLWnP9hFMxDTrCGtBbMPTwvB64rq9hpKG7Gn7/XL/_WHZ8760-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zfDT2n9/8/K5ZZJLWnP9hFMxDTrCGtBbMPTwvB64rq9hpKG7Gn7/XL/_WHZ8760-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zfDT2n9/8/MqV58vrRCCGDKFxPm5hG9jv2X6gwMXgqTwZrfMPmN/L/_WHZ8760-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zfDT2n9/8/KHthDwb49tdfqPD9smqZZkf7dC9Cmf676f4J3MnKf/M/_WHZ8760-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zfDT2n9/8/KF9hdDNNc4CDTbpz8J5zDQcWR62Fgg493SzbjBDgX/S/_WHZ8760-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-m44WWcP",
     "title": "Coast of Faroe  6   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  6   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-m44WWcP/8/NZQMpBjTMbXxGScXb9rWzH94mhbRK2QBFT8CWp4dM/XL/_WHZ8762-Edit-2-XL.jpg",
+    "alt": "Coast of Faroe 5   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-m44WWcP/A",
     "keywords": [
       "Faroe Islands",
@@ -1238,14 +1417,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-m44WWcP/8/KnLJCfTKCQ6bF8KPbLgQq5P474zsXJ6262ZfWJvFc/XL/_WHZ8762-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-m44WWcP/8/KnLJCfTKCQ6bF8KPbLgQq5P474zsXJ6262ZfWJvFc/XL/_WHZ8762-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-m44WWcP/8/KnLJCfTKCQ6bF8KPbLgQq5P474zsXJ6262ZfWJvFc/XL/_WHZ8762-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-m44WWcP/8/L6HNBF3M6RnWqKmZDVQVndTkcpFt49mc8Grc9LNFz/L/_WHZ8762-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-m44WWcP/8/KwBHNxdZ7nDW9xbXWpzxq48FznVdLZ6JdVBFqS7zd/S/_WHZ8762-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4cmkwMH",
     "title": "Coast of Faroe 7    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe 7    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-4cmkwMH/8/MjgJ9862dWSbbqDvKdG8dHF7L9TkGSbRGxNTH7Z28/XL/_K1W2881-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Coast of Faroe  6   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-4cmkwMH/A",
     "keywords": [
       "Faroe Islands",
@@ -1272,14 +1456,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-4cmkwMH/8/LZVmnS3m5Bf5NcKHB2zhdDjcBhXmN2HFCdTN9FSMj/XL/_K1W2881-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-4cmkwMH/8/LZVmnS3m5Bf5NcKHB2zhdDjcBhXmN2HFCdTN9FSMj/XL/_K1W2881-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-4cmkwMH/8/LZVmnS3m5Bf5NcKHB2zhdDjcBhXmN2HFCdTN9FSMj/XL/_K1W2881-Pano_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-4cmkwMH/8/MBwdc5d9Q57bH8L4jLJ6bF96GZvmBqJ8wnMHfrDHW/M/_K1W2881-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-4cmkwMH/8/M5QZ6kZZ74FxmM8LSTXwcXZcrhL3SWZvGTzgsH7kq/S/_K1W2881-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5BrczB7",
     "title": "Sunset Over Faroe Sea     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Sunset Over Faroe Sea     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5BrczB7/8/NbWFqvQbLJjh4xRCXDJg433z5HHPDSbBBPmSx6KPC/XL/_K1W2892_tonemapped-Edit-XL.jpg",
+    "alt": "Coast of Faroe 7    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-5BrczB7/A",
     "keywords": [
       "Faroe Islands",
@@ -1306,14 +1495,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5BrczB7/8/K7NcFB9xkChC3LGnKgz9VD563fh5SZZxsTTRK8587/XL/_K1W2892_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5BrczB7/8/K7NcFB9xkChC3LGnKgz9VD563fh5SZZxsTTRK8587/XL/_K1W2892_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5BrczB7/8/KbWN8WVXVQqkLR246kp4F5cTWQzPzr6mMcXwCqnrc/L/_K1W2892_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5BrczB7/8/KdzXjD29gdWNv4MFK8wRZvGGWGBhnLr8jW9bmVztz/M/_K1W2892_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-5BrczB7/8/LxZcRzsFdGnBsJ4bFb4wDKPvH8gPDkS56sHgFQs2T/S/_K1W2892_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-F3t7JCp",
     "title": "Faroe Rainbow 3    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Rainbow 3    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-F3t7JCp/1/MxWnbJ2tSxwp49PtHXRTm6FNtpZDGgZbJJLFTdt8r/XL/_K1W2950-Edit-XL.jpg",
+    "alt": "Sunset Over Faroe Sea     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-F3t7JCp/A",
     "keywords": [
       "Faroe Islands",
@@ -1340,14 +1534,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-F3t7JCp/1/K7bQjXwS3Wx6gcjQ9vCcCg7kfx9DprNZKwvpPtz9H/XL/_K1W2950-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-F3t7JCp/1/K7bQjXwS3Wx6gcjQ9vCcCg7kfx9DprNZKwvpPtz9H/XL/_K1W2950-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-F3t7JCp/1/KdSj62z3k9tvg6s2N9mDnnPcZzwZHm4QNrcpBTRGM/L/_K1W2950-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-F3t7JCp/1/Ljp9bLGT6XghtDDMmmGtVTS65QQ8jX7pkgNjNkGb8/M/_K1W2950-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-F3t7JCp/1/KfT45ZkDF2jVNk758cbxDn4XKK642kKP6sm4tN4Sj/S/_K1W2950-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vMpVqqt",
     "title": "End of the Faroe Rainbow   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "End of the Faroe Rainbow   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vMpVqqt/9/NBPLgqhrZ72W9bCP4xHNCNRFcnz4hTbVBhHLv6bkP/XL/_K1W2950-Edit-XL.jpg",
+    "alt": "Faroe Rainbow 3    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-vMpVqqt/A",
     "keywords": [
       "Faroe Islands",
@@ -1374,14 +1573,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vMpVqqt/9/LpRGjn7rkgXSV8RR5868tf5mr8NgbT2f3QrQZdbp6/XL/_K1W2950-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vMpVqqt/9/LpRGjn7rkgXSV8RR5868tf5mr8NgbT2f3QrQZdbp6/XL/_K1W2950-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vMpVqqt/9/KpdvkxQm5zw9xSVqMRhjg2P3VTm75bfktMZz75th9/L/_K1W2950-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vMpVqqt/9/M496sFt4KX5WwdxdjR7w5XXPxqq8MC8HVsxDzX4v9/M/_K1W2950-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vMpVqqt/9/LTHM6Nn8qdVWncCQGWdD82RshctjVCZ9N4R4gbQsf/S/_K1W2950-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TLCtbSJ",
     "title": "Rainbow on Faroe   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Rainbow on Faroe   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-TLCtbSJ/9/Ldd3m25xw4PSMcLNG85tG3hR9SQcJSs2tfjRdqpc7/XL/_WHZ8802-Edit-XL.jpg",
+    "alt": "End of the Faroe Rainbow   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-TLCtbSJ/A",
     "keywords": [
       "Faroe Islands",
@@ -1408,14 +1612,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-TLCtbSJ/9/K6PR9cMHQG5PnJp2TSSdGtXq8cHz2hLqfc6PJGjT9/XL/_WHZ8802-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-TLCtbSJ/9/K6PR9cMHQG5PnJp2TSSdGtXq8cHz2hLqfc6PJGjT9/XL/_WHZ8802-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-TLCtbSJ/9/K92Z3tTSB3ntz5QLnP5QPhcDFMZxRnf3BrpLpZWrV/L/_WHZ8802-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-TLCtbSJ/9/MwcWm5Rz4pvm8fWRKxvdRjB94QczQ8q7GR9xK6fN9/M/_WHZ8802-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-TLCtbSJ/9/Mnzg87ktKJKZRC9TwD5rJnVdSgmnFv7kDd2zLb4Gm/S/_WHZ8802-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-g92RtVZ",
     "title": "Rainbow Over the Bay    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Rainbow Over the Bay    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-g92RtVZ/8/LRGLh72FpskkrnJ6nQmKWfXbBPHPPPKVqJ8mcMw6Z/XL/_K1W3004-Pano-XL.jpg",
+    "alt": "Rainbow on Faroe   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-g92RtVZ/A",
     "keywords": [
       "Faroe Islands",
@@ -1442,14 +1651,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-g92RtVZ/8/MJkQgX2qcCwgccNcKPzbWr5bFrKS7L6BX2sh3zzHw/XL/_K1W3004-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-g92RtVZ/8/MJkQgX2qcCwgccNcKPzbWr5bFrKS7L6BX2sh3zzHw/XL/_K1W3004-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-g92RtVZ/8/K7JrKqH6ksRBts4GGDgnwxBshHCSXnbCW8psfvpnm/L/_K1W3004-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-g92RtVZ/8/MhcnVGWHBkwjKcr2GfbNDXh7m6Gk6tMr4jxc3QxQX/M/_K1W3004-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-g92RtVZ/8/KqNMfND9dVmBfNj6fHvrWnmz2HXpQL2GwC4FZL3cf/S/_K1W3004-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GtHXZzZ",
     "title": "Sunset over Faroe Islands   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Sunset over Faroe Islands   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-GtHXZzZ/8/LFRD9rCxNQndgdjhWgmG85gZ8gxstcxvLPTBpVRJ9/XL/_WHZ8837-Edit-2-Edit-XL.jpg",
+    "alt": "Rainbow Over the Bay    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-GtHXZzZ/A",
     "keywords": [
       "Faroe Islands",
@@ -1476,14 +1690,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-GtHXZzZ/8/Ktdj8qxNTZsBff3HvjbnFmSNmhdVQpgQHjB8CVzpV/XL/_WHZ8837-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-GtHXZzZ/8/Ktdj8qxNTZsBff3HvjbnFmSNmhdVQpgQHjB8CVzpV/XL/_WHZ8837-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-GtHXZzZ/8/NbdLKk8btFxWgKCTJ96M47K7kr7QVxXSR5CzxvqBv/L/_WHZ8837-Edit-2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-GtHXZzZ/8/LmnPfbbXZWP5gfFhHk9dvxJ2gHJ4Z7LMzKf2gh3xP/M/_WHZ8837-Edit-2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-GtHXZzZ/8/MTZg8vJ9pqfGcN2zMbvL6mP4HJbcgRnghDHTwcvc4/S/_WHZ8837-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Mr6swzM",
     "title": "Coast of Faroe  12     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  12     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Mr6swzM/9/NT6X8bwqzdkGZJhgZFn2W83zQDWmHQKDvht9dxRmL/XL/_K1W3048_tonemapped-XL.jpg",
+    "alt": "Sunset over Faroe Islands   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Mr6swzM/A",
     "keywords": [
       "Faroe Islands",
@@ -1510,14 +1729,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Mr6swzM/9/KK6GQmpXftbdkhQDxt4C2rHDPgbQqsZVKg7zWmsDP/XL/_K1W3048_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Mr6swzM/9/KK6GQmpXftbdkhQDxt4C2rHDPgbQqsZVKg7zWmsDP/XL/_K1W3048_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Mr6swzM/9/NXB922Tc6gMV6WgrQx9DzWd2nTPfZgQZRmjQJD8zd/L/_K1W3048_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Mr6swzM/9/LHnpg72sqPZzfsD6N7j5shRcdHGWqHFxNRWx3xzzB/M/_K1W3048_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Mr6swzM/9/LFgLHPD8h2527TFbZPRQs96HDXFrdt6HtZt5BpFsx/S/_K1W3048_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6ksmdC9",
     "title": "Faroe Road toe the Sea 2   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Road toe the Sea 2   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-6ksmdC9/1/K6xJLnKVzt77gG9KKwvsK6h2w3FNNb4qZHpV3Prg4/XL/_WHZ8898-XL.jpg",
+    "alt": "Coast of Faroe  12     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-6ksmdC9/A",
     "keywords": [
       "Faroe Islands",
@@ -1544,14 +1768,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-6ksmdC9/1/KX9xjdztWzdnfDZpzxLdnm9LWMRHVNMcnnQF6TL8T/XL/_WHZ8898-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-6ksmdC9/1/KX9xjdztWzdnfDZpzxLdnm9LWMRHVNMcnnQF6TL8T/XL/_WHZ8898-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-6ksmdC9/1/MgJ5VNrV7hvVJFC27SgfJGs2zRHmPWjMMbN3g4fcN/L/_WHZ8898-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-6ksmdC9/1/KJnwgHhNNZXDHJkZP4GBWrWJMrDFVwxNVPNqH466T/M/_WHZ8898-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-6ksmdC9/1/NZ3m5SNB9vTNLRvgnCxHG2g5mR8c8tFCj7cqFzdQ4/S/_WHZ8898-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xqHQmLS",
     "title": "Landscape of Faroe 3   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Landscape of Faroe 3   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xqHQmLS/9/NS7PFxB8XWjvKFnr3j8b6F6p36MvTVccqPrTCp9qS/XL/_K1W3053-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Road toe the Sea 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-xqHQmLS/A",
     "keywords": [
       "Faroe Islands",
@@ -1578,14 +1807,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xqHQmLS/9/M3r55b64wMFB7jpQHfp3FwV3tqgTRzTHHGm9dFTvJ/XL/_K1W3053-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xqHQmLS/9/M3r55b64wMFB7jpQHfp3FwV3tqgTRzTHHGm9dFTvJ/XL/_K1W3053-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xqHQmLS/9/L5zFBd3NjrsrGCTxT8zZX3PrHwtqnVRWTXb2CZ4zX/L/_K1W3053-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xqHQmLS/9/L4snJmvH97sgX3ZXnp6Z86zXb62D9sxsF3pCSj8W5/M/_K1W3053-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xqHQmLS/9/NSvQcxHBB3zchXhDm5fhnN6gR6zS2T76NqfG7bgj3/S/_K1W3053-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n24658z",
     "title": "Landscape of Faroe 2 Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Landscape of Faroe 2 Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n24658z/8/LXkSgGzBCN8LSTwg4ZTXm5JFS25zWnZKrzTHchh2s/XL/_K1W3053-Pano_tonemapped-Edit-2-XL.jpg",
+    "alt": "Landscape of Faroe 3   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-n24658z/A",
     "keywords": [
       "Faroe Islands",
@@ -1612,14 +1846,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n24658z/8/LhgKDBCVwMwJ9V7s5GKnSDxd2hkQskfDWVRtprmPv/XL/_K1W3053-Pano_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n24658z/8/LhgKDBCVwMwJ9V7s5GKnSDxd2hkQskfDWVRtprmPv/XL/_K1W3053-Pano_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n24658z/8/LtBSNx2xPSf58X2jtgnfqk2CPqmRqJBRcZh7HHKLZ/L/_K1W3053-Pano_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n24658z/8/L2bNgGKq2zwRhTjfXj3tcwvcP5bzFv5DT3MTN6QtH/M/_K1W3053-Pano_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-n24658z/8/MwgCzMS8H7Xp8tjNs7W2XXGqhWWD4VghgjCBp8Pp9/S/_K1W3053-Pano_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qwGRQLs",
     "title": "Faroe Coast  18      Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast  18      Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qwGRQLs/1/Mwmr6sLsrRfnK43TPKHrLdGkxt8bkF5WH9RVbMvJP/XL/_K1W3063-Pano-Edit-XL.jpg",
+    "alt": "Landscape of Faroe 2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-qwGRQLs/A",
     "keywords": [
       "Faroe Islands",
@@ -1646,14 +1885,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qwGRQLs/1/KvFHkTmJS3W8LRJgGFpCpkfPcrx62567FpsJtKK4c/XL/_K1W3063-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qwGRQLs/1/KvFHkTmJS3W8LRJgGFpCpkfPcrx62567FpsJtKK4c/XL/_K1W3063-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qwGRQLs/1/MdcswmMmtRDP6kgkrv2ChmSPzqXJXh7S6zfnhx6fQ/L/_K1W3063-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qwGRQLs/1/KnfBpDXmtZZZhcQkz8xQqPR37Ltqf7P7nGNLJRNzJ/M/_K1W3063-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-qwGRQLs/1/KL5rpm93wkzrvQbR2wGD9fNv3qQQ8kSGcSLwrgsvK/S/_K1W3063-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BnT4j9H",
     "title": "Faroe Stream  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Stream  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BnT4j9H/8/LCTT9fCn8Nfxh9wJJD5bcD7zC9t99sKWqfLDF2zt9/XL/_K1W3066_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Coast  18      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-BnT4j9H/A",
     "keywords": [
       "Faroe Islands",
@@ -1680,14 +1924,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BnT4j9H/8/Lx48kmCnskLV6xDF6BG6GB6jcppwKsNqrpcS6BCk6/XL/_K1W3066_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BnT4j9H/8/Lx48kmCnskLV6xDF6BG6GB6jcppwKsNqrpcS6BCk6/XL/_K1W3066_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BnT4j9H/8/Lx48kmCnskLV6xDF6BG6GB6jcppwKsNqrpcS6BCk6/XL/_K1W3066_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BnT4j9H/8/KsP5dG63jJD2Xn6djRvnwhw2zg8JjQPHpjt7rB8Qx/L/_K1W3066_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-BnT4j9H/8/M696T9MF6QsJtd6cLdqRC2fx56h7qZhWpR9LvsDPR/S/_K1W3066_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sqBFkqC",
     "title": "Faroe Stream 7    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Stream 7    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sqBFkqC/1/Mjvqknvqxnxct5N9gTfzSRdKXFcdCW78wHkthrKBz/XL/_K1W3066_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Stream  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-sqBFkqC/A",
     "keywords": [
       "Faroe Islands",
@@ -1714,14 +1963,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sqBFkqC/1/M5qTC4CzLpFpDGZcRTB75pg2jPjLHNPjwfjSNQq5d/XL/_K1W3066_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sqBFkqC/1/M5qTC4CzLpFpDGZcRTB75pg2jPjLHNPjwfjSNQq5d/XL/_K1W3066_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sqBFkqC/1/M5qTC4CzLpFpDGZcRTB75pg2jPjLHNPjwfjSNQq5d/XL/_K1W3066_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sqBFkqC/1/LzB4JDGhWJn72VXBxVHkhHcRJhDJCQdmM9nPKcDXP/L/_K1W3066_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sqBFkqC/1/LgkkDGwcmbpfjw3QKrJwTLHk6Hv5CNNDXGqzJLPzm/S/_K1W3066_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jsKpN4G",
     "title": "Landscape of Faroe  7    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Landscape of Faroe  7    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jsKpN4G/8/LkbQh7CnPqS4jTbJzPwNsSW5RJxg6QsKjLTcKgfHm/XL/_WHZ8989-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Stream 7    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-jsKpN4G/A",
     "keywords": [
       "Faroe Islands",
@@ -1748,14 +2002,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jsKpN4G/8/Mbcmr5gX7ksCm7pqQcNnV3fkbRgPj9hkwMM6RXGfR/XL/_WHZ8989-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jsKpN4G/8/Mbcmr5gX7ksCm7pqQcNnV3fkbRgPj9hkwMM6RXGfR/XL/_WHZ8989-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jsKpN4G/8/MjPSzQ3JKcbKBBFRwf2b4GJpzz9FfhKM8xdzTgLPd/L/_WHZ8989-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jsKpN4G/8/LRFk75cQgZRgn7qLLkmHpSdZkRSf6ctxnkHZtpTm5/M/_WHZ8989-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-jsKpN4G/8/LXSFMBcDWTn6R6HQLCVCchnVNgH34PfVjTmHd8Q5v/S/_WHZ8989-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8PwBb78",
     "title": "Faroe Stream with Gate  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Stream with Gate  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8PwBb78/9/LmdRMVV4WNqZjPcXx6frsQB8mrG687dpkRdkGPkkb/XL/_K1W3072_tonemapped-Edit-XL.jpg",
+    "alt": "Landscape of Faroe  7    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-8PwBb78/A",
     "keywords": [
       "Faroe Islands",
@@ -1782,14 +2041,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8PwBb78/9/KGHbvmDr8nBz4z8hsL6tqz2hkmkcD46GvvtvdhF3T/XL/_K1W3072_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8PwBb78/9/KGHbvmDr8nBz4z8hsL6tqz2hkmkcD46GvvtvdhF3T/XL/_K1W3072_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8PwBb78/9/LjRSV32MK6dPKkxGmskkJQGLK2b48xBsrgXdBcnHz/L/_K1W3072_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8PwBb78/9/LcrJG8bcwqSmcZZRCNMx3rVHBKjdqbdtthv8hqdJD/M/_K1W3072_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8PwBb78/9/Nbr8rr5K5JpNz67DfcwTzXkxPbhP9bhXWsg9xHFqf/S/_K1W3072_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-G4wkRxM",
     "title": "Faroe Gate     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Gate     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-G4wkRxM/0/Mk7WJtBwWmMTZgMvWxMC28twD26L8GVFZnkw3bvWK/XL/_K1W3072_tonemapped-Edit-3-XL.jpg",
+    "alt": "Faroe Stream with Gate  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-G4wkRxM/A",
     "keywords": [
       "Faroe Islands",
@@ -1816,14 +2080,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-G4wkRxM/0/MVpcczkBGpSRGf2xSrgx2XSQVkm3fXmpsNMPhvW9L/XL/_K1W3072_tonemapped-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-G4wkRxM/0/MVpcczkBGpSRGf2xSrgx2XSQVkm3fXmpsNMPhvW9L/XL/_K1W3072_tonemapped-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-G4wkRxM/0/NWj6GzcSrrcrScvLVFgKdsvbfWn4cTTjSwzWZhFhF/L/_K1W3072_tonemapped-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-G4wkRxM/0/LVTzxmfC4scH477gMTZmGkwMSvbwPmx5FbKpn5pR4/M/_K1W3072_tonemapped-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-G4wkRxM/0/LrTPJLs7MdHsqJ32TdbCDhm2rBRZgvvbnpms4h8fj/S/_K1W3072_tonemapped-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-q62Pgf9",
     "title": "Faroe Stream 5    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Stream 5    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q62Pgf9/0/NQBFNmRc9SF8q5pZfkWKP5ZQtw8dvH7Vs8JFGB2N6/XL/_K1W3081_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Faroe Gate     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-q62Pgf9/A",
     "keywords": [
       "Faroe Islands",
@@ -1850,14 +2119,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q62Pgf9/0/MQ9HtFkfT9tChXWVzm6dJZ5XZNnHP6JBRJtXzNkjB/XL/_K1W3081_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q62Pgf9/0/MQ9HtFkfT9tChXWVzm6dJZ5XZNnHP6JBRJtXzNkjB/XL/_K1W3081_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q62Pgf9/0/KkwncFhhV8rwx2qx3w3g4gnQs33hWCJT6W4s7bkNc/L/_K1W3081_tonemapped-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q62Pgf9/0/NJDvvH3fP4MF5X3tzr8dHcBQqNDvkTwm86XhjhhVX/M/_K1W3081_tonemapped-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q62Pgf9/0/MnVxmq7VThkVjC6xXtcZCvfPNTqcdzCCWVQBTFRD6/S/_K1W3081_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XHtpBtn",
     "title": "Faroe Stream  3  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Stream  3  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XHtpBtn/8/Lr2qF4mKMqmSrqPxz6JVzL6PHCnSPwhkfRnLM9JqJ/XL/_K1W3081_tonemapped-Edit-Edit-2-XL.jpg",
+    "alt": "Faroe Stream 5    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-XHtpBtn/A",
     "keywords": [
       "Faroe Islands",
@@ -1884,14 +2158,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XHtpBtn/8/KSkwnmdJFckrfDgPLvB83bN9WG9hck43NMHzphxBS/XL/_K1W3081_tonemapped-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XHtpBtn/8/KSkwnmdJFckrfDgPLvB83bN9WG9hck43NMHzphxBS/XL/_K1W3081_tonemapped-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XHtpBtn/8/KvszKDX2sNXBcKvHQ2zPnsMfq4LJVLQ3S4cvmZtq2/L/_K1W3081_tonemapped-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XHtpBtn/8/LhrxqLzhRx7BkpjBQnqf7CNRMssv3xBVJNdh6mdXV/M/_K1W3081_tonemapped-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-XHtpBtn/8/KcHWGSTGKcK8b2MDwkBQHBXppnjCgCVD4cZsqsqQ6/S/_K1W3081_tonemapped-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jBj2bt5",
     "title": "Faroe Stream 3    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Stream 3    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-jBj2bt5/0/KGXPRPp987d87BKXbTJTLQdGSQXxCtdSvTZPPrRBH/XL/_K1W3084_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Stream  3  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-jBj2bt5/A",
     "keywords": [
       "Faroe Islands",
@@ -1918,14 +2197,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-jBj2bt5/0/MRnxd3BTkgLqqm8Sj39LxtqTR9jBvf43LWCSPHRbs/XL/_K1W3084_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-jBj2bt5/0/MRnxd3BTkgLqqm8Sj39LxtqTR9jBvf43LWCSPHRbs/XL/_K1W3084_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-jBj2bt5/0/M8NbXD7xqKBCq435CPF3GZjnk8jFQP6N2gcSH8rz3/L/_K1W3084_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-jBj2bt5/0/Kn3g2N4vNgkv9jKbvHJTJ68VrrPzHNstb4MnCc8FG/M/_K1W3084_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-jBj2bt5/0/KsXr2sdQvnrVgphjDm5dFRG7gKKVVQC5kS2mPGhZX/S/_K1W3084_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xr3P9wD",
     "title": "Faroe Stream 4    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Stream 4    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xr3P9wD/9/MshTRpmj78XrqTQc78DJp7zRtMBVcLXh36nGCGp3d/XL/_K1W3084_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Stream 3    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-xr3P9wD/A",
     "keywords": [
       "Faroe Islands",
@@ -1952,14 +2236,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xr3P9wD/9/KkVnHRnfq7CzRQwndtDGRCbt5KM3TXXSxN5HSbrQ2/XL/_K1W3084_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xr3P9wD/9/KkVnHRnfq7CzRQwndtDGRCbt5KM3TXXSxN5HSbrQ2/XL/_K1W3084_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xr3P9wD/9/LnMfVnxNFLgbWbKdWwnVMMg5rwrRwhfJR6tqCDF6c/L/_K1W3084_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xr3P9wD/9/MkS2MQwtJBBMgTv4C2QKdF2FjXJ9WbbSzgs3QPTHH/M/_K1W3084_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xr3P9wD/9/MfTcD89HrCK7wn58DhS27wLNVnGCp5JFbJx3hqS9r/S/_K1W3084_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pd5cVMb",
     "title": "Faroe Coast  20     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast  20     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-pd5cVMb/1/MFVBJjLbtCPjvZpN66mGjnZ8k6PSmdrSWphFhthtR/XL/_WHZ9035_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Faroe Stream 4    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-pd5cVMb/A",
     "keywords": [
       "Faroe Islands",
@@ -1986,14 +2275,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-pd5cVMb/1/LFkwn2ndsJWRQCzJF45XssKpMMtRV9ZMv4ggvqk9Z/XL/_WHZ9035_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-pd5cVMb/1/LFkwn2ndsJWRQCzJF45XssKpMMtRV9ZMv4ggvqk9Z/XL/_WHZ9035_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-pd5cVMb/1/LFkwn2ndsJWRQCzJF45XssKpMMtRV9ZMv4ggvqk9Z/XL/_WHZ9035_tonemapped-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-pd5cVMb/1/M3RMs6kBDqwKRQkB7x4tvQGgwwCGRLsxBFmzZcxwR/L/_WHZ9035_tonemapped-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-pd5cVMb/1/L3qc37QF3D8SqMKVKX9txkD5nNDvF6mbVjrsnXtdh/S/_WHZ9035_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-szBvk3H",
     "title": "Faroe Stream 2   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Stream 2   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-szBvk3H/0/M77nTmCdpQxHqk5zv43QZtD69qf8N3t8rRsMbW6kb/XL/_WHZ9049_50_51_52_53-Edit-XL.jpg",
+    "alt": "Faroe Coast  20     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-szBvk3H/A",
     "keywords": [
       "Faroe Islands",
@@ -2020,14 +2314,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-szBvk3H/0/Kddb7725CkJgw2RqpNHPQkz9zWddDSpbkf2NRLM9z/XL/_WHZ9049_50_51_52_53-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-szBvk3H/0/Kddb7725CkJgw2RqpNHPQkz9zWddDSpbkf2NRLM9z/XL/_WHZ9049_50_51_52_53-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-szBvk3H/0/Kddb7725CkJgw2RqpNHPQkz9zWddDSpbkf2NRLM9z/XL/_WHZ9049_50_51_52_53-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-szBvk3H/0/KdvcVCdH6Kb6mMctQqwsDsSLgC8xjS92dvmLbx4Qk/L/_WHZ9049_50_51_52_53-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-szBvk3H/0/KRg8DK6HWm2J9GjdGRptcf5hLjmRSGWk4zSWkxpNJ/S/_WHZ9049_50_51_52_53-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gGV3jHF",
     "title": "Faroe Landscape  12   black and white Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Landscape  12   black and white Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-gGV3jHF/1/LzkfN6MWK5SCM9j4cw37Cw4QJJ74pgmJhstRNJ3hp/XL/_K1W3094-Edit-XL.jpg",
+    "alt": "Faroe Stream 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-gGV3jHF/A",
     "keywords": [
       "Faroe Islands",
@@ -2054,14 +2353,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-gGV3jHF/1/NQppsqGkfHkmHpdd3qGZT9dGPSt7RSvpNJ2kJG32m/XL/_K1W3094-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-gGV3jHF/1/NQppsqGkfHkmHpdd3qGZT9dGPSt7RSvpNJ2kJG32m/XL/_K1W3094-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-gGV3jHF/1/NQppsqGkfHkmHpdd3qGZT9dGPSt7RSvpNJ2kJG32m/XL/_K1W3094-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-gGV3jHF/1/MdGRprr6kVjsT8fTKKDKTxGH34LctNDJ3dWJk5pNG/L/_K1W3094-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-gGV3jHF/1/Kd8m4bDjb5qFwv9CQT9sXKpw8xJs3KqPZLg4gMbDH/S/_K1W3094-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bQ5rkvz",
     "title": "Faroe Waterfall   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waterfall   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/NPp9kfn6rrGctp3Sx74cvsdmnsZxpZ6cGBrP3cTtW/XL/_WHZ9144-HDR_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Landscape  12   black and white Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-bQ5rkvz/A",
     "keywords": [
       "Faroe Islands",
@@ -2088,14 +2392,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/M2VBv3LTW8P96QtxPNkwbX6J8vVGvTVVX3RhbqPmM/XL/_WHZ9144-HDR_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/M2VBv3LTW8P96QtxPNkwbX6J8vVGvTVVX3RhbqPmM/XL/_WHZ9144-HDR_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/M2VBv3LTW8P96QtxPNkwbX6J8vVGvTVVX3RhbqPmM/XL/_WHZ9144-HDR_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/M8kwvCwfk5CNscPHwXDShWVCBJsD6qwtkd6V96bHL/L/_WHZ9144-HDR_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-bQ5rkvz/10/Lc2x8DHk7TWptmPH9PhDNPg2XZRWWFL2sdH69jhsd/S/_WHZ9144-HDR_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-B6RmswN",
     "title": "Faroe Cemetery   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Cemetery   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-B6RmswN/0/KmgMWHTsMgbwbwLprDpL3r9sGjRJDTgXMdGhqXjgJ/XL/_K1W3148-Pano-XL.jpg",
+    "alt": "Faroe Waterfall   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-B6RmswN/A",
     "keywords": [
       "Faroe Islands",
@@ -2122,14 +2431,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-B6RmswN/0/KtB3KhpXp4mLLr9kjNzwq2SkHfR8j4qc2jhKbqdNL/XL/_K1W3148-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-B6RmswN/0/KtB3KhpXp4mLLr9kjNzwq2SkHfR8j4qc2jhKbqdNL/XL/_K1W3148-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-B6RmswN/0/LNLJTghS6kCP8C5ddGLs2twGVCvs3PTtwf32q78np/L/_K1W3148-Pano-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-B6RmswN/0/KP4WcbgRm639CQz6w7h3kpx9kxZngHzKrN3V5fxv2/M/_K1W3148-Pano-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-B6RmswN/0/LcDxLzv3jQT9wRfwSnbQTD8cQFCt4szNkf6C5WhtZ/S/_K1W3148-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8VXpK7w",
     "title": "Faroe Waterfall  5   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waterfall  5   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8VXpK7w/8/LHVfBp5xC5FZDvjH5q84s9Ss2wwC3N2sZ7xzbFRjz/XL/_WHZ9215_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Cemetery   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-8VXpK7w/A",
     "keywords": [
       "Faroe Islands",
@@ -2156,14 +2470,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 62,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8VXpK7w/8/Mc9Dw9K3GrdFTgVS8dsPfPT8284fqQVhJCZctzZVJ/XL/_WHZ9215_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8VXpK7w/8/Mc9Dw9K3GrdFTgVS8dsPfPT8284fqQVhJCZctzZVJ/XL/_WHZ9215_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8VXpK7w/8/Mc9Dw9K3GrdFTgVS8dsPfPT8284fqQVhJCZctzZVJ/XL/_WHZ9215_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8VXpK7w/8/KxPTN9cWMVRVDjfHxRWsjsMq7mWQpNTbQ9p7bVVtT/L/_WHZ9215_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8VXpK7w/8/KtC74zwPHLKkz9bNPSscgXTpPTxWV96StR5RKv49t/S/_WHZ9215_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-99HTVBx",
     "title": "Faroe Landscape  11a  black and white Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Landscape  11a  black and white Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-99HTVBx/0/NfcS3TPNzW6HwbW4L45Xpmw6Mn63vFMNHXdBK5HQR/XL/_WHZ9227_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Waterfall  5   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-99HTVBx/A",
     "keywords": [
       "Faroe Islands",
@@ -2190,14 +2509,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 63,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-99HTVBx/0/Mf7X6DBJRjDsfStpjtvzHD7kt66p5HhXjwDz7hrnW/XL/_WHZ9227_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-99HTVBx/0/Mf7X6DBJRjDsfStpjtvzHD7kt66p5HhXjwDz7hrnW/XL/_WHZ9227_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-99HTVBx/0/NS3789m9bKM76xCcrbgM8PqncTJn9sJL7vvxKFwHC/L/_WHZ9227_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-99HTVBx/0/Kf4MtFBb7XmvNPzp5cmB5Tq5fZpPxqmGXbWgz8Ntd/M/_WHZ9227_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-99HTVBx/0/K3QTkkVNrPQ9PtptgzKVKwsjngfzhm82qxRRhF6sM/S/_WHZ9227_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fStbcJ8",
     "title": "Faroe Pony  Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Pony  Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fStbcJ8/9/KPV97q4dWfd6X8pvz6LVmkHQ4mHvfc7wsgqncSHH2/XL/_WHZ9251-Edit-XL.jpg",
+    "alt": "Faroe Landscape  11a  black and white Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-fStbcJ8/A",
     "keywords": [
       "Faroe Islands",
@@ -2224,14 +2548,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 64,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fStbcJ8/9/LqnXShHFmw6V6hnsVDDdN6Fb6MzSBwtbXFjHH5SXb/XL/_WHZ9251-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fStbcJ8/9/LqnXShHFmw6V6hnsVDDdN6Fb6MzSBwtbXFjHH5SXb/XL/_WHZ9251-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fStbcJ8/9/K5T7j8dGSC8ctx9tRS5RQxxJTXDcK56nb45tWcMVZ/L/_WHZ9251-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fStbcJ8/9/LbcJM6TjmGqdrSjhX3QzmwcqXGPrnwwqfhkZCDrMz/M/_WHZ9251-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fStbcJ8/9/NDk5PS9btdLmgLMKzkgddWcnPx6X5p2cWbbd39rLW/S/_WHZ9251-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SpQjFwx",
     "title": "Faroe Landscape 11  Black and White Photography",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Landscape 11  Black and White Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-SpQjFwx/1/Nd4DHThqGjsrXNLLgkTNNGb8R7dTvkdcTBmFSXXr3/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Faroe Pony  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-SpQjFwx/A",
     "keywords": [
       "Faroe Islands",
@@ -2258,14 +2587,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 65,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-SpQjFwx/1/LTpbd6ghQkpH9HDWvBHxSh5xPxdQ8BKdpPjfhLJbG/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-SpQjFwx/1/LTpbd6ghQkpH9HDWvBHxSh5xPxdQ8BKdpPjfhLJbG/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-SpQjFwx/1/KgVL6spjDHMTxSScL8NZr52kXxFhvBGwsfrjGHs2C/L/_WHZ9257_tonemapped-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-SpQjFwx/1/Km2JdfGkvxjcjV5GGkK9NLBxgTck9cHXrVf8C2NgM/M/_WHZ9257_tonemapped-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-SpQjFwx/1/KgrCB2m4qc6phcThSPfD7wKZSPmPTMnpGSB7QQwQQ/S/_WHZ9257_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dzSgp9g",
     "title": "Landscape of Faroe  8  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Landscape of Faroe  8  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dzSgp9g/7/KQgJZt8VtGjVVDKt6L5VhJJ24f2gh6N8s5TLmBnkW/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Faroe Landscape 11  Black and White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-dzSgp9g/A",
     "keywords": [
       "Faroe Islands",
@@ -2292,14 +2626,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 66,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dzSgp9g/7/K4JDtzShcg6KhSFD9wQSJpCtv42BXtbsB6W462dVS/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dzSgp9g/7/K4JDtzShcg6KhSFD9wQSJpCtv42BXtbsB6W462dVS/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dzSgp9g/7/M26zcQcdBzmRJHL4ngBHRv3xBXWttXMJrzHDksHWF/L/_WHZ9257_tonemapped-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dzSgp9g/7/NdxJg8kZrszzCP8VDT8tMMv9ND5GtP7nnpgC2SMR8/M/_WHZ9257_tonemapped-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dzSgp9g/7/NJG33DbfFBRsPRMnXKmVM8N2hXpx6wWfZKL9K7kHc/S/_WHZ9257_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qH4KKbv",
     "title": "Faroe Waterfall  7    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waterfall  7    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qH4KKbv/8/M7jC9d7nbf8Mm9BxFxhhCNL7LsvffLrF3tqf5hN2q/XL/_K1W3178_tonemapped-Edit-XL.jpg",
+    "alt": "Landscape of Faroe  8  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-qH4KKbv/A",
     "keywords": [
       "Faroe Islands",
@@ -2326,14 +2665,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 67,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qH4KKbv/8/L2bq5rKH9pKDSVkRZwQ7TpcDfF3kGGT22sHC3mcD5/XL/_K1W3178_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qH4KKbv/8/L2bq5rKH9pKDSVkRZwQ7TpcDfF3kGGT22sHC3mcD5/XL/_K1W3178_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qH4KKbv/8/M2sS93WnsV5rPZM7MwX4mpFmTV5mP2RnKKxcFbNsn/L/_K1W3178_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qH4KKbv/8/MQnL2Xkbx8vtn9ntcdtgkJTFhQ5Bfq8BpzDG4KFdg/M/_K1W3178_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qH4KKbv/8/NQjMBrfLhBFPt7n7bCCHKRSZChVx7vG3BG4mz8xjR/S/_K1W3178_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tv9cmjM",
     "title": "Faroe Waterfall 2     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waterfall 2     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tv9cmjM/1/Lj7j4BbCwJGJxWsXsXC3SCfCmGsPpn87zq68HxXDd/XL/_K1W3178_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Waterfall  7    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-tv9cmjM/A",
     "keywords": [
       "Faroe Islands",
@@ -2360,14 +2704,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 68,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tv9cmjM/1/MQB6zfQWB468CFKFCWw9PmhtqfRtbTxCQ9ntQ2fQm/XL/_K1W3178_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tv9cmjM/1/MQB6zfQWB468CFKFCWw9PmhtqfRtbTxCQ9ntQ2fQm/XL/_K1W3178_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tv9cmjM/1/NSKmxSPVqz4XXbjDdzJSr8fhmQ7cGpz4RtPMn4FLG/L/_K1W3178_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tv9cmjM/1/K93hLsJbkmL7KJNW5gHPPGzWJcbVcKW35CwNgHWxJ/M/_K1W3178_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-tv9cmjM/1/KPDpVVVQ4pnhWnBcJgBgVJFwwNJNCGKjFZWTQMcxW/S/_K1W3178_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WMCS6Xq",
     "title": "Coast of Faroe 14    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe 14    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WMCS6Xq/8/Lhs3WzRKLxrKkZ8fTvX4w9dkH8DHGVvNwfNhnP2g9/XL/_K1W3207-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Waterfall 2     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-WMCS6Xq/A",
     "keywords": [
       "Faroe Islands",
@@ -2394,14 +2743,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 69,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WMCS6Xq/8/L4ZZ9pMMhF8SfvHHwrSNVFfqhN2Cf2hMt37rgDdX2/XL/_K1W3207-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WMCS6Xq/8/L4ZZ9pMMhF8SfvHHwrSNVFfqhN2Cf2hMt37rgDdX2/XL/_K1W3207-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WMCS6Xq/8/NJ5J7jtscmn8QZpN94XZnkfcFFNHNJqLJxNHDtRGv/L/_K1W3207-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WMCS6Xq/8/MV3Fz7kQ2zPwzPCghSH8K5Z5JHcbn2J6S5gtf23JG/M/_K1W3207-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WMCS6Xq/8/K2pLsB5Z4gSJh2MgPbtk9nhQxpN2cDvzjfRnqW9X2/S/_K1W3207-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-g3cjMWB",
     "title": "Faroe Landscape 8    black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Landscape 8    black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-g3cjMWB/0/MMWhjZ8Z3sKxbZ65VLZbrLWFfcBsnv4dfXSFH6fjm/XL/_WHZ9344_tonemapped-Edit-XL.jpg",
+    "alt": "Coast of Faroe 14    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-g3cjMWB/A",
     "keywords": [
       "Faroe Islands",
@@ -2428,14 +2782,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 70,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-g3cjMWB/0/KJbMRVf42tgRsDjbP68XZxCGRfBmVSvgSq2B3H4G6/XL/_WHZ9344_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-g3cjMWB/0/KJbMRVf42tgRsDjbP68XZxCGRfBmVSvgSq2B3H4G6/XL/_WHZ9344_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-g3cjMWB/0/K9xFw3RTZ45tTBwXFdmwMGJc5ZLm438LnXZMLghnL/L/_WHZ9344_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-g3cjMWB/0/LhX6fPsSqxBdLxKLF5b2qkb5CVd7fJPtbL8Ckrckm/M/_WHZ9344_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-g3cjMWB/0/KmKb3t6t78CQHVDmkc4KDvHzhM2Z3kzCqqJH7xzKG/S/_WHZ9344_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cbzQ7mj",
     "title": "Faroe Landscape 4 Black and white Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Landscape 4 Black and white Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/KtDhGBbNtsvnQpTQ64jfVN9g4sZCpZ3WFnjqkqKmz/XL/_WHZ9362-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Landscape 8    black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-cbzQ7mj/A",
     "keywords": [
       "Faroe Islands",
@@ -2462,14 +2821,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 71,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/M4ZTHPxHjpPNXmxZFxGbZXKDQtxGcKRhpJ4ZcCpnd/XL/_WHZ9362-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/M4ZTHPxHjpPNXmxZFxGbZXKDQtxGcKRhpJ4ZcCpnd/XL/_WHZ9362-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/NHsKjkc7XmLwJ478NQxWNGf3TVf7PLBg9DXKM7Bdn/L/_WHZ9362-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/NL4tV3wf6Fr7QJgWJBZ7fBnfz5Ghdd7bbnsQd6TRR/M/_WHZ9362-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/MgpPTP2STC7TF4nsGSsDskzq7CRnZp7WhMgbGZdnk/S/_WHZ9362-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mfMVdnH",
     "title": "Landscape of Faroe 12 Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Landscape of Faroe 12 Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/L5CbNJQcppCb2WGw8gFr7x57Pv3679KZGrDV3KHhp/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
+    "alt": "Faroe Landscape 4 Black and white Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-mfMVdnH/A",
     "keywords": [
       "Faroe Islands",
@@ -2496,14 +2860,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 72,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NFpdLdR7bV6qK99hkrHpBtM9Sh96g9J6pVbdbJ4sg/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NFpdLdR7bV6qK99hkrHpBtM9Sh96g9J6pVbdbJ4sg/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NRFhV2X7JH4WKtxMLh62rW9CJgx4965VK5p6rb3jr/L/_WHZ9362-Pano_tonemapped-Edit-4-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/Kzh6wBGrMbnmz95SCJfGV9297zQngKRMtb2LSf7Rm/M/_WHZ9362-Pano_tonemapped-Edit-4-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/K7BNrgzpr7gKkCjwnDtQ7V5W3NMggVJ3zrgdQN33S/S/_WHZ9362-Pano_tonemapped-Edit-4-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-smLKRJH",
     "title": "Landscape of Faroe 13  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Landscape of Faroe 13  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-smLKRJH/7/MJSK7ZS8NWZdrr87TnNFZ76TdD8nM8Ldhh7wbCmVd/XL/_WHZ9380-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Landscape of Faroe 12 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-smLKRJH/A",
     "keywords": [
       "Faroe Islands",
@@ -2530,14 +2899,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 73,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-smLKRJH/7/NHVpnvVb4Xw72XQqhn8JQ5wmkVprQQJ8KJTmk3Lrw/XL/_WHZ9380-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-smLKRJH/7/NHVpnvVb4Xw72XQqhn8JQ5wmkVprQQJ8KJTmk3Lrw/XL/_WHZ9380-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-smLKRJH/7/MCbFHMwVHJzmNVHs5bgcGmzTM5hjSk5TQjCjWTk83/L/_WHZ9380-Pano_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-smLKRJH/7/LjDgrZd2TfQKr7GtX6gNv5DJM2X3LjMPSrFmdPztS/M/_WHZ9380-Pano_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-smLKRJH/7/KNCqPwFsx2Wcrz52G7GcPX2C55PtfRsDzFxW2WGdZ/S/_WHZ9380-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SFHZKkz",
     "title": "Faroe Waves 3   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves 3   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/NMD5J8g6VG54TzLQq2RMvgmQ79tBJJcHxJgBTK3xm/XL/_OLY8446-XL.jpg",
+    "alt": "Landscape of Faroe 13  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-SFHZKkz/A",
     "keywords": [
       "Faroe Islands",
@@ -2564,14 +2938,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 74,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/MDKZN9Th9vFQQk6FpzcwzTHxGFqth48pT9WKxPCBK/XL/_OLY8446-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/MDKZN9Th9vFQQk6FpzcwzTHxGFqth48pT9WKxPCBK/XL/_OLY8446-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/LqSrCwXFf3t8zFNSC88X6KDpQWtHR3hwgq3qBH5sw/L/_OLY8446-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/K43VmjK9Vr3j9tX79ZpQjDPqSG45MtNhZNVwMBbZ4/M/_OLY8446-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-SFHZKkz/9/NC5MqsDSGQd55jWQFHhD8nr9GX3fmNRx3sf2MKDsf/S/_OLY8446-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6q5gXJP",
     "title": "Faroe Waves 4   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves 4   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/NCMwpRhGhbN2PTvS8345D4wJbRxpXxzvXFBd9nKvG/XL/_OLY8459_tonemapped-XL.jpg",
+    "alt": "Faroe Waves 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-6q5gXJP/A",
     "keywords": [
       "Faroe Islands",
@@ -2598,14 +2977,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 75,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/LGb33ntrM2Sp7zTqNkdSpg59M8Lh4TF66mxZGLgV2/XL/_OLY8459_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/LGb33ntrM2Sp7zTqNkdSpg59M8Lh4TF66mxZGLgV2/XL/_OLY8459_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/NKhqwLLbRK3G6XpHzPj6RCsvWG7J3ZzQJJX77hTt3/L/_OLY8459_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/Mkv2jKStCrhBMTNbr6jsFsfvrXCJ3K5C5ndmzJ4qd/M/_OLY8459_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6q5gXJP/9/Ld7BKTtJhmvdzwRVvVhkMWhrbCD2jPGW4fRNxkS73/S/_OLY8459_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zSqxXtw",
     "title": "Faroe Waves  5    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves  5    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/LVf7VmrNPjGXWZkGDFvCLLqW2MRhBhBGXDbzz9CC9/XL/_OLY8517-XL.jpg",
+    "alt": "Faroe Waves 4   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zSqxXtw/A",
     "keywords": [
       "Faroe Islands",
@@ -2632,14 +3016,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 76,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/NFpWDnzvVFVXnJgSKwZxXJ7H5F6mkpMDvVMfdcPDM/XL/_OLY8517-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/NFpWDnzvVFVXnJgSKwZxXJ7H5F6mkpMDvVMfdcPDM/XL/_OLY8517-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/NKrWpNwsLb9sxvWKZNtmgsZDHJqCBQ6Vq8jTfnPSm/L/_OLY8517-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/LPPbDG9dwfVMrPtsxx938N2z3q8fTS79kSD6sCtW3/M/_OLY8517-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zSqxXtw/9/LStNv2WBDdFLrwmKsWcPGNtBd2GPJNLqkc678fRnq/S/_OLY8517-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-m2wzGs2",
     "title": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/NTDVwKvKmDtTsZLPCMPbZLcvvBRLGWW8J96gL5vqM/XL/_OLY8522-XL.jpg",
+    "alt": "Faroe Waves  5    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-m2wzGs2/A",
     "keywords": [
       "Faroe Islands",
@@ -2666,14 +3055,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 77,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/NSMCNhSwKX5S47bms22LdJ2MNLxNKxkZs5MD25ZbG/XL/_OLY8522-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/NSMCNhSwKX5S47bms22LdJ2MNLxNKxkZs5MD25ZbG/XL/_OLY8522-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/LqLzS9tWMHppfNGhkJbQ3bJZnRNndL6RXCV7qgVCd/L/_OLY8522-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/KPwRfTSHzVzPTZRDxNjLV4KHsBkLQBPgV3FqZfPZt/M/_OLY8522-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-m2wzGs2/1/Kj7MLVQS9cqQZZTtFQdCrbpBXstNxCZHbVzH6KLGr/S/_OLY8522-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fGsWc5H",
     "title": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/LDqhwrXNXkk6SzLkwpBCrmMVSDcxNjX7WxSdmcCVQ/XL/_OLY8581-Edit-XL.jpg",
+    "alt": "Crashing Waves in Faroes 3    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-fGsWc5H/A",
     "keywords": [
       "Faroe Islands",
@@ -2700,14 +3094,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 78,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/LvLXP47gztsmmPTSJW9WdzGzpWBxSFC5cGZZGBKqG/XL/_OLY8581-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/LvLXP47gztsmmPTSJW9WdzGzpWBxSFC5cGZZGBKqG/XL/_OLY8581-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/LkrLGQmHTCFVG7dnNVdwtXM7QZFgk6TdvbCLJFMZZ/L/_OLY8581-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/K83RbkgVBGCnrgPgNz5nTsXhGRqkgVk6cjtXHGb2d/M/_OLY8581-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fGsWc5H/2/KHb5qwhsSWCGTcFQ2tW5pxWtjtKKzDqvzbph8rWTs/S/_OLY8581-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wSx559f",
     "title": "Faroe Waves 6   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves 6   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/LD3qGCNDgjLDLQFn7tc9LqvmxQJXbJRrqPH5qj8zF/XL/_OLY8581-Edit-XL.jpg",
+    "alt": "Crashing Waves in Faroes 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-wSx559f/A",
     "keywords": [
       "Faroe Islands",
@@ -2734,14 +3133,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 79,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/LCQHGWJFtrCwfQ8wNvRQ4w8Zc576fXdbZ2xFW9wBT/XL/_OLY8581-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/LCQHGWJFtrCwfQ8wNvRQ4w8Zc576fXdbZ2xFW9wBT/XL/_OLY8581-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/LzTC8D8kHkZDtrqg8vpM759sVD63rkhjTbSDgLbVb/L/_OLY8581-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/KK8BCv6RCM5TgjnWp9h3NWXGwdCs8B9bQkgbfzC4X/M/_OLY8581-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-wSx559f/10/Mxnr3rgkP4nLcdCDmKXVgQSr3PjFDLm5kqvKHc6zV/S/_OLY8581-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6HH4L3v",
     "title": "Faroe Waves 7   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Waves 7   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/Kb82PbXsPpnct9JsMPvGp5dKFG4Jb5R52ZB2xR9Nw/XL/_OLY8602-XL.jpg",
+    "alt": "Faroe Waves 6   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-6HH4L3v/A",
     "keywords": [
       "Faroe Islands",
@@ -2768,14 +3172,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 80,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/NRGf5hJkXVqtQM8X2M32xmRWB27PwPx9tnhVpBFBn/XL/_OLY8602-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/NRGf5hJkXVqtQM8X2M32xmRWB27PwPx9tnhVpBFBn/XL/_OLY8602-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/KdSPZX7g5JpmVCCZ5zzSNc7GBnSgCkH4nHvtr9HzX/L/_OLY8602-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/LFHsqnH2CPKCX4KL5F2Z4t9GHWgV8sF2GHwg4qpPQ/M/_OLY8602-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6HH4L3v/9/L3bzdxKnjmj8BJDC2d9hm4n22HncRfQhBdJpMLfcc/S/_OLY8602-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-P7pMnQ9",
     "title": "Faroe Island Coastal Town",
     "description": "Fine art, black & white, landscape sunset photography of the Faroe Islands.",
-    "alt": "Faroe Island Coastal Town",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/MVj7DFFm4pVxrcFpLF9h5zfnXQXPxfPD8bKCZtpKF/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Waves 7   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-P7pMnQ9/A",
     "keywords": [
       "Faroe Islands",
@@ -2802,14 +3211,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 81,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KgjdwcfrQCQWz8xqfjqftPdkqB5WPQxZkhqdsPFNR/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KgjdwcfrQCQWz8xqfjqftPdkqB5WPQxZkhqdsPFNR/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KMzM2rDKVs2RPFLchDqsG7KDSCw27c4g276MxWzRh/L/_WHZ9486_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KJmwwbXJ8rbZ97jDkGL4T6wzrZF4QZF3MBj9VQ6xC/M/_WHZ9486_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-P7pMnQ9/3/KGj4qksgnLqQ8LRfrLfLDZS6HttrQjpLFbzcT2mzs/S/_WHZ9486_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6NKTKgw",
     "title": "Sunset Rays on the Village",
     "description": "Fine art landscape sunset photograph of the Faroe Islands.",
-    "alt": "Sunset Rays on the Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LvNxkG7NPgdFMbbZGLR8xtfdLjxMK9GgdWGbsksRx/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Island Coastal Town",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-6NKTKgw/A",
     "keywords": [
       "Faroe Islands",
@@ -2836,14 +3250,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 82,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LNkpWw9W6SmS6xHWjgRjzsT66RFQ524FFFHCmtqRq/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LNkpWw9W6SmS6xHWjgRjzsT66RFQ524FFFHCmtqRq/XL/_WHZ9486_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LTx77ZBxFgJFdvDdhMQhZmF3PPKXztqTbBn7z2wFb/L/_WHZ9486_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/LFDsVXz5zJx7XZ4WvHMndVWC5gKpR7x5V4Ptrt9SB/M/_WHZ9486_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-6NKTKgw/11/KRZNDLSV4RFqZZtmQQ58x229CWZctWDmHT9td9HBW/S/_WHZ9486_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FxL2Ktq",
     "title": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/Kmxb5DnxFfsqtRzG2G5qSvkKDzB7zB3m5dDWzttqc/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "alt": "Sunset Rays on the Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-FxL2Ktq/A",
     "keywords": [
       "Faroe Islands",
@@ -2870,14 +3289,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 83
+    "sortOrder": 83,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/MWhtBjSddfCRPgbt3kCgxBZdmNCHvJP2Vj6Jr3Q8P/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/MWhtBjSddfCRPgbt3kCgxBZdmNCHvJP2Vj6Jr3Q8P/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/NXP4P2JN2NJtMQBbQQGfLxQc2Lh9F3Q2zJ6w7qtZB/L/_OLY8957_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/Nfvrz6TP8bPq95WVb8WPqGR7NhNDR3rjZFrq7F9xR/M/_OLY8957_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FxL2Ktq/1/M6D6x4cH4VqBP2M5qHPtkcm6JVFf3849Wff2xDCvZ/S/_OLY8957_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Wf6337s",
     "title": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/MS7d9nKcg463W2j6MZFtWwG4HhrHNTrLbBP49Bczt/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "alt": "Waves Crash in the Faroes       Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Wf6337s/A",
     "keywords": [
       "Faroe Islands",
@@ -2904,14 +3328,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 84
+    "sortOrder": 84,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/MPpxFVQ8GmSgWntgfGCLCWrf9nrD6G5VP63PPZfHP/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/MPpxFVQ8GmSgWntgfGCLCWrf9nrD6G5VP63PPZfHP/XL/_OLY8957_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/Mf2fSSgKwMXjq7pq7jrxzFKrKBSnJ6QMBPNgLJRCM/L/_OLY8957_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/KDnBmPQT7qWk96Csb8jmvNZ5WDZLP8R98MrrsdXbb/M/_OLY8957_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Wf6337s/12/LdZGKkJ5vpLtMHZ3S9pFdZDwW4jMsf6xsNXncbFk4/S/_OLY8957_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vwPNvvL",
     "title": "Coast of Faroe  15     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  15     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vwPNvvL/8/KLf65mrG8QjqwCwXG6hN8cGLmGpZ6nLZTq2CGHKDD/XL/_K1W3209_tonemapped-Edit-XL.jpg",
+    "alt": "Little Steeple in the Faroe Islands    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-vwPNvvL/A",
     "keywords": [
       "Faroe Islands",
@@ -2938,14 +3367,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 85,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vwPNvvL/8/L8qSgq3mFKcQ76rb8CWbjJsB6ZNSrPjgmZGTRs5bh/XL/_K1W3209_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vwPNvvL/8/L8qSgq3mFKcQ76rb8CWbjJsB6ZNSrPjgmZGTRs5bh/XL/_K1W3209_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vwPNvvL/8/Khndjc3HJRsptWwGGmD94Bv7r2m2BsgRHfnFw5fMN/L/_K1W3209_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vwPNvvL/8/Mg6hZSFLG65gQk6frdsnnckHNk224hbJLWkPhjFM9/M/_K1W3209_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-vwPNvvL/8/LnXVWWjxQt7RDKVRJWWc7H4RMRN2RJz8hVrzXS2RT/S/_K1W3209_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QFpd2x4",
     "title": "Looking Outward   Black and White Photography",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Looking Outward   Black and White Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/LknqbQfb87Vs7zPtrrscV57wjQFpGjNpnWJb4FgwD/XL/_WHZ9555-Pano-Edit-XL.jpg",
+    "alt": "Coast of Faroe  15     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-QFpd2x4/A",
     "keywords": [
       "Faroe Islands",
@@ -2972,14 +3406,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 86,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/Ld6rXd7mngGwz6sBT8PDQK5nCWVtr5rgDmJLmGNg2/XL/_WHZ9555-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/Ld6rXd7mngGwz6sBT8PDQK5nCWVtr5rgDmJLmGNg2/XL/_WHZ9555-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/LqWp8SPcmS45P7xQJRZh4th4kftQJNpjV4bfJBmbT/L/_WHZ9555-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/KmWT8Wm6BL6dNvcD5CvJcTWmzZFPh98jr4LgjVpck/M/_WHZ9555-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-QFpd2x4/10/Lf7C2RCNGkg88Xxw9kzXpxvvbX9W5P6K7t8RjcLw7/S/_WHZ9555-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fWPjdt3",
     "title": "Faroe Landscape  6      Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Landscape  6      Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fWPjdt3/0/Mztt8krKsg54NLwv7wrTtJJS5H3PctrfB4xcqLQrK/XL/_K1W3296-Edit-XL.jpg",
+    "alt": "Looking Outward   Black and White Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-fWPjdt3/A",
     "keywords": [
       "Faroe Islands",
@@ -3006,14 +3445,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 87,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fWPjdt3/0/KQRb4MRP9Vf7kNd3k8mPzPFh2FV5NP2LG3MqM9H7X/XL/_K1W3296-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fWPjdt3/0/KQRb4MRP9Vf7kNd3k8mPzPFh2FV5NP2LG3MqM9H7X/XL/_K1W3296-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fWPjdt3/0/LLNbXVKRtnD3dBpQs3wQdWv7nMXMLkdXHxSHPqPJL/L/_K1W3296-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fWPjdt3/0/LZZwmb75KWcRDcf9z8WJPsNC97gVZLfMFZPc2CSdD/M/_K1W3296-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-fWPjdt3/0/KgjDPX2fJJL3Ntg8XhQLwDvLLxCtHtp8fpXFnvnps/S/_K1W3296-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2GH8KXC",
     "title": "Coast of Faroe  17     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  17     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2GH8KXC/9/K3LkJqfkf5kBd6T4VBSrTkzRgdjWq9sBX4RtVcHNj/XL/_K1W3296-Edit2-XL.jpg",
+    "alt": "Faroe Landscape  6      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-2GH8KXC/A",
     "keywords": [
       "Faroe Islands",
@@ -3040,14 +3484,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 88
+    "sortOrder": 88,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2GH8KXC/9/KMThzpx2pP4vWXLhG7sDZhNgK9z72nb9GpHS2RqXV/XL/_K1W3296-Edit2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2GH8KXC/9/KMThzpx2pP4vWXLhG7sDZhNgK9z72nb9GpHS2RqXV/XL/_K1W3296-Edit2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2GH8KXC/9/MzvSpLBHvPZbL9zVZQvpkkq4Vjp87S3m47LTkVrgQ/L/_K1W3296-Edit2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2GH8KXC/9/LDz5gFh2SxGdhdkGVXwxhxGxC8KCvDjd9LRL2mJQW/M/_K1W3296-Edit2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2GH8KXC/9/Kf6sKR6Np53K7fxdpg3VJt3xBrVV8JDVRbK7p5GRP/S/_K1W3296-Edit2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Mpps7Mt",
     "title": "Faroe Coast 22     black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 22     black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Mpps7Mt/1/Lxp8nqBkkHW5qXbbjqP3tmvpKcTkwbsX4cv22SSxb/XL/_K1W3297_tonemapped-Edit-XL.jpg",
+    "alt": "Coast of Faroe  17     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Mpps7Mt/A",
     "keywords": [
       "Faroe Islands",
@@ -3074,14 +3523,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 89
+    "sortOrder": 89,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Mpps7Mt/1/KhgRd74SFF4sbXDvBJS6bddkX5MpTTZ6wtHsdJfv8/XL/_K1W3297_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Mpps7Mt/1/KhgRd74SFF4sbXDvBJS6bddkX5MpTTZ6wtHsdJfv8/XL/_K1W3297_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Mpps7Mt/1/KhgRd74SFF4sbXDvBJS6bddkX5MpTTZ6wtHsdJfv8/XL/_K1W3297_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Mpps7Mt/1/KZzBCzNdjxDJpnLm6SHJDZhNS6HHZnWzW5dFGRjFP/L/_K1W3297_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Mpps7Mt/1/KjQWmDCVcRjqRWhgN6NSznfknm9FXzmndj3LhqDR5/S/_K1W3297_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-s62pCtc",
     "title": "Coast of Faroe  18     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  18     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-s62pCtc/8/NCFLdBHd9zSbqKnR53PzsGpMDKvDRNBqxhpqffHVJ/XL/_K1W3297_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Coast 22     black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-s62pCtc/A",
     "keywords": [
       "Faroe Islands",
@@ -3108,14 +3562,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 90
+    "sortOrder": 90,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-s62pCtc/8/MkXGTwdNqK8RfWd9hnNtXf74cFR2m3NM7Jxw69tW3/XL/_K1W3297_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-s62pCtc/8/MkXGTwdNqK8RfWd9hnNtXf74cFR2m3NM7Jxw69tW3/XL/_K1W3297_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-s62pCtc/8/MkXGTwdNqK8RfWd9hnNtXf74cFR2m3NM7Jxw69tW3/XL/_K1W3297_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-s62pCtc/8/MKNKDs6DPzD59sXtGvx5rGWcn8tTJhqDWfDRLcVRf/L/_K1W3297_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-s62pCtc/8/M6QjWzLtDJTQvRjmnZkzx4sNThLcxMZrkLNnLMvPW/S/_K1W3297_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-65H69Vz",
     "title": "Faroe Coast 24      black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 24      black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-65H69Vz/1/LwHvKrVMWf6zdfGDjqzQMVmwcWrJmBdVdH3n6KfkS/XL/_WHZ9590-Pano-Edit-2-XL.jpg",
+    "alt": "Coast of Faroe  18     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-65H69Vz/A",
     "keywords": [
       "Faroe Islands",
@@ -3142,14 +3601,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 91
+    "sortOrder": 91,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-65H69Vz/1/LQK7fgsWQTBkqzrh4MpcDKw3KsJ9hVLwfp5SSNPbr/XL/_WHZ9590-Pano-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-65H69Vz/1/LQK7fgsWQTBkqzrh4MpcDKw3KsJ9hVLwfp5SSNPbr/XL/_WHZ9590-Pano-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-65H69Vz/1/LccXXbMqk5mhggzKkwZn8szCPL2zsqtB5NmRCVhBS/L/_WHZ9590-Pano-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-65H69Vz/1/Mfw456FCS5gW83RL8xbWSb4FnbbZPLLs5rjMHMgHZ/M/_WHZ9590-Pano-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-65H69Vz/1/LXbW3Pc4tbmpfdGBJp2bTCBWdr29NtLgFdDDJw5fd/S/_WHZ9590-Pano-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Gw8K6Vh",
     "title": "Coast of Faroe  20    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  20    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Gw8K6Vh/7/K9nBCrkf9CF5s8Vr5XRBw6sgqxtJcxKh4DRcncv24/XL/_WHZ9591-Pano_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Coast 24      black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Gw8K6Vh/A",
     "keywords": [
       "Faroe Islands",
@@ -3176,14 +3640,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 92
+    "sortOrder": 92,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Gw8K6Vh/7/LRvjCTQx7cWRC8ZSvfKXxG3v2x7LNzNTHPpBPnhLM/XL/_WHZ9591-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Gw8K6Vh/7/LRvjCTQx7cWRC8ZSvfKXxG3v2x7LNzNTHPpBPnhLM/XL/_WHZ9591-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Gw8K6Vh/7/LRvjCTQx7cWRC8ZSvfKXxG3v2x7LNzNTHPpBPnhLM/XL/_WHZ9591-Pano_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Gw8K6Vh/7/NKTxTnptVDcVJZHFJV9BLtPCkJjJKXqQJjnP3XB3B/L/_WHZ9591-Pano_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-Gw8K6Vh/7/NZQK8ZfNxwzhwg9Sh98vq58dsFKJTqs3VHW7KT3m2/S/_WHZ9591-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RRX5LQb",
     "title": "Faroe Coast 25   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 25   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-RRX5LQb/1/KKPcPZwTk97GtpGxtS6dKdRNX4tQJs45VdcMNg7GR/XL/_WHZ9635_tonemapped-XL.jpg",
+    "alt": "Coast of Faroe  20    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-RRX5LQb/A",
     "keywords": [
       "Faroe Islands",
@@ -3210,14 +3679,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 93
+    "sortOrder": 93,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-RRX5LQb/1/MPFR4zt3zPW9Q4z86tFGPZNcQPjJKLsX9Mwhx2C6x/XL/_WHZ9635_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-RRX5LQb/1/MPFR4zt3zPW9Q4z86tFGPZNcQPjJKLsX9Mwhx2C6x/XL/_WHZ9635_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-RRX5LQb/1/NTwwCmRVKXdS9kX7qwgpwFGdcHK5pnzMBQHK4z9WB/L/_WHZ9635_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-RRX5LQb/1/KbgWFW9QJMVt8fhfSRJtdLVXKD4HH2fTSN7vr9BFH/M/_WHZ9635_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-RRX5LQb/1/Lc6Gc7Hf4LP3rGBhPhmmmZgJfqkQHZLmTCmxrmVfr/S/_WHZ9635_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Vt4H5PV",
     "title": "Faroe Coast 26     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 26     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Vt4H5PV/0/MpXPgg53xT4ZNBGnZ3HfCvDXfSfLwwkKpBWb4R9k5/XL/_WHZ9639-Edit-XL.jpg",
+    "alt": "Faroe Coast 25   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-Vt4H5PV/A",
     "keywords": [
       "Faroe Islands",
@@ -3244,14 +3718,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 94
+    "sortOrder": 94,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Vt4H5PV/0/K5PLTF85JKbwZdLZcP5cN9Fpx25nw4fQ2VJkmspcR/XL/_WHZ9639-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Vt4H5PV/0/K5PLTF85JKbwZdLZcP5cN9Fpx25nw4fQ2VJkmspcR/XL/_WHZ9639-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Vt4H5PV/0/K5PLTF85JKbwZdLZcP5cN9Fpx25nw4fQ2VJkmspcR/XL/_WHZ9639-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Vt4H5PV/0/LNGzVBQdFP2h4FnX3kLCT5zrmCxSBLWRn5SsC7KBZ/L/_WHZ9639-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-Vt4H5PV/0/KQTk4RPdB97zSMPLXbshMsXgvc66cGJMKHGRrrLKw/S/_WHZ9639-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-q794hHD",
     "title": "Faroe Coast 27    black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Coast 27    black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q794hHD/0/Mbg26bT9gpdsGP5Vhv2LxHTQVJG3gxdr2LmW3Sb4K/XL/_OLY8984-Edit-XL.jpg",
+    "alt": "Faroe Coast 26     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-q794hHD/A",
     "keywords": [
       "Faroe Islands",
@@ -3278,14 +3757,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 95
+    "sortOrder": 95,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q794hHD/0/KdNMZxBHWjSGQZr9QQdjwGTMwKbbrGTJ4rgg9VzFw/XL/_OLY8984-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q794hHD/0/KdNMZxBHWjSGQZr9QQdjwGTMwKbbrGTJ4rgg9VzFw/XL/_OLY8984-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q794hHD/0/K2rZ3KnNq9ZSndDnCsSKHPqzWXtrRS5fMfGskpGSh/L/_OLY8984-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q794hHD/0/LwgRB7DwksJtFHxN6Wqrm4Dg497PMfTDT26X8Hf2D/M/_OLY8984-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-q794hHD/0/KvsGGjz2mZHc8pxnssWkzw7Sd479Vk2pc6KnZKt66/S/_OLY8984-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dXHvGd9",
     "title": "Coast of Faroe  22     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  22     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/MBnsD4TJNfKSKWk2gLBQcc7HPMhQ3k9QHSsNSGsXt/XL/_OLY8984-Edit-XL.jpg",
+    "alt": "Faroe Coast 27    black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-dXHvGd9/A",
     "keywords": [
       "Faroe Islands",
@@ -3312,14 +3796,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 96
+    "sortOrder": 96,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/KMz2W2KhQmz3GfzjhMDcRLTT5SCmq9zr28MS9Hdw5/XL/_OLY8984-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/KMz2W2KhQmz3GfzjhMDcRLTT5SCmq9zr28MS9Hdw5/XL/_OLY8984-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/Mvp8nm88pphXpbvSFT8WSLHv6SCf7v3GNLgNdn3gC/L/_OLY8984-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/LDV8Gxq3XKWLMnDrLqknFL8bhqp6DdNt5G6Z7S7Cw/M/_OLY8984-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/NTrgcQsb2nTmf5V2mGknpFkwHbMLmH6w25hZhpKBd/S/_OLY8984-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qrdkF7m",
     "title": "Coast of Faroe  23     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  23     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qrdkF7m/8/MVPSgSM93BfBCkPvJrbsxzdgKzMQXphBQ6PM9dB72/XL/_WHZ9645-Pano-Edit-2-XL.jpg",
+    "alt": "Coast of Faroe  22     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-qrdkF7m/A",
     "keywords": [
       "Faroe Islands",
@@ -3346,14 +3835,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 97
+    "sortOrder": 97,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qrdkF7m/8/Mgt77tNjhwg6mn7XsfwLV2Mc2FH6sKgTtP2M8fQ6Q/XL/_WHZ9645-Pano-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qrdkF7m/8/Mgt77tNjhwg6mn7XsfwLV2Mc2FH6sKgTtP2M8fQ6Q/XL/_WHZ9645-Pano-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qrdkF7m/8/KvsnHnkSBW4mM5gwqf6dpkvgdbq9KpJ8nKWKwVHWZ/L/_WHZ9645-Pano-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qrdkF7m/8/MjfGx79QnPS7G2fZtPkdVFNbqmhjqQS3JTqBncgS4/M/_WHZ9645-Pano-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-qrdkF7m/8/LhVJDgRbMTjNBXfkWCB7mdwsv6B5HQgc4tvrQDPVD/S/_WHZ9645-Pano-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HqcTxcr",
     "title": "Coast of Faroe  24     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  24     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-HqcTxcr/9/NTrfCKF6vRntCDMdm5Bg4fVNg6KdhmqH4gF5jk8kM/XL/_OLY9036-Edit-XL.jpg",
+    "alt": "Coast of Faroe  23     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-HqcTxcr/A",
     "keywords": [
       "Faroe Islands",
@@ -3380,14 +3874,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 98
+    "sortOrder": 98,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-HqcTxcr/9/LNqmx6rK3dKC76DVcQZQz25DVqMbWwM6N7Xm7gTtR/XL/_OLY9036-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-HqcTxcr/9/LNqmx6rK3dKC76DVcQZQz25DVqMbWwM6N7Xm7gTtR/XL/_OLY9036-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-HqcTxcr/9/LNqmx6rK3dKC76DVcQZQz25DVqMbWwM6N7Xm7gTtR/XL/_OLY9036-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-HqcTxcr/9/MQpKpPQBC5HxFV5RDpNwc98ksrTZj4Wv5Tz2LZsPC/L/_OLY9036-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-HqcTxcr/9/KxRQq4ZXr8PfGBrXpScNS5BJXzcTNQ73dfscS5DRB/S/_OLY9036-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7Tj6R33",
     "title": "Big, Little and Medium  Photography by Wayne",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Big, Little and Medium  Photography by Wayne",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7Tj6R33/8/LpTCjjkN44zDBh724wXfXxbJNRPSn6W8G3bjdZBhX/XL/_WHZ9670-Edit-XL.jpg",
+    "alt": "Coast of Faroe  24     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-7Tj6R33/A",
     "keywords": [
       "Faroe Islands",
@@ -3414,14 +3913,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 99
+    "sortOrder": 99,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7Tj6R33/8/NBxNZkFn6LrRCXJwLLt8Lq5Ckt3Rsmf5MZZNgPP4d/XL/_WHZ9670-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7Tj6R33/8/NBxNZkFn6LrRCXJwLLt8Lq5Ckt3Rsmf5MZZNgPP4d/XL/_WHZ9670-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7Tj6R33/8/NBxNZkFn6LrRCXJwLLt8Lq5Ckt3Rsmf5MZZNgPP4d/XL/_WHZ9670-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7Tj6R33/8/KrwV8X7M4LKxRnKnhtSK4NmvTvfv96jbTzqXZXxZt/L/_WHZ9670-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7Tj6R33/8/LHgNSbJW4bLHSkKvSQpQ44rJ8LgsCWkvbkN5Kc5qt/S/_WHZ9670-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zD48j45",
     "title": "Faroe Boat Houses    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Boat Houses    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-zD48j45/0/KX6ZLcLJTPdV7BLVGtRCCFt5m4m8dJwBPpdGczM4C/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
+    "alt": "Big, Little and Medium  Photography by Wayne",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zD48j45/A",
     "keywords": [
       "Faroe Islands",
@@ -3448,14 +3952,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 100
+    "sortOrder": 100,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-zD48j45/0/K82hWmNLHXCB5cMcVgRzV6wDLRTq3W8fGt3QsmtjD/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-zD48j45/0/K82hWmNLHXCB5cMcVgRzV6wDLRTq3W8fGt3QsmtjD/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-zD48j45/0/K7Dw4FNsmpz3b8jC4RVzgTF8rb3dJRFVSxrtX9LVn/L/_WHZ9716_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-zD48j45/0/LKwdzp6Tqf589QpTgxjDR6P8WQDS7JT2fn6KSSsgp/M/_WHZ9716_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-zD48j45/0/KcJ2BsRRW8V6sn9ChPnPvWML5DHqH3ws99GnRdxmX/S/_WHZ9716_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hxLj9xB",
     "title": "Boat Houses on the Faroe Island   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Boat Houses on the Faroe Island   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hxLj9xB/8/NCqTvhZQMHZXCL4ZTjm84TRpcgjPntzPBbt7S3NTq/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Boat Houses    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-hxLj9xB/A",
     "keywords": [
       "Faroe Islands",
@@ -3482,14 +3991,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 101
+    "sortOrder": 101,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hxLj9xB/8/K8fct6vWmnbvb79wnTZFbkDDggbp5ZQtnHRJqWvdN/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hxLj9xB/8/K8fct6vWmnbvb79wnTZFbkDDggbp5ZQtnHRJqWvdN/XL/_WHZ9716_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hxLj9xB/8/MjDzvBDkWGbTQd4VKDLdcmT3HkxvCGzmtFWLfVXVL/L/_WHZ9716_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hxLj9xB/8/NSgB33CctRj3KSSrvN2NDQzr9M8nNtB86TrFgzNsg/M/_WHZ9716_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-hxLj9xB/8/L79fMpDMTNxBjTqjNKJj5k68Nhmq2fzjjPrP4znTF/S/_WHZ9716_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xrXKTpD",
     "title": "Faroe Country Church  2         Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Country Church  2         Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xrXKTpD/1/LcR6DtFdXPmfChb7f3B3XJcn2QJXmFndDtfTTJjZt/XL/_WHZ9718_tonemapped-XL.jpg",
+    "alt": "Boat Houses on the Faroe Island   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-xrXKTpD/A",
     "keywords": [
       "Faroe Islands",
@@ -3516,14 +4030,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 102
+    "sortOrder": 102,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xrXKTpD/1/KVMHgkSCRFnnGgM9S4b6RM6hb8RPb44zbtc2kkvP9/XL/_WHZ9718_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xrXKTpD/1/KVMHgkSCRFnnGgM9S4b6RM6hb8RPb44zbtc2kkvP9/XL/_WHZ9718_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xrXKTpD/1/K7ChFTDjMVkN3tg8tbT3g2WCNMpcPt4jx9mrWBLGf/L/_WHZ9718_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xrXKTpD/1/NHWdzjBXJ3BHtP4Bc5BJ5Zv96DmCkCxgr68TTBkhS/M/_WHZ9718_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-xrXKTpD/1/NHwtFgP6Tg3DBgBZBFb2JsvB85XTS2fwGcztF86dR/S/_WHZ9718_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DcmkVhb",
     "title": "Faroe Country Church     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Country Church     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-DcmkVhb/0/KFpcM7WHzGDHXRVGfNqBcDxwxfw54Vg9S6nSWw7Jz/XL/_WHZ9733_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Country Church  2         Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-DcmkVhb/A",
     "keywords": [
       "Faroe Islands",
@@ -3550,14 +4069,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 103
+    "sortOrder": 103,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-DcmkVhb/0/LGR8BwLq8SsNQLqn3JrX43zN2W3W6j9JssSKjSrxk/XL/_WHZ9733_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-DcmkVhb/0/LGR8BwLq8SsNQLqn3JrX43zN2W3W6j9JssSKjSrxk/XL/_WHZ9733_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-DcmkVhb/0/KMJQJSqrS6LVqBHZHLTpF5ndTXdfmZvgQ4xg98b2h/L/_WHZ9733_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-DcmkVhb/0/LkxkDMxDcDHKBmpkrNwVW6Xs9w3MJQ5vcXC5Vm4Mz/M/_WHZ9733_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-DcmkVhb/0/KDKvR8GLpjVDBGxLwzqLzp2sJFQVMBjh2FVc4V6w4/S/_WHZ9733_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pKmQ9Ch",
     "title": "Fishing Village in Faroe Islands    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Fishing Village in Faroe Islands    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-pKmQ9Ch/9/LdNmJc57DZ6QZTVbqrz7nJ7p6KTFVbQ5mwT4rDPXh/XL/_K1W3374_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Country Church     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-pKmQ9Ch/A",
     "keywords": [
       "Faroe Islands",
@@ -3584,14 +4108,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 104
+    "sortOrder": 104,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-pKmQ9Ch/9/NHm89S2Dk9p9v2gHbzRrm87gzL9t9hrmBFrpTshT9/XL/_K1W3374_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-pKmQ9Ch/9/NHm89S2Dk9p9v2gHbzRrm87gzL9t9hrmBFrpTshT9/XL/_K1W3374_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-pKmQ9Ch/9/LcfRzQCBfgkcpwQCZdDsz349M4KG2CxWNbR7r2pwg/L/_K1W3374_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-pKmQ9Ch/9/LFc7TrcMmTTXw8bGkpdKppq98Gp9F97q3jtpnnZw6/M/_K1W3374_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-pKmQ9Ch/9/Mvm9KHBQTgRGdBFpgSGbPXwmSzx67GgDMk7McLTbV/S/_K1W3374_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mqMfQ7r",
     "title": "Faroe Lighthouse 3     Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Lighthouse 3     Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-mqMfQ7r/0/NNCCWdkzwK4QhXKSVhXpmcGMkHRswszZC69qvZq5H/XL/_WHZ9785_tonemapped-Edit-XL.jpg",
+    "alt": "Fishing Village in Faroe Islands    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-mqMfQ7r/A",
     "keywords": [
       "Faroe Islands",
@@ -3618,14 +4147,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 105
+    "sortOrder": 105,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-mqMfQ7r/0/M3NdzhjfpVzn6PPtZFpmFRsr7S36RsTGCkQgcchm7/XL/_WHZ9785_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-mqMfQ7r/0/M3NdzhjfpVzn6PPtZFpmFRsr7S36RsTGCkQgcchm7/XL/_WHZ9785_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-mqMfQ7r/0/MJHrmhwPDS5swnX3jbnsh6NJCJNQPvDfXm2ZCFmvh/L/_WHZ9785_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-mqMfQ7r/0/LD8tbB6QZNn49Z7KJ29HrZrW3QcKF4g39J22t6tp4/M/_WHZ9785_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-mqMfQ7r/0/MgrDQshNPz49QG2LJ6JR7k5s6zcM73J38rq7ZJfJx/S/_WHZ9785_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DDVrKQD",
     "title": "Faroe Lighthouse  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Lighthouse  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DDVrKQD/8/KgT2GQFkwCNFD2Xg8VPkHMgM8GBS4KkhjTVfgVd6L/XL/_WHZ9785_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Lighthouse 3     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-DDVrKQD/A",
     "keywords": [
       "Faroe Islands",
@@ -3652,14 +4186,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 106
+    "sortOrder": 106,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DDVrKQD/8/KkVnFDsFJHFLx94DbfbKSNxzZgQtxJjQgp5mHZz72/XL/_WHZ9785_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DDVrKQD/8/KkVnFDsFJHFLx94DbfbKSNxzZgQtxJjQgp5mHZz72/XL/_WHZ9785_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DDVrKQD/8/MnjrQCtHX2qc9sQb45XcGd6TbxcNGXBdFngrJ7BTJ/L/_WHZ9785_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DDVrKQD/8/NWHHDBm7wCtSLcRtQ7w4JX7hz8KzhtWwDcRv3JMDQ/M/_WHZ9785_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-DDVrKQD/8/KNJBhsMg7MTZtmsJxTcp6jnM2Cqg6SQm22nSSgBgK/S/_WHZ9785_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FZXJX87",
     "title": "Faroe Lighthouse 2      Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Lighthouse 2      Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FZXJX87/1/NSxrkLPGZqNrJ3jrdrdt8gsjMVxhZwDbxKPCZg9JF/XL/_WHZ9786_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Lighthouse  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-FZXJX87/A",
     "keywords": [
       "Faroe Islands",
@@ -3686,14 +4225,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 107
+    "sortOrder": 107,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FZXJX87/1/Kx6ZmhTh6jCtpfWwQ5GLFZgXj3ZmXLCPs466mKK5q/XL/_WHZ9786_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FZXJX87/1/Kx6ZmhTh6jCtpfWwQ5GLFZgXj3ZmXLCPs466mKK5q/XL/_WHZ9786_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FZXJX87/1/Kx6ZmhTh6jCtpfWwQ5GLFZgXj3ZmXLCPs466mKK5q/XL/_WHZ9786_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FZXJX87/1/MsNgbTHsXXXdbQkffPJCXhQSPfzXnQwtJqDhfbkb5/L/_WHZ9786_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-FZXJX87/1/KVwXdLMTDpRPsjtmtgcbfZzDrgrBPNz5qhm6nWqFx/S/_WHZ9786_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gdBhfG8",
     "title": "Faroe Lighthouse 2   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Lighthouse 2   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-gdBhfG8/8/LGH8Wt59NLZH836JggG54Cjt7TtWhshTDTKSZn6R7/XL/_WHZ9786_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Lighthouse 2      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-gdBhfG8/A",
     "keywords": [
       "Faroe Islands",
@@ -3720,14 +4264,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 108
+    "sortOrder": 108,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-gdBhfG8/8/M3q3S6Fdtg64nVwdZcCTszDgnHm3ppFQ4TmxhHJv8/XL/_WHZ9786_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-gdBhfG8/8/M3q3S6Fdtg64nVwdZcCTszDgnHm3ppFQ4TmxhHJv8/XL/_WHZ9786_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-gdBhfG8/8/M3q3S6Fdtg64nVwdZcCTszDgnHm3ppFQ4TmxhHJv8/XL/_WHZ9786_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-gdBhfG8/8/KM9T8Chm4fZZsCWkp5Wzp8Mpfb2HJ5gLqvZRvCX8D/L/_WHZ9786_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-gdBhfG8/8/L4JLGTVh2bvdMZtkfN3NkMvK89Rv2vkN8QMQ7rTdz/S/_WHZ9786_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-T8MJpbv",
     "title": "Faroe Lighthouse    Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Lighthouse    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-T8MJpbv/0/LwJvmm4463Nw6m7rhR6V59LFnHcR278g7g8DqH332/XL/_WHZ9796_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Lighthouse 2   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-T8MJpbv/A",
     "keywords": [
       "Faroe Islands",
@@ -3754,14 +4303,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 109
+    "sortOrder": 109,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-T8MJpbv/0/K3bJGK5sGxpGrtkLc4mzbDdPk8X2cZWKbD5DKQ2XM/XL/_WHZ9796_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-T8MJpbv/0/K3bJGK5sGxpGrtkLc4mzbDdPk8X2cZWKbD5DKQ2XM/XL/_WHZ9796_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-T8MJpbv/0/NRQwNpkgXZLrsPZCdh3CGRDHDTpSSvMwZKrPb9JKM/L/_WHZ9796_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-T8MJpbv/0/LbVtCDpf5kq8nvmScnccB5dDmnWNkFms2gnnNWw6s/M/_WHZ9796_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-T8MJpbv/0/MbBp4cksH6JnmFGBHKzhMrbXHFNV2dJRvCNDZvkFg/S/_WHZ9796_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WVGNqs6",
     "title": "Faroe Lighthouse 3  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Lighthouse 3  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LNBZkXq4H6WLDWs6Gn8GgHXqZff9VZM3KvGXVzqrK/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Lighthouse    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-WVGNqs6/A",
     "keywords": [
       "Faroe Islands",
@@ -3788,14 +4342,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 110,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LDzc5vFD8PBz6QDnPVMXgMNmQFm5XsFCSXGf2q6gg/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LDzc5vFD8PBz6QDnPVMXgMNmQFm5XsFCSXGf2q6gg/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LWmp3CQhQGLbBB8j8cLhvWrCGZJbzf82TwfG6bp9P/L/_WHZ9796_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LjNd5Ghk9TrvSd4WMvcKpwwTw7587frxVxXXdsPdj/M/_WHZ9796_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/MqvKcDG4BxZjB3gnd2NLdzXNXmK8sT2WrnF4V6W6j/S/_WHZ9796_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kL2NfSk",
     "title": "Faroe Boats 2   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Boats 2   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kL2NfSk/0/Lc7krcrDnXpNH3TKKqSQkhhj8ZJ2xm9KvWjdTd8Mr/XL/_WHZ9797_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Lighthouse 3  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-kL2NfSk/A",
     "keywords": [
       "Faroe Islands",
@@ -3822,14 +4381,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 111
+    "sortOrder": 111,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kL2NfSk/0/LtR3WvfN4HRKTPG9XdWghzk5mZL36VMMs6WGP7fQs/XL/_WHZ9797_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kL2NfSk/0/LtR3WvfN4HRKTPG9XdWghzk5mZL36VMMs6WGP7fQs/XL/_WHZ9797_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kL2NfSk/0/LtR3WvfN4HRKTPG9XdWghzk5mZL36VMMs6WGP7fQs/XL/_WHZ9797_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kL2NfSk/0/KG9ZH4BrbHtxQNxjNndjbtJhRKqNFBTZdcMfXSrxk/L/_WHZ9797_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-kL2NfSk/0/KsG8CBLfGxXkvR7qQMTNZXc82nXtrQPCD3hmW7JJr/S/_WHZ9797_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2pwdXXJ",
     "title": "Fishing Boats in Faroe   Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Fishing Boats in Faroe   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/MBLr9SggkTGskVBGfD9482fHjqgFm9P9t6rsvmdS3/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
+    "alt": "Faroe Boats 2   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-2pwdXXJ/A",
     "keywords": [
       "Faroe Islands",
@@ -3856,14 +4420,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 112
+    "sortOrder": 112,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/NFTqw22SDKFz2J3sQVPcBndKZfrjvZPNgSJdT7gjk/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/NFTqw22SDKFz2J3sQVPcBndKZfrjvZPNgSJdT7gjk/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/NFTqw22SDKFz2J3sQVPcBndKZfrjvZPNgSJdT7gjk/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/Kw98DDpQQdxFWkfpP98mjXRtQZRFtt3v8M4PSQszZ/L/_WHZ9797_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-2pwdXXJ/8/MG7fV3drTgR46gSVsmFRCpKChCtRD7GmB8Dp5SRjB/S/_WHZ9797_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7bDfPwf",
     "title": "Boats  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Boats  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/MCRmkvNCZ6mn8P3zL7phN9wtNPVRgN2ZJ28P55r65/XL/_WHZ9798_tonemapped-Edit-XL.jpg",
+    "alt": "Fishing Boats in Faroe   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-7bDfPwf/A",
     "keywords": [
       "Faroe Islands",
@@ -3890,14 +4459,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 113
+    "sortOrder": 113,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/MtMrqT9bdXzGzD5n9hN4RQvZzZmtfVdgFtSgXxwmM/XL/_WHZ9798_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/MtMrqT9bdXzGzD5n9hN4RQvZzZmtfVdgFtSgXxwmM/XL/_WHZ9798_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/MtMrqT9bdXzGzD5n9hN4RQvZzZmtfVdgFtSgXxwmM/XL/_WHZ9798_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/KPdb2MS2X28LwmNL2wbhj8McrhpQfTFnJK8wfJFZM/L/_WHZ9798_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7bDfPwf/10/NfKgCwhMgPhWSgfCKx2pxpdNt43h8Czd9nZs36mjx/S/_WHZ9798_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-23tZWBK",
     "title": "Faroe Boats      Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Boats      Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-23tZWBK/1/KHQTQ9PrJtLdwr8W5Nb5XkGvqzBftG86GPpThL8cZ/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
+    "alt": "Boats  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-23tZWBK/A",
     "keywords": [
       "Faroe Islands",
@@ -3924,14 +4498,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 114
+    "sortOrder": 114,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-23tZWBK/1/M6GfRtxbj5MSVRH7J9srgjRmzgZ22TNtv7JF5sNPD/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-23tZWBK/1/M6GfRtxbj5MSVRH7J9srgjRmzgZ22TNtv7JF5sNPD/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-23tZWBK/1/M6GfRtxbj5MSVRH7J9srgjRmzgZ22TNtv7JF5sNPD/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-23tZWBK/1/M79C2wdK7Vwd3gG82fJtx2BKzL7Vtx7J7H7znGdZ5/L/_WHZ9798_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-23tZWBK/1/KzjBL6cqdRGHcktKqvLtfjCFPmhKstf5kKxTwxNWC/S/_WHZ9798_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8btJjgn",
     "title": "Coast of Faroe  25     Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Coast of Faroe  25     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8btJjgn/8/Mk883v278qSzdQNMkQw4ttBV54LhvMjJKHdfVn9Zx/XL/_WHZ9848-Edit-XL.jpg",
+    "alt": "Faroe Boats      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-8btJjgn/A",
     "keywords": [
       "Faroe Islands",
@@ -3958,14 +4537,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 115
+    "sortOrder": 115,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8btJjgn/8/M9FM2FHZzBHRm5dVgKz7btsJj2GZhfJgJGgSPhfsD/XL/_WHZ9848-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8btJjgn/8/M9FM2FHZzBHRm5dVgKz7btsJj2GZhfJgJGgSPhfsD/XL/_WHZ9848-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8btJjgn/8/KLTBqGPF6zQp9KM6zKJvXfvFKJMGWKDC6dGJnHcZZ/L/_WHZ9848-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8btJjgn/8/MTbb79hn6sbSvQW2wfBcCFjzdnpxtFWckc9V5VkPZ/M/_WHZ9848-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8btJjgn/8/LTFMzr6RCJmtVqL3DBck4BVKvgLQTqZz258L5PDZc/S/_WHZ9848-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7QtRc47",
     "title": "Faroe Shelters  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Shelters  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7QtRc47/8/MTx2XcQxL4c744HmrtNGND96wGSBBv3jK36qMsDxv/XL/_WHZ9850-Edit-XL.jpg",
+    "alt": "Coast of Faroe  25     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-7QtRc47/A",
     "keywords": [
       "Faroe Islands",
@@ -3992,14 +4576,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 116
+    "sortOrder": 116,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7QtRc47/8/Kt5kDTLCXkd6mPRV98rVK72m9D6zJj2wV9kcRZDNd/XL/_WHZ9850-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7QtRc47/8/Kt5kDTLCXkd6mPRV98rVK72m9D6zJj2wV9kcRZDNd/XL/_WHZ9850-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7QtRc47/8/KQhHpXbCFTvjBswJHqF6X8jZ6Zpnk95Nq5VJ7BwpK/L/_WHZ9850-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7QtRc47/8/KJnMfcZHprbqS2G8SPj9C5G48c496WBqfQkwfZksN/M/_WHZ9850-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-7QtRc47/8/K5vhB73cbvZBpzKvVL7vQzQBdKZLSnVhGTCWstfzj/S/_WHZ9850-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sdWVBzH",
     "title": "Faroe Shelters  7   Black and White Photography by Wayne Heim",
     "description": "Fine art, black & white, landscape photography of the Faroe Islands.",
-    "alt": "Faroe Shelters  7   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sdWVBzH/1/KL5hfp25pBWmp2WkGRm8mKGD7SSbnZNRkTzKTzCKf/XL/_WHZ9850_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Shelters  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-sdWVBzH/A",
     "keywords": [
       "Faroe Islands",
@@ -4026,14 +4615,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 117
+    "sortOrder": 117,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sdWVBzH/1/MP8cgbJdKFBGxFNbjFbNP9BkDW65Zj4tZDRdpwTwT/XL/_WHZ9850_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sdWVBzH/1/MP8cgbJdKFBGxFNbjFbNP9BkDW65Zj4tZDRdpwTwT/XL/_WHZ9850_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sdWVBzH/1/K2FZj8RHP5w2SHRw5bvk9qcCbTX3Tmr3nPSWdGFfs/L/_WHZ9850_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sdWVBzH/1/K9rTxZMb9T86bhtpP7Hp9zXXr686j5g4R6bwKSRs5/M/_WHZ9850_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-sdWVBzH/1/Khz3cLmVJGhzrQrn2skLLXW8p42drV33SbDVSzhjD/S/_WHZ9850_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LXSxjwP",
     "title": "Faroe Shelters 2  Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Shelters 2  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-LXSxjwP/8/Lz6MFSqdbws2FFD3zqPxbF2wHWp6tVRgTDjKQ9qPz/XL/_WHZ9851_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Shelters  7   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-LXSxjwP/A",
     "keywords": [
       "Faroe Islands",
@@ -4060,14 +4654,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 118
+    "sortOrder": 118,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-LXSxjwP/8/LKpNNrpqnZKqf7WhNDnNkMtc2Z5dMwQbjvqQ2Tn9J/XL/_WHZ9851_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-LXSxjwP/8/LKpNNrpqnZKqf7WhNDnNkMtc2Z5dMwQbjvqQ2Tn9J/XL/_WHZ9851_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-LXSxjwP/8/LKpNNrpqnZKqf7WhNDnNkMtc2Z5dMwQbjvqQ2Tn9J/XL/_WHZ9851_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-LXSxjwP/8/NSh4s8FNzkHPjXSFrrNk3pKvFNFScw52mj2S6zKxT/L/_WHZ9851_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-LXSxjwP/8/MRVWtKrXzK398h7L473zRbZVz8zb93g7sbqmjPJ3d/S/_WHZ9851_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tfFVDTm",
     "title": "Faroe Shelters 5    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Shelters 5    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-tfFVDTm/8/LCs3CLNTCvLGkVqLfCv8nzR6qNhGRgnkGP9XFtvQQ/XL/_WHZ9864_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Shelters 2  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-tfFVDTm/A",
     "keywords": [
       "Faroe Islands",
@@ -4094,14 +4693,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 119
+    "sortOrder": 119,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-tfFVDTm/8/Mhb9s8SZ2f5xCzzdtZG8jsxBtvmb5BbbqVVz4WQ9q/XL/_WHZ9864_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-tfFVDTm/8/Mhb9s8SZ2f5xCzzdtZG8jsxBtvmb5BbbqVVz4WQ9q/XL/_WHZ9864_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-tfFVDTm/8/Mhb9s8SZ2f5xCzzdtZG8jsxBtvmb5BbbqVVz4WQ9q/XL/_WHZ9864_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-tfFVDTm/8/Knr9PTZTbXcKmD7FKC9TnbfGpXnFcD2hJXLqj52t6/L/_WHZ9864_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-tfFVDTm/8/Kn35F49Z7xPkw5FxH62WFGD6LQzTVtzbv6bWfngjt/S/_WHZ9864_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xrzfVbW",
     "title": "Faroe Shelters 6    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Shelters 6    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xrzfVbW/8/KtM2ZBxqwmtrTbS4SgDLmpRRXw3NPz5HXNF9KPNgW/XL/_WHZ9867_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Shelters 5    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-xrzfVbW/A",
     "keywords": [
       "Faroe Islands",
@@ -4128,14 +4732,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 120
+    "sortOrder": 120,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xrzfVbW/8/LSbDb6N4JNcxB28dvsqtxcZL2k7stBRJWpMkTwtw8/XL/_WHZ9867_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xrzfVbW/8/LSbDb6N4JNcxB28dvsqtxcZL2k7stBRJWpMkTwtw8/XL/_WHZ9867_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xrzfVbW/8/Ljg64kvHb4BV9dfpj8PGX323ZZZVKsWC3zPjzxPcc/L/_WHZ9867_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xrzfVbW/8/KrRwsTzKHPDJbgqbLW6VHspcM6GRBHHf7cp2ZQxK4/M/_WHZ9867_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-xrzfVbW/8/MKC8CPMR7mqLrFsfq33HWJt5TQgbJ4jgCvKnzHDZ8/S/_WHZ9867_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-r6t9ZVR",
     "title": "Faroe Shelters 7    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Shelters 7    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-r6t9ZVR/8/Mw3KXGNMh8gJG8VzTszvwkXcJ4bfJjkvwnj23gzX8/XL/_WHZ9873_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Shelters 6    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-r6t9ZVR/A",
     "keywords": [
       "Faroe Islands",
@@ -4162,14 +4771,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 121
+    "sortOrder": 121,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-r6t9ZVR/8/LkmzC2jx4dz9dzDmzRL6RHPrKbj3nKnSq5KpHGJhK/XL/_WHZ9873_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-r6t9ZVR/8/LkmzC2jx4dz9dzDmzRL6RHPrKbj3nKnSq5KpHGJhK/XL/_WHZ9873_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-r6t9ZVR/8/LkmzC2jx4dz9dzDmzRL6RHPrKbj3nKnSq5KpHGJhK/XL/_WHZ9873_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-r6t9ZVR/8/MCnwp2sgBtgrW3qfmdH5hVVzZGBg6QPpSdGPmWfjm/L/_WHZ9873_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-r6t9ZVR/8/LGxpvrqqQKzh5sssVvXbF5vq4wmGgJPtQJxQ5Gjxn/S/_WHZ9873_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JZsNXPN",
     "title": "Faroe Shelters 8    Photography by Wayne Heim",
     "description": "Fine art landscape photography of the Faroe Islands.",
-    "alt": "Faroe Shelters 8    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-JZsNXPN/8/MjqVQscfS3qtNnJV67rtrKbSPdb5vTm37qQ6qdr56/XL/_WHZ9875_tonemapped-Edit-XL.jpg",
+    "alt": "Faroe Shelters 7    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-JZsNXPN/A",
     "keywords": [
       "Faroe Islands",
@@ -4196,6 +4810,51 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 122
+    "sortOrder": 122,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-JZsNXPN/8/Kxn9WMkr7WPzsGBWdf79VJQRMF9MBLVDtdKg2qNkW/XL/_WHZ9875_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-JZsNXPN/8/Kxn9WMkr7WPzsGBWdf79VJQRMF9MBLVDtdKg2qNkW/XL/_WHZ9875_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-JZsNXPN/8/NZ6nThV8fjsc6HLzjsd4z6dfZX9qCctDMp9F9NQtz/L/_WHZ9875_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-JZsNXPN/8/KHwK7XB3qZh7RHdJqgqgKC4xKv39649dTmkx9dFZD/M/_WHZ9875_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-JZsNXPN/8/KDM6qzXqndHQckr34qktW4PcpPQzHCjcHFGKdSSmZ/S/_WHZ9875_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-zW8cTfv",
+    "title": "Looking Out to Sea     Photography by Wayne Heim",
+    "description": "Fine art landscape photography of the Faroe Islands.",
+    "alt": "Faroe Shelters 8    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-zW8cTfv/A",
+    "keywords": [
+      "Faroe Islands",
+      "fine art",
+      "photography",
+      "landscape",
+      "waterfalls",
+      "water",
+      "Atlantic Ocean",
+      "seashore",
+      "waves",
+      "rocks",
+      "villages",
+      "mountains",
+      "cliffs",
+      "houses",
+      "churches",
+      "boats",
+      "rainbow",
+      "lighthouse"
+    ],
+    "story": "Fine art landscape photography of the Faroe Islands.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 123,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

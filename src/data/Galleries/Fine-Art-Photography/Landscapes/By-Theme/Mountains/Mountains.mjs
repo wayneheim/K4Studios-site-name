@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-sTCJ5dz",
-    "title": "The Grand    Photography by Wayne HeimThe Grand is the highest peak in the Grand Teton Mountains of Wyoming.\n ©Wayne Heim",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "The Grand    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/NXZgFbRFwKCHjxWRcmSXrnrBsjpPFbqhRsFnHtmMC/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/A",
     "keywords": [
       "wayne heim",
@@ -38,14 +42,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/KqHFvCVkMhWtWGHNWwMR46DTThwDDP4DKjRxq5ck2/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/KqHFvCVkMhWtWGHNWwMR46DTThwDDP4DKjRxq5ck2/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/KqHFvCVkMhWtWGHNWwMR46DTThwDDP4DKjRxq5ck2/XL/_OLY1590-Pano_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/LKWJZKVrVrnvdxkb2kTnnBpPHH3wcHBqvd5p8rZh3/L/_OLY1590-Pano_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/8/KZCrWBsMT8mQ3ppTMmB3NzNdt4FRjFb4XR9Xx4jVZ/S/_OLY1590-Pano_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WgGWH9C",
     "title": "Majestic Ridge - After the Storm",
     "description": "Majestic Ridge. Etna Wyoming. snow covered mountain side © Wayne Heim",
-    "alt": "Majestic Ridge - After the Storm",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/KkdmKJR2WBpz6MbtCMxpDRFrsJ4VVzDt5zzNdt6mB/XL/P1030226-XL.jpg",
+    "alt": "The Grand    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WgGWH9C/A",
     "keywords": [
       "wayne heim",
@@ -62,14 +71,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/LQsXggRzD5BtzjNhNxFWzXCfBXnfcZGp4DwwkS9S4/XL/P1030226-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/LQsXggRzD5BtzjNhNxFWzXCfBXnfcZGp4DwwkS9S4/XL/P1030226-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/LnCM7GvXfzsQnmktLrsDqVJNphJzB8w5rZDcf6gJz/L/P1030226-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/MV6bfch3nbxnFksKBz7mxW29BcxMwM3JZC36pSdrS/M/P1030226-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/KsH4sPWt75bwm5b99Q9fKZDWnQQTWxSdJ4MLfjDNK/S/P1030226-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TvpKdWW",
     "title": "Sunset Approach    Photography by Wayne Heim",
     "description": "Sunset view of the approach to Zion National Park, Utah. ©Wayne Heim",
-    "alt": "Sunset Approach    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-TvpKdWW/9/L85XdtXCRmnWvDXQMMscBz33wPcwgQ7mXQZ69KJ9f/XL/_WEH8926-XL.jpg",
+    "alt": "Majestic Ridge - After the Storm",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-TvpKdWW/A",
     "keywords": [
       "wayne heim",
@@ -86,14 +100,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-TvpKdWW/9/KpVGhBF63Tpk8kVPStCW3xtfQhckKsrNNVJft4mQr/XL/_WEH8926-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-TvpKdWW/9/KpVGhBF63Tpk8kVPStCW3xtfQhckKsrNNVJft4mQr/XL/_WEH8926-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-TvpKdWW/9/MR4JvTwtNdZMF7vRv7wSLH7qB2dVDKNpQq5brCRF8/L/_WEH8926-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-TvpKdWW/9/MjKVh52qgkK8zTwSJvFMtFgj3xn2Zx4PndXRPv2Hx/M/_WEH8926-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-TvpKdWW/9/L39KQL9Gbn6kr4TT76hKs7FmgjB6ffdvTbdwcH946/S/_WEH8926-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4SmFT2v",
     "title": "Standing Guard   Black & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
-    "alt": "Standing Guard   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KdbpQB8pn8xDKQ3z9xkVPV3xfDN3MfdTpcvnB6j49/XL/_IGP2847-XL.jpg",
+    "alt": "Sunset Approach    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-4SmFT2v/A",
     "keywords": [
       "wayne heim",
@@ -110,14 +129,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KfsS8MRJWVtLcrMwxZfF2g8fCftLJnxTLh6Hhf37Z/XL/_IGP2847-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KfsS8MRJWVtLcrMwxZfF2g8fCftLJnxTLh6Hhf37Z/XL/_IGP2847-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KfsS8MRJWVtLcrMwxZfF2g8fCftLJnxTLh6Hhf37Z/XL/_IGP2847-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/KTG5NJwqGPcTcTvzndvZB26xzt8V77cPNPcFddQ3r/M/_IGP2847-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-4SmFT2v/4/L7323SvjNrQ6HS5VVHp7bcjDpjxhzqqTmJDq2HDSR/S/_IGP2847-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wxLBqLg",
     "title": "Grand Sunset Photography by Wayne Heim",
     "description": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
-    "alt": "Grand Sunset Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/NFC8pcpzQz8N8TzRWNkKNKcvrPw63dRJwkSTVc8Nh/XL/P1030095-c-XL.jpg",
+    "alt": "Standing Guard   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wxLBqLg/A",
     "keywords": [
       "wayne heim",
@@ -134,14 +158,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Mm5fwXCtgHGHkMzKqnnLCR7KZcBvWQD7SQ37xbMGT/XL/P1030095-c-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Mm5fwXCtgHGHkMzKqnnLCR7KZcBvWQD7SQ37xbMGT/XL/P1030095-c-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Nd9tfNXBDcmB62LHtxrQKxhMHQMrzMctf5CCmP32f/L/P1030095-c-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/M2jNXLjQtQ2RtSS9CbzNhRgsNWSTX8K62tJNqbwPc/M/P1030095-c-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/KGq92CzBPQt6RQMVCSkZLpMd34hKc3hnmvpPQ6JrX/S/P1030095-c-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8WSrqG4",
     "title": "Snow Majesty - Photography by Wayne Heim",
     "description": "Snow Majesty - snow covered mountains in Wyoming ©Wayne Heim",
-    "alt": "Snow Majesty - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8WSrqG4/4/MhFRQf4KbnK5VLd6Rs679JS8ps25NZ4SQgn7ZgTLm/XL/Majestic%2520Front-XL.jpg",
+    "alt": "Grand Sunset Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8WSrqG4/A",
     "keywords": [
       "wayne heim",
@@ -158,14 +187,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8WSrqG4/4/NXs8XkH9nfV6HVxBxd6KxHrhzWVPzzzLXNZqSLD9r/XL/Majestic%20Front-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8WSrqG4/4/NXs8XkH9nfV6HVxBxd6KxHrhzWVPzzzLXNZqSLD9r/XL/Majestic%20Front-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8WSrqG4/4/KvsVHXKDXKSq8GxDSr8Z8ssvDPv536RwmfPCFcGB7/L/Majestic%20Front-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8WSrqG4/4/KWLxL9FqNjw79xgC2krHKZWgHzq5kwrzbGp7Hsr4J/M/Majestic%20Front-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8WSrqG4/4/KZp7vxNL62DLRr6q4fVMd8qPXtj8bGz7FPN7pVKfJ/S/Majestic%20Front-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7zGDNJf",
     "title": "Mount Hood at Sunset  Photo by Wayne Heim",
     "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
-    "alt": "Mount Hood at Sunset  Photo by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/Ls837gwrfs643XVhF4QQjZNckBNdBNWwSRBh2sxLQ/XL/_IGP5748-XL.jpg",
+    "alt": "Snow Majesty - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/A",
     "keywords": [
       "wayne heim",
@@ -182,14 +216,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/NPXMfpCxVWQpgDpxGzDGXFhdQ7BcGkSKPG2Vpsgd4/XL/_IGP5748-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/K2fPCN3r4834b9KP8xXC6cW7Z6jwxVM983kh42f5j/L/_IGP5748-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7zGDNJf/11/KD2T3DV4wdnXMLzHWRwGrBFLHB25LjCNH6tLTn6mM/S/_IGP5748-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8hwfnGn",
     "title": "\"Meandering Stream\". Photography by Wayne Heim",
     "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
-    "alt": "\"Meandering Stream\". Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MwqrJG9nbZwMkDgZ4dZK3h2cKMR7rHFGzWTfQGt5x/XL/_IMG6007-XL.jpg",
+    "alt": "Mount Hood at Sunset  Photo by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8hwfnGn/A",
     "keywords": [
       "wayne heim",
@@ -206,14 +245,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MbqLKWfq7zjCHr6zwbgbKzsRZGpkMFWzwCnKXnSxx/XL/_IMG6007-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MbqLKWfq7zjCHr6zwbgbKzsRZGpkMFWzwCnKXnSxx/XL/_IMG6007-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/LwpFV4ScdtmDKskWgV3bvwS8TwQvXhQRqZVXhHmHs/L/_IMG6007-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MR4QTwLSHppQ52vGGFVhrtZ4HMmVNbbCsSLvczD4Z/M/_IMG6007-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MXCtw7kCqmnt6xMWdWGngrFHQMRd7QBNGnr7WR73N/S/_IMG6007-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wtHsJGQ",
     "title": "Old Farm. Photography by Wayne Heim",
     "description": "Old Farm - Sepia photograph of old  Wyoming homestead with mountains in the background- part of Mormon Row. ©Wayne Heim",
-    "alt": "Old Farm. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wtHsJGQ/6/LZzZQH5M5Qvg9mthzpZJ3nWbJZjSZLxNDMHhVMPM9/XL/_IMG6035-XL.jpg",
+    "alt": "\"Meandering Stream\". Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wtHsJGQ/A",
     "keywords": [
       "wayne heim",
@@ -230,14 +274,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wtHsJGQ/6/NLDJZCm3dT62WhDJzf4d8JfgsvgSMJnvBhkzNSzdp/XL/_IMG6035-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wtHsJGQ/6/NLDJZCm3dT62WhDJzf4d8JfgsvgSMJnvBhkzNSzdp/XL/_IMG6035-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wtHsJGQ/6/M2Sc9Vk6zkWpn9zGzkC6JjQ5LjDQ6szxqKvszKzg5/L/_IMG6035-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wtHsJGQ/6/MsBc5257d8X7ckKrFKmz7zKCgBF5xwqFz88Fbg2Pv/M/_IMG6035-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wtHsJGQ/6/KDzkkdsJc5dvtvL24THmZW6wkB5qnmssqgVMX8t7v/S/_IMG6035-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MXKDnVL",
     "title": "Holding Pens. Photography by Wayne Heim",
     "description": "Holding Pens.  Sepia toned photo of old weathered Wyoming holding pens with the Grand Tetons  in the background. ©Wayne Heim",
-    "alt": "Holding Pens. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-MXKDnVL/6/LhtxtxWQh62CXcjxhSnvt5tZK4HzsNnBBKQWDGgTw/XL/_IMG6063-XL.jpg",
+    "alt": "Old Farm. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-MXKDnVL/A",
     "keywords": [
       "wayne heim",
@@ -254,14 +303,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-MXKDnVL/6/KW5pNB9j6GNCMQnQgpQNJKbJXVxm7KxkP5MQpvtqM/XL/_IMG6063-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-MXKDnVL/6/KW5pNB9j6GNCMQnQgpQNJKbJXVxm7KxkP5MQpvtqM/XL/_IMG6063-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-MXKDnVL/6/MJmKCLfQNTSfX6333Nhq5j87svDXn8PkK5hF9XswF/L/_IMG6063-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-MXKDnVL/6/MjcvQQ8RfQ5hJMKzZjXTSsd4mdLZ9gF62GGJLDMPL/M/_IMG6063-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-MXKDnVL/6/MjcvQQ8RfQ5hJMKzZjXTSsd4mdLZ9gF62GGJLDMPL/M/_IMG6063-M.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8XNRjZF",
     "title": "View from the Past: The Tetons",
     "description": "View from broken window in one of the old building on Mormon row in Jackson Hole Wyoming. Dark black inside creates the perfect frame inside the frame of the picture of the mountains. Black isolation is perfect balance to the rustic isolation of the Old West.© Wayne Heim",
-    "alt": "View from the Past: The Tetons",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MrgZ3TtkgxdML89hc8668gnZdMr6KcJBGCGpjsGds/XL/_IMG6130-XL.jpg",
+    "alt": "Holding Pens. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8XNRjZF/A",
     "keywords": [
       "wayne heim",
@@ -278,14 +332,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MDQSkn9HrRGrJZFPtmbMpbhh9wpg5MhLgMsfFqXc3/XL/_IMG6130-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/MDQSkn9HrRGrJZFPtmbMpbhh9wpg5MhLgMsfFqXc3/XL/_IMG6130-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/LQgvwZjXK23Rkc9WJ4RvfXJgdZwBrvt6rv2XmRR2t/L/_IMG6130-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/LFCngTrmkkBGLk2T5ZjBfQPzKFg9vNjn22M4GHJxH/M/_IMG6130-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8XNRjZF/4/Mp6phkXspGwzDBknJMMg6ZPX36f4bGgbcCpfGDmkw/S/_IMG6130-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PVbJdpj",
     "title": "Old Fence - Black & White Photography by Wayne Heim",
     "description": "Old Fence - old weathered fence that had fallen down in Wyoming. ©Wayne Heim",
-    "alt": "Old Fence - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NSd3PDZVPkwnnt43K5xGXSnmDjXcKtLGthvLBZWTF/XL/_IMG6295-XL.jpg",
+    "alt": "View from the Past: The Tetons",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-PVbJdpj/A",
     "keywords": [
       "wayne heim",
@@ -302,14 +361,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/MGrSTLCqgxRFXZNMzZTnZTGkGbXwNxjtxWR3MW6Q2/XL/_IMG6295-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/NbVPgnZ82nCvN6mKLcKHsR2PjThBHGPMG4q2BbZCz/L/_IMG6295-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-PVbJdpj/4/L9jwRQT3W7wbCLdPcwXTdNTPPMkC9xVRtRT9hMxpm/S/_IMG6295-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-74rc8wb",
     "title": "Out for a Walk",
     "description": "A single cowboy sets the seen as he takes a walk on Mormon Row, Jackson Hole Wyoming- This is the T.A. Moulton Barn, one of the most iconic barns in America on Mormon Row just outside of Jackson Hole Wyoming. Fall is one of the best time to take pictures of this area as the golden hues of the aspens and grass play off of the blue mountains and dramatic Teton backdrop. ©Wayne Heim",
-    "alt": "Out for a Walk",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/LztbDsVg97kCz7h498TWhJzHRBCnSrdB35cF9rBCV/XL/_IMG6310-XL.jpg",
+    "alt": "Old Fence - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-74rc8wb/A",
     "keywords": [
       "wayne heim",
@@ -326,14 +390,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/LHBC25HP5wnzWFJ8mnwcvBDkQ4tbtRQt9X62GZjFz/XL/_IMG6310-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/LHBC25HP5wnzWFJ8mnwcvBDkQ4tbtRQt9X62GZjFz/XL/_IMG6310-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/KJ9RjPjHxv5CMLs5LR2cZXXW6TXw27FbvLXF69QSP/L/_IMG6310-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/NGHrFLvCFNQngmwwDgpq5NM95MSqZVHsfHtvW29s7/M/_IMG6310-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-74rc8wb/4/M2VgMwdnbQvd5rBLkXt9c5GDpmFWxC8ksGm5wNJX8/S/_IMG6310-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xZH95Bj",
     "title": "Tetons on the Outside",
     "description": "Teton Mountain view looking out of the open barn door.. Looking out an old barn door at the Tetons. Dark isolation of inside of barn is shattered by the light streaming inside breaking the silence, while lurking in the distance is a view of the Grand and the Teton mountain range. ©Wayne Heim",
-    "alt": "Tetons on the Outside",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/LkZMgr9JHMw2Lzzcf34GfCw86T87gpsZt5445r5ZP/XL/_IMG6333-2-XL.jpg",
+    "alt": "Out for a Walk",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xZH95Bj/A",
     "keywords": [
       "wayne heim",
@@ -350,14 +419,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/K6vZMjBHgPrPF3RSDS4M6rf9KLV77cdchCHTw6MCn/XL/_IMG6333-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/K6vZMjBHgPrPF3RSDS4M6rf9KLV77cdchCHTw6MCn/XL/_IMG6333-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/K6vZMjBHgPrPF3RSDS4M6rf9KLV77cdchCHTw6MCn/XL/_IMG6333-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/LJsdPWkdRW58GMNWznTt7gVqBBnbWKfP2n24nRrvm/L/_IMG6333-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-xZH95Bj/4/NSfQjFBC7nSqFrmTL2rXmgtQCPNND8bCP4s6wDS4j/S/_IMG6333-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Bdbf3L9",
     "title": "The Great Protectors - by Wayne Heim",
     "description": "Between Trees - T.A. Moulton Barn, a famous old barn, is viewed between or guarded by two cottonwood trees. The great golden protectors perfectly frame the scene and focus the attention on the barn and the Tetons in the background.  © Wayne Heim",
-    "alt": "The Great Protectors - by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LPphtn4MNHxnG56s4XL6C945PXTwcJk8Pc7RTBb94/XL/_IMG6391-XL.jpg",
+    "alt": "Tetons on the Outside",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Bdbf3L9/A",
     "keywords": [
       "wayne heim",
@@ -374,14 +448,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LW5kVVz87p9QBdFCChS79XrtVKxbk3mBZL9bsn94w/XL/_IMG6391-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/LW5kVVz87p9QBdFCChS79XrtVKxbk3mBZL9bsn94w/XL/_IMG6391-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/NG3ZTKM44BTrs9zX48nCRstzNKhDH9HZjcXvvq4Fx/L/_IMG6391-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/KxzTWPLMGzMgqfjTBxcKZ8mP6JX3ZXcbrtkfbczZk/M/_IMG6391-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-Bdbf3L9/5/KTr2RQMSv5j7CJ2cDCMXd95jkk6xkRTZQx3zpgZ7M/S/_IMG6391-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-98c9sG9",
     "title": "Coming Fall  Photography by Wayne Heim",
     "description": "Trees begin to change color as fall approached in shadow of the Tetons. ©Wayne Heim",
-    "alt": "Coming Fall  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-98c9sG9/4/M4HTK6N2kK3wsVrj8b6HjFfRkC3s8pJn4NtwBKnzQ/XL/_IMG6410-XL.jpg",
+    "alt": "The Great Protectors - by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-98c9sG9/A",
     "keywords": [
       "wayne heim",
@@ -398,14 +477,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-98c9sG9/4/MfXS52C6XNSPGph8dfXrDb7r86Zs3mnJNRMSdcMTS/XL/_IMG6410-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-98c9sG9/4/MfXS52C6XNSPGph8dfXrDb7r86Zs3mnJNRMSdcMTS/XL/_IMG6410-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-98c9sG9/4/KNk5CFpKWvbNbGQmqPj4CCj5KdQNksGW3TfMwrSRz/L/_IMG6410-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-98c9sG9/4/LS64cq9tsz2MB5MCNKsVVP94mSpJjNGGGLQjd2Tp3/M/_IMG6410-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-98c9sG9/4/LPvRvb75JK9m5gx7BKnNpRZqJg343vf48PDLbsFV6/S/_IMG6410-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WJvRGjn",
     "title": "Young Trees    Photography by Wayne Heim",
     "description": "Small group of trees stand in field in shadow of the Tetons. ©Wayne Heim",
-    "alt": "Young Trees    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WJvRGjn/4/LbVskRmhdq9xF2F7DqKWcG7kn89FGcCkdVKtZD6Sz/XL/_IMG6448-XL.jpg",
+    "alt": "Coming Fall  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WJvRGjn/A",
     "keywords": [
       "wayne heim",
@@ -422,14 +506,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WJvRGjn/4/KVqVXZf2HPBcNKnHkWkCFgLnKbw26BtmGvRng55X4/XL/_IMG6448-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WJvRGjn/4/KVqVXZf2HPBcNKnHkWkCFgLnKbw26BtmGvRng55X4/XL/_IMG6448-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WJvRGjn/4/MLRfFzNHpDR6DXLCpRsTXq3qDK7RSftb8tc85jLp9/L/_IMG6448-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WJvRGjn/4/KtVS4Lxj9ptDGN2v8q38QFwQMD22Ngfg3ZsWC2bKR/M/_IMG6448-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WJvRGjn/4/K5XhzpwxCSTd5x246mpg2ZQZzLB8HhWKdvn6Z37tQ/S/_IMG6448-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Rpvhss3",
     "title": "Rio - Black & White Photography by Wayne Heim",
     "description": "Rio - shot of Rio de Janerio, Brazil including the mountain with the statue of Christ the Redeemer (Cristo Redentor). ©Wayne Heim",
-    "alt": "Rio - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-Rpvhss3/2/NRG5QkG9B8dgb76VdD6sGgcMsJzG9f7HDshfvpCGW/XL/i-Rpvhss3-XL.jpg",
+    "alt": "Young Trees    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Rpvhss3/A",
     "keywords": [
       "wayne heim",
@@ -446,14 +535,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/photos/i-Rpvhss3/2/LSNg8SNxtQn8h9bPTVrJJmXxpxXPvQqNQdsGdGjvx/XL/i-Rpvhss3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-Rpvhss3/2/LSNg8SNxtQn8h9bPTVrJJmXxpxXPvQqNQdsGdGjvx/XL/i-Rpvhss3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-Rpvhss3/2/MvhgbjCpwcwk52n9LQ6xDzL4pZMJFqvZtgRM2PRDF/L/i-Rpvhss3-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-Rpvhss3/2/MfqmW2NnnNTDXVmdbZMM53DKdpLNQpdDhpsG8J7jq/M/i-Rpvhss3-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-Rpvhss3/2/K6P3fHg4Jr6WsMSJZwnd25WsW2Gqxb89knZvvgNqT/S/i-Rpvhss3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LgrdsMQ",
     "title": "Rio    Black and White Photography by Wayne Heim",
     "description": "Rio de Janerio in Brazil ©Wayne Heim",
-    "alt": "Rio    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/Kg5QWwnDkbfx5rVcBScMspjQhM4L6w9HwxwRxtTtv/XL/i-LgrdsMQ-XL.jpg",
+    "alt": "Rio - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-LgrdsMQ/A",
     "keywords": [
       "wayne heim",
@@ -470,14 +564,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/L7CJMB9MHVBBCDPFFkwFZnL7ZvFfMtMNgD3pH7BHS/XL/i-LgrdsMQ-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/L7CJMB9MHVBBCDPFFkwFZnL7ZvFfMtMNgD3pH7BHS/XL/i-LgrdsMQ-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/KhkKMK76LfZ4sjttDjqcBVt5SPJ6fP2ktCBNqWK8Q/L/i-LgrdsMQ-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/Mm7TGzb2rq6zMTmmFf2GCLXgsMbnnhx8kDxGDqh9g/M/i-LgrdsMQ-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-LgrdsMQ/4/L8mSWnJ4pKW8X4mWT4nf2Z9n3WTXFDnd3J9zWxCW8/S/i-LgrdsMQ-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mcrrSZ2",
     "title": "Another View    Photography by Wayne Heim",
     "description": "Another view of the famous Moulton Barn in Wyoming.  ©Wayne Heim",
-    "alt": "Another View    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/LJv7hNzSmJdzQjL8PqDG9sGz6HG2Lk4VvWTT8p4rn/XL/_WHZ7717-XL.jpg",
+    "alt": "Rio    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-mcrrSZ2/A",
     "keywords": [
       "wayne heim",
@@ -494,14 +593,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/NfdMxK4xr34Fq3h8PBNh6W39K5HbB3Xv2pvvZ7n6V/XL/_WHZ7717-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/NfdMxK4xr34Fq3h8PBNh6W39K5HbB3Xv2pvvZ7n6V/XL/_WHZ7717-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/M6HLRGqB7Nhpv7L7CXCc7vHt6VTwxsv5QGj7c3KRS/L/_WHZ7717-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/LDnKL2WXKSDVMcHjnkZDr82K2r55SdS78d52GhMjk/M/_WHZ7717-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/KSG4xdkVPDLQdskbXS7MjNjFn7wjBRLFpkMFBzzsw/S/_WHZ7717-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9Zv7LRm",
     "title": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
     "description": "Famous Moulton Barn seen through two trees. Grand Tetons rise up behind this in Wyoming. ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/LG5HRcg7GntKTcQLbpZkHMSXgXwDxRWmtLfDDh7tP/XL/_WHZ9589-2-XL.jpg",
+    "alt": "Another View    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-9Zv7LRm/A",
     "keywords": [
       "wayne heim",
@@ -518,14 +622,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/LRvgjpwgPf6rKXCJ8xrWTVZ8B5rfwv5nHFFkcRfZN/L/_WHZ9589-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MxFDvJ4xdzrHrgFMS59C7FtWLFwXnJBrSKc2hK96z/S/_WHZ9589-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wnBw2xt",
     "title": "Church in the Country  Photography by Wayne Heim",
     "description": "Little church is nestled in the countryside of Iceland. ©Wayne Heim",
-    "alt": "Church in the Country  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wnBw2xt/7/MHcM3bMXLFV8KqKLFwXLk5Bsx7vFvp8vnqXq9DBNt/XL/_WHZ0990-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wnBw2xt/A",
     "keywords": [
       "wayne heim",
@@ -542,14 +651,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wnBw2xt/7/KfSsCJBxDXtvcbghB2nzn4KfTvQdCnxbRK5x4fdMq/XL/_WHZ0990-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wnBw2xt/7/KfSsCJBxDXtvcbghB2nzn4KfTvQdCnxbRK5x4fdMq/XL/_WHZ0990-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wnBw2xt/7/LtBDkXm3pdHKM8PdmSdrHQKs9npmBLJKd2MJdJtb4/L/_WHZ0990-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wnBw2xt/7/NJrtqQQMMBVSfCxJmW59bj8MJwHpTwCQSC739qtnC/M/_WHZ0990-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-wnBw2xt/7/LWcHpBFG24jF2wgtkW424cHRvFs7PDb6TwK8hwZnK/S/_WHZ0990-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gsFcMFJ",
     "title": "Top Crop    Photography by Wayne Heim",
     "description": "Rock outcropping on the top of a hill in Iceland. ©Wayne Heim",
-    "alt": "Top Crop    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-gsFcMFJ/7/KGSgB4MqpN4XWWP46Jw3zmxJcQXLdH6T2BzV7XPCK/XL/_WHZ1793_tonemapped-XL.jpg",
+    "alt": "Church in the Country  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-gsFcMFJ/A",
     "keywords": [
       "wayne heim",
@@ -566,14 +680,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-gsFcMFJ/7/KFXjX33C8rZ9LzHWjQ2pz6xmQnQw4q8xJwprdFSkZ/XL/_WHZ1793_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-gsFcMFJ/7/KFXjX33C8rZ9LzHWjQ2pz6xmQnQw4q8xJwprdFSkZ/XL/_WHZ1793_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-gsFcMFJ/7/LvGQX6qW3vcpzsFq9dp9RNthWNGrdb3D8V4dFbhnB/L/_WHZ1793_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-gsFcMFJ/7/Knbmh25kLSxhts9NqhXBPxSWCW6JVNgN2qm3MqPrw/M/_WHZ1793_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-gsFcMFJ/7/KQGmGJnxNF7cXBbgQSDN4DZS4pkxTPGp45PghzRN4/S/_WHZ1793_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2DcTtvw",
     "title": "Landscape of Rock Mountain  Photography by Wayne Heim",
     "description": "Part of the Rock Mountain landscape and fields of Ye in Iceland.  ©Wayne Heim",
-    "alt": "Landscape of Rock Mountain  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw/7/NVq5qsxbFQFxCwRF2m8vMqPtxk56vjsvzZkfjGR98/XL/_WHZ2226-XL.jpg",
+    "alt": "Top Crop    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw/A",
     "keywords": [
       "wayne heim",
@@ -590,14 +709,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw/7/MWBgR8tN636wDPfRxwwvbc4pvBmnKJQbqwWdwz5tg/XL/_WHZ2226-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw/7/MWBgR8tN636wDPfRxwwvbc4pvBmnKJQbqwWdwz5tg/XL/_WHZ2226-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw/7/Mpwd83dvF6LbBGmPNnBsZzRB2w5zLMdq9dpL3D9wV/L/_WHZ2226-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw/7/NZjHzpVP5PPsbMfNLJpPTcRDVWhndhfgS6wdNTq6S/M/_WHZ2226-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2DcTtvw/7/MCCX5tCWV9nwc5TdTZhVtSpd6QnbsgRBMHPTJJVZP/S/_WHZ2226-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xVS6dxc",
     "title": "Flowers and Mountains   Photography by Wayne Heim",
     "description": "Lupin flowers bloom in the foreground while the mountains of Iceland rise majestically in the background.  ©Wayne Heim",
-    "alt": "Flowers and Mountains   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xVS6dxc/7/KXSXsc6DZdKLxZrnkxhbLQ8pB2JvhxXgX68ZkkWmb/XL/_WHZ2355_tonemapped-XL.jpg",
+    "alt": "Landscape of Rock Mountain  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xVS6dxc/A",
     "keywords": [
       "wayne heim",
@@ -614,14 +738,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xVS6dxc/7/MffHRNpw3DxW8x3gb6ztkgT4zWmWJVQw4v8nd3qKN/XL/_WHZ2355_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xVS6dxc/7/MffHRNpw3DxW8x3gb6ztkgT4zWmWJVQw4v8nd3qKN/XL/_WHZ2355_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xVS6dxc/7/MjLPX9JcWb6cQ4mSDBQWrXTJwf5tHWcw8NC4j5B4q/L/_WHZ2355_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xVS6dxc/7/L4t2MpKbh2wsC3kTD5WD6r3m6tXw7Wwd2wSGKmPvJ/M/_WHZ2355_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-xVS6dxc/7/LF6vzLHhphWpmDrCht4N4vRNvnqFcLTMW7MdfX4Rg/S/_WHZ2355_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Mf7gmw7",
     "title": "Road to Church  Photography by Wayne Heim",
     "description": "Road leading to as small country church.\n©Wayne Heim",
-    "alt": "Road to Church  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Mf7gmw7/8/NbtXX7zVPZ6Md4xtQ7BK7hCqwMZXzwqfhF8qktRVc/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Flowers and Mountains   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Mf7gmw7/A",
     "keywords": [
       "wayne heim",
@@ -638,14 +767,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Mf7gmw7/8/MRK8Rz4NKKF8MZjH2WztfKGzWR82Q5pfQZW6kx2xd/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Mf7gmw7/8/MRK8Rz4NKKF8MZjH2WztfKGzWR82Q5pfQZW6kx2xd/XL/_WHZ9257_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Mf7gmw7/8/LZ4BTf5HFR9qzrcjbrGkZ5bqbmbRB3LN2tssXCKRp/L/_WHZ9257_tonemapped-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Mf7gmw7/8/Kj46F3QDJvkxcc8Fsvrk5VgW8KRSp94LcsB2hbs7k/M/_WHZ9257_tonemapped-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Mf7gmw7/8/MQ3ZCS8pQxm6CQLvRJSd9qNfT3BVC9CzQRMxbnXkm/S/_WHZ9257_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZfJzXjP",
     "title": "Open Road   Photography by Wayne Heim",
     "description": "Road winds through the country side in Iceland. ©Wayne Heim",
-    "alt": "Open Road   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZfJzXjP/9/Kb9SP25JQFh4C6qNm5TCj8SmnB5P8qXNCvsLrBxsD/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
+    "alt": "Road to Church  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZfJzXjP/A",
     "keywords": [
       "wayne heim",
@@ -662,14 +796,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZfJzXjP/9/L8QdGCLBqSN5KW6kpXbjW7SVFwHmM2Q5NpTXs4M24/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZfJzXjP/9/L8QdGCLBqSN5KW6kpXbjW7SVFwHmM2Q5NpTXs4M24/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZfJzXjP/9/NKwWCtSnNJnKxFv4vPBW5L2kwFbj2SRsBbcVnQGnb/L/_WHZ9362-Pano_tonemapped-Edit-4-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZfJzXjP/9/LVsjGSbQV838bnNxGw4XKdhgZtBVRGJxsx7cg33Z5/M/_WHZ9362-Pano_tonemapped-Edit-4-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZfJzXjP/9/NfvvdFK6RCbdNmJDTCVtzXPJ4xQ67bJBJCPHQsmN5/S/_WHZ9362-Pano_tonemapped-Edit-4-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tM7nXPd",
     "title": "Overlook",
     "description": "Collection of the Best Iceland fine art landscape photography.",
-    "alt": "Overlook",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/MHhRdfkgQc3HK6LCmD8jfn5t9v6szdG9zzLpKSqBL/XL/_DSF1636-Edit-2-XL.jpg",
+    "alt": "Open Road   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-tM7nXPd/A",
     "keywords": [
       "wayne heim",
@@ -686,14 +825,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/Lr63zc9cspD7vbPbqsRVpdS74BK9KXH9kVMtCB4rq/XL/_DSF1636-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/Lr63zc9cspD7vbPbqsRVpdS74BK9KXH9kVMtCB4rq/XL/_DSF1636-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/KvBZNzLttJrVTN5ZTZqcVmJpLZprbDjNqwb2jBtTM/L/_DSF1636-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/M2bBZWGrNGSndZfK49kWTtRgBhFzJzNjR6jMCCdZ8/M/_DSF1636-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-tM7nXPd/7/MHdwqMZ3s3GmCLHxcQ54Hc4vqtpvG4bv6mG3khrXb/S/_DSF1636-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RHkxK9x",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/0/LB79V38pbSRS65CgnJLB7kRBpGBhJWWQF84gw527F/XL/_O1H1108-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Overlook",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/A",
     "keywords": [
       "wayne heim",
@@ -710,14 +854,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/0/KzrW8CkVJgPrzbvtGKThxFMWktk9wB3NRHZt5c4Jf/XL/_O1H1108-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/0/KzrW8CkVJgPrzbvtGKThxFMWktk9wB3NRHZt5c4Jf/XL/_O1H1108-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/0/LznNDr3Kj8bJKLtqzT4rZZtzf5zVKLLFDnbtx6jzt/L/_O1H1108-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/0/MqrKJvQ35h8PSGRcPDRntNJzbVLq9bcdJdgf3RPNz/M/_O1H1108-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/0/NGQgkwcXhjwxwHQPkvd96MQVFMcLbjdDggrW3BdcQ/S/_O1H1108-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7jBKDJ9",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/0/MtqNv5JKwv6SZJvhPSqZMxtNhKd2qNbNhMtjmJRpg/XL/20230714_155954-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/A",
     "keywords": [
       "wayne heim",
@@ -734,14 +883,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/0/Mwjgcg66KtsFSrwnqmPxvCJbP5LPZszNRDZcgKDFK/XL/20230714_155954-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/0/Mwjgcg66KtsFSrwnqmPxvCJbP5LPZszNRDZcgKDFK/XL/20230714_155954-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/0/MPM6VCRX7kMqNv9rgjHmc5vDJNNJS2VMBWPh939h4/L/20230714_155954-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/0/LdcVLBLf3gkNLw8FKdzGjdxfXk68X43d39ncNs549/M/20230714_155954-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/0/LZQ9Q3X3vQNndBKXV2BgtDFMh8XjL82RWjd5CdhLm/S/20230714_155954-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Lc9fCHw",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/0/NMMBhhBGcx9DTV89bTXWsnSvPqnq2Kc244Rt9gKjD/XL/_O1H1690-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/A",
     "keywords": [
       "wayne heim",
@@ -758,14 +912,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/0/KtRkhkF7SD6FxtGnjkvncLzrQHWvF7Dg4NjKhHXFj/XL/_O1H1690-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/0/KtRkhkF7SD6FxtGnjkvncLzrQHWvF7Dg4NjKhHXFj/XL/_O1H1690-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/0/KvKLGjDRnTWPpcW8QHwWB77HNjgV6fSTmzMpQcNBt/L/_O1H1690-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/0/MZ8SDd2kRsTnj36qQLWgH7LW3wMtmdnqgz3Qdf9gp/M/_O1H1690-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/0/LTMvsZ2fXbdTPZ4PFqZd9z6Q6QDhktgXsPK3Hbt85/S/_O1H1690-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-35gFhbt",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/0/KRx3t8CL3knd6FKXPTcHghst7v4nHrgmTrtRGQdj3/XL/_O1H1947-Edit-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/A",
     "keywords": [
       "wayne heim",
@@ -782,14 +941,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/0/Mm8pTpptMHCtz5DrCbRbFjhM9BT2rqtR469LddTzN/XL/_O1H1947-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/0/Mm8pTpptMHCtz5DrCbRbFjhM9BT2rqtR469LddTzN/XL/_O1H1947-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/0/L4w7DBTp9JTphBS32frT7WGTXndtCMVVMdqMC4pmD/L/_O1H1947-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/0/L6kZdWvgL6FdNfsxmRmp5J2Nv4T6vjBKgKVzzVML3/M/_O1H1947-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/0/Lkxwsr6MkKpjrX25gfZWVGsPnQzQ47SjBMvrJF6d8/S/_O1H1947-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Qs5qL2f",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/0/MRhC92hfHd7nzNS3LSZhPS7SVhwWP6trzd9hnkp2S/XL/_O1H2191-Enhanced-NR-462-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/A",
     "keywords": [
       "wayne heim",
@@ -806,14 +970,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/0/MRMcb5CMpQbgFpsgMdfTk7DFJWqGL66kvq9J5nf6X/XL/_O1H2191-Enhanced-NR-462-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/0/MRMcb5CMpQbgFpsgMdfTk7DFJWqGL66kvq9J5nf6X/XL/_O1H2191-Enhanced-NR-462-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/0/K4hQkPNr9nncXWZWRRfJwxfZwJV2KJ9fL45pCFLdM/L/_O1H2191-Enhanced-NR-462-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/0/NgXqmdxhWQqGpMpdXwLbh29CpVBXhtJwjXC82dVKJ/M/_O1H2191-Enhanced-NR-462-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/0/KLnNqxkTZ8qbxLGv6GLm8J5Cp2HbbjFvr6zqPhwcj/S/_O1H2191-Enhanced-NR-462-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2znG97v",
     "title": "Head in Clouds  -  Black & White Photography by Wayne Heim",
     "description": "Head in Clouds - cloud drifts towards the top of a mountain in Wyoming.©Wayne Heim",
-    "alt": "Head in Clouds  -  Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-2znG97v/3/LtrmtnSnWjJBPhT9DBd4WNL4h9LVPt7BZ4zZffdFC/XL/_IGP5161-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-2znG97v/A",
     "keywords": [
       "wayne heim",
@@ -830,6 +999,41 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-2znG97v/3/MMzBW7NsNF8dmDVg3wh5ZHkrZFh6hLbLCV9RrSqjw/XL/_IGP5161-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-2znG97v/3/MMzBW7NsNF8dmDVg3wh5ZHkrZFh6hLbLCV9RrSqjw/XL/_IGP5161-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-2znG97v/3/McPV5hZNGwN9rXtK2k6x6wZzFKJ5KKRQdBXLfgcGT/L/_IGP5161-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-2znG97v/3/NLJxVZGqd4CPKjXJRJCfL4m633N6Vk5rmgj2jxqpM/M/_IGP5161-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-2znG97v/3/KhvjkRpbFhjmMCqBnnRwbjpm8kLntgvmSXb7fP8jX/S/_IGP5161-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-BzsKZNR",
+    "title": "Canoe s for Rent.    Photography by Wayne Heim",
+    "description": "Fine art landscape photography of Glacier National Park and Montana.",
+    "alt": "Head in Clouds  -  Black & White Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-BzsKZNR/A",
+    "keywords": [
+      "wayne heim",
+      "landscape photography",
+      "landscape",
+      "nature photography",
+      "nature",
+      "mountains",
+      "grand tetons",
+      "k4 studios"
+    ],
+    "story": "Fine art landscape photography of Glacier National Park and Montana.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 34,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

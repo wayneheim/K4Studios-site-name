@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-6Vj6H86",
-    "title": "Long View of Letchworth Canyon   Black & White Photography by Wayne HeimFine art landscape photography of Letchworth State Park in New York.",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/MF8rg4Pvmcsc9FrnqLB5X8gR4W7rTQ7hW6CJGLF7F/XL/_IMG6809-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6Vj6H86/A",
     "keywords": [
       "New York",
@@ -56,14 +60,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/KcW3xZTDbhNHWH3vq996zHQCPrZgGP2RnjWjCW9hN/XL/_IMG6809-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/KcW3xZTDbhNHWH3vq996zHQCPrZgGP2RnjWjCW9hN/XL/_IMG6809-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/L36mrF8Lw3WmXFK8cQxPpMBJGx9j4Gpv7GZRkfnFW/L/_IMG6809-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/NbHmWSHTw4Zspn59pWjCH9T4bgSKtmW5f7vz8zGNN/M/_IMG6809-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-6Vj6H86/3/NHvqDBwRSL3NWCfNTXXWbtWMfRbnSHhv5M9b2d2VG/S/_IMG6809-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BZZRZwC",
     "title": "Around the Bend. Black and White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Around the Bend. Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/NR6qVhzhxJc892hqbgBZ3rn3tfCMMmppfhqZj2bgh/XL/_IMG6812-XL.jpg",
+    "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BZZRZwC/A",
     "keywords": [
       "New York",
@@ -98,14 +107,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MjQfGjZDFmc4jsWfQR6JNXW9SMmcjrwHS9XzBC7xZ/XL/_IMG6812-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MjQfGjZDFmc4jsWfQR6JNXW9SMmcjrwHS9XzBC7xZ/XL/_IMG6812-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MjQfGjZDFmc4jsWfQR6JNXW9SMmcjrwHS9XzBC7xZ/XL/_IMG6812-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MJ4bJtNbV7RXrhGG9XTRbDMxCcgjZtFfcr9x8FzXc/L/_IMG6812-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-BZZRZwC/3/MC94xdnwtmSbZgT5hW5f6nd7D69XL2JwvPmqJ3Gsf/S/_IMG6812-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nVXX6Fn",
     "title": "Rushing Water  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Rushing Water  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/KFQCBMwCnRB6TCqGt7hHMMwTPNTWCgSvnv7zCWPSX/XL/_IMG6823-XL.jpg",
+    "alt": "Around the Bend. Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nVXX6Fn/A",
     "keywords": [
       "New York",
@@ -140,14 +154,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/NgL5zmmcmKR5JTZNXSTf7Xj556phPkQVjLW8kCLm7/XL/_IMG6823-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/NgL5zmmcmKR5JTZNXSTf7Xj556phPkQVjLW8kCLm7/XL/_IMG6823-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/NgL5zmmcmKR5JTZNXSTf7Xj556phPkQVjLW8kCLm7/XL/_IMG6823-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/Kv9w5ggN5KLMBHFnZJxz7Qkz3W8BkFn9C2hcdXd7R/L/_IMG6823-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-nVXX6Fn/3/L3h9HSCDqv8SCL3n4dMCnBRfjTsvmr78CxcWZP5Ch/S/_IMG6823-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KVgw4cV",
     "title": "Log Above Falls  Bllack & White Photography by Wayne Heim",
     "description": "Fine art landscape photography of Letchworth State Park in New York.",
-    "alt": "Log Above Falls  Bllack & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/MDXsST5PkdzhMbZbMcPPdZPvdVxGTPMkZ4PGRN5BC/XL/_IMG7072-XL.jpg",
+    "alt": "Rushing Water  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-KVgw4cV/A",
     "keywords": [
       "New York",
@@ -182,14 +201,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/NNKNfLQbdQxKhLRVkQwCJvbBQKxwQW2XM4r2DpQsK/XL/_IMG7072-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/NNKNfLQbdQxKhLRVkQwCJvbBQKxwQW2XM4r2DpQsK/XL/_IMG7072-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/MBvS2WC9HF3TqPTwFZMPwV3HCTQNgkcRG49fjWJSq/L/_IMG7072-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/M4B7vdDsSzPPsVjCCjVJZjX7R9L3LhbcNBsmj7vDT/M/_IMG7072-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Letchworth-State-Park/i-KVgw4cV/3/LSc8wQVDBntBZfvwXW3vxs5c2qFPhS4C4ZCdJ7SNq/S/_IMG7072-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gHjq9S9",
     "title": "Canyon Stream   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Canyon Stream   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LRtKqMHnCJPKWDmCFgrT7T4mMgTw3bwttNGMbpJC8/XL/_W3H9702_tonemapped-XL.jpg",
+    "alt": "Log Above Falls  Bllack & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gHjq9S9/A",
     "keywords": [
       "New York",
@@ -224,14 +248,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LgDQr5SnM2ZrHZkM9DDfwHMshQc4xRxhcXS4HbJkj/XL/_W3H9702_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LgDQr5SnM2ZrHZkM9DDfwHMshQc4xRxhcXS4HbJkj/XL/_W3H9702_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/LgDQr5SnM2ZrHZkM9DDfwHMshQc4xRxhcXS4HbJkj/XL/_W3H9702_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/M6dkfdGjdk7BBzQgGR4N6SRQbJ3Rfp42Gf6hrTcmt/L/_W3H9702_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-gHjq9S9/5/MgBGh2Rcp6qtBkMsxXR9rJLdMjtWJxBC6TJscCNKg/S/_W3H9702_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xbVp2GS",
     "title": "Ravine Waterfalls   Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Ravine Waterfalls   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/MwhPGGhLFsLR5pVBLcDPr2RqV5sJKx548Sbx29rhw/XL/_W3H9740-XL.jpg",
+    "alt": "Canyon Stream   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-xbVp2GS/A",
     "keywords": [
       "New York",
@@ -266,14 +295,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/KLKrfzKHC9XQgnJZm8QPMFXW2XZkj8vcN53G9bPzp/XL/_W3H9740-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/KLKrfzKHC9XQgnJZm8QPMFXW2XZkj8vcN53G9bPzp/XL/_W3H9740-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/KLKrfzKHC9XQgnJZm8QPMFXW2XZkj8vcN53G9bPzp/XL/_W3H9740-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/NgV7NwNMKjG8G5Fb2dgFssbn3jK7RZSrkRxFdGSrS/L/_W3H9740-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-xbVp2GS/4/MRvxfHJ5GMb7rpSpbP7hWtZkFHgBZgwBTmFNB6vwM/S/_W3H9740-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QGSJxwc",
     "title": "Watkins Glen Canyon. Photography by Wayne Heim",
     "description": "Fine art landscape photography of Watkins Glen, New York.",
-    "alt": "Watkins Glen Canyon. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/KNbX4XBTBgkps5L8Qr32K48f4KMnjNJkVbVkHsnQG/XL/_W3H9878-Edit-XL.jpg",
+    "alt": "Ravine Waterfalls   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-QGSJxwc/A",
     "keywords": [
       "New York",
@@ -308,14 +342,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/Mq5gFwMvhPQmcZkKt9fFDKsSRjfjmq8Gjd8MqRbqD/XL/_W3H9878-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/Mq5gFwMvhPQmcZkKt9fFDKsSRjfjmq8Gjd8MqRbqD/XL/_W3H9878-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/Mq5gFwMvhPQmcZkKt9fFDKsSRjfjmq8Gjd8MqRbqD/XL/_W3H9878-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/MPM2W4t5KJ5t2DsL8LKrPXCCt3s2rHWcxDcFhPHsv/L/_W3H9878-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/New-York/Watkins-Glen/i-QGSJxwc/6/LgrPPtVtFMtR5CK3QL6zR8jN4tSq6BtnLTVPJgQJm/S/_W3H9878-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vqC5jTC",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MDpkHpMZVJS44XkwD8SXtZK4Fd9T9ss87f7dzz7Nm/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "alt": "Watkins Glen Canyon. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vqC5jTC/A",
     "keywords": [
       "New York",
@@ -350,14 +389,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/LMKHvLBzsvgHjkP4CDGfp9qQMT9qGp7x2bghGQGFN/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/LMKHvLBzsvgHjkP4CDGfp9qQMT9qGp7x2bghGQGFN/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/LMKHvLBzsvgHjkP4CDGfp9qQMT9qGp7x2bghGQGFN/XL/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MKMn5J4dF9kJb7FGbCNkVfK6gw29gPKQ96RddMmXc/L/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-vqC5jTC/2/MjGdDQ9DrtgN67wxffG7ffD4889vMN76gSdzTmZ3m/S/_WHZ7824-Edit-sharpen-sharpen-sharpen-sharpen-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dT6fKnc",
     "title": "Yellowstone Hotspots   Photography by Wayne Heim",
     "description": "In Stock 18 x 24Geyser pools  at Yellowstone National Park in Wyoming. ©Wayne Heim",
-    "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/K7m77774NtqWq8SRJKJkPPLsXPhCJ9GLpFgjTCptQ/XL/_WHZ8329-Pano-Edit-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dT6fKnc/A",
     "keywords": [
       "New York",
@@ -392,14 +436,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/NfJKpbpJqL9jDJjD5SKNT4R97Rj4vSjrJrhp4gvkw/XL/_WHZ8329-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/NfJKpbpJqL9jDJjD5SKNT4R97Rj4vSjrJrhp4gvkw/XL/_WHZ8329-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/M6h3FHDnVgDCVk5jmhH3Wwqk8gXpGTgcJnppCLRWF/L/_WHZ8329-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/NNwjtLt7qvvpKnm4wv7LNrbVkLxptLCMrx2J6tbpb/M/_WHZ8329-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-dT6fKnc/2/MNqzrPqrQdrrRTjpDVVcVq3cD6sNJNcsjQtCwfvCC/S/_WHZ8329-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dmwDS7K",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/L44wmsd5ktjJzWdPQQmC68Z3ZdRgqWPGmddDTqFg7/XL/_DSF5409-Pano-Edit-2-XL.jpg",
+    "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dmwDS7K/A",
     "keywords": [
       "New York",
@@ -434,14 +483,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/Nb5BXdtnfnnTnsPR2tsHHg5gTmK9cqDVmjWjxWdcF/XL/_DSF5409-Pano-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/Nb5BXdtnfnnTnsPR2tsHHg5gTmK9cqDVmjWjxWdcF/XL/_DSF5409-Pano-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/Nb5BXdtnfnnTnsPR2tsHHg5gTmK9cqDVmjWjxWdcF/XL/_DSF5409-Pano-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/NZ6vZzghHfJqGB6MQgbBG7sbVFpTtdF7Hb2Csw6vb/L/_DSF5409-Pano-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-dmwDS7K/0/MKgm2N54LRNL2dFRTzfS4WtKHwLnqbrpc5TnVgjKb/S/_DSF5409-Pano-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-s3xXCPH",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/NhsvvVNsPFj3XpXXrd8WGN67sBwMMfD8xpvQhPssP/XL/_DSF5489-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-s3xXCPH/A",
     "keywords": [
       "New York",
@@ -476,14 +530,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/MfFbDN6kZggcMjGMLZ2D8LLwHhFVhrzgdzrBBhWsC/XL/_DSF5489-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/MfFbDN6kZggcMjGMLZ2D8LLwHhFVhrzgdzrBBhWsC/XL/_DSF5489-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/MfFbDN6kZggcMjGMLZ2D8LLwHhFVhrzgdzrBBhWsC/XL/_DSF5489-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/LTrr98dCGNswkrHqRZPtbJpBK4RrLX3BXFWJDTxLb/L/_DSF5489-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-s3xXCPH/0/MdrssG4GmGqdqSfC4BW3Hj9bphNsfbq9FCh9d4L5D/S/_DSF5489-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-p5ghtLz",
     "title": "A Path Less Traveled",
     "description": "Light creating playful shadows through the forest trees and stream. Greens and browns of nature paint the picture of texture and discovery.",
-    "alt": "A Path Less Traveled",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
     "keywords": [
       "New York",
@@ -518,14 +577,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/Mv3QrnkcLFnw9PGkgTrhBhwF75N7j4ZCLGNsRLtz6/L/Shadow%20trees_DSF5489-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/K3Zkq4TQBbj3DCMh7JDhVPXT8zkXCSn5nVkZRpJHp/S/Shadow%20trees_DSF5489-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rfGP5Zj",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/M535dZSW6rzdcGNx53PScHsFhRPx54PZQkRgZW7Tf/XL/_DSF5537_tonemapped-XL.jpg",
+    "alt": "A Path Less Traveled",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rfGP5Zj/A",
     "keywords": [
       "New York",
@@ -560,14 +624,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/LXD2SDNLH9H2rcz7JPB9tdZjcq2HxZQmSq9c3m9nC/XL/_DSF5537_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/LXD2SDNLH9H2rcz7JPB9tdZjcq2HxZQmSq9c3m9nC/XL/_DSF5537_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/LXD2SDNLH9H2rcz7JPB9tdZjcq2HxZQmSq9c3m9nC/XL/_DSF5537_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/MDVXkNFTMZNfSnd7P7XpG89bQCRZBJsGhX5KwKq5J/L/_DSF5537_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-rfGP5Zj/0/Mnp6PVcQzmhGL4wMtS4jm4tNcvCKXk9g3SN8MKf3c/S/_DSF5537_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bdSGG9L",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/MF5bj97rmBWfMJLKBWrxK96Tjpb25n2LckChqG8SJ/XL/_DSF5542_tonemapped_tonemapped-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bdSGG9L/A",
     "keywords": [
       "New York",
@@ -602,14 +671,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/Ltsn9cg42HSCSFmsvLkd9dBm4Cwn5f7rDv3RtdjCM/XL/_DSF5542_tonemapped_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/Ltsn9cg42HSCSFmsvLkd9dBm4Cwn5f7rDv3RtdjCM/XL/_DSF5542_tonemapped_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/Mc2bxxsB463jJ4FQbzzTCg2G5dVJb8BsBzXCBQ2fg/L/_DSF5542_tonemapped_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/MwvDsTtcNbn7HS6xMqvnzJ79tWcSHTC9476qFPWHc/M/_DSF5542_tonemapped_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-bdSGG9L/0/M87n26tSHqwVxL8HQWKSzdLkCRq7p5Cw7P8DWPPK6/S/_DSF5542_tonemapped_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BqKXR7D",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/MCRwX6dXq26QGz258N9V43QpfTrPVPmPwvk423vSv/XL/_DSF5548_tonemapped-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BqKXR7D/A",
     "keywords": [
       "New York",
@@ -644,14 +718,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/Mvg5492rGqSgfFDSQ5NzMQv3Z88bdGQw9dHLmRRP2/XL/_DSF5548_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/Mvg5492rGqSgfFDSQ5NzMQv3Z88bdGQw9dHLmRRP2/XL/_DSF5548_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/Mvg5492rGqSgfFDSQ5NzMQv3Z88bdGQw9dHLmRRP2/XL/_DSF5548_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/Kg7W4zfVt2xqSQXMqCgZWbtgcSKXBknFPwKVNfm3g/L/_DSF5548_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-BqKXR7D/0/NVG85L8tsTbtNcnGgwN2SWQqhZcG6mRLRvJpRzJ7j/S/_DSF5548_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nqpGhhX",
     "title": "Hidden Falls x2",
     "description": "Another hidden waterfall in the forest of West Virginia.",
-    "alt": "Hidden Falls x2",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nqpGhhX/A",
     "keywords": [
       "New York",
@@ -686,14 +765,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/NhD3KHBzjBsCpkQXCzq9Ftj5NSxtfcGcMKnP6SRxZ/L/_DSF5606-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/L7gSWJsB82VZ9QsP9hX5BrmDhVDNd9BKRxjcCJFBm/M/_DSF5606-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KQTGN9ct2H5KhRvWvfsnQndvWXzqgJwHpkd3p62mm/S/_DSF5606-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MGNfc8z",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/KQtdm6KwWF6J8QsXkFKzVnqmVfw23R95RjpMwCb92/XL/_DSF5613-Edit-XL.jpg",
+    "alt": "Hidden Falls x2",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MGNfc8z/A",
     "keywords": [
       "New York",
@@ -728,14 +812,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/M3NZbc9sCFSwFZgVP5XW2zcgb7JBt874TD3gHxKfH/XL/_DSF5613-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/M3NZbc9sCFSwFZgVP5XW2zcgb7JBt874TD3gHxKfH/XL/_DSF5613-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/Lv2p47KQQpxSwf4kjgFZF5kFk23vSXwRg9SDFQ5Jc/L/_DSF5613-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/K3NXdr5qjTpwbmdgh8c6jfJWSbvH2HVRMcmWq5Ntd/M/_DSF5613-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MGNfc8z/0/NcPWKKMGCqxkMXtNCPNkp8DgQfWfqV5CzLrZP5FL7/S/_DSF5613-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f4Jq6NZ",
     "title": "Davis West Virginia Sunrise in full show.",
     "description": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
-    "alt": "Davis West Virginia Sunrise in full show.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MJsPjtjWg5Dgx69KNnkvmdP3BG5jRR8TQV3HccK46/XL/_DSF5667-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-f4Jq6NZ/A",
     "keywords": [
       "New York",
@@ -770,14 +859,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MC3qNTMKTv7bTw7vWBjns6XPr3v9PBQ8857LBbsjG/XL/_DSF5667-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/MC3qNTMKTv7bTw7vWBjns6XPr3v9PBQ8857LBbsjG/XL/_DSF5667-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/NdZ5j26d7gbnPCX8dBZQPL3bXKjCvJX8RdGZBmgvp/L/_DSF5667-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/KqgbPgm4FZH7kTQtJLL625jVBDpHLkVnRzBS3VVbc/M/_DSF5667-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-f4Jq6NZ/1/KnnBkt5xW7HNDCdMkMQ5LrqqPPRN6v3KjLTjsMSD6/S/_DSF5667-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MwLgJL5",
     "title": "Eminent Rise",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Eminent Rise",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MGSGFcC6Wpnt2d6bRsZJgWPtNmKqp28qkZ64R3sD7/XL/_DSF5676-Pano-Edit-XL.jpg",
+    "alt": "Davis West Virginia Sunrise in full show.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MwLgJL5/A",
     "keywords": [
       "New York",
@@ -812,14 +906,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MXQr7jm6ktC945qvLB87jpcqMnxmxwnxsqgjSH8VG/XL/_DSF5676-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/MXQr7jm6ktC945qvLB87jpcqMnxmxwnxsqgjSH8VG/XL/_DSF5676-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/KXTZgQsDv4KT9knQQmbq6CvVkqDXP5PJcqsvff967/L/_DSF5676-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/M8VrrfQBGM93f8HP3MJwWgmL6wnTsCNz8zWhSPxvg/M/_DSF5676-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-MwLgJL5/1/KPv3cQnc5MnQz8946Gbcx5Ndt8SxWdm86bPJwt5S2/S/_DSF5676-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vSFBSgr",
     "title": "A Painters Pallet",
     "description": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
-    "alt": "A Painters Pallet",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/NcZxvQSsHvjCPt4mGRTWZ87hhDq4367ZLkDVb3z56/XL/_DSF5690-XL.jpg",
+    "alt": "Eminent Rise",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vSFBSgr/A",
     "keywords": [
       "New York",
@@ -854,14 +953,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/KNvMjRFhhRLGB5tS3CsqV3hLWM5PfSRMZTxsC4Hzn/XL/_DSF5690-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/KNvMjRFhhRLGB5tS3CsqV3hLWM5PfSRMZTxsC4Hzn/XL/_DSF5690-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/L7FpT74jpTv4VVHpvrV2WM6qW57L7sj5d9s9sHSMp/L/_DSF5690-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/LZcJqg24BDgpfPD2DdbjPWP3cJRrNfsDvN96XP6mq/M/_DSF5690-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vSFBSgr/0/Kj99dBvbkXK7Z9g8CwtdXXV9P3wbNtzZG9dqz8MNn/S/_DSF5690-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hVB6Pxq",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KMCVC3MxV2PB2ZwQXZg3XGBdBmck5SSMfMVqjV2Z6/XL/_O1H1351-Edit-Edit-XL.jpg",
+    "alt": "A Painters Pallet",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-hVB6Pxq/A",
     "keywords": [
       "New York",
@@ -896,14 +1000,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NZHwxFMgxNh8LsmGTW5rQ3CtvQHxJvGQqLHGHN6dc/XL/_O1H1351-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NZHwxFMgxNh8LsmGTW5rQ3CtvQHxJvGQqLHGHN6dc/XL/_O1H1351-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KDWp7935CN6Rs2F2hSKjQR5bfxvqDZP52X5qrBMZq/L/_O1H1351-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/LZzNMqJMRMhmBB8VMrn7FkMJKpBTg5CpzV2QfnjpJ/M/_O1H1351-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NKqPSvXvrL93mHSNHJ2mMPCxRG74nXNbBrGCm9sw9/S/_O1H1351-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-R5xvd53",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-R5xvd53/0/NQLQHNJShSLjJJsZ3ZzkdS5S7z9V5nkVjtGmCJt2m/XL/_O1H0031-Pano-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-R5xvd53/A",
     "keywords": [
       "New York",
@@ -938,14 +1047,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-R5xvd53/0/LfrnGfZ7gfPt7wJL4b5WmXN8VhL5SpgcbpVbPdcXw/XL/_O1H0031-Pano-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-R5xvd53/0/LfrnGfZ7gfPt7wJL4b5WmXN8VhL5SpgcbpVbPdcXw/XL/_O1H0031-Pano-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-R5xvd53/0/LfrnGfZ7gfPt7wJL4b5WmXN8VhL5SpgcbpVbPdcXw/XL/_O1H0031-Pano-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-R5xvd53/0/L7MN3VXxqTmpnbPwpqBQ378nMvMbLt6F7g9Q84Vg7/L/_O1H0031-Pano-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-R5xvd53/0/LkLDpwcFR9sG7GJKfgTb994vDLGhzbfjPNxVVM6WH/S/_O1H0031-Pano-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cQ5DJJL",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-cQ5DJJL/1/NMXwdSrZBTm5Bh9JCpmmLTcMVLjjRs4hctQhwpzpt/XL/_DSF5750-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cQ5DJJL/A",
     "keywords": [
       "New York",
@@ -980,14 +1094,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-cQ5DJJL/1/MM8LM26DPn8fG63WknNKdzmJDVdwdFrLzwg2dHTdc/XL/_DSF5750-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-cQ5DJJL/1/MM8LM26DPn8fG63WknNKdzmJDVdwdFrLzwg2dHTdc/XL/_DSF5750-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-cQ5DJJL/1/MM8LM26DPn8fG63WknNKdzmJDVdwdFrLzwg2dHTdc/XL/_DSF5750-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-cQ5DJJL/1/Kn47WMfqGhPpj4f7NsnbDpvfvZ6ckwcsx37czFzLD/L/_DSF5750-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-cQ5DJJL/1/NT5Qrkqx8BkHbVxfLfKvPstP7MKb9qzS2RcwvfGBg/S/_DSF5750-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2MmTpqQ",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/KSQ49Grhs4DRSZScgCgLqJ4LfnXFVj4wLq6BsHL7P/XL/_DSF5771-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2MmTpqQ/A",
     "keywords": [
       "New York",
@@ -1022,14 +1141,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/Kx2MTwwX53rvwszBgbptb9xcmmz9m5TXf8qPJfq2X/XL/_DSF5771-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/Kx2MTwwX53rvwszBgbptb9xcmmz9m5TXf8qPJfq2X/XL/_DSF5771-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/NhfpK9vrRTjW9MwSWbB3rX47wvW6NqnLKZ6XDDtTM/L/_DSF5771-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/KzbP6zwZPt74GWhDfXPfhPXfhFCpdjzBkt8V4V2K9/M/_DSF5771-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2MmTpqQ/2/LChQrkBBpv8zdjCm5cBvVsJ6VNcbXtTJPwwzQbxKZ/S/_DSF5771-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-h7Rcxmr",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-h7Rcxmr/0/MCgMh8kzWcLNWWKx9KfGQ8qHvNZ4bg2dkdWj3mWHr/XL/_DSF5771_tonemapped-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-h7Rcxmr/A",
     "keywords": [
       "New York",
@@ -1064,14 +1188,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-h7Rcxmr/0/Mg7cfpJkw45WrBKVkSP7wfqs2cXB3q8jCKBvDrQTj/XL/_DSF5771_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-h7Rcxmr/0/Mg7cfpJkw45WrBKVkSP7wfqs2cXB3q8jCKBvDrQTj/XL/_DSF5771_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-h7Rcxmr/0/LQNnNM3LT3k7ZTnmmn54QXqMVcZv6wXhFzBsXssfC/L/_DSF5771_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-h7Rcxmr/0/LStTZ7v6CkrcHz9wcsF4Nh8wJfVvrXkzjgKKgCNLN/M/_DSF5771_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-h7Rcxmr/0/NSCqsNSmBvNghPpSF933gn2Btqh4TmsK6DcCB3B4Q/S/_DSF5771_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wqjGgt4",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wqjGgt4/0/Mm2bBGpwZt6R5jrwt9fP5v593pVXP82zwzdhQfS6P/XL/_DSF5781-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wqjGgt4/A",
     "keywords": [
       "New York",
@@ -1106,14 +1235,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wqjGgt4/0/LLkGWGqp3jXpcj5HqMzJd5DzQKZHJT9n5Q4vDXB3m/XL/_DSF5781-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wqjGgt4/0/LLkGWGqp3jXpcj5HqMzJd5DzQKZHJT9n5Q4vDXB3m/XL/_DSF5781-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wqjGgt4/0/M4knq7SfdvDTQCDWVGgLfrSKdVRMPNNqZjcrzM4Ft/L/_DSF5781-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wqjGgt4/0/LQ5xP2hVMn99MqC56b5Pkq56BrZDFzVMs9zm5rBCF/M/_DSF5781-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wqjGgt4/0/KbJ5x5ftFFWS67NMWrDP3wF33q3kMF547RChhV2c6/S/_DSF5781-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4WL9kr6",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4WL9kr6/2/KQdsvBdQD94X299Cth6rDm4rfmGHMksW4HCfWN3dz/XL/_DSF5781-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-4WL9kr6/A",
     "keywords": [
       "New York",
@@ -1148,14 +1282,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4WL9kr6/2/KNZ7tqPPvJ6kn8KMnqCXLCBjcWM2srCxhHLpv6kdX/XL/_DSF5781-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4WL9kr6/2/KNZ7tqPPvJ6kn8KMnqCXLCBjcWM2srCxhHLpv6kdX/XL/_DSF5781-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4WL9kr6/2/LztcGkbDnj8h28Dqv3JKfx4cWKNqrDhPPth3N575p/L/_DSF5781-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4WL9kr6/2/LZHtmh5fsXrRdkH6VH5BW9GFrFmN66DRSrJL7Zg6J/M/_DSF5781-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-4WL9kr6/2/LjZ9zKnK4J5Gjb9Hn3Cch5rxZKWZJnTK2SMR839vT/S/_DSF5781-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-68NCBvz",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-68NCBvz/0/KXSMrN2CzwVTHJMDPcptpdcrNm2RpLvR5T9RbrcbJ/XL/_DSF5984_tonemapped-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-68NCBvz/A",
     "keywords": [
       "New York",
@@ -1190,14 +1329,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-68NCBvz/0/MmvcgmLs3xF9BxsvtZDnXmnjcCqmKDv4hQJRpvCTQ/XL/_DSF5984_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-68NCBvz/0/MmvcgmLs3xF9BxsvtZDnXmnjcCqmKDv4hQJRpvCTQ/XL/_DSF5984_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-68NCBvz/0/MmvcgmLs3xF9BxsvtZDnXmnjcCqmKDv4hQJRpvCTQ/XL/_DSF5984_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-68NCBvz/0/MbcpZdDSBhrzKBNMjn7VknRt9HCc7KfrddR2phXqj/L/_DSF5984_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-68NCBvz/0/KvBwqMWmZxz3mPghCHMnRnQwHvhf3ZWGzMjpdxSBs/S/_DSF5984_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jgkhwcs",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/KRXtnwgxWXn6ZHWDGcFHqjpMxWPRfFxDjVsjSFcwd/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jgkhwcs/A",
     "keywords": [
       "New York",
@@ -1232,14 +1376,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/MPNv3XJdRN6V3HSwbsTbMZQr6k6HrjdxfQqNWXbRq/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/MPNv3XJdRN6V3HSwbsTbMZQr6k6HrjdxfQqNWXbRq/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/MPNv3XJdRN6V3HSwbsTbMZQr6k6HrjdxfQqNWXbRq/XL/_DSF6068_tonemapped-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/NRd86msN2snBZ6DrjBZgfMR9L8xqJWj2rmHLct67L/L/_DSF6068_tonemapped-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jgkhwcs/1/LqtL5GxPp8SwHP6b6WW6jMhB4cVcMXs89ppJR46Lj/S/_DSF6068_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6qnzDzx",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6qnzDzx/0/KcRSW7r9FFJbBvGf238Xk9z4Cn9TbKmR749DgHDNm/XL/_DSF6070-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6qnzDzx/A",
     "keywords": [
       "New York",
@@ -1274,14 +1423,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6qnzDzx/0/NVG4cRhkbj4GGPdXnRLm7Lc3nXPDp9pddd29HGDcz/XL/_DSF6070-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6qnzDzx/0/NVG4cRhkbj4GGPdXnRLm7Lc3nXPDp9pddd29HGDcz/XL/_DSF6070-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6qnzDzx/0/NVG4cRhkbj4GGPdXnRLm7Lc3nXPDp9pddd29HGDcz/XL/_DSF6070-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6qnzDzx/0/KP4vrNVPz6df7KdrNQKjBQgsZSTjxHHXVcCW8gNqS/L/_DSF6070-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6qnzDzx/0/LfNzkMqWWm7qF68fJ68g8v2j8brDNxhW59mrrkbZW/S/_DSF6070-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jP9xB7p",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jP9xB7p/0/L3sL5QM586r6s9bfcWcx5cGGqffLHhvtwDmwD3tNp/XL/_DSF6092-Edit-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jP9xB7p/A",
     "keywords": [
       "New York",
@@ -1316,14 +1470,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jP9xB7p/0/K6Gtpbh6gDsGK99t3W9cNc8RRshQm2tL5VHnLKq7g/XL/_DSF6092-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jP9xB7p/0/K6Gtpbh6gDsGK99t3W9cNc8RRshQm2tL5VHnLKq7g/XL/_DSF6092-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jP9xB7p/0/K6Gtpbh6gDsGK99t3W9cNc8RRshQm2tL5VHnLKq7g/XL/_DSF6092-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jP9xB7p/0/MRbQ862tgz9KgvZCnVH3HMHVC23qDRpcV9CrDfMgw/L/_DSF6092-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-jP9xB7p/0/M8tLNKwJtwg5HZZB9hrx5cXQbccwQzTsMG5WFxdsh/S/_DSF6092-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Qdgw4G5",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Qdgw4G5/1/LPVxzZ8DqjmDJNqR5VPcLsDLVtrN9Fq7sLvKRqZhm/XL/_DSF6146-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Qdgw4G5/A",
     "keywords": [
       "New York",
@@ -1358,14 +1517,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Qdgw4G5/1/LsgvdN2XpNSRNDJs9VC53PzVcdTzVbtKf8P5XFrZz/XL/_DSF6146-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Qdgw4G5/1/LsgvdN2XpNSRNDJs9VC53PzVcdTzVbtKf8P5XFrZz/XL/_DSF6146-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Qdgw4G5/1/LsgvdN2XpNSRNDJs9VC53PzVcdTzVbtKf8P5XFrZz/XL/_DSF6146-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Qdgw4G5/1/NbNj9ZG2bxP6kVgsdgMjZCPkCgX3H59LhKKfmPmsg/L/_DSF6146-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Qdgw4G5/1/NJxmSM6KfZMbLdWJLrtfRkW7N2w2rbZK5mz3qHJ9G/S/_DSF6146-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sRRJHVz",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/Nhnp94nFG8VzjM5VmKkVWgsKqJV3xh9LMJbGzGJDV/XL/_DSF6146_tonemapped-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-sRRJHVz/A",
     "keywords": [
       "New York",
@@ -1400,14 +1564,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/MK3jsps5Rft8KBR7rMxzNNTHrVRQzwVZjChNXqjrF/XL/_DSF6146_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/MK3jsps5Rft8KBR7rMxzNNTHrVRQzwVZjChNXqjrF/XL/_DSF6146_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/MK3jsps5Rft8KBR7rMxzNNTHrVRQzwVZjChNXqjrF/XL/_DSF6146_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/MBG3mCp4BRLXgxF6vxBLxmZzfQbpWfsnwHt6zqsx7/L/_DSF6146_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-sRRJHVz/0/KbfzLPnfMmHWCLmDfhwMf2Ft7R7QdDJGkGTLFLMph/S/_DSF6146_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2PC8CL2",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2PC8CL2/0/KgM7mQStg9WzJrXLfdpvFHbt35trJm4M57GSmM6HQ/XL/_DSF6176-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2PC8CL2/A",
     "keywords": [
       "New York",
@@ -1442,14 +1611,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2PC8CL2/0/MHjD35qPZ5THc7ZqQWcWxFLVHvjhKRsfRJcLKTH6B/XL/_DSF6176-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2PC8CL2/0/MHjD35qPZ5THc7ZqQWcWxFLVHvjhKRsfRJcLKTH6B/XL/_DSF6176-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2PC8CL2/0/MHjD35qPZ5THc7ZqQWcWxFLVHvjhKRsfRJcLKTH6B/XL/_DSF6176-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2PC8CL2/0/M9XKTv7mP6GHpcCMLZ6sHft5BxbX5Qd3nQwPZJ9Gq/L/_DSF6176-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-2PC8CL2/0/McZbGTwM92vHhxJV2nqpk7B7wsP9W28RtZsCcjbdn/S/_DSF6176-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HqXtbrD",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HqXtbrD/0/Kj4R4mrQKSDhKwMpmg7cWMX5G5pxg7P4SFFKJFm6m/XL/_DSF6185-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-HqXtbrD/A",
     "keywords": [
       "New York",
@@ -1484,14 +1658,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HqXtbrD/0/KpRRV8hBwtCdSSvTmp5tSMtCDZ5J247zQt7z7LpCR/XL/_DSF6185-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HqXtbrD/0/KpRRV8hBwtCdSSvTmp5tSMtCDZ5J247zQt7z7LpCR/XL/_DSF6185-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HqXtbrD/0/KpRRV8hBwtCdSSvTmp5tSMtCDZ5J247zQt7z7LpCR/XL/_DSF6185-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HqXtbrD/0/KrXgXMJCQNVTN4kbmbMnTRNC8QDSdzQWcpJN8Zcss/L/_DSF6185-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-HqXtbrD/0/Mc3n2PrXxcdfGP2rTcVCCX95RMrWkjFBVVbr4RD64/S/_DSF6185-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7pG4nQv",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/L9C827hbvfPbMLG8JhTZCWfdbvMghtXD39dFXrXHP/XL/_DSF6187-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7pG4nQv/A",
     "keywords": [
       "New York",
@@ -1526,14 +1705,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/MhdnBsCQM85kXRCpVcHCjLW2xmQVC8GFTzzGjFR5M/XL/_DSF6187-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/MhdnBsCQM85kXRCpVcHCjLW2xmQVC8GFTzzGjFR5M/XL/_DSF6187-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/LN3kt3c7WTmrrvtw8gcncHmkWDhTgxsbbpz5wNJ8v/L/_DSF6187-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/NKHsMhZH8GwnV9xtLbLwC6ZkhQtVLs2g5TRgpGFtr/M/_DSF6187-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-7pG4nQv/1/NZnp63NcR6ssQ6qHM9S4tXqjg8qFDJzvbbFZF8j3Q/S/_DSF6187-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DKPmrRN",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/KZN9DRh3VRTjKXS5d59DJk4MFRdnN4q3t9ghf9zzr/XL/_DSF6199-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DKPmrRN/A",
     "keywords": [
       "New York",
@@ -1568,14 +1752,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/LvM2BGd5SdBsf759f69DFTSgnrMxB7KbKh6N36TPk/XL/_DSF6199-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/LvM2BGd5SdBsf759f69DFTSgnrMxB7KbKh6N36TPk/XL/_DSF6199-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/LzTqLHqLZvHgDnwvwjrpQcbS3dNzk82mDnC2rDHNd/L/_DSF6199-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/M27d7M7H7Ks27gSVT9tjc92sDzkhV3nxcPSnfFnwd/M/_DSF6199-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DKPmrRN/1/KZ7S6DFhKmd5Q9mMsvHFMdW2VCLFKhVhXsfv5Cwj6/S/_DSF6199-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gM4DZ97",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-gM4DZ97/0/KhQs8ntR27wvwSfJ5v98c9pcCdKXVPmHwQm2GHTHJ/XL/_DSF6203_tonemapped-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gM4DZ97/A",
     "keywords": [
       "New York",
@@ -1610,14 +1799,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-gM4DZ97/0/KhzMrm4K2rLQqht38dzhjNftwrRXzwKHckNNwJf3p/XL/_DSF6203_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-gM4DZ97/0/KhzMrm4K2rLQqht38dzhjNftwrRXzwKHckNNwJf3p/XL/_DSF6203_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-gM4DZ97/0/KhzMrm4K2rLQqht38dzhjNftwrRXzwKHckNNwJf3p/XL/_DSF6203_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-gM4DZ97/0/LsN8XXQK4xsjfhX4KC8H99KzT49npqJhV5gPTBxsK/L/_DSF6203_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-gM4DZ97/0/MvRKfkXd9vHKGmJbBF3RcfCv6nR3S5JVK2tBbXrN4/S/_DSF6203_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rsKpjQ8",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-rsKpjQ8/0/LKzZFRJ2WJcWSdhbszV8DGpDCpVRCfSXwrQrP7kRQ/XL/_DSF6267-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rsKpjQ8/A",
     "keywords": [
       "New York",
@@ -1652,14 +1846,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-rsKpjQ8/0/KFc8Z7JjJv2KCDV7SGG8qxGSRDJ8VM8b5m5qG5Xfh/XL/_DSF6267-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-rsKpjQ8/0/KFc8Z7JjJv2KCDV7SGG8qxGSRDJ8VM8b5m5qG5Xfh/XL/_DSF6267-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-rsKpjQ8/0/LGDrWRddCvWvqrDftcwN6kB8jXrsL4RRzQKrKk7bs/L/_DSF6267-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-rsKpjQ8/0/LsM7CfSsfLsbvBtFpFVGh5JHTtwVCJWwXSQDKFtsm/M/_DSF6267-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-rsKpjQ8/0/NT4CrC4Ffq957FGHKwTkVjCLDXzc5TTSbMBJxJZn2/S/_DSF6267-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-T3fx2pT",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/LJcZTxV9ZVwksLQ4Lfhh5Xs59Vvmb6BVtBcXhNKDm/XL/_DSF6267-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-T3fx2pT/A",
     "keywords": [
       "New York",
@@ -1694,14 +1893,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/LVfL49RjQQPLZhS3wbnRBJcsVCPFSgPStP7Xm8g34/XL/_DSF6267-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/LVfL49RjQQPLZhS3wbnRBJcsVCPFSgPStP7Xm8g34/XL/_DSF6267-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/K8Jpqpsn9SFr7qX79dzZgQBgPZMkjkjc2V7RC5hC3/L/_DSF6267-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/MR2XDbV4TBvNjT8GSBCxp3Q7J26NJBKSKQ8Jkg2mW/M/_DSF6267-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-T3fx2pT/1/MN2TMt2zfmdH2rcg9JGgC3P8zf5TN5Pq9n87C5hvM/S/_DSF6267-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DmxFbF6",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DmxFbF6/0/MfsFqMwnGcxhLGzp9882xSs9GjKfbSH4cgBRNjgM9/XL/_DSF6285-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DmxFbF6/A",
     "keywords": [
       "New York",
@@ -1736,14 +1940,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DmxFbF6/0/MDwJBZc8SDH3fwhGGkRddTxVb5nqzS2DnMrPhX56p/XL/_DSF6285-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DmxFbF6/0/MDwJBZc8SDH3fwhGGkRddTxVb5nqzS2DnMrPhX56p/XL/_DSF6285-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DmxFbF6/0/NX3q2CxGSnktnvGSbrQG3JfHwBGZnhHbphRwr2Gmc/L/_DSF6285-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DmxFbF6/0/MZ9FJCpP5zDwfQwPQgffp3T6C9gRZhzXRtKfzKK6M/M/_DSF6285-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-DmxFbF6/0/KRh8rHMBrjRgTnVS9svCgrzFWLWMWSVdfkzDVP67W/S/_DSF6285-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VDnpX3W",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-VDnpX3W/1/MTCtcn6h3vTKqq33FZ6Kqz5zQLNvTXbsKNkPXqzWn/XL/_DSF6384_tonemapped-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-VDnpX3W/A",
     "keywords": [
       "New York",
@@ -1778,14 +1987,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-VDnpX3W/1/M2zzh5LZgQHTJWTM5NJRVLpg2GVBpkL5GWnGxBQcr/XL/_DSF6384_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-VDnpX3W/1/M2zzh5LZgQHTJWTM5NJRVLpg2GVBpkL5GWnGxBQcr/XL/_DSF6384_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-VDnpX3W/1/M2zzh5LZgQHTJWTM5NJRVLpg2GVBpkL5GWnGxBQcr/XL/_DSF6384_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-VDnpX3W/1/KmtFk7VfBNk5gkGXQzTPGkZHn4KtDJWSBDVXnHhk6/L/_DSF6384_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-VDnpX3W/1/Mvcx6xZJbMthJQwn4g33nx9t7Npb63w7DVpbL8cBX/S/_DSF6384_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wTXh9Lv",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wTXh9Lv/0/KQddgSMFqL48sk6wWmR4h7LkgtGb6sbVgvHD9sWLJ/XL/_O1H0074-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wTXh9Lv/A",
     "keywords": [
       "New York",
@@ -1820,14 +2034,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wTXh9Lv/0/NDjNm6DhVV9XSzMrRQWJVpxxSttzbmNZ5PPBvhBTH/XL/_O1H0074-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wTXh9Lv/0/NDjNm6DhVV9XSzMrRQWJVpxxSttzbmNZ5PPBvhBTH/XL/_O1H0074-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wTXh9Lv/0/NDjNm6DhVV9XSzMrRQWJVpxxSttzbmNZ5PPBvhBTH/XL/_O1H0074-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wTXh9Lv/0/KLgG3T2hTJbq2ttSjdzRJL3BqMNqKqQpghZwzdx2C/L/_O1H0074-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-wTXh9Lv/0/M9SXWvQfdkTsz5LmzwhBbTq8g55WCnWv4nZqMdnxM/S/_O1H0074-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5RjNxDr",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/Kc9H99ND7GKJWXmmwrwFr6KfZxfLTHDVBXg7w9vnf/XL/_O1H0012-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5RjNxDr/A",
     "keywords": [
       "New York",
@@ -1862,14 +2081,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/KSs5ZDDqKZvfjTQ3z59KfXQK7WTXtP4T2rhNk5KKv/XL/_O1H0012-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/KSs5ZDDqKZvfjTQ3z59KfXQK7WTXtP4T2rhNk5KKv/XL/_O1H0012-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/NJKzdrD6DQrpxKTCGDn3dxHM6hnMbKkfHVtqbpRR8/L/_O1H0012-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/NfgJHr66mBLDDHcgvS9MgC9KcqzdnX2jPFQnHk8zF/M/_O1H0012-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-5RjNxDr/1/MfPwWGfPdPX46w3TCRLwbpf4xRMsQp29fTmsDTCZS/S/_O1H0012-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Rpxdj4F",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Rpxdj4F/0/LFmv2CNhQvkBKvkzLRc9r8TRT8hBLxRbnsH7w4Gbz/XL/_O1H0212-Edit-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Rpxdj4F/A",
     "keywords": [
       "New York",
@@ -1904,14 +2128,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Rpxdj4F/0/Kbqg6RBKCBjbr5DDSh5PBRzdkmdzcKRR5nxZBq2gC/XL/_O1H0212-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Rpxdj4F/0/Kbqg6RBKCBjbr5DDSh5PBRzdkmdzcKRR5nxZBq2gC/XL/_O1H0212-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Rpxdj4F/0/Kbqg6RBKCBjbr5DDSh5PBRzdkmdzcKRR5nxZBq2gC/XL/_O1H0212-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Rpxdj4F/0/LvNVgDW6vczSwbLsssTtPKngVVwm9rBFx4Sn3xSMt/L/_O1H0212-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-Rpxdj4F/0/NK9JDpBcPTcbqdz4sw7KbrPtX9JWq3WNx3SR79hJ9/S/_O1H0212-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PhDqRHJ",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PhDqRHJ/0/L84Cc96bJspzn3qwSTqWNLh2WP78pmxs5F2HhDpHX/XL/_O1H0212-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-PhDqRHJ/A",
     "keywords": [
       "New York",
@@ -1946,14 +2175,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PhDqRHJ/0/M5kMKc5M326CnKVnpg8TWvWG2FfjRX4rXF8csq3Pp/XL/_O1H0212-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PhDqRHJ/0/M5kMKc5M326CnKVnpg8TWvWG2FfjRX4rXF8csq3Pp/XL/_O1H0212-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PhDqRHJ/0/M5kMKc5M326CnKVnpg8TWvWG2FfjRX4rXF8csq3Pp/XL/_O1H0212-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PhDqRHJ/0/K2hgs77QST75sqtvXgZwK65nsDgz7Rwf2nSL3btRk/L/_O1H0212-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-PhDqRHJ/0/KPV9VzdCJxtvBS6wmTS4mp4RNT3RtvKZDkv2xjX2t/S/_O1H0212-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-B9pcP9b",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-B9pcP9b/0/NTkckbF5PGDXmrRB2363jpkDkHhn34ZXjqF9JmCDp/XL/_DSF6438-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-B9pcP9b/A",
     "keywords": [
       "New York",
@@ -1988,14 +2222,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-B9pcP9b/0/LzK3KMZW8MLmx8KC3wwX2CsXFTSXv4pBfQRfpPjdF/XL/_DSF6438-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-B9pcP9b/0/LzK3KMZW8MLmx8KC3wwX2CsXFTSXv4pBfQRfpPjdF/XL/_DSF6438-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-B9pcP9b/0/KRTgCpC68wx7wZkfTN2FhqHbcD6mLgMmLM7kdrMG8/L/_DSF6438-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-B9pcP9b/0/KRHhgrmPbc6hHFP7Mb46XChH3JXM6kznWGKFN3wVm/M/_DSF6438-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-B9pcP9b/0/NcGzdgxBNbJNJK5GFxnShjcCX2cknzx4ZBnKS2MHR/S/_DSF6438-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WqnXv6B",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-WqnXv6B/0/NLVp5sj4F2X99P5FBjQmgSGL34kNcXCtN6LFDL5tq/XL/_O1H0234-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-WqnXv6B/A",
     "keywords": [
       "New York",
@@ -2030,14 +2269,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-WqnXv6B/0/KVJcr7gjqv6tSBk27Fccrz23fSxdwTLpr6cKWJSvp/XL/_O1H0234-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-WqnXv6B/0/KVJcr7gjqv6tSBk27Fccrz23fSxdwTLpr6cKWJSvp/XL/_O1H0234-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-WqnXv6B/0/K6MjfkBp4drs9Vr3SpQwT8W6kB3vBnBxLpfvL7rXH/L/_O1H0234-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-WqnXv6B/0/Mx73cQ2FK78szGwJsRZDjhGbSKvvpNT7RbLf3CJ5K/M/_O1H0234-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-WqnXv6B/0/Mw8Qhq3RPbjBqdn7pfH3mwX5nBvRQqXv3nKXwBMtN/S/_O1H0234-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mgSFMf3",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-mgSFMf3/0/Kc29W7jVtbtHDHXWTrBHk9738LmTC9MG6HgmNLsfd/XL/_DSF6485_tonemapped-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mgSFMf3/A",
     "keywords": [
       "a",
@@ -2054,14 +2298,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-mgSFMf3/0/LFb9ZZd5VN6k6Z4bRsmfhQ5bJ2Lqhg5RMjj9mNRqw/XL/_DSF6485_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-mgSFMf3/0/LFb9ZZd5VN6k6Z4bRsmfhQ5bJ2Lqhg5RMjj9mNRqw/XL/_DSF6485_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-mgSFMf3/0/LFb9ZZd5VN6k6Z4bRsmfhQ5bJ2Lqhg5RMjj9mNRqw/XL/_DSF6485_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-mgSFMf3/0/L9fG8J72CBnDF8xKpM9KzsbK7t8ZRm6tJnZDTj9gg/L/_DSF6485_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-mgSFMf3/0/L6LQhZRS4DHvrgRX2t78PwVTpXZjH5mVkpbszwzKh/S/_DSF6485_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-D7VJ3Nh",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-D7VJ3Nh/0/KZ4xMVZd6pLbjFD5c86vX8k5Q2CCJxJVWjbJ6KK47/XL/_DSF6492-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-D7VJ3Nh/A",
     "keywords": [
       "a",
@@ -2078,14 +2327,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-D7VJ3Nh/0/MjJDBMPH9mWKcMrnmSh6hNMshCXn79FVXXwtx8KPQ/XL/_DSF6492-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-D7VJ3Nh/0/MjJDBMPH9mWKcMrnmSh6hNMshCXn79FVXXwtx8KPQ/XL/_DSF6492-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-D7VJ3Nh/0/L69HSQQwhVtsLsq8nvXGJN57mhLxRWNwtrsjQJ784/L/_DSF6492-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-D7VJ3Nh/0/KjQx2tRd83Hb2v29fBtQ7xmPrjvzqC5t9Bd8QfdTf/M/_DSF6492-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-D7VJ3Nh/0/MhHtdTNSMqMX5zrRNfTvHr7CM2NRG83BSf2ZXjntd/S/_DSF6492-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6gXJFDR",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6gXJFDR/0/KVRCnQFG4PMGnw5RtM5jcGsBDC2wWbcrJ6c9TtKC9/XL/_O1H0256-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6gXJFDR/A",
     "keywords": [
       "a",
@@ -2102,14 +2356,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6gXJFDR/0/LsBhhGbgsHpSBd4ZsDZQ8sPg3VvvWbvMpspT5dX77/XL/_O1H0256-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6gXJFDR/0/LsBhhGbgsHpSBd4ZsDZQ8sPg3VvvWbvMpspT5dX77/XL/_O1H0256-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6gXJFDR/0/KdN9xq4zM66PcqpXvT6BRS3RG5KcKbLkMbxqPkpTV/L/_O1H0256-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6gXJFDR/0/LfNjCWnZ9pQ3sD82xz7R2zVxDGj2DFrbD8HF7ns7N/M/_O1H0256-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6gXJFDR/0/KFLKktZWMRmNc6XG5L3vLX7XTKDvxWxx6Z8KMrXPb/S/_O1H0256-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GjpFSmz",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-GjpFSmz/0/LBh8rDdjpmNNhqk6qHdhDKXZXRBfvXC2nCrRkkZZb/XL/_O1H0264-Pano-Pano-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-GjpFSmz/A",
     "keywords": [
       "a",
@@ -2126,14 +2385,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-GjpFSmz/0/NVwcRwnNnDtvR5vrN57rNJdHJ7bpmxD864ph4DDFz/XL/_O1H0264-Pano-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-GjpFSmz/0/NVwcRwnNnDtvR5vrN57rNJdHJ7bpmxD864ph4DDFz/XL/_O1H0264-Pano-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-GjpFSmz/0/NVwcRwnNnDtvR5vrN57rNJdHJ7bpmxD864ph4DDFz/XL/_O1H0264-Pano-Pano-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-GjpFSmz/0/LL35fG6TvKv36vwsxxKSm2qjVDGpW3Cw27Hb3ZcZf/L/_O1H0264-Pano-Pano-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-GjpFSmz/0/M6nqmVp6ZPNmmWxC5rcqdjF74wWQDsRQnkvgQs8vr/S/_O1H0264-Pano-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bQHXTGL",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-bQHXTGL/0/MzjMjbMBt9mr7JXm7tkjQ8ttFr3GCsP42v9sS3kZv/XL/_DSF6565-Edit-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bQHXTGL/A",
     "keywords": [
       "a",
@@ -2150,14 +2414,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-bQHXTGL/0/LQBqDMtc8drqsJjGt4Mn6B9bWLRCnptpSzbRcWVj2/XL/_DSF6565-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-bQHXTGL/0/LQBqDMtc8drqsJjGt4Mn6B9bWLRCnptpSzbRcWVj2/XL/_DSF6565-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-bQHXTGL/0/L5K24HfrXWtrw7rbkF97gHfQRnxFXcgnXM4zjrpNW/L/_DSF6565-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-bQHXTGL/0/KnHRkJTN2JMzm67xjBGRSTPWSmj9zC3Qz92M2j9Zf/M/_DSF6565-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-bQHXTGL/0/LFD7cR7w7gwz9JqqPbgcpkm4WCDWFzMcBSvfNcDj4/S/_DSF6565-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6GZxKjN",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6GZxKjN/0/Kj3rXBNjQtTQzMvCbhM99XGZT2q3QwCx9wnjwpZQH/XL/_O1H0296-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6GZxKjN/A",
     "keywords": [
       "a",
@@ -2174,14 +2443,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6GZxKjN/0/NRK77wBtc5jpJXDzpCzPtfQJQr43BhW2M6FrTKqkf/XL/_O1H0296-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6GZxKjN/0/NRK77wBtc5jpJXDzpCzPtfQJQr43BhW2M6FrTKqkf/XL/_O1H0296-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6GZxKjN/0/NRK77wBtc5jpJXDzpCzPtfQJQr43BhW2M6FrTKqkf/XL/_O1H0296-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6GZxKjN/0/NKdCnSLNrmt3qZL64xNmJVffd4ZhBdKGfJ4GSDZxt/L/_O1H0296-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6GZxKjN/0/K2jZDfmWBfLv5WWBwV5XLfMznMzbkwqd9nMtKQGkc/S/_O1H0296-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vnRK6nq",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vnRK6nq/0/KNcFpjJnXpW8ctfsCPDMPF3wkPrrZ9dhKZQQp67gt/XL/_O1H0298-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vnRK6nq/A",
     "keywords": [
       "a",
@@ -2198,14 +2472,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vnRK6nq/0/KGwbHJ8BFRSKSMCZRc97RfnJSJKH5XmqCKX4JF574/XL/_O1H0298-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vnRK6nq/0/KGwbHJ8BFRSKSMCZRc97RfnJSJKH5XmqCKX4JF574/XL/_O1H0298-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vnRK6nq/0/MC822xjMGVVTvfxfrRxxFVrqMNcWL6bfmc9TRKGtt/L/_O1H0298-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vnRK6nq/0/M5fjbdgHp4VKQb26qXW3vqvLZfLBwXvQxND5bPGMD/M/_O1H0298-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vnRK6nq/0/KW5PRxdK985P3tnSCgvGn8xwM2fWhqKP5v7PMbMKL/S/_O1H0298-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qpPKnkk",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-qpPKnkk/0/NJdD8TNTRcFDLDqBMgv399S97VfNPPGrkSLgGsJGX/XL/_O1H0300-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qpPKnkk/A",
     "keywords": [
       "a",
@@ -2222,14 +2501,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-qpPKnkk/0/NFw2TbvqGFc8VrKk8KhksgkJrsKLr4bhsvNx5ZjdC/XL/_O1H0300-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-qpPKnkk/0/NFw2TbvqGFc8VrKk8KhksgkJrsKLr4bhsvNx5ZjdC/XL/_O1H0300-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-qpPKnkk/0/LD99gfs4K9tH9CwHxcX4BQ5Cb9cCqBm6sj375hwjG/L/_O1H0300-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-qpPKnkk/0/KJzmXmLGtPJ9mpRhWxN4tVPPrrjbMG6FngSmX7jSh/M/_O1H0300-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-qpPKnkk/0/KpjX6nq3r8q9MPxWBcnQ55sW5SB9HLc824pKv83hV/S/_O1H0300-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6jZxx8J",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6jZxx8J/0/NGtnx6rnF4R4xxHGSFMWJTv2P8grQ5nJrXBs4qkz7/XL/_O1H0300-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6jZxx8J/A",
     "keywords": [
       "a",
@@ -2246,6 +2530,41 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6jZxx8J/0/LBc5ZSrVPFvw7Q6qC39WVMgrS3X9TxN7G9CRFgmTK/XL/_O1H0300-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6jZxx8J/0/LBc5ZSrVPFvw7Q6qC39WVMgrS3X9TxN7G9CRFgmTK/XL/_O1H0300-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6jZxx8J/0/M2kLqwK2fDG6XwTsLtVLx89Q2fvFt3G25ZJC7GX76/L/_O1H0300-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6jZxx8J/0/MN26MQg393LdVWPxhrNjnpVQ2Mbnqhc87rD6TvSmf/M/_O1H0300-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-6jZxx8J/0/MWwvvg3MHWGSL9BbCmpRmnSN2SWdGzP2qwgdwnfLF/S/_O1H0300-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-vXBVBKJ",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vXBVBKJ/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 57,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

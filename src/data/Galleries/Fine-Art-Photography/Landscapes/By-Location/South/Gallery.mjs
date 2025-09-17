@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-8tvnHvW",
-    "title": "Green Lagoon  Photography by Wayne HeimGreen Lagoon, quiet secluded lagoon in wooded area of Smokie Mountains ©Wayne Heim",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Green Lagoon  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/Mdt8qbBsKr48T4DDXjF86h42bp63bVqZRk3VPW56N/XL/_IGP2186-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/A",
     "keywords": [
       "Smokie Mountains",
@@ -38,14 +42,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/NhrftR6ChN9tqr4j2vRhBdZTs7w2fBdj6dH2jgpCb/XL/_IGP2186-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/NhrftR6ChN9tqr4j2vRhBdZTs7w2fBdj6dH2jgpCb/XL/_IGP2186-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/K5FrFZvRWKXC4rmRt4H9jrqT4n8xkCshLFfZ45CpT/L/_IGP2186-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/KzSBmgm3KXLtb4mVWrx2SD2MJG89gwGkb32dbSDj3/M/_IGP2186-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/3/KDTK5x7HBtNSG8BVcsZS8LJ7gD6tFsZW5RLdhHtpb/S/_IGP2186-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-R6Zh32H",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-R6Zh32H/1/Lckv3jhGWtKsHzSJdPSM6PDXHdV9fbgtdP3zdg3hq/XL/_WHZ6599-Edit-2-XL.jpg",
+    "alt": "Green Lagoon  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-R6Zh32H/A",
     "keywords": [
       "Smokie Mountains",
@@ -62,14 +71,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-R6Zh32H/1/M4T33kvWpcWr7FQP4854wTVQJz4wtjTZZshcxxM8q/XL/_WHZ6599-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-R6Zh32H/1/M4T33kvWpcWr7FQP4854wTVQJz4wtjTZZshcxxM8q/XL/_WHZ6599-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-R6Zh32H/1/M4T33kvWpcWr7FQP4854wTVQJz4wtjTZZshcxxM8q/XL/_WHZ6599-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-R6Zh32H/1/NX2Z6wMVZCDstm9VQnjmmbknStbfHj2gJqvc3Rz2V/L/_WHZ6599-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-R6Zh32H/1/LLnkBBgqcbdvjhbDzm5SgKPQzvSWRKGLnGTktPG45/S/_WHZ6599-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rH4MSZg",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-rH4MSZg/0/NVSm3p8zNXnVJ8WW3zBwkf85884PS9qJmgMmPNmGb/XL/_WHZ6643-Edit-2-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-rH4MSZg/A",
     "keywords": [
       "Smokie Mountains",
@@ -86,6 +100,41 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-rH4MSZg/0/NdTbjDMB84wVq3FpRT6mtFgn7gcz3X4TMQmRXcFSG/XL/_WHZ6643-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-rH4MSZg/0/NdTbjDMB84wVq3FpRT6mtFgn7gcz3X4TMQmRXcFSG/XL/_WHZ6643-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-rH4MSZg/0/NC2RRmTQ5MLtZhX4bJ3g89BM8qWHGdg8sTDH2kZ9w/L/_WHZ6643-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-rH4MSZg/0/KTw7sMMZxHMQVZkMLqn8n6SNZT7R6Xv4TGgwXDqGT/M/_WHZ6643-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-rH4MSZg/0/NWrQbkwnnSMpDFStmjZ7S2M8TfSq7wxqMw7TvrLR4/S/_WHZ6643-Edit-2-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-ZBbxVgZ",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-ZBbxVgZ/A",
+    "keywords": [
+      "Smokie Mountains",
+      "K4 Studios",
+      "Wayne Heim",
+      "landscape photography",
+      "forest",
+      "trees",
+      "secluded",
+      "landscape"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-ZBbxVgZ/1/M6L9MdsB9zLnHgBp4rfDXPWVn6hH2C2Tx3fwcMbvC/XL/_WHZ6646-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-ZBbxVgZ/1/M6L9MdsB9zLnHgBp4rfDXPWVn6hH2C2Tx3fwcMbvC/XL/_WHZ6646-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-ZBbxVgZ/1/M6L9MdsB9zLnHgBp4rfDXPWVn6hH2C2Tx3fwcMbvC/XL/_WHZ6646-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-ZBbxVgZ/1/LGFdFJ7zJXVKXg5CMNSt9Sq59RhDDskmfzSGxPMjb/L/_WHZ6646-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-ZBbxVgZ/1/NLR4N2wWPt5Zx7LWxZ8L5HFvWLzkBKVf8ps7gtSVx/S/_WHZ6646-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   }
 ];

@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-RNzNnCf",
-    "title": "MeganMegan Pillar",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Megan",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/NMVPTpvBMhPBgrb3nC5GjDBhqnBThWp4pMdrhnSDF/XL/_WHZ1114-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/A",
     "keywords": [
       "BW",
@@ -36,14 +40,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/MBqvqFrvBmHdjj8Njr95BC775k3pT5XQGS2zPjgP3/XL/_WHZ1114-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/MBqvqFrvBmHdjj8Njr95BC775k3pT5XQGS2zPjgP3/XL/_WHZ1114-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/MBqvqFrvBmHdjj8Njr95BC775k3pT5XQGS2zPjgP3/XL/_WHZ1114-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/MgZMqbR739F7McVbkSTstGKsCvFSvp7vs4rpVQxP8/L/_WHZ1114-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RNzNnCf/1/LsfnXwL6VpmW82bh8pMZRNLMv7d7BRTv2FLnvttVx/S/_WHZ1114-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dQbG65F",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/KPh36N4C4BbXj7D67mc8jvQFV2zRskC69fpCb9ffR/XL/_WHK3073-XL.jpg",
+    "alt": "Megan",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-dQbG65F/A",
     "keywords": [
       "BW",
@@ -58,14 +67,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/LH4s2tDJRqgMnGBQv4przcqB4mRgWL98bmD33Cqxd/M/_WHK3073-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mMZDVvM",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/L9tD7P6DzLCQcX6DS3RNFtX6rR7hp2cfGTBx7Ng43/XL/w_whz5994-edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/A",
     "keywords": [
       "BW",
@@ -80,14 +94,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/NCZx45p6ZR4TntFSTPWKLwqzTPBwXJcX5tkKC69mD/XL/w_whz5994-edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/NCZx45p6ZR4TntFSTPWKLwqzTPBwXJcX5tkKC69mD/XL/w_whz5994-edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/KTkMp8H6X7vfTKHxnGMwBBjbtCXmnhstsqFfV7Jk4/L/w_whz5994-edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/LJmX5TpmKPL7FLvTZ3wQfLxmxwZcvDdrm4jq4DHDZ/M/w_whz5994-edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/Kg4zJpsTTJNwVzrFc6V8gwDZMnCqpnkCc3gbtFcwx/S/w_whz5994-edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5FHtCVg",
     "title": "Pals - Black & White  Photography by Wayne Heim",
     "description": "Pals - black & white photo of a boy and his Black Labrador dog. ©Wayne Heim",
-    "alt": "Pals - Black & White  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/Ld29NgDSqr2P8WVGtb6w67kk9zxqcFwGNDZMQLRzH/XL/_IMG4636-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/A",
     "keywords": [
       "BW",
@@ -102,14 +121,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/L8F9n9mqkBv7ZT5sqfwFG4wC573bdpcqhZbH926K4/XL/_IMG4636-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/L8F9n9mqkBv7ZT5sqfwFG4wC573bdpcqhZbH926K4/XL/_IMG4636-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/KxXbnPPm4C3cnbFPw3LRBc3d5m3LpkbZ88LJ6pLQS/L/_IMG4636-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NHxt8j9xX2vRkBGqHcrGxRF93fz2wh6fb9Zdb4SJg/M/_IMG4636-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gjVgKTL",
     "title": "Thank You Kiss     Photography by Wayne Heim",
     "description": "Two reenactors at D Day Conneaut.  ©Wayne Heim",
-    "alt": "Thank You Kiss     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/LqPq65RXZBXnw8D6L2pRpsGg9KFPhQsxz3f2XjjMX/XL/_IMG8678-XL.jpg",
+    "alt": "Pals - Black & White  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/A",
     "keywords": [
       "BW",
@@ -124,14 +148,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/NbgQNKHrC96TP9RwQbHGzN7QxbJkzKPgMpLQJ7g83/XL/_IMG8678-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/NbgQNKHrC96TP9RwQbHGzN7QxbJkzKPgMpLQJ7g83/XL/_IMG8678-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M6Ktc2c6BMnGSDRgMx3BG9ztN7LMDm63gvvXwWrfw/L/_IMG8678-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/MRz3Xshs5D2n8gRKftncFDmCGg35vxnRcWdkC3c6P/M/_IMG8678-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8ZC4vFq",
     "title": "Highly Decorated PFC   Photography by Wayne Heim",
     "description": "WW II Veteran poses with all the metals he earned.   © Wayne Heim",
-    "alt": "Highly Decorated PFC   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/NJVkm5nDrd6P4hrDXFnXq3kmXP9bGGth7rxJZRN6t/XL/_W3H4899-XL.jpg",
+    "alt": "Thank You Kiss     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-8ZC4vFq/A",
     "keywords": [
       "BW",
@@ -146,14 +175,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/KF3jpQG4RmH6q2dbRmDgjXJfNfNqMRL2xm5jZtnGB/XL/_W3H4899-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/LwtNgwV32DszLqMmMdL7ZLpqPLQMph2kqKDcMXh5s/L/_W3H4899-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8ZC4vFq/4/MJFZv3R3Qp7DkXX8FjsJDqtJwTP4cRjJNQcWfcNN4/S/_W3H4899-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zkVnCjx",
     "title": "We'll Meet Again  Photography by Wayne Heim",
     "description": "Dancers  at the USO dance  of D Day Conneaut.©Wayne Heim",
-    "alt": "We'll Meet Again  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/K8H9MbDQCTfFDjMdJQQR3Q9JkWNPwJqsk58ChwsSC/XL/_IMG3978-XL.jpg",
+    "alt": "Highly Decorated PFC   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-zkVnCjx/A",
     "keywords": [
       "BW",
@@ -168,14 +202,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LFb58JT5Vg2DznNWCmsRrS9TsDS5wvTRsh24KkDH2/XL/_IMG3978-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LFb58JT5Vg2DznNWCmsRrS9TsDS5wvTRsh24KkDH2/XL/_IMG3978-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/NGPKBTLPRvVSBKvd6NF43FSvWzV9sKHcjQ8rzJ8Xn/L/_IMG3978-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LNwkcTtTtN9g96wnPdjhnChNdw2DLNQ6TRLnXZGT7/M/_IMG3978-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/Kfjw74nFW6dnt4xRzP8Vbmgt4pJWsW4JkjGT7zSJ3/S/_IMG3978-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TdvK9cd",
     "title": "USO Performer     Back & White Photography by Wayne Heim",
     "description": "Reenactor as a USO performer at the USA Dance of D Day Conneaut.©Wayne Heim",
-    "alt": "USO Performer     Back & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/KQjg9Q53XVJrd7vccx4QCbvXW59td6FXKDxD3rRv2/XL/_IMG3997-XL.jpg",
+    "alt": "We'll Meet Again  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TdvK9cd/A",
     "keywords": [
       "BW",
@@ -190,14 +229,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/NjmP3p5xzLxmWtCxXqz7CLK4GJHNvL6DNWMrp9HWK/XL/_IMG3997-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/NjmP3p5xzLxmWtCxXqz7CLK4GJHNvL6DNWMrp9HWK/XL/_IMG3997-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/NjmP3p5xzLxmWtCxXqz7CLK4GJHNvL6DNWMrp9HWK/XL/_IMG3997-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/K4jDp4Hz7mZKswncPdHWCXbfQLvWbnS5fTvv8D9tF/L/_IMG3997-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-TdvK9cd/5/KRZJMtc6H85TqhMhjPvmcZMS6rrqndFkpJVL5dChH/S/_IMG3997-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Gf48H98",
     "title": "Portrait of a Goth   Black & White  Photography by Wayne Heim",
     "description": "Goth woman poses for a portrait.\n ©Wayne Heim",
-    "alt": "Portrait of a Goth   Black & White  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/L8xvjdr2RTXhDhMPjdQmbK5k5RNWQLTZQx9tPQzms/XL/_WHZ0839-2-XL.jpg",
+    "alt": "USO Performer     Back & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Gf48H98/A",
     "keywords": [
       "BW",
@@ -212,14 +256,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/L6wdqt5GTt74LzkV4b2TNg2H6ZV6kZwSwWC2RVqwL/XL/_WHZ0839-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/L6wdqt5GTt74LzkV4b2TNg2H6ZV6kZwSwWC2RVqwL/XL/_WHZ0839-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/L6wdqt5GTt74LzkV4b2TNg2H6ZV6kZwSwWC2RVqwL/XL/_WHZ0839-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/M47cwtk79TpB2LN3r5PJq4qMXbLsp3Z8PNCtXppnw/L/_WHZ0839-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-Gf48H98/1/KG2pCJLgnLjTsf4Nd3W5ZHdctMN8dNgfKQC8wCDts/S/_WHZ0839-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-z8JXFZ2",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/KkLKC6rKDLrVcbvSvJ8B7nTvb2GJfjtwfHHr7LdFP/XL/_WHZ1101-Edit-2-XL.jpg",
+    "alt": "Portrait of a Goth   Black & White  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/A",
     "keywords": [
       "BW",
@@ -234,14 +283,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/NKsMBcjR6qB7NTjZZ6drkHW2QqhNdKgDVhbjhfwNZ/L/_WHZ1101-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/KbKjjz6m8ffqsZf8zdkdKKKSNHNnBxc7JkrgTCR7H/S/_WHZ1101-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GLhK6TT",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/KX4kv9KG2s7B3hfZdXstQCRvV7jhBgrfLWZ9mv8rZ/XL/_FWH7478-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-GLhK6TT/A",
     "keywords": [
       "BW",
@@ -256,14 +310,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/KkdczX4ffsddTLkRdfwRjgC6DKKXQnVz5zQkG6NpM/L/_FWH7478-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TzLS9r7",
     "title": "Portrait of Young Boy    Black & White Photography by Wayne Heim",
     "description": "Young boy in costume.  © Wayne Heim",
-    "alt": "Portrait of Young Boy    Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/KTmj8BTFBGzqDFjhFbPz8CW644Kfbpt8Ks3HdhSwQ/XL/_IMG5633-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/A",
     "keywords": [
       "BW",
@@ -278,14 +337,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/L224KG23B9h6fWtvxPTXNvBrbv8H9shCLtqKnz5Rj/XL/_IMG5633-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/L224KG23B9h6fWtvxPTXNvBrbv8H9shCLtqKnz5Rj/XL/_IMG5633-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/MG5GRkLZBPb3hkxnW5gbf75m9fChNbNCZd3H6GdXc/L/_IMG5633-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/Nh9gQXM2C253hrk8MM4cRbqQdgHqMFxk9WbSMpk5b/M/_IMG5633-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-TzLS9r7/3/M3qxTtrq8R76j8Hbxwshj3g5Dv2zCmSb55LgtBVZv/S/_IMG5633-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FthDrjJ",
     "title": "Young Aviator   Photography by Wayne Heim",
     "description": "Young boy dressed as an aviator. © Wayne Heim",
-    "alt": "Young Aviator   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/L5pM8bbqfbp39nZTsjhwdN5B7Fj3p3PBRSKCtKrds/XL/_IMG5685-2-XL.jpg",
+    "alt": "Portrait of Young Boy    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/A",
     "keywords": [
       "BW",
@@ -300,14 +364,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/M9nhthjcjRqQndVBdMFX9hwt5wwbq6DgP8mRvGMLd/XL/_IMG5685-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/M9nhthjcjRqQndVBdMFX9hwt5wwbq6DgP8mRvGMLd/XL/_IMG5685-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/M9nhthjcjRqQndVBdMFX9hwt5wwbq6DgP8mRvGMLd/XL/_IMG5685-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/Mh7cdNvPFnKtvkqxZNZp4mbTj4L7GG4MK5VwXnNMx/L/_IMG5685-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FthDrjJ/3/Kqrnn4Mtcj3WLBSNs8F442M6KwDb8pGNJPH3WSpjM/S/_IMG5685-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4k3RNmc",
     "title": "Cowgirl     Black & White Photography by  Wayne Heim",
     "description": "Portrait of young cowgirl   © Wayne Heim",
-    "alt": "Cowgirl     Black & White Photography by  Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/Lc3wHgLGf6WgRQ68NkdtBdggKQmK7FMsjczs6NPcS/XL/_IMG5693-XL.jpg",
+    "alt": "Young Aviator   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/A",
     "keywords": [
       "BW",
@@ -322,14 +391,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/KZrKGSJ9H7DfDJrJfKnccWmqcG5FvPxJJHhrn4wqc/XL/_IMG5693-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/KZrKGSJ9H7DfDJrJfKnccWmqcG5FvPxJJHhrn4wqc/XL/_IMG5693-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/M7wkr5vf3Q4pc5xFrKSkVdW96skzwTqJzbNfSktZf/L/_IMG5693-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/MF8LfjCVkzGG4sNcSnvPsbgNRQg7bPgBmtf3FhLd3/M/_IMG5693-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-4k3RNmc/3/LX2zFztFP7pVpVVDsVczg6wx9hNtSHgP7pgmmJw55/S/_IMG5693-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9ZnSqzD",
     "title": "You Got Lipstick  Photography by Wayne Hei",
     "description": "Bride wipes lipstick from groom's face.\n ©Wayne Heim",
-    "alt": "You Got Lipstick  Photography by Wayne Hei",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/MmL5Xh9PZM8n5FDRCJRDw3Hd4mNvd9X4Pxg2h5c6b/XL/_WHZ5945-Edit-2-2-XL.jpg",
+    "alt": "Cowgirl     Black & White Photography by  Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9ZnSqzD/A",
     "keywords": [
       "BW",
@@ -344,14 +418,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/Kb7b6LqRJgwpksSWQ6r5sbdxR5kXzCVtS6gD7P523/XL/_WHZ5945-Edit-2-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/Kb7b6LqRJgwpksSWQ6r5sbdxR5kXzCVtS6gD7P523/XL/_WHZ5945-Edit-2-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/Kb7b6LqRJgwpksSWQ6r5sbdxR5kXzCVtS6gD7P523/XL/_WHZ5945-Edit-2-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/KJMT7kSWFGPJHTjv827t3JrnHWpJ79k3fhRRQNr48/L/_WHZ5945-Edit-2-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9ZnSqzD/2/K5Zsn4rQps4mT2jd5WBs5dL2SZxVrRTt9g8hfX5g3/S/_WHZ5945-Edit-2-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vKxJbtv",
     "title": "Are They Coming Yet   Black & White Photography by Wayne Heim",
     "description": "Woman waits by window looking for retruning soldiers. © Wayne Heim",
-    "alt": "Are They Coming Yet   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/KsmTB4dSRFSTK8N8Rqq6TcRmH5jxB9D729mt3Z6kq/XL/_WEH5839-XL.jpg",
+    "alt": "You Got Lipstick  Photography by Wayne Hei",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-vKxJbtv/A",
     "keywords": [
       "BW",
@@ -366,14 +445,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/L29fT4cX4ghtgLNGLrvwwwTKZpGDcP5kQn4kTbMC9/XL/_WEH5839-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/L29fT4cX4ghtgLNGLrvwwwTKZpGDcP5kQn4kTbMC9/XL/_WEH5839-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/L29fT4cX4ghtgLNGLrvwwwTKZpGDcP5kQn4kTbMC9/XL/_WEH5839-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/NgNkcGVbK6zQTMwRDCLg8xCj2DnvkSJqmrHfrLhFC/L/_WEH5839-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-vKxJbtv/4/NS85Lfs6x5zhLQFW79L2H82sC7GbhrZq5Q6pnjr6F/S/_WEH5839-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9NT8GV4",
     "title": "I Am Waiting   Black & White Photography by Wayne Heim",
     "description": "Portrait of a woman reenactor at D Day Conneaut.  © Wayne Heim",
-    "alt": "I Am Waiting   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/MhNMqrfWKmNp4p4Jf5pjCrSsGkKhv5pWmdr9mBbkT/XL/_W3H3194-XL.jpg",
+    "alt": "Are They Coming Yet   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9NT8GV4/A",
     "keywords": [
       "BW",
@@ -388,14 +472,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/M9J2qbRVcjqv6JTkbHF46ZgGxJSXXHWd569kdGPQG/L/_W3H3194-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/MfzVBWD3bX3WMKCWLpmGZHKWBV8WkgdMVFt5B36vv/M/_W3H3194-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/LkNSWQ49hvJBDm6xCz3QsJ7VQvM8LjpZgbPsRH8Gw/S/_W3H3194-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CjRTfF3",
     "title": "Deep in thought.",
     "description": "Black and White Portrait",
-    "alt": "Deep in thought.",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/L8jNFqmVS2gdZhQXvdH7Qd6gsgtszq255f92DWkp8/XL/_WHZ1247-XL.jpg",
+    "alt": "I Am Waiting   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/A",
     "keywords": [
       "BW",
@@ -410,14 +499,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KQncWpSfx2tbrdK3pnX4V7G8TbWLFPGLNXgkVpnBk/L/_WHZ1247-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9WzBrqT",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/LDxz7SjrLsWH7C748DNLGFQcPPL2Nzn4Mm8sMG4n4/XL/_WHZ5735-Edit-2-XL.jpg",
+    "alt": "Deep in thought.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-9WzBrqT/A",
     "keywords": [
       "BW",
@@ -432,14 +526,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/K9PgjTCwsrfNjTj6s9GqQFqjRJ5vC2fwjxTFgXcXt/XL/_WHZ5735-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/K9PgjTCwsrfNjTj6s9GqQFqjRJ5vC2fwjxTFgXcXt/XL/_WHZ5735-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/K9PgjTCwsrfNjTj6s9GqQFqjRJ5vC2fwjxTFgXcXt/XL/_WHZ5735-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/MXGGds6CwPKj6C6W8BHxbLzQvN2Mw4HPLZQcSGgZ2/L/_WHZ5735-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-9WzBrqT/2/Ldx36W7sZcGtsJ7bK9WNh579pgWjdV5M8q5CJcV8D/S/_WHZ5735-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PtmDWWS",
     "title": "Sailor Boy     Photography by Wayne Heim",
     "description": "Young boy areenactor as a young sailor at the USO Dance during D Day Conneaut.  © Wayne Heim",
-    "alt": "Sailor Boy     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/L8bzWQsqH2LfsJRFCrN5NdWNdrLpnNbhXR8hkF7Qr/XL/_W3H6651-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-PtmDWWS/A",
     "keywords": [
       "BW",
@@ -454,14 +553,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/MCktkwWMGR4rpMmxnV7zNFfqth5q2WDKM37Cz2cTs/XL/_W3H6651-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/MCktkwWMGR4rpMmxnV7zNFfqth5q2WDKM37Cz2cTs/XL/_W3H6651-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/MCktkwWMGR4rpMmxnV7zNFfqth5q2WDKM37Cz2cTs/XL/_W3H6651-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/KwPnvX5BxDVfWF8WFcP7k5VsM2BdBJx7t4vTH3XWk/L/_W3H6651-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-PtmDWWS/4/ML2p4Db78V3RH6RWGm9JSZcWwLnpdHNfv2xBwX3xH/S/_W3H6651-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nZX8jLD",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/LpVJz4Tq7bWKdm9VScRpHQZDhT98NmFJVgFgc95rx/XL/_WHZ5840-XL.jpg",
+    "alt": "Sailor Boy     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-nZX8jLD/A",
     "keywords": [
       "BW",
@@ -476,14 +580,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/M548bHrb3G67jD7VZPXk9HcVTpvVq7pfjgCN7Z2vX/XL/_WHZ5840-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/M548bHrb3G67jD7VZPXk9HcVTpvVq7pfjgCN7Z2vX/XL/_WHZ5840-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/M548bHrb3G67jD7VZPXk9HcVTpvVq7pfjgCN7Z2vX/XL/_WHZ5840-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/L3jmcPJpqHJsKvWbrSd5MhDC3vcfzf9JJPG6bktNx/L/_WHZ5840-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nZX8jLD/1/MRjQtcqrR8hKd6sP9RpZmmLrWSMttNkwBB4wr4KCq/S/_WHZ5840-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BJxw3Dz",
     "title": "1920's  at Old Bedford Village",
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "1920's  at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/KGQG3hXWwfD3tPrWQG97SrVPQ5W4t7WCWkqSZLHL9/XL/_DSF2516-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-BJxw3Dz/A",
     "keywords": [
       "BW",
@@ -498,14 +607,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/LKZDc6fpTHLSr5M2DG2tnWFfTMjNMQwBbC3kQ9sdk/XL/_DSF2516-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/LKZDc6fpTHLSr5M2DG2tnWFfTMjNMQwBbC3kQ9sdk/XL/_DSF2516-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/LKZDc6fpTHLSr5M2DG2tnWFfTMjNMQwBbC3kQ9sdk/XL/_DSF2516-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/LqzwvSGX9R5gR5dTpdPjcp8Qdtz6f4xgX6nQRdjbn/L/_DSF2516-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-BJxw3Dz/8/MsWd9w9BPn7wGhkQThppFfk55DKjMHcd9QLVKRhVg/S/_DSF2516-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7bxKBFk",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/Kb99Nfz7SWNhMVWPDqWCNvj5VJBSzMdw56jd7H59g/XL/_WHZ0521-Edit-Edit-XL.jpg",
+    "alt": "1920's  at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-7bxKBFk/A",
     "keywords": [
       "BW",
@@ -520,14 +634,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/K6CqvSCC9Xqr7G3bSfcfKTwQvXjxbsxXZjS5bfFwW/XL/_WHZ0521-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/K6CqvSCC9Xqr7G3bSfcfKTwQvXjxbsxXZjS5bfFwW/XL/_WHZ0521-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/K6CqvSCC9Xqr7G3bSfcfKTwQvXjxbsxXZjS5bfFwW/XL/_WHZ0521-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/KDNzXnmdZTddHxb9Jz6b25jMGdnsX8g784QTC9s6t/L/_WHZ0521-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-7bxKBFk/1/LZ3gHNFFWGPPZjVftZRd6hKKMHSKX5hX2M6r7kvbJ/S/_WHZ0521-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xMxDrS5",
     "title": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
     "description": "Woman reenactor poses for a portrait during D  Day Conneaut. © Wayne Heim",
-    "alt": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/LpwJkCgBzqstDvfS5GMfJg6J4PhFZn2gjRgGfdznk/XL/_WHZ2607-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-xMxDrS5/A",
     "keywords": [
       "BW",
@@ -542,14 +661,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/L63RHJT4f3WHMSLhn7ztP3w78FbvmbcHk8zfjkWsB/XL/_WHZ2607-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/LBgwtHVHNGcg5BvPs7Qmgx7LddQcX3GcQFNw6VBmM/L/_WHZ2607-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-xMxDrS5/3/LWQQCRwzTN64DLxSX496DPwc6wBrbGG6VfWh4534C/S/_WHZ2607-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qkMT7hL",
     "title": "Ready for the Aisle  Photography by Wayne Heim",
     "description": "Bridesmaid ready for the ceremony.\n ©Wayne Heim",
-    "alt": "Ready for the Aisle  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/KnnQdc2xbrkpbQFkv6FvG9mNvdxp6h4v67gWJ32ND/XL/_WHZ5860-XL.jpg",
+    "alt": "Pretty in Blue ( black & white)   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qkMT7hL/A",
     "keywords": [
       "BW",
@@ -564,14 +688,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/LgkQNKJRRn3H7njWJBBVwDZR5kSHNNCkPksWC4qz2/XL/_WHZ5860-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/LgkQNKJRRn3H7njWJBBVwDZR5kSHNNCkPksWC4qz2/XL/_WHZ5860-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/LgkQNKJRRn3H7njWJBBVwDZR5kSHNNCkPksWC4qz2/XL/_WHZ5860-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/MGxwP7DFp4djRc3CL6jPGmVhHW5CfNpmbrtpPrPdr/L/_WHZ5860-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-qkMT7hL/1/LNfzbqxNg38zMSZDj4Ffrbtp7dfjQ5LmMDt3p2Qnc/S/_WHZ5860-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FfQhchB",
     "title": "Take This   Photography by Wayne Heim",
     "description": "Officer offers pencil to someone at USO Dance during  D Day Conneaut. © Wayne Heim",
-    "alt": "Take This   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/M2Xt2VJ5BMGzRRdtVTsfkm2Kwjw7q9773KZhbSjw9/XL/_WHZ5370-2-XL.jpg",
+    "alt": "Ready for the Aisle  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FfQhchB/A",
     "keywords": [
       "BW",
@@ -586,14 +715,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/MmSGC38P3mzR9ZsSR36mvjm3bpGwgGSbksSbb2TnQ/XL/_WHZ5370-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/MmSGC38P3mzR9ZsSR36mvjm3bpGwgGSbksSbb2TnQ/XL/_WHZ5370-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/MmSGC38P3mzR9ZsSR36mvjm3bpGwgGSbksSbb2TnQ/XL/_WHZ5370-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/LL2kPNZGTMWGvSNjFF679N5kbvrFT98GNprrZgHhX/L/_WHZ5370-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-FfQhchB/3/K99sPCFRVsTpnszbWKptRDSzL3QCfffqXH2DNfkq2/S/_WHZ5370-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3VCCKd2",
     "title": "Our Stories    Photography by Wayne Heim",
     "description": "Veterans tell their story at the USO Dance at D Day Conneaut. © Wayne Heim",
-    "alt": "Our Stories    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/NKjZZdFDCdVXC5vzTmWLtPRJVnGhz6nkxb8PSNc6m/XL/_WHZ5358-XL.jpg",
+    "alt": "Take This   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-3VCCKd2/A",
     "keywords": [
       "BW",
@@ -608,14 +742,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/MKZQ47L8ccmzwsH55vXPNVKS47z6HdDpBFHNGV7Lm/XL/_WHZ5358-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/MKZQ47L8ccmzwsH55vXPNVKS47z6HdDpBFHNGV7Lm/XL/_WHZ5358-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/KpdSLBMn8VqRG9XFsRV8pHT32WhWfGmXFbfzFDHtc/L/_WHZ5358-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/KMQRD9FB3JsMF6hCLJfJgLKStsMXpHXxjL88ZrjP3/M/_WHZ5358-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-3VCCKd2/3/K72pgpb3x9VLsbSR2Lj8MczK9VGJSKL65tM3KBzkS/S/_WHZ5358-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pcH8S3J",
     "title": "Waiting      Black and White Photography by Wayne Heim",
     "description": "Woman waits for time to dress for wedding.  ©Wayne Heim",
-    "alt": "Waiting      Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/MtCbmvm7fvxN5gBstBJrTH3jnqthHppbtr5rfXj8x/XL/_WHZ6849-Edit-XL.jpg",
+    "alt": "Our Stories    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-pcH8S3J/A",
     "keywords": [
       "BW",
@@ -630,14 +769,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/Mdj5nwJ9ZrHHqN7xtDTqjqzr7RsnthqDDRVN75gTZ/XL/_WHZ6849-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/Mdj5nwJ9ZrHHqN7xtDTqjqzr7RsnthqDDRVN75gTZ/XL/_WHZ6849-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/Mdj5nwJ9ZrHHqN7xtDTqjqzr7RsnthqDDRVN75gTZ/XL/_WHZ6849-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/MD2twXdnjcJpbg4GpMTbz7mXwFNRsjpSJVXhZsmhQ/L/_WHZ6849-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-pcH8S3J/3/KhPSMjmxPwSrQnNGCm3PbHPPsFLkPsDQRk4jLrntf/S/_WHZ6849-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RTj9HSn",
     "title": "Dancing     Photography by Wayne Heim",
     "description": "Couple dance at USO Dance during D Day Conneaut. © Wayne Heim",
-    "alt": "Dancing     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/Mk9R7jgLNQqNvwgTNtmRphCX9v96VJT26sHtcnXjv/XL/_WHZ5391%2520b-XL.jpg",
+    "alt": "Waiting      Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RTj9HSn/A",
     "keywords": [
       "BW",
@@ -652,14 +796,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KkWwP3dLVWZB3zRdDdKq9kmTrn8cZjDp3N854Vh7C/XL/_WHZ5391%20b-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/NbKF357RZ6nHkDtCLGgp9V34J8DW9S3sTNHNj4h9r/L/_WHZ5391%20b-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-RTj9HSn/3/KHgFDf6MT59PqvJcJz54ZJ4GdKr5zPKDfbzvt93gb/S/_WHZ5391%20b-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Dq6HwJp",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/LWkrSW9ZsST38m2WhQjxgTz2GR8vZcgJXb32pLkXP/XL/_WHZ5829-XL.jpg",
+    "alt": "Dancing     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Dq6HwJp/A",
     "keywords": [
       "BW",
@@ -674,14 +823,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/Mz62CVBvMZxPk3F5r4tZtSCks5sWLck8FMTCHPBv9/XL/_WHZ5829-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/Mz62CVBvMZxPk3F5r4tZtSCks5sWLck8FMTCHPBv9/XL/_WHZ5829-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/Mz62CVBvMZxPk3F5r4tZtSCks5sWLck8FMTCHPBv9/XL/_WHZ5829-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/MzKC6jdbnP6HzhzrGQz7zDmLJ32sq8XPNdppRzVDF/L/_WHZ5829-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-Dq6HwJp/1/NDFjr858kHdG54n8mzQcWhQpWxCjhT4dZbXNvjQms/S/_WHZ5829-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Q4JpqnD",
     "title": "Mother & Son  Photography by Wayne Heim",
     "description": "Mother and son reenactors atI D Day Conneaut USO Dance.  © Wayne Heim",
-    "alt": "Mother & Son  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/MC3qfNVbC5BFzcVtct23FWwbn5TDqPRf2CNBRS2wk/XL/_W3H6653-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Q4JpqnD/A",
     "keywords": [
       "BW",
@@ -696,14 +850,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/KtgGMRB2phQXShKw8LqrX6Rb3C7cZnhTXBqFSmVFv/XL/_W3H6653-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/KtgGMRB2phQXShKw8LqrX6Rb3C7cZnhTXBqFSmVFv/XL/_W3H6653-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/M3BcfTvZmrCCdsW99WSKvbCR38STjQX8x2jzkgkKB/L/_W3H6653-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/MbXCqTTgq9QWK867RCbg5H662MTLNqs5QXHgBZbDT/M/_W3H6653-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-Q4JpqnD/4/Njg8VNk9rztPHTh6shRJ4qmb2xVDRWfk4v865m8xb/S/_W3H6653-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bVC4M8w",
     "title": "Swearing In   Black & White Photography by Wayne Heim",
     "description": "Sailor is sworn in to the navy. © Wayne Heim",
-    "alt": "Swearing In   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/LFv8gxv5c3vFXDJ5trTGf5fhHK8S3v5nv7Gb2FDGW/XL/_WHZ7185-XL.jpg",
+    "alt": "Mother & Son  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bVC4M8w/A",
     "keywords": [
       "BW",
@@ -718,14 +877,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/NG4BNfKjTqxwj9hNk44KbNFNLPcVGSJTcjS3JRWbT/XL/_WHZ7185-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/NG4BNfKjTqxwj9hNk44KbNFNLPcVGSJTcjS3JRWbT/XL/_WHZ7185-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/K5FwTGsT5H8kkJ5T6Bkmnhrjk4jVBsHhCLD94k9DB/L/_WHZ7185-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/KTK9QPwGCxcDRwNNZQ2PX7FBvh2w7LZqwn4LStTxW/M/_WHZ7185-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-bVC4M8w/1/K7QVm5r5mG2pkgjTSKxGH7xhXnJgXqRVrzdJKSM9m/S/_WHZ7185-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zF4sTBK",
     "title": "Female Reenactor  Photography by Wayne Heim",
     "description": "Woman dressed as a reenactor at Rockford WWII Days.  ©Wayne Heim",
-    "alt": "Female Reenactor  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7pbm3ZvQvhXK7rcXrXTwLGnWjCrVcgvqTMRtFvgt/XL/_IMG8585-XL.jpg",
+    "alt": "Swearing In   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-zF4sTBK/A",
     "keywords": [
       "BW",
@@ -740,14 +904,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7cL7Qw7sKKjpthckcb8sp6pPsd3ngDvrVxC4p8hD/XL/_IMG8585-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7cL7Qw7sKKjpthckcb8sp6pPsd3ngDvrVxC4p8hD/XL/_IMG8585-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/M9kh7WG6zPncHFLshmPN9ptw8PJ8J88KmbWSKMdsb/L/_IMG8585-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/LX4cTshjsWh6J6HSKVBNQ4z5pCWbhfQWgfM4B8HNQ/M/_IMG8585-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/NMJLmZMgzVzGk6PjJCnd7zjRd72LsQx2QT4r795jb/S/_IMG8585-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-t4bq7qj",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/Kf279LsqXx4tDwJkrcktfBz4KJF8jqKX23W3zQDvw/XL/_WHZ5449-Edit-Edit-XL.jpg",
+    "alt": "Female Reenactor  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-t4bq7qj/A",
     "keywords": [
       "BW",
@@ -762,14 +931,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/KjW9fwGph3vXxn36dKr4t43Z32wkGZQBpp644sHH8/L/_WHZ5449-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-stghf3f",
     "title": "Looks Good   Photography by Wayne Heim",
     "description": "Woman tries on a hat.     ©Wayne Heim",
-    "alt": "Looks Good   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/KtdVvZQPZXHWg96PNTBV4Pwd5ZpPQR84KpWjTWMXV/XL/_WHZ5802-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-stghf3f/A",
     "keywords": [
       "BW",
@@ -784,14 +958,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/LfDCH8738qNJ4WHHTFTsKRJBLbvWfMbfwd7gMm9KB/XL/_WHZ5802-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/LfDCH8738qNJ4WHHTFTsKRJBLbvWfMbfwd7gMm9KB/XL/_WHZ5802-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/LfDCH8738qNJ4WHHTFTsKRJBLbvWfMbfwd7gMm9KB/XL/_WHZ5802-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/KgwwBBjpjTPxcK6NP6Q2CL2ZW8xwVHRtXm9LPnGLN/L/_WHZ5802-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-stghf3f/1/L4cscv5QH7cdFVk6VRnwgT9ZDtSV9hHDpjLZDKLPJ/S/_WHZ5802-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qBH8D5h",
     "title": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
     "description": "Woman in period dress poses for a portrait\n© Wayne Heim",
-    "alt": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/MQczNNx78Q56VnMLJLJJxkWFfv32pK6TFL5G3Gf3N/XL/_WHK7187-Edit-XL.jpg",
+    "alt": "Looks Good   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/A",
     "keywords": [
       "BW",
@@ -806,14 +985,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/KMgWnPRfFQZXdXsjvsWfPMzTbjmqt7BLQhBQgtV8W/XL/_WHK7187-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/NBf8DcKcbbZbvpwQwhFvTMjx2GKVBLmkRMBj9spNN/L/_WHK7187-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-qBH8D5h/1/LxF9k2PcVvXDfSKv3vXgTWszVXL8sGsWxzQfKW4vf/S/_WHK7187-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JcqCMM3",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/LPNTmrRNVc7qnPGp93vG2g72tc27D4GtLdwfbdMmw/XL/_WHZ0756-XL.jpg",
+    "alt": "Portrait of a Civilian Reenactor   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/A",
     "keywords": [
       "BW",
@@ -828,14 +1012,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/MPbv3ck3frJ3TTh38tZHFGSdZ4LPmnV7bm4ctk6sg/XL/_WHZ0756-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/MPbv3ck3frJ3TTh38tZHFGSdZ4LPmnV7bm4ctk6sg/XL/_WHZ0756-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/MPbv3ck3frJ3TTh38tZHFGSdZ4LPmnV7bm4ctk6sg/XL/_WHZ0756-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/MWXKd3zbRs3JzjDftW7WbkJ4qbZbkZHrPg4qCz9Jc/L/_WHZ0756-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-JcqCMM3/1/KVhnfzQH4NLB873j2cvw6rFgb4XqRzn2g2rMDwp7M/S/_WHZ0756-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-m4hMSXM",
     "title": "What's Up There   Black and  White Photography by Wayne Heim",
     "description": "Woman poses in woods looking up.\n ©Wayne Heim",
-    "alt": "What's Up There   Black and  White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/NWDr3ZvR383XKbwkvsMjGfG5TK3NmQ74TPhKWBwPw/XL/_WHZ0571-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-m4hMSXM/A",
     "keywords": [
       "BW",
@@ -850,14 +1039,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/KxdxgwZ8N2KNjSZbqx9sP6bsDBBqzxjZKwM3h2CHQ/XL/_WHZ0571-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/KxdxgwZ8N2KNjSZbqx9sP6bsDBBqzxjZKwM3h2CHQ/XL/_WHZ0571-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/McRqgBSNbG9VX8pSFhnpCgnM2fFPNbGr39qN2wxpN/L/_WHZ0571-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/LTHNL7M2Hspm2nBPL93WB4jNPTMNFKNtwG5LS2tJW/M/_WHZ0571-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-m4hMSXM/1/KS2gnprmLZ5fSxsmRGjbqh7m5x9zXJx2NKGQJdHxF/S/_WHZ0571-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HTN4w9V",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/KNtHsgjfHx4vLM7BM2BTD4Z97XfXXr38qFPgrwwmR/XL/_WHZ0437-Edit-Edit-XL.jpg",
+    "alt": "What's Up There   Black and  White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-HTN4w9V/A",
     "keywords": [
       "BW",
@@ -872,14 +1066,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/KvWPDLcVF69q6GCZXVHXnhVndtSFNs7TWHmtHVWR9/XL/_WHZ0437-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/KvWPDLcVF69q6GCZXVHXnhVndtSFNs7TWHmtHVWR9/XL/_WHZ0437-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/KvWPDLcVF69q6GCZXVHXnhVndtSFNs7TWHmtHVWR9/XL/_WHZ0437-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/MtjSTnMpPcf8gVTSMfffS4XS9wJgsBC96KQSvMmcZ/L/_WHZ0437-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-HTN4w9V/0/KM3M7M9NQQnVxLJSJbhh8dvX2z7P3rjzTsC54bV9P/S/_WHZ0437-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ztNRLR6",
     "title": "Loving Couple  Photography by Wayne Heim",
     "description": "Loving couple pose by lake.   ©Wayne Heim",
-    "alt": "Loving Couple  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/M5Rdc3K8bFcKKhBdrfP8qMf9LF8LkST6wTP4RRjtw/XL/_WHZ5978-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ztNRLR6/A",
     "keywords": [
       "BW",
@@ -894,14 +1093,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/NLDKK4DfPS3SWgwpKnn5g6bKC2vBZJNq9k2rQxrGG/XL/_WHZ5978-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/NLDKK4DfPS3SWgwpKnn5g6bKC2vBZJNq9k2rQxrGG/XL/_WHZ5978-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/NLDKK4DfPS3SWgwpKnn5g6bKC2vBZJNq9k2rQxrGG/XL/_WHZ5978-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/MPV3hFfQw84RdVz7ksz4LL6XckKkbPd5xXX8Zvmj2/L/_WHZ5978-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-ztNRLR6/1/K9k9HzNSG3RBtGkQjwC8kDfDVmLTBLgcMm96zmw6k/S/_WHZ5978-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VFWQsdm",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/KXPV6vPgzdprzJmqdsvC8rTKjjkwHrx3xDQdHvL8s/XL/_DSF3185-Edit-Edit-XL.jpg",
+    "alt": "Loving Couple  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/A",
     "keywords": [
       "BW",
@@ -916,14 +1120,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/L7zHZwHzJrcJNgnjLPjmxjQSfdb8GnMtssdps9cQH/XL/_DSF3185-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/L7zHZwHzJrcJNgnjLPjmxjQSfdb8GnMtssdps9cQH/XL/_DSF3185-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/L7zHZwHzJrcJNgnjLPjmxjQSfdb8GnMtssdps9cQH/XL/_DSF3185-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/NdFqNvhwLkPHwRhF9hfpCLXMcwwj5NzrnnvPK4kfm/L/_DSF3185-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VFWQsdm/1/LW22ggCzR9GFH3PsLttwhRt2CQxnHfvj28Q5sRzSm/S/_DSF3185-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kP4wjmp",
     "title": "I Served   Photography by Wayne Heim",
     "description": "A WWII veteran at D Day Conneaut. ©Wayne Heim",
-    "alt": "I Served   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/NMNRDW4H5SwthBdPM3LPjhKJ8Qcmzdx23XTv5j8n5/XL/_IMG2073-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-kP4wjmp/A",
     "keywords": [
       "BW",
@@ -938,14 +1147,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/KFPJ9xJrZC4FkxFc8j27zKQwrH3N7rjnw6b443wLq/XL/_IMG2073-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/KFPJ9xJrZC4FkxFc8j27zKQwrH3N7rjnw6b443wLq/XL/_IMG2073-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/LBqQcjN3PXJHvQs6HPvxZB9X8v4jkLhZChgk8whWG/L/_IMG2073-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/NgCPmWkNSLdNGPcx2pR8XVRtNzvJ4w6JwDBvw8vx3/M/_IMG2073-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-kP4wjmp/4/LPtf3B9cQ2V25Gc6kHmFK24S5djb4FpSNmkmmxgsp/S/_IMG2073-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vsZPHzr",
     "title": "Comfort  - Black & White Photography by Wayne Heim",
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
-    "alt": "Comfort  - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/NPrcVSprxpH2pfgqgRhKF3Frs2Lv3tJgMDbsqBXZT/XL/_IMG3130-XL.jpg",
+    "alt": "I Served   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-vsZPHzr/A",
     "keywords": [
       "BW",
@@ -960,14 +1174,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/KrFt55WRH9PfqF66WkZdFjkVZw44bpsHjQBF9XSxp/XL/_IMG3130-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/KrFt55WRH9PfqF66WkZdFjkVZw44bpsHjQBF9XSxp/XL/_IMG3130-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/KrFt55WRH9PfqF66WkZdFjkVZw44bpsHjQBF9XSxp/XL/_IMG3130-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/NM7jn8bp9Zzb7d9dQWpxZnf9Wx7bPn4dKfnd3D5Hk/L/_IMG3130-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-vsZPHzr/4/MJCnFvnCJwVMT5TsRdTJ3jWnFtng8M9sZdVxLNtkx/S/_IMG3130-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-x7Nj6FH",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/LwPd2ZBWTKcLNWGGscRkXBdSNwWFwPTM8jVT3P9wk/XL/_WHZ0936-Edit-2-XL.jpg",
+    "alt": "Comfort  - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/A",
     "keywords": [
       "BW",
@@ -982,14 +1201,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/NgMkcD2bTZB86dRQnJ9qfCDHWJH5VLvFWNjq5mPBK/XL/_WHZ0936-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/NgMkcD2bTZB86dRQnJ9qfCDHWJH5VLvFWNjq5mPBK/XL/_WHZ0936-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/NgMkcD2bTZB86dRQnJ9qfCDHWJH5VLvFWNjq5mPBK/XL/_WHZ0936-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/Lkk67djJ28TggFHsjsQsjpSFcRJ8CQ7dkFH3Hk5w2/L/_WHZ0936-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-x7Nj6FH/1/MJSKG5cXRVwhRfnR63DN7NvkKbhFs7McsQxLzq7DF/S/_WHZ0936-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FwBg8rF",
     "title": "Goth    Black and White Photography by Wayne Heim",
     "description": "Woman goth poses for photoshoot in woods.\n ©Wayne Heim",
-    "alt": "Goth    Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/MfWtrRbPJc39Z5tPFTkNXCQxmCjWKZLZCCF8C7FJg/XL/_WHZ0764-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-FwBg8rF/A",
     "keywords": [
       "BW",
@@ -1004,14 +1228,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/LXcxdpWg72sSGzmsrrtw5qTDNgQ8zDGj4fntPhsLd/XL/_WHZ0764-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/LXcxdpWg72sSGzmsrrtw5qTDNgQ8zDGj4fntPhsLd/XL/_WHZ0764-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/LXcxdpWg72sSGzmsrrtw5qTDNgQ8zDGj4fntPhsLd/XL/_WHZ0764-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/LB55KBzHncmKgf9GzFC85zHRBbbZRs9QCnJgR5BpB/L/_WHZ0764-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-FwBg8rF/1/M24g3mhMbVzkBmcvwhs4CRStZqwfWwwB3mb7vgZn7/S/_WHZ0764-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bfMNVrv",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/K5vz4H62s3jzD2zf5Wwrjpct3PMPXJScqJGvHwtRP/XL/_WHZ1118-Edit-XL.jpg",
+    "alt": "Goth    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/A",
     "keywords": [
       "BW",
@@ -1026,14 +1255,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/LLBGQ6X7rXb8qpd49rtPCs6dKWL2GqB4N5x57wGww/XL/_WHZ1118-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/LLBGQ6X7rXb8qpd49rtPCs6dKWL2GqB4N5x57wGww/XL/_WHZ1118-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/LLBGQ6X7rXb8qpd49rtPCs6dKWL2GqB4N5x57wGww/XL/_WHZ1118-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/MbPPg5gsm3hD5ppCnGJ4tRWGRnVRp8qRKnvpCzJLD/L/_WHZ1118-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-bfMNVrv/1/LbptNvKb4wrJZm45fnjGbd494n9Vbn74B7k5q6m76/S/_WHZ1118-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZGmLsjg",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/L6JPNt64dTqpSJhLgsMsSKvQrmQgpcwLTn5KwHQMt/XL/_WHK1254-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/A",
     "keywords": [
       "BW",
@@ -1048,14 +1282,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/MVpGFw4RhzghcFx6xJFL2gMnQ69VCw5xk3r6v4sxL/XL/_WHK1254-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/MVpGFw4RhzghcFx6xJFL2gMnQ69VCw5xk3r6v4sxL/XL/_WHK1254-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/MVpGFw4RhzghcFx6xJFL2gMnQ69VCw5xk3r6v4sxL/XL/_WHK1254-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/LSsTrr7PBxtXrQD9zBD7SHDpqNwNC7H8wp8S3x4WS/L/_WHK1254-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-ZGmLsjg/1/NVHwKBCKVH5Xbj6k6WtWDgdZNxkpVNhv6K5Cj77P7/S/_WHK1254-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DNCNfvk",
     "title": "Father & Daughter   Photography by wayne Heim",
     "description": "Intimate portrait of Father and \nDaughter done in a sepia tone. Companion piece for Mother & Daughter. ©Wayne Heim",
-    "alt": "Father & Daughter   Photography by wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/K3cxnfwGkrRnmVJsJtkTg5R4c5n6XXLgpSTsJHr8K/XL/_WHZ7798-2-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-DNCNfvk/A",
     "keywords": [
       "BW",
@@ -1070,14 +1309,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/Kj3q8ZcWB7xdGT34LdkBJMpvRNsHM3Nq9jkbZCVTR/XL/_WHZ7798-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/Kj3q8ZcWB7xdGT34LdkBJMpvRNsHM3Nq9jkbZCVTR/XL/_WHZ7798-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/L4RJq5jMPvSwVMWtJQRnNbkVJStPTh8FLJ9ZH8VJv/L/_WHZ7798-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/KsjDVtWHW5tjJVBxWP8VhhTMZZVGB6G4s2q2RwsWG/M/_WHZ7798-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-DNCNfvk/4/MpPbTskLD9zMxMZ9P3LTPQtg4Wj7c3vFCPrPTq3D4/S/_WHZ7798-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PNs7bP5",
     "title": "Mother & Daughter   Photography by Wayne Heim",
     "description": "Intimate portrait of Mother  & Daughter done in sepia tone. Companion piece for Father & Daughter. ©Wayne Heim",
-    "alt": "Mother & Daughter   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/Mvvjg6HCRW3WfkZrcNSSVw3SSk8WWFDL38xPZS2hM/XL/_WHZ7804-2-XL.jpg",
+    "alt": "Father & Daughter   Photography by wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-PNs7bP5/A",
     "keywords": [
       "wayne heim",
@@ -1095,14 +1339,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/LMDdJL7TvbQ7FWbC2nqGmkGT4bb4CxZK4gT68bq7W/XL/_WHZ7804-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/LMDdJL7TvbQ7FWbC2nqGmkGT4bb4CxZK4gT68bq7W/XL/_WHZ7804-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/KkH5sRHvNPNK4SRcsZvrsmLbrNp74ZVFS3CMwVGvz/L/_WHZ7804-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/K4vDpVnw24cpn83PG6xFjf6TbT6kZfmgdkMrKw2r4/M/_WHZ7804-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Heim-Family-Reunion/Family-Reunion/i-PNs7bP5/2/KhnpPBJ6zJSxG4bDhNfXvwKfgFmHKMxxhkMg5fwdX/S/_WHZ7804-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-S5x62Zc",
     "title": "Almost Time   Black and White Photography by Wayne Heim",
     "description": "Young woman contemplates her upcoming wedding.  ©Wayne Heim",
-    "alt": "Almost Time   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/NBzm7wxKvRzQp5d5kRh3tVNbsNScLLwHx5ZSbQH43/XL/_WHZ6940-XL.jpg",
+    "alt": "Mother & Daughter   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-S5x62Zc/A",
     "keywords": [
       "wayne heim",
@@ -1120,14 +1369,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/K6sQJkt3D56fwgNbzxZJfW3L8LT4ftdx9TPV9zF4r/XL/_WHZ6940-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/K6sQJkt3D56fwgNbzxZJfW3L8LT4ftdx9TPV9zF4r/XL/_WHZ6940-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/K6sQJkt3D56fwgNbzxZJfW3L8LT4ftdx9TPV9zF4r/XL/_WHZ6940-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/Ngzxp9TT4trLNhCcWJ9jcK42ZcFD6VvPvtzpWgVKC/L/_WHZ6940-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Courtney-and-Nick-Wedding/i-S5x62Zc/3/LTCZchVqRdWt6ktKwzLKCN2VpVhm3t9hwL2F7gdTT/S/_WHZ6940-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VGfBgBn",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/MVCbBbVPK6sgVkwVWLHWtN2crBHp3D46KGxrKhP8G/XL/_WHZ5899-XL.jpg",
+    "alt": "Almost Time   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-VGfBgBn/A",
     "keywords": [
       "wayne heim",
@@ -1145,14 +1399,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/KP9q4KnWgZq3fn8L2ZFkK9sFD7ZWwkZ6PNDVm7c8k/XL/_WHZ5899-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/KP9q4KnWgZq3fn8L2ZFkK9sFD7ZWwkZ6PNDVm7c8k/XL/_WHZ5899-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/KP9q4KnWgZq3fn8L2ZFkK9sFD7ZWwkZ6PNDVm7c8k/XL/_WHZ5899-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/Md5wwrb6r9pX7Mp432F4FjFqMcCBMTss4zVR6sNQp/L/_WHZ5899-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-VGfBgBn/1/Lbhjq8HfPXTWt3TrgcsJHRjFzdP4hXMDGn6SRj4s3/S/_WHZ5899-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nr48tJT",
     "title": "Posing in Hat   Photography by Wayne Heim",
     "description": "Woman poses for a portrait in hat she just got.     ©Wayne Heim",
-    "alt": "Posing in Hat   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/Lh8D7FRXQCwWNw3mfkSgqX8jZTjTsLhngZXHMVN5Q/XL/_WHZ5838-2-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-nr48tJT/A",
     "keywords": [
       "wayne heim",
@@ -1170,14 +1429,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/LwwZjHpkkWSWjTQpkDQLwdr6F7mJbwFj8CNPWpX56/XL/_WHZ5838-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/LwwZjHpkkWSWjTQpkDQLwdr6F7mJbwFj8CNPWpX56/XL/_WHZ5838-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/LwwZjHpkkWSWjTQpkDQLwdr6F7mJbwFj8CNPWpX56/XL/_WHZ5838-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/NJZvbh4ZvgdRkWN5tDFHsmjTFmh9J5SkKv3vN29vW/L/_WHZ5838-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nr48tJT/1/LTMx6nCWVZVVv8XzNN3J8DPF7Wxb2KZnFnL9NhwKc/S/_WHZ5838-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-r7CPZSf",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/LbzfRNkKfSmSvqfVpgZKxgLhxszXWkLjGrGqG2njj/XL/_FWH6741-XL.jpg",
+    "alt": "Posing in Hat   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-r7CPZSf/A",
     "keywords": [
       "wayne heim",
@@ -1195,14 +1459,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/NWsSGW4Gb737pVQVGqXXrbLPD3QQwRbr5XhNhTTRP/XL/_FWH6741-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/NWsSGW4Gb737pVQVGqXXrbLPD3QQwRbr5XhNhTTRP/XL/_FWH6741-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/KwRcmdB7Pwj9HHS5D4b24wXVKz9rpz8Hj88FHmb5r/L/_FWH6741-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/MswXg3Fc5PsNXZhHtpQcCcww9FBqmwkZWTdMMJmqS/M/_FWH6741-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-r7CPZSf/0/LNXk7jkrDwjdwtC688bKQXQPq7Jg3RZgjn2x7mmkT/S/_FWH6741-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QqDQz8x",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/NF8XnSxpVmn4WN2DQTpWfhggBHFLzB5F6xPqnLjZw/XL/_O1H0445-Enhanced-NR-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-QqDQz8x/A",
     "keywords": [
       "wayne heim",
@@ -1220,14 +1489,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/Mdpqs96fsSfcFV8h6knfp5xwvnLkzsqBWFQdkRPJh/XL/_O1H0445-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/Mdpqs96fsSfcFV8h6knfp5xwvnLkzsqBWFQdkRPJh/XL/_O1H0445-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/Mdpqs96fsSfcFV8h6knfp5xwvnLkzsqBWFQdkRPJh/XL/_O1H0445-Enhanced-NR-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/NSsLpB94xd8GmCNptNpN2pDHBWS7nNPfcqBjxVMg8/L/_O1H0445-Enhanced-NR-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-QqDQz8x/0/NJQSnkGZ7pncqf8dg5T9C5Bc3L67MbFkWtXmNsHQB/S/_O1H0445-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RR4b3rG",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/KtDnPfBhV3C4Xz7bkDgt6Nk2nc4PGChktsb7HVfK9/XL/_FWH6830-2-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-RR4b3rG/A",
     "keywords": [
       "wayne heim",
@@ -1245,14 +1519,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/KhhD6TznS498N3b53VzHsZsm8KWmDTTkbq6d6cR8P/XL/_FWH6830-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/KhhD6TznS498N3b53VzHsZsm8KWmDTTkbq6d6cR8P/XL/_FWH6830-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/KhhD6TznS498N3b53VzHsZsm8KWmDTTkbq6d6cR8P/XL/_FWH6830-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/KftVq3j7cdC5Qt42wTXRMBrDpXQ3rVsQxD8bqM9JT/L/_FWH6830-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-RR4b3rG/0/MSwHsFXwt4CTVpz6QP24JdxZZ8r3SPBrRtmDZfBtJ/S/_FWH6830-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rZFNBqH",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/NGvf3Bbhvv6r6mW8CSzRPLPCWV3sZCWQ6JSJJbbGx/XL/_FWH6835-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-rZFNBqH/A",
     "keywords": [
       "wayne heim",
@@ -1270,14 +1549,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/LX3LNtCVjPFqLDcvHpv4KmsVSXWWThtC6snqFg7Kn/XL/_FWH6835-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/LX3LNtCVjPFqLDcvHpv4KmsVSXWWThtC6snqFg7Kn/XL/_FWH6835-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/LX3LNtCVjPFqLDcvHpv4KmsVSXWWThtC6snqFg7Kn/XL/_FWH6835-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/Kc6gWRhJ8rgX8BwLzNz6WKZs5KWjzrQWkJCj7m7Rr/L/_FWH6835-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-rZFNBqH/0/MJvbJVPbjMnPwqBcwmVrTnQPN2NPCpbbx9gXZw3JB/S/_FWH6835-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-b7FN4Nx",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/M35pMZKftnqjvKWwCgQfhxgWXQz9C22TtpvSnTVcw/XL/_O1H0460-Enhanced-NR-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-b7FN4Nx/A",
     "keywords": [
       "wayne heim",
@@ -1295,14 +1579,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/Mxq5rKKJq9QQGV99C4HjxGhp5TbjC5rq9khC6WmKK/XL/_O1H0460-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/Mxq5rKKJq9QQGV99C4HjxGhp5TbjC5rq9khC6WmKK/XL/_O1H0460-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/Mxq5rKKJq9QQGV99C4HjxGhp5TbjC5rq9khC6WmKK/XL/_O1H0460-Enhanced-NR-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/KFz6d8wd2RmrpDMhHkwzbnwD8kGvCkG8QZZb3rD8w/L/_O1H0460-Enhanced-NR-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-b7FN4Nx/0/NGSLDnFGnqzFQDsL46QSP5jWFkqRnDGnm2KPW82vv/S/_O1H0460-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-T8CQBwG",
     "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/MrTLGGX94tz5rqvFmBhkjJVsdcrnHGM7hHx9ddNRr/XL/_FWH6944-2-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-T8CQBwG/A",
     "keywords": [
       "wayne heim",
@@ -1320,14 +1609,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/MJdc6vwF7FCtffjFvMjGWjNLkFJCkVgd9dL82nG3t/XL/_FWH6944-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/MJdc6vwF7FCtffjFvMjGWjNLkFJCkVgd9dL82nG3t/XL/_FWH6944-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/MJdc6vwF7FCtffjFvMjGWjNLkFJCkVgd9dL82nG3t/XL/_FWH6944-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/LhbG75d8CB7KrKdmN4MTHHpgCfd9GzXhT8BDWMkQn/L/_FWH6944-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-T8CQBwG/0/NZTkSTB5TZ55TFFmXW3rZ4jsS5QDGHzW2vFx3CB76/S/_FWH6944-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Z7ctKfL",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/MF8nxxnw6CnWXR9QtZvT2jrxVLc9Xg2g6jkCpTq9K/XL/_FWH7038-2-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-Z7ctKfL/A",
     "keywords": [
       "wayne heim",
@@ -1345,14 +1639,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/LRgDfpcdJCMdsbtWBHhQH2LjxvLrjJk2NHpzVjkKF/XL/_FWH7038-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/LRgDfpcdJCMdsbtWBHhQH2LjxvLrjJk2NHpzVjkKF/XL/_FWH7038-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/LRgDfpcdJCMdsbtWBHhQH2LjxvLrjJk2NHpzVjkKF/XL/_FWH7038-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/MXCdsmQHfrwhJbs5fGrTc2HRJBRc9Rxkk3nR6S63s/L/_FWH7038-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-Z7ctKfL/0/LHSzrBdHPgJp6PZftNS8DZ4MvgnHNNHc84797B7Tv/S/_FWH7038-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6hJ8kbm",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/LHXgb9BBKLH8xSnfKCvGKBcdx4MK8BkQXX48P7HBX/XL/_FWH7104-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-6hJ8kbm/A",
     "keywords": [
       "wayne heim",
@@ -1370,14 +1669,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/KrPtSr42N883GZRjttWxCNNzXc7hCprw7vqn74K9X/XL/_FWH7104-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/KrPtSr42N883GZRjttWxCNNzXc7hCprw7vqn74K9X/XL/_FWH7104-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/MfvTw9MQFVfjp8crJX7zS4HBJmP4r3hsXzsPj3MgH/L/_FWH7104-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/MtzD8MPPFDssbVkWhwMbGxPxnSTxNcjgG3BMT57xr/M/_FWH7104-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6hJ8kbm/0/MTkVJ4Dx9XBtzTLXMTDHZCC8ZkSzDJTxzXHLX6Vfh/S/_FWH7104-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6gnqGf4",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/KN5dzjxc5qtSDNPDdcP2HKf5n4NJfsx9shPhnk65z/XL/_FWH7216-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-6gnqGf4/A",
     "keywords": [
       "wayne heim",
@@ -1395,14 +1699,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/LFjP7MCKPgZfDXMDvx26kB8MtLFnPRM77fMmdD9xk/XL/_FWH7216-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/LFjP7MCKPgZfDXMDvx26kB8MtLFnPRM77fMmdD9xk/XL/_FWH7216-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/LvVMFFCzsX7ZcHknCz65Nj33B3PPJ3ZcqSfX7NfRV/L/_FWH7216-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/NMWR57STfPr6r3CFSZvfBkndvBk2ZTNqzG4zRbRJh/M/_FWH7216-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-6gnqGf4/0/LPGBkknFkrhZ7jV463qCk89xKXMP5cVDSd3ML6TFH/S/_FWH7216-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DFqr488",
     "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/Mkq84vJwKpfDMnC8NZx5DLMpqqbG6qx5DFWdRG7sz/XL/_FWH7407-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-DFqr488/A",
     "keywords": [
       "wayne heim",
@@ -1420,14 +1729,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KK2ZsxP9hsrXVww3WZ7WPPMBFDJHh8p2wSLZGNSRh/XL/_FWH7407-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KK2ZsxP9hsrXVww3WZ7WPPMBFDJHh8p2wSLZGNSRh/XL/_FWH7407-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KmFVD5DbLs6q4MM5t8wbbghSFqmdDJtgmM4vTdhjq/L/_FWH7407-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/NdTxFXZTsBxBs9pxR2XFN4nSd8NSQBs7tXkPj2zPf/M/_FWH7407-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/MH4FSNWdn2CkNCQMVnFbGgkBGd38z656tbXT85LVL/S/_FWH7407-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-g9njn76",
     "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MZdLjxH4QpvS9NrjggN3D9H9TjCrwGwDMghHMNpcV/XL/_O1H2329-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-g9njn76/A",
     "keywords": [
       "wayne heim",
@@ -1445,14 +1759,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 62,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MVfVgjPQr9nBDrjSXHkfpwR2CJvX7kzR2ZMpvCGTB/L/_O1H2329-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QQGxbsp",
     "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/KM6nZpSRpzWHxQLrsWbKpp7ssGbKvx3SGxn5pMKf5/XL/_DSF4801-Edit-Edit-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-QQGxbsp/A",
     "keywords": [
       "wayne heim",
@@ -1470,6 +1789,42 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 63,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/NXJCfMqtSVMtfLzjj6C5mbkc6FpWB2DgDz6dB7BKH/XL/_DSF4801-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/NXJCfMqtSVMtfLzjj6C5mbkc6FpWB2DgDz6dB7BKH/XL/_DSF4801-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/NXJCfMqtSVMtfLzjj6C5mbkc6FpWB2DgDz6dB7BKH/XL/_DSF4801-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/LsqVF8P7NHQn7w2qz4NzKJ5krKBVNJjX8nF7hGwq3/L/_DSF4801-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Nick-Tricia-Engagement/i-QQGxbsp/0/LmVNpDp43bscsmXgBKdvXHwBcjJPrMb2zDsKzmwLk/S/_DSF4801-Edit-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-pgzRbqs",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-pgzRbqs/A",
+    "keywords": [
+      "wayne heim",
+      "photos",
+      "portarit",
+      "intimate",
+      "mother",
+      "daughter",
+      "companion piece",
+      "sepia tone",
+      "photography"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 64,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];
