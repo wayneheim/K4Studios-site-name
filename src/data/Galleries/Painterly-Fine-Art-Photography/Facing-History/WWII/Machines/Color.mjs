@@ -1,911 +1,1168 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-{
-    "id": "i-rBtrrtx",
-    "title": "Armor Study at D-Day Conneaut",
-    "description": "Color fine art photograph of WWII reenactment machinery at D-Day Conneaut 2021. © Wayne Heim 2021",
-    "alt": "WWII reenactment armor detail in color",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/MwWDSn5dKKTg7zKMSdzwmvpmNjM885GjSchn6MDPz/XL/_PEN0153-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/A",
-    "keywords": [
-      "DDay Conneaut 2021",
-      "WWII armor",
-      "reenactment",
-      "historic machinery",
-      "color photography"
-    ],
-    "story": "Captured at D-Day Conneaut 2021, this photograph frames the presence of WWII machinery with painterly depth. © Wayne Heim 2021",
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-rBtrrtx",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/KgKZrcPFzpcjnMW6Rk8SbkLZNNLtPKv5ZhPNcnJ74/XL/_PEN0153-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/KgKZrcPFzpcjnMW6Rk8SbkLZNNLtPKv5ZhPNcnJ74/XL/_PEN0153-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/MBFztRDD3t4GVFrWNRhfLpxKfgGGgt8wGjj7ZWw75/L/_PEN0153-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/Nd6QS7DR9n3PLm8m2864B52BgGMBk4m9rpWwSTCHV/M/_PEN0153-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/KH9sqMw5XnzZsHdPkdQfc7JjWCM75XQrxWMSqrdvt/S/_PEN0153-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wRxHNc4",
-    "title": "Tonemapped Historic Transport",
-    "description": "Color photograph from the 2017 D-Day Conneaut reenactment showing historic transport machinery. © Wayne Heim",
-    "alt": "Historic reenactment transport tonemapped",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/NfDsbkWc6sb8wJ3NkP8M99sM72CSk9FqX7TbBwjSP/XL/_OLY0401_tonemapped-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-wRxHNc4/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-wRxHNc4/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "historic transport",
-      "tonemapped",
-      "color machinery"
+      "DDay Conneaut 2021"
     ],
-    "story": "A reenactment vehicle rendered with tonemapping to emphasize texture and atmosphere. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LksZHWfN5CFgBwTRZQW93cLqB8CSkKr3jsGtTwJxb/XL/_OLY0401_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LksZHWfN5CFgBwTRZQW93cLqB8CSkKr3jsGtTwJxb/XL/_OLY0401_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LksZHWfN5CFgBwTRZQW93cLqB8CSkKr3jsGtTwJxb/XL/_OLY0401_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LrdzzXzqdx6WJ2JHpNzxNCJs8Vt4vQZ5n9h5RG932/L/_OLY0401_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/MJDhmR2fNnhtQkKCtpJLPhGjjrtT8QkgpgT8rFM28/S/_OLY0401_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LMvspP9",
-    "title": "Reenactment Equipment Detail",
-    "description": "Color fine art capture of WWII reenactment machinery at D-Day Conneaut 2017. © Wayne Heim",
-    "alt": "Detail of reenactment equipment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/LGKTmPV9RCmQQqXcw99JvptPnmSnRGZTcPdGVFk7t/XL/_OLY0452-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-LMvspP9/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-LMvspP9/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII machinery",
-      "reenactment detail",
-      "historic equipment",
-      "color portrait"
+      "DDay Conneaut 2021"
     ],
-    "story": "An evocative look at reenactment equipment from D-Day Conneaut 2017, rendered with painterly clarity. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mq42xmhHMVmJnfnvw7WKtKFZCCPHzSXLSRvzd7CQf/L/_OLY0452-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/NGHzx3FgjCXJWM4rxjGbDMvJbV7zkxsqp6cstkZgq/S/_OLY0452-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fmd9mTF",
-    "title": "Vintage Gear Vignette",
-    "description": "Color image of WWII reenactment machinery at D-Day Conneaut 2021, emphasizing form and light. © Wayne Heim '21",
-    "alt": "WWII reenactment gear in color",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/MqFFNMxcPwJtF7XtJVScw4M9HCFDjWRs5HC7GV6GH/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-fmd9mTF/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim '21",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-fmd9mTF/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "historic machinery",
-      "color photography",
-      "vintage gear"
+      "DDay Conneaut 2021"
     ],
-    "story": "A detailed vignette of reenactment equipment, capturing the patina and presence of WWII history. © Wayne Heim '21",
+    "story": "© Wayne Heim '21",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZLJLcw4ZpJFSkGRLk3LBn6cc5X6vfV6Z3mwpG95x/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZLJLcw4ZpJFSkGRLk3LBn6cc5X6vfV6Z3mwpG95x/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZLJLcw4ZpJFSkGRLk3LBn6cc5X6vfV6Z3mwpG95x/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZxpv2sGjjBxnrq9xVbggg5MxsFjw8H8vgwcMdCdw/L/_ANA3303-Edit-Edit-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/M4ntP6BpCmmMx2JKDk5cdSQ6dSv8wHGRSrC95fz9B/S/_ANA3303-Edit-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dgwZgpw",
-    "title": "Reenactment Machinery Close-Up",
-    "description": "Color study of WWII equipment at D-Day Conneaut 2021 highlighting texture and detail. © Wayne Heim '21",
-    "alt": "Close-up of WWII reenactment machinery",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/Kq7pfVLcJH562WrgnBLVFBhqZVWcWsWrLfpngscdS/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-dgwZgpw/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim '21",
+    "alt": "© Wayne Heim '21",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-dgwZgpw/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII armor",
-      "reenactment detail",
-      "color historic",
-      "machine texture"
+      "DDay Conneaut 2021"
     ],
-    "story": "Close-up capturing the tactile presence of historical reenactment machinery at D-Day Conneaut. © Wayne Heim '21",
+    "story": "© Wayne Heim '21",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/LW5kMbxc2nxCff288tZr6WW7pPzxzZBWbZxMghvFW/L/_ANA3303-Edit-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/NSF5wF9jFXcqJvFPSrLnDbnZxDWC3HWn4XBnvZPRQ/S/_ANA3303-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RRNrLTb",
-    "title": "Historic Hardware in Context",
-    "description": "Color photograph of WWII-era reenactment machinery at D-Day Conneaut 2021. © Wayne Heim '21",
-    "alt": "WWII reenactment hardware",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/Lmjxq34tNPHtBJHFq3hsLwsd22Jb5tZJTLn8pGJGM/XL/_ANA3291-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-RRNrLTb/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim '21",
+    "alt": "© Wayne Heim '21",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-RRNrLTb/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "historic machinery",
-      "color documentation",
-      "armor context"
+      "DDay Conneaut 2021"
     ],
-    "story": "Reenactment hardware shown with compositional clarity, bridging past and present. © Wayne Heim '21",
+    "story": "© Wayne Heim '21",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/K9JS2jrTk2GgNsKPmcQdx4wC67HMGCTnn8VL86ZHs/XL/_ANA3291-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/K9JS2jrTk2GgNsKPmcQdx4wC67HMGCTnn8VL86ZHs/XL/_ANA3291-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/NNXxJTmfJpkVVBdWQFT4MFWjhZLSDwQgQKnHJ6xMj/L/_ANA3291-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/KvfHjV7cj9B2RV2BX37zTd3KsPzwmSSN72ZC75rxk/M/_ANA3291-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/KNGpMs647q4JtQVJKmB4CZNjGT5krMRNG9678mLvn/S/_ANA3291-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7r4cQqR",
-    "title": "Field Equipment Ensemble",
-    "description": "Color fine art image of WWII reenactment machinery at D-Day Conneaut 2021, arranged to evoke readiness. © Wayne Heim 2021",
-    "alt": "WWII field equipment ready",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/LN3t9HRHhwQKwD824qN8kvjVz5HJq5B276VwJ6MmW/XL/_PEN0128-Enhanced-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-7r4cQqR/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim '21",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-7r4cQqR/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "equipment ensemble",
-      "combat readiness",
-      "color photography"
+      "DDay Conneaut 2021"
     ],
-    "story": "An arrangement of field machinery conveying the tension of historical reenactment. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/NHmdTBTFFcHTFNv2DMkf4HjVjFXXQdhkBNM4qZVcs/XL/_PEN0128-Enhanced-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/NHmdTBTFFcHTFNv2DMkf4HjVjFXXQdhkBNM4qZVcs/XL/_PEN0128-Enhanced-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/KMFg8dw5Df6XsNnqgjrLsMZsDHwd3fsRh2rsm5qhb/L/_PEN0128-Enhanced-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/L4LSRJQ8cHTGxp7TttXZCcRCz92N2mqHTcXVr6sjt/M/_PEN0128-Enhanced-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/MwHxKwhhNDLcc5NtckKtn2PXrgLpbBJR25VffZTrd/S/_PEN0128-Enhanced-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FTgjc8C",
-    "title": "Enhanced WWII Machinery",
-    "description": "Color photograph from D-Day Conneaut 2021 showing reenactment gear with enhanced tonality. © Wayne Heim '21",
-    "alt": "Enhanced WWII reenactment machinery",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/KvbxkNk9Njsf5DzNRQKj67pr73WhXd55ZNWwvdJKB/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FTgjc8C/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim '21",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FTgjc8C/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "enhanced machinery",
-      "color tonality",
-      "historic equipment"
+      "DDay Conneaut 2021"
     ],
-    "story": "Reenactment machinery rendered with enhanced tonal treatment to emphasize presence. © Wayne Heim '21",
+    "story": "© Wayne Heim '21",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/NQ5HjnMZJP357NgP3DnfMdZHrX2zkH22N9FGTsqHT/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/NQ5HjnMZJP357NgP3DnfMdZHrX2zkH22N9FGTsqHT/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/MQ3fFW52WCsppFQdWdWs4nGxD4XjzV2WdtgFJFp7M/L/_ANA3350-Enhanced-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/MXp4tJvftMWBwDbjDKn99L2jPjQLp6nQC9ZqTzFQM/M/_ANA3350-Enhanced-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/KpVcCcMFjPt3kzTzCTs3Gt54SCtZsf3j4zNzHpg2h/S/_ANA3350-Enhanced-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Tfg5j96",
-    "title": "Things Are About to Get Messy",
-    "description": "Color capture of WWII reenactment machinery implying imminent action at D-Day Conneaut 2021. © Wayne Heim 2021",
-    "alt": "WWII reenactment machines ready for action",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/K4hFwDWngbQWcDw6nt6h3vMrChF4qHKSknPRnhsR7/XL/_PEN0783-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Tfg5j96/A",
+    "title": "Things are about to get messy.",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim '21",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Tfg5j96/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "machine readiness",
-      "color historical",
-      "anticipation"
+      "DDay Conneaut 2021"
     ],
-    "story": "A moment before upheaval, this image frames reenactment machinery poised on the cusp. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MjtNnJjZj7jSSCrHHSNwvCZs6rFjwrPFM84bB92vz/L/_PEN0783-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/KL5Z66dcM2gxqCZ4SvPZ84rZqjh97HnX6ZqxzD7fd/S/_PEN0783-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N9sBgRs",
-    "title": "Get Ready Boys",
-    "description": "WWII soldiers boarding a Higgins boat; color historical reenactment at D-Day Conneaut 2021. © Wayne Heim",
-    "alt": "Soldiers loading Higgins boat",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/LfsgvMZr53B6s64jZD4qtLWkJNtgJzLg6c3vzNwQM/XL/_PEN0798-Edit-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-N9sBgRs/A",
+    "title": "Get Ready Boys.",
+    "description": "WWII soldiers loading up on Higgin's Boat going into battle. © Wayne Heim",
+    "alt": "Things are about to get messy.",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-N9sBgRs/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "Higgins boat",
-      "WWII reenactment",
-      "loading for battle",
-      "historic amphibious"
+      "DDay Conneaut 2021"
     ],
-    "story": "Soldiers prepare to embark in a Higgins boat during a D-Day reenactment, capturing tension and purpose. © Wayne Heim",
+    "story": "WWII soldiers loading up on Higgin's Boat going into battle. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/K5c2gxv7gHXv5r3QBD4XCshmjKVxfXpXK6ZPWdgnW/XL/_PEN0798-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/K5c2gxv7gHXv5r3QBD4XCshmjKVxfXpXK6ZPWdgnW/XL/_PEN0798-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/NTMb3nkxwrJ3dG8G3DHQKxnMTjVzPcmpNBfXknTjp/L/_PEN0798-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/KxZf8ZJ6X9xxWx93KVNjtZf9MKd4mjfb8chgg75Bd/M/_PEN0798-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/LRjZ95GQXSNRjDXhcd6fF2SBCJrpLLNJPqtdgtj9q/S/_PEN0798-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-x3ZPvH9",
-    "title": "Warzone Machinery",
-    "description": "Color photograph of WWII reenactment war machines at D-Day Conneaut 2021. © Wayne Heim 2021",
-    "alt": "WWII reenactment war machinery",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LfqdvWpPW47nh6rs5xK9T9vX8qs29Whbdx6VTKcVd/XL/_PEN0264-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-x3ZPvH9/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "Get Ready Boys.",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-x3ZPvH9/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII war machines",
-      "reenactment action",
-      "historic conflict",
-      "color photo"
+      "DDay Conneaut 2021"
     ],
-    "story": "Powerful reenactment equipment positioned to invoke the atmosphere of wartime engagement. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LNCkkCqgs9frP2Q7PnndtmjNb8GmfvqMHLhRzN6Fh/L/_PEN0264-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/KVK5ZL339PGTWw7mjGVtSNk7BS5LRVRv4b6qBB5z7/S/_PEN0264-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Rb3fQ5d",
-    "title": "Mobilized and Ready",
-    "description": "Color capture of WWII reenactment machinery suggesting movement and preparedness at D-Day Conneaut 2021. © Wayne Heim 2021",
-    "alt": "WWII reenactment vehicles mobilized",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/NTkvFfbGJSzVK7BsRNCHQN8WJScZxc7LBQ4Bx3gW5/XL/_ANA4472-Edit2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Rb3fQ5d/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Rb3fQ5d/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "prepared machinery",
-      "historic vehicles",
-      "color portrait"
+      "DDay Conneaut 2021"
     ],
-    "story": "A moment of quiet readiness among reenactment vehicles, captured in rich color. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/KhLZmgGXvtMqnVq8THjKLLZkKHMcHRgwXbQLjD9dH/L/_ANA4472-Edit2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/Lmwzxfzp6WM2RXFQdr2wfkNLZckfd8ZmGzbxCmWZC/S/_ANA4472-Edit2-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-h6zMQW8",
+    "title": "Untitled",
+    "description": "© Wayne Heim '23",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "© Wayne Heim '23",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/NFTXzfPF9KbWSBfpM5R32Ddj7D445hWcB6nZsV8MD/XL/_PEN1121-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/NFTXzfPF9KbWSBfpM5R32Ddj7D445hWcB6nZsV8MD/XL/_PEN1121-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/M7t4ZdwL2XPMbktjzszW8pfqwx9PgchvcKXRJ5tMj/L/_PEN1121-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/KgzpTfM4nksvDDTR4nsLxSwwCVL5h2H3R3QnnkdqS/M/_PEN1121-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/LjL5zXcHdXvLD3CR69MwLW6n7fV2gcXDkx8Gs5ST5/S/_PEN1121-Edit-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-vsx5t6W",
+    "title": "Untitled",
+    "description": "© Wayne Heim '23",
+    "alt": "© Wayne Heim '23",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "© Wayne Heim '23",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/LJvWWgBzL6QNfqg3dRJHBPx85d5GRFfxFGBvZ8wmb/L/_PEN1134-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/LHjF3CNWNDXksMkMRkDPxtCGbBs9KV4mW66WKLtZv/S/_PEN1134-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-snvP87s",
+    "title": "Untitled",
+    "description": "© Wayne Heim '23",
+    "alt": "© Wayne Heim '23",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "© Wayne Heim '23",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/L9p2prfWPtzPmhJnpbkzb9XdKxkXqg8K8tsVv9thD/L/_O1H0252-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/KwqzJ3LkgMbjPJqQ7PKcNxHBTbxzJbCNrWjmcXDCf/S/_O1H0252-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-Cwv4Sf2",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "© Wayne Heim '23",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Cwv4Sf2/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/MPTk32D9bx2n6nWwmJHHf4QfXsKd23TKzrMjHbTQ7/XL/_O1H0573-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/MPTk32D9bx2n6nWwmJHHf4QfXsKd23TKzrMjHbTQ7/XL/_O1H0573-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/KpGzJkFDNc6drFzLbMkWRNhLwZ8ctPLDDQRPpcNDb/L/_O1H0573-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/NZwwbHmVz8DbxjpWCkFTd4cgtrdPgrWL3sHmtMw7Q/M/_O1H0573-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/KNSF26ppQcvtL3XjFGtKTJCnzr88dnjhHxxGjLvC3/S/_O1H0573-Edit-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-GXrCDJh",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GXrCDJh/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/Nf9Jcdc9TWXT2m2sTPB44zzRbBQsRxrKG9gBPVSKz/XL/_O1H0615-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/Nf9Jcdc9TWXT2m2sTPB44zzRbBQsRxrKG9gBPVSKz/XL/_O1H0615-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/KHZ3gjQ9WPmc2CvrWgDSmNBsbzzWBHrKJmhpQmNzq/L/_O1H0615-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/Mc8Hf2s8SxXWvhtg47tP86ZXQfqwPPcMzb4fmJ8S9/M/_O1H0615-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/NSSnFKsKvCDJCQ4wgPp2bJrLNF9Zt8WhzMTsdzNmK/S/_O1H0615-Edit-2-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-Z6f9LZn",
+    "title": "Tank Firing Line - WWII Armor",
+    "description": "World War II line of tanks firing at sunset/dusk. Fine art painterly photography of tanks at historic reenactment. © Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Z6f9LZn/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "World War II line of tanks firing at sunset/dusk. Fine art painterly photography of tanks at historic reenactment. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/LgHP5VZjCkCKtTrzChHDLsLLLqGp5hxvXLJP6dhzK/XL/_O1H0726-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/LgHP5VZjCkCKtTrzChHDLsLLLqGp5hxvXLJP6dhzK/XL/_O1H0726-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/MMrR2VtkTp4W59ZWsBxdBpRqSkKcR6WL4VXVdcHTq/L/_O1H0726-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/KnsxX5wTqHb4kxtLqJWwTVnmkbmBPGWzdwSfh6kqS/M/_O1H0726-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/Kvch9Ttf634ScPDSBrJS25p96DZxnQj6tPncFrMZw/S/_O1H0726-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-CzvL3Mk",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Tank Firing Line - WWII Armor",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-CzvL3Mk/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/MT35qsBXmcL6GxDqj5FNrM73KhKsfw3ckTVmMw6rp/XL/20220817_201343-6-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/MT35qsBXmcL6GxDqj5FNrM73KhKsfw3ckTVmMw6rp/XL/20220817_201343-6-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/L7vdrt3HsSF8nJSSfdd4JF5ShRd99ZSFQhwQb3vJ9/L/20220817_201343-6-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/LM9wBH7f45qMwRzmN96CMj442xR3MzgBKPz6XkPfX/M/20220817_201343-6-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/M7Cp5gT5mW5fD9vMFmCdsz7WcfXtcrMNmJ7Bcd8RX/S/20220817_201343-6-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-TVmp5NX",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-TVmp5NX/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "© Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/KvvhSTmX7mFzccBW5mM2GVtbHmtPmJK7zTNJhVNkm/XL/_OLY1828-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/KvvhSTmX7mFzccBW5mM2GVtbHmtPmJK7zTNJhVNkm/XL/_OLY1828-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/LJTMK2Wn5mVP7GP6ZcLTszbSsgGDvFBKJhF4zQVJC/L/_OLY1828-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/Km77nX4cgb2W9X9dVHnPCPs2KbXFj77CZ85x2pdbw/M/_OLY1828-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/LNmwKFQz9dTHS3Ptr7vHC4Z4SDTRwFz2776dPNNdC/S/_OLY1828-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-sr9WMcn",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-sr9WMcn/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "© Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/KM9xtLvK6Ksq6Q8H5833GNvTCdc4XqztKTXMK9cZ9/L/_OLY1830-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/LZ6Tbwp5t9qkGXgB39LWmwhKHCkgSxLKjPRT7jGBp/S/_OLY1830-Edit-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-kX8Wksp",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-kX8Wksp/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "© Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK9cS3XLqdxgp66SX88CsVSphRJjGQLcpbws5wBwQ/XL/_OLY2745-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK9cS3XLqdxgp66SX88CsVSphRJjGQLcpbws5wBwQ/XL/_OLY2745-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK7jDWSD5HgWZfSH7WhKtkjmPrrLJ8V5ftSndSbBm/L/_OLY2745-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/NL8txbkTbDDjjprdgzPPpb4FNvCZKvRGp5hnKZdTp/M/_OLY2745-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/LqgXqCCJmVPtpBpXpVLMZzFHSQcJWzrW825HV6Crz/S/_OLY2745-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-pd3hvNk",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-pd3hvNk/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "© Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/LwvMTsr3H6qRJbsxfNMCw5fjf7BkhsXSv37mM8tXL/XL/_OLY2790-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/LwvMTsr3H6qRJbsxfNMCw5fjf7BkhsXSv37mM8tXL/XL/_OLY2790-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/Mzfnt6bWnFNFBTFpzGPwqkQHkDQ9jwr3wS94XKXjr/L/_OLY2790-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/NgRvtdPrmxB7KFfFBdLBsFsXQszBzpVH5dgKpSwBZ/M/_OLY2790-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/MgVgb7DqHRn7WZ9r5MDkb6MGBSpLQ7wNK9sjRfMN7/S/_OLY2790-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ttDPKwH",
-    "title": "Historic Reenactment Machinery",
-    "description": "Color photograph of WWII reenactment machines at D-Day Conneaut 2017, capturing form and atmosphere. © Wayne Heim",
-    "alt": "Reenactment machinery in color at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/LKCBpTQ9dRnM3hFrL7Ph8RFPCKjx5drXDT8QCn4cV/XL/_OLY2994-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-ttDPKwH/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-ttDPKwH/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "historic machinery",
-      "color photography"
+      "DDay Conneaut 2021"
     ],
-    "story": "A moment from the 2017 D-Day Conneaut reenactment, portraying historic machines with painterly presence. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NHBGzGhQvT3PLkxf2rNRB7vwP65rskh37x2ZnJNcW/XL/_OLY2994-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NHBGzGhQvT3PLkxf2rNRB7vwP65rskh37x2ZnJNcW/XL/_OLY2994-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NT82LcBJGGkFr7RfF3sdctcKzLZrnzLsv8KjLdHXp/L/_OLY2994-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/LtJwZjt9TbJXr82JWmctNfQSG92qMcvcb9G2DP69K/M/_OLY2994-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/Kdr47XGMtPsS2DVGzd7Zr8f7Zq9mrLGB8v8Kz3ftC/S/_OLY2994-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TGwqTRB",
-    "title": "Reenactment Equipment Texture",
-    "description": "Color study of WWII reenactment machinery at D-Day Conneaut 2017 emphasizing texture and detail. © Wayne Heim",
-    "alt": "Detail of reenactment equipment at D-Day Conneaut",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LkNPpmpD2tGF5PgMf2Dqb6FFzRRC5q7fSTFVpGFtZ/XL/_OLY3066-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-TGwqTRB/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-TGwqTRB/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII machinery",
-      "reenactment detail",
-      "color portrait"
+      "DDay Conneaut 2021"
     ],
-    "story": "Close framing of reenactment gear, capturing the tactile quality of historic equipment. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LQD9PznV6PfJTkmzTZhppBphSfXtcC98pd9s9Vr8q/XL/_OLY3066-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LQD9PznV6PfJTkmzTZhppBphSfXtcC98pd9s9Vr8q/XL/_OLY3066-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LvMwhTZdnNX7zZjGXW5Df4QNL6ZS7WTbx5MSLmMdV/L/_OLY3066-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/KhVQ5Ldft3H7bmxLZLtxSMNKswLGsLgzR54VjxWFs/M/_OLY3066-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/MHHpgBPrX4S46vpGZx8tfZSmkpCpK9SqhJRfRGCvg/S/_OLY3066-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-S4sbv3n",
-    "title": "Equipment in Context",
-    "description": "Color image of WWII reenactment machinery at D-Day Conneaut 2017 showing broader context. © Wayne Heim",
-    "alt": "WWII reenactment equipment scene",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/LfhBCJtZST5s8cg7g6JLd4z98r8vQMvgPf2bjGWQ4/XL/_OLY3071-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-S4sbv3n/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-S4sbv3n/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "reenactment machinery",
-      "historical context",
-      "color study"
+      "DDay Conneaut 2021"
     ],
-    "story": "Shows machinery as part of the living reenactment environment, bridging history and present. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/NRGTZdvRQqRc278zGMrNcwd3n3XqbjrkcBqC4MN82/L/_OLY3071-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/LfQHfwNZjr6pRCgWZbPppPBj2mvqPVFznvSzXnW3Z/S/_OLY3071-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-65Xkcpk",
-    "title": "Vintage Armor Portrait",
-    "description": "Color portrait of WWII reenactment equipment at D-Day Conneaut 2017, highlighting structure and presence. © Wayne Heim",
-    "alt": "WWII reenactment armor close-up",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/K8DFD5H2cpZcQRX4gn3Jm3MtgPGpM8njNv5jMVFdM/XL/_WHK2138-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-65Xkcpk/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-65Xkcpk/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "armor detail",
-      "color photography"
+      "DDay Conneaut 2021"
     ],
-    "story": "An intimate look at reenactment armor, rendered to emphasize weight and history. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/LG6qNKttJxpWCVm5jH8nrmxdjGLh8cL8FNp3kNdvR/XL/_WHK2138-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/LG6qNKttJxpWCVm5jH8nrmxdjGLh8cL8FNp3kNdvR/XL/_WHK2138-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/KFtvg6Cw9CFmq7gJT8SJQ3qjTwpVwcsRZ2fvsqkgt/L/_WHK2138-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/Mkp7ZVPMJQFrRb2W3MnTgkbwQCsCP6WP33cGGhQj7/M/_WHK2138-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/M3mnvxZVmGD32DxRWTJ28gVTFG7sMVZw4VL6NzSvP/S/_WHK2138-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LbnS49s",
-    "title": "Field Gear Composition",
-    "description": "Color fine art capture of WWII reenactment machinery at D-Day Conneaut 2021, composed to suggest readiness. © Wayne Heim 2021",
-    "alt": "WWII reenactment field gear",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/MGH3kXxqNXM9Hrd56Pgk8T7Dm6WRzsRmhDXqGxtrt/XL/_PEN0791-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-LbnS49s/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-LbnS49s/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "field gear",
-      "color composition"
+      "DDay Conneaut 2021"
     ],
-    "story": "Arrangement of equipment that conveys anticipation of action during the reenactment. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/LxsCQ5xFDwcXSwwSQqRGbLgw8JFFg6D5hGbKr7W6W/XL/_PEN0791-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/LxsCQ5xFDwcXSwwSQqRGbLgw8JFFg6D5hGbKr7W6W/XL/_PEN0791-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/KS5jwftt8F6FJhd7zkgZsBhf2rhFvQjXrq6tzSfQq/L/_PEN0791-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/Kk7KXXkPsrmj8XLF4RQh5cP3QqhHTcD9FGQ6J9Mtn/M/_PEN0791-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/Ln2rggKQbnGNHvJS3BdSn56PCMhSfkPzPQWLnn8Rk/S/_PEN0791-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BNVxGWx",
-    "title": "Reenactment Readiness",
-    "description": "Color photograph of WWII reenactment machinery at D-Day Conneaut 2021 showing staged readiness. © Wayne Heim 2021",
-    "alt": "WWII reenactment equipment ready",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/LL35bw2qRBPW3RdPbT59GkP5p97zwTdtxMMX2hcGM/XL/_PEN0871-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-BNVxGWx/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-BNVxGWx/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "preparation",
-      "historic machinery"
+      "DDay Conneaut 2021"
     ],
-    "story": "A snapshot of reenactment equipment poised before movement, suggesting latent energy. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/Lh7sQDMPcnB66L28sHHPgfmzgQBBDPTppHrRzRCfD/XL/_PEN0871-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/Lh7sQDMPcnB66L28sHHPgfmzgQBBDPTppHrRzRCfD/XL/_PEN0871-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/KFGkpLbq6MS6fJNxhsTVStMjwrjrCFb2mvLCqNXkd/L/_PEN0871-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/NBFqT7RCxzqpTCrC2FSHsnp4RDt8p2NnrWT6C8Ft5/M/_PEN0871-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/KxzJJ8Cf8hPJjpV7FqtVPnFthQ6VhJDLjr6QLnmbP/S/_PEN0871-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HwgrDkM",
-    "title": "Historic Equipment Stillness",
-    "description": "Color study of WWII reenactment machinery at D-Day Conneaut 2021 capturing quiet presence. © Wayne Heim 2021",
-    "alt": "Still reenactment machinery",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/MbWqQtLDsMFc9jPXd7phvXNKkQWbz78dttRcpNDhx/XL/_PEN0875-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-HwgrDkM/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-HwgrDkM/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "stillness",
-      "color historical"
+      "DDay Conneaut 2021"
     ],
-    "story": "Captures the quiet, almost contemplative side of reenactment equipment between action. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M9z4njr5FmvsJmS7kwKxxMzG46sNjCn7kF5dWKddz/XL/_PEN0875-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M9z4njr5FmvsJmS7kwKxxMzG46sNjCn7kF5dWKddz/XL/_PEN0875-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M4SGdD68ZnCrQGRNfcK4zRpd8qKZkBQdm5n7g68rc/L/_PEN0875-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/LRMZ4rFCxgjJkCQkBSvQWDGkPmtqvjXqhdPB5bZmb/M/_PEN0875-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/LD4wh2GVNQ6b5ZQxwzWZJWvbFDXpCZ9vf5KXtPdwf/S/_PEN0875-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NdnMjDd",
-    "title": "Preparation Frame",
-    "description": "Color photograph of WWII reenactment machinery conveying preparation and movement at D-Day Conneaut 2021. © Wayne Heim 2021",
-    "alt": "WWII reenactment machinery preparing",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/MkJxqCW6ZsD5wTfBmR35w7jzVbbtCw4vMnzMKbStJ/XL/_PEN0163-Edit-Edit-3-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-NdnMjDd/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-NdnMjDd/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "preparation",
-      "historic machinery"
+      "DDay Conneaut 2021"
     ],
-    "story": "A visual narrative of machines staged in readiness, balancing tension and calm. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/Kx6HwP4dhvv7dx4j3K4xqwRwtC3Sjnpf3LGQ6K2xK/XL/_PEN0163-Edit-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/Kx6HwP4dhvv7dx4j3K4xqwRwtC3Sjnpf3LGQ6K2xK/XL/_PEN0163-Edit-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/KMkQM4qtwHprvWhBDLmbmVJxJjWSSqmbDdx36Ljss/L/_PEN0163-Edit-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/NRMT5sLgS3KmDHbZ3CmQBk5Vtjr3QK28NQMpRwBkh/M/_PEN0163-Edit-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/MB7dSFS3gw7gpsbgjHXfthqd785xFsSsPg8wdHpxX/S/_PEN0163-Edit-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-S3XQ9VZ",
-    "title": "Equipment Study",
-    "description": "Color fine art image of WWII reenactment machinery at D-Day Conneaut 2021, focusing on shape and light. © Wayne Heim 2021",
-    "alt": "WWII machinery under study",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/KQ6W588NSCSJ6NnhSRSf2mLNHg2PGb3Zmzq8kVVkv/XL/_PEN0288-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-S3XQ9VZ/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-S3XQ9VZ/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "light and form",
-      "historic equipment"
+      "DDay Conneaut 2021"
     ],
-    "story": "An observational capture of reenactment gear, presenting historical machinery with clarity. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/LVGbfzbrHsNxQJPXhVWXpB2B5zjfCc94JgGtfzb33/XL/_PEN0288-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/LVGbfzbrHsNxQJPXhVWXpB2B5zjfCc94JgGtfzb33/XL/_PEN0288-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/NNJ5phRrJmFcmMHFXGRnjJcfr534QLknNqJfdtkN9/L/_PEN0288-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/K8GB86f4Hj4Q66hwMDz2HrjNThWHbbNBL5crpXMpf/M/_PEN0288-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/LJXTnXTbTJc45SLs2qQH5Mq8CMqQGSLgmgqBzT6th/S/_PEN0288-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-X6D266B",
-    "title": "Armor Presence",
-    "description": "Color photograph of WWII reenactment armor at D-Day Conneaut 2021 emphasizing mass and texture. © Wayne Heim 2021",
-    "alt": "WWII reenactment armor presence",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/NWpqZkxVZjzXB8kFdsb9r2fJf7HXwbRztgrTn5wLr/XL/_ANA4477-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-X6D266B/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-X6D266B/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII armor",
-      "reenactment",
-      "texture study"
+      "DDay Conneaut 2021"
     ],
-    "story": "The photograph conveys the commanding presence of reenactment armor through scale and surface. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/MdSt3HwDDqD9B85PSdLW3r4LDbvC6KM9Fn8pqVGB9/XL/_ANA4477-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/MdSt3HwDDqD9B85PSdLW3r4LDbvC6KM9Fn8pqVGB9/XL/_ANA4477-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/L8gg2Wd7RN6Mn8jfdS6f4tDWVDD7sVPWnsKqrtX43/L/_ANA4477-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/NPd74rsQtgDWDtb63JtMJCGVjqHpLfqb6C44xhDJN/M/_ANA4477-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/KcSnGRLVDppnW4xHPf79X8TMnKSQWcRSR7hjmBPhf/S/_ANA4477-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jwJCCdg",
-    "title": "Mechanical Detail",
-    "description": "Color capture of WWII reenactment machinery at D-Day Conneaut 2021 focusing on mechanical components. © Wayne Heim 2021",
-    "alt": "Detail of reenactment mechanical parts",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/K9DHnhQs6JKqTLWGWzVvddZmTLHJ48RZSSv9p9dxz/XL/_PEN0411-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-jwJCCdg/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-jwJCCdg/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "mechanical detail",
-      "historic machinery"
+      "DDay Conneaut 2021"
     ],
-    "story": "Highlights the intricacies of reenactment equipment, emphasizing craftsmanship and history. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MWSpzgTN2Fw9C5wKD3pTKF9jzfpsXvJWfgr624Gt9/XL/_PEN0411-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MWSpzgTN2Fw9C5wKD3pTKF9jzfpsXvJWfgr624Gt9/XL/_PEN0411-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MKxfk3WqbXBXbFzhpbgMR8QQrmBPhPVSrNs3HB9JC/L/_PEN0411-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/LkqVV4GXvvcqTzQsdD74MNwNpqvQ79vxrfZ6wKVVD/M/_PEN0411-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/Mt7h4RVwLMxLzS4QWkHQwpzPxQ2XzTFhLGVXz9WW9/S/_PEN0411-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8Sgjrk6",
-    "title": "Ready and Waiting",
-    "description": "Color photograph of WWII reenactment equipment at D-Day Conneaut 2021 poised for action. © Wayne Heim 2021",
-    "alt": "Reenactment machinery ready",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/LcWSVGxkmdjJtXn6KgCdj25Vqr75Rw4tcS9c2zKCK/XL/_PEN0418-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8Sgjrk6/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8Sgjrk6/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "preparedness",
-      "color composition"
+      "DDay Conneaut 2021"
     ],
-    "story": "Equipment staged in quiet readiness, suggesting the moments before movement. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/KDSwd6Zk9nL5dbhNMwpp8H6p6Bs23XgGg2zQHvMVJ/XL/_PEN0418-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/KDSwd6Zk9nL5dbhNMwpp8H6p6Bs23XgGg2zQHvMVJ/XL/_PEN0418-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/NQ5bs6HVwDsS857bvKgLFXBRSQLJLxDVH5vsStQvm/L/_PEN0418-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/MDn5ZdLTmgLzpRSR4p5jDdHpb2Mzwh6sSVgBrNvr9/M/_PEN0418-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/LVqrhdzTfLqkm6jWX3d73pvphBhGPSCMHmC5xd9Dq/S/_PEN0418-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NzVgz27",
-    "title": "Historic Machinery Portrait",
-    "description": "Color study of WWII reenactment equipment at D-Day Conneaut 2021 presenting form and presence. © Wayne Heim 2021",
-    "alt": "WWII reenactment machinery portrait",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/KjKjftcj2RfPjGPdctVnk3sJXqBnK7Q539PTMjRsn/XL/_ANA4673-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-NzVgz27/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-NzVgz27/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "portrait",
-      "color machinery"
+      "DDay Conneaut 2021"
     ],
-    "story": "A considered portrait of reenactment hardware, emphasizing its historical weight. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L5PPgtfHwSNbzxdqtW4sLtbRgP93G59gcx5ssGjbF/XL/_ANA4673-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L5PPgtfHwSNbzxdqtW4sLtbRgP93G59gcx5ssGjbF/XL/_ANA4673-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L9Nw956vWV4pJfBrFj3qGdTKH5Mv3NRZqnCJNwH66/L/_ANA4673-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/KhQqthNGcCmpfrq73G7tfCBqMpMVVSN723xtzS8rp/M/_ANA4673-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/MgDxds45ZZ9TWMsjTpW58HSZvwXrXPpTtVF33x8JZ/S/_ANA4673-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kg2nPNc",
-    "title": "Reenactment Gear Focus",
-    "description": "Color photograph of WWII reenactment machinery at D-Day Conneaut 2021 focusing on structure and detail. © Wayne Heim 2021",
-    "alt": "Focused view of reenactment equipment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/K7W8xh8ZZZZRCz2DdCVBWf2rkNFhfDRZZkq7bFmwg/XL/_ANA4940-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-kg2nPNc/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-kg2nPNc/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "equipment focus",
-      "historic detail"
+      "DDay Conneaut 2021"
     ],
-    "story": "An intimate study of reenactment gear, highlighting structural elements. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/MrtHLXLqCpsKqpXPDJvr6knP3rXnkdDkFLpLBPR75/M/_ANA4940-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/KRcKTMfjgP3q95S6s7zvKKMgC36JLxMJj9dBw9gtk/S/_ANA4940-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8RsnRLj",
-    "title": "Operational Stillness",
-    "description": "Color image of WWII reenactment machinery at D-Day Conneaut 2021 capturing the quiet before action. © Wayne Heim 2021",
-    "alt": "Reenactment machinery calm",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/L9WXmbT9k68sz68J4cRFTrG78GgnNqb869Cpbdk8Z/XL/_PEN0995-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8RsnRLj/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8RsnRLj/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "stillness",
-      "color historical"
+      "DDay Conneaut 2021"
     ],
-    "story": "Portrays reenactment equipment in a pause, balancing expectation and history. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/MrrqszbHhvtFzsdw6Hw2FCPx7z3mwMWsWcGJPfmT3/XL/_PEN0995-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/MrrqszbHhvtFzsdw6Hw2FCPx7z3mwMWsWcGJPfmT3/XL/_PEN0995-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/LMLRPfGkvdFdL3VZrSv3N8cwMnjMsFg4449wpcr99/L/_PEN0995-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/LxxLfwkDRwLRXq3kH3NjrQxpKzLChHPFcgCPDhC5R/M/_PEN0995-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/MqBVhvKpHdH3MssG4vKvDPswx5GMtLrPNBL58zQ93/S/_PEN0995-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-B6rBNj5",
-    "title": "Historic Machinery Composition",
-    "description": "Color photograph from D-Day Conneaut 2021 of WWII reenactment equipment arranged to suggest narrative. © Wayne Heim 2021",
-    "alt": "Composed reenactment machinery scene",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/MxM9TX7xGqvGsLh2tQx5jTLQ8GzLZ7cZM73GRV4wx/XL/_PEN0383-Edit-c-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-B6rBNj5/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-B6rBNj5/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "narrative composition",
-      "color gear"
+      "DDay Conneaut 2021"
     ],
-    "story": "Arrangement of historic reenactment machinery that suggests story and purpose. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/LDmh8NWFDP8Jr83FVHm75pBxcGSMXvKLGJ8cP6HF3/XL/_PEN0383-Edit-c-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/LDmh8NWFDP8Jr83FVHm75pBxcGSMXvKLGJ8cP6HF3/XL/_PEN0383-Edit-c-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/K77bp75WS8mLwfRVrFpfqf7GFH6N9NKZTsVR5Vn68/L/_PEN0383-Edit-c-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/MJ2N66SmxFXpwtmXkQsG2Pn9dNqDf3rB7wt7L2DFf/M/_PEN0383-Edit-c-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/Mv4p77b3xQRK7Z6x325Np3Qd3WHk86QM6KfDVfT8M/S/_PEN0383-Edit-c-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jGXWq3f",
-    "title": "Reenactment Equipment Frame",
-    "description": "Color fine art capture of WWII reenactment machinery at D-Day Conneaut 2021, framed to emphasize scale and texture. © Wayne Heim 2021",
-    "alt": "Framed view of reenactment equipment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/LqbMb3k6PJQkDmLbRS3DWSdK2583CJDf8BwJjX57M/XL/_OL36216-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-jGXWq3f/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-jGXWq3f/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "scale and texture",
-      "historic machinery"
+      "DDay Conneaut 2021"
     ],
-    "story": "A composed frame highlighting the physicality and presence of reenactment equipment. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/KdSDMMp6VmJ6kD2KtJxrRv25kDqkhrDjpBrPN7SD6/XL/_OL36216-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/KdSDMMp6VmJ6kD2KtJxrRv25kDqkhrDjpBrPN7SD6/XL/_OL36216-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/LrzBq9cn79GMkd5sFPC9ddQ8c6bLX4w2n9wbkkwS3/L/_OL36216-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/LB5vLH96DhHkmzbxt4NRnGCxpDbwDPb6WhWw9tRzq/M/_OL36216-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/KsDBH4MFt7fk8h5Xj62DptjjqLkdTgzwfxJXtqr6T/S/_OL36216-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FMDBqqF",
-    "title": "Historic Machinery Detail",
-    "description": "Color fine art photograph of WWII reenactment machinery at D-Day Conneaut 2021, emphasizing form and patina. © Wayne Heim",
-    "alt": "Detail of WWII reenactment machine at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/KFt5NLHzLHG9N2M6tBZHfq32gmCB4nSbLNv4RHgbX/XL/_O2H8754-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "historic machinery",
-      "color photography"
+      "DDay Conneaut 2021"
     ],
-    "story": "A close study of reenactment machinery, capturing texture and the weight of history. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/MG73r6bKsKxfmQRttgVP2c7LxPfHnkSS5dhw7fMTk/XL/_O2H8754-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/MG73r6bKsKxfmQRttgVP2c7LxPfHnkSS5dhw7fMTk/XL/_O2H8754-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/LCcmWCcLxv8txGdN8QsZPtPfMPvVcjX8nTDpfn8Zz/L/_O2H8754-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/KPPSvDSRFQvTtnWH5xWVd6CMWwdHzNq3L3DSSmqr3/M/_O2H8754-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/Kjrvqjw3qvw3xSg2LTqBqxtCC6KrNpxd9kgtgVhzj/S/_O2H8754-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rZX5GhQ",
-    "title": "GI Resting Moment",
-    "description": "Group of GIs relaxing in front of their tent during D-Day Conneaut reenactment, captured in color. © Wayne Heim",
-    "alt": "GIs relaxing by tent at D-Day Conneaut reenactment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/MHX5C3jn3g2P7QCmMP8XWtRzvfTHJbd5LnXTCpHTS/XL/_W3H3947-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rZX5GhQ/A",
+    "title": "Relaxing    Photography by Wayne Heim",
+    "description": "Group of GI's relax in front of their tent during D Day Conneaut. © Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rZX5GhQ/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "soldiers relaxing",
-      "color portrait"
+      "DDay Conneaut 2021"
     ],
-    "story": "A quiet candid of reenactors taking a break, blending camaraderie and historical atmosphere. © Wayne Heim",
+    "story": "Group of GI's relax in front of their tent during D Day Conneaut. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/MvHSQ75hktGHkGHXNtxQQSsZF5ZvbkBhdN3pjhHbf/XL/_W3H3947-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/MvHSQ75hktGHkGHXNtxQQSsZF5ZvbkBhdN3pjhHbf/XL/_W3H3947-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/LP2tts9bJtgbmMrbMf84ZWX99ngRGbgs48TkhMFmL/L/_W3H3947-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/KT4tKb9fg8dz4snsWZhtrG2VLwNzPM4q3PtsZr3F4/M/_W3H3947-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/KpcmqMZdTPXJGngWrvpjfK5MXwHF6vLkv8Dchdw7T/S/_W3H3947-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-F9HpvdL",
-    "title": "Reenactment Reflection",
-    "description": "Color photograph from D-Day Conneaut 2015 capturing reenactment participants and the mood of the event. Wayne Heim ©2015",
-    "alt": "WWII reenactment scene at D-Day Conneaut 2015",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/MVHrvFnTMPXS7QGpbb3cWg6tmTwJ6zp9fzvmtG43s/XL/_WHZ2646-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-F9HpvdL/A",
+    "title": "Untitled",
+    "description": "Wayne Heim ©2015",
+    "alt": "Relaxing    Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-F9HpvdL/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "historical atmosphere",
-      "color documentary"
+      "DDay Conneaut 2021"
     ],
-    "story": "An evocative moment from a past reenactment, showing the continuity of memory and performance. Wayne Heim ©2015",
+    "story": "Wayne Heim ©2015",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/LVtqcFwJMPPj6Xz8zrZchW38WTFRLvrQrTVmGnz9G/XL/_WHZ2646-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/LVtqcFwJMPPj6Xz8zrZchW38WTFRLvrQrTVmGnz9G/XL/_WHZ2646-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/KWP9X8bJBZLSQqr9TJCnbhTdcnCSKs6jR5rrRncgk/L/_WHZ2646-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/LwvL9qCj2nqn5QpMST72HK47bdpbhG98D7CfwFNbz/M/_WHZ2646-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/NBTfXLSTRvzNb9R6CrJ2NRfBcJVFjDthZ8WqNMms2/S/_WHZ2646-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8KVCjVK",
-    "title": "Armor and Presence",
-    "description": "Color capture of WWII reenactment machinery at D-Day Conneaut 2021, conveying scale and still energy. © Wayne Heim 2021",
-    "alt": "Reenactment armor equipment at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/Mz8W4ZjXGqSDKwFGpkq97dnrn6DFq7B88SCfGz5b9/XL/_ANA5110-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8KVCjVK/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "Wayne Heim ©2015",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8KVCjVK/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "armor study",
-      "color photography"
+      "DDay Conneaut 2021"
     ],
-    "story": "A still portrait of reenactment armor, emphasizing its silent but imposing presence. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/Ngz9RFKXMZPhnjpWWHtTZX3mXWwVD5G9vGF4JvJKv/XL/_ANA5110-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/Ngz9RFKXMZPhnjpWWHtTZX3mXWwVD5G9vGF4JvJKv/XL/_ANA5110-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/NjFmvxSSHfJMFR3qm8MGdkB84hF49RHc2JT4fnmLF/L/_ANA5110-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/KRTTzR9HtTXhvCkZ9nSCpz4M3HBhwdCJR5zKLbHmq/M/_ANA5110-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/NdtXXt76krdz9j7c6thRQFPFxPKbb7dTWM3xgMBCT/S/_ANA5110-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-M7RwTB4",
-    "title": "Prepared Movement",
-    "description": "Color photograph of WWII reenactment machinery at D-Day Conneaut 2021 suggesting imminent action. © Wayne Heim 2021",
-    "alt": "Reenactment machinery poised for movement",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/KctXvXssNpkPnDSvsqCxpCcTmD5z6ws36wVnrqqCP/XL/_OL33272-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "readiness",
-      "historic machinery"
+      "DDay Conneaut 2021"
     ],
-    "story": "Machines staged in balanced tension, a visual prelude to reenacted movement. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/LTkjZBGCJrHsCxnB3TSbLQ4JVGTCcdRrH3JBQSBjs/XL/_OL33272-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/LTkjZBGCJrHsCxnB3TSbLQ4JVGTCcdRrH3JBQSBjs/XL/_OL33272-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/KTLqbHf5JSXFhxFjx8npsNW2L8FL4dDWhfHXXrsx8/L/_OL33272-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/KxKcKRCjSJ5B84wfj59LLGDvt9mSdL7fMBXdG6R29/M/_OL33272-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/K4XdsfMLT5fMD5CgNSMvRPM3HpbsJr5kqjMkfkzxN/S/_OL33272-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FDHCvzp",
-    "title": "Gear in Light",
-    "description": "Color fine art photograph of WWII reenactment machinery at D-Day Conneaut 2021, capturing interplay of light and structure. © Wayne Heim 2021",
-    "alt": "WWII reenactment machinery showing light and form",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LkwBNVsMDzj4jCf5D87nkrT5MFzkn42Zf5Kkvz9dJ/XL/_OL33286-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "light study",
-      "color detail"
+      "DDay Conneaut 2021"
     ],
-    "story": "An observational capture of historic reenactment equipment, highlighting how light defines form. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/KMgWPZJrxr6dpWKqHPRMdWsMhBLGd4hJWrgvf3gNG/XL/_OL33286-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/KMgWPZJrxr6dpWKqHPRMdWsMhBLGd4hJWrgvf3gNG/XL/_OL33286-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LJxgWGNjLzkP9RF2NBwcfFtStvSf2Mxw5BpPdBsTr/L/_OL33286-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/Kz5B8Pm2Mb6pRc9qX9RBn4VtLrFjs7mMCrzrbMHnq/M/_OL33286-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LTNWCbm5tX99DhCQq2ZwcJW7pZPkptWLVzwtnSxZH/S/_OL33286-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n3N8NRr",
-    "title": "Staged Readiness",
-    "description": "Color photograph of WWII reenactment machinery at D-Day Conneaut 2021, balancing stillness and anticipation. © Wayne Heim 2021",
-    "alt": "Reenactment machinery ready and awaiting",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LQ5LqQftrthtChL4LT7pFghr2sknzN587QRxZwZZK/XL/_PEN0791-Edit-2-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "anticipation",
-      "historic machinery"
+      "DDay Conneaut 2021"
     ],
-    "story": "Equipment positioned to convey a quiet moment before action, blending tension with calm. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LvqbcX6w6PLjSpgXmM5rtN6wwhs9Fgm35pv8z2Vnp/XL/_PEN0791-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LvqbcX6w6PLjSpgXmM5rtN6wwhs9Fgm35pv8z2Vnp/XL/_PEN0791-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/M696LhZTGCjdwRc8KTtRMVZbd64PWTJMVJvKMcHBv/L/_PEN0791-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/MGQKtjcdBcgRkrb7nDQVHFk5pJRwVm9nZ4WtnRjkm/M/_PEN0791-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/NWdgwmWNNsJSMPT8nf7D2ZKdsb2Dz4LzrsCDn3qDf/S/_PEN0791-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-59zQzXC",
-    "title": "Embarkation Departure",
-    "description": "Color image showing the departing embarkation zone en route to Omaha Beach during a WWII reenactment at D-Day Conneaut 2021. © Wayne Heim 2021",
-    "alt": "Reenactment embarkation zone leaving for Omaha Beach",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/Mjc6St5R45r38XLzRV2b66VBBpSkgsW2HLb5mhZff/XL/_PEN0808-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/A",
+    "title": "Take her out.",
+    "description": "Departing embarkation zone. Next stop Omaha Beach. © Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "embarkation",
-      "Omaha Beach"
+      "DDay Conneaut 2021"
     ],
-    "story": "A narrative moment of departure, evoking movement toward historic action. © Wayne Heim 2021",
+    "story": "Departing embarkation zone. Next stop Omaha Beach. © Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L6xknpDKXJMhfpb4StcjMSJVC6FsTzvJmHxQbtBwm/XL/_PEN0808-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L6xknpDKXJMhfpb4StcjMSJVC6FsTzvJmHxQbtBwm/XL/_PEN0808-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/K85C4sj4WNVpJSZVHXDcPWz5HdkK25NbmNzPrJCqb/L/_PEN0808-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L3m9zCbJhjPMF5mhZHp28xmHxZ2PnvSqwkBmM88Pm/M/_PEN0808-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/M26T93Zf7rt7wz3PLqfkWMhB9gWhW35k8z78PNphF/S/_PEN0808-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Dd5XSHd",
-    "title": "Final Signal",
-    "description": "Color photograph capturing the last communicated signal during the D-Day Conneaut 2021 reenactment. © Wayne Heim 2021",
-    "alt": "Final signal scene at reenactment",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lw87fBvk7MF5nxPp27PvkfmTB3tbhbD6RgpvGWBrW/XL/_PEN0830-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/A",
+    "title": "#1",
+    "description": "Final signal. © Wayne Heim 2021",
+    "alt": "Take her out.",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "communication",
-      "historic moment"
+      "DDay Conneaut 2021"
     ],
-    "story": "A symbolic capture of the concluding signal, blending authenticity with narrative weight. © Wayne Heim 2021",
+    "story": "Final signal. © Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lx5M9KCSsXKdsrTzvbFRNfRfjF7BZM4XKKmSSgkF9/XL/_PEN0830-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lx5M9KCSsXKdsrTzvbFRNfRfjF7BZM4XKKmSSgkF9/XL/_PEN0830-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/KvXsqhm5Zht9KDfBZvK7hmz4RjgRSLrnbWQv3KxNM/L/_PEN0830-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/NLZP8KfpWMHNXSvq6qtGMR9xqFF6bGHwRqbTxcCtT/M/_PEN0830-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/M6gg7vtr4PHRR74DNJmJ7g7BLnBXQR8C8XNn88FxW/S/_PEN0830-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vZNLBNp",
-    "title": "Machine Poise",
-    "description": "Color fine art photograph of WWII reenactment machinery at D-Day Conneaut 2021, showing poised readiness. © Wayne Heim 2021",
-    "alt": "WWII reenactment machine poised and ready",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/K5cXZGcmrq7W4tMxXjmKqnSSSvJmhzJnN3t9mpXGN/XL/_PEN0836-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "#1",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "machinery study",
-      "historic readiness"
+      "DDay Conneaut 2021"
     ],
-    "story": "An image that balances stillness and latent energy in reenactment hardware. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/MFGbXwmBND3R2Hcj5gwwbShtHwFvgM53m2znHN2MC/XL/_PEN0836-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/MFGbXwmBND3R2Hcj5gwwbShtHwFvgM53m2znHN2MC/XL/_PEN0836-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/NCHm6k5Ft42vZ2dNRHJ9B8X6rjMLrXMJtN7sXvghJ/L/_PEN0836-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/L4RGJcq8DTrdMNJ6MLCdGWWMvtcgGhVBHXnKhcksx/M/_PEN0836-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/LhCsDnKFdmfd4cFCVXmsGvN3k4wGj9dZDN6Wvd3qL/S/_PEN0836-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rhM88g4",
-    "title": "Field Quiet",
-    "description": "Color photograph of WWII reenactment machinery at D-Day Conneaut 2021 capturing a calm moment in the field. © Wayne Heim 2021",
-    "alt": "Reenactment equipment in quiet field setting",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/KpxwkDrjZx2sfMrwMJbw3J5JXpfSKwmVcwccbh5jJ/XL/_OL37022-Edit-Edit-XL.jpg",
-    "buyLink": "https://www.k4studmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/A",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/A",
     "keywords": [
-      "DDay Conneaut 2021",
-      "WWII reenactment",
-      "stillness",
-      "color documentation"
+      "DDay Conneaut 2021"
     ],
-    "story": "A contemplative view of reenactment machinery, emphasizing the quieter side of historic reenactment. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/LkvmXx3zvwCX8RNDPD8NWLKcQQfpZVzG3PKs7JnDh/XL/_OL37022-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/LkvmXx3zvwCX8RNDPD8NWLKcQQfpZVzG3PKs7JnDh/XL/_OL37022-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/Lt2g9PPP5CSKtnkCZCGzvsML4XgmbT6MM38HwffX9/L/_OL37022-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/NXxZqxRwcVc5xCMTMHKJRFh27m3mGn3wZcSvWrR3c/M/_OL37022-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/LGpbW78fHR6VvQnFhcrxn4Cx5LZ3MNCzV2677jB2Q/S/_OL37022-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
+  {
+    "id": "i-GwTMZZK",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/A",
+    "keywords": [
+      "DDay Conneaut 2021"
+    ],
+    "story": "© Wayne Heim 2021",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 51,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  }
 ];

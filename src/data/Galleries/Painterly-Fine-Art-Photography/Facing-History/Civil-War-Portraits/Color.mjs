@@ -1,34 +1,37 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome to the Color Cowboy Gallery",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-{
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
+  {
     "id": "i-xhX479V",
-    "title": "Civil War Art: A Hero's Ride",
-    "description": "Painterly Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: A Hero's Ride: Painterly Fine Art Photography",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/K5Bg7SCmwhNJL9G8vCSMRPqtXnZV85nSQBSkktkdK/XL/Heros%2520ride-XL.jpg",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Civil War Art: A Hero's Ride",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/A",
     "keywords": [
       "Heros",
       "ride",
       "American Civil War",
       "Civil War",
-      "Painterly Fine Art Photography",
       "civil war photography",
       "civil war reenactment",
       "civil war reenactmet",
@@ -42,21 +45,24 @@ export const galleryData = [
       "soldier",
       "Union"
     ],
-    "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/LqM3pgfFsZW9nTSp4mWQQTjdTHsQnP3qTtvJcfKZG/XL/Heros%20ride-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/LqM3pgfFsZW9nTSp4mWQQTjdTHsQnP3qTtvJcfKZG/XL/Heros%20ride-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/LxWD5xxvvBdvKd8gn2DjPWKF3ZxKvD7xZWtwQ9JbX/L/Heros%20ride-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/KqBt6TxfTW3cbrkRsM8XBdt3HqTSHwCzmZQTtcc46/M/Heros%20ride-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/L5qrBf63BWGVH9XgwCL86R6HLbF3dKVxrGqPW2F3h/S/Heros%20ride-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-C5ZGjMH",
     "title": "Civil War Art: Tides Have Turned v1",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Tides Have Turned v1",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/NP52qQC8MGVmwjK2cr4Xm2JgbnS2Cs7SZctZTLwzb/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
+    "alt": "Civil War Art: A Hero's Ride",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/A",
     "keywords": [
       "Heros",
@@ -79,18 +85,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/K99fW6vxLCPVs34QhXMN9PX2ZZMspSsZhSzbVsGv5/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/K99fW6vxLCPVs34QhXMN9PX2ZZMspSsZhSzbVsGv5/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/KsfkBvbQZkwq6BZP5cSzz7NtsjvnzCMkDwksHRdZC/L/_O2H6866-Enhanced-NR-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/Lm7RRJDZTtJzdxJw68JTNxSSbtNTq5NMDht5Tt2GM/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/M6hvc2PPC7MFdmmwM9tSCXmKLcTHTpW74tW8HtvGR/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9q7BrTt",
     "title": "Civil War Art:  Little Drummer Boy.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art:  Little Drummer Boy.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/MKDJSDWW7wrm4rQjFmLLLjLSb7VrPVN5x9g9WtVk8/XL/_HF20983-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Tides Have Turned v1",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-9q7BrTt/A",
     "keywords": [
       "Heros",
@@ -113,18 +122,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/LBfrrxqVsZx6PK7jCPkpLwLNjdKGBhRLHJkRq6fvQ/XL/_HF20983-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/LBfrrxqVsZx6PK7jCPkpLwLNjdKGBhRLHJkRq6fvQ/XL/_HF20983-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/L5BD5RpZnMRmLTTMfQw7T8qkJQVDJtb3SchzwqnWR/L/_HF20983-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/KfX682WNCXWjSFK6ZZX3vSX8t3Cr2Lp38HFNZgFjN/M/_HF20983-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9q7BrTt/0/LjJBRNNfTsqSKZzxksj4mzd76xfBbC237hw62XH3J/S/_HF20983-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N2LmzLK",
     "title": "Old Glory Civil War Run",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Old Glory Civil War Run",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-N2LmzLK/0/Mqs835CFMP4nT9cg4HppB6CRMQwrPsfrjbZgVBDXM/XL/_O2H2892-Edit-Edit-XL.jpg",
+    "alt": "Civil War Art:  Little Drummer Boy.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-N2LmzLK/A",
     "keywords": [
       "Heros",
@@ -147,18 +159,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-N2LmzLK/0/LNSzVDwNFKhq28HvPhwhQdw6cGt39GstrkjMnwjZp/XL/_O2H2892-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-N2LmzLK/0/LNSzVDwNFKhq28HvPhwhQdw6cGt39GstrkjMnwjZp/XL/_O2H2892-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-N2LmzLK/0/LNSzVDwNFKhq28HvPhwhQdw6cGt39GstrkjMnwjZp/XL/_O2H2892-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-N2LmzLK/0/KkJ38Mwv9xnnNHV4SDzt99grjSnKn4x9rQcHTkJbc/L/_O2H2892-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-N2LmzLK/0/LmzT6j6Vg7sM64PdxmkKWfQPxNzHwnMPjQk6MbRx7/S/_O2H2892-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pvFgTr4",
     "title": "Civil War Art: Fog of War",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Fog of War",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pvFgTr4/0/NSFwBdrQFFPJd5vRcszH2KG4FgxJtnz3tmd93R9vw/XL/_O2H2885-Edit-XL.jpg",
+    "alt": "Old Glory Civil War Run",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-pvFgTr4/A",
     "keywords": [
       "Heros",
@@ -181,18 +196,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pvFgTr4/0/LzNsV3z75KhbN8333XCnXkJtb3mNDjDVRWVHBcJ3t/XL/_O2H2885-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pvFgTr4/0/LzNsV3z75KhbN8333XCnXkJtb3mNDjDVRWVHBcJ3t/XL/_O2H2885-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pvFgTr4/0/LswS9fh9bzq76GcJJqfrnb2r5nC49hGPh9S34Fc6w/L/_O2H2885-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pvFgTr4/0/KLnTBtJPxNC28MhfMdSGHX9cthDSNCSPS7QNWhPdf/M/_O2H2885-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pvFgTr4/0/NKHV9bnZK32SLLKkmXHh5vgDNx4NHjS9vxjHbHVdm/S/_O2H2885-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DJKJkMb",
     "title": "Civil War Art: Waiting for the Signal",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Waiting for the Signal",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/KR55ttRB87DgWRkMB52HFBFWQLpbFHSpQKQbcfnc9/XL/_O2H6822-Edit-Edit-Edit-XL.jpg",
+    "alt": "Civil War Art: Fog of War",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-DJKJkMb/A",
     "keywords": [
       "Heros",
@@ -215,18 +233,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/KmmVNDb6wkWKMc9NTmvQN8NXGk5HzPF8j8CmC62qx/XL/_O2H6822-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/KmmVNDb6wkWKMc9NTmvQN8NXGk5HzPF8j8CmC62qx/XL/_O2H6822-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/NgXJt2MwkjcSWX3cTRNZDpZgzsrftqrHMKt3kPbBW/L/_O2H6822-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/K5bVCwGZNszJLLffQ4r8jhHbcXHd7SJTC3qxJH7Tz/M/_O2H6822-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-DJKJkMb/0/KHnXXpCZbfH9R9BF35CLRrpJRSzdkmd7fkdxhwkHT/S/_O2H6822-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nWsP2r2",
     "title": "Civil War Art: Catching Up",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Catching Up",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nWsP2r2/0/MDk6FxD5s67hQhTbGNND9Fg64Mn3MtmkvzvMf8JZx/XL/_HF20969-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Waiting for the Signal",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-nWsP2r2/A",
     "keywords": [
       "Heros",
@@ -249,18 +270,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nWsP2r2/0/LCzGgh4zB8GWTkxW8J5JWptkLn26PN6bKP3fTZsCt/XL/_HF20969-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nWsP2r2/0/LCzGgh4zB8GWTkxW8J5JWptkLn26PN6bKP3fTZsCt/XL/_HF20969-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nWsP2r2/0/LCzGgh4zB8GWTkxW8J5JWptkLn26PN6bKP3fTZsCt/XL/_HF20969-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nWsP2r2/0/MfgWCT6Drvbmh7L4MhjJVZVmzR8f87dxQwpVp9Z2F/L/_HF20969-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nWsP2r2/0/LNZVTstmpKh2tXdNn9fbfnGS9pxkdN23bD7vDvrLZ/S/_HF20969-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fdtLTbW",
     "title": "Civil War Art: Interesting Proposition",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Interesting Proposition",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/MfzFvmtWb9dKtQZkHvVRjRG9xd3FCFPQfBmCWpr65/XL/_HF21487-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Civil War Art: Catching Up",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-fdtLTbW/A",
     "keywords": [
       "Heros",
@@ -283,18 +307,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KzVjVtqWBx2m9LgGZ8cMzLQ34jFRBLNXnPgqN9vTW/XL/_HF21487-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KzVjVtqWBx2m9LgGZ8cMzLQ34jFRBLNXnPgqN9vTW/XL/_HF21487-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KX7W429mg924gRFdS9cVPrbKcp2MQmZjTJwpk4rHL/L/_HF21487-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/LDXRdxdgbbXSQgxgzKnm8xTH7fMRt9jHDtMbtfpkr/M/_HF21487-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fdtLTbW/0/KsHdGCsvLHxbhzCsrhgqxfsnj7qtBWPNtRVtSwBvC/S/_HF21487-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CGRD3jF",
     "title": "Civil War Art: Tending to the Boys",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Tending to the Boys",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-CGRD3jF/0/NgzPpDfMFXRJKWJwckhVhKbJjKQgJFXpXqf8sZ3p9/XL/_HF21497-Edit-XL.jpg",
+    "alt": "Civil War Art: Interesting Proposition",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-CGRD3jF/A",
     "keywords": [
       "Heros",
@@ -317,18 +344,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-CGRD3jF/0/MgbRphKzBVSmPpmKPwnn9t57rvgZB5PrbkLRMTTZs/XL/_HF21497-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-CGRD3jF/0/MgbRphKzBVSmPpmKPwnn9t57rvgZB5PrbkLRMTTZs/XL/_HF21497-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-CGRD3jF/0/MgbRphKzBVSmPpmKPwnn9t57rvgZB5PrbkLRMTTZs/XL/_HF21497-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-CGRD3jF/0/LwcmzD5KVxNrb7zLL6rxBMS8PrbzWrMvqg6KRwbwP/L/_HF21497-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-CGRD3jF/0/L6vzZqCGB88T62rmdN8VwVN7KQKg52SQ8bBpPwddK/S/_HF21497-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hD6jQZZ",
     "title": "Civil War Art: Soldier taking 5",
     "description": "Painterly Fine Art Civil War Photography of Union troop reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Soldier taking 5",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/KjpgcZMHGrD9RNNn4n67KdfnfCcjcQ4sVT7RPXxBJ/XL/_HF20980-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Tending to the Boys",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-hD6jQZZ/A",
     "keywords": [
       "Heros",
@@ -351,18 +381,21 @@ export const galleryData = [
     "story": "Painterly Fine Art Civil War Photography of Union troop reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/MpsS6JNJGhS643W8Kc7FT2fP5gLhsxJHSXXDF6FPb/XL/_HF20980-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/MpsS6JNJGhS643W8Kc7FT2fP5gLhsxJHSXXDF6FPb/XL/_HF20980-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/MpsS6JNJGhS643W8Kc7FT2fP5gLhsxJHSXXDF6FPb/XL/_HF20980-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/KTKQh5GWcgTdwPfRgSpJ4xq9tTMFx6qdRhq2CHcN2/L/_HF20980-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hD6jQZZ/0/MHbCZDBd2C9N2fBdp9s4ZDDG59KS4dJkHwX6C3Zpj/S/_HF20980-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9wj2BCw",
     "title": "Civil War Art: Too Many Losses to Count",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Too Many Losses to Count",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/NJHczjLzRfm7FGrdW87LvgMQp55XpjLsbrKLLr5Wc/XL/_HF21520-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Soldier taking 5",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-9wj2BCw/A",
     "keywords": [
       "Heros",
@@ -385,18 +418,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/KpHXFJtVdGZ25NXNmwsjgRJfrXftWKXKdGn4PrcsF/XL/_HF21520-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/KpHXFJtVdGZ25NXNmwsjgRJfrXftWKXKdGn4PrcsF/XL/_HF21520-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/L7jkVZk9Wn6FnMmpw98Tx48zrqdpJqzzSTmt8zqnz/L/_HF21520-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/MfRnHT8ftpvHkPn6qGRFPWmMcgTCpgdq4bV4d7XCt/M/_HF21520-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-9wj2BCw/0/Mdd2DFc4978zjN3WHgwjX3cFqx3jWhQj9rDGBLzk7/S/_HF21520-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-s785L8d",
     "title": "Civil War Art: Ain't Seen that Before",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Ain't Seen that Before",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/MSW4TLx7xR55QSd5j5dSvKhz4VWtjk7RMkxFCkBS6/XL/_HF21462-Edit-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Too Many Losses to Count",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-s785L8d/A",
     "keywords": [
       "Heros",
@@ -419,18 +455,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/Lc56CrBZxnR3xvWFB3mSXcMGvgXgtQBzb4gVZhpXM/XL/_HF21462-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/Lc56CrBZxnR3xvWFB3mSXcMGvgXgtQBzb4gVZhpXM/XL/_HF21462-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/M6ZgxCxrV2LRTStFN7wT6TC9FS4WXHp6XwzhgT8g6/L/_HF21462-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/KqVmtLqDN9vpFNdv2sg4B25f2Z9h3b2JFMCJFkw7X/M/_HF21462-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-s785L8d/0/M4qz4cVwBVh6JMBGfnb2vjkGsHWWCmNX7xMK9SmkH/S/_HF21462-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QsnR9mf",
     "title": "Civil War Art: Soldier Portrait",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Soldier Portrait",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NRTrKxCQnms7sGQTRt8X4bFqfKHTQ8vs9rZ2QDqPF/XL/_HF21458-Edit-XL.jpg",
+    "alt": "Civil War Art: Ain't Seen that Before",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-QsnR9mf/A",
     "keywords": [
       "Heros",
@@ -453,18 +492,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/NWXSgZxp8ZBhZmdKpRQccT7XCJzVD3Jw86q6FWsQC/XL/_HF21458-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/KpKJtDtKfbMmGHQFWkg987pVQ6rjhkRRJDZR5RnKJ/L/_HF21458-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QsnR9mf/0/K3jKG3MGG2N7DSzh3Wd75HcwtwMWWQCpG3NQHN6Cj/S/_HF21458-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WRw5xs7",
     "title": "Civil War Art: Regret and Disbelief",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Regret and Disbelief",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WRw5xs7/0/LqLw4dT2GF23r8qVC7BpPpNV7WTL5Pnd5m8t558cx/XL/_HF21450-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Soldier Portrait",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-WRw5xs7/A",
     "keywords": [
       "Heros",
@@ -487,18 +529,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WRw5xs7/0/MbD59JzKWFG4MwSdv3BHvwsdW9K88DScWgb8zqsHP/XL/_HF21450-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WRw5xs7/0/MbD59JzKWFG4MwSdv3BHvwsdW9K88DScWgb8zqsHP/XL/_HF21450-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WRw5xs7/0/MbD59JzKWFG4MwSdv3BHvwsdW9K88DScWgb8zqsHP/XL/_HF21450-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WRw5xs7/0/KM2B7bbShJpsgxwg4gkvWfwd5qFgGpbVhnCthxGB9/L/_HF21450-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WRw5xs7/0/Kt43TdCR6XPpPf6tCXQQHdz8h6jZXXS7dp36Bnths/S/_HF21450-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tvs5pD9",
     "title": "Civil War Art: Where do we go from here?",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Where do we go from here?",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-tvs5pD9/0/MVSsJbSJm59TqgfwkLRxWhX9gDT29hskGLwDMtZMP/XL/_HF21376-Edit-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Regret and Disbelief",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-tvs5pD9/A",
     "keywords": [
       "Heros",
@@ -521,18 +566,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-tvs5pD9/0/LzPdnV26fpdZJ7RRvjFmrSBq9K5bGGXBQ99zHqmjk/XL/_HF21376-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-tvs5pD9/0/LzPdnV26fpdZJ7RRvjFmrSBq9K5bGGXBQ99zHqmjk/XL/_HF21376-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-tvs5pD9/0/KrQbwXMT7rHPN4nrTVpzcWCFrWD4Th98hH3Ps4v7p/L/_HF21376-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-tvs5pD9/0/KvqGR8nw2RwCztLNsh4Gfrm29WGLpVPgrHFcBjnrP/M/_HF21376-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-tvs5pD9/0/LQRxZMgfV9vzP8C8FwdZkvcz2Zt82QvGhCbks6Z3v/S/_HF21376-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kvCJ39n",
     "title": "Civil War Art:  Traveling Man",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art:  Traveling Man",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LvJCTnhb4bvfw9cP4NspLm7mksmHZRsmLfQgz3T9G/XL/_O2H0296-Enhanced-NR-Edit-Edit-XL.jpg",
+    "alt": "Civil War Art: Where do we go from here?",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-kvCJ39n/A",
     "keywords": [
       "Heros",
@@ -555,18 +603,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LM9BBkgsWjsFmZLsLqLxqMNnpcvhBHJGSVcG8WzKN/XL/_O2H0296-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LM9BBkgsWjsFmZLsLqLxqMNnpcvhBHJGSVcG8WzKN/XL/_O2H0296-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/K57CkczJmvJkmdrfGqhM4PWqMMf2Smz4gqTZHCG9Z/L/_O2H0296-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/KnWSW7TGnbNxGmRZh6Pv3N7KLhKBzvQr34G8WVqtC/M/_O2H0296-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kvCJ39n/0/LWWmNFxZKbLWWcnHp3RM6cNvTbBCbwDvj7vWJRKhF/S/_O2H0296-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VgGGG68",
     "title": "Civil War Art: All Business",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: All Business",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/M3JL9pRB6ShLNkchWLPMQj3vTHrtnDRqXJ37SSkHk/XL/_HF21372-Edit-XL.jpg",
+    "alt": "Civil War Art:  Traveling Man",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-VgGGG68/A",
     "keywords": [
       "Heros",
@@ -589,18 +640,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/NQbG8hwcG26xj4sz3WRvJTbQFgsdx6FcrGf3wmZ9s/XL/_HF21372-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/LtWkFkdgJnW9pQTwQgxqzTR7mqKtLbztMwPmZZzFt/L/_HF21372-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VgGGG68/0/MkcgfDcFPnwBJCrHtGVRD6WCDBnCQz7qDKHkVCTKM/S/_HF21372-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nDPs3J2",
     "title": "Civil War Art: Bugler",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Bugler",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/KSLxvzd282BnBfTZxfgX9QNn47DDgSt8Ch5HPrHbF/XL/_O2H6690-Edit-XL.jpg",
+    "alt": "Civil War Art: All Business",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-nDPs3J2/A",
     "keywords": [
       "Heros",
@@ -623,18 +677,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ln9sBv5L63vTKPCJ3RHGRntDvw2f2DxqttwBq88M7/XL/_O2H6690-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/Ndm9xtB4B9Lsn6wDn9qHjtJMTCvKQVT3Dq67VR5vM/L/_O2H6690-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nDPs3J2/0/LDxTtRgTV5DzrHQmMCkkwJdS5hZSnHQLhMxbgxDWK/S/_O2H6690-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QbSdKQS",
     "title": "Civil War Art: Pep talk for the boys.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Pep talk for the boys.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/L8GcJftdzzm2PFQp4Vn7QWFFzFrPX4vj5WM7x4Wtt/XL/_HF21408-Enhanced-NR-Edit-Edit-XL.jpg",
+    "alt": "Civil War Art: Bugler",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-QbSdKQS/A",
     "keywords": [
       "Heros",
@@ -657,18 +714,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MmkHBFcCKSf3P9WJpxHL5bnGv9F6zbCBdBC2HgLLF/XL/_HF21408-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MmkHBFcCKSf3P9WJpxHL5bnGv9F6zbCBdBC2HgLLF/XL/_HF21408-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/KZ5dwMpjRHQMkG56qFsMWxrBNTxbNPGfgBmv2Zzqt/L/_HF21408-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/LW3KCx9DMcbKrXNvmTjPfsJB8fwwSBFz49Qw8vtBC/M/_HF21408-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-QbSdKQS/0/MPmHxZGFWDhdNJJz3Z4rsHV5xsBh5wjrfm7qsVvtb/S/_HF21408-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RpVqXBB",
     "title": "Civil War Art: Face of Defeat",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Face of Defeat",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/NMfCNgm3hS4knk5KzQWQhmTPqjm242q45cz4pQVW3/XL/_O2H6798-Edit-XL.jpg",
+    "alt": "Civil War Art: Pep talk for the boys.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-RpVqXBB/A",
     "keywords": [
       "Heros",
@@ -691,18 +751,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/Mbq5g2qSWswBMpc6ZCQrSLHtDx8xS8XTrtT6m2nqb/XL/_O2H6798-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/Mbq5g2qSWswBMpc6ZCQrSLHtDx8xS8XTrtT6m2nqb/XL/_O2H6798-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/LbqC6Gt8phfDRBFdLbPL7JZqDsbM5BkFLdz7TDZNp/L/_O2H6798-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/KTcjTCQwp8SkcDpmkBFPrnBVZKzdfLPWJ79JGQqQ9/M/_O2H6798-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RpVqXBB/0/KJvDTPdnFmgqckxZn63hGnRbh85HTQqRgJZHjws7K/S/_O2H6798-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zmbvK99",
     "title": "Civil War Art: Lesson at Hand",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Lesson at Hand",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/MfKgX3CxmMLNmMXvp39zqgSgDv9prvRNFnjvRwM38/XL/_O2H6871-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Civil War Art: Face of Defeat",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-zmbvK99/A",
     "keywords": [
       "Heros",
@@ -725,18 +788,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/KmQq2rShMVZWMRd5cjRrpjMhJJXjQFRB9zgWJcksj/XL/_O2H6871-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/KmQq2rShMVZWMRd5cjRrpjMhJJXjQFRB9zgWJcksj/XL/_O2H6871-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/Njg6cLGvJnrQx264D6cxck2BTG73w25b2pQXT5b5H/L/_O2H6871-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/LfP32ThGrZ7HwX8wgRpKx2zH8jbsDH7sq2vdBQ7gz/M/_O2H6871-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-zmbvK99/0/LQ9pXsqq5stP2V97ss4bMrPZLmsTqdT5mKbWcTN6G/S/_O2H6871-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LnvhzJ4",
     "title": "Returning Fire! - Civil War Art by Wayne Heim",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Returning Fire! - Civil War Art by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-LnvhzJ4/0/Kr6kf3vmPmRqSPjdgzRXK2hzfKz484gWGtNmMZ5XB/XL/_O2H1564-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Lesson at Hand",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-LnvhzJ4/A",
     "keywords": [
       "Heros",
@@ -759,18 +825,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-LnvhzJ4/0/Lg3k5dzRwbcqsR54SbPjP9WsZFFDHgTCwJhG4sV3m/XL/_O2H1564-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-LnvhzJ4/0/Lg3k5dzRwbcqsR54SbPjP9WsZFFDHgTCwJhG4sV3m/XL/_O2H1564-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-LnvhzJ4/0/KRZK6sLWxjsrdrKk9f6DxNCpzXNkZhKx2PqVDMjhB/L/_O2H1564-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-LnvhzJ4/0/K3JbgVQ3K2xKFMLwhMnKmhMTLjL6k6TGCkN64W5Nm/M/_O2H1564-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-LnvhzJ4/0/NGVNs9xBVS6sG9jzxJ3PpTbpFHHxn2knNqMGQ5FvN/S/_O2H1564-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-H5Z44TF",
     "title": "Civil War Art:  Firing Line",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art:  Firing Line",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-H5Z44TF/0/NPhBhQQHtXvTc8dRcmBGGkcd7MGpwshv79L6MQDSw/XL/_O2H4660-Edit-XL.jpg",
+    "alt": "Returning Fire! - Civil War Art by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-H5Z44TF/A",
     "keywords": [
       "Heros",
@@ -793,18 +862,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-H5Z44TF/0/LrfQ9GnGtZrQrkt5TFFchMcmzngxxpRh5JMg9P6mj/XL/_O2H4660-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-H5Z44TF/0/LrfQ9GnGtZrQrkt5TFFchMcmzngxxpRh5JMg9P6mj/XL/_O2H4660-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-H5Z44TF/0/Mp7CN74sG7Xt89sN4DMftKhQMCDPRpzkGNSnZmnms/L/_O2H4660-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-H5Z44TF/0/ND8vRtqJQkLMKnSF6MRPw3zw2VnxZFPhk5NXwBbjP/M/_O2H4660-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-H5Z44TF/0/McvWgTZB7LsNvd3s2dCHJWKqD8z78ktmdPWzmcsht/S/_O2H4660-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-R5L4KXL",
     "title": "Civil War Art: Glory on the Move",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Glory on the Move",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R5L4KXL/0/LwR8STJ2H4xfXqVVVz7DMbPPML7qJGfkL6W6NnPng/XL/_O2H2892-Edit-Edit-2-XL.jpg",
+    "alt": "Civil War Art:  Firing Line",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-R5L4KXL/A",
     "keywords": [
       "Heros",
@@ -827,18 +899,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R5L4KXL/0/K2qFDKh227zLWXSZS7pWRZBgghkCkK5d6964Wd9TM/XL/_O2H2892-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R5L4KXL/0/K2qFDKh227zLWXSZS7pWRZBgghkCkK5d6964Wd9TM/XL/_O2H2892-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R5L4KXL/0/K2qFDKh227zLWXSZS7pWRZBgghkCkK5d6964Wd9TM/XL/_O2H2892-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R5L4KXL/0/KJrCKbNFdKB4zp4vRdS9gCF47bqSS7b7462v9djTx/M/_O2H2892-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R5L4KXL/0/M3CSM459tMsWFngQ5pVS6pz2dz6SN6jM6WWtpP3zd/S/_O2H2892-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Lkzzxqv",
     "title": "Civil War Art:  Charge the Line!",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art:  Charge the Line!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Lkzzxqv/0/MFWwRCptGSNjzV6x9XgSwHx4gLtRmLJTDJBfHfQFw/XL/_O2H2692-Edit-XL.jpg",
+    "alt": "Civil War Art: Glory on the Move",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-Lkzzxqv/A",
     "keywords": [
       "Heros",
@@ -861,18 +936,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Lkzzxqv/0/NPnk6rQsWHXPS76J6xWqsKDgNpjJq23pwLJXkxVxw/XL/_O2H2692-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Lkzzxqv/0/NPnk6rQsWHXPS76J6xWqsKDgNpjJq23pwLJXkxVxw/XL/_O2H2692-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Lkzzxqv/0/KHJMh4NxTwhSRFzK4SV8CZWt4G9mpVCCPKrCNGsB6/L/_O2H2692-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Lkzzxqv/0/MrfWbDVb75mgvTG8Dd9mH47cbKGKX3TDTRHkhjwWq/M/_O2H2692-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Lkzzxqv/0/Nhtrv5TgJnvJMPW8nTcMTLsfwW7qHXhPfzcnTwHs7/S/_O2H2692-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3M3Jd8c",
     "title": "Civil War Art: Onward to the Next Battle",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Onward to the Next Battle",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-3M3Jd8c/0/Lj6pMj9TMFhZCjMm5WNxj8nTkLB9S2Nkpj3HWSV9B/XL/_HF21254-Edit-XL.jpg",
+    "alt": "Civil War Art:  Charge the Line!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-3M3Jd8c/A",
     "keywords": [
       "Heros",
@@ -895,18 +973,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-3M3Jd8c/0/LqkFLt7tH8gj2VNnPH9RZmK6976dgNpqRcPhDrMXL/XL/_HF21254-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-3M3Jd8c/0/LqkFLt7tH8gj2VNnPH9RZmK6976dgNpqRcPhDrMXL/XL/_HF21254-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-3M3Jd8c/0/NhfK7VbQjSQLC6fgLLj7zmspVFs47RhSVGrjvrB7P/L/_HF21254-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-3M3Jd8c/0/LSmVKZpQVM9BVPRk3JpWBLFHnKNnpgfBkcKHd9NCd/M/_HF21254-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-3M3Jd8c/0/LtmwjvDFSJ4Z4GZpS2WS7gFgdsCT2NV8MnNJbT9Ch/S/_HF21254-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6FVGsWM",
     "title": "Civil War Art: Motivation",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Motivation",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-6FVGsWM/0/KSshvhHzMLpcGhcDjtpcG6xPMssMxnCG38672d6h8/XL/_HF21223-Edit-XL.jpg",
+    "alt": "Civil War Art: Onward to the Next Battle",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-6FVGsWM/A",
     "keywords": [
       "Heros",
@@ -929,18 +1010,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-6FVGsWM/0/KT8v4Xpbg4wLFmNHp42XBn3JMH7FD8Jdghz4G6HH5/XL/_HF21223-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-6FVGsWM/0/KT8v4Xpbg4wLFmNHp42XBn3JMH7FD8Jdghz4G6HH5/XL/_HF21223-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-6FVGsWM/0/NhmWXcCsw4tzCLvXZsfXvTc4bf7cSRXJ2QX98NNZJ/L/_HF21223-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-6FVGsWM/0/MBgf9VvsFHFfB63ZKMmQ9bSFd4D7R42ZwsS5mMSbQ/M/_HF21223-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-6FVGsWM/0/MLQJtCxbh4JvZsvcRVqhmbBJqbbMfbd4Hs5RjQHSk/S/_HF21223-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VZL9dTs",
     "title": "Civil War Art: Simple Portrait",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Simple Portrait",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/Kd9xhDf83grNGvGg94GCCjjRXkprRkFVC3WH5PvbZ/XL/_HF20945-Edit-XL.jpg",
+    "alt": "Civil War Art: Motivation",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-VZL9dTs/A",
     "keywords": [
       "Heros",
@@ -963,18 +1047,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/M9mtm6h6VZ3vK97vPLx46nVKXh6BHSMpgKMHCHV4b/XL/_HF20945-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/M9mtm6h6VZ3vK97vPLx46nVKXh6BHSMpgKMHCHV4b/XL/_HF20945-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/M9mtm6h6VZ3vK97vPLx46nVKXh6BHSMpgKMHCHV4b/XL/_HF20945-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/NZ5NvFD7mkq2g8DBwnzj6w9gRDRLCkKBFn7hDFBbv/L/_HF20945-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VZL9dTs/2/LVFf7CqbCS9SQ5WBzVvgvzZD8Kt9jK3ZjCkbg35wj/S/_HF20945-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nHw5ZMt",
     "title": "Civil War Art:  Four score...",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art:  Four score...",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nHw5ZMt/1/MRTz9TxmV6TT8j7mZKpjbvrpzJW8qgfhHzbqDGRLV/XL/_O2H0020-Edit-XL.jpg",
+    "alt": "Civil War Art: Simple Portrait",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-nHw5ZMt/A",
     "keywords": [
       "Heros",
@@ -997,18 +1084,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nHw5ZMt/1/MX92j5RwRtMVvxTWdNSPzKD67dT4D9kRZxzLTTD8h/XL/_O2H0020-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nHw5ZMt/1/MX92j5RwRtMVvxTWdNSPzKD67dT4D9kRZxzLTTD8h/XL/_O2H0020-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nHw5ZMt/1/MX92j5RwRtMVvxTWdNSPzKD67dT4D9kRZxzLTTD8h/XL/_O2H0020-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nHw5ZMt/1/KgjXPXvrGP4FXjgGsHzDL2t4vKfkzXWLg6xz5bnmv/L/_O2H0020-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-nHw5ZMt/1/Mtm3tJ33V9bnKk5mPBbqCWpmMkZtW8tVVpBxMkWXc/S/_O2H0020-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-R53CkVb",
     "title": "Civil War Art: Ready to ride.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Ready to ride.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/NSVKXZqX6kZnZRrHHdcjNFxLSffvz9mfCfQ4g9RNK/XL/_O2H6822-Edit-Edit-Edit-2-2-XL.jpg",
+    "alt": "Civil War Art:  Four score...",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-R53CkVb/A",
     "keywords": [
       "Heros",
@@ -1031,18 +1121,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/Lf7xfjvBbGhW3zQZk5Rs6QdfSxNqtB2fFS2PPZmQT/XL/_O2H6822-Edit-Edit-Edit-2-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/Lf7xfjvBbGhW3zQZk5Rs6QdfSxNqtB2fFS2PPZmQT/XL/_O2H6822-Edit-Edit-Edit-2-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MB6M7PTgkdfKJbcWCwsCGzb39sHXPSz7FThrRGVxS/L/_O2H6822-Edit-Edit-Edit-2-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/KRMzVdpTMJHCHrkGSNj8cQtmQsJ4Pmrt29ww2fXL8/M/_O2H6822-Edit-Edit-Edit-2-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-R53CkVb/0/MVjjXvP2BRLhDxbKRPggcVFMDG6hfg7ddfLkNrJNV/S/_O2H6822-Edit-Edit-Edit-2-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Ng98bJK",
     "title": "Civil War Art: War Torn and Weary",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: War Torn and Weary",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/MkBVP3pfWHVKRCTM7hj2kvTwxJZWHLTJfKzGRpDhG/XL/_O2H6749-Enhanced-NR-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Ready to ride.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-Ng98bJK/A",
     "keywords": [
       "Heros",
@@ -1065,18 +1158,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/MJ8WR8zbCVSD4XvGfcMwJ5rvCST88kvZ7NvrLvHms/XL/_O2H6749-Enhanced-NR-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/MJ8WR8zbCVSD4XvGfcMwJ5rvCST88kvZ7NvrLvHms/XL/_O2H6749-Enhanced-NR-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K46tCJtmFxdTwsXjnSHhw2gRCJ7NR9pw3Ld8V276D/L/_O2H6749-Enhanced-NR-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/Lfj2V4fGWdw8VTtwbpfxLChBk5F9jzdMKvtD6TgJj/M/_O2H6749-Enhanced-NR-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Ng98bJK/0/K98h3KTP88bWCNbpBPTC4hBcwQ47WvJvRv33cktWZ/S/_O2H6749-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4vsb9Qp",
     "title": "Civil War Art: Be ready boys!",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Be ready boys!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/LQrnJ6fchwGfxjhX32QZcfNnBHxhnSMp9JTWnzfBD/XL/_O2H6730-Edit-XL.jpg",
+    "alt": "Civil War Art: War Torn and Weary",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-4vsb9Qp/A",
     "keywords": [
       "Heros",
@@ -1099,18 +1195,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/MqdF4fZtr449Lmz6LFHkfjbgLb7d3KcvV6mpFfHrR/XL/_O2H6730-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/MqdF4fZtr449Lmz6LFHkfjbgLb7d3KcvV6mpFfHrR/XL/_O2H6730-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/MqdF4fZtr449Lmz6LFHkfjbgLb7d3KcvV6mpFfHrR/XL/_O2H6730-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/Kqwt23jZLwkXLGHZZWDP6524Sh3m69jpJB9ZVgmPG/L/_O2H6730-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-4vsb9Qp/0/LxLfn6mcjBnjDH9hcGsNpVsN8dgzrF9zTZvrGMpfd/S/_O2H6730-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f2DpvdK",
     "title": "Civil War Art: Documenting the War",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Documenting the War",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/LQhxZCwkjDz9fbCpfvJXBDDB34dpHTzCX7cpGdkrK/XL/_O2H6907-Enhanced-NR-Edit-Edit-XL.jpg",
+    "alt": "Civil War Art: Be ready boys!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-f2DpvdK/A",
     "keywords": [
       "Heros",
@@ -1133,18 +1232,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/LqcdH2sDTP5cVB4FGrtR76zr8SPKTxgRKJkBrZJw3/XL/_O2H6907-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/LqcdH2sDTP5cVB4FGrtR76zr8SPKTxgRKJkBrZJw3/XL/_O2H6907-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/KkPsf38fSbvXvVXQ582CqL7ZbN4wFTSqHWT3zd8rJ/L/_O2H6907-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Kz5qQRNPKTGNQtdJQT3r7THmKDMvxdzr25hrMZhkW/M/_O2H6907-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-f2DpvdK/0/Mh2HZwTzC7XctJS2SqVwb9vBbt5fnzR6TQ3mNNtjN/S/_O2H6907-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2pHXbPq",
     "title": "Civil War Art: Fall in boys!",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Fall in boys!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/Kg957fg8w8xLtttX2J3DSQCSs85BGsThr8PTgckb4/XL/_HF21237-Edit-XL.jpg",
+    "alt": "Civil War Art: Documenting the War",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-2pHXbPq/A",
     "keywords": [
       "Heros",
@@ -1167,18 +1269,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MS6Q2tq98j6cQ2zxL7kbdbCK6JW6jZxrcqPKP3Q67/XL/_HF21237-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MS6Q2tq98j6cQ2zxL7kbdbCK6JW6jZxrcqPKP3Q67/XL/_HF21237-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/Lb5WHn5knT8psJgXQJjT9tdD3FNZzZk2hV3hGL5Gs/L/_HF21237-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/Mw3vZfdTb8m4bCPvv7D9HXqmMVDDPcdzS8vV7gptG/M/_HF21237-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-2pHXbPq/0/MrH9WSjswqLFBQwS9BKGDnQwL5BLp8gr8CnGRrcHg/S/_HF21237-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mvXJpHF",
     "title": "Civil War Art: Quiet Reflection",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Quiet Reflection",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/M3ksZD2XfQwWTzMCHrhHBsdjjnt5j7qP36dF2j8VJ/XL/_HF21543-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Fall in boys!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-mvXJpHF/A",
     "keywords": [
       "Heros",
@@ -1201,18 +1306,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/K8Tq9WxgNJXJfFGQt8c8Rv5J8STNHrNkGMMqDgpzJ/XL/_HF21543-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/K8Tq9WxgNJXJfFGQt8c8Rv5J8STNHrNkGMMqDgpzJ/XL/_HF21543-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/LZ5HKFJmLP7cJfvfFdfBFqzFJpSRsH4fWVhV59rPJ/L/_HF21543-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/L9Rj2Nj6LMGZrNRGzvLgCGNkrHLwCqBrG4BTzgFVq/M/_HF21543-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-mvXJpHF/0/MNsCzGhff73NwRTR2NcnJMpVdJBKCkxP2xTZDCLMd/S/_HF21543-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZMt9t8J",
     "title": "Civil War Art: Disbelief",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Disbelief",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-ZMt9t8J/0/LPB45kK6k8fmsPTPQrCB5nMjLhDRjrF3LM6sZxsMJ/XL/_O2H0378-Enhanced-NR-Edit-Edit-XL.jpg",
+    "alt": "Civil War Art: Quiet Reflection",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-ZMt9t8J/A",
     "keywords": [
       "Heros",
@@ -1235,18 +1343,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-ZMt9t8J/0/Ls3Cs9f9bw4mVd53KFVK6dggLVL68HV6cGMGWjNzD/XL/_O2H0378-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-ZMt9t8J/0/Ls3Cs9f9bw4mVd53KFVK6dggLVL68HV6cGMGWjNzD/XL/_O2H0378-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-ZMt9t8J/0/Ls3Cs9f9bw4mVd53KFVK6dggLVL68HV6cGMGWjNzD/XL/_O2H0378-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-ZMt9t8J/0/MFJRQnrgmjS4Hmx2Tp9zdkW7s4CjFrPsLwpLVLbvV/L/_O2H0378-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-ZMt9t8J/0/MGm53JrRrhzW9cBn3nk6GPQk3ZwM6jKhCb6X2WCn9/S/_O2H0378-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-96shbfB",
     "title": "Civil War Art: Weight of the World",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Weight of the World",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-96shbfB/0/K4Fwqn938ckBSKGnd8M3zt4ktw5xkfzfX4TXTv84t/XL/_HF21116-Edit-XL.jpg",
+    "alt": "Civil War Art: Disbelief",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-96shbfB/A",
     "keywords": [
       "Heros",
@@ -1269,18 +1380,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-96shbfB/0/Lvq4TrBBwjnxz784h6nFJQGN2m33HxJcdSsRHg6BV/XL/_HF21116-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-96shbfB/0/Lvq4TrBBwjnxz784h6nFJQGN2m33HxJcdSsRHg6BV/XL/_HF21116-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-96shbfB/0/Lvq4TrBBwjnxz784h6nFJQGN2m33HxJcdSsRHg6BV/XL/_HF21116-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-96shbfB/0/LxqBHf72Nd8FtBBFmBLfZxh8tc4ffFRtRwTTc5Zmf/L/_HF21116-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-96shbfB/0/KjkH6qPLrpWDtSH3Vzzf7fg5TWKkG6JfxN2jD7qZp/S/_HF21116-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vT7SdKj",
     "title": "Civil War Art: Classic Couple",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Classic Couple",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPKwNkSSbjmbZFhTK82dBrRwp4k3QpP4xgHrsJwRj/XL/Water%2520color%2520portrait-XL.jpg",
+    "alt": "Civil War Art: Weight of the World",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/A",
     "keywords": [
       "Heros",
@@ -1303,18 +1417,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/Lrnnsch68MZ7Nfz5TsvDXNHSZcMwwTnZ6Hjb2MCmJ/XL/Water%20color%20portrait-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/Lrnnsch68MZ7Nfz5TsvDXNHSZcMwwTnZ6Hjb2MCmJ/XL/Water%20color%20portrait-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/KhRtQn6fC4JGQDthQfxTgFkQ4NH8Rwzj5xJm4JFmk/L/Water%20color%20portrait-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/McNdn2VX3m3NhmqTLMRqSD7wTxNpvkxbRzWMnJS5r/M/Water%20color%20portrait-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vT7SdKj/1/LPgXmfgcprfKXSj3PvbTQhPhKsLZLVKpDSSXvfz8m/S/Water%20color%20portrait-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kbpkRxp",
     "title": "Civil War Art: Where've you been?",
     "description": "Historixally themed, painterly Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Where've you been?",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LWZWdRbztbPC2MQLWd9t7cHg4G7hDPjd92xPFSm6F/XL/_HF21069-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Classic Couple",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-kbpkRxp/A",
     "keywords": [
       "Heros",
@@ -1337,18 +1454,21 @@ export const galleryData = [
     "story": "Historixally themed, painterly Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/LdpW42Z6xFNZLbn6mV5ZG4kCWh8QbpVTdGrTcfPb9/XL/_HF21069-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L2534qhDmj3rrWcLqRKKfvpsCLg88zQV3S7Z5LmRZ/L/_HF21069-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-kbpkRxp/0/L8sV4QngF22gsdfTfQ7q7pSCFgRb3qsRSh9RnfVr5/S/_HF21069-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HJ2ZRPj",
     "title": "Civil War Art: Hydrate",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Hydrate",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/LzPQR3P5ZCQvgkjfhsWP79Q2g3Nz2jN5GKvnJZs8C/XL/_HF21063-Edit-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Where've you been?",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-HJ2ZRPj/A",
     "keywords": [
       "Heros",
@@ -1371,18 +1491,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/L7Wpnm6rBmHNj9Gk5DWwTbdRwtJCsBHVgXPKsTpjX/XL/_HF21063-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/LdMFFKfdC3fKnktPwQXtLT2CttBNQxSp3pF55g22m/L/_HF21063-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-HJ2ZRPj/0/Nf7r7whd5SS8cCqPDM3S2d4X3C5jL3362wqPDFKtw/S/_HF21063-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8bDSdDK",
     "title": "Civil War Art: This great union...",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: This great union...",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8bDSdDK/0/NPdWVrjRKcwbMVCpt72M7pdXbZvc7V554h72N9hR3/XL/_HF21084-Edit-XL.jpg",
+    "alt": "Civil War Art: Hydrate",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-8bDSdDK/A",
     "keywords": [
       "Heros",
@@ -1405,18 +1528,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8bDSdDK/0/Mg6JBhQrwPBZcpvgGZR347Cv2CkbCR6McqRX6tSCq/XL/_HF21084-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8bDSdDK/0/Mg6JBhQrwPBZcpvgGZR347Cv2CkbCR6McqRX6tSCq/XL/_HF21084-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8bDSdDK/0/Mg6JBhQrwPBZcpvgGZR347Cv2CkbCR6McqRX6tSCq/XL/_HF21084-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8bDSdDK/0/LWMDQxQFFtNTWTzdN9XPcngWDh3CMf6wLG7VjSq5B/L/_HF21084-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8bDSdDK/0/MmjXN25p3JnZqSTqcSN9cLT68mHNRcKzQqtxXVz8t/S/_HF21084-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-L6QfRFP",
     "title": "Civil War Art: I had no other choice.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: I had no other choice.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-L6QfRFP/0/LkBbt3fHpZsXgFfwt9wzVJ9fmsrqpVMVFCF6jbT49/XL/_O2H6859-Edit-XL.jpg",
+    "alt": "Civil War Art: This great union...",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-L6QfRFP/A",
     "keywords": [
       "Heros",
@@ -1439,18 +1565,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-L6QfRFP/0/MCrcq2vq4jWXBjrHfjccRXrGStzJ5mTnVpHTKc2jC/XL/_O2H6859-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-L6QfRFP/0/MCrcq2vq4jWXBjrHfjccRXrGStzJ5mTnVpHTKc2jC/XL/_O2H6859-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-L6QfRFP/0/MCrcq2vq4jWXBjrHfjccRXrGStzJ5mTnVpHTKc2jC/XL/_O2H6859-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-L6QfRFP/0/KvWcqgmMwWG9FxZCH6KW6tSXhhzRNBPNPsqnxF4M6/L/_O2H6859-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-L6QfRFP/0/MQtd9MRv88Nsdvfg839z2wQ5cfzgRJGWmBHpwBSnr/S/_O2H6859-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WCW5QvM",
     "title": "Civil War Art: My beautiful Sarah!",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: My beautiful Sarah!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MjqzZZ6n7fhzfHDFDnLmxwsVVWKk6MMWpjbgV7dhs/XL/_HF21057-Edit-XL.jpg",
+    "alt": "Civil War Art: I had no other choice.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-WCW5QvM/A",
     "keywords": [
       "Heros",
@@ -1473,18 +1602,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/L96MG5fBcFh8TZnkPsSQkS6Z494jVgWGsQxg8FgHj/XL/_HF21057-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MrgkCBSgWBpSPK5Qn3Zs7tgxRNGjFWdrDVWzc6rGz/L/_HF21057-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-WCW5QvM/0/MfnjHWdbNfLPZQkS9PLxMn4kpxZZc8Nv2HSwkkzxj/S/_HF21057-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pBz9L9p",
     "title": "Civil War Art: Careful with your words my friend.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Careful with your words my friend.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/Lcf9q3s6m8cNRfcGbXL28JKMQWr4jQZLHtZWcx6kt/XL/_HF21051-Edit-XL.jpg",
+    "alt": "Civil War Art: My beautiful Sarah!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-pBz9L9p/A",
     "keywords": [
       "Heros",
@@ -1507,18 +1639,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KrzrL7RMrpQjPXFkxDHGCzcCKMpfbBQBV5x9hJh8h/XL/_HF21051-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/L88TbVGkQ57NCDcfjCMNds5SVjccNtdDP6GL69WjX/L/_HF21051-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-pBz9L9p/0/KXGdC7PbXckj9Wq98LhzNqJR9jDLQcSVjQdm8qZvT/S/_HF21051-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hpRQLLm",
     "title": "Civil War Art: They're getting closer.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: They're getting closer.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NDSGjKtTFcjQhfcPmRDXX2S3fGrx4cDW287HQ82N4/XL/_HF21055-Edit-XL.jpg",
+    "alt": "Civil War Art: Careful with your words my friend.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-hpRQLLm/A",
     "keywords": [
       "Heros",
@@ -1541,18 +1676,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NSFDNPP3hRwjxQRz6XZpBCm8QKT5JXGvZRgmwZqRL/XL/_HF21055-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/KTFvJ3XC5NNjwxXxQwxHHPnXVHgsxRdrLm57T39rZ/L/_HF21055-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-hpRQLLm/0/NcMCjPSQ9Cb2wLqw44KFQTKcFr7PX4n7D83NMLcNq/S/_HF21055-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xKkVXbj",
     "title": "Civil War Art: Clean up crew.",
     "description": "Painterly Fine Art Civil War Portrait Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Clean up crew.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/NK5PR8Vv675sdBmRnGswtbxVv84pcmVSSz3qCxxZd/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Civil War Art: They're getting closer.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xKkVXbj/A",
     "keywords": [
       "Heros",
@@ -1575,18 +1713,21 @@ export const galleryData = [
     "story": "Painterly Fine Art Civil War Portrait Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/M4FKK2SVRbNj3vZwQQSD5H7GhWK8t2c87tVMHbR3B/XL/_HF21043-Enhanced-NR-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/KP2ZtWcPHP7SbdgGRgLtzTrt5sLkFZ5Kp25FB2CSN/L/_HF21043-Enhanced-NR-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-xKkVXbj/0/L6Wkjqxtt5Cm33P8CtQ3hZsTWJ7zgRbTQRCQzxkNX/S/_HF21043-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fgb75Ts",
     "title": "Civil War Art: Doing his part",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Doing his part",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/Mj8mV53LdZrHgR6W2Lbpv3J8KNLzFjdzTQ8M524L7/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Clean up crew.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-fgb75Ts/A",
     "keywords": [
       "Heros",
@@ -1609,18 +1750,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/K4HXgkzTKm2hcpgRrbncNp5WXH6N32CQvCNSKJ6n6/XL/_O2H0365-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/KkKgHptVJkqxT64rM9Z2w6XCWr5NT648JFb66wHMz/L/_O2H0365-Enhanced-NR-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-fgb75Ts/0/NWcg5Qc2R3W7nznpnB9wLT3v9C44bssnVqKx6jTgb/S/_O2H0365-Enhanced-NR-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RJprr78",
     "title": "Civil War Art: Setting a spell.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Setting a spell.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/Mf75kVvSxsPC2nzMJ8qzpPsZJFwbBNF8XPQG3tJDC/XL/_HF20974-Edit-XL.jpg",
+    "alt": "Civil War Art: Doing his part",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-RJprr78/A",
     "keywords": [
       "Heros",
@@ -1643,18 +1787,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KcfxtwLSVpT2rcf2NL6mNVCXRCqHtHQQqqKWxwBL5/XL/_HF20974-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/MRK682Pnx3thBnn8rqsW6BTtzGwB4sWKxXkTwmwPm/L/_HF20974-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-RJprr78/0/KWGrH3zjpG9Q3TJmfZ5fN49pVLfQ8J7Vjq8MLn8K8/S/_HF20974-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Pw9Tzzf",
     "title": "Civil War Art: I don't see him.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: I don't see him.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KGX6LW54fdMqc4R2wHHGVfZd2zZ5XgCBkKbS84cn7/XL/_O2H0307-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Civil War Art: Setting a spell.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-Pw9Tzzf/A",
     "keywords": [
       "O2H0307",
@@ -1678,18 +1825,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KpNWHbpDJcFBjv8zQzSp7wcvpSvXrGq6xXf4xq2Vn/XL/_O2H0307-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KpNWHbpDJcFBjv8zQzSp7wcvpSvXrGq6xXf4xq2Vn/XL/_O2H0307-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/KTGRmPX4zpJtszFqFFT97wtPKX8WRX3M3BD4z8SPg/L/_O2H0307-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/LHzWDzpPc5SKGntkBH99fMHphP2rfnW6fH5gs7FsC/M/_O2H0307-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Pw9Tzzf/0/NKC5vjTRNXPWJBwLBFz5ZFCh33KK4vbcrs3vqFPwB/S/_O2H0307-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-767CNKX",
     "title": "Civil War Art: Moment of peace.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Moment of peace.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NG5rjkzgTW3s44ZRq84Z5k2M9PsTz4QVrJTNDwQDM/XL/_HF20972-Edit-XL.jpg",
+    "alt": "Civil War Art: I don't see him.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-767CNKX/A",
     "keywords": [
       "O2H0307",
@@ -1713,18 +1863,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/KVZNtRnDPktzWW4cN2g7WgZvn6D7vvqxF43LBvhp8/XL/_HF20972-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/KVZNtRnDPktzWW4cN2g7WgZvn6D7vvqxF43LBvhp8/XL/_HF20972-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NRgvR2FXBvrMcF7pnrfZ429TZRmdSNC2dMpt4HSqD/L/_HF20972-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/LNGgzKT8B6vvVxc2fVHHj6khsnF6QBT4WWm6GhLZH/M/_HF20972-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-767CNKX/0/NgXqPd2XQCvVC5ttvffz3Z9nC5w34WWcGCTnvdWHX/S/_HF20972-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SbcnJ6G",
     "title": "Civil War Art: Now what?",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Now what?",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/KZsXkTmvHWD9ZFS4VxBvfftL3mMMNXC3t8ZXQ9hx2/XL/_HF20968-Edit-XL.jpg",
+    "alt": "Civil War Art: Moment of peace.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-SbcnJ6G/A",
     "keywords": [
       "O2H0307",
@@ -1748,18 +1901,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/Mc3RN5jJWM8jbrPZgxSF9xC9hF9WC9bmPHPcbhcZD/XL/_HF20968-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/Mc3RN5jJWM8jbrPZgxSF9xC9hF9WC9bmPHPcbhcZD/XL/_HF20968-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/Mc3RN5jJWM8jbrPZgxSF9xC9hF9WC9bmPHPcbhcZD/XL/_HF20968-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/LBcR6BWkm73sg8TsJT323Wn7mWX9ZLnwWq5x9wSD5/L/_HF20968-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-SbcnJ6G/0/NfmcbWrprJxWSmQp4qtrkh3MZt3fzsWXn2nq9nHHP/S/_HF20968-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VK8Vmjh",
     "title": "Civil War Art: I have a deal for you my friend.",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: I have a deal for you my friend.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VK8Vmjh/0/MQK9xbWMTrm4C2pRHf6mhjwqcJ2G6gqvzCHFbSDR7/XL/_HF20910-Edit-Edit-XL.jpg",
+    "alt": "Civil War Art: Now what?",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-VK8Vmjh/A",
     "keywords": [
       "O2H0307",
@@ -1783,18 +1939,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VK8Vmjh/0/NgSD6KVqNV3W7pK9TfS8QwTfXNLZv6hjxFVC4PQcJ/XL/_HF20910-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VK8Vmjh/0/NgSD6KVqNV3W7pK9TfS8QwTfXNLZv6hjxFVC4PQcJ/XL/_HF20910-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VK8Vmjh/0/KsgLGLzvFkXbpqJFmDFznJzZcD3Nz3rmvGXHd7Vkx/L/_HF20910-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VK8Vmjh/0/Kn9CJFdpCdfDtmnQf4nhKHMfW88BLfbMRMP3kkM9Z/M/_HF20910-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-VK8Vmjh/0/NbRR4QwtvxT9HjRsb38V4N28wQ99Fr3DkGXnBh4qr/S/_HF20910-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-46zfcQx",
     "title": "Civil War Art: Abe",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Abe",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-46zfcQx/0/Mt2794SwW8xfrFWDsrSzLVC7LvR6xpwXtkdMdrF72/XL/_HF20904-Edit-XL.jpg",
+    "alt": "Civil War Art: I have a deal for you my friend.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-46zfcQx/A",
     "keywords": [
       "O2H0307",
@@ -1818,18 +1977,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-46zfcQx/0/NbmVP38VNb7FKSR9QKQ6XKTgWvWMxHxr4ZdgcZHjL/XL/_HF20904-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-46zfcQx/0/NbmVP38VNb7FKSR9QKQ6XKTgWvWMxHxr4ZdgcZHjL/XL/_HF20904-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-46zfcQx/0/LvvWxnNmcGwfzx8HTGBFkSq3HcpMvRzjkpjJBhTJw/L/_HF20904-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-46zfcQx/0/MW5fPZX6zR8FbR72trKtCrN7Gsb2dQZDznJ9L6f4H/M/_HF20904-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-46zfcQx/0/Kp9wRhB9QswQVxG2krBSzPPJhSSzFkRHdmGx3w8Qg/S/_HF20904-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-thK6pDc",
     "title": "Civil War Art: Taking Aim",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Taking Aim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MnL9BHH9bxm8wgXswt5TnJ95RrkCgLKDp7bN5mtnW/XL/_HF22104-Edit-XL.jpg",
+    "alt": "Civil War Art: Abe",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/A",
     "keywords": [
       "O2H0307",
@@ -1853,18 +2015,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MXkgpdxHNzfhVC87n7wsQLXpS5MB4z83L94XwvBbb/XL/_HF22104-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MXkgpdxHNzfhVC87n7wsQLXpS5MB4z83L94XwvBbb/XL/_HF22104-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MtmKv53Gtq2QkS9fmXJ6GVJTFWTsk4Z7D8LM7JTHj/L/_HF22104-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/NGcbNpzKPVH3xr6DBwM2jpLCD64kLPLcQGMDpj53z/M/_HF22104-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-thK6pDc/0/MVZtq9DJhtsPQvTsB6Vp3ncBQHBN9gPv3Vsng2tJW/S/_HF22104-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vqdKfnX",
     "title": "Civil War Art: Tides Have Turned v2",
     "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art: Tides Have Turned v2",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/KxhJjqJfPZ9pxs2K37XnDXgh2qSrQ8hQqcNRxNtfh/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
+    "alt": "Civil War Art: Taking Aim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-vqdKfnX/A",
     "keywords": [
       "O2H0307",
@@ -1888,18 +2053,21 @@ export const galleryData = [
     "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LrrjS4pPTPscnBmtQzfvxKmvBGsQzTBMSLxfnJB2J/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LrrjS4pPTPscnBmtQzfvxKmvBGsQzTBMSLxfnJB2J/XL/_O2H6866-Enhanced-NR-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/Mn4PxmChFg9dPkJbwbzR8fb3PVpQ9gxSPvL2Ht3ph/L/_O2H6866-Enhanced-NR-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/LXLmDNxQ3ZWW4SXvmVrgM8PfR7dGtX44XSSWfJv49/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-vqdKfnX/1/MMZwq9xXTWJ39htpXbnXGFVd88DFxFwHhnHFqMShW/S/_O2H6866-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gd64pg2",
     "title": "Civil War Art:  Ghosts from the Past",
     "description": "Painterly  Two civil war reenactors.   © Wayne Heim Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
-    "alt": "Civil War Art:  Ghosts from the Past",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/MMMNgKXK5LF5dSBdmCvLsJs4fGsP6HrhJrFkPBtWw/XL/_W3H4016b-XL.jpg",
+    "alt": "Civil War Art: Tides Have Turned v2",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-gd64pg2/A",
     "keywords": [
       "O2H0307",
@@ -1923,10 +2091,52 @@ export const galleryData = [
     "story": "Painterly  Two civil war reenactors.   © Wayne Heim Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/KNrBBCTV6djXp5ptFkHVqscMm9Kg4kKWgbVLVSDkW/XL/_W3H4016b-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/LXtvP3Zkc9ksKr9rgXgQnW4Xk9Wc9S34CDN7Xp7qJ/L/_W3H4016b-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-gd64pg2/3/Lfx5M5rjjz46nBh8hvcp8BNXQ8SSg65dTF4Z8fDV5/S/_W3H4016b-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-8pvnqf5",
+    "title": "Civil War Art: Interesting Proposal.",
+    "description": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
+    "alt": "Civil War Art:  Ghosts from the Past",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-8pvnqf5/A",
+    "keywords": [
+      "O2H0307",
+      "Enhanced",
+      "Civil War",
+      "Hale Farm",
+      "reenactment",
+      "American Civil War",
+      "civil war photography",
+      "civil war reenactment",
+      "civil war reenactmet",
+      "color",
+      "Confederate",
+      "confederate soldiers",
+      "Heros",
+      "reenactors",
+      "portrait",
+      "soldier",
+      "Union"
+    ],
+    "story": "Painterly  Fine Art Civil War Photography of reenactors at Civil War reenactments. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 56,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

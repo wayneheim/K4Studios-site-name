@@ -1,27 +1,31 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
- {
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
+  {
     "id": "i-wdnJQwf",
-    "title": "Preparing for the Beach Landing",
-    "description": "World War II reenactors ready their landing craft on the beach at D-Day Conneaut, captured in fine art black & white. © Wayne Heim",
-    "alt": "WWII reenactors preparing landing craft on beach during D-Day Conneaut reenactment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/L6kKdzKkfvrMG5c6xM65LZG3SbcgdDm3jkXw7N7kP/XL/WWII%2520reenactment%2520photo_IMG6149-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "WWII themed photo of beach landing.  © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wdnJQwf/A",
     "keywords": [
       "Battle Prep  Training",
@@ -34,21 +38,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A moment of tense anticipation as reenactors prepare to disembark from landing craft during the D-Day Conneaut reenactment. Fine art by Wayne Heim.",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/LdBDDHswKzS7LckpX33BSKT2dNfx7kjKgCcZ2g9kP/XL/WWII%20reenactment%20photo_IMG6149-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/LdBDDHswKzS7LckpX33BSKT2dNfx7kjKgCcZ2g9kP/XL/WWII%20reenactment%20photo_IMG6149-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/NDK5X7g94ht6C7ckXp97H2Q9ntJZ5BbtPXmfsN3Mj/L/WWII%20reenactment%20photo_IMG6149-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/KFQbgDNspnpqr8FGv7zGLkq5vKDcdm4DQvWgzBNr7/M/WWII%20reenactment%20photo_IMG6149-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2013/i-wdnJQwf/5/Ltd47LFg3bvCbcMNqdg5XVPZvQKSLzFFgx4GjZtS8/S/WWII%20reenactment%20photo_IMG6149-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-t6xx8Cq",
-    "title": "Pre-Battle Respite",
-    "description": "Reenactors take a quiet moment before engagement at D-Day Conneaut 2021. © Wayne Heim 2021",
-    "alt": "World War II reenactors resting before battle at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t6xx8Cq/1/Mn2K7xbDPrqWzx5LJwkr9FpcwDxpzxqNmh7ZfnzRZ/XL/_PEN0383-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "WWII themed photo of beach landing.  © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-t6xx8Cq/A",
     "keywords": [
       "Battle Prep  Training",
@@ -61,21 +68,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Before the reenacted combat unfolds, soldiers pause to gather themselves—captured by Wayne Heim to show the human side of history.",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t6xx8Cq/1/M75X8HcM2KsnwPnMhQpHTTmkRmr3Pxx8DjKv5Cjm3/XL/_PEN0383-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t6xx8Cq/1/M75X8HcM2KsnwPnMhQpHTTmkRmr3Pxx8DjKv5Cjm3/XL/_PEN0383-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t6xx8Cq/1/Mbx4zPxpzdN7XfC78CL7Hbckh88hw4SGL8DBXm9gd/L/_PEN0383-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t6xx8Cq/1/LF94K4R5wfdR5HWdB9t4jvDGp92HBmzBPqMBLmpBn/M/_PEN0383-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t6xx8Cq/1/NLBScxFbpBPznfKSXt9DTZZzrpdGjnXxvSV2WsdsK/S/_PEN0383-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qrSVhmS",
-    "title": "Historic Preparation",
-    "description": "Reenactors prepare their gear in period authenticity at D-Day Conneaut 2016. © Wayne Heim",
-    "alt": "WWII reenactors prepping equipment at D-Day Conneaut 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-qrSVhmS/2/Ks9Kf7bd6XKt7HNqWzSxNBGjqvBpwvN5tgfLbMG2B/XL/_OWH0998-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2016",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-qrSVhmS/A",
     "keywords": [
       "Battle Prep  Training",
@@ -88,21 +98,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Authentic gear and focused faces: a behind-the-scenes glimpse of reenactors readying for the D-Day Conneaut portrayal. © Wayne Heim 2016.",
+    "story": "© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-qrSVhmS/2/NXpQ9p4V8wH4CXJQnxnnq3wbTJPX25qChQHL6CcQw/XL/_OWH0998-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-qrSVhmS/2/NXpQ9p4V8wH4CXJQnxnnq3wbTJPX25qChQHL6CcQw/XL/_OWH0998-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-qrSVhmS/2/NXpQ9p4V8wH4CXJQnxnnq3wbTJPX25qChQHL6CcQw/XL/_OWH0998-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-qrSVhmS/2/K5cntrWzNnKsTWzs8RrcXtptmTBdsdmPn3r8W6NQP/L/_OWH0998-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-qrSVhmS/2/MkMcNXCpcxvh8tcTNfnnKvcCKCqpC96bZvqKsSfbN/S/_OWH0998-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8fbHpXN",
-    "title": "Coffee Time",
-    "description": "Swabbie pauses for a coffee break amid the tension of D-Day Conneaut reenactment. © Wayne Heim",
-    "alt": "Swabbie taking a coffee break during D-Day Conneaut reenactment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8fbHpXN/4/MLQrrTxKWpFKGtXZkRdzBnCWrzNns4PLKPBqrRqMH/XL/_W3H6584-Edit-XL.jpg",
+    "title": "Coffee Time    © Wayne Heim",
+    "description": "Swabbie takes a coffee break during D Day Conneaut  © Wayne Heim",
+    "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-8fbHpXN/A",
     "keywords": [
       "Battle Prep  Training",
@@ -115,21 +128,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A quiet interlude: a Swabbie enjoys coffee before the next wave of activity. Captured in timeless black & white by Wayne Heim.",
+    "story": "Swabbie takes a coffee break during D Day Conneaut  © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8fbHpXN/4/LN6VLg7jtDgrRSKQKDwswnmWtdCXsc5DwMK4g3bVH/XL/_W3H6584-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8fbHpXN/4/LN6VLg7jtDgrRSKQKDwswnmWtdCXsc5DwMK4g3bVH/XL/_W3H6584-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8fbHpXN/4/LN6VLg7jtDgrRSKQKDwswnmWtdCXsc5DwMK4g3bVH/XL/_W3H6584-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8fbHpXN/4/NF6R68xtmQ2wvjM4FSNNNX7NkGntHNCvNfNZbSDtW/L/_W3H6584-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-8fbHpXN/4/Nggk3pzd8m7QZQZK2GnvGxXxg6ghLP9cfFL8JvP59/S/_W3H6584-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2MP7Gvv",
-    "title": "Veteran Reenactment Moment",
-    "description": "Historic portrayal of WWII soldiers taking a breath during D-Day Conneaut 2015. © Wayne Heim",
-    "alt": "Reenactors in WWII gear during D-Day Conneaut 2015",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2MP7Gvv/3/NJDW7FKT95jH3vKgH47gfJCShZh22bnvmcGJLM5kJ/XL/_WHZ2111-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim ©2015",
+    "alt": "Coffee Time    © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-2MP7Gvv/A",
     "keywords": [
       "Battle Prep  Training",
@@ -142,21 +158,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Captured during D-Day Conneaut 2015, this image shows reenactors embodying the resolve of WWII soldiers. © Wayne Heim.",
+    "story": "Wayne Heim ©2015",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2MP7Gvv/3/Mgb4Q7WTW8HLrjDqCPk96gzJsmhP2K6qMf4HKLL2x/XL/_WHZ2111-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2MP7Gvv/3/Mgb4Q7WTW8HLrjDqCPk96gzJsmhP2K6qMf4HKLL2x/XL/_WHZ2111-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2MP7Gvv/3/Mgb4Q7WTW8HLrjDqCPk96gzJsmhP2K6qMf4HKLL2x/XL/_WHZ2111-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2MP7Gvv/3/NNT4jbMTMNCLwwpC2gQWDqXs7Shh8vB7hRbGXSN7K/L/_WHZ2111-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-2MP7Gvv/3/MZrLg4QJqcnHBcdnqgrrNNd2XDfqqFdbPsDpwxcHG/S/_WHZ2111-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-89dTvpV",
-    "title": "Night Firing",
-    "description": "German 88 artillery firing at night during D-Day Conneaut reenactment, rendered in stark black & white. © Wayne Heim",
-    "alt": "Night time firing of German 88 at D-Day Conneaut reenactment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-89dTvpV/3/MBxrdX6Q4k54S7XXtL5MqwDgw7nNSFFsKZ7QdncFR/XL/_WHZ2633-XL.jpg",
+    "title": "Night Firing     Black & White Photography by Wayne Heim",
+    "description": "Night time firing of the German 88  during D Day Conneaut. © Wayne Heim",
+    "alt": "Wayne Heim ©2015",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-89dTvpV/A",
     "keywords": [
       "Battle Prep  Training",
@@ -169,21 +188,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "The glow and recoil of nighttime artillery evokes the intensity of historic combat in this reenactment scene. © Wayne Heim.",
+    "story": "Night time firing of the German 88  during D Day Conneaut. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-89dTvpV/3/MmTdfr2wCtDDWMNFSSnWJHQrpPzhZFWVXXFJvKSSp/XL/_WHZ2633-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-89dTvpV/3/MmTdfr2wCtDDWMNFSSnWJHQrpPzhZFWVXXFJvKSSp/XL/_WHZ2633-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-89dTvpV/3/MmTdfr2wCtDDWMNFSSnWJHQrpPzhZFWVXXFJvKSSp/XL/_WHZ2633-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-89dTvpV/3/KK6PcC9PSkLRMhdLTJh9cvGDPpRPFR9Bj2NXn9zV8/L/_WHZ2633-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-89dTvpV/3/MKBcfpZ9TrbbHfxMHZVXrwBFXCPDwT44ZKxcr29rG/S/_WHZ2633-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Sns3Ksn",
-    "title": "Portrait of Reenactors",
-    "description": "WWII reenactors captured in an authentic moment at D-Day Conneaut 2015. © Wayne Heim",
-    "alt": "WWII reenactors during D-Day Conneaut 2015",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-Sns3Ksn/3/KZbdvCh6Snjrq9LHxM8pTFCdkW8WJpjSkQzwHNQdQ/XL/_WHZ2648-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim ©2015",
+    "alt": "Night Firing     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-Sns3Ksn/A",
     "keywords": [
       "Battle Prep  Training",
@@ -196,21 +218,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A candid moment from D-Day Conneaut 2015 showing the dedication of reenactors to historical realism. © Wayne Heim.",
+    "story": "Wayne Heim ©2015",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-Sns3Ksn/3/KQGCW5CRMbj3CXNCcdJPNk8vVqkLznSSxG5QNj4jC/XL/_WHZ2648-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-Sns3Ksn/3/KQGCW5CRMbj3CXNCcdJPNk8vVqkLznSSxG5QNj4jC/XL/_WHZ2648-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-Sns3Ksn/3/MD9Wr4C8vJ4DBnfzPR6DGXpSQ7NWzVrVgJKM4bnk7/L/_WHZ2648-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-Sns3Ksn/3/M8P3GnQNtKmzhrQ9X8zpXHbKjFxfrGJc9grDGr3QZ/M/_WHZ2648-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-Sns3Ksn/3/NPnMpwj4SgjsXchZmG5WxnLrMrdg4Xs8PgVBXvz44/S/_WHZ2648-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-F2WkVxc",
-    "title": "Untitled Reenactment Study",
-    "description": "",
-    "alt": "_WHZ8241.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-F2WkVxc/2/KQcwXVdNnwbNsrQxfHkD2kDmDRjJrbzNdSjHxm35W/XL/_WHZ8241-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "Wayne Heim ©2015",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-F2WkVxc/A",
     "keywords": [
       "Battle Prep  Training",
@@ -223,21 +248,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-F2WkVxc/2/Mb5vrt3sJ3HjXnqn2hsj36v8R2PhJ9WXbLXcqDdrd/XL/_WHZ8241-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-F2WkVxc/2/Mb5vrt3sJ3HjXnqn2hsj36v8R2PhJ9WXbLXcqDdrd/XL/_WHZ8241-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-F2WkVxc/2/LjC7rvkTKFdTFcH2jx2BSccmt9NF3VZT2DpmQ8PWH/L/_WHZ8241-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-F2WkVxc/2/KGdFvkTBj5M7GNxqsfL64bmbVRLrrdDksVpBn9v6t/M/_WHZ8241-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-F2WkVxc/2/Lrx9qtgn5xCZLnn7T66j4wvqzsphgRtMqMbTztdQc/S/_WHZ8241-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JgPqTqV",
-    "title": "Staging Area",
-    "description": "Reenactors prepare for launch at D-Day Conneaut 2021, captured in momentary stillness. © Wayne Heim 2021",
-    "alt": "WWII reenactors staging before landing at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-JgPqTqV/0/LwmzSktvgQFzQpZg6BBBx5bp2fWMWMZdrL6xQJtNL/XL/_PEN0153-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-JgPqTqV/A",
     "keywords": [
       "Battle Prep  Training",
@@ -250,21 +278,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Wayne Heim captures the layered preparation and quiet focus of reenactors moments before action. © 2021.",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-JgPqTqV/0/LXwKXFG3hPkjkTNr78kKVNftr6CBjN373wW94wvsD/XL/_PEN0153-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-JgPqTqV/0/LXwKXFG3hPkjkTNr78kKVNftr6CBjN373wW94wvsD/XL/_PEN0153-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-JgPqTqV/0/Kn7MX4wRdjSkBn2TphR9488HLz7jLXKGn7pWmpMsz/L/_PEN0153-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-JgPqTqV/0/MKTXrR6wJnzz899zNPwkG4btvtXHfSn7d9FG2RmMX/M/_PEN0153-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-JgPqTqV/0/KS747Nv6msLjs4fDX5NCJDRj8BN7SSRqN45nL3488/S/_PEN0153-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wRbqxRm",
-    "title": "Historic Drill",
-    "description": "Reenactors in period uniform rehearse or prepare equipment during D-Day Conneaut 2016. © Wayne Heim",
-    "alt": "WWII reenactors performing pre-battle drill at D-Day Conneaut 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wRbqxRm/2/K4cLvgbQtKTpdvCz4n9VfqgZLgKjzW7d3KS7QTQcP/XL/_OWH0885-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2016",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wRbqxRm/A",
     "keywords": [
       "Battle Prep  Training",
@@ -277,21 +308,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A study in discipline and authenticity: reenactors engaging in tactical preparation ahead of the reenacted invasion. © Wayne Heim 2016.",
+    "story": "© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wRbqxRm/2/MhBtnJJkGC7pjx3C9rvwQ7sMLQNjHHmNS5t6jmBS8/XL/_OWH0885-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wRbqxRm/2/MhBtnJJkGC7pjx3C9rvwQ7sMLQNjHHmNS5t6jmBS8/XL/_OWH0885-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wRbqxRm/2/LmCn76RXwd4jwVMBtkm7KdMvgh7rJj8Wj7hg8pz4P/L/_OWH0885-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wRbqxRm/2/M9XsL9d7gB2c9Mz9xsmK5Qrn6CPFWGrL3DfRzJRtq/M/_OWH0885-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-wRbqxRm/2/KtfgKnvD4p4StqMZ7h7r3J9DrVtbWPbqzH6TDsNX4/S/_OWH0885-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QpWNnWp",
-    "title": "On the Brink",
-    "description": "Reenactors poised at the edge of action during D-Day Conneaut 2017. © Wayne Heim",
-    "alt": "WWII reenactors readying themselves during D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-QpWNnWp/3/KNh9MvsCs7wsvDMT4G9BQ4bWqJKNCNj69g6c4L2xx/XL/_OLY1802-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-QpWNnWp/A",
     "keywords": [
       "Battle Prep  Training",
@@ -304,21 +338,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Captured during D-Day Conneaut 2017, this image reflects the build-up of tension before reenacted operations commence.",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-QpWNnWp/3/K86rmTj5pssPq9JCRPJDCTDC4PGzWbjQPLdLFWpTJ/XL/_OLY1802-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-QpWNnWp/3/K86rmTj5pssPq9JCRPJDCTDC4PGzWbjQPLdLFWpTJ/XL/_OLY1802-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-QpWNnWp/3/K86rmTj5pssPq9JCRPJDCTDC4PGzWbjQPLdLFWpTJ/XL/_OLY1802-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-QpWNnWp/3/KqRBHkCgJsHZhs5W7Wnq8DL3ZfGnz3MXpXjn5sbsH/L/_OLY1802-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-QpWNnWp/3/Kn4bZMD5GHvdmM9s5Q9BdMxzPL36Xf365B24tbsz2/S/_OLY1802-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xjxgdxN",
-    "title": "Uniformed Readiness",
-    "description": "WWII reenactors in uniform readying themselves during preparations at D-Day Conneaut 2016. © Wayne Heim",
-    "alt": "WWII reenactors preparing during D-Day Conneaut 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-xjxgdxN/2/M2KbNL9nDHDJS8wghXH2zZpGH3jgPrns3b6vhrrxz/XL/_WHK7171-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2016",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-xjxgdxN/A",
     "keywords": [
       "Battle Prep  Training",
@@ -331,21 +368,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Detailed portrayal of reenactors embodying soldierly readiness in a historical reenactment setting. © Wayne Heim 2016.",
+    "story": "© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-xjxgdxN/2/KMXJRTkhnZ2xbtzrpNFDwWTJ8kCBXKqvL7w6FdVWP/XL/_WHK7171-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-xjxgdxN/2/KMXJRTkhnZ2xbtzrpNFDwWTJ8kCBXKqvL7w6FdVWP/XL/_WHK7171-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-xjxgdxN/2/K24cBjqxw46t6dZ3pWXkDPKPDt4x9B8rV8PNdFVP3/L/_WHK7171-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-xjxgdxN/2/NWwhtRZBSpHQptLMpWNtnFCjSv72Fb6sNNKS7cgKP/M/_WHK7171-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-xjxgdxN/2/MkCCftHqKFpXgtHBmdxTTg7pRv6rXJ5dLSv9jX2BN/S/_WHK7171-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f8W25wQ",
-    "title": "Operational Preparation",
-    "description": "Reenactment participants prepare for execution of the scenario at D-Day Conneaut 2016. © Wayne Heim",
-    "alt": "WWII reenactors in preparatory activity at D-Day Conneaut 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-f8W25wQ/2/LKFzqmNNdKN5F6HQJNzS67Hb6hNBsCQKmvq7H8jB6/XL/_OWH0068-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2016",
+    "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-f8W25wQ/A",
     "keywords": [
       "Battle Prep  Training",
@@ -358,21 +398,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A study in authenticity and process, showing the reenactors’ meticulous preparation for the historic portrayal. © Wayne Heim 2016.",
+    "story": "© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-f8W25wQ/2/MjhwSRvtqCwDvzvfmBvHbWtrm3TPtc3ZJ3Gwwn2KH/XL/_OWH0068-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-f8W25wQ/2/MjhwSRvtqCwDvzvfmBvHbWtrm3TPtc3ZJ3Gwwn2KH/XL/_OWH0068-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-f8W25wQ/2/MjhwSRvtqCwDvzvfmBvHbWtrm3TPtc3ZJ3Gwwn2KH/XL/_OWH0068-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-f8W25wQ/2/KSFDnSSfDVtM9DZrwvLgXCtvnF5gH4DvZfSnBQdhb/L/_OWH0068-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-f8W25wQ/2/KD9RQhNrKMFDsmjTjC9K5TFQLsXxPrg2NQBTSXm2g/S/_OWH0068-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pNv5vGW",
-    "title": "Tactical Staging",
-    "description": "Participants in WWII reenactment organize and ready equipment during D-Day Conneaut 2016. © Wayne Heim",
-    "alt": "WWII reenactors staging equipment at D-Day Conneaut 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-pNv5vGW/2/MDMTBk8PK5H867cFJGdfWrtrrs6ds8r5HKZqHWpx5/XL/_WHK9176-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2016",
+    "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-pNv5vGW/A",
     "keywords": [
       "Battle Prep  Training",
@@ -385,21 +428,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Captured during a moment of detailed coordination, reenactors convey the gravity of historical military staging. © Wayne Heim 2016.",
+    "story": "© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-pNv5vGW/2/NGP8tsBCHgsgVz8zqsgpJJmjLCmk8GzrShBGdbGHZ/XL/_WHK9176-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-pNv5vGW/2/NGP8tsBCHgsgVz8zqsgpJJmjLCmk8GzrShBGdbGHZ/XL/_WHK9176-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-pNv5vGW/2/KHLR4KhPJmjMBJFMFNfpLbXn2vM4Fsmhvv89dPh3D/L/_WHK9176-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-pNv5vGW/2/LVCbjR4GFmXXp9j8T3qvpvgH6d2XHP2Vxwfd5Bqbn/M/_WHK9176-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-pNv5vGW/2/LfQwWpsDqZkt5n92tQDj6RLf8ZqfHH9b7cHbgPvPT/S/_WHK9176-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VDFRKvN",
-    "title": "Fog of War",
-    "description": "Reenacted German forces emerge through haze and ambiguity during the D-Day Conneaut portrayal, captured in moody black & white. © Wayne Heim",
-    "alt": "German reenactors in fog during D-Day Conneaut reenactment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VDFRKvN/2/K6Z6nnsZbsjK2sJgCmqcG6j2jLB74B7vWQnmLBqBt/XL/_WHZ4507-Edit-XL.jpg",
+    "title": "Fog of War - German forces",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-VDFRKvN/A",
     "keywords": [
       "Battle Prep  Training",
@@ -412,21 +458,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Shrouded in mist, reenacted German forces convey uncertainty and tension—'fog of war' made literal in this atmospheric moment. © Wayne Heim 2016.",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VDFRKvN/2/Mw4bZFdt3w7MbKfgQW9453Sjm66gNSrHcjmsRchGj/XL/_WHZ4507-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VDFRKvN/2/Mw4bZFdt3w7MbKfgQW9453Sjm66gNSrHcjmsRchGj/XL/_WHZ4507-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VDFRKvN/2/Mb6H9jr72LGk5Xgn5znK9L89b5XPJV3zdq6CPs22k/L/_WHZ4507-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VDFRKvN/2/MfnHF8F5dCZM7rmWMV3CMmQZMbpSkFPnz5NbL6j97/M/_WHZ4507-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-VDFRKvN/2/NK925MFqjZBCx8GNX8ZRH5cbvK8J24gRsL55gfDRP/S/_WHZ4507-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-597XdNX",
-    "title": "Equipment Ready",
-    "description": "Period-authentic reenactors and their gear staged during D-Day Conneaut 2016, a study in preparation. © Wayne Heim",
-    "alt": "WWII reenactors with equipment at D-Day Conneaut 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-597XdNX/2/M4Pm7PR2vCJjZMJpqZfDWTCQsQ3jxcFxGKDsXsdq9/XL/_WHK1109-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2016",
+    "alt": "Fog of War - German forces",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-597XdNX/A",
     "keywords": [
       "Battle Prep  Training",
@@ -439,21 +488,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Focused and composed, reenactors attend to their gear ahead of the reenacted operations at D-Day Conneaut. © Wayne Heim 2016.",
+    "story": "© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-597XdNX/2/LNQdDXQQGSMxG6rLMvC53C86pL3CNMgCGsPgsWB9t/XL/_WHK1109-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-597XdNX/2/LNQdDXQQGSMxG6rLMvC53C86pL3CNMgCGsPgsWB9t/XL/_WHK1109-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-597XdNX/2/NQsnbhTFkdgjQstSNtJ3r2mcnp9WBh3mc9NS4tnkQ/L/_WHK1109-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-597XdNX/2/KXJMD6Pprw4J2NXDRrsPjKz5jDHStkrXnV7cPHpQw/M/_WHK1109-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-597XdNX/2/M6cTBrwK8rJt3rk7CCLwsRKrRQpdSCWx36TbQNpzJ/S/_WHK1109-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-whNr3dr",
-    "title": "Silent Vigil",
-    "description": "A quiet moment of readiness captured during D-Day Conneaut 2016, highlighting discipline in the reenactment. © Wayne Heim",
-    "alt": "WWII reenactors in contemplative preparation at D-Day Conneaut 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-whNr3dr/2/LKGJ9rJ8xc985p7N5dKs9SJw9sRNhpBNKjRfSf58X/XL/_WHZ5161-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2016",
+    "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-whNr3dr/A",
     "keywords": [
       "Battle Prep  Training",
@@ -466,21 +518,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Reenactors hold a silent moment before action, the calm before the historic storm of D-Day Conneaut. © Wayne Heim 2016.",
+    "story": "© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-whNr3dr/2/MNzHvKwgqGgVs7zHSQQrMhDgFd3ndzwq8NMTnN9gh/XL/_WHZ5161-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-whNr3dr/2/MNzHvKwgqGgVs7zHSQQrMhDgFd3ndzwq8NMTnN9gh/XL/_WHZ5161-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-whNr3dr/2/KdLBRcrNtxMbqn8Lmzg7pWsj8B5HSTcD3S4WJWGhq/L/_WHZ5161-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-whNr3dr/2/LvQSFkmK4G4nXF7Znfpm6ZS4Vsg6KhXRVdDpT25TB/M/_WHZ5161-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-whNr3dr/2/Lm95cRHVKPDFgtqfBM54C8R6c2pDVd5LSkPfPxcMX/S/_WHZ5161-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Bwd2kfT",
-    "title": "Field Preparation",
-    "description": "Reenacted personnel finalize last-minute adjustments at D-Day Conneaut 2016, emphasizing authenticity. © Wayne Heim",
-    "alt": "WWII reenactors adjusting equipment during D-Day Conneaut 2016",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-Bwd2kfT/2/NfxKdgr4FHGcqX8Rf32j8z7LKDKwh2BRJ2fnDwVnR/XL/_WHK1395-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2016",
+    "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-Bwd2kfT/A",
     "keywords": [
       "Battle Prep  Training",
@@ -493,21 +548,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Attention to detail defines this moment as reenactors prepare their field positions for the D-Day Conneaut reenactment. © Wayne Heim 2016.",
+    "story": "© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-Bwd2kfT/2/NGFZzQ9S9Nrj4bDMbhhb32tjjF4KSVkpsSCv9TkMr/XL/_WHK1395-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-Bwd2kfT/2/NGFZzQ9S9Nrj4bDMbhhb32tjjF4KSVkpsSCv9TkMr/XL/_WHK1395-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-Bwd2kfT/2/Krb6HHrKgdvmBKD993G2prcF9ppMxhxW3KXc54Qb2/L/_WHK1395-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-Bwd2kfT/2/LGXCbc2WxC4PnC7ZcWzTCd574DTRfWCKNxMJBwNpH/M/_WHK1395-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-Bwd2kfT/2/LmTr3fNnzq4NQSLBqHg8mWH2KwqHSjtpnkxq4jzdS/S/_WHK1395-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vVTBSzp",
-    "title": "Hitching a Ride",
-    "description": "British soldiers catch a lift up the beach in the aftermath of battle during D-Day Conneaut reenactment. © Wayne Heim 2016",
-    "alt": "British soldiers riding up the beach during D-Day Conneaut reenactment",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-vVTBSzp/1/MR2gVfTRZJjcSjpjTPKNLbkDNSPNtgXghcrdmKNsz/XL/_WHK8903-Edit-XL.jpg",
+    "title": "Hitching a Ride     Black and White Photography by Wayne Heim",
+    "description": "Group of British soldiers hitch a ride up the beach after the battle.\n© Wayne Heim 2016",
+    "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-vVTBSzp/A",
     "keywords": [
       "Battle Prep  Training",
@@ -520,21 +578,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "After the engagement, soldiers share a moment of camaraderie as they catch a ride up the beach, blending motion and history. © Wayne Heim 2016.",
+    "story": "Group of British soldiers hitch a ride up the beach after the battle.\n© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-vVTBSzp/1/LSHwfMJLtTRrH3rCSWrHjWpnmMzmPxcFXPPZfFtq9/XL/_WHK8903-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-vVTBSzp/1/LSHwfMJLtTRrH3rCSWrHjWpnmMzmPxcFXPPZfFtq9/XL/_WHK8903-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-vVTBSzp/1/NFVMtbDQjgSfXsfgjbDpKstT8dRDCmdz7zsJJWBp2/L/_WHK8903-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-vVTBSzp/1/NMw2VtQT2Stfp5SwTGR3DW4gfLpCpzcg4VmCfDK6w/M/_WHK8903-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-vVTBSzp/1/KcqHRPs4MwHT2qhsGG8MtPfS5cmSpwQbzPZbcjbnF/S/_WHK8903-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-35JcTVg",
-    "title": "Reenactment Momentum",
-    "description": "Dynamic scene from D-Day Conneaut 2017 showing movement and readiness among armored units. © Wayne Heim",
-    "alt": "Armored reenactment units in action at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-35JcTVg/3/Kd9m2D6MHNB43zWdJB9ws2qTwVrtDb546WZS2rh4J/XL/_OLY0376-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "Hitching a Ride     Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-35JcTVg/A",
     "keywords": [
       "Battle Prep  Training",
@@ -547,21 +608,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "The momentum of reenacted operations is palpable in this composition from D-Day Conneaut 2017, blending historical staging with photographic tension. © Wayne Heim.",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-35JcTVg/3/LQwrs25XK3zpS8Hq3HHB7Kj57C5CZVdhfNj4sNNgh/XL/_OLY0376-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-35JcTVg/3/LQwrs25XK3zpS8Hq3HHB7Kj57C5CZVdhfNj4sNNgh/XL/_OLY0376-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-35JcTVg/3/Kc9LcjPgxLGtdTrhTn3tfNtbpxgKsDnhXtSdFzpSR/L/_OLY0376-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-35JcTVg/3/K2McqMPH9XNSpFcRjnL453Bn9Vpstswq2LmSHxFSJ/M/_OLY0376-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-35JcTVg/3/MpK6Q7FWnR6Rf5WLckbhvLbBK3QKv55DjkKhKdbJm/S/_OLY0376-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5fCfkhm",
-    "title": "Tactical Assembly",
-    "description": "Reenactors gather and coordinate during D-Day Conneaut 2017, reflecting the layered choreography of historical operations. © Wayne Heim",
-    "alt": "WWII reenactors coordinating at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5fCfkhm/3/Lq6CXvcKjJFTJdh3hF7nnFPpqzKCHTGsJ7q4Q797N/XL/_OLY0431-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-5fCfkhm/A",
     "keywords": [
       "Battle Prep  Training",
@@ -574,21 +638,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Captured during D-Day Conneaut 2017, this image shows reenactors working in concert, embodying the coordination of wartime movements. © Wayne Heim.",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5fCfkhm/3/LGBdG3cpQG3RDLNT2k7wcH4vrLfZPvwvCkdkwbHbt/XL/_OLY0431-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5fCfkhm/3/LGBdG3cpQG3RDLNT2k7wcH4vrLfZPvwvCkdkwbHbt/XL/_OLY0431-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5fCfkhm/3/LGBdG3cpQG3RDLNT2k7wcH4vrLfZPvwvCkdkwbHbt/XL/_OLY0431-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5fCfkhm/3/M84qjGqpCk336hZFGR76PRBX4CjSNgXKstRxLH7tS/L/_OLY0431-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-5fCfkhm/3/Mh954MMSjf4ZGjp5sRJPPpxg4SZMdZgk2PjGPLd4d/S/_OLY0431-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-D9rGNBw",
-    "title": "Ready for Battle",
-    "description": "Armored units roll forward, poised for engagement in a WWII reenactment at D-Day Conneaut. © Wayne Heim",
-    "alt": "Tanks advancing during D-Day Conneaut reenactment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-D9rGNBw/3/KsVFctvWzfFKKScNDRP484bXggQsxNjnhVQds7hKs/XL/_OLY0470-Edit-XL.jpg",
+    "title": "Ready for Battle  BlacK & White Photography by Wayne Heim",
+    "description": "Tanks on the roll ready for the tank battle at WWII reenactment.  © Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-D9rGNBw/A",
     "keywords": [
       "Battle Prep  Training",
@@ -601,21 +668,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Tanks roll into position, capturing the tension and scale of the reenacted armored battle. © Wayne Heim.",
+    "story": "Tanks on the roll ready for the tank battle at WWII reenactment.  © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-D9rGNBw/3/M2m4p73wTCD8GjbkgPbBM8DfzZDz9n8s4gHD58Gr7/XL/_OLY0470-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-D9rGNBw/3/M2m4p73wTCD8GjbkgPbBM8DfzZDz9n8s4gHD58Gr7/XL/_OLY0470-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-D9rGNBw/3/LP2mNB5wJx2tBnzWrDs5hstzrbTh5Ng4Fk25xnNLt/L/_OLY0470-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-D9rGNBw/3/MP3FcGHdrVJ68MddrpsFFk3dMqRhQ48pxptDcvJVQ/M/_OLY0470-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-D9rGNBw/3/KJrDbdDVDSsLSBQHCJTGX2fzHNnkgFVs52W8XKTNB/S/_OLY0470-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4BfzV3h",
-    "title": "Staging the Advance",
-    "description": "Preparatory movement of vehicles and personnel during D-Day Conneaut 2017, recorded in fine art detail. © Wayne Heim",
-    "alt": "WWII reenactment staging at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4BfzV3h/3/KJQfghpQJmfdKbxPnBZDccHk5kRH4tfK86nVXdrNq/XL/_OLY0619-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "Ready for Battle  BlacK & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4BfzV3h/A",
     "keywords": [
       "Battle Prep  Training",
@@ -628,21 +698,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A composed frame showing the layered preparation of reenacted forces readying to move at D-Day Conneaut. © Wayne Heim.",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4BfzV3h/3/LpTbkbPwgGfHj8TVV9gKLWB9dQNBJ7MH2Ln3QHVJQ/XL/_OLY0619-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4BfzV3h/3/LpTbkbPwgGfHj8TVV9gKLWB9dQNBJ7MH2Ln3QHVJQ/XL/_OLY0619-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4BfzV3h/3/LpTbkbPwgGfHj8TVV9gKLWB9dQNBJ7MH2Ln3QHVJQ/XL/_OLY0619-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4BfzV3h/3/MdzKKZKpH22jk8wMcvnQTqdwNpgr4v95nVvXh2gT7/L/_OLY0619-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4BfzV3h/3/MJ7Wss8rwttJBmJF7PWndfDHQJ6DNLMHzgPvsNxZn/S/_OLY0619-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WbRFtsn",
-    "title": "Operational Focus",
-    "description": "Reenactors demonstrate intent and coordination during D-Day Conneaut 2017, underscoring historical immersion. © Wayne Heim",
-    "alt": "WWII reenactors in operational discussion at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-WbRFtsn/3/L2KJd7JDbHXm8hmJdwmN7zqrbn6VgtvCVttcMgjst/XL/_OLY0773-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-WbRFtsn/A",
     "keywords": [
       "Battle Prep  Training",
@@ -655,21 +728,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Captured intent: reenactors confer and prepare, bringing a lived sense of command and coordination to the reenactment. © Wayne Heim.",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-WbRFtsn/3/NZtS4fJQnKZdBJMWwbVQTXPzSJS3Gq4jXDx8Zv8mS/XL/_OLY0773-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-WbRFtsn/3/NZtS4fJQnKZdBJMWwbVQTXPzSJS3Gq4jXDx8Zv8mS/XL/_OLY0773-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-WbRFtsn/3/NZtS4fJQnKZdBJMWwbVQTXPzSJS3Gq4jXDx8Zv8mS/XL/_OLY0773-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-WbRFtsn/3/K4Lq62fmHr5fvv2zHs3rLFS2CVFqxV5fPpF2d6khb/L/_OLY0773-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-WbRFtsn/3/M2bbx86WtJVwWk6wQCL94NdnwMWJgsz3PksJCfN4c/S/_OLY0773-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7MTPDt4",
-    "title": "Engagement Poise",
-    "description": "Moments before action at D-Day Conneaut 2017, reenactors hold strategic positions in quiet readiness. © Wayne Heim",
-    "alt": "Reenactors poised before engagement at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7MTPDt4/3/MXJ27tRVJ5VxMDH7VW4v4gB7RXScjpLwbvDtxnvfN/XL/_OLY0841-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-7MTPDt4/A",
     "keywords": [
       "Battle Prep  Training",
@@ -682,21 +758,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A still moment of tactical calm, capturing the tension prior to reenacted maneuvers at D-Day Conneaut. © Wayne Heim.",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7MTPDt4/3/MmKsnNmT2t8FbRGpwgTc5ZqdVJfM2RwJJSFH5t2zn/XL/_OLY0841-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7MTPDt4/3/MmKsnNmT2t8FbRGpwgTc5ZqdVJfM2RwJJSFH5t2zn/XL/_OLY0841-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7MTPDt4/3/MmKsnNmT2t8FbRGpwgTc5ZqdVJfM2RwJJSFH5t2zn/XL/_OLY0841-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7MTPDt4/3/Nf4vhZ2dhZVqFpT6t5mVzM7Kz6pkh7Vt59M2Rkbtx/L/_OLY0841-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-7MTPDt4/3/L2v6XFSjNTKtnq6pZ9BTt8bFbcmTpPp8bQq8g53S7/S/_OLY0841-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-R69W3Cs",
-    "title": "Armor in Position",
-    "description": "Armored reenactment units staged and ready during D-Day Conneaut 2017. © Wayne Heim",
-    "alt": "Armored vehicles and reenactors prepared at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-R69W3Cs/4/MNZ9bnWsQDMjc8LXTfBP29HrJzBDrwnw5w5LGNmh4/XL/_OLY0959-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-R69W3Cs/A",
     "keywords": [
       "Battle Prep  Training",
@@ -709,21 +788,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Armored forces hold position at D-Day Conneaut 2017, capturing the tension of anticipation before reenacted engagement. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-R69W3Cs/4/Mcqdg3S684hgHxjTtRkRJRV59P8Pb6RjVddJwKtkT/XL/_OLY0959-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-R69W3Cs/4/Mcqdg3S684hgHxjTtRkRJRV59P8Pb6RjVddJwKtkT/XL/_OLY0959-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-R69W3Cs/4/Mcqdg3S684hgHxjTtRkRJRV59P8Pb6RjVddJwKtkT/XL/_OLY0959-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-R69W3Cs/4/K6MbD3FQ9Xbp7Kbrr8HLJtcgVmqmZwB53pzzBkw9k/L/_OLY0959-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-R69W3Cs/4/MkP9qtGPcH6jtJShMrKSWx25Q2zqg4Lf8RZ9rHMwj/S/_OLY0959-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-K2qMML6",
-    "title": "Field Coordination",
-    "description": "Reenactors coordinate movement and logistics during the D-Day Conneaut 2017 reenactment. © Wayne Heim",
-    "alt": "WWII reenactors coordinating at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-K2qMML6/3/MvDJNsB2bNtjkLG4sbR6j7kXKnwN3JngHPKzdkcwp/XL/_OLY1169-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-K2qMML6/A",
     "keywords": [
       "Battle Prep  Training",
@@ -736,21 +818,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Details of tactical communication and preparation are immortalized at the 2017 D-Day Conneaut reenactment. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-K2qMML6/3/MvDJQ443KBSwN2P4KLPmZL5hFs78bCcFdV5qTkk4H/XL/_OLY1169-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-K2qMML6/3/MvDJQ443KBSwN2P4KLPmZL5hFs78bCcFdV5qTkk4H/XL/_OLY1169-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-K2qMML6/3/LxWgTkZX8sxtCJ3Fq7zBD43FSDKPRHsvSHM88RK8P/L/_OLY1169-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-K2qMML6/3/LB2QS5pn6gXqhJgLqstCLB6ztVN4MRG6sHBZVx3k8/M/_OLY1169-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-K2qMML6/3/KHWdtwHrrgq2KjMrvPDMtCwHW7fMNdW3D6gn4LrtN/S/_OLY1169-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zwwvP7j",
-    "title": "Reenactment Movement",
-    "description": "Participants in motion during a staged operation at D-Day Conneaut 2017. © Wayne Heim",
-    "alt": "Reenactors moving during D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-zwwvP7j/3/LtdWrQLRf52XKtvTcpZbCVhd4kX4PngZSwKN9Wtt5/XL/_OLY1810-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-zwwvP7j/A",
     "keywords": [
       "Battle Prep  Training",
@@ -763,21 +848,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Action and staging blend as reenactors advance during the D-Day Conneaut 2017 portrayal. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-zwwvP7j/3/K8BLLSNJQBZQcCwFnTKhnfsscNq3qRDcfLwKvgvxL/XL/_OLY1810-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-zwwvP7j/3/K8BLLSNJQBZQcCwFnTKhnfsscNq3qRDcfLwKvgvxL/XL/_OLY1810-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-zwwvP7j/3/KzjpsCKQmrQVL58cgD9c7sDnNsV3xS5Jkw4h5x46t/L/_OLY1810-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-zwwvP7j/3/M2rndBk4r5KpdvWNdWf9LVLfxvvS93SWrXCdG4qQm/M/_OLY1810-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-zwwvP7j/3/MJ84VFrjF6q5frXQNPd4xQLxzGrDWXghKVxqgLqPt/S/_OLY1810-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kr2stsR",
-    "title": "Operational Readiness",
-    "description": "A composed scene of readiness and deployment in the D-Day Conneaut 2017 reenactment. © Wayne Heim",
-    "alt": "WWII reenactors prepared for action at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kr2stsR/3/MLqCnNtSRMgHHJLZT96GbPZXgk9fZBkG3NqtP6WXQ/XL/_OLY2736-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-kr2stsR/A",
     "keywords": [
       "Battle Prep  Training",
@@ -790,21 +878,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Prepared and poised, reenactors embody the disciplined tension of historic military operations at D-Day Conneaut. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kr2stsR/3/Kt3PCSJRstf4RzZLg5mgvjsSx7TQWWMV2qwnmmxgV/XL/_OLY2736-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kr2stsR/3/Kt3PCSJRstf4RzZLg5mgvjsSx7TQWWMV2qwnmmxgV/XL/_OLY2736-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kr2stsR/3/MDJLkKFnSjbXfrkKcdGcXZ2QK4mzrckcFmvCQbC8M/L/_OLY2736-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kr2stsR/3/LbFWPjz89RjmMLhmQ3c5G5qxxQfR4P6SGGfxqGJXb/M/_OLY2736-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kr2stsR/3/MnnVJKdpfwQW4TZF7zqZzCLWrS89PDZRkfxd7nWvM/S/_OLY2736-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qTPmXLJ",
-    "title": "Signal Ready",
-    "description": "Communication and coordination captured during the 2021 D-Day Conneaut reenactment. © Wayne Heim",
-    "alt": "Reenactor signaling during D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qTPmXLJ/0/NSqpkpv4BCzKQXSw4VmT7Bkt9rH5Wb7n2QB4C6kLQ/XL/_ANA3303-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim '21",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-qTPmXLJ/A",
     "keywords": [
       "Battle Prep  Training",
@@ -817,21 +908,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A reenactor prepares a final signal, representing the crucial moments of communication in wartime staging. © Wayne Heim 2021",
+    "story": "© Wayne Heim '21",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qTPmXLJ/0/KKsGdJbrhFcS4m33R5kn7Gr9ttJ6XMDmS9PvDDRpz/XL/_ANA3303-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qTPmXLJ/0/KKsGdJbrhFcS4m33R5kn7Gr9ttJ6XMDmS9PvDDRpz/XL/_ANA3303-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qTPmXLJ/0/KKsGdJbrhFcS4m33R5kn7Gr9ttJ6XMDmS9PvDDRpz/XL/_ANA3303-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qTPmXLJ/0/KH36RMdMNfxWPkMnp2PNzhLvHRgmFm3MbWgx9zHMD/L/_ANA3303-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qTPmXLJ/0/NjcXc2XCt3BKX24t4HRLVgDKt4KDqMqRH4BLh6R8D/S/_ANA3303-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zN5fnqH",
-    "title": "Beachhead Preparation",
-    "description": "Reenactors ready equipment and positions before engagement at D-Day Conneaut 2021. © Wayne Heim",
-    "alt": "WWII reenactors preparing on the beach at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zN5fnqH/0/NdPwBwHL74KDSgHz4XS8P5dtnRnBkQxkP3TZ97BjL/XL/_PEN0128-Enhanced-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim '21",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-zN5fnqH/A",
     "keywords": [
       "Battle Prep  Training",
@@ -844,21 +938,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Quiet focus and methodical setup underscore the authenticity of the 2021 reenactment at D-Day Conneaut. © Wayne Heim",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zN5fnqH/0/Kp5mNtVShK4tKgvtH74R4FQKxsNdPRxQ2B94xk5rn/XL/_PEN0128-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zN5fnqH/0/Kp5mNtVShK4tKgvtH74R4FQKxsNdPRxQ2B94xk5rn/XL/_PEN0128-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zN5fnqH/0/Kd4hH4rD6VjR97C5Vksz2hFzpTCqtSbqjh6JcbW3Z/L/_PEN0128-Enhanced-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zN5fnqH/0/MnGppNXpZNTBcdxnx5zdfDsK9ZGrdmhkDBqsvx9wk/M/_PEN0128-Enhanced-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zN5fnqH/0/KkNw9VFnPvGQ9RXDhRsgN7ft72rDZdtnZqtW22QFq/S/_PEN0128-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-z7QmfM5",
-    "title": "Portrait of Reenactor",
-    "description": "A detailed study of a reenactor in period attire during D-Day Conneaut 2021. © Wayne Heim",
-    "alt": "Close-up portrait of WWII reenactor at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/K9fRSD7SQC7pCpbMfgkQPjcNFLMTWw69LXpQStJK6/XL/_PEN0758-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-z7QmfM5/A",
     "keywords": [
       "Battle Prep  Training",
@@ -871,21 +968,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "The individuality of a reenactor is highlighted, merging personal portrayal with historical context at D-Day Conneaut. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/K8mvdvbN5ngHL26zLQ5Xq7vqvQnCvWhCrws9VgRZD/XL/_PEN0758-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/K8mvdvbN5ngHL26zLQ5Xq7vqvQnCvWhCrws9VgRZD/XL/_PEN0758-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/LKXsdk5mH5MkxcLkkHhMzRmKVn4Nb9pxxZZJx85m2/L/_PEN0758-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/NFgcwZfM5xQwZ8vt27TMvncmmQ3ntLZPGx5Wcf3bX/M/_PEN0758-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-z7QmfM5/0/Mh8DFPFrPRw7btqGKCWHwXkhz86J5zTxH8BRrCnbD/S/_PEN0758-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-m3CWsjq",
-    "title": "Pre-Engagement Focus",
-    "description": "Reenactor in contemplative readiness captured at D-Day Conneaut 2021. © Wayne Heim",
-    "alt": "WWII reenactor preparing before action at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-m3CWsjq/1/KmHz2P7h5m3xKCLGG7S7CbThc4tdb65fh9qrvfbcb/XL/_PEN0783-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-m3CWsjq/A",
     "keywords": [
       "Battle Prep  Training",
@@ -898,21 +998,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A quiet moment of concentration before reenacted maneuvers, reflecting the discipline of historical portrayal. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-m3CWsjq/1/MCKFcxVDnfR5kQ2fBBF8qrNtN438NHNwKtCjP7259/XL/_PEN0783-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-m3CWsjq/1/MCKFcxVDnfR5kQ2fBBF8qrNtN438NHNwKtCjP7259/XL/_PEN0783-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-m3CWsjq/1/MCKFcxVDnfR5kQ2fBBF8qrNtN438NHNwKtCjP7259/XL/_PEN0783-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-m3CWsjq/1/KwDCvM8mCPgpSQMRbVCRLD2DQ5h9GvGrWKpmKXdWS/L/_PEN0783-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-m3CWsjq/1/KjT8rXgKp7Ckn7LKLJJp9vmZWvxCXLG6sJMX9QkLC/S/_PEN0783-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jsJGz2c",
-    "title": "Command Preparation",
-    "description": "Reenactor readies for coordination and oversight during D-Day Conneaut 2021. © Wayne Heim",
-    "alt": "WWII reenactor in leadership role at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/1/LPC5VR8XB4hV7nj4ZSd576BW7StSP4vdxMTMSJQLj/XL/_PEN0791-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/A",
     "keywords": [
       "Battle Prep  Training",
@@ -925,21 +1028,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Leadership and planning are subtly conveyed through posture and gaze in this reenactment portrait. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/1/KwFxwpNnR4MGKN6FXXpfBG5qNX7CQ9w2wFhRtmbmL/XL/_PEN0791-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/1/KwFxwpNnR4MGKN6FXXpfBG5qNX7CQ9w2wFhRtmbmL/XL/_PEN0791-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/1/MvMCm4LNdBvNCCXvWmSCfDkmbP3gd3SH5VCt63fJq/L/_PEN0791-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/1/Lj8Wk74pBrMq63JcKCFRd8dnPVpPBwqSvWpRHb7Q6/M/_PEN0791-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-jsJGz2c/1/KRNkZ5RpLKfFM8vZRQqMtV6BVbb47dHwRhgbg3VF8/S/_PEN0791-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fLNLCcT",
-    "title": "Ready to Move",
-    "description": "Reenactors hold position with readiness during D-Day Conneaut 2021, moments before deployment. © Wayne Heim",
-    "alt": "Reenactors poised at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/1/KxXW47vtMKfJmt6SFKMw5WDZTSRHtPss5ffD9cNsf/XL/_PEN0798-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-fLNLCcT/A",
     "keywords": [
       "Battle Prep  Training",
@@ -952,21 +1058,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "The tension of impending movement is captured as reenactors prepare to advance. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/1/Kh2mZHMTN5LGD3grrw7CVGvbwFRHSXcjTnxnpmz7N/XL/_PEN0798-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/1/Kh2mZHMTN5LGD3grrw7CVGvbwFRHSXcjTnxnpmz7N/XL/_PEN0798-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/1/KmcMHxdFFVTzg3Fj3qPLWzP9LBTqkQLLbnS6LJtxq/L/_PEN0798-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/1/L9HmgkHBXcmTCqtJJ5KVmhJQXD6Z6Cc555Zf6FPVG/M/_PEN0798-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/1/NVL9phLNXMtTLBVpvRVrjHGPTRvpL2LHWHjTx2Znw/S/_PEN0798-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TD5LPgq",
-    "title": "Portrait Stance",
-    "description": "A formal study of a reenactor in period uniform during D-Day Conneaut 2021. © Wayne Heim",
-    "alt": "WWII reenactor portrait at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/K6gd9FzFKXWZcncmMQH5pbx274ssXH42n8ZrhhDHJ/XL/_ANA4478-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-TD5LPgq/A",
     "keywords": [
       "Battle Prep  Training",
@@ -979,21 +1088,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A composed portrait reflecting discipline and character in the reenactment. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MhHFvsDzCz3cVNt2vZvs39WkCXXXxwjFPj752vVq6/L/_ANA4478-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MwqxvQLzr2bq2RPdvPkGs2hBVPmJckXLCn4GRT4fr/S/_ANA4478-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dhFcdtJ",
-    "title": "Battle Prep Moment",
-    "description": "Reenactor readies gear and mindset ahead of action at D-Day Conneaut 2021. © Wayne Heim",
-    "alt": "WWII reenactor preparing before engagement at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-dhFcdtJ/1/K5jrDjcsbpV7dNWMXCm5NCj3LkQvXRRnvSf3MWhC4/XL/_PEN0366-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-dhFcdtJ/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1006,21 +1118,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Captured focus and preparation underscore the authenticity of the reenacted scenario. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-dhFcdtJ/1/MV59x99VVsPFVGkk2F9T339DcNJCgxw2ChVQ3TBzr/XL/_PEN0366-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-dhFcdtJ/1/MV59x99VVsPFVGkk2F9T339DcNJCgxw2ChVQ3TBzr/XL/_PEN0366-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-dhFcdtJ/1/M3JdC8QhDCHJp6qtTZCFN64HLxvwwrTXBwsQJDnjZ/L/_PEN0366-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-dhFcdtJ/1/KpqVgmtrqspw4zWDNXxHLpF8ZxV6SsXJRqNc7jMrn/M/_PEN0366-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-dhFcdtJ/1/KnzzQkWqsx4Kk687TttcGPVvjrD92v9JRPW9Qk8g4/S/_PEN0366-Edit-S.jpg",
+    "srcOriginal": ""
   },
-   {
+  {
     "id": "i-L7zCNR2",
-    "title": "Pre-Movement Briefing",
-    "description": "Reenactors gather and prepare for the next phase of the D-Day Conneaut 2021 reenactment. © Wayne Heim",
-    "alt": "Reenactors preparing for movement at D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-L7zCNR2/0/Khcn4kMD5XLwn6cxZHTWnhP72W6D4KF29t4WNL4pF/XL/_PEN0995-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-L7zCNR2/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1033,21 +1148,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Moments before action, reenactors confer and finalize their readiness during D-Day Conneaut 2021. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-L7zCNR2/0/MDggBVR6gGZQwVLGjn687pJ7vr3rWW9wMBJJTpXZw/XL/_PEN0995-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-L7zCNR2/0/MDggBVR6gGZQwVLGjn687pJ7vr3rWW9wMBJJTpXZw/XL/_PEN0995-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-L7zCNR2/0/Mz3rrZdPm8bLFKT6WLgrVnhpFnBqKDWGpPRsW8bzm/L/_PEN0995-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-L7zCNR2/0/KHVvjCKZnMfrpnJQJwvN9VgP2R4RKQp2hPgtFtV9G/M/_PEN0995-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-L7zCNR2/0/LC5nfxSnGQWZr3BDXqKJpf6shwVNGQKZ9Hmd3WMQ9/S/_PEN0995-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-h3gzd8X",
-    "title": "Field Observation",
-    "description": "A reenactor surveys the reenactment field, capturing the tension of preparation at D-Day Conneaut 2021. © Wayne Heim",
-    "alt": "Reenactor observing the field during D-Day Conneaut 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-h3gzd8X/0/LzjTL7GPR5k4cdLnQ5BT7nV9nmbLpb5KZ7HRLsTbq/XL/_OL36244-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim 2021",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-h3gzd8X/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1060,21 +1178,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Silent vigilance: a reenactor takes stock of the scene, embodying command presence before engagement. © Wayne Heim 2021",
+    "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-h3gzd8X/0/LWQsD4N3WQW9VPn9sbCT5v4CPw9SZ9mQ7XcDc4m3W/XL/_OL36244-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-h3gzd8X/0/LWQsD4N3WQW9VPn9sbCT5v4CPw9SZ9mQ7XcDc4m3W/XL/_OL36244-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-h3gzd8X/0/LgQrHD46BQkgz9CQTp4W2T7b6g2gcnZB3PCCZJvwv/L/_OL36244-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-h3gzd8X/0/LnC8xw8FmNFC8HTkHtHq7DXk2GFbzQLVf88FdG8Hr/M/_OL36244-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-h3gzd8X/0/K5PQ8pvbd7Fj3rPsvkVdv85TmKvQdT2xXt9FB2NtV/S/_OL36244-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VGxz5Bb",
-    "title": "Tank Firing Line at Dusk",
-    "description": "World War II armor poised in a dramatic line, captured during the D-Day Conneaut 2022 reenactment. © Wayne Heim",
-    "alt": "Line of tanks firing at dusk during reenactment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VGxz5Bb/0/Kh7wSGMXMn7X3w9kZFB854n8ppQftfXdjq9tcvJrL/XL/_O1H0726-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-VGxz5Bb/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1087,21 +1208,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "The glow of evening frames a line of armored might, evoking the tension of historic battlefield moments. © Wayne Heim",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VGxz5Bb/0/LkvCMb3qrK7npWsqLHKWGm5gcCQzLRkkCFp4X4H7w/XL/_O1H0726-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VGxz5Bb/0/LkvCMb3qrK7npWsqLHKWGm5gcCQzLRkkCFp4X4H7w/XL/_O1H0726-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VGxz5Bb/0/LHNxmzDDw3Lv3gn9kXPLtL7CVzpTj6dvtZgJvzPZS/L/_O1H0726-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VGxz5Bb/0/MTf9QDJ4XzVfN65MCGzmPb5FdmP7HN3BQk6JDCCDZ/M/_O1H0726-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VGxz5Bb/0/MMNSzZNKXZ5H6k49XbQFXNBL8GLV9cvPwJDB4vS2C/S/_O1H0726-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4c8N2wS",
-    "title": "Historic Armor Detail",
-    "description": "Close-up of World War II reenactment machinery, emphasizing texture and form. © Wayne Heim",
-    "alt": "Detail of historic armor at D-Day Conneaut reenactment",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4c8N2wS/0/NZjXzfZV4QPSPzfM4kbNBwh8c9sPCwJFSVjGk95DM/XL/_HF24705-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4c8N2wS/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1114,21 +1238,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "The craftsmanship of reenacted armor is highlighted, bringing historic machinery into sharp artistic focus. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4c8N2wS/0/Lw7kStd7BGzX6JZZnShVJck2xWTFBL66GtqKP4jRS/XL/_HF24705-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4c8N2wS/0/Lw7kStd7BGzX6JZZnShVJck2xWTFBL66GtqKP4jRS/XL/_HF24705-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4c8N2wS/0/MP6shhFFWdPVKw4G4xDf3HxCvmQVxvSxZmdhQhSWd/L/_HF24705-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4c8N2wS/0/KghqKpq7vr2qJPNvW4pf6mmLwJVWfFmNKvh8ZCv36/M/_HF24705-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4c8N2wS/0/MXqQg399Pv7hmS6JwgxjLk8q8gRhdRn2HGsFw7rsk/S/_HF24705-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wMgfbn6",
-    "title": "Ready in Position",
-    "description": "Equipment and vehicles stand prepared during the D-Day Conneaut reenactment, awaiting movement. © Wayne Heim",
-    "alt": "WWII reenactment vehicles staged and ready",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wMgfbn6/0/Md8rNdJvvjqg8DmgXqTcbfpNGjZg8V3VFZVxM4KJ5/XL/_HF24706-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wMgfbn6/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1141,21 +1268,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A moment of calm before the reenacted storm; vehicles and crews are poised for action. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wMgfbn6/0/NT7vt7sTK32jfh4KjVDzp4FZJQXDbtddL8ppcRQHJ/XL/_HF24706-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wMgfbn6/0/NT7vt7sTK32jfh4KjVDzp4FZJQXDbtddL8ppcRQHJ/XL/_HF24706-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wMgfbn6/0/NT7vt7sTK32jfh4KjVDzp4FZJQXDbtddL8ppcRQHJ/XL/_HF24706-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wMgfbn6/0/LnMTDJF4LRHc3xCsvN9B9nqt5TNCKZnmNSbzZW2gV/L/_HF24706-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wMgfbn6/0/KvTH76bfRSC9pndrT4bKcWNk8xjczKKs8dtgLQ5KW/S/_HF24706-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-P4pmxKM",
-    "title": "Mobilization Scene",
-    "description": "World War II reenactment forces organize and prepare for deployment at D-Day Conneaut. © Wayne Heim",
-    "alt": "Reenactment troops and machinery in mobilization at D-Day Conneaut",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-P4pmxKM/0/MNqBd6XWsNnrkdhdbg5MnHfvjMTzg6FGzv4kQGpjW/XL/_HF24731-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-P4pmxKM/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1168,21 +1298,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "The logistics of reenactment come alive as personnel and machines align for historic portrayal. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-P4pmxKM/0/Nd84Cwpc74Cbq7TGsBgmbMbvVM8P7GL3mC4rvs9Gf/XL/_HF24731-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-P4pmxKM/0/Nd84Cwpc74Cbq7TGsBgmbMbvVM8P7GL3mC4rvs9Gf/XL/_HF24731-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-P4pmxKM/0/Nd84Cwpc74Cbq7TGsBgmbMbvVM8P7GL3mC4rvs9Gf/XL/_HF24731-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-P4pmxKM/0/Ltnhfj2JpLZ7JBgPrQQq84GPJVrfsDVk2PJ8pCKwP/L/_HF24731-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-P4pmxKM/0/NRFcJtbk9mBP8vZGQFStcXVdDdQfTpHPmMCjLHMP7/S/_HF24731-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-s3QvQMQ",
-    "title": "Armor Assembly",
-    "description": "A grouping of reenacted armor units captured in formation during the D-Day Conneaut event. © Wayne Heim",
-    "alt": "Formation of WWII armor reenactment vehicles",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-s3QvQMQ/0/MtT6kmGMsnnTgvLqTp5jn4LgZXsJRQwC8fdFSR5tK/XL/_HF24748-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-s3QvQMQ/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1195,21 +1328,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Groups of reenacted vehicles present a studied display of historic military presence. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-s3QvQMQ/0/NGVg7VSxWZh6MMqVKnDjZ8cjjzW5HQGHxhjx9zMXP/XL/_HF24748-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-s3QvQMQ/0/NGVg7VSxWZh6MMqVKnDjZ8cjjzW5HQGHxhjx9zMXP/XL/_HF24748-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-s3QvQMQ/0/M6f6tbckvv3sVWbHWGw69jMGZQhzQ6fWQdGqZkb28/L/_HF24748-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-s3QvQMQ/0/KQ28fbw2LRNfRSWQBj7xscHdJzW7NFmZxxqxTh7Cb/M/_HF24748-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-s3QvQMQ/0/KNQjzp6HtbD5G3wCPfDdpBDNC3LRPNqsFWV9JWvjS/S/_HF24748-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ctQFzW3",
-    "title": "Field Command Post",
-    "description": "Command elements coordinate at the heart of the reenactment during D-Day Conneaut 2017. © Wayne Heim",
-    "alt": "Reenactment command post at D-Day Conneaut 2017",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ctQFzW3/3/KJq4kn6pF2k7vr9ntm5tqgkvVLjz7JrQ6S4vMzvmh/XL/P8170170-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-ctQFzW3/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1222,21 +1358,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Strategic planning unfolds at the reenactment command post, capturing the organizational backbone of the portrayal. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ctQFzW3/3/MmKX2DMTXrNgzXpGkSS99jZ54vXcTwr2zn36tjb36/XL/P8170170-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ctQFzW3/3/MmKX2DMTXrNgzXpGkSS99jZ54vXcTwr2zn36tjb36/XL/P8170170-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ctQFzW3/3/MmKX2DMTXrNgzXpGkSS99jZ54vXcTwr2zn36tjb36/XL/P8170170-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ctQFzW3/3/LRcLdfS65mmSsmXwL7gV3T4dJMwCKJNF5S24NMVDw/L/P8170170-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ctQFzW3/3/NFnDtT9Vr3wMnjdgxCGh77H5r9fLZqjnVrsKGvwSd/S/P8170170-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6zntx9R",
-    "title": "Historic Preparation",
-    "description": "Reenactment crews adjust equipment and ensure readiness ahead of the D-Day Conneaut sequence. © Wayne Heim",
-    "alt": "WWII reenactment crew prepping equipment",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-6zntx9R/0/KsWj8T9PtDwS2dS7xPFmB2ZZgHsXMC4QDCsGTMcKc/XL/_HF24764-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-6zntx9R/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1249,21 +1388,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "A behind-the-scenes glimpse into the methodical preparation that lends authenticity to the reenactment. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-6zntx9R/0/MBhkTmNq5t6GRZWWzpQ9hHNK8jpKTXZ9SGfBQjcf5/XL/_HF24764-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-6zntx9R/0/MBhkTmNq5t6GRZWWzpQ9hHNK8jpKTXZ9SGfBQjcf5/XL/_HF24764-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-6zntx9R/0/MBhkTmNq5t6GRZWWzpQ9hHNK8jpKTXZ9SGfBQjcf5/XL/_HF24764-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-6zntx9R/0/KZrFswFkvdQV6xC29dGLmfG5K5rHspC5Fb2GT9rwg/L/_HF24764-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-6zntx9R/0/LzCDznjgknPG7B253t4xB3JQDgfchKRTtSLP7H7XF/S/_HF24764-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9Cf3prX",
-    "title": "Armor Staging",
-    "description": "Staged World War II armor stands ready, embodying historical presence at D-Day Conneaut. © Wayne Heim",
-    "alt": "Staged WWII armor vehicles before reenactment action",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-9Cf3prX/0/Lp5tM8hzsShDpjkWsgMhshLJ8JMNZtxFJCxfJbPWM/XL/_PEN0014-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-9Cf3prX/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1276,21 +1418,24 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Armored units await the signal, a study in readiness and historical recreation. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-9Cf3prX/0/KgkMw8jzWncnLbxCR5JFLqds433smQm8W42rLFmDn/XL/_PEN0014-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-9Cf3prX/0/KgkMw8jzWncnLbxCR5JFLqds433smQm8W42rLFmDn/XL/_PEN0014-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-9Cf3prX/0/KgkMw8jzWncnLbxCR5JFLqds433smQm8W42rLFmDn/XL/_PEN0014-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-9Cf3prX/0/MkcdRV4ZkL3cVRcbh4kJH8kLrH6PGt5rfRtPxk6Vs/L/_PEN0014-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-9Cf3prX/0/KVcF4rGW2ZGx7DcCQ88pbcRvBHvpfs7RghLCFQNzL/S/_PEN0014-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nJm6QjG",
-    "title": "Support Line",
-    "description": "Support elements and equipment organized in the background of the reenactment scene. © Wayne Heim",
-    "alt": "WWII reenactment support vehicles and crew",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-nJm6QjG/0/KWTTsSXXRSLK2qThMQC4H7RLHWT9spG52G68shRrb/XL/_PEN0018-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-nJm6QjG/A",
     "keywords": [
       "Battle Prep  Training",
@@ -1303,64 +1448,133 @@ export const galleryData = [
       "click to view only wayne heim beach battle photos",
       "beach landing"
     ],
-    "story": "Elements of the logistical backbone are captured, showing the scope beyond front-line action. © Wayne Heim",
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-nJm6QjG/0/Lb6G85wfqfdVH84ZbX2srtS7bvDP5TRBBSKjT73bb/XL/_PEN0018-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-nJm6QjG/0/Lb6G85wfqfdVH84ZbX2srtS7bvDP5TRBBSKjT73bb/XL/_PEN0018-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-nJm6QjG/0/Lb6G85wfqfdVH84ZbX2srtS7bvDP5TRBBSKjT73bb/XL/_PEN0018-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-nJm6QjG/0/KX5VWWbn2D53XPSFkJVjntVLnpt2T2CJkLv62BMZz/L/_PEN0018-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-nJm6QjG/0/MSvS3NjTgMz3VQDkBCKHMLwbJjDgfch8c7Jss9wx9/S/_PEN0018-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wkXNbZh",
-    "title": "Silent Preparation",
-    "description": "Quiet moments of readiness before the reenactment tempo picks up at D-Day Conneaut. © Wayne Heim",
-    "alt": "Reenactment crew in quiet preparation",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wkXNbZh/0/MgSWxGxfdxhKwZDLzPx53WxZ468nFsDBxjrk9nxLP/XL/_HF24777-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wkXNbZh/A",
-    "keywords": [],
-    "story": "A reflective pause, showing the human side of historic reenactment before the action unfolds. © Wayne Heim",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wkXNbZh/0/KSLTrxcrDL8b35Cqj59W3KxP99rphh4md5jmGnN6t/XL/_HF24777-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wkXNbZh/0/KSLTrxcrDL8b35Cqj59W3KxP99rphh4md5jmGnN6t/XL/_HF24777-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wkXNbZh/0/KSLTrxcrDL8b35Cqj59W3KxP99rphh4md5jmGnN6t/XL/_HF24777-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wkXNbZh/0/KzzBR7TjNDxtr4jjvFJPppM94nsZRc9TWwzgtrMbr/L/_HF24777-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wkXNbZh/0/M5gtZnp9xQj7WG8xZLTPdMWPGN2wS39Z4c6fgn9br/S/_HF24777-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mc37dxv",
-    "title": "Battlefield Detail",
-    "description": "Textures and equipment from the D-Day Conneaut reenactment captured in careful detail. © Wayne Heim",
-    "alt": "Close-up of reenactment equipment at D-Day Conneaut",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-mc37dxv/0/Nckg26Q8LK35fkvjJ2wwsZGKCT5xmqf8LCCVRWhTd/XL/_HF24782-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-mc37dxv/A",
-    "keywords": [],
-    "story": "A study in authenticity, focusing on the gear that brings the reenactment to life. © Wayne Heim",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-mc37dxv/0/LrCc3vvdGV25prBSSFfkTzLdcVgMGrzLZcwzVFjnq/XL/_HF24782-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-mc37dxv/0/LrCc3vvdGV25prBSSFfkTzLdcVgMGrzLZcwzVFjnq/XL/_HF24782-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-mc37dxv/0/LrCc3vvdGV25prBSSFfkTzLdcVgMGrzLZcwzVFjnq/XL/_HF24782-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-mc37dxv/0/L9vGBbVgKfPTQzpL8sFcNmkbT2Kh9kXJShKGfVQdt/L/_HF24782-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-mc37dxv/0/KhWHdFvcSpN2PHLZ7Kk7HZn6N9G7gfgQXz8mh9BN2/S/_HF24782-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fqbP6GL",
-    "title": "Staged Warfare",
-    "description": "A composed view of historical reenactment vehicles and atmosphere at D-Day Conneaut. © Wayne Heim",
-    "alt": "Reenactment scene with armored vehicles at D-Day Conneaut",
-    "src": "https://www.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-fqbP6GL/0/LwdqG9CrSLnkSnhPZWn3HSBMQcd284qTx456gpgRB/XL/_O2H1131-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-fqbP6GL/A",
-    "keywords": [],
-    "story": "The staging of historically inspired machinery captures the essence of reenacted conflict. © Wayne Heim",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-fqbP6GL/0/MqQjq86f3wWQd8zhNTJBtxTcNFLdzdkkvjTtZzQp2/XL/_O2H1131-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-fqbP6GL/0/MqQjq86f3wWQd8zhNTJBtxTcNFLdzdkkvjTtZzQp2/XL/_O2H1131-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-fqbP6GL/0/LP9vZFhGFk6hFg6XJxH8FZFRjrj22ph7xpmhfcRJ6/L/_O2H1131-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-fqbP6GL/0/NFVswkGpX2dBJdcxKs9FPsckDs6N4nhgMtx6DnJjF/M/_O2H1131-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-fqbP6GL/0/KjdGZjc3Gnq2NnSTrwkHZ7DJtp6sLjDVK2Vr64jQd/S/_O2H1131-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-f5TPN83",
+    "title": "German 88    Black & White Photography by Wayne Heim",
+    "description": "German 88 gun in silhouette against the night sky. © Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-f5TPN83/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "German 88 gun in silhouette against the night sky. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 51,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];

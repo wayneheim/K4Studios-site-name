@@ -1,27 +1,31 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-{
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
+  {
     "id": "i-4p3fBxJ",
-    "title": "Ready to March - WWII Reenactment Photo",
-    "description": "Portrait of a soldier at FIG.  © Wayne Heim",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Ready to March - WWII Reenactment Photo",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/NWcXqnrqPGXnVQv6dqmvM5tGfdtkJqtGLfWsx6PqN/XL/_whz8497x2-edit-4-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4p3fBxJ/A",
     "keywords": [
       "wayne heim",
@@ -34,21 +38,24 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Portrait of a soldier at FIG.  © Wayne Heim",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/Kc4PgG4rxmphrhS6bpz8Qnh67QCdd7v8vFkV4qnZL/XL/_whz8497x2-edit-4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/Kc4PgG4rxmphrhS6bpz8Qnh67QCdd7v8vFkV4qnZL/XL/_whz8497x2-edit-4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/Kc4PgG4rxmphrhS6bpz8Qnh67QCdd7v8vFkV4qnZL/XL/_whz8497x2-edit-4-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/MmZtFQcMnmHTcXJdWjjMNf5V56PJBzgWW4xkPwkBT/L/_whz8497x2-edit-4-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-4p3fBxJ/3/L35k5V7H4kC9TTQ78KzrXCKm6tdqwFMWxXt68jqq5/S/_whz8497x2-edit-4-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wp7KTps",
     "title": "WWII Reenactment Photography: Smoke Signals by Wayne Heim",
     "description": "Men await their turn to fire their tank while watching other exhibitors at Bulletfest. © Wayne Heim",
-    "alt": "WWII Reenactment Photography: Smoke Signals by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/LXnKjDbtpRvwsXJp7RKphGV9XGF5Djvx2Lkc5ZHZZ/XL/_WHZ6931-2-XL.jpg",
+    "alt": "Ready to March - WWII Reenactment Photo",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wp7KTps/A",
     "keywords": [
       "wayne heim",
@@ -64,18 +71,21 @@ export const galleryData = [
     "story": "Men await their turn to fire their tank while watching other exhibitors at Bulletfest. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/LVJ2kpTwTwDcp8h844rNBHcbhmNk2QDRTD8hZVLVs/XL/_WHZ6931-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/LVJ2kpTwTwDcp8h844rNBHcbhmNk2QDRTD8hZVLVs/XL/_WHZ6931-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/LVJ2kpTwTwDcp8h844rNBHcbhmNk2QDRTD8hZVLVs/XL/_WHZ6931-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/KdhpCNtLZRJp5Q5xvJSXBxDPLJc2Mt87KMbLfFtBx/L/_WHZ6931-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-wp7KTps/1/L4GJqjKBCR7KkvHcFcSmZMhsPqMxST9TBbCr8qqc7/S/_WHZ6931-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XNN4GPQ",
     "title": "Cold Soldier   Photography by Wayne Heim",
     "description": "Young soldier stands in the cold.  © Wayne Heim",
-    "alt": "Cold Soldier   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/K48W9KvXKdJLMCGV5pLgNcVrcPTHSPbbpLCSSwQB8/XL/_WHZ8084-Edit-XL.jpg",
+    "alt": "WWII Reenactment Photography: Smoke Signals by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XNN4GPQ/A",
     "keywords": [
       "wayne heim",
@@ -91,18 +101,21 @@ export const galleryData = [
     "story": "Young soldier stands in the cold.  © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/KSqHWgKNKXKNDdC2NpcJgQvs9NcwVNjRp8f4PcLkP/XL/_WHZ8084-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/KSqHWgKNKXKNDdC2NpcJgQvs9NcwVNjRp8f4PcLkP/XL/_WHZ8084-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/KSqHWgKNKXKNDdC2NpcJgQvs9NcwVNjRp8f4PcLkP/XL/_WHZ8084-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/Lqkt8Z6btnTgJbCQbzZZdCbDNXwj2m2TLLLsNnLV7/L/_WHZ8084-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-XNN4GPQ/3/Mc2dm8M44Rf98kr2FPD6S2tmsWWBNNxB2nZzhS3D5/S/_WHZ8084-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7wSnzbn",
     "title": "Looking for Trouble",
     "description": "Painterly photo of WWII soldier under fire looking through his field glasses for a path through the carnage.",
-    "alt": "Looking for Trouble",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7wSnzbn/2/MCsv8P2dRd2HZgfbmf3sXrHdmq2mkBt9gXcnv75nm/XL/_OLY8280-Edit-2-XL.jpg",
+    "alt": "Cold Soldier   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7wSnzbn/A",
     "keywords": [
       "wayne heim",
@@ -118,18 +131,21 @@ export const galleryData = [
     "story": "Painterly photo of WWII soldier under fire looking through his field glasses for a path through the carnage.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7wSnzbn/2/KxfMBsmjK5ssdvXpqTB8Ccfg6QR2NzZm6xVcRzfRj/XL/_OLY8280-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7wSnzbn/2/KxfMBsmjK5ssdvXpqTB8Ccfg6QR2NzZm6xVcRzfRj/XL/_OLY8280-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7wSnzbn/2/MM4mwrCDBQjG4GVvbDwjvK9QdkBD3Wcgh8pvTgGTm/L/_OLY8280-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7wSnzbn/2/K6cTT3FT2RrBNC9ScbpkjttwVJ45xtSVzS5Zk4f96/M/_OLY8280-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7wSnzbn/2/MfHW5x3ZL83GvZXLfhrQ538LsT548TL7Gw8Rm23XR/S/_OLY8280-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xdJQsQQ",
     "title": "WWII Reenactment Photography: Rush for Cover.",
-    "description": "",
-    "alt": "WWII Reenactment Photography: Rush for Cover.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xdJQsQQ/2/MHb5tpZwM6gdcTv5DSXJs6kndXWHdKJpkT8D9ZQHx/XL/DSCF0611-2-XL.jpg",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Looking for Trouble",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-xdJQsQQ/A",
     "keywords": [
       "wayne heim",
@@ -142,21 +158,24 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xdJQsQQ/2/MVGp6S77RdvxZdRFQG8knQrp8VR88BjK42vLWsjbQ/XL/DSCF0611-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xdJQsQQ/2/MVGp6S77RdvxZdRFQG8knQrp8VR88BjK42vLWsjbQ/XL/DSCF0611-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xdJQsQQ/2/MVGp6S77RdvxZdRFQG8knQrp8VR88BjK42vLWsjbQ/XL/DSCF0611-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xdJQsQQ/2/NPxLPnnpvSQ6KjrZgRn4Kc9TBZTbh9QTRnKfhCbBc/L/DSCF0611-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-xdJQsQQ/2/LJh47D2JMWD2gp9p8TwjZfVTHLpwvRWgPHXNGnsFj/S/DSCF0611-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MLbJfVV",
     "title": "Medic Rescue Mission - WWII Reenactment Photo",
     "description": "Medic on a rescue mission for a wounded soldier. WWII Reenactment Photo - D-Day Conneaut © Wayne Heim",
-    "alt": "Medic Rescue Mission - WWII Reenactment Photo",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-MLbJfVV/3/LwpQrMjntxW9Sb7Rz98vL8zh98QJFnW9qT65KbCLJ/XL/_WHK7894-Edit-3-XL.jpg",
+    "alt": "WWII Reenactment Photography: Rush for Cover.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-MLbJfVV/A",
     "keywords": [
       "wayne heim",
@@ -172,18 +191,21 @@ export const galleryData = [
     "story": "Medic on a rescue mission for a wounded soldier. WWII Reenactment Photo - D-Day Conneaut © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-MLbJfVV/3/KGL9xWfhhkwpntKJXBh5CG4DQ4XSBjw2hQg3B8dQX/XL/_WHK7894-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-MLbJfVV/3/KGL9xWfhhkwpntKJXBh5CG4DQ4XSBjw2hQg3B8dQX/XL/_WHK7894-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-MLbJfVV/3/KGL9xWfhhkwpntKJXBh5CG4DQ4XSBjw2hQg3B8dQX/XL/_WHK7894-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-MLbJfVV/3/MZZvtN6KGn3XLNR4FXrQfB7pwS2CW6Fz2D2HxVqCL/L/_WHK7894-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2016/i-MLbJfVV/3/MgzjwK2N8vFvMXNJDbVnzXwCDNm3NS497HMjpVCxL/S/_WHK7894-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dMQWS6q",
     "title": "Into the Breach. WWII Reenactment",
     "description": "© Wayne Heim",
-    "alt": "Into the Breach. WWII Reenactment",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/LVnkkpc3WkwPXsc9D2cLr6ztwVDzZk3Fs25fZW4nq/XL/_OLY7916-Edit-XL.jpg",
+    "alt": "Medic Rescue Mission - WWII Reenactment Photo",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dMQWS6q/A",
     "keywords": [
       "wayne heim",
@@ -199,18 +221,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/M6MF2DBtfQKQQKpghvQDsSctTLTkXjCzHbcSzJDS4/XL/_OLY7916-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/M6MF2DBtfQKQQKpghvQDsSctTLTkXjCzHbcSzJDS4/XL/_OLY7916-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/L9kLWnngBBCxz46RfCWvSHWJ4bXhfW67qVZfhT5Km/L/_OLY7916-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/K4MKVkQSN7tnjKMrDKVbKSwTH9RSvJCdRQJphfxWR/M/_OLY7916-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/Kg372cjJQWFhMsgRgTD9K6j22kJ3HhrscsPG8G6cm/S/_OLY7916-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3X9JbcF",
     "title": "WWII Reenactment Photography: Under Fire.",
     "description": "© Wayne Heim 2019",
-    "alt": "WWII Reenactment Photography: Under Fire.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-3X9JbcF/3/NgVvFd7FLpLH3p9n5JLX5nFRjvB9rgB4QgMq35Vcr/XL/_OLY0947-Edit-XL.jpg",
+    "alt": "Into the Breach. WWII Reenactment",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3X9JbcF/A",
     "keywords": [
       "wayne heim",
@@ -226,18 +251,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-3X9JbcF/3/KXNMFGbRcJ5CCNZfwCZrkJwhJkx4mCDNfpKdCTd68/XL/_OLY0947-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-3X9JbcF/3/KXNMFGbRcJ5CCNZfwCZrkJwhJkx4mCDNfpKdCTd68/XL/_OLY0947-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-3X9JbcF/3/KXNMFGbRcJ5CCNZfwCZrkJwhJkx4mCDNfpKdCTd68/XL/_OLY0947-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-3X9JbcF/3/Lwh6mqxX2x6XqnKxZCJtvf8tf9TGnKtRSHw6FCPP8/L/_OLY0947-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-3X9JbcF/3/KgjZqMw868RKtm7dq5DScm3596h7JJBH5JVDXmnqc/S/_OLY0947-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3fWjF7C",
     "title": "WWII Reenactment Photography: Looking for Cover.",
     "description": "© Wayne Heim",
-    "alt": "WWII Reenactment Photography: Looking for Cover.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3fWjF7C/4/NXpLn9v4f9mGnR688sz9Nc5ZmPptJ3R6p3qP8jdps/XL/_OLY3435-Edit-2-XL.jpg",
+    "alt": "WWII Reenactment Photography: Under Fire.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3fWjF7C/A",
     "keywords": [
       "wayne heim",
@@ -253,18 +281,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3fWjF7C/4/LJh9N4n2dr6QXSzMnnVbjWM8rP7JNZhLt8vZf2BCg/XL/_OLY3435-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3fWjF7C/4/LJh9N4n2dr6QXSzMnnVbjWM8rP7JNZhLt8vZf2BCg/XL/_OLY3435-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3fWjF7C/4/LzNmQfPddQdKcrWxh5Z7sL3fzqD3W2Trq6v4Lkwmw/L/_OLY3435-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3fWjF7C/4/KQDnn5Qd66rpHsLwn9HNdN5QDn59T7sMzJHFf2dGL/M/_OLY3435-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-3fWjF7C/4/LMKW9RhDcJ5GMh8Mhx74FzJvwg8ngLzVRGwML8XGk/S/_OLY3435-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N95cmmJ",
     "title": "WWII Reenactment Photography: On the move.",
     "description": "© Wayne Heim 2019",
-    "alt": "WWII Reenactment Photography: On the move.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/KvMGqDNLQGDHfWbpGvLJZhKpS2Nw7vq48CTZVbqgf/XL/_OLY0959-Edit-XL.jpg",
+    "alt": "WWII Reenactment Photography: Looking for Cover.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N95cmmJ/A",
     "keywords": [
       "wayne heim",
@@ -280,18 +311,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/LXKtfCkhNWcFVNDwt6SxwXHZFFwfz5WrNhVjBmKfM/XL/_OLY0959-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/LXKtfCkhNWcFVNDwt6SxwXHZFFwfz5WrNhVjBmKfM/XL/_OLY0959-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/LXKtfCkhNWcFVNDwt6SxwXHZFFwfz5WrNhVjBmKfM/XL/_OLY0959-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/MhqwKM48BbxWPXCWL4fMK5tMtGjMpGbwpGwSrJw5d/L/_OLY0959-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-N95cmmJ/3/MZCmhq2RbszbTWWbsFqXjPN9LhVBQrHHvqrqJTtCz/S/_OLY0959-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nrtRrhM",
     "title": "WWII Reenactor Photography: War News. Photography by Wayne Heim",
     "description": "Woman reads paper with headlines that tell of the D-Day landings of World War II.      © Wayne Heim",
-    "alt": "WWII Reenactor Photography: War News. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/NJKNkm6RMfCJ4f74t82j4PSFDR8Vp62gkBKnQ4QMk/XL/P8180283-Edit-XL.jpg",
+    "alt": "WWII Reenactment Photography: On the move.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nrtRrhM/A",
     "keywords": [
       "wayne heim",
@@ -307,18 +341,21 @@ export const galleryData = [
     "story": "Woman reads paper with headlines that tell of the D-Day landings of World War II.      © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/MqCRWwTjrG7k2hmtZFLctQTkz28MtxSJczDRpMq8F/XL/P8180283-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/MqCRWwTjrG7k2hmtZFLctQTkz28MtxSJczDRpMq8F/XL/P8180283-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/L8j2G3PKx3SbdW3BM8JFPks2KCmMgPtcbLSqqWwJ6/L/P8180283-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/KWqJ2J8phCHDx3HcrtCszhkmjTDmBQDZj9G39bw4x/M/P8180283-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-nrtRrhM/4/LSXdqPKCDKxXvxCkdNjTwZMvTj49nhdnFvvW8FkR8/S/P8180283-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NSgKSxg",
     "title": "Beach Patrol",
     "description": "© Wayne Heim",
-    "alt": "Beach Patrol",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-NSgKSxg/4/MZZG2jkVcrprtRD4xHKtPc5cs6WjZPM7VQjQFMMQM/XL/_OLY0630-Edit-XL.jpg",
+    "alt": "WWII Reenactor Photography: War News. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NSgKSxg/A",
     "keywords": [
       "wayne heim",
@@ -334,18 +371,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-NSgKSxg/4/LRkQ4HQ6z6xPbK5zn24q3BxJwc3WPmM69Hw4hKjsW/XL/_OLY0630-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-NSgKSxg/4/LRkQ4HQ6z6xPbK5zn24q3BxJwc3WPmM69Hw4hKjsW/XL/_OLY0630-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-NSgKSxg/4/KpfT4tNQ7n5Xp7kV2t2Z4zBvvqFHC4M5tkZfh752Z/L/_OLY0630-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-NSgKSxg/4/LFXC7Rs6B5pG9PbJXBJLp7Gw8Q3RCfNzk4NkW2fDF/M/_OLY0630-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-NSgKSxg/4/KFcndXjj4fDDCrqvxrrbgCXTzRFQXQwnc3JGD2zn8/S/_OLY0630-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wzB7S42",
     "title": "Find cover!",
     "description": "© Wayne Heim British troops land on beach head and scurry for cover.",
-    "alt": "Find cover!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wzB7S42/4/KFpwK2HRJzkPrwjJmKgMkZ9VHkCfp2LhLBH6SPG8T/XL/_OLY0923-Edit-XL.jpg",
+    "alt": "Beach Patrol",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzB7S42/A",
     "keywords": [
       "wayne heim",
@@ -361,18 +401,21 @@ export const galleryData = [
     "story": "© Wayne Heim British troops land on beach head and scurry for cover.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wzB7S42/4/M3MJvDD8QpTgQ3dCzFvx5pChpQQmVtCxqNJbcgVjX/XL/_OLY0923-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wzB7S42/4/M3MJvDD8QpTgQ3dCzFvx5pChpQQmVtCxqNJbcgVjX/XL/_OLY0923-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wzB7S42/4/MvQnSX7crdPbtFfsPL9DxdLDfbncRVGw6ChPjPs2s/L/_OLY0923-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wzB7S42/4/NX3xWdQ55rH9G5jjBmpcXskwKHzc4VV93X7b7sWTV/M/_OLY0923-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wzB7S42/4/NWVq68nSZ8dCmtzzfsmvGz6jz8qVhjTswV97xj9sV/S/_OLY0923-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sLWpzr4",
     "title": "Portrait of Canadian Reenactor  Photography by Wayne Heim",
     "description": "A Canadian reenactor poses for a portrait at D Day Conneaut.  © Wayne Heim",
-    "alt": "Portrait of Canadian Reenactor  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/KVWpFj8NJtwfzxmvzspBTB45FVGdZjNR8xLN8Zz2D/XL/P8180482-Edit-XL.jpg",
+    "alt": "Find cover!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-sLWpzr4/A",
     "keywords": [
       "wayne heim",
@@ -388,18 +431,21 @@ export const galleryData = [
     "story": "A Canadian reenactor poses for a portrait at D Day Conneaut.  © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/NNktkxgZd5F44thQK2J4295C9cGWwFJh6rfX6snsx/XL/P8180482-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/NNktkxgZd5F44thQK2J4295C9cGWwFJh6rfX6snsx/XL/P8180482-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/LC26Kggp47mLSfMJB8WwcWGV6QTVSmHmq4fj8Mtmm/L/P8180482-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/KHZ86Q4W4VxsmRMPGQnG7Jd4ZmPKVbC53xxhHb2Mg/M/P8180482-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sLWpzr4/4/Lgmr9MX9x4mKXQbKgZqKnwSVDHF9n3tTTHfXfb79F/S/P8180482-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4t3Dmz8",
     "title": "Sneak attack.",
     "description": "© Wayne Heimcanadian soldies find cover in the tall grass and wait for orders.",
-    "alt": "Sneak attack.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4t3Dmz8/4/LHqKrn5fG4Z2CwvRgGJwbSfSSx5Bj6BqN95NchFZG/XL/P8180545-Edit-2-XL.jpg",
+    "alt": "Portrait of Canadian Reenactor  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4t3Dmz8/A",
     "keywords": [
       "wayne heim",
@@ -415,18 +461,21 @@ export const galleryData = [
     "story": "© Wayne Heimcanadian soldies find cover in the tall grass and wait for orders.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4t3Dmz8/4/KmT4WqXnbgLwSv4WpHQC4WxPqGQCrBQnfzgc993H8/XL/P8180545-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4t3Dmz8/4/KmT4WqXnbgLwSv4WpHQC4WxPqGQCrBQnfzgc993H8/XL/P8180545-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4t3Dmz8/4/MhcqgN86WdW53FRn5P6vcMtwngPTsMKPnXjGnVJMw/L/P8180545-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4t3Dmz8/4/LMXPSb8PbHkvSN9BV6ZqvwJdctpqxvvKHBmrQShDv/M/P8180545-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4t3Dmz8/4/Lz592ZVSfNstzNDWK9v4QwPsLPJXVjL4v9gZTqw2n/S/P8180545-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MPZNDSF",
     "title": "Take the hill!",
     "description": "© Wayne Heim Canadian soldiers charging into the fight.",
-    "alt": "Take the hill!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-MPZNDSF/5/LtbFDbWHQKz3w3GS7swHxLnQbVS3sGjj7vvkpDsK7/XL/P8180665-Edit-XL.jpg",
+    "alt": "Sneak attack.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-MPZNDSF/A",
     "keywords": [
       "wayne heim",
@@ -442,18 +491,21 @@ export const galleryData = [
     "story": "© Wayne Heim Canadian soldiers charging into the fight.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-MPZNDSF/5/MzWDQstnrvjRh8hQv9DZhCvTn6BDf493w2zctXJgf/XL/P8180665-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-MPZNDSF/5/MzWDQstnrvjRh8hQv9DZhCvTn6BDf493w2zctXJgf/XL/P8180665-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-MPZNDSF/5/KwJHGMFmsttz4mw2QdR9PRxHpgGTqVQ8dXBqV6LCC/L/P8180665-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-MPZNDSF/5/Mj3Q7GxDJbfCg8DVQzdJxzM688DNs3nSkDG2tr7k4/M/P8180665-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-MPZNDSF/5/KMFNNLctqcgWTdsnJbPrBLHj9bqBrssF6kkvB2gHh/S/P8180665-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cn9672v",
     "title": "Look Out    Photography by Wayne Heim",
     "description": "Two soldiers stand as lookouts during WWII reenactment battle.    © Wayne Heim",
-    "alt": "Look Out    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cn9672v/3/Kddjbr4DkgwTkkWL9dNVxjB59ScX2N8R9sngZmBjG/XL/_OLY2222-XL.jpg",
+    "alt": "Take the hill!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cn9672v/A",
     "keywords": [
       "wayne heim",
@@ -469,18 +521,21 @@ export const galleryData = [
     "story": "Two soldiers stand as lookouts during WWII reenactment battle.    © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cn9672v/3/McC9z8W4P9S9bWFJdK3wtMr89BQHx7FrfBddC78Lr/XL/_OLY2222-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cn9672v/3/McC9z8W4P9S9bWFJdK3wtMr89BQHx7FrfBddC78Lr/XL/_OLY2222-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cn9672v/3/Kp79t9ZjtwDVxzxMNDvgnz2z2WQw43stwkQxHHT3R/L/_OLY2222-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cn9672v/3/KfJF5jr9F8ddVhCpjHGJ55PvDXFLpRCf5xmDhqRg6/M/_OLY2222-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-cn9672v/3/KPcWVkMNRQDFk7gjMb6xW4qcSpNs5xdbjmR9RSHHQ/S/_OLY2222-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mDkpZWG",
     "title": "Momentary cover.",
     "description": "© Wayne Heim WWII soldie kneeling behind hedgehog in hopes of gaining some cover.",
-    "alt": "Momentary cover.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mDkpZWG/4/K8rPWKqJHJPvHsLgR2hKXZwFmnGnvHrxmhJDWvtmf/XL/_OLY2970-Edit-XL.jpg",
+    "alt": "Look Out    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mDkpZWG/A",
     "keywords": [
       "wayne heim",
@@ -496,18 +551,21 @@ export const galleryData = [
     "story": "© Wayne Heim WWII soldie kneeling behind hedgehog in hopes of gaining some cover.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mDkpZWG/4/M4HdxJg35QP3LXPS5Nrb84wRRXxKbxfTsg4BRNzST/XL/_OLY2970-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mDkpZWG/4/M4HdxJg35QP3LXPS5Nrb84wRRXxKbxfTsg4BRNzST/XL/_OLY2970-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mDkpZWG/4/M4HdxJg35QP3LXPS5Nrb84wRRXxKbxfTsg4BRNzST/XL/_OLY2970-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mDkpZWG/4/MJ6cBpdTBzBRqQsn8dJGVSfdzxKnHzmzpTfq2LtKj/L/_OLY2970-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-mDkpZWG/4/MFw5BwshZrC2dJbfZdxdngfcv339TRV2Kpt5fqLG5/S/_OLY2970-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KVCbxHD",
     "title": "Ballon Lost",
     "description": "© Wayne Heim WWII soldiers on the beachhead in battle.",
-    "alt": "Ballon Lost",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KVCbxHD/4/Lbmb6hJqJSDXsfGDqtMFC2MCrgnZnRVP58MRdnPKX/XL/_OLY3097-Edit-XL.jpg",
+    "alt": "Momentary cover.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KVCbxHD/A",
     "keywords": [
       "wayne heim",
@@ -523,18 +581,21 @@ export const galleryData = [
     "story": "© Wayne Heim WWII soldiers on the beachhead in battle.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KVCbxHD/4/KVgHPXbnqr69WWtmhRBKd4sVXPv6kGTF8V22Tk8Ns/XL/_OLY3097-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KVCbxHD/4/KVgHPXbnqr69WWtmhRBKd4sVXPv6kGTF8V22Tk8Ns/XL/_OLY3097-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KVCbxHD/4/LdJBfQVbHLdVmkc7pVP3hT63cskwnHzW2hTVsKWr6/L/_OLY3097-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KVCbxHD/4/Mz4vjz28sqLTCWk7nrTQ82DKb6zh7kBWRXDQSDjKG/M/_OLY3097-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KVCbxHD/4/KR9QhZPXd4cbWKMQnSxPv7dxsbSgcvdMTK6zSZgWr/S/_OLY3097-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Cb9Q27F",
     "title": "Sending up protectin.",
     "description": "© Wayne Heim Men scrambling for cover as they try to raise the balloon for air cover.",
-    "alt": "Sending up protectin.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Cb9Q27F/4/K9dqNctHsK7mfCCz8n7KfkzdLhDSghjX8wrFwRSd6/XL/_WHK2020-Edit-XL.jpg",
+    "alt": "Ballon Lost",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cb9Q27F/A",
     "keywords": [
       "wayne heim",
@@ -550,18 +611,21 @@ export const galleryData = [
     "story": "© Wayne Heim Men scrambling for cover as they try to raise the balloon for air cover.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Cb9Q27F/4/KQc2WTNNmVwGppGjdDh52w4GM6NstGvNKQntHNBmS/XL/_WHK2020-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Cb9Q27F/4/KQc2WTNNmVwGppGjdDh52w4GM6NstGvNKQntHNBmS/XL/_WHK2020-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Cb9Q27F/4/MJJTbfnksZGx4m8LPMMqVMNHPbvCxrNPHcqm7VMqP/L/_WHK2020-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Cb9Q27F/4/KTRwxqCSD89CSXczW8ZtKgDkvh3mg8JTCJcMrctcS/M/_WHK2020-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Cb9Q27F/4/NN7tWgnJ6JxSLbbJqdJ6dcSVCjfwqHczt8n7fgW99/S/_WHK2020-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jqnwhPg",
     "title": "What's our next move?",
     "description": "© Wayne Heim Soldiers pinned down on beach taking g fire.",
-    "alt": "What's our next move?",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jqnwhPg/4/L8w7cTMVqjxgGxXHd5vTD6FXgQPRBxm4PzwDMBbXC/XL/_OLY3282-Edit-XL.jpg",
+    "alt": "Sending up protectin.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jqnwhPg/A",
     "keywords": [
       "wayne heim",
@@ -577,18 +641,21 @@ export const galleryData = [
     "story": "© Wayne Heim Soldiers pinned down on beach taking g fire.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jqnwhPg/4/MmbcxH9fV8VX4HC3qkrszz7dnbf4rXHqVgNgnBvcR/XL/_OLY3282-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jqnwhPg/4/MmbcxH9fV8VX4HC3qkrszz7dnbf4rXHqVgNgnBvcR/XL/_OLY3282-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jqnwhPg/4/KVCdMtg9R3JVBF66dXMtDTP6cDWRcVsZzCRpz4vZr/L/_OLY3282-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jqnwhPg/4/KtwQn3skQtN9jH9TWGrBkF6xrw7K6Wjkr56CbLwLJ/M/_OLY3282-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-jqnwhPg/4/MkNxV2BffQGzRMHqw2vpsjq5QGrQhbtrKqwSgb6Kg/S/_OLY3282-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2BMfpZf",
     "title": "Running for his life.",
     "description": "© Wayne Heim Soldier running for his life.",
-    "alt": "Running for his life.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-2BMfpZf/5/KfzH5p9t5cb6T9VJ2ms6sc9DrPkk4SwRHTZ9ssHw8/XL/_OLY3621-Edit-XL.jpg",
+    "alt": "What's our next move?",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2BMfpZf/A",
     "keywords": [
       "wayne heim",
@@ -604,18 +671,21 @@ export const galleryData = [
     "story": "© Wayne Heim Soldier running for his life.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-2BMfpZf/5/MHms3fK6ZtpN6jsTR42wMgSfWd5FTL9HMw8sZzRMj/XL/_OLY3621-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-2BMfpZf/5/MHms3fK6ZtpN6jsTR42wMgSfWd5FTL9HMw8sZzRMj/XL/_OLY3621-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-2BMfpZf/5/NLMrPFB47KXXcjv8kMLtNKRnNNtWX4nCCqcHTMp7C/L/_OLY3621-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-2BMfpZf/5/NBs9zJqj69rwcdLkzxbNCTBSChV57qJ4WbkQCgq3c/M/_OLY3621-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-2BMfpZf/5/M5B6vzmgJjqM7GrxsCNJqgcbqVWt6Zxn6XZXktjZn/S/_OLY3621-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Xc9QF2n",
     "title": "They Are Coming    Photography by Wayne Heim",
     "description": "Soldier waits in fox hole for enemy attack.\n© Wayne Heim",
-    "alt": "They Are Coming    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Xc9QF2n/4/LXtkkK5FmVPVJ8vFZc4CCFJT7vqW9B2NSFq9rsQ96/XL/P8191291-Edit-XL.jpg",
+    "alt": "Running for his life.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Xc9QF2n/A",
     "keywords": [
       "wayne heim",
@@ -631,18 +701,21 @@ export const galleryData = [
     "story": "Soldier waits in fox hole for enemy attack.\n© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Xc9QF2n/4/KbCR8F8H87K5KQHjk2r7j6XDqwqHDk2tf7DdLG5VZ/XL/P8191291-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Xc9QF2n/4/KbCR8F8H87K5KQHjk2r7j6XDqwqHDk2tf7DdLG5VZ/XL/P8191291-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Xc9QF2n/4/NCN3CNhzbrKggtPJm7NcQ6fDd6bpjhr8vpqWfKcjv/L/P8191291-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Xc9QF2n/4/L7snWB5FpfXnqVCT7GPcr3rrPGTrSj7Z67CTtTxjd/M/P8191291-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Xc9QF2n/4/MjzFmjvn8mDkwjjMPzgwLVRXczqGQPWhJDJxnmQtr/S/P8191291-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fK4qZB4",
     "title": "Charging Soldier    Photography by Wayne Heim",
     "description": "Portrait of soldier charging during reenactment battle.  © Wayne Heim",
-    "alt": "Charging Soldier    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/MD8fDgSSMjwVL9x87SbpvTHnKbPjZHWXZwtVmMm2b/XL/P8191330-Edit-XL.jpg",
+    "alt": "They Are Coming    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fK4qZB4/A",
     "keywords": [
       "wayne heim",
@@ -658,18 +731,21 @@ export const galleryData = [
     "story": "Portrait of soldier charging during reenactment battle.  © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/KwsPkqGkP2Jd6pQnC3mbc9tdbpvB35PpBR5PH9Xjs/XL/P8191330-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/KwsPkqGkP2Jd6pQnC3mbc9tdbpvB35PpBR5PH9Xjs/XL/P8191330-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/MWwWPdZwLn5NxFrBnpsj2c4fhN52wHhTb8PH4CRXL/L/P8191330-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/M6gnTzQpXRQcsrQC5qmHH9HtVSMVwNrc2pdf3XvCc/M/P8191330-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-fK4qZB4/5/MrS68vR4dhsDKsjXfsF3DpGZMsnL6pffnwb9MbcRR/S/P8191330-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-z3JjLSG",
     "title": "Have to make my move.",
     "description": "© Wayne Heim Heroic run by soldier on the beach during battle.",
-    "alt": "Have to make my move.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-z3JjLSG/4/Kpm9rVvRGDhcc8xZZbn4KxtmL48ZBwGwHvppVmmHB/XL/P8191440-Edit-XL.jpg",
+    "alt": "Charging Soldier    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-z3JjLSG/A",
     "keywords": [
       "wayne heim",
@@ -685,18 +761,21 @@ export const galleryData = [
     "story": "© Wayne Heim Heroic run by soldier on the beach during battle.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-z3JjLSG/4/MfTMBrjkjC2KV3cn72hk8S3THkDJxcmc7BdqXTgWX/XL/P8191440-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-z3JjLSG/4/MfTMBrjkjC2KV3cn72hk8S3THkDJxcmc7BdqXTgWX/XL/P8191440-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-z3JjLSG/4/M8GFmtGcnxpj5mzfWrH5WbfKTTBfn4sS789WffBkL/L/P8191440-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-z3JjLSG/4/KmPMFN8hZvmGS2KGfPMFLPSD3dvstP6rJgGB9PSjG/M/P8191440-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-z3JjLSG/4/LgvDgzNXj5FPdXVxL5P8fWRkH7sRRsJHLHQZ7t4RD/S/P8191440-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tSkLZb9",
     "title": "Covering fire.",
     "description": "© Wayne Heim Soldier fires back in effort to stop the enimy.",
-    "alt": "Covering fire.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-tSkLZb9/4/MDtjHJtBnDt7G8JSSSBVKrbMHnBgm76qRTzSrp4nC/XL/P8191674-Edit-XL.jpg",
+    "alt": "Have to make my move.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tSkLZb9/A",
     "keywords": [
       "wayne heim",
@@ -712,18 +791,21 @@ export const galleryData = [
     "story": "© Wayne Heim Soldier fires back in effort to stop the enimy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-tSkLZb9/4/LDxmWVgGhnCk75sdGDbPncNKF8vrvdRsG8bLPbQLG/XL/P8191674-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-tSkLZb9/4/LDxmWVgGhnCk75sdGDbPncNKF8vrvdRsG8bLPbQLG/XL/P8191674-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-tSkLZb9/4/NV2QV7DsrpBm8d2JSBD4PcpvNKxsHXxQ7WNvJqP9n/L/P8191674-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-tSkLZb9/4/LJ7Qt7mQXdzkmZNVNFdBSgNzMSLZJxLdjgZdJ9Rd5/M/P8191674-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-tSkLZb9/4/M8Bv756Bg8m6cjPGjFHZzH33mt6jwN63gqp8kk5Jc/S/P8191674-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Bgz4NtW",
     "title": "Return to sender.",
     "description": "© Wayne Heim Soldier bravely throwing back German potato masher to those who threw it.",
-    "alt": "Return to sender.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Bgz4NtW/4/MW5h59ZbsqKTZ4vvzmLVkbWnCpKZL5Z7CXcphZM4j/XL/_WHK2375-XL.jpg",
+    "alt": "Covering fire.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Bgz4NtW/A",
     "keywords": [
       "wayne heim",
@@ -739,18 +821,21 @@ export const galleryData = [
     "story": "© Wayne Heim Soldier bravely throwing back German potato masher to those who threw it.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Bgz4NtW/4/KVqsWg2SXK89hkzzV5FxkwgSHKhjkSQ5QqnM65FS6/XL/_WHK2375-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Bgz4NtW/4/KVqsWg2SXK89hkzzV5FxkwgSHKhjkSQ5QqnM65FS6/XL/_WHK2375-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Bgz4NtW/4/MLQVssQZmz3TdrWFQs8XRzjdtb62ggJWrh5d5jcQ6/L/_WHK2375-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Bgz4NtW/4/MqDXDckpb5x65hzHCqT2dXC3zZxRvcq3tb2tWmvVV/M/_WHK2375-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-Bgz4NtW/4/NS2wLhqphsRDkkFvfdk3LzQZ2KZkwh3xSRtkfRHSB/S/_WHK2375-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-M2nR5tB",
     "title": "Clean up.",
     "description": "© Wayne Heim All that's left is to pick up the pieces of war.",
-    "alt": "Clean up.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-M2nR5tB/4/KDWJWXVPpg729D929Vz77wBWMjVrF6DNBqFWgd6Zp/XL/_OLY4041-Edit-XL.jpg",
+    "alt": "Return to sender.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-M2nR5tB/A",
     "keywords": [
       "wayne heim",
@@ -766,18 +851,21 @@ export const galleryData = [
     "story": "© Wayne Heim All that's left is to pick up the pieces of war.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-M2nR5tB/4/NRM6vfnqmqCwLcx723sWFBNTXGB3wwDWLvwkr4fkr/XL/_OLY4041-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-M2nR5tB/4/NRM6vfnqmqCwLcx723sWFBNTXGB3wwDWLvwkr4fkr/XL/_OLY4041-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-M2nR5tB/4/NhkMmjrsTBsMLZ73nngGGxj5XFtw34r5nsc3bqMNf/L/_OLY4041-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-M2nR5tB/4/M63XHZbT2sPq6DPVW5n2vKfk29gm7g95g8T2WJBPT/M/_OLY4041-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-M2nR5tB/4/L2MmkcrMxdQB8nrPBW22j6Bd3zzxHKJRnNgRzwzCN/S/_OLY4041-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-k7jVD2j",
     "title": "Hold your position.",
     "description": "© Wayne Heim 2018 soldier waves off advance of men.",
-    "alt": "Hold your position.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/WWII/i-k7jVD2j/2/NN8J4d236FMFKmRknBCgdqJQprLZktjvs34rb7cf9/XL/_OLY6505-Edit-2-XL.jpg",
+    "alt": "Clean up.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-k7jVD2j/A",
     "keywords": [
       "wayne heim",
@@ -793,18 +881,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 soldier waves off advance of men.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/WWII/i-k7jVD2j/2/L2G4X2jCPT4JRkfDm7FZKQQfQ6wqXtth4zwT9BB8p/XL/_OLY6505-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/WWII/i-k7jVD2j/2/L2G4X2jCPT4JRkfDm7FZKQQfQ6wqXtth4zwT9BB8p/XL/_OLY6505-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/WWII/i-k7jVD2j/2/L2G4X2jCPT4JRkfDm7FZKQQfQ6wqXtth4zwT9BB8p/XL/_OLY6505-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/WWII/i-k7jVD2j/2/MMhBLKBXFkpwNHj87DRb4NKrHPcDbmJNRtCLCChdg/L/_OLY6505-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/WWII/i-k7jVD2j/2/KLXPgkZ9nSHMhB3G8FxQF6xD2XGNvKsWjk3XgM2ZH/S/_OLY6505-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8PsVxCC",
     "title": "Moment to reflect.",
     "description": "© Wayne Heim 2018 soldiers talk about life back home.",
-    "alt": "Moment to reflect.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/K4w9BjMZ6BfTqWhH2F5PGL9PrM7HTrcdt6dB5X5L2/XL/_OLY7599-Edit-XL.jpg",
+    "alt": "Hold your position.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8PsVxCC/A",
     "keywords": [
       "wayne heim",
@@ -820,18 +911,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 soldiers talk about life back home.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/KwKFLDT8k4KLwsNSK5464P3G6htVBwhJbXbwB3GjZ/XL/_OLY7599-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/KwKFLDT8k4KLwsNSK5464P3G6htVBwhJbXbwB3GjZ/XL/_OLY7599-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/KQL9gLW5dgqWCh76MwDWfSdQPvjGk9wCf9dCd72LG/L/_OLY7599-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/MqXxqjvfpQLx3kr3gWzWdWZqxw9zfsNDQMbVVpfQ5/M/_OLY7599-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8PsVxCC/2/LH939Dd79R8QdMgrz63bDwkMZ8pWp4qWRfnhhTzsf/S/_OLY7599-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mHJNQXW",
     "title": "Scramble for cover.",
     "description": "© Wayne Heim 2019 Canadian troops on the move on the beach.",
-    "alt": "Scramble for cover.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-mHJNQXW/2/LR9HNvbn3qjzwPZP62CDCQTTzSTdXGwQHVrxx5rtp/XL/_OLY0896-Edit-XL.jpg",
+    "alt": "Moment to reflect.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mHJNQXW/A",
     "keywords": [
       "wayne heim",
@@ -847,18 +941,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Canadian troops on the move on the beach.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-mHJNQXW/2/MFGJkGf3SSTwzGnKDK97HTX9N2j8swGJfvSWpjS93/XL/_OLY0896-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-mHJNQXW/2/MFGJkGf3SSTwzGnKDK97HTX9N2j8swGJfvSWpjS93/XL/_OLY0896-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-mHJNQXW/2/M9XrgmNJTmqNFmbr9bHMW6SKxF5485QH3zx2h9JHP/L/_OLY0896-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-mHJNQXW/2/NfzgTknnpcgJt4pZ6s9k3SjCBTK5fD5JNLhTdwKdV/M/_OLY0896-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-mHJNQXW/2/KsX7JvDHTWpXtv9gzBZK9rdvt7x9zbbm7chM9XrCn/S/_OLY0896-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GcGX4Ln",
     "title": "I see you.",
     "description": "© Wayne Heim 2019 locking eyes with the enemy.",
-    "alt": "I see you.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-GcGX4Ln/2/KFBvk4JNsjw8Hk65kjVQ8MskTfJCCqk3FjwGxnqFj/XL/_OLY1066-Edit-XL.jpg",
+    "alt": "Scramble for cover.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GcGX4Ln/A",
     "keywords": [
       "wayne heim",
@@ -874,18 +971,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 locking eyes with the enemy.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-GcGX4Ln/2/L4bGSP3NccLntx2wd8wpHHKXjDrB4PLjvnjMwhzq2/XL/_OLY1066-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-GcGX4Ln/2/L4bGSP3NccLntx2wd8wpHHKXjDrB4PLjvnjMwhzq2/XL/_OLY1066-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-GcGX4Ln/2/KtgKmXKF86jfSZ4BCw5FZ3WsBDvrZBzJQmQR7Jkfs/L/_OLY1066-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-GcGX4Ln/2/LJFqzt5FLxRGns7SNgVdbtqTWQhBRvDbTX56gcCXG/M/_OLY1066-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-GcGX4Ln/2/KVZZT9SHNvXDpLWGkMBD9CTXT8ws845qTf4xtqFGf/S/_OLY1066-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SWPCd35",
     "title": "You can't hide for long.",
     "description": "© Wayne Heim 2019 letting his foe know he better think twice.",
-    "alt": "You can't hide for long.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-SWPCd35/3/L2CkmBQxrTLP7CtdMN65j2Rg4gHk4XDgQsWxnXJB9/XL/_OLY1073-Edit-XL.jpg",
+    "alt": "I see you.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SWPCd35/A",
     "keywords": [
       "wayne heim",
@@ -901,18 +1001,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 letting his foe know he better think twice.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-SWPCd35/3/M9KDTVJ6kNhrBpz6g8tzpW8hGGQdfKZMBRCT6f5D5/XL/_OLY1073-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-SWPCd35/3/M9KDTVJ6kNhrBpz6g8tzpW8hGGQdfKZMBRCT6f5D5/XL/_OLY1073-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-SWPCd35/3/KGHq4jP2KWV2pc9vvjMLZ6W2GGn4rws6925JhvB9N/L/_OLY1073-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-SWPCd35/3/KWP2RcRVgwN7WkB8cXddqKnjcsrRMBw2vGSpszrHK/M/_OLY1073-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-SWPCd35/3/K2CprtQr3pNgV2q28hVcV6pwv8hdSsH4WqbdPxCCL/S/_OLY1073-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tNfpL4T",
     "title": "Resque mission",
     "description": "© Wayne Heim 2019",
-    "alt": "Resque mission",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/KkpwBfJV6TsDgVw4xrRzMrh4wZDWXxBChGcFt4hDc/XL/_OLY2237-Edit-3-2-XL.jpg",
+    "alt": "You can't hide for long.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tNfpL4T/A",
     "keywords": [
       "wayne heim",
@@ -928,18 +1031,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/LDzh6gFrrLqJhMgF2N69W6GBPJbhNBxdpPqWS96Rd/XL/_OLY2237-Edit-3-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/LDzh6gFrrLqJhMgF2N69W6GBPJbhNBxdpPqWS96Rd/XL/_OLY2237-Edit-3-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/NR2zRFPRf4f7rn9mqbnBQBrGLRqkRk9bKnQPDXszG/L/_OLY2237-Edit-3-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/K3mdWB8x2cjzDDVm2W9txCNtHFwvCwqJwcP59Dkj4/M/_OLY2237-Edit-3-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNfpL4T/1/MwDBdj3P6X6mKpkVGxjq36Qb8VqbjhsJ3PPDbHPv2/S/_OLY2237-Edit-3-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NFVPd6V",
     "title": "Medical needed.",
     "description": "Medical attending to wounded.",
-    "alt": "Medical needed.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-NFVPd6V/2/K8Td3kkXHXGWNVtt22zRkqTpNQZFq7Qkc2LcbMJ3q/XL/_OLY4197-Edit-2-XL.jpg",
+    "alt": "Resque mission",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NFVPd6V/A",
     "keywords": [
       "wayne heim",
@@ -955,18 +1061,21 @@ export const galleryData = [
     "story": "Medical attending to wounded.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-NFVPd6V/2/MtDjZFfFfgqFSd9Qjbk8M6zjpJjbVtKJsqfSDVBsT/XL/_OLY4197-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-NFVPd6V/2/MtDjZFfFfgqFSd9Qjbk8M6zjpJjbVtKJsqfSDVBsT/XL/_OLY4197-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-NFVPd6V/2/KgkKdrF7Df9NV9vCXz5S47PBfTdnfLpHGwB5CwqGW/L/_OLY4197-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-NFVPd6V/2/MxmjjF74BnCmsC687wcqfHcVWF3n64mHjzHk8R58G/M/_OLY4197-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-NFVPd6V/2/Kj56Gjq5PwZqtwFWQ4pM23CkL4rtMwhmZNk4vdMbQ/S/_OLY4197-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HWWSkqG",
     "title": "Too far gone.",
     "description": "Medical can't save this one.",
-    "alt": "Too far gone.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/KPrDQV7M7x5s2Kc9xZPrk8djbB8hs4kznw6qNhvDt/XL/_OLY4622-Edit-3-Edit-XL.jpg",
+    "alt": "Medical needed.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-HWWSkqG/A",
     "keywords": [
       "wayne heim",
@@ -982,18 +1091,21 @@ export const galleryData = [
     "story": "Medical can't save this one.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/Nd8MMS66ZJ4RKjCcgVR6Fz4nXsV56xbVjjcDpn6DG/XL/_OLY4622-Edit-3-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/Nd8MMS66ZJ4RKjCcgVR6Fz4nXsV56xbVjjcDpn6DG/XL/_OLY4622-Edit-3-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/KPXPjGFSZM3fdtRbVqHKr89wMsZPnRc2VfmN5Qdxf/L/_OLY4622-Edit-3-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/MJqZG6LJhzWKz2dxb4tbgcqFqTtRzrT5MmKVg5c3j/M/_OLY4622-Edit-3-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-HWWSkqG/2/L53WnZ8hTL3TDkmmFP3LgGpfmhjhxJrJ3MRv8nTJj/S/_OLY4622-Edit-3-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hHJjng7",
     "title": "Obstacles",
     "description": "© Wayne Heim 2019 Facing another obstacle.",
-    "alt": "Obstacles",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHJjng7/2/NNzMFswn5CNtbw2nbMh7rthHMq6mJw6Bxwgk4BFjR/XL/_OLY7445-Edit-XL.jpg",
+    "alt": "Too far gone.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hHJjng7/A",
     "keywords": [
       "wayne heim",
@@ -1009,18 +1121,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Facing another obstacle.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHJjng7/2/NFHc7xLjQZSMbfZFJSC6dgfK6dh3KZvfpB3gXJgcw/XL/_OLY7445-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHJjng7/2/NFHc7xLjQZSMbfZFJSC6dgfK6dh3KZvfpB3gXJgcw/XL/_OLY7445-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHJjng7/2/NFHc7xLjQZSMbfZFJSC6dgfK6dh3KZvfpB3gXJgcw/XL/_OLY7445-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHJjng7/2/Kgj3TnjWjfdwpW3vVhSMMStFgm2hDML82f7JMsjVq/L/_OLY7445-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHJjng7/2/NDJH4DFsJN94jLhjVwCnHTRSSr5KJVpzz2VMtxzMJ/S/_OLY7445-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hKN7Rxx",
     "title": "Returning covering fire.",
     "description": "© Wayne Heim 2019 Soldier fires back in defense.",
-    "alt": "Returning covering fire.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hKN7Rxx/2/LzM6zJ2c5cknSCswRQTWfZFWKMrscZKwpfjJ3HwmN/XL/_OLY7458-Edit-XL.jpg",
+    "alt": "Obstacles",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hKN7Rxx/A",
     "keywords": [
       "wayne heim",
@@ -1036,18 +1151,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Soldier fires back in defense.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hKN7Rxx/2/LxB2X4cXqvBxfZtwdknxL2csc4PJ8TdhTQ9VjK2MJ/XL/_OLY7458-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hKN7Rxx/2/LxB2X4cXqvBxfZtwdknxL2csc4PJ8TdhTQ9VjK2MJ/XL/_OLY7458-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hKN7Rxx/2/NNWLjSNgjvxxs9HgKxQJhkGXcwpDk38NzrTD5SGZZ/L/_OLY7458-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hKN7Rxx/2/NDgbGtXZxM7H2jjbss3x3GvRxbCpCJtckffFmDb7f/M/_OLY7458-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hKN7Rxx/2/LGcVfsp6kxXLjB3RNDGdKZp32spc6fVdNG8CT2NPz/S/_OLY7458-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-R2mpKNb",
     "title": "Full charge.",
     "description": "© Wayne Heim 2019 Troos make a run for it.",
-    "alt": "Full charge.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-R2mpKNb/2/NTgCrwtdfwtQBvzQTH6xVFCFBL8snvCCJLmBGCM8j/XL/_OLY7914-Edit-XL.jpg",
+    "alt": "Returning covering fire.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-R2mpKNb/A",
     "keywords": [
       "wayne heim",
@@ -1063,18 +1181,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Troos make a run for it.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-R2mpKNb/2/KD78dsRr2m63sk5Dn93G9XrZGzw3sWSNKvmQzdCxw/XL/_OLY7914-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-R2mpKNb/2/KD78dsRr2m63sk5Dn93G9XrZGzw3sWSNKvmQzdCxw/XL/_OLY7914-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-R2mpKNb/2/NSjqLcfqXDrcr55dfbwc2nHhPLNB6c6wvChMtktwm/L/_OLY7914-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-R2mpKNb/2/KKCnP4jtfwqbQm5wTtbJTQXFrHWxjjjsbTJst5X56/M/_OLY7914-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-R2mpKNb/2/M9WgVcSpj5wnnBXkXGPf8jwHBmSMwStL63h7gsDfv/S/_OLY7914-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jhgDbcf",
     "title": "Moment of lightness.",
     "description": "Soldier with his men on a quiet day. For once.",
-    "alt": "Moment of lightness.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-jhgDbcf/2/LxTwXsp82p2cf8dpRZ5z4fLZ2Zdn85St3Hsmc6JCk/XL/_WHZ8147-Edit2-XL.jpg",
+    "alt": "Full charge.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jhgDbcf/A",
     "keywords": [
       "wayne heim",
@@ -1090,18 +1211,21 @@ export const galleryData = [
     "story": "Soldier with his men on a quiet day. For once.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-jhgDbcf/2/LRbZMhgBrb2jTMfSS6VcTq7JwnJncbgDw7xh7kfLP/XL/_WHZ8147-Edit2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-jhgDbcf/2/LRbZMhgBrb2jTMfSS6VcTq7JwnJncbgDw7xh7kfLP/XL/_WHZ8147-Edit2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-jhgDbcf/2/Knwzbsm3ggJDxj2nkQkX4FnzLfKpnKpcjdqfvvWnL/L/_WHZ8147-Edit2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-jhgDbcf/2/KQzXgXtHbTnqbgRVBFp2hVHwWffkWQMFfV9tHSbK5/M/_WHZ8147-Edit2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/FIG-2016/i-jhgDbcf/2/LvKGzDGcfMn7gq8LRLwK3SZ3HjwMqKDVXVqhntqhg/S/_WHZ8147-Edit2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LwQQVjp",
     "title": "Heroic effort.",
     "description": "© Wayne Heim 2019 Soldiers running to take the beach.",
-    "alt": "Heroic effort.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LwQQVjp/3/KGcSRgqrSvpw6CxWf2pNH96LXbvdZnLhZsVrgc2L2/XL/_OLY7921-Edit-XL.jpg",
+    "alt": "Moment of lightness.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LwQQVjp/A",
     "keywords": [
       "wayne heim",
@@ -1117,18 +1241,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Soldiers running to take the beach.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LwQQVjp/3/KNF3bQm7BRJmBLDQ5R4tVNHNQgGk2wKW6gvgDLSSp/XL/_OLY7921-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LwQQVjp/3/KNF3bQm7BRJmBLDQ5R4tVNHNQgGk2wKW6gvgDLSSp/XL/_OLY7921-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LwQQVjp/3/MQXjgHvRvF6L2DBfgvqPrJwRfrdWdcnc7qPrTddLm/L/_OLY7921-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LwQQVjp/3/L4HvCNmZkP3Hk99zQB6WFm6KqQ5G2PqQxFtPPmgwZ/M/_OLY7921-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LwQQVjp/3/LH4WZ4TmtTvP3xC8x7dnVzMqkmg78HcPrKKSHsSRc/S/_OLY7921-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zNSvQmB",
     "title": "About to make his move.",
     "description": "© Wayne Heim 2019 Soldier weighing the odds.",
-    "alt": "About to make his move.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zNSvQmB/3/K7nSdRs5vSc69nV24k5MDBxKSjJGqgknxJPwKbCC3/XL/_OLY8014-Edit-XL.jpg",
+    "alt": "Heroic effort.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zNSvQmB/A",
     "keywords": [
       "wayne heim",
@@ -1144,18 +1271,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Soldier weighing the odds.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zNSvQmB/3/ND8FCCddS5wwnz9TpnRgDvn3jPVPWs6Z94pL6GhnD/XL/_OLY8014-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zNSvQmB/3/ND8FCCddS5wwnz9TpnRgDvn3jPVPWs6Z94pL6GhnD/XL/_OLY8014-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zNSvQmB/3/LSZd4GLcwK55qMxNWxrCmMBWsRQRzfpLqdPxWvqnG/L/_OLY8014-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zNSvQmB/3/KqqzRTQG2sqX7BrgdsXmwHtkQqx3dnxCjtpMqfdRZ/M/_OLY8014-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-zNSvQmB/3/Kj56Zn65JnvjHkj7xLZvdj2WCxFQ4gDFjWZpxxLjX/S/_OLY8014-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cGcxvSL",
     "title": "In my sights.",
     "description": "© Wayne Heim 2019 Soldier taking deadly aim.",
-    "alt": "In my sights.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-cGcxvSL/2/LLQjCSHK5NzfdHg4rf8VBRkVqRTRrMV76HpNvL66Z/XL/_OLY8221-Edit-XL.jpg",
+    "alt": "About to make his move.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cGcxvSL/A",
     "keywords": [
       "wayne heim",
@@ -1171,18 +1301,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Soldier taking deadly aim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-cGcxvSL/2/MMSGK9S5hsnnD3sTxsL6CKQLKW5pvCnS4N3nkpSjz/XL/_OLY8221-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-cGcxvSL/2/MMSGK9S5hsnnD3sTxsL6CKQLKW5pvCnS4N3nkpSjz/XL/_OLY8221-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-cGcxvSL/2/NRP2t6f5L94TH7mR4tL2FkvtsXPfQWK9JMxmnDFwx/L/_OLY8221-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-cGcxvSL/2/KhgN5ftMkMfXN43Pc9gx4VzW4NDdhTtTSCFC4QxCX/M/_OLY8221-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-cGcxvSL/2/L9LkbndQhdFf3R6CRjL8qcTBGxWQT3TbNrjVn5xP2/S/_OLY8221-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LhZnWf7",
     "title": "She'll shocked",
     "description": "© Wayne Heim 2019 Battered troops hoping for cover.",
-    "alt": "She'll shocked",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LhZnWf7/2/Mjs3sjbSCjJLVv4nnrSPvStTbcDD373wX9j26pRmc/XL/_OLY8529-Edit-XL.jpg",
+    "alt": "In my sights.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LhZnWf7/A",
     "keywords": [
       "wayne heim",
@@ -1198,18 +1331,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Battered troops hoping for cover.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LhZnWf7/2/LVFdSWMFrjMDfQt3cn2xpKb7qrfKrJBbmdJNqWnmL/XL/_OLY8529-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LhZnWf7/2/LVFdSWMFrjMDfQt3cn2xpKb7qrfKrJBbmdJNqWnmL/XL/_OLY8529-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LhZnWf7/2/MwN8V3zqh7Mqxgzf8GX5GJ6D7R6JXddg23XMpcrqQ/L/_OLY8529-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LhZnWf7/2/Mb5WTcTVXvPTwcXn8GCBr9RvtZSkqJrJF76B7gdCj/M/_OLY8529-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-LhZnWf7/2/LqWb4Z5BTRmJdfvjQQB8LLhgFQmFLHsS55B5NfPsG/S/_OLY8529-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KH4Mqv3",
     "title": "Defensive action.",
     "description": "© Wayne Heim 2019 Troops fighting for their life.",
-    "alt": "Defensive action.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-KH4Mqv3/2/Mr5shJLdvnKZhngpLStc9q5FhsP3rhQ6LQFS664pm/XL/_OLY8537-Edit-XL.jpg",
+    "alt": "She'll shocked",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KH4Mqv3/A",
     "keywords": [
       "wayne heim",
@@ -1225,18 +1361,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Troops fighting for their life.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-KH4Mqv3/2/MNBCz7tsW3XHk4KFHShcxWShbWLbwQLKfx6jgjqXX/XL/_OLY8537-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-KH4Mqv3/2/MNBCz7tsW3XHk4KFHShcxWShbWLbwQLKfx6jgjqXX/XL/_OLY8537-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-KH4Mqv3/2/M9wMdwtqZtmMThzg8VkpjgMb9hGQj2pVPkmMLmgj2/L/_OLY8537-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-KH4Mqv3/2/NBW28ThSCCG2ZtgQPcxNN8rCKd59gBQDSSTRQHCPm/M/_OLY8537-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-KH4Mqv3/2/LpqWTVRmhqnr797FcQT9RVPmCx9GwRC3nBcr8XZrp/S/_OLY8537-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nhm5CRf",
     "title": "Ead on a swivel.",
     "description": "© Wayne Heim 2019 Always check your back.",
-    "alt": "Ead on a swivel.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-nhm5CRf/3/KSHBf4JD64RJZTkdZcXwX7ZtGvpgdDxPGD6jvHJHt/XL/_OLY8611-Edit-XL.jpg",
+    "alt": "Defensive action.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nhm5CRf/A",
     "keywords": [
       "wayne heim",
@@ -1252,18 +1391,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Always check your back.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-nhm5CRf/3/MCtVB56gtgBzX7SK4KsZXrck3HqRC5H8QkqPJvcKk/XL/_OLY8611-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-nhm5CRf/3/MCtVB56gtgBzX7SK4KsZXrck3HqRC5H8QkqPJvcKk/XL/_OLY8611-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-nhm5CRf/3/KTRk6SFr56XX56SsD9493VzphSrnvCtqwvBhMSZGm/L/_OLY8611-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-nhm5CRf/3/Mdbj37vzqJbqq4bxKbhHtwNLRTKBBsqVfKVVXbZQm/M/_OLY8611-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-nhm5CRf/3/NZkN5pMs2q4WtPrn3dwN37cJFX6qcrmQ5RXshhq7g/S/_OLY8611-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hHVDKC9",
     "title": "Run for Cover",
     "description": "© Wayne Heim 2019",
-    "alt": "Run for Cover",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHVDKC9/3/MfK8w2TLHpXSN8Jsvn8rwsNDfFcTfVG46rsJwJSx2/XL/_OLY8702-Edit-XL.jpg",
+    "alt": "Ead on a swivel.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hHVDKC9/A",
     "keywords": [
       "wayne heim",
@@ -1279,18 +1421,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHVDKC9/3/KJfhCQWRfzsJSpbqjT7bDX8B7RR3DjCDHzR7qq3VW/XL/_OLY8702-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHVDKC9/3/KJfhCQWRfzsJSpbqjT7bDX8B7RR3DjCDHzR7qq3VW/XL/_OLY8702-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHVDKC9/3/KGSwLtNxnBJ3zjT4nxRwKR7zjkLhwpJdgjQCCDr2L/L/_OLY8702-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHVDKC9/3/NSr8zNR8ghbHFt6CwpTbvq4JHQPQp5kzBJRcPWPs2/M/_OLY8702-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-hHVDKC9/3/KFWdNPSj5XDmPjXVqxG68FnDj7BmCB4Mp9ThzB3wb/S/_OLY8702-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tNQj34J",
     "title": "Guys we got to do something.",
     "description": "© Wayne Heim 2019 Guys pinned down planning to move.",
-    "alt": "Guys we got to do something.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNQj34J/3/LwZgxc2vZXpB7v8bKZ4ChWt3HQHxNH8B4FskBLJqT/XL/_OLY8721-Edit-XL.jpg",
+    "alt": "Run for Cover",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tNQj34J/A",
     "keywords": [
       "wayne heim",
@@ -1306,1650 +1451,2805 @@ export const galleryData = [
     "story": "© Wayne Heim 2019 Guys pinned down planning to move.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNQj34J/3/Mx2rC7hV2SFTn5SstXXD7MhpbxQdhT8hQqNvmKPvh/XL/_OLY8721-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNQj34J/3/Mx2rC7hV2SFTn5SstXXD7MhpbxQdhT8hQqNvmKPvh/XL/_OLY8721-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNQj34J/3/MpGTDqHPwZ9FBzhqq7R8WjzwmXKbCTvHmDSfBDfTn/L/_OLY8721-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNQj34J/3/K9d9mP3md4PrXpKHsbSWs4DjWmv7TKwNgpLLNxrsM/M/_OLY8721-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-tNQj34J/3/LpdkmqrZ5t58zPqvPQsrxk8G9jHQjxLWh6KBZjZGh/S/_OLY8721-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-V695Dp6",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
-    "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/KH7DLGP7KnvDqN6sn6P765MdFLwbZW8tSQs9vCRcT/XL/_OLY8725-Edit-XL.jpg",
+    "alt": "Guys we got to do something.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-V695Dp6/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/LhL5sbR9b9kbKcpmrjF2LvmH9jKgRgfVfCD4J4CQZ/XL/_OLY8725-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/LhL5sbR9b9kbKcpmrjF2LvmH9jKgRgfVfCD4J4CQZ/XL/_OLY8725-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/KsPMcmmwpzvLhPphbxmHmXB532c93LxhmcjxVLfGt/L/_OLY8725-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/Kmm73Ch75kHrHMjNcXBC9mFc5gbvd7XZt9vb8p3BH/M/_OLY8725-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-V695Dp6/3/NFbTC5NQn8CcRLtQrpDP8Bb5R4tQNQK5kjNZBLgSf/S/_OLY8725-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kJd5ZV5",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/McFmgxxnrbjFq9BcTqV243vjp9rdnLQk9jwqX3DRK/XL/_OLY8775-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-kJd5ZV5/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/K4jJ5rd4NS85DGXXK6J4qQqWLqfSz799mZdKV3C2T/XL/_OLY8775-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/K4jJ5rd4NS85DGXXK6J4qQqWLqfSz799mZdKV3C2T/XL/_OLY8775-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/Lb2qxf64b5K5tDSR6cwp9tNzsZR2HnjK9kwKNKzv9/L/_OLY8775-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/NMSFwcGw9DZ6vsnRZNRTMvNsFV9ZqgrMtx3tjN2Q6/M/_OLY8775-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kJd5ZV5/2/M3dZX2rL53qcd9RPmgP9kvgQBk8Tn6DwZGGcRQtHF/S/_OLY8775-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PXRF9TX",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/LP4CN8Xrd4VWmq6zFnTCNGnVFhf9jkLjrq3VMNLGz/XL/_OLY8776-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-PXRF9TX/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/MjzsDv75GncS6J5xWjkV4mgvjKkTWsnPdQHk2tC8m/XL/_OLY8776-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/MjzsDv75GncS6J5xWjkV4mgvjKkTWsnPdQHk2tC8m/XL/_OLY8776-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/MjzsDv75GncS6J5xWjkV4mgvjKkTWsnPdQHk2tC8m/XL/_OLY8776-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/K4XN5f5B3hmMqvSbSrG8HfhKvdz3MWVSbTWgfjdgc/L/_OLY8776-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-PXRF9TX/2/LJW8N49BgCLRVRdQpFcTCr9GjkSJv5RVwLN4Tb4GR/S/_OLY8776-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TFnxp39",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/MZZXHHHQcPt3pPHz8N7hSj9rFmHpLJ2K9RS369q2J/XL/_OLY8791-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-TFnxp39/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/Nhh53PHGdwnPJw7n7S3C4Gcvt7cK2KjrmZtpX2WgD/XL/_OLY8791-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/Nhh53PHGdwnPJw7n7S3C4Gcvt7cK2KjrmZtpX2WgD/XL/_OLY8791-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/MqqLf9v6VG3nwxF73398jKNrCL2khQCqmpLFrw4Q7/L/_OLY8791-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/Lt2kFLdGXdCbH5qDPm5gcKBtcsPsJDNds6ThGSvkw/M/_OLY8791-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-TFnxp39/3/LXpsWxW9M4NTBm6xf4NjqhptmZ8GsRzNzMMHChQ48/S/_OLY8791-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jmZQmcS",
     "title": "Painterly Photography: Up the beach.",
     "description": "Soldiers charging into battle. WWII reenactment. © Wayne Heim 2019",
-    "alt": "Painterly Photography: Up the beach.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jmZQmcS/2/Lb5Rj8sh5JZNJTHGZPL4pXScv24sjCrsGRv5rP7dv/XL/_OLY8876-Edit-XL.jpg",
+    "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jmZQmcS/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "Soldiers charging into battle. WWII reenactment. © Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jmZQmcS/2/MVHdvGkswhCpkrQ6WVZtFkNHBWCGFDvKSLpTN7hWg/XL/_OLY8876-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jmZQmcS/2/MVHdvGkswhCpkrQ6WVZtFkNHBWCGFDvKSLpTN7hWg/XL/_OLY8876-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jmZQmcS/2/LrhKTFf63mDCj6K8z9WwVM7D8GJGzKQdRFK9WQrvB/L/_OLY8876-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jmZQmcS/2/LQ9gkXCgrsxPdVpSCZqC3PGpw6MQdCLhptp6RVjfp/M/_OLY8876-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-jmZQmcS/2/KHN7S394MfBkVHpmvhczcfXBNqRRzRr7mXzNbCWQ8/S/_OLY8876-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Vrmx6xQ",
     "title": "Painterly Photography: Charge!",
     "description": "WWII reenactment of charging solder on the beach.© Wayne Heim 2019",
-    "alt": "Painterly Photography: Charge!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-Vrmx6xQ/2/K5XkrPmn7kCZxXGxvRTbG4GsRzrFprtQcdBJxpMRK/XL/_OLY8888-Edit-XL.jpg",
+    "alt": "Painterly Photography: Up the beach.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Vrmx6xQ/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "WWII reenactment of charging solder on the beach.© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-Vrmx6xQ/2/Ljp6jMcFzjJZ7Ds437T7PnhVQM4SRRRR3VRr2JzrC/XL/_OLY8888-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-Vrmx6xQ/2/Ljp6jMcFzjJZ7Ds437T7PnhVQM4SRRRR3VRr2JzrC/XL/_OLY8888-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-Vrmx6xQ/2/Ljp6jMcFzjJZ7Ds437T7PnhVQM4SRRRR3VRr2JzrC/XL/_OLY8888-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-Vrmx6xQ/2/K5zhvCH6gqTcj7tGmHtgjCWgxk25xKvm8Fx534K4N/L/_OLY8888-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-Vrmx6xQ/2/KRT9JTsDQ7GX9Gs54gXT8dR3FzBLC63SrcCnNxhHf/S/_OLY8888-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7z6hDdR",
     "title": "Painterly Photography: Finding cover.",
     "description": "© Wayne Heim 2019",
-    "alt": "Painterly Photography: Finding cover.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7z6hDdR/2/KPQsvXXzHXvKXVZs3Cvvh6sz5kj4GfhzZmTWZJW6F/XL/_OLY8896-Edit-XL.jpg",
+    "alt": "Painterly Photography: Charge!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7z6hDdR/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7z6hDdR/2/M4TDp4rwXBqm7Dk4f927bpJ9X7MXzVT6xvm3rn5f5/XL/_OLY8896-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7z6hDdR/2/M4TDp4rwXBqm7Dk4f927bpJ9X7MXzVT6xvm3rn5f5/XL/_OLY8896-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7z6hDdR/2/M4TDp4rwXBqm7Dk4f927bpJ9X7MXzVT6xvm3rn5f5/XL/_OLY8896-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7z6hDdR/2/NDrL83xNmC2cJMXDZVJ4p5XGqv9Bp2wmKgcFtXLxC/L/_OLY8896-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-7z6hDdR/2/MbHBN77Wp76NsNSQ6wxD3vvPX9Rp7JSKTsfTV4NwS/S/_OLY8896-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-w8SFWQT",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
-    "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/LF5z9fJJCFWxDb7Ncs7zmrBWSfsh4dNhVjr9WtGVf/XL/_OLY9007-Edit-XL.jpg",
+    "alt": "Painterly Photography: Finding cover.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-w8SFWQT/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/NgZDvnVRTzmcX8Rjf869tq9T9TZSHwPJtmFxQhh8q/XL/_OLY9007-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/NgZDvnVRTzmcX8Rjf869tq9T9TZSHwPJtmFxQhh8q/XL/_OLY9007-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/KpW5Vrjwc9vpHHVbCdgJPppffNPhpZZ3KX3STHgDC/L/_OLY9007-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/NQK76p8MS8qj45MQ4BVLqWSMKCz2b7v2zLVgDGx6v/M/_OLY9007-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-w8SFWQT/2/MQ7fTM8p8Q93BFt39jsTQjZL3B78R3c5J6LFt7h97/S/_OLY9007-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kFG6fSc",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/LNpfHTqBPjrn55JhtxzsN7zG9XgCH4Vbm3C5sCrCB/XL/_OLY9032-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-kFG6fSc/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/KSSjSrzQ7wtPKknPrbvxP9qBQtDjdHhNLkqrz2jcw/XL/_OLY9032-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/KSSjSrzQ7wtPKknPrbvxP9qBQtDjdHhNLkqrz2jcw/XL/_OLY9032-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/Kxk7Qw9v4KxrhXtvsmZCSQ6ThKwsN6r74Ds6kr6bC/L/_OLY9032-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/M3XHNHSwT844HCnj2xW37ZzPXc8smCH9vbFkmsKH5/M/_OLY9032-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-kFG6fSc/2/Lgwd2WkwpHNwJw7cZXXCDkmRqSmNJQqGHsHbX6jfp/S/_OLY9032-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dLCkS26",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/MnzgwBcksDWKSwKXjHJR8MgLLSBkCb2wbWHpTW7Nd/XL/_OLY9032-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dLCkS26/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/MRsG5twffpt7w7MZJ56JZZqxMH9Jp72cgjjJm9gT7/XL/_OLY9032-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/MRsG5twffpt7w7MZJ56JZZqxMH9Jp72cgjjJm9gT7/XL/_OLY9032-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/Lt5b4fDLQvVwTNXjnW3pZ34vJv8RQpBg6FLZ4TSPS/L/_OLY9032-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/Mf2dkjrFWk672LmPBbqmXx72wPj3X5hJrQTDz4kZX/M/_OLY9032-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dLCkS26/3/Kn6x8MGGXkPD9Nfdpsxt36tpL6RDr4mwLN8D5KwWJ/S/_OLY9032-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZwPshf2",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/MwkXqh2G2rW5VZ9hKHJd2TqtPDWpnwBwcLscW53tP/XL/_OLY9127-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZwPshf2/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/K93Kn642HhJKQN3S7Km5QB9XT6X9bRBXTKmwGfbhX/XL/_OLY9127-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/K93Kn642HhJKQN3S7Km5QB9XT6X9bRBXTKmwGfbhX/XL/_OLY9127-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/NNqrndKVCxcKXmNKBQmLSRgR3sGFKnDtVsm5kQTrd/L/_OLY9127-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/MHvbm7jqP98RbJXpkzw5bt9WQs2jK2JxbggS3v9gx/M/_OLY9127-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-ZwPshf2/2/K9fcSLqBrcRF6wCnxVpqpqcrkKQjCNhc8smv8TFrZ/S/_OLY9127-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8MFcm9N",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2019",
     "alt": "© Wayne Heim 2019",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/Kqbd6jQfwXwwtDsqzxPDzVQPQ76qnxJpQtCS2RKHC/XL/_OLY9696-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8MFcm9N/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2019",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/NfZrBfVg595P299wZbBVxJVqF7NjLSDVKsLn8v5VP/XL/_OLY9696-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/NfZrBfVg595P299wZbBVxJVqF7NjLSDVKsLn8v5VP/XL/_OLY9696-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/NJcQBTzSjmL6pmXrZJ92ZZHLm65vSWgFtK6WghXL6/L/_OLY9696-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/Nhn38HG6SQmLQVNkWHrXBCBsp2Dgt9hHcSDZMDTQQ/M/_OLY9696-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-8MFcm9N/2/LsCNTwjXmWbdPdj7SdJ43bdHVfjgh3XNF7ddSxmRT/S/_OLY9696-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gL2CxV7",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
-    "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gL2CxV7/3/K32KSSMpTPdzkxJ8XzG2qcqr5VP2vDDFtVCRSJV9G/XL/_PEN0762-Edit-XL.jpg",
+    "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gL2CxV7/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gL2CxV7/3/K4wvGMKrMxG5VphMbXCX8CMB3LRH2J43mspsfGmBX/XL/_PEN0762-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gL2CxV7/3/K4wvGMKrMxG5VphMbXCX8CMB3LRH2J43mspsfGmBX/XL/_PEN0762-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gL2CxV7/3/KD4zKZc3mC7XLw2p85WSnGnCgj64sJLQR38XSRCS9/L/_PEN0762-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gL2CxV7/3/NfnQNzqbG7bdNVNBhHN5vZHj3sGXMLgWFFfzh2WNM/M/_PEN0762-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gL2CxV7/3/LGjQ2d5gLMvXscGPQQR25ktmSdxmn7LWd8j4mhVcG/S/_PEN0762-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Tfg5j96",
     "title": "Things are about to get messy.",
     "description": "© Wayne Heim 2021",
-    "alt": "Things are about to get messy.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/K4hFwDWngbQWcDw6nt6h3vMrChF4qHKSknPRnhsR7/XL/_PEN0783-Edit-2-XL.jpg",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Tfg5j96/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MjtNnJjZj7jSSCrHHSNwvCZs6rFjwrPFM84bB92vz/L/_PEN0783-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/KL5Z66dcM2gxqCZ4SvPZ84rZqjh97HnX6ZqxzD7fd/S/_PEN0783-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n3N8NRr",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
-    "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LQ5LqQftrthtChL4LT7pFghr2sknzN587QRxZwZZK/XL/_PEN0791-Edit-2-XL.jpg",
+    "alt": "Things are about to get messy.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n3N8NRr/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 62,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LvqbcX6w6PLjSpgXmM5rtN6wwhs9Fgm35pv8z2Vnp/XL/_PEN0791-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LvqbcX6w6PLjSpgXmM5rtN6wwhs9Fgm35pv8z2Vnp/XL/_PEN0791-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/M696LhZTGCjdwRc8KTtRMVZbd64PWTJMVJvKMcHBv/L/_PEN0791-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/MGQKtjcdBcgRkrb7nDQVHFk5pJRwVm9nZ4WtnRjkm/M/_PEN0791-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/NWdgwmWNNsJSMPT8nf7D2ZKdsb2Dz4LzrsCDn3qDf/S/_PEN0791-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N9sBgRs",
     "title": "Get Ready Boys.",
     "description": "WWII soldiers loading up on Higgin's Boat going into battle. © Wayne Heim",
-    "alt": "Get Ready Boys.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/LfsgvMZr53B6s64jZD4qtLWkJNtgJzLg6c3vzNwQM/XL/_PEN0798-Edit-Edit-2-XL.jpg",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N9sBgRs/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "WWII soldiers loading up on Higgin's Boat going into battle. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 63,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/K5c2gxv7gHXv5r3QBD4XCshmjKVxfXpXK6ZPWdgnW/XL/_PEN0798-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/K5c2gxv7gHXv5r3QBD4XCshmjKVxfXpXK6ZPWdgnW/XL/_PEN0798-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/NTMb3nkxwrJ3dG8G3DHQKxnMTjVzPcmpNBfXknTjp/L/_PEN0798-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/KxZf8ZJ6X9xxWx93KVNjtZf9MKd4mjfb8chgg75Bd/M/_PEN0798-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/LRjZ95GQXSNRjDXhcd6fF2SBCJrpLLNJPqtdgtj9q/S/_PEN0798-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-59zQzXC",
     "title": "Take her out.",
     "description": "Departing embarkation zone. Next stop Omaha Beach. © Wayne Heim 2021",
-    "alt": "Take her out.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/Mjc6St5R45r38XLzRV2b66VBBpSkgsW2HLb5mhZff/XL/_PEN0808-Edit-Edit-XL.jpg",
+    "alt": "Get Ready Boys.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-59zQzXC/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "Departing embarkation zone. Next stop Omaha Beach. © Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 64,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L6xknpDKXJMhfpb4StcjMSJVC6FsTzvJmHxQbtBwm/XL/_PEN0808-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L6xknpDKXJMhfpb4StcjMSJVC6FsTzvJmHxQbtBwm/XL/_PEN0808-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/K85C4sj4WNVpJSZVHXDcPWz5HdkK25NbmNzPrJCqb/L/_PEN0808-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L3m9zCbJhjPMF5mhZHp28xmHxZ2PnvSqwkBmM88Pm/M/_PEN0808-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/M26T93Zf7rt7wz3PLqfkWMhB9gWhW35k8z78PNphF/S/_PEN0808-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Dd5XSHd",
     "title": "#1",
     "description": "Final signal. © Wayne Heim 2021",
-    "alt": "#1",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lw87fBvk7MF5nxPp27PvkfmTB3tbhbD6RgpvGWBrW/XL/_PEN0830-Edit-XL.jpg",
+    "alt": "Take her out.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Dd5XSHd/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "Final signal. © Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 65,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lx5M9KCSsXKdsrTzvbFRNfRfjF7BZM4XKKmSSgkF9/XL/_PEN0830-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lx5M9KCSsXKdsrTzvbFRNfRfjF7BZM4XKKmSSgkF9/XL/_PEN0830-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/KvXsqhm5Zht9KDfBZvK7hmz4RjgRSLrnbWQv3KxNM/L/_PEN0830-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/NLZP8KfpWMHNXSvq6qtGMR9xqFF6bGHwRqbTxcCtT/M/_PEN0830-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/M6gg7vtr4PHRR74DNJmJ7g7BLnBXQR8C8XNn88FxW/S/_PEN0830-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vZNLBNp",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
-    "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/K5cXZGcmrq7W4tMxXjmKqnSSSvJmhzJnN3t9mpXGN/XL/_PEN0836-Edit-XL.jpg",
+    "alt": "#1",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-vZNLBNp/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 66,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/MFGbXwmBND3R2Hcj5gwwbShtHwFvgM53m2znHN2MC/XL/_PEN0836-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/MFGbXwmBND3R2Hcj5gwwbShtHwFvgM53m2znHN2MC/XL/_PEN0836-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/NCHm6k5Ft42vZ2dNRHJ9B8X6rjMLrXMJtN7sXvghJ/L/_PEN0836-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/L4RGJcq8DTrdMNJ6MLCdGWWMvtcgGhVBHXnKhcksx/M/_PEN0836-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/LhCsDnKFdmfd4cFCVXmsGvN3k4wGj9dZDN6Wvd3qL/S/_PEN0836-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2XSdvtV",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2XSdvtV/2/KMWQn8CSS5MswxCSPjhm9Lqm4bnCzRxv6r7vXvjd9/XL/_OL37211-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2XSdvtV/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 67,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2XSdvtV/2/MfwKXNLfmKkmkq3gRXFbR8dG9C4p5HQNCCMrBQh63/XL/_OL37211-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2XSdvtV/2/MfwKXNLfmKkmkq3gRXFbR8dG9C4p5HQNCCMrBQh63/XL/_OL37211-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2XSdvtV/2/MxFfL8TqNLtWtw9RQQ3Jm9gJ8x95WcdBg5kbd53fX/L/_OL37211-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2XSdvtV/2/NQP5WRZQcN9ZZqqcLk6VcBj6rnBs9cXhzc5qrMnzC/M/_OL37211-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2XSdvtV/2/KMs7x9ZLm4c84mwwKhpb6Lqq9KGwHmK6ThsX2RPKH/S/_OL37211-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rTVRQJQ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rTVRQJQ/2/L6xfDwDL6hfpfJtjfmjD2wDDmb4zrd3vXcXt9G9T3/XL/_OL37229-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rTVRQJQ/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 68,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rTVRQJQ/2/MHRkX5WLgfqPg3H8f5GRqbKwKT6z5N9wgMZXnXtxt/XL/_OL37229-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rTVRQJQ/2/MHRkX5WLgfqPg3H8f5GRqbKwKT6z5N9wgMZXnXtxt/XL/_OL37229-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rTVRQJQ/2/LLFx8vRg8r7DSqFv26JqhZnnnWzNGsc8h2tmgbfJm/L/_OL37229-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rTVRQJQ/2/MjjNk64nxfFfRXjSr8z76GFJ9PSMhTxsqkxjdJRPT/M/_OL37229-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rTVRQJQ/2/NKGr5sbwj8L2GgG8MJCqkWGQddLFLfL2s6G77QbP6/S/_OL37229-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hwZmvKw",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hwZmvKw/1/M9Qsf3KrqGQRrF6GXZCF8SGMnx99zbgpgBL8DKvpd/XL/_OL37236-Enhanced-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hwZmvKw/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 69,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hwZmvKw/1/LShDPTxzWFDFrq2rNpRPLVF9CBGcLWJbC8hqC5htz/XL/_OL37236-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hwZmvKw/1/LShDPTxzWFDFrq2rNpRPLVF9CBGcLWJbC8hqC5htz/XL/_OL37236-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hwZmvKw/1/KfJ9k2KvB52RQwjpb2nzd5cDMfFps96S4KS9rHspV/L/_OL37236-Enhanced-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hwZmvKw/1/LhW2B2XvP7K6MPmh9M6Bfwxx6JQ8v4X5NvtqTWjK9/M/_OL37236-Enhanced-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hwZmvKw/1/MR6ZDgr5Q23WDm8HcBpRJn5g3vj3NrbfCFxm4xmZn/S/_OL37236-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cnKRrrH",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cnKRrrH/2/MCf3ffJkSzJJP8D9vLRrsC8GkLt8hDRGmNXsk9tfs/XL/_OL37236-Enhanced-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cnKRrrH/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 70,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cnKRrrH/2/LNH9ZQNT4TtQXMjG6Xj5fSqXDzGktWR5mcdtDvwCF/XL/_OL37236-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cnKRrrH/2/LNH9ZQNT4TtQXMjG6Xj5fSqXDzGktWR5mcdtDvwCF/XL/_OL37236-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cnKRrrH/2/MTN93jZk73Hvn4R4BtrksZ4W7xjZ96LFGZvRQ6xtv/L/_OL37236-Enhanced-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cnKRrrH/2/KDvXH3QgPJFLZHw98dMmwTdK7ZgCKptLT9rMLJ53h/M/_OL37236-Enhanced-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cnKRrrH/2/LBW2tVJxgcsZQnVf6Ksq26njHTQrn7QF4dG3Zvq3f/S/_OL37236-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NBvV5CH",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBvV5CH/1/K4sWpLsLgXKDb88nDQXMzrJNBkzNf5fbGzXPcZvZc/XL/_OL37276-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NBvV5CH/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 71,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBvV5CH/1/KRQknLPJTfBgWKndnsHRmLqFCRDgcLBsMBLrCdNKx/XL/_OL37276-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBvV5CH/1/KRQknLPJTfBgWKndnsHRmLqFCRDgcLBsMBLrCdNKx/XL/_OL37276-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBvV5CH/1/LB3fXGrjkQfxVNZdxppqsQrcg9CfN7kxpDwD7TF8J/L/_OL37276-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBvV5CH/1/KnB7TMZRZtL7rGZSp3MX7DPjmwbFfCRqrGP3F9gRZ/M/_OL37276-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NBvV5CH/1/KQpj2xpv9b5dGPh5TnwWZsd2McjDvtKvKK5rQHT34/S/_OL37276-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gbcTnJp",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gbcTnJp/1/NNph9SW4M3NdJfFSPgxT6Gzqkhxd9vWP3Fth57Ts4/XL/_OL37291-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gbcTnJp/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 72,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gbcTnJp/1/KWrSxBpHSZCGwnCN3KDnn34NcjK8KnPp9KtPHRpZw/XL/_OL37291-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gbcTnJp/1/KWrSxBpHSZCGwnCN3KDnn34NcjK8KnPp9KtPHRpZw/XL/_OL37291-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gbcTnJp/1/KWrSxBpHSZCGwnCN3KDnn34NcjK8KnPp9KtPHRpZw/XL/_OL37291-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gbcTnJp/1/KbnMPqVnHJj88T8BKm5TW5Lg6c2qJLhwZks7PfF9q/L/_OL37291-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-gbcTnJp/1/M6jpDHMt8D65zfVDvKVhbvvp9rZM4jcQm6SDHFpVj/S/_OL37291-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4CDbNZW",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4CDbNZW/2/Mxd2L3kmTLrxCDk7h8cZRbtFCQPvJ4WXLNLNPDBJ8/XL/_OL37291-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4CDbNZW/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 73,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4CDbNZW/2/LMzVfZSggDq4cw294zfTwpXGnK4rXwZFFCNjfrwqj/XL/_OL37291-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4CDbNZW/2/LMzVfZSggDq4cw294zfTwpXGnK4rXwZFFCNjfrwqj/XL/_OL37291-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4CDbNZW/2/LMzVfZSggDq4cw294zfTwpXGnK4rXwZFFCNjfrwqj/XL/_OL37291-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4CDbNZW/2/NgkMZNwqFDdShsLL27v28MB2f66chkvZCS9KzL6KK/L/_OL37291-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4CDbNZW/2/LBPX4Xv9sbjCfrZQRq8Sd9JGqkczZdzXMhV9rDm6H/S/_OL37291-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nNR9s8N",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-nNR9s8N/1/LHhNG6pqGmzBQrc7kCfBHrSgBrmRM8Mxms7ZXCNGW/XL/_OL37340-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nNR9s8N/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 74,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-nNR9s8N/1/M659jT4n3Hn2wMM6v34Vv8DMTz33HSTLXDssPZRvq/XL/_OL37340-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-nNR9s8N/1/M659jT4n3Hn2wMM6v34Vv8DMTz33HSTLXDssPZRvq/XL/_OL37340-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-nNR9s8N/1/K5QRRb3rSn6t3j4fVfSGC4zsTGMnDcfJNRPNdQ8kP/L/_OL37340-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-nNR9s8N/1/NHdjJqnRkcx5CzLb53S5NPdRZrcWrG7nCNTQ9dRCS/M/_OL37340-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-nNR9s8N/1/LpH27BFkV5hBL5ZVfjDJrVjQNSJcS4DTQ6PNKShLC/S/_OL37340-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CFM4PGm",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-CFM4PGm/1/MXmMvCSxNhPZDQPCk8G58b4tBFHTp6Xt3knBTW6rJ/XL/_OL37347-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-CFM4PGm/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 75,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-CFM4PGm/1/M7WDhc5zLNcL8CrZDH8XZpfdmZwzVKwRHS76L7Lg8/XL/_OL37347-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-CFM4PGm/1/M7WDhc5zLNcL8CrZDH8XZpfdmZwzVKwRHS76L7Lg8/XL/_OL37347-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-CFM4PGm/1/LN6DDLWxP6ZbK5HC8jGzjBbgFphWPKhk6W4fdKjr8/L/_OL37347-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-CFM4PGm/1/KmnNFfmTdtkNGtBR77X8Kqw3Snd7t5DcZdQGx3MSn/M/_OL37347-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-CFM4PGm/1/MtMb3qN9X4fRxrwwSRTNPN9qtvz3LcfkD2Q9GgzSm/S/_OL37347-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zgFkMj7",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zgFkMj7/1/KxnBPd2BhnSrRxDngvxvWqrGpMNJfPkzS3R4PSNwb/XL/_OL37416-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zgFkMj7/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 76,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zgFkMj7/1/LHWLPBh3jshMGHc7k83j79Wx98PB8XHT34576Kw7D/XL/_OL37416-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zgFkMj7/1/LHWLPBh3jshMGHc7k83j79Wx98PB8XHT34576Kw7D/XL/_OL37416-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zgFkMj7/1/L8xC74NvfQqN7KKQ9DKHPcH5HjCjzd4rSS5THPsBT/L/_OL37416-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zgFkMj7/1/M5MLc5DbZzwj6Wh6vHtLP78xRmCG8fk33BR6RWBMJ/M/_OL37416-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zgFkMj7/1/M5Cn7hCrRdHmfDwVPFVWRSPjMDqrPrwkgsVz6NG7F/S/_OL37416-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cFcMB2h",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cFcMB2h/2/LPWxTQfd84h2Z69Jb27STNzPLxtHHnBHXpSv6L6XF/XL/_OL37443-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cFcMB2h/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 77,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cFcMB2h/2/MBQhD9WNczsCgc8cmtFnBDwcchmCpxX2VRMsbxc92/XL/_OL37443-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cFcMB2h/2/MBQhD9WNczsCgc8cmtFnBDwcchmCpxX2VRMsbxc92/XL/_OL37443-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cFcMB2h/2/NKzJfmqmfHpzvMTqW9FGzKWF6wTZ7DcpFBqk4Rv9t/L/_OL37443-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cFcMB2h/2/NHgBLJSw4J2XckrS4CJnnk22H7T2zNKNrZvRHpMVb/M/_OL37443-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cFcMB2h/2/NQb5pFDTTwNQ88pdnzFTKrPGZcwz2xKpc78Ks4gFC/S/_OL37443-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NPkLTtP",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPkLTtP/2/KsHFnC26vMtvSxGGkcMq2mGx3Sgx67vLfrbtnzR46/XL/_OL37500-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPkLTtP/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 78,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPkLTtP/2/MmM9TmDsVWH9kPg26ZWJFkddFW92WQMG2BLZwXNxd/XL/_OL37500-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPkLTtP/2/MmM9TmDsVWH9kPg26ZWJFkddFW92WQMG2BLZwXNxd/XL/_OL37500-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPkLTtP/2/Kz86hnC6VsQkjHvZk2kVvbG7GgkhCwwhBd6B9bqcT/L/_OL37500-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPkLTtP/2/LSzFd25XG7phdDs3ZkSZJdFQ3KwPVbVRMnJSw2p25/M/_OL37500-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPkLTtP/2/MNtcz9KbRrXN8RmbxwLfd8fWdRHNqBBszX23X8H3q/S/_OL37500-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3gH2xgz",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3gH2xgz/2/McSxS2BFP7gGfGjpL7cgw6gxwBkmnXWgrMgHtKdJs/XL/_OL37508-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3gH2xgz/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 79,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3gH2xgz/2/KnvDQxtzgc4zgQDMqzfKjB7d2Z47V2BnQ6Gdp2SpL/XL/_OL37508-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3gH2xgz/2/KnvDQxtzgc4zgQDMqzfKjB7d2Z47V2BnQ6Gdp2SpL/XL/_OL37508-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3gH2xgz/2/KGx3ZrqwzMxbd42xhqF9F6t8Hh4kQcXc5dksx2j5R/L/_OL37508-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3gH2xgz/2/KP2ptL86HLh66W6NTP82B6TTBfQ7rZZRbtvPhvLJ7/M/_OL37508-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-3gH2xgz/2/KdwWws3TQ6x7jPvQ29ts8b4BjghXpZVBxxQGTJFcV/S/_OL37508-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dBLHKzn",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dBLHKzn/1/MxJsCSNHCzrN3q53xbbndCKt48ZB2jZVLH5tnqjd3/XL/_OL37524-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dBLHKzn/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 80,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dBLHKzn/1/KwxRNt25j37FH52xHzrKw6VKQDdBBmNJ5rjH6X4W7/XL/_OL37524-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dBLHKzn/1/KwxRNt25j37FH52xHzrKw6VKQDdBBmNJ5rjH6X4W7/XL/_OL37524-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dBLHKzn/1/MZ9c76xndJKPbxXq4R4Lp7SnXLHHNw2N9phVdwCn8/L/_OL37524-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dBLHKzn/1/L3npH2ndzGwftcDJxqVrjBD93vkHJTzQpCjcjxdBz/M/_OL37524-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dBLHKzn/1/K3mMXhbVZkmXKXFXqkQNrJJjzGDqzBv9sKkwL72Sb/S/_OL37524-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-m7Pp5fs",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-m7Pp5fs/2/NhcZtPCq7M4cKHrmJmxds3vSJ4vMhkjk9fzNkVscV/XL/_OL37524-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-m7Pp5fs/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 81,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-m7Pp5fs/2/KkMm5ZfSb5sfDCLtd7NbXVSRw9pRwGw2ggspDKvG2/XL/_OL37524-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-m7Pp5fs/2/KkMm5ZfSb5sfDCLtd7NbXVSRw9pRwGw2ggspDKvG2/XL/_OL37524-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-m7Pp5fs/2/MVtm2m9mQ39K8TKnVktnDj7JzMvQxcFdjXJj7SpTt/L/_OL37524-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-m7Pp5fs/2/LvMC2cCtsTZ6GLV5JC2RcQn4DHcPZQCZrsZ7wRZDf/M/_OL37524-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-m7Pp5fs/2/KsvG5G6ntPwjmg3CSfNBKWJWBcQgCnLdKrNPnnGNK/S/_OL37524-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-t8sGcrF",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t8sGcrF/2/MptPtsm6tvq6kJCZZTgtK5BPR2W66824nbtt76smX/XL/_OL37554-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-t8sGcrF/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 82,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t8sGcrF/2/NVgJrbk85hhSLR6hVMkr9VbPGNQLzJr4mGfJCRJ2r/XL/_OL37554-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t8sGcrF/2/NVgJrbk85hhSLR6hVMkr9VbPGNQLzJr4mGfJCRJ2r/XL/_OL37554-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t8sGcrF/2/MbQSkbFKKBzWfhsmbXnFphmxFwxw5fpznBfm9RQtC/L/_OL37554-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t8sGcrF/2/KbfXVNJHJBDW6SRmBWpncdknKTZ6rrr46rzpBVqLp/M/_OL37554-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-t8sGcrF/2/NffzvbLPscm2LGgTLm8WwJDdTTQXFxsSJkk8sQL6Q/S/_OL37554-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fDfPWtf",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fDfPWtf/3/KD7WtckcTfhKvzD7hQPdQXrgTWkfP3tqkfgXmmdtq/XL/_OL37554-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fDfPWtf/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 83
+    "sortOrder": 83,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fDfPWtf/3/Msr82tmsq5s8m422hVg632t4d5BMhcnV46K4bzRBG/XL/_OL37554-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fDfPWtf/3/Msr82tmsq5s8m422hVg632t4d5BMhcnV46K4bzRBG/XL/_OL37554-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fDfPWtf/3/KpbQms9hZDZ88pm3B9xjFv2Jrh292pxj2nvcpJ8Qg/L/_OL37554-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fDfPWtf/3/KRm8MNhTt4JBmDmwbg8skWbH9nDFp6nGmv44wnmCP/M/_OL37554-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fDfPWtf/3/KxjhSZJzHFvfVjpqf53HG4FjmW9nvjSNwXTHNWStT/S/_OL37554-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VKd9tKt",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-VKd9tKt/2/KbVhnv74n3t6Tkq6HTmmpDfbgg63QvrMgXSpHttnG/XL/_OL37560-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VKd9tKt/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 84
+    "sortOrder": 84,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-VKd9tKt/2/Kc9tqQtwkjDSrf2b3vvzN7qDg5zXqq7K88HxtBWN5/XL/_OL37560-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-VKd9tKt/2/Kc9tqQtwkjDSrf2b3vvzN7qDg5zXqq7K88HxtBWN5/XL/_OL37560-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-VKd9tKt/2/M4Srd2xS7GzjhzKXwqhD75PVQjmbs2rqVHk6jC8Wn/L/_OL37560-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-VKd9tKt/2/Mdx7hsLQ8RBnLcRZSLkWCg9zMszdqLM6zDJMGkjbR/M/_OL37560-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-VKd9tKt/2/LsCk6NC35jfd8RLzdF75RXVr2TpbGDJv5WbhtBvLg/S/_OL37560-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qtpJ9Rc",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qtpJ9Rc/1/M9hkM3LRVkDh2SCvnJw9RbrmmpKbbRJvJXPHWCh5m/XL/_OL37566-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qtpJ9Rc/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 85,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qtpJ9Rc/1/KMZRjgQ6ZHzGRT39NZFf6QhX3qSDRjDrHL3RXVD4h/XL/_OL37566-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qtpJ9Rc/1/KMZRjgQ6ZHzGRT39NZFf6QhX3qSDRjDrHL3RXVD4h/XL/_OL37566-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qtpJ9Rc/1/MRN8btmxWcDwcMCkPLhnsXxPxbGDqpSgBCphCKKtp/L/_OL37566-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qtpJ9Rc/1/LB64gFX6Q5X4cMnMHG3pQBtSQDq8g4V9FZNj3PPJQ/M/_OL37566-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-qtpJ9Rc/1/LwzTN6ZwBPSJVHtfRLvpwMcFxN8TXpFL72mw5qsnQ/S/_OL37566-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7GhbvWS",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7GhbvWS/3/MPTmT2z4TDHTf6FWx6cWjVWLtpMJrv4QNc5NmnJhg/XL/_OL37566-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7GhbvWS/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 86,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7GhbvWS/3/KTHVZLMkJBMX5PgxvpM9wPbcQ3dbQL33Gkxhdmjqh/XL/_OL37566-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7GhbvWS/3/KTHVZLMkJBMX5PgxvpM9wPbcQ3dbQL33Gkxhdmjqh/XL/_OL37566-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7GhbvWS/3/KjMZjVnZBvfPRS7QJTXfXVjCgSXXMw3qDbLxRVTMH/L/_OL37566-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7GhbvWS/3/MSGxJSQwNRpWr6XnQnBkRXtmc3KgfwtZHQDHCZWmX/M/_OL37566-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7GhbvWS/3/K736qWLH8R24TnjgJKgnPPgqkjzHVTfKJGpKk7T3r/S/_OL37566-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nDF3Jmx",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nDF3Jmx/2/K8MGMKLQnptnd5WRqjrNK2R82fJpV2cNQvKqQLL7h/XL/_OL37570-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nDF3Jmx/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 87,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nDF3Jmx/2/NTBWJvTvnwBg66JmfG3rBRFP8svw4pw6LMTn7tTpk/XL/_OL37570-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nDF3Jmx/2/NTBWJvTvnwBg66JmfG3rBRFP8svw4pw6LMTn7tTpk/XL/_OL37570-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nDF3Jmx/2/NTBWJvTvnwBg66JmfG3rBRFP8svw4pw6LMTn7tTpk/XL/_OL37570-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nDF3Jmx/2/LqDLbTP622dxFM6Wv5PV6L62x67dHvkbLrbzXSGjC/L/_OL37570-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-nDF3Jmx/2/NjR65bMvfRWHCmdgbj7K5pbHdpL6xfdcLmgmsLrG5/S/_OL37570-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XPk7zrk",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XPk7zrk/2/MZPfd5ZZZk6M84LdL9PMXpwSCqBLNqm8nzQ3LskJq/XL/_OL37753-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XPk7zrk/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 88
+    "sortOrder": 88,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XPk7zrk/2/NPLDSvDbQqJnBZpTKH85LnhbtrNQB5rvGGnjxc85m/XL/_OL37753-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XPk7zrk/2/NPLDSvDbQqJnBZpTKH85LnhbtrNQB5rvGGnjxc85m/XL/_OL37753-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XPk7zrk/2/LpfgCXwLmVXDTRz5bFZNtVxc7xVPPgB8fSH9nLqSm/L/_OL37753-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XPk7zrk/2/KnvL4gBTC3nDMBvjTx4TXZRqgc279828B68zK9Tjg/M/_OL37753-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-XPk7zrk/2/M5VSgbrjCKsrRw6q768tzdLz9BHs4Thhc8pd4zGC6/S/_OL37753-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sw7GKqP",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sw7GKqP/2/NThjgVRwLJp34NNgNhQX4N7Dg5fQNbLNHS8rDPgrw/XL/_OL37783-Enhanced-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-sw7GKqP/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 89
+    "sortOrder": 89,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sw7GKqP/2/Kt3jq3hv6hZDh2KP9rdnPfstm5fQLqbwszRtgXkK7/XL/_OL37783-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sw7GKqP/2/Kt3jq3hv6hZDh2KP9rdnPfstm5fQLqbwszRtgXkK7/XL/_OL37783-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sw7GKqP/2/Lf3C7MNWPv44q3ZPm292HH6htZvwzRFkdnH4866Mm/L/_OL37783-Enhanced-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sw7GKqP/2/MChqVs8t2J3Smbnv3h4WVFhCJvZQ6Lt2M9hFtrMLK/M/_OL37783-Enhanced-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sw7GKqP/2/KqC64gNfF84MnPLjBGX94W86q9JH8Dc5Fc6pZ46rX/S/_OL37783-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hX6B3rV",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hX6B3rV/2/LTZ6JXgkpmcJgzsg3CcdzNT7sLJvGTvwnd6CN9LBv/XL/_OL37855-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hX6B3rV/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 90
+    "sortOrder": 90,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hX6B3rV/2/MtMqG7wCZCgSw44CpsfBjcs5m23FR7hhxmrmxPWNL/XL/_OL37855-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hX6B3rV/2/MtMqG7wCZCgSw44CpsfBjcs5m23FR7hhxmrmxPWNL/XL/_OL37855-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hX6B3rV/2/KRHxvbHTjZvf5QCdLkF3zFxkH4Zsw4XCQWGg674bM/L/_OL37855-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hX6B3rV/2/MjPMLCmfrQKpLnnjtrC5v6GRNWHchr9XbBWPCsThb/M/_OL37855-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-hX6B3rV/2/MKs4BJ9tDhcNhrRnXzbf3JxLsNDj3bb6vVfSsjLwN/S/_OL37855-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mx6vDgR",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mx6vDgR/1/LhKVtcPnJQZqg7GZ3xcM2gFq4HzDCDDD7qnG28gWG/XL/_OL37899-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mx6vDgR/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 91
+    "sortOrder": 91,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mx6vDgR/1/LDTXNS8nxXhzt4C2Hv8JwqdZCHqM8gw3kv2dZ73s6/XL/_OL37899-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mx6vDgR/1/LDTXNS8nxXhzt4C2Hv8JwqdZCHqM8gw3kv2dZ73s6/XL/_OL37899-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mx6vDgR/1/LDTXNS8nxXhzt4C2Hv8JwqdZCHqM8gw3kv2dZ73s6/XL/_OL37899-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mx6vDgR/1/L8wCnc9dRVrTQPBXWxck8tSCdNDzTQNbv5v7W3Z6M/L/_OL37899-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mx6vDgR/1/Nb42W4HdxH9WvHmQgCb6zrmg6cGzdzN4JrqK93TWD/S/_OL37899-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2nrKDf9",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-2nrKDf9/2/MDQNks5nvkZkhBgqvgLC7Qq6KcFJn8P7Vxp983qf6/XL/_OL38459-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2nrKDf9/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 92
+    "sortOrder": 92,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-2nrKDf9/2/Kr4hjq839sfXNd6Vg4QsBMnc3bTt7vch5LSXN3DZV/XL/_OL38459-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-2nrKDf9/2/Kr4hjq839sfXNd6Vg4QsBMnc3bTt7vch5LSXN3DZV/XL/_OL38459-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-2nrKDf9/2/MvfGSz5mcdKBqPrMZWWKvgzwc6rTM5GCqNbHWc5Q2/L/_OL38459-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-2nrKDf9/2/LMzSNgNBsNqpvzcQMkd8gfgnbcM7PC3zznP5MRpsx/M/_OL38459-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-2nrKDf9/2/L3wBSDn2CLzgnGKjk5jkp8KwMw22hT5gh9wfNSPmp/S/_OL38459-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pvpwdBx",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pvpwdBx/1/MKd6CqQScwkPTM2ZvPSjjpCDcwJCzQPrJLc2SCJFX/XL/_OL38491-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-pvpwdBx/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 93
+    "sortOrder": 93,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pvpwdBx/1/KWGvmpzKc4d8VqNvKKCQpP7Z76WdDjNrCBVhhCrbt/XL/_OL38491-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pvpwdBx/1/KWGvmpzKc4d8VqNvKKCQpP7Z76WdDjNrCBVhhCrbt/XL/_OL38491-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pvpwdBx/1/MRVcMzPLn47f3LG3ZGwS3mmGSFTV2JxCRgHr8TZ9q/L/_OL38491-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pvpwdBx/1/Lw4Xc2FbdmWpP67kPMfVcr6QZS9tcmHFz6SLNPQM2/M/_OL38491-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pvpwdBx/1/KH6GkLLgdMf3bMkZ6H5HBgDtC5mbP7MV7ttXgk8rV/S/_OL38491-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xJ2ncLF",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/Kh2Z5s9Jjn52CgJdVwb88Mn4hFGs7VqCZ5b7FCCKH/XL/_OL38494-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-xJ2ncLF/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 94
+    "sortOrder": 94,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/KxXg6kLLbLZRR5tp586fTb4mH3fPXWvfpptdzdKTn/XL/_OL38494-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/KxXg6kLLbLZRR5tp586fTb4mH3fPXWvfpptdzdKTn/XL/_OL38494-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/NHGF9WD9dHBQHDz2Pzk8HG8V9mf2wxkBfhP5P5v9m/L/_OL38494-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/LWbMjDDBSTQwDRzjB3X2qNqhqkmNzx3qW7R7GGzhW/M/_OL38494-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-xJ2ncLF/1/NVfWt6VTBn6tkM4vhCbzVrfq7M9HgZKFMSFCx3hck/S/_OL38494-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rh4WHJh",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rh4WHJh/2/Mk2QkDcPHkGpLnDcFrkQDwtxV6scdz2bKPJTXJLRd/XL/_OL38907-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rh4WHJh/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 95
+    "sortOrder": 95,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rh4WHJh/2/K8qn8ZDSpDbMb2x69mjZfjRDwzf2k2X79FCn7BJFc/XL/_OL38907-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rh4WHJh/2/K8qn8ZDSpDbMb2x69mjZfjRDwzf2k2X79FCn7BJFc/XL/_OL38907-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rh4WHJh/2/MWPXMXFXpQdj2VQJdbv8SsDJCq7w3pkjgCsPTS5pH/L/_OL38907-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rh4WHJh/2/L25fRfHMKcZxHKhRn93chWfGQdtsxWxFSbvcxw6m7/M/_OL38907-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rh4WHJh/2/LD7hfb67fwVwzSjwpMrV4gGWCwQjQw92CTSVB5S86/S/_OL38907-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-x3ZPvH9",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LfqdvWpPW47nh6rs5xK9T9vX8qs29Whbdx6VTKcVd/XL/_PEN0264-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 96
+    "sortOrder": 96,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LNCkkCqgs9frP2Q7PnndtmjNb8GmfvqMHLhRzN6Fh/L/_PEN0264-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/KVK5ZL339PGTWw7mjGVtSNk7BS5LRVRv4b6qBB5z7/S/_PEN0264-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Bfbggnq",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Bfbggnq/1/KtVFJL6PDx5fw79GSgF5CD6xXLc66w5b72xSZjbwP/XL/_ANA4472-Edit2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Bfbggnq/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 97
+    "sortOrder": 97,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Bfbggnq/1/MdRtT7zq5wKqp8Hf5CSzBHnh38WPd83B9z5WxHRSs/XL/_ANA4472-Edit2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Bfbggnq/1/MdRtT7zq5wKqp8Hf5CSzBHnh38WPd83B9z5WxHRSs/XL/_ANA4472-Edit2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Bfbggnq/1/MdRtT7zq5wKqp8Hf5CSzBHnh38WPd83B9z5WxHRSs/XL/_ANA4472-Edit2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Bfbggnq/1/Kqg45QgXSvc7N9PPsnvf6chB5bJf9HFWq4bXVM2p7/L/_ANA4472-Edit2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-Bfbggnq/1/LGLvjCtq49jCD7vGVHxrRMTcPFTf5g97NVf6SLRgT/S/_ANA4472-Edit2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Rb3fQ5d",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/NTkvFfbGJSzVK7BsRNCHQN8WJScZxc7LBQ4Bx3gW5/XL/_ANA4472-Edit2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 98
+    "sortOrder": 98,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/KhLZmgGXvtMqnVq8THjKLLZkKHMcHRgwXbQLjD9dH/L/_ANA4472-Edit2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/Lmwzxfzp6WM2RXFQdr2wfkNLZckfd8ZmGzbxCmWZC/S/_ANA4472-Edit2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jDntD39",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jDntD39/2/LGPmZJcr55D5gJ6Jznz7HBtXpVrt2gR3kmc5fMFCJ/XL/_ANA4477-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jDntD39/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 99
+    "sortOrder": 99,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jDntD39/2/LF3QNCKqLg5vw4TTHKV6nMPVqD674nvKFHDbz36m7/XL/_ANA4477-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jDntD39/2/LF3QNCKqLg5vw4TTHKV6nMPVqD674nvKFHDbz36m7/XL/_ANA4477-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jDntD39/2/MhmTpBsTqMd8zB76nk5bR8RsKC2R7DMmVNnRvLgg4/L/_ANA4477-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jDntD39/2/KccvvXpf29GGDcsNjTfNXv25qc7zNG6s58pbCcLnv/M/_ANA4477-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jDntD39/2/KHGTFWbC4NndHdGC7JR6s7cTBVTL668jMTcdLj8PF/S/_ANA4477-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9DrbLRG",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/NcfRZC2tsWCMd49xnCjvMbWhfQpPQZkrDZSrnMpSw/XL/_PEN0411-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9DrbLRG/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 100
+    "sortOrder": 100,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/Lr2kCGbxBHDP65CMzhNcTQ2tq6wC7ZG4wtLWfXnpv/XL/_PEN0411-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/Lr2kCGbxBHDP65CMzhNcTQ2tq6wC7ZG4wtLWfXnpv/XL/_PEN0411-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/NFbsW6KvM2CHXW33Lsm5rWNtbTsJr6FwqnkSLmDJr/L/_PEN0411-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/K3zgQHqskk9cKF24b2r9J3hRD8TTG482HLzCx3Hr5/M/_PEN0411-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-9DrbLRG/1/MXCt6SS9vdSSm5LWhx9scVVW3Tq2N8CJDxzKWmcXt/S/_PEN0411-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NzVgz27",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/KjKjftcj2RfPjGPdctVnk3sJXqBnK7Q539PTMjRsn/XL/_ANA4673-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NzVgz27/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 101
+    "sortOrder": 101,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L5PPgtfHwSNbzxdqtW4sLtbRgP93G59gcx5ssGjbF/XL/_ANA4673-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L5PPgtfHwSNbzxdqtW4sLtbRgP93G59gcx5ssGjbF/XL/_ANA4673-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L9Nw956vWV4pJfBrFj3qGdTKH5Mv3NRZqnCJNwH66/L/_ANA4673-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/KhQqthNGcCmpfrq73G7tfCBqMpMVVSN723xtzS8rp/M/_ANA4673-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/MgDxds45ZZ9TWMsjTpW58HSZvwXrXPpTtVF33x8JZ/S/_ANA4673-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QdTk3tx",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/LQsp8KgqWcZS3NhGmbZDRpPF8LDWtM87FD7h4gMqj/XL/_ANA4940-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-QdTk3tx/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 102
+    "sortOrder": 102,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/K84Kx8PnzJDKKkDtSFdggr543fkQTfZ5dKptkhSNC/XL/_ANA4940-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/K84Kx8PnzJDKKkDtSFdggr543fkQTfZ5dKptkhSNC/XL/_ANA4940-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/MRGTLpXrhCk5nGBVm4SqxNg5rw2rfTZLBrR3j4dLm/L/_ANA4940-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/Lz8wL8C33ZCXCBzDjcs5ZSzkVvtJGMhBzcbqwjnmd/M/_ANA4940-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-QdTk3tx/1/NN8nJx9qcnd6mF2mnJn57wM8j42Q2GxtcBjswv34m/S/_ANA4940-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qrfsSnK",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qrfsSnK/2/MtVnT3q4wJG6t9K9j6hTmHNFKWZZksM63spWbdhNb/XL/_OL30095-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qrfsSnK/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 103
+    "sortOrder": 103,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qrfsSnK/2/KDQHkCSj7NcxvFc6vnGLdxr4XLJXWCXML36hNtwD9/XL/_OL30095-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qrfsSnK/2/KDQHkCSj7NcxvFc6vnGLdxr4XLJXWCXML36hNtwD9/XL/_OL30095-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qrfsSnK/2/LgkxJzPFQtNkPGzWD5sdXqQgC8LbMw3vb3Ft8H3wQ/L/_OL30095-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qrfsSnK/2/LRdRWszxnmnqScJ2WMt5GMnjKzvhdwqg8tRksDLjf/M/_OL30095-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qrfsSnK/2/LpHfHf82sk33FTX53rHb5Qk75JqrSDdS7n3CDd5MV/S/_OL30095-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6GXtnFS",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6GXtnFS/1/KGMzk3K2rvNDSLwBN99b7SSvQHqbV9BKNkGssXKW2/XL/_OL30186-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-6GXtnFS/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 104
+    "sortOrder": 104,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6GXtnFS/1/L9dZn7KWS6xGFZcmKdJKtWX3qfkBK4Fgn4rBksNBq/XL/_OL30186-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6GXtnFS/1/L9dZn7KWS6xGFZcmKdJKtWX3qfkBK4Fgn4rBksNBq/XL/_OL30186-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6GXtnFS/1/L9dZn7KWS6xGFZcmKdJKtWX3qfkBK4Fgn4rBksNBq/XL/_OL30186-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6GXtnFS/1/MD3Crg8tbLdwRF4kSTmLnmZtgt9kb6McqJ6R3cvs6/L/_OL30186-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6GXtnFS/1/LQ2P2QPgtmZqV6CprqTrS9bCDvN37BJZDKJb772LZ/S/_OL30186-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zQCt9xG",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zQCt9xG/1/KspWCprdXKrqPVM2Ptd8tHqvm7N5fKMtcmZgKc9q9/XL/_OL30279-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zQCt9xG/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 105
+    "sortOrder": 105,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zQCt9xG/1/MFj9VGRnk2CKNfvH2bXgjvgCNT7WfWWgV68gngkN2/XL/_OL30279-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zQCt9xG/1/MFj9VGRnk2CKNfvH2bXgjvgCNT7WfWWgV68gngkN2/XL/_OL30279-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zQCt9xG/1/K4v6sQ6WMCP3XtW9mVn58Zdfhdqgzn27bnLmNHphj/L/_OL30279-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zQCt9xG/1/LCV4Cpx7MGrQcChPN6gCRwWRGhSFXkJ6PkmM6zSZf/M/_OL30279-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-zQCt9xG/1/KV6B3VCD82DXs5D2FVxGSBGKcdjqHtkCQgRTmXWmv/S/_OL30279-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sZ9Bfsh",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sZ9Bfsh/2/K5n2L6sM4H4P5x2Bbm4pnDcXcq2p53r38V7FGZNmS/XL/_OL30369-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-sZ9Bfsh/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 106
+    "sortOrder": 106,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sZ9Bfsh/2/LSMqbnK4jFHfxDkcT6cPsLzkH9XNHZxVJZTpVmTjZ/XL/_OL30369-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sZ9Bfsh/2/LSMqbnK4jFHfxDkcT6cPsLzkH9XNHZxVJZTpVmTjZ/XL/_OL30369-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sZ9Bfsh/2/LnwP26XMn26CwqZMRstjL59vsP65JZQ2NPnsrKdhQ/L/_OL30369-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sZ9Bfsh/2/NhCTbpQPCdRVzXdftxrkmPv93dFgcKnHNnzg2CCfN/M/_OL30369-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-sZ9Bfsh/2/Mh6wBbvz3NvJP34LnpPdm7N2dwswJWzdMrbzNHVzz/S/_OL30369-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SQhmH23",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SQhmH23/3/KXwfFkHppzzVhmBWFBwXs4FPNgmSx4zNwPZhPR79z/XL/_OL30373-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SQhmH23/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 107
+    "sortOrder": 107,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SQhmH23/3/Mb83GgDBvVVKQgXvkThTGzdXS5wS2M9mvHWsD5VZB/XL/_OL30373-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SQhmH23/3/Mb83GgDBvVVKQgXvkThTGzdXS5wS2M9mvHWsD5VZB/XL/_OL30373-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SQhmH23/3/NVbVHZM6hVP3GLZrWgzXdDcm5rQwjSJbDcwJ9p3Cw/L/_OL30373-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SQhmH23/3/M47NFtnfnDr8cDncmZP47tPJPmgdbJvtP8rNG8cnL/M/_OL30373-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-SQhmH23/3/M8jZNKTf5xnKhh74BJ9jCQz3MJSXCX9WRCtt7s7gf/S/_OL30373-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gDqZPrV",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gDqZPrV/3/LNSgr2Bkh4dMFmL74Qf2SVfjgBzsC8MQtwjX8pV6r/XL/_OL30957-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gDqZPrV/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 108
+    "sortOrder": 108,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gDqZPrV/3/LLWrZKfbkdVjwpc73MC5HjhmZGz54v4ZsLdx6W5cs/XL/_OL30957-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gDqZPrV/3/LLWrZKfbkdVjwpc73MC5HjhmZGz54v4ZsLdx6W5cs/XL/_OL30957-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gDqZPrV/3/KrBT3tpf7brBQGkXZNgWgtShkSq4jHQKwjJpcC4HZ/L/_OL30957-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gDqZPrV/3/K52Qpd7hn99gGnkH8qFQTWzFcWWq8nr3P7CL6LzVW/M/_OL30957-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gDqZPrV/3/MKhGV2C2xx3b25ghnBLBWKw3cxJVr3kJPZFL28R8w/S/_OL30957-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mZhwrsq",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mZhwrsq/1/LG3jLkPQXHnztVXN3f4pqXcFc65bZFMLFNgzWpq8f/XL/_OL31468-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mZhwrsq/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 109
+    "sortOrder": 109,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mZhwrsq/1/LrtvsV7DzxL6s92CKXK4VP6k65bM3WKvpGdvdzGxD/XL/_OL31468-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mZhwrsq/1/LrtvsV7DzxL6s92CKXK4VP6k65bM3WKvpGdvdzGxD/XL/_OL31468-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mZhwrsq/1/MnXg98Hs9TKWrccDJzLTrtStsRZFpJR7HbkTmwZKT/L/_OL31468-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mZhwrsq/1/KN6mjPW4n4vNZZ4qkkR7nk5D5xLpJTkS2pvNnQZKk/M/_OL31468-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-mZhwrsq/1/L3zL9wRPKCmRqwcPpNRvCBQnVqrvdBkMQmCN28PdC/S/_OL31468-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-X6K2nTX",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6K2nTX/2/Lc44MhjLpvQ7SNQhQBqPvzjfsZL445H9WHrzmTKsT/XL/_OL31665-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-X6K2nTX/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 110,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6K2nTX/2/MZVWpwzCdsjKpxWQt78CVQPW4BL2srVvgMjfVVs8g/XL/_OL31665-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6K2nTX/2/MZVWpwzCdsjKpxWQt78CVQPW4BL2srVvgMjfVVs8g/XL/_OL31665-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6K2nTX/2/KvrJD9vgnGFMbNF6ms35K77zw2J6bzVH5LxhkGk4W/L/_OL31665-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6K2nTX/2/LMMmdnwRPTbqnZTbw5d89zSWMMDdpxnKmH6DpTX99/M/_OL31665-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6K2nTX/2/K9qtkqHXdK33CtPXbnS3vT7gRmgqnS655s7BgRWtm/S/_OL31665-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-x66BqR2",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/K7wPnsjwpZJtsDgR9wxWZ7mGhvbXPDVKH7p4D76pg/XL/_OL31665-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x66BqR2/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 111
+    "sortOrder": 111,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/MP2pSqhtm35JftBzNkz5JkhDsVkcXrCwMQMDh7gKG/XL/_OL31665-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/MP2pSqhtm35JftBzNkz5JkhDsVkcXrCwMQMDh7gKG/XL/_OL31665-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/NZN2KkBKBXvsTPZ4bPC3FNBs2K6g6xspkTf83b5hd/L/_OL31665-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/LkqfLCPGX8ZHX45qG8pBMGNWW2thQNLWKXM9nxmk6/M/_OL31665-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-x66BqR2/1/Kp2XJ26233XwxSRhKxD86c4vBhrnSfMkf6Hh5WPCF/S/_OL31665-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pcgbbVD",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pcgbbVD/1/LM9nPzQw6pdPXLLwHCHXSF3xZmNf8FXSL9gfqpH9W/XL/_OL32116-Enhanced-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-pcgbbVD/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 112
+    "sortOrder": 112,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pcgbbVD/1/LzLjgdxcs3KTmCG8w72N8CVW7PCm5Wbf8stQ5Cm6z/XL/_OL32116-Enhanced-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pcgbbVD/1/LzLjgdxcs3KTmCG8w72N8CVW7PCm5Wbf8stQ5Cm6z/XL/_OL32116-Enhanced-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pcgbbVD/1/KXrvLdC38qQkkL6SXg59BSS8rGDTqZ4snNv5swF5Q/L/_OL32116-Enhanced-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pcgbbVD/1/LKqggkJkjbFKCVNWtm34QBXH67r6pjtxTcwCJh4Hc/M/_OL32116-Enhanced-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-pcgbbVD/1/MxCHg3BXM9PbMK35F4qxjrqKzGMwg44jStndgcDxB/S/_OL32116-Enhanced-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LqvLkRk",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LqvLkRk/2/NFFF4J2DfWfgfSwg3NQnPLBxLtdR2dJwHCdvz4ML7/XL/_OL32264-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LqvLkRk/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 113
+    "sortOrder": 113,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LqvLkRk/2/KJFhjDkssHjrmS6hgJDxB5gHZ25fwmTNhVVRPzWT2/XL/_OL32264-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LqvLkRk/2/KJFhjDkssHjrmS6hgJDxB5gHZ25fwmTNhVVRPzWT2/XL/_OL32264-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LqvLkRk/2/MHxddPLhzNZ4C4Qg22HtdGdPPg5pnjgvvp5kjWRwB/L/_OL32264-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LqvLkRk/2/L3XfDvdc4fWpp2LcCqmgVsXLBb4MFcqsDs4dkkxQz/M/_OL32264-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LqvLkRk/2/LfhXsFLTPJvRfKWQfh5g359vKgKkg66z8ghtmn9Vf/S/_OL32264-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fT66LMh",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fT66LMh/1/KLkJw5c49LGFFhXHM5khpVc8sZRwnR8VJt8kWGmfZ/XL/_OL32268-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-fT66LMh/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 114
+    "sortOrder": 114,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fT66LMh/1/L7GK869g25QLN8FGFSmxdTHGT9K34cHJTtkSpDfMK/XL/_OL32268-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fT66LMh/1/L7GK869g25QLN8FGFSmxdTHGT9K34cHJTtkSpDfMK/XL/_OL32268-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fT66LMh/1/NVsZxPwsWvJ86nnqD3nrh3vXpfxvXR992V6qLNtHL/L/_OL32268-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fT66LMh/1/MTPvVF2Wk6g2Smx87ndmn5Xj42wJVLkP3TrRTzFLC/M/_OL32268-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fT66LMh/1/K3FHJBkkwkkD9kQXSXjthjrmH8FLvtW6nrwr8M9xZ/S/_OL32268-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FDHCvzp",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LkwBNVsMDzj4jCf5D87nkrT5MFzkn42Zf5Kkvz9dJ/XL/_OL33286-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-FDHCvzp/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 115
+    "sortOrder": 115,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/KMgWPZJrxr6dpWKqHPRMdWsMhBLGd4hJWrgvf3gNG/XL/_OL33286-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/KMgWPZJrxr6dpWKqHPRMdWsMhBLGd4hJWrgvf3gNG/XL/_OL33286-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LJxgWGNjLzkP9RF2NBwcfFtStvSf2Mxw5BpPdBsTr/L/_OL33286-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/Kz5B8Pm2Mb6pRc9qX9RBn4VtLrFjs7mMCrzrbMHnq/M/_OL33286-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LTNWCbm5tX99DhCQq2ZwcJW7pZPkptWLVzwtnSxZH/S/_OL33286-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-j8MSWCQ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-j8MSWCQ/2/K875pCGrtrkzgfhSfTx93bT6xD8gVLTqFW6cHj47r/XL/_OL35105-Enhanced-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-j8MSWCQ/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 116
+    "sortOrder": 116,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-j8MSWCQ/2/Lq4Bk9sC5NVbwrLLKx5pnq9k869RQKJJLTd3ZhfRp/XL/_OL35105-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-j8MSWCQ/2/Lq4Bk9sC5NVbwrLLKx5pnq9k869RQKJJLTd3ZhfRp/XL/_OL35105-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-j8MSWCQ/2/LsxkcsMg3pnDRQ6Xz3bLh2qPVLgqGdtsGvgF3Qwwr/L/_OL35105-Enhanced-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-j8MSWCQ/2/LNrdRXgQZkFxpFXqLnV4w2F6r9vg9WRbL43MHFsH7/M/_OL35105-Enhanced-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-j8MSWCQ/2/MTD94mPbsLTzrxFbztFfCCpddFV89GqGRf3VjmwCf/S/_OL35105-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LPGK6GQ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LPGK6GQ/1/LCtRgH7MbrxnQf3g8Ks6gSDZ4xnckrZgKnrD9ZMQb/XL/_OL37673-Edit-2-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LPGK6GQ/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 117
+    "sortOrder": 117,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LPGK6GQ/1/MSVWBrxQgDdCRcTjNSvNrbtB75WRMXRDmz82pmbNf/XL/_OL37673-Edit-2-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LPGK6GQ/1/MSVWBrxQgDdCRcTjNSvNrbtB75WRMXRDmz82pmbNf/XL/_OL37673-Edit-2-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LPGK6GQ/1/MqdLpv42VrGPSjWx2CPx9dTCgbBt8nRjKH2pJCwvd/L/_OL37673-Edit-2-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LPGK6GQ/1/LPXBRFsPWQKhgJhhcHgnqdvwxvFdcFfJS9crqrMNs/M/_OL37673-Edit-2-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LPGK6GQ/1/LCNrSn8ZnbmmKXhmNzHDzdXNt8zNcGRWbcZ5JV6qm/S/_OL37673-Edit-2-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DBhHNsx",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-DBhHNsx/2/LgM5c42S9rGfCBFjDLQMb2CCmdVDVVH8hDcVvMC5M/XL/_OL38216-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-DBhHNsx/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 118
+    "sortOrder": 118,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-DBhHNsx/2/LC6t8R42GdH5bBXN28pNPXZv44ZDp9nNMWQ4QMn8r/XL/_OL38216-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-DBhHNsx/2/LC6t8R42GdH5bBXN28pNPXZv44ZDp9nNMWQ4QMn8r/XL/_OL38216-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-DBhHNsx/2/Lb5PJnZbMZsgVr9Hp99ZXxLh6Hfhm8FscK2SjHbSb/L/_OL38216-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-DBhHNsx/2/MqsQjqQLQ7b4jdrCZbVkJ9mtZ6WBFdx9znMRTmVVT/M/_OL38216-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-DBhHNsx/2/LkdD3ZcpbgKX2HZwD6mHwt3JJpPSJ7dJPLMpJ5qqc/S/_OL38216-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xfVsJSw",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-xfVsJSw/1/MFZm84fTcLMdprLBXg9g9P2sQtCf48znQSV7sBxCX/XL/_ANA6138-Enhanced-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-xfVsJSw/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 119
+    "sortOrder": 119,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-xfVsJSw/1/MwbH4TsZqvD7nSPtB2kfntkchdbWX8K8dFMC9g6fW/XL/_ANA6138-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-xfVsJSw/1/MwbH4TsZqvD7nSPtB2kfntkchdbWX8K8dFMC9g6fW/XL/_ANA6138-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-xfVsJSw/1/MwbH4TsZqvD7nSPtB2kfntkchdbWX8K8dFMC9g6fW/XL/_ANA6138-Enhanced-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-xfVsJSw/1/L3bWtp7PHRkbnMtQ2sQJ3qMWmJ9RzBVjvCZLs7V4h/L/_ANA6138-Enhanced-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-xfVsJSw/1/LHmKHx4NbFmTv3bFbJbZFggKG9GjLS5PfDLMZ4qsC/S/_ANA6138-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZsvXGsZ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZsvXGsZ/1/K4p5f4gBT9BZx4p5t8c6kXcRbtrJBjBCs8s2pMKrs/XL/_ANA6168-Enhanced-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZsvXGsZ/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 120
+    "sortOrder": 120,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZsvXGsZ/1/K2Ww3wzdRTvgX8LpTmvvzb7s9mdrhb4q3phW54sr7/XL/_ANA6168-Enhanced-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZsvXGsZ/1/K2Ww3wzdRTvgX8LpTmvvzb7s9mdrhb4q3phW54sr7/XL/_ANA6168-Enhanced-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZsvXGsZ/1/MdD8qcWjmMJ3k6QSKThCNcx8Wj6DLGzRjXDRBpvkv/L/_ANA6168-Enhanced-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZsvXGsZ/1/Kx79j484vzmDfcGMHn3spmwx7pwNxWS8qSpHhjtv5/M/_ANA6168-Enhanced-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-ZsvXGsZ/1/L7RMxtSqjx9VsthnfMwj8vCBhBdktq8zfV87bbjdB/S/_ANA6168-Enhanced-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n7KMpt6",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-n7KMpt6/1/KqGggr2sjCdgwCgtjGBtPjGnBvKz84gT6CbNc5HKg/XL/_ANA6205-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n7KMpt6/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 121
+    "sortOrder": 121,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-n7KMpt6/1/LxvTxNLZp93vGw5Z649JcMhdbdCdPXWK6SbrKGfnn/XL/_ANA6205-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-n7KMpt6/1/LxvTxNLZp93vGw5Z649JcMhdbdCdPXWK6SbrKGfnn/XL/_ANA6205-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-n7KMpt6/1/KhfC6GrNc44H4qb3Vt3xXwXK7wbr8HMjxMLDJTzP7/L/_ANA6205-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-n7KMpt6/1/MghV3nvKPMP5PRXbMK8cNNrcvVM4tGVs6qnnfC922/M/_ANA6205-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-n7KMpt6/1/MgD6TMFdHjNLxF3L9TnP5q9prmk35g664CTJxhN2g/S/_ANA6205-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7nSpMCH",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7nSpMCH/1/Nc6dvrBNgGQ9742JCdSpg9cXc5c4tbm3N6XZ6n64M/XL/_ANA6212-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7nSpMCH/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 122
+    "sortOrder": 122,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7nSpMCH/1/LC3MTNm8BbVczNB6VXsVGrk4gF94Pn6PbfcDbv387/XL/_ANA6212-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7nSpMCH/1/LC3MTNm8BbVczNB6VXsVGrk4gF94Pn6PbfcDbv387/XL/_ANA6212-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7nSpMCH/1/L2XTsJSWpMq9gL8cpS2gD5VjFgJf82zqdhr7MxZr2/L/_ANA6212-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7nSpMCH/1/Lb63LhCXZkG3TwNFcD2jm3chsVTPrf3qVc9sKNFjK/M/_ANA6212-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7nSpMCH/1/LcQbGTSw2htrqwzvt97LZrNczsJ5D7RJ2Z4LMzKSz/S/_ANA6212-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6C3HdJL",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6C3HdJL/2/M3XhDDtWnWJF8dKRj9fWkjBnBpkGCtwRrGz4BbvJ6/XL/_ANA6214-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-6C3HdJL/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 123
+    "sortOrder": 123,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6C3HdJL/2/MhpHG4QSS5knZVZQk9xC2bV5nBQpGjXKRDX23dH7C/XL/_ANA6214-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6C3HdJL/2/MhpHG4QSS5knZVZQk9xC2bV5nBQpGjXKRDX23dH7C/XL/_ANA6214-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6C3HdJL/2/MvwpsJqFkBtpdXPvH7wCLWnzCKsNdvNnQqhnj7zcF/L/_ANA6214-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6C3HdJL/2/MCkzGk6jCz4gZfQSxgkzJfJZJ2xsXD39FT4PzKFGf/M/_ANA6214-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-6C3HdJL/2/KVZNzhKBp5FHQdm7JBsD2hwQbvgN8qbpvJZnxMWQR/S/_ANA6214-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qv2v6Hd",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qv2v6Hd/3/LsVzBPgRCG72PfmQ9vtc4Zf2SQSHh7MmgFb9GhBLq/XL/_ANA6222-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qv2v6Hd/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 124
+    "sortOrder": 124,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qv2v6Hd/3/KXpRBPgWXvTjGHG2ZKVtthKL43V9TXV4PRvHW4LpS/XL/_ANA6222-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qv2v6Hd/3/KXpRBPgWXvTjGHG2ZKVtthKL43V9TXV4PRvHW4LpS/XL/_ANA6222-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qv2v6Hd/3/KQxHLg2Kkh46wFH8hHZ5ZSNtCHgH2vw7pPqMmPpNh/L/_ANA6222-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qv2v6Hd/3/LRg77tGdPRdngBFsXmpNVJdwpQKWh6sh3nP46LqhH/M/_ANA6222-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qv2v6Hd/3/KVLtfcW8RSV2ggqDSH8JNbnTXkg3PNfDr9BktbKCZ/S/_ANA6222-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cn52Pv8",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cn52Pv8/1/LmRD7nmgdd93tRZtgL5rBpL78zmWDtLjfQtjvcXbZ/XL/_ANA6239-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cn52Pv8/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 125
+    "sortOrder": 125,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cn52Pv8/1/Lz4GgpjQbV83HSDFsHWTMjxGrVcznPSTpGj9gwGrL/XL/_ANA6239-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cn52Pv8/1/Lz4GgpjQbV83HSDFsHWTMjxGrVcznPSTpGj9gwGrL/XL/_ANA6239-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cn52Pv8/1/KKczSWxqm9trJBS6v97CSwh4T3x5L83c2jFNHm72w/L/_ANA6239-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cn52Pv8/1/KKp2Stv7rxPGxqz9k9bGqxXdsMsGcbcqPLG6cKH5d/M/_ANA6239-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-cn52Pv8/1/MBLkZnrVJj6FMQgH8d9zQVkb8nPswmr2r5qMR9Prw/S/_ANA6239-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qD8wNrk",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim 2021",
     "alt": "© Wayne Heim 2021",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/2/Lxd3fxGmnjCqXhVbvPQCDKTWZDzrpcnWXH26wrrTc/XL/_ANA6462-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qD8wNrk/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim 2021",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 126
+    "sortOrder": 126,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/2/LMdM3ckwP6hwqWQsXB5nHDJHhjdFQRKc5zN9sQxc5/XL/_ANA6462-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/2/LMdM3ckwP6hwqWQsXB5nHDJHhjdFQRKc5zN9sQxc5/XL/_ANA6462-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/2/LMdM3ckwP6hwqWQsXB5nHDJHhjdFQRKc5zN9sQxc5/XL/_ANA6462-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/2/Mn5jcppgQkCJWFjBTpDZ7T4dDBJgjZ9mV6LvRN7kZ/L/_ANA6462-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qD8wNrk/2/KkWSDf64BRsrBVt3XHCsDztgBdMqVTFhfBd8CVQgT/S/_ANA6462-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8fG4Cw6",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H0486-Edit-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-8fG4Cw6/1/K397J8dzNpRKJPWqn9kgLXJmB2NRcKnkTZsdNwrrZ/XL/_O1H0486-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8fG4Cw6/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 127
+    "sortOrder": 127,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-8fG4Cw6/1/NjdDp9dVFRh2vQKM3P68FJcq2Dr7sPmzbxKPHQS2r/XL/_O1H0486-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-8fG4Cw6/1/NjdDp9dVFRh2vQKM3P68FJcq2Dr7sPmzbxKPHQS2r/XL/_O1H0486-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-8fG4Cw6/1/MhJWr78TWHxzq3HRDbPsnkCmhft4s6gKkbX9rbPcX/L/_O1H0486-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-8fG4Cw6/1/NBnmDhtZqn984mTqRQvWPMRQ46k6Xwx4BzBcs3R2C/M/_O1H0486-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-8fG4Cw6/1/LfS8tgb8NNhm7GTCpK4rMHcPpFgHvp84zJf2PmG55/S/_O1H0486-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n3DfmhH",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1106-Edit-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-n3DfmhH/1/LQzPqHGHdxHr4cvGNBCSW9J2kBr7LPcjvP7gWZhvP/XL/_O1H1106-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n3DfmhH/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 128
+    "sortOrder": 128,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-n3DfmhH/1/MC9G2BdWnBmGhXxrnwZnBhKcKm2SpwMK4c3ZL8c48/XL/_O1H1106-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-n3DfmhH/1/MC9G2BdWnBmGhXxrnwZnBhKcKm2SpwMK4c3ZL8c48/XL/_O1H1106-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-n3DfmhH/1/K7CQMM3vxCpwmv4qkLRsmGNPwVj7vQ9tvWc2RNKhS/L/_O1H1106-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-n3DfmhH/1/KxW27BvVC7JHW4RSJq5wzMDRNjmFZCXTrszSkSXqV/M/_O1H1106-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-n3DfmhH/1/KS6B9L3JJrrNdd4w4mZm2nss5C8bFJkQh4Sc92x3d/S/_O1H1106-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4dJHTwW",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1117-Edit-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-4dJHTwW/1/KZWhdzgV983j3V7GGKGrtc5ZGQjrkbDKZfTN4Wmvv/XL/_O1H1117-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-4dJHTwW/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 129
+    "sortOrder": 129,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-4dJHTwW/1/MQBtPX4k6LW2wnj4psbqc9VT9t6JSqT253VDJfqqj/XL/_O1H1117-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-4dJHTwW/1/MQBtPX4k6LW2wnj4psbqc9VT9t6JSqT253VDJfqqj/XL/_O1H1117-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-4dJHTwW/1/MQBtPX4k6LW2wnj4psbqc9VT9t6JSqT253VDJfqqj/XL/_O1H1117-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-4dJHTwW/1/Lsbw9rjfDv7pbhGtQFS8xXxvPntgX2pHNstdt5gdz/L/_O1H1117-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-4dJHTwW/1/MPcRMmCzd3Ggc6NXLggTPnvgKNKHDvJPVVFTShGsf/S/_O1H1117-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qXXc38X",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1118-Enhanced-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-qXXc38X/1/L76G9mGVjqhTgK9zVGMKNDZJ9LxC3g4FpLCJscH7T/XL/_O1H1118-Enhanced-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qXXc38X/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 130
+    "sortOrder": 130,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-qXXc38X/1/KpgzqxvGp7Ms4HnB8vjRvRZx9NBLQNQZrPpnTZ2nM/XL/_O1H1118-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-qXXc38X/1/KpgzqxvGp7Ms4HnB8vjRvRZx9NBLQNQZrPpnTZ2nM/XL/_O1H1118-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-qXXc38X/1/Ktgsbq4xMpTPj9MqKjmvJVKpHfCWKcspJ8ftkvFHg/L/_O1H1118-Enhanced-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-qXXc38X/1/LPwvJ9Tw7KbWM4z8MbMWFjkFBKd4NpnHBzHVFKh4R/M/_O1H1118-Enhanced-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-qXXc38X/1/M8KwPd88GxvZsvHCt2NsqLtd5cXnfmbSF6xXDS2RD/S/_O1H1118-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VvNJkLt",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1122-Enhanced-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VvNJkLt/1/Lxt9SHCWZjKzfPDwrkMtVQ8d6VJGtHwq5tHgRRK39/XL/_O1H1122-Enhanced-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VvNJkLt/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 131
+    "sortOrder": 131,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VvNJkLt/1/LsWJHmdfBL7c3TsnSHWgDrRPtDJSZ3LZQZ3JWkdwh/XL/_O1H1122-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VvNJkLt/1/LsWJHmdfBL7c3TsnSHWgDrRPtDJSZ3LZQZ3JWkdwh/XL/_O1H1122-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VvNJkLt/1/K7kpXZJj38J9zFNTHVxrBG9wWbP4v9Wx6JJ4VrZBC/L/_O1H1122-Enhanced-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VvNJkLt/1/NHktjhmBhrN9q756zhvDZSTQmRsrx5XmcFFVDCmXp/M/_O1H1122-Enhanced-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-VvNJkLt/1/LXXhFjrPZpP744zjss7zhnTzV4HBFsHBb8CDX9SnK/S/_O1H1122-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LbjX2Cp",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1124-Enhanced-Edit-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-LbjX2Cp/1/LZH8NgG6D85FQwmpmVrJWzxcCXSVq9vd44x3LvtTh/XL/_O1H1124-Enhanced-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LbjX2Cp/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 132
+    "sortOrder": 132,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-LbjX2Cp/1/K8bjWgPg5h8bMfH2S5CKqLw8t9KSwdpcC9QxPvFW6/XL/_O1H1124-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-LbjX2Cp/1/K8bjWgPg5h8bMfH2S5CKqLw8t9KSwdpcC9QxPvFW6/XL/_O1H1124-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-LbjX2Cp/1/MSHGNXPWLsS3VFVJLCCvmm9cZHMpj44cz6s7zV6Bq/L/_O1H1124-Enhanced-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-LbjX2Cp/1/LtPqHn9nbnBcfpCJ6kFvGKFb8s5qHJpV5b6mst8Mt/M/_O1H1124-Enhanced-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-LbjX2Cp/1/NTwJsQrtBx8M7vfwKSJ8pMnSgLxCfZ677CqBBd9Xv/S/_O1H1124-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mgtzMfv",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1126-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-mgtzMfv/0/MVdC5m9ssDTmBLZgbLxr6SpbWFTzWtWGzK757QRCZ/XL/_O1H1126-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mgtzMfv/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 133
+    "sortOrder": 133,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-mgtzMfv/0/KvvFVtmB4ZWZnKj9qxVKQFxxkTbgtZcM9Ks9fsFVn/XL/_O1H1126-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-mgtzMfv/0/KvvFVtmB4ZWZnKj9qxVKQFxxkTbgtZcM9Ks9fsFVn/XL/_O1H1126-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-mgtzMfv/0/KzJqZr8P657j2Djbp8KFP8fc5ZpfFtGD22L7z5ZDV/L/_O1H1126-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-mgtzMfv/0/KpRC3jPbD55Stp4nspSZtm7DrrKjPHjrHvrBC8psb/M/_O1H1126-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-mgtzMfv/0/Lbh2D5L44vs4Xf7RbX2NKqQ6g3ZBckvDqnh72bpxn/S/_O1H1126-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HpjgX48",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1127-Enhanced-Edit-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-HpjgX48/1/MKZQWqvNzRpcFGfpqwV72pbc9T9d7P8nsKRP9KTKs/XL/_O1H1127-Enhanced-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-HpjgX48/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 134
+    "sortOrder": 134,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-HpjgX48/1/McWnHwGRSGTZ2QmMTXGv9MTgk6QdGcrVvSdzhW2QM/XL/_O1H1127-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-HpjgX48/1/McWnHwGRSGTZ2QmMTXGv9MTgk6QdGcrVvSdzhW2QM/XL/_O1H1127-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-HpjgX48/1/McWnHwGRSGTZ2QmMTXGv9MTgk6QdGcrVvSdzhW2QM/XL/_O1H1127-Enhanced-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-HpjgX48/1/KJ38Hvd3nqVHQrBbVkg8H4PSHZbJfFXqNmNLDN9wf/L/_O1H1127-Enhanced-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-HpjgX48/1/MGsXQNFqrt743m9WxMvm2CTxgthhFck5ZCDgVJtST/S/_O1H1127-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DtGgkq6",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1169-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DtGgkq6/1/K2GhGcQsdJD3Rz7C9PQsFT3R5KnK9MctBmMQVbM5r/XL/_O1H1169-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-DtGgkq6/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 135
+    "sortOrder": 135,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DtGgkq6/1/NV9LZrfRvtrgTDnMrjNSxDhndgN5R3cSW6mN3knD3/XL/_O1H1169-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DtGgkq6/1/NV9LZrfRvtrgTDnMrjNSxDhndgN5R3cSW6mN3knD3/XL/_O1H1169-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DtGgkq6/1/LDXRsCHDcnj2ntztMJGkfXqZGjRZqnvDTtVkmdhPn/L/_O1H1169-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DtGgkq6/1/Lw3NFPhHGFWjXhVTHzcCM3BvkxQFkKkxsPrSbTsFR/M/_O1H1169-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DtGgkq6/1/NSZX5TkfWRp2jMJkZknxNNS3QNkV4FMnmrMr5gMnV/S/_O1H1169-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PJjLRDx",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1169-Edit-2.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-PJjLRDx/1/LpvgSmZrbc5XQQkZg4MKcc8zmmXBqDD3ZXMvR7sfc/XL/_O1H1169-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-PJjLRDx/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 136
+    "sortOrder": 136,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-PJjLRDx/1/NPffhWw8BBVFBrdPb6sVL6WJVQKFWM5nkLpBSz248/XL/_O1H1169-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-PJjLRDx/1/NPffhWw8BBVFBrdPb6sVL6WJVQKFWM5nkLpBSz248/XL/_O1H1169-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-PJjLRDx/1/Lk7kFWH8Md36pgrZDskfqxqNXvg9xjJMMHJrWvxmb/L/_O1H1169-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-PJjLRDx/1/MkRMxCFPFGwPhHNtXLw8tdssBS56HG5ZBxdBGvSLm/M/_O1H1169-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-PJjLRDx/1/NCfQ4VfqDVW7JfdtDM6p6RXZd9BwRHBfq8m552HHS/S/_O1H1169-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-P8fzNch",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1176-Edit-Edit-2.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-P8fzNch/1/KD3SDKZfNCb4NkL2P6dST37hCf7xKpKvxrGvpQg6S/XL/_O1H1176-Edit-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-P8fzNch/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 137
+    "sortOrder": 137,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-P8fzNch/1/NZM76hCDbhwcpFHcDxc3McVVHLqnpbbN9XV8qD6xh/XL/_O1H1176-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-P8fzNch/1/NZM76hCDbhwcpFHcDxc3McVVHLqnpbbN9XV8qD6xh/XL/_O1H1176-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-P8fzNch/1/K83kGNtQVCNHphR4224ss8CqR6ST5xRhmFzDvmsN3/L/_O1H1176-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-P8fzNch/1/LLkBnNdqjsZDznGwrS5LFR7TBkHVpn8chbCsbNLvX/M/_O1H1176-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-P8fzNch/1/Kbn7ZpbDDDFwpzZF4NZBGRPmvJVv5KvQZmbzcS26Q/S/_O1H1176-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-w3XjwMB",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1253-Edit-2.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-w3XjwMB/1/L9rmRRrbvmnnFLBrh6vNL4LvrZjXb3KtCWZX2n3TC/XL/_O1H1253-Edit-2-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-w3XjwMB/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 138
+    "sortOrder": 138,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-w3XjwMB/1/LkDchXfHrNVfTjJBRHGwChfCp5QkhX6rshDK78pQk/XL/_O1H1253-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-w3XjwMB/1/LkDchXfHrNVfTjJBRHGwChfCp5QkhX6rshDK78pQk/XL/_O1H1253-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-w3XjwMB/1/MxjmS9vHBzsb7TsqG3jvpRtPC7CB4DJJ3MJDRwKxJ/L/_O1H1253-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-w3XjwMB/1/M6WjhHDwXHRLLFQL8ttvvZzQvZz4GHfQTpkLZ9kT3/M/_O1H1253-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-w3XjwMB/1/LKLq66FG7D92XJ9gfJ2md5hr3mFD9hS7g8cr8TZsq/S/_O1H1253-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DBBbvKP",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_O1H1314-Enhanced-Edit-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DBBbvKP/1/LKMSMMP5z5JtkfbG3tV93XFMsnwDQR2LqDbJpwtdW/XL/_O1H1314-Enhanced-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-DBBbvKP/A",
-    "keywords": [],
-    "story": "",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 139
+    "sortOrder": 139,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DBBbvKP/1/LwVJwcGSHqR7sQTztzp6WPLf6srMbXSWg689sK75W/XL/_O1H1314-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DBBbvKP/1/LwVJwcGSHqR7sQTztzp6WPLf6srMbXSWg689sK75W/XL/_O1H1314-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DBBbvKP/1/MfdcQ4FfvtzxTdqq9s8435BCrdfp5cP9zvbTHWhjh/L/_O1H1314-Enhanced-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DBBbvKP/1/KSWXjXh2mXjGMwcj3MMdC7qBLpKSJX8stvJRJ89Bs/M/_O1H1314-Enhanced-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-DBBbvKP/1/K9BTLshMw22BHdLSPhfTv6Tc7TWzBC493cSH9wzwz/S/_O1H1314-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8VzRGRk",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
-    "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8VzRGRk/0/Lg57hRtt6j5TXN2dB39JC2mb4TRf4svxKnRjSMpWV/XL/_O1H0566-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8VzRGRk/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 140
+    "sortOrder": 140,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8VzRGRk/0/MtZKKQ3WD3NWXRLnRCQJ5jrJ6WMbFzcrgzfqWCB2L/XL/_O1H0566-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8VzRGRk/0/MtZKKQ3WD3NWXRLnRCQJ5jrJ6WMbFzcrgzfqWCB2L/XL/_O1H0566-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8VzRGRk/0/NV7j4jjW2nKNMrpv3L8mzkbqpjrKZGdcBmgwqK8fq/L/_O1H0566-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8VzRGRk/0/LDp6g6Rp77jzBB8gF9MJw4r7CmDSrZfkZhkPm9QrW/M/_O1H0566-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8VzRGRk/0/KMQc7Qp4GPMzsb9Zz8BkDbnvCS6BXRf88VzfC4rq3/S/_O1H0566-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-22hf958",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958/0/KwLbKw7BbJF6BJXDNHVSgMgg5L4XjgfVwncVcL2CG/XL/_O1H1251-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 141
+    "sortOrder": 141,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958/0/LJ6twKvg5bVDNg2wqKhcgBXxVxthkKTzM7qSC9g7c/XL/_O1H1251-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958/0/LJ6twKvg5bVDNg2wqKhcgBXxVxthkKTzM7qSC9g7c/XL/_O1H1251-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958/0/Kc5zFPgC4pkQ7nPm2j2xqKd5LZmBRVRZMZF9Kc68T/L/_O1H1251-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958/0/M5gnhCFHrRNzTKkK4CtWfRsDdRKPzzZZMpnMHn9sV/M/_O1H1251-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-22hf958/0/NP9Tt8N34txwH4qgSmCWC9FWGdwtpLhMWJ5CRqQcP/S/_O1H1251-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dSCsqSC",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dSCsqSC/0/LcWMsVfmC46Xck8Kn9cJB4tMcg43B8rBNZqkMShB9/XL/_PEN0184-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dSCsqSC/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 142
+    "sortOrder": 142,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dSCsqSC/0/NR7K5LdhWqRZR9vnjqb3s3RkMg78w3Tv9rpsHW4f6/XL/_PEN0184-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dSCsqSC/0/NR7K5LdhWqRZR9vnjqb3s3RkMg78w3Tv9rpsHW4f6/XL/_PEN0184-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dSCsqSC/0/Kq4zzvDd2XKbwNDbCKJHtTvJW8mq63qFkxKWskRG4/L/_PEN0184-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dSCsqSC/0/McDHbbPjSwsCw7hcHQDwxMf4H7KQ8rB6GH2TTnfTp/M/_PEN0184-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-dSCsqSC/0/KVkwLwxP4GRgVz5XcVp42X89RTbSVsJB5WnKVPCHf/S/_PEN0184-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RFpMwFx",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-RFpMwFx/0/KtSg5SWCqNjHhPbQD8KZR2ZXWn5FJCtWKS3Zvcc2v/XL/_O1H1449-Edit-Edit-3-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-RFpMwFx/A",
-    "keywords": [],
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 143
+    "sortOrder": 143,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-RFpMwFx/0/NQfGmZZpwvz53Pp3bm6kRfR2KcwDTG8gs5nq3ZzL5/XL/_O1H1449-Edit-Edit-3-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-RFpMwFx/0/NQfGmZZpwvz53Pp3bm6kRfR2KcwDTG8gs5nq3ZzL5/XL/_O1H1449-Edit-Edit-3-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-RFpMwFx/0/MDVprpR3CcPNTtnFdLnX7kX8nrprLWS6w94CmDSf4/L/_O1H1449-Edit-Edit-3-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-RFpMwFx/0/KPr7BwZWzkWD3v2h9B249MmprM8zzK47hpXKBG97j/M/_O1H1449-Edit-Edit-3-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-RFpMwFx/0/MBcqSCp3Fp7K7hhc8prh3vQQ4hL9DM9vLSm2pBW26/S/_O1H1449-Edit-Edit-3-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N2gT9Qw",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N2gT9Qw/0/KJLBvhPBLhRnqNQFHdDGFxG9w9JCfnSvprsp53JNr/XL/_PEN0564-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N2gT9Qw/A",
     "keywords": [
       "PEN0564"
@@ -2957,18 +4257,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 144
+    "sortOrder": 144,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N2gT9Qw/0/KSN4qF4z9hhcDcn5RCkvTKZzJPJJL5JSCvzrKvQMz/XL/_PEN0564-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N2gT9Qw/0/KSN4qF4z9hhcDcn5RCkvTKZzJPJJL5JSCvzrKvQMz/XL/_PEN0564-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N2gT9Qw/0/NZHgRgGQZqWHHnNMzQrVGvHbc7JgLd7qnqj2XpzBB/L/_PEN0564-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N2gT9Qw/0/Lg4ZsrHXdJZqtdjfTJbK2Tst6V2fM5kGB72HSSrMJ/M/_PEN0564-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-N2gT9Qw/0/KWNhLhbDKrMW6nh4vQPRPz2chGjdmCkzfb8rs4T7f/S/_PEN0564-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9FsxDzV",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9FsxDzV/0/LZzR4Mhbjv9PKSR8dZFDJLfh7LdChLTpmGr9vRHWC/XL/_PEN0819-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9FsxDzV/A",
     "keywords": [
       "PEN0564"
@@ -2976,18 +4279,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 145
+    "sortOrder": 145,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9FsxDzV/0/NMWQ49Gk5sKB3hKJWw8C7TfGvS727FGwTtwdTPN2S/XL/_PEN0819-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9FsxDzV/0/NMWQ49Gk5sKB3hKJWw8C7TfGvS727FGwTtwdTPN2S/XL/_PEN0819-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9FsxDzV/0/KpqTTp7kgc4rswhD45bgXDRNJZ8WBr3SPxBfjsfsj/L/_PEN0819-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9FsxDzV/0/K83X25qJgGJQbhgDSP8r6qT7MMS3HPVcvzmB8R736/M/_PEN0819-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-9FsxDzV/0/M7q3v9xb2CRjT7n6rWV8mJh72B93qGNH2MKD456XX/S/_PEN0819-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jkN6Q3B",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jkN6Q3B/0/K3TZJQrcMKXTrnBPL4dWFBZfZr4MwgRWDr4F3WRz2/XL/_PEN0935-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jkN6Q3B/A",
     "keywords": [
       "PEN0564"
@@ -2995,18 +4301,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 146
+    "sortOrder": 146,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jkN6Q3B/0/Kn8tBqvNQW4MMPTq8rHqL29jNSfNmzZj7b2DjDKdq/XL/_PEN0935-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jkN6Q3B/0/Kn8tBqvNQW4MMPTq8rHqL29jNSfNmzZj7b2DjDKdq/XL/_PEN0935-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jkN6Q3B/0/KKJWZfhGvqGB3CKRKP9PH5pc5GVSq85cKpQgBdQCt/L/_PEN0935-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jkN6Q3B/0/LgGN8ZHW8533TD2sHzN5cPtKQpGf5ZVLrRZCnqMHD/M/_PEN0935-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jkN6Q3B/0/KcrHK8thK36nM6LKhnDkKztDqQzLxZx2J2TjJ7kCV/S/_PEN0935-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rhRQtTn",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rhRQtTn/0/KLzXp3pGGHGzTqZcvVKSrkB6jBPTg7qTdHXrxSpCt/XL/_PEN0975-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rhRQtTn/A",
     "keywords": [
       "PEN0564"
@@ -3014,18 +4323,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 147
+    "sortOrder": 147,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rhRQtTn/0/LZpssgStpFm6cx4wP88mwRZLrp9z6LDXKX4gnsS5D/XL/_PEN0975-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rhRQtTn/0/LZpssgStpFm6cx4wP88mwRZLrp9z6LDXKX4gnsS5D/XL/_PEN0975-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rhRQtTn/0/MZ3ZGFcvbcJgMmdBZsMRc7fHfjP7pjzmGR4QLr2cF/L/_PEN0975-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rhRQtTn/0/KFGq2sjHpd8BkM4NzdKbrFmmMSd4DNShLpwZPGSG7/M/_PEN0975-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-rhRQtTn/0/MS9Pk25xsMNDxVt9dC3TNQsSCT4ZT9P4stJhGCGVv/S/_PEN0975-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WM8czGM",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-WM8czGM/0/LPP4xxNm7fsmBbbj4RdTwC7nMbX46cHHJfsnmskXT/XL/_O1H1633-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-WM8czGM/A",
     "keywords": [
       "PEN0564"
@@ -3033,18 +4345,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 148
+    "sortOrder": 148,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-WM8czGM/0/LbnLbVqs7P2XSGKnSG6wKfjDGgz8cNHKjJCLKpCNb/XL/_O1H1633-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-WM8czGM/0/LbnLbVqs7P2XSGKnSG6wKfjDGgz8cNHKjJCLKpCNb/XL/_O1H1633-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-WM8czGM/0/LPBtfvdwD2PgT7Hgs2PQF6B4MgbQQkFDCrHVMkLgv/L/_O1H1633-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-WM8czGM/0/KpzGZR7WXzjZSJn87FRqCpDT6KwbrNdQmtMJGqVXS/M/_O1H1633-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-WM8czGM/0/KgTVQVK5rngWnGv9mCZjSg6z68JZKdWB3gd6kzMW2/S/_O1H1633-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2LZq7Wn",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2LZq7Wn/0/KbhXqhm6P8n7nRVJnVwnSXMHD32nfD8Twx2kZvcGk/XL/_O1H2350-Edit-2-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2LZq7Wn/A",
     "keywords": [
       "PEN0564"
@@ -3052,18 +4367,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 149
+    "sortOrder": 149,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2LZq7Wn/0/M3dfrnRdwRNqNbFHqngMrtfDPRXZ6rw96sbxkpNDX/XL/_O1H2350-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2LZq7Wn/0/M3dfrnRdwRNqNbFHqngMrtfDPRXZ6rw96sbxkpNDX/XL/_O1H2350-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2LZq7Wn/0/LJmnGmgm6sTL5m2t2jD57NWmdDzSGtSLc9z69t5zk/L/_O1H2350-Edit-2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2LZq7Wn/0/MB5TrSDBbd539LPpJW9XZ7b7tBRTw4QMZ6nHjr5fk/M/_O1H2350-Edit-2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2LZq7Wn/0/NhNqtGm7HF3qPWMPVqDChwNhntmqZbcQwpBSwjmjc/S/_O1H2350-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wzkNsnZ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzkNsnZ/0/LdBdrsMw4WwhHCp9FQphvcp3Fwds9FZM9NbzXPcr4/XL/_O1H2634-Enhanced-NR-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzkNsnZ/A",
     "keywords": [
       "PEN0564"
@@ -3071,18 +4389,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 150
+    "sortOrder": 150,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzkNsnZ/0/MZcjdzNmHMhZ5fvhgSSJjRcjh8M98T8WSwWQHvpZR/XL/_O1H2634-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzkNsnZ/0/MZcjdzNmHMhZ5fvhgSSJjRcjh8M98T8WSwWQHvpZR/XL/_O1H2634-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzkNsnZ/0/K56hw2VK59gSw34RXhrcVgnC2kbSjC6DM4ZwqCTWj/L/_O1H2634-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzkNsnZ/0/NB9xnhLvJHTJZMPZrBScwzLvvQT8dkwfFJkP3WFw4/M/_O1H2634-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wzkNsnZ/0/MttpJk4Kmd3mrdLVNz82hw5vKtvNwcdGk7VhJX7b8/S/_O1H2634-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hn3SFCW",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hn3SFCW/0/NcxgQZjFMrQC3vGn4rmPwWM44Mbs9NrqZ3tJ25MgR/XL/_O1H2581-Enhanced-NR-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hn3SFCW/A",
     "keywords": [
       "PEN0564"
@@ -3090,18 +4411,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 151
+    "sortOrder": 151,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hn3SFCW/0/NC64chP39vg3wDfrpzMvCc5RzBBqKqcVm9KM5tKTm/XL/_O1H2581-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hn3SFCW/0/NC64chP39vg3wDfrpzMvCc5RzBBqKqcVm9KM5tKTm/XL/_O1H2581-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hn3SFCW/0/K4Fg6mPhF5vMbsBB5GsQJQNQvKmNfhKmsCWksnvhz/L/_O1H2581-Enhanced-NR-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hn3SFCW/0/Mqk4rb83VC3PBwxsQ7M4hzSwJjK3SG2zdcRNwVbv3/M/_O1H2581-Enhanced-NR-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hn3SFCW/0/KFJtPPWjFsvxwx45zD9mM8VrCnmWR6MqCz6Hgzr5p/S/_O1H2581-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LN9Tdvr",
     "title": "Looking Through the Fog of War",
     "description": "WWII Allied Soldiers navigate obstacles as they make their way though the fighting on their way up the beach. Photo taken at D-Day Conneaut, the largest WWII reenactment in the country. © Wayne Heim '23",
-    "alt": "Looking Through the Fog of War",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LN9Tdvr/0/KzvBpfbHb9ctLtxGz7NXb9gPQmkV66F5ZR6xtKFM4/XL/_O1H2732-Edit-XL.jpg",
+    "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LN9Tdvr/A",
     "keywords": [
       "PEN0564"
@@ -3109,18 +4433,21 @@ export const galleryData = [
     "story": "WWII Allied Soldiers navigate obstacles as they make their way though the fighting on their way up the beach. Photo taken at D-Day Conneaut, the largest WWII reenactment in the country. © Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 152
+    "sortOrder": 152,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LN9Tdvr/0/NcNNTZ8TtkmDg8r8CW5Q7ZTzr2JnqxLdgLczc6QN5/XL/_O1H2732-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LN9Tdvr/0/NcNNTZ8TtkmDg8r8CW5Q7ZTzr2JnqxLdgLczc6QN5/XL/_O1H2732-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LN9Tdvr/0/NcNNTZ8TtkmDg8r8CW5Q7ZTzr2JnqxLdgLczc6QN5/XL/_O1H2732-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LN9Tdvr/0/NXDQ9wvBGssCpB7j8Zhp7NqCHnHggHfPcx6z34wzd/L/_O1H2732-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-LN9Tdvr/0/MB5wDRMswbzWhWNwfvFscsmB2Z9BNKb3Px3RV45xC/S/_O1H2732-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5vzkHgL",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
-    "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5vzkHgL/0/MFNKgBxpjjL3qhcPmqqV733pwQhWtWPC5S9R6J4QC/XL/_O1H2816-XL.jpg",
+    "alt": "Looking Through the Fog of War",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5vzkHgL/A",
     "keywords": [
       "PEN0564"
@@ -3128,18 +4455,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 153
+    "sortOrder": 153,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5vzkHgL/0/KqFJJxMTTj3fScd2vx4Zp4ZrTkwXBbccrtTqjCShs/XL/_O1H2816-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5vzkHgL/0/KqFJJxMTTj3fScd2vx4Zp4ZrTkwXBbccrtTqjCShs/XL/_O1H2816-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5vzkHgL/0/KxRvsVqWb5fK8H7fQKHZLdMzQGfhhQhMMjrvBwrrB/L/_O1H2816-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5vzkHgL/0/MgLZX8qMLbfj5sDDg42Cd7wmgW4Hncnz2VFJVcQKL/M/_O1H2816-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5vzkHgL/0/MLQpfrGLWPbfHpRxFjnSRLZ8kbnBj3dv9sZ8nk9vC/S/_O1H2816-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zkZ4vmZ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zkZ4vmZ/0/KWhTcNm23j2fJG2j86T4nx9rZmQ7VhG85gQRLgM3b/XL/_O1H2833-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zkZ4vmZ/A",
     "keywords": [
       "PEN0564"
@@ -3147,18 +4477,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 154
+    "sortOrder": 154,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zkZ4vmZ/0/NfKCR9BBwrQ2gBrM2sGvD8mW9kpCCfQqg32MjL33v/XL/_O1H2833-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zkZ4vmZ/0/NfKCR9BBwrQ2gBrM2sGvD8mW9kpCCfQqg32MjL33v/XL/_O1H2833-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zkZ4vmZ/0/M6wkLZcpNVdQXQmkR9CgR68TdJN7LrhkcDfVFkxwP/L/_O1H2833-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zkZ4vmZ/0/MZPjT3Q3sdh3Nq3CmT6x7XckDJbNH2JGdvwqSdLJJ/M/_O1H2833-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-zkZ4vmZ/0/LCHxDXPBs2Bp8xZbF38Dw35brR8NDCjnMPWtFRqMZ/S/_O1H2833-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jBD68qM",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jBD68qM/0/K7QX2ZtZTnzSsV5PjWjFJ5PHNHzcFHmJMKnSnPsGz/XL/_O1H2873-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jBD68qM/A",
     "keywords": [
       "PEN0564"
@@ -3166,18 +4499,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 155
+    "sortOrder": 155,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jBD68qM/0/Kv8sHRhnt26xc8LrcrnsLSzsSHfPHnKLbJHSPMJP7/XL/_O1H2873-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jBD68qM/0/Kv8sHRhnt26xc8LrcrnsLSzsSHfPHnKLbJHSPMJP7/XL/_O1H2873-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jBD68qM/0/NWSdrz26kt3jTSDN2Z38dthpp485hvKPdq95xXf7f/L/_O1H2873-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jBD68qM/0/K9Zh29zgvPJnJmHPXJfFpX5fthQsNtDCcCSL8K9f8/M/_O1H2873-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jBD68qM/0/NKPBXGZnqc3dNWLPBVnHtth7Ppk5hsfv5Kq8fGRZd/S/_O1H2873-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jR2v25J",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jR2v25J/0/MgstjsmtLjV6LGxT3qsC6f3sZsfT5kw8Q6RN44sKG/XL/_PEN0989-Enhanced-NR-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jR2v25J/A",
     "keywords": [
       "PEN0564"
@@ -3185,18 +4521,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 156
+    "sortOrder": 156,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jR2v25J/0/LwpfzSzgF95982mqP2mXTbDWm6dTcSBLGzddbHgjr/XL/_PEN0989-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jR2v25J/0/LwpfzSzgF95982mqP2mXTbDWm6dTcSBLGzddbHgjr/XL/_PEN0989-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jR2v25J/0/McFssJ8xQnTCNmkJWGMgtvbfnjdN3t7NFZtCwwk4X/L/_PEN0989-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jR2v25J/0/MW9WjGLNbwHXtLTqLkK5VXccm3XjXwztrkGh4XCKq/M/_PEN0989-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-jR2v25J/0/KsP3mqNxDKCDVc95zdXNh9zT8qtWQdWZ7sHkvFXqQ/S/_PEN0989-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qjLpZPg",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qjLpZPg/0/Kd23cs6s6PnD5JSfz3pzWPkCQMHF8PxKp2dS6LNTJ/XL/_O1H2889-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qjLpZPg/A",
     "keywords": [
       "PEN0564"
@@ -3204,18 +4543,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 157
+    "sortOrder": 157,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qjLpZPg/0/KwFrKGDLQZ2V5BmRzJT7pRKwCnshGg64mhT8z8bxs/XL/_O1H2889-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qjLpZPg/0/KwFrKGDLQZ2V5BmRzJT7pRKwCnshGg64mhT8z8bxs/XL/_O1H2889-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qjLpZPg/0/KZ7fhdBvxNc38ZtfH9cWTHWL2zkJrVVSNPKst9b8z/L/_O1H2889-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qjLpZPg/0/K3JPT7DMbznrfwMHBgfZmDHCPPJVM3L9bBgZWQ5vD/M/_O1H2889-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qjLpZPg/0/LPZx2Rhxhxt7NZ24s4rVwt5zgSsTXxsgwqfxS2RNJ/S/_O1H2889-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ggLrXkW",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ggLrXkW/0/K3hpZRcqM8bM4BKqnqg3Vc9TSb2tQMNVT64QDF6Ch/XL/_PEN1050-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ggLrXkW/A",
     "keywords": [
       "PEN0564"
@@ -3223,18 +4565,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 158,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ggLrXkW/0/LxNfmf44vRzhFV4hs584swS7ddndTVq9qfNbsQCjK/XL/_PEN1050-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ggLrXkW/0/LxNfmf44vRzhFV4hs584swS7ddndTVq9qfNbsQCjK/XL/_PEN1050-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ggLrXkW/0/Lb7pkTw3xkpxbPKqQKfBrq6nLR2XmHFwxPcPbBsnk/L/_PEN1050-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ggLrXkW/0/KN6jZVZgdtm3Mm4zNGn74ZCkjdGR5WGRbtrBpF242/M/_PEN1050-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ggLrXkW/0/NdsvtnTjxFHdwbnF3sVSPMchrNpk46C3jgxRSrnt2/S/_PEN1050-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qpX8Gxp",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qpX8Gxp/0/Kr3V3DNkqwQRBzBm8xfjg9HzpWT7RL37BjT3GCZRH/XL/_PEN1155-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qpX8Gxp/A",
     "keywords": [
       "PEN0564"
@@ -3242,18 +4587,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 159
+    "sortOrder": 159,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qpX8Gxp/0/L6bLskXGLpbn3bHzcMHFBG2Wcc5VfwLWWSgcNLvWT/XL/_PEN1155-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qpX8Gxp/0/L6bLskXGLpbn3bHzcMHFBG2Wcc5VfwLWWSgcNLvWT/XL/_PEN1155-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qpX8Gxp/0/MDh7N334NdXkjzSCC69MFb25J23bwkMjpxHjPqg7r/L/_PEN1155-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qpX8Gxp/0/K2sQCVfh3Zf6RbhvJSb3fmgPnR3WfsWQLZdQ5N8dQ/M/_PEN1155-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-qpX8Gxp/0/K5cT2WnThF8NWMt8jgdsJWhqz2ZdTZ5bw8xkSzjDs/S/_PEN1155-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XSB5fVp",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XSB5fVp/0/NHtp8bGHHbhWqzcfJwm9ZWJxQfjHFLGJkJPqLxKBf/XL/_O1H3177-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XSB5fVp/A",
     "keywords": [
       "PEN0564"
@@ -3261,18 +4609,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 160
+    "sortOrder": 160,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XSB5fVp/0/KqqRbtCx7GDd54XkXSfpLPgmctsdm2928zMRDNG4r/XL/_O1H3177-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XSB5fVp/0/KqqRbtCx7GDd54XkXSfpLPgmctsdm2928zMRDNG4r/XL/_O1H3177-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XSB5fVp/0/KgzPXLZGvSpn5GSdhpmkDRD4JhVnS6Bdx9ntHf6Cw/L/_O1H3177-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XSB5fVp/0/NDvfNGHXpWGVNsmgLMjhgNxr97fFPtKZvCfdkXMBB/M/_O1H3177-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XSB5fVp/0/MTxkdHPs89FrJXv93xbpNjg6w96Vm29XKSFLmCRfB/S/_O1H3177-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VgGXHr3",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VgGXHr3/0/NT5CNVbM24pT2v3NVpKv7tmRkCSr8xT4kc6fWZbhV/XL/_O1H3457-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VgGXHr3/A",
     "keywords": [
       "PEN0564"
@@ -3280,18 +4631,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 161
+    "sortOrder": 161,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VgGXHr3/0/LFPBXg36n3pJd9hVbqmnhNTwbSphNtMZCPn8T7Pgx/XL/_O1H3457-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VgGXHr3/0/LFPBXg36n3pJd9hVbqmnhNTwbSphNtMZCPn8T7Pgx/XL/_O1H3457-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VgGXHr3/0/K2P9GFBgSw3Zgz7mBVkDR4Lm87dX5R2WZS4ctZCW5/L/_O1H3457-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VgGXHr3/0/KPtWbrwcwKf6RCBpbkJwk63rHHPDVtv7QMmCgrzrQ/M/_O1H3457-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-VgGXHr3/0/L2XNd9RhVkdx7bf3zxwGW5wCR7NJKQzPDfjk8fLk9/S/_O1H3457-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NPK4j4w",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPK4j4w/0/MpsNz6T6G3HDM7xB6gKbf9mmWBFnXx2gnkn4CgtM6/XL/_PEN1423-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPK4j4w/A",
     "keywords": [
       "PEN0564"
@@ -3299,18 +4653,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 162
+    "sortOrder": 162,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPK4j4w/0/K2Bsvx9RdHdP8mSJ4ZGSppg2TVpn8Cn8VTzJS9R2W/XL/_PEN1423-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPK4j4w/0/K2Bsvx9RdHdP8mSJ4ZGSppg2TVpn8Cn8VTzJS9R2W/XL/_PEN1423-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPK4j4w/0/KWT6KgZhSdK6mcCq6JKmkhR85nm3f7rqqrtxv8S24/L/_PEN1423-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPK4j4w/0/MZ5qfB2BXhwX6WkLfjVBxwzQmrLVDqdTMTkFtfLS4/M/_PEN1423-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-NPK4j4w/0/K4q8nVKxQDgpWWxfPw6qXdBfkswVXswcTP6n2mkLP/S/_PEN1423-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KNQnJpx",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KNQnJpx/0/K95mmMTTJndkDnbgjQWpSvLSpWKSGbgpfdg4fCstB/XL/_PEN1433-Enhanced-NR-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KNQnJpx/A",
     "keywords": [
       "PEN0564"
@@ -3318,18 +4675,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 163
+    "sortOrder": 163,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KNQnJpx/0/MMbM2Wj3PP7gprVDJMFnM3RKF9gXHTB3gMGmZRg6J/XL/_PEN1433-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KNQnJpx/0/MMbM2Wj3PP7gprVDJMFnM3RKF9gXHTB3gMGmZRg6J/XL/_PEN1433-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KNQnJpx/0/NS2PmstS85bcPzD5SvxHpNRRT75rK4C7VpFRWKLRp/L/_PEN1433-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KNQnJpx/0/K4S44QhNLB5cGh6NggMVkzGVxKFqhJGdK5gZ2TBXM/M/_PEN1433-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KNQnJpx/0/KkxLRnvRCtxC6JPxJh88BN8rhjQh8C7nHGGP9dVBD/S/_PEN1433-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2PNTFjQ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2PNTFjQ/0/L3jzfns5QQG6wb4gKxXgMKB2qCdwJMM5PGkDngbXG/XL/_O1H4133-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2PNTFjQ/A",
     "keywords": [
       "PEN0564"
@@ -3337,18 +4697,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 164
+    "sortOrder": 164,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2PNTFjQ/0/KZ6LWpKrXbhZHLhw92Z8Gs5bpLLp6RKMZtS26pCnG/XL/_O1H4133-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2PNTFjQ/0/KZ6LWpKrXbhZHLhw92Z8Gs5bpLLp6RKMZtS26pCnG/XL/_O1H4133-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2PNTFjQ/0/Kgc98FXgFDwrkd6mmZdLpG3GkGwCSHMq9RmVtJ9PJ/L/_O1H4133-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2PNTFjQ/0/MD5NMZL8hs4dWjXMgFrS3zJL8PqSDRMPntVCcmKg3/M/_O1H4133-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-2PNTFjQ/0/LvhwRFCz84wx2fWckFCtGwpSbmktFwf8536bkgN32/S/_O1H4133-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZrS6Hpm",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZrS6Hpm/0/LMhTJvH4BS2DQccQmTH55T4VHCd2VjSGK8978NZSx/XL/_O1H5810-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZrS6Hpm/A",
     "keywords": [
       "PEN0564"
@@ -3356,18 +4719,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 165
+    "sortOrder": 165,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZrS6Hpm/0/LfJQqbRMPBs8cHdN8LhwjtgcTxHxRsG8fC9NQ7LQR/XL/_O1H5810-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZrS6Hpm/0/LfJQqbRMPBs8cHdN8LhwjtgcTxHxRsG8fC9NQ7LQR/XL/_O1H5810-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZrS6Hpm/0/MLcZ6L3wqJW2G8RtQg9xJ9ZBGG5sXsjPfCQ4wd4xh/L/_O1H5810-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZrS6Hpm/0/NJF48LQ2S3jZ6vHfwcMxh8snJJzKjJwhCpDX3BG4D/M/_O1H5810-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ZrS6Hpm/0/L9n8vnfW9Nn58Nh75dCspdnHkGXbPTcXZ4VkNJrXV/S/_O1H5810-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8QK8f9C",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8QK8f9C/0/MbxdXHMqQqd3wN7DLXjGpQhct6jRPNKCQt2NfJBt3/XL/_O1H0187-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8QK8f9C/A",
     "keywords": [
       "PEN0564"
@@ -3375,18 +4741,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 166
+    "sortOrder": 166,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8QK8f9C/0/K3hn5bKK9GVXWBpBsqfC85nRx62z3vjmzBHjfZfmt/XL/_O1H0187-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8QK8f9C/0/K3hn5bKK9GVXWBpBsqfC85nRx62z3vjmzBHjfZfmt/XL/_O1H0187-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8QK8f9C/0/MQ7dh4VtwghgH839kXCgwXWSnLHrV292jBxpNH6Qj/L/_O1H0187-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8QK8f9C/0/LDfFMMQScLMnf7tWN8rcGgFFVhVLbJcBnvqbTxLgp/M/_O1H0187-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-8QK8f9C/0/KKhGPxsh7NrNWZsWSSJXSdsXW8ZjCDXsVZX5CF5zk/S/_O1H0187-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n9FrVQG",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n9FrVQG/0/LgD6DHrg4ZkKbnWzpqKdtWR6Thvnxq2qVJQn732MR/XL/_O1H0898-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n9FrVQG/A",
     "keywords": [
       "PEN0564"
@@ -3394,18 +4763,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 167
+    "sortOrder": 167,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n9FrVQG/0/Nfttbv7QTvXNdw6MdtMwCRQDh2XDmjCwXzXGPx5tD/XL/_O1H0898-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n9FrVQG/0/Nfttbv7QTvXNdw6MdtMwCRQDh2XDmjCwXzXGPx5tD/XL/_O1H0898-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n9FrVQG/0/LNfrJq8G9LSdvtmsrrDqBPHWTzdhSw9Dwc7RPm243/L/_O1H0898-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n9FrVQG/0/LvZj4GpcQp6RVDrRbLttC4TKwDfHhnhQv6F9TrFMc/M/_O1H0898-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n9FrVQG/0/K92JB8RCNkfLr2g8nhNPNpQ5pLXq2TkPdwdHpvvCs/S/_O1H0898-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BHDwMmG",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-BHDwMmG/0/L6V3CLrXXgXQpRX555TrGBCrzCwSGBCcMF4vpt9Qz/XL/_O1H0914-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-BHDwMmG/A",
     "keywords": [
       "PEN0564"
@@ -3413,18 +4785,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 168
+    "sortOrder": 168,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-BHDwMmG/0/KmxMtrz38wxPXH655QMqR9SvF99JZ2mZcHCT76vJn/XL/_O1H0914-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-BHDwMmG/0/KmxMtrz38wxPXH655QMqR9SvF99JZ2mZcHCT76vJn/XL/_O1H0914-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-BHDwMmG/0/KHszNQFNMPK5jh8DZRRHDf5nbvb5Cm8VTFQfCrQgg/L/_O1H0914-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-BHDwMmG/0/K8SbHrhgDssFdMXtBLF5sgM4kMTv3ntqKFqvT9Vj3/M/_O1H0914-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-BHDwMmG/0/KFTdG49fKwsxDC8kW58txK6bNWSzZnZWj4GxbSW4x/S/_O1H0914-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5Bt3Kxx",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5Bt3Kxx/0/Kkw3k2Fxf6W2G2GZF3933ZVRbzjfP3jbV7xBtgzdH/XL/_PEN1119-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5Bt3Kxx/A",
     "keywords": [
       "PEN0564"
@@ -3432,18 +4807,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 169
+    "sortOrder": 169,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5Bt3Kxx/0/NRFwLnS5fp7DCsN94SbDZJFPR8MkQwPxprxq9gz5f/XL/_PEN1119-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5Bt3Kxx/0/NRFwLnS5fp7DCsN94SbDZJFPR8MkQwPxprxq9gz5f/XL/_PEN1119-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5Bt3Kxx/0/LQcZ3TrG2Q5hTfgvGmzqPnx3p8MqSC3vddJMNNrFD/L/_PEN1119-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5Bt3Kxx/0/MRDF5PhPqHDsvmcLzFXk8TqHLw65wtWFpbThbNgzK/M/_PEN1119-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5Bt3Kxx/0/KpfLprJzb8TP5fhPkgr2TNXxf4tQdVmm9fhsthhwV/S/_PEN1119-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tL9CW7Q",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tL9CW7Q/0/KfgshLTHBxXFkGfXNq59f7FrbNCHsfBsmWD8GCHCT/XL/_PEN1134-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tL9CW7Q/A",
     "keywords": [
       "PEN0564"
@@ -3451,18 +4829,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 170
+    "sortOrder": 170,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tL9CW7Q/0/LwhHHqsn6kS3sRscX9HPRbK6wprWRvQWC6ntzLLGW/XL/_PEN1134-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tL9CW7Q/0/LwhHHqsn6kS3sRscX9HPRbK6wprWRvQWC6ntzLLGW/XL/_PEN1134-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tL9CW7Q/0/LwhHHqsn6kS3sRscX9HPRbK6wprWRvQWC6ntzLLGW/XL/_PEN1134-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tL9CW7Q/0/MDsdqwHcjNtSvvzkTCvDf2TJnRC3s6V97Vq283GVv/L/_PEN1134-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tL9CW7Q/0/NCSStL4j6BrHnt6NrPQwRCDXpwLT7Jh48zmvdrbvL/S/_PEN1134-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tRkQxSw",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim '23",
     "alt": "© Wayne Heim '23",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tRkQxSw/0/NMs923q9Gm9wnVVm366VLKmVDwjbLd3fGZR6z8t8N/XL/_O1H2670-Edit-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tRkQxSw/A",
     "keywords": [
       "PEN0564"
@@ -3470,18 +4851,21 @@ export const galleryData = [
     "story": "© Wayne Heim '23",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 171
+    "sortOrder": 171,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tRkQxSw/0/LJ7PN3q6jjHjgDsQzmnwXcDKnpHqMB6gjMsTFbH82/XL/_O1H2670-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tRkQxSw/0/LJ7PN3q6jjHjgDsQzmnwXcDKnpHqMB6gjMsTFbH82/XL/_O1H2670-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tRkQxSw/0/LGhFfvC3c5VcNLrss3d3hPKFMDFvKsJSjLXwj9X65/L/_O1H2670-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tRkQxSw/0/LZGj9dRJ3Sh6TqnNVmTKsss6K4Mp94MsvkkjRDmQM/M/_O1H2670-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-tRkQxSw/0/Kj5zjcrs8KdNJPb8FKLxNQWZzzf4t3vGZJw8nn43B/S/_O1H2670-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5bvTQ93",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
-    "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5bvTQ93/0/MFBW7VXfrhJDCGZQFWrtWK4KF7j4xkLd4p9gz9xQs/XL/_O2H4178-Edit-XL.jpg",
+    "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5bvTQ93/A",
     "keywords": [
       "PEN0564"
@@ -3489,18 +4873,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 172
+    "sortOrder": 172,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5bvTQ93/0/LrkSmqBDTfsKmPRMkLJc8ZPJqKvms9cRmWP4LBkcG/XL/_O2H4178-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5bvTQ93/0/LrkSmqBDTfsKmPRMkLJc8ZPJqKvms9cRmWP4LBkcG/XL/_O2H4178-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5bvTQ93/0/K7vnGwww6khNXrnGrrmvG8NDLNSMftgB6GGJhbS8H/L/_O2H4178-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5bvTQ93/0/M3jm6rM7MCK8hWfpH52VKRzLww6xSQSWJrjLPxrX2/M/_O2H4178-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-5bvTQ93/0/M5FcbGzdmZzF6vmmFnKgdX7fnq3sQsx8nj2bPCVzm/S/_O2H4178-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hPDVVf4",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hPDVVf4/0/KLfvNJWtVdZQrNSFQwSG6wpgmtJRTw3PXJWpH5ZQR/XL/_O2H7579-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hPDVVf4/A",
     "keywords": [
       "PEN0564"
@@ -3508,18 +4895,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 173
+    "sortOrder": 173,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hPDVVf4/0/KX3jnskN3MRSrs42MxJV52LkGjChQ3vRqTQptHZP5/XL/_O2H7579-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hPDVVf4/0/KX3jnskN3MRSrs42MxJV52LkGjChQ3vRqTQptHZP5/XL/_O2H7579-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hPDVVf4/0/KbsQThgWSH47PNLXQz4zHpfsGtSWxPVgSDFBsBvMC/L/_O2H7579-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hPDVVf4/0/M2nXX5QFWWs9zPxKFzGPr5hShJBzBdxsH7SMv3K8f/M/_O2H7579-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-hPDVVf4/0/NGh5jL6djtVbww4Vf5WFXcmgw5wjqRvPbHsGRqZvB/S/_O2H7579-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mRcjcQx",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mRcjcQx/0/Nb9CKrKnwcRB6WCfLrk6mmfBgHKXjLRMWdsXJPZ8x/XL/_O2H8042-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mRcjcQx/A",
     "keywords": [
       "PEN0564"
@@ -3527,18 +4917,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 174
+    "sortOrder": 174,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mRcjcQx/0/MG72p3NnkZZ5KSpt63TVQvxvmbQks2RfLS3jN4m3g/XL/_O2H8042-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mRcjcQx/0/MG72p3NnkZZ5KSpt63TVQvxvmbQks2RfLS3jN4m3g/XL/_O2H8042-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mRcjcQx/0/LjdpD2dXRCVSVmtR3kjwVqLjrtZFBnfxVNxjgSdGK/L/_O2H8042-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mRcjcQx/0/MGFwxDfXHCKTwZ4pmDfpsmGWF76W4RCBCTNFhDjJD/M/_O2H8042-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-mRcjcQx/0/MbncR7LXbB8r6KpQpK8266ZXTzm8jcdqHdgc8Z87g/S/_O2H8042-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-29bkHrX",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-29bkHrX/0/L3T7MnG8Lw75g672xxTHVxMmsK88NLnj4hZwmL4VK/XL/_O2H8908-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-29bkHrX/A",
     "keywords": [
       "PEN0564"
@@ -3546,18 +4939,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 175
+    "sortOrder": 175,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-29bkHrX/0/MQGGtMzMQFCDzr8TDQZN5vzBrwJhDnFn73cfQnvX9/XL/_O2H8908-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-29bkHrX/0/MQGGtMzMQFCDzr8TDQZN5vzBrwJhDnFn73cfQnvX9/XL/_O2H8908-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-29bkHrX/0/LxhZTHTJRHGFrKBvMP6qhm442pMS66L2NVBFmJcDd/L/_O2H8908-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-29bkHrX/0/NJmRJ44R3RvgGvwWTBSQLL8j2ppjz2xZsw5Sj9ntd/M/_O2H8908-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-29bkHrX/0/LxXsWbCKrM4QfF6gg8HkBc4D4TRnJwvqjkXX2PvqZ/S/_O2H8908-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XXnPLmQ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XXnPLmQ/0/M7gn4R9gGkGR8q75JVBNrWqqQS4CKtPFBcNFLBbc6/XL/_O2H8933-Enhanced-NR-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XXnPLmQ/A",
     "keywords": [
       "PEN0564"
@@ -3565,18 +4961,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 176
+    "sortOrder": 176,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XXnPLmQ/0/MvhpMR5d8RJrzRKtHpw26s4mPPZv6pNQWJXLMwwMt/XL/_O2H8933-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XXnPLmQ/0/MvhpMR5d8RJrzRKtHpw26s4mPPZv6pNQWJXLMwwMt/XL/_O2H8933-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XXnPLmQ/0/NQ4nd9fKrcSVBP9r3zbwGKqGsDzwZm7KNgwVfsmFC/L/_O2H8933-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XXnPLmQ/0/Md5xJZC46LFfVj8z5Sm7zPjvcMHqXb3zSSPC98888/M/_O2H8933-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-XXnPLmQ/0/MQfSCM26tCtLR57kH9khTd7Xm6FKppr76tGJ4dWzR/S/_O2H8933-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KQ2M2Qj",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KQ2M2Qj/0/M3Z4NJ9FKPL2XtnpkHPVGt6gzmNSPXnRpxMH9V7rB/XL/_O2H0906-Enhanced-NR-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KQ2M2Qj/A",
     "keywords": [
       "PEN0564"
@@ -3584,18 +4983,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 177
+    "sortOrder": 177,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KQ2M2Qj/0/MkbSrb3VjsqvXzRDDWBvNNgBkLqvPcQ2HXNqw6pT7/XL/_O2H0906-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KQ2M2Qj/0/MkbSrb3VjsqvXzRDDWBvNNgBkLqvPcQ2HXNqw6pT7/XL/_O2H0906-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KQ2M2Qj/0/K3wCLTMdB7r4WVV9gSdmSQm3tZmMntnw5jPBCQFTP/L/_O2H0906-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KQ2M2Qj/0/Kq8wcMbhSD458xxtnWV4zq3B9xNhRShB2SrhQxV3t/M/_O2H0906-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-KQ2M2Qj/0/ND4DGsJ6DbNRjG958CBmjRzRQpGzmmHJjqwTZFtVv/S/_O2H0906-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-v8GHpWG",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-v8GHpWG/0/KJfccKkMJHnn4vkDfSQBNgPhXwm2Fz6VFvFJtnWCs/XL/_O2H3632-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-v8GHpWG/A",
     "keywords": [
       "PEN0564"
@@ -3603,18 +5005,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 178
+    "sortOrder": 178,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-v8GHpWG/0/M5d8pTJ9Mnhf2WkG3LJnZ5KgXHPWWpgcGrNw9F5cT/XL/_O2H3632-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-v8GHpWG/0/M5d8pTJ9Mnhf2WkG3LJnZ5KgXHPWWpgcGrNw9F5cT/XL/_O2H3632-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-v8GHpWG/0/LNWNsJCNMvGN39JhjTQ4HH6BHSzVtmCkdnQNV6wTx/L/_O2H3632-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-v8GHpWG/0/MWHjrpPj4CL6SpvZtzj4FFzdh5QGzmXC3nW8DDtCg/M/_O2H3632-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-v8GHpWG/0/LSzV2PJQrQtvjnV2TnSCfwpRscCZNJwkbjvSq9sdd/S/_O2H3632-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-D33PVtv",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-D33PVtv/0/MJH849TCjQtR8qjZrLjLQr7Bbxv63zrfJTfzhHsCh/XL/_O2H3676-Enhanced-NR-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-D33PVtv/A",
     "keywords": [
       "PEN0564"
@@ -3622,18 +5027,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 179
+    "sortOrder": 179,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-D33PVtv/0/LwTFsJBmccq33fMWNqzBDQRKDP8JKdfPsfH2FFPmP/XL/_O2H3676-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-D33PVtv/0/LwTFsJBmccq33fMWNqzBDQRKDP8JKdfPsfH2FFPmP/XL/_O2H3676-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-D33PVtv/0/L82G4ZgcVrX3bWLxsDvrVmQ9q89QB8ZZmpz7srtRW/L/_O2H3676-Enhanced-NR-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-D33PVtv/0/KqFJV4NK2N3dFSnTJz87tzRbJ484M7r6cts4bnvPp/M/_O2H3676-Enhanced-NR-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-D33PVtv/0/LXxw9XnChDSPgJz8XDhQkH2Qx6RW53vfFdkBNLDpj/S/_O2H3676-Enhanced-NR-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-W3z4Wch",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-W3z4Wch/0/MNtp4hKdB8MHh6GwnNF5J24gDL3Wm2FDD8zN9Ln9M/XL/_O2H4042-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-W3z4Wch/A",
     "keywords": [
       "PEN0564"
@@ -3641,18 +5049,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 180
+    "sortOrder": 180,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-W3z4Wch/0/LpBmx7rLhfppzF75thMNcFdPFmd3BdTGPL77SGXS3/XL/_O2H4042-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-W3z4Wch/0/LpBmx7rLhfppzF75thMNcFdPFmd3BdTGPL77SGXS3/XL/_O2H4042-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-W3z4Wch/0/MP9WsPJf4t69GkSQR9244nBscmBHQVDcFzGm96nKd/L/_O2H4042-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-W3z4Wch/0/MxN47sGp596RH2W9xNRwBdCXz4tPnNx5PsNtqbtXc/M/_O2H4042-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-W3z4Wch/0/M3gNq3GgPcWVxkmPpKK2Wsmw6PXcmt4WB5HcH4cNk/S/_O2H4042-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-H73gQ4P",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-H73gQ4P/0/Mxmp4r9PGN7KKPxMw3PX9736nC8XT2RkCCjw9cKhv/XL/_O2H4137-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-H73gQ4P/A",
     "keywords": [
       "PEN0564"
@@ -3660,18 +5071,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 181
+    "sortOrder": 181,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-H73gQ4P/0/M7jGMVt7jjzpRJ9RZfFTHR74sZrHzLMWLkfMPkk4t/XL/_O2H4137-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-H73gQ4P/0/M7jGMVt7jjzpRJ9RZfFTHR74sZrHzLMWLkfMPkk4t/XL/_O2H4137-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-H73gQ4P/0/NJpqggZgQwx2dwVkNZHCGpzNf8S5272RsDzWNL8gV/L/_O2H4137-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-H73gQ4P/0/MJpzdR6KDjXMQ5STHDzX62BQ5g8gfcGf3h4nBV726/M/_O2H4137-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-H73gQ4P/0/MCQSCkBj3SwFnQJ9k2b96kqqFw82pKZxWPmQwVvSr/S/_O2H4137-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GdMFBGc",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GdMFBGc/0/KDhWkcF6h5HGcpTRmp9Q5PGswGWfMhPMLWzc4NSmF/XL/_O2H4145-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GdMFBGc/A",
     "keywords": [
       "PEN0564"
@@ -3679,18 +5093,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 182
+    "sortOrder": 182,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GdMFBGc/0/NJnw3mbkNgBG5PkpwFmzKhv4tnf43wVw2FrQtR8q6/XL/_O2H4145-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GdMFBGc/0/NJnw3mbkNgBG5PkpwFmzKhv4tnf43wVw2FrQtR8q6/XL/_O2H4145-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GdMFBGc/0/MS4kHZXPjQ8bv6T4Fjd9SRPKhXTMmN8PjhnjXxnBL/L/_O2H4145-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GdMFBGc/0/MZm86wGvBHf6M26NTQsDGxhqzvQJf3Hvq7zkrdMgC/M/_O2H4145-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GdMFBGc/0/M4jMbqwqQ6qj7xJp5GXTMD9PxZ7SLRmc7dWgtLVFk/S/_O2H4145-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gRqMNCH",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gRqMNCH/0/MVgDgcQWbmmNzQJvXvGSvvrFdHXLs728Btm4NWR5z/XL/_O2H4159-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gRqMNCH/A",
     "keywords": [
       "PEN0564"
@@ -3698,18 +5115,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 183
+    "sortOrder": 183,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gRqMNCH/0/MgzkwXvsfHbqhL8Q27w24j52x8LHNvpf4kbbFfNFC/XL/_O2H4159-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gRqMNCH/0/MgzkwXvsfHbqhL8Q27w24j52x8LHNvpf4kbbFfNFC/XL/_O2H4159-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gRqMNCH/0/K7W28LR55tCKW47TTSHkhFPrxphkHk6pnkDnnKN9P/L/_O2H4159-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gRqMNCH/0/Krwxhd2ZJVsT6sPVxVcm5kZ96F6nh9ZXnfbNWQtBQ/M/_O2H4159-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-gRqMNCH/0/Kbr3zHWTN3cZFWZhdbSh7msvRnjXpKX6VpJt57HfM/S/_O2H4159-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Cw72C3b",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cw72C3b/0/M9krzCQKdcCVTMhGLrFpBQCxR24mVHw3tDQJkWVCL/XL/_O2H4162-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cw72C3b/A",
     "keywords": [
       "PEN0564"
@@ -3717,18 +5137,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 184
+    "sortOrder": 184,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cw72C3b/0/LbtPHcN7MzPD7RMSpv7Td3PvndgQGNKRJ2dzWPMbM/XL/_O2H4162-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cw72C3b/0/LbtPHcN7MzPD7RMSpv7Td3PvndgQGNKRJ2dzWPMbM/XL/_O2H4162-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cw72C3b/0/NVhf84NsBX9X4GwcLwGKr3LzDWgMZ6Dg5DJQxpks7/L/_O2H4162-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cw72C3b/0/MPZF34bxkrHvTNjQt8JFGBh9F69ZC44xpZhZ8Qz9q/M/_O2H4162-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Cw72C3b/0/NJC2hFT7qgNmPpX4NzXTtcXG2vRZWLjVG8qtjzpPz/S/_O2H4162-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wpZr6sV",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wpZr6sV/0/MjmZ5Bc4M6hm8Lb5QNkwWt8SM34ZQVskT2sBVNLG4/XL/_O2H9288-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wpZr6sV/A",
     "keywords": [
       "PEN0564"
@@ -3736,18 +5159,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 185
+    "sortOrder": 185,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wpZr6sV/0/LP37LJsrPxD2RpR3S9NkzTL2nt59KCdPQkLwXV3fk/XL/_O2H9288-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wpZr6sV/0/LP37LJsrPxD2RpR3S9NkzTL2nt59KCdPQkLwXV3fk/XL/_O2H9288-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wpZr6sV/0/MK4WK58ZSWxSqb8bn4k8fcjdLsJ9g9TMffXGBSNrw/L/_O2H9288-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wpZr6sV/0/MKVfkgBsbBF67dShfFcLK5K42S6P8kWBVFk2SWTq8/M/_O2H9288-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-wpZr6sV/0/NfB5Rc5qfNdr9vVT3mX9RxTNNkFDSbXXZNKS62SNt/S/_O2H9288-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-G95TtRW",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-G95TtRW/0/MgJSfCsjKHT5rNqc2wm95LwvpxBXGQCrhHNmpnHhw/XL/_O2H1820-Enhanced-NR-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-G95TtRW/A",
     "keywords": [
       "PEN0564"
@@ -3755,18 +5181,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 186
+    "sortOrder": 186,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-G95TtRW/0/M2gRktMjVK57RWwxdx3DFxH5TVVJvS9jJ9hn4f4L6/XL/_O2H1820-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-G95TtRW/0/M2gRktMjVK57RWwxdx3DFxH5TVVJvS9jJ9hn4f4L6/XL/_O2H1820-Enhanced-NR-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-G95TtRW/0/LG9zXTnQB8zm66gJsNdCqV6HzrVTRmxLmXhzdmHmM/L/_O2H1820-Enhanced-NR-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-G95TtRW/0/LPK8nKhh7ZTM3sS5nBBc9nkFqsgzNKFqGB64977HK/M/_O2H1820-Enhanced-NR-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-G95TtRW/0/MPJC6Nh6DMzgp6S8xhGwsCGx7WsjnWd26p8BwF563/S/_O2H1820-Enhanced-NR-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n5GxNj6",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n5GxNj6/0/KmV5KQ6RzN6DBPCSXFGfJMDF4sngCvxrSmHD9jdR7/XL/_O2H3261-Enhanced-NR-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n5GxNj6/A",
     "keywords": [
       "PEN0564"
@@ -3774,18 +5203,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 187
+    "sortOrder": 187,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n5GxNj6/0/K76RPZPkbxT93mGrjSbXC4QNjsR2GZkVKMkm7ddQ8/XL/_O2H3261-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n5GxNj6/0/K76RPZPkbxT93mGrjSbXC4QNjsR2GZkVKMkm7ddQ8/XL/_O2H3261-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n5GxNj6/0/LvnCjBpWF3P47jm2WdP4SHjf9Jr6dLVh7jwdKGWwk/L/_O2H3261-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n5GxNj6/0/KVXFPfDhM7PWBk2FjqXj5g5nJB86XRXHzDSCsBCnT/M/_O2H3261-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-n5GxNj6/0/NQZ4bNb5q7PqLtCFXVwgr3FpGCrVdzZ55frS9xc9k/S/_O2H3261-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cvxNjbV",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cvxNjbV/0/Msj4GMDQ6KcPkwxmZpfLP7qQh8wkQLS6PxWkHGQqG/XL/_O2H0699-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cvxNjbV/A",
     "keywords": [
       "PEN0564"
@@ -3793,18 +5225,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 188
+    "sortOrder": 188,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cvxNjbV/0/LjJZZSw4vnFCgqcDjG9Hk2Vp5PnbjkFkXzxhnzVxP/XL/_O2H0699-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cvxNjbV/0/LjJZZSw4vnFCgqcDjG9Hk2Vp5PnbjkFkXzxhnzVxP/XL/_O2H0699-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cvxNjbV/0/LqX9vBZCpVWVZc5dncxcxw3G96bXpxn29xPNMhZT6/L/_O2H0699-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cvxNjbV/0/L5LZwL7b4qXVQHhNKJqdzjCD4XzC3GkwkLdzwkTqF/M/_O2H0699-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-cvxNjbV/0/NKn2bJgwfVpzRS4pjQ6kzzzp3C7hZ8NwdXb3jmQVx/S/_O2H0699-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-J7nsQtj",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-J7nsQtj/0/McwGHhhHq9zqFQ5xh4sdJFbPDfFDMjJ8MgJjTfGPQ/XL/_O2H1221-Enhanced-NR-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-J7nsQtj/A",
     "keywords": [
       "PEN0564"
@@ -3812,18 +5247,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 189
+    "sortOrder": 189,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-J7nsQtj/0/MXNL2LfL4F9sBZ3zJ6wtFtxNt8CgH43RggMwFxSS9/XL/_O2H1221-Enhanced-NR-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-J7nsQtj/0/MXNL2LfL4F9sBZ3zJ6wtFtxNt8CgH43RggMwFxSS9/XL/_O2H1221-Enhanced-NR-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-J7nsQtj/0/L6WfNkRTkhwFgqS8kBq8gLKmtt4JfsTQ4K3bChpVK/L/_O2H1221-Enhanced-NR-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-J7nsQtj/0/K8QCtWpVcPXBj6JjPwZ2NshbsDfmdDnRV2mwGJPf3/M/_O2H1221-Enhanced-NR-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-J7nsQtj/0/K3g7FWMd3qGPfhKQRFKWFQD9VMTJBJngNXps59Pkr/S/_O2H1221-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ST6R4S3",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ST6R4S3/0/KDmjGdM9rHJ5fdwPwkgxgBJ5NhfmJDJM6rhZmQnk4/XL/_O2H1683-Enhanced-NR-Edit-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ST6R4S3/A",
     "keywords": [
       "PEN0564"
@@ -3831,18 +5269,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 190
+    "sortOrder": 190,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ST6R4S3/0/MvXcWc4T6DdBmzLJthBP5snQkVPp5S273KWvs29Xx/XL/_O2H1683-Enhanced-NR-Edit-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ST6R4S3/0/MvXcWc4T6DdBmzLJthBP5snQkVPp5S273KWvs29Xx/XL/_O2H1683-Enhanced-NR-Edit-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ST6R4S3/0/L3xHCwzsb9cBNqcZNSkBKxTwNwJHSQzntSgKWs8Q3/L/_O2H1683-Enhanced-NR-Edit-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ST6R4S3/0/MkRW3t5vJrCkcBN86djQQcQbz3qZGkpQ5jRbRC2DV/M/_O2H1683-Enhanced-NR-Edit-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-ST6R4S3/0/MB7GgvhtVwpz3QZmBbhScz79qbMKVGqGQbHS3BRDB/S/_O2H1683-Enhanced-NR-Edit-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-32xbMtQ",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-32xbMtQ/0/NfnncmCZMbssFZhkL6QN6MxRS22bBjmXKwM4SdTZP/XL/_O2H2181-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-32xbMtQ/A",
     "keywords": [
       "PEN0564"
@@ -3850,18 +5291,21 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 191
+    "sortOrder": 191,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-32xbMtQ/0/LdVkJnLLpB7v7FDCZdHzD5LZmSdvhVMh6DXNt4twQ/XL/_O2H2181-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-32xbMtQ/0/LdVkJnLLpB7v7FDCZdHzD5LZmSdvhVMh6DXNt4twQ/XL/_O2H2181-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-32xbMtQ/0/LdVkJnLLpB7v7FDCZdHzD5LZmSdvhVMh6DXNt4twQ/XL/_O2H2181-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-32xbMtQ/0/LBWMphwxrmDRQRdXTT2tmrhrZd4ZxWVwxcGPmcFMx/L/_O2H2181-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-32xbMtQ/0/LTDpZNmJmZqKkgLPPjKFJZ7ZHJ6JjmXTR9H73pkk9/S/_O2H2181-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GtX9w4B",
-   "title": "Untitled",
+    "title": "Untitled",
     "description": "© Wayne Heim",
     "alt": "© Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GtX9w4B/1/NNVcWCRXvDKhg9b5gMvMZzNnHKDhHXcvM5X78cgfX/XL/_O2H1628-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GtX9w4B/A",
     "keywords": [
       "O2H1628"
@@ -3869,10 +5313,36 @@ export const galleryData = [
     "story": "© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 192
+    "sortOrder": 192,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GtX9w4B/1/Kzfc7Qs5JWDG9RtgKwW3SKzQCCzhRVtLFNLzjZ3KD/XL/_O2H1628-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GtX9w4B/1/Kzfc7Qs5JWDG9RtgKwW3SKzQCCzhRVtLFNLzjZ3KD/XL/_O2H1628-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GtX9w4B/1/LJgXNPvFL7kj9RQJVfzKNXnpQRGKtdnDSCb4Gv8RS/L/_O2H1628-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GtX9w4B/1/KJGCwBcGK9R36pPmVs4bDvSH4JLTV5zVgFKkJxwJ2/M/_O2H1628-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-GtX9w4B/1/MRVWrWkrWw4P4Bv8xdgxtZJVfL2hwz3GcfRF6TQwF/S/_O2H1628-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-7bVL94b",
+    "title": "Untitled",
+    "description": "© Wayne Heim",
+    "alt": "© Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7bVL94b/A",
+    "keywords": [
+      "O2H1628"
+    ],
+    "story": "© Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 193,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   }
 ];
