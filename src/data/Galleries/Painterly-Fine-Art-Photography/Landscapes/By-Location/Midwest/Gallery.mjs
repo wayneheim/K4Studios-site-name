@@ -1,28 +1,31 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-  
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
   {
     "id": "i-GBTSWkW",
-    "title": "Old Clifton Mill",
-    "description": "Fine art landscape photography of Historic Clifton Mill in Ohio.",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Old Clifton Mill",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NHJNkGcJfZ6QP33p7S9jCCW3f3p6DtG9FrrbrMtH5/XL/_HF20856-Pano-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-GBTSWkW/A",
     "keywords": [
       "Ohio",
@@ -37,21 +40,24 @@ export const galleryData = [
       "Buckeye State",
       "rivers"
     ],
-    "story": "Fine art landscape photography of Historic Clifton Mill in Ohio.",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/L2QH5jGbPsBBVsWRMwHhpKZgCM4HvsLLpLtgjsC32/XL/_HF20856-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/L2QH5jGbPsBBVsWRMwHhpKZgCM4HvsLLpLtgjsC32/XL/_HF20856-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NXZjkBB68gWGKFzrGggw8wNb77HBnTpq65X3L8Z65/L/_HF20856-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NRmr8PRtzXWvV4qf9Jvbf2bbF94QKkQFBWk3xngHP/M/_HF20856-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/MpvzL7VZ4vbwkQXVB3TCSwTZKCXkD2pZCbjQZqPhJ/S/_HF20856-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zXsjXwN",
     "title": "Forest Path. Photography by Wayne Heim",
     "description": "Painterly photography. Forest Path , quiet path through the woods of Hocking Hills in Ohio ©Wayne Heim",
-    "alt": "Forest Path. Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/KSgPnQ23vkk4qfHKhbBwQZq4m7XHQdRBCZ2SQXLjm/XL/_igp2989-XL.jpg",
+    "alt": "Old Clifton Mill",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-zXsjXwN/A",
     "keywords": [
       "Ohio",
@@ -69,18 +75,21 @@ export const galleryData = [
     "story": "Painterly photography. Forest Path , quiet path through the woods of Hocking Hills in Ohio ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/L2QH5jGbPsBBVsWRMwHhpKZgCM4HvsLLpLtgjsC32/XL/_HF20856-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/L2QH5jGbPsBBVsWRMwHhpKZgCM4HvsLLpLtgjsC32/XL/_HF20856-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NXZjkBB68gWGKFzrGggw8wNb77HBnTpq65X3L8Z65/L/_HF20856-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NRmr8PRtzXWvV4qf9Jvbf2bbF94QKkQFBWk3xngHP/M/_HF20856-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/MpvzL7VZ4vbwkQXVB3TCSwTZKCXkD2pZCbjQZqPhJ/S/_HF20856-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HP6hJm4",
     "title": "Rocks in Fall  Photography by Wayne Heim",
     "description": "Rocks in Fall -  stream flows through downed trees and rock in Metro Park. ©Wayne Heim",
-    "alt": "Rocks in Fall  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NX86CFv22dwCxMbqtwc88kXT2vpktMp7ZvXMhHhXT/XL/i-HP6hJm4-XL.jpg",
+    "alt": "Forest Path. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-HP6hJm4/A",
     "keywords": [
       "Ohio",
@@ -98,18 +107,21 @@ export const galleryData = [
     "story": "Rocks in Fall -  stream flows through downed trees and rock in Metro Park. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/NdWHcvbsdLN2Z8mjqq4SJz8dQ7fjRSGbXRJ2b6WXr/XL/_igp2989-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/NdWHcvbsdLN2Z8mjqq4SJz8dQ7fjRSGbXRJ2b6WXr/XL/_igp2989-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/KNxgJzGnLZxvQMfGCZL9kBZh6ZsXwqmRScbJVQSd8/L/_igp2989-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/MxGHR4z7wTc9gzXK3WRf8dcbkvvXVPsQ423hJSSkJ/M/_igp2989-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/MQ9ZL826h9qxqdsHh5KHpXw9MZTkJwmc8N5pcNcZv/S/_igp2989-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GmFFsFL",
     "title": "Dueling Falls    Photography by Wayne Heim",
     "description": "Two waterfalls flow over same rocks. . ©Wayne Heim",
-    "alt": "Dueling Falls    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/MhSp4rdkmSGQDH6Q7FnpfSCFFHdZLGsQnGGjGTNR4/XL/_IMG0137_tonemapped-XL.jpg",
+    "alt": "Rocks in Fall  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-GmFFsFL/A",
     "keywords": [
       "Ohio",
@@ -127,18 +139,21 @@ export const galleryData = [
     "story": "Two waterfalls flow over same rocks. . ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/MgwSH4QV7FhZrDjnmMkzdTqd465wpZnVC3ksMnMJ2/XL/i-HP6hJm4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-HP6hJm4/4/MgwSH4QV7FhZrDjnmMkzdTqd465wpZnVC3ksMnMJ2/XL/i-HP6hJm4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NRWjg2Tc3M6HWwr8K7mxpNDWZP9JbMBCCqLCCLtnf/L/i-HP6hJm4-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NT8pkBJtPHHP3pmHrwjkzb94ZCT6RcrZ8MTpHwKxq/M/i-HP6hJm4-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-HP6hJm4/4/LtRWbwt7jM4G6dnHDq5xQ2QdVCdZhRCMFtwsvj3Jb/S/i-HP6hJm4-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WdNbPqX",
     "title": "Berea Bridge  1   Photography by Wayne Heim",
     "description": "Many arches of the Berea Bridge. ©Wayne Heim",
-    "alt": "Berea Bridge  1   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/KMb5t2pNBrKqKBtKqfrF5KBVjt8NxdVKdJKrFsDvJ/XL/_IMG0156_tonemapped-XL.jpg",
+    "alt": "Dueling Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-WdNbPqX/A",
     "keywords": [
       "Ohio",
@@ -156,18 +171,21 @@ export const galleryData = [
     "story": "Many arches of the Berea Bridge. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/NRjbN7mHtSJpMkmRqZhLM5DnscfSJvGmWHMmNGbjr/L/_IMG0137_tonemapped-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/NBRWLq8McGBNq4bMp8MRF7hcsCkcL37rZ5PKCnWpv/S/_IMG0137_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fccqTrW",
     "title": "Berea Bridge 2  Photography by Wayne Heim",
     "description": "Photo farther away from the Berea Bridge. ©Wayne Heim",
-    "alt": "Berea Bridge 2  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/MvdxFWsdSt6BcGXBMtvNjTBcpFxVvPmxCPFRzwdVJ/XL/_IMG0159_tonemapped-XL.jpg",
+    "alt": "Berea Bridge  1   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-fccqTrW/A",
     "keywords": [
       "Ohio",
@@ -185,18 +203,21 @@ export const galleryData = [
     "story": "Photo farther away from the Berea Bridge. ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/LCP6DnrZ5ZhdwVh6jxLT99zFhT37jtZgDZktwxPmF/XL/_IMG0156_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/LCP6DnrZ5ZhdwVh6jxLT99zFhT37jtZgDZktwxPmF/XL/_IMG0156_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/L4TjMVfwtsbxhwKtF8XpxmMXzQsFJ7jSrK5crH6GZ/L/_IMG0156_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/LXr3QD2FsKqJNBqPnpgPKd96Z4drGQ6m9Bp4PNTsR/M/_IMG0156_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/MHMHfJB9DWZShXkr4vTVVhnxPtqTLGvhzMJfMkCV8/S/_IMG0156_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sm7MXM4",
     "title": "Painterly Photography:  Lighthouse & Waves",
     "description": "Painterly photo of stormy day and lighthouse in Conneaut, OH. by © Wayne Heim Painterly landscape photography of water and waterfalls.",
-    "alt": "Painterly Photography:  Lighthouse & Waves",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/KnkXBgcVtjCP4hzcqFfK6TZxB4Nr5bhtMZvzts2RD/XL/_OLY0581-Edit-XL.jpg",
+    "alt": "Berea Bridge 2  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/A",
     "keywords": [
       "Ohio",
@@ -214,18 +235,21 @@ export const galleryData = [
     "story": "Painterly photo of stormy day and lighthouse in Conneaut, OH. by © Wayne Heim Painterly landscape photography of water and waterfalls.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/LXD7cNjGcVF3dkC7Z2FcDXsPwK8WGGnJGZSf3Brcm/XL/_IMG0159_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/LXD7cNjGcVF3dkC7Z2FcDXsPwK8WGGnJGZSf3Brcm/XL/_IMG0159_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/KhpRSfXpJp6XKT5d78ZQZMxVbXnTq92W9KZbgNV93/L/_IMG0159_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/LnppZ7dxxT3cQgm8BmNX4w8jCLZ8kfP8nfF4dKqcJ/M/_IMG0159_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/NJ4NMV9Kzm2rpbL2qvf4vJjcn6cJbpD7bCnRdg69X/S/_IMG0159_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7LVp5bN",
     "title": "Painterly Photography: Old Mill",
     "description": "Painterly landscape photography of water and waterfalls.",
-    "alt": "Painterly Photography: Old Mill",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/KDptzFbZxRFjrsKdPbWSzvstCh3dw2t9dz4SQ9JBJ/XL/_WHZ6681-Edit-Edit-XL.jpg",
+    "alt": "Painterly Photography:  Lighthouse & Waves",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/A",
     "keywords": [
       "Ohio",
@@ -243,18 +267,21 @@ export const galleryData = [
     "story": "Painterly landscape photography of water and waterfalls.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/NVHZPbRrFwjXj95MMQmrZwHDZKqZsgVSgvmBgjkHt/XL/_OLY0581-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/NVHZPbRrFwjXj95MMQmrZwHDZKqZsgVSgvmBgjkHt/XL/_OLY0581-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/LvdjZgCht62b9tBG48XRrnLT2n5PsHgzWGJVDDfMZ/L/_OLY0581-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/KPW3rKqKRS4T82xHfrmxk9hr9khswkwQxsC9b5Bcn/M/_OLY0581-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/KXCXc8Zt94FmRD3CffNChwJHf8C2QVjbL5b49nHsN/S/_OLY0581-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mCJv3RM",
     "title": "Painterly Landscape Photography: Burea Falls at Sunset",
     "description": "Painterly landscape autumn sunset photo of waterfalls and bridge in Ohio. © Wayne Heim",
-    "alt": "Painterly Landscape Photography: Burea Falls at Sunset",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/LqHh3bB6PW5MS5nTfZ3nfmnL6nc3gbJJqjZDx3bDB/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "alt": "Painterly Photography: Old Mill",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/A",
     "keywords": [
       "Ohio",
@@ -272,18 +299,21 @@ export const galleryData = [
     "story": "Painterly landscape autumn sunset photo of waterfalls and bridge in Ohio. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/NhQMKNtXS23DbmWPDxCS3zjG9LJdkvRvTQTh87X2D/L/_WHZ6681-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/L3xNFn48zGJNxkfRgJHqnBsvb2vpLQVgkkD5rxxDD/S/_WHZ6681-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GV5XPtF",
     "title": "Black River West Falls",
     "description": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
-    "alt": "Black River West Falls",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/NQZm7B799KPVng9vPRwQ89ChLMjmMGZjPHXZV8nJs/XL/_WHZ7498-Edit-XL.jpg",
+    "alt": "Painterly Landscape Photography: Burea Falls at Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-GV5XPtF/A",
     "keywords": [
       "Ohio",
@@ -301,18 +331,21 @@ export const galleryData = [
     "story": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/KMfzxLhwKQ3JtXGsJj8kd3KSFZTGcGvDSb4tX4Sx8/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/KMfzxLhwKQ3JtXGsJj8kd3KSFZTGcGvDSb4tX4Sx8/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/LmJNfBt59gK5MxJBgNhThD6rvD335WSvvRZKsXstm/L/_WHZ7317-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/LFDHN84tJGt3cxb7PDZtLsszqCdKfXw69LvbM2LLP/M/_WHZ7317-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/MdwvnZ7LTST6BHvQG527fBMhQ4pmKsgpxCjZ9DfKc/S/_WHZ7317-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pd6dZCP",
     "title": "Just Around the Bend: A Winter Walk in the Park",
     "description": "Painterly fine art photography. Showy walk through the woods. © Wayne Heim",
-    "alt": "Just Around the Bend: A Winter Walk in the Park",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/LhNqmghTV4h7RKhgvFX7hbkGhDnpRk3Rcpw8TNNTH/XL/_ANA0731-Edit-XL.jpg",
+    "alt": "Black River West Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/A",
     "keywords": [
       "Ohio",
@@ -330,18 +363,21 @@ export const galleryData = [
     "story": "Painterly fine art photography. Showy walk through the woods. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/Nh6bb5xkG9SkT8ZJqWTFpxdj8SGnscF9RZf5LZpDJ/XL/_WHZ7498-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/Nh6bb5xkG9SkT8ZJqWTFpxdj8SGnscF9RZf5LZpDJ/XL/_WHZ7498-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/LrFXfk4dfcddth69Gz6WQ7DbrQZJKpMJkNMZqSPRC/L/_WHZ7498-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/MFhDmTsFBLsMr5Zwds285zLBd52KzcN3t3hTJZHCV/M/_WHZ7498-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/KFDpkJG5bDxFztVNF5br5LLsV2fzjcTQ5pkRxQdKD/S/_WHZ7498-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VHMgr5J",
     "title": "Painterly Landscape Photo: Light through trees.",
     "description": "Fine art painterly photography of light shining through the trees.",
-    "alt": "Painterly Landscape Photo: Light through trees.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/KqQqStXbQXJS6SSHqXm7NbHrFb35TJ3zP9RnDMmpd/XL/_ANA1097-Edit-Edit-XL.jpg",
+    "alt": "Just Around the Bend: A Winter Walk in the Park",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VHMgr5J/A",
     "keywords": [
       "Ohio",
@@ -359,18 +395,21 @@ export const galleryData = [
     "story": "Fine art painterly photography of light shining through the trees.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/NT74JDsBtrmTg4npchTgFMwQGTWcXvwCTvkVCnBDX/XL/_ANA0731-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/NT74JDsBtrmTg4npchTgFMwQGTWcXvwCTvkVCnBDX/XL/_ANA0731-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/NT74JDsBtrmTg4npchTgFMwQGTWcXvwCTvkVCnBDX/XL/_ANA0731-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/K8dWZpW5tj56v3QngV7qqH6FXmK69QwGWqJZx4Lph/L/_ANA0731-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/MQ6qBs4z5QQNvLFcbjqwJVR7PZJN2KzQBmwn2N2nw/S/_ANA0731-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QsskjT5",
     "title": "Painterly Photography:  Moring Clouds Over Lake Erie",
     "description": "Painterly Landscape Photography of sunrise and clouds over the beach in Conneaut Ohio. © Wayne Heim Painterly landscape photography of water and waterfalls.",
-    "alt": "Painterly Photography:  Moring Clouds Over Lake Erie",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/LzhnR8kSWdcPVNvjgchcwcGvBqvFPpbH25g2sRGvR/XL/_PEN0005-Enhanced-Edit-XL.jpg",
+    "alt": "Painterly Landscape Photo: Light through trees.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-QsskjT5/A",
     "keywords": [
       "Ohio",
@@ -388,18 +427,21 @@ export const galleryData = [
     "story": "Painterly Landscape Photography of sunrise and clouds over the beach in Conneaut Ohio. © Wayne Heim Painterly landscape photography of water and waterfalls.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/LgZt3XgvxQRRc3nSbw3L7zsC7XK4VVCRpGtdgW94T/XL/_ANA1097-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/LgZt3XgvxQRRc3nSbw3L7zsC7XK4VVCRpGtdgW94T/XL/_ANA1097-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/LgZt3XgvxQRRc3nSbw3L7zsC7XK4VVCRpGtdgW94T/XL/_ANA1097-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/MGCPxrNNRhDd2VDdCMvVfdZ8vN3w8bTvFgsC4qKw4/L/_ANA1097-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/Kr4hfvVkhQrZQSns3HbqR98N2fWMNxtRH744v9RXN/S/_ANA1097-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-f56454D",
     "title": "Red barn and storm clouds.",
     "description": "Old red barn with storm approaching from behind. Painterly landscape photography.",
-    "alt": "Red barn and storm clouds.",
-    "src": "https://photos.smugmug.com/photos/i-f56454D/2/LQZm2gX6Cw4GxThXNnrQskNFrW7NNNFLQfQ9FT9xG/XL/i-f56454D-XL.jpg",
+    "alt": "Painterly Photography:  Moring Clouds Over Lake Erie",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f56454D/A",
     "keywords": [
       "Ohio",
@@ -417,18 +459,21 @@ export const galleryData = [
     "story": "Old red barn with storm approaching from behind. Painterly landscape photography.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/NNmXnBH98RnzJvTTFzGT8ksfW5XgzwGkCbRjwMg4r/XL/_PEN0005-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/NNmXnBH98RnzJvTTFzGT8ksfW5XgzwGkCbRjwMg4r/XL/_PEN0005-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/LvqbrZVdKSLF3NzGFfTcSPCGzsjtxGwMHdm8hVNp5/L/_PEN0005-Enhanced-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/KPkQzJBvP4DQXcqZLmb2w3224488GFRMhtH8Vbs2Z/M/_PEN0005-Enhanced-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/M6sPrqSCC42rVJ7HGRdDj8NNkjdhRFMdMz8gm4Jbp/S/_PEN0005-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KWjsH3B",
     "title": "Heaven's Lights",
     "description": "Fine art landscape photography of stormy skies in Ohio.",
-    "alt": "Heaven's Lights",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/Lmw3KW4Kx3454Cp8r3VBhF8PhddhGC2nM9BWhgFcq/XL/_O1H0465-Edit-XL.jpg",
+    "alt": "Red barn and storm clouds.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-KWjsH3B/A",
     "keywords": [
       "Ohio",
@@ -446,18 +491,21 @@ export const galleryData = [
     "story": "Fine art landscape photography of stormy skies in Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/photos/i-f56454D/2/NLrRHSwc6DCd2QGZ8N538dC6t72zr3HXKK8HhpMss/XL/i-f56454D-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-f56454D/2/NLrRHSwc6DCd2QGZ8N538dC6t72zr3HXKK8HhpMss/XL/i-f56454D-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-f56454D/2/KrH2mDLz58kv3zFSWvqxhNnHWbkC9r75VVxQCHHTd/L/i-f56454D-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-f56454D/2/L9JPsk3xc7KP2WgSZnbsd8Jj8sv5Zt8jZKvBtgWXc/M/i-f56454D-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-f56454D/2/KWSgmD5LwFV74KbFWsdF69MkJKqbt6fXrfqj8hHnP/S/i-f56454D-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DL6wMc7",
     "title": "God Rays",
     "description": "Fine art landscape photography of stormy skies in Ohio.",
-    "alt": "God Rays",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/LrLQPdb5tLTS2cP5tDcsDT9S3vZmTTh9swBKFFWWD/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
+    "alt": "Heaven's Lights",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-DL6wMc7/A",
     "keywords": [
       "Ohio",
@@ -475,18 +523,21 @@ export const galleryData = [
     "story": "Fine art landscape photography of stormy skies in Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/MCd5HpSxVxGj7ZBfPCDspgdkLqXvbxHPLWPfRVPqL/XL/_O1H0465-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/MCd5HpSxVxGj7ZBfPCDspgdkLqXvbxHPLWPfRVPqL/XL/_O1H0465-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/LH9j4WxrfZHNgwvFGqzBCsGg3h43JRCm5GhqpJgV6/L/_O1H0465-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/KhF6jfzRPfCXdSC2gMqNnBWgCk5Vv7tNkTgpqXL6b/M/_O1H0465-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/NXd2PtCgzS8FRWPszL767fj5f9VkTd8wsvZCNqR4k/S/_O1H0465-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5wFxqjj",
     "title": "Break in the Storm",
     "description": "Fine art landscape photography of stormy skies in Ohio.",
-    "alt": "Break in the Storm",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/LMVPVsMJHWGzt2JvVvpCfgm4tTwqXJWPZgWNSxFfg/XL/_O1H0478-XL.jpg",
+    "alt": "God Rays",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-5wFxqjj/A",
     "keywords": [
       "Ohio",
@@ -504,18 +555,21 @@ export const galleryData = [
     "story": "Fine art landscape photography of stormy skies in Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/KZ7w9PtcjZBBbtvwSSPbN8MNrPP7JFpQSBxPxSbsL/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/KZ7w9PtcjZBBbtvwSSPbN8MNrPP7JFpQSBxPxSbsL/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/KxHgLqVnRwRQFXSxK9vWd4SN5Dt3ddmvPGLMLTjkL/L/_O1H0474-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/K3RBxdWSqtW3zmps5GXzS6zdh3VWHQr3NVsW6MmGW/M/_O1H0474-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/KWtmgbWtfjdhbv76s5X96ZXcTXr2dm5NMPn2K9BWr/S/_O1H0474-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-m3V6PZf",
     "title": "Cold Front",
     "description": "Fine art landscape photography of stormy skies in Ohio.",
-    "alt": "Cold Front",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LptFrpgLhgq7b6NWKprRMNNwGCdRsCKCnf7cjBdPF/XL/_O1H0479-Edit-Edit-XL.jpg",
+    "alt": "Break in the Storm",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-m3V6PZf/A",
     "keywords": [
       "Ohio",
@@ -533,18 +587,21 @@ export const galleryData = [
     "story": "Fine art landscape photography of stormy skies in Ohio.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/KZCGjg7WDDdtQjgP2wCCQ9Q6XQJWBKJ7ngTQvgpv7/XL/_O1H0478-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/KZCGjg7WDDdtQjgP2wCCQ9Q6XQJWBKJ7ngTQvgpv7/XL/_O1H0478-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/LdMpqtpggLvL66Zk5KLFj4CzxRTncsbZDjpfzFK2N/L/_O1H0478-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/NGXDKXc3xHjQw7CTHDg8W5MpXnV67gW6H3bX7NHWP/M/_O1H0478-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/NCKFzsSnHgbQ3vVckFjFdJ7ZNDpwM4gWBbJRnCzC9/S/_O1H0478-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SCMFzP3",
     "title": "Great Planes Clouds",
     "description": "Painterly landscape photography of clouds on a sunny day.",
-    "alt": "Great Planes Clouds",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/KHGKCwVcZfsTrWjH4q55b6PQD6mbm2cJ9fNsw4QNJ/XL/20230706_181805-Edit-XL.jpg",
+    "alt": "Cold Front",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/A",
     "keywords": [
       "Ohio",
@@ -562,18 +619,21 @@ export const galleryData = [
     "story": "Painterly landscape photography of clouds on a sunny day.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LWKVCFb76BKkCzM3qgnvjHFXMVC4pTx8jhcJWpqjX/XL/_O1H0479-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LWKVCFb76BKkCzM3qgnvjHFXMVC4pTx8jhcJWpqjX/XL/_O1H0479-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/KvS3X4xN7xh3ndCpRQqvTzzW9Pm8ShzgmsZ3SR8gs/L/_O1H0479-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LkgjDJtKKR5RmgW7kXWdj69FFfcpCSmMXgtSmvjFV/M/_O1H0479-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/Kp4qJtfdHhRCB83SD6z84wSXqMfS75kXhFGjR5VvD/S/_O1H0479-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-84Cqc8J",
     "title": "Cloudscape.",
     "description": "Painterly landscape photography of clouds on a summer day.",
-    "alt": "Cloudscape.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/NJVztbJT75n3X4XpCbjFLpxpmQZRtLctNqdFKk3xP/XL/20230706_183048-Edit-Edit-XL.jpg",
+    "alt": "Great Planes Clouds",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/A",
     "keywords": [
       "Ohio",
@@ -591,10 +651,46 @@ export const galleryData = [
     "story": "Painterly landscape photography of clouds on a summer day.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MgPmbwcSV5GHgBTczDDcsG2w5TTSrDvbKzRJXkT4g/XL/20230706_181805-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MgPmbwcSV5GHgBTczDDcsG2w5TTSrDvbKzRJXkT4g/XL/20230706_181805-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/KzFxDZ4nT6fTMHLCxxG2Nv2WFQbBndnXnZwZ6PkXp/L/20230706_181805-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/M46RbV9cpQndh2WmshLcR54Rf4hpmDJcd88ZqS2Q2/M/20230706_181805-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MV2SFXfjVRkCkh5NLvFvRkK8fC2F9kgkcTSvcQXZp/S/20230706_181805-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-pg6hdsZ",
+    "title": "Cedar Cliff Falls",
+    "description": "Fine art landscape photography of Cedar Cliff Waterfalls in Cedarville, Ohio. Tucked away in the lush green foliage that surrounds this understated park sits this beautiful waterfall. Hidden Ohio gem.",
+    "alt": "Cloudscape.",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pg6hdsZ/A",
+    "keywords": [
+      "Ohio",
+      "fine art",
+      "photography",
+      "landscape",
+      "water",
+      "waterfalls",
+      "Clifton Mill",
+      "trees",
+      "bridges",
+      "Buckeye State",
+      "rivers"
+    ],
+    "story": "Fine art landscape photography of Cedar Cliff Waterfalls in Cedarville, Ohio. Tucked away in the lush green foliage that surrounds this understated park sits this beautiful waterfall. Hidden Ohio gem.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/MXHBnt5hsDkrh93vDFQCZFk5S75GVMcpLD43q5V5B/XL/20230706_183048-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/MXHBnt5hsDkrh93vDFQCZFk5S75GVMcpLD43q5V5B/XL/20230706_183048-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/MScwpFzGdLMqsRfzkRJZ227bmQP759f8Rh2ZKhj5P/L/20230706_183048-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/L4M3KF48wx425M7gL7PvNXMTZnCg5QVKppx7QnvKH/M/20230706_183048-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/NZf6h6kQMmqzWDMDB5tz2vppCXGPxqBtsLWZ4BTb6/S/20230706_183048-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   }
 ];

@@ -1,28 +1,31 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-  
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
   {
     "id": "i-fgkX7Jn",
-    "title": "Forest Brook in Green",
-    "description": "Painterly landscape photography of green canopy in the forest with stream running through the hills of Vermont.",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "Forest Brook in Green",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/K3WHkRRR8kkRf7bvrDXkNhMPvHhwjkXSVfxgZMVhr/XL/_DSF5884-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/A",
     "keywords": [
       "Vermont",
@@ -35,21 +38,24 @@ export const galleryData = [
       "painterly photography",
       "painterly landscape photography"
     ],
-    "story": "Painterly landscape photography of green canopy in the forest with stream running through the hills of Vermont.",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/Kw5hjrdsXzXPF4383ZrtnjSbKG2gvsFwn4DdZ6dkX/L/_DSF5884-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/LHr4Zg4WJXggv35zvXPs2T3mVZFSLvwXBBGrMN2qJ/M/_DSF5884-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/KS3d52bBWwLqdq9zFxKbfRxtcBzkxp32zVSV6GZJW/S/_DSF5884-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7LZhFkc",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_WHZ6646-Edit-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/MV2NZKCZb5LrkrFnhP9CfKCNWgttNdHvLJcXqm7hT/XL/_WHZ6646-Edit-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Forest Brook in Green",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7LZhFkc/A",
     "keywords": [
       "Vermont",
@@ -62,21 +68,24 @@ export const galleryData = [
       "painterly photography",
       "painterly landscape photography"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/Kw5hjrdsXzXPF4383ZrtnjSbKG2gvsFwn4DdZ6dkX/L/_DSF5884-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/LHr4Zg4WJXggv35zvXPs2T3mVZFSLvwXBBGrMN2qJ/M/_DSF5884-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/KS3d52bBWwLqdq9zFxKbfRxtcBzkxp32zVSV6GZJW/S/_DSF5884-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mSp9WgK",
     "title": "Old Mill in the Fall",
     "description": "Old mill and waterfall highlighted by fall colors.",
-    "alt": "Old Mill in the Fall",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LnGChwdNw638jTQKmFTcD3TmJNC4StDF2XhgRsfZQ/XL/_WHZ6667_8_9-Edit-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mSp9WgK/A",
     "keywords": [
       "Vermont",
@@ -92,18 +101,21 @@ export const galleryData = [
     "story": "Old mill and waterfall highlighted by fall colors.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/LDbzWpJGRCWm2hQzq67JT7JvLS55NgVkMCt6kHM6X/XL/_WHZ6646-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/LDbzWpJGRCWm2hQzq67JT7JvLS55NgVkMCt6kHM6X/XL/_WHZ6646-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/LDbzWpJGRCWm2hQzq67JT7JvLS55NgVkMCt6kHM6X/XL/_WHZ6646-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/LCRrzhC4cmGSkRHrPsjpDzBDQs8PwCSBVBNFSQjgW/L/_WHZ6646-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/K7BKJCSbStsDzs5cbzgCG4tnnFzX85NGdN7LkwSgg/S/_WHZ6646-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-p5ghtLz",
     "title": "A Path Less Traveled",
     "description": "Light creating playful shadows through the forest trees and stream. Greens and browns of nature paint the picture of texture and discovery.",
-    "alt": "A Path Less Traveled",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/MfnQ6vQjQH2CrXfZqSvP3Rn4RgXrDFXHBHhQ8nm4f/XL/Shadow%2520trees_DSF5489-Edit-Edit-XL.jpg",
+    "alt": "Old Mill in the Fall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-p5ghtLz/A",
     "keywords": [
       "Vermont",
@@ -119,18 +131,21 @@ export const galleryData = [
     "story": "Light creating playful shadows through the forest trees and stream. Greens and browns of nature paint the picture of texture and discovery.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/M62BHmzrSpLW5LJJ4JfWKgRGQPMb77434wdrPtNQF/L/_WHZ6667_8_9-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/NBJc5TDJ5VbDqDnQvms2ZNWtSGpS6xR5gC2gzDBC4/S/_WHZ6667_8_9-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FpmhtnM",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_DSF5501_tonemapped-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/KXtH3cJt6DxSBX2nXNFVtM8Cz8dxrfSbhmnXtkWRZ/XL/_DSF5501_tonemapped-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "A Path Less Traveled",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-FpmhtnM/A",
     "keywords": [
       "Vermont",
@@ -143,21 +158,24 @@ export const galleryData = [
       "painterly photography",
       "painterly landscape photography"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/Mv3QrnkcLFnw9PGkgTrhBhwF75N7j4ZCLGNsRLtz6/L/Shadow%20trees_DSF5489-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/K3Zkq4TQBbj3DCMh7JDhVPXT8zkXCSn5nVkZRpJHp/S/Shadow%20trees_DSF5489-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Jstk9Gx",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_DSF5516_tonemapped-Edit.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/K738tNKcXSmHbtvWzZQVv865DhtMK8XJR8WggdLST/XL/_DSF5516_tonemapped-Edit-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Jstk9Gx/A",
     "keywords": [
       "Vermont",
@@ -170,21 +188,24 @@ export const galleryData = [
       "painterly photography",
       "painterly landscape photography"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/MQkzNxTp4kcGf4H2rbZTZZN9rWDcjJPS8vx73MZ3d/XL/_DSF5501_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/MQkzNxTp4kcGf4H2rbZTZZN9rWDcjJPS8vx73MZ3d/XL/_DSF5501_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/MQkzNxTp4kcGf4H2rbZTZZN9rWDcjJPS8vx73MZ3d/XL/_DSF5501_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/LsLVLtcxfkWNchTfHwL239LhqmxFBrKq5pRxnTrPx/L/_DSF5501_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/MjqTFbDswGRKtvKGPD3vvsTNkFHQphRThc9DmSpjp/S/_DSF5501_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NkNwLM6",
     "title": "Hidden Falls",
     "description": "Hidden waterfall in West Virginia.",
-    "alt": "Hidden Falls",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/LXFDHGCGjwMtzJ6BxsDJhC9ztstzSkf7dbCrbnsZ6/XL/_DSF5574_tonemapped-Edit-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-NkNwLM6/A",
     "keywords": [
       "Vermont",
@@ -200,18 +221,21 @@ export const galleryData = [
     "story": "Hidden waterfall in West Virginia.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/LBcfp2g5RTFxQ5J93bBLxnqvtdDJXZG66kk7S4krw/L/_DSF5516_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/Lp2gGRNDwN473kVXBB8g7P26fBjF9xvTmRGFwnV9R/S/_DSF5516_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nqpGhhX",
     "title": "Hidden Falls x2",
     "description": "Another hidden waterfall in the forest of West Virginia.",
-    "alt": "Hidden Falls x2",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KcXnQcbc76JxR9F344m6Wf2ThLRL5j4xFRQMrd6P7/XL/_DSF5606-Edit-XL.jpg",
+    "alt": "Hidden Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-nqpGhhX/A",
     "keywords": [
       "Vermont",
@@ -227,18 +251,21 @@ export const galleryData = [
     "story": "Another hidden waterfall in the forest of West Virginia.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/KR3LvzwQmcJWKrtX8v5R3JQ4T4ZFpFM69pq38Q7kN/L/_DSF5574_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/NGgH77Br8zdHBzpjshFkLq2zBGbRjFsC67b5k5jQs/S/_DSF5574_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cKsdqTs",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_DSF5984_tonemapped.jpg",
-    "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/Mz5M8mvzTfMfXrTzxFjGzFh77KFFC8xxbHXsfnGnt/XL/i-cKsdqTs-XL.jpg",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Hidden Falls x2",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cKsdqTs/A",
     "keywords": [
       "Vermont",
@@ -251,21 +278,24 @@ export const galleryData = [
       "painterly photography",
       "painterly landscape photography"
     ],
-    "story": "",
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/NhD3KHBzjBsCpkQXCzq9Ftj5NSxtfcGcMKnP6SRxZ/L/_DSF5606-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/L7gSWJsB82VZ9QsP9hX5BrmDhVDNd9BKRxjcCJFBm/M/_DSF5606-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KQTGN9ct2H5KhRvWvfsnQndvWXzqgJwHpkd3p62mm/S/_DSF5606-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-RjSqqDt",
     "title": "Triangles",
     "description": "Abstract view of waterfall at sunset.  in Vermont.",
-    "alt": "Triangles",
-    "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/M3GXBhdQGdVGjBJ7rR7D2NzRVkBjhtJT8sxg6p8Wh/XL/i-RjSqqDt-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-RjSqqDt/A",
     "keywords": [
       "Vermont",
@@ -281,18 +311,21 @@ export const galleryData = [
     "story": "Abstract view of waterfall at sunset.  in Vermont.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-cKsdqTs/0/MtKfHxKc9gDVnbsGKJBhfBz3xg9vMPnN8cfHcN64X/L/i-cKsdqTs-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-cKsdqTs/0/MbRWMK5s2GxJhhP2P9ZXK6WP7JJX3j4fNztMpTRK7/S/i-cKsdqTs-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qM9zBVL",
     "title": "50/50",
     "description": "Abstract waterfall view showing the spillway and textures.",
-    "alt": "50/50",
-    "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/L88X9243jxcSVSczNpqx4HRZnVGpJ8RPpGFz8Smtn/XL/i-qM9zBVL-XL.jpg",
+    "alt": "Triangles",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qM9zBVL/A",
     "keywords": [
       "Vermont",
@@ -308,18 +341,21 @@ export const galleryData = [
     "story": "Abstract waterfall view showing the spillway and textures.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/LK6Pnfwc9jc3mtTgdptj8JhKQQdJdWB8x3Wc9HsvG/XL/i-RjSqqDt-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-RjSqqDt/1/LK6Pnfwc9jc3mtTgdptj8JhKQQdJdWB8x3Wc9HsvG/XL/i-RjSqqDt-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-RjSqqDt/1/Ndkr7PtTPmTChjBm4k5h6HXSBKJp64CZWjmCVtH8F/L/i-RjSqqDt-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-RjSqqDt/1/MHGv4jmFprSP96k2hSB8sttVv4kWZtNg86SdcB5wK/M/i-RjSqqDt-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-RjSqqDt/1/Kd2jzH4thdMdQdDtQGcTXs6VqV5m2kcW3x7F7fmPw/S/i-RjSqqDt-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5ZsWtSx",
     "title": "Down the hill.",
     "description": "Waterfall in the woods.",
-    "alt": "Down the hill.",
-    "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MB757WTWqZdkccdVzDTz2KdvQVBb8mRcKtrk7DVdX/XL/i-5ZsWtSx-XL.jpg",
+    "alt": "50/50",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5ZsWtSx/A",
     "keywords": [
       "Vermont",
@@ -335,18 +371,21 @@ export const galleryData = [
     "story": "Waterfall in the woods.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NVQVZ8Wd7kbBzGbhbkXRbTWV9ScFgCVDZXpvD8rsF/XL/i-qM9zBVL-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NVQVZ8Wd7kbBzGbhbkXRbTWV9ScFgCVDZXpvD8rsF/XL/i-qM9zBVL-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-qM9zBVL/1/Lkr9v9NGptJgVgp99R6dJMHzBZSfzgdHcTGhNDC9v/L/i-qM9zBVL-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NWDKCT6679BfGNWrJZBjcHVLKFwpk9h9v62MjN8T9/M/i-qM9zBVL-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-qM9zBVL/1/LFNn7JKMPj2NGWsqhL3sMP6pkkhhpFqPphPXPvtML/S/i-qM9zBVL-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fGnNkBL",
     "title": "Vermont Waterfall",
     "description": "Cascading waterfall in the green forest.",
-    "alt": "Vermont Waterfall",
-    "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/LtDZ8prBjhG43S2H6ggt6bHJXFxXjcnWgDDmcSTSC/XL/i-fGnNkBL-XL.jpg",
+    "alt": "Down the hill.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fGnNkBL/A",
     "keywords": [
       "Vermont",
@@ -362,18 +401,21 @@ export const galleryData = [
     "story": "Cascading waterfall in the green forest.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MCWwMt3sLLQD8cPh74jd8pT6bkzHJR2krD5QZQqT3/L/i-5ZsWtSx-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/KHWgS458P2QZTMqFdSHzvWMvGdDv2pSJmFNGnmCZj/M/i-5ZsWtSx-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/K9sP3wQvRKVnj9PP325XDjMSS3vQFfSsc8DwPdFsN/S/i-5ZsWtSx-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qrS5Ggc",
     "title": "Colors of the forest.",
     "description": "Cascading waterfall through the forest over black rocks and surrounded by green forest.",
-    "alt": "Colors of the forest.",
-    "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/Kh4rjJLjV9fZtTw6DR2W2n2kf4WK9ddGMswJfgtbG/XL/i-qrS5Ggc-XL.jpg",
+    "alt": "Vermont Waterfall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qrS5Ggc/A",
     "keywords": [
       "Vermont",
@@ -389,18 +431,21 @@ export const galleryData = [
     "story": "Cascading waterfall through the forest over black rocks and surrounded by green forest.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-fGnNkBL/1/L7dM3vk45tFhhM34wQMgt8xZS3MsSBX7JcvjSfTRd/L/i-fGnNkBL-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KjCM9D3pcjKCRTXzJqLdRMwZzXnfDdvPtz4D89Pwc/S/i-fGnNkBL-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bqnctgw",
     "title": "Final Plunge",
     "description": "Final path of waterfall as it cascades down the black rock slope.",
-    "alt": "Final Plunge",
-    "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/LWqnqbxws5zmqLGTtkhHCwNGwvRKzStBQxjZpVVhj/XL/i-bqnctgw-XL.jpg",
+    "alt": "Colors of the forest.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bqnctgw/A",
     "keywords": [
       "Vermont",
@@ -416,10 +461,44 @@ export const galleryData = [
     "story": "Final path of waterfall as it cascades down the black rock slope.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/Ndk9GwFvnK9C2Sd65TmwfS2NdCXxWGPncKsgQ5bKV/L/i-qrS5Ggc-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/L2Tt7vCgbSP7B3npd5ZZjWnSfLKrXsf4Nqv7htjvK/S/i-qrS5Ggc-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-XzhTJPf",
+    "title": "Painterly photography: Old time cabin.",
+    "description": "Fine art painterly photography of old log cabin at Old Bedford Village.",
+    "alt": "Final Plunge",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-XzhTJPf/A",
+    "keywords": [
+      "Vermont",
+      "Green Forest",
+      "forest",
+      "trees",
+      "stream",
+      "babbling brook",
+      "fine art painterly photography",
+      "painterly photography",
+      "painterly landscape photography"
+    ],
+    "story": "Fine art painterly photography of old log cabin at Old Bedford Village.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-bqnctgw/1/NXG5vK5JP9WDtd8PPC2gTwsDpbMqknR6Fxs2BDnPz/L/i-bqnctgw-L.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-bqnctgw/1/NfrsRSGKk5Wsg2vVPFgJHSGmvhgF3vCHhCxjvdgmK/S/i-bqnctgw-S.jpg",
+    "srcOriginal": ""
   }
 ];

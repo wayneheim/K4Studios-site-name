@@ -1,28 +1,31 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-  
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
   {
     "id": "i-FrDFN7V",
-    "title": "Steam Train Art",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/KTKXkQvxhNkqtSmDpk3CnK8CX5N4HJF8B5BtkXw8x/XL/_DSF0339-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-FrDFN7V/A",
     "keywords": [
       "steam train art",
@@ -37,21 +40,24 @@ export const galleryData = [
       "painterly train photos",
       "East Broad Top Railroad"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/KX4J3xNPzsVJGPgN2sMz3NbtRBVdtjgfPCmHWfgGb/XL/_DSF0339-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/KX4J3xNPzsVJGPgN2sMz3NbtRBVdtjgfPCmHWfgGb/XL/_DSF0339-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/KX4J3xNPzsVJGPgN2sMz3NbtRBVdtjgfPCmHWfgGb/XL/_DSF0339-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/MKpX76tM3pzw5BR8r2dVcMTKwZ7pBZ26K5JCg5hjr/L/_DSF0339-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/NKfh2z9bWvfPGhkkMJ2tT3CccBfc9N7W7Pxq8wPgV/S/_DSF0339-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n6PjStj",
-    "title": "Train in the Yard.",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6PjStj/0/KHbmmWsHJd3t4Z7pKjcVx2fnv9vbw39H27s6S5g6H/XL/_DSF0416-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n6PjStj/A",
     "keywords": [
       "steam train art",
@@ -69,18 +75,21 @@ export const galleryData = [
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/KX4J3xNPzsVJGPgN2sMz3NbtRBVdtjgfPCmHWfgGb/XL/_DSF0339-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/KX4J3xNPzsVJGPgN2sMz3NbtRBVdtjgfPCmHWfgGb/XL/_DSF0339-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/KX4J3xNPzsVJGPgN2sMz3NbtRBVdtjgfPCmHWfgGb/XL/_DSF0339-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/MKpX76tM3pzw5BR8r2dVcMTKwZ7pBZ26K5JCg5hjr/L/_DSF0339-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-FrDFN7V/1/NKfh2z9bWvfPGhkkMJ2tT3CccBfc9N7W7Pxq8wPgV/S/_DSF0339-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SfsCh3W",
     "title": "Creature of the darkness.",
     "description": "B/W Painterly Train Photography © Wayne Heim",
-    "alt": "Creature of the darkness.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KcFB9H7RVp7kHVfQpzCncK8K4h9G3FtJR5H7vNJxP/XL/_DSF0462-XL.jpg",
+    "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-SfsCh3W/A",
     "keywords": [
       "steam train art",
@@ -98,18 +107,21 @@ export const galleryData = [
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6PjStj/0/MgcnNSXJJX2DZmgf3MVCBGPn5d6bn9LmkNWX7ctWg/XL/_DSF0416-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6PjStj/0/MgcnNSXJJX2DZmgf3MVCBGPn5d6bn9LmkNWX7ctWg/XL/_DSF0416-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6PjStj/0/MgcnNSXJJX2DZmgf3MVCBGPn5d6bn9LmkNWX7ctWg/XL/_DSF0416-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6PjStj/0/Ncj5FWvJbzJktkfdP3fJL2WFLCLnpknLH2WDmh7Sw/L/_DSF0416-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6PjStj/0/Mfnzx87Dd2JZV83VkQTcnjC9qDMxfwrkC7FpwxQmT/S/_DSF0416-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n6ktVfH",
-    "title": "Down the Line.",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
-    "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6ktVfH/0/MZLGVMB2Mk5ThFp4ch7wb7QxrQq2tkqcGNJB95Q6B/XL/_DSF0468-XL.jpg",
+    "alt": "Creature of the darkness.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n6ktVfH/A",
     "keywords": [
       "steam train art",
@@ -127,18 +139,21 @@ export const galleryData = [
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KGcvPp5pGVW88VnZJP6CZVJStN7Xwd6MDBxjgJNkW/XL/_DSF0462-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KGcvPp5pGVW88VnZJP6CZVJStN7Xwd6MDBxjgJNkW/XL/_DSF0462-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KM44rTLQxCpBR84TVZrKdW7xjW6jP4Pt7Lcq9BVSm/L/_DSF0462-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/NDGmrdzT9p4nvZ7JSt2dgpJCkjpPQ9vgcgbpzN77d/M/_DSF0462-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/LLT4PgsvNKGfDZ9VCSKSgZkWnhmKD87V8PzzhZFFc/S/_DSF0462-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jwzQrKx",
-    "title": "Passing Through.",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jwzQrKx/0/K2Jb7hSxkHFjx6BJ6dBFX8NWCphmNCXGvr9Lp62rL/XL/_DSF0480-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jwzQrKx/A",
     "keywords": [
       "steam train art",
@@ -156,18 +171,21 @@ export const galleryData = [
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6ktVfH/0/MBrcZm94F4t4rDGTcTjKx8LMBBbXTcnvdC6LSHZh7/XL/_DSF0468-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6ktVfH/0/MBrcZm94F4t4rDGTcTjKx8LMBBbXTcnvdC6LSHZh7/XL/_DSF0468-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6ktVfH/0/KFXH58TLmjSr6Q34ZckKtwdL8T4wX7skLZQZG6Hxk/L/_DSF0468-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6ktVfH/0/KNkdzDpvW7jhqkVKnKpjNbG3QrVWdj5kFDJqvQbkw/M/_DSF0468-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n6ktVfH/0/KNK58rg7g25nz2hKtSFpFhCMg8Xw9D5V3gKSp5rHQ/S/_DSF0468-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ML26tVm",
-    "title": "Through the Draw.",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-ML26tVm/0/NKn6sfr8MsrhXXprjxm89tJVHDc4PWx6gNCVvtP9g/XL/_DSF0650-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-ML26tVm/A",
     "keywords": [
       "steam train art",
@@ -185,18 +203,21 @@ export const galleryData = [
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jwzQrKx/0/Ldpc792dXXbK6QvtR4SrM8TxXRpFV3Wc5f3SDkJnv/XL/_DSF0480-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jwzQrKx/0/Ldpc792dXXbK6QvtR4SrM8TxXRpFV3Wc5f3SDkJnv/XL/_DSF0480-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jwzQrKx/0/LH7VJ5ChfmZThc2ThjGPc2DnCHxmFrp3nT9JPJ24h/L/_DSF0480-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jwzQrKx/0/L2LKLK8FKBrmRFhNj6xSrg8p2RjBv5Lf4ZkMZGxsg/M/_DSF0480-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jwzQrKx/0/MHVqdthNrRN7wktH4GtJhf87Fkbd5WjnvXd3sWtDS/S/_DSF0480-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JNBbHjN",
-    "title": "Out of the Fog.",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JNBbHjN/0/LtQ3v7mMf5DLsBpthCxbkpPSdVbgxXWtGfJRzgmkk/XL/_O1H0422-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-JNBbHjN/A",
     "keywords": [
       "steam train art",
@@ -214,18 +235,21 @@ export const galleryData = [
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-ML26tVm/0/NHFr2nCQLkcFtn7jqkn4ZdJzLwkcctDSzVGKL7rkq/XL/_DSF0650-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-ML26tVm/0/NHFr2nCQLkcFtn7jqkn4ZdJzLwkcctDSzVGKL7rkq/XL/_DSF0650-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-ML26tVm/0/NBVfNzkdhT7Px9h2xxcWSfCrH4CLM5rbfdz9NqbzJ/L/_DSF0650-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-ML26tVm/0/NHwM2Nwq5jq8T4VdzPvN3WR77KD7pjKTWmMLx5CVN/M/_DSF0650-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-ML26tVm/0/Lfnq6VWDjpFKJHnmKfnDbCb4wkvM92Sz5zttDSxNZ/S/_DSF0650-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NXqvv7J",
-    "title": "Contrasting Crossing.",
+    "title": "Untitled",
     "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/LvH2WQVkb4jwsp29vkPZnSwd4MjTZD3KB5ZWZbHtB/XL/_HF26382-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-NXqvv7J/A",
     "keywords": [
       "steam train art",
@@ -243,409 +267,718 @@ export const galleryData = [
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JNBbHjN/0/L2bghMsxHHLvXzNH3Dsb5ZTRBqLCNCtMCwJXpWNkR/XL/_O1H0422-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JNBbHjN/0/L2bghMsxHHLvXzNH3Dsb5ZTRBqLCNCtMCwJXpWNkR/XL/_O1H0422-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JNBbHjN/0/L2bghMsxHHLvXzNH3Dsb5ZTRBqLCNCtMCwJXpWNkR/XL/_O1H0422-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JNBbHjN/0/KgjHCggkr46nZtn6JjFKz5rJCLvw9GbsMLMK5QfmW/L/_O1H0422-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JNBbHjN/0/KzFbNVF3s67KqSDr4nLjPRMQPCLg7SzGVcRJGHF9d/S/_O1H0422-S.jpg",
+    "srcOriginal": ""
   },
-   {
+  {
     "id": "i-Lj6wfwt",
-    "title": "Black and White Steam Train Picture – East Broad Top Railroad",
-    "description": "Classic black and white painterly steam train photograph by Wayne Heim.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Lj6wfwt/0/NNh7bcp6cfXw9ctTJTpwfqBbpB6BL7S2qVKXhq2pv/XL/_DSF0597-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-Lj6wfwt/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/M7DtBFtHpRwjGvkKrWmcSDfsgLq9VmWFbnHZWxQZZ/XL/_HF26382-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/M7DtBFtHpRwjGvkKrWmcSDfsgLq9VmWFbnHZWxQZZ/XL/_HF26382-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/LMRdDXQt28T7s65P9G3v4ZHtMf8pMpG2nHkk7wXbf/L/_HF26382-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/M7CwcV4sVt6tqZbbj6NJHNfCtxmHrZK8cj3zPXkkr/M/_HF26382-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/NPsvjrbF8dSwMTDMJbwtW2zcwMXPcVq6VbHnHvGFQ/S/_HF26382-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CGvLHjK",
-    "title": "Vintage Black and White Steam Locomotive Photo",
-    "description": "Artistic monochrome steam locomotive fine art image by Wayne Heim.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CGvLHjK/0/KmNrHLRQP2zv6jPSSfMzcDTFxZ9KhqhXbV9cNL6ZV/XL/_DSF0651-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CGvLHjK/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Lj6wfwt/0/Mc3NRkP84cGvk25NF5d7zJbVp5TpVZLCtxdXct62m/XL/_DSF0597-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Lj6wfwt/0/Mc3NRkP84cGvk25NF5d7zJbVp5TpVZLCtxdXct62m/XL/_DSF0597-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Lj6wfwt/0/Mc3NRkP84cGvk25NF5d7zJbVp5TpVZLCtxdXct62m/XL/_DSF0597-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Lj6wfwt/0/LHPCCmLsRTNGmMtMP2CrbQTvTM7TJbbkTXPffsGHT/L/_DSF0597-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Lj6wfwt/0/MfznVrBWXFJWBGW8mVvScpmbDjMGDd6SmSvMKSWSX/S/_DSF0597-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wGGSxJM",
-    "title": "Classic Steam Train in Black and White",
-    "description": "Vintage-style painterly train photo in black and white by Wayne Heim.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wGGSxJM/0/MkJ3RcBGdcQ3QTc8Tkwp6RJ9nPHLZmqVBM5PFBJ2n/XL/_DSF0850-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-wGGSxJM/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CGvLHjK/0/LgPBgxBLCW7g3Wv2BJW2rRs2RMjPxWDMpS5rmh4Tf/XL/_DSF0651-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CGvLHjK/0/LgPBgxBLCW7g3Wv2BJW2rRs2RMjPxWDMpS5rmh4Tf/XL/_DSF0651-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CGvLHjK/0/K9GTB225cpLtstkSFRx4zWbZ5Pp4CB9r3r2Q3JPWh/L/_DSF0651-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CGvLHjK/0/K8M8WZF69mVmM5f5MJvkwKsC7q7z7qCz8K647ws4T/M/_DSF0651-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CGvLHjK/0/NMhD43J5HD4ZjxVLHFMhdSfLhHCBStdKcxjknqk8Z/S/_DSF0651-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cBxjW3V",
-    "title": "Painterly Black and White Train Image",
-    "description": "Timeless steam engine captured in black and white painterly style.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-cBxjW3V/0/LkFFnV3h93mVtpvcw3vPLrSTJPpK66wJ62FWN5mvL/XL/_O1H1227-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-cBxjW3V/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wGGSxJM/0/KXT5FCzhC8rGhDTbg3px48ssdpCgwcLmsNZMWV5Vx/XL/_DSF0850-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wGGSxJM/0/KXT5FCzhC8rGhDTbg3px48ssdpCgwcLmsNZMWV5Vx/XL/_DSF0850-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wGGSxJM/0/KXT5FCzhC8rGhDTbg3px48ssdpCgwcLmsNZMWV5Vx/XL/_DSF0850-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wGGSxJM/0/MzzCs3XwN4ZJh5dFnnZ9c5mQH7qTvCGDtRmkwzRGF/L/_DSF0850-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wGGSxJM/0/KSsDrNkZMZprKqJzh92BrsLRcTsWmzk2sv3g3dhXb/S/_DSF0850-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VRcx6Vb",
-    "title": "Historic Steam Locomotive – Black and White Art",
-    "description": "Historic locomotive rendered as painterly black and white fine art.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRcx6Vb/0/Lv3vS243hMcxx4QM8fzXkNXRwGNPdLjQDDdQ5qtKM/XL/_O1H1235-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-VRcx6Vb/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-cBxjW3V/0/KWXfT2qvFTPD5jQqSk4QqGhQvkvKWNQFgTSCJN7gt/XL/_O1H1227-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-cBxjW3V/0/KWXfT2qvFTPD5jQqSk4QqGhQvkvKWNQFgTSCJN7gt/XL/_O1H1227-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-cBxjW3V/0/KWXfT2qvFTPD5jQqSk4QqGhQvkvKWNQFgTSCJN7gt/XL/_O1H1227-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-cBxjW3V/0/MWV7p2L3drhL5STxfMtFb6DGw6qLTkX3RGFWnm9Vx/L/_O1H1227-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-cBxjW3V/0/KkmtvPprCTgH5RqvLzD4xR3f87c5dks4VfCKPck8k/S/_O1H1227-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n492NmH",
-    "title": "Timeless Black & White Steam Train Scene",
-    "description": "Dramatic black and white steam train art by Wayne Heim.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n492NmH/0/MSPQqhJdQ89qRfsfFSD7RdsrJ8QHSzqFRjLDvSRrK/XL/_O1H1421-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n492NmH/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRcx6Vb/0/LGhqRJ8rJbBsTDbkCnqHhx6htQcS2q2WS6pm73X4R/XL/_O1H1235-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRcx6Vb/0/LGhqRJ8rJbBsTDbkCnqHhx6htQcS2q2WS6pm73X4R/XL/_O1H1235-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRcx6Vb/0/K33DH5Z7BXsSd6CcZvVJNKv3BfhNkcvJKLTJrWTFN/L/_O1H1235-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRcx6Vb/0/KjmZ8PGG95HQRQtTcnch4LJfHLFJrZHVwSPbX7x6v/M/_O1H1235-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRcx6Vb/0/M7SCcpmBkBMVXPKpNtCKGWn5f2JnxVZvxzjFQwGCJ/S/_O1H1235-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gtHP556",
-    "title": "Dramatic Black and White Locomotive Portrait",
-    "description": "Nostalgic painterly photo of a steam locomotive in black and white.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-gtHP556/0/LbGJnnfxXpZq5p3H69qrTbzVrbSVTVs7KkfhKznkV/XL/_O1H1453-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-gtHP556/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n492NmH/0/Ms74NNn53vJd2DmWN2qzpqSzmmCPkk4TBPmj9HSbc/XL/_O1H1421-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n492NmH/0/Ms74NNn53vJd2DmWN2qzpqSzmmCPkk4TBPmj9HSbc/XL/_O1H1421-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n492NmH/0/LX2KBGnWnVBzZM95wWhKx37kWwP2HsQCKnzSjnQQg/L/_O1H1421-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n492NmH/0/NZ4gDL75MGNZtww6Cj7m4c3FRsbcJLjkFt59MGzc7/M/_O1H1421-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-n492NmH/0/LdzhtGsKhvZrfRfvrmcRVNKPL2vRchQ2B9zhk2zgk/S/_O1H1421-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jxpPrSQ",
-    "title": "Black & White Railroad Engine Fine Art Photo",
-    "description": "Fine art black and white study of a steam train by Wayne Heim.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jxpPrSQ/0/L4RSwXGt6tGV39MQMtZzPnLj4sz4cSwdxZpSxGSRW/XL/_DSF1802-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jxpPrSQ/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-gtHP556/0/KbdwPd3BXqjTS5mRqFSvz6QKxG36FCRvhgXV9rnFh/XL/_O1H1453-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-gtHP556/0/KbdwPd3BXqjTS5mRqFSvz6QKxG36FCRvhgXV9rnFh/XL/_O1H1453-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-gtHP556/0/NQbPwTrxB7tqDdR7hWqXbmJGLzJsG2827VTnm6Tpc/L/_O1H1453-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-gtHP556/0/LNZvctDtv8vQthwXgm5m6DQVjFpmdSBmpbGLzmkM3/M/_O1H1453-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-gtHP556/0/MgrbN3ZzHQxLTq352c2hmFZtdk9TXpp9kdBB2TMpC/S/_O1H1453-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hHdRfWJ",
-    "title": "Steam Train Study in Black and White",
-    "description": "Expressive painterly photograph of a classic steam locomotive in monochrome.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-hHdRfWJ/0/LbNzVT7fpTKj95XLBLNLfH5xKbDdcbFPW4cQRqDbG/XL/_DSF1802-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-hHdRfWJ/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jxpPrSQ/0/M9DxF7WW32CBhgZrwsgtk2SqXBCNsLSHRZNnJZHLN/XL/_DSF1802-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jxpPrSQ/0/M9DxF7WW32CBhgZrwsgtk2SqXBCNsLSHRZNnJZHLN/XL/_DSF1802-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jxpPrSQ/0/LfkQSZ35d5bX9zrs2vKWVVVKXzQnDPvFh699BKcnZ/L/_DSF1802-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jxpPrSQ/0/MM55c9Zxb7c9BM5WjxCq4pRB92fST8mkwm65hSwQN/M/_DSF1802-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jxpPrSQ/0/Lb2h56n2hB5TJ8kZSHsbmb79GxKc3837CfdGT5fn9/S/_DSF1802-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vQSzph5",
-    "title": "Vintage Railroad in Black and White",
-    "description": "Evocative black and white steam engine portrait in painterly style.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vQSzph5/0/LK2vBs4JbG6Mwn4rTt3zJMCxrDFrHZ8BWVvzfg62m/XL/_DSF1849-Enhanced-NR-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-vQSzph5/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-hHdRfWJ/0/MzPdRfDp7BLLB3x6NJVrf7qjHFpJQrHqqnDMdmhPk/XL/_DSF1802-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-hHdRfWJ/0/MzPdRfDp7BLLB3x6NJVrf7qjHFpJQrHqqnDMdmhPk/XL/_DSF1802-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-hHdRfWJ/0/KG8XdXZHKJh7MRBMCdFH5ZgDthKgBLpSHXZsD5wbL/L/_DSF1802-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-hHdRfWJ/0/LR88g7ZvXr22H72q94hJtx4Mjpmd39qMGp4vcJxr7/M/_DSF1802-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-hHdRfWJ/0/LhxXrrtDN6MR7hfptzSLGHDVCnhmsb8mfwqHrv4Q5/S/_DSF1802-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4NQdjBP",
-    "title": "Classic Black & White Steam Engine Photograph",
-    "description": "Atmospheric painterly image of a vintage train in black and white.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/MhhCWjf8KpgSN92k2nqw2qXLCLgsJkrZRLxrnmpKV/XL/_DSF1881-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-4NQdjBP/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vQSzph5/0/NQVC87DjGGfMHd3K3gQkRctMkCtQxTsb3BtPqMLKx/XL/_DSF1849-Enhanced-NR-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vQSzph5/0/NQVC87DjGGfMHd3K3gQkRctMkCtQxTsb3BtPqMLKx/XL/_DSF1849-Enhanced-NR-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vQSzph5/0/KZNPpB5njKw8Brf2hLjrPkqVD4rp3BW9vbmwg8HnT/L/_DSF1849-Enhanced-NR-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vQSzph5/0/Lmr26W3LZKx4tT3zgkfRbmk7mGhLRgv7DmhcfPt9T/M/_DSF1849-Enhanced-NR-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vQSzph5/0/M55wqdh4kBS2dfWhfrPxJqZjqwS69DprmKp4SrGX7/S/_DSF1849-Enhanced-NR-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nbZ2kwd",
-    "title": "Steam Locomotive on Tracks – Black and White",
-    "description": "Elegant monochrome railroad scene with steam locomotive by Wayne Heim.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nbZ2kwd/0/MTC63fdTSW7rdPthxwLtvhzP973HgPFGHjrTnszDs/XL/_DSF1891-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-nbZ2kwd/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/NZw5P5BBVfkxWpSqH5zjVVwSSjMQQQ9kmjH5wFLtt/XL/_DSF1881-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/NZw5P5BBVfkxWpSqH5zjVVwSSjMQQQ9kmjH5wFLtt/XL/_DSF1881-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/NZw5P5BBVfkxWpSqH5zjVVwSSjMQQQ9kmjH5wFLtt/XL/_DSF1881-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/KL6v6bfrTwvLQsv5bZ42Z2BwQfMqJ4hbDMRSJF8Dt/L/_DSF1881-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/LsQhpQkB6HV3J3vjWS8WZjc8GQdw3Zj4R5PTMq4Xv/S/_DSF1881-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MTqWVJ8",
-    "title": "Iconic Steam Train – Black and White Art",
-    "description": "Painterly steam engine photograph in classic black and white.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MTqWVJ8/0/NB282Gb884Q9D5GZRcdgptkFQcTVtS2fgnCV3tdfn/XL/_ANA1965-Enhanced-NR-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-MTqWVJ8/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nbZ2kwd/0/K5nJ85ZvkD6dJBfTW7kVKmVshZNHVsRmgJ9qX2zdc/XL/_DSF1891-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nbZ2kwd/0/K5nJ85ZvkD6dJBfTW7kVKmVshZNHVsRmgJ9qX2zdc/XL/_DSF1891-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nbZ2kwd/0/LWXm29SZ7gtZVD668hgGvZx3VZRsxF3MV442qMzCg/L/_DSF1891-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nbZ2kwd/0/NWL6fCJtvBbfPhHDTWZvPBMVKdhmnJfdPgSgvZ5Kx/M/_DSF1891-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nbZ2kwd/0/KvBB78M7zbJTd9xkfSbggQFFSVVGRfQgpMdvWwbSL/S/_DSF1891-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jbScHR5",
-    "title": "Artistic Black & White Locomotive Image",
-    "description": "Railroad fine art print: black and white painterly steam train.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jbScHR5/0/KQ8b6q25pq48gHkdt4qBqHrfrTd8PpjvxGvrqJFjK/XL/_HF22964-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jbScHR5/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MTqWVJ8/0/MD8Z7DBC93XLNWxpwF5RRV5W8GV27QPXtjn5FFWzv/XL/_ANA1965-Enhanced-NR-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MTqWVJ8/0/MD8Z7DBC93XLNWxpwF5RRV5W8GV27QPXtjn5FFWzv/XL/_ANA1965-Enhanced-NR-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MTqWVJ8/0/KJJd37p9tc942QwS2k58JmsKNQmnzG7RM5bGFJqrQ/L/_ANA1965-Enhanced-NR-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MTqWVJ8/0/LGP63CKnxKsqkwFshx3jbL5vqLN4cD54nzgqccxK8/M/_ANA1965-Enhanced-NR-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MTqWVJ8/0/Lkmn68TnXC5p8d6Hj6vqgsZhc7cjfNMjkg4PdPBB3/S/_ANA1965-Enhanced-NR-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BMTswCg",
-    "title": "Steam Engine Close-Up – Black and White",
-    "description": "Striking monochrome image of a steam locomotive by Wayne Heim.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/K475SnTJrjsb9PFBpzV6GJVFCjkwgvwQsGN553cK5/XL/_HF25090-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-BMTswCg/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jbScHR5/0/LGwMFgNvCPHRGZXswS9rrq2KgqmjD8cwJv24Kp4ss/XL/_HF22964-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jbScHR5/0/LGwMFgNvCPHRGZXswS9rrq2KgqmjD8cwJv24Kp4ss/XL/_HF22964-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jbScHR5/0/L6NJxtcVknZ8PtDZ3Qrprmsztv8CdTV3wzzgRdj8d/L/_HF22964-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jbScHR5/0/NQqNx7fxm76KPNtsHQx93sfpvp66nRt4qrqQGJDzc/M/_HF22964-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jbScHR5/0/L2CKW8WFLW6GPPhVmJfGDZcppWF64ZqjkmvKt9LD2/S/_HF22964-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CbbTFst",
-    "title": "Painterly Black & White Steam Train",
-    "description": "Artistic black and white fine art train photo, painterly effect.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-CbbTFst/0/KFLHqCZnMCdQkbFj5crNX569PwHLfgLtj7mhTtXwc/XL/_HF25306-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CbbTFst/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/KZjg7RdbzxC62QL5nCfWwhsqhz83JnwZH8KBqsbvn/XL/_HF25090-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/KZjg7RdbzxC62QL5nCfWwhsqhz83JnwZH8KBqsbvn/XL/_HF25090-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/KZjg7RdbzxC62QL5nCfWwhsqhz83JnwZH8KBqsbvn/XL/_HF25090-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/LPjzxRhbBPtCXJtHnsMv9dTk5xwHqNpfPgtGsp8w2/L/_HF25090-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/NPnL5sWNNw6L4zRLwS4LRZT9GWgtCXPwFdfMkB3xh/S/_HF25090-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MSGcRLk",
-    "title": "Steam Train Engine – Black & White Art",
-    "description": "Moody painterly photograph of a steam engine in black and white.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MSGcRLk/0/KGNMmwHBL8qBwn9SsTtMc888bgthPRnJCM3GGWNSC/XL/_HF26228-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-MSGcRLk/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-CbbTFst/0/LZZvrS8BzsdPsBjPxcmDn6NN2QS7HNPGXjVF7X6Xs/XL/_HF25306-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-CbbTFst/0/LZZvrS8BzsdPsBjPxcmDn6NN2QS7HNPGXjVF7X6Xs/XL/_HF25306-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-CbbTFst/0/K6MD373QWJJpHhHHgpRtzhR42DgVZvxmb4JfqSgtw/L/_HF25306-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-CbbTFst/0/Kk523Ds2ccH2mgL2R8LDSHpPXkBf72C24QZSnG8r3/M/_HF25306-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-CbbTFst/0/LnLk7VXd9xrCw3TcbdgBH6hcpthPZLNrnGSHftjDx/S/_HF25306-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Qk22N2c",
-    "title": "Steam Train Engine – Black & White Art",
-    "description": "Distinctive black and white railroad scene, painterly style by Wayne Heim.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Qk22N2c/0/MmW52nmw7mHBg4PtzGdHHmsJCJ5n9HRFrNXKwjHg8/XL/_DSF0462-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-Qk22N2c/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MSGcRLk/0/Lv267CsRgbmJTp6m9KfQ3TpwvjP82CsX8dL8Fj27L/XL/_HF26228-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MSGcRLk/0/Lv267CsRgbmJTp6m9KfQ3TpwvjP82CsX8dL8Fj27L/XL/_HF26228-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MSGcRLk/0/KVpNTnNrQ7tkcpxVPPCP8Th7vs9vQgdHV2RkgMCNd/L/_HF26228-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MSGcRLk/0/MGHv8g8h2zK5tLRhxGGvnP259QZb2DtgmStTLzmL2/M/_HF26228-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-MSGcRLk/0/L2C2kDTPkCdKCMs3R4ZHN7m4rLHZ6W6BQJPt922Fv/S/_HF26228-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FcdDxxw",
-    "title": "Fine Art Steam Train – Black & White",
-    "description": "Steam train portrait in black and white with painterly finish.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FcdDxxw/0/LZXwCD3DGqf4crrKDTpz9XxtXwKGxfv8bsH4Nnzd7/XL/_ANA7300-Edit_tonemapped-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-FcdDxxw/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Qk22N2c/0/LcQT2ZHD6xLPsmG6BmS5qvs2CdQq8Tn6j7MVgFWwf/XL/_DSF0462-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Qk22N2c/0/LcQT2ZHD6xLPsmG6BmS5qvs2CdQq8Tn6j7MVgFWwf/XL/_DSF0462-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Qk22N2c/0/LFPQhvTQqz9LGdcvZ9vq4ZxgxRSfHW7nDtXnh8hLH/L/_DSF0462-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Qk22N2c/0/KLQPvpGKWmzzVhFKsMmwn6M2GcC6zzV2hjrGGwwk4/M/_DSF0462-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Qk22N2c/0/KwF7spx4tZtNRxgzwhhRWn3Nbmz7TB9283wsjgVgJ/S/_DSF0462-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QdcLZLF",
-    "title": "Classic Steam Locomotive Photo – Black and White",
-    "description": "Classic steam locomotive rendered in expressive black and white.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-QdcLZLF/0/MGbVfQ7zSGqDm2n69WGB4QGGjMNcb2DvRC2JZzsWM/XL/_O1H1421-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-QdcLZLF/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FcdDxxw/0/LJ43SRDzXKTQH3mKfHQ6TgNp2Xcs2QfPctmDdWVWr/XL/_ANA7300-Edit_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FcdDxxw/0/LJ43SRDzXKTQH3mKfHQ6TgNp2Xcs2QfPctmDdWVWr/XL/_ANA7300-Edit_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FcdDxxw/0/M4CFmZcCkgCjgbxjSjPrF7BL3nHWCjZF2Thd4GRX6/L/_ANA7300-Edit_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FcdDxxw/0/LxpPR9RskgvnZSLcGCXFmrQ92TspSnKvD3wMdKX6g/M/_ANA7300-Edit_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FcdDxxw/0/KPH8cxn7gXSDq9qW8rRTP3S2XtZ6cdkF7826fhvMb/S/_ANA7300-Edit_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nSnCQtj",
-    "title": "Black and White Steam Train Study – Painterly Art",
-    "description": "Painterly black and white photograph of a historic railroad engine.",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nSnCQtj/0/Kqmmc2pcrDr7Q45WxNbSdpN367jHC2GJwWc6pW7pJ/XL/_O1H0808-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-nSnCQtj/A",
     "keywords": [
-      "steam train art", "Steam train", "steam locomotive", "Classic trains", "trains", "locomotives", "train art", "train photos", "painterly photography", "painterly train photos", "East Broad Top Railroad"
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
     ],
     "story": "B/W Painterly Train Photography © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-QdcLZLF/0/KVScjf48hR2qgV6HnhPLjqG92CsMcZWcZ7rttphrw/XL/_O1H1421-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-QdcLZLF/0/KVScjf48hR2qgV6HnhPLjqG92CsMcZWcZ7rttphrw/XL/_O1H1421-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-QdcLZLF/0/KTfVrnNGcHLC5LZ8GVzVn4bCVkXWLp3hQnx2FZXkK/L/_O1H1421-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-QdcLZLF/0/MPHXzXMSmGPfmKGqRvxTGXhmFhM5ZZd89sM82HccJ/M/_O1H1421-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-QdcLZLF/0/LnLHX36ZfD4VrMqVHTHSBBhGF4RJ5LPFkVTvSxfjF/S/_O1H1421-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-CBkjbnq",
+    "title": "Untitled",
+    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "alt": "B/W Painterly Train Photography © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CBkjbnq/A",
+    "keywords": [
+      "steam train art",
+      "Steam train",
+      "steam locomotive",
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top Railroad"
+    ],
+    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nSnCQtj/0/LrNr4W7qr547Hrjp5Rq6mznLq7TtNDvHBLCtDsgKC/XL/_O1H0808-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nSnCQtj/0/LrNr4W7qr547Hrjp5Rq6mznLq7TtNDvHBLCtDsgKC/XL/_O1H0808-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nSnCQtj/0/NJFtXf4FQHVdrHdwjQkQn4bW83Q3mxmP2XGzc3ZPx/L/_O1H0808-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nSnCQtj/0/LQdBNpK75fJJJWP4VdCPcm9MVMq93Hkzq285LdbC8/M/_O1H0808-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-nSnCQtj/0/KMLtdrjHMmsDTggPQZfXqzhLJf94Vmv6P9xt2rX2r/S/_O1H0808-Edit-S.jpg",
+    "srcOriginal": ""
   }
 ];

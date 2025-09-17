@@ -1,41 +1,76 @@
-// File: data/Galleries/Painterly-Fine-Art-Photography/carousel.ts
+// --- Carousel: Images from Painterly Miscellaneous Section Only ---
+// Import all gallery .mjs files from the Miscellaneous branch only
+const allModules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/*.mjs', { eager: true });
 
-export const slides = [
-  {
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/NFxH4CcWGQvFMkkLZ8d5Whb4XCGV5dpL3DVP6nZfz/L/_HF28860-Edit-Edit-L.jpg",
-    href: "https://",
-    alt: "Classic Portrait.",
-    description: "Painterly photograph of vintage woman."
-  },
-  {
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/KsdLtx29G4tQgwR4279fdVwsvzM9nxp69LsVLjnc8/L/_OLY2310-Edit-L.jpg",
-    href: "",
-    alt: "All in the Eyes",
-    description: "A child and their look. Painterly photography by Wayne Heim."
-  },
-  {
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NJwq68zHmHk2VJf96jBnRLCpcLV7NcMsWPLvv83MX/L/_O1H0222-Edit-L.jpg",
-    href: "",
-    alt: "Historic cowboy portrait",
-    description: "Painterly fine art cowboy portrait of a rugged old west cowboy looking towards trouble in his cabin window."
-  },
-  {
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/NVHFHBzKdrV57FnrrBbN2cNTbtc6sJkJKrPPWp8QC/L/_WHZ5760-Edit-L.jpg",
-    href: "",
-    alt: "Painterly photograph youn woman",
-    description: "Young troubled woman portrait captured in painterly style."
-  },
-  {
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/L5657hsSDMPwMdHSTQt56vkX7tghH5N3nx24pRcLT/L/_WHZ0456-Edit-Edit-L.jpg",
-    href: "",
-    alt: "Dramatic portrait of teen in blue. Painterly style photo.",
-    description: "She's got the blues. Dramatic portrait of a teen in blue captured in painterly style."
-  },
-  {
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/Mp6p4hSMF8j2RKRHHdGgmSSQBSkwPdjHqR2dN8hbP/L/_FWH7908-Edit-Edit-2-L.jpg",
-    href: "",
-    alt: "Wedding couple portrait",
-    description: "One last kiss before the wedding couple heads off to their honeymoon. Painterly photography by Wayne Heim."
-  },
+// Helper: Get gallery data from module
+function getGalleryData(mod) {
+  return mod.galleryData || (mod.default && mod.default.galleryData) || [];
+}
 
-];
+// Helper: Shuffle array
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Helper: Convert image to slide object, with loading, width, height, and custom css class
+function toSlide(img, path, idx, loading = "lazy") {
+  return {
+    href: `${path}/${img.id}`,
+    src: img.srcM || img.src || img.url || '', // Use srcM for carousel, fallback to src
+    alt: img.alt || img.title || '',
+    description: img.description || '',
+    width: img.width || undefined,
+    height: img.height || undefined,
+    loading,
+    className: `k4-home-carousel-img k4-home-carousel-img--${idx + 1} fade-in`
+  };
+}
+
+// Collect all visible images from the Miscellaneous gallery
+let allImages = [];
+let galleryPath = '';
+for (const filePath in allModules) {
+  const mod = allModules[filePath];
+  const data = getGalleryData(mod);
+  if (!Array.isArray(data) || data.length === 0) continue;
+  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  if (visible.length === 0) continue;
+  allImages = allImages.concat(visible);
+  if (!galleryPath) galleryPath = filePathToHref(filePath); // Use the first found path
+}
+
+// Helper: Convert file path to public gallery route (for slide links)
+function filePathToHref(filePath) {
+  return filePath
+    .replace(/^.*Galleries/, '/Galleries')
+    .replace(/\.mjs$/, '')
+    .replace(/\\/g, '/');
+}
+
+// Shuffle images
+allImages = shuffle(allImages);
+
+// Number of slides to show
+const SLIDE_COUNT = 8;
+let slidesArr = [];
+if (allImages.length > 0) {
+  // If fewer images than needed, repeat as necessary
+  while (slidesArr.length < SLIDE_COUNT) {
+    for (let i = 0; i < allImages.length && slidesArr.length < SLIDE_COUNT; i++) {
+      slidesArr.push(toSlide(allImages[i], galleryPath, slidesArr.length));
+    }
+  }
+}
+
+// Set loading: 'eager' for the first image, 'lazy' for the rest
+const slides = slidesArr.map((slide, idx) => ({
+  ...slide,
+  loading: idx === 0 ? 'eager' : 'lazy',
+  className: slide.className + (idx === 0 ? ' loaded' : '')
+}));
+
+export { slides };

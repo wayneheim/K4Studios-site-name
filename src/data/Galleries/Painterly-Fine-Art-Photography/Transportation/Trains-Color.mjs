@@ -1,28 +1,31 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-  
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
   {
     "id": "i-VzhZFL7",
-    "title": "This too Shall Pass",
-    "description": "Color fine art painterly train photography showing classic black steam engine crossing stone overpass silhouetted by blue sky. © Wayne Heim",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "This too Shall Pass",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/LLKcpS25Mr83FxsP2zCzM5XqFVWZC9mbmcHG8wwHh/XL/_HF26382-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-VzhZFL7/A",
     "keywords": [
       "Classic trains",
@@ -34,21 +37,24 @@ export const galleryData = [
       "painterly train photos",
       "East Broad Top  Railroad"
     ],
-    "story": "Color fine art painterly train photography showing classic black steam engine crossing stone overpass silhouetted by blue sky. © Wayne Heim",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/Kw8NGXgZb66nqCHZ2mMGg24vtJmmCFCq5Q7FVgWxr/XL/_HF26382-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/Kw8NGXgZb66nqCHZ2mMGg24vtJmmCFCq5Q7FVgWxr/XL/_HF26382-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/M3Nfn4pGjQWCdD4rszcBrvC3qnh7ZxXxmb6LqfkwG/L/_HF26382-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/LBjtC4wZXZjsbwRTn74Ld9D2ZM9NKvQcZkcffgHng/M/_HF26382-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/KLzVv6VsxbhhcwfG59WzPLqsS65wvZ6DXG2KdRthz/S/_HF26382-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-L9qJ9K3",
     "title": "7094 Locomotive",
     "description": "Old 7094 train featuring blue and yellow coloring awaiting it's next load of passengers. Appropriately named: Progress. Rendered in Wayne's distinct painterly photography style. © Wayne Heim",
-    "alt": "7094 Locomotive",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-L9qJ9K3/0/NVFvJc5HGzt78MKJrtbX52cX7Gpv6kFxg5nRKZ4mq/XL/_DSF5213-Edit-XL.jpg",
+    "alt": "This too Shall Pass",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-L9qJ9K3/A",
     "keywords": [
       "Classic trains",
@@ -63,18 +69,21 @@ export const galleryData = [
     "story": "Old 7094 train featuring blue and yellow coloring awaiting it's next load of passengers. Appropriately named: Progress. Rendered in Wayne's distinct painterly photography style. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/Kw8NGXgZb66nqCHZ2mMGg24vtJmmCFCq5Q7FVgWxr/XL/_HF26382-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/Kw8NGXgZb66nqCHZ2mMGg24vtJmmCFCq5Q7FVgWxr/XL/_HF26382-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/M3Nfn4pGjQWCdD4rszcBrvC3qnh7ZxXxmb6LqfkwG/L/_HF26382-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/LBjtC4wZXZjsbwRTn74Ld9D2ZM9NKvQcZkcffgHng/M/_HF26382-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-VzhZFL7/0/KLzVv6VsxbhhcwfG59WzPLqsS65wvZ6DXG2KdRthz/S/_HF26382-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vRh7JXz",
     "title": "7094: Unique Perspective",
     "description": "Color fine art painterly train photography of old train presented in muted colors from a unique foreshortened perspective view. © Wayne Heim",
-    "alt": "7094: Unique Perspective",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vRh7JXz/0/MvspLnqrN47JW5BnwfC8DrwpS4vwQPRdzFfkGtZN2/XL/_DSF5232-Edit-XL.jpg",
+    "alt": "7094 Locomotive",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-vRh7JXz/A",
     "keywords": [
       "Classic trains",
@@ -89,18 +98,21 @@ export const galleryData = [
     "story": "Color fine art painterly train photography of old train presented in muted colors from a unique foreshortened perspective view. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-L9qJ9K3/0/LQqVJxQf5Pq673scMxc8DmSdQn7xCt4LNcJ5Wfp6q/XL/_DSF5213-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-L9qJ9K3/0/LQqVJxQf5Pq673scMxc8DmSdQn7xCt4LNcJ5Wfp6q/XL/_DSF5213-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-L9qJ9K3/0/NXKR553gdNrqcDwBCHBBfTnr2pB9qTvnQVXjkrn2c/L/_DSF5213-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-L9qJ9K3/0/NfJ55xC9G7msFkDdGpGHd4p25Q5wDZTFQtr8nQXxw/M/_DSF5213-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-L9qJ9K3/0/LknmfvwRGWn7m4f6G84J4mQFNbKm53wrzhgr9rk5c/S/_DSF5213-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mdDVM3R",
     "title": "End of the line",
     "description": "Us flag adorns old rail coach car at the back of the train on the tracks deep in the woods of West Virginia. Green foliage\n contrasts grey metal in texture and color. © Wayne Heim",
-    "alt": "End of the line",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-mdDVM3R/2/MH5ZBGnDFCDtkx26LkDj4ZXjBs5TRM3bJjCQRFJXx/XL/_ANA7300-Edit_tonemapped-Edit-2-XL.jpg",
+    "alt": "7094: Unique Perspective",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-mdDVM3R/A",
     "keywords": [
       "Classic trains",
@@ -115,18 +127,21 @@ export const galleryData = [
     "story": "Us flag adorns old rail coach car at the back of the train on the tracks deep in the woods of West Virginia. Green foliage\n contrasts grey metal in texture and color. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vRh7JXz/0/LkRmbp5zVRGqJb76QvGD3Pxp5DznxFjp76jgwmrvg/XL/_DSF5232-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vRh7JXz/0/LkRmbp5zVRGqJb76QvGD3Pxp5DznxFjp76jgwmrvg/XL/_DSF5232-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vRh7JXz/0/LkRmbp5zVRGqJb76QvGD3Pxp5DznxFjp76jgwmrvg/XL/_DSF5232-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vRh7JXz/0/NPgmW5fTt4X99nMBvcLBfCfWbHNtFwLznm53vQHQd/L/_DSF5232-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-vRh7JXz/0/NRnX6D2wJJhwzR8wdf48SNs9KvHSBpGg4Wz8pQNFJ/S/_DSF5232-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PZMQcjb",
     "title": "Yard Work",
     "description": "Number 16 steam engine navigates the yard with conductor hanging off the side in typical blue uniform; a start contrast to a mostly black and white image. © Wayne Heim",
-    "alt": "Yard Work",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PZMQcjb/1/M4sS36jBqXT2dWWJ2CLbzTcKLSpKq8MbFFgVjk3QD/XL/_O1H0049-Edit-XL.jpg",
+    "alt": "End of the line",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-PZMQcjb/A",
     "keywords": [
       "Classic trains",
@@ -141,18 +156,21 @@ export const galleryData = [
     "story": "Number 16 steam engine navigates the yard with conductor hanging off the side in typical blue uniform; a start contrast to a mostly black and white image. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-mdDVM3R/2/KPf8RDLKF5xCZBRBxsL2wbhK43qkpjQ2k8WVTJXkC/XL/_ANA7300-Edit_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-mdDVM3R/2/KPf8RDLKF5xCZBRBxsL2wbhK43qkpjQ2k8WVTJXkC/XL/_ANA7300-Edit_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-mdDVM3R/2/KhZmjwJSJ7KZp75tmBzbHcn7T3ftP69g46fHV6LcQ/L/_ANA7300-Edit_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-mdDVM3R/2/MCBbgnRWSMJ9P3Dkjq4rCHcRBSD2Rq34fDLxLbzc9/M/_ANA7300-Edit_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-mdDVM3R/2/MKgc9L75vbC9fKn73rFv9D6q43s2K2gFSNWcVGBFm/S/_ANA7300-Edit_tonemapped-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3FrzPRt",
     "title": "Conductor",
     "description": "Train conductor pears out of engine number 16 through the steam as they take on water for next leg of their journey. © Wayne Heim",
-    "alt": "Conductor",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3FrzPRt/1/MZKwHDMn9QSwZ6T9SDbbBhpngPwKpfw2wDkwVJRmr/XL/_O1H0078-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Yard Work",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-3FrzPRt/A",
     "keywords": [
       "Classic trains",
@@ -167,18 +185,21 @@ export const galleryData = [
     "story": "Train conductor pears out of engine number 16 through the steam as they take on water for next leg of their journey. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PZMQcjb/1/LH52rJdbt9qRT7bLNmsj5VsCzLBWxppGfK9dNFw2Q/XL/_O1H0049-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PZMQcjb/1/LH52rJdbt9qRT7bLNmsj5VsCzLBWxppGfK9dNFw2Q/XL/_O1H0049-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PZMQcjb/1/LH52rJdbt9qRT7bLNmsj5VsCzLBWxppGfK9dNFw2Q/XL/_O1H0049-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PZMQcjb/1/LhsBZckH3z4QSvWngSW5C9TXvgd79JXxKj8xPcRKv/L/_O1H0049-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PZMQcjb/1/MCFVqk22fsB6vnWcJr8bZSG7Wxtn8BSks9Rvf3b7m/S/_O1H0049-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DgSG4Ht",
     "title": "Checking the Rails",
     "description": "Train yard working walks the rails looking for trouble on the tracks. © Wayne Heim",
-    "alt": "Checking the Rails",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DgSG4Ht/2/MkKtB3KmWsdVgwqB6ndSPcHHJJC2DKSDvNnzCtZ5z/XL/_O1H0172-Edit-2-XL.jpg",
+    "alt": "Conductor",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-DgSG4Ht/A",
     "keywords": [
       "Classic trains",
@@ -193,18 +214,21 @@ export const galleryData = [
     "story": "Train yard working walks the rails looking for trouble on the tracks. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3FrzPRt/1/Mj2DRQr4dDrPr4XWCTXNdWfsrLrBbX5C6GzRVNBXL/XL/_O1H0078-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3FrzPRt/1/Mj2DRQr4dDrPr4XWCTXNdWfsrLrBbX5C6GzRVNBXL/XL/_O1H0078-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3FrzPRt/1/Mj2DRQr4dDrPr4XWCTXNdWfsrLrBbX5C6GzRVNBXL/XL/_O1H0078-Enhanced-NR-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3FrzPRt/1/LnQ5SDq7G2PfQQ8gZtMmGvHCgMjBXWqH8LFKBw2Pq/L/_O1H0078-Enhanced-NR-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3FrzPRt/1/MWQwqgTnRxkQTwfGPbtTnsRWH6n7HDppfP8S36jZs/S/_O1H0078-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rP2QhwJ",
     "title": "Conducting in Blues",
     "description": "Train crew looks on though the rain and blue-gray of the day as they journey down the track.© Wayne Heim",
-    "alt": "Conducting in Blues",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-rP2QhwJ/1/KnnjW5pfPDnP4hJfqDzGTMmDqL93pmZm2g7hfWbKC/XL/_O1H0176-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Checking the Rails",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-rP2QhwJ/A",
     "keywords": [
       "Classic trains",
@@ -219,18 +243,21 @@ export const galleryData = [
     "story": "Train crew looks on though the rain and blue-gray of the day as they journey down the track.© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DgSG4Ht/2/LqgJm3FKMBZgwgHg94jWH29MgndQtKxHXGn52g8BM/XL/_O1H0172-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DgSG4Ht/2/LqgJm3FKMBZgwgHg94jWH29MgndQtKxHXGn52g8BM/XL/_O1H0172-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DgSG4Ht/2/LqgJm3FKMBZgwgHg94jWH29MgndQtKxHXGn52g8BM/XL/_O1H0172-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DgSG4Ht/2/KSz4N6RjVnnW6hGkJgcmq3JxwxKRPkQG5VqWjzQdz/L/_O1H0172-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DgSG4Ht/2/KQzJgDxqG35SgvNF56PrJtnDj54GP27XsRQsVLcsD/S/_O1H0172-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PT5GqfP",
     "title": "Steaming into the Station",
     "description": "Loaded steam engine number 16 steaming into the station with a load of eager travelers. East Broad Top Railroad © Wayne Heim",
-    "alt": "Steaming into the Station",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PT5GqfP/2/K39CQL8bgZMk2JqZm2CVGVG5T6FxFCT7tKG938wS6/XL/_DSF0339-Edit-2-XL.jpg",
+    "alt": "Conducting in Blues",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-PT5GqfP/A",
     "keywords": [
       "Classic trains",
@@ -245,18 +272,21 @@ export const galleryData = [
     "story": "Loaded steam engine number 16 steaming into the station with a load of eager travelers. East Broad Top Railroad © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-rP2QhwJ/1/KstF96DRDVthrmmVcWLB4hkgZqxp2v3tdmmDwsmkR/XL/_O1H0176-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-rP2QhwJ/1/KstF96DRDVthrmmVcWLB4hkgZqxp2v3tdmmDwsmkR/XL/_O1H0176-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-rP2QhwJ/1/L5GHCXNwfQjr6G9cpFtjsPBNgrcK4LL24vwPgf3H6/L/_O1H0176-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-rP2QhwJ/1/KtXJ6HpF8qRLZCfccq8Mp4nvPPSJmCNrp9htFTZjj/M/_O1H0176-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-rP2QhwJ/1/NQGxbj5Fbc5LBx7rQCKZsVbRfjtmL72P7DcBJjdHW/S/_O1H0176-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9SSNHdh",
     "title": "Loading Coal",
     "description": "Iconic steam engine positioning itself to take on a new load of coal to power the hungry engine. Yard worker overseas the switch and navigation.© Wayne Heim",
-    "alt": "Loading Coal",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-9SSNHdh/1/NMMd99d3QZjmgWH9HHqx2qmTkFdRjhQX64ThrH3Rk/XL/_DSF0411-Edit-XL.jpg",
+    "alt": "Steaming into the Station",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-9SSNHdh/A",
     "keywords": [
       "Classic trains",
@@ -271,18 +301,21 @@ export const galleryData = [
     "story": "Iconic steam engine positioning itself to take on a new load of coal to power the hungry engine. Yard worker overseas the switch and navigation.© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PT5GqfP/2/Mn7JQ5zfnkW9bJGG7RRc2MTMQrc2gLTmmZCCbrhhd/XL/_DSF0339-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PT5GqfP/2/Mn7JQ5zfnkW9bJGG7RRc2MTMQrc2gLTmmZCCbrhhd/XL/_DSF0339-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PT5GqfP/2/Mn7JQ5zfnkW9bJGG7RRc2MTMQrc2gLTmmZCCbrhhd/XL/_DSF0339-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PT5GqfP/2/Ks7JJWR8CzshPvqncX88Sd96Czt7M25QRmrvM6QZF/L/_DSF0339-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-PT5GqfP/2/M67cL2CdqcDdnb7JrDdczb52TPqHTf9MzFGbXPLL4/S/_DSF0339-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VzGp35Z",
     "title": "Switching Tracks",
     "description": "Black smoke billows from the steam engine as it slows it's approach to take on a new load of coal. Train worker stands ready to switch tracks in order to get her back on track when finished.© Wayne Heim",
-    "alt": "Switching Tracks",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VzGp35Z/0/NRGq3SmS5kx34tXCF63p4hR8KxqKQSzz82r24CkRS/XL/_DSF0415-XL.jpg",
+    "alt": "Loading Coal",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-VzGp35Z/A",
     "keywords": [
       "Classic trains",
@@ -297,18 +330,21 @@ export const galleryData = [
     "story": "Black smoke billows from the steam engine as it slows it's approach to take on a new load of coal. Train worker stands ready to switch tracks in order to get her back on track when finished.© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-9SSNHdh/1/MHJ8qLs6N9LD2hQ9hk2BBg95FDCkfB5L3tNf8thXf/XL/_DSF0411-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-9SSNHdh/1/MHJ8qLs6N9LD2hQ9hk2BBg95FDCkfB5L3tNf8thXf/XL/_DSF0411-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-9SSNHdh/1/MHJ8qLs6N9LD2hQ9hk2BBg95FDCkfB5L3tNf8thXf/XL/_DSF0411-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-9SSNHdh/1/L6WNs97xL8gP4qWXqbDZxBJMkfwLvx3G5mz9MFK8S/L/_DSF0411-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-9SSNHdh/1/MrtmVM9CC8ssQ7XzkHJCgXN29D65jbZkksBkhDBfH/S/_DSF0411-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qQHjwDz",
     "title": "Outlook",
     "description": "Bearded train conductor looks out of the black engine on a stormy grey day with a keen eye for trouble.© Wayne Heim",
-    "alt": "Outlook",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-qQHjwDz/0/MTKkfb4WZmtCTp4L8Fc3XqHBFPRpSMggvJT7HNvX5/XL/_O1H0253-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Switching Tracks",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-qQHjwDz/A",
     "keywords": [
       "Classic trains",
@@ -323,18 +359,21 @@ export const galleryData = [
     "story": "Bearded train conductor looks out of the black engine on a stormy grey day with a keen eye for trouble.© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VzGp35Z/0/NFzQK69bDCnNMs2kmmJqk98p33BLGwMLTqWb4mnks/XL/_DSF0415-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VzGp35Z/0/NFzQK69bDCnNMs2kmmJqk98p33BLGwMLTqWb4mnks/XL/_DSF0415-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VzGp35Z/0/NFzQK69bDCnNMs2kmmJqk98p33BLGwMLTqWb4mnks/XL/_DSF0415-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VzGp35Z/0/KcvGS5DM3qB4P4FxTCKZrV3DP6bRqwQZGrN22wQmN/L/_DSF0415-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VzGp35Z/0/KZ6tqFmcDK4gq8hMpVzMJ6f5bjz6qJp6hZFJW97PB/S/_DSF0415-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sxshHx9",
     "title": "Northbound #16.",
     "description": "Steaming through the hills of Pennsylvania, Old Number 16 disrupts the still of a stormy, rainy day with its rhythmic chugging and belching smoke and steam.© Wayne Heim",
-    "alt": "Northbound #16.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-sxshHx9/0/KkBcQ9LLBfHtzMMnNQrDQ7ChW7Pc4mtM3DktQjx8d/XL/_O1H0413-Edit-Edit-XL.jpg",
+    "alt": "Outlook",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-sxshHx9/A",
     "keywords": [
       "Classic trains",
@@ -349,18 +388,21 @@ export const galleryData = [
     "story": "Steaming through the hills of Pennsylvania, Old Number 16 disrupts the still of a stormy, rainy day with its rhythmic chugging and belching smoke and steam.© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-qQHjwDz/0/Mqjp2hhTfJnkgVGZgLFcms45JgtQ3CmLbV4wxSp4c/XL/_O1H0253-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-qQHjwDz/0/Mqjp2hhTfJnkgVGZgLFcms45JgtQ3CmLbV4wxSp4c/XL/_O1H0253-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-qQHjwDz/0/Mqjp2hhTfJnkgVGZgLFcms45JgtQ3CmLbV4wxSp4c/XL/_O1H0253-Enhanced-NR-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-qQHjwDz/0/LKXkGLQN9CWJpdw2mV3SfcQSVnJRF8HftfZPrKJQT/L/_O1H0253-Enhanced-NR-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-qQHjwDz/0/MpqPxDSssBHBncw6jfNVwthWxx8SfP5q7H9Pnwb3W/S/_O1H0253-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8VgD3bQ",
     "title": "Steaming Ahead",
     "description": "Black steam engine riding down the rails on a cloudy, rainy day. Black lines of the train bisect this image from the sky and greenery of the landscape creating a dynamic story of movement. © Wayne Heim",
-    "alt": "Steaming Ahead",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-8VgD3bQ/0/LQXhRQhQCXqVLg9QLtNfm2PwhQnpj69vWxMBW2ntG/XL/_O1H0424-XL.jpg",
+    "alt": "Northbound #16.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-8VgD3bQ/A",
     "keywords": [
       "Classic trains",
@@ -375,18 +417,21 @@ export const galleryData = [
     "story": "Black steam engine riding down the rails on a cloudy, rainy day. Black lines of the train bisect this image from the sky and greenery of the landscape creating a dynamic story of movement. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-sxshHx9/0/K6m5xtZMN7tN4qdm79J5KCdp7v23BsbGMrH9SrVjq/XL/_O1H0413-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-sxshHx9/0/K6m5xtZMN7tN4qdm79J5KCdp7v23BsbGMrH9SrVjq/XL/_O1H0413-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-sxshHx9/0/K6m5xtZMN7tN4qdm79J5KCdp7v23BsbGMrH9SrVjq/XL/_O1H0413-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-sxshHx9/0/LzVKdJZwPRW69B6DVz9KxZfSsX6CWMZMGVBf5KzC6/L/_O1H0413-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-sxshHx9/0/LsTjhhFr9MjQ9xgg8PBcMxPJRj4zvFFT5PNqJjL2J/S/_O1H0413-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-C6DBCqz",
     "title": "Through the Draw.",
     "description": "Smoky #16 steam engine passes through the draw of the hillside on it's way to the next town. © Wayne Heim",
-    "alt": "Through the Draw.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/Nc2VVnDCgPpzH3J43Fcxn4z8H3N8XDgpM2FQcpHxP/XL/_DSF0650-Enhanced-NR-XL.jpg",
+    "alt": "Steaming Ahead",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-C6DBCqz/A",
     "keywords": [
       "Classic trains",
@@ -401,18 +446,21 @@ export const galleryData = [
     "story": "Smoky #16 steam engine passes through the draw of the hillside on it's way to the next town. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-8VgD3bQ/0/LQ5Nb9qT6hLdMm2dqrPn9ZG42mp5FLZTTJsCj7q5v/XL/_O1H0424-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-8VgD3bQ/0/LQ5Nb9qT6hLdMm2dqrPn9ZG42mp5FLZTTJsCj7q5v/XL/_O1H0424-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-8VgD3bQ/0/LQ5Nb9qT6hLdMm2dqrPn9ZG42mp5FLZTTJsCj7q5v/XL/_O1H0424-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-8VgD3bQ/0/KQjtFxz67fQJ3FN4QsT3zTmB6VrCh4dhw4Dmk4BWZ/L/_O1H0424-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-8VgD3bQ/0/LXCX5vhpHcS4h8HkpvG8w795SP5NRKwf4ZMrbzwF8/S/_O1H0424-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jsGFv5C",
     "title": "Over the River and Through The Woods",
     "description": "Color fine art painterly photography of steam engine crossing river on a stormy day.. © Wayne Heim",
-    "alt": "Over the River and Through The Woods",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jsGFv5C/0/M7g99fP2vdfLLMzNsNtcSdd8q2SDs2McNCLQJWpv6/XL/_DSF0852-XL.jpg",
+    "alt": "Through the Draw.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-jsGFv5C/A",
     "keywords": [
       "Classic trains",
@@ -427,18 +475,21 @@ export const galleryData = [
     "story": "Color fine art painterly photography of steam engine crossing river on a stormy day.. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/Kmsg2wzxbXzWKpbwknkmh4TZrS3h2DRFxss2d9c7x/XL/_DSF0650-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/Kmsg2wzxbXzWKpbwknkmh4TZrS3h2DRFxss2d9c7x/XL/_DSF0650-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/NZBBKq8QWSfr9p8FWc6Xs3tdRxk5dL9zqNDL5BHhV/L/_DSF0650-Enhanced-NR-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/MK6V9CG57WHLDwhCqXMKL92QPSGRxq2NmwmxLqQbd/M/_DSF0650-Enhanced-NR-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/L5KssZ22qLRpmQFfJxXTfcJjHkLXmC73MKtkSczTf/S/_DSF0650-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dSBHv7x",
     "title": "Inspection",
     "description": "Train worker navigates the steam clouds as he inspects the train engine as it take on water and fuel for it's next leg of the journey. © Wayne Heim",
-    "alt": "Inspection",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-dSBHv7x/0/M325TkvBXb2s4RCcP4PWVWHxPntPHJ7FnPwTwtw2G/XL/_DSF1066-Edit-XL.jpg",
+    "alt": "Over the River and Through The Woods",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-dSBHv7x/A",
     "keywords": [
       "Classic trains",
@@ -453,18 +504,21 @@ export const galleryData = [
     "story": "Train worker navigates the steam clouds as he inspects the train engine as it take on water and fuel for it's next leg of the journey. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jsGFv5C/0/KcfwkwQ3S2RQBbzgSSdtKKHwMRsxL2L9XrQ438tqb/XL/_DSF0852-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jsGFv5C/0/KcfwkwQ3S2RQBbzgSSdtKKHwMRsxL2L9XrQ438tqb/XL/_DSF0852-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jsGFv5C/0/KcfwkwQ3S2RQBbzgSSdtKKHwMRsxL2L9XrQ438tqb/XL/_DSF0852-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jsGFv5C/0/NMMtrTFfwJTntTRcHMDrrt3J4MQwsqwHWBb9Kh57t/L/_DSF0852-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-jsGFv5C/0/KxmPjSkMkSXbBtRxWdP3NSqfvCwbR73V2htjdHB32/S/_DSF0852-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tThTG6j",
     "title": "Here comes trouble.",
     "description": "Train yard workers spot some approaching trouble. Could it be the law or an inspector or a wayward traveler? © Wayne Heim",
-    "alt": "Here comes trouble.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-tThTG6j/0/LPHTdK8Rrwh9XqC6hxNHz9Q3JQRsKd2FRvgH8TqLc/XL/_DSF1077-Edit-XL.jpg",
+    "alt": "Inspection",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-tThTG6j/A",
     "keywords": [
       "Classic trains",
@@ -479,18 +533,21 @@ export const galleryData = [
     "story": "Train yard workers spot some approaching trouble. Could it be the law or an inspector or a wayward traveler? © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-dSBHv7x/0/Mh8WsVgdhpt8t6DN6Lvk6cVFC2QgLx648874bdFmJ/XL/_DSF1066-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-dSBHv7x/0/Mh8WsVgdhpt8t6DN6Lvk6cVFC2QgLx648874bdFmJ/XL/_DSF1066-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-dSBHv7x/0/Mh8WsVgdhpt8t6DN6Lvk6cVFC2QgLx648874bdFmJ/XL/_DSF1066-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-dSBHv7x/0/Mgz6pGrcpRGFg7cBjSp95Xbsg3C3x8H8NM69sBJ8J/L/_DSF1066-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-dSBHv7x/0/LkbwJ3GKZdwFk6M3pBfxN8xBcR8KM4z2MjCf34cmh/S/_DSF1066-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Dqn5vGG",
     "title": "Waiting for his fair.",
     "description": "Vintage car and steam locomotive. Man leans on car while he waits for his passenger to arrive from the train. Color fine art painterly train photography. © Wayne Heim",
-    "alt": "Waiting for his fair.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Dqn5vGG/0/M7F7vdfRK5MN5s2SbXvXgqHGnpCnZPMKn4BVFvz5s/XL/_DSF1096-Edit-2-XL.jpg",
+    "alt": "Here comes trouble.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-Dqn5vGG/A",
     "keywords": [
       "Classic trains",
@@ -505,18 +562,21 @@ export const galleryData = [
     "story": "Vintage car and steam locomotive. Man leans on car while he waits for his passenger to arrive from the train. Color fine art painterly train photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-tThTG6j/0/KNnXJJJhT9Gk7CZQHF6F9L9h4bwC8ccgrXxHg9cmS/XL/_DSF1077-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-tThTG6j/0/KNnXJJJhT9Gk7CZQHF6F9L9h4bwC8ccgrXxHg9cmS/XL/_DSF1077-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-tThTG6j/0/L3BPwRJxVkwG6fSFbCnDfdnJRTvkMgRKWZCSkpKXq/L/_DSF1077-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-tThTG6j/0/MFnrNtvCBPr543Nh2VfZqBL8qkg8gzQwNg8ZP8jF2/M/_DSF1077-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-tThTG6j/0/MHc6DnhLPStVWk9CsFcFsPhdwzLLbK3nxsLQKWFgs/S/_DSF1077-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JS2Z6HT",
     "title": "Pulling out of the Station",
     "description": "Painterly train photography showing old #16 steam engine pulling into station while she belches steam and soot. © Wayne Heim",
-    "alt": "Pulling out of the Station",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JS2Z6HT/1/LB9S92KLd6HTZ9zQHNSmdbg3NxRqtNb5hGBKjwpBp/XL/_O1H0808-Edit-2-XL.jpg",
+    "alt": "Waiting for his fair.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-JS2Z6HT/A",
     "keywords": [
       "Classic trains",
@@ -531,18 +591,21 @@ export const galleryData = [
     "story": "Painterly train photography showing old #16 steam engine pulling into station while she belches steam and soot. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Dqn5vGG/0/NV4DdHdWLPJrhQQ3kFqkk6nVpvQmgx33bCKn9gtnx/XL/_DSF1096-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Dqn5vGG/0/NV4DdHdWLPJrhQQ3kFqkk6nVpvQmgx33bCKn9gtnx/XL/_DSF1096-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Dqn5vGG/0/NV4DdHdWLPJrhQQ3kFqkk6nVpvQmgx33bCKn9gtnx/XL/_DSF1096-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Dqn5vGG/0/MMmxBkf9QR675rfpF33KQgsKDWCNZcwhRzMtqWkFW/L/_DSF1096-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-Dqn5vGG/0/MKZkMBnPf4cxhDRXzXrjGVZz7fXGLHhrvwV5DNDVp/S/_DSF1096-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wnGkKGj",
     "title": "All Aboard!",
     "description": "1940's themed photograph of old steam engine pulling into the East Broad Top railway station as travelers arrive in vintage car and stand waiting to board. © Wayne Heim",
-    "alt": "All Aboard!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wnGkKGj/0/L9XpqWvqMvXx8Dd8gV6bLsv8CcNQ2MwjCkDzkqmSf/XL/_O1H0853-Edit-XL.jpg",
+    "alt": "Pulling out of the Station",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-wnGkKGj/A",
     "keywords": [
       "Classic trains",
@@ -557,18 +620,21 @@ export const galleryData = [
     "story": "1940's themed photograph of old steam engine pulling into the East Broad Top railway station as travelers arrive in vintage car and stand waiting to board. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JS2Z6HT/1/KxD59JgCHhZBZWdk6wZhP5tjBJXNB6WvmkDZcV8g3/XL/_O1H0808-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JS2Z6HT/1/KxD59JgCHhZBZWdk6wZhP5tjBJXNB6WvmkDZcV8g3/XL/_O1H0808-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JS2Z6HT/1/MsQVwjKGBDbQq6LmSPqDSB4prv2n75RfDGdstpLs3/L/_O1H0808-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JS2Z6HT/1/KWT3jBZZKm6BhSP86kcjkwWdWTz8chG5s2wnbFKmX/M/_O1H0808-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-JS2Z6HT/1/KLFCbwQMS2djbp4dJxQPkD7tQd8Cd6CsVx4wn8RSg/S/_O1H0808-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VRjSsM6",
     "title": "Heading Home from Work",
     "description": "Vintage style photo of train station with workers waiting to board the train to head home after a long days work. © Wayne Heim",
-    "alt": "Heading Home from Work",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRjSsM6/0/L5g8rDzQZKsqFM6hj5zZTf7rQZgS2XvvvB2DxgWXB/XL/_DSF1449-Edit-2-XL.jpg",
+    "alt": "All Aboard!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-VRjSsM6/A",
     "keywords": [
       "Classic trains",
@@ -583,18 +649,21 @@ export const galleryData = [
     "story": "Vintage style photo of train station with workers waiting to board the train to head home after a long days work. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wnGkKGj/0/KPqHwCQWqcfh9Fv9Hpn29VDJSxTF6DSXBPk7Qkbwc/XL/_O1H0853-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wnGkKGj/0/KPqHwCQWqcfh9Fv9Hpn29VDJSxTF6DSXBPk7Qkbwc/XL/_O1H0853-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wnGkKGj/0/MctXS7zfHTQQG5hn5C5xM2KtVPBwGfsGFH45R8jvr/L/_O1H0853-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wnGkKGj/0/KpsVF35cJjRw7ZCF3V8Zz83RpdSBtLc8SZLNV5zvq/M/_O1H0853-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-wnGkKGj/0/LwfCtQdG7r5t76ZfwnKsfpNfzHz24V2VN3HGXNXBf/S/_O1H0853-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6CqjzJ3",
     "title": "Waiting for Directions",
     "description": "Classic train conductor in his blue uniform and hat looks out the engines window as he waits for the \"all clear\" sign so he can pull out of the station. © Wayne Heim",
-    "alt": "Waiting for Directions",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-6CqjzJ3/0/Kjs9KKsZ9G3HtJfLk7R4nfLsH6wj9ffLsGt8b2GbL/XL/_O1H1227-Edit-2-XL.jpg",
+    "alt": "Heading Home from Work",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-6CqjzJ3/A",
     "keywords": [
       "Classic trains",
@@ -609,18 +678,21 @@ export const galleryData = [
     "story": "Classic train conductor in his blue uniform and hat looks out the engines window as he waits for the \"all clear\" sign so he can pull out of the station. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRjSsM6/0/KMGPV5mCs9C65KNxRLmW6CxgtKqLcF5WM5dm8tjnv/XL/_DSF1449-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRjSsM6/0/KMGPV5mCs9C65KNxRLmW6CxgtKqLcF5WM5dm8tjnv/XL/_DSF1449-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRjSsM6/0/MDvVr7JzpXqhdTmSKxkSBTWZ3347fWprP8BCrt8Kv/L/_DSF1449-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRjSsM6/0/K55HHn9ZHjW32dMCrRS6W5L9dFQQFTGTbrhRz6J9j/M/_DSF1449-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-VRjSsM6/0/MkC9btDwjZXcLVTSPkhBGwK9M4snWFjxR3dbf5QDF/S/_DSF1449-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-86HKcF6",
     "title": "Working the Train Yard.",
     "description": "All in a days work. Train yard workers reposition the black steam engine for it's next journey. © Wayne Heim",
-    "alt": "Working the Train Yard.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-86HKcF6/0/K34SVs9TG4LDx2H97r9h5mVFHMqWrgCdVpjvXfV7n/XL/_O1H1235-Edit-2-XL.jpg",
+    "alt": "Waiting for Directions",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-86HKcF6/A",
     "keywords": [
       "Classic trains",
@@ -635,18 +707,21 @@ export const galleryData = [
     "story": "All in a days work. Train yard workers reposition the black steam engine for it's next journey. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-6CqjzJ3/0/NCKBZXq67ZjkLcz4tthzsv7HBLXT5NhcK3pcMXqkr/XL/_O1H1227-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-6CqjzJ3/0/NCKBZXq67ZjkLcz4tthzsv7HBLXT5NhcK3pcMXqkr/XL/_O1H1227-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-6CqjzJ3/0/NCKBZXq67ZjkLcz4tthzsv7HBLXT5NhcK3pcMXqkr/XL/_O1H1227-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-6CqjzJ3/0/LxcN5m7XFSbmnW4wp9TmVh9NXnXjfTmmTswJnw8kf/L/_O1H1227-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-6CqjzJ3/0/KqXS33CN5ZdjcKbJpnXMFXgMcc2r4gMswM7ztn6Xf/S/_O1H1227-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vDCmHDx",
     "title": "Threading the Needle",
     "description": "Through the rain, the black steam engine navigates through the red buildings like black thread passing through the eye of a needle. © Wayne Heim",
-    "alt": "Threading the Needle",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vDCmHDx/1/Lw5QwnB5N8pdd7hc5VpXdvhBVntH8LrNvdBFr8Tmd/XL/_O1H1310-Edit-XL.jpg",
+    "alt": "Working the Train Yard.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-vDCmHDx/A",
     "keywords": [
       "Classic trains",
@@ -661,18 +736,21 @@ export const galleryData = [
     "story": "Through the rain, the black steam engine navigates through the red buildings like black thread passing through the eye of a needle. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-86HKcF6/0/MwbnwggTgkNSxfVWFDh3WdCDB7wJ2MhHVbMDzGwzZ/XL/_O1H1235-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-86HKcF6/0/MwbnwggTgkNSxfVWFDh3WdCDB7wJ2MhHVbMDzGwzZ/XL/_O1H1235-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-86HKcF6/0/K2Z9bxnVxqsMsWNWWt8f5Vp3g9PQw9LhRXBjjhHvg/L/_O1H1235-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-86HKcF6/0/K3BtbKp8BPKZvZSj3ZrwTSCsqg23Vhb59hHtgJxsk/M/_O1H1235-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-86HKcF6/0/M5n3tMF4S968gTWMRvX3MPrZjcrGB49xx6VhVVphn/S/_O1H1235-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-38H7pXm",
     "title": "Vintage #16",
     "description": "Colorized sepia toned photograph of classic vintage steam engine. Uniquely viewed from lower front perspective to emphasize the grandeur and power of this metal giant. © Wayne Heim",
-    "alt": "Vintage #16",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-38H7pXm/0/LCbsMchRzzHjZ54vgF7Sf4NM4f255Xdg6Kv2wrvCm/XL/_O1H1398-Edit-XL.jpg",
+    "alt": "Threading the Needle",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-38H7pXm/A",
     "keywords": [
       "Classic trains",
@@ -687,18 +765,21 @@ export const galleryData = [
     "story": "Colorized sepia toned photograph of classic vintage steam engine. Uniquely viewed from lower front perspective to emphasize the grandeur and power of this metal giant. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vDCmHDx/1/LqMKbpkNVPDr9nZtJDFqgLnzCTcnr8CLgMtfhJCQ6/XL/_O1H1310-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vDCmHDx/1/LqMKbpkNVPDr9nZtJDFqgLnzCTcnr8CLgMtfhJCQ6/XL/_O1H1310-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vDCmHDx/1/Mhs9sbj2FzbpBjqXbkSGFK9qd6ZmbP9C3h7JNtgtP/L/_O1H1310-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vDCmHDx/1/KDNNwzBsFPp3dBtF2Kd5sMVb6HL9TXK6dppzZKQgf/M/_O1H1310-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-vDCmHDx/1/LdtZz6sqPvgxfmSZCXzWsT8FwnZ4RWjKQBqpVZjxN/S/_O1H1310-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KKFK79v",
     "title": "Black and Red: Passing through the Yard",
     "description": "Black steam engine passes red buildings in the rail yard on a gray cloudy day as workers look on. © Wayne Heim",
-    "alt": "Black and Red: Passing through the Yard",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-KKFK79v/0/LdJpQ4nhmrrq8RCt6DNz8XxXvt6Xv8DjDM5C4VrtQ/XL/_O1H1447-XL.jpg",
+    "alt": "Vintage #16",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-KKFK79v/A",
     "keywords": [
       "Classic trains",
@@ -713,18 +794,21 @@ export const galleryData = [
     "story": "Black steam engine passes red buildings in the rail yard on a gray cloudy day as workers look on. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-38H7pXm/0/LbwQZf56FwnSDzRXznpwrhB7S3KkRzJb4h89bDdv7/XL/_O1H1398-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-38H7pXm/0/LbwQZf56FwnSDzRXznpwrhB7S3KkRzJb4h89bDdv7/XL/_O1H1398-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-38H7pXm/0/LbwQZf56FwnSDzRXznpwrhB7S3KkRzJb4h89bDdv7/XL/_O1H1398-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-38H7pXm/0/MPwSCMPxXg7gfBV7tkRKFbdLgvFSRKBnQm3vR2Wdr/L/_O1H1398-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-38H7pXm/0/LN6Xwhtp6hzsxJ8x3R735M42KF79fhxsnzv4VCLk4/S/_O1H1398-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NHQCG6K",
     "title": "Hitching a Ride",
     "description": "Vintage style photo of passenger steam train being flagged down by a couple stranded passengers. © Wayne Heim",
-    "alt": "Hitching a Ride",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-NHQCG6K/0/LLf63gwctV6c498F5cVZd7VsgTdmjtjSct9svQ85T/XL/_DSF1802-Edit-3-XL.jpg",
+    "alt": "Black and Red: Passing through the Yard",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-NHQCG6K/A",
     "keywords": [
       "Classic trains",
@@ -739,18 +823,21 @@ export const galleryData = [
     "story": "Vintage style photo of passenger steam train being flagged down by a couple stranded passengers. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-KKFK79v/0/LH5sQ6z7SwQxpn86vpTdw5vwS9FDD457h58XGsRnT/XL/_O1H1447-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-KKFK79v/0/LH5sQ6z7SwQxpn86vpTdw5vwS9FDD457h58XGsRnT/XL/_O1H1447-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-KKFK79v/0/LqtrSMLNKtNW2SNFSds47ND49NtrddZWrXBq22GK9/L/_O1H1447-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-KKFK79v/0/NRdgpC5fwdxjF3N3VTdXhnvB4vTkGtQHjQSP7bgWC/M/_O1H1447-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-KKFK79v/0/KHsdPJmzqMxZS4Mqv9hHpQqKcrfd56bNTCghBTNgg/S/_O1H1447-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BHcNR9T",
     "title": "Greetings Friends!",
     "description": "Smokey steam engine billows black soot as it passes road side travelers out for a walk.© Wayne Heim",
-    "alt": "Greetings Friends!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-BHcNR9T/0/KsRqJzSWhSVm3w4cJVfZCkwCxXk7kNg8Hn3LfNWHn/XL/_DSF1803-XL.jpg",
+    "alt": "Hitching a Ride",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-BHcNR9T/A",
     "keywords": [
       "Classic trains",
@@ -765,18 +852,21 @@ export const galleryData = [
     "story": "Smokey steam engine billows black soot as it passes road side travelers out for a walk.© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-NHQCG6K/0/Mv98xPNC657H6fXj9NGZFfz5WS3WwgCCbJt2ptJQ7/XL/_DSF1802-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-NHQCG6K/0/Mv98xPNC657H6fXj9NGZFfz5WS3WwgCCbJt2ptJQ7/XL/_DSF1802-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-NHQCG6K/0/MZM66XbkbfrKttqtCTJmwwdMtVCNmvtpsVWMPQLSG/L/_DSF1802-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-NHQCG6K/0/L38kZvctQzQ78qVKZ6g4TkPMh65tPVCZfR8cB6cSv/M/_DSF1802-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-NHQCG6K/0/K4j2c33XH7qqH967BvTMJZNj7GkFZBW8hjC4R3psj/S/_DSF1802-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DsKrDFM",
     "title": "Making the Switch",
     "description": "Train worker switches the track so the steam engine can continue down the rails to it's next destination. © Wayne Heim",
-    "alt": "Making the Switch",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DsKrDFM/0/NcFjhB3NcSvnWBxMrwWMsNF3VgwNsdNt3NnsSHxtL/XL/_DSF1838-Edit-XL.jpg",
+    "alt": "Greetings Friends!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-DsKrDFM/A",
     "keywords": [
       "Classic trains",
@@ -791,18 +881,21 @@ export const galleryData = [
     "story": "Train worker switches the track so the steam engine can continue down the rails to it's next destination. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-BHcNR9T/0/MxDbrDC73D87mQgNGZBsmVDr5R3QgPfxCJvktv2jK/XL/_DSF1803-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-BHcNR9T/0/MxDbrDC73D87mQgNGZBsmVDr5R3QgPfxCJvktv2jK/XL/_DSF1803-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-BHcNR9T/0/MxDbrDC73D87mQgNGZBsmVDr5R3QgPfxCJvktv2jK/XL/_DSF1803-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-BHcNR9T/0/KNwqptnbPzrsvqXnw6x5HBqqrffbJvfcW7nzjG49Z/L/_DSF1803-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-BHcNR9T/0/NTBqQ9k367Tt9vdJ9f6SMkVJdFKtTN78KQtGJprnd/S/_DSF1803-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-5S7fJtQ",
     "title": "Fork in the Rail",
     "description": "Steam engine backs on this stormy day in order to activate the switch in the rails and take a different path. © Wayne Heim",
-    "alt": "Fork in the Rail",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-5S7fJtQ/1/Mk3QQQ2ddSwPrQqHcvq4Zs8kT57F8QM6767g6DmKt/XL/_DSF1849-Enhanced-NR-XL.jpg",
+    "alt": "Making the Switch",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-5S7fJtQ/A",
     "keywords": [
       "Classic trains",
@@ -817,18 +910,21 @@ export const galleryData = [
     "story": "Steam engine backs on this stormy day in order to activate the switch in the rails and take a different path. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DsKrDFM/0/MxvqNN5LQNRmnxdVZB8JqgmWDwdqN8JXpKgKjKvxv/XL/_DSF1838-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DsKrDFM/0/MxvqNN5LQNRmnxdVZB8JqgmWDwdqN8JXpKgKjKvxv/XL/_DSF1838-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DsKrDFM/0/NNGxQ9C5tZRv3Fq3VmjpVR9jKsDJftd9cSN4ZJcqt/L/_DSF1838-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DsKrDFM/0/MD6QtWBfbsdFWmJhZwB73KpcWWzvXtRsbhg8XsTGK/M/_DSF1838-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-DsKrDFM/0/NSRbsjhqfWzt6V4qf6P2G5TqFNkhHjvNpHcK64dkn/S/_DSF1838-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-679fHqX",
     "title": "Heading Back",
     "description": "Train worker hanging on the back of vintage train car as it speeds down the rails. © Wayne Heim",
-    "alt": "Heading Back",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-679fHqX/0/K58JgD6XdzhtPwh4j9LbJ5t5JQxTSHX6qjH6SDt4c/XL/_ANA1271-Edit-Edit-XL.jpg",
+    "alt": "Fork in the Rail",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-679fHqX/A",
     "keywords": [
       "Classic trains",
@@ -843,18 +939,21 @@ export const galleryData = [
     "story": "Train worker hanging on the back of vintage train car as it speeds down the rails. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-5S7fJtQ/1/K43jxpX9TBZ7VrJ8vqrWmNKnRjTMW5L8pLVCbcTbb/XL/_DSF1849-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-5S7fJtQ/1/K43jxpX9TBZ7VrJ8vqrWmNKnRjTMW5L8pLVCbcTbb/XL/_DSF1849-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-5S7fJtQ/1/MQhNB23cf8GnQHcvzgc63BZFFpJkFqVTMJzqknktk/L/_DSF1849-Enhanced-NR-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-5S7fJtQ/1/KXGtjS8rF2bRbbFB5V8r8LFHCGQ5zMSvpVD32BBhk/M/_DSF1849-Enhanced-NR-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-5S7fJtQ/1/KK3x8d3RSdm392XRR95ZRLGh2JmjFrrZxdzW8pNLP/S/_DSF1849-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-45tHJJR",
     "title": "Leaving the Station",
     "description": "Train worker looks back and a final goodbye to his friends at the station as he wonders when he will next see them. © Wayne Heim",
-    "alt": "Leaving the Station",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-45tHJJR/0/LS5LthpN3BC75SsX3xmt4kQ7JkrjTTT9kjPzGKssW/XL/_ANA1360-Edit-2-XL.jpg",
+    "alt": "Heading Back",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-45tHJJR/A",
     "keywords": [
       "Classic trains",
@@ -869,18 +968,21 @@ export const galleryData = [
     "story": "Train worker looks back and a final goodbye to his friends at the station as he wonders when he will next see them. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-679fHqX/0/LKPC4ZXm39qwgmLgjRssbkCqpjRRbhkvGj56Q9F43/XL/_ANA1271-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-679fHqX/0/LKPC4ZXm39qwgmLgjRssbkCqpjRRbhkvGj56Q9F43/XL/_ANA1271-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-679fHqX/0/MSxxnbVKQ9d8nmcLdRTj6dkCDD2schmbBC5xrP7hf/L/_ANA1271-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-679fHqX/0/MZQxxTnpk7QMV38G78KvKxL6PrtxDpkcxnvGHwj9S/M/_ANA1271-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-679fHqX/0/NHc5wVM9KLTkWnfzjsrL4TKZLtK83vrFQmDj38GMR/S/_ANA1271-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-z3ZNhdg",
     "title": "Flagging down Help",
     "description": "Stranded vintage car travelers attempt to flag down passing steam locomotive for assistance. © Wayne Heim",
-    "alt": "Flagging down Help",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-z3ZNhdg/1/NTCWVnD3wk4Bz59QjLnLCWFZq9KqhNQm6XdRSgNKj/XL/_ANA1529-Edit-2-XL.jpg",
+    "alt": "Leaving the Station",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-z3ZNhdg/A",
     "keywords": [
       "Classic trains",
@@ -895,18 +997,21 @@ export const galleryData = [
     "story": "Stranded vintage car travelers attempt to flag down passing steam locomotive for assistance. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-45tHJJR/0/LbQ7ZdVsmCKQkzLxVDgvftXfRwWJjs9NFsXkjnNFj/XL/_ANA1360-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-45tHJJR/0/LbQ7ZdVsmCKQkzLxVDgvftXfRwWJjs9NFsXkjnNFj/XL/_ANA1360-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-45tHJJR/0/LbQ7ZdVsmCKQkzLxVDgvftXfRwWJjs9NFsXkjnNFj/XL/_ANA1360-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-45tHJJR/0/L2PzZzqwbSk5GbJdKWDQfzqHRbdJDRHMR3gCdmRCz/L/_ANA1360-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-45tHJJR/0/LfZqmXcRPStZPKRQc6WCLdpTDDqKPrZTnb2gdNNGG/S/_ANA1360-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DQXK7gB",
     "title": "Waiting for a Ride",
     "description": "Painterly style photo of vintage steam engine leaving the station. Travelers look on as they await the passenger train due in any minute. © Wayne Heim",
-    "alt": "Waiting for a Ride",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-DQXK7gB/0/LDMJwgzX4LRs59qLDGtwQ37TS9QhRhwsS9pJ8z6jF/XL/_ANA1782-Edit-XL.jpg",
+    "alt": "Flagging down Help",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-DQXK7gB/A",
     "keywords": [
       "Classic trains",
@@ -921,18 +1026,21 @@ export const galleryData = [
     "story": "Painterly style photo of vintage steam engine leaving the station. Travelers look on as they await the passenger train due in any minute. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-z3ZNhdg/1/KkXBZHmBrDKV4tJb7rCCWtQdDfRmxZtcGLm4wNr5h/XL/_ANA1529-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-z3ZNhdg/1/KkXBZHmBrDKV4tJb7rCCWtQdDfRmxZtcGLm4wNr5h/XL/_ANA1529-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-z3ZNhdg/1/KkXBZHmBrDKV4tJb7rCCWtQdDfRmxZtcGLm4wNr5h/XL/_ANA1529-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-z3ZNhdg/1/NHP3CXR9mrpf5RBfcQ6dBLMpD85kdJhRJJdcH2s37/L/_ANA1529-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-z3ZNhdg/1/KjBG6PkZZsfJnq466tbdP4m3bH99GtXh8TKWCGzKf/S/_ANA1529-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jGCc9n4",
     "title": "Crewing the Line",
     "description": "Classic rail workers in their blue overalls ride the rails through the yard on their way to the next task. © Wayne Heim",
-    "alt": "Crewing the Line",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jGCc9n4/1/KLszP3SJMM3mnrwJfKFgVcx6vXNwdFLXjVPmTSBHw/XL/_ANA1873-Edit-XL.jpg",
+    "alt": "Waiting for a Ride",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-jGCc9n4/A",
     "keywords": [
       "Classic trains",
@@ -947,18 +1055,21 @@ export const galleryData = [
     "story": "Classic rail workers in their blue overalls ride the rails through the yard on their way to the next task. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-DQXK7gB/0/KsbhtrZ8ZBkc4T9mKm4HFPBpx7rBBFhKr3bn6VFq7/XL/_ANA1782-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-DQXK7gB/0/KsbhtrZ8ZBkc4T9mKm4HFPBpx7rBBFhKr3bn6VFq7/XL/_ANA1782-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-DQXK7gB/0/LM2FH8jdjwJGBdGpKkRMFqnSZ8nQQ8bz2jBV8K73s/L/_ANA1782-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-DQXK7gB/0/NXrHtghGqtvTt2Nsm9qDKw8C38HRkJwjgWBkktprc/M/_ANA1782-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-DQXK7gB/0/LSpNvNV6qv7pMD9DmRQZWWfcFnGJKQxfc8t83DkTf/S/_ANA1782-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FLtxbvc",
     "title": "Hooking Up",
     "description": "Rustic image of steam engine navigating backwards to hook up the the passenger cars. © Wayne Heim",
-    "alt": "Hooking Up",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FLtxbvc/0/MZzcxkrs8T76brSChJswnmFtNQNjx9NN5p6gM2jBf/XL/_ANA1965-Enhanced-NR-Edit-2-XL.jpg",
+    "alt": "Crewing the Line",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-FLtxbvc/A",
     "keywords": [
       "Classic trains",
@@ -973,18 +1084,21 @@ export const galleryData = [
     "story": "Rustic image of steam engine navigating backwards to hook up the the passenger cars. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jGCc9n4/1/LBKw3hZhkGN9GFPqSMPpXGF7MVfRFScd9ZCrn39TM/XL/_ANA1873-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jGCc9n4/1/LBKw3hZhkGN9GFPqSMPpXGF7MVfRFScd9ZCrn39TM/XL/_ANA1873-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jGCc9n4/1/LBKw3hZhkGN9GFPqSMPpXGF7MVfRFScd9ZCrn39TM/XL/_ANA1873-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jGCc9n4/1/KLWdTMxN8jFmHgWz6w87ChkvMCtS4jXRMzsdwB8M6/L/_ANA1873-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-jGCc9n4/1/MJBrVP67kBDV6mTszVg3VmKBR8zt5Jd3ZxX5hPzhF/S/_ANA1873-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3nPnmnQ",
     "title": "Station in Blue",
     "description": "Iconic blue themed image of steam engine pulling into the station. Image is almost monochromatic but is broken up and accented by the small amount of red on the engine and the the bold contrast of the yellow station building in the background, © Wayne Heim",
-    "alt": "Station in Blue",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3nPnmnQ/0/M5c6zkxMwN6Xc8VJqgfK45b3WktgdSnVDjtftVmgP/XL/_ANA1970-Edit-2-XL.jpg",
+    "alt": "Hooking Up",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-3nPnmnQ/A",
     "keywords": [
       "Classic trains",
@@ -999,18 +1113,21 @@ export const galleryData = [
     "story": "Iconic blue themed image of steam engine pulling into the station. Image is almost monochromatic but is broken up and accented by the small amount of red on the engine and the the bold contrast of the yellow station building in the background, © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FLtxbvc/0/KKkjgmRjnnMzPfx3t3WGdpd9p8NZ9fCZbLzXGPCj9/XL/_ANA1965-Enhanced-NR-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FLtxbvc/0/KKkjgmRjnnMzPfx3t3WGdpd9p8NZ9fCZbLzXGPCj9/XL/_ANA1965-Enhanced-NR-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FLtxbvc/0/LvxtjVdqHzRrcLJk8rTTNs8GLWzCjvknKBsK6rssX/L/_ANA1965-Enhanced-NR-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FLtxbvc/0/Mh3NdRfKwtbrDK9WbmP8vVGbsm9Mrng7TqMXGtMLs/M/_ANA1965-Enhanced-NR-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FLtxbvc/0/M3N8rgz7bmj6tjZxdDdh5633MRTrQFBp7Mt7LmLdL/S/_ANA1965-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-srgN25v",
     "title": "Into the Station",
     "description": "Rail station welcomes the arrival of it's old friend, train being pulled by engine #16. © Wayne Heim",
-    "alt": "Into the Station",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-srgN25v/0/NPh4SWSHF4hb6qMPShcBzJqD6PDNNKZBVSXXGW6bJ/XL/_ANA1970-Edit-3-XL.jpg",
+    "alt": "Station in Blue",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-srgN25v/A",
     "keywords": [
       "Classic trains",
@@ -1025,18 +1142,21 @@ export const galleryData = [
     "story": "Rail station welcomes the arrival of it's old friend, train being pulled by engine #16. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3nPnmnQ/0/NGP8LhKxTwxqZhPhVwb9vBZ28hvCCW72JJzrMsmZr/XL/_ANA1970-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3nPnmnQ/0/NGP8LhKxTwxqZhPhVwb9vBZ28hvCCW72JJzrMsmZr/XL/_ANA1970-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3nPnmnQ/0/NPt6Kv5P773gfm8zdFsG6qqstRbjWNX9mjLQZft3V/L/_ANA1970-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3nPnmnQ/0/M6kDKVWxVtstdxhJMvZGdWXm3BWjTvJ3bJHZsTwpH/M/_ANA1970-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3nPnmnQ/0/Mj8VrRMrSJg6XrtKSWVktJMMRPDrj5vJJqBk963Tv/S/_ANA1970-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BkcSBK6",
     "title": "Fog and Steam",
     "description": "Iconic steam engine billows steam and smoke as it cuts though the fog and mist of the dreary fall day. © Wayne Heim",
-    "alt": "Fog and Steam",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BkcSBK6/0/L8XDsjRM6hQLBRKr24djv4c95JfSPb6Pb25t3kw5L/XL/_ANA2010-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Into the Station",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-BkcSBK6/A",
     "keywords": [
       "Classic trains",
@@ -1051,18 +1171,21 @@ export const galleryData = [
     "story": "Iconic steam engine billows steam and smoke as it cuts though the fog and mist of the dreary fall day. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-srgN25v/0/LxqQKzZ4SNRXbQFtGkL5vCN7mQD5Bdzn49QP9DfLH/XL/_ANA1970-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-srgN25v/0/LxqQKzZ4SNRXbQFtGkL5vCN7mQD5Bdzn49QP9DfLH/XL/_ANA1970-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-srgN25v/0/KqkjwZFQd22gWQ238spW25zGkM4mG53tjWzddBQbN/L/_ANA1970-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-srgN25v/0/Ng6vZ3WLvjXXxwHRf4ZSfD6bn3H4WDmPRxB868jSn/M/_ANA1970-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-srgN25v/0/Kd3cfD7gFtFKML8r39Cc7sPNzvQMLc8L9DMMQ7B6S/S/_ANA1970-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6zk8Vt5",
     "title": "All Aboard!",
     "description": "1950's style travelers board the train. Woman in her Sunday best looks on to the military soldier as he makes his way onto the same train.© Wayne Heim",
-    "alt": "All Aboard!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-6zk8Vt5/0/KNtSSvB3m7Qk6rWKcSD34b55RbnVQMWtRPmnNfMjp/XL/_HF25398-Edit-XL.jpg",
+    "alt": "Fog and Steam",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-6zk8Vt5/A",
     "keywords": [
       "Classic trains",
@@ -1077,18 +1200,21 @@ export const galleryData = [
     "story": "1950's style travelers board the train. Woman in her Sunday best looks on to the military soldier as he makes his way onto the same train.© Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BkcSBK6/0/Mn3dz4ZJ5kZtwCZ6cjgPgsj9t2vqQRZ2JtwCkVfN8/XL/_ANA2010-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BkcSBK6/0/Mn3dz4ZJ5kZtwCZ6cjgPgsj9t2vqQRZ2JtwCkVfN8/XL/_ANA2010-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BkcSBK6/0/MkxN8jWGcMjM5pZGRJW54grTPPkFpKBvDVX6Ps7rS/L/_ANA2010-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BkcSBK6/0/MrXHC6bBn4MkzGXXHnt9Z8SMpP3R28VDNV5gcJcC9/M/_ANA2010-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BkcSBK6/0/MJQKJhpjF4LKb3ZbgmcbgzGMhV4pJ9GPc3dzTnxhC/S/_ANA2010-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-W27q59Q",
     "title": "Night Moves",
     "description": "Vintage car out for a night stroll heads down the road as the vintage #16 steam engine passes behind on the elevated tracks on it's way to the next station. © Wayne Heim",
-    "alt": "Night Moves",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KNkCSCdSh3Cr3wQCKJTvM2954r7hGd8C5vJLdwNjd/XL/_HF25580-XL.jpg",
+    "alt": "All Aboard!",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-W27q59Q/A",
     "keywords": [
       "Classic trains",
@@ -1103,18 +1229,21 @@ export const galleryData = [
     "story": "Vintage car out for a night stroll heads down the road as the vintage #16 steam engine passes behind on the elevated tracks on it's way to the next station. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-6zk8Vt5/0/NfKHR9S7cZ735c2CLHZdD7hkSnrhRn5RV6zHBVz5R/XL/_HF25398-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-6zk8Vt5/0/NfKHR9S7cZ735c2CLHZdD7hkSnrhRn5RV6zHBVz5R/XL/_HF25398-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-6zk8Vt5/0/M3ndS3P5BhCzWzNGsVwSd6L7Dz94pkc638CCgLxkS/L/_HF25398-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-6zk8Vt5/0/NRws4d6MNNspPMdQND3zBtrd6C5F7Zk4NWGfVTv8S/M/_HF25398-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-6zk8Vt5/0/NVHKh7nx39RdjvFwbNwZwC4HVTqvb6p82g3PjkM57/S/_HF25398-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZGNLtgd",
     "title": "Truck & Train Painterly Photography",
     "description": "Vintage style truck drives pass just as steam engine pass over the overpass; setting up the background for this timeless image. © Wayne Heim",
-    "alt": "Truck & Train Painterly Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZGNLtgd/0/LGKGNFzwZRFgtHn3rJd8wzSwbDPdzZnNcsb3vzn5H/XL/_HF26139-Edit-Edit-XL.jpg",
+    "alt": "Night Moves",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-ZGNLtgd/A",
     "keywords": [
       "Classic trains",
@@ -1129,18 +1258,21 @@ export const galleryData = [
     "story": "Vintage style truck drives pass just as steam engine pass over the overpass; setting up the background for this timeless image. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KxXVvBgMWq82fGmxbQhjNpDPGSwcCtHQZxqFwstQf/XL/_HF25580-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KxXVvBgMWq82fGmxbQhjNpDPGSwcCtHQZxqFwstQf/XL/_HF25580-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/MqFtq2pFsXQLMLSjL6F6T6ZWGp85zSGrwZtjnWmsP/L/_HF25580-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/MLwQjTPN6VHTqXxs96xzfx4rhjVgr94Gd4SX4Cpc6/M/_HF25580-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/L5nvKm7N9XpLJ5pkH74SNDh7dnNrmNDHVqCM4Jm6r/S/_HF25580-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZcRmL6x",
     "title": "50/50",
     "description": "Iconic steam engine horizontally dividing the fall scene in halve. Top showcasing the blue sky and wispy clouds vs the bottom of the scene features colors and textures of the surrounding foliage and grasses. © Wayne Heim",
-    "alt": "50/50",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZcRmL6x/0/NMXzqTgTkxNzgqFmMqs5JwnhGwccsV5sxLv96dgPx/XL/_HF26257-XL.jpg",
+    "alt": "Truck & Train Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-ZcRmL6x/A",
     "keywords": [
       "Classic trains",
@@ -1155,10 +1287,43 @@ export const galleryData = [
     "story": "Iconic steam engine horizontally dividing the fall scene in halve. Top showcasing the blue sky and wispy clouds vs the bottom of the scene features colors and textures of the surrounding foliage and grasses. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZGNLtgd/0/LJFV7kxdv2M4rs7CwvR6R6DzxVXmbM9K6rSn3Tvm2/XL/_HF26139-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZGNLtgd/0/LJFV7kxdv2M4rs7CwvR6R6DzxVXmbM9K6rSn3Tvm2/XL/_HF26139-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZGNLtgd/0/LfCZPjZcSnFp2V8n8DghfDp49qxC4WbJGvCKjqqSV/L/_HF26139-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZGNLtgd/0/NF9cmBCWq7Zwg3p5RGsBCXdZnbzx9GN2RHMDZMqtB/M/_HF26139-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZGNLtgd/0/MK4h7k3mwgsJm3zJ8DJdP492rCJxkfD7dhLVgXMtQ/S/_HF26139-Edit-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-zHjwCg7",
+    "title": "Headed East",
+    "description": "Vintage East Broad Top steam engine travels down the rail to the station. Iconic engine separates blue skey from the color and texture of the landscape. © Wayne Heim",
+    "alt": "50/50",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-zHjwCg7/A",
+    "keywords": [
+      "Classic trains",
+      "trains",
+      "locomotives",
+      "train art",
+      "train photos",
+      "painterly photography",
+      "painterly train photos",
+      "East Broad Top  Railroad"
+    ],
+    "story": "Vintage East Broad Top steam engine travels down the rail to the station. Iconic engine separates blue skey from the color and texture of the landscape. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZcRmL6x/0/LD8ShXQhvPKHwnVkNjCZg33zfNzcV3kvHSVLbzQSG/XL/_HF26257-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZcRmL6x/0/LD8ShXQhvPKHwnVkNjCZg33zfNzcV3kvHSVLbzQSG/XL/_HF26257-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZcRmL6x/0/Nf2qQsDVV36dbn2vzpDPwvRJ33pPfHjKVZ4rhdcNd/L/_HF26257-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZcRmL6x/0/KgqpVZbRjNN5NLjvVp5TkGHHCvdfnFCTpWxLPqsv4/M/_HF26257-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZcRmL6x/0/Kjp3thskW2pSLxZWhsP7kCPLFfQtPJsPTGs23BpRb/S/_HF26257-S.jpg",
+    "srcOriginal": ""
   }
 ];

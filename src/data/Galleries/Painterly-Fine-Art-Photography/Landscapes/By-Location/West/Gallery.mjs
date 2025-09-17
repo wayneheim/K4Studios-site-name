@@ -1,163 +1,216 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-  
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
   {
     "id": "i-G6gftd8",
-    "title": "Don't fence me in.",
-    "description": "Painterly mountain photography capturing a golden-hour moment of a rustic split-rail fence stretching toward the distant peaks. This fine art image by Wayne Heim evokes a sense of solitude, open space, and nostalgic Americana, with warm light pouring across yellow goldenrod grass and the foothills beyond. Perfect for collectors of Western wall art, mountain home decor, or anyone seeking atmospheric fine art prints rooted in place and time. © Wayne Heim",
-    "alt": "Rustic fence in golden grass at sunset, with painterly mountains in the background.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MxjqGpG95k2VzKb8567hQDzprHc97MBJq8fdxFwBb/XL/Painterly%2520Landscape%2520Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Painterly Mountain Photography: Don't fence me in.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/A",
     "keywords": [
-      "western fine art photography",
-      "painterly mountain photography",
-      "golden hour western landscape",
-      "rustic split-rail fence art",
-      "western wall decor",
-      "open range photography",
-      "mountain home artwork",
-      "solitude in western art"
-    ],
-    "story": "Crossing the valley. Fencing marking its zones. Mountains watching on, silent and eternal, as the goldenrod of summer restakes its claim.\n\nWaving in the fading light — not asking, not pleading — just saying: It’s always been mine.",
-    "notes": "With a nod to the luminist palette and the compositional stillness of the Hudson River School, this image blends pictorialist sensibilities with frontier grit. The fence — diagonally slicing the frame — offers more than structure; it’s a visual metaphor. Heim’s painterly process softens the realism into memory, letting light and land speak through brush-toned pixels. Like Wyeth or Adams, this work invites contemplation, not spectacle. A quiet masterwork for those who understand that freedom and confinement are often divided by a line of shadow.",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
-    "visibility": "show",
-    "sortOrder": 0
-  },
-  {
-    "id": "i-5BJh8BQ",
-    "title": "Closed",
-    "description": "Painterly fine art photograph of an old white clapboard church marked “Closed,” set against the vast prairie sky of South Dakota. This Western landscape captures both the beauty and quiet loss of rural life, with sweeping clouds, subtle color, and rich textures evoking a sense of timelessness and solitude. Ideal for collectors of Western wall art, Americana, or evocative frontier photography. © Wayne Heim",
-    "alt": "Old white church with a “Closed” sign under dramatic skies, framed by prairie grass and wire fence.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/Mb9Zsz9FFpchfHGTBd5qSrWDtpB6dDwVmdHdZj56q/XL/Image%2520s2-2b-490-XL.jpg",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/A",
-    "keywords": [
-      "western fine art photography",
-      "rural church art",
-      "abandoned western buildings",
-      "painterly western landscape",
-      "closed church photo",
-      "prairie chapel",
-      "South Dakota photography",
-      "americana wall decor"
-    ],
-    "story": "God’s country. Endless fields. The sky sings its praise.\n\nA simple cross — a quiet command at the intersection of heaven and earth. Closed, the sign says.\n\nThe journey is ours to make.",
-    "notes": "Heim’s composition plays with contradiction — order and entropy, reverence and vacancy. The church is placed cleanly in a third, yet the open grassland creeps in like time reclaiming space. Painterly soft tones and cloud drama echo the pictorialist tradition, yet the subject resists nostalgia. There's dignity here, but also finality — a visual elegy for forgotten sanctuaries of the West. Think Andrew Wyeth with a Midwestern accent.",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
-    "visibility": "show",
-    "sortOrder": 1
-  },
-  {
-    "id": "i-zwwCqFz",
-    "title": "Buffalo Bill Reservoir at Sundown",
-    "description": "Painterly fine art photograph of the Buffalo Bill Reservoir at sunset, located just outside Cody, Wyoming. The glowing sky reflects off tranquil water, framed by rolling meadows and rugged cliffs of the American West. Wayne Heim’s painterly landscape photography captures the mood and magic of the open plains, perfect for Western wall decor, rustic home design, or collectors of fine art mountain prints. © Wayne Heim",
-    "alt": "Painterly sunset over Buffalo Bill Reservoir near Cody, Wyoming, with glowing clouds and mirrored reflections in still water.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/MjJgkfqBzNbp4bznBSSmKmVKPgxHgrq4M6F4tL69n/XL/_O1H0149-Enhanced-NR-XL.jpg",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/A",
-    "keywords": [
-      "western sunset photography",
-      "painterly mountain photography",
-      "Buffalo Bill Reservoir print",
-      "Cody Wyoming fine art",
-      "rustic Western landscape",
-      "tranquil reservoir sunset",
-      "Western wall art",
-      "fine art mountain scene"
-    ],
-    "story": "Evening hums. The day exhales. Mountains shift to shadow, but the light refuses to leave — not just yet.\n\nWater holds the last word — mirroring fire, speaking in color. A quiet end.",
-    "notes": "This image blends precision and mood in a way reminiscent of Bierstadt’s later works — expansive yet intimate. The horizontal sweep is grounded by the water’s stillness, anchoring the composition while allowing the sky’s drama to unfold. Heim's signature painterly processing pulls painterly warmth from the clouds and foreground, giving this piece a visual harmony that invites stillness and reflection. Ideal for spaces meant to breathe.",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
-    "visibility": "show",
-    "sortOrder": 2
-  },
-  {
-    "id": "i-SNtZNVm",
-    "title": "Sunset at Horseshoe Bend",
-    "description": "Fine art painterly photograph of sunset over Horseshoe Bend in Arizona, where the Colorado River winds through red sandstone cliffs. Wayne Heim’s signature painterly treatment enhances the texture and drama of the scene, turning natural beauty into timeless narrative. Perfect for collectors of Western wall art, rustic desert landscapes, and fine art photography rooted in place and myth. © Wayne Heim",
-    "alt": "Painterly photograph of Horseshoe Bend at sunset, with deep canyon walls and river curve bathed in warm light.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/KGr2T5jDwq7DT4RCJ3SWq3SrjKNkdsvZr995xmSc9/XL/_DSF4943-605-XL.jpg",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/A",
-    "keywords": [
-      "Horseshoe Bend fine art print",
-      "painterly canyon landscape",
-      "Arizona river photography",
-      "Western desert wall art",
-      "rustic canyon decor",
-      "Colorado River sunset",
-      "red rock art print",
-      "fine art desert photography\nlandscape photography",
+      "Western Wall art",
+      "western prints",
+      "western photos",
+      "western mountain photography",
+      "western interior design",
+      "western home decor",
+      "western fine art",
+      "rustic mountain photos",
+      "mountain photography",
+      "man cave decor",
+      "Fine art landscape photography",
       "iconic western photography",
       "painterly photography",
       "Western photography prints",
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Carved slow, like a memory that never fades. Stone pressed by time — and water that never stops asking.\n\nThe light bends too, sinking into every scar. Silence here is not emptiness. It’s awe made visible.",
-    "notes": "This image echoes the tonal mastery of 19th-century luminists, yet feels unmistakably modern in its restraint. The horseshoe curve is rendered not as spectacle, but as symbol — of time, of change, of reverence. Heim’s painterly approach adds warmth and grain, lifting it into the pictorialist tradition. Light meets form in a composition that feels both grounded and monumental. A museum-worthy addition to any fine Western or desert-themed collection.",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/LdcpqTRvCSgXKnknXNt3hVZsnmWHzJr2ptqMkc7HB/XL/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/LdcpqTRvCSgXKnknXNt3hVZsnmWHzJr2ptqMkc7HB/XL/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MJ8XLBvHZz3d3kRjTQdGcX4ZTwqnWgWCTdGNtf22v/L/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MfkMWsRWf6Nz2kkMDBk2jzLgWZGngSMNTJcxzpXW7/M/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MQxcB3VdbH7qp55cfVhM8HmBjwXpfcmqgr8Sm4HLz/S/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-5BJh8BQ",
+    "title": "Closed",
+    "description": "Painterly landscape photography of old white church with \"closed\" sign on front door in South Dakota, the foothills of the Western landscape. © Wayne Heim",
+    "alt": "Painterly Mountain Photography: Don't fence me in.",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/A",
+    "keywords": [
+      "Western Wall art",
+      "western prints",
+      "western photos",
+      "western mountain photography",
+      "western interior design",
+      "western home decor",
+      "western fine art",
+      "rustic mountain photos",
+      "mountain photography",
+      "man cave decor",
+      "Fine art landscape photography",
+      "iconic western photography",
+      "painterly photography",
+      "Western photography prints",
+      "western landscape photography",
+      "painterly landscape photography"
+    ],
+    "story": "Painterly landscape photography of old white church with \"closed\" sign on front door in South Dakota, the foothills of the Western landscape. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/LdcpqTRvCSgXKnknXNt3hVZsnmWHzJr2ptqMkc7HB/XL/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/LdcpqTRvCSgXKnknXNt3hVZsnmWHzJr2ptqMkc7HB/XL/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MJ8XLBvHZz3d3kRjTQdGcX4ZTwqnWgWCTdGNtf22v/L/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MfkMWsRWf6Nz2kkMDBk2jzLgWZGngSMNTJcxzpXW7/M/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MQxcB3VdbH7qp55cfVhM8HmBjwXpfcmqgr8Sm4HLz/S/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-zwwCqFz",
+    "title": "Painterly Mountain Photography: Buffalo Bill Reservoir",
+    "description": "Photograph of sunset at the Buffalo bill Reservoir in Wyoming outside of Cody. Order Western prints of fine art painterly Western mountain photography. © Wayne Heim",
+    "alt": "Closed",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/A",
+    "keywords": [
+      "Western Wall art",
+      "western prints",
+      "western photos",
+      "western mountain photography",
+      "western interior design",
+      "western home decor",
+      "western fine art",
+      "rustic mountain photos",
+      "mountain photography",
+      "man cave decor",
+      "Fine art landscape photography",
+      "iconic western photography",
+      "painterly photography",
+      "Western photography prints",
+      "western landscape photography",
+      "painterly landscape photography"
+    ],
+    "story": "Photograph of sunset at the Buffalo bill Reservoir in Wyoming outside of Cody. Order Western prints of fine art painterly Western mountain photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KsKdh8bhDhDRWzr9GnnPfcs2NHPjrDrrrsgjjPSCr/XL/Image%20s2-2b-490-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KsKdh8bhDhDRWzr9GnnPfcs2NHPjrDrrrsgjjPSCr/XL/Image%20s2-2b-490-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KX6dsjTL3b7t5FLMZtQ43TMzm8BPSx2WcJvPMKXtG/L/Image%20s2-2b-490-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/LG7gzLkPs2Np8NqrsQLgtt7JB8fMJpdKpKjsGCjCR/M/Image%20s2-2b-490-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/LzSsGbNZKrfW3hVgn9kmZQJBz2rPt2MFNdzQvL4kt/S/Image%20s2-2b-490-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-SNtZNVm",
+    "title": "Fine art painterly photo: Sunset at Horseshoe Bend.",
+    "description": "Fine art painterly mountain photography of red rocks and river bend. Arizona © Wayne Heim",
+    "alt": "Painterly Mountain Photography: Buffalo Bill Reservoir",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/A",
+    "keywords": [
+      "Western Wall art",
+      "western prints",
+      "western photos",
+      "western mountain photography",
+      "western interior design",
+      "western home decor",
+      "western fine art",
+      "rustic mountain photos",
+      "mountain photography",
+      "man cave decor",
+      "Fine art landscape photography",
+      "iconic western photography",
+      "painterly photography",
+      "Western photography prints",
+      "western landscape photography",
+      "painterly landscape photography"
+    ],
+    "story": "Fine art painterly mountain photography of red rocks and river bend. Arizona © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/NBSqSwkR2rd6fjwcqNqVR8NfhSvhDC48VdhSmb5Zm/XL/_O1H0149-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/NBSqSwkR2rd6fjwcqNqVR8NfhSvhDC48VdhSmb5Zm/XL/_O1H0149-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/MM8t8mXBrXm3mzf9sZ4tKz5gRRsBHKNx8dBVGd58k/L/_O1H0149-Enhanced-NR-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/Mtw6JJkcttDH23mpgJx6rHMkFMbSKx7dJxKgJmDnS/M/_O1H0149-Enhanced-NR-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/Kv4DnghkvfsX48WSmLkBMNZZ23rNWQFDrFmJRQ374/S/_O1H0149-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-g7SCMTD",
-    "title": "Break in the Storm",
-    "description": "Painterly fine art photograph of snow-covered Western mountains in Etna, Wyoming, captured during a fleeting break in a winter storm. Dramatic clouds give way to filtered light, highlighting the ridges and trees with striking contrast. Wayne Heim’s painterly process brings texture and depth to this Western landscape, perfect for rustic home decor, mountain lodges, or collectors of moody fine art photography. © Wayne Heim",
-    "alt": "Snow-covered Western mountains near Etna, Wyoming, under brooding clouds with sunlight breaking through.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/KTqsh5KnVGMGw23x6jw4JT7j886bqrPZmDfjRkJ9L/XL/P1030226-523-548-XL.jpg",
+    "title": "Painterly Mountain Photography: Break in the Storm",
+    "description": "Fine art painterly mountain photography of classic Western mountains in Etna Wyoming in the winter Buy a Western art print today to add the sperit of the old west to your home decor. © Wayne Heim",
+    "alt": "Fine art painterly photo: Sunset at Horseshoe Bend.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/A",
     "keywords": [
+      "Western Wall art",
+      "western prints",
+      "western photos",
       "western mountain photography",
-      "Wyoming snow storm art",
-      "painterly winter landscape",
-      "Etna Wyoming fine art",
-      "dramatic mountain decor",
-      "stormy Western wall art",
-      "rustic lodge photography",
-      "fine art winter print"
+      "western interior design",
+      "western home decor",
+      "western fine art",
+      "rustic mountain photos",
+      "mountain photography",
+      "man cave decor",
+      "Fine art landscape photography",
+      "iconic western photography",
+      "painterly photography",
+      "Western photography prints",
+      "western landscape photography",
+      "painterly landscape photography"
     ],
-    "story": "Clouds retreat. Just for a moment. The mountain shows its shape — cut from ice and shadow.\n\nA break in the storm, but not the end of it. Stillness sharp as wind. Light like a warning. Or a promise.",
-    "notes": "A masterclass in tonal restraint, this image captures the cinematic tension of the high mountain West. Heim renders the landscape with quiet drama — dark pines stitched into snowfields, and peaks that emerge like sculpted myths. The painterly technique echoes 19th-century photogravure with a modern sensibility. Ideal for collectors drawn to isolation, clarity, and atmosphere.",
+    "story": "Fine art painterly mountain photography of classic Western mountains in Etna Wyoming in the winter Buy a Western art print today to add the sperit of the old west to your home decor. © Wayne Heim",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/KG7vctTSztzGT7Ztj7sTH8mNbjdHfTvp3rjFXkLG6/L/_DSF4943-605-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/KnZCdkhBS72MXHG2n8mRZM2Wbcpms2JBLX2qPTTmm/S/_DSF4943-605-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jWDDpC4",
-    "title": "Western Cotton Candy",
+    "title": "Western Cotton Candy -  Jackson Hole Wyoming.",
     "description": "Painterly Photograph of some iconic Western Cotton Candy- A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign. - Jackson Hole Wyoming. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly sunset cloud floating over open Wyoming fields near Jackson Hole, with soft colors and distant hills.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/NNXq3TdCZcGBDnzwqm65v5j69KWgPmpQWPrg7CgDG/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "alt": "Painterly Mountain Photography: Break in the Storm",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-jWDDpC4/A",
     "keywords": [
       "Western Wall art",
@@ -177,21 +230,24 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Pink defiance drifting over the sage.\n\nNo rush. No rules. The sky’s sweet defiance. Just cotton candy at cruising altitude.\n\n55 mph. No speeding here — it’s already miles ahead.",
-    "notes": "A masterclass in restraint and humor, this image distills the vastness of the American West into a single playful gesture — a lone pink cloud, painted like a brushstroke in an otherwise orderly sky. Heim’s painterly process softens the transition between realism and abstraction, evoking tonalism with a wink. The low horizon and vertical orientation emphasize the weight of sky over land, echoing classical landscape framing while letting the mood breathe. A quietly joyful piece that invites the viewer to pause, smile, and wonder what it means to truly drift.",
+    "story": "Painterly Photograph of some iconic Western Cotton Candy- A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign. - Jackson Hole Wyoming. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/L5gmVhjrj8x2w4Q9KbxW3pbQqjTVVKnxgLSv6BSFX/XL/P1030226-523-548-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/L5gmVhjrj8x2w4Q9KbxW3pbQqjTVVKnxgLSv6BSFX/XL/P1030226-523-548-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/LvwBRkVHpP8hx5c5ShmNF8ntJCwkCDFfh2WqWdZHn/L/P1030226-523-548-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/L3bxtCfdSxDJ2sJfXPFhWvqkCpqFSCJhmGJfwh5rv/M/P1030226-523-548-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/LDwhq5CCJRHN3ZNCrsNBstS8Np44HjMpPNJkWzvjn/S/P1030226-523-548-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6PzCQW9",
     "title": "Painterly Mountain Photography: Mormon Row, Jackson Hole Wyoming",
-    "description": "Painterly fine art photograph of a historic Mormon Row barn near Jackson Hole, Wyoming. Captured under dramatic skies with sweeping light, this image pays tribute to the resilience and beauty of the Western frontier. Ideal for collectors of rustic landscape photography, fine art Americana, or Western home décor with timeless character. © Wayne Heim",
-    "alt": "Painterly Western photo of a historic barn on Mormon Row in Jackson Hole, Wyoming, with dramatic sky and mountains in the background.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/KSgLV7GpfGnLTFTRBBDzQ2Z8G6kFdCbBXSsQzTbSd/XL/Painterly%2520Landscape%2520Photo_IMG6307_tonemapped-546-547-XL.jpg",
+    "description": "Western photo of lone cowboy and old barn from Mormon Row in Jackson Hole Wyoming at sunset. Fine art painterly mountain photography. © Wayne Heim",
+    "alt": "Western Cotton Candy -  Jackson Hole Wyoming.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/A",
     "keywords": [
       "Western Wall art",
@@ -211,47 +267,61 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "The barn holds its ground. A lone cowboy watches from the edge. No words. No motion.\n\nThe wind, the wood, and the mountains tell the story.",
-    "notes": "This piece is a study in weathered strength — a structure both iconic and personal. Heim’s painterly process emphasizes texture: the layered wood, windblown dust, and a sky that feels brushed in. The barn’s placement obeys classical rules of thirds while anchoring the vast openness. Echoes of Weston, but more romantic; whispers of the pictorialists, but more grounded. An image that feels both rooted and reverent — a cornerstone of any Western art collection.",
+    "story": "Western photo of lone cowboy and old barn from Mormon Row in Jackson Hole Wyoming at sunset. Fine art painterly mountain photography. © Wayne Heim",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/KMjcCtzQ2KCCmPP8RhRxN3ms3dVnWLv2Vf2NBQ2w8/L/Painterly-Photography_WHZ9803-528-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-N226DMX",
     "title": "In the Weeds - Tetons in Autumn - Jackson Hole Wyoming.",
-    "description": "Painterly fine art photograph of the Teton Mountains in autumn, reflected in a quiet stream at Schwabacher Landing near Jackson Hole, Wyoming. Captured amid golden grasses and evergreens, this peaceful Western landscape offers serene texture and balance. Ideal for collectors of fine art mountain photography, rustic home decor, or reflective Western nature scenes. © Wayne Heim",
-    "alt": "Painterly autumn view of the Teton Mountains reflected in still water, framed by golden grasses and evergreen trees near Jackson Hole, Wyoming.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MQ8DN9x389fFjh3V5b3nDWZP8H7J85tPJLrvHqttn/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
+    "description": "Teton mountains reflecting in the stream at Schwabacher Landing in the fall near Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
+    "alt": "Painterly Mountain Photography: Mormon Row, Jackson Hole Wyoming",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-N226DMX/A",
     "keywords": [
-      "Teton autumn photography",
-      "Schwabacher Landing art",
-      "painterly mountain landscape",
-      "Jackson Hole fall print",
-      "golden grasses and river reflection",
-      "peaceful western nature art",
-      "Grand Teton fine art photo",
-      "rustic mountain decor"
+      "Western Wall art",
+      "western prints",
+      "western photos",
+      "western mountain photography",
+      "western interior design",
+      "western home decor",
+      "western fine art",
+      "rustic mountain photos",
+      "mountain photography",
+      "man cave decor",
+      "Fine art landscape photography",
+      "iconic western photography",
+      "painterly photography",
+      "Western photography prints",
+      "western landscape photography",
+      "painterly landscape photography"
     ],
-    "story": "Hidden in the reeds, the world slows.\n\nMountains whisper in reflection, clouds drift twice,\nand time forgets to move. No need to chase the wild —\njust listen to the mountain song from the weeds.",
-    "notes": "This piece invites stillness. Wayne Heim’s perspective — low, intimate, and grounded in golden brush — subverts the typical grand vista, instead embracing the quiet edge of the scene. Painterly processing adds warmth and texture, evoking tonalism and early American landscape traditions. The mirrored symmetry of mountain and water is softened by natural imperfection, creating a mood of meditation rather than spectacle. A perfect companion piece for spaces meant to breathe and reflect.",
+    "story": "Teton mountains reflecting in the stream at Schwabacher Landing in the fall near Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/LPzKXsBKb3T6DMznGxvxtFFrhJ6B5MZ5Fdg6dWBjw/XL/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/LPzKXsBKb3T6DMznGxvxtFFrhJ6B5MZ5Fdg6dWBjw/XL/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/L6bfDz8nRvShwSXnNZ9jmwb5XvG7LSz9LGh7rVkzh/L/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/L7kbrCgHP7WktsCVDCZ5LQbvsDxF3ZsXJgvf3dQSf/M/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/Lr2wsqWwzSzXnnc62cTK5MJ4MjxM9vv4CB2R9NJgx/S/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NHkKNbH",
-    "title": "Schools Out",
-    "description": "Painterly fine art photograph of an old brick schoolhouse framed by white picket fences in Georgetown, Colorado. Though long closed, the scene carries echoes of learning and memory — where weathered walls and worn paths speak to generations past. Perfect for collectors of nostalgic Americana, historic Western architecture, and fine art photography that captures stories still quietly unfolding.",
-    "alt": "Painterly photo of an old brick schoolhouse and white picket fences in Georgetown, Colorado.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/KqfCwQbSB8vMS4QqhbsGQCS37CW56xRXhMpWrLkq3/XL/test%2520nothing-XL.jpg",
+    "title": "Painterly Photo: Schools Out",
+    "description": "Fine art painterly photography of old brick school building and white fence in Georgetown Colorado.",
+    "alt": "In the Weeds - Tetons in Autumn - Jackson Hole Wyoming.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/A",
     "keywords": [
       "Western Wall art",
@@ -271,21 +341,24 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "The bell’s gone silent. The doors long closed.\n\nBut the fences still lean in like they’re listening.\nAnd the walls — they remember everything.\n\nSchool’s out. But the lessons linger on.",
-    "notes": "Schools Out captures the beauty of a moment after the moment — a scene where silence carries weight. Heim’s painterly technique enhances the soft wear of wood and brick, letting light settle into every surface like memory. The composition draws the eye inward with symmetry and stillness, evoking both structure and sentiment. There’s a rhythm to the spacing — fence, window, shadow — like verses to a poem once recited here.\n\nThough the students are long gone, this piece holds the enduring echo of place-based learning — where the building becomes both artifact and storyteller. Ideal for collectors who appreciate Americana with emotional depth and painterly restraint.",
+    "story": "Fine art painterly photography of old brick school building and white fence in Georgetown Colorado.",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/KMJpLmQFZR2HGFDhDNmLWG8JLH6fBgfM6rbzSJdbc/L/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Q2NXpjG",
     "title": "Yellowstone Falls: After the Storm",
-    "description": "Painterly fine art photograph of Yellowstone Falls in Yellowstone National Park, captured in the aftermath of a storm. Towering cliffs, rushing water, and rising mist create a cinematic Western scene filled with motion and atmosphere. Ideal for collectors of fine art nature photography, rustic home decor, and dramatic landscape prints rooted in iconic American wilderness. © Wayne Heim",
-    "alt": "Painterly photo of Yellowstone Falls cascading into a misty canyon, surrounded by forest and distant cliffs in Yellowstone National Park.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/LV2xRFRMxMjzJ57BxhwWj79D5tc3NFzz3fdMQFRPD/XL/Painterly%2520Landscape%2520Photo_DSF4260-Pano-Edit-480-XL.jpg",
+    "description": "Fine art painterly photo of a waterfall in Yellowstone National Park. © Wayne Heim",
+    "alt": "Painterly Photo: Schools Out",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/A",
     "keywords": [
       "Western Wall art",
@@ -305,21 +378,24 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Yellowstone. Rugged. Unyielding.\n\nCarved by time, shaped by storm. The water roars.\nThe canyon holds. Not just a place — a legacy\nwritten in stone and carried on the whispers of the wind and mist.",
-    "notes": "This image balances grandeur and intimacy — capturing not just a location, but a moment suspended in elemental power. Heim’s painterly processing heightens the play between texture and light: the soft rise of mist, the razor edge of cliff, the sheer volume of water rendered in brush-toned pixels. Echoes of Hudson River School grandeur meet the tonal tension of pictorialism. A signature piece for those who seek nature not as background, but as force.",
+    "story": "Fine art painterly photo of a waterfall in Yellowstone National Park. © Wayne Heim",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/KmGSdp3zW25jKs2hBZRgQHp4Lb5HnvQ6Mvtc8qDdr/L/test%20nothing-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/MD6jrKzFFZW6M3BXqGm63GZfPRDzLHQKdPBLrtQfT/S/test%20nothing-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-C2w6Kpb",
-    "title": "Break time long over.",
-    "description": "Painterly fine art photograph of a rustic Western break room, featuring weathered chairs, a wood stove, and a checkerboard left mid-game. Captured in warm, nostalgic tones, this scene from a place long forgotten evokes echoes of work, rest, and the passage of time. Perfect for collectors of vintage Americana, Western interiors, and fine art photography rich with story. © Wayne Heim",
-    "alt": "Painterly photo of an abandoned Western break room with wooden chairs, stove, and a checkerboard left mid-game.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/Ktqp8bknvhn49fQQrkB9jWQdB6pRHx5tQZf6sWhs3/XL/_O1H1144-Edit-XL.jpg",
+    "title": "Painterly Photography: Break time.",
+    "description": "Painterly photo of old rustic western style stock room with break table, stove, chairs, and checkerboard. Place that time forgot. Fine art painterly photography © Wayne Heim",
+    "alt": "Yellowstone Falls: After the Storm",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/A",
     "keywords": [
       "Western Wall art",
@@ -339,21 +415,24 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "One long break.\n\nA checkered past. The present — skipping, jumping, hopping by. Memories keep watch, quietly waiting\nfor the next move in the dusty game of nostalgia.\n\nNext move? New game? Best two out of three?",
-    "notes": "Break Time Long Over evokes not just a setting, but a silence. Heim’s painterly approach enhances the soft shadows, layered textures, and the mood of abandonment without sorrow. The checkerboard mid-play becomes a visual metaphor — something interrupted, never resumed. With muted earth tones and chiaroscuro light, the image channels the quiet realism of early American painters while maintaining a narrative photographic voice. Ideal for collectors drawn to interiors that tell more than they show.",
+    "story": "Painterly photo of old rustic western style stock room with break table, stove, chairs, and checkerboard. Place that time forgot. Fine art painterly photography © Wayne Heim",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/NjWWqpSXfMPzRw47QgTBJXKhkc4wGThXGCvFw564z/XL/Painterly%20Landscape%20Photo_DSF4260-Pano-Edit-480-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/NjWWqpSXfMPzRw47QgTBJXKhkc4wGThXGCvFw564z/XL/Painterly%20Landscape%20Photo_DSF4260-Pano-Edit-480-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/NjWWqpSXfMPzRw47QgTBJXKhkc4wGThXGCvFw564z/XL/Painterly%20Landscape%20Photo_DSF4260-Pano-Edit-480-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/MvQm2S84Fknsp65vsLsVKwwnRxRt7z8xrwC4cwWcC/L/Painterly%20Landscape%20Photo_DSF4260-Pano-Edit-480-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/MNDXDDJRQmXP4j3crHdHspJT3dzqpLGLzrHxQ6vkv/S/Painterly%20Landscape%20Photo_DSF4260-Pano-Edit-480-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Lk8jWT3",
-    "title": "T.A. Moulton Barn – Framed in Time",
-    "description": "Fine art painterly photograph of the iconic T.A. Moulton Barn on Mormon Row, just outside Jackson Hole, Wyoming. Framed by towering cottonwoods and backed by the Tetons, this Western landscape evokes both history and permanence. Ideal for collectors of rustic Americana, Western heritage, and fine art photography that celebrates the enduring spirit of the land. © Wayne Heim",
-    "alt": "Painterly photograph of the historic T.A. Moulton Barn in Jackson Hole, Wyoming, framed by two old cottonwood trees.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/KP6LZ2Fs2zdCmvRt5VqmdvcX5gCFWrCc2CcBPNrT5/XL/_IMG6384-542-XL.jpg",
+    "title": "Painterly Mountain Photography: T. A. Moulton Barn.",
+    "description": "T. A. Moulton Barn. One of the most famous barns in Old West and America. Just outside of Jackson Hole, Wyoming. Sitting on \"Mormon Row\". Add a fine art painterly mountain photograph to your home and bring the essence of Western style and decor to your life. © Wayne Heim",
+    "alt": "Painterly Photography: Break time.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/A",
     "keywords": [
       "Western Wall art",
@@ -373,21 +452,24 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "A frame of bark and shadow. And between them — a barn that has seen more seasons than stories told.\n\nSunlight spills across the field, but the past still lingers beneath the roofline. Not just a landmark. A legacy, etched in wood and watched by time.",
-    "notes": "This composition honors one of the most photographed barns in the American West — yet brings a new sense of intimacy through its natural framing. The weathered texture of the cottonwoods in the foreground adds dimensional grounding, inviting the viewer to step into the scene rather than simply observe it. Wayne Heim’s painterly style softens the lines without sacrificing structure, lending a nostalgic patina that echoes pictorialist traditions. A piece that speaks to legacy — of land, labor, and light.",
+    "story": "T. A. Moulton Barn. One of the most famous barns in Old West and America. Just outside of Jackson Hole, Wyoming. Sitting on \"Mormon Row\". Add a fine art painterly mountain photograph to your home and bring the essence of Western style and decor to your life. © Wayne Heim",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/KXGXHtMRNFxv2MtCVJX2zr67Bt4b3dvP5Vcwdqf4z/XL/_O1H1144-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/KXGXHtMRNFxv2MtCVJX2zr67Bt4b3dvP5Vcwdqf4z/XL/_O1H1144-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/MNVwPz5PCMJGwXbrmCjkLMcL7WWBWzRTjMWjt3vGP/L/_O1H1144-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/Kg3ZXx6MPXcghGSqWjJ6tZvw4Jvg89SHCbpxQbNg4/M/_O1H1144-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/Nhd9jNqNH8QsSbzhsC5Dq836xH4zNGF6NFVJ6VBBD/S/_O1H1144-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7hz5LWz",
-    "title": "Aspen Fall",
-    "description": "Painterly fine art photograph of a grove of aspen trees in fall near Jackson Hole, Wyoming. The pale trunks rise in stark vertical rhythm against the glowing warmth of autumn undergrowth, creating a striking Western landscape full of contrast and texture. Ideal for collectors of rustic home décor, fine art photography of the American West, and seasonal landscape prints that capture fleeting beauty. ©Wayne Heim",
-    "alt": "Painterly photograph of a grove of aspen trees in autumn near Jackson Hole, Wyoming, with golden undergrowth and pale trunks.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/LFt4mjqfDJ2Q4bLTGM4mX9zzRMsV8zMC3D3NJmRLK/XL/Painterly%2520Landscape%2520Photo_WHZ7378_tonemapped-Edit-XL.jpg",
+    "title": "Painterly photography: Aspen Fall",
+    "description": "Grove of aspen trees in the fall outside of Jackson Hole Wyoming.  ©Wayne Heim",
+    "alt": "Painterly Mountain Photography: T. A. Moulton Barn.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7hz5LWz/A",
     "keywords": [
       "Western Wall art",
@@ -407,21 +489,24 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Aspen shed of gold, the final send-off for another season.\n\nWhite bark rising, etched like lines of a story half remembered. Autumn color fading fast — the forest’s last whisper before she sleeps.",
-    "notes": "This composition balances abstraction and realism — the aspens’ vertical rhythm becomes almost musical, while the painterly tones soften their starkness. Heim’s treatment highlights the delicate contrast of pale trunks and fiery underbrush, echoing tonalism with a Western palette. A piece that speaks to impermanence, reflection, and the cyclical beauty of the land. For collectors, it offers both atmosphere and intimacy: autumn not as spectacle, but as memory.",
+    "story": "Grove of aspen trees in the fall outside of Jackson Hole Wyoming.  ©Wayne Heim",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/MknLhq99sjwGJ9VksvxfZth9mVR2Rfz32VVzv9knr/XL/_IMG6384-542-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/MknLhq99sjwGJ9VksvxfZth9mVR2Rfz32VVzv9knr/XL/_IMG6384-542-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/LrtZW6Q22ZFwDHcNj9xGnjBkDsbbJCdwJPkvGmpwf/L/_IMG6384-542-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/KJDcFDmxpFFdfxG4R4gGf4FGzvPG57zvXc3mvZHSr/M/_IMG6384-542-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/LD5R4rTWsH9zxGjPZJxMtKFKDCS7kcSZ7jJTXdhvm/S/_IMG6384-542-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NHPCPhP",
-    "title": "Yellowstone Falls",
-    "description": "Yellowstone Falls — rugged, iconic, and layered with both power and time. This painterly fine art photograph captures the force of cascading water against weathered stone, framed by forest and canyon walls in Yellowstone National Park. A timeless Western landscape for collectors of fine art nature photography, rustic décor, and images that embody the enduring spirit of America’s first national park. ",
-    "alt": "Painterly fine art photograph of a waterfall cascading through cliffs and pines in Yellowstone National Park, Wyoming.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/LgNzjbngDTzTMb6N5f6LzS2v7XwM8p7KCkngNGcPw/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
+    "title": "Painterly Photography: Yellowstone Waterfall",
+    "description": "Painterly landscape photography of water and waterfalls in Yellowstone Wyoming.",
+    "alt": "Painterly photography: Aspen Fall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/A",
     "keywords": [
       "Western Wall art",
@@ -441,21 +526,24 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "Yellowstone Falls. Rugged. Iconic. Layered with both power and time.\n\nStone stands. Water moves. Together they carve a legacy that never fades.",
-    "notes": "Yellowstone Falls embodies the paradox of permanence and change. The canyon walls stand scarred and unyielding, while the water renews itself with every rush — together carving a history older than memory. Heim’s painterly treatment enriches the textures of stone, mist, and pine, lending the scene a timeless quality that echoes the pictorialist tradition. This image is less a view than a monument — rugged, iconic, and layered with both power and time. A cornerstone piece for collectors who value work that connects natural grandeur with artistic legacy.",
+    "story": "Painterly landscape photography of water and waterfalls in Yellowstone Wyoming.",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/LKh2b3bmttFK7C5P7HZcTQZNnQmRkDGB8BBh49VXL/XL/Painterly%20Landscape%20Photo_WHZ7378_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/LKh2b3bmttFK7C5P7HZcTQZNnQmRkDGB8BBh49VXL/XL/Painterly%20Landscape%20Photo_WHZ7378_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/MKmhNRkwM2Gs55GGTxWVhVfhbWzZRw5P29gTT7zf2/L/Painterly%20Landscape%20Photo_WHZ7378_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/M5CNNSxxmsbpVsrPpsJ9TbtpqbFC4CC6Z7Pn9Bt36/M/Painterly%20Landscape%20Photo_WHZ7378_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/Nftpq6CK6PtZvT3KmtfBG7ZQnPnXGm6cR5C3T76mc/S/Painterly%20Landscape%20Photo_WHZ7378_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WfrdxRR",
-    "title": "Teton Reflections – Jackson Hole",
-    "description": "Painterly fine art photograph of the Teton Mountains reflected in still waters at Schwabacher Landing, just outside Jackson Hole, Wyoming and Grand Teton National Park. Wayne Heim’s painterly style brings timeless beauty to this iconic Western landscape, balancing rugged peaks with serene reflection. Perfect for collectors of fine art mountain photography, rustic home décor, and classic images of the American West. © Wayne Heim.",
-    "alt": "Painterly photograph of the snowcapped Teton Mountains reflected in still waters at Schwabacher Landing near Jackson Hole, Wyoming.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MTHjGNKd3p85VHRX7tJ45cVRFLCWfh2mSgbQWxT52/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
+    "title": "Painterly Mountain Photography - Teton Reflections - Jackson Hole Wyoming.",
+    "description": "Painterly Photograph of the snow capped Teton mountains at Schwabachers Landing outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography done in Wayne's signture style of artful storytelling. Image showcases Western landscape photography of water and waterfalls. This fine art painterly mountain photography is © Wayne Heim.",
+    "alt": "Painterly Photography: Yellowstone Waterfall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WfrdxRR/A",
     "keywords": [
       "Western Wall art",
@@ -475,21 +563,24 @@ export const galleryData = [
       "western landscape photography",
       "painterly landscape photography"
     ],
-    "story": "The mountains rise. The water remembers.\n\nSky, stone, and forest held in perfect stillness — a mirror of the West, unbroken, unchanging. Reflections, soft as whispers, keeping the stories and legacies of the past alive.",
-    "notes": "This composition captures both grandeur and stillness — the Tetons rendered in painterly tones, doubled by the mirror of water. Heim’s treatment emphasizes symmetry without rigidity, letting texture and color soften into something timeless. Echoing the romanticism of 19th-century landscape painters while grounded in photographic realism, Teton Reflections offers a contemplative vision of Western legacy. A centerpiece for collectors drawn to both majesty and calm.",
+    "story": "Painterly Photograph of the snow capped Teton mountains at Schwabachers Landing outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography done in Wayne's signture style of artful storytelling. Image showcases Western landscape photography of water and waterfalls. This fine art painterly mountain photography is © Wayne Heim.",
+    "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/K3Q2tXGpbcXFTsLZRtBgH6tGd9g7S3VC2SvTWpcbK/L/_WHZ8138_tonemapped-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/KHmXCvznLh4FXpGSvGKdF6qZzb6Fv6c62XxtBGSTt/S/_WHZ8138_tonemapped-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HzFGjBR",
     "title": "Painterly Mountain Photography: The Tetons at Jackson Lake Lodge",
     "description": "Fine art painterly mountain photography of the iconic Western landscape, the Tetons, at Jackson Lake. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: The Tetons at Jackson Lake Lodge",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/MtwbdDRZLsmwj7qxTnnTGCr8jBQjFpXs75mPG8zqB/XL/Painterly%2520Landscape%2520Photo_WHZ7902-Pano-sharpen-stabilize-XL.jpg",
+    "alt": "Painterly Mountain Photography - Teton Reflections - Jackson Hole Wyoming.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-HzFGjBR/A",
     "keywords": [
       "Western Wall art",
@@ -512,18 +603,21 @@ export const galleryData = [
     "story": "Fine art painterly mountain photography of the iconic Western landscape, the Tetons, at Jackson Lake. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KNXNpTX43hzbFFXqM3FWgJ3ZB5HvzBf7HKbRCnXLL/L/Painterly-Landscape-Photography_WHZ9406-537-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MqtWCsv6DqvrQk4CZ6dsfqSDC3wMtxXCdbzPdR24c/M/Painterly-Landscape-Photography_WHZ9406-537-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MP2962XZzVqXFkGSFDXrWCFd6wgkFnCJ6MGMNbKZk/S/Painterly-Landscape-Photography_WHZ9406-537-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7SvxcWm",
     "title": "Painterly photography: Great plains.",
     "description": "Fine art painterly landscape photography of stream dividing the green landscape of the Great Plains. © Wayne Heim",
-    "alt": "Painterly photography: Great plains.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KPSvpzWkMLr2FZts8bSkv8BHWPGkcdxJZ8jJT9KxK/XL/_DSF3623-Edit-Edit-482-XL.jpg",
+    "alt": "Painterly Mountain Photography: The Tetons at Jackson Lake Lodge",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/A",
     "keywords": [
       "Western Wall art",
@@ -546,18 +640,21 @@ export const galleryData = [
     "story": "Fine art painterly landscape photography of stream dividing the green landscape of the Great Plains. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/Lq8HfPD2W7zhkgtC47fvvkSCXhsDcXDmg6PMmHgP3/XL/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/Lq8HfPD2W7zhkgtC47fvvkSCXhsDcXDmg6PMmHgP3/XL/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/KSDdqQzJMtpTwrnzNK7CrNggMwv4zqWhPk4nv7pjM/L/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/KxwHt2cR65TmMW3mbXnRdnn4B2bwx6Xvs5kL6Fqx4/M/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/NckVWW9g6zDGTrFPnwgDM7L2x2tgHV4QG8C75bN3K/S/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9zwL895",
     "title": "Painterly photography: Watering hole.",
     "description": "Fine art painterly landscape photography of watering hole stream dividing the green landscape of the Great Plains. © Wayne Heim",
-    "alt": "Painterly photography: Watering hole.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/Mwfxvw9Sf75T9kpG94f43pLp5Dw4T5MQvHRnJxB2K/XL/Painterly%2520Landscape%2520Photo_DSF3630-Enhanced-NR-Edit-484-XL.jpg",
+    "alt": "Painterly photography: Great plains.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/A",
     "keywords": [
       "Western Wall art",
@@ -580,18 +677,21 @@ export const galleryData = [
     "story": "Fine art painterly landscape photography of watering hole stream dividing the green landscape of the Great Plains. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KfsFHxSbMVztjS8p9zLFWJXS6qZx6kzFxw2sDFKsF/XL/_DSF3623-Edit-Edit-482-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KfsFHxSbMVztjS8p9zLFWJXS6qZx6kzFxw2sDFKsF/XL/_DSF3623-Edit-Edit-482-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KQpzXG5HKP47kCzhJPL97pd9RnppFDzBJPt97LsfB/L/_DSF3623-Edit-Edit-482-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KH4KdNLLgF8kFq558SLzK6Zpmpbm9hhqBB4L9mGhL/M/_DSF3623-Edit-Edit-482-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/LDMw9ZVtQBXz52MSdzwpgwhRBrRkSWCmmWmBfQSBZ/S/_DSF3623-Edit-Edit-482-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pSpnB4w",
     "title": "Painterly photography: Sunset at the Horse Shoe.",
     "description": "Painterly photography of sunsetting at the famous Horse Shoe Bend in Arizona.  Fine art Western Painterly Landscape Photography © Wayne Heim.",
-    "alt": "Painterly photography: Sunset at the Horse Shoe.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/K4Q2KcrHCfchxrJBXRT8mht2ngFcq7G47HGQN2dmX/XL/_O1H0365-589-XL.jpg",
+    "alt": "Painterly photography: Watering hole.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/A",
     "keywords": [
       "Western Wall art",
@@ -614,18 +714,21 @@ export const galleryData = [
     "story": "Painterly photography of sunsetting at the famous Horse Shoe Bend in Arizona.  Fine art Western Painterly Landscape Photography © Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/NgP47cDzwghHKrW9LCBf4CFzKxSr3Hgc4WxSzbRtx/XL/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/NgP47cDzwghHKrW9LCBf4CFzKxSr3Hgc4WxSzbRtx/XL/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/Lg4PXLj8wMQJSHjF9fmGtPVwbSLstQKDSPMDfTVv2/L/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/KS7fwtWs8gBZVfWt3CzNqSP23pLXH5hBK6gJtg78r/M/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/LFMJXkVnr6kmKMGK9K79wxB74gnKM6xZtQQQ3KV2x/S/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6VQKFs5",
     "title": "Painterly landscape photo: Moral High Ground",
     "description": "Fine art painterly landscape photography of lone white church on the hill. © Wayne Heim",
-    "alt": "Painterly landscape photo: Moral High Ground",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/0/Kh9rxpd7BxF4br598FrRBsqhhSm8JV546T66Pxqc6/XL/_O1H1173-487-XL.jpg",
+    "alt": "Painterly photography: Sunset at the Horse Shoe.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/A",
     "keywords": [
       "Western Wall art",
@@ -648,18 +751,21 @@ export const galleryData = [
     "story": "Fine art painterly landscape photography of lone white church on the hill. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/K2jnQmGJjS7KSbZC2GHDzWRBdqddn5Dcn4QSj98VJ/XL/_O1H0365-589-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/K2jnQmGJjS7KSbZC2GHDzWRBdqddn5Dcn4QSj98VJ/XL/_O1H0365-589-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/LH6SF4jM3XJ9GLk7BC7hnZpT2zwF9Zp42SxrsvptR/L/_O1H0365-589-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/K2p632DG78wNgjqVbM94jV5r4XV4GnN25MxRknZJm/M/_O1H0365-589-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/NjT7cNd6zVQjjtLSPxTCD4tRV2CTq2w4rxgmr2fqx/S/_O1H0365-589-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DxV8pJ9",
     "title": "Painterly photography: Path to Riotousness",
     "description": "Fine art painterly photography of old white church at the end of the green grass lane. © Wayne Heim",
-    "alt": "Painterly photography: Path to Riotousness",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/NDNCL9cq3HbPGzv9ddhhQt3Chwg39XtPhL7h52XFH/XL/_O1H1179-Enhanced-NR-492-XL.jpg",
+    "alt": "Painterly landscape photo: Moral High Ground",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/A",
     "keywords": [
       "Western Wall art",
@@ -682,18 +788,21 @@ export const galleryData = [
     "story": "Fine art painterly photography of old white church at the end of the green grass lane. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/0/LR6XQJR82NMCDwSXcMZBMwz8sKdsFCjcfGNg4KvrX/XL/_O1H1173-487-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/0/LR6XQJR82NMCDwSXcMZBMwz8sKdsFCjcfGNg4KvrX/XL/_O1H1173-487-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/0/LR6XQJR82NMCDwSXcMZBMwz8sKdsFCjcfGNg4KvrX/XL/_O1H1173-487-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/0/LB22Hqkg35DbPm62RRjxBv8DCJjhcncZnDbr6cG7p/L/_O1H1173-487-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/0/LDhrWZ4WTWFcjBVF873KXsSDkD3CZVXrCCSKHLcTv/S/_O1H1173-487-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZsFmtdj",
     "title": "Painterly Photo: Home on the range.",
     "description": "Fine art photo of old homestead at end of the road. © Wayne Heim",
-    "alt": "Painterly Photo: Home on the range.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/L72SJv6vL24M73VmNb2twK8bWHXXq55kgQGFFtVgc/XL/_DSF3718-491-XL.jpg",
+    "alt": "Painterly photography: Path to Riotousness",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/A",
     "keywords": [
       "Western Wall art",
@@ -716,18 +825,21 @@ export const galleryData = [
     "story": "Fine art photo of old homestead at end of the road. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/M8422CcmxP8WjDnsL45KFCwh4tv362S9gQWknthZh/XL/_O1H1179-Enhanced-NR-492-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/M8422CcmxP8WjDnsL45KFCwh4tv362S9gQWknthZh/XL/_O1H1179-Enhanced-NR-492-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/NdRNLTS5VfpsrBqsLz4PchNphRxk3zPqQj9RSgcsR/L/_O1H1179-Enhanced-NR-492-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/MLSjxvjFgPHvmHbZSg4jF8NLjtSHkn6wgndFBZZdC/M/_O1H1179-Enhanced-NR-492-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/MNQmTw82GXdGPhwFF2thnd6NJKSbZs9BfmRQzG3pr/S/_O1H1179-Enhanced-NR-492-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-52czKPJ",
     "title": "Painterly photography: River's Bend",
     "description": "Fine art painterly landscape photography of mountain stream at sunset. Oxbow Bend, Jackson Hole Wyoming. © Wayne Heim",
-    "alt": "Painterly photography: River's Bend",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/3/KmS8CXLgkVvPFM9XW5XLxJcRdcHVFTg7g4pwFqHLM/XL/_WHZ9821-Edit-2-XL.jpg",
+    "alt": "Painterly Photo: Home on the range.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/A",
     "keywords": [
       "Western Wall art",
@@ -750,18 +862,21 @@ export const galleryData = [
     "story": "Fine art painterly landscape photography of mountain stream at sunset. Oxbow Bend, Jackson Hole Wyoming. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/KXzBm3nCn2wks2Lczn5fxZsSjKr9dSQxShHRGBwnr/XL/_DSF3718-491-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/KXzBm3nCn2wks2Lczn5fxZsSjKr9dSQxShHRGBwnr/XL/_DSF3718-491-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/MNst75S2FxWFcZ9JDxS4bNzmQj3JMstwc2vSNDWmF/L/_DSF3718-491-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/M7Q3xv7SNdXhhNnKfdW8VWrfdBG3gxND3ZTq97fTc/M/_DSF3718-491-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/LBtJj9GXgCb5Gvs3MjB9Jpn2b9RkQtqBs2jt98d7R/S/_DSF3718-491-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cqrzRwc",
     "title": "Painterly photography: Hay Fever",
     "description": "Fine art painterly  color photo of rolls of hay in field. © Wayne Heim",
-    "alt": "Painterly photography: Hay Fever",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/0/NZG894hKv58SMxJ6hc8QVczxh7BxxXBhqTLXkK3gJ/XL/_DSF3862-Edit-XL.jpg",
+    "alt": "Painterly photography: River's Bend",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/A",
     "keywords": [
       "Western Wall art",
@@ -784,18 +899,21 @@ export const galleryData = [
     "story": "Fine art painterly  color photo of rolls of hay in field. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/3/Nb9mHHqtSLrStsdpFb7RbKDd5TJDt9wmWw6NvvC2p/XL/_WHZ9821-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/3/Nb9mHHqtSLrStsdpFb7RbKDd5TJDt9wmWw6NvvC2p/XL/_WHZ9821-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/3/Nb9mHHqtSLrStsdpFb7RbKDd5TJDt9wmWw6NvvC2p/XL/_WHZ9821-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/3/KxrM5kH6kQKnsW27JjPVvBc7qX9MTffZBzPxZnnbB/L/_WHZ9821-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/3/Lfb8ZzhVwT5bLrs6znk4vfTQwMW3WKwKMD7jsjMKC/S/_WHZ9821-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QHBqC4b",
     "title": "Painterly B/W Photo: Hay Fever b/w",
     "description": "Fine art painterly black and white photo of rolls of hay in field. © Wayne Heim",
-    "alt": "Painterly B/W Photo: Hay Fever b/w",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/Nfk6Mp6ksTJHJRDfLCXCwW36HXHTQZVQ3sp6TB6Zr/XL/_DSF3862-XL.jpg",
+    "alt": "Painterly photography: Hay Fever",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/A",
     "keywords": [
       "Western Wall art",
@@ -818,18 +936,21 @@ export const galleryData = [
     "story": "Fine art painterly black and white photo of rolls of hay in field. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/0/LQLS8bNzZBQJ82P9cbG6V4SDG7RmBqBJFV7L8KVDm/XL/_DSF3862-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/0/LQLS8bNzZBQJ82P9cbG6V4SDG7RmBqBJFV7L8KVDm/XL/_DSF3862-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/0/KKhrtfKWR2qHBVhFFXXTnJnzM4PX3gqMBFZswRztx/L/_DSF3862-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/0/M4sr6M4ctGQzCR7hhLJ8tgK34FBr2XhBmGpJ6CkkW/M/_DSF3862-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/0/M4mZ2swZ6rBCLNxjvSFvwhDsVd4nfZbBH2bfkkcJx/S/_DSF3862-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tZnxLz8",
     "title": "Painterly photo: Rolls of hay.",
     "description": "Fine art painterly photo of rolls of hay in field and phone lines. © Wayne Heim",
-    "alt": "Painterly photo: Rolls of hay.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KzKVQphQfnrmtr7C6wS7Rq4vxqFgbGgWMR9W8Gh6M/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
+    "alt": "Painterly B/W Photo: Hay Fever b/w",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/A",
     "keywords": [
       "Western Wall art",
@@ -852,18 +973,21 @@ export const galleryData = [
     "story": "Fine art painterly photo of rolls of hay in field and phone lines. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/NWghfDXxqjsk9cqx5MtnJvFhjvcPLLKbdJbjwF8pj/XL/_DSF3862-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/NWghfDXxqjsk9cqx5MtnJvFhjvcPLLKbdJbjwF8pj/XL/_DSF3862-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/MVBbDXdBpgNTm7qNwqNmbvHgnChKtzTnbB2w6F7D4/L/_DSF3862-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/M6FgxfSVzc8fsXmpbXxsP8dQRmFLm9Z4h8VT5t5NB/M/_DSF3862-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/MkjwTGrhhGhHwWnSWfbV9jbMJhpXrqw8hw8rdsvKg/S/_DSF3862-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gdbdH5Z",
     "title": "Painterly photo: Roll in the hay.",
     "description": "Fine art b/w painterly photo of rolls of hay in field with phone lines to the left. © Wayne Heim",
-    "alt": "Painterly photo: Roll in the hay.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/0/NLwxWQQwggtCzSTHXHLPjXWRvxZs3cVZs9R9SW2fp/XL/_DSF3862-Enhanced-NR-XL.jpg",
+    "alt": "Painterly photo: Rolls of hay.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/A",
     "keywords": [
       "Western Wall art",
@@ -886,18 +1010,21 @@ export const galleryData = [
     "story": "Fine art b/w painterly photo of rolls of hay in field with phone lines to the left. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/K7N8RNV5b32jXDCrSZQJ2Q5LdfPsB2Tqmzc4g2m5w/L/_DSF3862-Enhanced-NR-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/MnqmcSPVhQpKRgKMTTZsWZQzs8StJvgNRjhH4ChQJ/S/_DSF3862-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LPkbrS9",
     "title": "Painterly Photography: Bad Lands",
     "description": "Fine art landscape photo of green grass and blue sky and clouds in the Bad Lands. © Wayne Heim",
-    "alt": "Painterly Photography: Bad Lands",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/MmbnprzzjrTCvn4CxwvxCCSdLbFfdFZQ25R9tbq2B/XL/_O1H1307-Enhanced-NR-Edit-Edit-XL.jpg",
+    "alt": "Painterly photo: Roll in the hay.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/A",
     "keywords": [
       "Western Wall art",
@@ -920,18 +1047,21 @@ export const galleryData = [
     "story": "Fine art landscape photo of green grass and blue sky and clouds in the Bad Lands. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/0/KFMQ6HwvFv7vqpbt2Z2p8fMZDXrQJcfTG83JfJGXq/XL/_DSF3862-Enhanced-NR-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/0/KFMQ6HwvFv7vqpbt2Z2p8fMZDXrQJcfTG83JfJGXq/XL/_DSF3862-Enhanced-NR-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/0/KFMQ6HwvFv7vqpbt2Z2p8fMZDXrQJcfTG83JfJGXq/XL/_DSF3862-Enhanced-NR-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/0/MVQkV8dz3FpMwp3D7ZTcWwNJ7k5HLQMtpcSQwcZDc/L/_DSF3862-Enhanced-NR-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/0/M8Jv6zmrgg7sMP7Pd8cZPDtxpwWrhmjLV97PQBq3K/S/_DSF3862-Enhanced-NR-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-B2Jj4gG",
     "title": "Painterly photography of Castle Rock",
     "description": "Fine art painterly landscape photography of Castle Rock formation and hovering cloud. © Wayne Heim",
-    "alt": "Painterly photography of Castle Rock",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KjrDNn6wJfH66hTcs5LH6hth7BPVv8CTqxHDFq2C2/XL/_O1H0264-Edit-464-469-470-XL.jpg",
+    "alt": "Painterly Photography: Bad Lands",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/A",
     "keywords": [
       "Western Wall art",
@@ -954,18 +1084,21 @@ export const galleryData = [
     "story": "Fine art painterly landscape photography of Castle Rock formation and hovering cloud. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/NhXMZPDFbHCW8QpkcCVXd2cmWndc3dZGS3GqKP8h4/XL/_O1H1307-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/NhXMZPDFbHCW8QpkcCVXd2cmWndc3dZGS3GqKP8h4/XL/_O1H1307-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/KWjRRMTt9F9tV76CDGrdhwWVDzVkVCCZBfzJwtZbt/L/_O1H1307-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/MmBwbD7bdf3Twkn2nDr43dPbvKX4cq6QtX6DTNdKT/M/_O1H1307-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/KJ5XtbpgkgNxBHgLLswZ2gh5BL9WZCJrJhhBQw6D5/S/_O1H1307-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hwnwhJT",
     "title": "Painterly Mountain Photography: Buffalo Bill Reservoir at Sunset.",
     "description": "Fine art painterly mountain and lake photography at sunset. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Buffalo Bill Reservoir at Sunset.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/K92jPJ42BCpcMbh5xHfrFJhZgNRrnW5FhBpvttLVR/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Painterly photography of Castle Rock",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/A",
     "keywords": [
       "Western Wall art",
@@ -988,18 +1121,21 @@ export const galleryData = [
     "story": "Fine art painterly mountain and lake photography at sunset. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KWcjQZGxXQkhHC8HgtTgB424zfVrZZvCgPzppFcNC/XL/_O1H0264-Edit-464-469-470-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KWcjQZGxXQkhHC8HgtTgB424zfVrZZvCgPzppFcNC/XL/_O1H0264-Edit-464-469-470-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KSknXLSNWqm5gGgfkdz3FMCz6RptgjMppp5t5czQv/L/_O1H0264-Edit-464-469-470-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/Mj4zdbqRj4fwb3sQ2Rv6gHVNHg7ZT9StHV5f6nVnj/M/_O1H0264-Edit-464-469-470-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/L7BVksfMDmhQFHJk8XjWVCSFWKXdwvNtkpLdhpfqQ/S/_O1H0264-Edit-464-469-470-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GNWVmdp",
     "title": "Painterly Mountain Photography: Waterfall at sunset",
     "description": "Fine art painterly mountain photography showing another Yellowstone Waterfall. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Waterfall at sunset",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/NGrK5kQ5NVffxJXtkt3MN4BJSqHSPhHXMfdBhW3sx/XL/Painterly%2520Landscape%2520PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
+    "alt": "Painterly Mountain Photography: Buffalo Bill Reservoir at Sunset.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/A",
     "keywords": [
       "Western Wall art",
@@ -1022,18 +1158,21 @@ export const galleryData = [
     "story": "Fine art painterly mountain photography showing another Yellowstone Waterfall. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/M9PsKcrmMCVqHvrHbzg7cg5vtFGmw2ZnWQgRnPWGR/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/M9PsKcrmMCVqHvrHbzg7cg5vtFGmw2ZnWQgRnPWGR/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/NgbF4GHmrtTxF9GFmzLVCFqBG38QfxdkWZ4R9bqDF/L/_DSF4073-Pano_tonemapped-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/LP3dRtMQVjzGVzRgB7b4QN92z6PMSrB96fBkBQ6Kq/M/_DSF4073-Pano_tonemapped-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/NBNPznT9mPgNzRb5c8KhSbz24HP4wT58QNzdr3zVr/S/_DSF4073-Pano_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-H4dtMQ5",
     "title": "Painterly Mountain Photography: Tetons at Sunset",
     "description": "Fine art painterly mountain photography of Tetons from Jackson Lake Dam. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Tetons at Sunset",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/KjR9cvXc55MgZJczP9T53TJ9VdZMTbjCdgvbBz4r2/XL/Painterly%2520Landscape%2520Photo_DSF4556-Pano-Edit-519-XL.jpg",
+    "alt": "Painterly Mountain Photography: Waterfall at sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/A",
     "keywords": [
       "Western Wall art",
@@ -1056,18 +1195,21 @@ export const galleryData = [
     "story": "Fine art painterly mountain photography of Tetons from Jackson Lake Dam. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/NGmMj5V59NWKJL4tdD2c6gSNZFfnzzTDQ7h6sRZ97/M/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LNrvzKbK3C8XFTs7NxGM8ffwDNnpzBhrwxgFdq5p3/S/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qL6vZqs",
     "title": "Painterly Mountain Photography:  Mt. Moran at Sunrise",
     "description": "Painterly landscape mountain photography at sunrise. Fine art painterly Mt. Moran mountain and Jackson Lake photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Mt. Moran at Sunrise",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KLn5sm92cwfk7jC3GDzzsSPZvWcB8K2Gc3GB2nLQ9/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
+    "alt": "Painterly Mountain Photography: Tetons at Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-qL6vZqs/A",
     "keywords": [
       "Western Wall art",
@@ -1090,18 +1232,21 @@ export const galleryData = [
     "story": "Painterly landscape mountain photography at sunrise. Fine art painterly Mt. Moran mountain and Jackson Lake photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/M44p8NZgWw4bTnTw9JsdKDC8qS5gjMXGXjzZMZv64/XL/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/M44p8NZgWw4bTnTw9JsdKDC8qS5gjMXGXjzZMZv64/XL/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/L2D4WvmcvqTNRSpJ5HWRHXf4s2LH9nfQwDZ3CZMSK/L/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/LT4mfbCTR3Kc9xz73vD4nhs3zpTG8gsJxQpbwLKgL/M/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/NS362WM3LvR2RskhcrFBXCdRbMDqnkLmZbPHcNhrj/S/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xjQDB2L",
     "title": "Painterly Mountain Photography: Jackson Lake",
     "description": "Fine art painterly mountain photography of Tetons and Jackson Lake in Wyoming. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Jackson Lake",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/Lct5qXwLVDHtvzPKXR9HZCsVW2k5JjCdrmb495D6N/XL/_DSF4443-Pano-Edit-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Mt. Moran at Sunrise",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/A",
     "keywords": [
       "Western Wall art",
@@ -1124,18 +1269,21 @@ export const galleryData = [
     "story": "Fine art painterly mountain photography of Tetons and Jackson Lake in Wyoming. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/NQRJwcW2NVH295Nt2SQTWRCr3jhdLcmjhVfvf6pSG/L/_O1H1114-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KSCXZhFXBngbgs9fg43RqNQV6rqzBH4SdjZVSNnc6/M/_O1H1114-Enhanced-NR-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KKfJ2tFPGDFszLJrqFPCS8TpZjgzNStZfN2L6Whtq/S/_O1H1114-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9Zv7LRm",
     "title": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
     "description": "Famous Moulton Barn seen through two trees. Grand Tetons rise up behind this in Wyoming. ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/LG5HRcg7GntKTcQLbpZkHMSXgXwDxRWmtLfDDh7tP/XL/_WHZ9589-2-XL.jpg",
+    "alt": "Painterly Mountain Photography: Jackson Lake",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9Zv7LRm/A",
     "keywords": [
       "Western Wall art",
@@ -1158,18 +1306,21 @@ export const galleryData = [
     "story": "Famous Moulton Barn seen through two trees. Grand Tetons rise up behind this in Wyoming. ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MnpNzB8wSVDzwjVbrvWTQFkVmgrbMMJh389Ls55jN/XL/_DSF4443-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MnpNzB8wSVDzwjVbrvWTQFkVmgrbMMJh389Ls55jN/XL/_DSF4443-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/Ktmv332NKTBmWRx9kzZFGcw8jv4wC3QPFBF33X4Nj/L/_DSF4443-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/NjB7w69Pcp2WsNvgvttCzBwsfWpzTrJTGRJrqrNfW/M/_DSF4443-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MdHbW8vrvksBrzSHL4KQLWwq25Rv8ggVXbSbc65Px/S/_DSF4443-Pano-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4NMzs5D",
     "title": "Painterly Mountain Photography:  Crystal Mill",
     "description": "Crystal Mill Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Crystal Mill",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/1/LbcKdWhkphnMzdkFKHDjfBPwPvRssJJKGgHCKRKPR/XL/Painterly%2520Landscape%2520Photo_DSF4918-Edit-460-461%2520v2-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/A",
     "keywords": [
       "Western Wall art",
@@ -1192,18 +1343,21 @@ export const galleryData = [
     "story": "Crystal Mill Fine art painterly mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/LRvgjpwgPf6rKXCJ8xrWTVZ8B5rfwv5nHFFkcRfZN/L/_WHZ9589-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MxFDvJ4xdzrHrgFMS59C7FtWLFwXnJBrSKc2hK96z/S/_WHZ9589-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Hk9TrCX",
     "title": "Painterly Mountain Photography:  Crystal Mill B/W",
     "description": "Crystal Mill Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Crystal Mill B/W",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/1/KWQbNprH4FvwHmnwv4684CKkHXLnMdWQZW6mFPS8G/XL/Painterly%2520Landscape%2520Photo_DSF4918-Edit-456-458-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Crystal Mill",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/A",
     "keywords": [
       "Western Wall art",
@@ -1226,18 +1380,21 @@ export const galleryData = [
     "story": "Crystal Mill Fine art painterly mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/1/LBzZgGKPSTsqqnvTL3FG5z7HmXS5NF2kdw7gGqBsQ/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-460-461%20v2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/1/LBzZgGKPSTsqqnvTL3FG5z7HmXS5NF2kdw7gGqBsQ/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-460-461%20v2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/1/LBzZgGKPSTsqqnvTL3FG5z7HmXS5NF2kdw7gGqBsQ/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-460-461%20v2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/1/LC9H269T9tbHWMspDr25t4z6VfPPPbq2QkQwf9pBK/L/Painterly%20Landscape%20Photo_DSF4918-Edit-460-461%20v2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/1/KNprwM9D9P3mpvdX5bKLq27x9RrxFCXZSwQ3s2HXS/S/Painterly%20Landscape%20Photo_DSF4918-Edit-460-461%20v2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JqwF5sW",
     "title": "Painterly Mountain Photography:  Crystal Mill 2",
     "description": "Color Crystal Mill Fine art painterly mountain photography showing old mill at edge of river. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Crystal Mill 2",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/L2hsr8NfVVhFhmN8Gm8KsjXMtwrf4bMv6Nb3Qq9kH/XL/Painterly%2520Landscape%2520Photo_DSF4871-Pano-2_tonemapped5-454-455-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Crystal Mill B/W",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/A",
     "keywords": [
       "Western Wall art",
@@ -1260,18 +1417,21 @@ export const galleryData = [
     "story": "Color Crystal Mill Fine art painterly mountain photography showing old mill at edge of river. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/1/NT9g5CZPzMdGFj6h8sCKDMnNWMqnZSZCGfKDLbvS6/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-456-458-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/1/NT9g5CZPzMdGFj6h8sCKDMnNWMqnZSZCGfKDLbvS6/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-456-458-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/1/NT9g5CZPzMdGFj6h8sCKDMnNWMqnZSZCGfKDLbvS6/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-456-458-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/1/MZbZdZHvpHtBkWstT3PsJdS2FCdr585qnZPNpQ9LS/L/Painterly%20Landscape%20Photo_DSF4918-Edit-456-458-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/1/LD4VkcZnGJdRWSnLgzhDpjLTJf56SVMTJnpz3GFhk/S/Painterly%20Landscape%20Photo_DSF4918-Edit-456-458-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n5Kt6x3",
     "title": "Painterly Photo: Clouds on the Horizon",
     "description": "Fine art painterly photo of dancing clouds. © Wayne Heim",
-    "alt": "Painterly Photo: Clouds on the Horizon",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/M283W3rwXbp7k6pdrNCmQbHShgxS84xwLcCQ5b37w/XL/_O1H0202-597-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Crystal Mill 2",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/A",
     "keywords": [
       "Western Wall art",
@@ -1294,18 +1454,21 @@ export const galleryData = [
     "story": "Fine art painterly photo of dancing clouds. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MH7f46DkSS7d7KwqD33hGCnBMHnRKqWCwSsqTZ7Lp/XL/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MH7f46DkSS7d7KwqD33hGCnBMHnRKqWCwSsqTZ7Lp/XL/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MmwfQHwqF8pgxrGMg29C9M2nVHp3VQ2S8c8M5G29S/L/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MhgfBvcFRmRLFSpJb4GB9s5wpZ4NPSrwQjtWGgq49/M/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/KmwWcCmKvQJzzZSff96FvNGfK9NxF79CXGbvswHDJ/S/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-shVs3RQ",
     "title": "Painterly photo of Clouds",
     "description": "Fine art painterly photo of more dancing clouds. © Wayne Heim",
-    "alt": "Painterly photo of Clouds",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/2/KKsVXtPRR6T5zzm4Cj8j7BjnWVqgnLgZKqK54Kst4/XL/20230723_154844-604-XL.jpg",
+    "alt": "Painterly Photo: Clouds on the Horizon",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/A",
     "keywords": [
       "Western Wall art",
@@ -1328,18 +1491,21 @@ export const galleryData = [
     "story": "Fine art painterly photo of more dancing clouds. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LShznfPD2xMmsFSJ2vfXgW7Q382JCzWZmMz2rzrmL/XL/_O1H0202-597-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LShznfPD2xMmsFSJ2vfXgW7Q382JCzWZmMz2rzrmL/XL/_O1H0202-597-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/KMWfwthHFMkJnKnPLR9f5zZg6p2S84dmf3xCGVnPd/L/_O1H0202-597-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/K5LGdzPKfC7x8js46qvhQQHQtcw4RzLzGbDh35Q3G/M/_O1H0202-597-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LpsSr6FNFLcFGZJ8Lxx2qbj6jnbrTwwT6LN79dMpX/S/_O1H0202-597-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MmtQ2p8",
     "title": "Painterly photo of Big Sky",
     "description": "Fine art painterly photo of big sky with dancing clouds. © Wayne Heim",
-    "alt": "Painterly photo of Big Sky",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/Mb5TFNMQzjG23HM2D7XxNXzkMpJf9jSMQCDnkWqmv/XL/20230708_122828-Edit-XL.jpg",
+    "alt": "Painterly photo of Clouds",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/A",
     "keywords": [
       "Western Wall art",
@@ -1362,18 +1528,21 @@ export const galleryData = [
     "story": "Fine art painterly photo of big sky with dancing clouds. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/2/NZGHTfNJjKb45hcsmhdPwRw27PhJgC24whKMdLNcx/XL/20230723_154844-604-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/2/NZGHTfNJjKb45hcsmhdPwRw27PhJgC24whKMdLNcx/XL/20230723_154844-604-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/2/KZzS8rnTftRjbcJ7tVjhLXG8P3tQ4NhV46WHL73WC/L/20230723_154844-604-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/2/MjCm34nzr2rjGwJB9BVSLQPs49NQfhZd45CW4SwD6/M/20230723_154844-604-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/2/Ls2FnpcCvrqQvSbD4sp2JXMgJx57DdtQQgDTkgwC9/S/20230723_154844-604-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fnq8Gdv",
     "title": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photography: - Teton Trails - Mountain trail and sky.",
     "description": "Painterly photography by Wayne Heim showcasing photograph of Western Wyoming Teton mountains and dusty trail leading into the hills. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photography: - Teton Trails - Mountain trail and sky.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/NQQXMfhnR6FL3Rs53fTqBS5xFfzkZXRS4jhPVrHhq/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
+    "alt": "Painterly photo of Big Sky",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fnq8Gdv/A",
     "keywords": [
       "Western Wall art",
@@ -1396,18 +1565,21 @@ export const galleryData = [
     "story": "Painterly photography by Wayne Heim showcasing photograph of Western Wyoming Teton mountains and dusty trail leading into the hills. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KrxXKk2ZC7b5x2sprmMzWjcV6vc2xXscmzTfXmpKj/XL/20230708_122828-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KrxXKk2ZC7b5x2sprmMzWjcV6vc2xXscmzTfXmpKj/XL/20230708_122828-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/MvrzWsjZvbXJj8BP7rcTvLN7PvChDBjKLdQh3GmcH/L/20230708_122828-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/LSxmBnPTDCwxcDJRdG6Vvq4Q3zS6WK2dmBpd3JtWR/M/20230708_122828-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KS62V5j3jFMphjgXKwQTt2wWG594ZpbbCnCwd2WBm/S/20230708_122828-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-wmGnV8N",
     "title": "Painterly Mountain Photography: North Range",
     "description": "Fine art painterly mountain photography in Wyoming. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: North Range",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MHWbM9tLfwm5s65QF6hnj8b4mnvjRZm6H7qx77gRJ/XL/Painterly%2520Landscape%2520Photo_DSF4177-Pano-Edit-479-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photography: - Teton Trails - Mountain trail and sky.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/A",
     "keywords": [
       "Western Wall art",
@@ -1430,18 +1602,21 @@ export const galleryData = [
     "story": "Fine art painterly mountain photography in Wyoming. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MpqrbVk95TZ45zjJdzLrGH4qdzbdr2rTXhf9kQsZs/L/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/KQqmjCpFCbCM4FT5C7bgJPbdbPpF4Tn7c6zqtmLsF/M/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MNd7sw27nXnh243ZSFjWwnFBBWx2NwS9JxGrR8GKw/S/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Xhgr9rF",
     "title": "Sunset at Horseshoe Bend.",
     "description": "Fine art painterly landscape photography of river bend at sunset. © Wayne Heim",
-    "alt": "Sunset at Horseshoe Bend.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M9kJxgqpHJLPK24nBpKfKbNmf9rGwW9L2LQK3ZZd9/XL/_DSF5012-591-XL.jpg",
+    "alt": "Painterly Mountain Photography: North Range",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/A",
     "keywords": [
       "Western Wall art",
@@ -1464,18 +1639,21 @@ export const galleryData = [
     "story": "Fine art painterly landscape photography of river bend at sunset. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MQT7z8Zrtt8wM5hHFkS9LjDzghxgk7hS5SLbj4TBW/XL/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MQT7z8Zrtt8wM5hHFkS9LjDzghxgk7hS5SLbj4TBW/XL/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/NdRT5ggCvtxJ7LHFqr45SP6k7HhQLpG2gDW5RFT74/L/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/KSPPJbD3BNXGCvW9DW8PMZps69tZ4sbMjttcv4bsk/M/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MvWv2jhXnSNNzptwp4bGMZDQgvh5Sh8d8CxWwFSJH/S/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3bKfhW8",
     "title": "Fine art painterly photo: The Big Bend",
     "description": "Fine art painterly photo of Horse Shoe Bend river and red rocks at sunset. © Wayne Heim",
-    "alt": "Fine art painterly photo: The Big Bend",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/0/KrTwQHsRgJvBmj3zmD46ctT8VkmJ3ZcV54QC7Sw7d/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg",
+    "alt": "Sunset at Horseshoe Bend.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/A",
     "keywords": [
       "Western Wall art",
@@ -1498,18 +1676,21 @@ export const galleryData = [
     "story": "Fine art painterly photo of Horse Shoe Bend river and red rocks at sunset. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/K3D3vM9tHwdWxvrXdx2zhFMvwSdKvzqRWPDd5484H/L/_DSF5012-591-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/MKVkm2S45NvPHsp5Gw5h6KKDCxbGGWCQ2gn5L5Bpw/S/_DSF5012-591-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-73H3wLV",
     "title": "Painterly photo: Arizona Sunset at The Bend",
     "description": "Painterly landscape photograph: \nRed rocks and green grass create foreground for iconic western sunset with purple, orange and yellow clouds filling the sky as the day comes to an end. \n@Wayne Heim",
-    "alt": "Painterly photo: Arizona Sunset at The Bend",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/Mv4p8gwm2mSpDLrNGKj9V3p4v4cs6dJn8gJtT7dnL/XL/_O1H0460-Enhanced-NR_tonemapped-475-476-XL.jpg",
+    "alt": "Fine art painterly photo: The Big Bend",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/A",
     "keywords": [
       "Western Wall art",
@@ -1532,18 +1713,21 @@ export const galleryData = [
     "story": "Painterly landscape photograph: \nRed rocks and green grass create foreground for iconic western sunset with purple, orange and yellow clouds filling the sky as the day comes to an end. \n@Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/0/MWpZN6c7DxvhqZVwHnWCkKLfhmwNVMjQCGbg6rBGQ/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/0/MWpZN6c7DxvhqZVwHnWCkKLfhmwNVMjQCGbg6rBGQ/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/0/Kk4ZNVvghJJ5QdFKKdNDFLD8x9VkjcwBR3MhMWJtq/L/_O1H0436-Pano-Enhanced-NR-593-594-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/0/LVgBhXfcM8xs6jscSxwB4drr7r6pDh8D8LsqCqSWM/M/_O1H0436-Pano-Enhanced-NR-593-594-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/0/L66F9B4QsvFhbWgpQdxDsfKh3rQ4vZMxfCQ9BS65w/S/_O1H0436-Pano-Enhanced-NR-593-594-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zk7zXP3",
     "title": "Painterly Photography: - Tetons with Autumn Glow - Teton mountains with autumn colors and river - Jackson Hole Wyoming.",
     "description": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Photography: - Tetons with Autumn Glow - Teton mountains with autumn colors and river - Jackson Hole Wyoming.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/LJrVDMCqCZhWd3kqvmS3G2cnVJDF2Sx454JnQDs6w/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
+    "alt": "Painterly photo: Arizona Sunset at The Bend",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zk7zXP3/A",
     "keywords": [
       "Western Wall art",
@@ -1566,18 +1750,21 @@ export const galleryData = [
     "story": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole Wyoming and just outside of Grand Teton National Park. Painterly landscape mountain photography. Painterly landscape photography of water and waterfalls. Fine art painterly mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/LSBBT7znW6NCqjWCz64mGfbW8gDhfqRdxnTD5bBbf/XL/_O1H0460-Enhanced-NR_tonemapped-475-476-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/LSBBT7znW6NCqjWCz64mGfbW8gDhfqRdxnTD5bBbf/XL/_O1H0460-Enhanced-NR_tonemapped-475-476-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/MND6qn6NRGHwFCtzCfSS5z6RVWdPZrdC4f2JCh3GH/L/_O1H0460-Enhanced-NR_tonemapped-475-476-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/NHShNzVVbKqTD37qjvGWHqnvcHQ9C3ZC2TBbFbNg4/M/_O1H0460-Enhanced-NR_tonemapped-475-476-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/MQqwbMQSjVF3xdbsnCMNkBVbX5K34XtPRck9trHf9/S/_O1H0460-Enhanced-NR_tonemapped-475-476-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-b2hZptn",
     "title": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photograph: Break in the Storm -  Mountain Landscape",
     "description": "Painterly Photography of snow covered mountain. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photograph: Break in the Storm -  Mountain Landscape",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/L74Jv5JmLtXVFn6HwNtMjM3wdxQ5HhsbxWvwdCnN3/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
+    "alt": "Painterly Photography: - Tetons with Autumn Glow - Teton mountains with autumn colors and river - Jackson Hole Wyoming.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b2hZptn/A",
     "keywords": [
       "Western Wall art",
@@ -1600,18 +1787,21 @@ export const galleryData = [
     "story": "Painterly Photography of snow covered mountain. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/MTDxDXt86jf8XVcB5xZtvQ5wNrrS9s4gcpvv4j38w/M/Painterly-Photography_WHZ9456_tonemapped-Edit-535-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HCm7ssN",
     "title": "Painterly Mountain Photography:  Mountains Photography:",
     "description": "Painterly photography by Wayne Heim showcasing The Grand; the highest peak of the Teton Mountains. This photograph of Western Wyoming iconic mountain peak showcases the essence of the rugged West. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography:  Mountains Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/KPN8MwjWWm54zv4XHCPp7cLqSzMHHHSfsK62d66Mq/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photograph: Break in the Storm -  Mountain Landscape",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-HCm7ssN/A",
     "keywords": [
       "Painterly Photograph",
@@ -1645,18 +1835,21 @@ export const galleryData = [
     "story": "Painterly photography by Wayne Heim showcasing The Grand; the highest peak of the Teton Mountains. This photograph of Western Wyoming iconic mountain peak showcases the essence of the rugged West. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LFsc8PMMKNgVWqP7ZHVF8bgtK4Z8n7F3x8VLJdfM5/L/Painterly-Landscape-Photography_P1030226-523-548-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/KN6Vfj7kmSVbtL7pBCmH9FHVvL7cBpWt5PGCZrF2N/M/Painterly-Landscape-Photography_P1030226-523-548-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/KwzCvsGLdLT8fVn5RCg4XH76DvS84LvGgbSfMtLVB/S/Painterly-Landscape-Photography_P1030226-523-548-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QrnZzRW",
     "title": "Painterly photo: Lunch time",
     "description": "Fine art painterly photo of Bison mother and calf feeding. © Wayne Heim",
-    "alt": "Painterly photo: Lunch time",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LJfx4fn8J47RkFpNhwCq4VwV8wdPD8C4dd39rCzj8/XL/_O1H0362-Edit-Edit-509-XL.jpg",
+    "alt": "Painterly Mountain Photography:  Mountains Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/A",
     "keywords": [
       "Painterly Photograph",
@@ -1690,18 +1883,21 @@ export const galleryData = [
     "story": "Fine art painterly photo of Bison mother and calf feeding. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MvKZc5BMBbMDSVVgCvdkx8nMJQqZXbTPSVLtZKrF4/L/Painterly-Photography_WHZ7484-541-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MSHBjQBfbqjSg99SjMKjstq5N9x2Lr4MTz2RTnPdx/M/Painterly-Photography_WHZ7484-541-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/LWvTG8ZV6tnPgcFwrfLJszP99rZQHfFGGTTr3wqL9/S/Painterly-Photography_WHZ7484-541-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-2hZwZ6C",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_IMG5600-Enhanced-NR-611-612.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/LkzGJVW7pJRkfx6PZVJznHrqFrskZGjRFBDjL8v2B/XL/_IMG5600-Enhanced-NR-611-612-XL.jpg",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Painterly photo: Lunch time",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/A",
     "keywords": [
       "Painterly Photograph",
@@ -1732,21 +1928,24 @@ export const galleryData = [
       "western fine art photography",
       "western"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LCp58k4PpBdn3CL8JkFhtdHCW3dBVt4Gp8pMvhPnR/XL/_O1H0362-Edit-Edit-509-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LCp58k4PpBdn3CL8JkFhtdHCW3dBVt4Gp8pMvhPnR/XL/_O1H0362-Edit-Edit-509-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LkHPkRPgWvL6D8wGwvQFTGPFdHW92rrnFv9hps3R9/L/_O1H0362-Edit-Edit-509-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/NKFzSPQVcxsfQHWQndWWh2BJ4Xjmwgc7hhgRhrqKv/M/_O1H0362-Edit-Edit-509-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/NJPhsVBJ97pRZXPsbtTHrK8KGVDGV3KkVDFKRKxCg/S/_O1H0362-Edit-Edit-509-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-8JHmjF9",
     "title": "Mountains Photography:  Painterly Photography: - Grand Buffalo - The Grand Tetons and Bison.",
     "description": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole Wyoming. Painterly landscape mountain photography. © Wayne Heim",
-    "alt": "Mountains Photography:  Painterly Photography: - Grand Buffalo - The Grand Tetons and Bison.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/Kr2DD5mcCcZPrCMmNH6t3zVbCvXnpwNX9qBHgvhMT/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8JHmjF9/A",
     "keywords": [
       "Painterly Photograph",
@@ -1780,18 +1979,21 @@ export const galleryData = [
     "story": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole Wyoming. Painterly landscape mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/LJ33bM7CrcM2vPNSqjk9PSdnkwRdq94ttPGGCmP24/XL/_IMG5600-Enhanced-NR-611-612-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/LJ33bM7CrcM2vPNSqjk9PSdnkwRdq94ttPGGCmP24/XL/_IMG5600-Enhanced-NR-611-612-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/M9MN3SGWGgx9DPf2C3sZVx5TmcGBMvrMSBxWQgVGP/L/_IMG5600-Enhanced-NR-611-612-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/M8gfbhSrnmVGP59NZrMPRSwW532bC7zkqMdCkhFLh/M/_IMG5600-Enhanced-NR-611-612-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/MbXJqV79WHHnNCrMqK9hC8zp72TLP5FmwpJFSsPZg/S/_IMG5600-Enhanced-NR-611-612-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZDgVWFr",
     "title": "Mountains Photography: - Breakfast: Bison Grazing - autumn colors and clouds - Jackson Hole Wyoming.",
     "description": "Painterly Photograph of herd of bison (buffalo) grazing on golden fall grasses just outside of Grand Teton National Park - Jackson Hole Wyoming. Painterly landscape mountain photography.",
-    "alt": "Mountains Photography: - Breakfast: Bison Grazing - autumn colors and clouds - Jackson Hole Wyoming.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/LS4rGs7mC6M9XN8ZvbGbTqm32tRWfwGdP7d6pFMxc/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
+    "alt": "Mountains Photography:  Painterly Photography: - Grand Buffalo - The Grand Tetons and Bison.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZDgVWFr/A",
     "keywords": [
       "Painterly Photograph",
@@ -1825,18 +2027,21 @@ export const galleryData = [
     "story": "Painterly Photograph of herd of bison (buffalo) grazing on golden fall grasses just outside of Grand Teton National Park - Jackson Hole Wyoming. Painterly landscape mountain photography.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/Mgk7S8CNmPKtrwSddq3nWMgf6ftZjNrTCTgqLsNcT/L/Painterly-Photography_WHZ7828-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/ND64Xvm3cMH8V5zV5h8JzphgZJKccjPbfRb9CPBmK/S/Painterly-Photography_WHZ7828-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xTQqpTT",
     "title": "Painterly photo: On the road again",
     "description": "Fine art painterly landscape photography of highway and clouds. © Wayne Heim",
-    "alt": "Painterly photo: On the road again",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MV5K4QX2gQvgTTZ3JdDG54ktqm9NjSkGmJ47qdL9C/XL/_O1H0075-Edit-Edit-XL.jpg",
+    "alt": "Mountains Photography: - Breakfast: Bison Grazing - autumn colors and clouds - Jackson Hole Wyoming.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/A",
     "keywords": [
       "Painterly Photograph",
@@ -1870,18 +2075,21 @@ export const galleryData = [
     "story": "Fine art painterly landscape photography of highway and clouds. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/K4cWzwXw7TSx23FVdVrqkcqmMSKwQZ4w6VCszHH9R/L/Painterly-Photography_WHZ9816-Edit2-532-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/NHPh7sWt5psRqHFFGQnBqXMb9GpvcgZ5hXb7hxXgz/M/Painterly-Photography_WHZ9816-Edit2-532-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/MRvftmbqmmxqJvzG2js4HWWB8ffkgRgnQgXW3vNZQ/S/Painterly-Photography_WHZ9816-Edit2-532-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fvR6xh7",
     "title": "Painterly Mountain Photography: Lake, Rocks and Clouds",
     "description": "Buffalo Bill Reservoir. Fine art painterly mountain photography. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Lake, Rocks and Clouds",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/KNjVwNt5QVtB4FX9GjQwK6kKXFjpx3m722BCB6CJN/XL/_DSF4056-Edit-XL.jpg",
+    "alt": "Painterly photo: On the road again",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/A",
     "keywords": [
       "Painterly Photograph",
@@ -1915,18 +2123,21 @@ export const galleryData = [
     "story": "Buffalo Bill Reservoir. Fine art painterly mountain photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MLVm4dPgvjmSrRWrsFpzRPjXtxpQNFzp8T4f5FkDK/XL/_O1H0075-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MLVm4dPgvjmSrRWrsFpzRPjXtxpQNFzp8T4f5FkDK/XL/_O1H0075-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MRQjLWjWL22dhRt96z5r8f57qs4rSmxh9p4SF7Jm8/L/_O1H0075-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/Lw5V6h6T7tpztJ3h5wp6x86Lpq9VPMMHSG9s598mQ/M/_O1H0075-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/McDjb7Tzz56mzJnqkDhRqRstThFNvZ7HtrFRtHkMX/S/_O1H0075-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-b6dRFxv",
     "title": "Towering Green Aspens",
     "description": "Towering view of Aspen grove. Fine art painterly landscape photography. © Wayne Heim",
-    "alt": "Towering Green Aspens",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/KJ4c4TxW4nCQPgrpqPQQbqdFghf7bPhqd8P23BGLB/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
+    "alt": "Painterly Mountain Photography: Lake, Rocks and Clouds",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/A",
     "keywords": [
       "Painterly Photograph",
@@ -1960,18 +2171,21 @@ export const galleryData = [
     "story": "Towering view of Aspen grove. Fine art painterly landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/KJQdR9TqK29WZcngZP8cf6qCbVwZf4kLL6swbvxdf/XL/_DSF4056-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/KJQdR9TqK29WZcngZP8cf6qCbVwZf4kLL6swbvxdf/XL/_DSF4056-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/MPDznwknGHTN3K6g49F5qR2dgG379BHJjdgdsfCqQ/L/_DSF4056-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/LZC5jCNBhztvz5vw9xrGw66cqcqbcsG5LT3rHCfNC/M/_DSF4056-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/LHZcPG5MwD4PLSHBS9HTrjwCd6MPB2w7wVd6JZwRs/S/_DSF4056-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KKkLwvR",
-   "title": "Untitled",
-    "description": "",
-    "alt": "_IMG6056-Enhanced-NR-609-610.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/KSkKHm9BfNjwJDPswWPT6hmVzxWDDJNgjqdsBvdM2/XL/_IMG6056-Enhanced-NR-609-610-XL.jpg",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Towering Green Aspens",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/A",
     "keywords": [
       "Painterly Photograph",
@@ -2002,21 +2216,24 @@ export const galleryData = [
       "western fine art photography",
       "western"
     ],
-    "story": "",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/L75b9nP8XWqPkdqrBHR93c2k3tm78bW9Hs7d8dr58/L/_O1H1277-Pano-2-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/LGKK4MFp229dgStHMRmhTPGKN4mvVk8kt3B6Fmdm4/S/_O1H1277-Pano-2-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n7ZKsw5",
     "title": "Painterly Photo: Old Settler Cabin",
     "description": "Fine art painterly photo of old log cabin. © Wayne Heim",
-    "alt": "Painterly Photo: Old Settler Cabin",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/KsmQrj9R3nHSnfRK5J9TfsKxVnCzRCk3JMmPTkbLW/XL/_ANA0948-Edit-2-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/A",
     "keywords": [
       "Painterly Photograph",
@@ -2050,18 +2267,21 @@ export const galleryData = [
     "story": "Fine art painterly photo of old log cabin. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/KMb7PQ3P3QDGZp3fj66CHZGDhjFDJrMBNrDLBmCXG/XL/_IMG6056-Enhanced-NR-609-610-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/KMb7PQ3P3QDGZp3fj66CHZGDhjFDJrMBNrDLBmCXG/XL/_IMG6056-Enhanced-NR-609-610-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/MBvrRCp3TTx4pNwGkPLWHPxLqRKR2r6DxbGgXzbkm/L/_IMG6056-Enhanced-NR-609-610-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/MBHf4vnWhZ5mTRqxcmLgV6QHJPhQTgnVCXTK22Mgd/M/_IMG6056-Enhanced-NR-609-610-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/LSg4XPGpvPvrNQDn62qZkqmjn6drkwpdMJFT7R3Z7/S/_IMG6056-Enhanced-NR-609-610-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zncBGq4",
     "title": "Painterly photography: Reclamation",
     "description": "Reclamation.  Oregon -Old road being reclaimed by the surrounding woodland area ©Wayne Heim",
-    "alt": "Painterly photography: Reclamation",
-    "src": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/MJKmVF7N8DL3M7b7CGtv7zWjTXTT34WjgQtLMGwK9/XL/_IGP4461-Edit-XL.jpg",
+    "alt": "Painterly Photo: Old Settler Cabin",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zncBGq4/A",
     "keywords": [
       "Painterly Photograph",
@@ -2095,18 +2315,21 @@ export const galleryData = [
     "story": "Reclamation.  Oregon -Old road being reclaimed by the surrounding woodland area ©Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/NNvPtFCRLdgsKqXX8dmtvjcfVpRSf44wkqNsqfD84/XL/_ANA0948-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/NNvPtFCRLdgsKqXX8dmtvjcfVpRSf44wkqNsqfD84/XL/_ANA0948-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/LbqkV5KTKV9wVdt3c6MXqxDR6bFQjTMDrbjZRm3mR/L/_ANA0948-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/LJwVXck2mw3Nfn9v2ZdjMTw4CWHjpCNqH7fS24sqP/M/_ANA0948-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/LvxD8Gp8kXRPvg3g5cn3cVSzh8HZZj5rkHFDwpWJp/S/_ANA0948-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3g75V8v",
     "title": "Painterly Mountain Photography: Wyoming Road",
     "description": "Fine art painterly mountain photography of Grey's River Road and mountains and trees. © Wayne Heim",
-    "alt": "Painterly Mountain Photography: Wyoming Road",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/M5S2B8DS98hxqPwzszMRPnhFq9n4wMJ5kXSfrgwQQ/XL/_WHZ7172_tonemapped-Edit-Edit-XL.jpg",
+    "alt": "Painterly photography: Reclamation",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3g75V8v/A",
     "keywords": [
       "Painterly Photograph",
@@ -2140,10 +2363,62 @@ export const galleryData = [
     "story": "Fine art painterly mountain photography of Grey's River Road and mountains and trees. © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "src": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/KnTJQbrt4PhNkhf6M7PQKT8C6MCwZHx5cKRTKMkQC/S/_IGP4461-Edit-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-RBTGb7k",
+    "title": "Painterly Mountain Photography:  Barn Reflection   Black and White Photography by Wayne Heim",
+    "description": "Sun reflects off old barn on Mormon Row in Wyoming.  ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
+    "alt": "Painterly Mountain Photography: Wyoming Road",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-RBTGb7k/A",
+    "keywords": [
+      "Painterly Photograph",
+      "Wyoming",
+      "Tetons",
+      "Grand Teton",
+      "Mountain",
+      "Landscape",
+      "photography",
+      "Western Wall art",
+      "western prints",
+      "western photos",
+      "western mountain photography",
+      "western interior design",
+      "western home decor",
+      "western fine art",
+      "rustic mountain photos",
+      "mountain photography",
+      "man cave decor",
+      "Fine art landscape photography",
+      "iconic western photography",
+      "Painterly Photography",
+      "Western photography prints",
+      "western landscape photography",
+      "painterly landscape photography",
+      "West",
+      "Western art",
+      "western fine art photography",
+      "western"
+    ],
+    "story": "Sun reflects off old barn on Mormon Row in Wyoming.  ©Wayne Heim Fine art painterly mountain photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 60,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/LV9DnwrLCvWpCt9FSSrdP67FhrHv6ZBsf3m46L89v/XL/_WHZ7172_tonemapped-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/LV9DnwrLCvWpCt9FSSrdP67FhrHv6ZBsf3m46L89v/XL/_WHZ7172_tonemapped-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/KjpCdPJLv6cTPJvXnwSv39szxddRXSj4bp3FndKQv/L/_WHZ7172_tonemapped-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/M5788f269CCXJXgHdDVKqcxbKWw38JHWGZmZm9DCB/M/_WHZ7172_tonemapped-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/MP9tvvV7Jpt5xVJxfvwpCvq8WLxNFNsczf8bgK6HQ/S/_WHZ7172_tonemapped-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   }
 ];

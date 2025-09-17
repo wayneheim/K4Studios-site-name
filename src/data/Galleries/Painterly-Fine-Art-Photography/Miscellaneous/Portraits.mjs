@@ -1,28 +1,31 @@
 export const galleryData = [
   {
-  "id": "i-k4studios",
-  "title": "Welcome K4 Studios",
-  "description": "Explore the grit, grace, and story behind each image.",
-  "alt": "Welcome to the Color Cowboy Gallery",
-  "src": "/images/gallery-intro-placeholder.jpg",  // ← update this if needed
-  "buyLink": "",
-  "keywords": [],
-  "story": "",
-  "notes": "",
-  "rating": 0,
-  "galleries": [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-  ],
-  "visibility": "ghost",
-  "sortOrder": -1
-},
-  
+    "id": "i-k4studios",
+    "title": "Welcome K4 Studios",
+    "description": "Explore the grit, grace, and story behind each image.",
+    "alt": "Welcome to the K4 Studios Gallery",
+    "src": "/images/gallery-intro-placeholder.jpg",
+    "buyLink": "",
+    "keywords": [],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "ghost",
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
   {
     "id": "i-M2fMMNQ",
-    "title": "Fine Art Painterly Portrait Photography:",
-    "description": "Painterly photography portraits by Wayne Heim.",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/Mf6B33v4hF42HBfDnbQHgZjJN388ZLDfKPgbTpWZW/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/A",
     "keywords": [
       "portrait",
@@ -37,21 +40,24 @@ export const galleryData = [
       "fine art painterly photography",
       "painterly portrait photo"
     ],
-    "story": "Painterly photography portraits by Wayne Heim.",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LjWNX3BHsmRjvQPpnxk2mXq58T6kGsCSsN4jCZxT9/L/_WHZ0315-Edit-2-Editf-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/KbqZBRtD4L5mMZdK6BMNvdktVP8VzNNVwxVNSBN3m/S/_WHZ0315-Edit-2-Editf-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-62sCLX4",
-    "title": "Fine Art Painterly Portrait Photography:",
-    "description": "Painterly photography portraits by Wayne Heim.",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/MZn2fpcdXstfb9xwJh2PDjgGJZBWvXPCPb83cssvD/XL/_FWH7908-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-62sCLX4/A",
     "keywords": [
       "portrait",
@@ -66,21 +72,24 @@ export const galleryData = [
       "fine art painterly photography",
       "painterly portrait photo"
     ],
-    "story": "Painterly photography portraits by Wayne Heim.",
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LfDfq66FQJ3x48J9MxXhjJPCvCTk5kDBzLWqR4LJ8/XL/_WHZ0315-Edit-2-Editf-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/LjWNX3BHsmRjvQPpnxk2mXq58T6kGsCSsN4jCZxT9/L/_WHZ0315-Edit-2-Editf-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/KbqZBRtD4L5mMZdK6BMNvdktVP8VzNNVwxVNSBN3m/S/_WHZ0315-Edit-2-Editf-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dxqkxdC",
     "title": "Fine Art Painterly Portrait Photography:  Sleeping   Photography by Wayne Heim",
     "description": "Lady sleeping in enchanted wood.  ©Wayne Heim Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:  Sleeping   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/NZNDxWZPF8Dx4VJNX4844RCk9DrTGnfpWkBxzhRJd/XL/_WHZ0559-Edit-3-Edit-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dxqkxdC/A",
     "keywords": [
       "portrait",
@@ -98,18 +107,21 @@ export const galleryData = [
     "story": "Lady sleeping in enchanted wood.  ©Wayne Heim Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/NPJHZwNzkVkhw9VVbB8m256KPXXrnzPNCjwjtrXC2/XL/_FWH7908-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/NPJHZwNzkVkhw9VVbB8m256KPXXrnzPNCjwjtrXC2/XL/_FWH7908-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/NPJHZwNzkVkhw9VVbB8m256KPXXrnzPNCjwjtrXC2/XL/_FWH7908-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/Mp6p4hSMF8j2RKRHHdGgmSSQBSkwPdjHqR2dN8hbP/L/_FWH7908-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-62sCLX4/0/M4xsBDCb9DX96sz5GxPzpvQzSHPxgFm7ptDGLrRjb/S/_FWH7908-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Kj2CNt2",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/LqCpgG3rj3mSWNtMcj829J4Cp93Hv8zBk59SgTw7H/XL/_WHZ5744-Edit_pp-Edit-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:  Sleeping   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/A",
     "keywords": [
       "portrait",
@@ -127,18 +139,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/L3qthkKrtrb42C5kFTW7Kz5v8tDdBKbZfLLTpdRwN/XL/_WHZ0559-Edit-3-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/L3qthkKrtrb42C5kFTW7Kz5v8tDdBKbZfLLTpdRwN/XL/_WHZ0559-Edit-3-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/L3qthkKrtrb42C5kFTW7Kz5v8tDdBKbZfLLTpdRwN/XL/_WHZ0559-Edit-3-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/KxTxrD6NLFnvHTpBVPLzq3r8KjwzBMD5ng3fwZDhH/L/_WHZ0559-Edit-3-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Models-in-May/i-dxqkxdC/1/Lnk4Mhf7sc22sVHLDzLqw6WDdWJKKBdz7Kw3kxFRN/S/_WHZ0559-Edit-3-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dznf8sd",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/MvdmjkGrJDzNJXFmnftCFVLrc9WxPPvCk8KcH4v4b/XL/_WHZ5744-Edit_pp-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/A",
     "keywords": [
       "portrait",
@@ -156,18 +171,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/L75ncwMCKq8GMLm3TMdCfRPxDSR32Ht9gxV8XbSQ4/XL/_WHZ5744-Edit_pp-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/L75ncwMCKq8GMLm3TMdCfRPxDSR32Ht9gxV8XbSQ4/XL/_WHZ5744-Edit_pp-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/L75ncwMCKq8GMLm3TMdCfRPxDSR32Ht9gxV8XbSQ4/XL/_WHZ5744-Edit_pp-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/MJh4b7mhjCZz9WKVhsVmWBvHKxcbHKFJrcqVsTbB2/L/_WHZ5744-Edit_pp-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Kj2CNt2/1/Kz6dsShBDQJwRCXLtkDSzxHZcDdkzzN5CVjhtxLjg/S/_WHZ5744-Edit_pp-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jZQtnjM",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/K2dXb4MhKW3SJTwdcRtFtG8JTdj4kdJWJ2NZwZ2ZF/XL/_WHZ5744-Edit_pp-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/A",
     "keywords": [
       "portrait",
@@ -185,18 +203,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/NcCdb2GV7GvSv2bgDcmDwS8ZSCLTQfQXSJZrFRGpW/XL/_WHZ5744-Edit_pp-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/NcCdb2GV7GvSv2bgDcmDwS8ZSCLTQfQXSJZrFRGpW/XL/_WHZ5744-Edit_pp-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/NcCdb2GV7GvSv2bgDcmDwS8ZSCLTQfQXSJZrFRGpW/XL/_WHZ5744-Edit_pp-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/LfWjBq98f9m8V2z9mxvrSsfw8kMf8QDs62w7J8Qgx/L/_WHZ5744-Edit_pp-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd/1/LjRs8362SPCzxXVzx3qL7NqfVGVb3JNZ2hWNtQpJk/S/_WHZ5744-Edit_pp-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dB6BX5J",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/Mh98GJg3Ft93nJsC9fZd5WJDZTjCFkM8bnJZQksnb/XL/_WHZ0434-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dB6BX5J/A",
     "keywords": [
       "portrait",
@@ -214,18 +235,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/Lx84hNxFXsKSf3348MKDzhknPq7mxmWxGpm6BdKfQ/XL/_WHZ5744-Edit_pp-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/Lx84hNxFXsKSf3348MKDzhknPq7mxmWxGpm6BdKfQ/XL/_WHZ5744-Edit_pp-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/Lx84hNxFXsKSf3348MKDzhknPq7mxmWxGpm6BdKfQ/XL/_WHZ5744-Edit_pp-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/MX2N5Djh8mnFtdcHkDPm7mMHRtQ8scfcp8WNz3N2M/L/_WHZ5744-Edit_pp-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jZQtnjM/1/NMwQNPNXJL3BrkXVGPDNqGmh7D9cmG24SrrZ3tgKB/S/_WHZ5744-Edit_pp-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LcWbnLw",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/LNwrNkZLKHgJjhgPrwvghQ62LZV9Kb6SCWwwrWzMN/XL/_FWH7909-Enhanced-NR-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-LcWbnLw/A",
     "keywords": [
       "portrait",
@@ -243,18 +267,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/KNgNck27g2CpfStLJdQzLWtf7GgxjK92Cd9DGPjmG/XL/_WHZ0434-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/KNgNck27g2CpfStLJdQzLWtf7GgxjK92Cd9DGPjmG/XL/_WHZ0434-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/KNgNck27g2CpfStLJdQzLWtf7GgxjK92Cd9DGPjmG/XL/_WHZ0434-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/LNmfH4p7fqtstwJGPgwDDqfhtTxcBSXKxLZCzx2S7/L/_WHZ0434-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dB6BX5J/0/MB2QLP2FRqdp8hkc55Rhb8mnvkhsxkHPvbkfS7B7d/S/_WHZ0434-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bm2rnbd",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/KL2ZbBtbk6Sp4gmDZQfPpC4Jc2sJpLchPcTLcbtkk/XL/_OLY2310-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/A",
     "keywords": [
       "portrait",
@@ -272,18 +299,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/Mf3tKcFksjTtXzMd86LTXZFB5KrthDJtjFs5xj5Mk/XL/_FWH7909-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/Mf3tKcFksjTtXzMd86LTXZFB5KrthDJtjFs5xj5Mk/XL/_FWH7909-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/LFR5DxGVkBn8Ff27XCjN9J3TRZw674HP9RG4zLjdp/L/_FWH7909-Enhanced-NR-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/MvhzMt3GtBt2pzPPKmJ9rzccDf69zspm8wgxq3KCS/M/_FWH7909-Enhanced-NR-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-LcWbnLw/0/MhZRdpjnR3dQZCTsWDZfBRQXvMjCwVN5xPMhj5gcr/S/_FWH7909-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-hnKpM45",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/LPqT3nNZP8k483Zpq7xTPVbVTrqRbZtnj966nFvgW/XL/_WHZ5747-Edit_pp-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/A",
     "keywords": [
       "portrait",
@@ -301,18 +331,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/LD7rdd7LDrSwjwhgf2Cw2ggPbS3p5TdzTRbdhz2Jz/XL/_OLY2310-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/LD7rdd7LDrSwjwhgf2Cw2ggPbS3p5TdzTRbdhz2Jz/XL/_OLY2310-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/KsdLtx29G4tQgwR4279fdVwsvzM9nxp69LsVLjnc8/L/_OLY2310-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/M2Pt7RGfV8jDRhzVs2bgLN4BzM2sSMW8tB5Qfn48S/M/_OLY2310-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bm2rnbd/1/MqcxqCHnPZmDJFvHznqQPZ36c54Sd7q92ht87Xz7P/S/_OLY2310-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-w4HzscL",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/NPvH64wQxd2qPtmMJHQb4tTDqPLqJFxTCgNQw7dWX/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/A",
     "keywords": [
       "portrait",
@@ -330,18 +363,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KNfXNSNcL5ZXs29SQNQxLGwTMmmZQmmm9fvVtgdSV/XL/_WHZ5747-Edit_pp-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KNfXNSNcL5ZXs29SQNQxLGwTMmmZQmmm9fvVtgdSV/XL/_WHZ5747-Edit_pp-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KNfXNSNcL5ZXs29SQNQxLGwTMmmZQmmm9fvVtgdSV/XL/_WHZ5747-Edit_pp-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/Kk5WJKVP4SBVMcvSsNL82cmDqZS3fqNvt44jgHBm2/L/_WHZ5747-Edit_pp-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-hnKpM45/1/KT5tfzn6vGtJHFc6BKrcgKX3JW25HWbTzQ7sHqfdF/S/_WHZ5747-Edit_pp-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nJQjcFw",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/LPhJH9FmXczVDHwtfHmN2HNbwBrqVRkfqmh7VCX93/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/A",
     "keywords": [
       "portrait",
@@ -359,18 +395,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/KTgkcJH7Xs84bZFHbcMLLKZ6633zcwSB3xJTkfpTp/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/KTgkcJH7Xs84bZFHbcMLLKZ6633zcwSB3xJTkfpTp/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/KTgkcJH7Xs84bZFHbcMLLKZ6633zcwSB3xJTkfpTp/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/M7Vjcnbw9JjLwHch68ZhmHnzCTrd9LZkj5P3PF65v/L/_WHZ5747-Edit_pp-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-w4HzscL/1/M8v53T2c3FpxsrdFx33QFPH8RPsPZv7RNXX68QmSn/S/_WHZ5747-Edit_pp-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zS4W8Xv",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NJGx3pTLM4h59wD57K6kQdt5cN3xBwG7DWfB2cWmc/XL/_WHZ5748-Edit_pp-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/A",
     "keywords": [
       "portrait",
@@ -388,18 +427,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/MKtjkJSLZDkt2KJdCWN4MMzZqnMsGTBggMdwDKMvq/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/MKtjkJSLZDkt2KJdCWN4MMzZqnMsGTBggMdwDKMvq/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/MKtjkJSLZDkt2KJdCWN4MMzZqnMsGTBggMdwDKMvq/XL/_WHZ5747-Edit_pp-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/NjkP3Mb4hWzWvCsk4cDzrhJCnvmHBmrqQJRbNWdRc/L/_WHZ5747-Edit_pp-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-nJQjcFw/1/LZcHxxxmP7CTcpBGpLJZw6LxxfbcZhmtxtx3BPPwT/S/_WHZ5747-Edit_pp-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3G3qWpd",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/NXzS7Rkfjf4Fs3LVRRpb4BS69SJRTMz54mtbzvVHs/XL/_WHZ5748-Edit_pp-Edit-4-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/A",
     "keywords": [
       "portrait",
@@ -417,18 +459,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NCp4ftjFGhbrHvpstsRftrskfM2q3QCk3wqxXbrXM/XL/_WHZ5748-Edit_pp-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NCp4ftjFGhbrHvpstsRftrskfM2q3QCk3wqxXbrXM/XL/_WHZ5748-Edit_pp-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NCp4ftjFGhbrHvpstsRftrskfM2q3QCk3wqxXbrXM/XL/_WHZ5748-Edit_pp-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/NhCgLsFncJDHrWjWHV9rC39Fv4fVPP2f4t3LvpHSX/L/_WHZ5748-Edit_pp-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-zS4W8Xv/1/Mf6rKNfz3GPfKgdrnLqRGChvsrjs5b4cKKHZsNSsN/S/_WHZ5748-Edit_pp-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6gKnQzb",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/KRTQ86kc9n29Z6NM2WLBBmLbFxFX35nzs6WxBf575/XL/_WHZ5821-Edit-2-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/A",
     "keywords": [
       "portrait",
@@ -446,18 +491,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LpsMrtjpWF5gbpGDWgQx3fmwGhW5d8kfwmn6JsbWw/XL/_WHZ5748-Edit_pp-Edit-4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LpsMrtjpWF5gbpGDWgQx3fmwGhW5d8kfwmn6JsbWw/XL/_WHZ5748-Edit_pp-Edit-4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LpsMrtjpWF5gbpGDWgQx3fmwGhW5d8kfwmn6JsbWw/XL/_WHZ5748-Edit_pp-Edit-4-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/L6HS7FQK4fmdh3LtXbJH2V9LPM4KBjpmZK3VZ9G33/L/_WHZ5748-Edit_pp-Edit-4-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3G3qWpd/1/LrR4MR54GnfjMDxqGjrqbkwtJgQpvtRQZDvz6tr4H/S/_WHZ5748-Edit_pp-Edit-4-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KS6JFX5",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/LHfwpGJj8Cwd6rMLZWkHKFbhmgJF93tmBJzSGSpSc/XL/_WHZ5758-Edit_pp-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/A",
     "keywords": [
       "portrait",
@@ -475,18 +523,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/M4mhJnBJTDWkKh4Q63gTsbRb2vfPgGJ4WRQ25w2Q3/XL/_WHZ5821-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/M4mhJnBJTDWkKh4Q63gTsbRb2vfPgGJ4WRQ25w2Q3/XL/_WHZ5821-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/M4mhJnBJTDWkKh4Q63gTsbRb2vfPgGJ4WRQ25w2Q3/XL/_WHZ5821-Edit-2-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/MLxhrwmFTZSzw54kfRQ3g8ZSmZzMZps3wnQmNRH75/L/_WHZ5821-Edit-2-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6gKnQzb/1/KZNXRbd5TtmTCSrGdfGcxmbV54HRxPDswwQPFTTsH/S/_WHZ5821-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-qkB8tqZ",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/Kxpr7f3XxQ6jGVdvSrhMBfgrBCn9ZQ5wcdJtNjfRS/XL/_WHZ5823-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/A",
     "keywords": [
       "portrait",
@@ -504,18 +555,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/KD7c6CfZB6dXSpcc8TNrcrPmrzx9dsc4sdLnRhph3/XL/_WHZ5758-Edit_pp-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/KD7c6CfZB6dXSpcc8TNrcrPmrzx9dsc4sdLnRhph3/XL/_WHZ5758-Edit_pp-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/KD7c6CfZB6dXSpcc8TNrcrPmrzx9dsc4sdLnRhph3/XL/_WHZ5758-Edit_pp-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/MczjCJRkf3Dq4QQwXbk6fHTcJLKfKHgK9k4mPs6GK/L/_WHZ5758-Edit_pp-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KS6JFX5/1/LW2g945ZCM4SKgNtbncbVbdFGV2fbDLVKzZzh9RnJ/S/_WHZ5758-Edit_pp-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-9DLMNFd",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/LQfRxWzxgKHRFzBqgjpdLZ3fkZK8CkcWGz3zjcNtq/XL/_WHZ5796-Edit-3_pp-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/A",
     "keywords": [
       "portrait",
@@ -533,18 +587,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/MqffLpCNH5d9smQTmDkFDBLKBHwmDjr5CqLRw88nk/XL/_WHZ5823-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/MqffLpCNH5d9smQTmDkFDBLKBHwmDjr5CqLRw88nk/XL/_WHZ5823-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/MqffLpCNH5d9smQTmDkFDBLKBHwmDjr5CqLRw88nk/XL/_WHZ5823-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/LPJBLJJFtT4Qp3NLtSvc7R7Q3nhK97GSrJKqjzCcJ/L/_WHZ5823-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-qkB8tqZ/1/KFgRsGv3qxj3FpPVWx6FZ388fZ9RLXCwpxX5H2jGM/S/_WHZ5823-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6FXcvLm",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/Kj4NhBTNkVGTpSGCbWwgZcRtjKrsjgMKcXkBVJSZH/XL/_WHZ5796-Edit_pp-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/A",
     "keywords": [
       "portrait",
@@ -562,18 +619,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/K7zM2mFBHvXc44nHjm9JFgmvZfkmFNSHhNfnrk33j/XL/_WHZ5796-Edit-3_pp-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/K7zM2mFBHvXc44nHjm9JFgmvZfkmFNSHhNfnrk33j/XL/_WHZ5796-Edit-3_pp-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/K7zM2mFBHvXc44nHjm9JFgmvZfkmFNSHhNfnrk33j/XL/_WHZ5796-Edit-3_pp-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/Lp227npdkshqGfVgDJhGQdPFQkJSQgZgS4HpqFsV4/L/_WHZ5796-Edit-3_pp-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-9DLMNFd/1/MLF9xrxZPgkcDD3Xpx6zL73jm3CPdG77Nfz3SFwbw/S/_WHZ5796-Edit-3_pp-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vxN3Fvd",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/KFcpbtgPrHdHGvNz6cC55LZSPgXcVLqC47HTkCSV7/XL/_WHZ6183-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-vxN3Fvd/A",
     "keywords": [
       "portrait",
@@ -591,18 +651,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/LQ53HzVvzmBXRtXhDqVNKGfgrzB2K9LtB57gG2KQn/XL/_WHZ5796-Edit_pp-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/LQ53HzVvzmBXRtXhDqVNKGfgrzB2K9LtB57gG2KQn/XL/_WHZ5796-Edit_pp-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/LQ53HzVvzmBXRtXhDqVNKGfgrzB2K9LtB57gG2KQn/XL/_WHZ5796-Edit_pp-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/Lqc866gPZR75LwDkMgjWsPCnRSBhFVztMWPc4JRKq/L/_WHZ5796-Edit_pp-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6FXcvLm/1/M9VMw4d4BCt7463Q3Kp2Ft8c65jZMgL5FhkBM4Xgs/S/_WHZ5796-Edit_pp-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pCSz9SV",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "© Wayne Heim 2021 Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/Kb9WJQn8JHDgq8VGJ5m27FNvNGKhvCB77fXGgVNZF/XL/_OL30950-Enhanced-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/A",
     "keywords": [
       "portrait",
@@ -620,18 +683,21 @@ export const galleryData = [
     "story": "© Wayne Heim 2021 Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/MrXGMFbBZRt46dPBk8xnHkH7GbqL2J8zncnNDkvGv/XL/_WHZ6183-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/MrXGMFbBZRt46dPBk8xnHkH7GbqL2J8zncnNDkvGv/XL/_WHZ6183-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/MrXGMFbBZRt46dPBk8xnHkH7GbqL2J8zncnNDkvGv/XL/_WHZ6183-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/NZQZDSzqknvJqPDDBH9TZ8xKK8btdQ7nkTJQSqddg/L/_WHZ6183-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Travis/i-vxN3Fvd/0/KpFjD54jCC9FcS7BdR7Vk7wTwrpzKQnL43ZNCw4hN/S/_WHZ6183-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZHnSfxf",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/LVzwtTZzQjCfVLw75d27NMKMfS2W98wZ7Ngc7VSfN/XL/_O1H1390-Enhanced-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZHnSfxf/A",
     "keywords": [
       "portrait",
@@ -649,18 +715,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/L768xZc5C9q28MRz8sTSqjRvrqdXWkrTrMPZm9nX2/XL/_OL30950-Enhanced-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/L768xZc5C9q28MRz8sTSqjRvrqdXWkrTrMPZm9nX2/XL/_OL30950-Enhanced-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/L768xZc5C9q28MRz8sTSqjRvrqdXWkrTrMPZm9nX2/XL/_OL30950-Enhanced-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/L7L3PGHN46HLJ6QwjsRtMn5ZpqPShXTSHZWr7nfZB/L/_OL30950-Enhanced-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pCSz9SV/1/MmqN5Gf7VZ6MNgk5z2jD4HM8j2tGw58Lxgr5N9brB/S/_OL30950-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GqLkjtM",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/Lg82zfzKhJhWqwBLxH9HnfWvbW2HV2MdFTBTNkdXG/XL/_WHZ0389-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-GqLkjtM/A",
     "keywords": [
       "portrait",
@@ -678,18 +747,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/L6kHtD5TW6pDL7CKdCtmjm2Jd3grTQwzvHFVVP2FC/XL/_O1H1390-Enhanced-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/L6kHtD5TW6pDL7CKdCtmjm2Jd3grTQwzvHFVVP2FC/XL/_O1H1390-Enhanced-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/KtZcg7F4XPPTD96HTR9zzbBBQjrpxDZkX5DFZjgnk/L/_O1H1390-Enhanced-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/NP9s5KTwVSDVcqWrvjz4ZJJnCNgfTbVj9kFqJN5dn/M/_O1H1390-Enhanced-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZHnSfxf/6/KbmCBPQgXks32BpnZmWLdhN4jtDrNwGDXQzxgsZhL/S/_O1H1390-Enhanced-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-4VgnHNv",
     "title": "Fine Art Painterly Portrait Photography:  Waiting for Orders.  Photograph by Wayne Heim",
     "description": "Portrait of a young female reenactor.\n© Wayne Heim Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:  Waiting for Orders.  Photograph by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/MvQpCjB5sfp5qN697d3prSvvfvq78ZcNBxQCXGmd4/XL/_OLY2851-Edit-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-4VgnHNv/A",
     "keywords": [
       "portrait",
@@ -707,18 +779,21 @@ export const galleryData = [
     "story": "Portrait of a young female reenactor.\n© Wayne Heim Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/LcgzmhF5XdTw8RNbHvPbXLH9cgcVmQMkRmQFkNZRh/XL/_WHZ0389-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/LcgzmhF5XdTw8RNbHvPbXLH9cgcVmQMkRmQFkNZRh/XL/_WHZ0389-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/LfThpCPKxfmZRGPJHvq6vx6wmntXGCLFQ5cwqBXv4/L/_WHZ0389-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/KPQrk3Jv4zFznrfkLrZPw8XD5s9tzV6Skgqj48VRd/M/_WHZ0389-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-GqLkjtM/2/MZGn46bv2pqdXRm2DJ9tDPngz3t2DqcgpmfJw3BDV/S/_WHZ0389-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3sSNgVH",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/K9PckH77F24QbtRsdgHWnx5gftwPZhcCncDKVL73r/XL/_WHZ0314-Edit-Edit-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:  Waiting for Orders.  Photograph by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/A",
     "keywords": [
       "portrait",
@@ -736,18 +811,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/NcFXd8LGJGQftF855KbFkHSFPw2MS4msTRqwpFNrW/XL/_OLY2851-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/NcFXd8LGJGQftF855KbFkHSFPw2MS4msTRqwpFNrW/XL/_OLY2851-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/MFRwWHzDbTBF6pfkKPQGkHWzt5pc22fdqJJDZWQTJ/L/_OLY2851-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/NgwcDtfK52wTV7jhF2LWq5NdqKSzp3CDfFFBbD4Xw/M/_OLY2851-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-4VgnHNv/3/K8dDfGZQJvn98njnqr8Qh9cwSpTJ8dqSrZtmm54G5/S/_OLY2851-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MsjQLqX",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/MMrP77Wc2tqQmVxC7Km62f8qqDwgdNvBWdrSBhfdX/XL/_WHZ5760-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-MsjQLqX/A",
     "keywords": [
       "portrait",
@@ -765,18 +843,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/LbVbnq3sBMPGDzRTBWKCBg4Wt7DsRHJbCGJBsBf5L/XL/_WHZ0314-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/LbVbnq3sBMPGDzRTBWKCBg4Wt7DsRHJbCGJBsBf5L/XL/_WHZ0314-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/LbVbnq3sBMPGDzRTBWKCBg4Wt7DsRHJbCGJBsBf5L/XL/_WHZ0314-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/LtF6pPPMcbGdW9279CHGncVhV9dLmbmtKLSnJRnJC/L/_WHZ0314-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-3sSNgVH/1/MpQMNbSZ6NJQFdjCHXnf9nSKScctTczwLRbhnq6cW/S/_WHZ0314-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Ts97g3J",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/NdcnGkNKp3jVMTMrGMJQ7V4cZ89WqLp4pjtKdc5RP/XL/_WHZ0674-Edit-2-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Ts97g3J/A",
     "keywords": [
       "portrait",
@@ -794,18 +875,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/L2h4DChFw66gsCSvdzZ3JLBb7bTs9FNfvQRQJrvW5/XL/_WHZ5760-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/L2h4DChFw66gsCSvdzZ3JLBb7bTs9FNfvQRQJrvW5/XL/_WHZ5760-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/L2h4DChFw66gsCSvdzZ3JLBb7bTs9FNfvQRQJrvW5/XL/_WHZ5760-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/NVHFHBzKdrV57FnrrBbN2cNTbtc6sJkJKrPPWp8QC/L/_WHZ5760-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MsjQLqX/0/KrjMrtvqtqgx3qJkKSk6W88FgWJPRdjpwrZKNq3hJ/S/_WHZ5760-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dNRrCp8",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/Mg9pZM2NmcTjhtPKWdw2cKr5C9VjR38L2SPgsVLvn/XL/_WHZ0456-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dNRrCp8/A",
     "keywords": [
       "portrait",
@@ -823,18 +907,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/NXz6nzWVRBGHSRBkBmZPrjVzM3DcGhTv4m5pmPp2m/XL/_WHZ0674-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/NXz6nzWVRBGHSRBkBmZPrjVzM3DcGhTv4m5pmPp2m/XL/_WHZ0674-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/NXz6nzWVRBGHSRBkBmZPrjVzM3DcGhTv4m5pmPp2m/XL/_WHZ0674-Edit-2-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/LbfsGQwm8CthzmXXdTdxzPS2SFCn8Gw5bGR3MGLqg/L/_WHZ0674-Edit-2-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Ts97g3J/0/LtDCx5WrCFcLhQrWjVvNmRRrZv2PTnWvnqpFQvRTT/S/_WHZ0674-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Gc98zst",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/NCRKZwbt2NzccqRpLfmVMPdKcKGfJqQCBkncvBvg6/XL/_WHZ0513-Edit-Edit-3-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Gc98zst/A",
     "keywords": [
       "portrait",
@@ -852,18 +939,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MMg2MVGQXgBvKF46KQ4bhHqjHSr8xpcwN9G6d6WqR/XL/_WHZ0456-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MMg2MVGQXgBvKF46KQ4bhHqjHSr8xpcwN9G6d6WqR/XL/_WHZ0456-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MMg2MVGQXgBvKF46KQ4bhHqjHSr8xpcwN9G6d6WqR/XL/_WHZ0456-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/L5657hsSDMPwMdHSTQt56vkX7tghH5N3nx24pRcLT/L/_WHZ0456-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-dNRrCp8/0/MBrZcbCF5Xj9hsxqbBQss6DnBssGQcwLwZxD8tQwX/S/_WHZ0456-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tzF4Sgz",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/KvhhvVMb2DRFp88k8dz6jDtBcQ6JCGPsrDNGcjNvg/XL/_WHZ5449-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-tzF4Sgz/A",
     "keywords": [
       "portrait",
@@ -881,18 +971,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/KRVPRZPPk7FH74BT8vBGsdRMnLFTZspGfTmMpQ6Dp/XL/_WHZ0513-Edit-Edit-3-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/KRVPRZPPk7FH74BT8vBGsdRMnLFTZspGfTmMpQ6Dp/XL/_WHZ0513-Edit-Edit-3-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/MwHDhGgjXRgB4MchvMTS65sZzRFfDLdhqmmBBt9cH/L/_WHZ0513-Edit-Edit-3-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/NXqjKm9BnsbFp3SnjzXD5wKrPvVrD2xCBzWkqqJPn/M/_WHZ0513-Edit-Edit-3-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Archive/n-SXJ92S/Heim-Pics/X-mas-2018/i-Gc98zst/0/KvWtmWMTLRTF7hwBbQ8JvZsCpKkf6q2XTG87MXNsQ/S/_WHZ0513-Edit-Edit-3-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fCwv683",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/M8CpXp4KtWmwtTstTRG2SHP99B6MFQmWNHKZfZQxq/XL/_WHZ5523-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-fCwv683/A",
     "keywords": [
       "portrait",
@@ -910,18 +1003,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/MrPjfHJt8m5T2jKWNwRP3qLRgsZBXc6sTJn3WFtHf/XL/_WHZ5449-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/MrPjfHJt8m5T2jKWNwRP3qLRgsZBXc6sTJn3WFtHf/XL/_WHZ5449-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/MrPjfHJt8m5T2jKWNwRP3qLRgsZBXc6sTJn3WFtHf/XL/_WHZ5449-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/KNRTQshGrsC4gFJqVgt8bp9JSq6QMF77VSDtdDKzD/L/_WHZ5449-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-tzF4Sgz/0/M9xzVZcWN2fQCppRRwzWPmftpwhrh9fC43BZRfbFx/S/_WHZ5449-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6M79wHD",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/LqRPKBr6ZD4hLjK927mH3Znhg89ssWDpVCbjrJWbM/XL/_WHZ5532-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6M79wHD/A",
     "keywords": [
       "portrait",
@@ -939,18 +1035,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/KbDzpFsdmfnGrW356FqD3DL9tB7qBz5LZBk9f63PG/XL/_WHZ5523-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/KbDzpFsdmfnGrW356FqD3DL9tB7qBz5LZBk9f63PG/XL/_WHZ5523-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/KbDzpFsdmfnGrW356FqD3DL9tB7qBz5LZBk9f63PG/XL/_WHZ5523-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/NK7qqXdg9tKhL83SHgBDF6CpBrcFWmxRSsdVxhL9V/L/_WHZ5523-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-fCwv683/1/NFLB2dBPDJfVkcRrpzzS2vzRc26bPPtcqdbZxgQxC/S/_WHZ5523-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jh3tbmr",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/NCZc2wVpN3ZJKsQ2hM4kWCv3T2WnTNDCDFFwsWht4/XL/_WHZ5540-Edit-2-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-jh3tbmr/A",
     "keywords": [
       "portrait",
@@ -968,18 +1067,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/LZjBxGSXdxdJpJV4sjZN35sdzc7TCjWJrdJgfntLb/XL/_WHZ5532-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/LZjBxGSXdxdJpJV4sjZN35sdzc7TCjWJrdJgfntLb/XL/_WHZ5532-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/LLTP2QQ5pbZH6tcxxVLBgMsjJmMDcPXSZzLvhKRHn/L/_WHZ5532-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/Kzh8KMgFqMFTZ5JnvHKQPXSMzXR8SJjJMm2DJptKZ/M/_WHZ5532-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-6M79wHD/0/NJCXrwNDTwHcvg3sMGwCWHJPF93rNGTsCbf89WbK7/S/_WHZ5532-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-MNt956R",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/LKL2zt4zs5whSMKS7gz66gBS3MkZmm4zwjVzLjjDH/XL/_WHZ5833-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-MNt956R/A",
     "keywords": [
       "portrait",
@@ -997,18 +1099,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/KTKJLqhF45X2Bgg6fhFSfCCZNZTpKR4pkpjB3CrKz/XL/_WHZ5540-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/KTKJLqhF45X2Bgg6fhFSfCCZNZTpKR4pkpjB3CrKz/XL/_WHZ5540-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/KLtCcwCXnwR9KfZhCT23Dnj5fWz72FWD7rBQrgNQf/L/_WHZ5540-Edit-2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/NQ5ft9rpPh4BB883tH3wQBTQvgSHJfMkvgtQ5tB6T/M/_WHZ5540-Edit-2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Ivy-Pics/Ivy/i-jh3tbmr/0/Mpx2LvV974rkLpTXftmsGx9Tgxk5RnBfGSQ8nNQ2q/S/_WHZ5540-Edit-2-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CM3MV6z",
     "title": "Fine Art Painterly Portrait Photography:  Behold  Photography by Wayne Heim",
     "description": "Behold  a poster done in a photoshoot.\n ©Wayne Heim Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:  Behold  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/KhZ3w7vnsRH8KdNDsSFKSX7TkHzcK3wTdJN6ZD6pq/XL/_WHK1346-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/A",
     "keywords": [
       "portrait",
@@ -1026,18 +1131,21 @@ export const galleryData = [
     "story": "Behold  a poster done in a photoshoot.\n ©Wayne Heim Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/KfBKs8fg6QMjqPFLH8PDp6bB7MSNQd2RQLZT58RMH/XL/_WHZ5833-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/KfBKs8fg6QMjqPFLH8PDp6bB7MSNQd2RQLZT58RMH/XL/_WHZ5833-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/KfBKs8fg6QMjqPFLH8PDp6bB7MSNQd2RQLZT58RMH/XL/_WHZ5833-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/NVDKgC6hv8nqGcMZRK5Ck5bTwkXfpnhVPrWKnL2vs/L/_WHZ5833-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Emma/Emma-pictures/i-MNt956R/0/M6SWMsXNjWjvt4VhfTFL9gsT2kCSPmNswmGnsFvLX/S/_WHZ5833-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SMfNpJq",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/NW8886ZZBQ6XnVBtWzFLxtJbqwVQb7n29LXd2xBW3/XL/_HF29401-Edit-2-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:  Behold  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SMfNpJq/A",
     "keywords": [
       "portrait",
@@ -1055,18 +1163,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/M8Lt89rqrHNPZhn9CLCCJqMvpMSVZdT7KqwGT83M4/XL/_WHK1346-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/M8Lt89rqrHNPZhn9CLCCJqMvpMSVZdT7KqwGT83M4/XL/_WHK1346-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/M8Lt89rqrHNPZhn9CLCCJqMvpMSVZdT7KqwGT83M4/XL/_WHK1346-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/NfJw6KmHFPwwGGjZXRNTkVbhqPmQBhf6rBVJxvXhJ/L/_WHK1346-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-CM3MV6z/2/NGvZ2HDPDcMpWZHWGHg2srfZFfXrDBWZtnKmLJqBB/S/_WHK1346-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-KNPxS4t",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/MV8vgbVf6FsspfWJ998qjxP55F7Rc6DhrGCmK47R2/XL/_HF29403-Edit-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-KNPxS4t/A",
     "keywords": [
       "portrait",
@@ -1084,18 +1195,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/MS8G4JGdXxBdJt9JpMN6h7JTTq2nwvrZMM2Q4WLzH/XL/_HF29401-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/MS8G4JGdXxBdJt9JpMN6h7JTTq2nwvrZMM2Q4WLzH/XL/_HF29401-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/LV4TrLxsS4DJrJf4X39q8rDbPZ6SgSpbNqtF7Sr89/L/_HF29401-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/Kzd4sxTXCXnVZbS8HZL8S9tVgWP8vFx8jz5SWRd33/M/_HF29401-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SMfNpJq/3/Mq2DXpznc738hNCr95LzNfCLcmhpTbdPVFcFgHcwS/S/_HF29401-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NtMdSm4",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/KtMLqkj3nfBZr3DHkj75wtpzgJHcnT9xLdxmwp7D8/XL/_HF29406-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-NtMdSm4/A",
     "keywords": [
       "portrait",
@@ -1113,18 +1227,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/LWVCnDC4kht5rxsJrcdJ5SqsKN3t5pjHgRVnNhb2v/XL/_HF29403-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/LWVCnDC4kht5rxsJrcdJ5SqsKN3t5pjHgRVnNhb2v/XL/_HF29403-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/LWVCnDC4kht5rxsJrcdJ5SqsKN3t5pjHgRVnNhb2v/XL/_HF29403-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/Mzhx9ZD6fbjJCD337HKnJQdmCHJpBNqjSzftjrLtC/L/_HF29403-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KNPxS4t/21/Khj85kHd9RqjxMxjCjg6W5hM7Nr53rvJLCWPKxsC5/S/_HF29403-Edit-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pr298mj",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/NbsLnmP3xChWtXn9GQHVdsfdBRKJpcWsC8JMXTnCV/XL/_HF20177-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pr298mj/A",
     "keywords": [
       "portrait",
@@ -1142,18 +1259,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/NcvGJq58BkQKTBKfbsXLXqX6G4QCHjncs9DNPjh9C/XL/_HF29406-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/NcvGJq58BkQKTBKfbsXLXqX6G4QCHjncs9DNPjh9C/XL/_HF29406-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/LBFG7wDJJGGhrFnFdKw8vfs2z5M8khnfQCzbDZ3M6/L/_HF29406-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/K4GSkhfmv3MNVcQFxtXXjdhLcqJ7xxH5fgQPvsq2G/M/_HF29406-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NtMdSm4/3/KQJNv5md4pGLVDMdrDrPjXwHXrLzxBXHGkW73GWhH/S/_HF29406-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cXgzSFj",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/MvgvDXSwHR2N4DdWDgXr4mqPspTJtpcR7PjR494pq/XL/_HF28860-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-cXgzSFj/A",
     "keywords": [
       "portrait",
@@ -1171,18 +1291,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/MJcwVghFPGvmtrmv2CVkpbPKj9S2CCc3Fk5qZ8J76/XL/_HF20177-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/MJcwVghFPGvmtrmv2CVkpbPKj9S2CCc3Fk5qZ8J76/XL/_HF20177-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/NPGHKcJgVfFFKPfxwqTdKjCK5TcbDxdzGhsbJW9Dp/L/_HF20177-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/Mv8ND3MZPkBZD7tmwrdFVzjpjbvhBcSrtbpQjrRkX/M/_HF20177-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pr298mj/2/LhFQ88Mwhvbd5dQBnfmVXZ2Qgn5Mpm9hNn2jZzQqL/S/_HF20177-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZM2SV3N",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/M2Z4DRJzSd65Qb7v5tcPCRFC2xmFJPF6L2MPCthQM/XL/_HF28245-292-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/A",
     "keywords": [
       "portrait",
@@ -1200,18 +1323,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/MFwDVjgvNxDVx2wrnwQMQQt5kn7NjkbxGjDdCzGTd/XL/_HF28860-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/MFwDVjgvNxDVx2wrnwQMQQt5kn7NjkbxGjDdCzGTd/XL/_HF28860-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/NFxH4CcWGQvFMkkLZ8d5Whb4XCGV5dpL3DVP6nZfz/L/_HF28860-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/LSkj2RgZLQ4SXB6swTnQMWdL7kGcPTTzD34wBT34K/M/_HF28860-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-cXgzSFj/3/McBP2JhtFNL8BB9bP4PcpwXqNTvh2r5c8ckPxpLsD/S/_HF28860-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6Dr6FgF",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/LZtRhCkNfQvtPBKCxCdt8sNQ8TLG9C2kwHLXZCNNP/XL/_HF28496-300-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/A",
     "keywords": [
       "portrait",
@@ -1229,18 +1355,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/KGVN4vzr5TVjd6DkDfnPzd6b7m8whd5Cxx66vRC4B/XL/_HF28245-292-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/KGVN4vzr5TVjd6DkDfnPzd6b7m8whd5Cxx66vRC4B/XL/_HF28245-292-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/KdqbfpNj9XpcFSWw3JdCcNbLvFwvrpzsfrcc2ppp7/L/_HF28245-292-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/NQmcbwzVNSqk7VqPk6bgTrBCxGvTt3Mq4gmjK6cgf/M/_HF28245-292-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ZM2SV3N/0/K3VStzDDvkcHjKL5hWCpt9Pp6B2Dd62NdZmjTsCLj/S/_HF28245-292-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Nx9Z7rw",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MgnW9PzKNSD3vp73txxL3rmQNQd6pgSvhVhSjfTtj/XL/_HF28830-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Nx9Z7rw/A",
     "keywords": [
       "portrait",
@@ -1258,18 +1387,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/MBP64zxRsK4J9df8X99CWWGcTmj6XSDjPL4zDqzzj/XL/_HF28496-300-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/MBP64zxRsK4J9df8X99CWWGcTmj6XSDjPL4zDqzzj/XL/_HF28496-300-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/MjNP2dmDxzssRHFZ6Qsxh5DVQ9pWc9GcQNTD5rVqL/L/_HF28496-300-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/K88XHfBXxqw5xjpMx3nW6F4Gt57mk2JSj3ZWM5gK3/M/_HF28496-300-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-6Dr6FgF/0/L8RB9DZWBL7xRDLvfng7D9J26cQxrCNs38p6qZjQt/S/_HF28496-300-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TDvjskf",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/LpqjxqjBr3jkBhvv25qdbp4wJbbXRbn4GbxpSLKbW/XL/_HF20134-Edit-2-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-TDvjskf/A",
     "keywords": [
       "portrait",
@@ -1287,18 +1419,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MNdWSxKq3XQSMztkRHWqkw9L5PfLWgSDw2fzjjW5f/XL/_HF28830-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MNdWSxKq3XQSMztkRHWqkw9L5PfLWgSDw2fzjjW5f/XL/_HF28830-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MhXzf4GCCsvH2dfkb3cXmBkLKtTWKXbS76WZmRtwM/L/_HF28830-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/MhMjPDKcFffHk8C8KjP6cMN8QPHC6szkQC6tqzSbc/M/_HF28830-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Nx9Z7rw/3/NLr4GSdgP573ZmpDpvWsKkbTdmqVb9Qs6ZFHBkcMV/S/_HF28830-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PQzKJfr",
     "title": "Waiting for their return.",
     "description": "Painterly photography portrait of 1880's woman waiting for her cowboy to come home. Painterly Photo © Wayne Heim",
-    "alt": "Waiting for their return.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/MZZd7B2qK3RxrR9KxsJhnCmjxqZTV36Bj3nh2C62b/XL/_HF20097-Edit-Edit-3-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-PQzKJfr/A",
     "keywords": [
       "portrait",
@@ -1316,18 +1451,21 @@ export const galleryData = [
     "story": "Painterly photography portrait of 1880's woman waiting for her cowboy to come home. Painterly Photo © Wayne Heim",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/Ng5PHfC9LGwN6jRdCPKJ62cnTvpMvwsWvhSK3hs9z/XL/_HF20134-Edit-2-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/Ng5PHfC9LGwN6jRdCPKJ62cnTvpMvwsWvhSK3hs9z/XL/_HF20134-Edit-2-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/Ng5PHfC9LGwN6jRdCPKJ62cnTvpMvwsWvhSK3hs9z/XL/_HF20134-Edit-2-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/NJQGN9Jjh6RqcBkWfL3MRV4SzntnCW9tM395cVqFG/L/_HF20134-Edit-2-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TDvjskf/2/KKHTKbmhXTxv98Jqs2mHd7QMHNtjFZfcqp9W6QB7K/S/_HF20134-Edit-2-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Q4BHbm8",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/NXx4VNB2SmnH9sCXGsHVQ9nkSTtJLQX7JbpCnBsDK/XL/_HF29202-Edit-Edit-XL.jpg",
+    "alt": "Waiting for their return.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/A",
     "keywords": [
       "portrait",
@@ -1345,18 +1483,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/NQGCf9NvJTK8Z2NKzPkf8NJns727r6nwh5grJxjbn/XL/_HF20097-Edit-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/NQGCf9NvJTK8Z2NKzPkf8NJns727r6nwh5grJxjbn/XL/_HF20097-Edit-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/KndbwZjzGP6wrtdp5v75m5BcprtnvkcSq5Lg3Q5gw/L/_HF20097-Edit-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/MHngpmRbFb9hgKMb5MSq7qWbJfGgGBxCnsT8ZHk3D/M/_HF20097-Edit-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PQzKJfr/3/Kgcx7FFbMwRNCj2mJ6H7DnSJFRmDfJ63RVT3KNWCk/S/_HF20097-Edit-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SS4Fx5G",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/Kc7m8bhJMW6zvBfn4cL9mzGdXzVfc4msVFHP4Pvcv/XL/_HF28564-Edit-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/A",
     "keywords": [
       "portrait",
@@ -1374,18 +1515,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/L2wNWZft23vsRvbchpCSptCFXZVhSk8pgzFGpsphs/XL/_HF29202-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/L2wNWZft23vsRvbchpCSptCFXZVhSk8pgzFGpsphs/XL/_HF29202-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/MHdwbLzNLJzpqgghkL6wMPpvLjGChxX4gZqRCrCTx/L/_HF29202-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/KMM8RMQQtbvL7Dqhw26vCs8X9thCVbn7XRPpm7BJL/M/_HF29202-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Q4BHbm8/0/LGKvTvz8fRfj6GMzZWdWLLx6gGSWGpDPNxLVhx99h/S/_HF29202-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XdhCbrV",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/L9mvbknLgKHD72WshSNRh5DZgLxbj56k9X488vLSs/XL/_O1H0222-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/A",
     "keywords": [
       "portrait",
@@ -1403,18 +1547,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/M28GMn7xfKcjFgFZXNmSw3h2PqqTFJ69Lj6rXMGwr/XL/_HF28564-Edit-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/M28GMn7xfKcjFgFZXNmSw3h2PqqTFJ69Lj6rXMGwr/XL/_HF28564-Edit-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/M28GMn7xfKcjFgFZXNmSw3h2PqqTFJ69Lj6rXMGwr/XL/_HF28564-Edit-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/LRVzj5bxtMjkVgczJptWgwDpdnC3KrpV6F5qs2ztc/L/_HF28564-Edit-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-SS4Fx5G/2/Mc7fQJgbTWxnZKP7CmDVsm9t9WDhCV5DW5zMT7bBQ/S/_HF28564-Edit-Edit-3-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FVGrjwJ",
     "title": "Fine Art Painterly Portrait Photography: Big Red",
     "description": "Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography: Big Red",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/Ms9CS88rwQgvBGQHbsKjfWdHTL9cXPTD5SQMNnwcR/XL/_O1H0370-Edit-Edit-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-FVGrjwJ/A",
     "keywords": [
       "portrait",
@@ -1432,18 +1579,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NfkSskWgXM62bSx3Tn34xTvBcJs7qJqNHHBM8Lvph/XL/_O1H0222-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NfkSskWgXM62bSx3Tn34xTvBcJs7qJqNHHBM8Lvph/XL/_O1H0222-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NJwq68zHmHk2VJf96jBnRLCpcLV7NcMsWPLvv83MX/L/_O1H0222-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/NNdMmGVzDGrnQVfs6t8d32pWhX5N9bTM3prXkGgZQ/M/_O1H0222-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-XdhCbrV/2/LRwMVrc7sVwMStTBSMPzDfGKcn4VFLg9dwLwG4bTJ/S/_O1H0222-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cPqr3Cc",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/MHv7FHR2QZFcdw2bxqsqR4SjV3tSK7Twb9R3JPjxf/XL/_O1H0374-Edit-Edit-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography: Big Red",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-cPqr3Cc/A",
     "keywords": [
       "portrait",
@@ -1461,18 +1611,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/MZsPV27F2fLXQpPmQS6p6JX5bg2f7SkrrjPxMDcfB/XL/_O1H0370-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/MZsPV27F2fLXQpPmQS6p6JX5bg2f7SkrrjPxMDcfB/XL/_O1H0370-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/KPKS5RFpg9bJC5LgZ44Sc2RGhFdSrRctXbGXZqKGF/L/_O1H0370-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/LhrqJ2LX9nXNJkXFbnZrR4w67dLG7ZqTBR8gHvFqB/M/_O1H0370-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-FVGrjwJ/1/KPvP5gvpkSP4RZJV4jgpW8zrp6Qdm7bTkVNxKZVDz/S/_O1H0370-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kK2jT4H",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/KcsZbzkGkmfHgPKX6VJXp6Q79k4qQZmwMpfs7k7Fm/XL/_O1H0380-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/A",
     "keywords": [
       "portrait",
@@ -1490,18 +1643,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NX4zgDJpDBfDfjsJVx65CsQgFNBgZZv7spMCBvvxV/XL/_O1H0374-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NX4zgDJpDBfDfjsJVx65CsQgFNBgZZv7spMCBvvxV/XL/_O1H0374-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NX4zgDJpDBfDfjsJVx65CsQgFNBgZZv7spMCBvvxV/XL/_O1H0374-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/KGJJzt34NFgbCH85DgQfGK657XgDXFCz9vTCXsk26/L/_O1H0374-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-cPqr3Cc/2/NbKk4vKsnF24tfVNqvXDX2Fq8zTjsFFNB9kWpjjJj/S/_O1H0374-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n3J8HGN",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/MftXTSsQ5Zj4v886dfV6sBWS53LNvdwT32RsNTWdW/XL/_O1H0540-Edit-Enhanced-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-n3J8HGN/A",
     "keywords": [
       "portrait",
@@ -1519,18 +1675,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NPrt6tpwsZb2FbSzbJFLPQFCLx2qdvCPTZkwwGM6C/XL/_O1H0380-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NPrt6tpwsZb2FbSzbJFLPQFCLx2qdvCPTZkwwGM6C/XL/_O1H0380-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NPrt6tpwsZb2FbSzbJFLPQFCLx2qdvCPTZkwwGM6C/XL/_O1H0380-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/L7F3vF7LStkrKcxh4jtXnW8fqHtjqCZzsbXPzZpd5/L/_O1H0380-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-kK2jT4H/2/NGd63DsT4sFFf5gBx7F5CK8zxc4xRs4V9nXdK3QsS/S/_O1H0380-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WbdF5pW",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/L2r5mH6dHJsVNfR3cXnkDmcZMPWZnbP9wP62HHtHx/XL/_HF20662-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-WbdF5pW/A",
     "keywords": [
       "portrait",
@@ -1548,18 +1707,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/MptQ88CqPB78xxps2MDxC2wT4jrZVGQVw2h92smZP/XL/_O1H0540-Edit-Enhanced-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/MptQ88CqPB78xxps2MDxC2wT4jrZVGQVw2h92smZP/XL/_O1H0540-Edit-Enhanced-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/Ln3nkRzjsKv6Bps9k2PP9fLrMTrjtT9g6Dds4ZgWH/L/_O1H0540-Edit-Enhanced-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/M7cf62fHSrgxXzDM7VbzQ6RSpBZpQPFpX2QNWt3W7/M/_O1H0540-Edit-Enhanced-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-n3J8HGN/2/M6ZxWb9KBF69Bx4FLqQLkGTNbWX6Q74qXLHrtSHk2/S/_O1H0540-Edit-Enhanced-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ScpmWwx",
     "title": "Fine Art Painterly Portrait Photography:  Wild West at Old Bedford Village",
     "description": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:  Wild West at Old Bedford Village",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/KJPPqp5XWK66K723QT26K8HhLRtkvzLrmMP3dLW4n/XL/_DSF7761-Edit-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-ScpmWwx/A",
     "keywords": [
       "portrait",
@@ -1577,18 +1739,21 @@ export const galleryData = [
     "story": "Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/LnX84xP5JrVT3rBFvGTjNpgwPdtXksvpgTncVDsd4/XL/_HF20662-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/LnX84xP5JrVT3rBFvGTjNpgwPdtXksvpgTncVDsd4/XL/_HF20662-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/LnX84xP5JrVT3rBFvGTjNpgwPdtXksvpgTncVDsd4/XL/_HF20662-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/MBHTVjZq57FZLmrcPc2F4wnvt4V9w2gR3McCzr4xx/L/_HF20662-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-WbdF5pW/3/MrzJ4xRN5zQDMPxDnVVFXZ7WZBJSXHTTKk5K7wx3B/S/_HF20662-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HRWDPHP",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/LwvbJJ363CSv3rh9m35QXBbFVcQzZpZ8xfLZ9VBR6/XL/_ANA1071-Edit-Edit-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:  Wild West at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-HRWDPHP/A",
     "keywords": [
       "portrait",
@@ -1606,18 +1771,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/NNsPQGx6FRCpsKxVJhK4WnhCm3fpBHVtxFL6cZxd3/XL/_DSF7761-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/NNsPQGx6FRCpsKxVJhK4WnhCm3fpBHVtxFL6cZxd3/XL/_DSF7761-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/NNsPQGx6FRCpsKxVJhK4WnhCm3fpBHVtxFL6cZxd3/XL/_DSF7761-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/NNPCswscwdvTTsJx7VZf66WTdZ7Z8dVHxpgHqvDmZ/L/_DSF7761-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ScpmWwx/0/Mth4sprbMC5gmgkWwLmtM6nvsQHVV7FTMsdRcDvQ8/S/_DSF7761-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Z2dvTk4",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/LfXJhq25SFphqVCRK8DhMTLT4kC9t2vxMmq59Pk7x/XL/_HF21507-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/A",
     "keywords": [
       "portrait",
@@ -1635,18 +1803,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/M9ct6bFB48pCnZc4FfLGFTcjHSS4HGRb5wS4D3WtZ/XL/_ANA1071-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/M9ct6bFB48pCnZc4FfLGFTcjHSS4HGRb5wS4D3WtZ/XL/_ANA1071-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/M9ct6bFB48pCnZc4FfLGFTcjHSS4HGRb5wS4D3WtZ/XL/_ANA1071-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/LK6xK83m5HFDLcnfHW4KhRnZZk27SX5Jm32fGTCSj/L/_ANA1071-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-HRWDPHP/1/KMwZz92mxN2n7WKmhKQgfMbBCSPgPbn5FRSrcg2dd/S/_ANA1071-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-vnTPDqx",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/KPPjwNK5NthVZcQXHjmbPfDXSwbZRZgSs3JsNqnDc/XL/_O1H0023-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-vnTPDqx/A",
     "keywords": [
       "portrait",
@@ -1664,18 +1835,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/KHZkGr3KsQFPLMNQMwvcmmLVpPMJG7m4QxbHFpZWk/XL/_HF21507-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/KHZkGr3KsQFPLMNQMwvcmmLVpPMJG7m4QxbHFpZWk/XL/_HF21507-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/Lhs4kjdhcThDvvCj2TtfBxzHqcCpqtXT3GWZkMb6w/L/_HF21507-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/KKHJphr5dVkWrcCQTBQLQ4PkBJStgzjZkqMqBzSNH/M/_HF21507-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Z2dvTk4/2/KJ43J3sCs39q5rPtChVMsz7VMKpckM7rK5XmqgdGV/S/_HF21507-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-bRKCcWB",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/LZPwhwtXnGgfxrF7bV7pSmLwLV79wcXvb8mqTqK69/XL/_O1H0308-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/A",
     "keywords": [
       "portrait",
@@ -1693,18 +1867,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/KZjBH26pKwtHk3JH9LdjwpXWLw5NXPM4cxQscc3tk/XL/_O1H0023-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/KZjBH26pKwtHk3JH9LdjwpXWLw5NXPM4cxQscc3tk/XL/_O1H0023-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/LDj5vsPGKdBfpCrTZXjDksNnW929N45B7GCcjNgpT/L/_O1H0023-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/KLJCLcSdDCLDSRtL2MNPr8jBMbvG9grscwQWpmjt8/M/_O1H0023-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-vnTPDqx/2/NjjhZJKN5BXX5jS9QvvXJ4T94WZFDT5Dm9RQpfN9z/S/_O1H0023-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Qgfmc9Q",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/NdJJrmhTj3pNNSdvdWrFh3NPqL4ts3zb2CxQ85vgL/XL/_HF28489-299-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/A",
     "keywords": [
       "portrait",
@@ -1722,18 +1899,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/MFgSZqXWFP4XhWqn7RkncfDxLMdjQXW97tKGD8Xrh/XL/_O1H0308-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/MFgSZqXWFP4XhWqn7RkncfDxLMdjQXW97tKGD8Xrh/XL/_O1H0308-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/MFgSZqXWFP4XhWqn7RkncfDxLMdjQXW97tKGD8Xrh/XL/_O1H0308-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/KKXMDp4xPLnLjVGLS46QLPvGZM83SMLxT6Qp3QvK4/L/_O1H0308-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-bRKCcWB/3/K9PWn6mg7jW7n5T7QG2wbRhx7gpHxP9QMMW8cJmqm/S/_O1H0308-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mbd2s8D",
     "title": "Fine Art Painterly Portrait Photography:  Mrs. Margaret Williams",
     "description": "Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:  Mrs. Margaret Williams",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KbzHF9tBsdpQqNbv9xwssmgVspWNS7mgCwXCt76jj/XL/Margaret%2520Wilson%25202d-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/A",
     "keywords": [
       "portrait",
@@ -1751,18 +1931,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/LCBB9Zg6cfCDqCnW3WTn7mrvkvTnxd2bRzr8BF9LS/XL/_HF28489-299-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/LCBB9Zg6cfCDqCnW3WTn7mrvkvTnxd2bRzr8BF9LS/XL/_HF28489-299-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/Kr37BMjT24SpRdJbfgvpdXnnCLczwXNMQVwQSKfTG/L/_HF28489-299-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/LqSp6Lc4QZgpVbBwMX8ccLtkKLpX9JFvKCd2HTRbB/M/_HF28489-299-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-Qgfmc9Q/0/Kq2hzbxZwSMM34whhVWKBDrnrRDdhTK6SBWQLQ3LX/S/_HF28489-299-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-s5Dv9mW",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
-    "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/LKnJL3Lj7FzV9sXHH39XkGmrJfwDXtW6NH2bDXMm7/XL/_HF27284-239-XL.jpg",
+    "alt": "Fine Art Painterly Portrait Photography:  Mrs. Margaret Williams",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/A",
     "keywords": [
       "portrait",
@@ -1780,18 +1963,21 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KwLf7xzQbDT2q8gfZH53LfwKqNVffNCGwpdGcPcJC/XL/Margaret%20Wilson%202d-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KwLf7xzQbDT2q8gfZH53LfwKqNVffNCGwpdGcPcJC/XL/Margaret%20Wilson%202d-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KwLf7xzQbDT2q8gfZH53LfwKqNVffNCGwpdGcPcJC/XL/Margaret%20Wilson%202d-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/KfwThWZHW5TLQWmp8sBjkXDqsxsjXQN9tZF42XMhR/L/Margaret%20Wilson%202d-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-mbd2s8D/0/LmW5jgbpzW2PMzQMfJHRCwLSzjPsfV3HBLkgH5BJn/S/Margaret%20Wilson%202d-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JzWqxMX",
     "title": "Fine Art Painterly Portrait Photography:",
     "description": "Painterly photography portraits by Wayne Heim.",
     "alt": "Fine Art Painterly Portrait Photography:",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/LgMS52NsVj3N3bFCFvdQFXw4WvgX5xKdGQ6xBjP5P/XL/_HF29357-105-107-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/A",
     "keywords": [
       "portrait",
@@ -1809,10 +1995,46 @@ export const galleryData = [
     "story": "Painterly photography portraits by Wayne Heim.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/M9vj9WXThDmQZnpb4M7NvW5Hc9HdnGGhRpqD3Gq9X/XL/_HF27284-239-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/M9vj9WXThDmQZnpb4M7NvW5Hc9HdnGGhRpqD3Gq9X/XL/_HF27284-239-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/LCMFSFKhQnKdRgmHcWM5R2N8tLFnq27XHgVc6xP7X/L/_HF27284-239-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/KV8DSttj4jCDTttLMWxtVrf3wSzvXWrTpWNKhpSnH/M/_HF27284-239-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-s5Dv9mW/0/K7wjZMsmNMTGRTw8dWdNnsksvGVSvvpB76F58bk2X/S/_HF27284-239-S.jpg",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-pB5DwkQ",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Fine Art Painterly Portrait Photography:",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pB5DwkQ/A",
+    "keywords": [
+      "portrait",
+      "poster",
+      "reenactors",
+      "woman",
+      "young lady",
+      "painterly photography",
+      "painterly photograph",
+      "fine art",
+      "fine art photography",
+      "fine art painterly photography",
+      "painterly portrait photo"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 62,
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/LWbJWLkf9PpXrSjc9xsd49HG8XPZ8Cf7GDnWGTBkJ/XL/_HF29357-105-107-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/LWbJWLkf9PpXrSjc9xsd49HG8XPZ8Cf7GDnWGTBkJ/XL/_HF29357-105-107-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/MTN8kGkfQ6RnzT3BJVMxtxNsmR5jzP2zQCqf8mRtr/L/_HF29357-105-107-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/LFNbPL8Cg3qdRrhrzVb4ZSGLt6ffG3VND9pWrPpfx/M/_HF29357-105-107-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-JzWqxMX/0/KqbVCk23jMw3BPRhBjSrqSb5gFRG4KQW69P72dKMw/S/_HF29357-105-107-S.jpg",
+    "srcOriginal": ""
   }
 ];
