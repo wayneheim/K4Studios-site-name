@@ -602,11 +602,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 20,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-mQZ9rNb/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG4486-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-mQZ9rNb/3/K8x7ZbScD4FJz2k4wFzr9z6gjcxdjZ44GfBzn3pmd/XL/_IMG4486-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-mQZ9rNb/3/MHfT9KvFmW9SrpfZJcJJZpcH9zr2wvCBBjVrC8xV8/L/_IMG4486-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-mQZ9rNb/3/KdNJhsVhwX8WnNbRwSNbcsFf8PscbND8PZnX9B4XK/M/_IMG4486-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-mQZ9rNb/3/K7sCBJ3kXgbprDdHBSJBrTcHnS8vFJ5XRbHhRQ5PP/S/_IMG4486-S.jpg",
     "srcOriginal": ""
   }
 ];
