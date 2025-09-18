@@ -6,7 +6,7 @@ export default function LandingRightImages({ heading = "", images = [] }) {
       </div>
 
       {images.map(({ href, src, srcS, srcM, srcL, alt, title }) => (
-        <a href={href} target="_blank" rel="noopener" key={href}>
+        <a href={href} key={href}>
           <img
             src={srcS || srcM || srcL || src}
             alt={alt}

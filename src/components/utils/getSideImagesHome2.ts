@@ -86,7 +86,8 @@ function pullGalleryDataAndImagesMultiPass(
         const img = gallery.images[offset];
         if (img && !excludeIds.has(img.id)) {
           // FIX: previously used gallery.gallery (undefined) causing missing href on first item
-          const href = `${gallery.gallery || img.galleryPath || ''}/${img.id}`.replace(/\/+/g, '/');
+          const idPart = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
+          const href = `${gallery.gallery || img.galleryPath || ''}/${idPart}`.replace(/\/+/g, '/');
           const normalized = normalizeImage({ ...img, href });
           pickedImages.push(normalized);
           excludeIds.add(img.id);
