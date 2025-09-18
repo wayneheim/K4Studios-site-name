@@ -2132,11 +2132,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 56,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/MpXfvDWVqMvT63G6hSswRNJQNCnCHS5trJ3nbBhM7/XL/_HF20923-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/MpXfvDWVqMvT63G6hSswRNJQNCnCHS5trJ3nbBhM7/XL/_HF20923-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/M4pKgbT6jwCD8NtFZFQrrz27zrMhL7xF4vtpf2Wtc/L/_HF20923-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/Kcg7R5gTVM7fmWG2rBKCvcJgHPGNQWwFkRCVrbj5z/M/_HF20923-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-8pvnqf5/0/NGHGrRXwMVXvf8nZSWzZt2dgTQ8Bj9dpGWLQkZj5S/S/_HF20923-Edit-S.jpg",
     "srcOriginal": ""
   }
 ];

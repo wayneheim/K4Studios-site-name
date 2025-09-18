@@ -581,8 +581,8 @@ export const galleryData = [
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/LjF4Nx6sQwh3nQmfxnvd2MpPjF7fdMFRd49NRftwW/M/_ANA3350-Enhanced-Edit-Edit-2-M.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/K8Ms45Dsz9T7D24p6HDzVpxzwPqz4qbWs4J4r4kqF/Ti/_ANA3350-Enhanced-Edit-Edit-2-Ti.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/K8Ms45Dsz9T7D24p6HDzVpxzwPqz4qbWs4J4r4kqF/Ti/_ANA3350-Enhanced-Edit-Edit-2-Ti.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/LjF4Nx6sQwh3nQmfxnvd2MpPjF7fdMFRd49NRftwW/M/_ANA3350-Enhanced-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/NVjhLB896WZ9x5Rkcr3kWFS9GTqrZSLcJMq3vcTR5/S/_ANA3350-Enhanced-Edit-Edit-2-S.jpg",
     "srcOriginal": ""
   }
 ];

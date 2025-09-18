@@ -974,11 +974,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 29,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CBkjbnq/0/MBKdNbLjZGhH7L47RQ6QcGSC2dHKqRnkXhWrgcBpn/XL/_DSF1877-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CBkjbnq/0/MBKdNbLjZGhH7L47RQ6QcGSC2dHKqRnkXhWrgcBpn/XL/_DSF1877-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CBkjbnq/0/LcZhD7cTNQswTXRXqT4znLBXKT52gLbT5BMG8CdKd/L/_DSF1877-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CBkjbnq/0/LGMBGQhnZKzPjTW4RZwZrpNTRmj7KH5cpFQTRq6gc/M/_DSF1877-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-CBkjbnq/0/MshtDQhG2Hvxp3GrS82KSNNxM8WVshC4vn3wjQFd4/S/_DSF1877-S.jpg",
     "srcOriginal": ""
   }
 ];

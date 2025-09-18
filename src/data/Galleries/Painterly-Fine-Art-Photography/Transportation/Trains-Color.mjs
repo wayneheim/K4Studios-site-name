@@ -1319,11 +1319,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 44,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zHjwCg7/0/NFFVXfJssv6LPnDTnXzDtbgzkqSWBkPNJXcJNF6q4/XL/_HF26272-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zHjwCg7/0/NFFVXfJssv6LPnDTnXzDtbgzkqSWBkPNJXcJNF6q4/XL/_HF26272-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zHjwCg7/0/L39QgV7M6tLWcsBTVXGkZJg5zLLfsfDksWbgp3pZD/L/_HF26272-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zHjwCg7/0/MjFVbpCcQCPkBc8w5mFTr4FnXCZPcQPkTG9bZgDnz/M/_HF26272-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zHjwCg7/0/LL3qhp5wMKdWhHDVTSNfLwXnhwHTMVQt4FbmgvPpC/S/_HF26272-S.jpg",
     "srcOriginal": ""
   }
 ];

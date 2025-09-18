@@ -16,17 +16,23 @@ export interface ImageVariants {
 /**
  * Normalizes an image object so that:
  * - srcOriginal preserves the incoming src if we override it
- * - src is reassigned to the smallest available variant (S -> M -> L -> existing src if only option)
+ * - src is reassigned to the smallest available variant (S -> M -> L -> XL -> existing src)
  * - Never promotes XL to src if a smaller variant exists
+ * - Handles Ti.jpg references by using proper fallback chain
  */
 export function normalizeImage<T extends ImageVariants>(img: T): T {
   if (!img) return img;
-  const smallest = img.srcS || img.srcM || img.srcL || img.src || img.srcXL;
+
+  // Priority order for sidebar: S -> M -> L -> XL -> original src
+  // This ensures we use the smallest available image for performance
+  const smallest = img.srcS || img.srcM || img.srcL || img.srcXL || img.src;
+
   if (smallest && smallest !== img.src) {
-    // preserve prior
+    // Preserve the original src value
     if (!img.srcOriginal) img.srcOriginal = img.src;
     img.src = smallest;
   }
+
   return img;
 }
 

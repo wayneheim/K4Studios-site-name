@@ -5838,11 +5838,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 207,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9cq3qz/1/MxjrttpPSnTjqffDQDcnfPP9z2Wg9cSGNs6xT5NJ3/XL/_WHZ5830-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9cq3qz/1/MxjrttpPSnTjqffDQDcnfPP9z2Wg9cSGNs6xT5NJ3/XL/_WHZ5830-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9cq3qz/1/NMq9vFPrdkvTs6n96mTGndhpWnXMwpcshSC9BWQPq/L/_WHZ5830-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9cq3qz/1/MjNBL23B58xMhmzx5DsdssHr6WdPpPcqrHtnZXKd9/M/_WHZ5830-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9cq3qz/1/MDpGLb5mG2sghnCbVsjfwwJMxz8hkQqvTPp2WPjrd/S/_WHZ5830-Edit-S.jpg",
     "srcOriginal": ""
   }
 ];

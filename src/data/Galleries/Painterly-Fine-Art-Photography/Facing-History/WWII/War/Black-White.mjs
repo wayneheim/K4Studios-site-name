@@ -3109,11 +3109,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 114,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tdzdbQH/1/LKP5ZRvjPWKKNdztXbdPmH5jpcx2hqhz9Wrb57hC4/XL/_OL30186-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tdzdbQH/1/LKP5ZRvjPWKKNdztXbdPmH5jpcx2hqhz9Wrb57hC4/XL/_OL30186-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tdzdbQH/1/KmBSmwWFNBkvV9GgpWdZ2s34FsnvMZ9gsLmtxCrT9/L/_OL30186-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tdzdbQH/1/NDdXWM99JVTh4DSvjsSzMGgfxk52DrqCrz2Jd97gT/M/_OL30186-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-tdzdbQH/1/MmVnCcj43m6htPmMpxBb3gtvMRv3N58GcW23kwrBm/S/_OL30186-Edit-Edit-S.jpg",
     "srcOriginal": ""
   }
 ];

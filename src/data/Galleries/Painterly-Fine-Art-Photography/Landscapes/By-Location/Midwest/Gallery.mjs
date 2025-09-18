@@ -686,10 +686,10 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 20,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cedar-Cliff-Falls/i-pg6hdsZ/1/LHRpQSMtvXwFs7W3VrmXhzVHhqBrmnTGHKRgwnsbJ/XL/_O2H0020-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cedar-Cliff-Falls/i-pg6hdsZ/1/LHRpQSMtvXwFs7W3VrmXhzVHhqBrmnTGHKRgwnsbJ/XL/_O2H0020-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cedar-Cliff-Falls/i-pg6hdsZ/1/Mmgt2rtpzWB6J6JrHwbvJKhvXtZhbgtTDzZMDcqwn/L/_O2H0020-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cedar-Cliff-Falls/i-pg6hdsZ/1/LH86NNQKLJGqjbHTPnmzqzD9qLfXtWWShtf6vzr4W/M/_O2H0020-Edit-M.jpg",
     "srcS": "",
     "srcOriginal": ""
   }

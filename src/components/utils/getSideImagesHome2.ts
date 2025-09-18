@@ -48,56 +48,97 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-// --------- FIXED LOGIC: walk repeatedly until enough images ----------
-function pullGalleryDataAndImagesMultiPass(
+// --------- IMPROVED LOGIC: Random selection to reduce repetition ----------
+function pullGalleryDataAndImagesRandomized(
   gallerySources: { label: string; href: string }[],
   maxCount: number,
-  excludeIds: Set<string>
+  excludeIds: Set<string>,
+  mixingStrategy: 'random' | 'balanced' = 'random'
 ): { galleryDatas: Image[][], galleryPaths: string[], pickedImages: Image[] } {
   const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
   const galleryDatas: Image[][] = [];
   const galleryPaths: string[] = [];
-  let allGalleryImages: { gallery: string, images: Image[] }[] = [];
+  let allGalleryImages: { gallery: string, images: Image[], availableIndices: number[] }[] = [];
 
   // Collect images per gallery (attach path)
   for (const gallery of gallerySources) {
-      // gallery.href in siteNav already points to the exact variant (includes Color, Black-White, Gallery, etc.)
-      const filePath = '../../data' + gallery.href + '.mjs';
-      const mod: any = allGalleryData[filePath];
-      let images: Image[] = (mod?.galleryData || mod?.default || []).filter(
-        (img: Image) => img.id && img.id !== 'i-k4studios'
-      );
-      images.forEach(img => (img.galleryPath = gallery.href));
+    const filePath = '../../data' + gallery.href + '.mjs';
+    const mod: any = allGalleryData[filePath];
+    let images: Image[] = (mod?.galleryData || mod?.default || []).filter(
+      (img: Image) => img.id && img.id !== 'i-k4studios'
+    );
+    images.forEach(img => (img.galleryPath = gallery.href));
+
     if (images.length) {
       galleryDatas.push(images);
       galleryPaths.push(gallery.href);
-      // Shuffle order per gallery for fairer distribution
-      allGalleryImages.push({ gallery: gallery.href, images: shuffle(images) });
+
+      // Create array of available indices for random selection
+      const availableIndices = Array.from({ length: images.length }, (_, i) => i);
+      shuffle(availableIndices); // Shuffle indices for random access
+
+      allGalleryImages.push({
+        gallery: gallery.href,
+        images: images,
+        availableIndices: availableIndices
+      });
     }
   }
 
-  // Now loop as many times as needed to hit target
   const pickedImages: Image[] = [];
-  let offset = 0;
-  while (pickedImages.length < maxCount) {
-    let foundAny = false;
-    for (const gallery of allGalleryImages) {
-      if (gallery.images.length > offset) {
-        const img = gallery.images[offset];
+
+  if (mixingStrategy === 'random') {
+    // Random strategy: randomly select from any available gallery
+    const totalAvailableImages = allGalleryImages.reduce((sum, g) => sum + g.availableIndices.length, 0);
+
+    while (pickedImages.length < maxCount && totalAvailableImages > pickedImages.length) {
+      // Randomly select a gallery that still has available images
+      const availableGalleries = allGalleryImages.filter(g => g.availableIndices.length > 0);
+      if (availableGalleries.length === 0) break;
+
+      const randomGalleryIndex = Math.floor(Math.random() * availableGalleries.length);
+      const selectedGallery = availableGalleries[randomGalleryIndex];
+
+      // Get next available index from this gallery
+      const imageIndex = selectedGallery.availableIndices.pop()!;
+      const img = selectedGallery.images[imageIndex];
+
+      if (img && !excludeIds.has(img.id)) {
+        const href = `${selectedGallery.gallery}/${img.id}`.replace(/\/+/g, '/');
+        const normalized = normalizeImage({ ...img, href });
+        pickedImages.push(normalized);
+        excludeIds.add(img.id);
+      }
+    }
+  } else {
+    // Balanced strategy: ensure fair distribution across galleries
+    const galleriesWithImages = allGalleryImages.filter(g => g.availableIndices.length > 0);
+
+    while (pickedImages.length < maxCount && galleriesWithImages.length > 0) {
+      // Go through each gallery that still has images
+      for (const gallery of galleriesWithImages.slice()) { // slice() to avoid modification during iteration
+        if (gallery.availableIndices.length === 0) {
+          // Remove from available galleries
+          const index = galleriesWithImages.indexOf(gallery);
+          if (index > -1) galleriesWithImages.splice(index, 1);
+          continue;
+        }
+
+        const imageIndex = gallery.availableIndices.pop()!;
+        const img = gallery.images[imageIndex];
+
         if (img && !excludeIds.has(img.id)) {
-          // FIX: previously used gallery.gallery (undefined) causing missing href on first item
-          const idPart = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
-          const href = `${gallery.gallery || img.galleryPath || ''}/${idPart}`.replace(/\/+/g, '/');
+          const href = `${gallery.gallery}/${img.id}`.replace(/\/+/g, '/');
           const normalized = normalizeImage({ ...img, href });
           pickedImages.push(normalized);
           excludeIds.add(img.id);
-          foundAny = true;
+
           if (pickedImages.length >= maxCount) break;
         }
       }
+
+      if (pickedImages.length >= maxCount) break;
     }
-    if (!foundAny) break; // No more new images to pull!
-    offset++;
   }
 
   return { galleryDatas, galleryPaths, pickedImages };
@@ -106,21 +147,45 @@ function pullGalleryDataAndImagesMultiPass(
 export function getSideImagesHome2({
   targetCount = 100,
   excludeIds = new Set<string>(),
+  mixingStrategy = 'auto' as 'random' | 'balanced' | 'auto'
 }: {
   targetCount?: number;
   excludeIds?: Set<string>;
+  mixingStrategy?: 'random' | 'balanced' | 'auto';
 }): {
   featheredImages: Image[],
   galleryDatas: Image[][],
   galleryPaths: string[]
 } {
+  // Auto strategy: alternate between random and balanced on each call
+  let actualStrategy: 'random' | 'balanced' = 'random';
+  if (mixingStrategy === 'auto') {
+    // Use sessionStorage to alternate strategies across page loads
+    const currentStrategy = typeof sessionStorage !== 'undefined'
+      ? sessionStorage.getItem('sidebarMixingStrategy')
+      : null;
+
+    if (currentStrategy === 'random') {
+      actualStrategy = 'balanced';
+    } else {
+      actualStrategy = 'random';
+    }
+
+    // Store for next call
+    if (typeof sessionStorage !== 'undefined') {
+      sessionStorage.setItem('sidebarMixingStrategy', actualStrategy);
+    }
+  } else {
+    actualStrategy = mixingStrategy;
+  }
+
   // 1. Pull all galleries under both sections
   const painterlySources = getAllGallerySources("/Galleries/Painterly-Fine-Art-Photography");
   const fineArtSources   = getAllGallerySources("/Galleries/Fine-Art-Photography");
 
-  // 2. Gather gallery data and pull multiple images per gallery (fixed logic)
-  const painterly = pullGalleryDataAndImagesMultiPass(painterlySources, targetCount, excludeIds);
-  const fineArt   = pullGalleryDataAndImagesMultiPass(fineArtSources, targetCount, excludeIds);
+  // 2. Gather gallery data and pull multiple images per gallery (improved randomized logic)
+  const painterly = pullGalleryDataAndImagesRandomized(painterlySources, targetCount, excludeIds, actualStrategy);
+  const fineArt   = pullGalleryDataAndImagesRandomized(fineArtSources, targetCount, excludeIds, actualStrategy);
 
   // 3. Alternate from painterly and fine art
   const featheredImages: Image[] = [];

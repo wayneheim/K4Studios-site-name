@@ -1067,7 +1067,7 @@ export const galleryData = [
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-JW39KK8/0/M9sfGWF6k24VsXK5NrnGkFCDjSXNzDPsGFN6mGXx7/XL/_WHZ3140_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-JW39KK8/0/M9sfGWF6k24VsXK5NrnGkFCDjSXNzDPsGFN6mGXx7/XL/_WHZ3140_tonemapped-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-JW39KK8/0/M9WFqCKvm537pcRjPPNH3m7PLLb6swCs4JgnKHvKw/L/_WHZ3140_tonemapped-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-JW39KK8/0/M9wnmJkTrCvVkDj5LjTBzvFLSgpVxDtnRMNtS2hNg/S/_WHZ3140_tonemapped-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-JW39KK8/0/M8c5t9BrtxXqfM566FhbQBzL7NpnHN25tv52RDncr/M/_WHZ3140_tonemapped-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-JW39KK8/0/M9wnmJkTrCvVkDj5LjTBzvFLSgpVxDtnRMNtS2hNg/S/_WHZ3140_tonemapped-S.jpg",
     "srcOriginal": ""
  }

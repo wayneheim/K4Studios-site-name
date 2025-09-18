@@ -2414,11 +2414,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 60,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/L4rN8Xm7FsjMxFfKJkN7wb8gcKkcjkmkDshW6HpgN/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/L4rN8Xm7FsjMxFfKJkN7wb8gcKkcjkmkDshW6HpgN/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/Mn53szXkg4XQngFD8RgvdCchtBJFGqKT2n93cRrRT/L/_WHZ7671_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/LrRBv8G9R78jrjCTqnTd5pkkv7jpvQxFxmNTq79Sc/M/_WHZ7671_tonemapped-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/KjSG6nvJQdN2tqtFZF4s6t3bPM86nZKTnqCf8Bv8v/S/_WHZ7671_tonemapped-Edit-2-S.jpg",
     "srcOriginal": ""
   }
 ];

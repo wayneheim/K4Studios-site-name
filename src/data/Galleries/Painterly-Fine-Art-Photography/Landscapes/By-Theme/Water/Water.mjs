@@ -2126,11 +2126,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 23,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-bqnctgw/1/NXG5vK5JP9WDtd8PPC2gTwsDpbMqknR6Fxs2BDnPz/L/i-bqnctgw-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-bqnctgw/1/KZSPhh74GtLssW5T5kwjbWDV25CqqcwghSzD8QSWz/M/i-bqnctgw-M.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-bqnctgw/1/NfrsRSGKk5Wsg2vVPFgJHSGmvhgF3vCHhCxjvdgmK/S/i-bqnctgw-S.jpg",
     "srcOriginal": ""
   }
 ];

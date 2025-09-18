@@ -3488,11 +3488,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 89,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW/0/NLFRjW6FX8f9sGDcH2gSHCCSBwvFn7hj5hrXjcmpg/XL/_O1H0177_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW/0/NLFRjW6FX8f9sGDcH2gSHCCSBwvFn7hj5hrXjcmpg/XL/_O1H0177_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/MDrgvhdKFbH96QGvtfXkTB9kxkSpdmfhgJ6hDnJnP/L/_O1H0177_tonemapped-596-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/LT4nJmc7SK6CLBPsDBffqccHHsbmFRS9qT3WsnR7k/M/_O1H0177_tonemapped-596-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/K4bfbFqvHLVBtZ9DHk4gXhP7VJCKd7WwXhp2j7kfc/S/_O1H0177_tonemapped-596-S.jpg",
     "srcOriginal": ""
   }
 ];

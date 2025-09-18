@@ -797,11 +797,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 26,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/MqThb3bp27zBsfkKBvsKSvvKhtBWgdb9DsStQSv73/XL/_DSF3594-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/MqThb3bp27zBsfkKBvsKSvvKhtBWgdb9DsStQSv73/XL/_DSF3594-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/MWBvHDT5H5X8vZ8zvGqvJ8FfDRQv89bsj2hvJGWxS/L/_DSF3594-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/KTSpVgRn22DwKLqxRChkL4Smm5Fk4d9BX9T6MLd2S/M/_DSF3594-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/K55kkpSSZxnq8gfs3kqd8Lm48RfTjTHhZmtrxpk54/S/_DSF3594-Edit-S.jpg",
     "srcOriginal": ""
   }
 ];

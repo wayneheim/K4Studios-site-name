@@ -5338,11 +5338,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 193,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7bVL94b/0/NSwkRKCPj29GsTqRH9dJ9GdzFnpd5CKD3fns7sfKn/XL/_HF25974-Editc-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7bVL94b/0/NSwkRKCPj29GsTqRH9dJ9GdzFnpd5CKD3fns7sfKn/XL/_HF25974-Editc-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7bVL94b/0/Lwxh5pSDSSrDjFQDW5zFWkCNvh9cwbfZsb4TMQcKH/L/_HF25974-Editc-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7bVL94b/0/LncLD82J3HL4wLHfSpktWwgcbHnwS34r4D3jM8cd9/M/_HF25974-Editc-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-7bVL94b/0/L8MxsX3Ck8WKKPnFrVPGGDzJwVNkG4XXhN2XdCrfT/S/_HF25974-Editc-S.jpg",
     "srcOriginal": ""
   }
 ];

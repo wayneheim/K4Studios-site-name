@@ -518,11 +518,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 20,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/KpkdQG9VLbRn3ZxpdHZZQhhWhGJb4hRRcbsDQHdxm/XL/_DSF2781-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/KpkdQG9VLbRn3ZxpdHZZQhhWhGJb4hRRcbsDQHdxm/XL/_DSF2781-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/KMgPzNNRSFVjPCg2VJQjTcJtwjwZ7BPtQMGfKQLNP/L/_DSF2781-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/NN7Lv5Hv2jQ72Fmk5c26mVq4WRzdHr7D26392s3Wv/M/_DSF2781-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/Mb2CQ6jQQzKLdQH79w64VjndqrLVKmhZLhHMnmstc/S/_DSF2781-Edit-S.jpg",
     "srcOriginal": ""
   }
 ];

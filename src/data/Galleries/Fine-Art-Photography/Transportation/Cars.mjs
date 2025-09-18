@@ -1457,8 +1457,8 @@ export const galleryData = [
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/KcQ9Np3BxSVqWJFgFwk5zT5QVs6Lq4V8Hc7FkDMq4/XL/_O1H0454-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/KcQ9Np3BxSVqWJFgFwk5zT5QVs6Lq4V8Hc7FkDMq4/XL/_O1H0454-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/KTVssTxk4JnQJdCHtmLTzjQmQCgk2KN7WVbdH7cF2/M/_O1H0454-M.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/Mc5x6BRLsWfpj3t2PHTsGDbvfrth52BkCFLFr3WC6/Ti/_O1H0454-Ti.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/Mc5x6BRLsWfpj3t2PHTsGDbvfrth52BkCFLFr3WC6/Ti/_O1H0454-Ti.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/0/LVX4n3j2BJ2L42ZZtB7gX4fG9jvDBfHsMjChL7XTb/M/_O1H0453-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/MRJk92M8KrkV5DNpN5ZwSnZkX6Ch2sFHq5Dh2JvBv/S/_O1H0454-S.jpg",
     "srcOriginal": ""
   }
 ];

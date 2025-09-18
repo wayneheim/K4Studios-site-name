@@ -1158,11 +1158,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 51,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MkvGT6Hmtbn9DqcfXGxwqj8pxJrGjtTds4fDMrjLB/XL/_PEN0366-Edit2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MkvGT6Hmtbn9DqcfXGxwqj8pxJrGjtTds4fDMrjLB/XL/_PEN0366-Edit2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MPH34CbMqJGZzZwWC7tm99Fc63qdGtb6s8CgKRkHK/L/_PEN0366-Edit2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MDmWFVV44WJxpLhBJFkvcn4mwH3k7BrrCNDXTth2M/M/_PEN0366-Edit2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/NgcVt4ctmfQXzKG9gcRBFqNHvdMSdzBTR2fFx5WKf/S/_PEN0366-Edit2-S.jpg",
     "srcOriginal": ""
   }
 ];
