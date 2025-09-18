@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar3.css";
 
 // Glob import: grabs all carousel slide data files from both Galleries and Other
-// rename to cap
 const allCarousels = import.meta.glob([
   "../data/Galleries/**/carousel.ts",
   "../data/Other/**/carousel.ts"
@@ -73,7 +72,17 @@ export default function ImageBar2({ slides }) {
               <img
                 src={s.srcS || s.srcM || s.srcL || s.src}
                 alt={s.alt}
-                loading="lazy"
+                // Use fetchpriority for first image, loading="lazy" for the rest
+                {...(typeof s.fetchpriority === "string"
+                  ? { fetchpriority: s.fetchpriority }
+                  : i === 0
+                  ? { fetchpriority: "high" }
+                  : {})}
+                {...(typeof s.loading === "string"
+                  ? { loading: s.loading }
+                  : i !== 0
+                  ? { loading: "lazy" }
+                  : {})}
                 itemProp="contentUrl"
                 style={{ height: '390px', minHeight: '390px', width: 'auto', display: 'block' }}
               />

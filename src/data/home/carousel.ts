@@ -18,9 +18,8 @@ function buildRankedPool(images) {
   return pool;
 }
 
-// Helper: Convert image to slide object, with loading, width, height, and custom css class
+// Helper: Select responsive src for mobile/desktop
 function selectResponsiveSrc(img) {
-  // If running in SSR, default to desktop logic
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 700;
   let src = '';
   if (isMobile) {
@@ -35,7 +34,8 @@ function selectResponsiveSrc(img) {
   return src;
 }
 
-function toSlide(img, path, idx, loading = "lazy") {
+// Helper: Convert image to slide object, with loading, width, height, and custom css class
+function toSlide(img, path, idx) {
   return {
     href: `${path}/${img.id}`,
     src: selectResponsiveSrc(img),
@@ -43,7 +43,6 @@ function toSlide(img, path, idx, loading = "lazy") {
     description: img.description || '',
     width: img.width || undefined,
     height: img.height || undefined,
-    loading,
     className: `k4-home-carousel-img k4-home-carousel-img--${idx + 1}`
   };
 }
@@ -102,11 +101,12 @@ for (let i = 0; i < 4; i++) {
   if (traditionalPicks[i]) slidesArr.push({ ...toSlide(traditionalPicks[i].img, traditionalPicks[i].path, slidesArr.length) });
 }
 
-// Set loading: 'eager' for the first image, 'lazy' for the rest
+// Set fetchpriority: 'high' and no loading attr for the first image, 'lazy' for the rest
 const slides = slidesArr.map((slide, idx) => ({
   ...slide,
-  loading: idx === 0 ? 'eager' : 'lazy',
-  className: slide.className + (idx === 0 ? ' loaded' : '') // Optionally add 'loaded' for the first image
+  fetchpriority: idx === 0 ? 'high' : undefined,
+  loading: idx === 0 ? undefined : 'lazy',
+  className: slide.className + (idx === 0 ? ' loaded' : '')
 }));
 
 export { slides };
