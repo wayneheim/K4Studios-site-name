@@ -87,7 +87,13 @@ function getSmartFeatheredImages({
         .map((img: Image) => ({
           ...img,
           __galleryHref: child.href,
-          src: img.srcS || img.srcM || img.srcL || img.src // Prefer srcS, then srcM, then srcL, then src
+          src: (() => {
+            let s = img.srcM || img.srcS || img.srcL || img.src || '';
+            if (img.srcS && img.srcS.endsWith('-L.jpg')) {
+              s = img.srcS;
+            }
+            return s;
+          })()
         }));
       const highRated = allImages.filter(img => (img.rating ?? 0) >= 4);
       const lowRated = allImages.filter(img => (img.rating ?? 0) < 4);
