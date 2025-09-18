@@ -53,7 +53,22 @@ export default function ImageBar2Home() {
             itemType="https://schema.org/ImageObject"
           >
             <a href={s.href} title={s.alt} aria-label={s.alt}>
-              <img src={s.src} alt={s.alt} loading="lazy" itemProp="contentUrl" />
+              <img
+                src={s.srcS || s.src || s.srcM || s.srcL}
+                srcSet={[
+                  s.srcS && `${s.srcS} 400w`,
+                  s.srcM && `${s.srcM} 800w`,
+                  s.srcL && `${s.srcL} 1200w`
+                ].filter(Boolean).join(', ') || undefined}
+                sizes="(max-width:700px) 95vw, 600px"
+                alt={s.alt}
+                itemProp="contentUrl"
+                loading={s.loading}
+                fetchpriority={s.fetchpriority}
+                width={s.width}
+                height={s.height}
+                decoding={s.loading === 'lazy' ? 'async' : 'auto'}
+              />
             </a>
             <figcaption itemProp="description">{s.description}</figcaption>
           </figure>

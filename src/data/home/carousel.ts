@@ -34,11 +34,17 @@ function selectResponsiveSrc(img) {
   return src;
 }
 
+import { normalizeImage } from '@/components/utils/normalizeImage';
+
 // Helper: Convert image to slide object, with loading, width, height, and custom css class
-function toSlide(img, path, idx) {
+function toSlide(rawImg, path, idx) {
+  const img = normalizeImage({ ...rawImg });
   return {
     href: `${path}/${img.id}`,
     src: selectResponsiveSrc(img),
+    srcS: img.srcS,
+    srcM: img.srcM,
+    srcL: img.srcL,
     alt: img.alt || img.title || '',
     description: img.description || '',
     width: img.width || undefined,
