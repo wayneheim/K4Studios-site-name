@@ -34,8 +34,8 @@ function shuffle(array) {
 
 // Helper: Convert image to slide object, with loading, width, height, and custom css class
 function toSlide(img, path, idx, loading = "lazy") {
-  // Robust src fallback logic
-  let src = img.srcM || img.srcS || img.srcL || img.src || img.url || '';
+  // Robust src fallback logic: desktop order (srcM, srcS, srcL, src)
+  let src = img.srcM || img.srcS || img.srcL || img.src || '';
   // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
   if (img.srcS && img.srcS.endsWith('-L.jpg')) {
     src = img.srcS;

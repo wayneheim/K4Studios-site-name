@@ -26,8 +26,8 @@ function toSlide(img, galleryPath) {
   // Trim any accidental trailing slash on path and leading slash on id, then join
   const cleanPath = galleryPath.replace(/\/$/, '');
   const cleanId = (img.id || '').replace(/^\//, '');
-  // Robust src fallback logic
-  let src = img.srcM || img.srcS || img.srcL || img.src || img.url || '';
+  // Robust src fallback logic: desktop order (srcM, srcS, srcL, src)
+  let src = img.srcM || img.srcS || img.srcL || img.src || '';
   // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
   if (img.srcS && img.srcS.endsWith('-L.jpg')) {
     src = img.srcS;

@@ -56,8 +56,8 @@ function toSlide(img) {
   // img.galleryPath example: 'Machines/Color' or 'Portraits/Black-White'
   const cleanPath = (img.galleryPath || '').replace(/^\//, '').replace(/\/$/, '');
   const cleanId = (img.id || '').replace(/^\//, '');
-  // Robust src fallback logic
-  let src = img.srcM || img.srcS || img.srcL || img.src || img.url || '';
+  // Robust src fallback logic: desktop order (srcM, srcS, srcL, src)
+  let src = img.srcM || img.srcS || img.srcL || img.src || '';
   // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
   if (img.srcS && img.srcS.endsWith('-L.jpg')) {
     src = img.srcS;
