@@ -62,7 +62,11 @@ async function build() {
     // map down to minimal shape
     galleryDataMap[href] = curated.map(img => ({
       id:       img.id,
-      src:      img.src,
+      srcS:     img.srcS || '',
+      srcM:     img.srcM || '',
+      srcL:     img.srcL || '',
+      srcXL:    img.srcXL || '',
+      src:      img.srcS || img.srcM || img.srcL || img.srcXL || img.src || '',
       rating:   img.rating,
       galleries: [ href.replace(/^\//, '') ]
     }));
