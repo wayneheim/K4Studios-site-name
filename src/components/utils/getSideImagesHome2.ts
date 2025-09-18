@@ -1,4 +1,5 @@
 import { siteNav } from '../../data/siteNav';
+import { normalizeImage } from './normalizeImage';
 
 type Image = {
   id: string;
@@ -86,7 +87,8 @@ function pullGalleryDataAndImagesMultiPass(
         if (img && !excludeIds.has(img.id)) {
           // FIX: previously used gallery.gallery (undefined) causing missing href on first item
           const href = `${gallery.gallery || img.galleryPath || ''}/${img.id}`.replace(/\/+/g, '/');
-          pickedImages.push({ ...img, href });
+          const normalized = normalizeImage({ ...img, href });
+          pickedImages.push(normalized);
           excludeIds.add(img.id);
           foundAny = true;
           if (pickedImages.length >= maxCount) break;

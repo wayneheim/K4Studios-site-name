@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 
+function pickSmallest(match){
+  return match.srcS || match.srcM || match.srcL || match.src || match.srcXL;
+}
+
 export default function MobileStoryImages({ images = [] }) {
   useEffect(() => {
     if (window.innerWidth > 768) {
@@ -34,9 +38,13 @@ export default function MobileStoryImages({ images = [] }) {
         link.style.display = "block";
 
         const img = document.createElement("img");
-        img.src = match.src;
+        const smallest = pickSmallest(match);
+        img.src = smallest;
         img.alt = match.alt || "";
         img.className = "mobile-inline-img";
+        if(/[-_]XL\.jpg$/i.test(img.src)) {
+          console.warn('[XL MOBILE INSERTED]', match.id, img.src, match);
+        }
 
         const caption = document.createElement("div");
         caption.className = "mobile-caption";
@@ -46,7 +54,7 @@ export default function MobileStoryImages({ images = [] }) {
         container.appendChild(link);
         container.appendChild(caption);
 
-        console.log(`Inserting linked mobile image before <h3> in block[${index}]:`, match.src);
+  console.log(`Inserting linked mobile image before <h3> in block[${index}]:`, smallest);
         h3.parentNode?.insertBefore(container, h3);
       });
     };
