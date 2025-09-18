@@ -187,8 +187,47 @@ export function getSideImagesHome2({
   const painterly = pullGalleryDataAndImagesRandomized(painterlySources, targetCount, excludeIds, actualStrategy);
   const fineArt   = pullGalleryDataAndImagesRandomized(fineArtSources, targetCount, excludeIds, actualStrategy);
 
-  // 3. Alternate from painterly and fine art
+  // 3. Ensure first image is from western painterly portrait galleries, then alternate for remaining images
+  // Western portrait galleries: Color, Black-White, and NA-Color cowboy portrait galleries
   const featheredImages: Image[] = [];
+  const westernPortraitGalleries = [
+    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+  ];
+
+  // Find first available image from western portrait galleries
+  let firstImage: Image | null = null;
+  for (const westernGallery of westernPortraitGalleries) {
+    const westernImage = painterly.pickedImages.find(img =>
+      img.galleryPath === westernGallery && !excludeIds.has(img.id)
+    );
+    if (westernImage) {
+      firstImage = westernImage;
+      // Remove it from painterly.pickedImages to avoid duplication
+      const index = painterly.pickedImages.findIndex(img => img.id === westernImage.id);
+      if (index > -1) {
+        painterly.pickedImages.splice(index, 1);
+      }
+      break;
+    }
+  }
+
+  // If we found a western portrait image, use it as the first image
+  if (firstImage) {
+    featheredImages.push(firstImage);
+    excludeIds.add(firstImage.id);
+  } else {
+    // Fallback: if no western portrait images available, use first painterly image
+    console.warn('No western portrait images available, using fallback for first image');
+    if (painterly.pickedImages.length > 0) {
+      featheredImages.push(painterly.pickedImages[0]);
+      excludeIds.add(painterly.pickedImages[0].id);
+      painterly.pickedImages.shift(); // Remove from array to avoid duplication
+    }
+  }
+
+  // 4. Continue with alternating pattern for remaining images
   let p = 0, f = 0;
   while (featheredImages.length < targetCount && (p < painterly.pickedImages.length || f < fineArt.pickedImages.length)) {
     if (f < fineArt.pickedImages.length)  featheredImages.push(fineArt.pickedImages[f++]);
@@ -196,7 +235,7 @@ export function getSideImagesHome2({
     if (p < painterly.pickedImages.length) featheredImages.push(painterly.pickedImages[p++]);
   }
 
-  // 4. Combine galleryDatas and galleryPaths for linker, painterly first then fine art (order doesn't matter)
+  // 4. Continue with alternating pattern for remaining images
   const galleryDatas = [...painterly.galleryDatas, ...fineArt.galleryDatas];
   const galleryPaths = [...painterly.galleryPaths, ...fineArt.galleryPaths];
 
