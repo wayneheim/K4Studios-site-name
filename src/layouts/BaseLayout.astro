@@ -41,13 +41,19 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
       </>
     )}
 
-  <!-- Google Fonts: Preconnect and Preload -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts: Preconnect and Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://photos.smugmug.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
+    <!-- Make Tailwind CSS non-blocking -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
     <style>
       body {
         font-family: 'Glegoo', serif;
@@ -64,13 +70,13 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
       }
     </style>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-0J1HSKFC04');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0J1HSKFC04');
+    </script>
   </head>
 
   <body>
@@ -79,7 +85,7 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
     </div>
     <div id="overlay-root"></div>
 
-        <!-- SVG sharpening filter (for magnifier) -->
+    <!-- SVG sharpening filter (for magnifier) -->
     <svg width="0" height="0" style="position:absolute">
       <filter id="sharpen">
         <feConvolveMatrix order="3" kernelMatrix="
@@ -88,7 +94,6 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
           0 -.5 0
         " divisor="1.2"/>
       </filter>
-      
     </svg>
     
   </body>
