@@ -92,9 +92,9 @@ function pickRandomFromPools(pools, n) {
   return picks;
 }
 
-// Pick 4 from each, alternate painterly/traditional, shuffle order
-const painterlyPicks = pickRandomFromPools(painterlyPools, 4);
-const traditionalPicks = pickRandomFromPools(traditionalPools, 4);
+// Pick 3 from each, alternate painterly/traditional, shuffle order
+const painterlyPicks = pickRandomFromPools(painterlyPools, 3);
+const traditionalPicks = pickRandomFromPools(traditionalPools, 3);
 const slidesArr = [];
 for (let i = 0; i < 4; i++) {
   if (painterlyPicks[i]) slidesArr.push({ ...toSlide(painterlyPicks[i].img, painterlyPicks[i].path, slidesArr.length) });
