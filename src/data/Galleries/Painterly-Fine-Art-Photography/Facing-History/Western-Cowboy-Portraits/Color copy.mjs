@@ -10519,11 +10519,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 190,
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-zqV9NTB/7/LhxtQmLrFtvF2r7XXhNdsjw4fthhSGDQxWzSFdWnZ/XL/vintage%20western%20decor%20_DSF9110-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-zqV9NTB/7/LhxtQmLrFtvF2r7XXhNdsjw4fthhSGDQxWzSFdWnZ/XL/vintage%20western%20decor%20_DSF9110-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-zqV9NTB/7/LhxtQmLrFtvF2r7XXhNdsjw4fthhSGDQxWzSFdWnZ/XL/vintage%20western%20decor%20_DSF9110-Edit-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-zqV9NTB/7/M2sgD5HtqnVGVtN4cxb7BzS2zFFtpsXHXzXn8PMnz/L/vintage%20western%20decor%20_DSF9110-Edit-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-zqV9NTB/7/KVdMncHvVzhjtk2C9CPCR8ZfsH89NwRgGzX7VKFjC/S/vintage%20western%20decor%20_DSF9110-Edit-2-S.jpg",
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
     "srcOriginal": ""
   },
   {
@@ -10574,11 +10574,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 191,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-KnWSRqc/7/NDKVhVX4s5NFPJxvSpPWjvtFxMGwXGTLFMMtF579K/XL/Wild%20West%20Photo_DSF9032-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-KnWSRqc/7/NDKVhVX4s5NFPJxvSpPWjvtFxMGwXGTLFMMtF579K/XL/Wild%20West%20Photo_DSF9032-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-KnWSRqc/7/NDKVhVX4s5NFPJxvSpPWjvtFxMGwXGTLFMMtF579K/XL/Wild%20West%20Photo_DSF9032-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-KnWSRqc/7/KnZ8J2dmMt58qFHVg5h52GVJgMwXZSrKnZTwF3Ghs/Ti/Wild%20West%20Photo_DSF9032-Edit-Ti.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-KnWSRqc/7/KnZ8J2dmMt58qFHVg5h52GVJgMwXZSrKnZTwF3Ghs/Ti/Wild%20West%20Photo_DSF9032-Edit-Ti.jpg",
     "srcOriginal": ""
   }
 ];
