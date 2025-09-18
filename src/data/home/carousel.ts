@@ -19,22 +19,32 @@ function buildRankedPool(images) {
 }
 
 // Helper: Convert image to slide object, with loading, width, height, and custom css class
-function toSlide(img, path, idx, loading = "lazy") {
-  // Use srcM, then srcS, then srcL, then src as fallback
-  let src = img.srcM || img.srcS || img.srcL || img.src || '';
-  // If src ends with 'L.jpg' and srcS exists, use srcS instead (else fallback to src)
-  if (src && src.endsWith('L.jpg')) {
-    src = img.srcS || img.src || src;
+function selectResponsiveSrc(img) {
+  // If running in SSR, default to desktop logic
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 700;
+  let src = '';
+  if (isMobile) {
+    src = img.srcS || img.srcM || img.srcL || img.src || '';
+  } else {
+    src = img.srcM || img.srcS || img.srcL || img.src || '';
   }
+  // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
+  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
+    src = img.srcS;
+  }
+  return src;
+}
+
+function toSlide(img, path, idx, loading = "lazy") {
   return {
     href: `${path}/${img.id}`,
-    src,
+    src: selectResponsiveSrc(img),
     alt: img.alt || img.title || '',
     description: img.description || '',
     width: img.width || undefined,
     height: img.height || undefined,
     loading,
-    className: `k4-home-carousel-img k4-home-carousel-img--${idx + 1}` // add nth-child as a class for stagger support
+    className: `k4-home-carousel-img k4-home-carousel-img--${idx + 1}`
   };
 }
 
