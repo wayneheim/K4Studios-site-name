@@ -5402,11 +5402,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 179,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-rgv9nLk/0/LR3tj6zZddN3MPxgw2HmmCd2ZF38pS4JTjgJqsBQ6/XL/_K1W1423-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-rgv9nLk/0/LR3tj6zZddN3MPxgw2HmmCd2ZF38pS4JTjgJqsBQ6/XL/_K1W1423-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-rgv9nLk/0/MZTNQzTLn36GvjNx8jPGbX2H2kqHgVThnV67BnQLz/L/_K1W1423-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-rgv9nLk/0/NbPddgVPrG3zbRJ2kdJBxLCfcPX3BmMskB8TSr2XH/M/_K1W1423-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments/i-rgv9nLk/0/LNvq7K8dGLfV5kjC2HNctqpRrrgVp7cV36kz6W8kp/S/_K1W1423-Edit-2-S.jpg",
     "srcOriginal": ""
   }
 ];

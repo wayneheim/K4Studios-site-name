@@ -5203,11 +5203,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 168,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-364tqsH/4/K22jm6sztnKjkPWcdb8p3nzLwx333M5QwNK5WLNhF/XL/_IMG3932-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-364tqsH/4/K22jm6sztnKjkPWcdb8p3nzLwx333M5QwNK5WLNhF/XL/_IMG3932-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-364tqsH/4/LGWhL3HVDgKG6v7GrHJhPJHxJd5jBVKrCvSfs43Vg/L/_IMG3932-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-364tqsH/4/KZhFwx5jhkmNsVKcMrJHKmQcqG5C2DPTg5nr29mcN/M/_IMG3932-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-364tqsH/4/NjBWpGr2kG7Tk8BXC9mGPsJ8x2vcQDw4NtQ6CKrJf/S/_IMG3932-S.jpg",
     "srcOriginal": ""
   }
 ];

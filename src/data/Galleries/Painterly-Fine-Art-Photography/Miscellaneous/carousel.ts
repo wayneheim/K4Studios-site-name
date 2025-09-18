@@ -18,9 +18,15 @@ function shuffle(array) {
 
 // Helper: Convert image to slide object, with loading, width, height, and custom css class
 function toSlide(img, path, idx, loading = "lazy") {
+  // Robust src fallback logic
+  let src = img.srcM || img.srcS || img.srcL || img.src || img.url || '';
+  // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
+  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
+    src = img.srcS;
+  }
   return {
     href: `${path}/${img.id}`,
-    src: img.srcM || img.src || img.url || '', // Use srcM for carousel, fallback to src
+    src,
     alt: img.alt || img.title || '',
     description: img.description || '',
     width: img.width || undefined,

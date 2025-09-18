@@ -4850,11 +4850,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 123,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+ "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zW8cTfv/8/MQ9DPjZMV56mn7N4R6w4vZvRfwFRwMH5j2N87gTX9/XL/_WHZ9886_tonemapped-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zW8cTfv/8/MQ9DPjZMV56mn7N4R6w4vZvRfwFRwMH5j2N87gTX9/XL/_WHZ9886_tonemapped-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zW8cTfv/8/Mb6jpwQ2qP792mdrFP5txKFP9BRFw2pGWM3CPdfBw/L/_WHZ9886_tonemapped-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zW8cTfv/8/LsTwZBstwZHcw2FnS4SSRMSdwKV4dCPrHx6cvFjZG/M/_WHZ9886_tonemapped-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-zW8cTfv/8/KkMQZ7QX8xCpZVWvc6XvnQVfBpFsjCqrDXBnnsKXT/S/_WHZ9886_tonemapped-Edit-S.jpg",
     "srcOriginal": ""
   }
 ];

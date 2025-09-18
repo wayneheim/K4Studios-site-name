@@ -1499,11 +1499,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 44,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-wzJRjp5/0/LDQsLC3HgzJhvDzczfHsNmgfwpBLKMXGVX6bGCf3t/XL/_DSF4311-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-wzJRjp5/0/LDQsLC3HgzJhvDzczfHsNmgfwpBLKMXGVX6bGCf3t/XL/_DSF4311-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-wzJRjp5/0/MxWXqVHww9sX7DGmVZgXHqNxTG5RNVWHbsTRHjhB9/L/_DSF4311-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-wzJRjp5/0/Mt6QQcJmFM2SXB8vMzhv7ffDkVdpM5qcT8qvHf8jP/M/_DSF4311-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/i-wzJRjp5/0/MNhskWT4gJNv2w6ZZ95RGBSgmZ7tBB9z5D6fVCQ9K/S/_DSF4311-S.jpg",
     "srcOriginal": ""
   }
 ];

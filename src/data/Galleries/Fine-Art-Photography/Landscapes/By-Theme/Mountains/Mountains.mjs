@@ -1009,7 +1009,7 @@ export const galleryData = [
   },
   {
     "id": "i-BzsKZNR",
-    "title": "Canoe s for Rent.    Photography by Wayne Heim",
+    "title": "Canoe s for Rent.  Photography by Wayne Heim",
     "description": "Fine art landscape photography of Glacier National Park and Montana.",
     "alt": "Head in Clouds  -  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-BzsKZNR/A",
@@ -1029,11 +1029,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 34,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LXCBHG6RkSKxJgsq5hrFVTXjLPX3dZCqP2MkTwjXM/XL/_IGP2891-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LXCBHG6RkSKxJgsq5hrFVTXjLPX3dZCqP2MkTwjXM/XL/_IGP2891-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LtfKxSmmVzGT22L6QXfQCMxTvL9XddMXXzdQ463rK/L/_IGP2891-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/M6XVHdwnssBqnmfQDDCFJ85c2fm2JtvpWX62TTPCb/M/_IGP2891-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/KSzZHw6V2gH8tJkfHVVxMW4VGBqV6WwgQ5n7p8M8D/S/_IGP2891-S.jpg",
     "srcOriginal": ""
   }
 ];

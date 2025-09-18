@@ -1,37 +1,69 @@
-export const slides = [
-  {
-    href: "",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/Lm7RRJDZTtJzdxJw68JTNxSSbtNTq5NMDht5Tt2GM/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
-    alt: "Difficult times in the Civil War",
-    description:
-      "Civil War soldier in a moment of reflection, captured in painterly fine art style.",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-Lkzzxqv/0/MrfWbDVb75mgvTG8Dd9mH47cbKGKX3TDTRHkhjwWq/M/_O2H2692-Edit-M.jpg",
-    alt: "Charge! Into the fray of the Civil War",
-    description:
-      "Soldiers charging into battle, captured in a dramatic painterly style.",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/Lm7RRJDZTtJzdxJw68JTNxSSbtNTq5NMDht5Tt2GM/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
-    alt: "Honest Abe Lincoln",
-    description:
-      "Abe Lincoln addressing followers.",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-C5ZGjMH/0/Lm7RRJDZTtJzdxJw68JTNxSSbtNTq5NMDht5Tt2GM/M/_O2H6866-Enhanced-NR-Edit-2-M.jpg",
-    alt: "Returning Cannon Fire",
-    description:
-      "Civil War soldiers returning cannon fire, captured in a painterly fine art photography style.",
-  },
-  {
-    href: "",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2024-Hale-Farm/i-tHwDWLC/0/LhhP9QxNmSm5kGTXDtqVZz3qhpXgttkVMrpf7mN4r/M/_HF21376-Edit-Edit-M.jpg",
-    alt: "After the Battle",
-    description:
-      "Soldier resting after battle. Painterly fine art photography.",
-  },
-];
+// carousel.ts for Fine Art Landscapes → By-Theme
+
+// Import all gallery mjs modules for Civil-War-Portraits and its children
+const modules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/**/*.mjs', { eager: true });
+
+// Collect gallery datasets and URL paths
+const galleryDatas = [];
+const galleryPaths = [];
+
+for (const filePath in modules) {
+  const mod = modules[filePath];
+  const data = mod.galleryData || (mod.default && mod.default.galleryData);
+  if (!Array.isArray(data)) continue;
+  // Filter out ghost and placeholder images
+  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  if (visible.length === 0) continue;
+  // Extract subfolder name from file path for path building
+  const match = filePath.match(/Civil-War-Portraits\/?([^/]*)/);
+  const subfolder = match && match[1] ? `/${match[1]}` : '';
+  galleryDatas.push(visible);
+  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits${subfolder}`);
+}
+
+// Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating
+function buildRankedPool(images) {
+  const ratings = [5, 4, 3];
+  let pool = [];
+  ratings.forEach(r => {
+    pool.push(...images.filter(img => img.rating === r).sort(() => Math.random() - 0.5));
+  });
+  pool.push(...images.filter(img => !ratings.includes(img.rating)).sort(() => Math.random() - 0.5));
+  return pool;
+}
+
+// Helper: Convert image to slide object
+function toSlide(img, path) {
+  // Robust src fallback logic
+  let src = img.srcM || img.srcS || img.srcL || img.src || img.url || '';
+  // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
+  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
+    src = img.srcS;
+  }
+  return {
+    href: `${path}/${img.id}`,
+    src,
+    alt: img.alt || img.title || '',
+    description: img.description || ''
+  };
+}
+
+// Build alternating slides across all theme pools up to maxSlides
+export const slides = (() => {
+  const pools = galleryDatas.map(data => buildRankedPool(data));
+  const pointers = pools.map(() => 0);
+  const result = [];
+  const maxSlides = 10;
+
+  while (result.length < maxSlides && pointers.some((ptr, i) => ptr < pools[i].length)) {
+    for (let i = 0; i < pools.length && result.length < maxSlides; i++) {
+      const pool = pools[i];
+      const idx = pointers[i]++;
+      if (idx < pool.length) {
+        result.push(toSlide(pool[idx], galleryPaths[i]));
+      }
+    }
+  }
+
+  return result;
+})();

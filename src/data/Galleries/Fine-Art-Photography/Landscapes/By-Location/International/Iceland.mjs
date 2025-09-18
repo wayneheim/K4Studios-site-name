@@ -7846,11 +7846,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 88,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-5TtKShN/4/KnJxZCq9zSvF8LRkxPRmKKJXGG22mvDj3bKwxfPwq/XL/_WHK3237-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-5TtKShN/4/KnJxZCq9zSvF8LRkxPRmKKJXGG22mvDj3bKwxfPwq/XL/_WHK3237-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-5TtKShN/4/LtT8NZBCJcVmNzqnB6d26KLVRjsgB2dpcZFNsjJC5/L/_WHK3237-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-5TtKShN/4/MzRqp966L6WXthzMgkw3N5RWFkvfPwzg3XJNmKsLn/S/_WHK3237-S.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2018/i-5TtKShN/4/MzRqp966L6WXthzMgkw3N5RWFkvfPwzg3XJNmKsLn/S/_WHK3237-S.jpg",
     "srcOriginal": ""
-  }
+ }
 ];

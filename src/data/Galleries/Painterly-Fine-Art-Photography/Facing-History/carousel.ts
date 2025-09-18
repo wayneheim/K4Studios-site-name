@@ -21,9 +21,15 @@ function buildRankedPool(images) {
 
 // Helper: Convert image to slide object
 function toSlide(img, path) {
+  // Robust src fallback logic
+  let src = img.srcM || img.srcS || img.srcL || img.src || img.url || '';
+  // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
+  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
+    src = img.srcS;
+  }
   return {
     href: `${path}/${img.id}`,
-    src: img.src || img.url || '',
+    src,
     alt: img.alt || img.title || '',
     description: img.description || ''
   };

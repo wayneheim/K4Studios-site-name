@@ -1,7 +1,7 @@
 // carousel.ts for Fine Art Landscapes → By-Theme
 
 // Import all gallery mjs modules for By-Theme from data directory
-const modules = import.meta.glob('@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/*/*.mjs', { eager: true });
+const modules = import.meta.glob('@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/*/*.mjs', { eager: true });
 
 // Collect gallery datasets and URL paths
 const galleryDatas = [];
@@ -18,7 +18,7 @@ for (const filePath in modules) {
   const match = filePath.match(/By-Theme\/([^/]+)\//);
   const theme = match ? match[1] : '';
   galleryDatas.push(visible);
-  galleryPaths.push(`/Galleries/Fine-Art-Photography/Landscapes/By-Location/${theme}`);
+  galleryPaths.push(`/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/${theme}`);
 }
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating
@@ -34,9 +34,15 @@ function buildRankedPool(images) {
 
 // Helper: Convert image to slide object
 function toSlide(img, path) {
+  // Robust src fallback logic
+  let src = img.srcM || img.srcS || img.srcL || img.src || img.url || '';
+  // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
+  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
+    src = img.srcS;
+  }
   return {
     href: `${path}/${img.id}`,
-    src: img.src || img.url || '',
+    src,
     alt: img.alt || img.title || '',
     description: img.description || ''
   };

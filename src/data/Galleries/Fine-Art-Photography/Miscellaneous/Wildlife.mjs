@@ -391,11 +391,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 12,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-zM8tjW7/3/NbqdWx3B3Kxgj9RtxB8rjmJn6bCfLkF4MFgFSxNGS/XL/_OLY1472-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-zM8tjW7/3/NbqdWx3B3Kxgj9RtxB8rjmJn6bCfLkF4MFgFSxNGS/XL/_OLY1472-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-zM8tjW7/3/MKn2B78JkvfzbFsHNqb9gzRWSxfZZqLhrKFJ6VMns/L/_OLY1472-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-zM8tjW7/3/LvBh9vTDn8C3k3rRH9qQ5XPKPsTRLX6sgCBFGFkMD/M/_OLY1472-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-zM8tjW7/3/NDHBqfJpCp74N2DTqP3tnJGpKNNHsr432VZBdMnp9/S/_OLY1472-S.jpg",
     "srcOriginal": ""
   }
 ];

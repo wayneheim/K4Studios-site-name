@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-c8SFXzH",
-    "title": "Hudson -- Photography of Wayne HeimHudson  -  restored green Hudson at auto show at Conneaut, Ohio during D- Day  Reenactment. ©Wayne Heim",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Hudson -- Photography of Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/4/KLKbtrKsbJdvKrhZRZnG8znw8NXV3GjJvsvW2q5ZF/XL/_IMG9668-Edit%25203-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/A",
     "keywords": [
       "k4 studios",
@@ -39,14 +43,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/4/MKFZxvSpn3Mb6nPwjQkhDsPgqbDdgK8x4rcpQgC4d/XL/_IMG9668-Edit%203-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/4/MKFZxvSpn3Mb6nPwjQkhDsPgqbDdgK8x4rcpQgC4d/XL/_IMG9668-Edit%203-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/4/MSvVXbhQWS7HbWLLxXQg9BMSvtTn48pBvm6hxrZLD/L/_IMG9668-Edit%203-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/4/KQ47jXrLzbpCXXZjtgQdxqX4xk8z6WxrkJ4SZMjzF/M/_IMG9668-Edit%203-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/4/KZ3QFBDtNbF6xLkfcvNKPWCsSTJh3kbb9K7K2v3PK/S/_IMG9668-Edit%203-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PfrKwt2",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-PfrKwt2/0/LKCqXRjfPwLFV2TwVvzmP9gvQGnxT58KG4mTfFzcX/XL/_HF24082-XL.jpg",
+    "alt": "Hudson -- Photography of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PfrKwt2/A",
     "keywords": [
       "k4 studios",
@@ -64,14 +73,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-PfrKwt2/0/NLHXckXG4v4TJdVFMdMvMFLbcdvB82BppbVt42LZz/XL/_HF24082-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-PfrKwt2/0/NLHXckXG4v4TJdVFMdMvMFLbcdvB82BppbVt42LZz/XL/_HF24082-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-PfrKwt2/0/KFGk4qKbCLBswGckRD6zVcgsNTmZxFx6Rd9kRg4sg/L/_HF24082-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-PfrKwt2/0/KXJMkfqSNKq5TzxzMX7wjZJrzrfzLLfrfpwRRCr7R/M/_HF24082-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-PfrKwt2/0/M8MGzGd75MxP69Ngm5ffDZKxnksxdLDVx78JGTwvh/S/_HF24082-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NjL3FKh",
     "title": "Model A -- Black & White Photography by Wayne Heim",
     "description": "Model A  -  restored Ford at car show. ©Wayne Heim",
-    "alt": "Model A -- Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-NjL3FKh/4/Kq94xWtCF5mPNGMDHGCJK9qbM9pT2qtczDVBxpT2c/XL/_IMG9628-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NjL3FKh/A",
     "keywords": [
       "k4 studios",
@@ -89,14 +103,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-NjL3FKh/4/NV4FDVfZpbQQQ6CkMvWjScD2gSHtsVxKgv7GPTXGC/XL/_IMG9628-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-NjL3FKh/4/NV4FDVfZpbQQQ6CkMvWjScD2gSHtsVxKgv7GPTXGC/XL/_IMG9628-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-NjL3FKh/4/NV4FDVfZpbQQQ6CkMvWjScD2gSHtsVxKgv7GPTXGC/XL/_IMG9628-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-NjL3FKh/4/M2g8gKqPhbZPttFjwQ7ftJb99wqjLk7j2bm9K7N9d/L/_IMG9628-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-NjL3FKh/4/KZgdjP2cBCgBDLTbd6SmxFzmfdmpX3v5K8VhXCJhG/S/_IMG9628-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Q347VzH",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-Q347VzH/0/MRDSWMGsc8bBqs6b4NJSP3p22qKtFMLpwKFRXq4B7/XL/_HF25953-XL.jpg",
+    "alt": "Model A -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Q347VzH/A",
     "keywords": [
       "k4 studios",
@@ -114,14 +133,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-Q347VzH/0/MHBMbDkPsPKWdBmp6pxVpdHPKv8JTxRWNfNgWqFLS/XL/_HF25953-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-Q347VzH/0/MHBMbDkPsPKWdBmp6pxVpdHPKv8JTxRWNfNgWqFLS/XL/_HF25953-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-Q347VzH/0/MHBMbDkPsPKWdBmp6pxVpdHPKv8JTxRWNfNgWqFLS/XL/_HF25953-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-Q347VzH/0/K3rccXMRDxvwmLN54FdZP2NKpQwzDLKJT2BxdKxds/L/_HF25953-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-Q347VzH/0/MSM2vKMbr6bLwqnp7nw5gxKt6Xb6XJmZF22BRpBSZ/S/_HF25953-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-cQfBvZN",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cQfBvZN/0/NKPCjDtZRWrF4fM445FCpf7kWQ2nXcFm8QPcdbNGF/XL/_ANA2185-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-cQfBvZN/A",
     "keywords": [
       "k4 studios",
@@ -139,14 +163,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cQfBvZN/0/NFdLV5MWqH7BNM8VGcCRpZmmg48wxb4BsMVwQqWpR/XL/_ANA2185-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cQfBvZN/0/NFdLV5MWqH7BNM8VGcCRpZmmg48wxb4BsMVwQqWpR/XL/_ANA2185-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cQfBvZN/0/MwP8tQLVXTJsXBhWxvqG2TTkfdFgNz9xxVsWS2RLg/L/_ANA2185-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cQfBvZN/0/KfXvfWZXvWT2TfJcG6d3C57wrBfQwHB6GgQdWW57D/M/_ANA2185-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-cQfBvZN/0/MpGk6bFSXsG7C8LXNn7xVjhx2P57K8MwRRmTPfbgX/S/_ANA2185-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-b6B4gSK",
     "title": "Gold Show Car - Photography by Wayne Heim",
     "description": "Gold Show Car - restored historic car site with others at a show. ©Wayne Heim",
-    "alt": "Gold Show Car - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/4/KSTbkK4wg5nhX4PhrNRNPwSNgzBh4q4PGJFtbJ8cR/XL/_IMG9634-Edit2-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/A",
     "keywords": [
       "k4 studios",
@@ -164,14 +193,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/4/MkTSPS9LvWMJtFJKnWGf92bsMQ7KvZzFqDwwssVPL/XL/_IMG9634-Edit2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/4/MkTSPS9LvWMJtFJKnWGf92bsMQ7KvZzFqDwwssVPL/XL/_IMG9634-Edit2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/4/M47XQ3bHpPw7wpKnHjHFnrjtpfcTxV8pr2RfzBzk7/L/_IMG9634-Edit2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/4/LrMw7mpWC8t8C5STN7S4KrgTBPQmbx3cjqtJt95C7/M/_IMG9634-Edit2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-b6B4gSK/4/NDDzmWxzfnthJQDwPKN43ZvqRJnGD8phvrfvJNVqN/S/_IMG9634-Edit2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-93kRpLv",
     "title": "Plymouth Hood - Black & White Photography by Wayne Heim",
     "description": "Plymouth Hood -  photo of the hood of a 1939 Plymouth. ©Wayne Heim",
-    "alt": "Plymouth Hood - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-93kRpLv/4/KWmSctwnpjwJSKM4Kq4BdhVTgxFCBvcw6vLXvdqq9/XL/_IMG9636-XL.jpg",
+    "alt": "Gold Show Car - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-93kRpLv/A",
     "keywords": [
       "k4 studios",
@@ -189,14 +223,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-93kRpLv/4/Lzf4rmJpFw88BvPshzRSGv49XnmGvJXkXsRcLtvzQ/XL/_IMG9636-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-93kRpLv/4/Lzf4rmJpFw88BvPshzRSGv49XnmGvJXkXsRcLtvzQ/XL/_IMG9636-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-93kRpLv/4/Lzf4rmJpFw88BvPshzRSGv49XnmGvJXkXsRcLtvzQ/XL/_IMG9636-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-93kRpLv/4/MWkQqtgdXTjctwsH2Svm7NNwV47ZQwHFXpvv7Cfsb/L/_IMG9636-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-93kRpLv/4/LFjzxLpLwGpZLnMZXt9pQWj7bRtfxGmTfS9f85qQM/S/_IMG9636-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-xbZS9Zk",
     "title": "Vintage Plymouth - Photography by Wayne Heim",
     "description": "Vintage Plymouth --very old Plymouth pick up truck sits in a meadow.©Wayne Heim",
-    "alt": "Vintage Plymouth - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-xbZS9Zk/4/L2x5mbQP5NJbb5cHrhFm39XGVNLJWSnF3xfDnQNt8/XL/_IMG9641-Edit-XL.jpg",
+    "alt": "Plymouth Hood - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-xbZS9Zk/A",
     "keywords": [
       "k4 studios",
@@ -214,14 +253,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-xbZS9Zk/4/LCmJ9HvhNfgLd4SFBqMX8BV45NWzPwQ8ftHjm69Ls/XL/_IMG9641-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-xbZS9Zk/4/LCmJ9HvhNfgLd4SFBqMX8BV45NWzPwQ8ftHjm69Ls/XL/_IMG9641-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-xbZS9Zk/4/L9hp3fPZjw3JJQKw6ntJ4kXJxzm3qrLCcWwFR8LDt/L/_IMG9641-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-xbZS9Zk/4/LQN9w8LDMVhp4xNMpvwSLmWSQFRwgmZfWPfPRPDjc/M/_IMG9641-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-xbZS9Zk/4/MBTS9k2xKt2PBdbbCqBdKDdM9MpnwVwb7FHnP2nGQ/S/_IMG9641-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-J4RsWqM",
     "title": "Vintage Ford    Photography by Wayne Heim",
     "description": "Vintage Ford  in the sunset. ©Wayne Heim",
-    "alt": "Vintage Ford    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/4/NVWnW5JWrNrk34JGb2r7cVZB8ptqbFzWpR2JbGf4C/XL/_IMG9655-Edit-XL.jpg",
+    "alt": "Vintage Plymouth - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/A",
     "keywords": [
       "k4 studios",
@@ -239,14 +283,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/4/LZ7b8Z29g7mX74vwVStdP59BQ4Z7QxQ7frXjnBHJ6/XL/_IMG9655-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/4/LZ7b8Z29g7mX74vwVStdP59BQ4Z7QxQ7frXjnBHJ6/XL/_IMG9655-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/4/Lp8MNSGgqd7rhfV5DX5c6LkVHzxdQTCNTk9QwRtds/L/_IMG9655-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/4/K7ZdqJ4C7nFxS8jVML9Lg6C2MkjFjrvsXpjvSdCdk/M/_IMG9655-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-J4RsWqM/4/Kjhnmkqf3DsV6NdR8Sb8dPQpR2DntPFPVkzGrfvrK/S/_IMG9655-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VJSqCHx",
     "title": "Red Wheel  -  Photography  of Wayne Heim",
     "description": "Red Wheel -- interior of restored antique car showing red steering wheel and dashboard,©Wayne Heim",
-    "alt": "Red Wheel  -  Photography  of Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/4/K6Fk6LH8VNbqTTCZLT77H5Ft8VnbZxD2Xkfktb6C9/XL/_IMG9661-XL.jpg",
+    "alt": "Vintage Ford    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/A",
     "keywords": [
       "k4 studios",
@@ -264,14 +313,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/4/MQBt6TwLnL5z2sm5hp4dDhQH6px7tXbcNCGfZd8gq/XL/_IMG9661-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/4/MQBt6TwLnL5z2sm5hp4dDhQH6px7tXbcNCGfZd8gq/XL/_IMG9661-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/4/LmX33PJbZB8DTHTkpzsXs29Mz8gr52x5cqZxJ3Xj3/L/_IMG9661-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/4/NC7kcJkqvk3XsjzTXGrcMDvb7Bzh7r2XtTvtfP4Bn/M/_IMG9661-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-VJSqCHx/4/Kb9ZPcZBcrrM5jTZMpSzBT5jPGvg4JGqsRvdZbLzp/S/_IMG9661-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mJXkGHp",
     "title": "Classic Chevy   Photography by Wayne Heim",
     "description": "Classic red Chevy at car show in Conneaut. ©Wayne Heim",
-    "alt": "Classic Chevy   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/4/M94KxdsXxqgcJjngbcCMzDCjLfJCCvPGjNb6wKJq4/XL/_IMG4203-XL.jpg",
+    "alt": "Red Wheel  -  Photography  of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/A",
     "keywords": [
       "k4 studios",
@@ -289,14 +343,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/4/K2XXkpz7jvpRbXPwcvNqRNKkNDLznz27RRcBkRmkh/XL/_IMG4203-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/4/K2XXkpz7jvpRbXPwcvNqRNKkNDLznz27RRcBkRmkh/XL/_IMG4203-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/4/MjMkV2BMN3B5XVF5Ps5fcCf8StpXxMW3VjbmbbT5Q/L/_IMG4203-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/4/MMRdjTtd87rgk7fvHqxXbtsBd9V5nQW4J6v2fHNsP/M/_IMG4203-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mJXkGHp/4/M6zJNrwgqkGG5BFQJk7FbXvwmRLZF7CbCKb6SSNmV/S/_IMG4203-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-L4hPXbq",
     "title": "Buick     Photography by Wayne Heim",
     "description": "Classic turquoise  Buick front end.  ©Wayne Heim",
-    "alt": "Buick     Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Willoughby-Car-show-2013/i-L4hPXbq/5/Ksnxfr992LLrszLdQbqFKVLKqpGNg2vG6vrgjDjDJ/XL/_WEH6062-XL.jpg",
+    "alt": "Classic Chevy   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-L4hPXbq/A",
     "keywords": [
       "k4 studios",
@@ -314,14 +373,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Willoughby-Car-show-2013/i-L4hPXbq/5/K6F2TrbdGTGn5bhWJNTg9K64958Mb6tDvzRLdGBLV/XL/_WEH6062-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Willoughby-Car-show-2013/i-L4hPXbq/5/K6F2TrbdGTGn5bhWJNTg9K64958Mb6tDvzRLdGBLV/XL/_WEH6062-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Willoughby-Car-show-2013/i-L4hPXbq/5/NghSt633dJJjW3bscHT6c92q8dJnRzcmnPCLmbvW5/L/_WEH6062-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Willoughby-Car-show-2013/i-L4hPXbq/5/MBkhjgHrtMVFK449dBDS798P4hbqLB3Th6XfGfQrV/M/_WEH6062-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Willoughby-Car-show-2013/i-L4hPXbq/5/MnvSsRq39qzZDfSZQ3QfHDQVs778w87BfsBvbv7km/S/_WEH6062-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XW8VLHx",
     "title": "EBT Overpass",
     "description": "Vintage red pickup truck driving as East Broad Top steam locomotive passes on the overpass in the background.",
-    "alt": "EBT Overpass",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-XW8VLHx/0/KGVKxvbMW2ZFQqxF2QSW8Px9KcdMJqJqx2bcnw5Sp/XL/_HF26151-XL.jpg",
+    "alt": "Buick     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XW8VLHx/A",
     "keywords": [
       "k4 studios",
@@ -339,14 +403,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-XW8VLHx/0/KnwHHqx4xMZtG4zKV67H4chLVmcJLXC3VV54WdDzB/XL/_HF26151-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-XW8VLHx/0/KnwHHqx4xMZtG4zKV67H4chLVmcJLXC3VV54WdDzB/XL/_HF26151-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-XW8VLHx/0/MtcnPPLf9S3kd67t3PGC8WQGdjVkRPfQwtrwz5VKW/L/_HF26151-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-XW8VLHx/0/LrLBKH7kXZpLx3CqHbQscVP5pxn67hjnZgm2LMrJ2/M/_HF26151-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-XW8VLHx/0/MC9KQVscrckGkXTFsvVvdnmQC6ZsNNQFZg5C4DZFg/S/_HF26151-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-q3t9GT6",
     "title": "Hood Up   Photography by Wayne Heim",
     "description": "Hood up on a car at car show. ©Wayne Heim",
-    "alt": "Hood Up   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/4/KWN2T2CnGPghcGmzfxLgK8Bzbt49db9qB6f4kQjH8/XL/_IMG9684-XL.jpg",
+    "alt": "EBT Overpass",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/A",
     "keywords": [
       "k4 studios",
@@ -364,14 +433,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/4/K4RH6DJk5nLq9dMpdjXdpN8cjpsngCbfVs9J2Lp6W/XL/_IMG9684-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/4/K4RH6DJk5nLq9dMpdjXdpN8cjpsngCbfVs9J2Lp6W/XL/_IMG9684-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/4/K4RH6DJk5nLq9dMpdjXdpN8cjpsngCbfVs9J2Lp6W/XL/_IMG9684-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/4/K3njVVW2rV8ZJqgdzw4WfJ445kzdhK9dvFCTPzXkM/L/_IMG9684-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-q3t9GT6/4/KSTLr32kGhVqdBn8MW3NDC95bgJXfSZzm7DxHFkMW/S/_IMG9684-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-BJF28jt",
     "title": "Hudson Terreplane   Photography by Wayne Heim",
     "description": "Famous Hudson Terraplane vintage car.    © Wayne Heim",
-    "alt": "Hudson Terreplane   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-BJF28jt/4/KZZ6vP5bcQvfpCNQPNdH3N55v9Vgf6rXvc6jL5k4F/XL/_IMG9688-Edit-XL.jpg",
+    "alt": "Hood Up   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-BJF28jt/A",
     "keywords": [
       "k4 studios",
@@ -389,14 +463,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-BJF28jt/4/KxMvGDRHm93f5BLkCHd4JRFX3MXp4TP3rzpq6xGt9/XL/_IMG9688-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-BJF28jt/4/KxMvGDRHm93f5BLkCHd4JRFX3MXp4TP3rzpq6xGt9/XL/_IMG9688-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-BJF28jt/4/KxMvGDRHm93f5BLkCHd4JRFX3MXp4TP3rzpq6xGt9/XL/_IMG9688-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-BJF28jt/4/MFJwXCWBP6Rj7hvJZHWmXvwxVdR28Dm9cVKJHTQWb/L/_IMG9688-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-BJF28jt/4/K8SdkjksS6xzTNk8B6CFPW387RGthwDhh9hmMBHFN/S/_IMG9688-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6DDjGcH",
     "title": "Close up of Terraplane   Black and White Photography by Wayne Heim",
     "description": "Close up look at the Hudson Terreplane. ©Wayne Heim",
-    "alt": "Close up of Terraplane   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/3/LRPnq8BH2hNBD7KC2fNVwxfjjwc3Lq7XRQf4nhzq9/XL/_IMG9693-XL.jpg",
+    "alt": "Hudson Terreplane   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/A",
     "keywords": [
       "k4 studios",
@@ -414,14 +493,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/3/Nhv32MZcBvmKKZC367J8xT42T8MwxWXzG4fSCQKk5/XL/_IMG9693-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/3/Nhv32MZcBvmKKZC367J8xT42T8MwxWXzG4fSCQKk5/XL/_IMG9693-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/3/Nhv32MZcBvmKKZC367J8xT42T8MwxWXzG4fSCQKk5/XL/_IMG9693-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/3/L9MghvDNLnsQFXXsP7ww7BgDp8nzSmn4p9HGqJft5/L/_IMG9693-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-6DDjGcH/3/Lvt75XbcvXDQgCZTtSmjWZq9cwJrX4z5HKSshRKKt/S/_IMG9693-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-zwNxLnH",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zwNxLnH/0/MPtbnCvZQnJdt2QJZQD8bZdn83jj8Wg5zCmtCTtVD/XL/_HF25968-Edit-XL.jpg",
+    "alt": "Close up of Terraplane   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-zwNxLnH/A",
     "keywords": [
       "k4 studios",
@@ -439,14 +523,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zwNxLnH/0/MhfQHLTknKZtcRk9hvhtgJzBvTgZKqZHnzNQf2KK5/XL/_HF25968-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zwNxLnH/0/MhfQHLTknKZtcRk9hvhtgJzBvTgZKqZHnzNQf2KK5/XL/_HF25968-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zwNxLnH/0/NP2Ssfx44zghhctHrjLFFsJwHfrTNTVbmgLd56HQc/L/_HF25968-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zwNxLnH/0/KQfkTfTSvt8nq3fCdnSN4N9WbhSGXNSjdzcGwFLxC/M/_HF25968-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-zwNxLnH/0/LzRgbBGz6q45m7XX2fhVxWtSsTSKHzm9HX9zv5bHm/S/_HF25968-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SjhNDgV",
     "title": "Needs Work -- Photography by Wayne Heim",
     "description": "Needs Work - old Chevy needing restoration sits abandoned in a field. ©Wayne Heim",
-    "alt": "Needs Work -- Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SjhNDgV/4/M7H4mNftQwPzdqcrS8WKNrbSWMgZSsCmSmV69Wkgq/XL/_IMG5912_tonemapped-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-SjhNDgV/A",
     "keywords": [
       "k4 studios",
@@ -464,14 +553,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SjhNDgV/4/LnPMj8HnBNBP5SJWjs28D5cp6Bh9HF78vR8C9kt3P/XL/_IMG5912_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SjhNDgV/4/LnPMj8HnBNBP5SJWjs28D5cp6Bh9HF78vR8C9kt3P/XL/_IMG5912_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SjhNDgV/4/LVHPrrxTRqSV4xhC26xvVXrQ8mCRkqpcjRH8HTt7v/L/_IMG5912_tonemapped-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SjhNDgV/4/L85vKnBjj7mhCQkT32Pnn8qnv4qk4wcBTjkdNJTgK/M/_IMG5912_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SjhNDgV/4/KKWb2J6hD9hC9CKz9HZ6fqsrR3fckbth7JLJn6cGm/S/_IMG5912_tonemapped-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-knwvmNV",
     "title": "Texas Pontiac  Photography by Wayne HEim",
     "description": "Old Pontiac sits in yard in Texas.  ©Wayne Heim",
-    "alt": "Texas Pontiac  Photography by Wayne HEim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-knwvmNV/4/MGxHJ8FK9ZkmHDH37v9dmKJkbT9TZKbZZC99QRFpk/XL/_IMG5930-XL.jpg",
+    "alt": "Needs Work -- Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-knwvmNV/A",
     "keywords": [
       "k4 studios",
@@ -489,14 +583,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-knwvmNV/4/NP5mcnXp8kqvGWsLsZ37vBFzNNKGMGMJC2Gh7bDDD/XL/_IMG5930-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-knwvmNV/4/NP5mcnXp8kqvGWsLsZ37vBFzNNKGMGMJC2Gh7bDDD/XL/_IMG5930-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-knwvmNV/4/KK3ZLK3tM5WrxCgwT88v4Ttrtp4rWw5p5kmxxKSxg/L/_IMG5930-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-knwvmNV/4/Lbrgv9TPj9D6xKntjVkjpCCJ82xqXGNgn8jXJcTKN/M/_IMG5930-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-knwvmNV/4/MVb3LvjTMrxq2kWfG8f6XVJFfK3Rj9qJdCXZ6w3cC/S/_IMG5930-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gpKrXBm",
     "title": "Gear Shirt    Photography by Wayne Heim",
     "description": "View through driver's window shows the center console gear shift.  ©Wayne Heim",
-    "alt": "Gear Shirt    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-gpKrXBm/4/LX9c9KqP6vxPMGvMZtxNqLtcqqGBCXTfbDFbWtBdt/XL/_WEH3842-XL.jpg",
+    "alt": "Texas Pontiac  Photography by Wayne HEim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gpKrXBm/A",
     "keywords": [
       "k4 studios",
@@ -514,14 +613,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-gpKrXBm/4/LxXcBRpBw4bwzVjDJvPN6jw7Br5J7VzWNch3twvKR/XL/_WEH3842-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-gpKrXBm/4/LxXcBRpBw4bwzVjDJvPN6jw7Br5J7VzWNch3twvKR/XL/_WEH3842-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-gpKrXBm/4/KRzTzJtcTS53zBHvjDMh5MCdczkF369FVhTWGfhm5/L/_WEH3842-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-gpKrXBm/4/M36hrLr8Rzs92JKXNwvcbJKjTnt27xT2Vd46jnQL8/M/_WEH3842-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-gpKrXBm/4/NGVXvCBP887cRmj9sSTfsddZdHgDvdqkbjDkqVvS5/S/_WEH3842-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-SbCkpwH",
     "title": "Needs Work  -- Black & White Photography by Wayne Heim",
     "description": "Needs Work -- old Plymouth pickup truck from 1940's in much need of restoring.©Wayne Heim",
-    "alt": "Needs Work  -- Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SbCkpwH/4/K3nBGrfrFDLDBKgJbFp9kH4gvfdTC3PRF37Fx8Pmj/XL/_IMG9641-Edit-2-XL.jpg",
+    "alt": "Gear Shirt    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-SbCkpwH/A",
     "keywords": [
       "k4 studios",
@@ -539,14 +643,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SbCkpwH/4/LWfM76XvT2smnVQnP6XbdKxJxnjff4WrcJNHhKDWb/XL/_IMG9641-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SbCkpwH/4/LWfM76XvT2smnVQnP6XbdKxJxnjff4WrcJNHhKDWb/XL/_IMG9641-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SbCkpwH/4/Ktp9VTcj6mDZRsmqjM3bL8HKNDH7ZnVc8L5KMmz6P/L/_IMG9641-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SbCkpwH/4/LjvV5TcVS2Pq6rccnfBgtRkTQT8cHtSMMsQ7smRXV/M/_IMG9641-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cars/i-SbCkpwH/4/MsvddPVPTNq59pWTJZrkgTzqLPnLWtFPP3prdGNTq/S/_IMG9641-Edit-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pqbd83r",
     "title": "Driver's Seat - Photography by Wayne Heim",
     "description": "Driver's Seat -- the interior of a restored show car showing steering wheel and fancy gear shift. ©Wayne Heim",
-    "alt": "Driver's Seat - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-pqbd83r/4/MLWF6kCszjpKSWRwGxCszchjBt52xhCdxXHRw2XdK/XL/_WEH3899-XL.jpg",
+    "alt": "Needs Work  -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pqbd83r/A",
     "keywords": [
       "k4 studios",
@@ -564,14 +673,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-pqbd83r/4/LtrBxfKdQdCrndTSgNhqhV8qVqPv2xDcTmNMb2KcK/XL/_WEH3899-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-pqbd83r/4/LtrBxfKdQdCrndTSgNhqhV8qVqPv2xDcTmNMb2KcK/XL/_WEH3899-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-pqbd83r/4/KVWpQQT5qFG54ps2Mtd3Xfq6m6HSLwJ7vgqBdfWKH/L/_WEH3899-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-pqbd83r/4/MbGMLLdHRXKzGWmgcd2C66n8nZb8MrHfGngPWgLJD/M/_WEH3899-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Chester-Apple-Fest-1/i-pqbd83r/4/Kh6fDfDTbr6Fp8n8TvXRpV5FcNpCDNckpb5wgcBMn/S/_WEH3899-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gsJ9DLL",
     "title": "Old Front Seat - Black & White Photography by Wayne Heim",
     "description": "Old Front Seat - shows the front seat of an old car.  ©Wayne Heim",
-    "alt": "Old Front Seat - Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-gsJ9DLL/8/LwhHSzgk8t9VKZRP9Jn3CDKDLzJHqCvnwtPFNhNsQ/XL/_WEH8194-XL.jpg",
+    "alt": "Driver's Seat - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gsJ9DLL/A",
     "keywords": [
       "k4 studios",
@@ -589,14 +703,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-gsJ9DLL/8/Ktrdn87QsWvcJ2wNnbXv3wBKFbbgr9msbfwFJXH4s/XL/_WEH8194-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-gsJ9DLL/8/Ktrdn87QsWvcJ2wNnbXv3wBKFbbgr9msbfwFJXH4s/XL/_WEH8194-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-gsJ9DLL/8/M42mq34m6Df4zj6cVHc8FTvtcHCbrjvpF2hFjs5sp/L/_WEH8194-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-gsJ9DLL/8/MVnV6Mk7bwv975GjWzQwzJ3pBpTpwg54psgDqC9jx/M/_WEH8194-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-gsJ9DLL/8/MXSTG2C6bXvWQMhdJdbChxCW769hm3LL5TKBRzcgb/S/_WEH8194-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-FrmDMQq",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FrmDMQq/0/LGk8sfHdPLTFh2XmDfkM2StLVLnW322F39fdm3sLg/XL/_HF24924-XL.jpg",
+    "alt": "Old Front Seat - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-FrmDMQq/A",
     "keywords": [
       "k4 studios",
@@ -614,14 +733,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FrmDMQq/0/K5956sc6hz65S6hNsmR84KJ4M2xG4qSnhPphctxP3/XL/_HF24924-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FrmDMQq/0/K5956sc6hz65S6hNsmR84KJ4M2xG4qSnhPphctxP3/XL/_HF24924-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FrmDMQq/0/NCxDmfMTQCXQ8Q5dqMVDDvj7rhq4K9dJDnGVdGt9s/L/_HF24924-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FrmDMQq/0/KPZ8LGPg48gbMjcbjw5hVRwfRLDfchn2FBxRVsBCb/M/_HF24924-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-FrmDMQq/0/LHfJ77FmRm9x6qTsS2gM7TnwXwk8FJFLLQp9tw5Xp/S/_HF24924-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-gH4Qd3N",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-gH4Qd3N/0/KmJwQZDw7TGndKK9B4tQp9KDGSmfGfjKvz3s4TWGK/XL/_HF26010-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gH4Qd3N/A",
     "keywords": [
       "k4 studios",
@@ -639,14 +763,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-gH4Qd3N/0/K66mszzdmqwQP9gFGcjJsqjQqqNrznV6XphVBcWHp/XL/_HF26010-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-gH4Qd3N/0/K66mszzdmqwQP9gFGcjJsqjQqqNrznV6XphVBcWHp/XL/_HF26010-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-gH4Qd3N/0/MHn6Z5hbFNqNsTwLLJ2BqT3cCzJcbKD9fgMkgfFqv/L/_HF26010-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-gH4Qd3N/0/MQFLNJhZsHhzCjbMDvRfTCKrSVnHsw4Sbrn4f4QTG/M/_HF26010-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-gH4Qd3N/0/LjDtTsLh7RQB7hQZbLLz6JFnBs5XqWQ47p3whxRrs/S/_HF26010-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fr3rcbb",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fr3rcbb/0/M57W9Bf9wM8GXJGXWMtZ7dHqr3Sh2VVxRxQQZtvVp/XL/_HF24936-Edit-Edit-Edit-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fr3rcbb/A",
     "keywords": [
       "k4 studios",
@@ -664,14 +793,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fr3rcbb/0/Mn7pMQGztgX2SZCF4NjkRSG5VkzQFfN6THLFmDX6q/XL/_HF24936-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fr3rcbb/0/Mn7pMQGztgX2SZCF4NjkRSG5VkzQFfN6THLFmDX6q/XL/_HF24936-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fr3rcbb/0/LqRSPC83cDF2QX3wCqGchM6HfdgdXXp5VWcf4kDCv/L/_HF24936-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fr3rcbb/0/NZfcBrKKf8NXvXBSw8PqbbLrrXBnKXrLNsrjwf5JB/M/_HF24936-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fr3rcbb/0/M4MkTnr7hDMn5vQjJ9KCZgxHQwGLCtk28QNJ5xGq9/S/_HF24936-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-336zMPt",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-336zMPt/0/L5Tkd3q2xGhkMZDLmwkFkvfvrD33tQsqhkxbNFWW3/XL/_HF25453-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-336zMPt/A",
     "keywords": [
       "k4 studios",
@@ -689,14 +823,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-336zMPt/0/LFhR9MqSQnQWV2hZwwZbKVwfxhvM5fgvpjSWJ32Md/XL/_HF25453-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-336zMPt/0/LFhR9MqSQnQWV2hZwwZbKVwfxhvM5fgvpjSWJ32Md/XL/_HF25453-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-336zMPt/0/MGtMP3wq4CPmx95pxFJNsQ58jVbQpm5LwwMNbPXds/L/_HF25453-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-336zMPt/0/MpNhh5MjGr77hhW8hhMSJb9F2CQMfj6KHfRcCD77p/M/_HF25453-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-336zMPt/0/KdLvkHrVgzbBDx32qLQLXphXNSpWcrXMjRHHtcpgP/S/_HF25453-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-V8xzMjq",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-V8xzMjq/0/MHjzfdjfHVNXFSzkkgxPVxBMqS34nG6gwSk9dJjHV/XL/_HF25499-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-V8xzMjq/A",
     "keywords": [
       "k4 studios",
@@ -714,14 +853,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-V8xzMjq/0/MZHQsPFkSd2HjTSgZhJ9fntbL9bJPXXmtFK3Xv6MC/XL/_HF25499-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-V8xzMjq/0/MZHQsPFkSd2HjTSgZhJ9fntbL9bJPXXmtFK3Xv6MC/XL/_HF25499-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-V8xzMjq/0/MZHQsPFkSd2HjTSgZhJ9fntbL9bJPXXmtFK3Xv6MC/XL/_HF25499-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-V8xzMjq/0/LJJ2P96vgQ2tj3D3ChRZMQz5WP3b3PWjF5Rj2MJdH/L/_HF25499-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-V8xzMjq/0/KDcTLNJKg5gQ6X4PS5K2sJprxq5bdPxHVCqnZgsQB/S/_HF25499-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-mT37fhN",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-mT37fhN/0/McNh4z2WdMrCT2mJHtbVnX5dXRnTWzPZqWXJNDtCw/XL/_HF25852-Edit-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mT37fhN/A",
     "keywords": [
       "k4 studios",
@@ -739,14 +883,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-mT37fhN/0/Knw79H3RLL7TWf34VgNBtZgcmdvcPFm6B5QQjRbsq/XL/_HF25852-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-mT37fhN/0/Knw79H3RLL7TWf34VgNBtZgcmdvcPFm6B5QQjRbsq/XL/_HF25852-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-mT37fhN/0/Ng5mHSJrjV69ksW939LpNPVcPxj77RwR2jztZwRzt/L/_HF25852-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-mT37fhN/0/MTnbNdctcLt4t82N57PrmhsJXhhn4DcS5Q84kJWk6/M/_HF25852-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-mT37fhN/0/Lc7DVGxMMNBfVLjtz7kP2jF3vj86qjFRkB7xzmC8S/S/_HF25852-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-W27q59Q",
     "title": "Night Moves",
     "description": "Vintage car out for a night stroll heads down the road as the vintage #16 steam engine passes behind on the elevated tracks on it's way to the next station. © Wayne Heim",
-    "alt": "Night Moves",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KNkCSCdSh3Cr3wQCKJTvM2954r7hGd8C5vJLdwNjd/XL/_HF25580-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-W27q59Q/A",
     "keywords": [
       "k4 studios",
@@ -764,14 +913,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KxXVvBgMWq82fGmxbQhjNpDPGSwcCtHQZxqFwstQf/XL/_HF25580-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KxXVvBgMWq82fGmxbQhjNpDPGSwcCtHQZxqFwstQf/XL/_HF25580-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/MqFtq2pFsXQLMLSjL6F6T6ZWGp85zSGrwZtjnWmsP/L/_HF25580-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/MLwQjTPN6VHTqXxs96xzfx4rhjVgr94Gd4SX4Cpc6/M/_HF25580-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/L5nvKm7N9XpLJ5pkH74SNDh7dnNrmNDHVqCM4Jm6r/S/_HF25580-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-tCqCrV5",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-tCqCrV5/0/Mzpfs5FmBVcKgK3srvzsvtnfvQjDFPfxZzHGBK27V/XL/_HF24938-XL.jpg",
+    "alt": "Night Moves",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-tCqCrV5/A",
     "keywords": [
       "k4 studios",
@@ -789,14 +943,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-tCqCrV5/0/KghJWPvHL2sTNkvVCsvV2VPFVh3pdHxnSLxQ6RBT7/XL/_HF24938-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-tCqCrV5/0/KghJWPvHL2sTNkvVCsvV2VPFVh3pdHxnSLxQ6RBT7/XL/_HF24938-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-tCqCrV5/0/KR2sbWgKzvQp84DG44Cnr3RbR4qQGvFfNVxBwcrmL/L/_HF24938-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-tCqCrV5/0/LQrDSrjkBMQzXC9G79S524KGJVsMbXLwG9R5RrVsF/M/_HF24938-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-tCqCrV5/0/NCTRNPnrKhbfKVP3tdDWDckFKGgcxnBq7DNQbVKnZ/S/_HF24938-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kJTR6Bf",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-kJTR6Bf/0/KNXKJ4jGvbfRpMVfCQ8SRDWHx3bx93MMcqJLDM7Dt/XL/_HF25876-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-kJTR6Bf/A",
     "keywords": [
       "k4 studios",
@@ -814,14 +973,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-kJTR6Bf/0/NZQnGfPmDnQGCC2BwGnsZXk7FsWVTgMrnNrprCTZ8/XL/_HF25876-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-kJTR6Bf/0/NZQnGfPmDnQGCC2BwGnsZXk7FsWVTgMrnNrprCTZ8/XL/_HF25876-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-kJTR6Bf/0/Kvj9zdFzczskcsGwSkM3Kx7p3Rw2KtHNhsMQH5gMk/L/_HF25876-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-kJTR6Bf/0/KVMRVmR3NcJdgTwvfDWq7PfkgnXkRcZnN6f3FghGL/M/_HF25876-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-kJTR6Bf/0/Kd938KzCD49zxs84PTkp2kfF5GGQRBf9znMX3SW2B/S/_HF25876-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-fgVVLbm",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fgVVLbm/0/MXNfP5bMXxc8tkfGZr69gT2LMgC35CQ86zx2PFVnb/XL/_HF25887-Edit-2-2-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fgVVLbm/A",
     "keywords": [
       "k4 studios",
@@ -839,14 +1003,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fgVVLbm/0/LC2GCw6KkQjPSxgQBfCffPZL2GKk6Jq3VnXxHM3SJ/XL/_HF25887-Edit-2-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fgVVLbm/0/LC2GCw6KkQjPSxgQBfCffPZL2GKk6Jq3VnXxHM3SJ/XL/_HF25887-Edit-2-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fgVVLbm/0/Kfs6FJ89qXprfSHVVsKbBDCfqDZ6vgQrCJxxpKtSk/L/_HF25887-Edit-2-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fgVVLbm/0/MqCX9nbn93HMF2j7tXVrxjv3nKDF84QBsKWvdhBJ2/M/_HF25887-Edit-2-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fgVVLbm/0/Mw9jk9nrTXrb2jmcmpcgwLZHL6rBcjh3nmwfHs5qq/S/_HF25887-Edit-2-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-g8T6jdd",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-g8T6jdd/0/KfGQz3R4X4g9h2kQxgcBSfQVFmpDxRcKVjB8s5MKV/XL/_HF26907-XL.jpg",
+    "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-g8T6jdd/A",
     "keywords": [
       "k4 studios",
@@ -864,14 +1033,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-g8T6jdd/0/MrTzdSLPv2RDBwWSdfMQMPfHCCsR8LxdpQXLrJPx2/XL/_HF26907-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-g8T6jdd/0/MrTzdSLPv2RDBwWSdfMQMPfHCCsR8LxdpQXLrJPx2/XL/_HF26907-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-g8T6jdd/0/MrTzdSLPv2RDBwWSdfMQMPfHCCsR8LxdpQXLrJPx2/XL/_HF26907-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-g8T6jdd/0/LTRsfb62ZmXBGFn77mPGpXnzGWTHCQTTrCzK6zsXG/L/_HF26907-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-g8T6jdd/0/NWKpQ7DkD3FcqFZ7MRPx4HGkwVTdGS2KqB3Pfn6KJ/S/_HF26907-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-JdXPPpF",
     "title": "Liberty Aviation Museum   Black and White Photography by Wayne Heim",
     "description": "Front of Liberty Aviation Museum with vintage car in front.   ©Wayne Heim",
-    "alt": "Liberty Aviation Museum   Black and White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-JdXPPpF/4/NQGP7Z8pHRdQHBfMHQ95GZ3rFmN8n4x38PRLTKs5p/XL/_IMG9019-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-JdXPPpF/A",
     "keywords": [
       "k4 studios",
@@ -889,14 +1063,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-JdXPPpF/4/LmCrt4vgKMtdTwZwcZ24MpntKdfgSQ5dvRbgM5XGc/XL/_IMG9019-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-JdXPPpF/4/LmCrt4vgKMtdTwZwcZ24MpntKdfgSQ5dvRbgM5XGc/XL/_IMG9019-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-JdXPPpF/4/M37NvFn7JZj6rK7kMXTNkKg7T2Jb6ZmK57sRhtVVq/L/_IMG9019-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-JdXPPpF/4/LdZhff6JdJ7QSjCvckcmMPsgSPH3X25tKzdrxzT6F/M/_IMG9019-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-JdXPPpF/4/NHsh6QQ6MvzBLDKndVJdNjkR2VqjMNRtQGwsLZM4C/S/_IMG9019-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZpwKrbj",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-ZpwKrbj/9/LGKvgWQ3mPhwwJNWJPTCpdSGwPMnwmM4JP248VWvz/XL/_WEH8186-XL.jpg",
+    "alt": "Liberty Aviation Museum   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-ZpwKrbj/A",
     "keywords": [
       "k4 studios",
@@ -914,14 +1093,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-ZpwKrbj/9/MSk62Q4FCxrkz59pf8Pg8RgVFnDshW6j5RsbnGhBX/XL/_WEH8186-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-ZpwKrbj/9/MSk62Q4FCxrkz59pf8Pg8RgVFnDshW6j5RsbnGhBX/XL/_WEH8186-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-ZpwKrbj/9/MGLtmQCsqv54Mwgs9LJGwWtpcvrBC5vwqD5zZXbGx/L/_WEH8186-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-ZpwKrbj/9/LSqxbLLM953LBQP3ZBHFN6Bn3LkZGP6Vvb4xbtCrj/M/_WEH8186-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-ZpwKrbj/9/MbfdrZMfCDSsvskNqf9BZtDdzK4wGQ3JPSq4gSTpM/S/_WEH8186-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jXXqmN2",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-jXXqmN2/9/Lq76DHs33fbTtSTSpKRqQPkDnjXbtzkQdm6NsPXqn/XL/_WEH8188-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-jXXqmN2/A",
     "keywords": [
       "k4 studios",
@@ -939,14 +1123,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-jXXqmN2/9/Kj9LQQH2FgVWGLQjsHCv9j7mZv9CJctbhLRgtSQmn/XL/_WEH8188-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-jXXqmN2/9/Kj9LQQH2FgVWGLQjsHCv9j7mZv9CJctbhLRgtSQmn/XL/_WEH8188-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-jXXqmN2/9/KfvWFtr2MtfPps4bdcJxgPnFwmnvfzMCTCtqdb3M3/L/_WEH8188-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-jXXqmN2/9/MkprD4GqBrBZ4xwD6bfs59x3GKkfmVfF5FgdLxqjg/M/_WEH8188-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-jXXqmN2/9/L4ZCQf9Dq8RpSbf2qpzKKsxQs7HQwgHMnfWc7mmKN/S/_WEH8188-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rtPVxVG",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rtPVxVG/9/K2N9cNK8QHff4D3RmCR2VNBFDxnZBfLmXpGRv45tD/XL/_WEH8193-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rtPVxVG/A",
     "keywords": [
       "k4 studios",
@@ -964,14 +1153,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rtPVxVG/9/L4GmmR6P3WzDhmGq2W9LsnHG59xxZH6ssG6mJsF8h/XL/_WEH8193-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rtPVxVG/9/L4GmmR6P3WzDhmGq2W9LsnHG59xxZH6ssG6mJsF8h/XL/_WEH8193-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rtPVxVG/9/LNbDRhh4GTwFvT2btDgHBsJCfkvJmcJvB3f9wWmWf/L/_WEH8193-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rtPVxVG/9/MqxQrX2p7GHRtZDRx6hDq6b6BJL3J5PdpF7gFhvb5/M/_WEH8193-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rtPVxVG/9/LLCWmWhZ3qvXHmkZGjdSgpfMXFHC36mPkFbD9hmnf/S/_WEH8193-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-pStwNMq",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/0/MRhtRbspnGFVBF3pNLXjH8JgHzncRd7Nt9jNkjjfB/XL/_O1H0422-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/A",
     "keywords": [
       "k4 studios",
@@ -989,14 +1183,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/0/NWzV8QtqQLtDgWk7KHvhLBFpGtzFPXcQ36hR66m5N/XL/_O1H0422-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/0/NWzV8QtqQLtDgWk7KHvhLBFpGtzFPXcQ36hR66m5N/XL/_O1H0422-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/0/Mqgz9JCHrnDdwPSRsnPNVW5trzZmNBRDX9dckJtpr/L/_O1H0422-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/0/Lwm3chwWn6NJV7fvgMFd7XDcCkhrz4n8XxLcFk8Mx/M/_O1H0422-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/0/L2WbdxBzbKHQFFqPB8cRJ33dxn7C2HRGxptHqfc4x/S/_O1H0422-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-CfcqrJ9",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/0/NLfzNX2zPZtzR4t7TLPHsbSVS2VwSJtkL4XP6Pw5N/XL/_O1H0427-598-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/A",
     "keywords": [
       "k4 studios",
@@ -1014,14 +1213,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/0/LX7Sn8HFWL49KNpJcS6jxPk2B2vnpV5jXp8DLzXcx/XL/_O1H0427-598-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/0/LX7Sn8HFWL49KNpJcS6jxPk2B2vnpV5jXp8DLzXcx/XL/_O1H0427-598-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/0/LX7Sn8HFWL49KNpJcS6jxPk2B2vnpV5jXp8DLzXcx/XL/_O1H0427-598-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/0/KW4cvd4SWMC2wRzxBmrTvq483SHMcXFkxmzqtBgDn/L/_O1H0427-598-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/0/Kr5JPhVhQLPHWWNRDGGZ4hg5m2PcFfQqSWJtqj4zr/S/_O1H0427-598-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QfJt7xr",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/0/M83fddgHvQxSMgDQxVm3rjHsKtg7GsJpr4Qbbttxg/XL/_O1H0445-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/A",
     "keywords": [
       "k4 studios",
@@ -1039,14 +1243,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/0/MFC4cvnH2QxLRMVD3qGfVzBNnsg8mSvfBjC7FzLT9/XL/_O1H0445-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/0/MFC4cvnH2QxLRMVD3qGfVzBNnsg8mSvfBjC7FzLT9/XL/_O1H0445-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/0/MFC4cvnH2QxLRMVD3qGfVzBNnsg8mSvfBjC7FzLT9/XL/_O1H0445-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/0/KvtfsR2NBZ5D58p2Pf2xKs2LvKT3zZQR6HK9pNfmz/L/_O1H0445-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/0/KkrLMzRDnMF4fgbpG9v2wGhXc3DgdwdHFF89CNpVs/S/_O1H0445-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Psb5Rzp",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/0/KRHVFHG5sS33tzXnR7d85t8Gj4mq7HQR7738d6tvP/XL/_O1H0448-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/A",
     "keywords": [
       "k4 studios",
@@ -1064,14 +1273,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/0/Nch6FptdjxJHw25zNkn8xFGhVHzrk2ZKNVjncrZbg/XL/_O1H0448-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/0/Nch6FptdjxJHw25zNkn8xFGhVHzrk2ZKNVjncrZbg/XL/_O1H0448-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/0/MJWPsTsXvcJMb5FHzkMj9mm5mGFWFjLM8Gjmzq9gK/L/_O1H0448-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/0/KxNfvVBSwtn5msFMShrrD7ZMrJmj8tq5qwb3Lg2rN/M/_O1H0448-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/0/KhWp6Tc9GFHc9CqqRCxGTSPNhN9BZnmMKgMqWK6Wj/S/_O1H0448-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-NSJhpSV",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/0/MvmDRFgLC5dzjZFLxWxKWN3xssCvwcQRjXNPg3J8T/XL/_O1H0446-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/A",
     "keywords": [
       "k4 studios",
@@ -1089,14 +1303,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/0/LDFtwbBm8hSgHFRwZfqdCQGbh5gzx8cbJ5sWhC864/XL/_O1H0446-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/0/LDFtwbBm8hSgHFRwZfqdCQGbh5gzx8cbJ5sWhC864/XL/_O1H0446-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/0/LDFtwbBm8hSgHFRwZfqdCQGbh5gzx8cbJ5sWhC864/XL/_O1H0446-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/0/Nc6cp67HG5T8c3bGmnBmht7DS6VZPVcwGJ9Kck4pG/L/_O1H0446-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/0/K42svxdF2v77t3gTtjbTNWJ69TfsnZ96GSKNMQ2qC/S/_O1H0446-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-j3jLH4h",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/0/KJP9RpwTVFCDMP9jQ2kZkGM3JCwGQcTGBtrJ58FDG/XL/_O1H0449-601-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/A",
     "keywords": [
       "k4 studios",
@@ -1114,14 +1333,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/0/Kg2cxrS5kzt7b9H8xQJHzjxgvKrHx7mbgwz3bfJ8h/XL/_O1H0449-601-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/0/Kg2cxrS5kzt7b9H8xQJHzjxgvKrHx7mbgwz3bfJ8h/XL/_O1H0449-601-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/0/MSbLMVcMqQvgNTN7wf8Ltz5zh3dw5qM5vNKfr82db/L/_O1H0449-601-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/0/L26qDCCT6CJfBLFQSbXk9cqpwzZCFGkRGZN9pm8DR/M/_O1H0449-601-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/0/Njg47X24s2Gtt2vkQNGxdFgTtdHdKjmnfJrFbZnqH/S/_O1H0449-601-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-rT9Kp2K",
-    "title": "A",
+    "title": "Untitled",
     "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rT9Kp2K/9/NRr7zvhD8Nbd3q7Mb6fFgqz77h22cGR38pVpBhndK/XL/_WEH8200-XL.jpg",
+    "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rT9Kp2K/A",
     "keywords": [
       "k4 studios",
@@ -1139,14 +1363,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rT9Kp2K/9/NMJwjMrjtjRt6GR4X4nsnhFh9wtXVcr6prbVcHTZn/XL/_WEH8200-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rT9Kp2K/9/NMJwjMrjtjRt6GR4X4nsnhFh9wtXVcr6prbVcHTZn/XL/_WEH8200-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rT9Kp2K/9/MCcFz3MwtxZ6XWjHW5VQVFNNTJ4BzGFrCGRTZTRXQ/L/_WEH8200-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rT9Kp2K/9/LgRxnzPHprWKttXW5TtxGv2MHBZfpBzmxjnDB84bM/M/_WEH8200-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-rT9Kp2K/9/NTbKkh6SXQFdp37g9sFbRxC6GqQ25nDb7T3ZMqqFs/S/_WEH8200-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-PrdZP4Z",
-    "title": "A",
+    "title": "Untitled",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/0/Mz7dMK8mPWzFC5vtKnHwhjGBKSHgc856mTtrb9dgB/XL/_O1H0447-XL.jpg",
+    "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/A",
     "keywords": [
       "k4 studios",
@@ -1164,14 +1393,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/0/LhggFLQbjCZ2JmccdBCWpFmjNcdq4JvXnWmtJwKmF/XL/_O1H0447-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/0/LhggFLQbjCZ2JmccdBCWpFmjNcdq4JvXnWmtJwKmF/XL/_O1H0447-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/0/LhggFLQbjCZ2JmccdBCWpFmjNcdq4JvXnWmtJwKmF/XL/_O1H0447-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/0/Kd4GwsHtTqq9Kn2LPTgCzG4bcm93cC6GqdZcNLzZX/L/_O1H0447-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/0/K8Sx8srRdD3Jv6Dxb4FDq8ZGmDzvVZjxVgSMR7mVt/S/_O1H0447-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-XZ2DDS3",
-    "title": "A",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/0/LfXPCKkqtBjndfGhp85gSvNd9nnvx7VVMcrQ7MnCH/XL/_O1H0453-XL.jpg",
+    "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/A",
     "keywords": [
       "k4 studios",
@@ -1189,6 +1423,42 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-7PM87B8",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/A",
+    "keywords": [
+      "k4 studios",
+      "wayne heim",
+      "hudson",
+      "show car",
+      "historic car",
+      "Conneaut",
+      "Ohio",
+      "D Day Conneaut",
+      "green"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 47,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/KcQ9Np3BxSVqWJFgFwk5zT5QVs6Lq4V8Hc7FkDMq4/XL/_O1H0454-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/KcQ9Np3BxSVqWJFgFwk5zT5QVs6Lq4V8Hc7FkDMq4/XL/_O1H0454-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/KTVssTxk4JnQJdCHtmLTzjQmQCgk2KN7WVbdH7cF2/M/_O1H0454-M.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/Mc5x6BRLsWfpj3t2PHTsGDbvfrth52BkCFLFr3WC6/Ti/_O1H0454-Ti.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/0/Mc5x6BRLsWfpj3t2PHTsGDbvfrth52BkCFLFr3WC6/Ti/_O1H0454-Ti.jpg",
+    "srcOriginal": ""
   }
 ];

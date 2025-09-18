@@ -1,37 +1,69 @@
-export const slides = [
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LVMjfqS2rs9BBRZF8RNdFNNzVNjHtffNcdSpJsCj8/S/Havana-Car-p-S.jpg",
-    alt: "Callin in Trouble from the street in painterly 20s style",
-    description:
-      "Townfolk call in trouble from the street, at vintage call box.",
-  },
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/LrsP2CGWPpdRwGbGNVSGcHp5ZCCK9LFPzBrVpVfcX/S/12x18_O1H0006-Edit-2-Edit-S.jpg",
-    alt: "Shine em up sonny – 20s gangster in painterly style",
-    description:
-      "A young boy shines up a gansters shoes on a street corner in the South.",
-  },
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j",
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/0/KK47FFmwwVZQ5FnPTv4pkRhtbjw6srSNFWJfDRWQZ/S/_DSF3049-Edit-Edit-S.jpg",
-    alt: "Looking for trouble in the 20s – painterly fine art photography",
-    description:
-      "1920s wooman looks to stay out of or for trouble.",
-  },
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-fNTTW43",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-fNTTW43/2/Lnk3ccpHGxJkhHwgLLBTmvrBpnmJr9Qv8LwD3N5gQ/S/_DSF3123-Edit-S.jpg",
-    alt: "Moonshiners Promise - Keep your mouth shut.",
-    description:
-      "Lawman and moonshiner share a moment of understanding in the 20s.",
-  },
-  {
-    href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k2W3gQV",
-    src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/MsccQZ565tjw9Vrv9g68SmRQJLvMhtLMNbFF9V6N6/S/_DSF2597-Enhanced-NR-Edit-2-S.jpg",
-    alt: "Chief of Police in the 20s",
-    description:
-      "The Chief pauses to reflect on the folks in his office.",
-  },
-];
+// carousel.ts for Fine Art Landscapes → By-Theme
+
+// Import all gallery mjs modules for Roaring-20s-Portraits and its children
+const modules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/**/*.mjs', { eager: true });
+
+// Collect gallery datasets and URL paths
+const galleryDatas = [];
+const galleryPaths = [];
+
+for (const filePath in modules) {
+  const mod = modules[filePath];
+  const data = mod.galleryData || (mod.default && mod.default.galleryData);
+  if (!Array.isArray(data)) continue;
+  // Filter out ghost and placeholder images
+  const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
+  if (visible.length === 0) continue;
+  // Extract subfolder name from file path for path building
+  const match = filePath.match(/Roaring-20s-Portraits\/?([^/]*)/);
+  const subfolder = match && match[1] ? `/${match[1]}` : '';
+  galleryDatas.push(visible);
+  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits${subfolder}`);
+}
+
+// Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating
+function buildRankedPool(images) {
+  const ratings = [5, 4, 3];
+  let pool = [];
+  ratings.forEach(r => {
+    pool.push(...images.filter(img => img.rating === r).sort(() => Math.random() - 0.5));
+  });
+  pool.push(...images.filter(img => !ratings.includes(img.rating)).sort(() => Math.random() - 0.5));
+  return pool;
+}
+
+// Helper: Convert image to slide object
+function toSlide(img, path) {
+  // Robust src fallback logic
+  let src = img.srcM || img.srcS || img.srcL || img.src || img.url || '';
+  // If srcS ends with -L.jpg, use srcS as override (for legacy/fallback)
+  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
+    src = img.srcS;
+  }
+  return {
+    href: `${path}/${img.id}`,
+    src,
+    alt: img.alt || img.title || '',
+    description: img.description || ''
+  };
+}
+
+// Build alternating slides across all theme pools up to maxSlides
+export const slides = (() => {
+  const pools = galleryDatas.map(data => buildRankedPool(data));
+  const pointers = pools.map(() => 0);
+  const result = [];
+  const maxSlides = 10;
+
+  while (result.length < maxSlides && pointers.some((ptr, i) => ptr < pools[i].length)) {
+    for (let i = 0; i < pools.length && result.length < maxSlides; i++) {
+      const pool = pools[i];
+      const idx = pointers[i]++;
+      if (idx < pool.length) {
+        result.push(toSlide(pool[idx], galleryPaths[i]));
+      }
+    }
+  }
+
+  return result;
+})();

@@ -2560,11 +2560,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 57,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vXBVBKJ/0/NgGP7kx8VfD8HWCjvRK9qdHwdzSxNCvVJNb6Nn4v5/XL/_O1H0302-Pano-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vXBVBKJ/0/NgGP7kx8VfD8HWCjvRK9qdHwdzSxNCvVJNb6Nn4v5/XL/_O1H0302-Pano-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vXBVBKJ/0/LDNQF782V4stMdzPtFXCNBwSVXZ89zDLbvZsf8FvV/L/_O1H0302-Pano-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vXBVBKJ/0/LW6ZDQzbRrJgwHSJVLNDzs7KsDh63vGdzNKxKD2fn/M/_O1H0302-Pano-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-vXBVBKJ/0/KpKp7Mffhnn9ND5bb5cMBvkCRfT3Zn2XQHXDKBM3H/S/_O1H0302-Pano-Edit-2-S.jpg",
     "srcOriginal": ""
   }
 ];

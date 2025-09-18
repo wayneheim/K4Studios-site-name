@@ -1534,11 +1534,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 37,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NJ5gGw7/0/KMSQvRb8Njdq4LTDBFjGHKRz6mqkmVwzqmrVjFFCW/XL/_WHZ4705_tonemapped-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NJ5gGw7/0/KMSQvRb8Njdq4LTDBFjGHKRz6mqkmVwzqmrVjFFCW/XL/_WHZ4705_tonemapped-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NJ5gGw7/0/MJBKcQmTQ9QNQ6rrwLgZmqw9DXXNqckjJjHbNnqbr/L/_WHZ4705_tonemapped-L.jp",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NJ5gGw7/0/M762hLxdsG7r73PCSvRcWV4x7K2G6rnsx7p6cffKW/M/_WHZ4705_tonemapped-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-NJ5gGw7/0/K8LHDsj9FCBnTKNbczvp327PJ6xC2J6z6LCcrkWWR/S/_WHZ4705_tonemapped-S.jpg",
     "srcOriginal": ""
   }
 ];

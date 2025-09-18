@@ -14,14 +14,18 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "ghost",
-    "sortOrder": -1
+    "sortOrder": -1,
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
   },
   {
     "id": "i-pwMVKTQ",
-    "title": "Thumbs Up    Photography by Wayne HeimThumbs Up is signaled by the pilot meaning he is ready for take off.©Wayne Heim",
+    "title": "Untitled",
     "description": "From the Wayne Heim A series. New image! More info coming soon.",
     "alt": "Thumbs Up    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-pwMVKTQ/8/NVKx43xLd648Hg6cXpSHtMcRd4Mvw4fNQsjszHWxg/XL/_IMG7075-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-pwMVKTQ/A",
     "keywords": [
       "Cleveland Air Show",
@@ -37,14 +41,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-pwMVKTQ/8/MnbKQpRvtwm8WJ9n3Bcc5J8pdTZn38kFNv3BJCSCL/XL/_IMG7075-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-pwMVKTQ/8/MnbKQpRvtwm8WJ9n3Bcc5J8pdTZn38kFNv3BJCSCL/XL/_IMG7075-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-pwMVKTQ/8/MnbKQpRvtwm8WJ9n3Bcc5J8pdTZn38kFNv3BJCSCL/XL/_IMG7075-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-pwMVKTQ/8/NWvBn4BWJKBxHVJpXh9sG48gNzRvGBNq6h87LnhFT/L/_IMG7075-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-pwMVKTQ/8/K9xxkPQ8b6P8qdRkFb3DqH3JmZ75kvSSvFR6r2snc/S/_IMG7075-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dTLMtz9",
     "title": "F4 Phantom II Fighter Jet  Photography by Wayne Heim",
     "description": "F4 Phantom II Fighter Jet flying over the Cleveland Airshow.   © Wayne Heim",
-    "alt": "F4 Phantom II Fighter Jet  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dTLMtz9/6/NXrHK7DjGj5R3jTPgPJdHSPGWxnPmtgqLrkLhG88b/XL/_IMG7098-XL.jpg",
+    "alt": "Thumbs Up    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dTLMtz9/A",
     "keywords": [
       "Cleveland Air Show",
@@ -60,14 +69,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dTLMtz9/6/M3BpCrBQX5Qzhsp7KstN2JWqSP2JDZ38j7JDttmrX/XL/_IMG7098-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dTLMtz9/6/M3BpCrBQX5Qzhsp7KstN2JWqSP2JDZ38j7JDttmrX/XL/_IMG7098-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dTLMtz9/6/NS4Np7m43MDxSkcRh2JRjnWmqSJ82LztJJdjWBxDX/L/_IMG7098-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dTLMtz9/6/MzpJPvCGgxd8cnjSK29wPccd7P6PSsHKpRJjjCpdp/M/_IMG7098-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dTLMtz9/6/NcBDH3qXTDkMXSg8zscRkwTkVLCqB7DLhPfsfMtfL/S/_IMG7098-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-kPsZTTH",
     "title": "Duo   Photography by Wayne Heim",
     "description": "Two planes from the Cleveland Air show show their stuff. ©Wayne Heim",
-    "alt": "Duo   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-kPsZTTH/9/LBkcNvvfkgF7GrZFNwjHDTf2PjCBBbfrZjMHwF7Dp/XL/f45609792-XL.jpg",
+    "alt": "F4 Phantom II Fighter Jet  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-kPsZTTH/A",
     "keywords": [
       "Cleveland Air Show",
@@ -83,14 +97,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-kPsZTTH/9/NCBDT8sxR7Cp8c2MFbVJnLVK7qrCTXhz4NnfdsTmJ/XL/f45609792-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-kPsZTTH/9/NCBDT8sxR7Cp8c2MFbVJnLVK7qrCTXhz4NnfdsTmJ/XL/f45609792-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-kPsZTTH/9/M9CJgw9xwZspSzcJj4Hk69kT6MzF6PWfJRRZQrXRm/L/f45609792-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-kPsZTTH/9/MJ83f2CPTfvRk9C3qP2L26sSTCTL5sBDGCQ4qQpW2/M/f45609792-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-kPsZTTH/9/Mt6s8zcDNPGd4j3mrTnhLKN48hKtNCXT8rSJfGNRN/S/f45609792-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-QFBWthj",
     "title": "Going Away - Photograohy by Wayne Heim",
     "description": "Going Away - the Air Force Thunderbirds fly away in formation at Cleveland Air Show. ©Wayne Heim",
-    "alt": "Going Away - Photograohy by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-QFBWthj/7/MhHdM2cKMZ3MxPLMGf55Pj8nGL66q7jDT2M75bLPB/XL/f51798720-XL.jpg",
+    "alt": "Duo   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-QFBWthj/A",
     "keywords": [
       "Cleveland Air Show",
@@ -106,14 +125,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-QFBWthj/7/LTd2tsR6WQxp9LPvGpQpJpvzZz4TbzDnG3LQJ7k45/XL/f51798720-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-QFBWthj/7/LTd2tsR6WQxp9LPvGpQpJpvzZz4TbzDnG3LQJ7k45/XL/f51798720-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-QFBWthj/7/NHwJD8jMj7DrQKcTDp7Lj8dTkd7Vz4r96mpKJqSMw/L/f51798720-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-QFBWthj/7/KT3spVcrPpg5xnTj8mRrJcXJqq9KgTTNQWHrn24xn/M/f51798720-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-QFBWthj/7/KSkrv9dbzf7gSsH6Nnb54M85MwP8hjmX8kMKT4BbV/S/f51798720-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Bj2CzZB",
     "title": "Stacked- Photography by Wayne Heim",
     "description": "On Top of Each Other - Air Force Thunderbirds fly stacked over each other almost touching. ©Wayne Heim",
-    "alt": "Stacked- Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-Bj2CzZB/8/NW4DmHjq6SKNPcBTGTKdSrVFxhDRvH8Sm5bm3XCNV/XL/f54024192-XL.jpg",
+    "alt": "Going Away - Photograohy by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-Bj2CzZB/A",
     "keywords": [
       "Cleveland Air Show",
@@ -129,14 +153,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-Bj2CzZB/8/LPftdKwNCvbc4Xx47R5rRNZdN4mjGccqNwCfKj3HP/XL/f54024192-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-Bj2CzZB/8/LPftdKwNCvbc4Xx47R5rRNZdN4mjGccqNwCfKj3HP/XL/f54024192-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-Bj2CzZB/8/LdkT9BWv5f3SZ2J8J2XnmJ5r3QWgm5BrjcbZWKqzh/L/f54024192-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-Bj2CzZB/8/MPdT7xkbzZjWM3jtF3rcZmn468zrj5KFKW65TnKzd/M/f54024192-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-Bj2CzZB/8/LtqKGtNjfhqwsQkk4XLX4X4MN5ZGr5Bq758sM4HBX/S/f54024192-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-GfVVjJz",
     "title": "Close Formation - Photography by Wayne Heim",
     "description": "Close Formation - Air Force Thunderbirds fly in close formation at the Cleveland Air Show. ©Wayne Heim",
-    "alt": "Close Formation - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-GfVVjJz/7/MrhWX82z9c7g3nWDwfQk5D9dLMfwj5FKWnzNRcwcg/XL/f55227264-XL.jpg",
+    "alt": "Stacked- Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-GfVVjJz/A",
     "keywords": [
       "Cleveland Air Show",
@@ -152,14 +181,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-GfVVjJz/7/NWm4k6Pz5QT9Bdc6szV2jqcVG2hMZPCRBRxN5QW7K/XL/f55227264-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-GfVVjJz/7/NWm4k6Pz5QT9Bdc6szV2jqcVG2hMZPCRBRxN5QW7K/XL/f55227264-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-GfVVjJz/7/LjjX86Lnc3QKTDwVZ4ddhPQJJWC2hGwTmxLcFqqBX/L/f55227264-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-GfVVjJz/7/MvRnDNkjHh4xXLgPB7qFs62DTNVHrR9WvL8J6RRt8/M/f55227264-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-GfVVjJz/7/LS5GX3XtDg4c4c3qL2RspdHwrrxdSGFG6MZ7rrL6z/S/f55227264-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-VXDQLcR",
     "title": "One More - Photography by Wayne Heim",
     "description": "One More - five Air Force Thunderbirds fly in pyramid formation at Cleveland Air Show. ©Wayne Heim",
-    "alt": "One More - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-VXDQLcR/7/LJzjRPHvgFkcGC3xX9wQLMCg5SxjG6VbcpXqjf5fq/XL/f55844416-XL.jpg",
+    "alt": "Close Formation - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-VXDQLcR/A",
     "keywords": [
       "Cleveland Air Show",
@@ -175,14 +209,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-VXDQLcR/7/MTWbvzNntfPxtcPQW5ph55BWgcgznwsdCXP6pkbqr/XL/f55844416-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-VXDQLcR/7/MTWbvzNntfPxtcPQW5ph55BWgcgznwsdCXP6pkbqr/XL/f55844416-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-VXDQLcR/7/NCfZvWQMB8TMMMCQ7hXsh6Whf4FD3F9pFBph6gpL3/L/f55844416-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-VXDQLcR/7/KZjXNbnkHpmQ4vJfr9MHGpZCsZk6D7hsbr24L2Xwm/M/f55844416-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-VXDQLcR/7/KvWkJfvG5ZkrSphqZWnhT7MFbmw5C3V3CMMwKTRqg/S/f55844416-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-nKNphs8",
     "title": "Close Six - Photography by Wayne Heim",
     "description": "Air Force Thunderbirds fly in close pyramid formation. ©Wayne Heim",
-    "alt": "Close Six - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-nKNphs8/7/LvFKWpPdc2NkhJSXmJWvhJ8WmCtgH984nXsB3Nmk2/XL/f55891328-XL.jpg",
+    "alt": "One More - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-nKNphs8/A",
     "keywords": [
       "Cleveland Air Show",
@@ -198,14 +237,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-nKNphs8/7/Kr5qjbgz48Vdn53PzV4BhgRZZtR7gFb6hKgLkDVBK/XL/f55891328-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-nKNphs8/7/Kr5qjbgz48Vdn53PzV4BhgRZZtR7gFb6hKgLkDVBK/XL/f55891328-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-nKNphs8/7/KNnCmHK92pWh4W4NQzjd42QHdZmWjt6D6KB58SK83/L/f55891328-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-nKNphs8/7/NW3L36FJKggwGtbmGMDQJKrCxGj3jcvGxkhmX3mg4/M/f55891328-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-nKNphs8/7/L9vTBCLmWKvXqXcB4FS8TbtKkmSMMknPjPGJ4Ltnj/S/f55891328-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TLf9dqV",
     "title": "We Remember -- Photography by Wayne Heim",
     "description": "We Remember -- Pow*Mia Flag flies with the Stars and Stripes ©Wayne Heim",
-    "alt": "We Remember -- Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TLf9dqV/7/NK5c8G3C3FWs33NSLZDWf3rJcdD8QR6kGkc55QGZ2/XL/_IMG6886-XL.jpg",
+    "alt": "Close Six - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-TLf9dqV/A",
     "keywords": [
       "Cleveland Air Show",
@@ -221,14 +265,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TLf9dqV/7/ND5cPQwQqKdfthHHhNJ7XvbdjTjQxbdtwQf2PvW59/XL/_IMG6886-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TLf9dqV/7/ND5cPQwQqKdfthHHhNJ7XvbdjTjQxbdtwQf2PvW59/XL/_IMG6886-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TLf9dqV/7/LNMGwLJhGtRgWbMFKkxh59pJWDQFsT3t3T4924tSj/L/_IMG6886-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TLf9dqV/7/Mg2KhKn5xQxwMGJmLgBBGmPLbskwsbPPm2dF4s6HF/M/_IMG6886-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TLf9dqV/7/LbNj2J2PDrFKGNvNfN94fT39S2FbjD3GXWNxK2LB7/S/_IMG6886-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-jQRfK97",
     "title": "USAF Plane  Photography by Wayne Heim",
     "description": "USAF passenger plane from WW II  ©Wayne Heim",
-    "alt": "USAF Plane  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-jQRfK97/7/MVsZxK48zp7cxX84F6QfCDLFBrFcKCffjfKhzqTPH/XL/_IMG6931-XL.jpg",
+    "alt": "We Remember -- Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-jQRfK97/A",
     "keywords": [
       "Cleveland Air Show",
@@ -244,14 +293,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-jQRfK97/7/LGscmPZ4SmHZrGK65RF8srPHvpBCfW2Qm5Bmnnghc/XL/_IMG6931-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-jQRfK97/7/LGscmPZ4SmHZrGK65RF8srPHvpBCfW2Qm5Bmnnghc/XL/_IMG6931-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-jQRfK97/7/Mb8srDx7NFXw4KTdbmbdGnpbRxjFhMdgBmDgQ5WWc/L/_IMG6931-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-jQRfK97/7/KzfGzM9mQQXSC2RKcLGd7dsXvntWTMBT5cZPgZ96G/M/_IMG6931-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-jQRfK97/7/LBz3L3KH7Bvf2jS9JTkpCgSsmMF2k2hmXGnZhnRLv/S/_IMG6931-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-LBfNr5K",
     "title": "Navy Fighter    Photography by Wayne Heim",
     "description": "Navy fighter sits on runway at an air show.\n ©Wayne Heim",
-    "alt": "Navy Fighter    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-LBfNr5K/6/K7wjv5V28Z5SxqMZpSsPHbQp8cczhSZS4Mx7NxgXp/XL/_IMG7763-XL.jpg",
+    "alt": "USAF Plane  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-LBfNr5K/A",
     "keywords": [
       "Cleveland Air Show",
@@ -267,14 +321,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-LBfNr5K/6/LBtdfWptxJr7z5DHdhgrsZfvnD4SCqHVPfLcm6Gm5/XL/_IMG7763-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-LBfNr5K/6/LBtdfWptxJr7z5DHdhgrsZfvnD4SCqHVPfLcm6Gm5/XL/_IMG7763-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-LBfNr5K/6/LPh28JQSw5dWgDJ4RtW9TL7gfGFdf5KpK8LFWf3Sh/L/_IMG7763-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-LBfNr5K/6/MrKnPSkVcxBgWSsvgHdxVwsCVx4ZgfHLMw5VfzBm7/M/_IMG7763-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-LBfNr5K/6/NbG3TjrZVj8kz3ShWsg2GqVbdKWtBW7hqJWGSqTTT/S/_IMG7763-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-ZRfqtVk",
     "title": "Propeller   Photography by Wayne Heim",
     "description": "Propeller of old restored plane.©Wayne Heim",
-    "alt": "Propeller   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-ZRfqtVk/6/MZ7pJVV5XThJ4KdLmZsC3JTSTHrRXGsPLN4RzNBqF/XL/_IMG7744-XL.jpg",
+    "alt": "Navy Fighter    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-ZRfqtVk/A",
     "keywords": [
       "Cleveland Air Show",
@@ -290,14 +349,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-ZRfqtVk/6/KNhLzMJ3qV6vJD6tnJX2gdRvnVWwCzH2tmcT6ptDc/XL/_IMG7744-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-ZRfqtVk/6/KNhLzMJ3qV6vJD6tnJX2gdRvnVWwCzH2tmcT6ptDc/XL/_IMG7744-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-ZRfqtVk/6/LdFxQWr2vF2qvhnFrXXQbTqNn6tQr2LkptBwdLZ7T/L/_IMG7744-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-ZRfqtVk/6/NQ6Dm7v259ZHZJ9KpZDMG3rbW4WJg7Pc9M9pPxwVm/M/_IMG7744-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-ZRfqtVk/6/M4DbGqSb5gH3dnW37GNbmGGzbRRCcGTxNsDx7b89X/S/_IMG7744-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Hs3n5dS",
     "title": "Yankee Doodle Dandy   Photography by Wayne Heim",
     "description": "Yankee Doodle Dandy  is a U.S Air Force WWII era passenger plane. ©Wayne Heim \n\n\n\n\n\n\n\n\nI",
-    "alt": "Yankee Doodle Dandy   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-Hs3n5dS/8/NVNKfLxTJXnWXBsKCLvsV8hKk5zGhFRq2vktKGKTN/XL/_IMG7751-XL.jpg",
+    "alt": "Propeller   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-Hs3n5dS/A",
     "keywords": [
       "Cleveland Air Show",
@@ -313,14 +377,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-Hs3n5dS/8/MjKFn9tWvPMFBr5FchrZ7HzBLddgxVLvmxhSfFCRF/XL/_IMG7751-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-Hs3n5dS/8/MjKFn9tWvPMFBr5FchrZ7HzBLddgxVLvmxhSfFCRF/XL/_IMG7751-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-Hs3n5dS/8/KT8bDV7f9zbnqkBsRgfq7hg2jSLPvW38Wwhp4fSV3/L/_IMG7751-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-Hs3n5dS/8/LnkrwpNvwXfWCBJS6NvP75gmLj6wFkvJWH3ZJ8dTh/M/_IMG7751-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-Hs3n5dS/8/LDRFSgSjBmdn7VmtkmckmjRNFWrHkDPnfZvNGjVxD/S/_IMG7751-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-HtkF9rx",
     "title": "Dandy's Nose   Photography by Wayne Heim",
     "description": "View of USAF passenger plane's nose ©Wayne Heim",
-    "alt": "Dandy's Nose   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-HtkF9rx/8/KcNWkTgtjn87wXFdC7xQSzf7kH8zbwgzPT8hZz7tZ/XL/_IMG7752-XL.jpg",
+    "alt": "Yankee Doodle Dandy   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-HtkF9rx/A",
     "keywords": [
       "Cleveland Air Show",
@@ -336,14 +405,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-HtkF9rx/8/KkfR4GDdXjwrLkDQkQRRpd7pKHftXzDQktJh7VLFQ/XL/_IMG7752-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-HtkF9rx/8/KkfR4GDdXjwrLkDQkQRRpd7pKHftXzDQktJh7VLFQ/XL/_IMG7752-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-HtkF9rx/8/KkfR4GDdXjwrLkDQkQRRpd7pKHftXzDQktJh7VLFQ/XL/_IMG7752-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-HtkF9rx/8/L7BDNTn3qqpGgSmwGFt3BJJr5GtRCgv5QvSCPjHQ3/L/_IMG7752-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-HtkF9rx/8/Mwxkq6WSW9PKWGTnLLjjpvdBkL6V3sRbMPfv8VQXT/S/_IMG7752-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-3x7rZ6g",
     "title": "Dandy in Black & White     Black & White Photography by Wayne Heim",
     "description": "Black & White view of nose of USAF passenger plane  ©Wayne Heim",
-    "alt": "Dandy in Black & White     Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-3x7rZ6g/7/K68bLLrfvVNZgqn4FNsTt5WLqfLRx28GwFp5M6LhX/XL/_IMG7754-2-XL.jpg",
+    "alt": "Dandy's Nose   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-3x7rZ6g/A",
     "keywords": [
       "Cleveland Air Show",
@@ -359,14 +433,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-3x7rZ6g/7/KrMfV52G7wc3nG4PZsHC9fHfd3PfFrz8cPNf6dkJN/XL/_IMG7754-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-3x7rZ6g/7/KrMfV52G7wc3nG4PZsHC9fHfd3PfFrz8cPNf6dkJN/XL/_IMG7754-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-3x7rZ6g/7/NMQrKmSkwNnbrZGvzwXbPXZHgj6KtWHSt2DLHhdS8/L/_IMG7754-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-3x7rZ6g/7/MsM67CGmgdqgXJK5CCTRmRV2qSwZhJ6Q38cfDsnK4/M/_IMG7754-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-3x7rZ6g/7/LCRsbN7g59LTQtbh54dr5NZ6Kh8RND7kPj2j2Z4BM/S/_IMG7754-2-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-TW5rKS7",
     "title": "WW II Fighter - Photography by Wayne Heim",
     "description": "WW II Fighter -  fighter plane demonstration with smoke to follow path. ©Wayne Heim",
-    "alt": "WW II Fighter - Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TW5rKS7/7/NCmPqKGPQ5GsxrBrXqdfMBwGVFMFjP2FntfLHjQ5P/XL/_IMG8046-XL.jpg",
+    "alt": "Dandy in Black & White     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-TW5rKS7/A",
     "keywords": [
       "Cleveland Air Show",
@@ -382,14 +461,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TW5rKS7/7/NDCK9s8nx4fF39gxXfPQmbgpT94Dc3BMbzM7Ww8PK/XL/_IMG8046-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TW5rKS7/7/NDCK9s8nx4fF39gxXfPQmbgpT94Dc3BMbzM7Ww8PK/XL/_IMG8046-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TW5rKS7/7/LnkBSQCXRRG9x4jPQgwRb4Q8n83PsLdh75x3qP2Wp/L/_IMG8046-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TW5rKS7/7/KdCnNNpcvtcKMt6k9SJ8qdWCPNt8wGNqNdVfzXLT3/M/_IMG8046-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/2012-Gathering-of-Eagles/i-TW5rKS7/7/MLTs6LRjZmWmm8TdLSVzbwsTrVpw2KprmNC6Fh7dQ/S/_IMG8046-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-dRBzDM9",
     "title": "Dandy in Flight   Photography by Wayne Heim",
     "description": "Yankee Doodle Dandy USAF plane in flight.  ©Wayne Heim",
-    "alt": "Dandy in Flight   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dRBzDM9/4/L8KvLx9bXHmVqxMb6N8rS8hsnbHbgBCzzrcRst337/XL/_IMG8175-XL.jpg",
+    "alt": "WW II Fighter - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dRBzDM9/A",
     "keywords": [
       "Cleveland Air Show",
@@ -405,14 +489,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dRBzDM9/4/LCmfmcR7Mbsg2wTVcKjq4zQFV2LwvWQ5mWQx5Gd4j/XL/_IMG8175-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dRBzDM9/4/LCmfmcR7Mbsg2wTVcKjq4zQFV2LwvWQ5mWQx5Gd4j/XL/_IMG8175-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dRBzDM9/4/LZbjgWPNj7zgLkC6bbxnbxFVHS2H4LDmDXv5DnPTQ/L/_IMG8175-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dRBzDM9/4/K8bnWV2TD9fBZCnKKxDXhx9Rsqp6nmW9B9SwSvWQ3/M/_IMG8175-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-dRBzDM9/4/K6pLKQzVr9qR9NvzjcHdr2xZKhkJ2pFJsRV5mbRdQ/S/_IMG8175-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-6cNGRBZ",
     "title": "B-25 -- Photography by Wayne Heim",
     "description": "B-25 -  WW II B-25 bomber in demonstration at D Day Conneaut. ©Wayne Heim",
-    "alt": "B-25 -- Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-6cNGRBZ/4/LV23gcrwhwRJkQcK7KJpFWJW9HnFjn65rk8c3N4mQ/XL/_IMG8243-XL.jpg",
+    "alt": "Dandy in Flight   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-6cNGRBZ/A",
     "keywords": [
       "Cleveland Air Show",
@@ -428,14 +517,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-6cNGRBZ/4/KFqgXzTc7BfvfZdsNtbKsKk98XSN8rQLQcqvX3CBM/XL/_IMG8243-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-6cNGRBZ/4/KFqgXzTc7BfvfZdsNtbKsKk98XSN8rQLQcqvX3CBM/XL/_IMG8243-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-6cNGRBZ/4/M7V89mcfsVrRNjbR5Sc8djGdwqv8x4sg73b9ZQTXK/L/_IMG8243-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-6cNGRBZ/4/Mbtb2M4kRxMw6RLK2drSnxXsR3PXRM2nj2GvVvSD4/M/_IMG8243-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-6cNGRBZ/4/K7j96pZvLH6x86MBQZZ9rNDr9fWfhjKtmWhZwT98n/S/_IMG8243-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-7PT9GwS",
     "title": "Gun Turret -  Photography by Wayne Heim",
     "description": "Gun Turret -  WW II bomber protected by gun turret.©Wayne Heim",
-    "alt": "Gun Turret -  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/KMjWm3v2fHtgPxzbgjh96cq8stMVdLKJR7sgnwGF4/XL/_IMG8646-Edit-XL.jpg",
+    "alt": "B-25 -- Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-7PT9GwS/A",
     "keywords": [
       "Cleveland Air Show",
@@ -451,14 +545,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/LSwnfmPpBkdrjcr2bTkXBTx5vPsh5Xsf4N9J5WfV3/XL/_IMG8646-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/LSwnfmPpBkdrjcr2bTkXBTx5vPsh5Xsf4N9J5WfV3/XL/_IMG8646-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/LSwnfmPpBkdrjcr2bTkXBTx5vPsh5Xsf4N9J5WfV3/XL/_IMG8646-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/K9QBpzhpKgJJX6t5HzV3z8CmqfQcsDJ9s8ZDrMj6X/L/_IMG8646-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-7PT9GwS/4/MxLJPT8N53S6gjjVWJdd5MFgJjFn8bV7rzQNcLVbR/S/_IMG8646-Edit-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-28wLMv4",
     "title": "Propeller of B52   Photogra[phy by Wayne Heim",
     "description": "Power plant of the B52 , Close up of a propeller.    ©Wayne Heim",
-    "alt": "Propeller of B52   Photogra[phy by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-28wLMv4/4/NKwxL3jSZhK9zNDpLnrxwjmcqH7sb7jTWVqrCdKZd/XL/_IMG8665-XL.jpg",
+    "alt": "Gun Turret -  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-28wLMv4/A",
     "keywords": [
       "Cleveland Air Show",
@@ -474,14 +573,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-28wLMv4/4/KgLzWCBQg4fhTwdXKHsG2KjzKbkMCw9wL6K2BKkSR/XL/_IMG8665-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-28wLMv4/4/KgLzWCBQg4fhTwdXKHsG2KjzKbkMCw9wL6K2BKkSR/XL/_IMG8665-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-28wLMv4/4/KgLzWCBQg4fhTwdXKHsG2KjzKbkMCw9wL6K2BKkSR/XL/_IMG8665-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-28wLMv4/4/NZctqnGRf74RST5pqGW3zkvbX5D8vP4xTQNZxZFPW/L/_IMG8665-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-28wLMv4/4/M4zLQQpZwNBwdrvzDLtNrg6Pk292XGzr3WxTMpwLJ/S/_IMG8665-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-DXWW75L",
     "title": "Front View    Photography by Wayne Heim",
     "description": "Front view of WW II bomber showing gun turret, pilot  seat and propellers.  ©Wayne Heim",
-    "alt": "Front View    Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-DXWW75L/4/MncTfbQXpCFNjfcb7qSdGct39bTHMx3d9Mwtxh4rd/XL/_IMG8678-XL.jpg",
+    "alt": "Propeller of B52   Photogra[phy by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DXWW75L/A",
     "keywords": [
       "Cleveland Air Show",
@@ -497,14 +601,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-DXWW75L/4/M434zNjVxPD7fHsx48n6hK2WkFNfG6PGJwWTzLvKx/XL/_IMG8678-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-DXWW75L/4/M434zNjVxPD7fHsx48n6hK2WkFNfG6PGJwWTzLvKx/XL/_IMG8678-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-DXWW75L/4/M4XHGr33cZnJXVr2spQZSSSsHHwk7rxftwTxpRfhw/L/_IMG8678-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-DXWW75L/4/L436QhHKdRZdjbzRstXZgVGR7d4C2WTrvGhGQmF54/M/_IMG8678-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-DXWW75L/4/NfH9TM56W4fMzNjsRX5g5kgSF3K8NnrDchDRRWv6h/S/_IMG8678-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-sTRwRwB",
     "title": "Cockpit    Photograph by Wayne Heim",
     "description": "Cockpit of WW II bomber seen from rear.  ©Wayne Heim",
-    "alt": "Cockpit    Photograph by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-sTRwRwB/4/KdNGncJZ9z3SZR6kZ4dc67wRdmFjF7Nj6WNJxrfsM/XL/_IMG8919-XL.jpg",
+    "alt": "Front View    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-sTRwRwB/A",
     "keywords": [
       "Cleveland Air Show",
@@ -520,14 +629,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-sTRwRwB/4/M7dkV94W4FvrTVH8g5Sgs4W6FRj7rXw6jmgQ9Db3D/XL/_IMG8919-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-sTRwRwB/4/M7dkV94W4FvrTVH8g5Sgs4W6FRj7rXw6jmgQ9Db3D/XL/_IMG8919-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-sTRwRwB/4/KGkw5PKsz27x3SZDRscnmMzMsQLZZggF9kTc5jPVx/L/_IMG8919-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-sTRwRwB/4/NSPH7W98NfLKstdm965GwpD3DDx9GwwZ3X3m86JCt/M/_IMG8919-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-sTRwRwB/4/MfG64MCXnGqLhTN3MKdTTmnn39dLgs8bzGgxXR5hW/S/_IMG8919-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-Sv2QJHR",
     "title": "Inside Gun Turret 3   Photography by Wayne Heim",
     "description": "Inside view of a gun turret on WW II\n bomber  ©Wayne Heim",
-    "alt": "Inside Gun Turret 3   Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-Sv2QJHR/4/KmqVb6LJdQrxzSBGKrKnGqcGHpmfwxk3qwL9W3Cm7/XL/_IMG8934-XL.jpg",
+    "alt": "Cockpit    Photograph by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-Sv2QJHR/A",
     "keywords": [
       "Cleveland Air Show",
@@ -543,14 +657,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-Sv2QJHR/4/Kg2R99s9ZzkH7vzsd3639XWBtbGThLf262gQbmJ3S/XL/_IMG8934-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-Sv2QJHR/4/Kg2R99s9ZzkH7vzsd3639XWBtbGThLf262gQbmJ3S/XL/_IMG8934-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-Sv2QJHR/4/LKzH7J64V5LWk7RGjTB7N8DZdSM69fFtqVDKzcmm5/L/_IMG8934-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-Sv2QJHR/4/M4RFTwfrCLP2NGTzqSCJVfrGTbztM3sCRBhJx6jFd/M/_IMG8934-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-Sv2QJHR/4/K7fcbgjSjTjXs9WK7QVHmfKxf5qQX7cpfn2GQtC9L/S/_IMG8934-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-n69gkSP",
-    "title": "Bomb Bay-Black & White Photography by Wayne Heim",
+    "title": "Bomb Bay --Black & White Photography by Wayne Heim",
     "description": "Bomb Bay - looking up into the bomb bay of a plane showing the bombs waiting to be dropped.©Wayne Heim",
-    "alt": "Bomb Bay --Black & White Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cleveland-Piston-Power-Show-2014/i-n69gkSP/5/NggS3K87NXb3x7Xcv928WRR6bxDpTGrwChtVr9r34/XL/_W3H5751-XL.jpg",
+    "alt": "Inside Gun Turret 3   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-n69gkSP/A",
     "keywords": [
       "Cleveland Air Show",
@@ -566,14 +685,19 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cleveland-Piston-Power-Show-2014/i-n69gkSP/5/MpzMn9nGfkmf2W76B8mcqpQfk9P4L8TnmLBRjp5Zc/XL/_W3H5751-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cleveland-Piston-Power-Show-2014/i-n69gkSP/5/MpzMn9nGfkmf2W76B8mcqpQfk9P4L8TnmLBRjp5Zc/XL/_W3H5751-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cleveland-Piston-Power-Show-2014/i-n69gkSP/5/KGnJp4TCZ2B7pW2RvRPnMzHbBS9Gq4jFcwP2p2x9x/L/_W3H5751-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cleveland-Piston-Power-Show-2014/i-n69gkSP/5/Mv6gwt3fDJGTLdcmcQXQMJSZFJZ94tR4NjSmnvhqF/M/_W3H5751-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Airplanes/Cleveland-Piston-Power-Show-2014/i-n69gkSP/5/Mdp5xJbQpqNzBS64S84pvNFWmrW6tSt7tcPP5bMv3/S/_W3H5751-S.jpg",
+    "srcOriginal": ""
   },
   {
     "id": "i-WhRvxFT",
-    "title": "Bombs Away - Photography by Wayne Heim",
+    "title": "Bombs Away -  Photography by Wayne Heim",
     "description": "B25 bomber flies over with bomb bay doors open. ©Wayne Heim",
-    "alt": "Bombs Away -  Photography by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-WhRvxFT/3/NgFTZSt2RJ2mb8LkgdC7w7TqXWJRckbGrs5sJsFh4/XL/_WHZ4071-XL.jpg",
+    "alt": "Bomb Bay --Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-WhRvxFT/A",
     "keywords": [
       "Cleveland Air Show",
@@ -589,6 +713,40 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": ""
+  },
+  {
+    "id": "i-DGWLqTv",
+    "title": "Georgie Girl   Photography by Wayne Heim",
+    "description": "WWII plane flying over reenactment of D Day.© Wayne Heim 2016",
+    "alt": "Bombs Away -  Photography by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DGWLqTv/A",
+    "keywords": [
+      "Cleveland Air Show",
+      "wayne heim",
+      "k4 studios",
+      "aircraft",
+      "airshow",
+      "airplane",
+      "air force"
+    ],
+    "story": "WWII plane flying over reenactment of D Day.© Wayne Heim 2016",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 25,
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DGWLqTv/3/M75ZgdFCjQrPfgKp2t5ppGcBpbqNgnCFkBpKxbtNG/XL/_WHK9099-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DGWLqTv/3/M75ZgdFCjQrPfgKp2t5ppGcBpbqNgnCFkBpKxbtNG/XL/_WHK9099-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DGWLqTv/3/LnnbTPLBXDs4TnqJbPDhDMGzG6DJD7QW3rdKNwc8T/M/_WHK9099-M.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DGWLqTv/3/LXDsGNfccmVVWX8jG3VfcHTgg4rC5NDTwCsRCZf4W/Ti/_WHK9099-Ti.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Planes/i-DGWLqTv/3/LXDsGNfccmVVWX8jG3VfcHTgg4rC5NDTwCsRCZf4W/Ti/_WHK9099-Ti.jpg",
+    "srcOriginal": ""
   }
 ];

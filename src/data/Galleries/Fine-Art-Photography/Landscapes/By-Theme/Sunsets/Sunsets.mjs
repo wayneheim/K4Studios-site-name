@@ -942,11 +942,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 28,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+      "src": "https://photos.smugmug.com/photos/i-VbL6CF7/4/NjRMzJ7S6pbvkFnHrWNnnWccSwdCFWqCnJfcJKZZj/XL/i-VbL6CF7-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/photos/i-VbL6CF7/4/NjRMzJ7S6pbvkFnHrWNnnWccSwdCFWqCnJfcJKZZj/XL/i-VbL6CF7-XL.jpg",
+    "srcL": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MsfJb7mj34SDf2fQWMzBRJX5FSjJmTtFqGBsJqSrj/L/i-VbL6CF7-L.jpg",
+    "srcM": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MZ7fFzxcWxn27X7NfssJkFF2RhmwtSXFqZKgbGQ4C/S/i-VbL6CF7-S.jpg",
+    "srcS": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MZ7fFzxcWxn27X7NfssJkFF2RhmwtSXFqZKgbGQ4C/S/i-VbL6CF7-S.jpg",
     "srcOriginal": ""
   }
 ];

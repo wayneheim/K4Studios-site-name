@@ -1429,11 +1429,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 48,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Mtm6Htz/0/K4FJX58Nk2KskTm6WH5CrkqTMPXLjVQKKpM35xX3c/XL/_O1H1068-Pano-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Mtm6Htz/0/K4FJX58Nk2KskTm6WH5CrkqTMPXLjVQKKpM35xX3c/XL/_O1H1068-Pano-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Mtm6Htz/0/NNcNk9gpxHmsv9K2hKNvZjVmffqkDjTLD2RVjGRgp/L/_O1H1068-Pano-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Mtm6Htz/0/MqSg2J8mCGHghbWRCBtZRPsKsCQX3h3NnTJ4WGRv7/M/_O1H1068-Pano-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Mtm6Htz/0/KLRVZbxZLdCPqH5SZP2B92FgRznzCvL3MzwnHdSXD/S/_O1H1068-Pano-Edit-S.jpg",
     "srcOriginal": ""
   }
 ];

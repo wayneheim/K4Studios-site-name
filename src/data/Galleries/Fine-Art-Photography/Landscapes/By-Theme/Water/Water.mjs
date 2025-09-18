@@ -7582,11 +7582,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 234,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+   "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LP5x7MS/11/Lbqj9xGcj2nRhj9N98k5pq8wk2vSgCgp93DS9GCmL/XL/_IGP5528-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LP5x7MS/11/Lbqj9xGcj2nRhj9N98k5pq8wk2vSgCgp93DS9GCmL/XL/_IGP5528-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LP5x7MS/11/Mt29Hf5Sq4dznz8W6HJgx9NCQrBKwdWh5mgbC4KXL/L/_IGP5528-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LP5x7MS/11/MWG6JztLLnkknfqt5dkNbt25RGCKvjMnGhXsQ64gc/M/_IGP5528-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-LP5x7MS/11/NB2vjgDjXSLkxrSftJqN4f8xQ7KHGXkL63w5zRCNt/S/_IGP5528-S.jpg",
     "srcOriginal": ""
   }
 ];
