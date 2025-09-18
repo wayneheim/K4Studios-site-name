@@ -119,12 +119,9 @@ const structuredData = getStructuredData({
           ))}
         </section>
 
-  {/** MobileStoryImages temporarily disabled for XL debug
-  <MobileStoryImages client:only="react" images={featheredImages} />
-  **/}
+        <MobileStoryImages client:only="react" images={featheredImages} />
       </div>
 
-      {/** Sidebar LandingRightImages temporarily disabled for XL debug
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
@@ -133,7 +130,6 @@ const structuredData = getStructuredData({
           />
         </div>
       </div>
-      **/}
     </section>
 
     <section class="pb-10">
