@@ -34,17 +34,11 @@ function selectResponsiveSrc(img) {
   return src;
 }
 
-import { normalizeImage } from '@/components/utils/normalizeImage';
-
 // Helper: Convert image to slide object, with loading, width, height, and custom css class
-function toSlide(rawImg, path, idx) {
-  const img = normalizeImage({ ...rawImg });
+function toSlide(img, path, idx) {
   return {
     href: `${path}/${img.id}`,
     src: selectResponsiveSrc(img),
-    srcS: img.srcS,
-    srcM: img.srcM,
-    srcL: img.srcL,
     alt: img.alt || img.title || '',
     description: img.description || '',
     width: img.width || undefined,
@@ -98,7 +92,7 @@ function pickRandomFromPools(pools, n) {
   return picks;
 }
 
-// Pick 3 from each, alternate painterly/traditional, shuffle order
+// Pick 4 from each, alternate painterly/traditional, shuffle order
 const painterlyPicks = pickRandomFromPools(painterlyPools, 3);
 const traditionalPicks = pickRandomFromPools(traditionalPools, 3);
 const slidesArr = [];
