@@ -1,4 +1,4 @@
-// --- Carousel: Robust Random Hero from 3 Cowboy Images (srcS), Dynamic Rest Responsive ---
+// --- Carousel: Robust Random Hero from 3 Cowboy Images (always srcS), Dynamic Rest Responsive ---
 
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 import { normalizeImage } from '@/components/utils/normalizeImage';
@@ -28,21 +28,6 @@ function selectStaticHeroSrc(img) {
   return img.srcS || img.srcM || img.srcL || img.src || '';
 }
 
-// --- Responsive src for regular slides ---
-function selectResponsiveSrc(img) {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 700;
-  let src = '';
-  if (isMobile) {
-    src = img.srcS || img.srcM || img.srcL || img.src || '';
-  } else {
-    src = img.srcM || img.srcS || img.srcL || img.src || '';
-  }
-  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
-    src = img.srcS;
-  }
-  return src;
-}
-
 function filePathToHref(filePath) {
   return filePath
     .replace(/^.*Galleries/, '/Galleries')
@@ -56,7 +41,7 @@ function toSlide(rawImg, path, idx) {
   return {
     id: img.id,
     href: `${path}/${img.id}`,
-    src: selectResponsiveSrc(img),
+    src: selectResponsiveSrc(img), // responsive for all others!
     srcS: img.srcS,
     srcM: img.srcM,
     srcL: img.srcL,
@@ -66,6 +51,21 @@ function toSlide(rawImg, path, idx) {
     height: img.height,
     className: `k4-home-carousel-img k4-home-carousel-img--${idx + 1}`
   };
+}
+
+// --- Responsive src for regular slides ---
+function selectResponsiveSrc(img) {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 700;
+  let src = '';
+  if (isMobile) {
+    src = img.srcS || img.srcM || img.srcL || img.src || '';
+  } else {
+    src = img.srcM || img.srcS || img.srcL || img.src || '';
+  }
+  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
+    src = img.srcS;
+  }
+  return src;
 }
 
 // --- Build pools (excluding all hero candidates) ---
@@ -127,10 +127,20 @@ for (let i = 0; i < 4; i++) {
   if (traditionalPicks[i]) slidesArr.push({ ...toSlide(traditionalPicks[i].img, traditionalPicks[i].path, slidesArr.length) });
 }
 
-// --- Hero slide: always srcS --- 
+// --- Hero slide: *ALWAYS* srcS for hero, even on desktop ---
 const staticCowboySlide = {
-  ...toSlide(staticCowboyImg, filePathToHref(staticCowboyFilePath), 0),
-  src: selectStaticHeroSrc(staticCowboyImg)
+  ...normalizeImage({ ...staticCowboyImg }),
+  id: staticCowboyImg.id,
+  href: `${filePathToHref(staticCowboyFilePath)}/${staticCowboyImg.id}`,
+  src: selectStaticHeroSrc(staticCowboyImg),     // <--- ALWAYS srcS (fallback)
+  srcS: staticCowboyImg.srcS,
+  srcM: staticCowboyImg.srcM,
+  srcL: staticCowboyImg.srcL,
+  alt: staticCowboyImg.alt || staticCowboyImg.title || '',
+  description: staticCowboyImg.description || '',
+  width: staticCowboyImg.width,
+  height: staticCowboyImg.height,
+  className: `k4-home-carousel-img k4-home-carousel-img--1`
 };
 
 // --- Combine hero + rest ---
