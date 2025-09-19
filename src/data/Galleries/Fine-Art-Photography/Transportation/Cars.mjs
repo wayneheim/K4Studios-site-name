@@ -1424,11 +1424,11 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 46,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/0/NWTc4CKhfKnmv3F2VRHVnxXRCMLL8G4xrB6XWZXBH/XL/_O1H0453-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/0/NWTc4CKhfKnmv3F2VRHVnxXRCMLL8G4xrB6XWZXBH/XL/_O1H0453-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/0/K7vPz7fh4fRdL5SssL7JMLMPK7bXkctt9Rq7SZjhG/L/_O1H0453-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/0/LVX4n3j2BJ2L42ZZtB7gX4fG9jvDBfHsMjChL7XTb/M/_O1H0453-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/0/LPVjSBPKvggwxsrJqC4s3mDNdfsW9dCqzVnCsfFBj/S/_O1H0453-S.jpg",
     "srcOriginal": ""
   },
   {

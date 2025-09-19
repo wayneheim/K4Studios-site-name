@@ -11,7 +11,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
     ],
     "visibility": "ghost",
     "sortOrder": -1,

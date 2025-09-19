@@ -48,196 +48,206 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-// --------- IMPROVED LOGIC: Random selection to reduce repetition ----------
-function pullGalleryDataAndImagesRandomized(
-  gallerySources: { label: string; href: string }[],
-  maxCount: number,
-  excludeIds: Set<string>,
-  mixingStrategy: 'random' | 'balanced' = 'random'
-): { galleryDatas: Image[][], galleryPaths: string[], pickedImages: Image[] } {
-  const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
-  const galleryDatas: Image[][] = [];
-  const galleryPaths: string[] = [];
-  let allGalleryImages: { gallery: string, images: Image[], availableIndices: number[] }[] = [];
+// Helper function to get galleries from specific paths
+function getGalleriesByPaths(paths: string[]): { label: string, href: string }[] {
+  const allSources = getAllGallerySources("/Galleries/Painterly-Fine-Art-Photography")
+    .concat(getAllGallerySources("/Galleries/Fine-Art-Photography"));
 
-  // Collect images per gallery (attach path)
+  return allSources.filter(source => paths.some(path => source.href.includes(path)));
+}
+
+// Helper function to get galleries excluding specific paths
+function getGalleriesExcludingPaths(excludePaths: string[]): { label: string, href: string }[] {
+  const allSources = getAllGallerySources("/Galleries/Painterly-Fine-Art-Photography")
+    .concat(getAllGallerySources("/Galleries/Fine-Art-Photography"));
+
+  return allSources.filter(source => !excludePaths.some(path => source.href.includes(path)));
+}
+
+// Improved image pulling with better randomization
+function pullImagesFromGalleries(
+  gallerySources: { label: string; href: string }[],
+  count: number,
+  excludeIds: Set<string>,
+  useSessionStorage = false
+): Image[] {
+  const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
+  const pickedImages: Image[] = [];
+
+  // Create a pool of all available images from these galleries
+  let allImages: Image[] = [];
+
   for (const gallery of gallerySources) {
     const filePath = '../../data' + gallery.href + '.mjs';
     const mod: any = allGalleryData[filePath];
     let images: Image[] = (mod?.galleryData || mod?.default || []).filter(
-      (img: Image) => img.id && img.id !== 'i-k4studios'
+      (img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id)
     );
     images.forEach(img => (img.galleryPath = gallery.href));
+    allImages = allImages.concat(images);
+  }
 
-    if (images.length) {
-      galleryDatas.push(images);
-      galleryPaths.push(gallery.href);
+  // Shuffle the entire pool for better randomization
+  allImages = shuffle(allImages);
 
-      // Create array of available indices for random selection
-      const availableIndices = Array.from({ length: images.length }, (_, i) => i);
-      shuffle(availableIndices); // Shuffle indices for random access
-
-      allGalleryImages.push({
-        gallery: gallery.href,
-        images: images,
-        availableIndices: availableIndices
-      });
+  // Use session storage to track last used images for better variety
+  let lastUsedIndices: number[] = [];
+  if (useSessionStorage && typeof sessionStorage !== 'undefined') {
+    const stored = sessionStorage.getItem('sidebarLastUsedIndices');
+    if (stored) {
+      lastUsedIndices = JSON.parse(stored);
     }
   }
 
-  const pickedImages: Image[] = [];
+  // Prioritize images that haven't been used recently
+  const prioritizedImages = allImages
+    .map((img, index) => ({ img, originalIndex: index }))
+    .sort((a, b) => {
+      const aRecent = lastUsedIndices.includes(a.originalIndex);
+      const bRecent = lastUsedIndices.includes(b.originalIndex);
+      if (aRecent && !bRecent) return 1;
+      if (!aRecent && bRecent) return -1;
+      return Math.random() - 0.5; // Random tiebreaker
+    })
+    .map(item => item.img);
 
-  if (mixingStrategy === 'random') {
-    // Random strategy: randomly select from any available gallery
-    const totalAvailableImages = allGalleryImages.reduce((sum, g) => sum + g.availableIndices.length, 0);
+  // Take the required number
+  const selectedImages = prioritizedImages.slice(0, count);
 
-    while (pickedImages.length < maxCount && totalAvailableImages > pickedImages.length) {
-      // Randomly select a gallery that still has available images
-      const availableGalleries = allGalleryImages.filter(g => g.availableIndices.length > 0);
-      if (availableGalleries.length === 0) break;
-
-      const randomGalleryIndex = Math.floor(Math.random() * availableGalleries.length);
-      const selectedGallery = availableGalleries[randomGalleryIndex];
-
-      // Get next available index from this gallery
-      const imageIndex = selectedGallery.availableIndices.pop()!;
-      const img = selectedGallery.images[imageIndex];
-
-      if (img && !excludeIds.has(img.id)) {
-        const href = `${selectedGallery.gallery}/${img.id}`.replace(/\/+/g, '/');
-        const normalized = normalizeImage({ ...img, href });
-        pickedImages.push(normalized);
-        excludeIds.add(img.id);
-      }
-    }
-  } else {
-    // Balanced strategy: ensure fair distribution across galleries
-    const galleriesWithImages = allGalleryImages.filter(g => g.availableIndices.length > 0);
-
-    while (pickedImages.length < maxCount && galleriesWithImages.length > 0) {
-      // Go through each gallery that still has images
-      for (const gallery of galleriesWithImages.slice()) { // slice() to avoid modification during iteration
-        if (gallery.availableIndices.length === 0) {
-          // Remove from available galleries
-          const index = galleriesWithImages.indexOf(gallery);
-          if (index > -1) galleriesWithImages.splice(index, 1);
-          continue;
-        }
-
-        const imageIndex = gallery.availableIndices.pop()!;
-        const img = gallery.images[imageIndex];
-
-        if (img && !excludeIds.has(img.id)) {
-          const href = `${gallery.gallery}/${img.id}`.replace(/\/+/g, '/');
-          const normalized = normalizeImage({ ...img, href });
-          pickedImages.push(normalized);
-          excludeIds.add(img.id);
-
-          if (pickedImages.length >= maxCount) break;
-        }
-      }
-
-      if (pickedImages.length >= maxCount) break;
-    }
+  // Update session storage with used indices
+  if (useSessionStorage && typeof sessionStorage !== 'undefined') {
+    const usedIndices = selectedImages.map(img =>
+      allImages.findIndex(origImg => origImg.id === img.id)
+    ).filter(idx => idx !== -1);
+    sessionStorage.setItem('sidebarLastUsedIndices', JSON.stringify(usedIndices));
   }
 
-  return { galleryDatas, galleryPaths, pickedImages };
+  // Normalize and add to picked images
+  for (const img of selectedImages) {
+    const href = `${img.galleryPath}/${img.id}`.replace(/\/+/g, '/');
+    const normalized = normalizeImage({ ...img, href });
+    pickedImages.push(normalized);
+    excludeIds.add(img.id);
+  }
+
+  return pickedImages;
 }
 
 export function getSideImagesHome2({
-  targetCount = 100,
+  targetCount = 100, // Changed default to 100 as requested
   excludeIds = new Set<string>(),
-  mixingStrategy = 'auto' as 'random' | 'balanced' | 'auto'
 }: {
   targetCount?: number;
   excludeIds?: Set<string>;
-  mixingStrategy?: 'random' | 'balanced' | 'auto';
 }): {
   featheredImages: Image[],
   galleryDatas: Image[][],
   galleryPaths: string[]
 } {
-  // Auto strategy: alternate between random and balanced on each call
-  let actualStrategy: 'random' | 'balanced' = 'random';
-  if (mixingStrategy === 'auto') {
-    // Use sessionStorage to alternate strategies across page loads
-    const currentStrategy = typeof sessionStorage !== 'undefined'
-      ? sessionStorage.getItem('sidebarMixingStrategy')
-      : null;
-
-    if (currentStrategy === 'random') {
-      actualStrategy = 'balanced';
-    } else {
-      actualStrategy = 'random';
-    }
-
-    // Store for next call
-    if (typeof sessionStorage !== 'undefined') {
-      sessionStorage.setItem('sidebarMixingStrategy', actualStrategy);
-    }
-  } else {
-    actualStrategy = mixingStrategy;
-  }
-
-  // 1. Pull all galleries under both sections
-  const painterlySources = getAllGallerySources("/Galleries/Painterly-Fine-Art-Photography");
-  const fineArtSources   = getAllGallerySources("/Galleries/Fine-Art-Photography");
-
-  // 2. Gather gallery data and pull multiple images per gallery (improved randomized logic)
-  const painterly = pullGalleryDataAndImagesRandomized(painterlySources, targetCount, excludeIds, actualStrategy);
-  const fineArt   = pullGalleryDataAndImagesRandomized(fineArtSources, targetCount, excludeIds, actualStrategy);
-
-  // 3. Ensure first image is from western painterly portrait galleries, then alternate for remaining images
-  // Western portrait galleries: Color, Black-White, and NA-Color cowboy portrait galleries
-  const featheredImages: Image[] = [];
-  const westernPortraitGalleries = [
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
-    "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+  // Define gallery categories
+  const westernCowboyPaths = [
+    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
   ];
 
-  // Find first available image from western portrait galleries
-  let firstImage: Image | null = null;
-  for (const westernGallery of westernPortraitGalleries) {
-    const westernImage = painterly.pickedImages.find(img =>
-      img.galleryPath === westernGallery && !excludeIds.has(img.id)
+  const painterlyLandscapePaths = [
+    "/Galleries/Painterly-Fine-Art-Photography/Landscapes"
+  ];
+
+  const traditionalLandscapePaths = [
+    "/Galleries/Fine-Art-Photography/Landscapes"
+  ];
+
+  const transportationPaths = [
+    "/Galleries/Fine-Art-Photography/Transportation"
+  ];
+
+  // Get all painterly galleries
+  const allPainterlySources = getAllGallerySources("/Galleries/Painterly-Fine-Art-Photography");
+
+  // Get all traditional (fine art) galleries
+  const allTraditionalSources = getAllGallerySources("/Galleries/Fine-Art-Photography");
+
+  // 1. Select western cowboy image (must be first)
+  const westernCowboyGalleries = getGalleriesByPaths(westernCowboyPaths);
+  const westernCowboyImages = pullImagesFromGalleries(westernCowboyGalleries, 1, excludeIds, true);
+
+  // 2. Select painterly landscape image
+  const painterlyLandscapeGalleries = getGalleriesByPaths(painterlyLandscapePaths);
+  const painterlyLandscapeImages = pullImagesFromGalleries(painterlyLandscapeGalleries, 1, excludeIds, true);
+
+  // 3. Select painterly other image (excluding western and landscape)
+  const excludePainterlyPaths = westernCowboyPaths.concat(painterlyLandscapePaths);
+  const painterlyOtherGalleries = getGalleriesExcludingPaths(excludePainterlyPaths)
+    .filter(g => g.href.startsWith('/Galleries/Painterly-Fine-Art-Photography'));
+  const painterlyOtherImages = pullImagesFromGalleries(painterlyOtherGalleries, 1, excludeIds, true);
+
+  // 4. Select traditional landscape image
+  const traditionalLandscapeGalleries = getGalleriesByPaths(traditionalLandscapePaths);
+  const traditionalLandscapeImages = pullImagesFromGalleries(traditionalLandscapeGalleries, 1, excludeIds, true);
+
+  // 5. Select transportation image
+  const transportationGalleries = getGalleriesByPaths(transportationPaths);
+  const transportationImages = pullImagesFromGalleries(transportationGalleries, 1, excludeIds, true);
+
+  // 6. Select traditional other image (excluding landscape and transportation)
+  const excludeTraditionalPaths = traditionalLandscapePaths.concat(transportationPaths);
+  const traditionalOtherGalleries = getGalleriesExcludingPaths(excludeTraditionalPaths)
+    .filter(g => g.href.startsWith('/Galleries/Fine-Art-Photography'));
+  const traditionalOtherImages = pullImagesFromGalleries(traditionalOtherGalleries, 1, excludeIds, true);
+
+  // Combine all selected images in alternating pattern: painterly/traditional/painterly/traditional...
+  const featheredImages: Image[] = [];
+
+  // First image is always the western cowboy (painterly)
+  if (westernCowboyImages.length > 0) {
+    featheredImages.push(westernCowboyImages[0]);
+  }
+
+  // Create the alternating pattern with the remaining images
+  const painterlyImages = [painterlyLandscapeImages[0], painterlyOtherImages[0]].filter(Boolean);
+  const traditionalImages = [traditionalLandscapeImages[0], transportationImages[0], traditionalOtherImages[0]].filter(Boolean);
+
+  let p = 0, t = 0;
+  const maxImages = Math.min(targetCount - 1, painterlyImages.length + traditionalImages.length);
+
+  for (let i = 0; i < maxImages; i++) {
+    if (i % 2 === 0 && p < painterlyImages.length) {
+      // Even index: painterly
+      featheredImages.push(painterlyImages[p++]);
+    } else if (t < traditionalImages.length) {
+      // Odd index: traditional
+      featheredImages.push(traditionalImages[t++]);
+    } else if (p < painterlyImages.length) {
+      // Fallback to painterly if no more traditional
+      featheredImages.push(painterlyImages[p++]);
+    }
+  }
+
+  // Collect all gallery data for the linker
+  const allGallerySources = [
+    ...westernCowboyGalleries,
+    ...painterlyLandscapeGalleries,
+    ...painterlyOtherGalleries,
+    ...traditionalLandscapeGalleries,
+    ...transportationGalleries,
+    ...traditionalOtherGalleries
+  ];
+
+  const galleryDatas: Image[][] = [];
+  const galleryPaths: string[] = [];
+  const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
+
+  for (const gallery of allGallerySources) {
+    const filePath = '../../data' + gallery.href + '.mjs';
+    const mod: any = allGalleryData[filePath];
+    const images: Image[] = (mod?.galleryData || mod?.default || []).filter(
+      (img: Image) => img.id && img.id !== 'i-k4studios'
     );
-    if (westernImage) {
-      firstImage = westernImage;
-      // Remove it from painterly.pickedImages to avoid duplication
-      const index = painterly.pickedImages.findIndex(img => img.id === westernImage.id);
-      if (index > -1) {
-        painterly.pickedImages.splice(index, 1);
-      }
-      break;
+    if (images.length) {
+      galleryDatas.push(images);
+      galleryPaths.push(gallery.href);
     }
   }
-
-  // If we found a western portrait image, use it as the first image
-  if (firstImage) {
-    featheredImages.push(firstImage);
-    excludeIds.add(firstImage.id);
-  } else {
-    // Fallback: if no western portrait images available, use first painterly image
-    console.warn('No western portrait images available, using fallback for first image');
-    if (painterly.pickedImages.length > 0) {
-      featheredImages.push(painterly.pickedImages[0]);
-      excludeIds.add(painterly.pickedImages[0].id);
-      painterly.pickedImages.shift(); // Remove from array to avoid duplication
-    }
-  }
-
-  // 4. Continue with alternating pattern for remaining images
-  let p = 0, f = 0;
-  while (featheredImages.length < targetCount && (p < painterly.pickedImages.length || f < fineArt.pickedImages.length)) {
-    if (f < fineArt.pickedImages.length)  featheredImages.push(fineArt.pickedImages[f++]);
-    if (featheredImages.length >= targetCount) break;
-    if (p < painterly.pickedImages.length) featheredImages.push(painterly.pickedImages[p++]);
-  }
-
-  // 4. Continue with alternating pattern for remaining images
-  const galleryDatas = [...painterly.galleryDatas, ...fineArt.galleryDatas];
-  const galleryPaths = [...painterly.galleryPaths, ...fineArt.galleryPaths];
 
   return {
     featheredImages,
