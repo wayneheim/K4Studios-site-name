@@ -106,7 +106,7 @@
           font-weight: bold;
           margin-bottom: 2rem;
         }
-        .divider {
+  .landing-divider {
           width: 200px;
           margin: 1rem auto;
           display: flex;
@@ -114,18 +114,18 @@
           justify-content: center;
           gap: 1rem;
         }
-        .divider::before,
-        .divider::after {
+  .landing-divider::before,
+  .landing-divider::after {
           content: '';
           flex: 1;
           height: 1px;
           background: #888;
         }
-        .divider span {
+  .landing-divider span {
           font-size: 2.2rem;
           transition: text-shadow 0.3s ease;
         }
-        .explore-section:hover .divider span {
+  .explore-section:hover .landing-divider span {
           color: #000;
           text-shadow:
             0 0 8px rgba(255, 100, 0, 0.8),
