@@ -3,9 +3,9 @@
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 import { normalizeImage } from '@/components/utils/normalizeImage';
 
-const staticLcpIds = ['i-ncFcHDM', 'i-KtmPcCf', 'i-rqk5Kdk']; // your 3 heroes
+const staticLcpIds = ['i-ncFcHDM', 'i-KtmPcCf', 'i-rqk5Kdk'];
 
-// --- Find all hero matches, collecting their file path and img object ---
+// --- Find all hero matches (any Cowboy subfolder), and their real gallery path
 const heroCandidates = [];
 for (const filePath in allModules) {
   if (filePath.includes('Western-Cowboy-Portraits')) {
@@ -18,30 +18,28 @@ for (const filePath in allModules) {
 }
 if (heroCandidates.length === 0) throw new Error('No Cowboy hero images found!');
 
-// --- Pick one at random ---
+// --- Pick one at random for LCP/hero ---
 const heroIdx = Math.floor(Math.random() * heroCandidates.length);
 const { img: staticCowboyImg, filePath: staticCowboyFilePath } = heroCandidates[heroIdx];
 const staticCowboyId = staticCowboyImg.id;
 
-// --- Prepare hero slide ---
+// --- Responsive src selector (as requested) ---
+function selectResponsiveSrc(img) {
+  const isMobile =
+    typeof window !== 'undefined'
+      ? window.innerWidth <= 700
+      : false; // SSR fallback: treat as desktop if unknown
+  if (isMobile) {
+    return img.srcS || img.srcM || img.srcL || img.src || '';
+  } else {
+    return img.srcM || img.srcS || img.srcL || img.src || '';
+  }
+}
 function filePathToHref(filePath) {
   return filePath
     .replace(/^.*Galleries/, '/Galleries')
     .replace(/\.mjs$/, '')
     .replace(/\\/g, '/');
-}
-function selectResponsiveSrc(img) {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 700;
-  let src = '';
-  if (isMobile) {
-    src = img.srcS || img.srcM || img.srcL || img.src || '';
-  } else {
-    src = img.srcM || img.srcS || img.srcL || img.src || '';
-  }
-  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
-    src = img.srcS;
-  }
-  return src;
 }
 function toSlide(rawImg, path, idx) {
   const img = normalizeImage({ ...rawImg });
@@ -61,7 +59,6 @@ function toSlide(rawImg, path, idx) {
 }
 const staticCowboySlide = toSlide(staticCowboyImg, filePathToHref(staticCowboyFilePath), 0);
 
-// --- Pool helpers ---
 function getGalleryData(mod) {
   return mod.galleryData || (mod.default && mod.default.galleryData) || [];
 }
@@ -85,7 +82,7 @@ function pickRandomFromPools(pools, n) {
     if (pools[realIdx].images.length === 0) { usedPools.add(realIdx); continue; }
     const imgIdx = Math.floor(Math.random() * pools[realIdx].images.length);
     const chosen = pools[realIdx].images[imgIdx];
-    if (staticLcpIds.includes(chosen.id)) continue; // exclude any hero IDs from random
+    if (staticLcpIds.includes(chosen.id)) continue;
     picks.push({ img: chosen, path: pools[realIdx].path });
     usedPools.add(realIdx);
   }
@@ -121,10 +118,7 @@ for (let i = 0; i < 4; i++) {
   if (traditionalPicks[i]) slidesArr.push({ ...toSlide(traditionalPicks[i].img, traditionalPicks[i].path, slidesArr.length) });
 }
 
-// --- Combine hero + rest ---
 const allSlidesArr = [staticCowboySlide, ...slidesArr];
-
-// --- Set priorities and export ---
 const slides = allSlidesArr.map((slide, idx) => ({
   ...slide,
   fetchpriority: idx === 0 ? 'high' : undefined,
