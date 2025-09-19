@@ -100,7 +100,7 @@ export default function GalleryInfo({ entranceData, isLandingPage = false }) {
         transition={{ duration: 1.2, delay: 0, ease: [0.33, 1, 0.68, 1] }}
       >
         Explore the Gallery <span style={{ fontSize: "1.8rem", verticalAlign: "middle" }}>→</span>
-        {isLandingPage && (
+        {isLandingPage && entranceData && (
           <div className="landing-divider">
             <span style={{ fontSize: "1.5rem" }}>◆</span>
           </div>
