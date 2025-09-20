@@ -104,7 +104,7 @@ export default function GalleryInfo({ entranceData, isLandingPage = false }) {
           <>
             <span style={{ fontSize: "1.8rem", verticalAlign: "middle" }}>→</span>
             <div className="landing-divider">
-              <span style={{ fontSize: "1.5rem" }}>◆</span>
+              <span style={{ fontSize: "1.5rem" }}>Enter</span>
             </div>
           </>
         )}
