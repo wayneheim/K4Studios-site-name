@@ -862,9 +862,9 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                     {/* Separator */}
                     <div className="hidden md:flex justify-center my-2">
                       <div className="flex items-center justify-center gap-3 my-4 text-[#7a6a58]">
-                        <div className="h-px w-20 bg-[#7a6a58]" />
-                        <div className="w-3 h-3 rotate-45 bg-[#7a6a58]" />
-                        <div className="h-px w-20 bg-[#7a6a58]" />
+                        
+                       
+                        
                       </div>
                     </div>
 
@@ -1012,9 +1012,9 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                     {/* Bottom Separator */}
                     <div className="flex justify-center my-3">
                       <div className="flex items-center justify-center gap-3 my-6 text-[#7a6a58]">
-                        <div className="h-px w-20 bg-[#7a6a58]" />
-                        <div className="w-3 h-3 rotate-45 bg-[#7a6a58]" />
-                        <div className="h-px w-20 bg-[#7a6a58]" />
+                        
+                       
+                        
                       </div>
                     </div>
 

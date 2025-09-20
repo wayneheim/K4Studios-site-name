@@ -92,7 +92,7 @@ export default function GalleryInfo() {
   transition={{ duration: 1.2, delay: 0.0, ease: [0.33, 1, 0.68, 1] }}
 >
         Explore the Gallery <span style={{ fontSize: "1.8rem", verticalAlign: "middle" }}>→</span>
-        <div className="divider"><span style={{ fontSize: "1.5rem" }}>{'◆'}</span></div>
+        <div className="divider"><span style={{ fontSize: "1.5rem" }}>{'22◆'}</span></div>
       </motion.div>
     </>
   );

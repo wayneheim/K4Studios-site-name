@@ -99,15 +99,11 @@ export default function GalleryInfo({ entranceData, isLandingPage = false }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0, ease: [0.33, 1, 0.68, 1] }}
       >
-        {/* Only show the arrow and divider on landing page */}
-        {isLandingPage && entranceData && (
-          <>
-            <span style={{ fontSize: "1.8rem", verticalAlign: "middle" }}>→</span>
-            <div className="landing-divider">
-              <span style={{ fontSize: "1.5rem" }}>Enter</span>
-            </div>
-          </>
-        )}
+        Explore the Gallery
+        <span style={{ fontSize: "1.8rem", verticalAlign: "middle" }}>→</span>
+        <div className="landing-divider">
+          <span style={{ fontSize: "1.5rem" }}>◆</span>
+        </div>
       </motion.div>
     </>
   );

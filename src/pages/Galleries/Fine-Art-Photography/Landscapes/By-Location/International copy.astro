@@ -14,21 +14,23 @@ import { getSideImages } from '@/components/utils/getSideImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
-import { getLandingMeta } from '@/data/landingMeta.ts';
+import { landingInternational } from '@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/landingstones.ts';
+import { internationalStory } from '@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/story.ts';
+import { internationalFAQ } from '@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/faq.ts';
 
-import { landingWestern } from '@/data/Galleries/Fine-Art-Photography/Transportation/landingstones.ts';
-import { westernStory } from '@/data/Galleries/Fine-Art-Photography/Transportation/story.ts';
-import { transportationFAQ } from '@/data/Galleries/Fine-Art-Photography/Transportation/faq.ts';
+
+import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import '@/styles/global.css';
 
 // ----------------------
-// TRANSPORTATION GALLERY DATA GATHERING
+// UNIVERSAL IMAGE FEATHERING LOGIC (ALL DESCENDANT GALLERIES)
 // ----------------------
 
-const sectionPath = "/Galleries/Fine-Art-Photography/Transportation";
-const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+const sectionPath = "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International";
+const headingCount = internationalStory.filter((block, i) => i > 0 && block.subhead).length;
 
+// Find landingNav for this branch
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -98,7 +100,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
   meta={landingMeta}
 >
 
-  <main class="bg-[#fdfcf9] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
     </div>

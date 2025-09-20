@@ -145,7 +145,7 @@ return (
               fontSize: "0.75rem",
               textAlign: "right",
               opacity: 0.6,
-              color: ["black", "gray"].includes(matColor) ? "#fdfcf9" : "#2c2c2c",
+              color: ["black", "gray"].includes(matColor) ? "#ffffff" : "#2c2c2c",
             }}
           >
             © Wayne Heim

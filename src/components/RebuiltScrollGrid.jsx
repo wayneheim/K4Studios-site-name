@@ -136,7 +136,8 @@ export default function RebuiltScrollGrid({
           className="hidden md:flex flex-col items-center justify-center"
           style={{
             position: 'absolute',
-            top: -40,
+            top: -60,
+            bottom: 42,
             left: '50%',
             transform: 'translateX(-50%)',
             marginBottom: 0,
@@ -151,6 +152,7 @@ export default function RebuiltScrollGrid({
             style={{
               background: 'none',
               border: 'none',
+              
               padding: 0,
               cursor: 'pointer',
               outline: 'none'
@@ -160,8 +162,8 @@ export default function RebuiltScrollGrid({
               src="/images/K4Logo-web.jpg"
               alt="K4 Studios"
               style={{
-                width: 120,
-                height: 120,
+                width: 110,
+                height: 110,
                 borderRadius: '50%',
                 objectFit: 'cover',
                 opacity: .17,
@@ -176,7 +178,7 @@ export default function RebuiltScrollGrid({
         <h2
           className="watermark-title whitespace-nowrap"
           style={{
-            marginBottom: "2.5rem",
+            marginBottom: "4rem",
             transition: "color .14s",
             fontSize: "4rem",
             fontWeight: 700,
