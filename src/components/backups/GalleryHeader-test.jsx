@@ -10,7 +10,7 @@ export default function GalleryHeader() {
           font-family: 'Glegoo', serif;
           margin: 0;
           padding-top: 1.5rem;
-          background: #fdfcf9;
+          background: #ffffff;
           color: #2c2c2c;
         }
 

@@ -423,7 +423,7 @@ useEffect(() => {
     fontSize: "0.75rem",
     color:
       matColor === "black" || matColor === "gray"
-        ? "#fdfcf9"
+        ? "#ffffff"
         : "#2c2c2c",
     textAlign: "right",
   }}

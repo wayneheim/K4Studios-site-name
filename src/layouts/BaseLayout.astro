@@ -47,13 +47,8 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
     <link rel="preconnect" href="https://photos.smugmug.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
-    <!-- Make Tailwind CSS non-blocking -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
+    <!-- Use local purged Tailwind CSS build -->
+    <link rel="stylesheet" href="/tailwind.css" />
     <style>
       body {
         font-family: 'Glegoo', serif;

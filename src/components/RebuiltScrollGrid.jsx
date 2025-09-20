@@ -71,7 +71,7 @@ export default function RebuiltScrollGrid({
     const anchor = rowRefs.current[`row-${anchorRowIndex}`];
     if (anchor) {
       const anchorRect = anchor.getBoundingClientRect();
-      window.scrollBy({ top: anchorRect.top - 80, behavior: "instant" });
+  window.scrollBy({ top: anchorRect.top - 80, behavior: "auto" });
     }
     setPendingPrepend(false);
   }, [start, colCount, pendingPrepend]);
@@ -133,13 +133,14 @@ export default function RebuiltScrollGrid({
       >
         {/* Desktop-only circular logo absolutely centered above heading (no structural changes) */}
         <div
-          className="hidden md:flex flex-col items-center justify-center"
+          className="hidden md:flex flex-col items-center justify-center z-50"
           style={{
             position: 'absolute',
             top: -40,
             left: '50%',
             transform: 'translateX(-50%)',
             marginBottom: 0,
+            pointerEvents: 'auto',
           }}
         >
           <button
@@ -153,7 +154,8 @@ export default function RebuiltScrollGrid({
               border: 'none',
               padding: 0,
               cursor: 'pointer',
-              outline: 'none'
+              outline: 'none',
+              pointerEvents: 'auto',
             }}
           >
             <img
@@ -176,13 +178,14 @@ export default function RebuiltScrollGrid({
         <h2
           className="watermark-title whitespace-nowrap"
           style={{
-            marginBottom: "2.5rem",
+            marginBottom: "4rem",
             transition: "color .14s",
             fontSize: "4rem",
             fontWeight: 700,
             color: "#5e4740",
             opacity: ".17",
             textAlign: "center",
+            pointerEvents: 'none',
           }}
         >
           Chapter Index
@@ -192,9 +195,10 @@ export default function RebuiltScrollGrid({
 
       {/* Show Previous Button */}
       {start > 0 && (
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-2 relative" style={{zIndex: 30}}>
           <button
             className="px-6 py-2 bg-[#ece4d7] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
+            style={{ zIndex: 40, position: 'relative' }}
             onClick={() => {
               setSimIndex(start);
               setAnchorOnNextUpdate(false);

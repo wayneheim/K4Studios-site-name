@@ -573,7 +573,7 @@ export default function ChapterGalleryBase({
                         <span className="sr-only">Previous</span>
                       </button>
 
-                      <div className="relative w-full md:w-[340px] flex flex-row">
+                      <div className="relative w-full md:w-[660px] flex flex-row">
                         {/* Image container with absolutely positioned collector notes button outside/right of image edge */}
                         <div
                           className="relative flex justify-center items-center"
@@ -586,7 +586,7 @@ export default function ChapterGalleryBase({
                             style={
                               isMobile
                                 ? { cursor: "zoom-in", maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh", border: '1px solid rgba(120,120,120,0.30)', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }
-                                : { cursor: "zoom-in", maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7", transition: 'box-shadow .3s ease', border: '1px solid rgba(110,110,110,0.28)', boxShadow: '0 2px 5px rgba(0,0,0,0.10)' }
+                                : { cursor: "zoom-in", maxWidth: "100%", width: "594px", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7", transition: 'box-shadow .3s ease', border: '1px solid rgba(110,110,110,0.28)', boxShadow: '0 2px 5px rgba(0,0,0,0.10)' }
                             }
                             onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
                             data-zoom-btn
@@ -676,13 +676,13 @@ export default function ChapterGalleryBase({
 
                     {/* Unified Nav Row */}
                     <div
-                      className="w-full flex items-center justify-between ml-[0.1rem] gap-0.5 md:gap-2 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none"
-                      style={{ maxWidth: '340px', minWidth: '0' }}
+                      className="inline-flex items-center justify-center gap-5 mt-3 mb-3 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-6 py-0.5 select-none"
+                      style={{ borderWidth: '2px', boxShadow: '0 1px 6px 0 rgba(180,180,180,0.10)' }}
                     >
                       {/* Menu */}
                       <button
                         type="button"
-                        className="flex items-center justify-center w-8 h-8 border border-gray-200 hover:bg-gray-100 bg-white text-gray-500 text-lg rounded-full shadow-sm transition-colors duration-150 hover:border-red-200 hover:text-gray-700 focus:text-gray-600 hover:border-gray-300 focus:border-gray-300"
+                        className="flex items-center justify-center w-8 h-8 border border-gray-200 hover:bg-gray-100 bg-white text-gray-500 text-base rounded-full shadow-sm transition-colors duration-150 hover:border-red-200 hover:text-gray-700 focus:text-gray-600 hover:border-gray-300 focus:border-gray-300 -ml-5"
                         aria-label="Show Menu"
                         title="Show Menu"
                         style={{ fontWeight: 400 }}
@@ -785,7 +785,7 @@ export default function ChapterGalleryBase({
                       {/* Exit */}
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
+                        className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer -mr-5"
                         aria-label="Exit Chapter View"
                         title="Exit Viewer"
                         style={{ position: 'relative', zIndex: 20 }}
@@ -862,9 +862,9 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                     {/* Separator */}
                     <div className="hidden md:flex justify-center my-2">
                       <div className="flex items-center justify-center gap-3 my-4 text-[#7a6a58]">
-                        <div className="h-px w-20 bg-[#7a6a58]" />
-                        <div className="w-3 h-3 rotate-45 bg-[#7a6a58]" />
-                        <div className="h-px w-20 bg-[#7a6a58]" />
+                        
+                       
+                        
                       </div>
                     </div>
 
@@ -1012,9 +1012,9 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                     {/* Bottom Separator */}
                     <div className="flex justify-center my-3">
                       <div className="flex items-center justify-center gap-3 my-6 text-[#7a6a58]">
-                        <div className="h-px w-20 bg-[#7a6a58]" />
-                        <div className="w-3 h-3 rotate-45 bg-[#7a6a58]" />
-                        <div className="h-px w-20 bg-[#7a6a58]" />
+                        
+                        
+                        
                       </div>
                     </div>
 

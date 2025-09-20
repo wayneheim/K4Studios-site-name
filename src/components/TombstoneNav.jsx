@@ -146,7 +146,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           aspect-ratio: 3.5 / 4;
           border-radius: 0% 0% 25% 25% / 0% 0% 20% 20%;
           overflow: hidden;
-          background: #fdfcf9;
+          background: #ffffff;
           border: 1px solid #bda27c;
           box-shadow:
             inset 0 -1px 1px rgba(255, 255, 255, 0.6),

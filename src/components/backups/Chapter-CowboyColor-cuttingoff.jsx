@@ -390,7 +390,7 @@ export default function ScrollFlipGallery() {
               marginRight: '30px',
               marginBottom: '18px',
               fontSize: '0.75rem',
-              color: matColor === 'black' || matColor === 'gray' ? '#fdfcf9' : '#2c2c2c',
+              color: matColor === 'black' || matColor === 'gray' ? '#ffffff' : '#2c2c2c',
               textAlign: 'right',
               opacity: 0.55,
             }}
