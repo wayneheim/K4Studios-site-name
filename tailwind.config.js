@@ -12,13 +12,13 @@ module.exports = {
     './public/**/*.html',
   ],
   safelist: [
-    // Keep all inset utilities (override purge)
-    'inset-0', 'inset-x-0', 'inset-y-0', 'inset-1', 'inset-2', 'inset-4', 'inset-auto',
-    'top-0', 'right-0', 'bottom-0', 'left-0',
-    'top-1', 'right-1', 'bottom-1', 'left-1',
-    'top-2', 'right-2', 'bottom-2', 'left-2',
-    'top-4', 'right-4', 'bottom-4', 'left-4',
-    'top-auto', 'right-auto', 'bottom-auto', 'left-auto'
+    // Explicitly include inset-0
+    'inset-0',
+    // Pattern-based safelist for all inset utilities
+    { pattern: /inset(-[xy])?-(0|1|2|3|4|5|6|7|8|9|10|11|12|14|16|20|24|28|32|36|40|44|48|52|56|60|64|72|80|96|auto|1\/2|1\/3|2\/3|1\/4|2\/4|3\/4|full)/ },
+    { pattern: /(top|right|bottom|left)-(0|1|2|3|4|5|6|7|8|9|10|11|12|14|16|20|24|28|32|36|40|44|48|52|56|60|64|72|80|96|auto|1\/2|1\/3|2\/3|1\/4|2\/4|3\/4|full)/ },
+    { pattern: /-inset(-[xy])?-(0|1|2|3|4|5|6|7|8|9|10|11|12|14|16|20|24|28|32|36|40|44|48|52|56|60|64|72|80|96|auto|1\/2|1\/3|2\/3|1\/4|2\/4|3\/4|full)/ },
+    { pattern: /-(top|right|bottom|left)-(0|1|2|3|4|5|6|7|8|9|10|11|12|14|16|20|24|28|32|36|40|44|48|52|56|60|64|72|80|96|auto|1\/2|1\/3|2\/3|1\/4|2\/4|3\/4|full)/ },
   ],
   theme: {
     extend: {},
