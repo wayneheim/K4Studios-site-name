@@ -166,7 +166,7 @@ export default function GalleryNavMenuMini({ hideDefaultHamburger = false }) {
 
               <a href="/" aria-label="K4 Studios homepage" title="Home" className="logo-link">
   <img
-    src="/images/K4Logo-web-c.png"
+  src="/images/K4Logo-web-c.webp"
     alt="K4 Studios Logo"
     className="k4-watermark"
   />

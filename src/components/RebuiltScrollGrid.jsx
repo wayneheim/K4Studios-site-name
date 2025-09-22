@@ -165,7 +165,7 @@ export default function RebuiltScrollGrid({
             }}
           >
             <img
-              src="/images/K4Logo-web.jpg"
+              src="/images/K4Logo-web.webp"
               alt="K4 Studios"
               style={{
                 width: 110,

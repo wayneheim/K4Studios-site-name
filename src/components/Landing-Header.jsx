@@ -27,7 +27,7 @@ function LogoSlot({ isMobile, triggerStripe }) {
   }, [isMobile, triggerStripe]);
   return (
     <a href="/" className={`logo-slot${logoIn ? " logo-in" : ""}`}>
-      <img src="/images/K4Logo-web.jpg" alt="K4 Studios Home" className="logo-img" />
+  <img src="/images/K4Logo-web.webp" alt="K4 Studios Home" className="logo-img" />
     </a>
   );
 }

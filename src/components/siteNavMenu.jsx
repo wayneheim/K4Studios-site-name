@@ -184,7 +184,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
 
              <a href="/" aria-label="K4 Studios Home" className="k4-logo-hover">
   <img
-    src="/images/K4Logo-web-c.png"
+  src="/images/K4Logo-web-c.webp"
     alt="K4 Studios Logo"
     className="k4-watermark-opacity"
   />

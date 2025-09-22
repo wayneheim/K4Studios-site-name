@@ -183,7 +183,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
               </div>
 
               <img
-                src="/images/K4Logo-web.png"
+                src="/images/K4Logo-web.webp"
                 alt="K4 Studios Logo"
                 className="k4-watermark"
               />

@@ -39,7 +39,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
 
       <a href="/" className="logo-slot">
         <img
-          src="/images/K4Logo-web.jpg"
+          src="/images/K4Logo-web.webp"
           alt="K4 Studios Logo"
           className="logo-img"
         />

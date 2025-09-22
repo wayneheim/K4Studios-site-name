@@ -131,7 +131,7 @@ export default function MobileMiniDrawer({ onClose }) {
             }}
           >
             <img
-              src="/images/K4Logo-web-c.png"
+              src="/images/K4Logo-web-c.webp"
               alt="K4 Studios Logo"
               style={{
                 width: "120px",

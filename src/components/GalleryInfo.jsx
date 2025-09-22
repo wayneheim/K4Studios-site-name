@@ -46,8 +46,8 @@ export default function GalleryInfo({ entranceData, isLandingPage = false }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, delay: 0 }}
         >
-          <h2>{entranceData.title}</h2>
-          <h3>{entranceData.subtitle}</h3>
+          <h1>{entranceData.title}</h1>
+          <h2>{entranceData.subtitle}</h2>
           <div
   className="gallery-intro-description"
   dangerouslySetInnerHTML={{ __html: entranceData.description }}
@@ -55,7 +55,7 @@ export default function GalleryInfo({ entranceData, isLandingPage = false }) {
           {entranceData.details && (
             <details>
               <summary>
-                <span className="arrow-icon">▶</span> More…
+                <span className="arrow-icon">▶</span> More about this gallery
               </summary>
               <p className="mt-2 text-base">{entranceData.details}</p>
             </details>
