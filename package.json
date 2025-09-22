@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && cp _redirects dist/",
+    "build": "astro build && npx cpx \"_redirects\" dist/",
     "preview": "astro preview"
   },
   "repository": {
@@ -39,6 +39,7 @@
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "cpx": "^1.5.0",
     "ts-node": "^10.9.2"
   }
 }

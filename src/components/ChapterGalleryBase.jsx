@@ -506,7 +506,7 @@ export default function ChapterGalleryBase({
       {/* Google Font */}
       <link href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-      <div className="relative max-w-6xl mx-auto">
+  <div className="relative max-w-6xl mx-auto">
         {isZoomed ? (
           <ZoomOverlay
             imageData={galleryData[currentIndex]}
@@ -676,9 +676,12 @@ export default function ChapterGalleryBase({
 
                     {/* Unified Nav Row */}
                     <div
-                      className="w-full flex items-center justify-between ml-[0.1rem] gap-0.5 md:gap-2 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none"
-                      style={{ maxWidth: '340px', minWidth: '0' }}
-                    >
+  className={
+    `flex items-center gap-0.5 md:gap-2 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none ` +
+  (isMobile ? ' w-[90vw] max-w-[90vw] justify-between' : ' max-w-[425px] justify-between')
+  }
+  style={isMobile ? { width: '90%', maxWidth: '90%', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '425px', minWidth: 0, justifyContent: 'space-between' }}
+>
                       {/* Menu */}
                       <button
                         type="button"

@@ -564,10 +564,7 @@ export const siteNav = [
             "type": "gallery-source"
           },
 
-        ],
-        "code": "T-S4",
-        "slug": "miscellaneous",
-        "type": "collection"
+  ]
       }
     ],
     "code": "T",
@@ -580,7 +577,7 @@ export const siteNav = [
   "children": [
     {
       "label": "K4 Select Series",
-      "href": "/Other/K4-Select-Series",
+      "href": "",
       "code": "O-S4",
       "slug": "k4-select-series",
       "type": "collection",
