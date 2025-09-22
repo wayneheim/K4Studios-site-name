@@ -16,8 +16,8 @@ export default function ImageBar2Home() {
       trackRef.current.innerHTML += trackRef.current.innerHTML;
     }
 
-    // Appear *almost instantly* (30ms after mount)
-    const fadeTimer = setTimeout(() => setShow(true), 30);
+    // Appear *almost instantly* (30ms after mount) - but hold placeholder for 1s more
+    const fadeTimer = setTimeout(() => setShow(true), 1030);
 
     // Scale up after hero animation is done
     const scaleTimer = setTimeout(() => setFullSize(true), 1950); // adjust as needed
