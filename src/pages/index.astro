@@ -188,10 +188,11 @@ const structuredData = getStructuredData({
       setTimeout(() => {
         const lcp = document.getElementById("lcp-placeholder-img");
         if (lcp) {
+          lcp.style.transition = "opacity 0.5s ease-out";
           lcp.style.opacity = "0";
-          setTimeout(() => { lcp.style.display = "none"; }, 700);
+          setTimeout(() => { lcp.style.display = "none"; }, 500);
         }
-      }, 3000); // Increased to 3 sec for longer display
+      }, 2500); // Reduced to 2.5 sec for quicker fade
 
       // Heading animation
       setTimeout(() => {
