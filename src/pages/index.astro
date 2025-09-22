@@ -20,26 +20,18 @@ import { landingWestern }    from '../data/home/landingstones.ts';
 import { painterlyStory }    from '../data/home/story.ts';
 import { facingFAQ }         from '../data/home/faq.ts';
 
-import { slides } from '../data/home/carousel.ts';
+import { slides as homeSlides } from '../data/home/carousel.ts';
 
 import '../styles/global.css';
 
-// ----------------------
-// DYNAMIC LOGIC SECTION
-// ----------------------
-
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography"; // Fakes path context for all utils
+const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
 const meta = getLandingMeta(sectionPath);
 
 const headingCount = painterlyStory.filter((block, i) => i > 0 && block.subhead).length;
-
-// Use the new getSideImagesHome2!
 const { featheredImages, galleryDatas, galleryPaths } = getSideImages({
   targetCount: headingCount
 });
 const featheredImagesSidebar = featheredImages.slice(0, 6);
-
-const heroSrc = slides[0].src;
 
 const structuredData = getStructuredData({
   type: "gallery",
@@ -62,12 +54,10 @@ const structuredData = getStructuredData({
 });
 ---
 
-
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   structuredDataJSON={structuredData}
   meta={meta}
-  preloadImage={heroSrc}
 >
   <main class="bg-white text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
@@ -80,24 +70,36 @@ const structuredData = getStructuredData({
       </div>
     </div>
 
-    <div class="w-full max-w-[1200px] mt-8 mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
-        <img src={heroSrc} alt="Hero Image" style="width: 100%; height: auto; max-width: 1200px;" fetchpriority="high" />
-        <ImageBar2 client:load />
+    <div class="w-full max-w-[1200px] mt-8 mx-auto px-4" style="position:relative;">
+      {/* --- LCP Placeholder Overlay (z-10) --- */}
+      <img
+        src="/images/slide-1.webp"
+        alt="Featured artwork"
+        class="lcp-placeholder-img"
+        fetchpriority="high"
+        loading="eager"
+        decoding="sync"
+        id="lcp-placeholder-img"
+      />
+
+      {/* --- Carousel/Animated Hero (revealed after overlay fades) --- */}
+      <div style="position:relative;z-index:1;">
+        <div class="carousel-fade reveal-on-scroll">
+          <ImageBar2 client:load />
+        </div>
       </div>
     </div>
 
     <section class="section-heading-anim-wrap">
-  <div class="section-heading-anim">
-    <h2 class="hero-subtitle-anim" id="hero-subtitle">
-      {landingWestern.subtitle}
-    </h2>
-    <h1 class="hero-title-anim" id="hero-title">
-      {landingWestern.title}
-    </h1>
-  </div>
-</section>
-
+      <div class="section-heading-anim">
+        <h2 class="hero-subtitle-anim" id="hero-subtitle">
+          {landingWestern.subtitle}
+        </h2>
+        <h1 class="hero-title-anim" id="hero-title">
+          {landingWestern.title}
+        </h1>
+      </div>
+    </section>
 
     <div class="py-5">
       <TombstoneNav items={landingWestern.tombstones} />
@@ -163,16 +165,13 @@ const structuredData = getStructuredData({
               observer.unobserve(entry.target);
             }
           });
-        }, {
-          threshold: 0.15
-        });
+        }, { threshold: 0.15 });
         els.forEach(el => observer.observe(el));
       }
 
-      // NEW: auto-expand FAQ box if a question is clicked
+      // Auto-expand FAQ if clicked
       const faqToggle = document.getElementById("faq-toggle");
       const truncateContainer = document.querySelector(".truncate-container");
-
       if (truncateContainer && faqToggle) {
         truncateContainer.addEventListener("click", (e) => {
           const summaryClicked = e.target.closest("summary");
@@ -181,21 +180,51 @@ const structuredData = getStructuredData({
           }
         });
       }
+
+      // --- LCP Placeholder fade out logic ---
+      setTimeout(() => {
+        const lcp = document.getElementById("lcp-placeholder-img");
+        if (lcp) {
+          lcp.style.opacity = "0";
+          setTimeout(() => { lcp.style.display = "none"; }, 700);
+        }
+      }, 2000); // 2 sec, tune for feel
+
+      // Heading animation
+      setTimeout(() => {
+        document.querySelector('.section-heading-anim-wrap')
+          ?.classList.add('heading-animated');
+      }, 880);
     });
-
-    document.addEventListener("DOMContentLoaded", () => {
-  // Reveal-on-scroll logic (keep your existing code above!)
-
-  // HERO TEXT ANIMATION (this triggers the heading-animated class)
-  setTimeout(() => {
-    document.querySelector('.section-heading-anim-wrap')
-      ?.classList.add('heading-animated');
-  }, 880); // Adjust to sync with your bar/tombstone animation
-});
-
   </script>
 
 <style lang="css">
+.lcp-placeholder-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  z-index: 10;
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+/* Uncomment to hide LCP overlay on desktop
+@media (min-width: 769px) {
+  .lcp-placeholder-img { display: none !important; }
+}
+*/
+.carousel-fade, .sample-fade {
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  visibility: hidden;
+}
+.sample-fade { transition-delay: 0.2s; margin-top: -0.75rem; }
+.sample-fade.is-visible, .carousel-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
+/* ...rest of your existing styles... */
 .section-heading-anim-wrap {
   margin: -1.8rem 0 1.3rem 0;
   min-height: 138px;
@@ -214,7 +243,6 @@ const structuredData = getStructuredData({
   align-items: center;
   justify-content: center;
 }
-
 /* Subtitle */
 .hero-subtitle-anim {
   font-family: "Glegoo", serif;
@@ -236,7 +264,6 @@ const structuredData = getStructuredData({
   opacity: 0.96;
   transition-delay: 3.21s;
 }
-
 /* Title */
 .hero-title-anim {
   font-family: "Glegoo", serif;
@@ -258,7 +285,6 @@ const structuredData = getStructuredData({
   transform: translateY(0) scale(1);
   transition-delay: 3.49644s;
 }
-
 /* Responsive tweaks */
 @media (max-width: 800px) {
   .hero-title-anim {
@@ -281,7 +307,6 @@ const structuredData = getStructuredData({
     transform: translateY(0) scale(1);
     transition-delay: 0.24s;
   }
-
   .heading-animated .hero-subtitle-anim {
     font-size: 1.1rem;
     transform: scale(1) translateY(130px);
@@ -305,12 +330,9 @@ const structuredData = getStructuredData({
     transition-delay: 0.21s;
   }
 }
-
-/* Lists, sections, fades (unchanged) */
 ul { list-style-type: disc; padding-left: 1.25em; }
 ul li { margin-top: 0.15em; margin-left: 1.5em; }
 ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
-
 @media (max-width: 768px) {
   .section-heading .page-title { font-size: 1.5rem; line-height: 1.3; }
   .section-heading .page-subtitle { max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center; font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em; }
@@ -319,14 +341,12 @@ ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
   .story-section { letter-spacing: -0.03em; }
   .story-block h2 { letter-spacing: -0.05em; font-size: 1.4rem !important; margin-top: -0.59rem; line-height: 1.15; }
 }
-
 .fade-in { opacity: 0; visibility: hidden; transform: translateY(1px); transition: opacity 1.75s ease, transform 1.75s ease, visibility .5s linear 1.75s; }
 .fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
 .page-title.fade-in { transition-delay: .2s; }
 .section-heading-wrap { margin: 1.5rem 0; text-align: center; }
 .section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
 .section-heading .page-subtitle { font-size: 1rem; font-weight: 400; color: #6d5b4a; opacity: .9; }
-
 .story-section { line-height: 1.3; padding: 2rem 1.5rem; max-width: 860px; margin: 0 auto; font-family: 'Glegoo', serif; }
 .story-block { margin-bottom: 2.5rem; }
 .story-block h2 { font-size: 1.65rem; margin-bottom: 0.55rem; }
@@ -335,18 +355,7 @@ ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
 .story-block p { line-height: 1.6; margin-bottom: 1rem; font-size: 1.01rem; }
 .story-block ul { padding-left: 1.4rem; margin-top: 0.5rem; }
 .story-block li { margin-bottom: 0.5rem; font-size: 1rem; }
-
 .page-subtitle.fade-in { opacity: 0 !important; transform: translateY(-12px); visibility: hidden; transition: opacity 1.1s ease-out, transform 1.1s ease-out, visibility 0s linear 1.1s; transition-delay: 1s; }
 .page-subtitle.fade-in.is-visible { opacity: 1 !important; transform: translateY(0); visibility: visible; transition-delay: 1s; }
-
-.carousel-fade, .sample-fade {
-  opacity: 0;
-  transform: translateY(0);
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-  visibility: hidden;
-}
-.sample-fade { transition-delay: 0.2s; margin-top: -0.75rem; }
-.sample-fade.is-visible, .carousel-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
 </style>
-
 </BaseLayout>
