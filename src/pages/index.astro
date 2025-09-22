@@ -185,6 +185,8 @@ const structuredData = getStructuredData({
       }
 
       // --- LCP Placeholder fade out logic ---
+      const isMobile = window.innerWidth <= 768;
+      const fadeDelay = isMobile ? 1500 : 2500; // Quicker on mobile
       setTimeout(() => {
         const lcp = document.getElementById("lcp-placeholder-img");
         if (lcp) {
@@ -192,7 +194,7 @@ const structuredData = getStructuredData({
           lcp.style.opacity = "0";
           setTimeout(() => { lcp.style.display = "none"; }, 500);
         }
-      }, 2500); // Reduced to 2.5 sec for quicker fade
+      }, fadeDelay);
 
       // Heading animation
       setTimeout(() => {
