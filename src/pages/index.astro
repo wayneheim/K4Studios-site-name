@@ -82,16 +82,21 @@ const structuredData = getStructuredData({
     </div>
 
     <section class="section-heading-anim-wrap">
-  <div class="section-heading-anim">
-    <h2 class="hero-subtitle-anim" id="hero-subtitle">
-      {landingWestern.subtitle}
-    </h2>
-    <h1 class="hero-title-anim" id="hero-title">
-      {landingWestern.title}
-    </h1>
-  </div>
-</section>
+      <div class="section-heading-anim">
+        <!-- Static instant paint version (for Lighthouse) -->
+        <h1 class="hero-title-static" aria-hidden="true">
+          {landingWestern.title}
+        </h1>
 
+        <!-- Animated visible versions -->
+        <h2 class="hero-subtitle-anim" id="hero-subtitle">
+          {landingWestern.subtitle}
+        </h2>
+        <h1 class="hero-title-anim" id="hero-title">
+          {landingWestern.title}
+        </h1>
+      </div>
+    </section>
 
     <div class="py-5">
       <TombstoneNav items={landingWestern.tombstones} />
@@ -178,15 +183,12 @@ const structuredData = getStructuredData({
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-  // Reveal-on-scroll logic (keep your existing code above!)
-
-  // HERO TEXT ANIMATION (this triggers the heading-animated class)
-  setTimeout(() => {
-    document.querySelector('.section-heading-anim-wrap')
-      ?.classList.add('heading-animated');
-  }, 880); // Adjust to sync with your bar/tombstone animation
-});
-
+      // HERO TEXT ANIMATION (this triggers the heading-animated class)
+      setTimeout(() => {
+        document.querySelector('.section-heading-anim-wrap')
+          ?.classList.add('heading-animated');
+      }, 880); // Adjust to sync with your bar/tombstone animation
+    });
   </script>
 
 <style lang="css">
@@ -207,6 +209,21 @@ const structuredData = getStructuredData({
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Static hidden H1 – paints instantly for LCP but invisible to users */
+.hero-title-static {
+  font-family: "Glegoo", serif;
+  font-weight: 800;
+  font-size: 3.45rem;
+  letter-spacing: -0.04em;
+  color: #3e3220;
+  opacity: 0;               /* invisible to humans */
+  position: absolute;       /* sits underneath anim */
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: none;          /* no animation */
 }
 
 /* Subtitle */
