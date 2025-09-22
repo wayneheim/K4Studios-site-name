@@ -194,10 +194,10 @@ export default function RebuiltScrollGrid({
 
       {/* Show Previous Button */}
       {start > 0 && (
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8 z-10">
           <button
-            className="px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
-            style={{ border: '2px solid #d1d5db' }}
+            className="block px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition z-10"
+            style={{ border: '2px solid #d1d5db', position: 'relative' }}
             onClick={() => {
               setSimIndex(start);
               setAnchorOnNextUpdate(false);
