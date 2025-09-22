@@ -197,6 +197,7 @@ export default function RebuiltScrollGrid({
         <div className="flex justify-center mb-8">
           <button
             className="px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
+            style={{ border: '2px solid #d1d5db' }}
             onClick={() => {
               setSimIndex(start);
               setAnchorOnNextUpdate(false);
