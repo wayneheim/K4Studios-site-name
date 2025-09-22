@@ -38,9 +38,17 @@ function filePathToHref(filePath) {
 // --- toSlide for regular slides ---
 function toSlide(rawImg, path, idx) {
   const img = normalizeImage({ ...rawImg });
+  // Remove trailing duplicate gallery slug (e.g., '/Sunsets/Sunsets')
+  let cleanPath = path;
+  if (img.gallery && typeof img.gallery === 'string') {
+    const slug = img.gallery.split('/').pop();
+    if (slug && cleanPath.endsWith(`/${slug}/${slug}`)) {
+      cleanPath = cleanPath.replace(new RegExp(`/${slug}/${slug}$`), `/${slug}`);
+    }
+  }
   return {
     id: img.id,
-    href: `${path}/${img.id}`,
+    href: `${cleanPath}/${img.id}`,
     src: selectResponsiveSrc(img), // responsive for all others!
     srcS: img.srcS,
     srcM: img.srcM,
