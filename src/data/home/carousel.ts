@@ -38,13 +38,13 @@ function filePathToHref(filePath) {
 // --- toSlide for regular slides ---
 function toSlide(rawImg, path, idx) {
   const img = normalizeImage({ ...rawImg });
-  // Remove trailing duplicate gallery slug (e.g., '/Sunsets/Sunsets')
+  // Prevent duplicate slug in href (e.g., /Sunsets/Sunsets/i-xxxx)
   let cleanPath = path;
-  if (img.gallery && typeof img.gallery === 'string') {
-    const slug = img.gallery.split('/').pop();
-    if (slug && cleanPath.endsWith(`/${slug}/${slug}`)) {
-      cleanPath = cleanPath.replace(new RegExp(`/${slug}/${slug}$`), `/${slug}`);
-    }
+  const pathParts = path.split('/').filter(Boolean);
+  if (pathParts.length > 1 && pathParts[pathParts.length - 1] === pathParts[pathParts.length - 2]) {
+    // Remove duplicate last segment
+    pathParts.pop();
+    cleanPath = '/' + pathParts.join('/');
   }
   return {
     id: img.id,
