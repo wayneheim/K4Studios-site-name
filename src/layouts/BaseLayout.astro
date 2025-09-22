@@ -1,5 +1,5 @@
 ---
-const { title = 'Gallery', structuredDataJSON, meta = {} } = Astro.props;
+const { title = 'Gallery', structuredDataJSON, meta = {}, preloadImage } = Astro.props;
 
 // Fallbacks for meta
 const pageTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
@@ -47,6 +47,10 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
     <link rel="preconnect" href="https://photos.smugmug.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
+
+    {preloadImage && (
+      <link rel="preload" as="image" href={preloadImage} />
+    )}
     <!-- Make Tailwind CSS non-blocking -->
     <link
       
