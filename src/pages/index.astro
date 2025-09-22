@@ -72,15 +72,18 @@ const structuredData = getStructuredData({
 
     <div class="w-full max-w-[1200px] mt-8 mx-auto px-4" style="position:relative;">
       {/* --- LCP Placeholder Overlay (z-10) --- */}
-      <img
-        src="/images/slide-1.webp"
-        alt="Featured artwork"
-        class="lcp-placeholder-img"
-        fetchpriority="high"
-        loading="eager"
-        decoding="sync"
-        id="lcp-placeholder-img"
-      />
+      <picture>
+        <source media="(max-width: 768px)" srcset="/images/slide-1m.webp">
+        <img
+          src="/images/slide-1.webp"
+          alt="Featured artwork"
+          class="lcp-placeholder-img"
+          fetchpriority="high"
+          loading="eager"
+          decoding="sync"
+          id="lcp-placeholder-img"
+        />
+      </picture>
 
       {/* --- Carousel/Animated Hero (revealed after overlay fades) --- */}
       <div style="position:relative;z-index:1;">
