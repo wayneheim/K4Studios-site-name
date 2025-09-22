@@ -118,44 +118,50 @@ export default function RebuiltScrollGrid({
 
   // Hide large chapter spacer (dynamic top padding) while grid view is active.
   useEffect(() => {
-    const el = document.getElementById('chapter-section');
-    if (el) el.setAttribute('data-tight-header', '');
-    return () => { if (el) el.removeAttribute('data-tight-header'); };
+    const el = document.getElementById("chapter-section");
+    if (el) el.setAttribute("data-tight-header", "");
+    return () => {
+      if (el) el.removeAttribute("data-tight-header");
+    };
   }, []);
 
   return (
     <section className="bg-white py-10 px-6">
       {/* Header with hover/focus effect */}
       <div
-        className="chapter-title-block mb-[-3rem] z-20 relative flex items-center justify-center gap-4"
+        className="chapter-title-block mb-[-3rem] relative flex items-center justify-center gap-4"
         // Remove top space on mobile (colCount===1); keep large offset for centered desktop presentation
-        style={{ paddingTop: colCount === 1 ? '0px' : '150px' }}
+        style={{ paddingTop: colCount === 1 ? "0px" : "150px" }}
       >
         {/* Desktop-only circular logo absolutely centered above heading (no structural changes) */}
         <div
           className="hidden md:flex flex-col items-center justify-center"
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: -60,
             bottom: 42,
-            left: '50%',
-            transform: 'translateX(-50%)',
+            left: "50%",
+            transform: "translateX(-50%)",
             marginBottom: 0,
           }}
         >
           <button
             type="button"
             onClick={handleClose}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClose(); } }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                handleClose();
+              }
+            }}
             aria-label="Exit Chapter Index"
             title="Exit Index View"
             style={{
-              background: 'none',
-              border: 'none',
-              
+              background: "none",
+              border: "none",
               padding: 0,
-              cursor: 'pointer',
-              outline: 'none'
+              cursor: "pointer",
+              outline: "none",
             }}
           >
             <img
@@ -164,11 +170,11 @@ export default function RebuiltScrollGrid({
               style={{
                 width: 110,
                 height: 110,
-                borderRadius: '50%',
-                objectFit: 'cover',
-                opacity: .17,
-                filter: 'grayscale(10%)',
-                userSelect: 'none'
+                borderRadius: "50%",
+                objectFit: "cover",
+                opacity: 0.17,
+                filter: "grayscale(10%)",
+                userSelect: "none",
               }}
               draggable={false}
             />
@@ -197,7 +203,7 @@ export default function RebuiltScrollGrid({
         <div className="flex justify-center mb-8 z-10">
           <button
             className="block px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition z-10"
-            style={{ border: '2px solid #d1d5db', position: 'relative' }}
+            style={{ border: "2px solid #d1d5db", position: "relative" }}
             onClick={() => {
               setSimIndex(start);
               setAnchorOnNextUpdate(false);
@@ -311,44 +317,44 @@ export default function RebuiltScrollGrid({
       </div>
 
       <div className="flex justify-center mt-8 gap-4">
-   {/* Close first now with lighter tint */}
-  <button
-    onClick={handleClose}
-    tabIndex={0}
-    className="px-6 py-2 rounded-full border border-gray-300 font-medium text-sm shadow-md transition"
-    style={{
-      backgroundColor: "#d4d4d4", // lighter base
-    }}
-  title="Exit Index View"
-    onMouseEnter={(e) => {
-      e.currentTarget.style.backgroundColor = "#c0c0c0"; // hover slightly darker
-    }}
-    onMouseLeave={(e) => {
-      e.currentTarget.style.backgroundColor = "#d4d4d4";
-    }}
-    onFocus={(e) => {
-      e.currentTarget.style.outline = "2px solid rgba(0,0,0,0.35)";
-      e.currentTarget.style.outlineOffset = "2px";
-    }}
-    onBlur={(e) => {
-      e.currentTarget.style.outline = "none";
-    }}
-  >
-    Close
-  </button>
+        {/* Close first now with lighter tint */}
+        <button
+          onClick={handleClose}
+          tabIndex={0}
+          className="px-6 py-2 rounded-full border border-gray-300 font-medium text-sm shadow-md transition"
+          style={{
+            backgroundColor: "#d4d4d4", // lighter base
+          }}
+          title="Exit Index View"
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "#c0c0c0"; // hover slightly darker
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "#d4d4d4";
+          }}
+          onFocus={(e) => {
+            e.currentTarget.style.outline = "2px solid rgba(0,0,0,0.35)";
+            e.currentTarget.style.outlineOffset = "2px";
+          }}
+          onBlur={(e) => {
+            e.currentTarget.style.outline = "none";
+          }}
+        >
+          Close
+        </button>
 
-  {end < galleryData.length && (
-    <button
-      className="px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
-      onClick={() => {
-        setSimIndex(end - 1);
-        setAnchorOnNextUpdate(true);
-      }}
-    >
-      Show More
-    </button>
-  )}
-</div>
+        {end < galleryData.length && (
+          <button
+            className="px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
+            onClick={() => {
+              setSimIndex(end - 1);
+              setAnchorOnNextUpdate(true);
+            }}
+          >
+            Show More
+          </button>
+        )}
+      </div>
     </section>
   );
 }
