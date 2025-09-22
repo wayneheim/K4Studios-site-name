@@ -58,7 +58,6 @@ const structuredData = getStructuredData({
 });
 ---
 
-
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   structuredDataJSON={structuredData}
@@ -83,12 +82,17 @@ const structuredData = getStructuredData({
 
     <section class="section-heading-anim-wrap">
       <div class="section-heading-anim">
-        <!-- Static instant paint version (for Lighthouse) -->
-        <h1 class="hero-title-static" aria-hidden="true">
-          {landingWestern.title}
-        </h1>
+        <!-- HERO IMAGE promoted as LCP -->
+        <img
+          src="/images/hero-default.webp"   <!-- replace with your actual hero image -->
+          alt="Fine art photography by Wayne Heim"
+          class="hero-lcp-img"
+          fetchpriority="high"
+          loading="eager"
+          decoding="sync"
+        />
 
-        <!-- Animated visible versions -->
+        <!-- Animated visible text -->
         <h2 class="hero-subtitle-anim" id="hero-subtitle">
           {landingWestern.subtitle}
         </h2>
@@ -183,11 +187,10 @@ const structuredData = getStructuredData({
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-      // HERO TEXT ANIMATION (this triggers the heading-animated class)
       setTimeout(() => {
         document.querySelector('.section-heading-anim-wrap')
           ?.classList.add('heading-animated');
-      }, 880); // Adjust to sync with your bar/tombstone animation
+      }, 880);
     });
   </script>
 
@@ -211,19 +214,16 @@ const structuredData = getStructuredData({
   justify-content: center;
 }
 
-/* Static hidden H1 – paints instantly for LCP but invisible to users */
-.hero-title-static {
-  font-family: "Glegoo", serif;
-  font-weight: 800;
-  font-size: 3.45rem;
-  letter-spacing: -0.04em;
-  color: #3e3220;
-  opacity: 0;               /* invisible to humans */
-  position: absolute;       /* sits underneath anim */
+/* HERO IMAGE (promoted as LCP) */
+.hero-lcp-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none;
-  transform: none;          /* no animation */
+  z-index: -1;
 }
 
 /* Subtitle */
