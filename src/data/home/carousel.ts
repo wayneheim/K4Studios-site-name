@@ -3,8 +3,15 @@
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 import { normalizeImage } from '@/components/utils/normalizeImage';
 
-// Your 3 hero cowboy image IDs
+// Your 3 hero cowboy image IDs (webp sources)
 const staticLcpIds = ['i-ncFcHDM', 'i-KtmPcCf', 'i-rqk5Kdk'];
+
+// Map hero IDs to their .webp image paths in /public/images
+const heroWebpSrcs = {
+  'i-ncFcHDM': '/images/i-ncFcHDM.webp',
+  'i-KtmPcCf': '/images/i-KtmPcCf.webp',
+  'i-rqk5Kdk': '/images/i-rqk5Kdk.webp',
+};
 
 // --- Find all hero matches, collecting their file path and img object ---
 const heroCandidates = [];
@@ -23,8 +30,10 @@ if (heroCandidates.length === 0) throw new Error('No Cowboy hero images found!')
 const heroIdx = Math.floor(Math.random() * heroCandidates.length);
 const { img: staticCowboyImg, filePath: staticCowboyFilePath } = heroCandidates[heroIdx];
 
-// --- Always use srcS for hero, with fallback ---
+
+// --- Always use .webp for hero, fallback to srcS if not found ---
 function selectStaticHeroSrc(img) {
+  if (heroWebpSrcs[img.id]) return heroWebpSrcs[img.id];
   return img.srcS || img.srcM || img.srcL || img.src || '';
 }
 
@@ -136,8 +145,8 @@ const staticCowboySlide = {
   ...normalizeImage({ ...staticCowboyImg }),
   id: staticCowboyImg.id,
   href: `${filePathToHref(staticCowboyFilePath)}/${staticCowboyImg.id}`,
-  src: selectStaticHeroSrc(staticCowboyImg),     // <--- ALWAYS srcS (fallback)
-  srcS: staticCowboyImg.srcS,
+  src: selectStaticHeroSrc(staticCowboyImg),     // <--- ALWAYS .webp if available
+  srcS: heroWebpSrcs[staticCowboyImg.id] || staticCowboyImg.srcS,
   srcM: staticCowboyImg.srcM,
   srcL: staticCowboyImg.srcL,
   alt: staticCowboyImg.alt || staticCowboyImg.title || '',
