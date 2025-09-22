@@ -63,13 +63,9 @@ function toSlide(rawImg, path, idx) {
 
 // --- Responsive src for regular slides ---
 function selectResponsiveSrc(img) {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 700;
-  let src = '';
-  if (isMobile) {
-    src = img.srcS || img.srcM || img.srcL || img.src || '';
-  } else {
-    src = img.srcM || img.srcS || img.srcL || img.src || '';
-  }
+  // Always prefer srcS, fallback to srcM, srcL, src
+  let src = img.srcS || img.srcM || img.srcL || img.src || '';
+  // Special case: if srcS is actually a large image (ends with -L.jpg), still use it
   if (img.srcS && img.srcS.endsWith('-L.jpg')) {
     src = img.srcS;
   }
