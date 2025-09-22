@@ -20,18 +20,19 @@ import { landingWestern }    from '../data/home/landingstones.ts';
 import { painterlyStory }    from '../data/home/story.ts';
 import { facingFAQ }         from '../data/home/faq.ts';
 
+import { slides as homeSlides } from '../data/home/carousel.ts'; // 🔑 carousel dataset
+
 import '../styles/global.css';
 
 // ----------------------
 // DYNAMIC LOGIC SECTION
 // ----------------------
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography"; // Fakes path context for all utils
+const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
 const meta = getLandingMeta(sectionPath);
 
 const headingCount = painterlyStory.filter((block, i) => i > 0 && block.subhead).length;
 
-// Use the new getSideImagesHome2!
 const { featheredImages, galleryDatas, galleryPaths } = getSideImages({
   targetCount: headingCount
 });
@@ -76,23 +77,26 @@ const structuredData = getStructuredData({
 
     <div class="w-full max-w-[1200px] mt-8 mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+        <!-- Static hero image for LCP -->
+        <img
+          src={homeSlides[0].srcS}
+          alt={homeSlides[0].alt || "Fine art photography by Wayne Heim"}
+          class="hero-lcp-img"
+          fetchpriority="high"
+          loading="eager"
+          decoding="sync"
+          id="hero-lcp"
+        />
+
+        <!-- Carousel (hidden until load) -->
+        <div id="hero-carousel" class="hidden">
+          <ImageBar2 client:load />
+        </div>
       </div>
     </div>
 
     <section class="section-heading-anim-wrap">
       <div class="section-heading-anim">
-        <!-- HERO IMAGE promoted as LCP -->
-        <img
-          src="/images/hero-default.webp"   <!-- replace with your actual hero image -->
-          alt="Fine art photography by Wayne Heim"
-          class="hero-lcp-img"
-          fetchpriority="high"
-          loading="eager"
-          decoding="sync"
-        />
-
-        <!-- Animated visible text -->
         <h2 class="hero-subtitle-anim" id="hero-subtitle">
           {landingWestern.subtitle}
         </h2>
@@ -166,16 +170,13 @@ const structuredData = getStructuredData({
               observer.unobserve(entry.target);
             }
           });
-        }, {
-          threshold: 0.15
-        });
+        }, { threshold: 0.15 });
         els.forEach(el => observer.observe(el));
       }
 
-      // NEW: auto-expand FAQ box if a question is clicked
+      // Auto-expand FAQ if clicked
       const faqToggle = document.getElementById("faq-toggle");
       const truncateContainer = document.querySelector(".truncate-container");
-
       if (truncateContainer && faqToggle) {
         truncateContainer.addEventListener("click", (e) => {
           const summaryClicked = e.target.closest("summary");
@@ -184,9 +185,18 @@ const structuredData = getStructuredData({
           }
         });
       }
-    });
 
-    document.addEventListener("DOMContentLoaded", () => {
+      // HERO swap: replace static LCP image with carousel once loaded
+      window.addEventListener("load", () => {
+        const heroImg = document.getElementById("hero-lcp");
+        const heroCarousel = document.getElementById("hero-carousel");
+        if (heroImg && heroCarousel) {
+          heroImg.style.display = "none";
+          heroCarousel.classList.remove("hidden");
+        }
+      });
+
+      // Trigger heading animation
       setTimeout(() => {
         document.querySelector('.section-heading-anim-wrap')
           ?.classList.add('heading-animated');
@@ -195,6 +205,15 @@ const structuredData = getStructuredData({
   </script>
 
 <style lang="css">
+.hero-lcp-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+}
+.hidden { display: none; }
+
+/* Keep all your existing styles intact */
 .section-heading-anim-wrap {
   margin: -1.8rem 0 1.3rem 0;
   min-height: 138px;
@@ -212,18 +231,6 @@ const structuredData = getStructuredData({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-/* HERO IMAGE (promoted as LCP) */
-.hero-lcp-img {
-  width: 100%;
-  height: auto;
-  max-height: 420px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
 }
 
 /* Subtitle */
@@ -317,7 +324,7 @@ const structuredData = getStructuredData({
   }
 }
 
-/* Lists, sections, fades (unchanged) */
+/* Lists, sections, fades */
 ul { list-style-type: disc; padding-left: 1.25em; }
 ul li { margin-top: 0.15em; margin-left: 1.5em; }
 ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
