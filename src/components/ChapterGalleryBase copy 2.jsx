@@ -573,7 +573,7 @@ export default function ChapterGalleryBase({
                         <span className="sr-only">Previous</span>
                       </button>
 
-                      <div className="relative w-full md:w-[490px] flex flex-row">
+                      <div className="relative w-full md:w-[340px] flex flex-row">
                         {/* Image container with absolutely positioned collector notes button outside/right of image edge */}
                         <div
                           className="relative flex justify-center items-center"
@@ -678,9 +678,9 @@ export default function ChapterGalleryBase({
                     <div
   className={
     `flex items-center gap-0.5 md:gap-2 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none ` +
-  (isMobile ? ' w-[90vw] max-w-[90vw] justify-between' : ' max-w-[610px] justify-between')
+  (isMobile ? ' w-[90vw] max-w-[90vw] justify-between' : ' max-w-[425px] justify-between')
   }
-  style={isMobile ? { width: '90%', maxWidth: '90%', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '610px', minWidth: 0, justifyContent: 'space-between' }}
+  style={isMobile ? { width: '90%', maxWidth: '90%', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '425px', minWidth: 0, justifyContent: 'space-between' }}
 >
                       {/* Menu */}
                       <button
@@ -846,11 +846,11 @@ export default function ChapterGalleryBase({
           onClick={(e) => { e.stopPropagation(); setShowNotes(false); }}
           aria-label="Close Collector Notes"
 className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#b91c1c] text-[#b91c1c] shadow-lg"
-                            style={
-                              isMobile
-                                ? { cursor: "zoom-in", maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh", border: '1px solid rgba(120,120,120,0.30)', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }
-                                : { cursor: "zoom-in", maxWidth: "1290px", width: "auto", height: "auto", objectFit: "contain", maxHeight: "92vh", background: "#f7f7f7", transition: 'box-shadow .3s ease', border: '1px solid rgba(110,110,110,0.28)', boxShadow: '0 2px 5px rgba(0,0,0,0.10)' }
-                            }
+          style={{
+            backgroundColor: "rgba(255,255,255,0.95)", // 50% transparent white
+            zIndex: 10001,
+            boxShadow: "0 2px 8px rgba(123,30,30,0.12)"
+          }}
         >
           <span className="text-1xl font-bold" style={{ color: "#b91c1c" }}>✕</span>
         </button>
