@@ -75,7 +75,7 @@ const structuredData = getStructuredData({
       <picture>
         <source media="(max-width: 768px)" srcset="/images/slide-1m.webp">
         <img
-          src="/images/slide-1.webp"
+          src="/images/slide-1d.webp"
           alt="Featured artwork"
           class="lcp-placeholder-img"
           fetchpriority="high"
@@ -191,13 +191,8 @@ const structuredData = getStructuredData({
       setTimeout(() => {
         const lcp = document.getElementById("lcp-placeholder-img");
         if (lcp) {
-          if (isMobile) {
-            lcp.style.transition = "opacity 0.5s ease-out";
-            lcp.style.opacity = "0";
-          } else {
-            lcp.style.transition = "transform 0.5s ease-out";
-            lcp.style.transform = "scale(10)";
-          }
+          lcp.style.transition = "opacity 0.5s ease-out";
+          lcp.style.opacity = "0";
           setTimeout(() => { lcp.style.display = "none"; }, 500);
         }
       }, fadeDelay);
