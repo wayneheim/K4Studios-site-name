@@ -35,11 +35,15 @@ export default function MobileMiniDrawer({ onClose }) {
           top: 0,
           left: 0,
           zIndex: 9999,
-          width: "100%",
+          width: isMobile ? "100%" : "340px",
+          maxWidth: "100vw",
           height: "100vh",
           background: "#fff",
           overflowY: "auto",
           padding: "2rem",
+          boxShadow: isMobile ? undefined : "2px 0 16px rgba(0,0,0,0.08)",
+          borderRight: isMobile ? undefined : "1.5px solid #e0e0e0",
+          transition: "width 0.3s cubic-bezier(.4,2,.6,1)",
         }}
       >
         {/* Header row with K4 Index and Close button */}
