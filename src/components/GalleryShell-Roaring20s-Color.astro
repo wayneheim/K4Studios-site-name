@@ -113,6 +113,8 @@ const ogDescription =
       <div class="h-0 md:h-5"></div>
 
       <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
+        <h1 class="gallery-landing-title">{usedEntranceData.title}</h1>
+        <h2 class="gallery-landing-subtitle">{usedEntranceData.subtitle}</h2>
         <GalleryInfo client:load entranceData={usedEntranceData} />
       </div>
 
@@ -132,6 +134,21 @@ const ogDescription =
   </div>
 
   <style>
+    .gallery-landing-title {
+      font-size: 1.1rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 0.3em !important;
+      letter-spacing: 0.01em;
+      line-height: 1.12;
+    }
+    .gallery-landing-subtitle {
+      font-size: 0.95rem !important;
+      font-weight: 500 !important;
+      margin-bottom: 1.2em !important;
+      color: #666 !important;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
     .hamburger-circle {
       display: none !important;
     }

@@ -157,8 +157,10 @@ const ogDescription =
 
     /* override styles – update if layout changes */
     #gallery-content *,
-    #gallery-content h1,
-    #gallery-content h2,
+    /* override styles – update if layout changes */
+    #gallery-content *,
+    .gallery-landing-title,
+    .gallery-landing-subtitle,
     #gallery-content h3,
     #gallery-content p,
     #gallery-content a {
@@ -166,23 +168,19 @@ const ogDescription =
       color: #2c2c2c !important;
       line-height: 1.5 !important;
     }
-    #gallery-content h1 {
-  font-size: 1.1rem !important;
+    .gallery-landing-title {
+      font-size: 1.1rem !important;
       font-weight: 700 !important;
+      margin-bottom: 0.3em !important;
+      letter-spacing: 0.01em;
+      line-height: 1.12;
+    }
+    .gallery-landing-subtitle {
+      font-size: 0.95rem !important;
+      font-weight: 500 !important;
       margin-bottom: 0.5em !important;
-    }
-    #gallery-content h2 {
-  font-size: 0.95rem !important;
-      font-weight: 600 !important;
-      margin-bottom: 0.75em !important;
-    }
-    #gallery-content p {
-      font-size: 1rem !important;
-      margin-bottom: 1em !important;
-    }
-    #gallery-content a {
-      text-decoration: underline !important;
-      color: #85644b !important;
+      letter-spacing: 0.01em;
+      line-height: 1.15;
     }
   </style>
 
