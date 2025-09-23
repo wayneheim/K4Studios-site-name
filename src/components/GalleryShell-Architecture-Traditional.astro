@@ -122,7 +122,9 @@ const ogDescription =
 
     <!-- Intro: Visible initially with overridden featured image -->
     <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-      <GalleryInfo client:load entranceData={usedEntranceData} />
+  <h1>{usedEntranceData.title}</h1>
+  <h2>{usedEntranceData.subtitle}</h2>
+  <GalleryInfo client:load entranceData={usedEntranceData} />
     </div>
 
     <!-- Chapter Viewer: Hidden initially -->

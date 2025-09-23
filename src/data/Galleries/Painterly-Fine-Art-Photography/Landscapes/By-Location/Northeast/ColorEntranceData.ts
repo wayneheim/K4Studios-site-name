@@ -1,7 +1,7 @@
 // data/galleries/Civil-War/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Northeast Landscape Photography by Wayne Heim – Painterly Fine Art from New England & Beyond",
+  title: "Painterly Northeast Landscape Photography – Fine Art of New England & Beyond by Wayne Heim",
   subtitle: "Where Morning Mist Meets Memory – Painterly Northeast Landscapes from Coast to Countryside",
   description:
     "Explore painterly Northeast landscape photography by Wayne Heim, capturing evocative scenes from rocky coastlines, autumn forests, mountain lakes, and historic towns across New England and the greater Northeast. These fine art prints turn iconic vistas and hidden corners into moody, textured visual stories—ideal for collectors, interior designers, and all who find inspiration in the changing seasons.",

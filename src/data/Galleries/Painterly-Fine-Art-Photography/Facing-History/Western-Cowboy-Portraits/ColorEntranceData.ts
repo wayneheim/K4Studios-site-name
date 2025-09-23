@@ -1,7 +1,7 @@
 // data/galleries/Painterly-Western-Cowboy-Portraits/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Cowboy Art Prints by Wayne Heim - Authentic Western Fine Art Photography in Color",
+  title: "Cowboy Fine Art Photography in Color – Authentic Western Prints by Wayne Heim",
   subtitle: "Capturing the Spirit of the American West",
   description:
     "Discover a painterly take on cowboy photography that brings the color and grit of the frontier to life. Wayne Heim's Western art prints are more than portraits — they are vivid stories etched in sun, shadow, and dust.",

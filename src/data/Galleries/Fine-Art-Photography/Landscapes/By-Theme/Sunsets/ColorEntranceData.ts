@@ -1,7 +1,7 @@
 // data/galleries/Water/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Traditional Sunset Photography by Wayne Heim – Fine Art Prints",
+  title: "Sunset Photography by Wayne Heim – Traditional Fine Art Photos & Prints",
   subtitle: "Golden Hour, Timeless Skies – Classic Landscape Art for Collectors",
   description: `
     Experience Wayne Heim’s traditional sunset photography—a curated gallery of fine art prints capturing the glow, color, and emotional resonance of day’s end. 

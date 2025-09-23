@@ -1,7 +1,7 @@
 // data/galleries/Landscapes/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Traditional Mountain Landscape Photography by Wayne Heim – Fine Art Prints",
+  title: "Mountain Landscape Photography by Wayne Heim – Fine Art Prints (Traditional Series)",
   subtitle: "From the Rockies to Iceland – Timeless Scenes, Classic Process",
   description: `
     Discover Wayne Heim’s traditional mountain landscape photography—fine art prints that capture the majesty, serenity, and story of nature’s greatest peaks. 

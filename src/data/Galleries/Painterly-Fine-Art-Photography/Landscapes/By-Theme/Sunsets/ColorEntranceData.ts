@@ -1,7 +1,7 @@
 // data/galleries/Water/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Sunset Photography by Wayne Heim – Painterly Fine Art Prints",
+  title: "Painterly Sunset Photography by Wayne Heim – Painterly Fine Art",
   subtitle: "Dramatic Skies and Golden Horizons in Painterly Landscape Form",
   description:
     "Explore a curated collection of sunset photography that captures nature’s final light in rich, painterly detail. Wayne Heim’s fine art technique turns glowing skies, silhouetted trees, and reflective waters into atmospheric images that feel timeless and alive. Each print blends emotion, light, and landscape to elevate the familiar into fine art.",

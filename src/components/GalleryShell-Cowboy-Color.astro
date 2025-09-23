@@ -118,7 +118,11 @@ const ogDescription =
       <div class="h-0 md:h-5"></div>
 
       <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-        <GalleryInfo client:load entranceData={usedEntranceData} />
+        <h1>{usedEntranceData.title}</h1>
+        <h2>{usedEntranceData.subtitle}</h2>
+  <h1>{usedEntranceData.title}</h1>
+  <h2>{usedEntranceData.subtitle}</h2>
+  <GalleryInfo client:load entranceData={usedEntranceData} />
       </div>
 
       <div id="chapter-section" class="section-hidden" style="display: none;">

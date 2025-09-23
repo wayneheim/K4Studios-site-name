@@ -1,7 +1,7 @@
 // data/galleries/West/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Western Landscape Photography by Wayne Heim – Traditional Fine Art Prints of the American West",
+  title: "Classic Western Landscape Photography – Authentic Fine Art Photography by Wayne Heim",
   subtitle: "Authentic Views of the Frontier – Mountains, Deserts, and Wide-Open Horizons",
   description: `
     Wayne Heim’s traditional Western landscape photography captures the vast scale and spirit of the American frontier. From sunset over desert mesas to alpine lakes reflecting the Grand Tetons, these fine art prints preserve the West with clarity, balance, and timeless detail. Collectors and nature lovers alike will find each piece a testament to the region’s beauty and resilience.

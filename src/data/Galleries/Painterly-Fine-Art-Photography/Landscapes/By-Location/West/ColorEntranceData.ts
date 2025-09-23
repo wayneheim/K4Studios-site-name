@@ -1,7 +1,7 @@
 // data/galleries/Civil-War/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Western Landscape Photography by Wayne Heim – Painterly Fine Art from the American West",
+  title: "Painterly Western Landscape Photography Prints – Fine Art of the American West by Wayne Heim",
   subtitle: "Endless Horizons, Painted Light – Painterly Western Landscapes from Peaks to Prairies",
 description: `
   Explore painterly Western landscape photography by Wayne Heim, capturing evocative scenes from towering mountain ranges, vast deserts, wild rivers, and iconic canyons across the American West. These fine art prints turn legendary vistas and hidden outposts into moody, textured visual stories—perfect for collectors, interior designers, and all who are drawn to the spirit of the frontier.

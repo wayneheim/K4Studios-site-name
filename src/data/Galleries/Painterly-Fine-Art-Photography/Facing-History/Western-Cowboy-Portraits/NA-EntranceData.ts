@@ -1,5 +1,5 @@
 export const entranceData = {
-  title: "Native American Art Prints by Wayne Heim – Painterly Fine Art Photography in Color",
+  title: "Painterly Native American Portraits – Fine Art Photography Prints in Color by Wayne Heim",
   subtitle: "Portraits Honoring the Spirit and Legacy of Native America",
   description: `
     Experience a painterly approach to Native American portrait photography—art prints that honor the dignity, resilience, and stories of Indigenous peoples. These color portraits capture real people in authentic regalia and natural settings, blending evocative light and painterly technique to create images that feel timeless and true.

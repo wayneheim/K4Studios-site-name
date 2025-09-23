@@ -35,15 +35,11 @@ export default function MobileMiniDrawer({ onClose }) {
           top: 0,
           left: 0,
           zIndex: 9999,
-          width: isMobile ? "100%" : "340px",
-          maxWidth: "100vw",
+          width: "100%",
           height: "100vh",
           background: "#fff",
           overflowY: "auto",
           padding: "2rem",
-          boxShadow: isMobile ? undefined : "2px 0 16px rgba(0,0,0,0.08)",
-          borderRight: isMobile ? undefined : "1.5px solid #e0e0e0",
-          transition: "width 0.3s cubic-bezier(.4,2,.6,1)",
         }}
       >
         {/* Header row with K4 Index and Close button */}
@@ -135,7 +131,7 @@ export default function MobileMiniDrawer({ onClose }) {
             }}
           >
             <img
-              src="/images/K4Logo-web-c.webp"
+              src="/images/K4Logo-web-c.png"
               alt="K4 Studios Logo"
               style={{
                 width: "120px",

@@ -1,7 +1,7 @@
 // data/galleries/Civil-War/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Mountain Landscape Photography by Wayne Heim – Painterly Fine Art Prints",
+  title: "Painterly Style Mountain Landscapes At by Wayne Heim – Fine Art Prints",
   subtitle: "From the Rockies to Iceland – Discover Nature Reimagined in Painterly Form",
   description:
     "Explore painterly mountain landscape photography that captures the spirit and majesty of nature’s most iconic peaks. From the rugged Rockies to the misty Smokies and dramatic Icelandic cliffs, Wayne Heim transforms scenic mountain views into immersive fine art prints for collectors, western wall art lovers, and nature enthusiasts.",

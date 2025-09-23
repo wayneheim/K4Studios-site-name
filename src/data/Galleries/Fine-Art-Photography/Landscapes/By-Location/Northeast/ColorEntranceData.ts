@@ -1,7 +1,7 @@
 // data/galleries/Northeast/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Northeast Landscape Photography by Wayne Heim – Traditional Fine Art Prints",
+  title: "Classic Northeast Landscape Photography – Authentic Fine Art Photography by Wayne Heim",
   subtitle: "Authentic Views of New England and the Northeast in Timeless Fine Art",
   description: `
     Wayne Heim’s traditional Northeast landscape photography highlights the region’s distinctive beauty — rocky Atlantic coastlines, brilliant fall foliage, mist-draped lakes, and historic towns. Each fine art print preserves the atmosphere of the Northeast with clarity and balance, offering collectors and nature lovers a window into one of America’s most storied regions.
