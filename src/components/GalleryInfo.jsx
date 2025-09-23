@@ -46,8 +46,7 @@ export default function GalleryInfo({ entranceData, isLandingPage = false }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, delay: 0 }}
         >
-          <h1>{entranceData.title}</h1>
-          <h2>{entranceData.subtitle}</h2>
+          {/* Headings are now rendered in the shell for accessibility/SEO. */}
           <div
   className="gallery-intro-description"
   dangerouslySetInnerHTML={{ __html: entranceData.description }}
