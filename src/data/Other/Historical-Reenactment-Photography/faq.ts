@@ -22,7 +22,7 @@ export const facingFAQ = [
     q: "Are the images digitally illustrated or AI-generated?",
     a: [
       "No. Every image is crafted from real photography—captured on location or in studio, and hand-edited using traditional techniques. There’s no AI, no digital trickery. Just light, shadow, story, and skill.",
-      `Curious about the painterly process? <a href="/blog/what-is-painterly-photography">Learn more here</a>.`
+      `Curious about the painterly process? <a href="/Galleries/Painterly-Fine-Art-Photography">Learn more here</a>.`
     ],
   },
   {
@@ -35,15 +35,15 @@ export const facingFAQ = [
   {
     q: "Where can I buy prints?",
     a: [
-      "All images are available as fine art prints on paper, metal, or wood. You can <a href='/prints'>browse print options here</a> or shop directly from each gallery or image page.",
-      "Custom sizing, framing, and collector editions are also available—just <a href='/contact'>get in touch</a> if you have a special request."
+      "All images are available as fine art prints on paper, metal, or wood. You can <a href='/Other/Print-Options'>browse print options here</a> or shop directly from each gallery or image page.",
+      "Custom sizing, framing, and collector editions are also available—just <a href='/Contact'>get in touch</a> if you have a special request."
     ],
   },
   {
     q: "Do you accept commissions or custom shoots?",
     a: [
       "Yes! Wayne collaborates with collectors, families, interior designers, and historical groups to create custom portraits or themed image series.",
-      "Want to bring a story to life? <a href='/contact'>Reach out here</a> to discuss your vision."
+      "Want to bring a story to life? <a href='/Contact'>Reach out here</a> to discuss your vision."
     ],
   },
   {

@@ -11,7 +11,7 @@ export const entranceData = {
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Painterly Mountain Gallery</a>.
     Or immerse yourself in dramatic, artful waterscapes with the
-    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Waterfalls"
+    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Painterly Waterfalls Collection</a>.

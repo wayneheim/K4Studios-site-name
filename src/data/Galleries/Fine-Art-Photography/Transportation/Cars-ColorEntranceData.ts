@@ -7,7 +7,7 @@ export const entranceData = {
     Every photograph captures vehicles as they truly are, from pristine restorations gleaming under sunlight to weathered relics along back roads and barns. With sharp detail and authentic character, Wayne’s work transforms cars into enduring icons of Americana and adventure.
     <br><br>
     For rail fans, explore our 
-    <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Color"
+    <a href="/Galleries/Fine-Art-Photography/Transportation/Trains"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Traditional Train Photography</a>.

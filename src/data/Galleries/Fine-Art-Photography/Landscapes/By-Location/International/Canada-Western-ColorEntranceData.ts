@@ -7,7 +7,7 @@ export const entranceData = {
     Each photograph is a window into the soul of the Rockies—iconic mountains shaped by time, dramatic skies, and waters as clear as glass. Whether it’s the sunrise over Lake Louise or the shifting light on Peyto Lake and Maligne Lake, Wayne’s work immerses you in both serenity and awe, inviting you to feel the energy and peace of these legendary places.
     <br><br>
     For classic American Western vistas, visit our
-    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West"
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Western Landscapes Gallery</a>.

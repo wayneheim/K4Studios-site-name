@@ -7,7 +7,7 @@ export const entranceData = {
     Every photograph captures authentic moments on lakes, rivers, and oceans. From still reflections at dawn to the enduring strength of vessels weathering the elements, Wayne’s traditional photography emphasizes clarity, realism, and storytelling without painterly effects.
     <br><br>
     Interested in other forms of travel? Explore our 
-    <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Color"
+    <a href="/Galleries/Fine-Art-Photography/Transportation/Trains"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Traditional Train Photography</a>.

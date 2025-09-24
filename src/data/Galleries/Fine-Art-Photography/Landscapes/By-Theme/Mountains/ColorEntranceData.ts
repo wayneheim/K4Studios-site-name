@@ -8,12 +8,12 @@ export const entranceData = {
     These museum-quality images are created using classic fine art techniques and are ideal for collectors, mountain home decor lovers, and anyone who appreciates the power of an authentic landscape.
     <br><br>
     For dramatic Western vistas and iconic canyons, visit our 
-    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West" 
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery" 
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;" 
       onmouseover="this.style.color='#a74219'" 
       onmouseout="this.style.color='#85644b'">Western Landscapes</a>.
     Or explore our 
-    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Waterfalls" 
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water" 
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;" 
       onmouseover="this.style.color='#a74219'" 
       onmouseout="this.style.color='#85644b'">Waterfall Collection</a> 

@@ -14,7 +14,7 @@ export const entranceData = {
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Canadian Rockies & Western Canada Gallery</a>.
     Or experience the power of moving water in our
-    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Waterfalls"
+    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Painterly Waterfalls Collection</a>.

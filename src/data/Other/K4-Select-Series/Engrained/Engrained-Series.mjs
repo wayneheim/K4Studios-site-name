@@ -364,7 +364,7 @@ export const galleryData = [
     "title": "Mormon Row – Sunset Solitude",
     "description": "Lone cowboy and the iconic Moulton barn at sunset in Jackson Hole, Wyoming—painterly photographed and printed on Baltic birch wood for the Engrained Series. American history, Western landscape, and artisan craft all in one.",
     "alt": "Cowboy and Moulton barn at sunset – painterly birch wood print, Engrained Series",
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MRvB7ts6BKmW2jwJcfgfmmxqx3M2t5LfrWPGwSpVp/XL/Landscape%253DMoulton-Barn-ws-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MMjTz8GVDxfjpbq8zwbqhkJ7NW5dgw2JN9VT75xZw/L/Landscape%3DMoulton-Barn-ws-L.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/A",
     "keywords": ["Mormon Row", "barn", "cowboy", "Jackson Hole", "engrained series", "Western"],
     "story": "Sun sets behind the barn and the day’s work is done. Out here, solitude isn’t empty—it’s full of promise.",

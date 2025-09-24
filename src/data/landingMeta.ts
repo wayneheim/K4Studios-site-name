@@ -1,6 +1,56 @@
 // src/data/landingMeta.ts
 
 export const landingMetaDB = {
+  "/Contact": {
+    ogTitle: "Contact Wayne Heim – Fine Art Photography",
+    ogDescription: "Get in touch with Wayne Heim for fine art photography inquiries, commissions, or general questions. Reach out for collaborations or print orders.",
+    ogImage: "https://k4studios.com/og/contact.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Contact Wayne Heim – Fine Art Photography",
+    twitterDescription: "Contact Wayne Heim for photography inquiries, collaborations, or print orders.",
+    twitterImage: "https://k4studios.com/og/contact.jpg"
+  },
+  "/Other/Bio": {
+    ogTitle: "About Wayne Heim – Fine Art Photographer",
+    ogDescription: "Learn about Wayne Heim, his journey in fine art photography, and the stories behind his painterly and historical works.",
+    ogImage: "https://k4studios.com/og/bio.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "About Wayne Heim – Fine Art Photographer",
+    twitterDescription: "Discover the story and background of fine art photographer Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/bio.jpg"
+  },
+  "/News-Awards": {
+    ogTitle: "News & Awards – Wayne Heim Fine Art Photography",
+    ogDescription: "See the latest news, awards, and recognitions for Wayne Heim’s fine art photography. Stay updated on exhibitions and achievements.",
+    ogImage: "https://k4studios.com/og/news-awards.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "News & Awards – Wayne Heim",
+    twitterDescription: "Latest news and awards for Wayne Heim’s fine art photography.",
+    twitterImage: "https://k4studios.com/og/news-awards.jpg"
+  },
+  "/Other/Print-Options": {
+    ogTitle: "Print Options – Wayne Heim Fine Art Photography",
+    ogDescription: "Explore print options for Wayne Heim’s fine art photography, including museum-grade paper and artisan wood panels. Learn about sizes, finishes, and ordering.",
+    ogImage: "https://k4studios.com/og/print-options.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Print Options – Wayne Heim",
+    twitterDescription: "Discover print options for Wayne Heim’s fine art photography: paper, wood, sizes, and finishes.",
+    twitterImage: "https://k4studios.com/og/print-options.jpg"
+  },
+  "/Other/Historical-Reenactment-Photography": {
+    ogTitle: "Historical Reenactment Photography – Wayne Heim",
+    ogDescription: "View painterly and fine art photography of historical reenactments by Wayne Heim, capturing the spirit and detail of living history events.",
+    ogImage: "https://k4studios.com/og/historical-reenactment.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Historical Reenactment Photography – Wayne Heim",
+    twitterDescription: "Fine art photography of historical reenactments by Wayne Heim.",
+    twitterImage: "https://k4studios.com/og/historical-reenactment.jpg"
+  },
   "/Galleries/Painterly-Fine-Art-Photography": {
     ogTitle: "Painterly Fine Art Photography by Wayne Heim",
     ogDescription: "Experience painterly fine art photography by award-winning artist Wayne Heim—blending Western history, Americana, and painterly landscapes. Printed on museum-grade paper or artisan wood panels.",
@@ -71,7 +121,7 @@ export const landingMetaDB = {
     twitterDescription: "WWII war portraits and vintage military machines by Wayne Heim.",
     twitterImage: "https://k4studios.com/og/wwii-war.jpg"
   },
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Portraits": {
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits": {
     ogTitle: "WWII Portraits – Faces of the Greatest Generation",
     ogDescription: "See the courage and humanity of the Greatest Generation—painterly WWII portrait photography by Wayne Heim.",
     ogImage: "https://k4studios.com/og/wwii-portraits.jpg",
@@ -256,17 +306,29 @@ export const landingMetaDB = {
 
 // Helper to retrieve meta for a given pathname (can be imported in Astro files)
 export function getLandingMeta(pathname: string) {
-  // Remove trailing slash for consistency
+  // Normalize trailing slash
   const clean = pathname.replace(/\/$/, "");
-  const meta =
-    landingMetaDB[pathname] ||
-    landingMetaDB[clean] ||
-    landingMetaDB["default"] ||
-    {};
+
+  // 1. Exact match
+  if (landingMetaDB[clean]) {
+    const meta = landingMetaDB[clean];
+    const url = `https://k4studios.com${clean}`;
+    return { ...meta, ogUrl: url, twitterUrl: url };
+  }
+
+  // 2. Longest prefix match (inherit parent meta)
+  const parentKey = Object.keys(landingMetaDB)
+    .filter((key) => key !== "default" && clean.startsWith(key))
+    .sort((a, b) => b.length - a.length)[0];
+
+  if (parentKey) {
+    const meta = landingMetaDB[parentKey];
+    const url = `https://k4studios.com${clean}`;
+    return { ...meta, ogUrl: url, twitterUrl: url };
+  }
+
+  // 3. Fallback to default
+  const meta = landingMetaDB["default"] || {};
   const url = `https://k4studios.com${clean}`;
-  return {
-    ...meta,
-    ogUrl: url,
-    twitterUrl: url,
-  };
+  return { ...meta, ogUrl: url, twitterUrl: url };
 }

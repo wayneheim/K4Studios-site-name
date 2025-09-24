@@ -10,7 +10,7 @@ export const entranceData = {
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Portraits Gallery</a>.
     Or explore the untamed vistas of the frontier in our
-    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West"
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Western Landscape Collection</a>.

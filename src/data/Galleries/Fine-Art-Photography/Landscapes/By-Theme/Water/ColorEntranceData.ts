@@ -8,7 +8,7 @@ export const entranceData = {
     Each image is crafted with a classic fine art approach, making these works perfect for collectors, nature lovers, and anyone seeking a window to the natural world.
     <br><br>
     For atmospheric, painterly water scenes, visit our 
-    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Waterfalls"
+    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Painterly Waterfalls Gallery</a>.

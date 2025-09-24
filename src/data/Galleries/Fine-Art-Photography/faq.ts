@@ -50,7 +50,7 @@ export const facingFAQ = [
     q: "Can I see Wayne’s traditional fine art photography in person?",
     a: [
       "Yes. Wayne’s traditional works have been displayed in private collections, historical homes, design studios, and cultural institutions. His prints are often chosen for spaces where history, mood, and authenticity matter—like libraries, heritage hotels, and editorial office settings.",
-      "Follow his newsletter or <a href='/contact'>contact Wayne directly</a> to inquire about shows or availability."
+      "Follow his newsletter or <a href='/Contact'>contact Wayne directly</a> to inquire about shows or availability."
     ],
   },
 
@@ -58,7 +58,7 @@ export const facingFAQ = [
     q: "Do you offer commissions in this traditional style?",
     a: [
       "Yes. Wayne collaborates with families, collectors, and designers to create custom traditional fine art photography—whether that’s a personal landscape, heirloom portrait, or historical site documentation.",
-      "To inquire about a commission, <a href='/contact'>reach out here</a> and start the conversation."
+      "To inquire about a commission, <a href='/Contact'>reach out here</a> and start the conversation."
     ],
   },
 

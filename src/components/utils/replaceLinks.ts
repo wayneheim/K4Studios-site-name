@@ -11,7 +11,7 @@ export function replaceLinks(str: string): string {
     .replace(/\[wwii\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">`)
     .replace(/\[wwii-portraits\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">`)
     .replace(/\[wwii-machines\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Men-Machines">`)
-    .replace(/\[wwii-artofwar\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Art-of-War">`)
+    .replace(/\[wwii-artofwar\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War">`)
     .replace(/\[facinghistory\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">`)
     .replace(/\[painterly\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography">`)
     .replace(/\[transportation\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">`)

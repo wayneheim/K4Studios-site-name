@@ -23,7 +23,7 @@ export const westernStory = [
     ],
     list: [
       `<a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White">Black & White Train Photography</a>: Classic, tonal studies of steam and steel.`,
-      `<a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Color">Color Train Photography</a>: Vivid images that capture grit, heat, and the drama of rail power.`
+      `<a href="/Galleries/Fine-Art-Photography/Transportation/Trains">Color Train Photography</a>: Vivid images that capture grit, heat, and the drama of rail power.`
     ],
     tagline: "Bring the history and grandeur of railroads into your collection."
   },

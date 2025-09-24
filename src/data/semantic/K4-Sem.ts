@@ -105,7 +105,7 @@ export const semantic = {
   },
 
   wwiiArtOfWar: {
-    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Art-of-War",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War",
     def: "Motion, tension, and resolve—fragments from the front rendered as art.",
     landingPhrases: [
       { phrase: "The Art of War", rating: 5, use: true },
@@ -308,7 +308,7 @@ export const semantic = {
   },
 
   landscapeWestTraditional: {
-    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
     def: "A straight photograph—honest light, strong line.",
     landingPhrases: [
       { phrase: "Western Traditional Landscapes", rating: 5, use: true },

@@ -8,12 +8,12 @@ export const entranceData = {
     Each image is crafted with a classical eye for light and composition, transforming sunsets, lakes, and silhouetted landscapes into timeless works of art for your home or office.
     <br><br>
     For breathtaking painterly images of flowing water, visit our 
-    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Waterfalls"
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Waterfall Collection</a>.
     Or explore dramatic vistas in our 
-    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West"
+    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Western Landscapes</a> 

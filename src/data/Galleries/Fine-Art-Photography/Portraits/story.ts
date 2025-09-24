@@ -47,7 +47,7 @@ export const westernStory = [
   {
     subhead: "Explore More from K4 Studios",
     paragraphs: [
-      "For those inspired by the spirit of character and place, explore Wayne Heim’s <a href=\"/Galleries/Fine-Art-Photography/Landscapes\">Traditional Landscapes</a>, <a href=\"/Galleries/Fine-Art-Photography/Architecture\">Architecture</a>, and <a href=\"/Galleries/Fine-Art-Photography/Western\">Western Americana</a> galleries. Each collection is a unique chapter in the larger story of who we are."
+      "For those inspired by the spirit of character and place, explore Wayne Heim’s <a href=\"/Galleries/Fine-Art-Photography/Landscapes\">Traditional Landscapes</a>, <a href=\"/Galleries/Fine-Art-Photography/Architecture\">Architecture</a>, and <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery\">Western Americana</a> galleries. Each collection is a unique chapter in the larger story of who we are."
     ],
     tagline: "A portrait is a chapter of a life—find yours in the gallery."
   },

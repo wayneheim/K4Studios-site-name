@@ -77,7 +77,7 @@ export const westernStory = [
     subhead: "Part of the WWII Collection",
     tagline: "Explore More From the Era That Shaped the World",
     paragraphs: [
-      `Men & Machines is one chapter in a broader story. Explore other series in Wayne Heim’s WWII fine art photography collection, including [WWII Portraits](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits), [Art of War](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Art-of-War), and the [WWII Main Gallery](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII).`,
+      `Men & Machines is one chapter in a broader story. Explore other series in Wayne Heim’s WWII fine art photography collection, including [WWII Portraits](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits), [Art of War](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War), and the [WWII Main Gallery](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII).`,
       `Each gallery offers a different lens on the war—from intimate soldier portraits to the vast machinery that powered Allied victory.`
     ]
   }

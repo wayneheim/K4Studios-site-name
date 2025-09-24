@@ -12,7 +12,7 @@ export const entranceData = {
        onmouseover="this.style.color='#a74219'"
        onmouseout="this.style.color='#85644b'">
        Civil War Portraits</a>, which connect the Midwest’s natural settings with the people and stories of the era. If you’re drawn to the heritage of Americana and travel, visit our 
-    <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Color"
+    <a href="/Galleries/Fine-Art-Photography/Transportation/Trains"
        style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
        onmouseover="this.style.color='#a74219'"
        onmouseout="this.style.color='#85644b'">

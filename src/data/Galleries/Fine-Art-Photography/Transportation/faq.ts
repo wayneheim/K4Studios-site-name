@@ -15,7 +15,7 @@ export const transportationFAQ = [
   {
     q: "Do you feature both color and black & white train photography?",
     a: [
-      `Yes. The <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Color">Color Train Gallery</a> highlights the drama of railroads with sharp tones and vivid detail, while the <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White">Black & White Gallery</a> offers a classic, timeless interpretation for those drawn to traditional monochrome imagery.`
+      `Yes. The <a href="/Galleries/Fine-Art-Photography/Transportation/Trains">Color Train Gallery</a> highlights the drama of railroads with sharp tones and vivid detail, while the <a href="/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White">Black & White Gallery</a> offers a classic, timeless interpretation for those drawn to traditional monochrome imagery.`
     ]
   },
   {

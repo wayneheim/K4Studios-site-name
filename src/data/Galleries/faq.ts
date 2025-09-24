@@ -4,14 +4,14 @@ export const facingFAQ = [
     q: "What is painterly fine art photography?",
     a: [
       "Painterly fine art photography is a distinctive blend of photographic realism and artistic techniques drawn from the world of painting. Wayne Heim’s work channels the tradition of the Pictorialist movement, using soft focus, dramatic lighting, and textured layers to create images that feel timeless, immersive, and evocative.",
-      `Curious how this differs from other styles? <a href="/blog/what-is-painterly-photography">Read Wayne’s full guide to painterly photography</a>.`
+      `Curious how this differs from other styles? <a href="/Galleries/Painterly-Fine-Art-Photography">Read Wayne’s full guide to painterly photography</a>.`
     ],
   },
   {
     q: "How does painterly photography differ from AI-generated art or digital illustration?",
     a: [
       "Unlike AI or digital composites, painterly photography relies on real-world composition, lighting, and post-production rooted in traditional fine art techniques. Every image is carefully crafted—from concept and capture to editing and print. There’s no AI trickery, only genuine artistry.",
-      `For a behind-the-scenes look at Wayne’s process, see <a href="/blog/what-is-painterly-photography">What Is Painterly Photography?</a>`
+      `For a behind-the-scenes look at Wayne’s process, see <a href="/Galleries/Painterly-Fine-Art-Photography">What Is Painterly Photography?</a>`
     ],
   },
   {
@@ -53,7 +53,7 @@ export const facingFAQ = [
     q: "Can I commission a custom painterly portrait or themed image?",
     a: [
       "Yes! Wayne collaborates with collectors, families, historical societies, and organizations to create custom painterly portraits and narrative scenes.",
-      "Interested in a commission or themed shoot? <a href='/contact'>Contact Wayne here</a> to start a conversation."
+      "Interested in a commission or themed shoot? <a href='/Contact'>Contact Wayne here</a> to start a conversation."
     ],
   },
   {

@@ -37,7 +37,7 @@ export const westernStory = [
   {
     subhead: "Explore More from K4 Studios",
     paragraphs: [
-      "If you love discovering the extraordinary in the everyday, be sure to explore our other galleries: <a href=\"/Galleries/Fine-Art-Photography/Landscapes\">Landscapes</a>, <a href=\"/Galleries/Fine-Art-Photography/Portraits\">Portraits</a>, <a href=\"/Galleries/Fine-Art-Photography/Architecture\">Architecture</a>, and <a href=\"/Galleries/Fine-Art-Photography/Western\">Western Americana</a>. Every collection at K4 Studios offers a new way to see the world."
+      "If you love discovering the extraordinary in the everyday, be sure to explore our other galleries: <a href=\"/Galleries/Fine-Art-Photography/Landscapes\">Landscapes</a>, <a href=\"/Galleries/Fine-Art-Photography/Portraits\">Portraits</a>, <a href=\"/Galleries/Fine-Art-Photography/Architecture\">Architecture</a>, and <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery\">Western Americana</a>. Every collection at K4 Studios offers a new way to see the world."
     ],
     tagline: "Find the art that speaks to your story—unexpected moments await in the Miscellaneous Gallery."
   },
