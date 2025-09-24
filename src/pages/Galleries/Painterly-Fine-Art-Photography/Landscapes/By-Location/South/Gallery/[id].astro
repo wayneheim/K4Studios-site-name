@@ -1,7 +1,11 @@
 ---
-import GalleryShell from "@/components/GalleryShell-Landscapes-Location-Northeast.astro";
-import { entranceData as ColorEntranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/ColorEntranceData.ts";
-import { galleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs";
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import GalleryShell from "@/components/GalleryShell-Landscapes-Location-South.astro";
+import { entranceData as ColorEntranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/ColorEntranceData.ts";
+import { galleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs";
+import { getImageMeta } from '@/components/utils/getImageMeta.ts';
+import { getLandingMeta } from '@/data/landingMeta.ts';
 
 export async function getStaticPaths() {
   return galleryData.map(img => ({
@@ -10,12 +14,18 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const isValidId = galleryData.some(img => img.id === id);
-if (!isValidId) throw new Error(`Image with id ${id} not found.`);
+const imageData = galleryData.find(img => img.id === id);
+if (!imageData) throw new Error(`Image with id ${id} not found.`);
+
+// Get parent gallery meta for fallback
+const parentMeta = getLandingMeta("/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery");
+const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
 ---
 
-<GalleryShell 
-  breadcrumb={ColorEntranceData.breadcrumb} 
-  entranceData={ColorEntranceData}
-  initialImageId={id}
-/>
+<BaseLayout meta={meta}>
+  <GalleryShell 
+    breadcrumb={ColorEntranceData.breadcrumb} 
+    entranceData={ColorEntranceData}
+    initialImageId={id}
+  />
+</BaseLayout>

@@ -573,7 +573,7 @@ export default function ChapterGalleryBase({
                         <span className="sr-only">Previous</span>
                       </button>
 
-                      <div className="relative w-full md:w-[490px] flex flex-row">
+                      <div className="relative w-full md:w-[575px] flex flex-row"> 
                         {/* Image container with absolutely positioned collector notes button outside/right of image edge */}
                         <div
                           className="relative flex justify-center items-center"
@@ -584,9 +584,34 @@ export default function ChapterGalleryBase({
                             alt={galleryData[currentIndex]?.title}
                             className="chapter-image-mobile rounded-lg block"
                             style={
-                              isMobile
-                                ? { cursor: "zoom-in", maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh", border: '1px solid rgba(120,120,120,0.30)', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }
-                                : { cursor: "zoom-in", maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain", maxHeight: "70vh", background: "#f7f7f7", transition: 'box-shadow .3s ease', border: '1px solid rgba(110,110,110,0.28)', boxShadow: '0 2px 5px rgba(0,0,0,0.10)' }
+                              (() => {
+                                const img = galleryData[currentIndex];
+                                const isLandscape = img && img.width > img.height;
+                                if (isMobile) {
+                                  return {
+                                    cursor: "zoom-in",
+                                    maxWidth: "100%",
+                                    width: "auto",
+                                    height: "auto",
+                                    objectFit: "contain",
+                                    maxHeight: "65vh",
+                                    border: '1px solid rgba(120,120,120,0.30)',
+                                    boxShadow: '0 1px 3px rgba(0,0,0,0.08)'
+                                  };
+                                }
+                                return {
+                                  cursor: "zoom-in",
+                                  maxWidth: isLandscape ? "550px" : "100%",
+                                  width: "auto",
+                                  height: "auto",
+                                  objectFit: "contain",
+                                  maxHeight: "70vh",
+                                  background: "#f7f7f7",
+                                  transition: 'box-shadow .3s ease',
+                                  border: '1px solid rgba(110,110,110,0.28)',
+                                  boxShadow: '0 2px 5px rgba(0,0,0,0.10)'
+                                };
+                              })()
                             }
                             onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
                             data-zoom-btn
@@ -677,10 +702,10 @@ export default function ChapterGalleryBase({
                     {/* Unified Nav Row */}
                     <div
   className={
-    `flex items-center gap-0.5 md:gap-2 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none ` +
-  (isMobile ? ' w-[90vw] max-w-[90vw] justify-between' : ' max-w-[610px] justify-between')
+    `flex items-center gap-1 md:gap-6 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none ` +
+    (isMobile ? ' w-full max-w-full' : ' max-w-[1300px]')
   }
-  style={isMobile ? { width: '90%', maxWidth: '90%', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '610px', minWidth: 0, justifyContent: 'space-between' }}
+  style={isMobile ? { width: '100%', maxWidth: '100%', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
 >
                       {/* Menu */}
                       <button

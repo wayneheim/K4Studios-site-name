@@ -1,7 +1,10 @@
 ---
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import GalleryShell from "@/components/GalleryShell-Transportation-Cars-Traditional.astro";
 import { entranceData as ColorEntranceData } from "@/data/Galleries/Fine-Art-Photography/Transportation/Cars-ColorEntranceData.ts";
 import { galleryData } from "@/data/Galleries/Fine-Art-Photography/Transportation/Cars.mjs";
+import { getImageMeta } from "@/components/utils/getImageMeta.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
 
 export async function getStaticPaths() {
   return galleryData.map(img => ({
@@ -10,12 +13,17 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const isValidId = galleryData.some(img => img.id === id);
-if (!isValidId) throw new Error(`Image with id ${id} not found.`);
+const imageData = galleryData.find(img => img.id === id);
+if (!imageData) throw new Error(`Image with id ${id} not found.`);
+
+const parentMeta = getLandingMeta("/Galleries/Fine-Art-Photography/Transportation/Cars");
+const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
 ---
 
-<GalleryShell 
-  breadcrumb={ColorEntranceData.breadcrumb} 
-  entranceData={ColorEntranceData}
-  initialImageId={id}
-/>
+<BaseLayout meta={meta}>
+  <GalleryShell 
+    breadcrumb={ColorEntranceData.breadcrumb} 
+    entranceData={ColorEntranceData}
+    initialImageId={id}
+  />
+</BaseLayout>

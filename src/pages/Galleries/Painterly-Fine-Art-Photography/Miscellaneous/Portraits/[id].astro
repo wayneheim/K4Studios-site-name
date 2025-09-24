@@ -1,7 +1,11 @@
 ---
+
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import GalleryShell from '../../../../../components/GalleryShell-Misc-Portraits.astro';
 import { entranceData as BWEntranceData } from "../../../../../data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/PortraitsEntranceData.ts";
 import { galleryData } from '../../../../../data/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits.mjs';
+import { getImageMeta } from '../../../../../components/utils/getImageMeta.ts';
+import { getLandingMeta } from '../../../../../data/landingMeta.ts';
 
 export async function getStaticPaths() {
   return galleryData.map(img => ({
@@ -9,16 +13,19 @@ export async function getStaticPaths() {
   }));
 }
 
-// 👇 DECLARE id ASAP!
 const { id } = Astro.params;
+const imageData = galleryData.find(img => img.id === id);
+if (!imageData) throw new Error(`Image with id ${id} not found.`);
 
-// 👇 ONLY use id AFTER declaration
-const isValidId = galleryData.some(img => img.id === id);
-if (!isValidId) throw new Error(`Image with id ${id} not found.`);
+// Get parent gallery meta for fallback
+const parentMeta = getLandingMeta("/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits");
+const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
 ---
 
-<GalleryShell 
-  breadcrumb={BWEntranceData.breadcrumb} 
-  entranceData={BWEntranceData}
-  initialImageId={id}
-/>
+<BaseLayout meta={meta}>
+  <GalleryShell 
+    breadcrumb={BWEntranceData.breadcrumb} 
+    entranceData={BWEntranceData}
+    initialImageId={id}
+  />
+</BaseLayout>
