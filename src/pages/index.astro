@@ -88,7 +88,7 @@ const structuredData = getStructuredData({
 
       {/* --- Carousel/Animated Hero (revealed after overlay fades ) --- */}
       <div style="position:relative;z-index:1;">
-        <div class="carousel-fade reveal-on-scroll">
+        <div class="carousel-fade">
           <ImageBar2 client:load />
         </div>
       </div>
@@ -159,7 +159,7 @@ const structuredData = getStructuredData({
 
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
-      // Reveal-on-scroll logic
+      // Reveal-on-scroll logic (NO .carousel-fade here)
       const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
       if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver(entries => {
@@ -185,23 +185,26 @@ const structuredData = getStructuredData({
         });
       }
 
-      // --- LCP Placeholder fade out logic ---
+      // --- LCP Placeholder fade out logic and carousel trigger ---
       const isMobile = window.innerWidth <= 768;
-      const fadeDelay = isMobile ? 1500 : 2500; // Quicker on mobile
+      const fadeDelay = isMobile ? 1100 : 1200; // Quicker on mobile
       setTimeout(() => {
         const lcp = document.getElementById("lcp-placeholder-img");
         if (lcp) {
-          lcp.style.transition = "opacity 0.5s ease-out";
+          lcp.style.transition = "opacity 0.6s ease-out";
           lcp.style.opacity = "0";
           setTimeout(() => { lcp.style.display = "none"; }, 500);
         }
+        // FIRE CAROUSEL ZOOM-UP NOW
+        const carousel = document.querySelector('.carousel-fade');
+        if (carousel) carousel.classList.add('is-visible');
       }, fadeDelay);
 
       // Heading animation
       setTimeout(() => {
         document.querySelector('.section-heading-anim-wrap')
           ?.classList.add('heading-animated');
-      }, 600); // Reduced from 880ms to start sooner
+      }, 300); // You can tweak this for heading delay as needed
     });
   </script>
 
@@ -223,14 +226,27 @@ const structuredData = getStructuredData({
   .lcp-placeholder-img { display: none !important; }
 }
 */
-.carousel-fade, .sample-fade {
+.carousel-fade {
+  opacity: 0;
+  transform: scale(0.65) translateY(0);
+  transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(.36,1,.72,1);
+  visibility: hidden;
+}
+.carousel-fade.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  visibility: visible;
+  transition-delay: 0.05s;
+}
+.sample-fade {
   opacity: 0;
   transform: translateY(0);
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
   visibility: hidden;
+  transition-delay: 0.2s;
+  margin-top: -0.75rem;
 }
-.sample-fade { transition-delay: 0.2s; margin-top: -0.75rem; }
-.sample-fade.is-visible, .carousel-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
+.sample-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
 /* ...rest of your existing styles... */
 .section-heading-anim-wrap {
   margin: -1.8rem 0 1.3rem 0;
@@ -269,7 +285,7 @@ const structuredData = getStructuredData({
 .heading-animated .hero-subtitle-anim {
   transform: scale(1) translateY(130px);
   opacity: 0.96;
-  transition-delay: 3.21s;
+  transition-delay: 2.21s;
 }
 /* Title */
 .hero-title-anim {
@@ -290,7 +306,7 @@ const structuredData = getStructuredData({
 .heading-animated .hero-title-anim {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 3.49644s;
+  transition-delay: 2.49644s;
 }
 /* Responsive tweaks */
 @media (max-width: 800px) {
