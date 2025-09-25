@@ -1,8 +1,13 @@
 // scripts/build-sectionMap.js
 
+
 import fs from "fs";
 import path from "path";
-import siteNav from "../src/data/siteNav.js";  // adjust extension if needed
+import { fileURLToPath } from 'url';
+import { siteNav } from "../data/siteNav.js";  // corrected import path
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const sectionMap = {};
 
@@ -15,17 +20,25 @@ function traverse(nodes) {
         .split("/")
         .filter(Boolean)  // drop leading empty
         .slice(1);        // drop "Galleries"
-      // build path to your .mjs file
-      const filePath = path.resolve(
+      // Try flat and nested .mjs file locations
+      const filePath1 = path.resolve(
         __dirname,
-        "../src/data/Galleries",
+        "../data/Galleries",
         ...relSegments
       ) + ".mjs";
+      const filePath2 = path.resolve(
+        __dirname,
+        "../data/Galleries",
+        ...relSegments,
+        relSegments[relSegments.length - 1] + ".mjs"
+      );
 
-      if (fs.existsSync(filePath)) {
-        sectionMap[node.href] = filePath;
+      if (fs.existsSync(filePath1)) {
+        sectionMap[node.href] = filePath1;
+      } else if (fs.existsSync(filePath2)) {
+        sectionMap[node.href] = filePath2;
       } else {
-        console.warn(`⚠️  Missing data file: ${filePath}`);
+        console.warn(`⚠️  Missing data file: ${filePath1} or ${filePath2}`);
       }
     }
     if (node.children) traverse(node.children);
@@ -35,7 +48,7 @@ function traverse(nodes) {
 traverse(siteNav);
 
 fs.writeFileSync(
-  path.resolve(__dirname, "../src/data/sectionImageMap.json"),
+  path.resolve(__dirname, "../data/sectionImageMap.json"),
   JSON.stringify(sectionMap, null, 2)
 );
 

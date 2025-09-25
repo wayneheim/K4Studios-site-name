@@ -14,11 +14,15 @@ for (const filePath in modules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Extract theme from filename
-  const match = filePath.match(/Miscellaneous\\([^.]+)\.mjs$/);
+  // Extract theme/filename from file path (cross-platform)
+  const match = filePath.match(/Miscellaneous[\\/]([^\\\/]+)\.mjs$/);
   const theme = match ? match[1] : '';
   galleryDatas.push(visible);
-  galleryPaths.push(`/Galleries/Fine-Art-Photography/Miscellaneous/${theme}`);
+  // Avoid duplicate theme/filename in URL if they are the same
+  const urlPath = theme === 'Miscellaneous'
+    ? `/Galleries/Fine-Art-Photography/Miscellaneous` // unlikely, but fallback
+    : `/Galleries/Fine-Art-Photography/Miscellaneous/${theme}`;
+  galleryPaths.push(urlPath);
 }
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating

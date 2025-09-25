@@ -42,24 +42,61 @@ async function build() {
 
   // 2) Import & curate each gallery
   const galleryDataMap = {};
+
   for (const href of galleryHrefs) {
-    const rel  = href.replace(/^\/Galleries\//, '').replace(/\/$/, '');
-    const file = path.join(ROOT_DIR, rel + '.mjs');
-    if (!fs.existsSync(file)) continue;
+    // Only process leaf galleries (no children in siteNav)
+    const navNode = findNavNodeByHref(siteNav, href);
+    if (navNode && navNode.children && navNode.children.length > 0) {
+      // Skip parent nodes
+      continue;
+    }
+    // Remove /Galleries/ from the start, then split and join with path.sep, then add .mjs
+    const rel = href.replace(/^\/Galleries\//, '');
+    const flatFile   = path.join(ROOT_DIR, ...rel.split('/')) + '.mjs';
+    const nestedFile = path.join(ROOT_DIR, ...rel.split('/'), rel.split('/').slice(-1)[0] + '.mjs');
+
+    let fileToUse = null;
+    if (fs.existsSync(flatFile)) {
+      fileToUse = flatFile;
+    } else if (fs.existsSync(nestedFile)) {
+      fileToUse = nestedFile;
+    }
+
+    if (!fileToUse) {
+      continue;
+    }
+// Helper to find a nav node by href
+function findNavNodeByHref(node, href) {
+  if (Array.isArray(node)) {
+    for (const n of node) {
+      const found = findNavNodeByHref(n, href);
+      if (found) return found;
+    }
+    return null;
+  }
+  if (node.href === href) return node;
+  if (node.children) {
+    for (const ch of node.children) {
+      const found = findNavNodeByHref(ch, href);
+      if (found) return found;
+    }
+  }
+  return null;
+}
 
     let raw;
     try {
-      const mod = await import('file://' + file);
+      const mod = await import('file://' + fileToUse);
       raw = mod.galleryData || mod.default || [];
     } catch (e) {
-      console.error(`Failed loading ${file}:`, e);
+      console.error(`Failed loading ${fileToUse}:`, e);
       continue;
     }
     // filter out your studio watermark & cap
     const filtered = raw.filter(img => img.id !== 'i-k4studios');
     const curated  = pullTopN(filtered);
 
-    // map down to minimal shape
+    // Always use the original href as the key, regardless of file location
     galleryDataMap[href] = curated.map(img => ({
       id:       img.id,
       srcS:     img.srcS || '',

@@ -14,11 +14,16 @@ for (const filePath in modules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Extract theme folder name from file path
-  const match = filePath.match(/By-Theme\/([^/]+)\//);
+  // Extract theme folder and filename from file path
+  const match = filePath.match(/By-Location[\\/]([^\\\/]+)[\\/]([^\\\/]+)\.mjs$/);
   const theme = match ? match[1] : '';
+  const filename = match ? match[2] : '';
   galleryDatas.push(visible);
-  galleryPaths.push(`/Galleries/Fine-Art-Photography/Landscapes/By-Location/${theme}`);
+  // Avoid duplicate theme/filename in URL if they are the same
+  const urlPath = theme === filename
+    ? `/Galleries/Fine-Art-Photography/Landscapes/By-Location/${theme}`
+    : `/Galleries/Fine-Art-Photography/Landscapes/By-Location/${theme}/${filename}`;
+  galleryPaths.push(urlPath);
 }
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating

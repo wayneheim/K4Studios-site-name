@@ -55,10 +55,17 @@ for (const filePath in allModules) {
 
 // Helper: Convert file path to public gallery route (for slide links)
 function filePathToHref(filePath) {
-  return filePath
+  let url = filePath
     .replace(/^.*Galleries/, '/Galleries')
     .replace(/\.mjs$/, '')
     .replace(/\\/g, '/');
+  // Remove duplicate theme/filename if present (e.g., /Color/Color/)
+  const parts = url.split('/');
+  if (parts.length > 3 && parts[parts.length - 1] === parts[parts.length - 2]) {
+    parts.splice(parts.length - 2, 1); // Remove the duplicate
+    url = parts.join('/');
+  }
+  return url;
 }
 
 // Helper: Randomly pick N images from different pools (one per pool, if possible)

@@ -1,7 +1,7 @@
 // carousel.ts for Fine Art Architecture (single gallery, not by-theme)
 
 const modules = import.meta.glob(
-  '@/data/Galleries/Fine-Art-Photography/Architecture/Gallery/Gallery.mjs',
+  '@/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs',
   { eager: true }
 );
 
@@ -35,7 +35,7 @@ function toSlide(img) {
     src = img.srcS;
   }
   return {
-    href: `/Galleries/Fine-Art-Photography/Architecture/${img.id}`,
+    href: `/Galleries/Fine-Art-Photography/Architecture/Gallery/${img.id}`,
     src,
     alt: img.alt || img.title || '',
     description: img.description || ''

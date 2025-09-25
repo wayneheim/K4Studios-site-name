@@ -1,6 +1,78 @@
+
+
 // data/semantic/K4-Sem.ts
 
 export const semantic = {
+  reenactorsTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Portraits/Reenactors",
+    def: "Portraits of historical reenactors—character, costume, and story rendered in classic style.",
+    landingPhrases: [
+      { phrase: "Reenactor Portraits", rating: 5, use: true },
+      { phrase: "historical reenactment photography", rating: 5, use: true },
+      { phrase: "timeless reenactor portraits", rating: 4, use: true },
+      { phrase: "living history portraiture", rating: 4, use: true },
+       { phrase: "historic reenactment", rating: 5, use: true },
+      { phrase: "fine art reenactor prints", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "reenactor photography", rating: 5, use: true },
+      { phrase: "historic reenactor prints", rating: 4, use: true },
+      { phrase: "reenactment portraits", rating: 4, use: true },
+      { phrase: "period costume photography", rating: 3, use: true },
+      { phrase: "living history art", rating: 3, use: true }
+    ]
+  },
+  // --- PRINT OPTIONS & PRESENTATION ---
+  printOptions: {
+    path: "/Other/Print-Options",
+    def: "A guide to Wayne's museum-quality print options, paper types, mounting, and finishing—crafted for collectors and those who want their art to last.",
+    landingPhrases: [
+      { phrase: "print options", rating: 5, use: true },
+      { phrase: "Archival Paper Prints", rating: 5, use: true },
+      { phrase: "Acrylic", rating: 5, use: true },
+      { phrase: "fine art print options", rating: 5, use: true },
+      { phrase: "paper types", rating: 4, use: true },
+      { phrase: "framing and mounting", rating: 4, use: true },
+      { phrase: "display and presentation", rating: 4, use: true },
+      { phrase: "museum quality prints", rating: 4, use: true },
+      { phrase: "archival finishing", rating: 3, use: true },
+      { phrase: "gallery wrap", rating: 3, use: true },
+       { phrase: "Fine Art Prints", rating: 5, use: true },
+      { phrase: "canvas prints", rating: 3, use: true },
+      { phrase: "metal prints", rating: 3, use: true },
+      { phrase: "wood prints", rating: 3, use: true },
+      { phrase: "acrylic prints", rating: 3, use: true },
+      { phrase: "matting options", rating: 3, use: true },
+      { phrase: "ordering fine art", rating: 3, use: true },
+      { phrase: "how to buy art", rating: 3, use: true }
+    ]
+  },
+  architectureTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Architecture/Gallery",
+    def: "Classic architectural studies—form, light, and permanence rendered in traditional style.",
+    landingPhrases: [
+      { phrase: "Traditional Architecture Photography", rating: 5, use: true },
+      { phrase: "classic architecture wall art", rating: 4, use: true },
+      { phrase: "fine art architecture prints", rating: 4, use: true },
+      { phrase: "timeless architectural studies", rating: 4, use: true },
+      { phrase: "architecture gallery", rating: 3, use: true },
+      { phrase: "historic building photography", rating: 3, use: true },
+      { phrase: "architectural detail art", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "architecture photography", rating: 5, use: true },
+      { phrase: "classic buildings", rating: 5, use: true },
+      { phrase: "beauty of architecture", rating: 5, use: true },
+      { phrase: "iconic landmarks", rating: 5, use: true },
+      { phrase: "quiet grandeur of architecture", rating: 5, use: true },
+      { phrase: "Landmarks & Icons", rating: 5, use: true },
+      { phrase: "classic architecture", rating: 4, use: true },
+      { phrase: "building portraits", rating: 4, use: true },
+      { phrase: "traditional architecture art", rating: 3, use: true },
+      { phrase: "architectural fine art", rating: 3, use: true }
+    ]
+  },
+
   facingHistory: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
     def: "An ongoing series that blends living history and painterly craft into character-driven portraiture.",
@@ -9,7 +81,9 @@ export const semantic = {
       { phrase: "historical portraiture", rating: 5, use: true },
       { phrase: "story-driven reenactment photography", rating: 5, use: true },
       { phrase: "living history fine art", rating: 4, use: true },
+       { phrase: "moments from history", rating: 5, use: true },
       { phrase: "timeless reenactor portraits", rating: 4, use: true },
+      { phrase: "Step inside the story", rating: 5, use: true },
       { phrase: "evocative historical imagery", rating: 4, use: true },
       { phrase: "Pictorialism", rating: 4, use: true },
         { phrase: "Pictorialist movement", rating: 4, use: true },
@@ -27,14 +101,17 @@ export const semantic = {
       { phrase: "Western Cowboy Portraits", rating: 5, use: true },
       { phrase: "Explore Western Photography", rating: 5, use: true },
       { phrase: "western cowboy wall art for collectors", rating: 4, use: true },
+      { phrase: "the American West", rating: 5, use: true },
       { phrase: "grit & glory of the west", rating: 4, use: true },
       { phrase: "authentic frontier art prints", rating: 4, use: true },
       { phrase: "western art for rustic interiors", rating: 3, use: true }
     ],
     imagePhrases: [
-      { phrase: "misty landscapes", rating: 5, use: true },
       { phrase: "western cowboy art", rating: 5, use: true },
+       { phrase: "rugged spirit", rating: 5, use: true },
       { phrase: "cowboy portraits", rating: 5, use: true },
+       { phrase: "Western cowboys", rating: 5, use: true },
+       { phrase: "frontier life", rating: 5, use: true },
       { phrase: "wild west photography", rating: 4, use: true },
       { phrase: "outlaw portraits", rating: 4, use: true },
       { phrase: "historic western prints", rating: 3, use: true },
@@ -55,6 +132,8 @@ export const semantic = {
       { phrase: "Civil War Portraits", rating: 5, use: true },
       { phrase: "civil war valor & loss", rating: 5, use: true },
       { phrase: "Faces of Conflict", rating: 4, use: true },
+       { phrase: "American Civil War", rating: 5, use: true },
+      { phrase: "Civil War collections", rating: 5, use: true },
       { phrase: "american history wall decor", rating: 3, use: true },
       { phrase: "civil war art for history lovers", rating: 3, use: true }
     ],
@@ -116,6 +195,7 @@ export const semantic = {
     ],
     imagePhrases: [
       { phrase: "war zone photography", rating: 5, use: true },
+       { phrase: "Second World War", rating: 5, use: true },
       { phrase: "battlefield moments", rating: 4, use: true },
       { phrase: "WWII action art", rating: 3, use: true },
       { phrase: "wwii artistic documentary", rating: 3, use: true },
@@ -148,6 +228,7 @@ export const semantic = {
     landingPhrases: [
       { phrase: "Roaring 20s Portraits", rating: 5, use: true },
       { phrase: "The Roaring 20s", rating: 5, use: true },
+       { phrase: "Roaring 20s", rating: 5, use: true },
       { phrase: "Step into the Roaring 20s", rating: 5, use: true },
       { phrase: "gatsby era art", rating: 4, use: true },
       { phrase: "roaring 20s wall art for jazz fans", rating: 4, use: true },
@@ -167,6 +248,7 @@ export const semantic = {
     landingPhrases: [
       { phrase: "engrained series", rating: 5, use: true },
       { phrase: "stories etched in wood", rating: 4, use: true },
+      { phrase: "Engrained Prints", rating: 5, use: true },
       { phrase: "engrained wood prints for rustic interiors", rating: 4, use: true },
       { phrase: "fine art prints on wood", rating: 3, use: true },
     ],
@@ -209,6 +291,7 @@ export const semantic = {
     ],
     imagePhrases: [
       { phrase: "western landscape photography", rating: 5, use: true },
+       { phrase: "ethereal landscapes", rating: 5, use: true },
       { phrase: "feel every layer of it", rating: 4, use: true },
     ],
   },
@@ -276,6 +359,7 @@ export const semantic = {
     ],
     imagePhrases: [
       { phrase: "waterfall landscape photography", rating: 5, use: true },
+      { phrase: "the truth of a moment", rating: 5, use: true },       
       { phrase: "painterly river scenes", rating: 4, use: true },
     ],
   },
@@ -299,12 +383,91 @@ export const semantic = {
     def: "Classic field work abroad—composition and craft first.",
     landingPhrases: [
       { phrase: "International Traditional Landscapes", rating: 5, use: true },
+      { phrase: "international photography", rating: 5, use: true },  
+      { phrase: "International Landscapes – Global Wonders in Fine Art", rating: 5, use: true },
+       { phrase: "Traditional Landscapes collection", rating: 5, use: true },
+       { phrase: "International – Global Landscapes", rating: 5, use: true }, 
+      { phrase: "international prints", rating: 5, use: true },   
       { phrase: "classic international landscape art", rating: 4, use: true },
     ],
-    imagePhrases: [
-      { phrase: "traditional international landscape photography", rating: 5, use: true },
-      { phrase: "european scenery wall art", rating: 4, use: true },
+  },
+
+  canadaWesternTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+    def: "Classic Canadian West—prairie, mountain, and sky in traditional landscape style.",
+    landingPhrases: [
+      { phrase: "Canada Western Landscapes", rating: 5, use: true },
+      { phrase: "Canadian Rockies", rating: 5, use: true },   
+      { phrase: "Canadian West landscape photography", rating: 5, use: true },
+      { phrase: "Canada fine art landscapes", rating: 4, use: true },
+       { phrase: "Western Canada – Towering peaks", rating: 5, use: true },
+      { phrase: "prairie and mountain art", rating: 4, use: true },
+      { phrase: "Canadian landscape prints", rating: 3, use: true }
     ],
+    imagePhrases: [
+      { phrase: "Canada landscape photography", rating: 5, use: true },
+      { phrase: "Canadian West scenery", rating: 4, use: true },
+       { phrase: " bridge for discovery", rating: 5, use: true },
+      { phrase: "prairie landscape art", rating: 4, use: true },
+      { phrase: "mountain and prairie prints", rating: 3, use: true }
+    ]
+  },
+
+  faroeIslandsTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
+    def: "Moody seascapes and dramatic cliffs—Faroe Islands in classic landscape style.",
+    landingPhrases: [
+      { phrase: "Faroe Islands Landscapes", rating: 5, use: true },
+      { phrase: "Faroe Islands fine art photography", rating: 4, use: true },
+      { phrase: "Faroe Islands – Windswept cliffs", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "Faroe Islands landscape photography", rating: 5, use: true },
+       { phrase: "Faroe Islands", rating: 5, use: true },
+        { phrase: "cliffs of the Faroes", rating: 5, use: true },
+      { phrase: "cliffside scenery art", rating: 4, use: true },
+      { phrase: "moody ocean prints", rating: 3, use: true }
+    ]
+  },
+
+  icelandTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
+    def: "Iceland’s wild terrain—glaciers, waterfalls, and volcanic drama in traditional style.",
+    landingPhrases: [
+      { phrase: "Iceland Landscapes", rating: 5, use: true },
+      { phrase: "Icelandic volcanoes", rating: 5, use: true },  
+       { phrase: "Iceland’s volcanic rivers", rating: 5, use: true },
+       { phrase: "Iceland’s Waterfalls", rating: 5, use: true },
+      { phrase: "Iceland fine art photography", rating: 4, use: true },
+      { phrase: "Iceland – Glacial lagoons", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "Iceland landscape photography", rating: 5, use: true }, 
+       { phrase: "basalt waterfalls", rating: 5, use: true },
+       { phrase: "Iceland – Volcanic terrain", rating: 5, use: true },
+        { phrase: "wilds of Iceland", rating: 5, use: true },
+      { phrase: "Icelandic scenery art", rating: 4, use: true },
+      { phrase: "northern lights prints", rating: 3, use: true }
+    ]
+  },
+
+  newfoundlandTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
+    def: "Rugged coastlines and quiet villages—Newfoundland in classic landscape tradition.",
+    landingPhrases: [
+      { phrase: "Newfoundland Landscapes", rating: 5, use: true },
+        { phrase: "expanse of Newfoundland", rating: 5, use: true },
+      { phrase: "Newfoundland fine art photography", rating: 4, use: true },
+      { phrase: "Newfoundland – Rugged coastlines", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "Newfoundland landscape photography", rating: 5, use: true },
+       { phrase: "Newfoundland and beyond", rating: 5, use: true },
+       { phrase: "fjords of Newfoundland", rating: 5, use: true },
+       { phrase: "Newfoundland’s coasts", rating: 5, use: true },
+      { phrase: "coastal village art", rating: 4, use: true },
+      { phrase: "Atlantic coast prints", rating: 3, use: true }
+    ]
   },
 
   landscapeWestTraditional: {
@@ -312,23 +475,31 @@ export const semantic = {
     def: "A straight photograph—honest light, strong line.",
     landingPhrases: [
       { phrase: "Western Traditional Landscapes", rating: 5, use: true },
+       { phrase: "Western Landscapes – Spirit", rating: 5, use: true },
+        { phrase: "Wyoming & Montana", rating: 5, use: true },
       { phrase: "classic western landscape prints", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "traditional western landscape photography", rating: 5, use: true },
+       { phrase: "American West – Vast Horizons", rating: 5, use: true },
+        { phrase: "Western skies", rating: 5, use: true },
       { phrase: "western scenery wall art", rating: 4, use: true },
     ],
   },
 
   landscapeMidwestTraditional: {
-    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
     def: "Plainspoken scenes—shape, light, and season.",
     landingPhrases: [
       { phrase: "Midwest Traditional Landscapes", rating: 5, use: true },
+ { phrase: "Midwest Landscapes – Beauty in Simplicity", rating: 5, use: true },
+  { phrase: "Midwest Rivers & Lakes", rating: 5, use: true },
       { phrase: "heartland landscape prints", rating: 4, use: true },
     ],
     imagePhrases: [
       { phrase: "traditional midwest landscape photography", rating: 5, use: true },
+         { phrase: "Midwest – The Heartland Preserved", rating: 5, use: true },
+        { phrase: "Ohio river valleys", rating: 5, use: true },
       { phrase: "classic heartland scenery", rating: 4, use: true },
     ],
   },
@@ -342,6 +513,7 @@ export const semantic = {
     ],
     imagePhrases: [
       { phrase: "traditional northeast landscape photography", rating: 5, use: true },
+       { phrase: "Northeast – History and Contrast", rating: 5, use: true },
       { phrase: "new england landscapes fine art", rating: 4, use: true },
     ],
   },
@@ -355,6 +527,7 @@ export const semantic = {
     ],
     imagePhrases: [
       { phrase: "traditional southern landscape photography", rating: 5, use: true },
+         { phrase: "South – Light and Legacy", rating: 5, use: true },
       { phrase: "southern landscape prints", rating: 4, use: true },
     ],
   },
@@ -368,6 +541,7 @@ export const semantic = {
     ],
     imagePhrases: [
       { phrase: "mountain landscape photography", rating: 5, use: true },
+      { phrase: "mountain storm", rating: 3, use: true },
       { phrase: "mountain scenery fine art", rating: 4, use: true },
     ],
   },
@@ -377,6 +551,7 @@ export const semantic = {
     def: "Water recorded simply and well—composition and tone carry the rest.",
     landingPhrases: [
       { phrase: "Traditional Water Photography", rating: 5, use: true },
+       { phrase: "Water & Waterfall Photography – Nature in Motion", rating: 5, use: true },
       { phrase: "classic water landscape prints", rating: 4, use: true },
     ],
     imagePhrases: [
@@ -405,9 +580,59 @@ export const semantic = {
     landingPhrases: [
       { phrase: "Painterly Landscape Photography", rating: 5, use: true },
       { phrase: "western painterly landscape photography", rating: 4, use: true },
+       { phrase: "feel the landscape", rating: 5, use: true },
       { phrase: "mountain photography", rating: 4, use: true },
       { phrase: "fine art landscape prints for collectors", rating: 3, use: true },
     ],
+  },
+
+  landscapeTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Landscapes",
+    def: "Traditional landscapes—composition, craft, and honest light.",
+    landingPhrases: [
+      { phrase: "Traditional Landscape Photography", rating: 5, use: true },
+      { phrase: "classic landscape wall art", rating: 4, use: true },
+      { phrase: "landscape photography", rating: 5, use: true },     
+       { phrase: "traditional fine art style", rating: 5, use: true },
+      { phrase: "fine art landscape prints", rating: 4, use: true },
+      { phrase: "timeless landscape photography", rating: 4, use: true },
+      { phrase: "traditional landscape gallery", rating: 3, use: true },
+      { phrase: "landscape art for collectors", rating: 3, use: true }
+    ],
+  },
+
+  // --- MISCELLANEOUS: TRADITIONAL ---
+  miscellaneousTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Miscellaneous",
+    def: "A diverse collection of traditional fine art photographs—unique moments, candid scenes, and subjects that defy easy categorization.",
+    landingPhrases: [
+      { phrase: "Miscellaneous Traditional Photography", rating: 5, use: true },
+      { phrase: "unique fine art photographs", rating: 4, use: true },
+      { phrase: "unusual subjects in fine art", rating: 4, use: true },
+      { phrase: "eclectic traditional gallery", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "miscellaneous traditional photography", rating: 5, use: true },
+      { phrase: "candid moments", rating: 4, use: true },
+      { phrase: "unexpected fine art", rating: 3, use: true }
+    ]
+  },
+
+  // --- MISCELLANEOUS: PAINTERLY ---
+  miscellaneousPainterly: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous",
+    def: "Painterly fine art images that don’t fit a single theme—creative, experimental, and visually striking.",
+    landingPhrases: [
+      { phrase: "life’s raw beauty", rating: 5, use: true },
+      { phrase: "painterly experimental art", rating: 4, use: true },
+      { phrase: "unique painterly gallery", rating: 4, use: true },
+      { phrase: "eclectic painterly images", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "miscellaneous painterly photography", rating: 5, use: true },
+      { phrase: "creative painterly art", rating: 4, use: true },
+      { phrase: "experimental fine art", rating: 3, use: true }
+    ]
   },
 
   // --- TRANSPORTATION, UNIVERSAL, SYNONYMS ---
@@ -452,6 +677,7 @@ export const semantic = {
     landingPhrases: [
       { phrase: "Painterly Fine Art Photography", rating: 5, use: true },
       { phrase: "painterly photography", rating: 5, use: true },
+      { phrase: "Read the full story here", rating: 5, use: true },
       { phrase: "painterly art collection", rating: 4, use: true },
       { phrase: "painterly style wall art", rating: 4, use: true },
       { phrase: "painterly gallery", rating: 4, use: true },
@@ -464,6 +690,7 @@ export const semantic = {
     def: "Traditional photographic craft—composition, print, and permanence.",
     landingPhrases: [
       { phrase: "Fine Art Photography", rating: 5, use: true },
+      { phrase: "Traditional Fine Art collection", rating: 5, use: true },      
       { phrase: "traditional fine art photography", rating: 5, use: true },
       { phrase: "fine art gallery", rating: 4, use: true },
       { phrase: "classic fine art photos", rating: 4, use: true },
@@ -527,7 +754,7 @@ export const semantic = {
       "gatsby art", "flapper portraits", "speakeasy wall art", "bootlegger art", "prohibition era photography"
     ],
     "roaring twenties portraits": [
-      "1920s art", "jazz age portraits", "vintage roaring twenties photo"
+      "1920s art", "jazz age portraits", "vintage roaring twenties photo", 
     ],
     "wwii photography": [
       "world war ii art", "wartime prints", "greatest generation art", "historic war photography", "brotherhood & sacrifice art"

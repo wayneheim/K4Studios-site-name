@@ -2,6 +2,7 @@
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import ImageBar2          from '@/components/ImageBar2.jsx';
+import { slides as architectureSlides } from '@/data/Galleries/Fine-Art-Photography/Architecture/carousel.ts';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
@@ -110,7 +111,7 @@ const structuredData = getStructuredData({
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+        <ImageBar2 client:load slides={architectureSlides} />
       </div>
     </div>
 

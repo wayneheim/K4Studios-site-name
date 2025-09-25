@@ -207,22 +207,14 @@ export function autoLinkKeywordsInText(
   const linked = new Set<string>();
 
 
-  // Helper to determine if a given index is currently inside an <a>...</a> range
-  function isInsideAnchor(str: string, pos: number): boolean {
-    const lastOpenBefore = str.lastIndexOf('<a', pos);
-    if (lastOpenBefore === -1) return false;
-    const lastCloseBefore = str.lastIndexOf('</a>', pos);
-    // If the most recent <a is after the most recent </a> before pos, we're inside a link
-    return lastOpenBefore > lastCloseBefore;
-  }
-
   for (const { index, matchLen, matchText } of matches) {
     const lc = normalizeKW(matchText); // normalized lower for matching and uniqueness
     const displayText = output.substr(index, matchLen); // preserve original dashes/casing
     if (linked.has(lc)) continue;
 
-  // Skip if match position is inside an existing anchor
-  if (isInsideAnchor(output, index)) continue;
+    const before = output.lastIndexOf('<a', index);
+    const after = output.indexOf('</a>', index);
+    if (before !== -1 && after > before) continue;
 
     let href: string | undefined;
 
@@ -246,6 +238,7 @@ export function autoLinkKeywordsInText(
         let poolEntries: { img: any; galleryKey: string }[] = [];
 
         imgSecs.forEach(sec => {
+          // ...existing code...
           const kids = sectionGalleries[sec] || [];
           if (kids.length) {
             poolEntries.push(
@@ -253,30 +246,14 @@ export function autoLinkKeywordsInText(
                 (galleryDataMap[key] || []).map(img => ({ img, galleryKey: key }))
               )
             );
-            return;
+          } else {
+            const matchPath = sec + '/';
+            poolEntries.push(
+              ...allImages
+                .filter(img => img.src.includes(matchPath))
+                .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
+            );
           }
-
-          // No children: pull images directly from galleryDataMap if present
-          const alt1 = sec.startsWith('/') ? sec.slice(1) : '/' + sec;
-          const direct = galleryDataMap[sec] || galleryDataMap[alt1] || [];
-          if (direct.length) {
-            poolEntries.push(...direct.map(img => ({ img, galleryKey: sec })));
-            return;
-          }
-
-          // Fallback: scan allImages by gallery membership first, then by src path include
-          const byGallery = allImages.filter(img => (img.galleries || []).some(g => g === sec || g === alt1));
-          if (byGallery.length) {
-            poolEntries.push(...byGallery.map(img => ({ img, galleryKey: sec })));
-            return;
-          }
-
-          const matchPath = sec + '/';
-          poolEntries.push(
-            ...allImages
-              .filter(img => img.src.includes(matchPath))
-              .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
-          );
         });
 
         // ...existing code...
@@ -329,28 +306,14 @@ export function autoLinkKeywordsInText(
                     (galleryDataMap[key] || []).map(img => ({ img, galleryKey: key }))
                   )
                 );
-                return;
+              } else {
+                const matchPath = sec + '/';
+                poolEntries2.push(
+                  ...allImages
+                    .filter(img => img.src.includes(matchPath))
+                    .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
+                );
               }
-
-              const alt1 = sec.startsWith('/') ? sec.slice(1) : '/' + sec;
-              const direct = galleryDataMap[sec] || galleryDataMap[alt1] || [];
-              if (direct.length) {
-                poolEntries2.push(...direct.map(img => ({ img, galleryKey: sec })));
-                return;
-              }
-
-              const byGallery = allImages.filter(img => (img.galleries || []).some(g => g === sec || g === alt1));
-              if (byGallery.length) {
-                poolEntries2.push(...byGallery.map(img => ({ img, galleryKey: sec })));
-                return;
-              }
-
-              const matchPath = sec + '/';
-              poolEntries2.push(
-                ...allImages
-                  .filter(img => img.src.includes(matchPath))
-                  .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
-              );
             });
             const filtered2 = poolEntries2.filter(e => !exclude.has(e.img.id));
             if (filtered2.length) poolEntries2 = filtered2;

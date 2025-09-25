@@ -14,8 +14,8 @@ for (const filePath in modules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Extract gallery name from filename
-  const match = filePath.match(/Transportation\\([^.]+)\.mjs$/);
+  // Extract gallery name from filename (support both slash types)
+  const match = filePath.match(/Transportation[\\/]+([^.\\/]+)\.mjs$/);
   const gallery = match ? match[1] : '';
   galleryDatas.push(visible);
   galleryPaths.push(`/Galleries/Fine-Art-Photography/Transportation/${gallery}`);

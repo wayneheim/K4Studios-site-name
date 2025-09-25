@@ -13,7 +13,7 @@ export const westernStory = [
     subhead: "Midwest – The Heartland Preserved",
     paragraphs: [
       "The American Midwest is a study in quiet strength. Rolling farmland, wide rivers, and barns weathered by generations are captured here in crisp, detailed photographs. Wayne’s traditional fine art landscapes elevate these familiar views into timeless prints that honor the simplicity of the heartland.",
-      "From the waterfalls of Michigan to the plains of Illinois and golden light over Ohio fields, these images reveal beauty in places often overlooked. Many scenes also echo the atmosphere found in Wayne’s [Civil War Portraits](/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits), showing the natural context of the history that unfolded across this region."
+      "From the waterfalls of Michigan to the plains of Illinois and golden light over Ohio fields, these images reveal beauty in places often overlooked. Many scenes also echo the atmosphere found in Wayne’s Civil War Portraits, showing the natural context of the history that unfolded across this region."
     ],
     list: [
       "Shot across Ohio, Illinois, Michigan, Iowa, Wisconsin, and Missouri.",
@@ -26,7 +26,7 @@ export const westernStory = [
     subhead: "South – Light and Legacy",
     paragraphs: [
       "In the South, light carries memory. From Appalachian haze at dawn to golden Tennessee fields and rivers winding through Virginia, Wayne’s photographs capture the character of this region with honesty and care. The atmosphere here is rooted in tradition—warm, layered, and enduring.",
-      "These works connect naturally to the [Civil War collections](/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits), bridging natural and historic landscapes. They are ideal for collectors who want fine art photography that honors both land and legacy."
+      "These works connect naturally to the Civil War collections, bridging natural and historic landscapes. They are ideal for collectors who want fine art photography that honors both land and legacy."
     ],
     list: [
       "Captured across Kentucky, Tennessee, Georgia, Virginia, and the Carolinas.",
@@ -39,7 +39,7 @@ export const westernStory = [
     subhead: "Northeast – History and Contrast",
     paragraphs: [
       "The Northeast blends elegance with ruggedness. Stone fences, October forests, and fog-draped lakes are rendered in sharp detail, creating photographs that balance refinement with edge. Wayne’s traditional approach highlights contrast—coast versus inland, light against shadow, stillness beside motion.",
-      "These landscapes complement the solitary atmosphere of the [Western Cowboy Portraits](/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits), reflecting quiet resilience across different geographies."
+      "These landscapes complement the solitary atmosphere of the Western Cowboy Portraits, reflecting quiet resilience across different geographies."
     ],
     list: [
       "Shot in New York, Pennsylvania, Vermont, and West Virginia.",
@@ -52,7 +52,7 @@ export const westernStory = [
     subhead: "American West – Vast Horizons",
     paragraphs: [
       "The American West has long stood as a symbol of scale and freedom. Wayne’s traditional landscape photography captures its sweeping deserts, high plains, and mountain silhouettes with precision and depth. These images preserve the West in its most honest form—expansive, raw, and cinematic.",
-      "From Utah canyons to Wyoming prairies, these photographs pair naturally with Wayne’s [Engrained Series](/Other/K4-Select-Series/Engrained), where the textures of the West come alive on wood surfaces."
+      "From Utah canyons to Wyoming prairies, these photographs pair naturally with Wayne’s Engrained Series, where the textures of the West come alive on wood surfaces."
     ],
     list: [
       "Locations include Arizona, Utah, Colorado, Wyoming, and Nevada.",
@@ -78,7 +78,7 @@ export const westernStory = [
     subhead: "One Vision, Many Regions",
     paragraphs: [
       "Each regional gallery shows how traditional fine art photography preserves the character of place—whether that’s the steady rhythm of Midwest fields, the light of the South, or the power of Icelandic waterfalls.",
-      "From here, explore related collections like [Facing History](/Galleries/Painterly-Fine-Art-Photography/Facing-History), [Transportation](/Galleries/Fine-Art-Photography/Transportation), or the tactile storytelling of [Engrained](/Other/K4-Select-Series/Engrained). Together, these collections form a visual archive—rooted in place, told in light, and designed to endure."
+      "From here, explore related collections like Facing History, Transportation, or the tactile storytelling of Engrained. Together, these collections form a visual archive—rooted in place, told in light, and designed to endure."
     ]
   }
 ];

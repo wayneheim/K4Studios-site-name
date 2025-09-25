@@ -38,10 +38,17 @@ function selectStaticHeroSrc(img) {
 }
 
 function filePathToHref(filePath) {
-  return filePath
+  let url = filePath
     .replace(/^.*Galleries/, '/Galleries')
     .replace(/\.mjs$/, '')
     .replace(/\\/g, '/');
+  // Remove duplicate theme/filename if present (e.g., /Color/Color/)
+  const parts = url.split('/').filter(Boolean);
+  if (parts.length > 1 && parts[parts.length - 1] === parts[parts.length - 2]) {
+    parts.pop();
+    url = '/' + parts.join('/');
+  }
+  return url;
 }
 
 // --- toSlide for regular slides ---

@@ -60,6 +60,13 @@ export const westernStory = [
 
   /* ──────────────────────────────────────── 7 */
   {
+    subhead: "Beyond Borders: Wayne’s Vision Across Every Gallery",
+    paragraphs: [
+      `If these international landscapes spark your sense of wonder, don’t stop here. Wayne’s unique eye for story and place runs through every corner of his work. Wander through Painterly Landscape Photography for scenes that blur the line between memory and dream, or discover the quiet power of Traditional Landscape Photography. For those drawn to the poetry of structure, explore the world’s enduring spaces in Traditional Architecture Photography. And if you crave the full sweep of Wayne’s artistry, the Fine Art Photography collection is always open—each gallery a new chapter, every image a new invitation.`
+    ]
+  },
+  /* ──────────────────────────────────────── 8 */
+  {
     subhead: "Embrace the Edge. Live the Adventure.",
     paragraphs: [
       `Wayne Heim’s international fine art landscapes are more than photographs—they’re stories of weather, wonder, and wildness. Each piece is crafted for explorers, dreamers, and anyone who wants to live with the world’s last wild places close at hand.`,

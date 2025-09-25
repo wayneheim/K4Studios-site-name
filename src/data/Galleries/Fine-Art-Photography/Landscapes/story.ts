@@ -49,7 +49,7 @@ export const westernStory = [
     subhead: "Western Landscapes – Spirit of the American Frontier",
     paragraphs: [
       `Wayne’s Western landscape photography captures the untamed beauty of the American West. From sunsets over desert horizons to wide-open plains, these fine art prints connect collectors to the vastness, history, and soul of the frontier.`,
-      `Explore more in the [Western Landscapes collection](/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery).`
+      `Explore more in the Western Landscapes collection.`
     ],
     list: [
       `Wyoming & Montana – Iconic vistas including Mormon Row and cowboy country landscapes.`
@@ -61,7 +61,7 @@ export const westernStory = [
     subhead: "Midwest Landscapes – Beauty in Simplicity",
     paragraphs: [
       `The Midwest’s rolling hills and rural farmlands reveal the quiet strength of America’s heartland. Wayne’s traditional fine art photography transforms understated moments into prints that speak with calm, reflective power.`,
-      `Discover more in the [Midwest Landscapes collection](/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery).`
+      `Discover more in the Midwest Landscapes collection.`
     ],
     list: [
       `Golden Fields – Endless farmlands under changing skies.`,
@@ -74,7 +74,7 @@ export const westernStory = [
     subhead: "International Landscapes – Global Wonders in Fine Art",
     paragraphs: [
       `Wayne’s international landscape photography extends beyond the U.S., capturing breathtaking scenes worldwide. These fine art prints offer collectors a chance to bring the planet’s most extraordinary places into their homes.`,
-      `See more in the [International Landscapes gallery](/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Gallery).`
+      `See more in the International Landscapes gallery.`
     ],
     list: [
       `Iceland – Volcanic terrain, glacial rivers, and northern light.` ,
@@ -92,7 +92,7 @@ export const westernStory = [
     list: [
       `Pure & Honest: Photographs created without filters—just light, composition, and truth.`,
       `Fine Art Prints: Museum-quality pieces designed to elevate homes, offices, or galleries.`,
-      `SEO-friendly crosslinks: Compare with [Painterly Landscapes](/Galleries/Painterly-Fine-Art-Photography/Landscapes) to explore Wayne’s narrative style.`
+      `SEO-friendly crosslinks: Compare with Painterly Landscapes to explore Wayne’s narrative style.`
     ]
   },
 
@@ -114,7 +114,7 @@ export const westernStory = [
     subhead: "Discover the Beauty of Traditional Landscape Photography",
     paragraphs: [
       `Wayne Heim’s traditional landscapes connect you with mountains, rivers, plains, and coastlines across the globe. Each print is a fine art piece that honors nature while enhancing the spaces where it lives.`,
-      `Browse the full [Traditional Landscapes collection](/Galleries/Fine-Art-Photography/Landscapes) and bring home a print that reflects your connection to the natural world.`
+      `Browse the full Traditional Landscapes collection and bring home a print that reflects your connection to the natural world.`
     ]
   }
 ];

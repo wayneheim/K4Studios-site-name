@@ -14,8 +14,8 @@ for (const filePath in modules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Extract theme from filename
-  const match = filePath.match(/Portraits\\([^.]+)\.mjs$/);
+  // Extract theme from filename (support both slash types)
+  const match = filePath.match(/Portraits[\\/]+([^.\\/]+)\.mjs$/);
   const theme = match ? match[1] : '';
   galleryDatas.push(visible);
   galleryPaths.push(`/Galleries/Fine-Art-Photography/Portraits/${theme}`);
