@@ -2,13 +2,31 @@
 const { title = 'Gallery', structuredDataJSON, meta = {}, preloadImage } = Astro.props;
 
 // Fallbacks for meta
-const pageTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
+const pageTitle =
+  meta.title ||
+  preloadImage?.title || // ✅ Use image title
+  title ||
+  'K4 Studios – Fine Art Photography';
+
 const pageDescription =
   meta.description ||
+  preloadImage?.description || // ✅ Use image description if available
+  preloadImage?.story ||       // ✅ Fallback to story
   'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
 
 // Strip any HTML tags if accidentally passed in
 const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
+
+// Open Graph/Twitter fallbacks
+const ogTitle = meta.ogTitle || preloadImage?.title || pageTitle;
+const ogDescription = meta.ogDescription || preloadImage?.description || pageDescription;
+const ogImage = meta.ogImage || preloadImage?.src || preloadImage;
+const ogUrl = meta.ogUrl || Astro.url.pathname;
+
+const twitterTitle = meta.twitterTitle || ogTitle;
+const twitterDescription = meta.twitterDescription || ogDescription;
+const twitterImage = meta.twitterImage || ogImage;
+const twitterUrl = meta.twitterUrl || ogUrl;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -22,24 +40,19 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
       <script type="application/ld+json" set:html={structuredDataJSON} />
     )}
 
-    {meta.ogTitle && (
-      <>
-        <meta property="og:title" content={meta.ogTitle} />
-        <meta property="og:description" content={meta.ogDescription || pageDescription} />
-        <meta property="og:image" content={meta.ogImage} />
-        <meta property="og:type" content={meta.ogType || "website"} />
-        <meta property="og:url" content={meta.ogUrl} />
-      </>
-    )}
-    {meta.twitterTitle && (
-      <>
-        <meta name="twitter:card" content={meta.twitterCard || "summary_large_image"} />
-        <meta name="twitter:title" content={meta.twitterTitle} />
-        <meta name="twitter:description" content={meta.twitterDescription || pageDescription} />
-        <meta name="twitter:image" content={meta.twitterImage} />
-        <meta name="twitter:url" content={meta.twitterUrl} />
-      </>
-    )}
+    {/* OG tags */}
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content={meta.ogType || "website"} />
+    <meta property="og:url" content={ogUrl} />
+
+    {/* Twitter tags */}
+    <meta name="twitter:card" content={meta.twitterCard || "summary_large_image"} />
+    <meta name="twitter:title" content={twitterTitle} />
+    <meta name="twitter:description" content={twitterDescription} />
+    <meta name="twitter:image" content={twitterImage} />
+    <meta name="twitter:url" content={twitterUrl} />
 
     <!-- Google Fonts: Preconnect and Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
@@ -49,11 +62,10 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
 
     {preloadImage && (
-      <link rel="preload" as="image" href={preloadImage} />
+      <link rel="preload" as="image" href={preloadImage?.src || preloadImage} />
     )}
     <!-- Make Tailwind CSS non-blocking -->
     <link
-      
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
