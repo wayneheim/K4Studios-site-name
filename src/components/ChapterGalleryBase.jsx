@@ -354,8 +354,13 @@ export default function ChapterGalleryBase({
     if (window.location.pathname !== newUrl) window.history.pushState(null, "", newUrl);
   }, [currentIndex, hasEnteredChapters, basePath, galleryData]);
 
-  // Title
+  // Title - only set when actively viewing images
   useEffect(() => {
+    // Don't set title if we're on gallery landing page (intro visible)
+    const introEl = document.getElementById("intro-section");
+    const isIntroVisible = introEl && !introEl.classList.contains("section-hidden");
+    if (isIntroVisible) return;
+
     const entry = galleryData[currentIndex];
     const chapterLabel = entry?.title ? fixMojibake(entry.title) : `Chapter ${currentIndex + 1}`;
     const base = titleBase || "K4 Studios Gallery";

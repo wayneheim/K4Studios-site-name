@@ -6,11 +6,11 @@ import ChapterViewer from "@/components/Chapter-CivilWarBW.jsx";
 import Footer from "@/components/Footer.astro";
 
 import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
-import { landingWestern } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts";
+import { landingWestern as landingCivilWar } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 /** ----------------------------------------------------------------
- * Robust mojibake cleaner: safe default + common CP1252/UTF8 swaps
+ * Robust mojibake cleaner
  * ---------------------------------------------------------------- */
 function fixMojibake(str = "") {
   return String(str)
@@ -43,16 +43,15 @@ const { breadcrumb, entranceData = {}, initialImageId } = Astro.props;
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
 const currentImage = isGhost
   ? null
-  : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
+  : allImages.find((img) => img.id === initialImageId && img.visibility !== "ghost");
 
-// pick one random preview image to act as featured
-const previewImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 8);
+const previewImages = allImages.filter((img) => img.visibility !== "ghost").slice(0, 8);
 const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
 
-// Random preview for intro image (stable enough for landing)
-const singlePreviewImage = previewImages.length
-  ? previewImages[Math.floor(Math.random() * previewImages.length)]
-  : null;
+const singlePreviewImage =
+  previewImages.length
+    ? previewImages[Math.floor(Math.random() * previewImages.length)]
+    : null;
 
 /** ---------------------------------------------------------------
  * Entry content with fallbacks
@@ -62,41 +61,45 @@ const usedEntranceData = {
   image: singlePreviewImage
     ? {
         src: singlePreviewImage.src,
-        alt: singlePreviewImage.alt || singlePreviewImage.title || entranceData?.image?.alt,
+        alt:
+          singlePreviewImage.alt ||
+          singlePreviewImage.title ||
+          entranceData?.image?.alt,
         caption: singlePreviewImage.title || entranceData?.image?.caption,
       }
     : entranceData?.image,
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
+  title: entranceData?.title || landingCivilWar?.title || "Gallery",
+  subtitle: entranceData?.subtitle || landingCivilWar?.subtitle || "",
+  description: entranceData?.description || landingCivilWar?.description || "",
 };
 
 /** ---------------------------------------------------------------
  * SITE / URL helpers
  * --------------------------------------------------------------- */
-const siteBase = import.meta.env.SITE || "https://k4studios.com";
-const pathOnly = Astro.url.pathname; // no search/hash
+const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
+const pathOnly = Astro.url.pathname;
 const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
 
 /** ---------------------------------------------------------------
- * Structured data (image open => image; otherwise => gallery)
- * Ensure absolute URL is used for the gallery item
+ * Structured data
  * --------------------------------------------------------------- */
 const imageStructuredData = currentImage
   ? getStructuredData({ type: "image", data: currentImage })
   : getStructuredData({
       type: "gallery",
       data: {
-        title: fixMojibake(landingWestern.title),
-        description: fixMojibake(landingWestern.subtitle),
+        title: fixMojibake(usedEntranceData.title),
+        description: fixMojibake(usedEntranceData.description) || fixMojibake(usedEntranceData.subtitle),
         url: galleryAbsUrl,
       },
       images: previewImages,
     });
 
 /** ---------------------------------------------------------------
- * Page Title & Descriptions (dynamic, non-duplicative)
+ * Page Title & Descriptions
  * --------------------------------------------------------------- */
-// Title: Use image title if on image page, else use entranceData.title. Only append site/artist if not present.
 const siteName = "Wayne Heim";
 const siteSuffix = "Fine Art Photography";
 const fallbackTitle = "Gallery | Wayne Heim Fine Art Photography";
@@ -111,26 +114,24 @@ function appendSiteTitle(title) {
 
 const pageTitle = currentImage
   ? appendSiteTitle(fixMojibake(currentImage.title))
-  : appendSiteTitle(fixMojibake(usedEntranceData.title || landingWestern.title));
+  : appendSiteTitle(fixMojibake(usedEntranceData.title));
 
-// Description: prefer image description, else entranceData.description, else subtitle, else fallback
 const baseFallbackDescription =
-  "Explore painterly fine art photography of Civil War portraits in black and white by Wayne Heim.";
+  "Step into history with striking black and white Civil War portraits by Wayne Heim.";
 
 const pageDescription =
   (currentImage?.description && fixMojibake(currentImage.description)) ||
   (usedEntranceData?.description && fixMojibake(usedEntranceData.description)) ||
   (usedEntranceData?.subtitle && fixMojibake(usedEntranceData.subtitle)) ||
-  (landingWestern?.subtitle && fixMojibake(landingWestern.subtitle)) ||
   baseFallbackDescription;
 
 /** ---------------------------------------------------------------
- * OG / Twitter (always point to canonical; image changes if on image)
+ * OG / Twitter
  * --------------------------------------------------------------- */
 const ogImage = currentImage ? currentImage.src : usedEntranceData.image?.src;
-const ogAlt = currentImage
-  ? currentImage.alt || currentImage.title || pageTitle
-  : usedEntranceData.image?.alt || pageTitle;
+const ogAlt =
+  (currentImage && (currentImage.alt || currentImage.title)) ||
+  (usedEntranceData.image?.alt || fixMojibake(usedEntranceData.title));
 
 const meta = {
   description: pageDescription,
@@ -150,18 +151,14 @@ const meta = {
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
-    <!-- Header stays fixed above intro -->
     <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
       <GalleryHeader client:load breadcrumb={breadcrumb} />
     </div>
 
     <div class="h-0 md:h-5"></div>
 
-    <!-- Intro: only one h1 per page -->
     <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-      {!currentImage && (
-        <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
-      )}
+      <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
       {usedEntranceData.subtitle && (
         <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
       )}
@@ -173,12 +170,7 @@ const meta = {
       }} />
     </div>
 
-    <!-- Chapter Viewer: Hidden initially -->
     <div id="chapter-section" class="section-hidden" style="display: none;">
-      {/*
-        ChapterViewer renders its own <h1> for image pages.
-        Gallery landing <h1> is conditionally rendered above only for gallery pages.
-      */}
       <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
     </div>
   </div>
@@ -261,7 +253,6 @@ const meta = {
       const navToggle = document.getElementById('nav-toggle');
       let isMenuOpen = false;
 
-      // Deep-link image logic (open viewer if URL ends with /i-xxxxx)
       const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
       if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
         setTimeout(() => exploreButton?.click(), 50);
@@ -288,7 +279,6 @@ const meta = {
       });
     });
 
-    // Disable right-click on images
     document.addEventListener('contextmenu', e => {
       if (e.target.tagName === 'IMG') e.preventDefault();
     });

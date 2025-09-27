@@ -63,7 +63,21 @@ export function getStructuredData({
       "name": data.title,
       "description": data.description,
       "url": data.url,
-      "image": featuredImages,
+      "mainEntity": {
+        "@type": "ImageGallery",
+        "name": data.title,
+        "description": data.description,
+        "url": data.url,
+        "image": featuredImages,
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": creatorName,
+          "url": creatorUrl
+        },
+        "creator": { "@type": "Person", "name": creatorName, "url": creatorUrl },
+        "copyrightNotice": data.copyrightNotice || copyrightNotice,
+        "inLanguage": "en"
+      },
       "copyrightHolder": {
         "@type": "Person",
         "name": creatorName,

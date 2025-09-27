@@ -7,13 +7,38 @@ const {
   isImagePage = false
 } = Astro.props;
 
+const parseSite = (value) => {
+  if (!value) return null;
+  if (value instanceof URL) return value;
+  try {
+    return new URL(value);
+  } catch {
+    return null;
+  }
+};
+
+const siteUrl =
+  parseSite(Astro.site) ||
+  parseSite(import.meta.env.SITE) ||
+  new URL('https://www.k4studios.com');
+
+const siteOrigin = Astro.url?.origin || siteUrl.origin;
+
+const ensureAbsoluteUrl = (value) => {
+  if (!value) return null;
+  try {
+    return new URL(value, siteOrigin).toString();
+  } catch {
+    return value;
+  }
+};
+
 // Gallery-level title
 const galleryTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
 
 // Decide final page title
 let pageTitle;
 if (isImagePage) {
-  // Use image title if available, otherwise fall back to gallery
   pageTitle = preloadImage?.title || galleryTitle;
 } else {
   pageTitle = galleryTitle;
@@ -32,13 +57,53 @@ const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
 // Open Graph/Twitter
 const ogTitle = meta.ogTitle || cleanTitle;
 const ogDescription = meta.ogDescription || pageDescription;
-const ogImage = meta.ogImage || (isImagePage ? preloadImage?.src || preloadImage : null);
-const ogUrl = meta.ogUrl || `https://www.k4studios.com${Astro.url.pathname}`;
+const rawOgImage =
+  meta.ogImage ||
+  (isImagePage ? preloadImage?.src || preloadImage : null) ||
+  "/images/default-og.jpg"; // ✅ fallback to local image
+
+const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
+const ogUrl = ensureAbsoluteUrl(meta.ogUrl || Astro.url?.pathname || '/') || canonicalUrl;
+
+const ogImage = ensureAbsoluteUrl(rawOgImage);
+const ogImageSecureUrl = ensureAbsoluteUrl(meta.ogImageSecureUrl || rawOgImage)?.replace(/^http:/, 'https:');
+const ogType = isImagePage ? "article" : (meta.ogType || "website");
 
 const twitterTitle = meta.twitterTitle || ogTitle;
 const twitterDescription = meta.twitterDescription || ogDescription;
-const twitterImage = meta.twitterImage || ogImage;
-const twitterUrl = meta.twitterUrl || ogUrl;
+const twitterImage = ensureAbsoluteUrl(meta.twitterImage || rawOgImage);
+const twitterUrl = ensureAbsoluteUrl(meta.twitterUrl || ogUrl);
+
+// Dimensions: use preloadImage if it has size, else safe defaults
+const ogWidth = preloadImage?.width || "1600";
+const ogHeight = preloadImage?.height || "1200";
+
+const inferMimeType = (url) => {
+  if (!url) return null;
+  try {
+    const extension = new URL(url).pathname.split('.').pop()?.toLowerCase();
+    switch (extension) {
+      case 'jpg':
+      case 'jpeg':
+        return 'image/jpeg';
+      case 'png':
+        return 'image/png';
+      case 'webp':
+        return 'image/webp';
+      case 'gif':
+        return 'image/gif';
+      case 'avif':
+        return 'image/avif';
+      default:
+        return null;
+    }
+  } catch {
+    return null;
+  }
+};
+
+const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
+const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -46,9 +111,9 @@ const twitterUrl = meta.twitterUrl || ogUrl;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{cleanTitle}</title>
-    <meta name="description" content={pageDescription} />
-    <link rel="canonical" href={ogUrl} />
+  <title>{cleanTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <link rel="canonical" href={canonicalUrl} />
 
     {structuredDataJSON && (
       <script type="application/ld+json" set:html={structuredDataJSON} />
@@ -58,15 +123,42 @@ const twitterUrl = meta.twitterUrl || ogUrl;
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription} />
     {ogImage && <meta property="og:image" content={ogImage} />}
-    <meta property="og:type" content={meta.ogType || "website"} />
+    {ogImageSecureUrl && <meta property="og:image:secure_url" content={ogImageSecureUrl} />}
+    <meta property="og:image:width" content={ogWidth} />
+    <meta property="og:image:height" content={ogHeight} />
+    <meta property="og:image:alt" content="Wayne Heim – Fine Art Photography" />
+    <meta property="og:image:type" content={ogImageType} />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
+    <meta property="og:site_name" content="K4 Studios – Fine Art Photography" />
+    <meta property="og:locale" content={meta.ogLocale || 'en_US'} />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content={meta.twitterCard || "summary_large_image"} />
+  <meta name="twitter:card" content={twitterCard} />
     <meta name="twitter:title" content={twitterTitle} />
     <meta name="twitter:description" content={twitterDescription} />
-    {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+  {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+    <meta name="twitter:image:width" content={ogWidth} />
+    <meta name="twitter:image:height" content={ogHeight} />
     <meta name="twitter:url" content={twitterUrl} />
+
+    <!-- Schema.org (ImageObject) -->
+    {ogImage && (
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          "url": ogImage,
+          "contentUrl": ogImage,
+          "name": ogTitle,
+          "description": ogDescription,
+          "width": ogWidth,
+          "height": ogHeight,
+          "copyrightNotice": "Wayne Heim",
+          "creditText": "Wayne Heim"
+        })}
+      </script>
+    )}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
