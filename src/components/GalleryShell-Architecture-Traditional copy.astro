@@ -71,9 +71,14 @@ const usedEntranceData = {
       }
     : entranceData?.image,
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
-  title: entranceData?.title || landingArchitecture?.title || "Gallery",
-  subtitle: entranceData?.subtitle || landingArchitecture?.subtitle || "",
-  description: entranceData?.description || landingArchitecture?.description || "",
+  title:
+    entranceData?.title ||
+    landingArchitecture?.title ||
+    "Traditional Architecture Photography by Wayne Heim",
+  subtitle:
+    entranceData?.subtitle ||
+    landingArchitecture?.subtitle ||
+    "Fine Art Prints of Historic Buildings & Landmarks",
 };
 
 /** ---------------------------------------------------------------
@@ -94,7 +99,7 @@ const imageStructuredData = currentImage
       type: "gallery",
       data: {
         title: fixMojibake(usedEntranceData.title),
-        description: fixMojibake(usedEntranceData.description) || fixMojibake(usedEntranceData.subtitle),
+        description: fixMojibake(usedEntranceData.subtitle),
         url: galleryAbsUrl,
       },
       images: previewImages,
@@ -103,30 +108,21 @@ const imageStructuredData = currentImage
 /** ---------------------------------------------------------------
  * Page Title & Descriptions (dynamic, non-duplicative)
  * --------------------------------------------------------------- */
-// Title: Use image title if on image page, else use entranceData.title. Only append site/artist if not present.
-const siteName = "Wayne Heim";
-const siteSuffix = "Fine Art Photography";
-const fallbackTitle = "Gallery | Wayne Heim Fine Art Photography";
-
-function appendSiteTitle(title) {
-  if (!title) return fallbackTitle;
-  const lower = title.toLowerCase();
-  if (lower.includes(siteName.toLowerCase())) return title;
-  if (lower.includes(siteSuffix.toLowerCase())) return title;
-  return `${title} | ${siteName} ${siteSuffix}`;
-}
+const cleanGalleryTitle =
+  "Traditional Architecture Photography by Wayne Heim – Fine Art of Buildings & Landmarks";
 
 const pageTitle = currentImage
-  ? appendSiteTitle(fixMojibake(currentImage.title))
-  : appendSiteTitle(fixMojibake(usedEntranceData.title));
+  ? `${fixMojibake(currentImage.title)} – Traditional Architecture Photography by Wayne Heim`
+  : usedEntranceData.title && usedEntranceData.title !== "Gallery"
+    ? `${fixMojibake(usedEntranceData.title)} – Traditional Architecture Photography by Wayne Heim`
+    : cleanGalleryTitle;
 
-// Description: prefer image description, else entranceData.description, else subtitle, else fallback
+// Description: prefer image description; else curated subtitle; else fallback
 const baseFallbackDescription =
-  "Explore fine art photography of classic buildings, landmarks, and architecture by Wayne Heim.";
+  "Discover traditional architecture photography prints by award-winning photographer Wayne Heim — classic buildings, historic landmarks, rustic barns, and timeless Americana fine art.";
 
 const pageDescription =
   (currentImage?.description && fixMojibake(currentImage.description)) ||
-  (usedEntranceData?.description && fixMojibake(usedEntranceData.description)) ||
   (usedEntranceData?.subtitle && fixMojibake(usedEntranceData.subtitle)) ||
   baseFallbackDescription;
 

@@ -1,39 +1,27 @@
 ---
-const {
-  title = 'Gallery',
-  structuredDataJSON,
-  meta = {},
-  preloadImage,
-  isImagePage = false
-} = Astro.props;
+const { title = 'Gallery', structuredDataJSON, meta = {}, preloadImage } = Astro.props;
 
-// Gallery-level title
-const galleryTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
+// Fallbacks for meta
+const pageTitle =
+  meta.title ||
+  preloadImage?.title || // ✅ Use image title
+  title ||
+  'K4 Studios – Fine Art Photography';
 
-// Decide final page title
-let pageTitle;
-if (isImagePage) {
-  // Use image title if available, otherwise fall back to gallery
-  pageTitle = preloadImage?.title || galleryTitle;
-} else {
-  pageTitle = galleryTitle;
-}
-
-// Description logic
 const pageDescription =
   meta.description ||
-  (isImagePage ? preloadImage?.description : null) ||
-  (isImagePage ? preloadImage?.story : null) ||
+  preloadImage?.description || // ✅ Use image description if available
+  preloadImage?.story ||       // ✅ Fallback to story
   'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
 
-// Strip HTML tags if passed
+// Strip any HTML tags if accidentally passed in
 const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
 
-// Open Graph/Twitter
-const ogTitle = meta.ogTitle || cleanTitle;
-const ogDescription = meta.ogDescription || pageDescription;
-const ogImage = meta.ogImage || (isImagePage ? preloadImage?.src || preloadImage : null);
-const ogUrl = meta.ogUrl || `https://www.k4studios.com${Astro.url.pathname}`;
+// Open Graph/Twitter fallbacks
+const ogTitle = meta.ogTitle || preloadImage?.title || pageTitle;
+const ogDescription = meta.ogDescription || preloadImage?.description || pageDescription;
+const ogImage = meta.ogImage || preloadImage?.src || preloadImage;
+const ogUrl = meta.ogUrl || Astro.url.pathname;
 
 const twitterTitle = meta.twitterTitle || ogTitle;
 const twitterDescription = meta.twitterDescription || ogDescription;
@@ -45,30 +33,28 @@ const twitterUrl = meta.twitterUrl || ogUrl;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>{cleanTitle}</title>
     <meta name="description" content={pageDescription} />
-    <link rel="canonical" href={ogUrl} />
 
     {structuredDataJSON && (
       <script type="application/ld+json" set:html={structuredDataJSON} />
     )}
 
-    <!-- Open Graph -->
+    {/* OG tags */}
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription} />
-    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:image" content={ogImage} />
     <meta property="og:type" content={meta.ogType || "website"} />
     <meta property="og:url" content={ogUrl} />
 
-    <!-- Twitter -->
+    {/* Twitter tags */}
     <meta name="twitter:card" content={meta.twitterCard || "summary_large_image"} />
     <meta name="twitter:title" content={twitterTitle} />
     <meta name="twitter:description" content={twitterDescription} />
-    {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+    <meta name="twitter:image" content={twitterImage} />
     <meta name="twitter:url" content={twitterUrl} />
 
-    <!-- Fonts -->
+    <!-- Google Fonts: Preconnect and Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://photos.smugmug.com" crossorigin />
@@ -78,17 +64,19 @@ const twitterUrl = meta.twitterUrl || ogUrl;
     {preloadImage && (
       <link rel="preload" as="image" href={preloadImage?.src || preloadImage} />
     )}
-
-    <!-- Make Tailwind non-blocking -->
-    <link rel="stylesheet" media="print" onload="this.media='all'" />
-
+    <!-- Make Tailwind CSS non-blocking -->
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
     <style>
       body {
         font-family: 'Glegoo', serif;
-        background: #fff;
+        background: rgba(255, 255, 255, 1);
         margin: 0;
         padding: 0;
-        color: #2e2e2e;
+        color: #2e2e2eff;
         margin-top: 1rem;
       }
       .page-container {
@@ -97,8 +85,7 @@ const twitterUrl = meta.twitterUrl || ogUrl;
         padding: 0;
       }
     </style>
-
-    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -114,7 +101,7 @@ const twitterUrl = meta.twitterUrl || ogUrl;
     </div>
     <div id="overlay-root"></div>
 
-    <!-- SVG sharpening filter -->
+    <!-- SVG sharpening filter (for magnifier) -->
     <svg width="0" height="0" style="position:absolute">
       <filter id="sharpen">
         <feConvolveMatrix order="3" kernelMatrix="
@@ -124,5 +111,6 @@ const twitterUrl = meta.twitterUrl || ogUrl;
         " divisor="1.2"/>
       </filter>
     </svg>
+    
   </body>
 </html>

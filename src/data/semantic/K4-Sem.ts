@@ -110,7 +110,11 @@ export const semantic = {
       { phrase: "western cowboy art", rating: 5, use: true },
        { phrase: "rugged spirit", rating: 5, use: true },
       { phrase: "cowboy portraits", rating: 5, use: true },
+       { phrase: "cowboy art", rating: 5, use: true },
        { phrase: "Western cowboys", rating: 5, use: true },
+        { phrase: "cowboy artwork", rating: 5, use: true },
+        { phrase: "western fine art", rating: 5, use: true },
+        { phrase: "fine art Western photography", rating: 5, use: true },
        { phrase: "frontier life", rating: 5, use: true },
       { phrase: "wild west photography", rating: 4, use: true },
       { phrase: "outlaw portraits", rating: 4, use: true },
@@ -122,6 +126,30 @@ export const semantic = {
       { phrase: "frederic remington", rating: 3, use: true },
       { phrase: "powerful works of art", rating: 3, use: true },
       { phrase: "rustic charm", rating: 3, use: true }
+    ]
+  },
+
+  cowboyNativeAmerican: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+    def: "Painterly portraits honoring Native American heritage—dignity, tradition, and spirit in every image.",
+    landingPhrases: [
+      
+      { phrase: "Native American fine art photography", rating: 5, use: true },
+      { phrase: "Western Native American gallery", rating: 5, use: true },
+      { phrase: "heritage and tradition in art", rating: 4, use: true },
+      { phrase: "Native American wall art", rating: 4, use: true },
+      { phrase: "painterly Native American portraits", rating: 4, use: true },
+      { phrase: "spirit of the American West", rating: 4, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "Native American photography", rating: 5, use: true },
+      { phrase: "spirit of the West", rating: 5, use: true },
+      { phrase: "Native American Portraits", rating: 5, use: true },
+      { phrase: "Native American art prints", rating: 5, use: true },
+      { phrase: "Native American heritage art", rating: 4, use: true },
+      { phrase: "Native American tradition", rating: 4, use: true },
+      { phrase: "Indigenous experience", rating: 4, use: true },
+      { phrase: "painterly Native American images", rating: 3, use: true }
     ]
   },
 
@@ -305,7 +333,7 @@ export const semantic = {
     ],
     imagePhrases: [
       { phrase: "midwest landscape photography", rating: 5, use: true },
-      { phrase: "vivid", rating: 4, use: true },
+
     ],
   },
 
@@ -369,6 +397,7 @@ export const semantic = {
     def: "Color at the edge of day—softened, not saturated.",
     landingPhrases: [
       { phrase: "Painterly Sunset Photography", rating: 5, use: true },
+       { phrase: "Golden Prairie Sunsets", rating: 5, use: true },
       { phrase: "dramatic sunset wall art", rating: 4, use: true },
     ],
     imagePhrases: [
@@ -798,6 +827,9 @@ export const semantic = {
     "handcrafted fine art": [
       "art printed on wood"
     ],
+    "western fine art": [
+  "western art", "cowboy fine art", "fine art western photography", "western wall decor"
+],
     "custom painterly portraits": [
       "commissioned art", "bespoke portrait photography"
     ],

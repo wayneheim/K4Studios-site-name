@@ -7,24 +7,19 @@ import { galleryData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By
 import { getImageMeta } from "@/components/utils/getImageMeta.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 
-
 export async function getStaticPaths() {
   return galleryData.map(img => ({
     params: { id: img.id },
   }));
 }
 
-
 const { id } = Astro.params;
-const image = galleryData.find(img => img.id === id);
-if (!image) throw new Error(`Image with id ${id} not found.`);
+const imageData = galleryData.find(img => img.id === id);
+if (!imageData) throw new Error(`Image with id ${id} not found.`);
 
-const meta = {
-  ...getImageMeta(image),
-  ...getLandingMeta(ColorEntranceData),
-};
+const parentMeta = getLandingMeta("/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets");
+const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
 ---
-
 
 <BaseLayout meta={meta}>
   <GalleryShell 
