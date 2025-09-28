@@ -70,10 +70,12 @@ const galleryDatas = galleryPaths.map(path => {
   return allGalleryData[filePath]?.galleryData || [];
 });
 
-const headingCount   = westernStory.filter((b, i) => i > 0 && b.subhead).length;
+const headingCount    = westernStory.filter((b, i) => i > 0 && b.subhead).length;
 const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
 
+// ----------------------
 // Structured data
+// ----------------------
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -94,8 +96,21 @@ const structuredData = getStructuredData({
   }
 });
 
-// Social meta (ensure URL present)
-const landingMeta = getLandingMeta(sectionPath);
+// ----------------------
+// NEW: dynamic OG/Twitter image
+// ----------------------
+function makeAbsoluteUrl(src?: string) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
+
+// Pick first feathered image for stability (swap to random if desired)
+const landingImg    = featheredImages[0];
+const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+
+// Use landing meta with dynamic override
+const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
 if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
@@ -107,6 +122,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
   title={fixMojibake(`${landingWestern.title} – ${landingWestern.subtitle}`)}
   meta={landingMeta}
 >
+
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />

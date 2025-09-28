@@ -8,6 +8,7 @@ import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
@@ -17,8 +18,6 @@ import { semantic as cowboySemantic } from '@/data/semantic/K4-Sem.ts';
 import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/landingstones.ts';
 import { westernStory } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/story.ts';
 import { westernFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/faq.ts';
-
-import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import '@/styles/global.css';
 import '@/styles/oneupheader.css';
@@ -39,6 +38,7 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
+
 const landingNav = findNavEntry(siteNav, sectionPath);
 
 // Only pull descendant galleries with /Color or /Black-White
@@ -54,6 +54,7 @@ function collectGalleryPaths(entry) {
   }
   return paths;
 }
+
 const galleryPaths = landingNav ? collectGalleryPaths(landingNav) : [];
 
 // Load gallery data
@@ -67,7 +68,25 @@ const galleryDatas = galleryPaths.map(path => {
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
 
+// ----------------------
+// NEW: dynamic OG/Twitter image
+// ----------------------
+function makeAbsoluteUrl(src?: string) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
+
+const landingImg    = featheredImages[0];
+const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+
+const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
+if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// ----------------------
 // Structured data for gallery landing
+// ----------------------
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -87,11 +106,6 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
-
-// OG/Twitter meta
-const landingMeta = getLandingMeta(sectionPath);
-if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
-if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
 <!-- ✅ Structured data JSON-LD injection -->
@@ -100,10 +114,11 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
 <BaseLayout title={`${landingWestern.title} – ${landingWestern.subtitle}`} meta={landingMeta}>
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
-     <LandingHeader
-  client:load
-  breadcrumb={landingWestern.breadcrumb}
-/>
+      <LandingHeader
+        client:load
+        breadcrumb={landingWestern.breadcrumb}
+      />
+
     </div>
 
     <div class="mobile-breadcrumb-wrapper">

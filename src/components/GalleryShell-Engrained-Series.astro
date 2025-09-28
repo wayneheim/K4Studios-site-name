@@ -30,17 +30,23 @@ const currentImage = isGhost
 // pick one random preview image to act as featured
 const previewImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 8);
 const previewPath = "/Other/K4-Select-Series/Engrained/Engrained-Series";
-const singlePreviewImage = previewImages.length
+const singlePreviewImage = previewImages.length > 0
   ? previewImages[Math.floor(Math.random() * previewImages.length)]
   : null;
 
+const currentIndex = allImages.findIndex(
+  (img) => img.id === initialImageId && img.visibility !== "ghost"
+);
+const forcedImage = currentIndex >= 0 ? allImages[currentIndex] : singlePreviewImage;
+const selectedImage = currentImage || forcedImage;
+
 const usedEntranceData = {
   ...entranceData,
-  image: singlePreviewImage
+  image: selectedImage
     ? {
-        src: singlePreviewImage.src,
-        alt: singlePreviewImage.alt || singlePreviewImage.title || entranceData?.image?.alt,
-        caption: singlePreviewImage.title || entranceData?.image?.caption,
+        src: selectedImage.src,
+        alt: selectedImage.alt || selectedImage.title || entranceData?.image?.alt,
+        caption: selectedImage.title || entranceData?.image?.caption,
       }
     : entranceData?.image,
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
@@ -77,10 +83,8 @@ const cleanPageTitle = fixMojibake(pageTitle);
 // Open Graph / Twitter metadata (only for individual image pages)
 const siteBase = import.meta.env.SITE || "https://k4studios.com";
 const pageUrl = `${siteBase}${Astro.url.pathname}`;
-const ogImage = currentImage ? currentImage.src : usedEntranceData.image?.src;
-const ogAlt = currentImage
-  ? (currentImage.alt || currentImage.title || galleryTitle)
-  : (usedEntranceData.image?.alt || galleryTitle);
+const ogImage = selectedImage?.src;
+const ogAlt = selectedImage?.alt || selectedImage?.title || galleryTitle;
 const ogDescription =
   currentImage?.description ||
   entranceData?.details ||
@@ -133,7 +137,12 @@ const ogDescription =
   <!-- Spacer -->
   <div class="h-12 md:h-20"></div>
 
-  <Footer previewImages={previewImages} previewPath={previewPath} />
+  <Footer
+    previewImages={previewImages}
+    previewPath={previewPath}
+    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
+    title={cleanPageTitle}
+  />
 
   <style>
  @media (max-width: 767px) {

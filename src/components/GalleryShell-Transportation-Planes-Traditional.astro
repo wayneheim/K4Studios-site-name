@@ -33,17 +33,23 @@ const previewPath = "/Galleries/Fine-Art-Photography/Transportation/Planes";
 
 // pick one random preview image as featured
 const singlePreviewImage =
-  previewImages.length
+  previewImages.length > 0
     ? previewImages[Math.floor(Math.random() * previewImages.length)]
     : null;
 
+const currentIndex = allImages.findIndex(
+  (img) => img.id === initialImageId && img.visibility !== "ghost"
+);
+const forcedImage = currentIndex >= 0 ? allImages[currentIndex] : singlePreviewImage;
+const selectedImage = currentImage || forcedImage;
+
 const usedEntranceData = {
   ...entranceData,
-  image: singlePreviewImage
+  image: selectedImage
     ? {
-        src: singlePreviewImage.src,
-        alt: singlePreviewImage.alt || singlePreviewImage.title || entranceData?.image?.alt,
-        caption: singlePreviewImage.title || entranceData?.image?.caption,
+        src: selectedImage.src,
+        alt: selectedImage.alt || selectedImage.title || entranceData?.image?.alt,
+        caption: selectedImage.title || entranceData?.image?.caption,
       }
     : entranceData?.image,
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
@@ -79,10 +85,8 @@ const pageTitle = currentImage
 // build Open Graph / Twitter metadata
 const siteBase = import.meta.env.SITE || "https://k4studios.com";
 const pageUrl = `${siteBase}${Astro.url.pathname}`;
-const ogImage = currentImage ? currentImage.src : usedEntranceData.image?.src;
-const ogAlt = currentImage
-  ? currentImage.alt || currentImage.title || galleryTitle
-  : usedEntranceData.image?.alt || galleryTitle;
+const ogImage = selectedImage?.src;
+const ogAlt = selectedImage?.alt || selectedImage?.title || galleryTitle;
 const ogDescription =
   currentImage?.description ||
   entranceData?.details ||
@@ -140,9 +144,11 @@ const ogDescription =
   <!-- Spacer pushes the footer down -->
   <div class="h-12 md:h-20"></div>
 
-  <Footer 
+  <Footer
     previewImages={previewImages}
     previewPath={previewPath}
+    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
+    title={pageTitle}
   />
 
   <style>

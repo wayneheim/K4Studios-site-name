@@ -22,7 +22,9 @@ import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import '@/styles/global.css';
 
-// --- UNIVERSAL IMAGE FEATHERING LOGIC (ALL DESCENDANTS) ---
+// ----------------------
+// UNIVERSAL IMAGE FEATHERING LOGIC (ALL DESCENDANTS)
+// ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous";
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
@@ -37,14 +39,15 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
+
 function recursivelyGatherAllGalleryHrefs(node) {
   let result = [];
   if (!node) return result;
-  // Accept any descendant gallery
   if (node.href && node.href.startsWith('/Galleries/')) result.push(node.href);
   if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
   return result;
 }
+
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav ? recursivelyGatherAllGalleryHrefs(landingNav) : [];
 const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
@@ -60,7 +63,9 @@ const featheredImages = getSideImages({
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
-// ✅ Structured Data
+// ----------------------
+// Structured Data
+// ----------------------
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -81,10 +86,22 @@ const structuredData = getStructuredData({
   }
 });
 
-// 🟢 GET LANDING META (OG/TWITTER)
-// -- This pulls correct meta and auto-fills url fields if missing
-const landingMeta = getLandingMeta(sectionPath);
-if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
+// ----------------------
+// NEW: dynamic OG/Twitter image
+// ----------------------
+function makeAbsoluteUrl(src?: string) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
+
+// Pick first feathered image for stability (or random if desired)
+const landingImg    = featheredImages[0];
+const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+
+// Use landing meta with dynamic override
+const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
+if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
@@ -95,6 +112,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={landingMeta}
 >
+
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">

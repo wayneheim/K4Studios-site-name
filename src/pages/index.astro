@@ -24,8 +24,7 @@ import { slides as homeSlides } from '../data/home/carousel.ts';
 
 import '../styles/global.css';
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
-const meta = getLandingMeta(sectionPath);
+const sectionPath = "/index"; // treat homepage as special section
 
 const headingCount = painterlyStory.filter((block, i) => i > 0 && block.subhead).length;
 const { featheredImages, galleryDatas, galleryPaths } = getSideImages({
@@ -33,6 +32,9 @@ const { featheredImages, galleryDatas, galleryPaths } = getSideImages({
 });
 const featheredImagesSidebar = featheredImages.slice(0, 6);
 
+// ----------------------
+// Structured Data
+// ----------------------
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -52,6 +54,22 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
+
+// ----------------------
+// NEW: dynamic OG/Twitter image
+// ----------------------
+function makeAbsoluteUrl(src?: string) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
+
+const landingImg    = featheredImages[0];   // pick first feathered image for stability
+const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+
+const meta = getLandingMeta(sectionPath, landingImgUrl);
+if (!meta.ogUrl)      meta.ogUrl      = "https://k4studios.com/";
+if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
 ---
 
 <BaseLayout
@@ -59,6 +77,7 @@ const structuredData = getStructuredData({
   structuredDataJSON={structuredData}
   meta={meta}
 >
+
   <main class="bg-white text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />

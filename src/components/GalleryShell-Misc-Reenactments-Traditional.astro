@@ -53,16 +53,19 @@ const singlePreviewImage =
     ? previewImages[Math.floor(Math.random() * previewImages.length)]
     : null;
 
-/* ---------------------------------------------------------------
-   Entrance Data
-   --------------------------------------------------------------- */
+const currentIndex = allImages.findIndex(
+  (img) => img.id === initialImageId && img.visibility !== "ghost"
+);
+const forcedImage = currentIndex >= 0 ? allImages[currentIndex] : singlePreviewImage;
+const selectedImage = currentImage || forcedImage;
+
 const usedEntranceData = {
   ...entranceData,
-  image: singlePreviewImage
+  image: selectedImage
     ? {
-        src: singlePreviewImage.src,
-        alt: singlePreviewImage.alt || singlePreviewImage.title || entranceData?.image?.alt,
-        caption: singlePreviewImage.title || entranceData?.image?.caption,
+        src: selectedImage.src,
+        alt: selectedImage.alt || selectedImage.title || entranceData?.image?.alt,
+        caption: selectedImage.title || entranceData?.image?.caption,
       }
     : entranceData?.image,
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
@@ -115,9 +118,9 @@ const pageDescription =
 /* ---------------------------------------------------------------
    OG / Twitter Meta
    --------------------------------------------------------------- */
-const ogImage = currentImage ? currentImage.src : usedEntranceData.image?.src;
+const ogImage = selectedImage?.src;
 const ogAlt =
-  (currentImage && (currentImage.alt || currentImage.title)) ||
+  (selectedImage && (selectedImage.alt || selectedImage.title)) ||
   (usedEntranceData.image?.alt || fixMojibake(usedEntranceData.title));
 
 const meta = {
@@ -167,7 +170,12 @@ const meta = {
 
   <div class="h-12 md:h-20"></div>
 
-  <Footer previewImages={previewImages} previewPath={previewPath} />
+  <Footer
+    previewImages={previewImages}
+    previewPath={previewPath}
+    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
+    title={pageTitle}
+  />
 
   <style>
     @media (max-width: 767px) {

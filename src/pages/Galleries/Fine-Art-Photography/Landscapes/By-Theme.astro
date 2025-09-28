@@ -23,10 +23,10 @@ import { transportationFAQ } from '@/data/Galleries/Fine-Art-Photography/Landsca
 import '@/styles/global.css';
 
 // ----------------------
-// TRANSPORTATION GALLERY DATA GATHERING
+// BY THEME GALLERY DATA GATHERING
 // ----------------------
 
-const sectionPath = "/Galleries/Fine-Art-Photography/Landscapes";
+const sectionPath = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme";
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
 function findNavEntry(nav, url) {
@@ -39,6 +39,7 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
+
 function recursivelyGatherAllGalleryHrefs(node) {
   let result = [];
   if (!node) return result;
@@ -46,6 +47,7 @@ function recursivelyGatherAllGalleryHrefs(node) {
   if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
   return result;
 }
+
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
@@ -63,12 +65,25 @@ const featheredImages = getSideImages({
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
-// Get meta info for OG/twitter
-const meta = getLandingMeta(sectionPath);
-meta.ogUrl = `https://k4studios.com${sectionPath}`;
-meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+// ----------------------
+// NEW: dynamic OG/Twitter image
+// ----------------------
+function makeAbsoluteUrl(src?: string) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
 
-// Structured data (your usual logic)
+const landingImg    = featheredImages[0];   // stable first pick
+const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+
+const meta = getLandingMeta(sectionPath, landingImgUrl);
+if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// ----------------------
+// Structured data
+// ----------------------
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -90,14 +105,15 @@ const structuredData = getStructuredData({
 });
 ---
 
-<!-- SEO JSON-LD (Structured Data) -->
+<!-- ✅ SEO JSON-LD (Structured Data) -->
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
-<!-- BASE LAYOUT — meta prop added! -->
+<!-- BASE LAYOUT -->
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={meta}
 >
+
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">

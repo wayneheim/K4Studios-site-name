@@ -37,12 +37,9 @@ const ensureAbsoluteUrl = (value) => {
 const galleryTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
 
 // Decide final page title
-let pageTitle;
-if (isImagePage) {
-  pageTitle = preloadImage?.title || galleryTitle;
-} else {
-  pageTitle = galleryTitle;
-}
+let pageTitle = isImagePage
+  ? preloadImage?.title || galleryTitle
+  : galleryTitle;
 
 // Description logic
 const pageDescription =
@@ -54,30 +51,53 @@ const pageDescription =
 // Strip HTML tags if passed
 const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
 
-// Open Graph/Twitter
-const ogTitle = meta.ogTitle || cleanTitle;
-const ogDescription = meta.ogDescription || pageDescription;
-const rawOgImage =
-  meta.ogImage ||
-  (isImagePage ? preloadImage?.src || preloadImage : null) ||
-  "/images/default-og.jpg"; // ✅ fallback to local image
+// OG/Twitter priority wizardry
+let rawOgImage;
+let ogAlt;
+let ogWidth = preloadImage?.width || "1600";
+let ogHeight = preloadImage?.height || "1200";
 
+if (isImagePage && preloadImage?.src) {
+  // Always use the current image on image pages
+  rawOgImage = preloadImage.src;
+  ogAlt = preloadImage.alt || preloadImage.title || cleanTitle;
+  ogWidth = preloadImage.width || ogWidth;
+  ogHeight = preloadImage.height || ogHeight;
+} else if (meta.ogImage) {
+  // Landing-level override
+  rawOgImage = meta.ogImage;
+  ogAlt = meta.ogImageAlt || cleanTitle;
+  ogWidth = meta.ogImageWidth || ogWidth;
+  ogHeight = meta.ogImageHeight || ogHeight;
+} else {
+  // Absolute fallback
+  rawOgImage = "/images/default-og.jpg";
+  ogAlt = cleanTitle;
+  ogWidth = "1600";
+  ogHeight = "1200";
+}
+
+// 🔍 Debug log (build-time, check Netlify logs)
+console.log("BaseLayout OG Debug:", {
+  isImagePage,
+  preloadImage,
+  chosenOg: rawOgImage
+});
+
+// Canonical + og:url (unified)
 const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
-const ogUrl = ensureAbsoluteUrl(meta.ogUrl || Astro.url?.pathname || '/') || canonicalUrl;
+const ogUrl = canonicalUrl;
 
 const ogImage = ensureAbsoluteUrl(rawOgImage);
 const ogImageSecureUrl = ensureAbsoluteUrl(meta.ogImageSecureUrl || rawOgImage)?.replace(/^http:/, 'https:');
 const ogType = isImagePage ? "article" : (meta.ogType || "website");
 
-const twitterTitle = meta.twitterTitle || ogTitle;
-const twitterDescription = meta.twitterDescription || ogDescription;
+const twitterTitle = meta.twitterTitle || cleanTitle;
+const twitterDescription = meta.twitterDescription || pageDescription;
 const twitterImage = ensureAbsoluteUrl(meta.twitterImage || rawOgImage);
-const twitterUrl = ensureAbsoluteUrl(meta.twitterUrl || ogUrl);
+const twitterUrl = ogUrl;
 
-// Dimensions: use preloadImage if it has size, else safe defaults
-const ogWidth = preloadImage?.width || "1600";
-const ogHeight = preloadImage?.height || "1200";
-
+// Infer type
 const inferMimeType = (url) => {
   if (!url) return null;
   try {
@@ -105,28 +125,29 @@ const inferMimeType = (url) => {
 const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
 const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>{cleanTitle}</title>
-  <meta name="description" content={pageDescription} />
-  <link rel="canonical" href={canonicalUrl} />
+    <title>{cleanTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonicalUrl} />
 
     {structuredDataJSON && (
       <script type="application/ld+json" set:html={structuredDataJSON} />
     )}
 
     <!-- Open Graph -->
-    <meta property="og:title" content={ogTitle} />
-    <meta property="og:description" content={ogDescription} />
+    <meta property="og:title" content={meta.ogTitle || cleanTitle} />
+    <meta property="og:description" content={meta.ogDescription || pageDescription} />
     {ogImage && <meta property="og:image" content={ogImage} />}
     {ogImageSecureUrl && <meta property="og:image:secure_url" content={ogImageSecureUrl} />}
     <meta property="og:image:width" content={ogWidth} />
     <meta property="og:image:height" content={ogHeight} />
-    <meta property="og:image:alt" content="Wayne Heim – Fine Art Photography" />
+    {ogAlt && <meta property="og:image:alt" content={ogAlt} />}
     <meta property="og:image:type" content={ogImageType} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
@@ -134,12 +155,11 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     <meta property="og:locale" content={meta.ogLocale || 'en_US'} />
 
     <!-- Twitter -->
-  <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:card" content={twitterCard} />
     <meta name="twitter:title" content={twitterTitle} />
     <meta name="twitter:description" content={twitterDescription} />
-  {twitterImage && <meta name="twitter:image" content={twitterImage} />}
-    <meta name="twitter:image:width" content={ogWidth} />
-    <meta name="twitter:image:height" content={ogHeight} />
+    {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+    {ogAlt && <meta name="twitter:image:alt" content={ogAlt} />}
     <meta name="twitter:url" content={twitterUrl} />
 
     <!-- Schema.org (ImageObject) -->
@@ -150,8 +170,8 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
           "@type": "ImageObject",
           "url": ogImage,
           "contentUrl": ogImage,
-          "name": ogTitle,
-          "description": ogDescription,
+          "name": cleanTitle,
+          "description": pageDescription,
           "width": ogWidth,
           "height": ogHeight,
           "copyrightNotice": "Wayne Heim",
@@ -167,8 +187,8 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
 
-    {preloadImage && (
-      <link rel="preload" as="image" href={preloadImage?.src || preloadImage} />
+    {preloadImage?.src && (
+      <link rel="preload" as="image" href={preloadImage.src} />
     )}
 
     <!-- Make Tailwind non-blocking -->

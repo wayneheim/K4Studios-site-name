@@ -44,18 +44,36 @@ const galleryPaths = landingNav?.children?.filter(c =>
   /\/Color$|\/Black-White$/.test(c.href)
 ).map(c => c.href) || [];
 
-// 3. Load gallery data
+// Load gallery data
 const allGalleryData = import.meta.glob('@/data/galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = "@/data/galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
   return allGalleryData[filePath]?.galleryData || [];
 });
 
-// 4. Feathered image injection logic
+// Feathered image injection logic
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
 
-// --- Structured data for this gallery landing
+// ----------------------
+// NEW: dynamic OG/Twitter image
+// ----------------------
+function makeAbsoluteUrl(src?: string) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
+
+const landingImg    = featheredImages[0];
+const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+
+const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
+if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// ----------------------
+// Structured data
+// ----------------------
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
@@ -75,11 +93,6 @@ const structuredData = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
-
-// --- OG/Twitter meta (central db, url fields auto-set)
-const landingMeta = getLandingMeta(sectionPath);
-if (!landingMeta.ogUrl) landingMeta.ogUrl = `https://k4studios.com${sectionPath}`;
-if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
 <!-- ✅ Structured data JSON-LD injection -->
@@ -89,9 +102,10 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader
-  client:load
-  breadcrumb={landingWestern.breadcrumb}
-/>
+        client:load
+        breadcrumb={landingWestern.breadcrumb}
+      />
+
     </div>
 
     <div class="mobile-breadcrumb-wrapper">

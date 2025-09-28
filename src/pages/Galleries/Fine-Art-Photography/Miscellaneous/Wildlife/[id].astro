@@ -15,7 +15,24 @@ const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
 if (!imageData) throw new Error(`Image with id ${id} not found.`);
 
-const parentMeta = getLandingMeta("/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife");
+
+// Ensure absolute URL (don’t prepend if already absolute)
+function makeAbsoluteUrl(src) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) {
+    return src;
+  }
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
+
+const imgUrl = makeAbsoluteUrl(imageData.src);
+
+// Get parent gallery meta, override with correct image URL
+const parentMeta = getLandingMeta(
+  "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife",
+  imgUrl
+);
+
 const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
 ---
 
@@ -24,5 +41,7 @@ const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], paren
     breadcrumb={ColorEntranceData.breadcrumb} 
     entranceData={ColorEntranceData}
     initialImageId={id}
+    currentImageUrl={imgUrl}
+    title={meta.title}
   />
 </BaseLayout>

@@ -82,7 +82,7 @@ export const galleryData = [
   },
   {
     "id": "i-4Wsxmqv",
-    "title": "Untitled",
+    "title": "Young Warrior",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Wsxmqv/A",

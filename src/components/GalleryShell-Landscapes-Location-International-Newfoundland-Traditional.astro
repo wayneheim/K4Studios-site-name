@@ -23,11 +23,10 @@ function fixMojibake(str: string) {
 const { breadcrumb, entranceData = {}, initialImageId } = Astro.props;
 
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
-const currentImage = isGhost
-  ? null
-  : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
+const selectedImage = !isGhost
+  ? allImages.find(img => img.id === initialImageId && img.visibility !== "ghost")
+  : null;
 
-// pick one random preview image to act as featured
 const previewImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 8);
 const singlePreviewImage = previewImages.length
   ? previewImages[Math.floor(Math.random() * previewImages.length)]
@@ -45,8 +44,8 @@ const usedEntranceData = {
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
 };
 
-const imageStructuredData = currentImage
-  ? getStructuredData({ type: "image", data: currentImage })
+const imageStructuredData = selectedImage
+  ? getStructuredData({ type: "image", data: selectedImage })
   : getStructuredData({
       type: "gallery",
       data: {
@@ -57,55 +56,52 @@ const imageStructuredData = currentImage
       images: previewImages,
     });
 
-// dynamic title logic
 function formatBreadcrumbTitle(bc) {
   if (!bc) return "Gallery";
   return bc.split("|").map(s => s.trim()).join(" – ");
 }
 const galleryTitle = formatBreadcrumbTitle(usedEntranceData.breadcrumb || breadcrumb);
-const pageTitle = currentImage
+const pageTitle = selectedImage
   ? (
-      currentImage.title
-        ? `${currentImage.title} — ${galleryTitle}`
-        : `Chapter ${allImages.findIndex(img => img.id === currentImage.id) + 1} — ${galleryTitle}`
+      selectedImage.title
+        ? `${selectedImage.title} — ${galleryTitle}`
+        : `Chapter ${allImages.findIndex(img => img.id === selectedImage.id) + 1} — ${galleryTitle}`
     )
   : galleryTitle;
 
-// build our Open Graph / Twitter metadata values
 const siteBase = import.meta.env.SITE || "https://k4studios.com";
 const pageUrl = `${siteBase}${Astro.url.pathname}`;
-const ogImage = currentImage
-  ? currentImage.src
+const ogImage = selectedImage
+  ? selectedImage.src
   : usedEntranceData.image?.src;
-const ogAlt = currentImage
-  ? currentImage.alt || currentImage.title || galleryTitle
+const ogAlt = selectedImage
+  ? selectedImage.alt || selectedImage.title || galleryTitle
   : usedEntranceData.image?.alt || galleryTitle;
 const ogDescription =
-  currentImage?.description ||
+  selectedImage?.description ||
   entranceData?.details ||
   landingWestern.subtitle ||
   usedEntranceData.subtitle;
 ---
 
-{currentImage && (
-  <head>
-    {/* Open Graph */}
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={pageUrl} />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={ogDescription} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content={ogAlt} />
 
-    {/* Twitter Card */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={pageUrl} />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={ogDescription} />
-    <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content={ogAlt} />
-  </head>
-)}
+<head>
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:alt" content={ogAlt} />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={pageUrl} />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={ogDescription} />
+  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image:alt" content={ogAlt} />
+</head>
 
 <BaseLayout title={pageTitle} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
@@ -136,6 +132,8 @@ const ogDescription =
   <Footer
     previewImages={previewImages}
     previewPath="/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland"
+    currentImageUrl={ogImage}
+    currentImageTitle={pageTitle}
   />
 
   <style>

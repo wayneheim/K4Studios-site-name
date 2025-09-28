@@ -23,7 +23,7 @@ function fixMojibake(str: string) {
 const { breadcrumb, entranceData = {}, initialImageId } = Astro.props;
 
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
-const currentImage = isGhost
+const selectedImage = isGhost
   ? null
   : allImages.find(img => img.id === initialImageId && img.visibility !== "ghost");
 
@@ -50,8 +50,8 @@ const usedEntranceData = {
 };
 
 // structured data for SEO
-const imageStructuredData = currentImage
-  ? getStructuredData({ type: "image", data: currentImage })
+const imageStructuredData = selectedImage
+  ? getStructuredData({ type: "image", data: selectedImage })
   : getStructuredData({
       type: "gallery",
       data: {
@@ -68,29 +68,29 @@ function formatBreadcrumbTitle(bc) {
   return bc.split("|").map(s => s.trim()).join(" – ");
 }
 const galleryTitle = formatBreadcrumbTitle(usedEntranceData.breadcrumb || breadcrumb);
-const pageTitle = currentImage
+const pageTitle = selectedImage
   ? (
-      currentImage.title
-        ? `${currentImage.title} — ${galleryTitle}`
-        : `Chapter ${allImages.findIndex(img => img.id === currentImage.id) + 1} — ${galleryTitle}`
+      selectedImage.title
+        ? `${selectedImage.title} — ${galleryTitle}`
+        : `Chapter ${allImages.findIndex(img => img.id === selectedImage.id) + 1} — ${galleryTitle}`
     )
   : galleryTitle;
 
 // build Open Graph / Twitter metadata
 const siteBase = import.meta.env.SITE || "https://k4studios.com";
 const pageUrl = `${siteBase}${Astro.url.pathname}`;
-const ogImage = currentImage ? currentImage.src : usedEntranceData.image?.src;
-const ogAlt = currentImage
-  ? currentImage.alt || currentImage.title || galleryTitle
+const ogImage = selectedImage ? selectedImage.src : usedEntranceData.image?.src;
+const ogAlt = selectedImage
+  ? selectedImage.alt || selectedImage.title || galleryTitle
   : usedEntranceData.image?.alt || galleryTitle;
 const ogDescription =
-  currentImage?.description ||
+  selectedImage?.description ||
   entranceData?.details ||
   landingWestern.subtitle ||
   usedEntranceData.subtitle;
 ---
 
-{currentImage && (
+{selectedImage && (
   <head>
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

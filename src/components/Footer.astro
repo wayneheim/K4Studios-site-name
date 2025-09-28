@@ -3,7 +3,7 @@ const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 import ShareDrawer from '@/components/ShareDrawer.jsx';
 
-const { previewImages = [], previewPath = "", title = "" } = Astro.props;
+const { previewImages = [], previewPath = "", title = "", currentImageUrl } = Astro.props;
 
 // Get actual runtime URL
 const currentPath = Astro.url.pathname;
@@ -18,7 +18,7 @@ const showPreviewBar =
   !isImagePage;
 
 // fallback share image if previewImages[0] is undefined
-const shareImage = previewImages?.[0]?.src || undefined;
+let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
 ---
 
 <footer
