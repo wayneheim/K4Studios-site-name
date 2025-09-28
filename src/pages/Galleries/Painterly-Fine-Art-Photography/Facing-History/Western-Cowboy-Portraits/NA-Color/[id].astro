@@ -16,32 +16,55 @@ const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
 if (!imageData) throw new Error(`Image with id ${id} not found.`);
 
-// Ensure absolute URL (don’t prepend if already absolute)
 function makeAbsoluteUrl(src) {
   if (!src) return "";
-  if (src.startsWith("http://") || src.startsWith("https://")) {
-    return src;
-  }
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
   return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
 const imgUrl = makeAbsoluteUrl(imageData.src);
 
-// Get parent gallery meta, override with correct image URL
 const parentMeta = getLandingMeta(
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
   imgUrl
 );
 
+// Build full meta for this image
 const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
+
+// Prepare structured data
+const structuredDataJSON = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  contentUrl: imgUrl,
+  creator: { "@type": "Person", name: "Wayne Heim" },
+  creditText: "Wayne Heim",
+  license: "https://k4studios.com/license",
+  acquireLicensePage: "https://k4studios.com/license",
+  name: imageData.title || "Untitled",
+  description: imageData.description || imageData.story || "Painterly fine art photograph",
+});
 ---
 
-<BaseLayout meta={meta}>
+<BaseLayout 
+  meta={meta} 
+  isImagePage={true} 
+  preloadImage={imageData}
+  structuredDataJSON={structuredDataJSON}
+>
+  <!-- ✅ Pinterest override -->
+  <img
+    src={imgUrl}
+    alt={imageData.title || "Pinterest Image"}
+    data-pin-media={imgUrl}
+    data-pin-description={imageData.description || imageData.story || meta.description}
+    style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"
+  />
+
   <GalleryShell 
     breadcrumb={NAEntranceData.breadcrumb} 
     entranceData={NAEntranceData}
     initialImageId={id}
     currentImageUrl={imgUrl}
-    title={meta.title}
   />
 </BaseLayout>

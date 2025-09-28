@@ -912,20 +912,18 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                     </div>
 
                     {/* Title */}
-                    <h3
-  className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
-  style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.0" : "1.35", fontFamily: "'Glegoo', serif" }}
->
-  Chapter {currentIndex + 1}
-  {galleryData[currentIndex]?.title && (
-    <>
-      :<br />
-      <span className="chapter-title">{galleryData[currentIndex].title}</span>
-    </>
-  )}
-</h3>
-
-
+                    <h1
+                      className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
+                      style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.0" : "1.35", fontFamily: "'Glegoo', serif" }}
+                    >
+                      Chapter {currentIndex + 1}:
+                      {galleryData[currentIndex]?.title && (
+                        <>
+                          <br />
+                          <span className="chapter-title">{galleryData[currentIndex].title}</span>
+                        </>
+                      )}
+                    </h1>
 
                     {/* Story */}
                     <p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">

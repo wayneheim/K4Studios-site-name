@@ -4,7 +4,10 @@ const {
   structuredDataJSON,
   meta = {},
   preloadImage,
-  isImagePage = false
+  isImagePage = false,
+  canonical,          // new
+  pinterestImage,     // new
+  pinterestJSONLD     // new
 } = Astro.props;
 
 const parseSite = (value) => {
@@ -51,40 +54,30 @@ const pageDescription =
 // Strip HTML tags if passed
 const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
 
-// OG/Twitter priority wizardry
+// OG/Twitter priority
 let rawOgImage;
 let ogAlt;
 let ogWidth = preloadImage?.width || "1600";
 let ogHeight = preloadImage?.height || "1200";
 
 if (isImagePage && preloadImage?.src) {
-  // Always use the current image on image pages
   rawOgImage = preloadImage.src;
   ogAlt = preloadImage.alt || preloadImage.title || cleanTitle;
   ogWidth = preloadImage.width || ogWidth;
   ogHeight = preloadImage.height || ogHeight;
 } else if (meta.ogImage) {
-  // Landing-level override
   rawOgImage = meta.ogImage;
   ogAlt = meta.ogImageAlt || cleanTitle;
   ogWidth = meta.ogImageWidth || ogWidth;
   ogHeight = meta.ogImageHeight || ogHeight;
 } else {
-  // Absolute fallback
   rawOgImage = "/images/default-og.jpg";
   ogAlt = cleanTitle;
   ogWidth = "1600";
   ogHeight = "1200";
 }
 
-// 🔍 Debug log (build-time, check Netlify logs)
-console.log("BaseLayout OG Debug:", {
-  isImagePage,
-  preloadImage,
-  chosenOg: rawOgImage
-});
-
-// Canonical + og:url (unified)
+// Canonical + og:url
 const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
 const ogUrl = canonicalUrl;
 
@@ -134,7 +127,12 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
 
     <title>{cleanTitle}</title>
     <meta name="description" content={pageDescription} />
-    <link rel="canonical" href={canonicalUrl} />
+    <link rel="canonical" href={canonical || canonicalUrl} />
+
+    {pinterestImage && <link rel="image_src" href={pinterestImage} />}
+    {pinterestJSONLD && (
+      <script type="application/ld+json" is:inline set:html={pinterestJSONLD}></script>
+    )}
 
     {structuredDataJSON && (
       <script type="application/ld+json" set:html={structuredDataJSON} />
@@ -161,24 +159,6 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     {twitterImage && <meta name="twitter:image" content={twitterImage} />}
     {ogAlt && <meta name="twitter:image:alt" content={ogAlt} />}
     <meta name="twitter:url" content={twitterUrl} />
-
-    <!-- Schema.org (ImageObject) -->
-    {ogImage && (
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ImageObject",
-          "url": ogImage,
-          "contentUrl": ogImage,
-          "name": cleanTitle,
-          "description": pageDescription,
-          "width": ogWidth,
-          "height": ogHeight,
-          "copyrightNotice": "Wayne Heim",
-          "creditText": "Wayne Heim"
-        })}
-      </script>
-    )}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
@@ -221,6 +201,17 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
   </head>
 
   <body>
+    <!-- Hidden primary image for Pinterest -->
+    {isImagePage && preloadImage?.src && (
+      <img
+        src={preloadImage.src}
+        alt={preloadImage.alt || preloadImage.title || cleanTitle}
+        width={preloadImage.width}
+        height={preloadImage.height}
+        style="position:absolute;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0;"
+      />
+    )}
+
     <div class="page-container">
       <slot />
     </div>

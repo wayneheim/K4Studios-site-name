@@ -30,7 +30,7 @@ function fixMojibake(str = "") {
     .replace(/Ã´/g, "ô")
     .replace(/Ã¶/g, "ö")
     .replace(/Ã¼/g, "ü")
-  .replace(/ÃŸ/g, "ß")
+    .replace(/ÃŸ/g, "ß")
     .replace(/Ã /g, "à")
     .replace(/Â©/g, "©")
     .replace(/â„¢/g, "™")
@@ -125,17 +125,6 @@ const pageDescription =
   (usedEntranceData?.description && fixMojibake(usedEntranceData.description)) ||
   (usedEntranceData?.subtitle && fixMojibake(usedEntranceData.subtitle)) ||
   baseFallbackDescription;
-
-/** Debug log for build */
-console.log("Selected Image for OG/Twitter:", {
-  id: selectedImage?.id,
-  src: selectedImage?.src,
-  title: selectedImage?.title,
-  alt: selectedImage?.alt,
-  width: selectedImage?.width,
-  height: selectedImage?.height,
-  isImagePage: !!currentImage
-});
 ---
 
 <BaseLayout
@@ -169,44 +158,44 @@ console.log("Selected Image for OG/Twitter:", {
   structuredDataJSON={imageStructuredData}
 >
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
-    <!-- Header -->
-    <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
-      <GalleryHeader client:load breadcrumb={breadcrumb} />
-    </div>
+    <!-- Header (only for gallery landing) -->
+    {!currentImage && (
+      <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
+        <GalleryHeader client:load breadcrumb={breadcrumb} />
+      </div>
+    )}
 
     <div class="h-0 md:h-5"></div>
 
-    <!-- Intro -->
-    <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
-      <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
-      {usedEntranceData.subtitle && (
-        <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
-      )}
-      <GalleryInfo
-        client:load
-        entranceData={{
-          ...usedEntranceData,
-          title: fixMojibake(usedEntranceData.title),
-          subtitle: fixMojibake(usedEntranceData.subtitle),
-          image: usedEntranceData.image
-        }}
-      />
-    </div>
+    <!-- Intro (only for gallery landing) -->
+    {!currentImage && (
+      <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
+        <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
+        {usedEntranceData.subtitle && (
+          <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
+        )}
+
+        <GalleryInfo
+          client:load
+          entranceData={{
+            ...usedEntranceData,
+            title: fixMojibake(usedEntranceData.title),
+            subtitle: fixMojibake(usedEntranceData.subtitle),
+            image: usedEntranceData.image
+          }}
+        />
+      </div>
+    )}
 
     <!-- Chapter Viewer -->
-    <div id="chapter-section" class="section-hidden" style="display:none;">
+    <div id="chapter-section" class={`section-${currentImage ? 'visible' : 'hidden'}`} style={`display:${currentImage ? 'block' : 'none'};`}>
       <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
     </div>
   </div>
 
   <div class="h-12 md:h-20"></div>
 
-  <Footer
-    previewImages={previewImages}
-    previewPath={previewPath}
-    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${origin || 'https://k4studios.com'}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
-    title={pageTitle}
-  />
+  <Footer previewImages={previewImages} previewPath={previewPath} />
 
   <style>
     @media (max-width: 767px) {
@@ -297,7 +286,7 @@ console.log("Selected Image for OG/Twitter:", {
       let isMenuOpen = false;
 
       const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
+      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios" && exploreButton) {
         setTimeout(() => exploreButton?.click(), 50);
       }
 
@@ -309,7 +298,7 @@ console.log("Selected Image for OG/Twitter:", {
           chapter.classList.remove("section-hidden");
           chapter.classList.add("section-visible");
         }, 50);
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 767) {
           document.getElementById("nav-toggle")?.classList.remove("hidden");
         }
       });
