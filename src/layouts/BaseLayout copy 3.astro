@@ -159,8 +159,8 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     {ogAlt && <meta name="twitter:image:alt" content={ogAlt} />}
     <meta name="twitter:url" content={twitterUrl} />
 
-    <!-- ✅ Schema.org (ImageObject) Fallback -->
-    {!structuredDataJSON && ogImage && (
+    <!-- Schema.org (ImageObject) -->
+    {ogImage && (
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -219,6 +219,7 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
 
   <body>
     <div class="page-container">
+      <!-- ✅ Only render landing slot content on non-image pages -->
       {!isImagePage && <slot />}
       {isImagePage && <slot />} <!-- still render children like ChapterGalleryBase -->
     </div>

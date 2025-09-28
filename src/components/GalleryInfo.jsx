@@ -1,62 +1,125 @@
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
 
-// Add isLandingPage prop
-export default function GalleryInfo({ entranceData, isLandingPage = false }) {
-  function handleExploreClick() {
-    const header    = document.getElementById("header-section");
-    const intro     = document.getElementById("intro-section");
-    const chapter   = document.getElementById("chapter-section");
-    const navToggle = document.getElementById("nav-toggle");
-    const topSpacer = document.getElementById("top-spacer");
+/* ---------------------------------------------------------
+   Glob all gallery data files
+--------------------------------------------------------- */
+const dataModules = import.meta.glob(
+  "/src/data/Galleries/**/*.mjs",
+  { eager: true }
+);
+const dataModulesOther = import.meta.glob(
+  "/src/data/Other/**/*.mjs",
+  { eager: true }
+);
+const allModules = { ...dataModules, ...dataModulesOther };
 
-    if (intro) intro.classList.add("slide-fade-out");
-    if (header) header.classList.add("slide-fade-out");
+/* ---------------------------------------------------------
+   Loader with fallback (flat + nested)
+--------------------------------------------------------- */
+function loadGalleryDataFor(baseHref) {
+  if (!baseHref) return [];
 
-    setTimeout(() => {
-      if (header) header.classList.add("section-hidden");
-      if (intro) {
-        intro.classList.add("section-hidden");
-        intro.classList.remove("slide-fade-out");
-      }
-      if (chapter) {
-        chapter.style.display = "block";
-        // Force reflow for animation
-        void chapter.offsetWidth;
-        chapter.classList.remove("section-hidden");
-        chapter.classList.add("section-visible", "slide-fade-in");
-      }
-      if (navToggle) navToggle.classList.remove("hidden");
-      if (topSpacer) {
-        topSpacer.style.marginTop = "0px";
-        topSpacer.style.height = "0px";
-        topSpacer.style.overflow = "hidden";
-      }
+  const normalized = baseHref.replace(/\/$/, "");
+  const last = normalized.split("/").pop();
 
-        window.__forceStartAtIndex = 1;
-    }, 10);
+  let possibleKeys = [];
+
+  if (normalized.includes("/Engrained/")) {
+    // Engrained → direct file
+    possibleKeys.push(`/src/data${normalized}.mjs`);
+  } else if (last === "Gallery") {
+    // By-Location → /Gallery.mjs
+    possibleKeys.push(`/src/data${normalized}.mjs`);
+  } else {
+    // Try flat file first (…/Color.mjs, …/Portraits.mjs, etc.)
+    possibleKeys.push(`/src/data${normalized}.mjs`);
+    // Then try nested file (…/Black-White/Black-White.mjs, …/Mountains/Mountains.mjs, etc.)
+    possibleKeys.push(`/src/data${normalized}/${last}.mjs`);
   }
+
+  for (const key of possibleKeys) {
+    if (allModules[key]) {
+      console.log("✅ GalleryInfo loaded:", key);
+      const mod = allModules[key];
+      return mod.galleryData || mod.default || [];
+    }
+  }
+
+  console.warn("⚠️ GalleryInfo: no data module found for", possibleKeys);
+  return [];
+}
+
+/* ---------------------------------------------------------
+   Pick first valid image
+--------------------------------------------------------- */
+function pickFirstRealImage(arr) {
+  return (arr || [])
+    .filter(
+      (img) =>
+        img &&
+        img.id &&
+        img.id !== "i-k4studios" &&
+        (img.sortOrder ?? 0) !== -1 &&
+        img.visibility !== "ghost"
+    )
+    .sort(
+      (a, b) =>
+        (a.sortOrder ?? Infinity) - (b.sortOrder ?? Infinity)
+    )[0];
+}
+
+/* ---------------------------------------------------------
+   Component
+--------------------------------------------------------- */
+export default function GalleryInfo({
+  entranceData,
+  path = "",
+  isLandingPage = false,
+}) {
+  const baseHref =
+    path ||
+    entranceData?.galleryPath ||
+    (typeof window !== "undefined"
+      ? window.location.pathname
+      : "");
+  const trimmedBase = baseHref.replace(/\/$/, "");
+
+  const galleryData = loadGalleryDataFor(trimmedBase);
+  const lowestSortImage = pickFirstRealImage(galleryData);
+
+  const exploreHref =
+    lowestSortImage && lowestSortImage.id && trimmedBase
+      ? `${trimmedBase}/${lowestSortImage.id}`
+      : "#";
 
   return (
     <>
-      <section className="intro-wrapper" style={{ zIndex: 0, position: "relative" }}>
+      <section
+        className="intro-wrapper"
+        style={{ zIndex: 0, position: "relative" }}
+      >
         <motion.div
           className="intro-text"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, delay: 0 }}
         >
-          {/* Headings are now rendered in the shell for accessibility/SEO. */}
           <div
-  className="gallery-intro-description"
-  dangerouslySetInnerHTML={{ __html: entranceData.description }}
-/>
-          {entranceData.details && (
+            className="gallery-intro-description"
+            dangerouslySetInnerHTML={{
+              __html: entranceData?.description || "",
+            }}
+          />
+          {!!entranceData?.details && (
             <details>
               <summary>
-                <span className="arrow-icon">▶</span> More about this gallery
+                <span className="arrow-icon">▶</span> More
+                about this gallery
               </summary>
-              <p className="mt-2 text-base">{entranceData.details}</p>
+              <p className="mt-2 text-base">
+                {entranceData.details}
+              </p>
             </details>
           )}
         </motion.div>
@@ -66,44 +129,64 @@ export default function GalleryInfo({ entranceData, isLandingPage = false }) {
           style={{ zIndex: 0, position: "relative" }}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1] }}
+          transition={{
+            duration: 1.2,
+            ease: [0.33, 1, 0.68, 1],
+          }}
         >
-          {entranceData.image && (
+          {entranceData?.image && (
             <figure>
               <img
                 src={entranceData.image.src}
-                alt={entranceData.image.alt || "Portrait preview"}
+                alt={
+                  entranceData.image.alt || "Portrait preview"
+                }
                 style={{
-  maxWidth: "100%",
-  borderRadius: "9px",
-  boxShadow: "0 8px 32px #0002",
-  border: "2px solid #ddd" // <-- soft gray border
-}}
+                  maxWidth: "100%",
+                  borderRadius: "9px",
+                  boxShadow: "0 8px 32px #0002",
+                  border: "2px solid #ddd",
+                }}
               />
-              <figcaption>{entranceData.image.caption}</figcaption>
+              <figcaption>
+                {entranceData.image.caption}
+              </figcaption>
             </figure>
           )}
         </motion.div>
       </section>
 
-      <motion.div
-        className="explore-section explore-button"
-        role="button"
-        tabIndex={0}
-        onClick={() => {
-          window.dispatchEvent(new CustomEvent("enterChapters")); // ✅ new trigger
-          handleExploreClick();
-        }}
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0, ease: [0.33, 1, 0.68, 1] }}
-      >
-        Explore the Gallery
-        <span style={{ fontSize: "1.8rem", verticalAlign: "middle" }}>→</span>
-        <div className="landing-divider">
-          <span style={{ fontSize: "1.5rem" }}>◆</span>
-        </div>
-      </motion.div>
+      {lowestSortImage && lowestSortImage.id ? (
+        <motion.a
+          href={exploreHref}
+          className="explore-section explore-button"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1.2,
+            delay: 0,
+            ease: [0.33, 1, 0.68, 1],
+          }}
+          style={{
+            display: "block",
+            textDecoration: "none",
+            color: "inherit",
+          }}
+        >
+          Explore the Gallery
+          <span
+            style={{
+              fontSize: "1.8rem",
+              verticalAlign: "middle",
+            }}
+          >
+            →
+          </span>
+          <div className="landing-divider">
+            <span style={{ fontSize: "1.5rem" }}>◆</span>
+          </div>
+        </motion.a>
+      ) : null}
     </>
   );
 }

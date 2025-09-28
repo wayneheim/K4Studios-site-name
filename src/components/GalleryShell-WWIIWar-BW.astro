@@ -148,35 +148,47 @@ const meta = {
   twitterUrl: canonicalUrl,
   twitterImageAlt: ogAlt,
 };
+
+/** ---------------------------------------------------------------
+ * Detect if this is an image page
+ * --------------------------------------------------------------- */
+const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
+const isImagePage = lastSegment.startsWith("i-");
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
     <!-- Header -->
-    <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
-      <GalleryHeader client:load breadcrumb={breadcrumb} />
-    </div>
+    {!isImagePage && (
+      <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
+        <GalleryHeader client:load breadcrumb={breadcrumb} />
+      </div>
+    )}
 
     <div class="h-0 md:h-5"></div>
 
     <!-- Intro -->
-    <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
-      <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
-      {usedEntranceData.subtitle && (
-        <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
-      )}
-      <GalleryInfo client:load entranceData={{
-        ...usedEntranceData,
-        title: fixMojibake(usedEntranceData.title),
-        subtitle: fixMojibake(usedEntranceData.subtitle),
-        image: usedEntranceData.image
-      }} />
-    </div>
+    {!isImagePage && (
+      <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
+        <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
+        {usedEntranceData.subtitle && (
+          <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
+        )}
+        <GalleryInfo client:load entranceData={{
+          ...usedEntranceData,
+          title: fixMojibake(usedEntranceData.title),
+          subtitle: fixMojibake(usedEntranceData.subtitle),
+          image: usedEntranceData.image
+        }} />
+      </div>
+    )}
 
     <!-- Chapter Viewer -->
-    <div id="chapter-section" class="section-hidden" style="display:none;">
-      <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-    </div>
+    {isImagePage && (
+      <div id="chapter-section" class="section-visible" style="display:block;">
+        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+      </div>
+    )}
   </div>
 
   <div class="h-12 md:h-20"></div>
@@ -245,44 +257,40 @@ const meta = {
     #gallery-content a { text-decoration:underline !important; color:#85644b !important; }
   </style>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const exploreButton = document.querySelector('.explore-button');
-      const header = document.getElementById('header-section');
-      const intro = document.getElementById('intro-section');
-      const chapter = document.getElementById('chapter-section');
-      const navToggle = document.getElementById('nav-toggle');
-      let isMenuOpen = false;
+  {!isImagePage && (
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const exploreButton = document.querySelector('.explore-button');
+        const header = document.getElementById('header-section');
+        const intro = document.getElementById('intro-section');
+        const chapter = document.getElementById('chapter-section');
+        const navToggle = document.getElementById('nav-toggle');
+        let isMenuOpen = false;
 
-      // Deep-link handling
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-        setTimeout(() => exploreButton?.click(), 50);
-      }
+        exploreButton?.addEventListener('click', () => {
+          header.classList.add('section-hidden');
+          intro.classList.add('section-hidden');
+          chapter.style.display = 'block';
+          setTimeout(() => {
+            chapter.classList.remove('section-hidden');
+            chapter.classList.add('section-visible');
+          }, 50);
+          if (window.innerWidth >= 768) {
+            document.getElementById('nav-toggle')?.classList.remove('hidden');
+          }
+        });
 
-      exploreButton?.addEventListener('click', () => {
-        header.classList.add('section-hidden');
-        intro.classList.add('section-hidden');
-        chapter.style.display = 'block';
-        setTimeout(() => {
-          chapter.classList.remove('section-hidden');
-          chapter.classList.add('section-visible');
-        }, 50);
-        if (window.innerWidth >= 768) {
-          document.getElementById('nav-toggle')?.classList.remove('hidden');
-        }
+        navToggle?.addEventListener('click', () => {
+          isMenuOpen = !isMenuOpen;
+          const label = document.getElementById('menu-label');
+          if (label) label.textContent = isMenuOpen ? "M−" : "M+";
+          document.getElementById('floating-header')?.classList.toggle('show');
+        });
       });
 
-      navToggle?.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        const label = document.getElementById('menu-label');
-        if (label) label.textContent = isMenuOpen ? "M−" : "M+";
-        document.getElementById('floating-header')?.classList.toggle('show');
+      document.addEventListener('contextmenu', e => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
       });
-    });
-
-    document.addEventListener('contextmenu', e => {
-      if (e.target.tagName === 'IMG') e.preventDefault();
-    });
-  </script>
+    </script>
+  )}
 </BaseLayout>

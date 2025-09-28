@@ -3,12 +3,9 @@ const {
   title = 'Gallery',
   structuredDataJSON,
   meta = {},
-  preloadImage
+  preloadImage,
+  isImagePage = false
 } = Astro.props;
-
-// ✅ Auto-detect if this is an image page
-const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
-const isImagePage = lastSegment.startsWith("i-");
 
 const parseSite = (value) => {
   if (!value) return null;
@@ -54,29 +51,40 @@ const pageDescription =
 // Strip HTML tags if passed
 const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
 
-// OG/Twitter priority
+// OG/Twitter priority wizardry
 let rawOgImage;
 let ogAlt;
 let ogWidth = preloadImage?.width || "1600";
 let ogHeight = preloadImage?.height || "1200";
 
 if (isImagePage && preloadImage?.src) {
+  // Always use the current image on image pages
   rawOgImage = preloadImage.src;
   ogAlt = preloadImage.alt || preloadImage.title || cleanTitle;
   ogWidth = preloadImage.width || ogWidth;
   ogHeight = preloadImage.height || ogHeight;
 } else if (meta.ogImage) {
+  // Landing-level override
   rawOgImage = meta.ogImage;
   ogAlt = meta.ogImageAlt || cleanTitle;
   ogWidth = meta.ogImageWidth || ogWidth;
   ogHeight = meta.ogImageHeight || ogHeight;
 } else {
+  // Absolute fallback
   rawOgImage = "/images/default-og.jpg";
   ogAlt = cleanTitle;
   ogWidth = "1600";
   ogHeight = "1200";
 }
 
+// 🔍 Debug log (build-time, check Netlify logs)
+console.log("BaseLayout OG Debug:", {
+  isImagePage,
+  preloadImage,
+  chosenOg: rawOgImage
+});
+
+// Canonical + og:url (unified)
 const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
 const ogUrl = canonicalUrl;
 
@@ -89,6 +97,7 @@ const twitterDescription = meta.twitterDescription || pageDescription;
 const twitterImage = ensureAbsoluteUrl(meta.twitterImage || rawOgImage);
 const twitterUrl = ogUrl;
 
+// Infer type
 const inferMimeType = (url) => {
   if (!url) return null;
   try {
@@ -123,14 +132,8 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ✅ Only render landing title/description; skip on image pages -->
-    {!isImagePage && (
-      <>
-        <title>{cleanTitle}</title>
-        <meta name="description" content={pageDescription} />
-      </>
-    )}
-
+    <title>{cleanTitle}</title>
+    <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonicalUrl} />
 
     {structuredDataJSON && (
@@ -159,8 +162,8 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     {ogAlt && <meta name="twitter:image:alt" content={ogAlt} />}
     <meta name="twitter:url" content={twitterUrl} />
 
-    <!-- ✅ Schema.org (ImageObject) Fallback -->
-    {!structuredDataJSON && ogImage && (
+    <!-- Schema.org (ImageObject) -->
+    {ogImage && (
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -219,8 +222,7 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
 
   <body>
     <div class="page-container">
-      {!isImagePage && <slot />}
-      {isImagePage && <slot />} <!-- still render children like ChapterGalleryBase -->
+      <slot />
     </div>
     <div id="overlay-root"></div>
 

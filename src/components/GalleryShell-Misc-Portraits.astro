@@ -78,7 +78,8 @@ const usedEntranceData = {
    URLs & Structured Data
    ================================================================ */
 const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
-const canonicalUrl = `${siteBase}${Astro.url.pathname.replace(/\/$/, "")}`;
+const pathOnly = Astro.url.pathname;
+const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
 
 const imageStructuredData = currentImage
@@ -98,11 +99,13 @@ const imageStructuredData = currentImage
    ================================================================ */
 const siteName = "Wayne Heim";
 const siteSuffix = "Fine Art Photography";
+const fallbackTitle = "Gallery | Wayne Heim Fine Art Photography";
 
 function appendSiteTitle(title) {
-  if (!title) return `Gallery | ${siteName} ${siteSuffix}`;
+  if (!title) return fallbackTitle;
   const lower = title.toLowerCase();
-  if (lower.includes(siteName.toLowerCase()) || lower.includes(siteSuffix.toLowerCase())) return title;
+  if (lower.includes(siteName.toLowerCase())) return title;
+  if (lower.includes(siteSuffix.toLowerCase())) return title;
   return `${title} | ${siteName} ${siteSuffix}`;
 }
 
@@ -110,19 +113,20 @@ const pageTitle = currentImage
   ? appendSiteTitle(fixMojibake(currentImage.title))
   : appendSiteTitle(fixMojibake(usedEntranceData.title));
 
+const baseFallbackDescription =
+  "Discover narrative-rich painterly fine art portraits by Wayne Heim, blending classic style with modern storytelling.";
+
 const pageDescription =
   (currentImage?.description && fixMojibake(currentImage.description)) ||
   (usedEntranceData?.description && fixMojibake(usedEntranceData.description)) ||
   (usedEntranceData?.subtitle && fixMojibake(usedEntranceData.subtitle)) ||
-  "Miscellaneous fine art portraits by Wayne Heim.";
+  baseFallbackDescription;
 
 /* ================================================================
    OG / Twitter Meta
    ================================================================ */
 const ogImage = selectedImage?.src;
-const ogAlt =
-  (selectedImage && (selectedImage.alt || selectedImage.title)) ||
-  (usedEntranceData.image?.alt || fixMojibake(usedEntranceData.title));
+const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
 
 const meta = {
   description: pageDescription,
@@ -138,35 +142,47 @@ const meta = {
   twitterUrl: canonicalUrl,
   twitterImageAlt: ogAlt,
 };
+
+/* ================================================================
+   Detect if this is an image page
+   ================================================================ */
+const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
+const isImagePage = lastSegment.startsWith("i-");
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
-    <!-- Header -->
-    <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
-      <GalleryHeader client:load breadcrumb={breadcrumb} />
-    </div>
+    {/* Header */}
+    {!isImagePage && (
+      <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
+        <GalleryHeader client:load breadcrumb={breadcrumb} />
+      </div>
+    )}
 
     <div class="h-0 md:h-5"></div>
 
-    <!-- Intro -->
-    <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
-      <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
-      {usedEntranceData.subtitle && (
-        <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
-      )}
-      <GalleryInfo client:load entranceData={{
-        ...usedEntranceData,
-        title: fixMojibake(usedEntranceData.title),
-        subtitle: fixMojibake(usedEntranceData.subtitle),
-        image: usedEntranceData.image
-      }} />
-    </div>
+    {/* Intro */}
+    {!isImagePage && (
+      <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
+        <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
+        {usedEntranceData.subtitle && (
+          <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
+        )}
+        <GalleryInfo client:load entranceData={{
+          ...usedEntranceData,
+          title: fixMojibake(usedEntranceData.title),
+          subtitle: fixMojibake(usedEntranceData.subtitle),
+          image: usedEntranceData.image
+        }} />
+      </div>
+    )}
 
-    <!-- Chapter Viewer -->
-    <div id="chapter-section" class="section-hidden" style="display:none;">
-      <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-    </div>
+    {/* Chapter Viewer */}
+    {isImagePage && (
+      <div id="chapter-section" class="section-visible" style="display:block;">
+        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+      </div>
+    )}
   </div>
 
   <div class="h-12 md:h-20"></div>
@@ -182,7 +198,8 @@ const meta = {
     @media (max-width: 767px) {
       #nav-toggle { display: none !important; }
       #intro-section { margin-top: 3.5rem !important; }
-      .gallery-landing-title, .gallery-landing-subtitle { margin-left: 3rem !important; margin-right: 3rem !important; }
+      .gallery-landing-title,
+      .gallery-landing-subtitle { margin-left: 2.1rem !important; margin-right: 2.1rem !important; }
       .gallery-landing-subtitle { text-align: center; }
     }
     .hamburger-circle { display: none !important; }
@@ -200,7 +217,8 @@ const meta = {
       transform:translateX(0);
       transition:opacity 1s ease, transform 1.2s ease;
       pointer-events:auto;
-      position:relative; width:100%; z-index:2;
+      position:relative;
+      width:100%; z-index:2;
     }
     #gallery-content *,
     .gallery-landing-title,
@@ -233,43 +251,40 @@ const meta = {
     #gallery-content a { text-decoration:underline !important; color:#85644b !important; }
   </style>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const exploreButton = document.querySelector('.explore-button');
-      const header = document.getElementById('header-section');
-      const intro = document.getElementById('intro-section');
-      const chapter = document.getElementById('chapter-section');
-      const navToggle = document.getElementById('nav-toggle');
-      let isMenuOpen = false;
+  {!isImagePage && (
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const exploreButton = document.querySelector('.explore-button');
+        const header = document.getElementById('header-section');
+        const intro = document.getElementById('intro-section');
+        const chapter = document.getElementById('chapter-section');
+        const navToggle = document.getElementById('nav-toggle');
+        let isMenuOpen = false;
 
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-        setTimeout(() => exploreButton?.click(), 50);
-      }
+        exploreButton?.addEventListener('click', () => {
+          header.classList.add('section-hidden');
+          intro.classList.add('section-hidden');
+          chapter.style.display = 'block';
+          setTimeout(() => {
+            chapter.classList.remove('section-hidden');
+            chapter.classList.add('section-visible');
+          }, 50);
+          if (window.innerWidth >= 768) {
+            document.getElementById('nav-toggle')?.classList.remove('hidden');
+          }
+        });
 
-      exploreButton?.addEventListener('click', () => {
-        header.classList.add('section-hidden');
-        intro.classList.add('section-hidden');
-        chapter.style.display = 'block';
-        setTimeout(() => {
-          chapter.classList.remove('section-hidden');
-          chapter.classList.add('section-visible');
-        }, 50);
-        if (window.innerWidth >= 768) {
-          document.getElementById('nav-toggle')?.classList.remove('hidden');
-        }
+        navToggle?.addEventListener('click', () => {
+          isMenuOpen = !isMenuOpen;
+          const label = document.getElementById('menu-label');
+          if (label) label.textContent = isMenuOpen ? "M−" : "M+";
+          document.getElementById('floating-header')?.classList.toggle('show');
+        });
       });
 
-      navToggle?.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        const label = document.getElementById('menu-label');
-        if (label) label.textContent = isMenuOpen ? "M−" : "M+";
-        document.getElementById('floating-header')?.classList.toggle('show');
+      document.addEventListener('contextmenu', e => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
       });
-    });
-
-    document.addEventListener('contextmenu', (e) => {
-      if (e.target.tagName === 'IMG') e.preventDefault();
-    });
-  </script>
+    </script>
+  )}
 </BaseLayout>
