@@ -20,7 +20,7 @@ export const facingFAQ = [
       "The collection spans a range of Americana and storytelling themes, including:",
       `<ul>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Historical reenactment portraits</a> (Civil War, WWII, Roaring 20s)</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Western-Cowboy-Portraits">Western cowboy and frontier art</a></li>
+        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western cowboy and frontier art</a></li>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Painterly landscapes</a> from the American West and beyond</li>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation and Americana</a> (trains, vintage cars, boats)</li>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Miscellaneous">Miscellaneous and experimental works</a></li>
@@ -39,7 +39,7 @@ export const facingFAQ = [
     q: "What makes Wayne Heim’s painterly style unique?",
     a: [
       "Wayne is an award-winning fine art photographer and medical illustrator. His painterly approach combines traditional craftsmanship, historical research, and modern photographic technique. The result is art that looks and feels timeless—each image is a story, not just a scene.",
-      "If you’re seeking <a href='/Galleries/Painterly-Fine-Art-Photography/Western-Cowboy-Portraits'>Western art</a>, <a href='/Galleries/Painterly-Fine-Art-Photography/Landscapes'>mountain landscapes</a>, or <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>historical reenactments</a>, Wayne’s painterly gallery is a curated journey through Americana."
+      "If you’re seeking <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits'>Western art</a>, <a href='/Galleries/Painterly-Fine-Art-Photography/Landscapes'>mountain landscapes</a>, or <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>historical reenactments</a>, Wayne’s painterly gallery is a curated journey through Americana."
     ],
   },
   {

@@ -154,7 +154,6 @@ const meta = {
 const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
 const isImagePage = lastSegment.startsWith("i-");
 ---
----
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
@@ -200,6 +199,7 @@ const isImagePage = lastSegment.startsWith("i-");
     title={pageTitle}
   />
 
+  <!-- CSS and script block identical to master -->
   <style>
     @media (max-width: 767px) {
       #nav-toggle { display: none !important; }

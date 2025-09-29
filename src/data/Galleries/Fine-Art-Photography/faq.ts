@@ -20,11 +20,11 @@ export const facingFAQ = [
     a: [
       "This collection spans natural landscapes, rural Americana, and timeless portraits:",
       `<ul>
-        <li><a href="/Galleries/Traditional-Fine-Art-Photography/Landscapes">Fine art landscape photography</a> (mountains, waterfalls, sunsets, and forests)</li>
-        <li><a href="/Galleries/Traditional-Fine-Art-Photography/Western-Scenes">Western and frontier themes</a></li>
-        <li><a href="/Galleries/Traditional-Fine-Art-Photography/Trains">Train photography</a> capturing movement, nostalgia, and design</li>
-        <li><a href="/Galleries/Traditional-Fine-Art-Photography/Portraits">Emotive fine art portraits</a> of real people and quiet moments</li>
-        <li><a href="/Galleries/Traditional-Fine-Art-Photography/Miscellaneous">One-off images</a> and personal stories in still form</li>
+        <li><a href="/Galleries/Fine-Art-Photography/Landscapes">Fine art landscape photography</a> (mountains, waterfalls, sunsets, and forests)</li>
+        <li><a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery">Western and frontier themes</a></li>
+        <li><a href="/Galleries/Fine-Art-Photography/Transportation/Trains">Train photography</a> capturing movement, nostalgia, and design</li>
+        <li><a href="/Galleries/Fine-Art-Photography/Portraits">Emotive fine art portraits</a> of real people and quiet moments</li>
+        <li><a href="/Galleries/Fine-Art-Photography/Miscellaneous">One-off images</a> and personal stories in still form</li>
       </ul>`,
       "Each gallery offers a unique visual journey through natural and cultural memory."
     ],
@@ -33,7 +33,7 @@ export const facingFAQ = [
   {
     q: "Are prints available from the Traditional Fine Art gallery?",
     a: [
-      "Yes — all images are available as archival-quality fine art prints on paper or metal. Select pieces are also offered as part of <a href='/Galleries/Engrained'>The Engrained Series</a>, printed directly on Baltic Birch wood panels for a tactile, rustic finish.",
+      "Yes — all images are available as archival-quality fine art prints on paper or metal. Select pieces are also offered as part of <a href='/Other/K4-Select-Series/Engrained'>The Engrained Series</a>, printed directly on Baltic Birch wood panels for a tactile, rustic finish.",
       "Each print is handled with care to ensure it reflects the integrity of the original scene."
     ],
   },
@@ -42,7 +42,7 @@ export const facingFAQ = [
     q: "What makes Wayne Heim’s traditional style unique?",
     a: [
       "Wayne combines the precision of a medical illustrator with the emotional depth of a visual storyteller. His traditional images are crafted with patience, respect for light, and an eye for subtle storytelling—turning overlooked landscapes or fleeting expressions into lasting visual narratives.",
-      "Whether you're drawn to <a href='/Galleries/Traditional-Fine-Art-Photography/Landscapes'>mountains and waterfalls</a> or <a href='/Galleries/Traditional-Fine-Art-Photography/Trains'>vintage locomotives</a>, you'll find images that speak softly—but powerfully."
+      "Whether you're drawn to <a href='/Galleries/Fine-Art-Photography/Landscapes'>mountains and waterfalls</a> or <a href='/Galleries/Fine-Art-Photography/Transportation/Trains'>vintage locomotives</a>, you'll find images that speak softly—but powerfully."
     ],
   },
 
