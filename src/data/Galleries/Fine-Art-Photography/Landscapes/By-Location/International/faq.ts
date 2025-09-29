@@ -14,7 +14,7 @@ export const transportationFAQ = [
   {
     q: "How are the international galleries organized?",
     a: [
-      "You can explore landscapes by country or region: <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland\">Iceland</a>, <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland\">Newfoundland</a>, <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Faroe-Islands\">Faroe Islands</a>, and <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/International\">Canadian Rockies & Western Canada</a>. Each section highlights the unique beauty and culture of its landscapes."
+      "You can explore landscapes by country or region: <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland\">Iceland</a>, <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland\">Newfoundland</a>, <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands\">Faroe Islands</a>, and <a href=\"/Galleries/Fine-Art-Photography/Landscapes/By-Location/International\">Canadian Rockies & Western Canada</a>. Each section highlights the unique beauty and culture of its landscapes."
     ]
   },
   {

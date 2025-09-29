@@ -24,7 +24,7 @@ export const entranceData = {
     Available as archival paper prints, wood panels, acrylic face-mounted, and metal wall displays. Ideal for collectors, modern interiors, coastal homes, or anyone seeking bold, evocative nature photography from one of the world’s most unique island landscapes.
   `,
   image: {
-    src: "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Faroe-Islands/i-XXXXXXX/3/XXXXXX/XL/faroe-islands-preview-XL.jpg", // Replace with your best Faroe Islands image
+    src: "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/i-XXXXXXX/3/XXXXXX/XL/faroe-islands-preview-XL.jpg", // Replace with your best Faroe Islands image
     alt: "Fine art landscape photograph of the Faroe Islands by Wayne Heim",
     caption: "\"Edge of the North Atlantic – Faroe Islands\"",
   },
