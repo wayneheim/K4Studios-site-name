@@ -40,6 +40,8 @@ const { breadcrumb, entranceData = {}, initialImageId } = Astro.props;
 /** ---------------------------------------------------------------
  * Image context
  * --------------------------------------------------------------- */
+const firstRealImage = allImages.find((img) => img.visibility !== "ghost");
+
 const isGhost = !initialImageId || initialImageId === "i-k4studios";
 const currentImage = isGhost
   ? null
@@ -69,9 +71,21 @@ const usedEntranceData = {
       }
     : entranceData?.image,
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
-  title: entranceData?.title || landingWestern?.title || "Gallery",
-  subtitle: entranceData?.subtitle || landingWestern?.subtitle || "",
-  description: entranceData?.description || landingWestern?.description || "",
+  title:
+    entranceData?.title ||
+    firstRealImage?.title ||
+    landingWestern?.title ||
+    "Gallery",
+  subtitle:
+    entranceData?.subtitle ||
+    firstRealImage?.subtitle ||
+    landingWestern?.subtitle ||
+    "",
+  description:
+    entranceData?.description ||
+    firstRealImage?.description ||
+    landingWestern?.description ||
+    "",
 };
 
 /** ---------------------------------------------------------------
@@ -131,7 +145,14 @@ const pageDescription =
  * OG / Twitter
  * --------------------------------------------------------------- */
 const ogImage = selectedImage?.src;
-const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
+const ogAlt =
+  currentImage?.title ||
+  currentImage?.alt ||
+  currentImage?.description ||
+  selectedImage?.title ||
+  selectedImage?.alt ||
+  fixMojibake(usedEntranceData.title) ||
+  "Wayne Heim Fine Art Photography";
 
 const meta = {
   description: pageDescription,
@@ -198,6 +219,18 @@ const isImagePage = lastSegment.startsWith("i-");
     currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
     title={pageTitle}
   />
+
+  {/* ✅ JSON-LD Schema injection */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": isImagePage ? "ImageObject" : "ImageGallery",
+    "url": canonicalUrl,
+    "contentUrl": ogImage,
+    "name": ogAlt,
+    "description": pageDescription,
+      "copyrightNotice": selectedImage?.copyrightNotice || "Wayne E Heim",
+      "creditText": selectedImage?.creditText || "Wayne E Heim"
+  })}></script>
 
   <style>
     @media (max-width: 767px) {

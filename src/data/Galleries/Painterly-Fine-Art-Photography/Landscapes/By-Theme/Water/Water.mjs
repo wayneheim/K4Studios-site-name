@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-Pgks2np",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Trifecta - Waterfalls in Iceland",
+    "description": "Wayne Heim Photography: A selection from Waterfall series. Full description coming soon.",
     "alt": "Roadside Iceland Waterfall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-Pgks2np/A",
     "keywords": [

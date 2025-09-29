@@ -55,23 +55,7 @@ export default function ChapterGalleryBase({
   }, [rawData]);
 
   const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
-  // SSR-safe initial index: match initialImageId or URL
-  const initialIndex = (() => {
-    if (!galleryData.length) return 0;
-    // Try to match URL first (SSR: window is undefined)
-    let idFromURL = undefined;
-    if (typeof window !== "undefined") {
-      const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-      idFromURL = match ? match[1] : undefined;
-    }
-    const idToFind = idFromURL || initialImageId;
-    if (idToFind) {
-      const idx = galleryData.findIndex((e) => e.id === idToFind);
-      if (idx !== -1) return idx;
-    }
-    return 0;
-  })();
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
   const [viewMode, setViewMode] = useState("flip");

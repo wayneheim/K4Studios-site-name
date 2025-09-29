@@ -41,7 +41,7 @@ const galleryTitle = meta.title || title || 'K4 Studios – Fine Art Photography
 
 // Decide final page title
 let pageTitle = isImagePage
-  ? (preloadImage?.title || meta.ogTitle || meta.ogImageTitle || galleryTitle)
+  ? preloadImage?.title || galleryTitle
   : galleryTitle;
 
 // Description logic
@@ -52,7 +52,7 @@ const pageDescription =
   'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
 
 // Strip HTML tags if passed
-const cleanTitle = (pageTitle || '').replace(/<[^>]*>/g, '');
+const cleanTitle = pageTitle.replace(/<[^>]*>/g, '');
 
 // OG/Twitter priority
 let rawOgImage;
@@ -67,12 +67,12 @@ if (isImagePage && preloadImage?.src) {
   ogHeight = preloadImage.height || ogHeight;
 } else if (meta.ogImage) {
   rawOgImage = meta.ogImage;
-  ogAlt = meta.ogImageAlt || meta.ogImageTitle || cleanTitle;
+  ogAlt = meta.ogImageAlt || cleanTitle;
   ogWidth = meta.ogImageWidth || ogWidth;
   ogHeight = meta.ogImageHeight || ogHeight;
 } else {
   rawOgImage = "/images/default-og.jpg";
-  ogAlt = meta.ogImageAlt || meta.ogImageTitle || cleanTitle;
+  ogAlt = cleanTitle;
   ogWidth = "1600";
   ogHeight = "1200";
 }
@@ -88,7 +88,6 @@ const twitterTitle = meta.twitterTitle || cleanTitle;
 const twitterDescription = meta.twitterDescription || pageDescription;
 const twitterImage = ensureAbsoluteUrl(meta.twitterImage || rawOgImage);
 const twitterUrl = ogUrl;
-// (No twitterImageAlt logic in original)
 
 const inferMimeType = (url) => {
   if (!url) return null;
@@ -124,9 +123,13 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ Always render title/description for SEO compliance -->
-  <title>{cleanTitle}</title>
-  <meta name="description" content={pageDescription} />
+    <!-- ✅ Only render landing title/description; skip on image pages -->
+    {!isImagePage && (
+      <>
+        <title>{cleanTitle}</title>
+        <meta name="description" content={pageDescription} />
+      </>
+    )}
 
     <link rel="canonical" href={canonicalUrl} />
 
@@ -136,12 +139,12 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
 
     <!-- Open Graph -->
     <meta property="og:title" content={meta.ogTitle || cleanTitle} />
-  <meta property="og:description" content={pageDescription} />
+    <meta property="og:description" content={meta.ogDescription || pageDescription} />
     {ogImage && <meta property="og:image" content={ogImage} />}
     {ogImageSecureUrl && <meta property="og:image:secure_url" content={ogImageSecureUrl} />}
     <meta property="og:image:width" content={ogWidth} />
     <meta property="og:image:height" content={ogHeight} />
-  <meta property="og:image:alt" content={preloadImage?.alt || preloadImage?.title || meta.ogImageAlt || meta.ogImageTitle || meta.ogTitle || cleanTitle} />
+    {ogAlt && <meta property="og:image:alt" content={ogAlt} />}
     <meta property="og:image:type" content={ogImageType} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
@@ -151,25 +154,27 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     <!-- Twitter -->
     <meta name="twitter:card" content={twitterCard} />
     <meta name="twitter:title" content={twitterTitle} />
-  <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:description" content={twitterDescription} />
     {twitterImage && <meta name="twitter:image" content={twitterImage} />}
-  <meta name="twitter:image:alt" content={preloadImage?.alt || preloadImage?.title || meta.ogImageAlt || meta.ogImageTitle || meta.ogTitle || cleanTitle} />
+    {ogAlt && <meta name="twitter:image:alt" content={ogAlt} />}
     <meta name="twitter:url" content={twitterUrl} />
 
     <!-- ✅ Schema.org (ImageObject) Fallback -->
-    {!structuredDataJSON && (
-      <script type="application/ld+json" set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ImageObject",
-        url: preloadImage?.src || ogImage,
-        contentUrl: preloadImage?.src || ogImage,
-        name: preloadImage?.alt || preloadImage?.title || meta.ogImageAlt || meta.ogImageTitle || meta.ogTitle || cleanTitle,
-        description: preloadImage?.description || pageDescription,
-        width: preloadImage?.width || ogWidth || "1600",
-        height: preloadImage?.height || ogHeight || "1200",
-        copyrightNotice: "Wayne Heim",
-        creditText: "Wayne Heim"
-      })}></script>
+    {!structuredDataJSON && ogImage && (
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          "url": ogImage,
+          "contentUrl": ogImage,
+          "name": cleanTitle,
+          "description": pageDescription,
+          "width": ogWidth,
+          "height": ogHeight,
+          "copyrightNotice": "Wayne Heim",
+          "creditText": "Wayne Heim"
+        })}
+      </script>
     )}
 
     <!-- Fonts -->
@@ -183,7 +188,8 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
       <link rel="preload" as="image" href={preloadImage.src} />
     )}
 
-
+    <!-- Make Tailwind non-blocking -->
+    <link rel="stylesheet" media="print" onload="this.media='all'" />
 
     <style>
       body {
@@ -213,9 +219,11 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
 
   <body>
     <div class="page-container">
-      <slot />
+      {!isImagePage && <slot />}
+      {isImagePage && <slot />} <!-- still render children like ChapterGalleryBase -->
     </div>
     <div id="overlay-root"></div>
+
     <!-- SVG sharpening filter -->
     <svg width="0" height="0" style="position:absolute">
       <filter id="sharpen">

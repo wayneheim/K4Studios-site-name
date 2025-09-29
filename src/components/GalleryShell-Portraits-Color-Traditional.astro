@@ -48,11 +48,6 @@ const currentImage = isGhost
 const previewImages = allImages.filter((img) => img.visibility !== "ghost").slice(0, 8);
 const previewPath = "/Galleries/Fine-Art-Photography/Portraits";
 
-// Compute first image for explore link (lowest sortOrder, non-ghost)
-const nonGhostImages = allImages.filter((img) => img.visibility !== "ghost");
-const firstImage = nonGhostImages.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))[0];
-const firstImageHref = firstImage ? `${previewPath}/${firstImage.id}` : null;
-
 const singlePreviewImage =
   previewImages.length > 0
     ? previewImages[Math.floor(Math.random() * previewImages.length)]
@@ -178,7 +173,7 @@ const isImagePage = lastSegment.startsWith("i-");
           title: fixMojibake(usedEntranceData.title),
           subtitle: fixMojibake(usedEntranceData.subtitle),
           image: usedEntranceData.image
-        }} firstImageHref={firstImageHref} />
+        }} />
       </div>
     )}
 
