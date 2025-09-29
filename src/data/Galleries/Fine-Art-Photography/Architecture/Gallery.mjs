@@ -41,7 +41,7 @@ export const galleryData = [
     ],
     "story": "It smelled like warm stone and slow water. Not the kind that rushes — the kind that waits. A laundry line sagged just enough to brush a shutter. Pigeons somewhere overhead. You could hear voices on the other side of the canal, but not what they were saying. Didn’t need to. The flowers were enough.",
     "notes": "The composition leverages vertical layering — windows, balconies, boats, bricks — to pull the viewer through time as much as space. The weathered textures and hand-built irregularities invite slow reading. Color is softly vibrant: oranges, rusts, and jade tones balanced against a flat Venetian sky. The controlled saturation and use of subtle reflections recall the quiet elegance of 19th-century oil studies. This is travel photography made timeless — more remembered than recorded.",
-    "rating": 4,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 0,
