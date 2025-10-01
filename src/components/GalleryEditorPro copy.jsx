@@ -31,11 +31,6 @@ function buildMjs(galleryData, exportName = "galleryData") {
       if (it.notes != null) pushStr("notes", it.notes);
       if (it.url != null) pushStr("url", it.url);
       if (it.src != null) pushStr("src", it.src);
-      if (it.srcXL != null) pushStr("srcXL", it.srcXL);
-      if (it.srcL != null) pushStr("srcL", it.srcL);
-      if (it.srcM != null) pushStr("srcM", it.srcM);
-      if (it.srcS != null) pushStr("srcS", it.srcS);
-      if (it.srcOriginal != null) pushStr("srcOriginal", it.srcOriginal);
       if (it.section != null) pushStr("section", it.section);
       if (typeof it.rating === "number") pushVal("rating", it.rating);
       if (Array.isArray(it.tags)) out.push(`    tags: ${JSON.stringify(it.tags)},`);
@@ -69,7 +64,7 @@ function downloadText(text, filename) {
 
 function pickImage(d = {}) {
   return (
-    d.url || d.srcXL || d.srcL || d.srcM || d.srcS || d.src || d.imageUrl || d.cover || d.hero?.src || d.preview?.src ||
+    d.url || d.src || d.imageUrl || d.cover || d.hero?.src || d.preview?.src ||
     d.images?.[0]?.url || d.images?.[0]?.src || ""
   );
 }
@@ -328,12 +323,12 @@ export default function GalleryEditorPro() {
       const copy = [...arr];
       const {
         id, title, alt, description, story, collectorNotes, notes, tags, keywords,
-        url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink
+        url, src, section, rating, galleries, visibility, sortOrder, buyLink
       } = orig;
       copy[i] = {
         id, title, alt, description, story,
         collectorNotes: collectorNotes ?? notes,
-        tags, keywords, url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink
+        tags, keywords, url, src, section, rating, galleries, visibility, sortOrder, buyLink
       };
       return copy;
     });
@@ -348,12 +343,12 @@ export default function GalleryEditorPro() {
       backupData.filter(isRealItem).map((orig) => {
         const {
           id, title, alt, description, story, collectorNotes, notes, tags, keywords,
-          url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink
+          url, src, section, rating, galleries, visibility, sortOrder, buyLink
         } = orig;
         return {
           id, title, alt, description, story,
           collectorNotes: collectorNotes ?? notes,
-          tags, keywords, url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink
+          tags, keywords, url, src, section, rating, galleries, visibility, sortOrder, buyLink
         };
       })
     );
@@ -406,11 +401,6 @@ export default function GalleryEditorPro() {
               .map((s) => s.trim())
               .filter(Boolean),
         rating: typeof current.rating === "number" ? current.rating : undefined,
-        srcXL: current.srcXL ?? "",
-        srcL: current.srcL ?? "",
-        srcM: current.srcM ?? "",
-        srcS: current.srcS ?? "",
-        srcOriginal: current.srcOriginal ?? "",
       },
     };
 
@@ -593,7 +583,7 @@ export default function GalleryEditorPro() {
           </a>
 
           <a
-            href={`/admin/GalleryImporter?dataset=${datasetParam}`}
+            href={`/admin/GalleryImporter?to=${datasetParam}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => { clearDraftForCurrent(keyLS); setShowRefreshGuard(true); }}
@@ -739,36 +729,6 @@ export default function GalleryEditorPro() {
                   onChange={(e) => updateField("keywords", e.target.value)}
                   className="w-full min-h-[88px] border rounded-md px-2 py-1 resize-y"
                 />
-              </div>
-
-              <div>
-                <label className="block text-xs opacity-70 mb-1">Src</label>
-                <input value={current.src || ""} onChange={(e) => updateField("src", e.target.value)} className="w-full border rounded-md px-2 py-1" />
-              </div>
-
-              <div>
-                <label className="block text-xs opacity-70 mb-1">Src XL</label>
-                <input value={current.srcXL || ""} onChange={(e) => updateField("srcXL", e.target.value)} className="w-full border rounded-md px-2 py-1" />
-              </div>
-
-              <div>
-                <label className="block text-xs opacity-70 mb-1">Src L</label>
-                <input value={current.srcL || ""} onChange={(e) => updateField("srcL", e.target.value)} className="w-full border rounded-md px-2 py-1" />
-              </div>
-
-              <div>
-                <label className="block text-xs opacity-70 mb-1">Src M</label>
-                <input value={current.srcM || ""} onChange={(e) => updateField("srcM", e.target.value)} className="w-full border rounded-md px-2 py-1" />
-              </div>
-
-              <div>
-                <label className="block text-xs opacity-70 mb-1">Src S</label>
-                <input value={current.srcS || ""} onChange={(e) => updateField("srcS", e.target.value)} className="w-full border rounded-md px-2 py-1" />
-              </div>
-
-              <div>
-                <label className="block text-xs opacity-70 mb-1">Src Original</label>
-                <input value={current.srcOriginal || ""} onChange={(e) => updateField("srcOriginal", e.target.value)} className="w-full border rounded-md px-2 py-1" />
               </div>
             </div>
 

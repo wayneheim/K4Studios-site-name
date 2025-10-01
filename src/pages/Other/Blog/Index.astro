@@ -1,0 +1,105 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+
+import { posts } from "@/data/Other/Blog/posts.mjs"; // new dataset
+import "@/styles/global.css";
+
+// ----------------------
+// Dynamic Logic
+// ----------------------
+const sectionPath = "/Other/Blog";
+
+const structuredData = getStructuredData({
+  type: "Blog",
+  data: {
+    title: "Inside the Frame",
+    description: "Conversations with Quill about layered storytelling, composition, and painterly photography.",
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim"
+  },
+  images: posts.map(p => p.cover),
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const landingImgUrl = posts[0]?.cover || "";
+const meta = getLandingMeta(sectionPath, landingImgUrl);
+if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+---
+
+<BaseLayout
+  title="Inside the Frame – K4 Studios Blog"
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other › Blog" />
+    </div>
+
+    <section class="section-heading-wrap">
+      <div class="section-heading" style="font-family: 'Glegoo', serif;">
+        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">Inside the Frame</h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
+          Conversations on story, image, and meaning
+        </h2>
+      </div>
+    </section>
+
+    <!-- Intro block -->
+    <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-10">
+      <p class="text-lg leading-relaxed text-gray-700">
+        “Inside the Frame” is where I step out from behind the lens and share the stories 
+        that shape my work. Part interview, part reflection, these posts explore composition, 
+        symbolism, and the painterly choices that transform Western fine art photography into 
+        narrative-driven, painterly storytelling.
+      </p>
+    </section>
+
+    <section class="story-layout" style="font-family: 'Glegoo', serif;">
+      <!-- MAIN CONTENT (left) -->
+      <div class="text-column">
+        {posts.map(post => (
+          <article class="story-block mb-10">
+            <img src={post.cover} alt={post.title} class="mb-4 rounded-2xl shadow" />
+            <h2 class="text-xl font-bold mb-2">
+              <a href={`/Other/Blog/${post.slug}`}>{post.title}</a>
+            </h2>
+            <p class="text-sm text-gray-600 mb-2">{post.date}</p>
+            <p class="mb-4">{post.excerpt}</p>
+            <a href={`/Other/Blog/${post.slug}`} class="underline text-blue-700">Read more →</a>
+          </article>
+        ))}
+      </div>
+
+      <!-- SIDEBAR (right) -->
+      <div class="sidebar-column hidden md:block">
+        <div class="sample-fade reveal-on-scroll p-4 border rounded-xl shadow bg-gray-50">
+          <h3 class="font-bold mb-3">All Posts</h3>
+          <ul class="space-y-2">
+            {posts.map(post => (
+              <li>
+                <a href={`/Other/Blog/${post.slug}`} class="block hover:text-red-600">
+                  {post.title}
+                </a>
+                <span class="block text-xs text-gray-500">{post.date}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+</BaseLayout>
