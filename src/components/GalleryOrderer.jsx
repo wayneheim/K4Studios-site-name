@@ -154,6 +154,11 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   // undo stack for last move
   const lastMoveRef = useRef(null); // {from,to,snapshot}
 
+  // context menu state
+  const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0, itemId: null, action: null, targetPath: '' });
+  const [showBackupPrompt, setShowBackupPrompt] = useState(false);
+  const [backupOptions, setBackupOptions] = useState({ source: true, target: true });
+
   // Choose dataset: prefer prop → URL → first option
   useEffect(() => {
     if (!options.length) return;
@@ -186,6 +191,17 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedPath]);
+
+  // close context menu on outside click
+  useEffect(() => {
+    function handleClickOutside() {
+      if (contextMenu.visible) {
+        closeContextMenu();
+      }
+    }
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [contextMenu.visible]);
 
   function note(msg) {
     setLastAction(`${msg} — ${new Date().toLocaleTimeString()}`);
@@ -324,6 +340,111 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     setDirty(false);
   }
 
+  // context menu handler
+  function handleContextMenu(e, itemId) {
+    e.preventDefault();
+    setContextMenu({ visible: true, x: e.clientX, y: e.clientY, itemId, action: null, targetPath: '' });
+  }
+
+  function closeContextMenu() {
+    setContextMenu({ visible: false, x: 0, y: 0, itemId: null, action: null, targetPath: '' });
+  }
+
+  // perform move or copy
+  async function performAction() {
+    const { itemId, action, targetPath } = contextMenu;
+    if (!itemId || !action || !targetPath) return;
+
+    const item = items.find(it => it.id === itemId);
+    if (!item) return;
+
+    // download backups if selected
+    if (backupOptions.source) {
+      const ts = new Date().toISOString().replace(/[:.]/g, "-");
+      const sourceFilename = `BACKUP-${selectedPath.split('/').pop()}-${ts}`;
+      downloadText(JSON.stringify(backupData, null, 2), `${sourceFilename}.json`);
+      downloadText(buildMjsJson(backupData, "galleryData"), `${sourceFilename}.mjs`);
+    }
+
+    // load target data
+    let targetData = [];
+    try {
+      const mod = await modules[targetPath]();
+      targetData = Array.isArray(mod) ? mod : [];
+    } catch (err) {
+      alert("Failed to load target dataset: " + err.message);
+      return;
+    }
+
+    if (backupOptions.target) {
+      const ts = new Date().toISOString().replace(/[:.]/g, "-");
+      const targetFilename = `BACKUP-${targetPath.split('/').pop()}-${ts}`;
+      downloadText(JSON.stringify(targetData, null, 2), `${targetFilename}.json`);
+      downloadText(buildMjsJson(targetData, "galleryData"), `${targetFilename}.mjs`);
+    }
+
+    // prepare updated data
+    const normalizedItem = normalizeItem(item);
+    normalizedItem.sortOrder = targetData.filter(isRealItem).length; // append to end
+
+    let updatedSource = backupData;
+    let updatedTarget = targetData;
+
+    if (action === 'move') {
+      // remove from source
+      updatedSource = backupData.filter(it => it.id !== itemId);
+      // add to target
+      updatedTarget = targetData.concat([normalizedItem]);
+    } else if (action === 'copy') {
+      // just add to target
+      updatedTarget = targetData.concat([normalizedItem]);
+    }
+
+    // save source if moved
+    if (action === 'move') {
+      try {
+        const res = await fetch("/.netlify/functions/updateGalleryOrder", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            datasetPath: selectedPath.replace(/^\//, ""),
+            fullArray: updatedSource,
+          }),
+        });
+        if (!res.ok) throw new Error(await res.text());
+      } catch (err) {
+        alert("Failed to update source: " + err.message);
+        return;
+      }
+    }
+
+    // save target
+    try {
+      const res = await fetch("/.netlify/functions/updateGalleryOrder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          datasetPath: targetPath.replace(/^\//, ""),
+          fullArray: updatedTarget,
+        }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+    } catch (err) {
+      alert("Failed to update target: " + err.message);
+      return;
+    }
+
+    // update local state if current dataset affected
+    if (action === 'move' && selectedPath === selectedPath) {
+      setItems(updatedSource.filter(isRealItem));
+      setBackupData(updatedSource);
+      setDirty(false);
+    }
+
+    note(`${action === 'move' ? 'Moved' : 'Copied'} item to ${targetPath.split('/').pop()}`);
+    closeContextMenu();
+  }
+
   const total = items.length;
 
   return (
@@ -426,6 +547,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
               onDragStart={(e) => onDragStart(e, it.id)}
               onDragOver={onDragOver}
               onDrop={(e) => onDrop(e, it.id)}
+              onContextMenu={(e) => handleContextMenu(e, it.id)}
               className="relative border rounded-md bg-white overflow-hidden shadow-sm"
               title={`#${i + 1} – ${it.id}${hidden ? " (hidden)" : ""}`}
               style={hidden ? { opacity: 0.5, filter: "grayscale(0.35)" } : undefined}
@@ -483,6 +605,111 @@ export default function GalleryOrderer({ datasetPath = "" }) {
           );
         })}
       </div>
+
+      {/* context menu */}
+      {contextMenu.visible && (
+        <div
+          className="fixed z-50 bg-white border border-gray-300 rounded-md shadow-lg p-3"
+          style={{ left: contextMenu.x, top: contextMenu.y }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="text-sm font-medium mb-2">Move/Copy to:</div>
+          <select
+            className="border rounded-md px-2 py-1 mb-2 w-full"
+            value={contextMenu.targetPath}
+            onChange={(e) => setContextMenu(prev => ({ ...prev, targetPath: e.target.value }))}
+          >
+            <option value="">Select target...</option>
+            {options.filter(o => o.path !== selectedPath).map((o) => (
+              <option key={o.path} value={o.path}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+          <div className="flex gap-2">
+            <button
+              onClick={() => {
+                if (!contextMenu.targetPath) return;
+                setContextMenu(prev => ({ ...prev, action: 'move' }));
+                setBackupOptions({ source: true, target: true });
+                setShowBackupPrompt(true);
+              }}
+              className="px-3 py-1 rounded-md border bg-blue-50 hover:bg-blue-100"
+              disabled={!contextMenu.targetPath}
+            >
+              Move
+            </button>
+            <button
+              onClick={() => {
+                if (!contextMenu.targetPath) return;
+                setContextMenu(prev => ({ ...prev, action: 'copy' }));
+                setBackupOptions({ source: true, target: true });
+                setShowBackupPrompt(true);
+              }}
+              className="px-3 py-1 rounded-md border bg-green-50 hover:bg-green-100"
+              disabled={!contextMenu.targetPath}
+            >
+              Copy
+            </button>
+            <button
+              onClick={closeContextMenu}
+              className="px-3 py-1 rounded-md border"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* backup prompt */}
+      {showBackupPrompt && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-md shadow-lg max-w-md w-full">
+            <h3 className="text-lg font-semibold mb-4">Backup Before Proceeding</h3>
+            <p className="mb-4 text-sm">Before {contextMenu.action === 'move' ? 'moving' : 'copying'} the item, download backups of the affected files?</p>
+            <div className="space-y-2 mb-4">
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  checked={backupOptions.source}
+                  onChange={(e) => setBackupOptions(prev => ({ ...prev, source: e.target.checked }))}
+                  className="mr-2"
+                />
+                Backup source file ({selectedPath.split('/').pop()})
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  checked={backupOptions.target}
+                  onChange={(e) => setBackupOptions(prev => ({ ...prev, target: e.target.checked }))}
+                  className="mr-2"
+                />
+                Backup target file ({contextMenu.targetPath.split('/').pop()})
+              </label>
+            </div>
+            <div className="flex gap-2 justify-end">
+              <button
+                onClick={() => {
+                  setShowBackupPrompt(false);
+                  performAction();
+                }}
+                className="px-4 py-2 rounded-md border bg-blue-50 hover:bg-blue-100"
+              >
+                Proceed
+              </button>
+              <button
+                onClick={() => {
+                  setShowBackupPrompt(false);
+                  closeContextMenu();
+                }}
+                className="px-4 py-2 rounded-md border"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="mt-4 text-xs opacity-70">
         Drag to reorder. Use the S/H buttons to show/hide items. Click <strong>Save Here (server)</strong> to overwrite

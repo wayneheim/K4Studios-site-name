@@ -635,6 +635,13 @@ export const siteNav = [
       "slug": "photo-shoots",
       "type": "gallery-source"
     },
+      {
+        "label": "Blog",
+        "href": "/Other/Blog/",
+        "code": "O-S5",
+        "slug": "blog",
+        "type": "section"
+      },
     
   ],
   "code": "O",

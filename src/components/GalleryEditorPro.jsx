@@ -593,7 +593,7 @@ export default function GalleryEditorPro() {
           </a>
 
           <a
-            href={`/admin/GalleryImporter?dataset=${datasetParam}`}
+            href={`/admin/GalleryImporter?to=${datasetParam}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => { clearDraftForCurrent(keyLS); setShowRefreshGuard(true); }}
