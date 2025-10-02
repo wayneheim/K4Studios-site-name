@@ -412,7 +412,15 @@ export default function ChapterGalleryBase({
                             <button
                               ref={notesBtnRef}
                               type="button"
-                              onClick={(e) => { e.stopPropagation(); setShowNotes((p) => !p); }}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setShowNotes((p) => !p);
+                                logUIEvent("collector_notes_toggle", {
+                                  page: window.location.pathname,
+                                  imageId: galleryData[currentIndex]?.id,
+                                  notesVisible: !showNotes
+                                });
+                              }}
                               aria-label="View Collector Notes"
                               title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
                               className="absolute top-2 right-3 w-8 h-9 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition z-30 flex items-center justify-center"
