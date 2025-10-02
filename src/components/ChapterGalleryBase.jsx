@@ -1,5 +1,3 @@
-import { useState, useRef, useEffect, useMemo } from "react";
-// ...existing imports...
 // Helper to log UI events to Airtable
 async function logUIEvent(eventType, details = {}) {
   try {
@@ -12,6 +10,7 @@ async function logUIEvent(eventType, details = {}) {
     console.error("UI event logging failed:", err);
   }
 }
+import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight } from "lucide-react";
 import ZoomOverlay from "./ZoomOverlay.jsx";
