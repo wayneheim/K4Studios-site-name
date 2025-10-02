@@ -104,9 +104,46 @@ export default function ChapterGalleryBase({
     document.documentElement.getAttribute("data-k4tour-open") === "1";
 
   // Nav handlers
-  const goPrev = (e) => { e?.stopPropagation(); if (tourOpen()) return; setIsExpanded(false); setCurrentIndex((i) => Math.max(i - 1, 0)); };
-  const goNext = (e) => { e?.stopPropagation(); if (tourOpen()) return; setIsExpanded(false); setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1)); };
-  const goGrid = (e) => { e?.stopPropagation(); if (tourOpen()) return; setViewMode("grid"); };
+  const goPrev = (e) => {
+    e?.stopPropagation();
+    if (tourOpen()) return;
+    setIsExpanded(false);
+    setCurrentIndex((i) => {
+      const newIndex = Math.max(i - 1, 0);
+      logUIEvent("gallery_prev", {
+        page: window.location.pathname,
+        fromIndex: i,
+        toIndex: newIndex,
+        imageId: galleryData[newIndex]?.id
+      });
+      return newIndex;
+    });
+  };
+  const goNext = (e) => {
+    e?.stopPropagation();
+    if (tourOpen()) return;
+    setIsExpanded(false);
+    setCurrentIndex((i) => {
+      const newIndex = Math.min(i + 1, galleryData.length - 1);
+      logUIEvent("gallery_next", {
+        page: window.location.pathname,
+        fromIndex: i,
+        toIndex: newIndex,
+        imageId: galleryData[newIndex]?.id
+      });
+      return newIndex;
+    });
+  };
+  const goGrid = (e) => {
+    e?.stopPropagation();
+    if (tourOpen()) return;
+    setViewMode("grid");
+    logUIEvent("gallery_grid_view", {
+      page: window.location.pathname,
+      imageId: galleryData[currentIndex]?.id,
+      index: currentIndex
+    });
+  };
   const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; if (basePath) window.location.href = basePath; };
 
   // Enter chapters
@@ -394,7 +431,15 @@ export default function ChapterGalleryBase({
                                 };
                               })()
                             }
-                            onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
+                            onClick={() => {
+                              if (!isLandscapeMobile) {
+                                setIsZoomed(true);
+                                logUIEvent("image_zoom", {
+                                  page: window.location.pathname,
+                                  imageId: galleryData[currentIndex]?.id
+                                });
+                              }
+                            }}
                             data-zoom-btn
                             onMouseEnter={(e) => {
                               if (!isMobile) {
