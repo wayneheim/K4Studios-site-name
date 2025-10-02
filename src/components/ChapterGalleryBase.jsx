@@ -1,4 +1,17 @@
 import { useState, useRef, useEffect, useMemo } from "react";
+// ...existing imports...
+// Helper to log UI events to Airtable
+async function logUIEvent(eventType, details = {}) {
+  try {
+    await fetch("/.netlify/functions/log-ui-event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ eventType, details, timestamp: Date.now() }),
+    });
+  } catch (err) {
+    console.error("UI event logging failed:", err);
+  }
+}
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight } from "lucide-react";
 import ZoomOverlay from "./ZoomOverlay.jsx";
@@ -596,7 +609,12 @@ export default function ChapterGalleryBase({
                     {!showStoryShow && (
                       <button
                         type="button"
-                        onClick={() => { if (!tourOpen()) setShowStoryShow(true); }}
+                        onClick={() => {
+                          if (!tourOpen()) {
+                            setShowStoryShow(true);
+                            logUIEvent("slideshow_start", { page: window.location.pathname });
+                          }
+                        }}
                         aria-label="Play K4 Slideshow"
                         title="Play K4 Story Show"
                         className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
