@@ -105,46 +105,9 @@ export default function ChapterGalleryBase({
     document.documentElement.getAttribute("data-k4tour-open") === "1";
 
   // Nav handlers
-  const goPrev = (e) => {
-    e?.stopPropagation();
-    if (tourOpen()) return;
-    setIsExpanded(false);
-    setCurrentIndex((i) => {
-      const newIndex = Math.max(i - 1, 0);
-      logUIEvent("gallery_prev", {
-        page: window.location.pathname,
-        fromIndex: i,
-        toIndex: newIndex,
-        imageId: galleryData[newIndex]?.id
-      });
-      return newIndex;
-    });
-  };
-  const goNext = (e) => {
-    e?.stopPropagation();
-    if (tourOpen()) return;
-    setIsExpanded(false);
-    setCurrentIndex((i) => {
-      const newIndex = Math.min(i + 1, galleryData.length - 1);
-      logUIEvent("gallery_next", {
-        page: window.location.pathname,
-        fromIndex: i,
-        toIndex: newIndex,
-        imageId: galleryData[newIndex]?.id
-      });
-      return newIndex;
-    });
-  };
-  const goGrid = (e) => {
-    e?.stopPropagation();
-    if (tourOpen()) return;
-    setViewMode("grid");
-    logUIEvent("gallery_grid_view", {
-      page: window.location.pathname,
-      imageId: galleryData[currentIndex]?.id,
-      index: currentIndex
-    });
-  };
+  const goPrev = (e) => { e?.stopPropagation(); if (tourOpen()) return; setIsExpanded(false); setCurrentIndex((i) => Math.max(i - 1, 0)); };
+  const goNext = (e) => { e?.stopPropagation(); if (tourOpen()) return; setIsExpanded(false); setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1)); };
+  const goGrid = (e) => { e?.stopPropagation(); if (tourOpen()) return; setViewMode("grid"); };
   const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; if (basePath) window.location.href = basePath; };
 
   // Enter chapters
@@ -432,15 +395,7 @@ export default function ChapterGalleryBase({
                                 };
                               })()
                             }
-                            onClick={() => {
-                              if (!isLandscapeMobile) {
-                                setIsZoomed(true);
-                                logUIEvent("image_zoom", {
-                                  page: window.location.pathname,
-                                  imageId: galleryData[currentIndex]?.id
-                                });
-                              }
-                            }}
+                            onClick={() => { if (!isLandscapeMobile) setIsZoomed(true); }}
                             data-zoom-btn
                             onMouseEnter={(e) => {
                               if (!isMobile) {
@@ -458,15 +413,7 @@ export default function ChapterGalleryBase({
                             <button
                               ref={notesBtnRef}
                               type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setShowNotes((p) => !p);
-                                logUIEvent("collector_notes_toggle", {
-                                  page: window.location.pathname,
-                                  imageId: galleryData[currentIndex]?.id,
-                                  notesVisible: !showNotes
-                                });
-                              }}
+                              onClick={(e) => { e.stopPropagation(); setShowNotes((p) => !p); }}
                               aria-label="View Collector Notes"
                               title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
                               className="absolute top-2 right-3 w-8 h-9 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition z-30 flex items-center justify-center"
