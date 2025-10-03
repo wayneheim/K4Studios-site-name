@@ -338,43 +338,37 @@ export default function ChapterGalleryBase({
   // Nav handlers
   const goPrev = (e) => {
     e?.stopPropagation();
+    logUIEvent("gallery_prev", {
+      page: window.location.pathname,
+      fromIndex: currentIndex,
+      toIndex: Math.max(currentIndex - 1, 0),
+      imageId: galleryData[Math.max(currentIndex - 1, 0)]?.id
+    });
     if (tourOpen()) return;
     setIsExpanded(false);
-    setCurrentIndex((i) => {
-      const newIndex = Math.max(i - 1, 0);
-      logUIEvent("gallery_prev", {
-        page: window.location.pathname,
-        fromIndex: i,
-        toIndex: newIndex,
-        imageId: galleryData[newIndex]?.id
-      });
-      return newIndex;
-    });
+    setCurrentIndex((i) => Math.max(i - 1, 0));
   };
   const goNext = (e) => {
     e?.stopPropagation();
+    logUIEvent("gallery_next", {
+      page: window.location.pathname,
+      fromIndex: currentIndex,
+      toIndex: Math.min(currentIndex + 1, galleryData.length - 1),
+      imageId: galleryData[Math.min(currentIndex + 1, galleryData.length - 1)]?.id
+    });
     if (tourOpen()) return;
     setIsExpanded(false);
-    setCurrentIndex((i) => {
-      const newIndex = Math.min(i + 1, galleryData.length - 1);
-      logUIEvent("gallery_next", {
-        page: window.location.pathname,
-        fromIndex: i,
-        toIndex: newIndex,
-        imageId: galleryData[newIndex]?.id
-      });
-      return newIndex;
-    });
+    setCurrentIndex((i) => Math.min(i + 1, galleryData.length - 1));
   };
   const goGrid = (e) => {
     e?.stopPropagation();
-    if (tourOpen()) return;
-    setViewMode("grid");
     logUIEvent("gallery_grid_view", {
       page: window.location.pathname,
       imageId: galleryData[currentIndex]?.id,
       index: currentIndex
     });
+    if (tourOpen()) return;
+    setViewMode("grid");
   };
   const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; if (basePath) window.location.href = basePath; };
 
@@ -904,9 +898,9 @@ export default function ChapterGalleryBase({
                       <button
                         type="button"
                         onClick={() => {
+                          logUIEvent("slideshow_start", { page: window.location.pathname });
                           if (!tourOpen()) {
                             setShowStoryShow(true);
-                            logUIEvent("slideshow_start", { page: window.location.pathname });
                           }
                         }}
                         aria-label="Play K4 Slideshow"
