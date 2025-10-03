@@ -1,4 +1,6 @@
 ---
+import GalleryTourSkipClearer from "../components/GalleryTourSkipClearer.jsx";
+
 const {
   title = 'Gallery',
   structuredDataJSON,
@@ -209,6 +211,7 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
   </head>
 
   <body>
+    <GalleryTourSkipClearer client:load />
     <div class="page-container">
       <slot />
     </div>

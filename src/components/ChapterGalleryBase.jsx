@@ -29,7 +29,237 @@ import useMetaSwap from "./hooks/useMetaSwap.js";
    Reusable lightweight guided tour (uses sectionKey + image)
    ========================================================= */
 function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
-  // ... [UNCHANGED guided tour code]
+  const [isOpen, setIsOpen] = useState(false);
+  const [idx, setIdx] = useState(0);
+  const [rect, setRect] = useState(null);
+  const seenKey = `k4-tour-seen:${sectionKey || "k4"}`;
+
+  const isVisible = (el) => {
+    if (!el) return false;
+    const style = window.getComputedStyle(el);
+    if (style.display === "none" || style.visibility === "hidden" || parseFloat(style.opacity) === 0) return false;
+    const r = el.getBoundingClientRect();
+    return r.width > 0 && r.height > 0;
+  };
+  const pickVisible = (selector) => {
+    const nodes = Array.from(document.querySelectorAll(selector));
+    return nodes.find(isVisible) || null;
+  };
+
+  // Get notes for the current image
+  let notes = null;
+  try {
+    const el = document.querySelector(`[data-image-id="${imageId}"] [data-notes-btn]`);
+    notes = el && el.offsetParent !== null;
+  } catch {}
+
+  const steps = [
+    { selector: null, placement: 'center', title: 'Welcome to our Chapter Viewer', body: 'Before exploring the chapter-images, take a quick tour of our features to get the most out of your visit — navigation, grid view, zoom + matting, likes, sharing, ordering prints and more.' },
+    { selector: `[data-image-id="${imageId}"] [data-prev-btn]`,  title: 'Go Back', body: 'Step back to previous chapter-image.', placement: 'bottom' },
+    { selector: `[data-image-id="${imageId}"] [data-next-btn]`,  title: 'Go Forward', body: 'Continue to the next chapter-image.', placement: 'bottom' },
+    { selector: `[data-image-id="${imageId}"] [data-grid-btn]`,  title: 'Grid View', body: 'Open a dynamic grid index to jump around.', placement: 'bottom' },
+    { selector: `[data-image-id="${imageId}"] [data-menu-btn]`,  title: 'Menu', body: 'Open the site-wide navigation.', placement: 'bottom' },
+    { selector: `[data-image-id="${imageId}"] [data-count]`,     title: 'Position', body: 'See your place in this gallery.', placement: 'top' },
+    { selector: `[data-image-id="${imageId}"] [data-jump-form]`, title: 'Jump to #', body: 'Enter a chapter number to jump directly.', placement: 'top' },
+    { selector: `[data-cart-btn]`,  title: 'Buy a Print', body: 'Order a print of this image.', placement: 'top' },
+    { selector: `[data-image-id="${imageId}"] [data-like-btn]`,  title: 'Like', body: 'Tap the heart to save favorites.', placement: 'top' },
+    ...(notes ? [{ selector: `[data-image-id="${imageId}"] [data-notes-btn]`, title: 'Collector Notes', body: 'Open in-depth background & story details for this image (tap again to close).', placement: 'right' }] : []),
+    { selector: `[data-image-id="${imageId}"] [data-exit-btn]`,  title: 'Exit', body: 'Return to the gallery landing page.', placement: 'top' },
+    { selector: `[data-image-id="${imageId}"] [data-zoom-btn]`,  title: 'Zoom + Matting', body: 'Click image for zoom & matting tools.', placement: 'right' },
+    { selector: `[data-image-id="${imageId}"] [data-slideshow-btn]`, title: 'Slideshow', body: 'Watch an automated story show.', placement: 'top' },
+    { selector: `[data-share-btn]`, title: 'Share', body: 'Copy or share this chapter-image.', placement: 'top' },
+  ];
+
+  // Open logic
+  useEffect(() => {
+    if (!autoStart) return;
+
+    const tryStart = () => {
+      // Hide tour for this gallery if skip flag is set in sessionStorage
+      if (sessionStorage.getItem(`k4-tour-skip:${sectionKey || "k4"}`) === "1") return;
+      try {
+        const raw = localStorage.getItem(seenKey);
+        if (raw) {
+          if (raw === "1") return;
+          try {
+            const obj = JSON.parse(raw);
+            if (obj && typeof obj.ts === "number" && typeof obj.ttl === "number") {
+              if (Date.now() - obj.ts < obj.ttl) return;
+              localStorage.removeItem(seenKey);
+            }
+          } catch {}
+        }
+      } catch {}
+
+      const ok =
+        pickVisible(`[data-image-id="${imageId}"] [data-next-btn], [data-image-id="${imageId}"] [data-prev-btn], [data-image-id="${imageId}"] [data-grid-btn], [data-image-id="${imageId}"] [data-zoom-btn]`) ||
+        pickVisible(`[data-next-btn], [data-prev-btn], [data-grid-btn], [data-zoom-btn]`) ||
+        pickVisible(`[data-cart-btn], [data-share-btn]`) ||
+        pickVisible(`[data-image-id="${imageId}"] [data-exit-btn]`);
+
+      if (ok) { setIsOpen(true); return; }
+
+      let tries = 0;
+      const max = 30;
+      const tick = 15;
+      const retry = () => {
+        const again =
+          pickVisible(`[data-image-id="${imageId}"] [data-next-btn], [data-image-id="${imageId}"] [data-prev-btn], [data-image-id="${imageId}"] [data-grid-btn], [data-image-id="${imageId}"] [data-zoom-btn]`) ||
+          pickVisible(`[data-next-btn], [data-prev-btn], [data-grid-btn], [data-zoom-btn]`) ||
+          pickVisible(`[data-cart-btn], [data-share-btn]`) ||
+          pickVisible(`[data-image-id="${imageId}"] [data-exit-btn]`);
+        if (again) { setIsOpen(true); return; }
+        if (tries++ < max) setTimeout(retry, tick);
+      };
+      retry();
+    };
+
+    tryStart();
+    window.addEventListener("k4:urlchange", tryStart);
+    return () => window.removeEventListener("k4:urlchange", tryStart);
+  }, [autoStart, seenKey, imageId, sectionKey]);
+
+  // Mark html with a flag while tour is open — nav/keys check this
+  useEffect(() => {
+    const html = document.documentElement;
+    if (isOpen) html.setAttribute("data-k4tour-open", "1"); else html.removeAttribute("data-k4tour-open");
+    return () => html.removeAttribute("data-k4tour-open");
+  }, [isOpen]);
+
+  // Position tip/spotlight
+  useEffect(() => {
+    if (!isOpen) return;
+    const onRecalc = () => {
+      const step = steps[idx];
+      if (!step) return setRect(null);
+      if (!step.selector) { setRect(null); return; }
+      const el = pickVisible(step.selector);
+      if (!el) { setRect(null); return; }
+      const r = el.getBoundingClientRect();
+      setRect({ x: r.left, y: r.top, w: r.width, h: r.height });
+    };
+    onRecalc();
+    window.addEventListener("resize", onRecalc, { passive: true });
+    window.addEventListener("scroll", onRecalc, { passive: true });
+    return () => {
+      window.removeEventListener("resize", onRecalc);
+      window.removeEventListener("scroll", onRecalc);
+    };
+  }, [isOpen, idx, steps]);
+
+  if (typeof window !== "undefined" && !/\/i-[a-zA-Z0-9_-]+$/i.test(window.location.pathname)) return null;
+  if (typeof window === "undefined" || !isOpen || !steps[idx]) return null;
+
+  const pad = 12, tipW = 320, tipH = 120;
+  const r = rect;
+  const placement = steps[idx].placement || "bottom";
+  const tipPos = (() => {
+    if (!r || placement === "center" || steps[idx]?.selector == null) {
+      const left = Math.max(12, (window.innerWidth - tipW) / 2);
+      const top  = Math.max(12, (window.innerHeight - tipH) / 2);
+      return { left, top };
+    }
+    let left = r.x, top = r.y;
+    if (placement === "bottom") { left = r.x; top = r.y + r.h + pad; }
+    if (placement === "top")    { left = r.x; top = r.y - tipH - pad; }
+    if (placement === "left")   { left = r.x - tipW - pad; top = r.y; }
+    if (placement === "right")  { left = r.x + r.w + pad; top = r.y; }
+    left = Math.max(12, Math.min(left, window.innerWidth - tipW - 12));
+    top  = Math.max(12, Math.min(top, window.innerHeight - tipH - 12));
+    return { left, top };
+  })();
+
+  const spotlightStyle = r
+    ? { position: "fixed", left: r.x - 8, top: r.y - 8, width: r.w + 16, height: r.h + 16, borderRadius: 10, boxShadow: "0 0 0 9999px rgba(0,0,0,0.6)", outline: "2px solid rgba(255,255,255,0.5)", pointerEvents: "none", transition: "all .2s ease" }
+    : { position: "fixed", inset: 0, boxShadow: "0 0 0 9999px rgba(0,0,0,0.6)", pointerEvents: "none" };
+
+  const closeTour = (markSeen = true) => {
+    if (markSeen) { try { localStorage.setItem(seenKey, "1"); } catch {} }
+    setIsOpen(false);
+    onClose && onClose();
+  };
+
+  return createPortal(
+    <div style={{ position: "fixed", inset: 0, zIndex: 999999, pointerEvents: "none", fontFamily: "'Glegoo', serif" }}>
+      <div style={spotlightStyle} />
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={steps[idx].title}
+        style={{ position: "fixed", left: tipPos.left, top: tipPos.top, width: 320, minHeight: 120, background: "rgba(255,255,255,0.96)", color: "#1b1a19", border: "1px solid rgba(0,0,0,0.15)", borderRadius: 12, boxShadow: "0 10px 30px rgba(0,0,0,0.25)", padding: "14px 14px 10px 14px", pointerEvents: "auto", userSelect: "none" }}
+      >
+        <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 6 }}>{steps[idx].title}</div>
+        <div style={{ fontSize: 13, lineHeight: 1.35 }}>{steps[idx].body}</div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 10 }}>
+          <div style={{ fontSize: 12, opacity: 0.7 }}>
+            {steps[idx].selector ? (() => {
+              const counted = steps.filter(s => s.selector);
+              const currentNumber = counted.indexOf(steps[idx]) + 1;
+              return `Step ${currentNumber} / ${counted.length}`;
+            })() : null}
+          </div>
+          <div style={{ display: "flex", gap: 6, flexWrap: 'wrap' }}>
+            {!(idx === 0 && steps[idx].selector == null) && (
+              <button
+                type="button"
+                onClick={() => setIdx((i) => Math.max(0, i - 1))}
+                disabled={idx === 0}
+                style={{ pointerEvents: "auto", background: idx === 0 ? "#f2f2f2" : "#fff", color: idx === 0 ? "#999" : "#4a4a4a", border: "1px solid #d0d0d0", borderRadius: 8, padding: "6px 10px", fontSize: 13, cursor: idx === 0 ? "not-allowed" : "pointer" }}
+              >
+                Back
+              </button>
+            )}
+            {idx < steps.length - 1 ? (
+              <button
+                type="button"
+                onClick={() => setIdx((i) => Math.min(steps.length - 1, i + 1))}
+                style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
+              >
+                Next
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => closeTour(true)}
+                style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
+              >
+                Done
+              </button>
+            )}
+            <button
+              type="button"
+              title="Skip for now"
+              onClick={() => {
+                try {
+                  sessionStorage.setItem(`k4-tour-skip:${sectionKey || "k4"}`, "1");
+                } catch {}
+                setIsOpen(false); onClose && onClose();
+              }}
+              style={{ pointerEvents: "auto", background: "transparent", marginLeft: 10, color: "#7b1e1e", border: "1px solid rgba(123,30,30,0.35)", borderRadius: 88, padding: "5px 5px", fontSize: 11, cursor: "pointer" }}
+            >
+              Skip
+            </button>
+            {!steps[idx].selector && (
+              <button
+                type="button"
+                title="Hide for 1 month"
+                onClick={() => {
+                  try {
+                    localStorage.setItem(seenKey, JSON.stringify({ ts: Date.now(), ttl: 2592000000 })); // 30 days in ms
+                  } catch {}
+                  setIsOpen(false); onClose && onClose();
+                }}
+                style={{ pointerEvents: "auto", background: "#fff", color: "#444", border: "1px solid #c0c0c0", borderRadius: 88, padding: "5px 5px", fontSize: 11, cursor: "pointer" }}
+              >
+                Hide
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
 }
 
 /* =========================
@@ -63,7 +293,9 @@ export default function ChapterGalleryBase({
 
   const galleryData = useMemo(() => {
     const arr = Array.isArray(rawData) ? rawData : [];
-    return arr.filter((e) => e && !isGhost(e) && !isHidden(e));
+    return arr
+      .filter((e) => e && !isGhost(e) && !isHidden(e))
+      .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
   }, [rawData]);
 
   const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
@@ -457,6 +689,7 @@ export default function ChapterGalleryBase({
                             <button
                               ref={notesBtnRef}
                               type="button"
+                              data-notes-btn
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setShowNotes((p) => !p);
@@ -559,6 +792,7 @@ export default function ChapterGalleryBase({
                         <button
                           ref={notesBtnRef}
                           type="button"
+                          data-notes-btn
                           onClick={(e) => {
                             e.stopPropagation();
                             setShowNotes((p) => !p);
@@ -978,10 +1212,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
 
       {/* Swipe hint + Guided Tour */}
       <SwipeHint galleryKey={galleryKey || "k4-gallery"} />
-      {/* Show tour only while on the very first slide */}
-      {currentIndex === 0 && (
-        <GalleryTour sectionKey={sectionKey} imageId={currentId} autoStart={true} />
-      )}
+      <GalleryTour sectionKey={sectionKey} imageId={currentId} autoStart={true} />
     </div>
   );
 }
