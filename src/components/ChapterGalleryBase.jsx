@@ -263,7 +263,7 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
 }
 
 /* =========================
-   Utility + Base Component
+   Utility + Base adf  Component
    ========================= */
 function fixMojibake(str) {
   if (!str) return str;
