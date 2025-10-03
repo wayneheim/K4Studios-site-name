@@ -32,6 +32,11 @@ function normalizeItem(raw) {
   if (raw.description != null) out.description = raw.description;
   if (raw.alt != null) out.alt = raw.alt;
   if (raw.src != null || raw.url != null) out.src = raw.src || raw.url;
+  if (raw.srcXL != null) out.srcXL = raw.srcXL;
+  if (raw.srcL != null) out.srcL = raw.srcL;
+  if (raw.srcM != null) out.srcM = raw.srcM;
+  if (raw.srcS != null) out.srcS = raw.srcS;
+  if (raw.srcOriginal != null) out.srcOriginal = raw.srcOriginal;
   if (raw.buyLink != null) out.buyLink = raw.buyLink;
   if (keywords != null) out.keywords = keywords;
   if (raw.story != null) out.story = raw.story;

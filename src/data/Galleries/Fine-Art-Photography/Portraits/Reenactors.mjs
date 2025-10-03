@@ -4436,5 +4436,28 @@ export const galleryData = [
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 170
+  },
+  {
+    "id": "i-B2H9fFs",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-B2H9fFs/0/L8G8sx2mpjDFhzk22PW8PbLnnqGJ2H3Zdnp9Lg4Nk/L/_HF24190-705-L.jpg",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-B2H9fFs/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "sortOrder": 171
   }
 ];

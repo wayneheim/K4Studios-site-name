@@ -29,9 +29,20 @@ const structuredData = getStructuredData({
   }
 });
 
-const meta = getLandingMeta(sectionPath, coverImage);
-if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+const meta = {
+  ...getLandingMeta(sectionPath, coverImage),
+  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogTitle: "Inside the Frame: High Ground Justice",
+  ogDescription: "A conversation with Quill about layered storytelling, composition, and painterly meaning behind Wayne Heim’s Western image ‘High Ground Justice.’",
+  ogImage: coverImage,
+  ogImageAlt: "High Ground Justice cover",
+  ogType: "article",
+  twitterUrl: `https://k4studios.com${sectionPath}`,
+  twitterTitle: "Inside the Frame: High Ground Justice",
+  twitterDescription: "A conversation with Quill about layered storytelling, composition, and painterly meaning behind Wayne Heim’s Western image ‘High Ground Justice.’",
+  twitterImage: coverImage,
+  twitterCard: "summary_large_image"
+};
 ---
 
 <BaseLayout
@@ -63,12 +74,17 @@ if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
   <a 
     href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-FpH3LXf" 
     style="display:inline-block;"
+    onMouseEnter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)';"
+    onMouseLeave="this.querySelector('img').style.boxShadow='none';"
   >
     <img 
       src="https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KmHXFd8MFFCLTpg7SH72LN3SwhQPWNkXvQsDGcdBN/XL/_HF25860-Edit-XL.jpg" 
       alt="High Ground Justice cover" 
-      style="max-width:800px; width:100%; height:auto; margin:0 auto; border-radius:8px;" 
+      style="max-width:640px; width:100%; height:auto; margin:0 auto; border-radius:8px; transition:box-shadow .3s;" 
     />
+    <div style="font-size:0.95rem; color:#888; text-align:right; margin-top:0.25rem;">
+      Click for details
+    </div>
   </a>
   <!-- Replace `href` above with the gallery/chapter page URL from your dataset -->
   <!-- Replace `src` above with the image path or dataset field (e.g. {post.cover}) -->

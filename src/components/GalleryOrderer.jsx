@@ -589,9 +589,18 @@ export default function GalleryOrderer({ datasetPath = "" }) {
               <div className="flex items-center justify-between px-2 py-1 text-xs border-t bg-gray-50">
                 <span className="font-medium">#{i + 1}</span>
                 {showTitles ? (
-                  <span className="truncate ml-2" title={it.title || ""}>
-                    {it.title || it.id}
-                  </span>
+                  <input
+                    type="text"
+                    className="ml-2 px-1 py-0.5 border rounded text-xs truncate bg-white"
+                    value={it.title || ""}
+                    title={it.title || it.id}
+                    onChange={e => {
+                      const newTitle = e.target.value;
+                      setItems(items => items.map(item => item.id === it.id ? { ...item, title: newTitle } : item));
+                      setBackupData(data => data.map(item => item.id === it.id ? { ...item, title: newTitle } : item));
+                      setDirty(true);
+                    }}
+                  />
                 ) : (
                   <span className="opacity-60 truncate ml-2">{it.id}</span>
                 )}
@@ -650,6 +659,19 @@ export default function GalleryOrderer({ datasetPath = "" }) {
               disabled={!contextMenu.targetPath}
             >
               Copy
+            </button>
+            <button
+              onClick={() => {
+                if (window.confirm('Are you sure you want to delete this image? This action cannot be undone.')) {
+                  // Remove the item from items and backupData
+                  setItems(items => items.filter(it => it.id !== contextMenu.itemId));
+                  setBackupData(data => data.filter(it => it.id !== contextMenu.itemId));
+                  closeContextMenu();
+                }
+              }}
+              className="px-3 py-1 rounded-md border bg-red-50 hover:bg-red-100 text-red-700"
+            >
+              Delete Image
             </button>
             <button
               onClick={closeContextMenu}
