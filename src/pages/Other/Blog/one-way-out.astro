@@ -1,0 +1,137 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Blog/one-way-out";
+const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VWX9vk/3/MwtPFtqVfNsTTCgDZJVmSdP9Wxm9Hh3knwbW8qsWX/L/_WHO6282-918-L.jpg"; // <-- replace with actual
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    title: "Conversations With Quill – One Way Out",
+    description: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim’s Western image 'One Way Out.'",
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim",
+    author: "Wayne Heim",
+    datePublished: "2025-10-01",
+    image: coverImage
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, coverImage),
+  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogTitle: "Conversations With Quill: One Way Out",
+  ogDescription: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim’s Western image 'One Way Out.'",
+  ogImage: coverImage,
+  ogImageAlt: "One Way Out cover",
+  ogType: "article",
+  twitterUrl: `https://k4studios.com${sectionPath}`,
+  twitterTitle: "Conversations With Quill: One Way Out",
+  twitterDescription: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim’s Western image 'One Way Out.'",
+  twitterImage: coverImage,
+  twitterCard: "summary_large_image"
+};
+---
+
+<BaseLayout
+  title="Conversations With Quill – One Way Out"
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other › Blog › One Way Out" />
+    </div>
+
+    <!-- ===================== -->
+    <!-- Big Centered Heading -->
+    <!-- ===================== -->
+    <section style="text-align:center; padding:3rem 0;">
+      <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
+        Conversations With Quill
+      </h1>
+      <h2 style="font-size:1.5rem; color:#4a4a4a;">
+        Ep: 2 – One Way Out
+      </h2>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Blog Cover Image Slot -->
+    <!-- ===================== -->
+    <section style="text-align:center; margin-bottom:2rem;">
+      <a 
+        href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-hKcrxwf" 
+        style="display:inline-block;"
+        onMouseEnter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)';"
+        onMouseLeave="this.querySelector('img').style.boxShadow='none';"
+      >
+        <img 
+          src="https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VWX9vk/3/MwtPFtqVfNsTTCgDZJVmSdP9Wxm9Hh3knwbW8qsWX/L/_WHO6282-918-L.jpg" 
+          alt="One Way Out cover" 
+          style="max-width:640px; width:100%; height:auto; margin:0 auto; border-radius:8px; transition:box-shadow .3s;" 
+        />
+        <div style="font-size:0.95rem; color:#888; text-align:right; margin-top:0.25rem;">
+          Click for details
+        </div>
+      </a>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Story Content -->
+    <!-- ===================== -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <h3>Intro</h3>
+        <p><em>The American West has always burned. Yet most Western art looks away from fire, preferring sunsets, dust, or lone riders on open plains. Rarely do we see the flames that scarred landscapes, ended lives, and cleared the way for rebirth. In “One Way Out,” Wayne Heim doesn’t just paint fire into the frame — he makes it the story. Not as spectacle, but as metaphor: trauma, endurance, and renewal. In this conversation, we dive into how fire shapes the land, the people, and the myths of the West.</em></p>
+
+        <p><strong>Quill:</strong><br/>Wayne, most Western art avoids fire. It gives us golden skies, heroic standoffs, cattle trails. But fire? Absent. And yet, you’ve put it at the very heart of <em>One Way Out</em>. Why?</p>
+
+        <p><strong>Wayne:</strong><br/>Because you can’t tell the West honestly without it. Fire isn’t just background, it’s the cycle itself. It takes, but it also gives. Some pines — lodgepole especially — only release their seeds when fire cracks their cones open. Without heat, there’s no next generation. That’s not destruction — that’s renewal.</p>
+
+        <p><strong>Quill:</strong><br/>That’s powerful — that even nature knows rebirth requires fire. And you’re saying the rider understands that too?</p>
+
+        <p><strong>Wayne:</strong><br/>Yes. Look at him: he’s not panicking, not spurring wild. He’s moving with purpose. Calm. He’s seen it before. He knows fire is inevitable — part of life. It burns the past down, it scars you, but it also makes space for what comes next.</p>
+
+        <p><strong>Quill:</strong><br/>So it becomes metaphor. The fire behind him isn’t just flame — it’s memory, loss, trauma. He doesn’t fight it. He carries it, learns from it, and goes forward.</p>
+
+        <p><strong>Wayne:</strong><br/>Exactly. That’s what makes it a Western story but also a human one. We all carry fire. The scars don’t vanish, but they shape the person we become.</p>
+
+        <p><strong>Quill:</strong><br/>That’s what sets this apart. Fire here isn’t spectacle, not Hollywood blaze. It’s lived truth. It’s the quiet understanding that survival isn’t about conquest — it’s about resilience.</p>
+
+        <p><strong>Wayne:</strong><br/>And that’s why I wanted the palette painterly, mythic. Golden but molten, soft edges but unforgiving tones. The rider becomes almost allegory — not one man, but anyone who’s faced down their fire and chosen the one way out: forward.</p>
+
+        <p><strong>Quill:</strong><br/>It’s striking because, as you said, most Western art doesn’t even touch fire. By putting it at the center, you’re not just depicting the land — you’re depicting the scars, the cycles, the resilience. And symbolically, it speaks beyond the West. Anyone who’s walked through struggle, loss, trauma can see themselves in this rider.</p>
+
+        <h3>Closing Reflection</h3>
+        <p><em>“One Way Out” doesn’t just capture a cowboy riding away from flames. It reframes fire as truth. The West has always burned, and so have we. Fire takes — it scars, it destroys — but it also clears, it teaches, it renews. Just as pine cones need heat to release life, we too are shaped by the burns we carry. In Wayne’s hands, fire becomes myth: not catastrophe, but the crucible of survival and rebirth.</em></p>
+
+        <h3>🖋️ About the Artist</h3>
+        <p>Wayne Heim is a fine art photographer and certified medical illustrator.<br/>
+        His painterly storytelling explores historical reenactment, Western conflict, cinematic landscapes, and emotional memory.<br/>
+        He blends light, composition, and narrative tension to create images that feel lived in, mythic, and museum-ready.</p>
+
+        <p>🔗 Explore more at <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
+      </article>
+    </section>
+
+    <SiteFooter title="Conversations With Quill – One Way Out" class="pt-12 pb-12" />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.6; }
+    .story-block p { margin-bottom: 0.85rem; }
+    .story-block h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; font-weight: 700; }
+  </style>
+</BaseLayout>
