@@ -43,15 +43,25 @@ export const GET: APIRoute = async () => {
   walkGalleryNav(siteNav, galleryHrefs);
 
   // For each gallery-source, try to import its .mjs file and add image links
-  const galleryModules = import.meta.glob('/src/data/Galleries/**/*.mjs');
+  const galleryModules = import.meta.glob('/src/data/**/*.mjs');
   for (const href of galleryHrefs) {
     // Use the href directly to build the gallery module path
-    const modulePath = `/src/data${href}.mjs`;
+    const lastPart = href.split('/').pop();
+    const possiblePaths = [
+      `/src/data${href}.mjs`,
+      `/src/data${href}/${lastPart}.mjs`
+    ];
     let found = false;
-    if (galleryModules[modulePath]) {
-      found = true;
+    let mod = null;
+    for (const modulePath of possiblePaths) {
+      if (galleryModules[modulePath]) {
+        found = true;
+        mod = await galleryModules[modulePath]();
+        break;
+      }
+    }
+    if (found) {
       try {
-        const mod = await galleryModules[modulePath]();
         const images = (mod as any).galleryData;
         if (Array.isArray(images)) {
           images.forEach((img) => {

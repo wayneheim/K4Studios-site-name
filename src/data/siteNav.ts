@@ -304,7 +304,7 @@ export const siteNav = [
         "href": "/Other/K4-Select-Series/Engrained",
         "code": "P-S5",
         "slug": "engrained-series",
-        "type": "gallery-source"
+        "type": "collection"
       }
     ],
     "code": "P",
@@ -612,28 +612,28 @@ export const siteNav = [
       "href": "/News-Awards",
       "code": "O-S1",
       "slug": "news--awards",
-      "type": "gallery-source"
+      "type": "collection"
     },
     {
       "label": "Print Options",
       "href": "/Other/Print-Options",
       "code": "O-S2",
       "slug": "print-options",
-      "type": "gallery-source"
+      "type": "collection"
     },
     {
       "label": "Historical Reenactment Photography",
       "href": "/Other/Historical-Reenactment-Photography",
       "code": "O-S3",
       "slug": "historical-reenactment-photography",
-      "type": "gallery-source"
+      "type": "collection"
     },
     {
       "label": "Photo Shoots",
       "href": "https://wayne-heim.smugmug.com/Other/Photo-Shoots",
       "code": "O-S4",
       "slug": "photo-shoots",
-      "type": "gallery-source"
+      "type": "collection"
     },
       {
         "label": "Blog",
