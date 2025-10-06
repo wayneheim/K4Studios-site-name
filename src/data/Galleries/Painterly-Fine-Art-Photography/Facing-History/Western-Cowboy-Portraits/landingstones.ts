@@ -22,7 +22,7 @@ export const landingWestern = {
     },
     {
       title: 'Engrained Series',
-      href: '/Other/Print-Options/Prints-on-Wood',
+      href: '/Other/Print-Options',
       thumb: '/images/tombstones/engrained-ts.jpg',
     },
   ]

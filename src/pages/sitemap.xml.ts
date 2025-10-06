@@ -45,35 +45,27 @@ export const GET: APIRoute = async () => {
   // For each gallery-source, try to import its .mjs file and add image links
   const galleryModules = import.meta.glob('/src/data/Galleries/**/*.mjs');
   for (const href of galleryHrefs) {
-    let relPath = href.replace(/^\//, '').replace(/^Galleries\//, '');
-    const lastSegment = relPath.split('/').pop();
-    const possiblePaths = [
-      `/src/data/Galleries/${relPath}.mjs`,
-      `/src/data/Galleries/${relPath}/index.mjs`,
-      `/src/data/Galleries/${relPath}/${lastSegment}.mjs`
-    ];
+    // Use the href directly to build the gallery module path
+    const modulePath = `/src/data${href}.mjs`;
     let found = false;
-    for (const path of possiblePaths) {
-      if (galleryModules[path]) {
-        found = true;
-        try {
-          const mod = await galleryModules[path]();
-          const images = (mod as any).galleryData;
-          if (Array.isArray(images)) {
-            images.forEach((img) => {
-              if (
-                img.id &&
-                /^i-[\w\d]+$/.test(img.id) &&
-                img.id !== "i-k4studios"
-              ) {
-                urls.add(`${baseUrl}${href}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
-              }
-            });
-          }
-        } catch (e) {
-          console.error(`Error loading gallery module for ${href}:`, e);
+    if (galleryModules[modulePath]) {
+      found = true;
+      try {
+        const mod = await galleryModules[modulePath]();
+        const images = (mod as any).galleryData;
+        if (Array.isArray(images)) {
+          images.forEach((img) => {
+            if (
+              img.id &&
+              /^i-[\w\d]+$/.test(img.id) &&
+              img.id !== "i-k4studios"
+            ) {
+              urls.add(`${baseUrl}${href}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
+            }
+          });
         }
-        break;
+      } catch (e) {
+        console.error(`Error loading gallery module for ${href}:`, e);
       }
     }
     if (!found) {
@@ -81,10 +73,14 @@ export const GET: APIRoute = async () => {
     }
   }
 
-  // Filter out any URLs not starting with your domain
-  const cleanUrls = Array.from(urls).filter(url =>
-    url.startsWith(baseUrl)
-  );
+  // Filter out any URLs not starting with your domain and exclude Photo-Shoots/smugmug links
+  const cleanUrls = Array.from(urls).filter(url => {
+    const strUrl = String(url);
+    if (!strUrl.startsWith(baseUrl)) return false;
+    // Exclude any URLs that reference Photo-Shoots or smugmug
+    if (strUrl.includes("Photo-Shoots") || strUrl.includes("smugmug.com")) return false;
+    return true;
+  });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset 
