@@ -81,7 +81,11 @@ export const GET: APIRoute = async () => {
     }
   }
 
-  const cleanUrls = Array.from(urls);
+  // Filter out any URLs not starting with your domain
+  const cleanUrls = Array.from(urls).filter(url =>
+    url.startsWith(baseUrl)
+  );
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset 
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
