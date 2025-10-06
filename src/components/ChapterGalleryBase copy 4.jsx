@@ -1,13 +1,11 @@
 // Helper to log UI events to Airtable
 async function logUIEvent(eventType, details = {}) {
-  console.log("Logging event:", eventType, details);
   try {
-    const response = await fetch("/.netlify/functions/log-ui-event", {
+    await fetch("/.netlify/functions/log-ui-event", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ eventType, details, timestamp: Date.now() }),
     });
-    console.log("Log response:", response.status);
   } catch (err) {
     console.error("UI event logging failed:", err);
   }
