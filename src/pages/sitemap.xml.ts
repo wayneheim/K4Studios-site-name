@@ -45,13 +45,17 @@ export const GET: APIRoute = async () => {
   // For each gallery-source, try to import its .mjs file and add image links
   const galleryModules = import.meta.glob('/src/data/Galleries/**/*.mjs');
   for (const href of galleryHrefs) {
-    let relPath = href.replace(/^\//, '').replace(/\/$/, '').replace(/^Galleries\//, '');
+    let relPath = href.replace(/^\//, '').replace(/^Galleries\//, '');
+    const lastSegment = relPath.split('/').pop();
     const possiblePaths = [
       `/src/data/Galleries/${relPath}.mjs`,
-      `/src/data/Galleries/${relPath}/index.mjs`
+      `/src/data/Galleries/${relPath}/index.mjs`,
+      `/src/data/Galleries/${relPath}/${lastSegment}.mjs`
     ];
+    let found = false;
     for (const path of possiblePaths) {
       if (galleryModules[path]) {
+        found = true;
         try {
           const mod = await galleryModules[path]();
           const images = (mod as any).galleryData;
@@ -66,9 +70,14 @@ export const GET: APIRoute = async () => {
               }
             });
           }
-        } catch (e) {}
+        } catch (e) {
+          console.error(`Error loading gallery module for ${href}:`, e);
+        }
         break;
       }
+    }
+    if (!found) {
+      console.warn(`No gallery module found for: ${href}`);
     }
   }
 
