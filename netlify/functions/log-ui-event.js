@@ -17,6 +17,9 @@ export async function handler(event) {
     };
   }
 
+  // Extract IP address
+  const ip = event.headers['x-forwarded-for']?.split(',')[0]?.trim() || event.headers['client-ip'] || 'unknown';
+
   const {
     AIRTABLE_API_TOKEN,
     AIRTABLE_BASE_ID,
@@ -45,6 +48,7 @@ export async function handler(event) {
         eventType,
         details: JSON.stringify(details || {}),
         timestamp: eventTime,
+        ip,
       },
     }),
   });
