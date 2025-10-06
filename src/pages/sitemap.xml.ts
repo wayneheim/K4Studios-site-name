@@ -42,13 +42,10 @@ export const GET: APIRoute = async () => {
   const galleryHrefs = [];
   walkGalleryNav(siteNav, galleryHrefs);
 
-
   // For each gallery-source, try to import its .mjs file and add image links
   const galleryModules = import.meta.glob('/src/data/Galleries/**/*.mjs');
-  // First, do all referenced by siteNav (for completeness)
   for (const href of galleryHrefs) {
-    let relPath = href.replace(/^\//, '').replace(/\/$/, '');
-    relPath = relPath.replace(/^Galleries\//, '');
+    let relPath = href.replace(/^\//, '').replace(/\/$/, '').replace(/^Galleries\//, '');
     const possiblePaths = [
       `/src/data/Galleries/${relPath}.mjs`,
       `/src/data/Galleries/${relPath}/index.mjs`
@@ -65,7 +62,7 @@ export const GET: APIRoute = async () => {
                 /^i-[\w\d]+$/.test(img.id) &&
                 img.id !== "i-k4studios"
               ) {
-                urls.add(`${baseUrl}${href.replace(/^\//, '')}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
+                urls.add(`${baseUrl}${href}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
               }
             });
           }
@@ -73,30 +70,6 @@ export const GET: APIRoute = async () => {
         break;
       }
     }
-  }
-
-  // Now, walk all .mjs files in Galleries and add any i-xxx image links not already present
-  for (const path in galleryModules) {
-    try {
-      const mod = await galleryModules[path]();
-      const images = (mod as any).galleryData;
-      // Derive gallery href from file path
-      let galleryHref = path
-        .replace('/src/data/Galleries', '')
-        .replace(/\/index\.mjs$/, '')
-        .replace(/\.mjs$/, '');
-      // Ensure leading slash
-      if (!galleryHref.startsWith('/')) galleryHref = '/' + galleryHref;
-      for (const img of Array.isArray(images) ? images : []) {
-        if (
-          img.id &&
-          /^i-[\w\d]+$/.test(img.id) &&
-          img.id !== "i-k4studios"
-        ) {
-          urls.add(`${baseUrl}${galleryHref}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
-        }
-      }
-    } catch (e) {}
   }
 
   const cleanUrls = Array.from(urls);
