@@ -8,7 +8,12 @@ export const prerender = true;
 function walkNav(nav, urls) {
   for (const entry of nav) {
     if (entry.href) {
-      let url = entry.href.startsWith('/') ? `${baseUrl}${entry.href}` : `${baseUrl}/${entry.href}`;
+      let url;
+      if (/^https?:\/\//.test(entry.href)) {
+        url = entry.href;
+      } else {
+        url = entry.href.startsWith('/') ? `${baseUrl}${entry.href}` : `${baseUrl}/${entry.href}`;
+      }
       urls.add(url.replace(/\/+/g, '/').replace(':/', '://'));
     }
     if (entry.children) {
@@ -37,53 +42,50 @@ export const GET: APIRoute = async () => {
   const galleryHrefs = [];
   walkGalleryNav(siteNav, galleryHrefs);
 
-
   // For each gallery-source, try to import its .mjs file and add image links
   const galleryModules = import.meta.glob('/src/data/Galleries/**/*.mjs');
-  // First, do all referenced by siteNav (for completeness)
   for (const href of galleryHrefs) {
-    let relPath = href.replace(/^\//, '').replace(/\/$/, '');
-    relPath = relPath.replace(/^Galleries\//, '');
+    let relPath = href.replace(/^\//, '').replace(/^Galleries\//, '');
+    const lastSegment = relPath.split('/').pop();
     const possiblePaths = [
       `/src/data/Galleries/${relPath}.mjs`,
-      `/src/data/Galleries/${relPath}/index.mjs`
+      `/src/data/Galleries/${relPath}/index.mjs`,
+      `/src/data/Galleries/${relPath}/${lastSegment}.mjs`
     ];
+    let found = false;
     for (const path of possiblePaths) {
       if (galleryModules[path]) {
+        found = true;
         try {
           const mod = await galleryModules[path]();
           const images = (mod as any).galleryData;
           if (Array.isArray(images)) {
             images.forEach((img) => {
-              if (img.id && /^i-[\w\d]+$/.test(img.id)) {
-                // Add full gallery path for image
-                urls.add(`${baseUrl}/${href.replace(/^\//, '')}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
+              if (
+                img.id &&
+                /^i-[\w\d]+$/.test(img.id) &&
+                img.id !== "i-k4studios"
+              ) {
+                urls.add(`${baseUrl}${href}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
               }
             });
           }
-        } catch (e) {}
+        } catch (e) {
+          console.error(`Error loading gallery module for ${href}:`, e);
+        }
         break;
       }
     }
+    if (!found) {
+      console.warn(`No gallery module found for: ${href}`);
+    }
   }
 
-  // Now, walk all .mjs files in Galleries and add any i-xxx image links not already present
-  for (const path in galleryModules) {
-    try {
-      const mod = await galleryModules[path]();
-      const images = (mod as any).galleryData;
-      // Derive gallery path from file path
-      let galleryPath = path.replace('/src/data/Galleries/', '').replace(/\/index\.mjs$/, '').replace(/\.mjs$/, '');
-      galleryPath = `Galleries/${galleryPath}`;
-      for (const img of Array.isArray(images) ? images : []) {
-        if (img.id && /^i-[\w\d]+$/.test(img.id)) {
-          urls.add(`${baseUrl}/${galleryPath}/${img.id}`.replace(/\/+/g, '/').replace(':/', '://'));
-        }
-      }
-    } catch (e) {}
-  }
+  // Filter out any URLs not starting with your domain
+  const cleanUrls = Array.from(urls).filter(url =>
+    url.startsWith(baseUrl)
+  );
 
-  const cleanUrls = Array.from(urls);
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset 
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
