@@ -43,6 +43,7 @@ export default function GalleryImporter({ showTitle = true }) {
   const modules = useMemo(() => {
     const maps = [
       import.meta.glob("/src/data/Galleries/**/*.mjs", { eager: false, import: "galleryData" }),
+      import.meta.glob("/src/data/Other/**/*.mjs",     { eager: false, import: "galleryData" }),
       import.meta.glob("/src/pages/Other/**/*.mjs",    { eager: false, import: "galleryData" }),
     ];
     return Object.assign({}, ...maps);

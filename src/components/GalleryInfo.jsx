@@ -108,7 +108,7 @@ export default function GalleryInfo({
           <div
             className="gallery-intro-description"
               dangerouslySetInnerHTML={{
-                __html: entranceData?.story || lowestSortImage?.story || "",
+                __html: entranceData?.description || lowestSortImage?.story || "",
               }}
           />
           {!!entranceData?.details && (

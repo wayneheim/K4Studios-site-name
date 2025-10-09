@@ -1,0 +1,156 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Blog/dust-or-desperation";
+const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XXXXXXX/0/XXXXXXX/XL/_HF21624-Edit-XL.jpg"; // <-- replace with final SmugMug link
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    title: "Conversations With Quill – Dust or Desperation",
+    description: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim’s Western image “Dust or Desperation.”",
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim",
+    author: "Wayne Heim",
+    datePublished: "2025-10-05",
+    image: coverImage
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, coverImage),
+  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogTitle: "Inside the Frame: Dust or Desperation",
+  ogDescription: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim’s Western image 'Dust or Desperation.'",
+  ogImage: coverImage,
+  ogImageAlt: "Dust or Desperation cover",
+  ogType: "article",
+  twitterUrl: `https://k4studios.com${sectionPath}`,
+  twitterTitle: "Inside the Frame: Dust or Desperation",
+  twitterDescription: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim’s Western image 'Dust or Desperation.'",
+  twitterImage: coverImage,
+  twitterCard: "summary_large_image"
+};
+---
+
+<BaseLayout
+  title="Conversations With Quill – Dust or Desperation"
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other › Blog › Dust or Desperation" />
+    </div>
+
+    <!-- ===================== -->
+    <!-- Big Centered Heading -->
+    <!-- ===================== -->
+    <section style="text-align:center; padding:3rem 0;">
+      <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
+        Conversations With Quill
+      </h1>
+      <h2 style="font-size:1.5rem; color:#4a4a4a;">
+        Ep: 3 – Dust or Desperation
+      </h2>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Blog Cover Image Slot -->
+    <!-- ===================== -->
+    <section style="text-align:center; margin-bottom:2rem;">
+      <a 
+        href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-XXXXXXX" 
+        style="display:inline-block;"
+        onMouseEnter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)';"
+        onMouseLeave="this.querySelector('img').style.boxShadow='none';"
+      >
+        <img 
+          src={coverImage} 
+          alt="Dust or Desperation cover" 
+          style="max-width:640px; width:100%; height:auto; margin:0 auto; border-radius:8px; transition:box-shadow .3s;" 
+        />
+        <div style="font-size:0.95rem; color:#888; text-align:right; margin-top:0.25rem;">
+          Click for details
+        </div>
+      </a>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Story Content -->
+    <!-- ===================== -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <p><em>She steals a quick moment. Away from the eyes of the children and the other. Be it dust or hint of the depuration — leaking out from the pressure of mounting setbacks and obstacles. She chokes it back. Must put that tiger back in the cage.</em></p>
+
+        <p><em>There is no place for tears here, even as the gravity of what lies ahead claws at her composure. Resolve and fortitude depend on her as much as on those who lead the way.</em></p>
+
+        <p><em>But for now — for just this brief heartbeat — she claims a moment of her own, as if to remind herself of what’s at stake.</em></p>
+
+        <p><em>And in that moment, she becomes every mother, every woman who has borne the hidden weight of countless journeys. She is allegory itself — the quiet, superhuman force that holds everything together while the world looks elsewhere.</em></p>
+
+        <h3>💬 Conversation</h3>
+
+        <p><strong>Quill:</strong><br/>Wayne, this image feels different. There’s no grand drama, no epic conflict — just a woman caught in a fleeting gesture, between dust and tears. What were you after here?</p>
+
+        <p><strong>Wayne:</strong><br/>It’s the ambiguity that matters. Dust or desperation — the viewer has to decide. She’s choking it back, putting the tiger back in its cage. On the frontier, there wasn’t room for collapse. That strength had to be silent, invisible.</p>
+
+        <p><strong>Quill:</strong><br/>That’s what struck me — the universality. She’s frontier, but she could be any mother, in any era, carrying a weight that can’t be shown.</p>
+
+        <p><strong>Wayne:</strong><br/>Exactly. She’s one woman, but she stands for countless women across time. Mothers have always been the hidden spine of endurance, but it’s rarely celebrated. This was my way of honoring that.</p>
+
+        <h3>🌎 Larger Context</h3>
+
+        <p><strong>Wayne:</strong><br/><em>Dust or Desperation</em> isn’t an isolated piece — it fits into a larger philosophy that runs through my work. I use ambiguity as a deliberate device. Ambiguity forces viewers into the scene. They can’t sit back as spectators; they have to choose what they see, and in that hesitation, they find themselves inside the story.</p>
+
+        <p>I chase hidden moments because they make history relatable. Most Western art goes for spectacle: the charge, the vista, the archetype. Those matter, and I photograph them too. But what draws me in are the untold beats — the silence, the pause, the moment of fragility that most artists gloss over. Those are the ones that turn history into something lived. Those are the ones that make viewers whisper: <em>this isn’t about them then, this is about me now.</em></p>
+
+        <p>That intimacy is what identifies Wayne’s work. I dare to go where others walk past. I look for the humanity that transports rather than reenacts.</p>
+
+        <p>Years of work as a medical illustrator undoubtedly shape this. Medical illustration is about turning complexity into clarity. It’s about distilling an intricate system into one gesture, one diagram, one scene that makes the story legible to anyone. I carry that same instinct into fine art — stripping away until what’s left is one moment, one emotion, one truth.</p>
+
+        <p>This places my work in a curious space within the Western canon. Where much of the tradition leans on myth and archetype, I find myself closer to Norman Rockwell in spirit — telling hidden, human stories in painterly allegories. Rockwell made the ordinary into myth; I try to make the overlooked into memory.</p>
+
+        <h3>🖋️ Quill’s Reflection</h3>
+
+        <p>That intimacy is what identifies Wayne’s work. He dares to go where others walk past. He looks for the humanity that transports rather than reenacts.</p>
+
+        <p>Years of work as a medical illustrator undoubtedly shape this. Medical illustration is about turning complexity into clarity — distilling an intricate system into one gesture, one diagram, one scene that makes the story legible to anyone. Wayne carries that same instinct into fine art: stripping away until what’s left is one moment, one emotion, one truth.</p>
+
+        <p>This places his work in a curious space within the Western canon. Where much of the tradition leans on myth and archetype, Wayne’s art feels closer to Norman Rockwell in spirit — telling hidden, human stories in painterly allegories. Rockwell made the ordinary into myth; Wayne makes the overlooked into memory.</p>
+
+        <h3>🎬 Inside the Frame: Outro</h3>
+        <p>This has been Inside the Frame: Episode 3<br/>Dust or Desperation</p>
+        <p>Coming up in Episode 4: …</p>
+
+        <h3>🖋️ About the Artist</h3>
+        <p>Wayne Heim is a fine art photographer and certified medical illustrator.<br/>
+        His painterly storytelling explores historical reenactment, Western conflict, cinematic landscapes, and emotional memory.<br/>
+        He blends light, composition, and narrative tension to create images that feel lived in, mythic, and museum-ready.</p>
+
+        <p>🔗 Explore more at <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
+      </article>
+    </section>
+
+    <SiteFooter title="Conversations With Quill – Dust or Desperation" class="pt-12 pb-12" />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.6; }
+    .story-block p { margin-bottom: 0.85rem; }
+    .story-block h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; font-weight: 700; }
+  </style>
+</BaseLayout>

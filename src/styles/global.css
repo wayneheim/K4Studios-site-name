@@ -187,10 +187,17 @@ main {
   }
 
     .story-layout {
-    padding-left: 0.0rem;
-    padding-right: 0.0rem;
-  }
+      padding-left: 0rem;
 
+      padding-right: 0rem;
+    }
+
+
+@media (max-width: 700px) {
+  .story-layout {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .text-column {
@@ -587,4 +594,3 @@ body.react-mounted footer {
     margin: 1rem auto 0 auto !important;
   }
 }
-
