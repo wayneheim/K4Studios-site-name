@@ -186,12 +186,12 @@ main {
     transform: translateX(0);
   }
 
+
     .story-layout {
       padding-left: 0rem;
-
       padding-right: 0rem;
     }
-
+}
 
 @media (max-width: 700px) {
   .story-layout {
