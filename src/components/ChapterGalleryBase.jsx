@@ -709,7 +709,7 @@ export default function ChapterGalleryBase({
                               ) : (
                                 <>
                                   <span className="absolute left-2 top-[2px] text-[12px] text-red-600 font-semibold">*</span>
-                                  <Notebook className="w-6 h-6 stroke-[1.75]" />
+                                  <Notebook className="w-6 h-6 stroke-[1.75]" style={{ color: '#b91c1c' }} />
                                 </>
                               )}
                             </button>
@@ -811,7 +811,7 @@ export default function ChapterGalleryBase({
                           ) : (
                             <>
                               <span className="absolute left-2 top-[2px] text-[12px] text-red-600 font-semibold">*</span>
-                              <Notebook className="w-5 h-5 stroke-[1.75]" />
+                              <Notebook className="w-5 h-5 stroke-[1.75]" style={{ color: '#b91c1c' }} />
                             </>
                           )}
                         </button>
