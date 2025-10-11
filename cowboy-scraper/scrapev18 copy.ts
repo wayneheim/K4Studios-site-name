@@ -172,6 +172,11 @@ async function scrapeDetails(page: puppeteer.Page, sortOrder: number): Promise<I
 
   let sizeUrls: Record<string, string> = {};
 
+  // Start with XL size to ensure we get the largest image first
+  await page.setViewport({ width: 2200, height: 1800 });
+  await page.evaluate(() => window.dispatchEvent(new Event('resize')));
+  await wait(300);
+
   for (const bp of SIZE_BREAKPOINTS) {
     await page.setViewport({ width: bp.width, height: bp.height });
     await page.evaluate(() => window.dispatchEvent(new Event('resize')));
@@ -393,10 +398,11 @@ async function main() {
         }
       }
 
-      // Then set viewport to XL to ensure we get the correct image size
-      await page.setViewport({ width: 2200, height: 1800 });
-      await page.evaluate(() => window.dispatchEvent(new Event('resize')));
-      await wait(120);
+      // DON'T set viewport here - let scrapeDetails handle all viewport changes internally
+      // This was causing the last image to get wrong sizes because viewport was already at XL
+      // await page.setViewport({ width: 2200, height: 1800 });
+      // await page.evaluate(() => window.dispatchEvent(new Event('resize')));
+      // await wait(120);
     }
   } catch (err: any) {
     console.error(`❌ Error scraping:`, err?.message || err);
@@ -428,105 +434,11 @@ async function main() {
 
   results.unshift(ghostEntry);
 
-  // --- FINAL SCRAPE for last image to ensure src fields are captured ---
-  if (results.length > 1) {
-    const lastEntry = results[results.length - 1];
-    // Scrape the current image's src fields from the lightbox
-    const SIZE_BREAKPOINTS = [
-      { name: "srcXL", width: 2200, height: 1800 },
-      { name: "srcL", width: 1200, height: 831 },
-      { name: "srcM", width: 800, height: 600 },
-      { name: "srcS", width: 400, height: 300 },
-    ];
-    let sizeUrls: Record<string, string> = {};
-    for (const bp of SIZE_BREAKPOINTS) {
-      await page.setViewport({ width: bp.width, height: bp.height });
-      await page.evaluate(() => window.dispatchEvent(new Event('resize')));
-      await wait(300);
-      const url = await page.evaluate(() => {
-        const el = document.querySelector('.sm-lightbox-v2-photo') as HTMLElement | null;
-        if (el) {
-          const bg = getComputedStyle(el).backgroundImage;
-          const match = bg.match(/url\(["']?(.+?\.jpg)["']?\)/);
-          if (match && match[1]) return match[1];
-        }
-        const el2 = document.querySelector('.sm-lightbox-v2-photo-img') as HTMLElement | null;
-        if (el2) {
-          const bg = getComputedStyle(el2).backgroundImage;
-          const match = bg.match(/url\(["']?(.+?\.jpg)["']?\)/);
-          if (match && match[1]) return match[1];
-        }
-        return "";
-      });
-      if (url) sizeUrls[bp.name] = url;
-    }
-    // Try to find Original from preload links
-    let srcOriginal = "";
-    const allOriginals = await page.evaluate(() => {
-      let urls: string[] = [];
-      document.querySelectorAll('link[rel="preload"][as="image"]').forEach(link => {
-        const href = link.getAttribute("href");
-        if (href && /Original\./i.test(href)) urls.push(href);
-      });
-      return urls;
-    });
-    if (allOriginals.length) srcOriginal = allOriginals[0];
-    // Assign to last entry
-    lastEntry.src = sizeUrls.srcXL || sizeUrls.srcL || sizeUrls.srcM || sizeUrls.srcS || srcOriginal || lastEntry.src;
-    lastEntry.srcXL = sizeUrls.srcXL || lastEntry.srcXL;
-    lastEntry.srcL = sizeUrls.srcL || lastEntry.srcL;
-    lastEntry.srcM = sizeUrls.srcM || lastEntry.srcM;
-    lastEntry.srcS = sizeUrls.srcS || lastEntry.srcS;
-    lastEntry.srcOriginal = srcOriginal || lastEntry.srcOriginal;
-    console.log(`Final scrape: updated src fields for last image id ${lastEntry.id}`);
-  }
+  // --- No need for final scrape anymore - main loop should handle all images correctly ---
+  console.log(`All ${results.length} images processed with proper size variants.`);
 
-  // --- REALIGN src fields to correct id after scrape ---
-  const fieldsToAlign = ["src", "srcXL", "srcL", "srcM", "srcS", "srcOriginal"];
-  // Build a map of id to entry
-  const idMap: Record<string, any> = {};
-  for (const rec of results) {
-    if (rec.id) idMap[rec.id] = rec;
-  }
-  // Collect all src fields by id found in their URL
-  const srcFieldBuffer: Record<string, Partial<ImageRecord>> = {};
-  for (const rec of results) {
-    for (const f of fieldsToAlign) {
-      const url = (rec as any)[f];
-      if (typeof url === 'string' && url.startsWith('http') && url.includes('i-')) {
-        const match = url.match(/i-([a-zA-Z0-9]+)/);
-        if (match) {
-          const urlId = `i-${match[1]}`;
-          if (!srcFieldBuffer[urlId]) srcFieldBuffer[urlId] = {};
-          (srcFieldBuffer[urlId] as any)[f] = url;
-        }
-      }
-    }
-  }
-  // Assign collected src fields to the correct entry by id
-  let realigned = 0, unmatched = 0;
-  for (const id in srcFieldBuffer) {
-    if (idMap[id]) {
-      Object.assign(idMap[id], srcFieldBuffer[id]);
-      realigned++;
-    } else {
-      unmatched++;
-      console.warn(`No entry found for id ${id} when realigning src fields.`);
-    }
-  }
-  // Optionally clear src fields that don't match their id
-  for (const rec of results) {
-    for (const f of fieldsToAlign) {
-      const url = (rec as any)[f];
-      if (typeof url === 'string' && url.startsWith('http') && url.includes('i-')) {
-        const match = url.match(/i-([a-zA-Z0-9]+)/);
-        if (!match || rec.id !== `i-${match[1]}`) {
-          (rec as any)[f] = '';
-        }
-      }
-    }
-  }
-  console.log(`Realigned src fields for ${realigned} ids. Unmatched: ${unmatched}`);
+  // --- Simplified: No complex realignment needed if scraping works correctly ---
+  console.log(`Processed ${results.length} images with proper src field assignment.`);
 
   const outputPath = path.join(OUT_PATH);
   mkdirpSync(path.dirname(outputPath));

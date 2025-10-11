@@ -11,7 +11,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ],
     "visibility": "ghost",
     "sortOrder": -1,
@@ -36,14 +36,16 @@ export const galleryData = [
     "story": "Civil War Union soldier rides into battle on his horse as troops and the flag disappear into the haze of battle behind him. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 0,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MdHzKpjZpmCdxpqhkqgcFhJ7BRfLrT4hs5Khbx4r6/XL/Civil-War-Heros-ride-ws-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MdHzKpjZpmCdxpqhkqgcFhJ7BRfLrT4hs5Khbx4r6/XL/Civil-War-Heros-ride-ws-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MdHzKpjZpmCdxpqhkqgcFhJ7BRfLrT4hs5Khbx4r6/XL/Civil-War-Heros-ride-ws-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/KT7sf3nnsQkZNhGfQn8ZJ3KMVSMHSgTJ9Q6f7kn82/M/Civil-War-Heros-ride-ws-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/LGq44nJXH8jCxgddfRgnQ8bgXXcwZ8VfrcKmnGJHs/S/Civil-War-Heros-ride-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/M5PR4nL5J32cQwZxh438cJ2MwtKGSTXjhDfsG4JLk/X2/Settler-Wave-Goodbye-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/M5PR4nL5J32cQwZxh438cJ2MwtKGSTXjhDfsG4JLk/X2/Settler-Wave-Goodbye-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/M5PR4nL5J32cQwZxh438cJ2MwtKGSTXjhDfsG4JLk/X2/Settler-Wave-Goodbye-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/NKZz3d7Bfwpp5cT3nFP4C3TZxtSvf7G9R2rLfj7Xn/L/Settler-Wave-Goodbye-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/LddSFBC5q3CwXWRJxch6fdkTWJ5t2q2Qc5pDnt2BC/S/Settler-Wave-Goodbye-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -61,14 +63,16 @@ export const galleryData = [
     "story": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Each image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 1,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/MJZQGfvcJZVR5GNHsMfsgtSpPxJDZmJWfzrdMDG2V/X2/Cowboy-Hired-Gun-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/MJZQGfvcJZVR5GNHsMfsgtSpPxJDZmJWfzrdMDG2V/X2/Cowboy-Hired-Gun-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/MJZQGfvcJZVR5GNHsMfsgtSpPxJDZmJWfzrdMDG2V/X2/Cowboy-Hired-Gun-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/NWQmzL5N38LNsTFBcpp56Nz8HNDqcsXHHqskbj278/L/Cowboy-Hired-Gun-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/KDzsnSDXRNBjF8XqnhSVRfJbrkWGDKxpN5dCvCb6t/S/Cowboy-Hired-Gun-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/NVpH9zJ5cvKJP9VqRRb9Gkr9FNzLSd9BfZFghBC7g/X2/WWII-Under-Pressure-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/NVpH9zJ5cvKJP9VqRRb9Gkr9FNzLSd9BfZFghBC7g/X2/WWII-Under-Pressure-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/NVpH9zJ5cvKJP9VqRRb9Gkr9FNzLSd9BfZFghBC7g/X2/WWII-Under-Pressure-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/LGGzgS3tNjSXfDnvXpMCJjpP9zH2SzRC6gcv7rBdq/L/WWII-Under-Pressure-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/NZ4V4ZFX9FfKphvhZPNSkDsBx8Smz6ZMVnT7mpM5g/S/WWII-Under-Pressure-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -86,14 +90,16 @@ export const galleryData = [
     "story": "Painterly photography portrait of old time cowboy drinking whiskey at the bar: With the weight of the world resting clearly on his shoulders, Chávez pores himself one last drink for the day. Weight of what he's done or weight of what is to come - most likely a mixture of both. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 2,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KM2trHHSbncKRcnXFHfhp5bhWKbWDQXs4ZfBTs4Zj/X2/Cowboy-Just-a-Sip-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KM2trHHSbncKRcnXFHfhp5bhWKbWDQXs4ZfBTs4Zj/X2/Cowboy-Just-a-Sip-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KM2trHHSbncKRcnXFHfhp5bhWKbWDQXs4ZfBTs4Zj/X2/Cowboy-Just-a-Sip-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/M5WnXvzbtsVp4k86ZWMCngDDTG9C5knFfqjwMCp6s/L/Cowboy-Just-a-Sip-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/MsgsDR7JcFq55WHnLqGhT5tBtNgKwjfP8MtFZs977/S/Cowboy-Just-a-Sip-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MdHzKpjZpmCdxpqhkqgcFhJ7BRfLrT4hs5Khbx4r6/XL/Civil-War-Heros-ride-ws-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MdHzKpjZpmCdxpqhkqgcFhJ7BRfLrT4hs5Khbx4r6/XL/Civil-War-Heros-ride-ws-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MdHzKpjZpmCdxpqhkqgcFhJ7BRfLrT4hs5Khbx4r6/XL/Civil-War-Heros-ride-ws-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/KT7sf3nnsQkZNhGfQn8ZJ3KMVSMHSgTJ9Q6f7kn82/M/Civil-War-Heros-ride-ws-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/LGq44nJXH8jCxgddfRgnQ8bgXXcwZ8VfrcKmnGJHs/S/Civil-War-Heros-ride-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -111,14 +117,16 @@ export const galleryData = [
     "story": "Timeless Western portrait photography. Cowboy in scene: as he watched the loan coach disappear down the dusty road, he wondered whether their paths would ever cross again. Deep down, he knew saying goodbye was the right choice to make.\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 3,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/MNLgRGjBcJBgnZd7hpCk8JpfBZ7fvmjK6TWPZQqbC/X2/Cowboy-Long-Goodbye-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/MNLgRGjBcJBgnZd7hpCk8JpfBZ7fvmjK6TWPZQqbC/X2/Cowboy-Long-Goodbye-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/MNLgRGjBcJBgnZd7hpCk8JpfBZ7fvmjK6TWPZQqbC/X2/Cowboy-Long-Goodbye-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LmgxDzGwJMMQ7ZL4B2VwHPkvxk5czvhhxnT57rRTD/L/Cowboy-Long-Goodbye-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/Kr73s7Qw7hg62bhRGtnGbLZbWQKLVqksNtf6q7fVK/S/Cowboy-Long-Goodbye-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/MJZQGfvcJZVR5GNHsMfsgtSpPxJDZmJWfzrdMDG2V/X2/Cowboy-Hired-Gun-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/MJZQGfvcJZVR5GNHsMfsgtSpPxJDZmJWfzrdMDG2V/X2/Cowboy-Hired-Gun-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/MJZQGfvcJZVR5GNHsMfsgtSpPxJDZmJWfzrdMDG2V/X2/Cowboy-Hired-Gun-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/NWQmzL5N38LNsTFBcpp56Nz8HNDqcsXHHqskbj278/L/Cowboy-Hired-Gun-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/KDzsnSDXRNBjF8XqnhSVRfJbrkWGDKxpN5dCvCb6t/S/Cowboy-Hired-Gun-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -136,14 +144,16 @@ export const galleryData = [
     "story": "Painterly Wild West themed photography of a cowboy with a coffee cup who is all smiles.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 4,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/Lch7cnc2X7hJTcz89VcskffqgZzXt6NXsqnZdjkxK/X2/Cowboy-Morning-Joe-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/Lch7cnc2X7hJTcz89VcskffqgZzXt6NXsqnZdjkxK/X2/Cowboy-Morning-Joe-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/Lch7cnc2X7hJTcz89VcskffqgZzXt6NXsqnZdjkxK/X2/Cowboy-Morning-Joe-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/NVbhMPnCV2rBJjpt9gH8LbrKvDXRhZChB8Bzv72Zs/L/Cowboy-Morning-Joe-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/MVxBdH28Dnzqkwqd4Dn2WMvrZzCK3RqCg38qqZqWp/S/Cowboy-Morning-Joe-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KM2trHHSbncKRcnXFHfhp5bhWKbWDQXs4ZfBTs4Zj/X2/Cowboy-Just-a-Sip-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KM2trHHSbncKRcnXFHfhp5bhWKbWDQXs4ZfBTs4Zj/X2/Cowboy-Just-a-Sip-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/KM2trHHSbncKRcnXFHfhp5bhWKbWDQXs4ZfBTs4Zj/X2/Cowboy-Just-a-Sip-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/M5WnXvzbtsVp4k86ZWMCngDDTG9C5knFfqjwMCp6s/L/Cowboy-Just-a-Sip-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/1/MsgsDR7JcFq55WHnLqGhT5tBtNgKwjfP8MtFZs977/S/Cowboy-Just-a-Sip-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -161,14 +171,16 @@ export const galleryData = [
     "story": "Classic rustic cowboy in cowboy hat and red shirt longingly looking off into the distance deep in thought.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 5,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/Mqrwp8JFDn7rxP4fzHbkD4nRr25SfDbRDHqH9c7Wr/X2/Cowboy-One-Last-Look-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/Mqrwp8JFDn7rxP4fzHbkD4nRr25SfDbRDHqH9c7Wr/X2/Cowboy-One-Last-Look-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/Mqrwp8JFDn7rxP4fzHbkD4nRr25SfDbRDHqH9c7Wr/X2/Cowboy-One-Last-Look-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/NV79qqt8nMPG7s6GZM3XwZGN5VpMqmJsNVzNmrhGn/L/Cowboy-One-Last-Look-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/NLg4fnKLGNZv8Pv4wQghZSNGMwZsTGFQC2bWVd6FR/S/Cowboy-One-Last-Look-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/MNLgRGjBcJBgnZd7hpCk8JpfBZ7fvmjK6TWPZQqbC/X2/Cowboy-Long-Goodbye-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/MNLgRGjBcJBgnZd7hpCk8JpfBZ7fvmjK6TWPZQqbC/X2/Cowboy-Long-Goodbye-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/MNLgRGjBcJBgnZd7hpCk8JpfBZ7fvmjK6TWPZQqbC/X2/Cowboy-Long-Goodbye-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LmgxDzGwJMMQ7ZL4B2VwHPkvxk5czvhhxnT57rRTD/L/Cowboy-Long-Goodbye-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/Kr73s7Qw7hg62bhRGtnGbLZbWQKLVqksNtf6q7fVK/S/Cowboy-Long-Goodbye-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -186,14 +198,16 @@ export const galleryData = [
     "story": "Vintage cowboy portrait of old west cowboy in cowboy hat with gun in the window of his cabin saying: They said they would come for me... just didn't think this would be the day. Martha forgive me. I did what needed to be done. Old Jim had it coming! Bring it on boys. I don't know where I'm going but I'm sure of one thing; some of you are coming with me! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 6,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NQKGSLKvzLL5rnNrPhqJ728bnfPjcZZc7jqcLQTDH/X2/Cowboy-Over-My-Dead-Body-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NQKGSLKvzLL5rnNrPhqJ728bnfPjcZZc7jqcLQTDH/X2/Cowboy-Over-My-Dead-Body-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NQKGSLKvzLL5rnNrPhqJ728bnfPjcZZc7jqcLQTDH/X2/Cowboy-Over-My-Dead-Body-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NJTK9NLVkFmC363QpsBwRZHhN5jX6sp4GQXVfkNT4/L/Cowboy-Over-My-Dead-Body-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/MnNQgpzTDL28tcKCKDkFhjJgCcb5sHzxV8hTdtwhM/S/Cowboy-Over-My-Dead-Body-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/Lch7cnc2X7hJTcz89VcskffqgZzXt6NXsqnZdjkxK/X2/Cowboy-Morning-Joe-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/Lch7cnc2X7hJTcz89VcskffqgZzXt6NXsqnZdjkxK/X2/Cowboy-Morning-Joe-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/Lch7cnc2X7hJTcz89VcskffqgZzXt6NXsqnZdjkxK/X2/Cowboy-Morning-Joe-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/NVbhMPnCV2rBJjpt9gH8LbrKvDXRhZChB8Bzv72Zs/L/Cowboy-Morning-Joe-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/MVxBdH28Dnzqkwqd4Dn2WMvrZzCK3RqCg38qqZqWp/S/Cowboy-Morning-Joe-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -211,14 +225,16 @@ export const galleryData = [
     "story": "Outside of his keen sense of humor, patience is one of Big Jim's strongest qualities. The warmth of the afternoon slips by as he patiently waits for what undoubtably will be a non-laughing matter. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 7,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/Lb7BQmSLSxqTmvC66sBKs6bqRVKV2fnfScCwGM87N/X2/Cowboy-Up-to-No-Good-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/Lb7BQmSLSxqTmvC66sBKs6bqRVKV2fnfScCwGM87N/X2/Cowboy-Up-to-No-Good-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/Lb7BQmSLSxqTmvC66sBKs6bqRVKV2fnfScCwGM87N/X2/Cowboy-Up-to-No-Good-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/NFVVvmHw6jGXmqKTL8KCtqLXRvXvCF4zR55X9L255/L/Cowboy-Up-to-No-Good-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/LnvWxMsWj6ZJqD2bPg2dsWb7DwwrJr5Gjdrr7n4dQ/S/Cowboy-Up-to-No-Good-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/Mqrwp8JFDn7rxP4fzHbkD4nRr25SfDbRDHqH9c7Wr/X2/Cowboy-One-Last-Look-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/Mqrwp8JFDn7rxP4fzHbkD4nRr25SfDbRDHqH9c7Wr/X2/Cowboy-One-Last-Look-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/Mqrwp8JFDn7rxP4fzHbkD4nRr25SfDbRDHqH9c7Wr/X2/Cowboy-One-Last-Look-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/NV79qqt8nMPG7s6GZM3XwZGN5VpMqmJsNVzNmrhGn/L/Cowboy-One-Last-Look-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/NLg4fnKLGNZv8Pv4wQghZSNGMwZsTGFQC2bWVd6FR/S/Cowboy-One-Last-Look-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -236,14 +252,16 @@ export const galleryData = [
     "story": "Cowboy portrait photography. Photo tells the story: A bolt of lightning shot through him as the bullet pierced his left side. A momentary thought of mortality.... Vengeance will be mine! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 8,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LFGB2Ffx9JJdDqFvpmcvSFs4kcMtPQjK69dnQWFLW/X2/Cowboy-Wounded-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LFGB2Ffx9JJdDqFvpmcvSFs4kcMtPQjK69dnQWFLW/X2/Cowboy-Wounded-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LFGB2Ffx9JJdDqFvpmcvSFs4kcMtPQjK69dnQWFLW/X2/Cowboy-Wounded-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/NdP6cThHzQ5dVs6WRpQ82q8QBf5gt6QcZrTQRmQS3/L/Cowboy-Wounded-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LTwkXZMdTGk3r4bvhNjtnjMFx8P4kXjPHGB2DrBJ5/S/Cowboy-Wounded-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NQKGSLKvzLL5rnNrPhqJ728bnfPjcZZc7jqcLQTDH/X2/Cowboy-Over-My-Dead-Body-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NQKGSLKvzLL5rnNrPhqJ728bnfPjcZZc7jqcLQTDH/X2/Cowboy-Over-My-Dead-Body-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NQKGSLKvzLL5rnNrPhqJ728bnfPjcZZc7jqcLQTDH/X2/Cowboy-Over-My-Dead-Body-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NJTK9NLVkFmC363QpsBwRZHhN5jX6sp4GQXVfkNT4/L/Cowboy-Over-My-Dead-Body-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/MnNQgpzTDL28tcKCKDkFhjJgCcb5sHzxV8hTdtwhM/S/Cowboy-Over-My-Dead-Body-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -261,14 +279,16 @@ export const galleryData = [
     "story": "Three old time cowboys sitting on the porch solving the problems of the world. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 9,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/KvPZXRBHmC3Zjg2bdrGx7NLrPr2BWFtLzKkpCGZWz/M/Cowboys-3-Wise-Men-ws-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/MhgpWxFtjDqGvRSc88XMhxTc9zHsg3RbfV4X2B28j/S/Cowboys-3-Wise-Men-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/Lb7BQmSLSxqTmvC66sBKs6bqRVKV2fnfScCwGM87N/X2/Cowboy-Up-to-No-Good-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/Lb7BQmSLSxqTmvC66sBKs6bqRVKV2fnfScCwGM87N/X2/Cowboy-Up-to-No-Good-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/Lb7BQmSLSxqTmvC66sBKs6bqRVKV2fnfScCwGM87N/X2/Cowboy-Up-to-No-Good-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/NFVVvmHw6jGXmqKTL8KCtqLXRvXvCF4zR55X9L255/L/Cowboy-Up-to-No-Good-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/LnvWxMsWj6ZJqD2bPg2dsWb7DwwrJr5Gjdrr7n4dQ/S/Cowboy-Up-to-No-Good-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -286,14 +306,16 @@ export const galleryData = [
     "story": "Three cowboys about to get into some serious trouble.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 10,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KF5gjQGvpDZKGH2zjdFck6qN8rvkT9bDxpMSKQ7Gc/L/Cowobys-3-Amigos-ws-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KF5gjQGvpDZKGH2zjdFck6qN8rvkT9bDxpMSKQ7Gc/L/Cowobys-3-Amigos-ws-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KF5gjQGvpDZKGH2zjdFck6qN8rvkT9bDxpMSKQ7Gc/L/Cowobys-3-Amigos-ws-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KvkdbDk3JFVr8kGdTCLcz92gXdszJWsWd63c2JxKZ/M/Cowobys-3-Amigos-ws-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/MzztmJpp3pWDjtrstLX5vdWpvXkNXhNtMBc66vJ58/S/Cowobys-3-Amigos-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LFGB2Ffx9JJdDqFvpmcvSFs4kcMtPQjK69dnQWFLW/X2/Cowboy-Wounded-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LFGB2Ffx9JJdDqFvpmcvSFs4kcMtPQjK69dnQWFLW/X2/Cowboy-Wounded-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LFGB2Ffx9JJdDqFvpmcvSFs4kcMtPQjK69dnQWFLW/X2/Cowboy-Wounded-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/NdP6cThHzQ5dVs6WRpQ82q8QBf5gt6QcZrTQRmQS3/L/Cowboy-Wounded-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LTwkXZMdTGk3r4bvhNjtnjMFx8P4kXjPHGB2DrBJ5/S/Cowboy-Wounded-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -311,14 +333,16 @@ export const galleryData = [
     "story": "Painterly landscape photograph: \nRed rocks and green grass create foreground for iconic western sunset with purple, orange and yellow clouds filling the sky as the day comes to an end.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 11,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/NhQcGqR8Nb8gSF4hW94mkCqZtdmk85HHs9tFn5VKF/L/Landscape-Arizona-Sunset-ws-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/NhQcGqR8Nb8gSF4hW94mkCqZtdmk85HHs9tFn5VKF/L/Landscape-Arizona-Sunset-ws-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/NhQcGqR8Nb8gSF4hW94mkCqZtdmk85HHs9tFn5VKF/L/Landscape-Arizona-Sunset-ws-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/Lz9GbXqSZDxz5gmbxfG4NRQ4j6mBk9F7c5JnW7pLC/M/Landscape-Arizona-Sunset-ws-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/KdMPjsFNKKF7s6hBm5rwPMg9bxtXBpkMRwTgW86Qz/S/Landscape-Arizona-Sunset-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/KvPZXRBHmC3Zjg2bdrGx7NLrPr2BWFtLzKkpCGZWz/M/Cowboys-3-Wise-Men-ws-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/MhgpWxFtjDqGvRSc88XMhxTc9zHsg3RbfV4X2B28j/S/Cowboys-3-Wise-Men-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -336,14 +360,16 @@ export const galleryData = [
     "story": "Towering view of an Aspen grove with blue sky above. Fine art painterly landscape photography.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 12,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/NW4Bt7fJwcXmtZbLWWDgLRNS5qqJ2gsDvDv7ckLW5/X2/Landscape-Aspens-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/NW4Bt7fJwcXmtZbLWWDgLRNS5qqJ2gsDvDv7ckLW5/X2/Landscape-Aspens-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/NW4Bt7fJwcXmtZbLWWDgLRNS5qqJ2gsDvDv7ckLW5/X2/Landscape-Aspens-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/M65B6GCckbxSBZdHN2PCdS2cwn5jsmbt7X6qC486g/L/Landscape-Aspens-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/Kt2xxw8WPgJQfMQcMbPw9Q7ZPQrrLQBPfx7xvKXk3/S/Landscape-Aspens-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KF5gjQGvpDZKGH2zjdFck6qN8rvkT9bDxpMSKQ7Gc/L/Cowobys-3-Amigos-ws-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KF5gjQGvpDZKGH2zjdFck6qN8rvkT9bDxpMSKQ7Gc/L/Cowobys-3-Amigos-ws-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KF5gjQGvpDZKGH2zjdFck6qN8rvkT9bDxpMSKQ7Gc/L/Cowobys-3-Amigos-ws-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/KvkdbDk3JFVr8kGdTCLcz92gXdszJWsWd63c2JxKZ/M/Cowobys-3-Amigos-ws-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/0/MzztmJpp3pWDjtrstLX5vdWpvXkNXhNtMBc66vJ58/S/Cowobys-3-Amigos-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -361,14 +387,16 @@ export const galleryData = [
     "story": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 13,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LNVcdXmk5CJ8mKptNF84bzZjmxTHWCH3B72tTbPQv/X2/Landscape-Buffy-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LNVcdXmk5CJ8mKptNF84bzZjmxTHWCH3B72tTbPQv/X2/Landscape-Buffy-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LNVcdXmk5CJ8mKptNF84bzZjmxTHWCH3B72tTbPQv/X2/Landscape-Buffy-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/MQMzHDGhQMGvW4HgqGzwKzBwxMrFxjKGJ6pKPGSTk/L/Landscape-Buffy-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/Mq6jCzD8V6Hgm3D8BCWwfLzHnGG54BwWThbLh3dLg/S/Landscape-Buffy-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/NhQcGqR8Nb8gSF4hW94mkCqZtdmk85HHs9tFn5VKF/L/Landscape-Arizona-Sunset-ws-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/NhQcGqR8Nb8gSF4hW94mkCqZtdmk85HHs9tFn5VKF/L/Landscape-Arizona-Sunset-ws-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/NhQcGqR8Nb8gSF4hW94mkCqZtdmk85HHs9tFn5VKF/L/Landscape-Arizona-Sunset-ws-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/Lz9GbXqSZDxz5gmbxfG4NRQ4j6mBk9F7c5JnW7pLC/M/Landscape-Arizona-Sunset-ws-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/0/KdMPjsFNKKF7s6hBm5rwPMg9bxtXBpkMRwTgW86Qz/S/Landscape-Arizona-Sunset-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -386,14 +414,16 @@ export const galleryData = [
     "story": "Painterly photograph of some iconic Western Cotton Candy - A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 14,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/K3ZjHGjzmbH6x8PC3XBnZd7hfcwW43DH2PGCFmbrV/X2/Landscape-Cotton-Canday-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/K3ZjHGjzmbH6x8PC3XBnZd7hfcwW43DH2PGCFmbrV/X2/Landscape-Cotton-Canday-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/K3ZjHGjzmbH6x8PC3XBnZd7hfcwW43DH2PGCFmbrV/X2/Landscape-Cotton-Canday-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/NVMQVQ2ftVtj2WH9X3ftZ8RPv4gJgGJB6ndxpRW9X/L/Landscape-Cotton-Canday-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/Kn93nzk472f47vfHv9DwtFXHWjt5ZXDnNXrVJGc5N/S/Landscape-Cotton-Canday-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/NW4Bt7fJwcXmtZbLWWDgLRNS5qqJ2gsDvDv7ckLW5/X2/Landscape-Aspens-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/NW4Bt7fJwcXmtZbLWWDgLRNS5qqJ2gsDvDv7ckLW5/X2/Landscape-Aspens-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/NW4Bt7fJwcXmtZbLWWDgLRNS5qqJ2gsDvDv7ckLW5/X2/Landscape-Aspens-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/M65B6GCckbxSBZdHN2PCdS2cwn5jsmbt7X6qC486g/L/Landscape-Aspens-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/Kt2xxw8WPgJQfMQcMbPw9Q7ZPQrrLQBPfx7xvKXk3/S/Landscape-Aspens-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -411,14 +441,16 @@ export const galleryData = [
     "story": "Fine art painterly mountain photography of Crystal Mill near Marble, Colorado.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 15,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/Ncdwzt7FfGXmHfM75bhHBTdV5bsRmXcmv4SWH4Zmc/X2/Landscape-Crystal-mill-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/Ncdwzt7FfGXmHfM75bhHBTdV5bsRmXcmv4SWH4Zmc/X2/Landscape-Crystal-mill-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/Ncdwzt7FfGXmHfM75bhHBTdV5bsRmXcmv4SWH4Zmc/X2/Landscape-Crystal-mill-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/NQ2pxQqWPqNSLn9LvCtFF2Kj9CrBLDvDnWzf4rrft/L/Landscape-Crystal-mill-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/LvJmPW4v9LjZ9Rbf7cqkHncS4LHRWTjXDQ3JCbnWh/S/Landscape-Crystal-mill-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LNVcdXmk5CJ8mKptNF84bzZjmxTHWCH3B72tTbPQv/X2/Landscape-Buffy-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LNVcdXmk5CJ8mKptNF84bzZjmxTHWCH3B72tTbPQv/X2/Landscape-Buffy-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LNVcdXmk5CJ8mKptNF84bzZjmxTHWCH3B72tTbPQv/X2/Landscape-Buffy-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/MQMzHDGhQMGvW4HgqGzwKzBwxMrFxjKGJ6pKPGSTk/L/Landscape-Buffy-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/Mq6jCzD8V6Hgm3D8BCWwfLzHnGG54BwWThbLh3dLg/S/Landscape-Buffy-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -436,14 +468,16 @@ export const galleryData = [
     "story": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole, Wyoming and just outside of Grand Teton National Park. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 16,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LwQdHjMHPzJtKL9QTg6JkpVc7Zr32PmbxDsBqnVnL/X2/Landscape-In-the-weeds-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LwQdHjMHPzJtKL9QTg6JkpVc7Zr32PmbxDsBqnVnL/X2/Landscape-In-the-weeds-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LwQdHjMHPzJtKL9QTg6JkpVc7Zr32PmbxDsBqnVnL/X2/Landscape-In-the-weeds-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LqGQH9ZW8H672v43DzH9GhSrZt5R4gQBDhWLx33Cb/L/Landscape-In-the-weeds-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LVC6Jx8WTnGXfJWDRjcqrszBdK3qZDczzzsJc5CxN/S/Landscape-In-the-weeds-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/K3ZjHGjzmbH6x8PC3XBnZd7hfcwW43DH2PGCFmbrV/X2/Landscape-Cotton-Canday-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/K3ZjHGjzmbH6x8PC3XBnZd7hfcwW43DH2PGCFmbrV/X2/Landscape-Cotton-Canday-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/K3ZjHGjzmbH6x8PC3XBnZd7hfcwW43DH2PGCFmbrV/X2/Landscape-Cotton-Canday-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/NVMQVQ2ftVtj2WH9X3ftZ8RPv4gJgGJB6ndxpRW9X/L/Landscape-Cotton-Canday-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/Kn93nzk472f47vfHv9DwtFXHWjt5ZXDnNXrVJGc5N/S/Landscape-Cotton-Canday-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -461,14 +495,16 @@ export const galleryData = [
     "story": "Fine art painterly landscape photography of a lone white church on the hill.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 17,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/NgWdwC3RXbC6cmqHw4PZVQJQvrXndx3SjpmQz6bck/X2/Landscape-Moral-Highground-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/NgWdwC3RXbC6cmqHw4PZVQJQvrXndx3SjpmQz6bck/X2/Landscape-Moral-Highground-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/NgWdwC3RXbC6cmqHw4PZVQJQvrXndx3SjpmQz6bck/X2/Landscape-Moral-Highground-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/NMmkD8CTVdLnmWxF9gvm6ncb8RWpm84RtGqkkVK6d/L/Landscape-Moral-Highground-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/LSFcNQRXcLP7dV6dfNmNfPsSV6p79fVRsZRB7rwp3/S/Landscape-Moral-Highground-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/Ncdwzt7FfGXmHfM75bhHBTdV5bsRmXcmv4SWH4Zmc/X2/Landscape-Crystal-mill-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/Ncdwzt7FfGXmHfM75bhHBTdV5bsRmXcmv4SWH4Zmc/X2/Landscape-Crystal-mill-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/Ncdwzt7FfGXmHfM75bhHBTdV5bsRmXcmv4SWH4Zmc/X2/Landscape-Crystal-mill-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/NQ2pxQqWPqNSLn9LvCtFF2Kj9CrBLDvDnWzf4rrft/L/Landscape-Crystal-mill-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/LvJmPW4v9LjZ9Rbf7cqkHncS4LHRWTjXDQ3JCbnWh/S/Landscape-Crystal-mill-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -486,14 +522,16 @@ export const galleryData = [
     "story": "Fine art painterly photo of the Upper Yellowstone waterfall in Yellowstone National Park.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 18,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/LQdTqNhK6JVbvdhCLzvmqP3rNSwvhppNftkMtFFJ2/X2/Landscape-Upper-Falls-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/LQdTqNhK6JVbvdhCLzvmqP3rNSwvhppNftkMtFFJ2/X2/Landscape-Upper-Falls-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/LQdTqNhK6JVbvdhCLzvmqP3rNSwvhppNftkMtFFJ2/X2/Landscape-Upper-Falls-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/Mwc3mBRhhHwjW8N5zXhMwvNWJxgtCVh8KBt9pDrDz/L/Landscape-Upper-Falls-ws-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/Nd6zQpcfz2gXpfWJBtM9WJhwqrSzw8XpBXg4GrgxZ/S/Landscape-Upper-Falls-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LwQdHjMHPzJtKL9QTg6JkpVc7Zr32PmbxDsBqnVnL/X2/Landscape-In-the-weeds-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LwQdHjMHPzJtKL9QTg6JkpVc7Zr32PmbxDsBqnVnL/X2/Landscape-In-the-weeds-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LwQdHjMHPzJtKL9QTg6JkpVc7Zr32PmbxDsBqnVnL/X2/Landscape-In-the-weeds-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LqGQH9ZW8H672v43DzH9GhSrZt5R4gQBDhWLx33Cb/L/Landscape-In-the-weeds-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LVC6Jx8WTnGXfJWDRjcqrszBdK3qZDczzzsJc5CxN/S/Landscape-In-the-weeds-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -511,14 +549,16 @@ export const galleryData = [
     "story": "Western photo of lone cowboy and Moulton barn on Mormon Row in Jackson Hole, Wyoming at sunset. Fine art painterly mountain photography. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 19,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MMjTz8GVDxfjpbq8zwbqhkJ7NW5dgw2JN9VT75xZw/L/Landscape%3DMoulton-Barn-ws-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MMjTz8GVDxfjpbq8zwbqhkJ7NW5dgw2JN9VT75xZw/L/Landscape%3DMoulton-Barn-ws-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MMjTz8GVDxfjpbq8zwbqhkJ7NW5dgw2JN9VT75xZw/L/Landscape%3DMoulton-Barn-ws-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MPB4q4mfVT2Cc5gG6ZQSfDnRKt48kTP34ZZKRRtvQ/M/Landscape%3DMoulton-Barn-ws-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MVPHcq9WtpXcdsK7nfwhznjkNjhjnvfcjMk6VvzS3/S/Landscape%3DMoulton-Barn-ws-S.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/NgWdwC3RXbC6cmqHw4PZVQJQvrXndx3SjpmQz6bck/X2/Landscape-Moral-Highground-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/NgWdwC3RXbC6cmqHw4PZVQJQvrXndx3SjpmQz6bck/X2/Landscape-Moral-Highground-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/NgWdwC3RXbC6cmqHw4PZVQJQvrXndx3SjpmQz6bck/X2/Landscape-Moral-Highground-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/NMmkD8CTVdLnmWxF9gvm6ncb8RWpm84RtGqkkVK6d/L/Landscape-Moral-Highground-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/0/LSFcNQRXcLP7dV6dfNmNfPsSV6p79fVRsZRB7rwp3/S/Landscape-Moral-Highground-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -536,14 +576,16 @@ export const galleryData = [
     "story": "Painterly Wild West themed photography of a lady waving goodbye from the train.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 20,
-    "src": "",
-    "srcXL": "",
-    "srcL": "",
-    "srcM": "",
-    "srcS": "",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/LQdTqNhK6JVbvdhCLzvmqP3rNSwvhppNftkMtFFJ2/X2/Landscape-Upper-Falls-ws-X2.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/LQdTqNhK6JVbvdhCLzvmqP3rNSwvhppNftkMtFFJ2/X2/Landscape-Upper-Falls-ws-X2.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/LQdTqNhK6JVbvdhCLzvmqP3rNSwvhppNftkMtFFJ2/X2/Landscape-Upper-Falls-ws-X2.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/Mwc3mBRhhHwjW8N5zXhMwvNWJxgtCVh8KBt9pDrDz/L/Landscape-Upper-Falls-ws-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/1/Nd6zQpcfz2gXpfWJBtM9WJhwqrSzw8XpBXg4GrgxZ/S/Landscape-Upper-Falls-ws-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -561,14 +603,16 @@ export const galleryData = [
     "story": "A WWII nurse tending to the sick and the wounded on the battlefield.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+    ],
     "visibility": "show",
     "sortOrder": 21,
-    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/NVpH9zJ5cvKJP9VqRRb9Gkr9FNzLSd9BfZFghBC7g/X2/WWII-Under-Pressure-ws-X2.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/NVpH9zJ5cvKJP9VqRRb9Gkr9FNzLSd9BfZFghBC7g/X2/WWII-Under-Pressure-ws-X2.jpg",
-    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/NVpH9zJ5cvKJP9VqRRb9Gkr9FNzLSd9BfZFghBC7g/X2/WWII-Under-Pressure-ws-X2.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/LTBHqGsTbJkKvshc37w3kJt36tkdWWnB4jRDVrTGC/Ti/WWII-Under-Pressure-ws-Ti.jpg",
-    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/LTBHqGsTbJkKvshc37w3kJt36tkdWWnB4jRDVrTGC/Ti/WWII-Under-Pressure-ws-Ti.jpg",
+    "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MMjTz8GVDxfjpbq8zwbqhkJ7NW5dgw2JN9VT75xZw/L/Landscape%3DMoulton-Barn-ws-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MMjTz8GVDxfjpbq8zwbqhkJ7NW5dgw2JN9VT75xZw/L/Landscape%3DMoulton-Barn-ws-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MMjTz8GVDxfjpbq8zwbqhkJ7NW5dgw2JN9VT75xZw/L/Landscape%3DMoulton-Barn-ws-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MPB4q4mfVT2Cc5gG6ZQSfDnRKt48kTP34ZZKRRtvQ/M/Landscape%3DMoulton-Barn-ws-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/0/MVPHcq9WtpXcdsK7nfwhznjkNjhjnvfcjMk6VvzS3/S/Landscape%3DMoulton-Barn-ws-S.jpg",
     "srcOriginal": ""
   }
 ];
