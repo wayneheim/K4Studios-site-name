@@ -406,8 +406,8 @@ export const galleryData = [
   },
   {
     "id": "i-QNdCxKN",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Cowboy Portrait - Native American photography",
+    "description": "Experience the Native American heritage art in this captivating Native American Portraits by Wayne Heim. A stunning piece of spirit of the West that captures the essence of Native American tradition. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/0/LM599HhPqKD7B5LjM2ddv6PQCpW6xpL3hLCk7VcbQ/XL/_HF27324-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-QNdCxKN/A",
@@ -419,7 +419,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American photography",
+      "Native American heritage art",
+      "Native American Portraits",
+      "spirit of the West",
+      "Native American tradition"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -435,8 +440,8 @@ export const galleryData = [
   },
   {
     "id": "i-Jbxc4G6",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - spirit of the West",
+    "description": "Experience the Native American heritage art in this captivating Native American art prints by Wayne Heim. A stunning piece of spirit of the West that captures the essence of Indigenous experience. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/0/M9Jk3CqFS4v8jWbvKbzBrcXdZWjH89ScXtg4TF67Q/XL/_WHO4968-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Jbxc4G6/A",
@@ -448,7 +453,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "spirit of the West",
+      "Native American heritage art",
+      "Native American art prints",
+      "Indigenous experience"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -464,8 +473,8 @@ export const galleryData = [
   },
   {
     "id": "i-9frbWfJ",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American tradition",
+    "description": "Experience the Native American tradition in this captivating Indigenous experience by Wayne Heim. A stunning piece of Native American photography that captures the essence of Native American heritage art. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-9frbWfJ/A",
@@ -477,7 +486,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American tradition",
+      "Indigenous experience",
+      "Native American photography",
+      "Native American heritage art"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -493,8 +506,8 @@ export const galleryData = [
   },
   {
     "id": "i-vJSCrqC",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - Indigenous experience",
+    "description": "Experience the Native American art prints in this captivating Native American heritage art by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of Native American tradition. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/0/MNwKQJwzS4467v7ZQBThSHJmhXkmThTC6psMst99S/XL/_WHO0336-Edit-Edit-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-vJSCrqC/A",
@@ -506,7 +519,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Indigenous experience",
+      "Native American art prints",
+      "Native American heritage art",
+      "painterly Native American images",
+      "Native American tradition"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -522,8 +540,8 @@ export const galleryData = [
   },
   {
     "id": "i-CD6rgtF",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American photography",
+    "description": "Experience the Native American tradition in this captivating Native American heritage art by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of Native American Portraits. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/0/MvHVjJk5qn9b9kvhZnMjVdDhrxZ6kGBbkshmPS5JV/XL/_WHO2552-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-CD6rgtF/A",
@@ -535,7 +553,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American photography",
+      "Native American tradition",
+      "Native American heritage art",
+      "painterly Native American images",
+      "Native American Portraits"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -551,8 +574,8 @@ export const galleryData = [
   },
   {
     "id": "i-bxDjH9c",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American tradition",
+    "description": "Experience the Native American Portraits in this captivating Indigenous experience by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of Native American tradition. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/0/LPRCpfjRSRXG4bxRszMpfrm7XnssVBBmmDShFRrtS/XL/_WHO5788-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-bxDjH9c/A",
@@ -564,7 +587,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American tradition",
+      "Native American Portraits",
+      "Indigenous experience",
+      "painterly Native American images"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -609,8 +636,8 @@ export const galleryData = [
   },
   {
     "id": "i-V96Rgmj",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Western Cowboy Portrait - Native American art prints",
+    "description": "Experience the Native American photography in this captivating Native American Portraits by Wayne Heim. A stunning piece of spirit of the West that captures the essence of Indigenous experience. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/KVTLxxQwM7HdcwgDV8Kvv3xnn6QNzvfsCT3T5Spwq/XL/_WHO0338-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-V96Rgmj/A",
@@ -622,7 +649,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American art prints",
+      "Native American photography",
+      "Native American Portraits",
+      "spirit of the West",
+      "Indigenous experience"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -638,8 +670,8 @@ export const galleryData = [
   },
   {
     "id": "i-h679dhn",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - spirit of the West",
+    "description": "Experience the Indigenous experience in this captivating Native American photography by Wayne Heim. A stunning piece of spirit of the West that captures the essence of painterly Native American images. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-h679dhn/A",
@@ -651,7 +683,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "spirit of the West",
+      "Indigenous experience",
+      "Native American photography",
+      "painterly Native American images"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -667,8 +703,8 @@ export const galleryData = [
   },
   {
     "id": "i-zt2btJ7",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Cowboy Portrait - Native American Portraits",
+    "description": "Experience the painterly Native American images in this captivating Native American tradition by Wayne Heim. A stunning piece of Native American heritage art that captures the essence of Indigenous experience. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/LfbKQpX3tSXNRNz9jsjJsdxGFzGdktCLRvGHJcvsC/XL/_WHO3531-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zt2btJ7/A",
@@ -680,7 +716,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American Portraits",
+      "painterly Native American images",
+      "Native American tradition",
+      "Native American heritage art",
+      "Indigenous experience"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -696,8 +737,8 @@ export const galleryData = [
   },
   {
     "id": "i-NgkC4Zt",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Western Cowboy Portrait - Native American Portraits",
+    "description": "Experience the painterly Native American images in this captivating Native American tradition by Wayne Heim. A stunning piece of spirit of the West that captures the essence of Native American photography. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/LZmHGfQv8tMgnvDzDvX2wxMcNzL5NLsCRBd3Dgp94/XL/_WHO2514-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-NgkC4Zt/A",
@@ -709,7 +750,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American Portraits",
+      "painterly Native American images",
+      "Native American tradition",
+      "spirit of the West",
+      "Native American photography"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -725,8 +771,8 @@ export const galleryData = [
   },
   {
     "id": "i-zZJbbHG",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Western Cowboy Portrait - spirit of the West",
+    "description": "Experience the Native American art prints in this captivating Native American tradition by Wayne Heim. A stunning piece of Indigenous experience that captures the essence of Native American Portraits. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MWbpQRmQw7DXf6KMrVCnBhXNcv4b2gN6V5ws6TWQj/XL/_WHO0135-Edit-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zZJbbHG/A",
@@ -738,7 +784,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "spirit of the West",
+      "Native American art prints",
+      "Native American tradition",
+      "Indigenous experience",
+      "Native American Portraits"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -754,8 +805,8 @@ export const galleryData = [
   },
   {
     "id": "i-sDZFJ6t",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Cowboy Portrait - Native American art prints",
+    "description": "Experience the Native American photography in this captivating Native American Portraits by Wayne Heim. A stunning piece of spirit of the West that captures the essence of Native American heritage art. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/K8wPVfPrjCMmPBCnWCJGw7GzwKFTQwqcN75Jwbdcs/XL/_WHO2202-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sDZFJ6t/A",
@@ -767,7 +818,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American art prints",
+      "Native American photography",
+      "Native American Portraits",
+      "spirit of the West",
+      "Native American heritage art"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -783,8 +839,8 @@ export const galleryData = [
   },
   {
     "id": "i-cNbW8wV",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Cowboy Portrait - Indigenous experience",
+    "description": "Experience the Native American art prints in this captivating spirit of the West by Wayne Heim. A stunning piece of Native American tradition that captures the essence of painterly Native American images. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/LHQnH52gpCBqgMDDNXb8qKxJQ9BXmctrNGWkFzPMM/XL/_HF29032-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-cNbW8wV/A",
@@ -796,7 +852,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Indigenous experience",
+      "Native American art prints",
+      "spirit of the West",
+      "Native American tradition",
+      "painterly Native American images"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -812,8 +873,8 @@ export const galleryData = [
   },
   {
     "id": "i-4Hz6D7k",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - Indigenous experience",
+    "description": "Experience the Indigenous experience in this captivating spirit of the West by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of Native American art prints. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NB485BPKHD5dS3QZN6xmQGznJwwXW65dgfRPcFPLN/XL/_HF29691-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Hz6D7k/A",
@@ -825,7 +886,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Indigenous experience",
+      "spirit of the West",
+      "painterly Native American images",
+      "Native American art prints"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -841,8 +906,8 @@ export const galleryData = [
   },
   {
     "id": "i-bWw2GPZ",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Western Cowboy Portrait - painterly Native American images",
+    "description": "Experience the Native American art prints in this captivating Native American Portraits by Wayne Heim. A stunning piece of spirit of the West that captures the essence of Native American photography. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/1/KgDDgW7gkmtK9CSqSRMTTXBfrjNfWZJ8vZV7GCb5n/XL/_WHO1458-891-893-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-bWw2GPZ/A",
@@ -854,7 +919,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "painterly Native American images",
+      "Native American art prints",
+      "Native American Portraits",
+      "spirit of the West",
+      "Native American photography"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -865,8 +935,8 @@ export const galleryData = [
   },
   {
     "id": "i-Z8pZLnt",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - spirit of the West",
+    "description": "Experience the Native American heritage art in this captivating Native American Portraits by Wayne Heim. A stunning piece of spirit of the West that captures the essence of Indigenous experience. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/2/KJNKKMVsd8t977NpwVvFggb7LHHjP8rTKmcjG2Kf2/XL/_WHO1224-901-902-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Z8pZLnt/A",
@@ -878,7 +948,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "spirit of the West",
+      "Native American heritage art",
+      "Native American Portraits",
+      "Indigenous experience"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -894,8 +968,8 @@ export const galleryData = [
   },
   {
     "id": "i-67Qt8WM",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American heritage art",
+    "description": "Experience the Indigenous experience in this captivating Native American art prints by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of Native American photography. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-67Qt8WM/A",
@@ -907,7 +981,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American heritage art",
+      "Indigenous experience",
+      "Native American art prints",
+      "painterly Native American images",
+      "Native American photography"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -923,8 +1002,8 @@ export const galleryData = [
   },
   {
     "id": "i-wmDznTm",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Cowboy Portrait - Native American art prints",
+    "description": "Experience the spirit of the West in this captivating painterly Native American images by Wayne Heim. A stunning piece of Native American photography that captures the essence of Native American tradition. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/1/KmmfsdGp6q4KpCJZJTRV55ttpVpgQ7VHs3NcJv2pS/XL/_WHO5804-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-wmDznTm/A",
@@ -936,7 +1015,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American art prints",
+      "spirit of the West",
+      "painterly Native American images",
+      "Native American photography",
+      "Native American tradition"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -947,8 +1031,8 @@ export const galleryData = [
   },
   {
     "id": "i-KG7ZwXT",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American art prints",
+    "description": "Experience the painterly Native American images in this captivating Native American tradition by Wayne Heim. A stunning piece of Native American Portraits that captures the essence of Native American art prints. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/Lj6QBVbS4rWP6n92R65CZpX8sjm3KccJ7TJXzHcZp/XL/_WHO1676-887-888-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KG7ZwXT/A",
@@ -960,7 +1044,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American art prints",
+      "painterly Native American images",
+      "Native American tradition",
+      "Native American Portraits"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -976,8 +1064,8 @@ export const galleryData = [
   },
   {
     "id": "i-Gk8bBLn",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American tradition",
+    "description": "Experience the Indigenous experience in this captivating Native American art prints by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of spirit of the West. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/0/NdNswj9fNLQ73JWX7LPNKG5hsSZkcXf5sQKsQ5zPJ/XL/_WHO6112-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Gk8bBLn/A",
@@ -989,7 +1077,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American tradition",
+      "Indigenous experience",
+      "Native American art prints",
+      "painterly Native American images",
+      "spirit of the West"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -1005,8 +1098,8 @@ export const galleryData = [
   },
   {
     "id": "i-nZbDC9C",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Cowboy Portrait - Native American tradition",
+    "description": "Experience the Native American art prints in this captivating Indigenous experience by Wayne Heim. A stunning piece of Native American heritage art that captures the essence of Native American photography. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/2/KLGwmMR57nK2V8mWm5Wcm7K2ChC39txffFTFh5WfB/XL/_HF20466-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-nZbDC9C/A",
@@ -1018,7 +1111,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American tradition",
+      "Native American art prints",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American photography"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -1072,8 +1170,8 @@ export const galleryData = [
   },
   {
     "id": "i-WXNSQzk",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American tradition",
+    "description": "Experience the painterly Native American images in this captivating Native American heritage art by Wayne Heim. A stunning piece of Native American tradition that captures the essence of spirit of the West. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-WXNSQzk/A",
@@ -1085,7 +1183,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American tradition",
+      "painterly Native American images",
+      "Native American heritage art",
+      "spirit of the West"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -1101,8 +1203,8 @@ export const galleryData = [
   },
   {
     "id": "i-rR76nKr",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - Indigenous experience",
+    "description": "Experience the Indigenous experience in this captivating Native American tradition by Wayne Heim. A stunning piece of Native American art prints that captures the essence of Native American Portraits. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/0/MggWQRwDzZCsQ3TGqcPXbrDF56Qvg5wrJXmwdvPX9/XL/_WHO0996-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rR76nKr/A",
@@ -1114,7 +1216,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Indigenous experience",
+      "Native American tradition",
+      "Native American art prints",
+      "Native American Portraits"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -1130,8 +1236,8 @@ export const galleryData = [
   },
   {
     "id": "i-zDcr5T3",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Cowboy Portrait - Native American photography",
+    "description": "Experience the Native American heritage art in this captivating Indigenous experience by Wayne Heim. A stunning piece of Native American art prints that captures the essence of Native American Portraits. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/M9RQmdb6bMtSXHTmXXxfJ6Kpwcd9hQpD5BRNL6w5Z/XL/_HF24203-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zDcr5T3/A",
@@ -1143,7 +1249,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American photography",
+      "Native American heritage art",
+      "Indigenous experience",
+      "Native American art prints",
+      "Native American Portraits"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -1159,8 +1270,8 @@ export const galleryData = [
   },
   {
     "id": "i-hHVb4vC",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Western Cowboy Portrait - Native American Portraits",
+    "description": "Experience the painterly Native American images in this captivating Native American Portraits by Wayne Heim. A stunning piece of Native American heritage art that captures the essence of Native American tradition. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/1/LkgR77BRdwK9NfF4g3mWDL7JKRRzgHzhrcC4tXdvV/XL/_WHO1224-901-902-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-hHVb4vC/A",
@@ -1172,7 +1283,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American Portraits",
+      "painterly Native American images",
+      "Native American heritage art",
+      "Native American tradition"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -1188,8 +1303,8 @@ export const galleryData = [
   },
   {
     "id": "i-tfZTHXq",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Western Cowboy Portrait - Native American art prints",
+    "description": "Experience the Native American Portraits in this captivating spirit of the West by Wayne Heim. A stunning piece of Native American tradition that captures the essence of Native American art prints. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-tfZTHXq/A",
@@ -1201,7 +1316,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American art prints",
+      "Native American Portraits",
+      "spirit of the West",
+      "Native American tradition"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -1217,8 +1336,8 @@ export const galleryData = [
   },
   {
     "id": "i-z4mTWBb",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - painterly Native American images",
+    "description": "Experience the Native American art prints in this captivating Native American tradition by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of Indigenous experience. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/2/NLgqVKtJv7xJvnGmcNPfrJD6GLLCZ4LQLRrzJvCTv/XL/_WHO1264-895-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-z4mTWBb/A",
@@ -1230,7 +1349,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "painterly Native American images",
+      "Native American art prints",
+      "Native American tradition",
+      "Indigenous experience"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -1246,8 +1369,8 @@ export const galleryData = [
   },
   {
     "id": "i-StJWnTh",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American tradition",
+    "description": "Experience the Native American tradition in this captivating spirit of the West by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of Native American Portraits. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/1/Krjdw6XfVRnW4b78L8KtTzwtQTL4kxSpzHv8CCHdT/XL/_WHO1676-887-888-3-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-StJWnTh/A",
@@ -1259,7 +1382,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American tradition",
+      "spirit of the West",
+      "painterly Native American images",
+      "Native American Portraits"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -1275,8 +1402,8 @@ export const galleryData = [
   },
   {
     "id": "i-7CjNq8p",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Western Cowboy Portrait - Native American tradition",
+    "description": "Experience the Indigenous experience in this captivating Native American photography by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of spirit of the West. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7CjNq8p/A",
@@ -1288,7 +1415,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American tradition",
+      "Indigenous experience",
+      "Native American photography",
+      "painterly Native American images",
+      "spirit of the West"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -1304,8 +1436,8 @@ export const galleryData = [
   },
   {
     "id": "i-567K6d3",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - spirit of the West",
+    "description": "Experience the Native American tradition in this captivating Native American art prints by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of spirit of the West. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wmDznTm/1/MqvJV44FzksQrz7sXwf37pMq6JWh8PDTvwTCwDNCF/XL/_WHO5804-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-567K6d3/A",
@@ -1317,7 +1449,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "spirit of the West",
+      "Native American tradition",
+      "Native American art prints",
+      "painterly Native American images"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -1333,8 +1469,8 @@ export const galleryData = [
   },
   {
     "id": "i-JbWnV3V",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American photography",
+    "description": "Experience the Native American heritage art in this captivating Native American Portraits by Wayne Heim. A stunning piece of spirit of the West that captures the essence of painterly Native American images. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-JbWnV3V/A",
@@ -1346,7 +1482,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American photography",
+      "Native American heritage art",
+      "Native American Portraits",
+      "spirit of the West",
+      "painterly Native American images"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -1362,8 +1503,8 @@ export const galleryData = [
   },
   {
     "id": "i-FTCst2K",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Cowboy Portrait - Native American tradition",
+    "description": "Experience the Indigenous experience in this captivating painterly Native American images by Wayne Heim. A stunning piece of Native American art prints that captures the essence of Native American heritage art. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/K2M9dDMLGdbLRRHvzZqxj4rpFSrP2tjCLP937GzPW/XL/_WHO2117-Edit-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-FTCst2K/A",
@@ -1375,7 +1516,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American tradition",
+      "Indigenous experience",
+      "painterly Native American images",
+      "Native American art prints",
+      "Native American heritage art"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -1391,8 +1537,8 @@ export const galleryData = [
   },
   {
     "id": "i-7hD9CCh",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - Native American photography",
+    "description": "Experience the Native American photography in this captivating spirit of the West by Wayne Heim. A stunning piece of painterly Native American images that captures the essence of Indigenous experience. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bWw2GPZ/1/KRvFrN9Hf3tZLh2kGR7PxJbjfg3KR9mqskTkSngb9/XL/_WHO1469-889-890-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7hD9CCh/A",
@@ -1404,7 +1550,11 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Native American photography",
+      "spirit of the West",
+      "painterly Native American images",
+      "Indigenous experience"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",

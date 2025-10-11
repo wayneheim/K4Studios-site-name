@@ -4,7 +4,7 @@ export const posts = [
     title: "Inside the Frame: Dust or Desperation",
     date: "2025-10-05",
     excerpt: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim’s Western image 'Dust or Desperation.'",
-    cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XXXXXXX/0/XXXXXXX/S/_HF21624-1005-1006-S.jpg" // <-- replace with actual SmugMug link
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-cFhZXJc/3/NgnZb2R8LZhnbq6wvbd8nd6s98h5rffmGcjkznMTq/S/_HF21624-1005-1006-S.jpg" // <-- replace with actual SmugMug link
   },
   {
     slug: "one-way-out",

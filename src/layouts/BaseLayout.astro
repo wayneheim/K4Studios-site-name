@@ -129,6 +129,10 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     <!-- ✅ Always render SEO title + description -->
     <title>{cleanTitle}</title>
     <meta name="description" content={seoDescription} />
+    <meta name="author" content="Wayne Heim" />
+    <meta name="copyright" content="© Wayne Heim, K4 Studios" />
+    <meta name="creator" content="Wayne Heim" />
+    {isImagePage && <meta name="robots" content="noai, noimageai" />}
     <link rel="canonical" href={canonicalUrl} />
 
     {structuredDataJSON && (

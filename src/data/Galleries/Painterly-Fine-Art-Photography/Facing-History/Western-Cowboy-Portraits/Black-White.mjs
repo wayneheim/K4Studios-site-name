@@ -515,8 +515,8 @@ export const galleryData = [
   },
   {
     "id": "i-RK9HRjR",
-    "title": "A",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - frontier life",
+    "description": "Experience the cowboy portraits in this captivating cowboy painting art by Wayne Heim. A stunning piece of frontier life that captures the essence of western art. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-RK9HRjR/0/Kw4HKxb6QFw5dxQ5jshj8TF8H4fDmjpmgPfQMVDPp/L/_HF23341-816-L.jpg",
     "srcXL": "",
@@ -527,7 +527,11 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-RK9HRjR/A",
     "keywords": [
       "O2H1228",
-      "785"
+      "785",
+      "frontier life",
+      "cowboy portraits",
+      "cowboy painting art",
+      "western art"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -1505,8 +1509,8 @@ export const galleryData = [
   },
   {
     "id": "i-MTX8mmk",
-    "title": "A",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - cowboy portraits",
+    "description": "Experience the cowboy painting art in this captivating cowboy artwork by Wayne Heim. A stunning piece of rugged spirit that captures the essence of frederic remington. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-MTX8mmk/0/Mdf8T9kBbP8jrtMBqQShHNX5pqvDFtTSqm5hRND4C/L/_O2H2856-855-L.jpg",
     "srcXL": "",
@@ -1523,7 +1527,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "cowboy portraits",
+      "cowboy painting art",
+      "cowboy artwork",
+      "rugged spirit",
+      "frederic remington"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -4258,8 +4267,8 @@ export const galleryData = [
   },
   {
     "id": "i-LZNLWf9",
-    "title": "A",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - cowboy artwork",
+    "description": "Experience the frederic remington in this captivating wild west photography by Wayne Heim. A stunning piece of western art that captures the essence of powerful works of art. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-LZNLWf9/0/Kc7hbbqd6DDnn6FB478kcSFhQRxR9SQcKVfw7kbbc/L/_O2H0586-Edit-Edit-Edit-L.jpg",
     "srcXL": "",
@@ -4269,7 +4278,12 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-LZNLWf9/A",
     "keywords": [
-      "O2H0009"
+      "O2H0009",
+      "cowboy artwork",
+      "frederic remington",
+      "wild west photography",
+      "western art",
+      "powerful works of art"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -4344,8 +4358,8 @@ export const galleryData = [
   },
   {
     "id": "i-w3n5cvx",
-    "title": "A",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - frontier life",
+    "description": "Experience the cowboy portraits in this captivating painterly cowboy portraits by Wayne Heim. A stunning piece of cowboy art that captures the essence of outlaw portraits. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-w3n5cvx/0/LntgzGhFDs6Gq9HD9gtC8JQSqsw5QdWpRHRgP4Grr/L/_O2H3505-866-867-869-L.jpg",
     "srcXL": "",
@@ -4362,7 +4376,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "frontier life",
+      "cowboy portraits",
+      "painterly cowboy portraits",
+      "cowboy art",
+      "outlaw portraits"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -5653,8 +5672,8 @@ export const galleryData = [
   },
   {
     "id": "i-QsNP7mR",
-    "title": "A",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - wild west photography",
+    "description": "Experience the Western cowboys in this captivating western landscapes fine art by Wayne Heim. A stunning piece of cowboy artwork that captures the essence of cowboy portraits. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QsNP7mR/0/L2Zrf8tjpqjrB6JJh4W9RWpXwQvM66JPkfQ28MRSq/L/_O2H2798-853-L.jpg",
     "srcXL": "",
@@ -5671,7 +5690,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wild west photography",
+      "Western cowboys",
+      "western landscapes fine art",
+      "cowboy artwork",
+      "cowboy portraits"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
@@ -7961,8 +7985,8 @@ export const galleryData = [
   },
   {
     "id": "i-B2H9fFs",
-    "title": "A",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Western Cowboy Portrait - Western cowboys",
+    "description": "Experience the western fine art in this captivating fine art Western photography by Wayne Heim. A stunning piece of rugged spirit that captures the essence of western cowboy art. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-B2H9fFs/0/L8G8sx2mpjDFhzk22PW8PbLnnqGJ2H3Zdnp9Lg4Nk/L/_HF24190-705-L.jpg",
     "srcXL": "",
@@ -7979,7 +8003,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Western cowboys",
+      "western fine art",
+      "fine art Western photography",
+      "rugged spirit",
+      "western cowboy art"
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
@@ -8915,8 +8944,8 @@ export const galleryData = [
   },
   {
     "id": "i-6rCCMf9",
-    "title": "A",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - rustic charm",
+    "description": "Experience the fine art Western photography in this captivating Western cowboys by Wayne Heim. A stunning piece of western fine art that captures the essence of wild west photography. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-6rCCMf9/0/Mp9KgdrXQB7s6JLncNNSKSNpfxSCGqbSthZQds88T/L/_O2H0605-780-L.jpg",
     "srcXL": "",
@@ -8926,7 +8955,12 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-6rCCMf9/A",
     "keywords": [
-      "O2H0009"
+      "O2H0009",
+      "rustic charm",
+      "fine art Western photography",
+      "Western cowboys",
+      "western fine art",
+      "wild west photography"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -9408,8 +9442,8 @@ export const galleryData = [
   },
   {
     "id": "i-qVVVQPH",
-    "title": "A",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - rugged spirit",
+    "description": "Experience the cowboy portraits in this captivating western cowboy art by Wayne Heim. A stunning piece of cowboy artwork that captures the essence of cowboy art. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-qVVVQPH/0/Kwvwk9kF4Xs9rqtBD8TXng8SwZTr8gth7M6qBWtGT/L/_HF23480-828-L.jpg",
     "srcXL": "",
@@ -9420,7 +9454,12 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-qVVVQPH/A",
     "keywords": [
       "HF23379",
-      "819"
+      "819",
+      "rugged spirit",
+      "cowboy portraits",
+      "western cowboy art",
+      "cowboy artwork",
+      "cowboy art"
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
@@ -9709,8 +9748,8 @@ export const galleryData = [
   },
   {
     "id": "i-7Gh7Gq5",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Cowboy Portrait - western cowboy art",
+    "description": "Experience the rugged spirit in this captivating Western cowboys by Wayne Heim. A stunning piece of western fine art that captures the essence of western landscapes fine art. Ideal for collectors seeking authentic Western art to adorn their walls. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/2/NNg5LfbZcWx9RrCRGVF7tbG7WxdCSZhQxB7hx7f5f/XL/_WHO0739-Edit-Edit-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/2/NNg5LfbZcWx9RrCRGVF7tbG7WxdCSZhQxB7hx7f5f/XL/_WHO0739-Edit-Edit-Edit-Edit-2-XL.jpg",
@@ -9720,7 +9759,12 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/A",
     "keywords": [
-      "HF22961"
+      "HF22961",
+      "western cowboy art",
+      "rugged spirit",
+      "Western cowboys",
+      "western fine art",
+      "western landscapes fine art"
     ],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
