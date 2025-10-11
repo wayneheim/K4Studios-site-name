@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-834cDZ8",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Civil War Art Portrait",
+    "description": "Wayne Heim's civil war art captures the spirit of civil war art prints in this Explore Civil War Photography image. Featuring historic reenactor prints, legacy portraits for collectors, and civil war art, it's ideal for civil war art prints enthusiasts. © Wayne Heim",
     "alt": "Painterly Civil War Portrait: End of the battle.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-834cDZ8/A",
     "keywords": [
@@ -40,9 +40,14 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war art",
+      "civil war art prints",
+      "Explore Civil War Photography",
+      "historic reenactor prints",
+      "legacy portraits for collectors"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies civil war art and civil war photography, captured by Wayne Heim in his signature style. It reflects historic reenactor prints with a touch of legacy portraits for collectors. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -227,8 +232,8 @@ export const galleryData = [
   },
   {
     "id": "i-dWHn77W",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Explore Civil War Photography - Civil War Art",
+    "description": "Witness Explore Civil War Photography in Wayne Heim's civil war art. This image features traditional reenactment photography collection with historic reenactor prints and civil war photography, ideal for admirers of Explore Civil War Photography. © Wayne Heim",
     "alt": "Painterly Civil War Portrait: Thinking of Home.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-dWHn77W/A",
     "keywords": [
@@ -244,9 +249,16 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "Explore Civil War Photography",
+      "civil war art",
+      "traditional reenactment photography collection",
+      "historic reenactor prints",
+      "legacy portraits for collectors",
+      "civil war art prints",
+      "civil war reenactment photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies civil war art and legacy portraits for collectors, captured by Wayne Heim in his signature style. It reflects civil war art prints with a touch of civil war reenactment photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -261,8 +273,8 @@ export const galleryData = [
   },
   {
     "id": "i-5jfqH53",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Fine Art Civil War Art",
+    "description": "Experience civil war art through this evocative legacy portraits for collectors from Wayne Heim's portfolio. This piece highlights civil war reenactment photography with civil war photography, while conveying civil war paintings, ideal for those who appreciate civil war art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-5jfqH53/A",
     "keywords": [
@@ -278,9 +290,14 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war art",
+      "legacy portraits for collectors",
+      "civil war reenactment photography",
+      "civil war paintings",
+      "civil war art prints"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of civil war paintings comes alive in this piece, showcasing civil war art prints and civil war reenactment photography. A testament to legacy portraits for collectors in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -295,8 +312,8 @@ export const galleryData = [
   },
   {
     "id": "i-qSgZ7zD",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Civil War Art Prints Study",
+    "description": "Uncover civil war art prints through this historic reenactor prints from Wayne Heim. Showcasing civil war reenactment photography, traditional reenactment photography collection, and Explore Civil War Photography, it's perfect for enthusiasts of civil war art prints. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-qSgZ7zD/A",
     "keywords": [
@@ -312,9 +329,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war art prints",
+      "historic reenactor prints",
+      "civil war reenactment photography",
+      "traditional reenactment photography collection",
+      "Explore Civil War Photography",
+      "civil war paintings"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of Explore Civil War Photography comes alive in this piece, showcasing civil war photography and historic reenactor prints. A testament to civil war paintings in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -329,8 +352,8 @@ export const galleryData = [
   },
   {
     "id": "i-qkhr8Nv",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Exploring Civil War Paintings",
+    "description": "Immerse yourself in civil war paintings with this stunning legacy portraits for collectors by Wayne Heim. Capturing civil war photography, historic reenactor prints, and Explore Civil War Photography, it's a must-have for collectors of civil war paintings. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-qkhr8Nv/A",
     "keywords": [
@@ -346,9 +369,17 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war paintings",
+      "legacy portraits for collectors",
+      "historic reenactor prints",
+      "Explore Civil War Photography",
+      "civil war art",
+      "19th-century photography",
+      "civil war reenactment photography",
+      "civil war art prints"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies civil war art and 19th-century photography, captured by Wayne Heim in his signature style. It reflects civil war reenactment photography with a touch of civil war art prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -363,8 +394,8 @@ export const galleryData = [
   },
   {
     "id": "i-tHwDWLC",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Capturing Civil War Paintings",
+    "description": "Discover the civil war paintings in this powerful legacy portraits for collectors by Wayne Heim. A compelling work that embodies 19th-century photography, historic reenactor prints, and Explore Civil War Photography. Perfect for art lovers seeking civil war paintings to enhance their collection. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-tHwDWLC/A",
     "keywords": [
@@ -380,9 +411,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war paintings",
+      "legacy portraits for collectors",
+      "19th-century photography",
+      "historic reenactor prints",
+      "Explore Civil War Photography",
+      "civil war reenactment photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into civil war reenactment photography, this work by Wayne Heim highlights historic reenactor prints through civil war photography and Explore Civil War Photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -397,8 +434,8 @@ export const galleryData = [
   },
   {
     "id": "i-2rXwHbt",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Exploring Civil War Reenactment Photography",
+    "description": "Explore civil war reenactment photography with Wayne Heim's Explore Civil War Photography. This legacy portraits for collectors piece conveys traditional reenactment photography collection, civil war art, and civil war reenactment photography, perfect for fans of Explore Civil War Photography. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-2rXwHbt/A",
     "keywords": [
@@ -414,9 +451,17 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war reenactment photography",
+      "Explore Civil War Photography",
+      "legacy portraits for collectors",
+      "traditional reenactment photography collection",
+      "civil war art",
+      "19th-century photography",
+      "civil war paintings",
+      "historic reenactor prints"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of Explore Civil War Photography comes alive in this piece, showcasing 19th-century photography and civil war paintings. A testament to historic reenactor prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -431,8 +476,8 @@ export const galleryData = [
   },
   {
     "id": "i-jHxmb55",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Exploring Civil War Paintings",
+    "description": "Witness civil war paintings in Wayne Heim's civil war art prints. This image features civil war art with traditional reenactment photography collection and civil war photography, ideal for admirers of civil war paintings. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-jHxmb55/A",
     "keywords": [
@@ -448,9 +493,14 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war paintings",
+      "civil war art prints",
+      "civil war art",
+      "traditional reenactment photography collection",
+      "historic reenactor prints"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of civil war paintings comes alive in this piece, showcasing civil war photography and historic reenactor prints. A testament to civil war art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -465,8 +515,8 @@ export const galleryData = [
   },
   {
     "id": "i-7PMTVGg",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Fine Art Civil War Paintings",
+    "description": "Delve into civil war paintings via this civil war art by Wayne Heim. Highlighting civil war photography through Explore Civil War Photography and civil war art prints, it's great for collectors interested in civil war paintings. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-7PMTVGg/A",
     "keywords": [
@@ -482,9 +532,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war paintings",
+      "civil war art",
+      "Explore Civil War Photography",
+      "civil war art prints",
+      "historic reenactor prints",
+      "civil war reenactment photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies civil war paintings and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects civil war reenactment photography with a touch of civil war photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -499,8 +555,8 @@ export const galleryData = [
   },
   {
     "id": "i-4xLxQpk",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Legacy Portraits For Collectors Portrait",
+    "description": "This legacy portraits for collectors artwork by Wayne Heim showcases civil war art in a traditional reenactment photography collection style. Reflecting 19th-century photography, civil war photography, and legacy portraits for collectors, it's suited for admirers of civil war art. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-4xLxQpk/A",
     "keywords": [
@@ -516,9 +572,14 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "legacy portraits for collectors",
+      "civil war art",
+      "traditional reenactment photography collection",
+      "19th-century photography",
+      "Explore Civil War Photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of civil war photography comes alive in this piece, showcasing traditional reenactment photography collection and 19th-century photography. A testament to Explore Civil War Photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -533,8 +594,8 @@ export const galleryData = [
   },
   {
     "id": "i-gF8ZqQS",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Fine Art Legacy Portraits For Collectors",
+    "description": "Immerse yourself in legacy portraits for collectors with this stunning Explore Civil War Photography by Wayne Heim. Capturing civil war paintings, historic reenactor prints, and civil war art prints, it's a must-have for collectors of legacy portraits for collectors. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-gF8ZqQS/A",
     "keywords": [
@@ -550,9 +611,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "legacy portraits for collectors",
+      "Explore Civil War Photography",
+      "civil war paintings",
+      "historic reenactor prints",
+      "civil war art prints",
+      "civil war art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies Explore Civil War Photography and legacy portraits for collectors, captured by Wayne Heim in his signature style. It reflects civil war art with a touch of civil war photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -567,8 +634,8 @@ export const galleryData = [
   },
   {
     "id": "i-bcHKgfx",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Exploring Civil War Paintings",
+    "description": "Witness civil war paintings in Wayne Heim's legacy portraits for collectors. This image features historic reenactor prints with civil war reenactment photography and civil war art, ideal for admirers of civil war paintings. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-bcHKgfx/A",
     "keywords": [
@@ -584,9 +651,16 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war paintings",
+      "legacy portraits for collectors",
+      "historic reenactor prints",
+      "civil war reenactment photography",
+      "civil war art",
+      "traditional reenactment photography collection",
+      "19th-century photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies civil war paintings and civil war art, captured by Wayne Heim in his signature style. It reflects traditional reenactment photography collection with a touch of 19th-century photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -601,8 +675,8 @@ export const galleryData = [
   },
   {
     "id": "i-bCzTRRB",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Historic Reenactor Prints ",
+    "description": "Wayne Heim presents historic reenactor prints in this 19th-century photography work. Embodying civil war reenactment photography, traditional reenactment photography collection, and civil war photography, it's recommended for lovers of historic reenactor prints. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-bCzTRRB/A",
     "keywords": [
@@ -618,9 +692,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "historic reenactor prints",
+      "19th-century photography",
+      "civil war reenactment photography",
+      "traditional reenactment photography collection",
+      "civil war paintings",
+      "civil war art prints"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of civil war paintings comes alive in this piece, showcasing civil war photography and civil war art prints. A testament to historic reenactor prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -635,8 +715,8 @@ export const galleryData = [
   },
   {
     "id": "i-QW5C48m",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "19th-Century Photography",
+    "description": "Wayne Heim's traditional reenactment photography collection captures the spirit of 19th-century photography in this civil war photography image. Featuring Explore Civil War Photography, civil war art, and traditional reenactment photography collection, it's ideal for 19th-century photography enthusiasts. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-QW5C48m/A",
     "keywords": [
@@ -652,9 +732,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "traditional reenactment photography collection",
+      "19th-century photography",
+      "Explore Civil War Photography",
+      "civil war art",
+      "civil war reenactment photography",
+      "historic reenactor prints"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies civil war reenactment photography and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects Explore Civil War Photography with a touch of traditional reenactment photography collection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -669,8 +755,8 @@ export const galleryData = [
   },
   {
     "id": "i-xKnSff2",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Civil War Art Portrait",
+    "description": "Witness civil war art in Wayne Heim's 19th-century photography. This image features civil war paintings with traditional reenactment photography collection and civil war reenactment photography, ideal for admirers of civil war art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-xKnSff2/A",
     "keywords": [
@@ -686,9 +772,16 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war art",
+      "19th-century photography",
+      "civil war paintings",
+      "traditional reenactment photography collection",
+      "civil war reenactment photography",
+      "legacy portraits for collectors",
+      "historic reenactor prints"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies legacy portraits for collectors and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects 19th-century photography with a touch of civil war art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -703,8 +796,8 @@ export const galleryData = [
   },
   {
     "id": "i-vztmrNx",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Exploring Civil War Art",
+    "description": "Uncover civil war art through this Explore Civil War Photography from Wayne Heim. Showcasing traditional reenactment photography collection, 19th-century photography, and civil war art prints, it's perfect for enthusiasts of civil war art. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vztmrNx/A",
     "keywords": [
@@ -720,9 +813,17 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war art",
+      "Explore Civil War Photography",
+      "traditional reenactment photography collection",
+      "19th-century photography",
+      "civil war art prints",
+      "civil war paintings",
+      "legacy portraits for collectors",
+      "historic reenactor prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into civil war paintings, this work by Wayne Heim highlights legacy portraits for collectors through historic reenactor prints and civil war photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -737,8 +838,8 @@ export const galleryData = [
   },
   {
     "id": "i-vRTfLrV",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Civil War Reenactment Photography Moment",
+    "description": "Uncover civil war reenactment photography through this legacy portraits for collectors from Wayne Heim. Showcasing civil war photography, civil war paintings, and civil war art prints, it's perfect for enthusiasts of civil war reenactment photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-vRTfLrV/A",
     "keywords": [
@@ -754,9 +855,16 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war reenactment photography",
+      "legacy portraits for collectors",
+      "civil war paintings",
+      "civil war art prints",
+      "Explore Civil War Photography",
+      "historic reenactor prints",
+      "civil war art"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into Explore Civil War Photography, this work by Wayne Heim highlights legacy portraits for collectors through historic reenactor prints and civil war art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -771,8 +879,8 @@ export const galleryData = [
   },
   {
     "id": "i-q5tM4bH",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Capturing Civil War Art",
+    "description": "Experience civil war art through this evocative 19th-century photography from Wayne Heim's portfolio. This piece highlights legacy portraits for collectors with civil war art prints, while conveying Explore Civil War Photography, ideal for those who appreciate civil war art. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-q5tM4bH/A",
     "keywords": [
@@ -788,9 +896,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war art",
+      "19th-century photography",
+      "legacy portraits for collectors",
+      "civil war art prints",
+      "Explore Civil War Photography",
+      "traditional reenactment photography collection"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies civil war art and Explore Civil War Photography, captured by Wayne Heim in his signature style. It reflects traditional reenactment photography collection with a touch of civil war photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -805,8 +919,8 @@ export const galleryData = [
   },
   {
     "id": "i-WDPZRGD",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Civil War Photography",
+    "description": "Immerse yourself in legacy portraits for collectors with this stunning civil war photography by Wayne Heim. Capturing Explore Civil War Photography, traditional reenactment photography collection, and historic reenactor prints, it's a must-have for collectors of legacy portraits for collectors. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-WDPZRGD/A",
     "keywords": [
@@ -822,9 +936,16 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "legacy portraits for collectors",
+      "Explore Civil War Photography",
+      "traditional reenactment photography collection",
+      "historic reenactor prints",
+      "civil war paintings",
+      "civil war art prints",
+      "civil war art"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies civil war paintings and civil war art prints, captured by Wayne Heim in his signature style. It reflects civil war art with a touch of Explore Civil War Photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -839,8 +960,8 @@ export const galleryData = [
   },
   {
     "id": "i-ScfTV48",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Legacy Portraits For Collectors In Fine Art",
+    "description": "Experience legacy portraits for collectors through this evocative traditional reenactment photography collection from Wayne Heim's portfolio. This piece highlights Explore Civil War Photography with civil war art prints, while conveying historic reenactor prints, ideal for those who appreciate legacy portraits for collectors. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-ScfTV48/A",
     "keywords": [
@@ -856,9 +977,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "legacy portraits for collectors",
+      "traditional reenactment photography collection",
+      "Explore Civil War Photography",
+      "civil war art prints",
+      "historic reenactor prints",
+      "civil war paintings"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of civil war paintings comes alive in this piece, showcasing legacy portraits for collectors and civil war art prints. A testament to civil war photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -907,8 +1034,8 @@ export const galleryData = [
   },
   {
     "id": "i-m5CqBfM",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Civil War Photography ",
+    "description": "Wayne Heim's civil war photography captures the spirit of civil war reenactment photography in this Explore Civil War Photography image. Featuring legacy portraits for collectors, traditional reenactment photography collection, and civil war photography, it's ideal for civil war reenactment photography enthusiasts. © Wayne Heim",
     "alt": "Taking Aim     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-m5CqBfM/A",
     "keywords": [
@@ -924,9 +1051,16 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war reenactment photography",
+      "Explore Civil War Photography",
+      "legacy portraits for collectors",
+      "traditional reenactment photography collection",
+      "civil war art",
+      "civil war paintings",
+      "civil war art prints"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies civil war art and civil war paintings, captured by Wayne Heim in his signature style. It reflects traditional reenactment photography collection with a touch of civil war art prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -941,8 +1075,8 @@ export const galleryData = [
   },
   {
     "id": "i-JdswJLd",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Civil War Art Prints And 19th-Century Photography",
+    "description": "Wayne Heim presents civil war art prints in this 19th-century photography work. Embodying civil war photography, legacy portraits for collectors, and civil war paintings, it's recommended for lovers of civil war art prints. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-JdswJLd/A",
     "keywords": [
@@ -958,9 +1092,15 @@ export const galleryData = [
       "American Civil War",
       "Union",
       "confederate soldiers",
-      "Confederate"
+      "Confederate",
+      "civil war art prints",
+      "19th-century photography",
+      "legacy portraits for collectors",
+      "civil war paintings",
+      "civil war art",
+      "traditional reenactment photography collection"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies legacy portraits for collectors and civil war art, captured by Wayne Heim in his signature style. It reflects traditional reenactment photography collection with a touch of civil war paintings. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

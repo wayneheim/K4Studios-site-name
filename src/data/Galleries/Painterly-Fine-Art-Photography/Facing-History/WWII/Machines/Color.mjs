@@ -11,7 +11,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western--Portraits/Color"
     ],
     "visibility": "ghost",
     "sortOrder": -1,
@@ -23,14 +23,18 @@ export const galleryData = [
   },
   {
     "id": "i-rBtrrtx",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Wwii Tanks And Trucks Moment",
+    "description": "Wayne Heim's wwii tanks and trucks captures the spirit of history's greatest conflicts in this wwii tanks and trucks image. Featuring battle-ready machines, military machinery prints, and wwii tanks and trucks, it's ideal for history's greatest conflicts enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "military machinery prints",
+      "mechanical war art"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into military machinery prints, this work by Wayne Heim highlights battle-ready machines through mechanical war art and battle-ready machines. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -45,14 +49,18 @@ export const galleryData = [
   },
   {
     "id": "i-wRxHNc4",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Military Machinery Prints Portrait",
+    "description": "This military machinery prints artwork by Wayne Heim showcases military machinery prints in a mechanical war art style. Reflecting battle-ready machines, history's greatest conflicts, and military machinery prints, it's suited for admirers of military machinery prints. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-wRxHNc4/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "military machinery prints",
+      "mechanical war art",
+      "battle-ready machines",
+      "history's greatest conflicts",
+      "wwii tanks and trucks"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii tanks and trucks, this work by Wayne Heim highlights military machinery prints through wwii tanks and trucks and mechanical war art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -67,14 +75,18 @@ export const galleryData = [
   },
   {
     "id": "i-LMvspP9",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Mechanical War Art",
+    "description": "Discover the mechanical war art in this powerful wwii tanks and trucks by Wayne Heim. A compelling work that embodies history's greatest conflicts, history's greatest conflicts, and mechanical war art. Perfect for art lovers seeking mechanical war art to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-LMvspP9/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "wwii tanks and trucks",
+      "history's greatest conflicts",
+      "military machinery prints",
+      "battle-ready machines"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into military machinery prints, this work by Wayne Heim highlights battle-ready machines through battle-ready machines and battle-ready machines. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -89,14 +101,18 @@ export const galleryData = [
   },
   {
     "id": "i-fmd9mTF",
-    "title": "Untitled",
-    "description": "© Wayne Heim '21",
+    "title": "Battle-Ready Machines Study",
+    "description": "Experience battle-ready machines through this evocative battle-ready machines from Wayne Heim's portfolio. This piece highlights history's greatest conflicts with mechanical war art, while conveying history's greatest conflicts, ideal for those who appreciate battle-ready machines. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-fmd9mTF/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "history's greatest conflicts",
+      "mechanical war art",
+      "wwii tanks and trucks",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim '21",
+    "story": "This image embodies wwii tanks and trucks and history's greatest conflicts, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of military machinery prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -111,14 +127,17 @@ export const galleryData = [
   },
   {
     "id": "i-dgwZgpw",
-    "title": "Untitled",
-    "description": "© Wayne Heim '21",
+    "title": "Wwii Tanks And Trucks In Fine Art",
+    "description": "Wayne Heim's wwii tanks and trucks captures the spirit of mechanical war art in this mechanical war art image. Featuring military machinery prints, mechanical war art, and wwii tanks and trucks, it's ideal for mechanical war art enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim '21",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-dgwZgpw/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "mechanical war art",
+      "military machinery prints",
+      "history's greatest conflicts"
     ],
-    "story": "© Wayne Heim '21",
+    "story": "Wayne Heim's exploration of wwii tanks and trucks comes alive in this piece, showcasing history's greatest conflicts and military machinery prints. A testament to mechanical war art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -133,14 +152,17 @@ export const galleryData = [
   },
   {
     "id": "i-RRNrLTb",
-    "title": "Untitled",
-    "description": "© Wayne Heim '21",
+    "title": "History'S Greatest Conflicts Moment",
+    "description": "Wayne Heim presents history's greatest conflicts in this history's greatest conflicts work. Embodying battle-ready machines, mechanical war art, and military machinery prints, it's recommended for lovers of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim '21",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-RRNrLTb/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "mechanical war art",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim '21",
+    "story": "This image embodies mechanical war art and history's greatest conflicts, captured by Wayne Heim in his signature style. It reflects battle-ready machines with a touch of military machinery prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -155,14 +177,18 @@ export const galleryData = [
   },
   {
     "id": "i-7r4cQqR",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Fine Art History'S Greatest Conflicts",
+    "description": "Witness history's greatest conflicts in Wayne Heim's battle-ready machines. This image features wwii tanks and trucks with history's greatest conflicts and mechanical war art, ideal for admirers of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim '21",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-7r4cQqR/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "wwii tanks and trucks",
+      "mechanical war art",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies battle-ready machines and mechanical war art, captured by Wayne Heim in his signature style. It reflects military machinery prints with a touch of battle-ready machines. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -177,14 +203,17 @@ export const galleryData = [
   },
   {
     "id": "i-FTgjc8C",
-    "title": "Untitled",
-    "description": "© Wayne Heim '21",
+    "title": "Fine Art Battle-Ready Machines",
+    "description": "Immerse yourself in battle-ready machines with this stunning battle-ready machines by Wayne Heim. Capturing wwii tanks and trucks, battle-ready machines, and mechanical war art, it's a must-have for collectors of battle-ready machines. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FTgjc8C/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "wwii tanks and trucks",
+      "mechanical war art",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim '21",
+    "story": "Wayne Heim's exploration of military machinery prints comes alive in this piece, showcasing mechanical war art and battle-ready machines. A testament to military machinery prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -199,14 +228,17 @@ export const galleryData = [
   },
   {
     "id": "i-Tfg5j96",
-    "title": "Things are about to get messy.",
-    "description": "© Wayne Heim 2021",
+    "title": "History'S Greatest Conflicts - Military Machinery Prints",
+    "description": "Wayne Heim presents history's greatest conflicts in this military machinery prints work. Embodying military machinery prints, mechanical war art, and battle-ready machines, it's recommended for lovers of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim '21",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Tfg5j96/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "military machinery prints",
+      "mechanical war art",
+      "battle-ready machines"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies history's greatest conflicts and history's greatest conflicts, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of military machinery prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -221,14 +253,18 @@ export const galleryData = [
   },
   {
     "id": "i-N9sBgRs",
-    "title": "Get Ready Boys.",
-    "description": "WWII soldiers loading up on Higgin's Boat going into battle. © Wayne Heim",
+    "title": "Mechanical War Art Portrait",
+    "description": "Witness mechanical war art in Wayne Heim's wwii tanks and trucks. This image features battle-ready machines with military machinery prints and battle-ready machines, ideal for admirers of mechanical war art. © Wayne Heim",
     "alt": "Things are about to get messy.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-N9sBgRs/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "military machinery prints",
+      "history's greatest conflicts"
     ],
-    "story": "WWII soldiers loading up on Higgin's Boat going into battle. © Wayne Heim",
+    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights history's greatest conflicts through mechanical war art and battle-ready machines. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -243,14 +279,17 @@ export const galleryData = [
   },
   {
     "id": "i-x3ZPvH9",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Tanks And Trucks In Fine Art",
+    "description": "Experience wwii tanks and trucks through this evocative wwii tanks and trucks from Wayne Heim's portfolio. This piece highlights history's greatest conflicts with mechanical war art, while conveying history's greatest conflicts, ideal for those who appreciate wwii tanks and trucks. © Wayne Heim",
     "alt": "Get Ready Boys.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-x3ZPvH9/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "history's greatest conflicts",
+      "mechanical war art",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of history's greatest conflicts comes alive in this piece, showcasing military machinery prints and wwii tanks and trucks. A testament to wwii tanks and trucks in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -265,14 +304,18 @@ export const galleryData = [
   },
   {
     "id": "i-Rb3fQ5d",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "The Essence Of History'S Greatest Conflicts",
+    "description": "Discover the history's greatest conflicts in this powerful battle-ready machines by Wayne Heim. A compelling work that embodies wwii tanks and trucks, battle-ready machines, and mechanical war art. Perfect for art lovers seeking history's greatest conflicts to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Rb3fQ5d/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "wwii tanks and trucks",
+      "mechanical war art",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of wwii tanks and trucks comes alive in this piece, showcasing military machinery prints and wwii tanks and trucks. A testament to mechanical war art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -287,14 +330,17 @@ export const galleryData = [
   },
   {
     "id": "i-h6zMQW8",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wwii Tanks And Trucks Portrait",
+    "description": "Uncover wwii tanks and trucks through this battle-ready machines from Wayne Heim. Showcasing battle-ready machines, battle-ready machines, and mechanical war art, it's perfect for enthusiasts of wwii tanks and trucks. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "mechanical war art",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of military machinery prints comes alive in this piece, showcasing battle-ready machines and military machinery prints. A testament to mechanical war art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -309,14 +355,18 @@ export const galleryData = [
   },
   {
     "id": "i-vsx5t6W",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Military Machinery Prints - History'S Greatest Conflicts",
+    "description": "Wayne Heim presents military machinery prints in this history's greatest conflicts work. Embodying wwii tanks and trucks, military machinery prints, and history's greatest conflicts, it's recommended for lovers of military machinery prints. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "military machinery prints",
+      "history's greatest conflicts",
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies wwii tanks and trucks and battle-ready machines, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of mechanical war art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -331,14 +381,17 @@ export const galleryData = [
   },
   {
     "id": "i-snvP87s",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Battle-Ready Machines And Military Machinery Prints",
+    "description": "Experience battle-ready machines through this evocative military machinery prints from Wayne Heim's portfolio. This piece highlights wwii tanks and trucks with battle-ready machines, while conveying battle-ready machines, ideal for those who appreciate battle-ready machines. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "military machinery prints",
+      "wwii tanks and trucks",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies wwii tanks and trucks and mechanical war art, captured by Wayne Heim in his signature style. It reflects military machinery prints with a touch of battle-ready machines. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -353,14 +406,16 @@ export const galleryData = [
   },
   {
     "id": "i-Cwv4Sf2",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Wwii Tanks And Trucks Moment",
+    "description": "Wayne Heim's wwii tanks and trucks captures the spirit of battle-ready machines in this history's greatest conflicts image. Featuring wwii tanks and trucks, battle-ready machines, and wwii tanks and trucks, it's ideal for battle-ready machines enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Cwv4Sf2/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "history's greatest conflicts"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies wwii tanks and trucks and history's greatest conflicts, captured by Wayne Heim in his signature style. It reflects wwii tanks and trucks with a touch of history's greatest conflicts. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -375,14 +430,18 @@ export const galleryData = [
   },
   {
     "id": "i-GXrCDJh",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Wwii Tanks And Trucks Portrait",
+    "description": "This wwii tanks and trucks artwork by Wayne Heim showcases military machinery prints in a military machinery prints style. Reflecting wwii tanks and trucks, battle-ready machines, and wwii tanks and trucks, it's suited for admirers of military machinery prints. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GXrCDJh/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "military machinery prints",
+      "battle-ready machines",
+      "mechanical war art",
+      "history's greatest conflicts"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into mechanical war art, this work by Wayne Heim highlights history's greatest conflicts through history's greatest conflicts and mechanical war art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -397,14 +456,18 @@ export const galleryData = [
   },
   {
     "id": "i-Z6f9LZn",
-    "title": "Tank Firing Line - WWII Armor",
-    "description": "World War II line of tanks firing at sunset/dusk. Fine art painterly photography of tanks at historic reenactment. © Wayne Heim",
+    "title": "Exploring Battle-Ready Machines",
+    "description": "This battle-ready machines artwork by Wayne Heim showcases mechanical war art in a battle-ready machines style. Reflecting wwii tanks and trucks, battle-ready machines, and battle-ready machines, it's suited for admirers of mechanical war art. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Z6f9LZn/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "mechanical war art",
+      "wwii tanks and trucks",
+      "history's greatest conflicts",
+      "military machinery prints"
     ],
-    "story": "World War II line of tanks firing at sunset/dusk. Fine art painterly photography of tanks at historic reenactment. © Wayne Heim",
+    "story": "This image embodies history's greatest conflicts and battle-ready machines, captured by Wayne Heim in his signature style. It reflects military machinery prints with a touch of history's greatest conflicts. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -419,14 +482,17 @@ export const galleryData = [
   },
   {
     "id": "i-CzvL3Mk",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Wwii Tanks And Trucks And History'S Greatest Conflicts",
+    "description": "Wayne Heim's wwii tanks and trucks captures the spirit of history's greatest conflicts in this wwii tanks and trucks image. Featuring military machinery prints, military machinery prints, and wwii tanks and trucks, it's ideal for history's greatest conflicts enthusiasts. © Wayne Heim",
     "alt": "Tank Firing Line - WWII Armor",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-CzvL3Mk/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "history's greatest conflicts",
+      "military machinery prints",
+      "battle-ready machines"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of wwii tanks and trucks comes alive in this piece, showcasing wwii tanks and trucks and wwii tanks and trucks. A testament to battle-ready machines in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -441,14 +507,18 @@ export const galleryData = [
   },
   {
     "id": "i-TVmp5NX",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring History'S Greatest Conflicts",
+    "description": "Experience history's greatest conflicts through this evocative military machinery prints from Wayne Heim's portfolio. This piece highlights history's greatest conflicts with mechanical war art, while conveying wwii tanks and trucks, ideal for those who appreciate history's greatest conflicts. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-TVmp5NX/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "military machinery prints",
+      "mechanical war art",
+      "wwii tanks and trucks",
+      "battle-ready machines"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights battle-ready machines through mechanical war art and battle-ready machines. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -463,14 +533,17 @@ export const galleryData = [
   },
   {
     "id": "i-sr9WMcn",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Mechanical War Art Study",
+    "description": "Immerse yourself in mechanical war art with this stunning history's greatest conflicts by Wayne Heim. Capturing battle-ready machines, battle-ready machines, and military machinery prints, it's a must-have for collectors of mechanical war art. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-sr9WMcn/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into battle-ready machines, this work by Wayne Heim highlights history's greatest conflicts through mechanical war art and military machinery prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -485,14 +558,17 @@ export const galleryData = [
   },
   {
     "id": "i-kX8Wksp",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "History'S Greatest Conflicts Moment",
+    "description": "This history's greatest conflicts artwork by Wayne Heim showcases military machinery prints in a wwii tanks and trucks style. Reflecting history's greatest conflicts, wwii tanks and trucks, and history's greatest conflicts, it's suited for admirers of military machinery prints. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-kX8Wksp/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "military machinery prints",
+      "wwii tanks and trucks",
+      "battle-ready machines"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies military machinery prints and history's greatest conflicts, captured by Wayne Heim in his signature style. It reflects wwii tanks and trucks with a touch of battle-ready machines. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -507,14 +583,17 @@ export const galleryData = [
   },
   {
     "id": "i-pd3hvNk",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Tanks And Trucks In Fine Art",
+    "description": "Witness wwii tanks and trucks in Wayne Heim's battle-ready machines. This image features history's greatest conflicts with battle-ready machines and history's greatest conflicts, ideal for admirers of wwii tanks and trucks. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-pd3hvNk/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "history's greatest conflicts",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights mechanical war art through mechanical war art and wwii tanks and trucks. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -529,14 +608,17 @@ export const galleryData = [
   },
   {
     "id": "i-ttDPKwH",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Tanks And Trucks And Battle-Ready Machines",
+    "description": "Wayne Heim presents wwii tanks and trucks in this battle-ready machines work. Embodying history's greatest conflicts, wwii tanks and trucks, and mechanical war art, it's recommended for lovers of wwii tanks and trucks. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-ttDPKwH/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "history's greatest conflicts",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into mechanical war art, this work by Wayne Heim highlights history's greatest conflicts through mechanical war art and history's greatest conflicts. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -551,14 +633,17 @@ export const galleryData = [
   },
   {
     "id": "i-TGwqTRB",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Tanks And Trucks Study",
+    "description": "Delve into wwii tanks and trucks via this mechanical war art by Wayne Heim. Highlighting military machinery prints through military machinery prints and mechanical war art, it's great for collectors interested in wwii tanks and trucks. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-TGwqTRB/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "mechanical war art",
+      "military machinery prints",
+      "history's greatest conflicts"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights wwii tanks and trucks through mechanical war art and mechanical war art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -573,14 +658,17 @@ export const galleryData = [
   },
   {
     "id": "i-S4sbv3n",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Battle-Ready Machines",
+    "description": "Explore battle-ready machines with Wayne Heim's military machinery prints. This battle-ready machines piece conveys battle-ready machines, wwii tanks and trucks, and battle-ready machines, perfect for fans of military machinery prints. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-S4sbv3n/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "military machinery prints",
+      "wwii tanks and trucks",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of mechanical war art comes alive in this piece, showcasing military machinery prints and battle-ready machines. A testament to wwii tanks and trucks in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -595,14 +683,18 @@ export const galleryData = [
   },
   {
     "id": "i-65Xkcpk",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "History'S Greatest Conflicts - Mechanical War Art",
+    "description": "Uncover history's greatest conflicts through this mechanical war art from Wayne Heim. Showcasing history's greatest conflicts, wwii tanks and trucks, and battle-ready machines, it's perfect for enthusiasts of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-65Xkcpk/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "mechanical war art",
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wwii tanks and trucks and battle-ready machines, captured by Wayne Heim in his signature style. It reflects military machinery prints with a touch of mechanical war art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -617,14 +709,18 @@ export const galleryData = [
   },
   {
     "id": "i-LbnS49s",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Mechanical War Art Study",
+    "description": "This mechanical war art artwork by Wayne Heim showcases military machinery prints in a history's greatest conflicts style. Reflecting history's greatest conflicts, military machinery prints, and mechanical war art, it's suited for admirers of military machinery prints. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-LbnS49s/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "military machinery prints",
+      "history's greatest conflicts",
+      "wwii tanks and trucks",
+      "battle-ready machines"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies wwii tanks and trucks and battle-ready machines, captured by Wayne Heim in his signature style. It reflects battle-ready machines with a touch of battle-ready machines. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -639,14 +735,16 @@ export const galleryData = [
   },
   {
     "id": "i-BNVxGWx",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing Wwii Tanks And Trucks",
+    "description": "Experience wwii tanks and trucks through this evocative military machinery prints from Wayne Heim's portfolio. This piece highlights military machinery prints with wwii tanks and trucks, while conveying battle-ready machines, ideal for those who appreciate wwii tanks and trucks. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-BNVxGWx/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "military machinery prints",
+      "battle-ready machines"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing battle-ready machines and wwii tanks and trucks. A testament to wwii tanks and trucks in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -661,14 +759,17 @@ export const galleryData = [
   },
   {
     "id": "i-HwgrDkM",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Tanks And Trucks In Fine Art",
+    "description": "Uncover wwii tanks and trucks through this battle-ready machines from Wayne Heim. Showcasing military machinery prints, mechanical war art, and military machinery prints, it's perfect for enthusiasts of wwii tanks and trucks. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-HwgrDkM/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "military machinery prints",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies military machinery prints and mechanical war art, captured by Wayne Heim in his signature style. It reflects wwii tanks and trucks with a touch of battle-ready machines. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -683,14 +784,16 @@ export const galleryData = [
   },
   {
     "id": "i-NdnMjDd",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Fine Art Military Machinery Prints",
+    "description": "Experience military machinery prints through this evocative military machinery prints from Wayne Heim's portfolio. This piece highlights mechanical war art with wwii tanks and trucks, while conveying military machinery prints, ideal for those who appreciate military machinery prints. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-NdnMjDd/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "military machinery prints",
+      "mechanical war art",
+      "wwii tanks and trucks"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of mechanical war art comes alive in this piece, showcasing wwii tanks and trucks and military machinery prints. A testament to military machinery prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -705,14 +808,18 @@ export const galleryData = [
   },
   {
     "id": "i-S3XQ9VZ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Tanks And Trucks And Battle-Ready Machines",
+    "description": "Witness wwii tanks and trucks in Wayne Heim's battle-ready machines. This image features wwii tanks and trucks with battle-ready machines and wwii tanks and trucks, ideal for admirers of wwii tanks and trucks. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-S3XQ9VZ/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "mechanical war art",
+      "history's greatest conflicts",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies mechanical war art and wwii tanks and trucks, captured by Wayne Heim in his signature style. It reflects history's greatest conflicts with a touch of military machinery prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -727,14 +834,18 @@ export const galleryData = [
   },
   {
     "id": "i-X6D266B",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring History'S Greatest Conflicts",
+    "description": "Uncover history's greatest conflicts through this military machinery prints from Wayne Heim. Showcasing wwii tanks and trucks, military machinery prints, and military machinery prints, it's perfect for enthusiasts of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-X6D266B/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "military machinery prints",
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into military machinery prints, this work by Wayne Heim highlights battle-ready machines through mechanical war art and military machinery prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -749,14 +860,17 @@ export const galleryData = [
   },
   {
     "id": "i-jwJCCdg",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Military Machinery Prints Portrait",
+    "description": "Discover the military machinery prints in this powerful battle-ready machines by Wayne Heim. A compelling work that embodies military machinery prints, military machinery prints, and battle-ready machines. Perfect for art lovers seeking military machinery prints to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-jwJCCdg/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "military machinery prints",
+      "battle-ready machines",
+      "history's greatest conflicts",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights mechanical war art through history's greatest conflicts and history's greatest conflicts. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -771,14 +885,16 @@ export const galleryData = [
   },
   {
     "id": "i-8Sgjrk6",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Military Machinery Prints Study",
+    "description": "Witness military machinery prints in Wayne Heim's battle-ready machines. This image features mechanical war art with mechanical war art and mechanical war art, ideal for admirers of military machinery prints. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8Sgjrk6/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "military machinery prints",
+      "battle-ready machines",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies military machinery prints and battle-ready machines, captured by Wayne Heim in his signature style. It reflects military machinery prints with a touch of military machinery prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -793,14 +909,17 @@ export const galleryData = [
   },
   {
     "id": "i-NzVgz27",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring History'S Greatest Conflicts",
+    "description": "Discover the history's greatest conflicts in this powerful wwii tanks and trucks by Wayne Heim. A compelling work that embodies battle-ready machines, history's greatest conflicts, and mechanical war art. Perfect for art lovers seeking history's greatest conflicts to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-NzVgz27/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights battle-ready machines through history's greatest conflicts and battle-ready machines. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -815,14 +934,17 @@ export const galleryData = [
   },
   {
     "id": "i-kg2nPNc",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "History'S Greatest Conflicts Portrait",
+    "description": "Wayne Heim presents history's greatest conflicts in this battle-ready machines work. Embodying history's greatest conflicts, history's greatest conflicts, and wwii tanks and trucks, it's recommended for lovers of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-kg2nPNc/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "wwii tanks and trucks",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into military machinery prints, this work by Wayne Heim highlights battle-ready machines through military machinery prints and battle-ready machines. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -837,14 +959,18 @@ export const galleryData = [
   },
   {
     "id": "i-8RsnRLj",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "History'S Greatest Conflicts Moment",
+    "description": "Wayne Heim presents history's greatest conflicts in this military machinery prints work. Embodying wwii tanks and trucks, wwii tanks and trucks, and military machinery prints, it's recommended for lovers of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8RsnRLj/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "military machinery prints",
+      "wwii tanks and trucks",
+      "battle-ready machines",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing mechanical war art and battle-ready machines. A testament to history's greatest conflicts in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -859,14 +985,18 @@ export const galleryData = [
   },
   {
     "id": "i-B6rBNj5",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing Military Machinery Prints",
+    "description": "Discover the military machinery prints in this powerful battle-ready machines by Wayne Heim. A compelling work that embodies wwii tanks and trucks, mechanical war art, and history's greatest conflicts. Perfect for art lovers seeking military machinery prints to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-B6rBNj5/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "military machinery prints",
+      "battle-ready machines",
+      "wwii tanks and trucks",
+      "mechanical war art",
+      "history's greatest conflicts"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing battle-ready machines and mechanical war art. A testament to wwii tanks and trucks in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -881,14 +1011,17 @@ export const galleryData = [
   },
   {
     "id": "i-jGXWq3f",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "History'S Greatest Conflicts And Wwii Tanks And Trucks",
+    "description": "Discover the history's greatest conflicts in this powerful wwii tanks and trucks by Wayne Heim. A compelling work that embodies military machinery prints, wwii tanks and trucks, and history's greatest conflicts. Perfect for art lovers seeking history's greatest conflicts to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-jGXWq3f/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "wwii tanks and trucks",
+      "military machinery prints",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies military machinery prints and wwii tanks and trucks, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of history's greatest conflicts. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -903,14 +1036,18 @@ export const galleryData = [
   },
   {
     "id": "i-FMDBqqF",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Mechanical War Art",
+    "description": "Witness mechanical war art in Wayne Heim's battle-ready machines. This image features mechanical war art with military machinery prints and wwii tanks and trucks, ideal for admirers of mechanical war art. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "battle-ready machines",
+      "military machinery prints",
+      "wwii tanks and trucks",
+      "history's greatest conflicts"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of military machinery prints comes alive in this piece, showcasing wwii tanks and trucks and mechanical war art. A testament to history's greatest conflicts in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -925,14 +1062,18 @@ export const galleryData = [
   },
   {
     "id": "i-rZX5GhQ",
-    "title": "Relaxing    Photography by Wayne Heim",
-    "description": "Group of GI's relax in front of their tent during D Day Conneaut. © Wayne Heim",
+    "title": "Battle-Ready Machines Study",
+    "description": "Experience battle-ready machines through this evocative mechanical war art from Wayne Heim's portfolio. This piece highlights history's greatest conflicts with wwii tanks and trucks, while conveying battle-ready machines, ideal for those who appreciate battle-ready machines. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rZX5GhQ/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "mechanical war art",
+      "history's greatest conflicts",
+      "wwii tanks and trucks",
+      "military machinery prints"
     ],
-    "story": "Group of GI's relax in front of their tent during D Day Conneaut. © Wayne Heim",
+    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing wwii tanks and trucks and military machinery prints. A testament to military machinery prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -947,14 +1088,17 @@ export const galleryData = [
   },
   {
     "id": "i-F9HpvdL",
-    "title": "Untitled",
-    "description": "Wayne Heim ©2015",
+    "title": "Mechanical War Art - History'S Greatest Conflicts",
+    "description": "Immerse yourself in mechanical war art with this stunning history's greatest conflicts by Wayne Heim. Capturing military machinery prints, battle-ready machines, and military machinery prints, it's a must-have for collectors of mechanical war art. © Wayne Heim",
     "alt": "Relaxing    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-F9HpvdL/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "history's greatest conflicts",
+      "military machinery prints",
+      "battle-ready machines"
     ],
-    "story": "Wayne Heim ©2015",
+    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights history's greatest conflicts through mechanical war art and mechanical war art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -969,14 +1113,18 @@ export const galleryData = [
   },
   {
     "id": "i-8KVCjVK",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Tanks And Trucks In Fine Art",
+    "description": "This wwii tanks and trucks artwork by Wayne Heim showcases military machinery prints in a history's greatest conflicts style. Reflecting battle-ready machines, wwii tanks and trucks, and wwii tanks and trucks, it's suited for admirers of military machinery prints. © Wayne Heim",
     "alt": "Wayne Heim ©2015",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8KVCjVK/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "military machinery prints",
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of military machinery prints comes alive in this piece, showcasing mechanical war art and wwii tanks and trucks. A testament to battle-ready machines in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -991,14 +1139,17 @@ export const galleryData = [
   },
   {
     "id": "i-M7RwTB4",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battle-Ready Machines Portrait",
+    "description": "Delve into battle-ready machines via this battle-ready machines by Wayne Heim. Highlighting battle-ready machines through history's greatest conflicts and military machinery prints, it's great for collectors interested in battle-ready machines. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "history's greatest conflicts",
+      "military machinery prints",
+      "wwii tanks and trucks"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into battle-ready machines, this work by Wayne Heim highlights military machinery prints through battle-ready machines and wwii tanks and trucks. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1013,14 +1164,17 @@ export const galleryData = [
   },
   {
     "id": "i-FDHCvzp",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Fine Art Mechanical War Art",
+    "description": "Experience mechanical war art through this evocative mechanical war art from Wayne Heim's portfolio. This piece highlights history's greatest conflicts with history's greatest conflicts, while conveying military machinery prints, ideal for those who appreciate mechanical war art. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "history's greatest conflicts",
+      "military machinery prints",
+      "wwii tanks and trucks"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights history's greatest conflicts through military machinery prints and wwii tanks and trucks. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1035,14 +1189,18 @@ export const galleryData = [
   },
   {
     "id": "i-n3N8NRr",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battle-Ready Machines Moment",
+    "description": "This battle-ready machines artwork by Wayne Heim showcases mechanical war art in a wwii tanks and trucks style. Reflecting military machinery prints, battle-ready machines, and battle-ready machines, it's suited for admirers of mechanical war art. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "mechanical war art",
+      "wwii tanks and trucks",
+      "military machinery prints",
+      "history's greatest conflicts"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of wwii tanks and trucks comes alive in this piece, showcasing history's greatest conflicts and history's greatest conflicts. A testament to mechanical war art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1057,14 +1215,17 @@ export const galleryData = [
   },
   {
     "id": "i-59zQzXC",
-    "title": "Take her out.",
-    "description": "Departing embarkation zone. Next stop Omaha Beach. © Wayne Heim 2021",
+    "title": "Exploring Mechanical War Art",
+    "description": "Explore mechanical war art with Wayne Heim's history's greatest conflicts. This history's greatest conflicts piece conveys battle-ready machines, mechanical war art, and mechanical war art, perfect for fans of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "wwii tanks and trucks"
     ],
-    "story": "Departing embarkation zone. Next stop Omaha Beach. © Wayne Heim 2021",
+    "story": "Delving into wwii tanks and trucks, this work by Wayne Heim highlights battle-ready machines through wwii tanks and trucks and wwii tanks and trucks. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1079,14 +1240,18 @@ export const galleryData = [
   },
   {
     "id": "i-Dd5XSHd",
-    "title": "#1",
-    "description": "Final signal. © Wayne Heim 2021",
+    "title": "Mechanical War Art And Battle-Ready Machines",
+    "description": "Experience mechanical war art through this evocative battle-ready machines from Wayne Heim's portfolio. This piece highlights wwii tanks and trucks with military machinery prints, while conveying military machinery prints, ideal for those who appreciate mechanical war art. © Wayne Heim",
     "alt": "Take her out.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "mechanical war art",
+      "battle-ready machines",
+      "wwii tanks and trucks",
+      "military machinery prints",
+      "history's greatest conflicts"
     ],
-    "story": "Final signal. © Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of mechanical war art comes alive in this piece, showcasing wwii tanks and trucks and mechanical war art. A testament to history's greatest conflicts in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1101,14 +1266,17 @@ export const galleryData = [
   },
   {
     "id": "i-vZNLBNp",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Tanks And Trucks - Military Machinery Prints",
+    "description": "Experience wwii tanks and trucks through this evocative military machinery prints from Wayne Heim's portfolio. This piece highlights history's greatest conflicts with wwii tanks and trucks, while conveying history's greatest conflicts, ideal for those who appreciate wwii tanks and trucks. © Wayne Heim",
     "alt": "#1",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "wwii tanks and trucks",
+      "military machinery prints",
+      "history's greatest conflicts",
+      "battle-ready machines"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies wwii tanks and trucks and military machinery prints, captured by Wayne Heim in his signature style. It reflects battle-ready machines with a touch of military machinery prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1123,14 +1291,18 @@ export const galleryData = [
   },
   {
     "id": "i-rhM88g4",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "The Essence Of History'S Greatest Conflicts",
+    "description": "Explore history's greatest conflicts with Wayne Heim's history's greatest conflicts. This battle-ready machines piece conveys military machinery prints, wwii tanks and trucks, and history's greatest conflicts, perfect for fans of history's greatest conflicts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "history's greatest conflicts",
+      "battle-ready machines",
+      "military machinery prints",
+      "wwii tanks and trucks",
+      "mechanical war art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of history's greatest conflicts comes alive in this piece, showcasing mechanical war art and battle-ready machines. A testament to military machinery prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1145,14 +1317,17 @@ export const galleryData = [
   },
   {
     "id": "i-GwTMZZK",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battle-Ready Machines In Fine Art",
+    "description": "Explore battle-ready machines with Wayne Heim's wwii tanks and trucks. This mechanical war art piece conveys battle-ready machines, mechanical war art, and battle-ready machines, perfect for fans of wwii tanks and trucks. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "battle-ready machines",
+      "wwii tanks and trucks",
+      "mechanical war art",
+      "military machinery prints"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing military machinery prints and mechanical war art. A testament to battle-ready machines in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

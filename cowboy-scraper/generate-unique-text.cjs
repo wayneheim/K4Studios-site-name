@@ -36,11 +36,24 @@ const semantic = eval('(' + semMatch[1] + ')'); // Use eval for nested objects, 
 
 // Choose phrases based on gallery path
 let phrases;
+let section = 'cowboy';
 if (galleryPath.includes('NA-Color') || galleryPath.includes('NA')) {
   phrases = semantic.cowboyNativeAmerican.imagePhrases.filter(p => p.use).map(p => p.phrase);
+  section = 'cowboy';
+} else if (galleryPath.includes('Civil-War')) {
+  phrases = semantic.civilwar.imagePhrases.filter(p => p.use).map(p => p.phrase);
+  section = 'civilwar';
+} else if (galleryPath.includes('Roaring-20s')) {
+  phrases = semantic.roaring20s.imagePhrases.filter(p => p.use).map(p => p.phrase);
+  section = 'roaring20s';
+} else if (galleryPath.includes('WWII') && galleryPath.includes('Machines')) {
+  phrases = semantic.wwiiMenAndMachines.imagePhrases.filter(p => p.use).map(p => p.phrase);
+  section = 'wwii';
 } else {
   phrases = semantic.cowboy.imagePhrases.filter(p => p.use).map(p => p.phrase);
+  section = 'cowboy';
 }
+console.log('Using phrases for', galleryPath, phrases.length, 'section:', section);
 
 function getRandomPhrase() {
   return phrases[Math.floor(Math.random() * phrases.length)];
@@ -50,7 +63,7 @@ function getUniquePhrases(count) {
   const selected = [];
   while (selected.length < count) {
     const p = getRandomPhrase();
-    if (!selected.includes(p)) selected.push(p);
+    selected.push(p); // Allow duplicates if not enough unique
   }
   return selected;
 }
@@ -64,8 +77,6 @@ function generateTitle(phrases) {
     () => `${phrases[0]} Portrait`,
     () => `Capturing ${phrases[0]}`,
     () => `${phrases[0]} in Fine Art`,
-    () => `Cowboy ${phrases[1]}`,
-    () => `${phrases[0]} Cowboy`,
     () => `Fine Art ${phrases[0]}`,
     () => `${phrases[0]} Study`,
     () => `The Essence of ${phrases[0]}`,
@@ -120,7 +131,7 @@ const galleryData = extractGalleryData(galleryRaw);
 let updated = 0;
 for (const img of galleryData) {
   if (isRevert) {
-    if (img.description.includes('© Wayne Heim')) {
+    if (img.description.includes('© Wayne Heim') || img.description.includes("to be added")) {
       img.title = placeholderTitle;
       img.description = placeholderDescription;
       img.story = placeholderStory;
@@ -128,7 +139,7 @@ for (const img of galleryData) {
       updated++;
     }
   } else {
-    if (img.title === placeholderTitle || img.description.includes("coming soon") || img.story.includes("soon")) {
+    if (img.title === placeholderTitle || img.description.includes("coming soon") || img.description.includes("to be added") || img.story.includes("soon") || img.story.includes("to be added")) {
       const selectedPhrases = getUniquePhrases(5);
       const storyPhrases = getUniquePhrases(4); // Separate phrases for story to make it distinct
       const newTitle = generateTitle(selectedPhrases);
@@ -149,6 +160,9 @@ if (isRevert) {
 } else {
   console.log(`Updated ${updated} placeholder items with unique titles, descriptions, and stories.`);
 }
+
+fs.writeFileSync(galleryPath, replaceGalleryData(galleryRaw, galleryData), 'utf8');
+console.log(`${galleryPath} updated with generated text.`);
 
 const newContent = replaceGalleryData(galleryRaw, galleryData);
 fs.writeFileSync(galleryPath, newContent, 'utf8');

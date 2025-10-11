@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-xhX479V",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Traditional Reenactment Photography Collection",
+    "description": "Uncover traditional reenactment photography collection through this civil war paintings from Wayne Heim. Showcasing historic reenactor prints, 19th-century photography, and legacy portraits for collectors, it's perfect for enthusiasts of traditional reenactment photography collection. © Wayne Heim",
     "alt": "Civil War Art: A Hero's Ride",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/A",
     "keywords": [
@@ -43,9 +43,17 @@ export const galleryData = [
       "portrait",
       "reenactment",
       "soldier",
-      "Union"
+      "Union",
+      "traditional reenactment photography collection",
+      "civil war paintings",
+      "historic reenactor prints",
+      "19th-century photography",
+      "legacy portraits for collectors",
+      "civil war art prints",
+      "civil war art",
+      "civil war reenactment photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of civil war art prints comes alive in this piece, showcasing traditional reenactment photography collection and civil war art. A testament to civil war reenactment photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

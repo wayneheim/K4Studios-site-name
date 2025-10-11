@@ -23,16 +23,19 @@ export const galleryData = [
   },
   {
     "id": "i-8zkKqtg",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring 20s Photography",
+    "description": "Wayne Heim's roaring 20s photography captures the spirit of roaring 20s photography in this roaring twenties portraits image. Featuring roaring twenties portraits, roaring 20s art, and roaring 20s photography, it's ideal for roaring 20s photography enthusiasts. © Wayne Heim",
     "alt": "Shoe Shine Boy",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring 20s photography",
+      "roaring twenties portraits",
+      "roaring 20s art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies roaring 20s art and roaring 20s art, captured by Wayne Heim in his signature style. It reflects roaring twenties portraits with a touch of roaring 20s photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -71,16 +74,19 @@ export const galleryData = [
   },
   {
     "id": "i-KMhKvRb",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "1920s Portraits - Roaring 20s Photography",
+    "description": "Wayne Heim presents 1920s portraits in this roaring 20s photography work. Embodying 1920s portraits, 1920s portraits, and roaring 20s art, it's recommended for lovers of 1920s portraits. © Wayne Heim",
     "alt": "Phoning It In",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "1920s portraits",
+      "roaring 20s photography",
+      "roaring 20s art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into roaring 20s photography, this work by Wayne Heim highlights 1920s portraits through 1920s portraits and roaring 20s art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -95,16 +101,20 @@ export const galleryData = [
   },
   {
     "id": "i-k9qB2jV",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Roaring Twenties Portraits And 1920s Portraits",
+    "description": "Discover the roaring twenties portraits in this powerful 1920s portraits by Wayne Heim. A compelling work that embodies roaring 20s art, roaring 20s photography, and roaring twenties portraits. Perfect for art lovers seeking roaring twenties portraits to enhance their collection. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s art",
+      "roaring 20s photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into roaring 20s art, this work by Wayne Heim highlights 1920s portraits through roaring twenties portraits and roaring 20s art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -143,16 +153,20 @@ export const galleryData = [
   },
   {
     "id": "i-NVz5zk2",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring Twenties Portraits Moment",
+    "description": "Explore roaring twenties portraits with Wayne Heim's 1920s portraits. This 1920s portraits piece conveys roaring 20s photography, roaring twenties portraits, and roaring twenties portraits, perfect for fans of 1920s portraits. © Wayne Heim",
     "alt": "Just a Typical Saturday Afternoon",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s photography",
+      "roaring 20s art"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of roaring twenties portraits comes alive in this piece, showcasing roaring 20s art and roaring 20s art. A testament to roaring 20s photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -167,16 +181,20 @@ export const galleryData = [
   },
   {
     "id": "i-9cZHdvB",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Capturing Roaring 20s Photography",
+    "description": "Witness roaring 20s photography in Wayne Heim's roaring twenties portraits. This image features 1920s portraits with roaring 20s photography and 1920s portraits, ideal for admirers of roaring 20s photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring 20s photography",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into roaring twenties portraits, this work by Wayne Heim highlights roaring twenties portraits through roaring twenties portraits and roaring 20s art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -191,16 +209,20 @@ export const galleryData = [
   },
   {
     "id": "i-zrVCpMP",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Exploring Roaring Twenties Portraits",
+    "description": "Witness roaring twenties portraits in Wayne Heim's 1920s portraits. This image features roaring 20s art with roaring 20s photography and roaring twenties portraits, ideal for admirers of roaring twenties portraits. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s art",
+      "roaring 20s photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies 1920s portraits and roaring twenties portraits, captured by Wayne Heim in his signature style. It reflects 1920s portraits with a touch of 1920s portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -215,16 +237,20 @@ export const galleryData = [
   },
   {
     "id": "i-rxnpqCQ",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Essence Of Roaring 20s Photography",
+    "description": "Discover the roaring 20s photography in this powerful 1920s portraits by Wayne Heim. A compelling work that embodies roaring twenties portraits, 1920s portraits, and 1920s portraits. Perfect for art lovers seeking roaring 20s photography to enhance their collection. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring 20s photography",
+      "1920s portraits",
+      "roaring twenties portraits",
+      "roaring 20s art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies 1920s portraits and roaring 20s art, captured by Wayne Heim in his signature style. It reflects roaring 20s art with a touch of roaring 20s art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -239,16 +265,20 @@ export const galleryData = [
   },
   {
     "id": "i-qgJkNtv",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "The Essence Of Roaring Twenties Portraits",
+    "description": "Experience roaring twenties portraits through this evocative roaring 20s photography from Wayne Heim's portfolio. This piece highlights 1920s portraits with roaring twenties portraits, while conveying roaring 20s art, ideal for those who appreciate roaring twenties portraits. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring twenties portraits",
+      "roaring 20s photography",
+      "1920s portraits",
+      "roaring 20s art"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into 1920s portraits, this work by Wayne Heim highlights 1920s portraits through 1920s portraits and roaring 20s photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -263,16 +293,20 @@ export const galleryData = [
   },
   {
     "id": "i-6NPsMpH",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring Twenties Portraits",
+    "description": "Witness roaring twenties portraits in Wayne Heim's 1920s portraits. This image features roaring 20s photography with roaring 20s photography and roaring 20s photography, ideal for admirers of roaring twenties portraits. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s photography",
+      "roaring 20s art"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of roaring 20s art comes alive in this piece, showcasing roaring 20s photography and 1920s portraits. A testament to roaring 20s art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -287,16 +321,19 @@ export const galleryData = [
   },
   {
     "id": "i-5CcF5N4",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring 20s Art In Fine Art",
+    "description": "Explore roaring 20s art with Wayne Heim's roaring 20s photography. This 1920s portraits piece conveys roaring 20s photography, roaring 20s photography, and roaring 20s art, perfect for fans of roaring 20s photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring 20s art",
+      "roaring 20s photography",
+      "1920s portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of roaring 20s art comes alive in this piece, showcasing roaring 20s photography and roaring 20s art. A testament to roaring 20s photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -359,16 +396,20 @@ export const galleryData = [
   },
   {
     "id": "i-m7STjq2",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Roaring 20s Photography",
+    "description": "Wayne Heim's roaring 20s photography captures the spirit of roaring twenties portraits in this roaring 20s art image. Featuring 1920s portraits, 1920s portraits, and roaring 20s photography, it's ideal for roaring twenties portraits enthusiasts. © Wayne Heim",
     "alt": "1920's  at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-m7STjq2/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring 20s photography",
+      "roaring twenties portraits",
+      "roaring 20s art",
+      "1920s portraits"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into roaring 20s photography, this work by Wayne Heim highlights 1920s portraits through roaring 20s art and 1920s portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -407,16 +448,20 @@ export const galleryData = [
   },
   {
     "id": "i-QBKhZS2",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Capturing Roaring 20s Photography",
+    "description": "Witness roaring 20s photography in Wayne Heim's roaring twenties portraits. This image features roaring 20s art with roaring 20s photography and 1920s portraits, ideal for admirers of roaring 20s photography. © Wayne Heim",
     "alt": "1920's  at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-QBKhZS2/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring 20s photography",
+      "roaring twenties portraits",
+      "roaring 20s art",
+      "1920s portraits"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies roaring 20s photography and roaring 20s art, captured by Wayne Heim in his signature style. It reflects 1920s portraits with a touch of roaring twenties portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -503,16 +548,19 @@ export const galleryData = [
   },
   {
     "id": "i-PXj364M",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring 20s Art Moment",
+    "description": "Witness roaring 20s art in Wayne Heim's roaring 20s photography. This image features roaring 20s photography with roaring 20s art and 1920s portraits, ideal for admirers of roaring 20s art. © Wayne Heim",
     "alt": "1920's  at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/A",
     "keywords": [
       "shoe shine",
       "1920s Bedford Village",
-      "roaring 20's"
+      "roaring 20's",
+      "roaring 20s art",
+      "roaring 20s photography",
+      "1920s portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into 1920s portraits, this work by Wayne Heim highlights 1920s portraits through roaring 20s art and roaring 20s art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

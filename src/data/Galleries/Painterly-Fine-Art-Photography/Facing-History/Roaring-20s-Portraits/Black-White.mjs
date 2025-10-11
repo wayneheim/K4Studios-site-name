@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-MhMbDtL",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Roaring Twenties Portraits And Roaring Twenties Portraits",
+    "description": "Delve into roaring twenties portraits via this roaring twenties portraits by Wayne Heim. Highlighting roaring 20s art through roaring twenties portraits and roaring twenties portraits, it's great for collectors interested in roaring twenties portraits. © Wayne Heim",
     "alt": "The Look",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-MhMbDtL/A",
     "keywords": [
@@ -35,9 +35,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring twenties portraits",
+      "roaring 20s art",
+      "1920s portraits",
+      "roaring 20s photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of 1920s portraits comes alive in this piece, showcasing roaring 20s photography and roaring 20s art. A testament to roaring twenties portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -52,8 +56,8 @@ export const galleryData = [
   },
   {
     "id": "i-7rWrmHq",
-    "title": "1920's  at Old Bedford Village",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Exploring 1920s Portraits",
+    "description": "Wayne Heim presents 1920s portraits in this 1920s portraits work. Embodying roaring twenties portraits, roaring 20s art, and 1920s portraits, it's recommended for lovers of 1920s portraits. © Wayne Heim",
     "alt": "The Look",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-7rWrmHq/A",
     "keywords": [
@@ -64,9 +68,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "1920s portraits",
+      "roaring twenties portraits",
+      "roaring 20s art",
+      "roaring 20s photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies roaring twenties portraits and roaring 20s photography, captured by Wayne Heim in his signature style. It reflects roaring 20s art with a touch of 1920s portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -139,8 +147,8 @@ export const galleryData = [
   },
   {
     "id": "i-trPHqZK",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "The Essence Of Roaring 20s Photography",
+    "description": "Wayne Heim presents roaring 20s photography in this roaring 20s photography work. Embodying 1920s portraits, roaring twenties portraits, and roaring 20s photography, it's recommended for lovers of roaring 20s photography. © Wayne Heim",
     "alt": "1920's  at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-trPHqZK/A",
     "keywords": [
@@ -151,9 +159,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s photography",
+      "1920s portraits",
+      "roaring twenties portraits",
+      "roaring 20s art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into 1920s portraits, this work by Wayne Heim highlights roaring 20s art through 1920s portraits and roaring twenties portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -168,8 +180,8 @@ export const galleryData = [
   },
   {
     "id": "i-DfS7sz2",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Fine Art Roaring Twenties Portraits",
+    "description": "Uncover roaring twenties portraits through this 1920s portraits from Wayne Heim. Showcasing roaring 20s art, 1920s portraits, and roaring twenties portraits, it's perfect for enthusiasts of roaring twenties portraits. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-DfS7sz2/A",
     "keywords": [
@@ -180,9 +192,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s art",
+      "roaring 20s photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of roaring 20s photography comes alive in this piece, showcasing roaring 20s photography and roaring twenties portraits. A testament to roaring 20s photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -197,8 +213,8 @@ export const galleryData = [
   },
   {
     "id": "i-zKXCVqN",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Cowboy Roaring 20s Art",
+    "description": "Uncover roaring twenties portraits through this roaring 20s art from Wayne Heim. Showcasing roaring twenties portraits, roaring twenties portraits, and roaring 20s art, it's perfect for enthusiasts of roaring twenties portraits. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zKXCVqN/A",
     "keywords": [
@@ -209,9 +225,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring twenties portraits",
+      "roaring 20s art",
+      "1920s portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies roaring twenties portraits and 1920s portraits, captured by Wayne Heim in his signature style. It reflects 1920s portraits with a touch of roaring 20s art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -284,8 +303,8 @@ export const galleryData = [
   },
   {
     "id": "i-Pt7whDS",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Exploring Roaring 20s Photography",
+    "description": "Immerse yourself in roaring 20s photography with this stunning 1920s portraits by Wayne Heim. Capturing roaring 20s photography, roaring twenties portraits, and roaring 20s art, it's a must-have for collectors of roaring 20s photography. © Wayne Heim",
     "alt": "Havana Post Cigars",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Pt7whDS/A",
     "keywords": [
@@ -296,9 +315,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s photography",
+      "1920s portraits",
+      "roaring twenties portraits",
+      "roaring 20s art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into roaring 20s art, this work by Wayne Heim highlights 1920s portraits through roaring twenties portraits and roaring 20s art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -371,8 +394,8 @@ export const galleryData = [
   },
   {
     "id": "i-QmjZvHF",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Roaring 20s Photography - Roaring Twenties Portraits",
+    "description": "This roaring 20s photography artwork by Wayne Heim showcases roaring twenties portraits in a 1920s portraits style. Reflecting roaring 20s photography, roaring 20s art, and roaring 20s photography, it's suited for admirers of roaring twenties portraits. © Wayne Heim",
     "alt": "1920's  at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-QmjZvHF/A",
     "keywords": [
@@ -383,9 +406,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s photography",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s art"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies roaring 20s art and roaring 20s photography, captured by Wayne Heim in his signature style. It reflects roaring twenties portraits with a touch of 1920s portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -400,8 +427,8 @@ export const galleryData = [
   },
   {
     "id": "i-mgVpfhT",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring 20s Art In Fine Art",
+    "description": "Witness roaring 20s art in Wayne Heim's 1920s portraits. This image features roaring 20s photography with 1920s portraits and roaring twenties portraits, ideal for admirers of roaring 20s art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-mgVpfhT/A",
     "keywords": [
@@ -412,9 +439,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s art",
+      "1920s portraits",
+      "roaring 20s photography",
+      "roaring twenties portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of roaring 20s art comes alive in this piece, showcasing roaring twenties portraits and roaring 20s art. A testament to roaring 20s art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -429,8 +460,8 @@ export const galleryData = [
   },
   {
     "id": "i-5WZKmbB",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Essence Of Roaring 20s Art",
+    "description": "This roaring 20s art artwork by Wayne Heim showcases roaring 20s photography in a roaring 20s photography style. Reflecting 1920s portraits, roaring twenties portraits, and roaring 20s art, it's suited for admirers of roaring 20s photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB/A",
     "keywords": [
@@ -441,9 +472,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s art",
+      "roaring 20s photography",
+      "1920s portraits",
+      "roaring twenties portraits"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies 1920s portraits and 1920s portraits, captured by Wayne Heim in his signature style. It reflects roaring 20s art with a touch of roaring twenties portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -516,8 +551,8 @@ export const galleryData = [
   },
   {
     "id": "i-cpRfZ8j",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Fine Art 1920s Portraits",
+    "description": "Witness 1920s portraits in Wayne Heim's roaring 20s photography. This image features 1920s portraits with roaring twenties portraits and 1920s portraits, ideal for admirers of 1920s portraits. © Wayne Heim",
     "alt": "1920's  at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/A",
     "keywords": [
@@ -528,9 +563,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "1920s portraits",
+      "roaring 20s photography",
+      "roaring twenties portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies roaring twenties portraits and roaring 20s photography, captured by Wayne Heim in his signature style. It reflects roaring 20s photography with a touch of roaring 20s photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -545,8 +583,8 @@ export const galleryData = [
   },
   {
     "id": "i-KdGdjFZ",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "1920s Portraits Moment",
+    "description": "Experience 1920s portraits through this evocative roaring 20s photography from Wayne Heim's portfolio. This piece highlights 1920s portraits with roaring 20s art, while conveying roaring twenties portraits, ideal for those who appreciate 1920s portraits. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-KdGdjFZ/A",
     "keywords": [
@@ -557,9 +595,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "1920s portraits",
+      "roaring 20s photography",
+      "roaring 20s art",
+      "roaring twenties portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of roaring twenties portraits comes alive in this piece, showcasing roaring 20s art and roaring 20s photography. A testament to roaring 20s photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -603,8 +645,8 @@ export const galleryData = [
   },
   {
     "id": "i-T2XDQPG",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring 20s Art And Roaring Twenties Portraits",
+    "description": "Discover the roaring 20s art in this powerful roaring twenties portraits by Wayne Heim. A compelling work that embodies roaring twenties portraits, roaring twenties portraits, and 1920s portraits. Perfect for art lovers seeking roaring 20s art to enhance their collection. © Wayne Heim",
     "alt": "1920's  at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-T2XDQPG/A",
     "keywords": [
@@ -615,9 +657,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s art",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies roaring 20s art and roaring 20s photography, captured by Wayne Heim in his signature style. It reflects 1920s portraits with a touch of roaring 20s photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -661,8 +707,8 @@ export const galleryData = [
   },
   {
     "id": "i-xfjX34L",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Capturing 1920s Portraits",
+    "description": "Uncover 1920s portraits through this roaring 20s photography from Wayne Heim. Showcasing roaring twenties portraits, roaring 20s art, and roaring twenties portraits, it's perfect for enthusiasts of 1920s portraits. © Wayne Heim",
     "alt": "Mr. & Mrs. Trouble",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-xfjX34L/A",
     "keywords": [
@@ -673,9 +719,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "1920s portraits",
+      "roaring 20s photography",
+      "roaring twenties portraits",
+      "roaring 20s art"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies roaring twenties portraits and roaring 20s art, captured by Wayne Heim in his signature style. It reflects roaring twenties portraits with a touch of roaring 20s art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -690,8 +740,8 @@ export const galleryData = [
   },
   {
     "id": "i-Gzdmm73",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Roaring 20s Art Portrait",
+    "description": "Uncover roaring 20s art through this roaring twenties portraits from Wayne Heim. Showcasing 1920s portraits, roaring 20s art, and 1920s portraits, it's perfect for enthusiasts of roaring 20s art. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Gzdmm73/A",
     "keywords": [
@@ -702,9 +752,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s art",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into 1920s portraits, this work by Wayne Heim highlights roaring 20s photography through 1920s portraits and 1920s portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -719,8 +773,8 @@ export const galleryData = [
   },
   {
     "id": "i-jQCkBDs",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring 20s Art",
+    "description": "Wayne Heim presents roaring 20s art in this 1920s portraits work. Embodying roaring twenties portraits, roaring twenties portraits, and 1920s portraits, it's recommended for lovers of roaring 20s art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jQCkBDs/A",
     "keywords": [
@@ -731,9 +785,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s art",
+      "1920s portraits",
+      "roaring twenties portraits"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies roaring twenties portraits and roaring twenties portraits, captured by Wayne Heim in his signature style. It reflects 1920s portraits with a touch of 1920s portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -748,8 +805,8 @@ export const galleryData = [
   },
   {
     "id": "i-sjtz7Fj",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Roaring 20s Art Study",
+    "description": "Delve into roaring 20s art via this 1920s portraits by Wayne Heim. Highlighting roaring 20s art through roaring 20s photography and 1920s portraits, it's great for collectors interested in roaring 20s art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-sjtz7Fj/A",
     "keywords": [
@@ -760,9 +817,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s art",
+      "1920s portraits",
+      "roaring 20s photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into roaring 20s photography, this work by Wayne Heim highlights roaring 20s art through 1920s portraits and roaring 20s photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -777,8 +837,8 @@ export const galleryData = [
   },
   {
     "id": "i-zgNxHdz",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Roaring 20s Photography Moment",
+    "description": "Wayne Heim presents roaring 20s photography in this roaring twenties portraits work. Embodying roaring twenties portraits, 1920s portraits, and roaring twenties portraits, it's recommended for lovers of roaring 20s photography. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zgNxHdz/A",
     "keywords": [
@@ -789,9 +849,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "roaring 20s photography",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "roaring 20s art"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into roaring twenties portraits, this work by Wayne Heim highlights roaring 20s art through roaring 20s photography and roaring 20s photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
