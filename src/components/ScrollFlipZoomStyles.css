@@ -268,3 +268,35 @@ opacity: 0%;
   0%, 80% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* Collector Notes Hint Animation */
+@keyframes collectorHintRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  15% {
+    box-shadow: 0 0 0 5px rgba(220, 38, 38, 0);
+  }
+  15.01% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  30.75% {
+    box-shadow: 0 0 0 5px rgba(220, 38, 38, 0);
+  }
+  30.76% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  46.155% {
+    box-shadow: 0 0 0 5px rgba(220, 38, 38, 0);
+  }
+  46.156% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.collector-hint-ring {
+  animation: collectorHintRing 5.2s ease-out infinite;
+}

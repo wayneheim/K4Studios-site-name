@@ -332,7 +332,6 @@ export default function ChapterGalleryBase({
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showStoryShow, setShowStoryShow] = useState(false);
-  const [showCollectorHint, setShowCollectorHint] = useState(false);
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
@@ -535,29 +534,6 @@ export default function ChapterGalleryBase({
     }
   }, []);
 
-  // Collector Notes attention hint
-  useEffect(() => {
-    const collectorState = sessionStorage.getItem("collectorHintShown") || "0";
-    const pageViews = parseInt(sessionStorage.getItem("pageViews") || "0", 10);
-    const hasNotes = galleryData[currentIndex]?.notes?.trim();
-
-    if (collectorState === "0" && pageViews < 4 && hasNotes && !showNotes && !tourOpen()) {
-      const timer = setTimeout(() => {
-        setShowCollectorHint(true);
-      }, 2000); // 2 seconds delay
-      return () => clearTimeout(timer);
-    } else {
-      setShowCollectorHint(false);
-    }
-  }, [currentIndex, galleryData, showNotes, tourOpen()]);
-
-  // Increment page views on index change
-  useEffect(() => {
-    let views = parseInt(sessionStorage.getItem("pageViews") || "0", 10);
-    views++;
-    sessionStorage.setItem("pageViews", views.toString());
-  }, [currentIndex]);
-
   // Body scroll lock during slideshow
   useEffect(() => {
     if (showStoryShow) document.body.style.overflow = "hidden";
@@ -722,8 +698,6 @@ export default function ChapterGalleryBase({
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setShowNotes((p) => !p);
-                                sessionStorage.setItem("collectorHintShown", "1");
-                                setShowCollectorHint(false);
                                 logUIEvent("collector_notes_toggle", {
                                   page: window.location.pathname,
                                   imageId: galleryData[currentIndex]?.id,
@@ -732,7 +706,7 @@ export default function ChapterGalleryBase({
                               }}
                               aria-label="View Collector Notes"
                               title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
-                              className={`absolute top-2 right-3 w-8 h-9 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition z-30 flex items-center justify-center ${showCollectorHint ? 'collector-hint-ring' : ''}`}
+                              className="absolute top-2 right-3 w-8 h-9 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition z-30 flex items-center justify-center"
                               style={{ boxShadow: "0 2px 6px rgba(80,60,30,0.10)", transform: "translateX(50px)" }}
                             >
                               {showNotes ? (
@@ -827,8 +801,6 @@ export default function ChapterGalleryBase({
                           onClick={(e) => {
                             e.stopPropagation();
                             setShowNotes((p) => !p);
-                            sessionStorage.setItem("collectorHintShown", "1");
-                            setShowCollectorHint(false);
                             logUIEvent("collector_notes_toggle", {
                               page: window.location.pathname,
                               imageId: galleryData[currentIndex]?.id,
@@ -837,7 +809,7 @@ export default function ChapterGalleryBase({
                           }}
                           aria-label="View Collector Notes"
                           title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
-                          className={`inline-flex items-center justify-center w-8 h-8 relative border border-gray-200 bg-white rounded-full shadow text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors ${showCollectorHint ? 'collector-hint-ring' : ''}`}
+                          className="inline-flex items-center justify-center w-8 h-8 relative border border-gray-200 bg-white rounded-full shadow text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors"
                         >
                           {showNotes ? (
                             <span className="text-lg leading-none">✕</span>
