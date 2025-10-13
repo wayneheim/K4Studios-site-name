@@ -110,7 +110,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
       >
         {!hasKids ? (
           <span className="leaf-label">
-            <span className="leaf-prefix" style={{ marginRight: "0.3rem" }}>○</span>
+            <span className="leaf-prefix" style={{ marginRight: "0.3rem" }} aria-hidden="true">○</span>
             {node.label}
           </span>
         ) : (
