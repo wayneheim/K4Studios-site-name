@@ -1190,7 +1190,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                                 exit={{ opacity: 0, y: 12 }}
                                 transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
                                 className="absolute left-1/2 bottom-0 z-50"
-                                style={{ transform: "translateX(-50%) translateY(-8px)", marginLeft: "-275px", background: "#fff", border: "1.5px solid #d1d5d9", borderRadius: 16, boxShadow: "0 2px 12px rgba(80,80,90,0.10)", padding: ".95rem 1.5rem .95rem 1.5rem", color: "#4a4a49", minWidth: "340px", maxWidth: "75vw", minHeight: "4rem", maxHeight: "320px", overflowY: "auto" }}
+                                style={{ transform: "translateX(-50%) translateY(-8px)", marginLeft: "-275px", background: "#fff", border: "1.5px solid #d1d5d9", borderRadius: 16, boxShadow: "0 2px 12px rgba(80,80,90,0.10)", padding: ".95rem 1.5rem 3rem 1.5rem", color: "#4a4a49", minWidth: "340px", maxWidth: "75vw", minHeight: "4rem", maxHeight: "320px", overflowY: "auto" }}
                                 id={descPanelId}
                                 role="region"
                                 aria-labelledby={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
@@ -1200,10 +1200,11 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                                   type="button"
                                   onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }}
                                   aria-label="Close More Info"
-                                  className="absolute bottom-3 left-3 px-4 py-1 rounded-full border border-[#b91c1c] text-[#b91c1c] bg-white hover:bg-gray-100 text-sm font-semibold shadow transition-colors"
+                                  title="close"
+                                  className="absolute bottom-3 left-3 inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
                                   style={{ zIndex: 10001 }}
                                 >
-                                  Close
+                                  <CircleX className="w-7 h-7" />
                                 </button>
                                 <h2 className="text-lg font-semibold mb-2">More about this image</h2>
                                 <p className="pb-2">{galleryData[currentIndex]?.description}</p>
