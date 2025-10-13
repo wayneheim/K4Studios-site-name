@@ -169,17 +169,11 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
         url: preloadImage?.src || ogImage,
         contentUrl: preloadImage?.src || ogImage,
         name: preloadImage?.alt || preloadImage?.title || cleanTitle,
-        caption: preloadImage?.alt || preloadImage?.title || cleanTitle,
         description: socialDescription,
         width: preloadImage?.width || ogWidth || "1600",
         height: preloadImage?.height || ogHeight || "1200",
         copyrightNotice: "Wayne Heim",
-        creditText: "Wayne Heim",
-        creator: { "@type": "Person", "name": "Wayne Heim", "url": "https://www.k4studios.com/" },
-        copyrightHolder: { "@type": "Person", "name": "Wayne Heim" },
-        license: "https://www.k4studios.com/Contact",
-        acquireLicensePage: "https://www.k4studios.com/Contact",
-        inLanguage: "en"
+        creditText: "Wayne Heim"
       })}></script>
     )}
 

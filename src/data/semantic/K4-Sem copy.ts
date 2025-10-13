@@ -12,13 +12,7 @@ export const semantic = {
       { phrase: "timeless reenactor portraits", rating: 4, use: true },
       { phrase: "living history portraiture", rating: 4, use: true },
        { phrase: "historic reenactment", rating: 5, use: true },
-      { phrase: "fine art reenactor prints", rating: 3, use: true },
-
-      { phrase: "fine art reenactment photography", rating: 5, use: true },
-      { phrase: "reenactor photography", rating: 3, use: true },
-      { phrase: "reenactment photography", rating: 3, use: true },
-      { phrase: "reenacting photos", rating: 3, use: true }
-
+      { phrase: "fine art reenactor prints", rating: 3, use: true }
     ],
     imagePhrases: [
       { phrase: "reenactor photography", rating: 5, use: true },
@@ -94,10 +88,7 @@ export const semantic = {
       { phrase: "Pictorialism", rating: 4, use: true },
         { phrase: "Pictorialist movement", rating: 4, use: true },
          { phrase: "fantastic places", rating: 4, use: true },
-      { phrase: "History in Fine Art", rating: 3, use: true },
-
-      { phrase: "fine art painterly photography", rating: 3, use: true }
-
+      { phrase: "History in Fine Art", rating: 3, use: true }
     ],
   },
 
@@ -113,37 +104,7 @@ export const semantic = {
       { phrase: "the American West", rating: 5, use: true },
       { phrase: "grit & glory of the west", rating: 4, use: true },
       { phrase: "authentic frontier art prints", rating: 4, use: true },
-      { phrase: "western art for rustic interiors", rating: 3, use: true },
-
-      { phrase: "painterly cowboy photography", rating: 5, use: true },
-      { phrase: "wild west painterly photography", rating: 5, use: true },
-      { phrase: "western painterly photography", rating: 4, use: true },
-      { phrase: "wild west fine art prints", rating: 3, use: true },
-      { phrase: "wild west inspired photography", rating: 3, use: true },
-      { phrase: "old west fine art prints", rating: 3, use: true },
-      { phrase: "vintage cowboy art photography", rating: 3, use: true },
-      { phrase: "western inspired photography", rating: 3, use: true },
-      { phrase: "western photography fine art prints", rating: 3, use: true },
-      { phrase: "western fine art photography", rating: 3, use: true },
-      { phrase: "western themed portrait photography", rating: 3, use: true },
-      { phrase: "western photography prints", rating: 3, use: true },
-      { phrase: "western portrait art", rating: 3, use: true },
-      { phrase: "fine art cowboy photography", rating: 3, use: true },
-      { phrase: "fine art western photography", rating: 3, use: true },
-      { phrase: "western portraits", rating: 3, use: true },
-      { phrase: "cowboy portraits", rating: 3, use: true },
-      { phrase: "western themed photography", rating: 3, use: true },
-      { phrase: "cowboy fine art prints", rating: 3, use: true },
-      { phrase: "old west cowboy art", rating: 3, use: true },
-      { phrase: "cowboy portrait", rating: 3, use: true },
-      { phrase: "wild west cowboy art", rating: 3, use: true },
-      { phrase: "photography western", rating: 3, use: true },
-      { phrase: "vintage western photography", rating: 3, use: true },
-      { phrase: "western artwork prints", rating: 3, use: true },
-      { phrase: "cowboy artwork prints", rating: 3, use: true },
-      { phrase: "western themed art", rating: 3, use: true },
-      { phrase: "western cowboy paintings art", rating: 3, use: true }
-
+      { phrase: "western art for rustic interiors", rating: 3, use: true }
     ],
     imagePhrases: [
       { phrase: "western cowboy art", rating: 5, use: true },
@@ -202,11 +163,7 @@ export const semantic = {
        { phrase: "American Civil War", rating: 5, use: true },
       { phrase: "Civil War collections", rating: 5, use: true },
       { phrase: "american history wall decor", rating: 3, use: true },
-      { phrase: "civil war art for history lovers", rating: 3, use: true },
-
-      { phrase: "civil war themed photography", rating: 4, use: true },
-      { phrase: "civil war inspired photography", rating: 3, use: true }
-
+      { phrase: "civil war art for history lovers", rating: 3, use: true }
     ],
     imagePhrases: [
       { phrase: "civil war photography", rating: 5, use: true },
@@ -230,15 +187,7 @@ export const semantic = {
       { phrase: "Discover WWII Photography", rating: 5, use: true },
       { phrase: "the Greatest Generation", rating: 5, use: true },
       { phrase: "WWII Sacrifice & Brotherhood", rating: 5, use: true },
-      { phrase: "wartime photography", rating: 4, use: true },
-
-      { phrase: "historical themed photography", rating: 5, use: true },
-      { phrase: "historically themed photography", rating: 5, use: true },
-      { phrase: "wwii themed fine art photography", rating: 5, use: true },
-      { phrase: "wwii themed photography", rating: 5, use: true },
-      { phrase: "wwii inspired photography", rating: 4, use: true },
-      { phrase: "wwii reenactment photography", rating: 3, use: true }
-
+      { phrase: "wartime photography", rating: 4, use: true }
     ],
   },
 
@@ -312,9 +261,6 @@ export const semantic = {
       { phrase: "gatsby era art", rating: 4, use: true },
       { phrase: "roaring 20s wall art for jazz fans", rating: 4, use: true },
       { phrase: "Bootleggers", rating: 4, use: true },
-
-      { phrase: "roaring 20s inspired photography", rating: 3, use: true }
-
     ],
     imagePhrases: [
       { phrase: "roaring 20s photography", rating: 5, use: true },
@@ -370,12 +316,6 @@ export const semantic = {
     landingPhrases: [
       { phrase: "Western Painterly Landscapes", rating: 5, use: true },
       { phrase: "mountain west fine art photography", rating: 4, use: true },
-
-      { phrase: "painterly fine art landscape photography", rating: 4, use: true },
-      { phrase: "painterly landscape photography", rating: 3, use: true },
-      { phrase: "painterly sunset photography", rating: 3, use: true },
-      { phrase: "western landscape photography", rating: 3, use: true }
-
     ],
     imagePhrases: [
       { phrase: "western landscape photography", rating: 5, use: true },
@@ -431,9 +371,6 @@ export const semantic = {
     landingPhrases: [
       { phrase: "Painterly Mountain Photography", rating: 5, use: true },
       { phrase: "mountain landscapes fine art", rating: 4, use: true },
-
-      { phrase: "painterly mountain photography", rating: 5, use: true }
-
     ],
     imagePhrases: [
       { phrase: "mountain landscape photography", rating: 5, use: true },
@@ -758,10 +695,6 @@ export const semantic = {
       { phrase: "Route 66 Photography", rating: 5, use: true },
       { phrase: "Steam Engine Photography", rating: 5, use: true },
       { phrase: "painterly transportation photography", rating: 4, use: true },
-
-      { phrase: "painterly car photography", rating: 5, use: true },
-      { phrase: "painterly train photography", rating: 5, use: true }
-
     ],
     imagePhrases: [
       { phrase: "classic car photography", rating: 5, use: true },
