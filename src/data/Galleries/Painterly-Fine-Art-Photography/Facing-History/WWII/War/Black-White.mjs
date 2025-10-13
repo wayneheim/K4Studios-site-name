@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-p8JdtJM",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "The Essence Of War Zone Photography",
+    "description": "Wayne Heim presents war zone photography in this wwii artistic documentary work. Embodying WWII battlefield, war zone photography, and WWII battlefield, it's recommended for lovers of war zone photography. © Wayne Heim",
     "alt": "First Man Landing  © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-p8JdtJM/A",
     "keywords": [
@@ -37,9 +37,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "war zone photography",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "WWII action art",
+      "battlefield moments"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing battlefield moments and battlefield moments. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -178,8 +183,8 @@ export const galleryData = [
   },
   {
     "id": "i-2Pwm8vt",
-    "title": "© Wayne Heim",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing WWII Action Art",
+    "description": "Discover the WWII action art in this powerful war zone photography by Wayne Heim. A compelling work that embodies WWII action art, battlefield moments, and Second World War. Perfect for art lovers seeking WWII action art to enhance their collection. © Wayne Heim",
     "alt": "Guiding the Landing Craft. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-2Pwm8vt/A",
     "keywords": [
@@ -192,9 +197,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "WWII action art",
+      "war zone photography",
+      "battlefield moments",
+      "Second World War"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies war zone photography and WWII action art, captured by Wayne Heim in his signature style. It reflects war zone photography with a touch of battlefield moments. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -333,8 +342,8 @@ export const galleryData = [
   },
   {
     "id": "i-wvPXPbw",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Battlefield Moments Portrait",
+    "description": "This battlefield moments artwork by Wayne Heim showcases WWII action art in a WWII battlefield style. Reflecting Second World War, Second World War, and battlefield moments, it's suited for admirers of WWII action art. © Wayne Heim",
     "alt": "Forward   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wvPXPbw/A",
     "keywords": [
@@ -347,9 +356,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "battlefield moments",
+      "WWII action art",
+      "WWII battlefield",
+      "Second World War",
+      "wwii artistic documentary"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into Second World War, this work by Wayne Heim highlights wwii artistic documentary through WWII battlefield and wwii artistic documentary. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -364,8 +378,8 @@ export const galleryData = [
   },
   {
     "id": "i-xkztczt",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "WWII Battlefield Moment",
+    "description": "Explore WWII battlefield with Wayne Heim's battlefield moments. This WWII action art piece conveys WWII action art, WWII action art, and WWII battlefield, perfect for fans of battlefield moments. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xkztczt/A",
     "keywords": [
@@ -378,9 +392,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "WWII battlefield",
+      "battlefield moments",
+      "WWII action art",
+      "wwii artistic documentary"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies WWII action art and wwii artistic documentary, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of WWII battlefield. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -395,8 +413,8 @@ export const galleryData = [
   },
   {
     "id": "i-drjN6Mh",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "WWII Battlefield And Wwii Artistic Documentary",
+    "description": "Explore WWII battlefield with Wayne Heim's wwii artistic documentary. This wwii artistic documentary piece conveys WWII battlefield, battlefield moments, and WWII battlefield, perfect for fans of wwii artistic documentary. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-drjN6Mh/A",
     "keywords": [
@@ -409,9 +427,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "battlefield moments",
+      "WWII action art",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies WWII action art and Second World War, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of WWII battlefield. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -426,8 +449,8 @@ export const galleryData = [
   },
   {
     "id": "i-c8WPctp",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Capturing Second World War",
+    "description": "Delve into Second World War via this WWII action art by Wayne Heim. Highlighting wwii artistic documentary through Second World War and battlefield moments, it's great for collectors interested in Second World War. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-c8WPctp/A",
     "keywords": [
@@ -440,9 +463,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "WWII action art",
+      "wwii artistic documentary",
+      "battlefield moments",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into WWII action art, this work by Wayne Heim highlights Second World War through wwii artistic documentary and WWII battlefield. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -457,8 +485,8 @@ export const galleryData = [
   },
   {
     "id": "i-qTKSmBD",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "War Zone Photography In Fine Art",
+    "description": "Experience war zone photography through this evocative WWII battlefield from Wayne Heim's portfolio. This piece highlights battlefield moments with WWII action art, while conveying wwii artistic documentary, ideal for those who appreciate war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-qTKSmBD/A",
     "keywords": [
@@ -471,9 +499,15 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "war zone photography",
+      "WWII battlefield",
+      "battlefield moments",
+      "WWII action art",
+      "wwii artistic documentary",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into Second World War, this work by Wayne Heim highlights battlefield moments through WWII battlefield and war zone photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -488,8 +522,8 @@ export const galleryData = [
   },
   {
     "id": "i-VcqWqCD",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "WWII Action Art In Fine Art",
+    "description": "Explore WWII action art with Wayne Heim's battlefield moments. This war zone photography piece conveys Second World War, WWII battlefield, and WWII action art, perfect for fans of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-VcqWqCD/A",
     "keywords": [
@@ -502,9 +536,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "WWII action art",
+      "battlefield moments",
+      "war zone photography",
+      "Second World War",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Wayne Heim's exploration of battlefield moments comes alive in this piece, showcasing war zone photography and WWII battlefield. A testament to battlefield moments in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -519,8 +558,8 @@ export const galleryData = [
   },
   {
     "id": "i-rDdbFnP",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "WWII Action Art And WWII Battlefield",
+    "description": "Wayne Heim presents WWII action art in this WWII battlefield work. Embodying war zone photography, war zone photography, and battlefield moments, it's recommended for lovers of WWII action art. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-rDdbFnP/A",
     "keywords": [
@@ -533,9 +572,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "WWII action art",
+      "WWII battlefield",
+      "war zone photography",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into war zone photography, this work by Wayne Heim highlights battlefield moments through battlefield moments and WWII battlefield. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -550,8 +593,8 @@ export const galleryData = [
   },
   {
     "id": "i-pBsM4NR",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Wwii Artistic Documentary And Wwii Artistic Documentary",
+    "description": "Explore wwii artistic documentary with Wayne Heim's wwii artistic documentary. This wwii artistic documentary piece conveys wwii artistic documentary, war zone photography, and wwii artistic documentary, perfect for fans of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-pBsM4NR/A",
     "keywords": [
@@ -564,9 +607,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "wwii artistic documentary",
+      "war zone photography",
+      "WWII battlefield",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies war zone photography and WWII battlefield, captured by Wayne Heim in his signature style. It reflects war zone photography with a touch of battlefield moments. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -581,8 +628,8 @@ export const galleryData = [
   },
   {
     "id": "i-9vvLmPk",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "The Essence Of Battlefield Moments",
+    "description": "Uncover battlefield moments through this wwii artistic documentary from Wayne Heim. Showcasing WWII battlefield, war zone photography, and battlefield moments, it's perfect for enthusiasts of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-9vvLmPk/A",
     "keywords": [
@@ -595,9 +642,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "war zone photography",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into wwii artistic documentary, this work by Wayne Heim highlights Second World War through Second World War and battlefield moments. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -612,8 +664,8 @@ export const galleryData = [
   },
   {
     "id": "i-xdQMPhx",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Battlefield Moments - WWII Action Art",
+    "description": "Uncover battlefield moments through this WWII action art from Wayne Heim. Showcasing WWII battlefield, wwii artistic documentary, and battlefield moments, it's perfect for enthusiasts of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xdQMPhx/A",
     "keywords": [
@@ -626,9 +678,15 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "battlefield moments",
+      "WWII action art",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "war zone photography",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into war zone photography, this work by Wayne Heim highlights battlefield moments through WWII battlefield and Second World War. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -643,8 +701,8 @@ export const galleryData = [
   },
   {
     "id": "i-JtGX2Jj",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "War Zone Photography - Second World War",
+    "description": "Experience war zone photography through this evocative Second World War from Wayne Heim's portfolio. This piece highlights WWII action art with battlefield moments, while conveying war zone photography, ideal for those who appreciate war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-JtGX2Jj/A",
     "keywords": [
@@ -657,9 +715,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "war zone photography",
+      "Second World War",
+      "WWII action art",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies WWII action art and Second World War, captured by Wayne Heim in his signature style. It reflects battlefield moments with a touch of WWII action art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -674,8 +736,8 @@ export const galleryData = [
   },
   {
     "id": "i-zhXRRQJ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Capturing Second World War",
+    "description": "Wayne Heim's Second World War captures the spirit of war zone photography in this war zone photography image. Featuring WWII action art, Second World War, and Second World War, it's ideal for war zone photography enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-zhXRRQJ/A",
     "keywords": [
@@ -688,9 +750,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "war zone photography",
+      "WWII action art",
+      "wwii artistic documentary",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Wayne Heim's exploration of war zone photography comes alive in this piece, showcasing wwii artistic documentary and Second World War. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -705,8 +772,8 @@ export const galleryData = [
   },
   {
     "id": "i-v6mfR3M",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Wwii Artistic Documentary Portrait",
+    "description": "Wayne Heim presents wwii artistic documentary in this Second World War work. Embodying WWII battlefield, war zone photography, and WWII battlefield, it's recommended for lovers of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-v6mfR3M/A",
     "keywords": [
@@ -719,9 +786,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "wwii artistic documentary",
+      "Second World War",
+      "WWII battlefield",
+      "war zone photography",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies war zone photography and WWII battlefield, captured by Wayne Heim in his signature style. It reflects Second World War with a touch of WWII action art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -736,8 +808,8 @@ export const galleryData = [
   },
   {
     "id": "i-wDQZ8SZ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Second World War Study",
+    "description": "Discover the Second World War in this powerful Second World War by Wayne Heim. A compelling work that embodies battlefield moments, WWII action art, and Second World War. Perfect for art lovers seeking Second World War to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wDQZ8SZ/A",
     "keywords": [
@@ -750,9 +822,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "battlefield moments",
+      "WWII action art",
+      "war zone photography"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into war zone photography, this work by Wayne Heim highlights war zone photography through war zone photography and WWII action art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -767,8 +843,8 @@ export const galleryData = [
   },
   {
     "id": "i-VCqzrtn",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "War Zone Photography In Fine Art",
+    "description": "Wayne Heim's war zone photography captures the spirit of wwii artistic documentary in this wwii artistic documentary image. Featuring wwii artistic documentary, Second World War, and war zone photography, it's ideal for wwii artistic documentary enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-VCqzrtn/A",
     "keywords": [
@@ -781,9 +857,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "war zone photography",
+      "wwii artistic documentary",
+      "Second World War",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Wayne Heim's exploration of Second World War comes alive in this piece, showcasing WWII action art and wwii artistic documentary. A testament to war zone photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -798,8 +878,8 @@ export const galleryData = [
   },
   {
     "id": "i-Zbv6GQz",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "WWII Action Art Study",
+    "description": "Immerse yourself in WWII action art with this stunning WWII battlefield by Wayne Heim. Capturing WWII action art, war zone photography, and war zone photography, it's a must-have for collectors of WWII action art. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Zbv6GQz/A",
     "keywords": [
@@ -812,9 +892,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "WWII action art",
+      "WWII battlefield",
+      "war zone photography",
+      "wwii artistic documentary",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Wayne Heim's exploration of wwii artistic documentary comes alive in this piece, showcasing war zone photography and Second World War. A testament to WWII action art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -829,8 +914,8 @@ export const galleryData = [
   },
   {
     "id": "i-wQTdr8b",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Exploring Wwii Artistic Documentary",
+    "description": "Experience wwii artistic documentary through this evocative WWII battlefield from Wayne Heim's portfolio. This piece highlights Second World War with WWII battlefield, while conveying WWII action art, ideal for those who appreciate wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wQTdr8b/A",
     "keywords": [
@@ -843,9 +928,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "Second World War",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Wayne Heim's exploration of wwii artistic documentary comes alive in this piece, showcasing wwii artistic documentary and Second World War. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -891,8 +980,8 @@ export const galleryData = [
   },
   {
     "id": "i-XQnNv53",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Fine Art Battlefield Moments",
+    "description": "Witness battlefield moments in Wayne Heim's wwii artistic documentary. This image features war zone photography with WWII battlefield and war zone photography, ideal for admirers of battlefield moments. © Wayne Heim",
     "alt": "Dug In    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XQnNv53/A",
     "keywords": [
@@ -905,9 +994,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "war zone photography",
+      "WWII battlefield",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Wayne Heim's exploration of wwii artistic documentary comes alive in this piece, showcasing war zone photography and WWII action art. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -922,8 +1016,8 @@ export const galleryData = [
   },
   {
     "id": "i-65CBsn3",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Capturing War Zone Photography",
+    "description": "Wayne Heim's war zone photography captures the spirit of WWII battlefield in this Second World War image. Featuring WWII action art, war zone photography, and war zone photography, it's ideal for WWII battlefield enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-65CBsn3/A",
     "keywords": [
@@ -936,9 +1030,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "war zone photography",
+      "WWII battlefield",
+      "Second World War",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies Second World War and Second World War, captured by Wayne Heim in his signature style. It reflects war zone photography with a touch of war zone photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -953,8 +1051,8 @@ export const galleryData = [
   },
   {
     "id": "i-krDJb3M",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Second World War Study",
+    "description": "Wayne Heim presents Second World War in this WWII battlefield work. Embodying WWII battlefield, war zone photography, and WWII action art, it's recommended for lovers of Second World War. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-krDJb3M/A",
     "keywords": [
@@ -967,9 +1065,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "WWII battlefield",
+      "war zone photography",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into Second World War, this work by Wayne Heim highlights war zone photography through WWII action art and war zone photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1015,8 +1117,8 @@ export const galleryData = [
   },
   {
     "id": "i-fgksDHK",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Second World War Portrait",
+    "description": "Discover the Second World War in this powerful battlefield moments by Wayne Heim. A compelling work that embodies WWII battlefield, WWII battlefield, and WWII battlefield. Perfect for art lovers seeking Second World War to enhance their collection. © Wayne Heim",
     "alt": "Into the Smoke    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fgksDHK/A",
     "keywords": [
@@ -1029,9 +1131,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "battlefield moments",
+      "WWII battlefield",
+      "WWII action art",
+      "wwii artistic documentary"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of Second World War comes alive in this piece, showcasing WWII action art and wwii artistic documentary. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1046,8 +1153,8 @@ export const galleryData = [
   },
   {
     "id": "i-w43Z2Td",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Second World War In Fine Art",
+    "description": "Immerse yourself in Second World War with this stunning WWII battlefield by Wayne Heim. Capturing wwii artistic documentary, Second World War, and war zone photography, it's a must-have for collectors of Second World War. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-w43Z2Td/A",
     "keywords": [
@@ -1060,9 +1167,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "war zone photography",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into WWII action art, this work by Wayne Heim highlights WWII battlefield through WWII action art and Second World War. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1108,8 +1220,8 @@ export const galleryData = [
   },
   {
     "id": "i-jbhq74R",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Battlefield Moments",
+    "description": "Explore battlefield moments with Wayne Heim's battlefield moments. This war zone photography piece conveys WWII action art, war zone photography, and battlefield moments, perfect for fans of battlefield moments. © Wayne Heim",
     "alt": "Haze of Fire  black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jbhq74R/A",
     "keywords": [
@@ -1122,9 +1234,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "battlefield moments",
+      "war zone photography",
+      "WWII action art",
+      "wwii artistic documentary",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies battlefield moments and battlefield moments, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of WWII battlefield. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1139,8 +1256,8 @@ export const galleryData = [
   },
   {
     "id": "i-ZvrLLHG",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Second World War Portrait",
+    "description": "This Second World War artwork by Wayne Heim showcases WWII battlefield in a Second World War style. Reflecting Second World War, WWII battlefield, and Second World War, it's suited for admirers of WWII battlefield. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-ZvrLLHG/A",
     "keywords": [
@@ -1153,9 +1270,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "WWII battlefield",
+      "war zone photography",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of war zone photography comes alive in this piece, showcasing WWII battlefield and war zone photography. A testament to WWII action art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1170,8 +1291,8 @@ export const galleryData = [
   },
   {
     "id": "i-szFGDLB",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Second World War Moment",
+    "description": "Explore Second World War with Wayne Heim's war zone photography. This war zone photography piece conveys Second World War, wwii artistic documentary, and Second World War, perfect for fans of war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-szFGDLB/A",
     "keywords": [
@@ -1184,9 +1305,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "war zone photography",
+      "wwii artistic documentary",
+      "WWII action art",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing Second World War and battlefield moments. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1232,8 +1358,8 @@ export const galleryData = [
   },
   {
     "id": "i-bNFcCpd",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "WWII Battlefield - Second World War",
+    "description": "Discover the WWII battlefield in this powerful Second World War by Wayne Heim. A compelling work that embodies war zone photography, Second World War, and WWII battlefield. Perfect for art lovers seeking WWII battlefield to enhance their collection. © Wayne Heim",
     "alt": "In Shadow  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-bNFcCpd/A",
     "keywords": [
@@ -1246,9 +1372,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "WWII battlefield",
+      "Second World War",
+      "war zone photography",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of battlefield moments comes alive in this piece, showcasing war zone photography and Second World War. A testament to war zone photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1263,8 +1393,8 @@ export const galleryData = [
   },
   {
     "id": "i-wM6zgrQ",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "WWII Action Art - WWII Battlefield",
+    "description": "Delve into WWII action art via this WWII battlefield by Wayne Heim. Highlighting Second World War through battlefield moments and wwii artistic documentary, it's great for collectors interested in WWII action art. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wM6zgrQ/A",
     "keywords": [
@@ -1277,9 +1407,15 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "WWII action art",
+      "WWII battlefield",
+      "Second World War",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "war zone photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of war zone photography comes alive in this piece, showcasing Second World War and Second World War. A testament to WWII action art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1294,8 +1430,8 @@ export const galleryData = [
   },
   {
     "id": "i-cHZFshj",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "War Zone Photography Moment",
+    "description": "Immerse yourself in war zone photography with this stunning wwii artistic documentary by Wayne Heim. Capturing war zone photography, Second World War, and WWII action art, it's a must-have for collectors of war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-cHZFshj/A",
     "keywords": [
@@ -1308,9 +1444,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "war zone photography",
+      "wwii artistic documentary",
+      "Second World War",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of Second World War comes alive in this piece, showcasing war zone photography and wwii artistic documentary. A testament to war zone photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1325,8 +1465,8 @@ export const galleryData = [
   },
   {
     "id": "i-3w8Kpzz",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Battlefield Moments Moment",
+    "description": "Experience battlefield moments through this evocative WWII action art from Wayne Heim's portfolio. This piece highlights WWII battlefield with WWII action art, while conveying war zone photography, ideal for those who appreciate battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3w8Kpzz/A",
     "keywords": [
@@ -1339,9 +1479,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "battlefield moments",
+      "WWII action art",
+      "WWII battlefield",
+      "war zone photography",
+      "wwii artistic documentary"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into WWII battlefield, this work by Wayne Heim highlights wwii artistic documentary through WWII action art and WWII action art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1356,8 +1501,8 @@ export const galleryData = [
   },
   {
     "id": "i-xkntcRq",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Wwii Artistic Documentary Study",
+    "description": "Discover the wwii artistic documentary in this powerful WWII battlefield by Wayne Heim. A compelling work that embodies war zone photography, WWII battlefield, and Second World War. Perfect for art lovers seeking wwii artistic documentary to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xkntcRq/A",
     "keywords": [
@@ -1370,9 +1515,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "war zone photography",
+      "Second World War",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "This image embodies WWII battlefield and battlefield moments, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of WWII battlefield. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1387,8 +1537,8 @@ export const galleryData = [
   },
   {
     "id": "i-4DvQwz5",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Exploring War Zone Photography",
+    "description": "Explore war zone photography with Wayne Heim's battlefield moments. This battlefield moments piece conveys wwii artistic documentary, battlefield moments, and war zone photography, perfect for fans of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-4DvQwz5/A",
     "keywords": [
@@ -1401,9 +1551,13 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "war zone photography",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Wayne Heim's exploration of wwii artistic documentary comes alive in this piece, showcasing WWII battlefield and war zone photography. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1418,8 +1572,8 @@ export const galleryData = [
   },
   {
     "id": "i-frBvQp7",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Wwii Artistic Documentary Portrait",
+    "description": "Discover the wwii artistic documentary in this powerful war zone photography by Wayne Heim. A compelling work that embodies WWII battlefield, battlefield moments, and WWII action art. Perfect for art lovers seeking wwii artistic documentary to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-frBvQp7/A",
     "keywords": [
@@ -1432,9 +1586,14 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "wwii artistic documentary",
+      "war zone photography",
+      "WWII battlefield",
+      "battlefield moments",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Wayne Heim's exploration of wwii artistic documentary comes alive in this piece, showcasing wwii artistic documentary and battlefield moments. A testament to WWII action art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1449,8 +1608,8 @@ export const galleryData = [
   },
   {
     "id": "i-z7QmfM5",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing War Zone Photography",
+    "description": "Experience war zone photography through this evocative wwii artistic documentary from Wayne Heim's portfolio. This piece highlights Second World War with battlefield moments, while conveying WWII action art, ideal for those who appreciate war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-z7QmfM5/A",
     "keywords": [
@@ -1463,9 +1622,15 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "war zone photography",
+      "wwii artistic documentary",
+      "Second World War",
+      "battlefield moments",
+      "WWII action art",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects battlefield moments with a touch of Second World War. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1480,8 +1645,8 @@ export const galleryData = [
   },
   {
     "id": "i-kvdDsK8",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Fine Art Second World War",
+    "description": "Explore Second World War with Wayne Heim's WWII action art. This WWII battlefield piece conveys wwii artistic documentary, Second World War, and Second World War, perfect for fans of WWII action art. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-kvdDsK8/A",
     "keywords": [
@@ -1494,9 +1659,15 @@ export const galleryData = [
       "beach",
       "reenactment",
       "black  white photograohy",
-      "click to view only wayne heim beach battle photos"
+      "click to view only wayne heim beach battle photos",
+      "Second World War",
+      "WWII action art",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "battlefield moments",
+      "war zone photography"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into battlefield moments, this work by Wayne Heim highlights war zone photography through battlefield moments and WWII action art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1511,14 +1682,19 @@ export const galleryData = [
   },
   {
     "id": "i-jsJGz2c",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battlefield Moments And Second World War",
+    "description": "Explore battlefield moments with Wayne Heim's Second World War. This battlefield moments piece conveys WWII battlefield, battlefield moments, and battlefield moments, perfect for fans of Second World War. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jsJGz2c/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "Second World War",
+      "WWII battlefield",
+      "war zone photography",
+      "wwii artistic documentary"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into Second World War, this work by Wayne Heim highlights war zone photography through WWII battlefield and wwii artistic documentary. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1533,14 +1709,18 @@ export const galleryData = [
   },
   {
     "id": "i-fLNLCcT",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "War Zone Photography Portrait",
+    "description": "Discover the war zone photography in this powerful WWII action art by Wayne Heim. A compelling work that embodies WWII action art, battlefield moments, and war zone photography. Perfect for art lovers seeking war zone photography to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fLNLCcT/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "WWII action art",
+      "battlefield moments",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into battlefield moments, this work by Wayne Heim highlights WWII battlefield through war zone photography and battlefield moments. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1555,14 +1735,20 @@ export const galleryData = [
   },
   {
     "id": "i-K7WCpBX",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing WWII Battlefield",
+    "description": "Wayne Heim presents WWII battlefield in this battlefield moments work. Embodying battlefield moments, war zone photography, and wwii artistic documentary, it's recommended for lovers of WWII battlefield. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-K7WCpBX/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII battlefield",
+      "battlefield moments",
+      "war zone photography",
+      "wwii artistic documentary",
+      "Second World War",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of war zone photography comes alive in this piece, showcasing Second World War and battlefield moments. A testament to WWII action art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1577,14 +1763,19 @@ export const galleryData = [
   },
   {
     "id": "i-8rZ67C2",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring Battlefield Moments",
+    "description": "Witness battlefield moments in Wayne Heim's WWII action art. This image features WWII battlefield with war zone photography and Second World War, ideal for admirers of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-8rZ67C2/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "WWII action art",
+      "WWII battlefield",
+      "war zone photography",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies WWII action art and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of war zone photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1599,14 +1790,20 @@ export const galleryData = [
   },
   {
     "id": "i-tfMnxdj",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "The Essence Of Battlefield Moments",
+    "description": "Uncover battlefield moments through this WWII battlefield from Wayne Heim. Showcasing battlefield moments, Second World War, and wwii artistic documentary, it's perfect for enthusiasts of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tfMnxdj/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "WWII battlefield",
+      "Second World War",
+      "wwii artistic documentary",
+      "WWII action art",
+      "war zone photography"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into WWII action art, this work by Wayne Heim highlights WWII battlefield through war zone photography and wwii artistic documentary. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1621,14 +1818,18 @@ export const galleryData = [
   },
   {
     "id": "i-64t3cFv",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Fine Art WWII Action Art",
+    "description": "Explore WWII action art with Wayne Heim's war zone photography. This war zone photography piece conveys wwii artistic documentary, WWII action art, and WWII action art, perfect for fans of war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-64t3cFv/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII action art",
+      "war zone photography",
+      "wwii artistic documentary",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing wwii artistic documentary and war zone photography. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1643,14 +1844,18 @@ export const galleryData = [
   },
   {
     "id": "i-q9gwvwQ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battlefield Moments - Wwii Artistic Documentary",
+    "description": "Experience battlefield moments through this evocative wwii artistic documentary from Wayne Heim's portfolio. This piece highlights Second World War with battlefield moments, while conveying WWII battlefield, ideal for those who appreciate battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-q9gwvwQ/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "Second World War",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of wwii artistic documentary comes alive in this piece, showcasing wwii artistic documentary and battlefield moments. A testament to Second World War in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1665,14 +1870,18 @@ export const galleryData = [
   },
   {
     "id": "i-XpbzZrt",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing War Zone Photography",
+    "description": "Wayne Heim presents war zone photography in this Second World War work. Embodying war zone photography, WWII battlefield, and WWII battlefield, it's recommended for lovers of war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XpbzZrt/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "Second World War",
+      "WWII battlefield",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies battlefield moments and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of Second World War. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1687,14 +1896,19 @@ export const galleryData = [
   },
   {
     "id": "i-LD3zdft",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "WWII Action Art Study",
+    "description": "Experience WWII action art through this evocative war zone photography from Wayne Heim's portfolio. This piece highlights battlefield moments with battlefield moments, while conveying battlefield moments, ideal for those who appreciate WWII action art. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LD3zdft/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII action art",
+      "war zone photography",
+      "battlefield moments",
+      "Second World War",
+      "WWII battlefield"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies Second World War and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of WWII battlefield. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1709,14 +1923,19 @@ export const galleryData = [
   },
   {
     "id": "i-TD5LPgq",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing WWII Battlefield",
+    "description": "Experience WWII battlefield through this evocative WWII action art from Wayne Heim's portfolio. This piece highlights WWII battlefield with Second World War, while conveying WWII battlefield, ideal for those who appreciate WWII battlefield. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TD5LPgq/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII battlefield",
+      "WWII action art",
+      "Second World War",
+      "wwii artistic documentary",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies wwii artistic documentary and Second World War, captured by Wayne Heim in his signature style. It reflects Second World War with a touch of battlefield moments. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1731,14 +1950,18 @@ export const galleryData = [
   },
   {
     "id": "i-5MnLKFh",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battlefield Moments Moment",
+    "description": "Uncover battlefield moments through this wwii artistic documentary from Wayne Heim. Showcasing battlefield moments, WWII battlefield, and wwii artistic documentary, it's perfect for enthusiasts of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-5MnLKFh/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing battlefield moments and WWII battlefield. A testament to battlefield moments in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1753,14 +1976,19 @@ export const galleryData = [
   },
   {
     "id": "i-Wd8cVgw",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "War Zone Photography - War Zone Photography",
+    "description": "Uncover war zone photography through this war zone photography from Wayne Heim. Showcasing WWII action art, battlefield moments, and Second World War, it's perfect for enthusiasts of war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Wd8cVgw/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "WWII action art",
+      "battlefield moments",
+      "Second World War",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies Second World War and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of war zone photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1775,14 +2003,19 @@ export const galleryData = [
   },
   {
     "id": "i-cC29XgQ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "War Zone Photography And Second World War",
+    "description": "Discover the war zone photography in this powerful Second World War by Wayne Heim. A compelling work that embodies wwii artistic documentary, WWII action art, and WWII action art. Perfect for art lovers seeking war zone photography to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-cC29XgQ/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "Second World War",
+      "wwii artistic documentary",
+      "WWII action art",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies Second World War and wwii artistic documentary, captured by Wayne Heim in his signature style. It reflects battlefield moments with a touch of Second World War. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1797,14 +2030,18 @@ export const galleryData = [
   },
   {
     "id": "i-vWJbD8P",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battlefield Moments Portrait",
+    "description": "Immerse yourself in battlefield moments with this stunning Second World War by Wayne Heim. Capturing wwii artistic documentary, WWII action art, and wwii artistic documentary, it's a must-have for collectors of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-vWJbD8P/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "Second World War",
+      "wwii artistic documentary",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of battlefield moments comes alive in this piece, showcasing battlefield moments and wwii artistic documentary. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1819,14 +2056,20 @@ export const galleryData = [
   },
   {
     "id": "i-TFGwMrt",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "WWII Action Art Moment",
+    "description": "Explore WWII action art with Wayne Heim's wwii artistic documentary. This WWII battlefield piece conveys Second World War, war zone photography, and WWII action art, perfect for fans of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TFGwMrt/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII action art",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "Second World War",
+      "war zone photography",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into wwii artistic documentary, this work by Wayne Heim highlights wwii artistic documentary through wwii artistic documentary and battlefield moments. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1841,14 +2084,19 @@ export const galleryData = [
   },
   {
     "id": "i-pzzqZGt",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battlefield Moments And WWII Battlefield",
+    "description": "Witness battlefield moments in Wayne Heim's WWII battlefield. This image features battlefield moments with Second World War and WWII battlefield, ideal for admirers of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-pzzqZGt/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "WWII battlefield",
+      "Second World War",
+      "wwii artistic documentary",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects Second World War with a touch of WWII action art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1863,14 +2111,19 @@ export const galleryData = [
   },
   {
     "id": "i-3Cd579Z",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Artistic Documentary - Second World War",
+    "description": "Uncover wwii artistic documentary through this Second World War from Wayne Heim. Showcasing wwii artistic documentary, war zone photography, and WWII action art, it's perfect for enthusiasts of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3Cd579Z/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "Second World War",
+      "war zone photography",
+      "WWII action art",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects war zone photography with a touch of WWII battlefield. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1885,14 +2138,18 @@ export const galleryData = [
   },
   {
     "id": "i-Vh94vfV",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Artistic Documentary Study",
+    "description": "Immerse yourself in wwii artistic documentary with this stunning WWII action art by Wayne Heim. Capturing war zone photography, WWII battlefield, and wwii artistic documentary, it's a must-have for collectors of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Vh94vfV/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "WWII action art",
+      "war zone photography",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing WWII battlefield and WWII battlefield. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1907,14 +2164,19 @@ export const galleryData = [
   },
   {
     "id": "i-NBppNcg",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring Wwii Artistic Documentary",
+    "description": "Wayne Heim presents wwii artistic documentary in this WWII action art work. Embodying WWII battlefield, Second World War, and Second World War, it's recommended for lovers of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-NBppNcg/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "WWII action art",
+      "WWII battlefield",
+      "Second World War",
+      "war zone photography"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of war zone photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1929,14 +2191,18 @@ export const galleryData = [
   },
   {
     "id": "i-ZCbRRsN",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Artistic Documentary - WWII Battlefield",
+    "description": "This wwii artistic documentary artwork by Wayne Heim showcases WWII battlefield in a WWII battlefield style. Reflecting WWII battlefield, wwii artistic documentary, and wwii artistic documentary, it's suited for admirers of WWII battlefield. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-ZCbRRsN/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "Second World War",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies Second World War and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of WWII action art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1951,14 +2217,19 @@ export const galleryData = [
   },
   {
     "id": "i-srT6jwR",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring War Zone Photography",
+    "description": "Discover the war zone photography in this powerful war zone photography by Wayne Heim. A compelling work that embodies WWII battlefield, WWII battlefield, and wwii artistic documentary. Perfect for art lovers seeking war zone photography to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-srT6jwR/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "Second World War",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into wwii artistic documentary, this work by Wayne Heim highlights war zone photography through Second World War and battlefield moments. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1973,14 +2244,18 @@ export const galleryData = [
   },
   {
     "id": "i-H5XJjj2",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battlefield Moments Moment",
+    "description": "Experience battlefield moments through this evocative battlefield moments from Wayne Heim's portfolio. This piece highlights war zone photography with war zone photography, while conveying WWII action art, ideal for those who appreciate battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-H5XJjj2/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "war zone photography",
+      "WWII action art",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into WWII action art, this work by Wayne Heim highlights battlefield moments through war zone photography and Second World War. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1995,14 +2270,20 @@ export const galleryData = [
   },
   {
     "id": "i-dkfbg4H",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Artistic Documentary Portrait",
+    "description": "Experience wwii artistic documentary through this evocative war zone photography from Wayne Heim's portfolio. This piece highlights WWII action art with wwii artistic documentary, while conveying WWII battlefield, ideal for those who appreciate wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-dkfbg4H/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "war zone photography",
+      "WWII action art",
+      "WWII battlefield",
+      "Second World War",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies Second World War and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of WWII action art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2017,14 +2298,18 @@ export const galleryData = [
   },
   {
     "id": "i-tQWBXvt",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Artistic Documentary - Battlefield Moments",
+    "description": "Discover the wwii artistic documentary in this powerful battlefield moments by Wayne Heim. A compelling work that embodies WWII battlefield, battlefield moments, and wwii artistic documentary. Perfect for art lovers seeking wwii artistic documentary to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tQWBXvt/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "battlefield moments",
+      "WWII battlefield",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into battlefield moments, this work by Wayne Heim highlights WWII battlefield through Second World War and wwii artistic documentary. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2039,14 +2324,18 @@ export const galleryData = [
   },
   {
     "id": "i-VNXbdGD",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Wwii Artistic Documentary And Wwii Artistic Documentary",
+    "description": "Immerse yourself in wwii artistic documentary with this stunning wwii artistic documentary by Wayne Heim. Capturing war zone photography, wwii artistic documentary, and war zone photography, it's a must-have for collectors of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-VNXbdGD/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "war zone photography",
+      "Second World War",
+      "battlefield moments"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of Second World War comes alive in this piece, showcasing battlefield moments and Second World War. A testament to Second World War in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2061,14 +2350,19 @@ export const galleryData = [
   },
   {
     "id": "i-Gt24qgS",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Wwii Artistic Documentary In Fine Art",
+    "description": "Wayne Heim's wwii artistic documentary captures the spirit of WWII action art in this WWII battlefield image. Featuring WWII battlefield, war zone photography, and wwii artistic documentary, it's ideal for WWII action art enthusiasts. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Gt24qgS/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "WWII action art",
+      "WWII battlefield",
+      "war zone photography",
+      "battlefield moments"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing battlefield moments and battlefield moments. A testament to wwii artistic documentary in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2083,14 +2377,19 @@ export const galleryData = [
   },
   {
     "id": "i-69rmhkz",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Exploring WWII Action Art",
+    "description": "This WWII action art artwork by Wayne Heim showcases battlefield moments in a Second World War style. Reflecting wwii artistic documentary, WWII action art, and WWII action art, it's suited for admirers of battlefield moments. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-69rmhkz/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII action art",
+      "battlefield moments",
+      "Second World War",
+      "wwii artistic documentary",
+      "war zone photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into war zone photography, this work by Wayne Heim highlights Second World War through battlefield moments and war zone photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2105,14 +2404,19 @@ export const galleryData = [
   },
   {
     "id": "i-TqwNVLm",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "War Zone Photography And Second World War",
+    "description": "Wayne Heim presents war zone photography in this Second World War work. Embodying WWII action art, wwii artistic documentary, and war zone photography, it's recommended for lovers of war zone photography. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TqwNVLm/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "Second World War",
+      "WWII action art",
+      "wwii artistic documentary",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies Second World War and battlefield moments, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of war zone photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2127,14 +2431,18 @@ export const galleryData = [
   },
   {
     "id": "i-hSXXXmd",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "WWII Battlefield Portrait",
+    "description": "Wayne Heim's WWII battlefield captures the spirit of Second World War in this battlefield moments image. Featuring battlefield moments, battlefield moments, and WWII battlefield, it's ideal for Second World War enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-hSXXXmd/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII battlefield",
+      "Second World War",
+      "battlefield moments",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Delving into WWII action art, this work by Wayne Heim highlights battlefield moments through battlefield moments and WWII action art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2149,14 +2457,18 @@ export const galleryData = [
   },
   {
     "id": "i-M4Tzhkn",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Exploring Wwii Artistic Documentary",
+    "description": "Uncover wwii artistic documentary through this battlefield moments from Wayne Heim. Showcasing battlefield moments, WWII action art, and WWII action art, it's perfect for enthusiasts of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-M4Tzhkn/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "battlefield moments",
+      "WWII action art",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Delving into wwii artistic documentary, this work by Wayne Heim highlights WWII battlefield through WWII battlefield and wwii artistic documentary. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2171,14 +2483,19 @@ export const galleryData = [
   },
   {
     "id": "i-LSqMCph",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Exploring Battlefield Moments",
+    "description": "Delve into battlefield moments via this WWII action art by Wayne Heim. Highlighting Second World War through WWII action art and war zone photography, it's great for collectors interested in battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LSqMCph/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "WWII action art",
+      "Second World War",
+      "war zone photography",
+      "wwii artistic documentary"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of wwii artistic documentary comes alive in this piece, showcasing WWII action art and Second World War. A testament to WWII action art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2193,14 +2510,19 @@ export const galleryData = [
   },
   {
     "id": "i-RZn2tCT",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wwii Artistic Documentary Study",
+    "description": "Delve into wwii artistic documentary via this WWII action art by Wayne Heim. Highlighting wwii artistic documentary through Second World War and battlefield moments, it's great for collectors interested in wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-RZn2tCT/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "WWII action art",
+      "Second World War",
+      "battlefield moments",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of battlefield moments comes alive in this piece, showcasing WWII battlefield and WWII action art. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2215,14 +2537,19 @@ export const galleryData = [
   },
   {
     "id": "i-XkPp2M9",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "The Essence Of War Zone Photography",
+    "description": "Wayne Heim's war zone photography captures the spirit of WWII action art in this wwii artistic documentary image. Featuring war zone photography, war zone photography, and war zone photography, it's ideal for WWII action art enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XkPp2M9/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "WWII action art",
+      "wwii artistic documentary",
+      "Second World War",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Delving into Second World War, this work by Wayne Heim highlights WWII battlefield through WWII battlefield and WWII battlefield. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2237,14 +2564,20 @@ export const galleryData = [
   },
   {
     "id": "i-kFB5dxv",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Artistic Documentary Portrait",
+    "description": "Experience wwii artistic documentary through this evocative WWII action art from Wayne Heim's portfolio. This piece highlights battlefield moments with WWII battlefield, while conveying war zone photography, ideal for those who appreciate wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-kFB5dxv/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "WWII action art",
+      "battlefield moments",
+      "WWII battlefield",
+      "war zone photography",
+      "Second World War"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies WWII battlefield and Second World War, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of Second World War. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2259,14 +2592,19 @@ export const galleryData = [
   },
   {
     "id": "i-752SgTm",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Second World War Portrait",
+    "description": "Experience Second World War through this evocative battlefield moments from Wayne Heim's portfolio. This piece highlights war zone photography with Second World War, while conveying wwii artistic documentary, ideal for those who appreciate Second World War. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-752SgTm/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "Second World War",
+      "battlefield moments",
+      "war zone photography",
+      "wwii artistic documentary",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies war zone photography and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of battlefield moments. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2281,14 +2619,18 @@ export const galleryData = [
   },
   {
     "id": "i-xwTrk8M",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Artistic Documentary - WWII Action Art",
+    "description": "Wayne Heim's wwii artistic documentary captures the spirit of WWII action art in this WWII action art image. Featuring war zone photography, Second World War, and wwii artistic documentary, it's ideal for WWII action art enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xwTrk8M/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "WWII action art",
+      "war zone photography",
+      "Second World War"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of war zone photography comes alive in this piece, showcasing war zone photography and wwii artistic documentary. A testament to WWII action art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2303,14 +2645,19 @@ export const galleryData = [
   },
   {
     "id": "i-GkpGWvT",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Second World War",
+    "description": "Discover the Second World War in this powerful WWII action art by Wayne Heim. A compelling work that embodies Second World War, wwii artistic documentary, and Second World War. Perfect for art lovers seeking Second World War to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-GkpGWvT/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "Second World War",
+      "WWII action art",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii artistic documentary comes alive in this piece, showcasing Second World War and WWII battlefield. A testament to battlefield moments in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2325,14 +2672,18 @@ export const galleryData = [
   },
   {
     "id": "i-fTGjHKh",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "War Zone Photography And Second World War",
+    "description": "Experience war zone photography through this evocative Second World War from Wayne Heim's portfolio. This piece highlights Second World War with war zone photography, while conveying wwii artistic documentary, ideal for those who appreciate war zone photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fTGjHKh/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "Second World War",
+      "wwii artistic documentary",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into WWII action art, this work by Wayne Heim highlights Second World War through WWII action art and WWII action art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2347,14 +2698,19 @@ export const galleryData = [
   },
   {
     "id": "i-wWwVmQG",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Second World War",
+    "description": "Wayne Heim's Second World War captures the spirit of battlefield moments in this WWII battlefield image. Featuring wwii artistic documentary, Second World War, and Second World War, it's ideal for battlefield moments enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wWwVmQG/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "Second World War",
+      "battlefield moments",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of WWII battlefield comes alive in this piece, showcasing battlefield moments and WWII action art. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2369,14 +2725,19 @@ export const galleryData = [
   },
   {
     "id": "i-3t683PB",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "WWII Action Art Study",
+    "description": "Wayne Heim's WWII action art captures the spirit of Second World War in this WWII battlefield image. Featuring war zone photography, battlefield moments, and WWII action art, it's ideal for Second World War enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3t683PB/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII action art",
+      "Second World War",
+      "WWII battlefield",
+      "war zone photography",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing WWII action art and WWII action art. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2391,14 +2752,19 @@ export const galleryData = [
   },
   {
     "id": "i-jgkD4tQ",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Second World War Portrait",
+    "description": "Immerse yourself in Second World War with this stunning battlefield moments by Wayne Heim. Capturing wwii artistic documentary, WWII action art, and WWII battlefield, it's a must-have for collectors of Second World War. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jgkD4tQ/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "Second World War",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "WWII action art",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of battlefield moments comes alive in this piece, showcasing battlefield moments and wwii artistic documentary. A testament to battlefield moments in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2413,14 +2779,19 @@ export const galleryData = [
   },
   {
     "id": "i-JHF4Jfp",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing War Zone Photography",
+    "description": "Discover the war zone photography in this powerful Second World War by Wayne Heim. A compelling work that embodies WWII battlefield, wwii artistic documentary, and WWII action art. Perfect for art lovers seeking war zone photography to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-JHF4Jfp/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "war zone photography",
+      "Second World War",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii artistic documentary, this work by Wayne Heim highlights war zone photography through WWII battlefield and Second World War. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2435,14 +2806,18 @@ export const galleryData = [
   },
   {
     "id": "i-LwmWNNd",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Battlefield Moments - Wwii Artistic Documentary",
+    "description": "This battlefield moments artwork by Wayne Heim showcases wwii artistic documentary in a WWII action art style. Reflecting wwii artistic documentary, Second World War, and battlefield moments, it's suited for admirers of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LwmWNNd/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "WWII action art",
+      "Second World War"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies battlefield moments and Second World War, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of Second World War. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2457,14 +2832,18 @@ export const galleryData = [
   },
   {
     "id": "i-pntwtPC",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "WWII Action Art Study",
+    "description": "Immerse yourself in WWII action art with this stunning war zone photography by Wayne Heim. Capturing war zone photography, Second World War, and battlefield moments, it's a must-have for collectors of WWII action art. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-pntwtPC/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII action art",
+      "war zone photography",
+      "Second World War",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies war zone photography and battlefield moments, captured by Wayne Heim in his signature style. It reflects battlefield moments with a touch of Second World War. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2479,14 +2858,18 @@ export const galleryData = [
   },
   {
     "id": "i-jVK5Lqc",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "WWII Battlefield Moment",
+    "description": "Discover the WWII battlefield in this powerful WWII action art by Wayne Heim. A compelling work that embodies war zone photography, war zone photography, and Second World War. Perfect for art lovers seeking WWII battlefield to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-jVK5Lqc/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "WWII battlefield",
+      "WWII action art",
+      "war zone photography",
+      "Second World War"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into WWII action art, this work by Wayne Heim highlights WWII action art through Second World War and WWII battlefield. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2501,14 +2884,18 @@ export const galleryData = [
   },
   {
     "id": "i-MphpdF8",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Battlefield Moments Portrait",
+    "description": "Delve into battlefield moments via this wwii artistic documentary by Wayne Heim. Highlighting Second World War through battlefield moments and Second World War, it's great for collectors interested in battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-MphpdF8/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "wwii artistic documentary",
+      "Second World War",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into battlefield moments, this work by Wayne Heim highlights WWII battlefield through wwii artistic documentary and WWII battlefield. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2523,14 +2910,18 @@ export const galleryData = [
   },
   {
     "id": "i-S8Z9pr4",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Battlefield Moments Portrait",
+    "description": "Witness battlefield moments in Wayne Heim's WWII battlefield. This image features wwii artistic documentary with wwii artistic documentary and WWII action art, ideal for admirers of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-S8Z9pr4/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "battlefield moments",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "WWII action art"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of battlefield moments. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2545,14 +2936,19 @@ export const galleryData = [
   },
   {
     "id": "i-b2HzGZK",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Artistic Documentary Study",
+    "description": "Delve into wwii artistic documentary via this war zone photography by Wayne Heim. Highlighting WWII action art through WWII action art and battlefield moments, it's great for collectors interested in wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-b2HzGZK/A",
     "keywords": [
-      "DDay Conneaut 2021"
+      "DDay Conneaut 2021",
+      "wwii artistic documentary",
+      "war zone photography",
+      "WWII action art",
+      "battlefield moments",
+      "Second World War"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii artistic documentary, this work by Wayne Heim highlights WWII action art through wwii artistic documentary and Second World War. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2567,8 +2963,8 @@ export const galleryData = [
   },
   {
     "id": "i-74PzTjC",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Second World War Moment",
+    "description": "Explore Second World War with Wayne Heim's WWII battlefield. This war zone photography piece conveys WWII action art, battlefield moments, and Second World War, perfect for fans of WWII battlefield. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-74PzTjC/A",
     "keywords": [
@@ -2579,9 +2975,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Second World War",
+      "WWII battlefield",
+      "war zone photography",
+      "WWII action art",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies WWII battlefield and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of battlefield moments. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2596,8 +2997,8 @@ export const galleryData = [
   },
   {
     "id": "i-k3k976G",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Battlefield Moments - WWII Battlefield",
+    "description": "Uncover battlefield moments through this WWII battlefield from Wayne Heim. Showcasing wwii artistic documentary, WWII action art, and war zone photography, it's perfect for enthusiasts of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-k3k976G/A",
     "keywords": [
@@ -2608,9 +3009,15 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "battlefield moments",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "WWII action art",
+      "war zone photography",
+      "Second World War"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies battlefield moments and war zone photography, captured by Wayne Heim in his signature style. It reflects Second World War with a touch of battlefield moments. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2625,8 +3032,8 @@ export const galleryData = [
   },
   {
     "id": "i-8JM8jfL",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Artistic Documentary - WWII Battlefield",
+    "description": "Wayne Heim's wwii artistic documentary captures the spirit of WWII battlefield in this Second World War image. Featuring WWII battlefield, WWII action art, and wwii artistic documentary, it's ideal for WWII battlefield enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-8JM8jfL/A",
     "keywords": [
@@ -2637,9 +3044,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "Second World War",
+      "WWII action art",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into WWII battlefield, this work by Wayne Heim highlights battlefield moments through battlefield moments and WWII action art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2828,8 +3240,8 @@ export const galleryData = [
   },
   {
     "id": "i-dwCG8Mx",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "War Zone Photography In Fine Art",
+    "description": "Immerse yourself in war zone photography with this stunning WWII action art by Wayne Heim. Capturing battlefield moments, WWII action art, and war zone photography, it's a must-have for collectors of war zone photography. © Wayne Heim",
     "alt": "Woman Reenactor   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-dwCG8Mx/A",
     "keywords": [
@@ -2840,9 +3252,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "war zone photography",
+      "WWII action art",
+      "battlefield moments",
+      "WWII battlefield",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies battlefield moments and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of Second World War. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2857,8 +3274,8 @@ export const galleryData = [
   },
   {
     "id": "i-648v5jr",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Battlefield Moments Portrait",
+    "description": "Wayne Heim presents battlefield moments in this WWII action art work. Embodying Second World War, war zone photography, and WWII battlefield, it's recommended for lovers of battlefield moments. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-648v5jr/A",
     "keywords": [
@@ -2869,9 +3286,15 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "battlefield moments",
+      "WWII action art",
+      "Second World War",
+      "war zone photography",
+      "WWII battlefield",
+      "wwii artistic documentary"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies WWII action art and war zone photography, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of battlefield moments. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2886,8 +3309,8 @@ export const galleryData = [
   },
   {
     "id": "i-sLVb5sJ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Artistic Documentary Portrait",
+    "description": "Uncover wwii artistic documentary through this Second World War from Wayne Heim. Showcasing WWII action art, wwii artistic documentary, and war zone photography, it's perfect for enthusiasts of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-sLVb5sJ/A",
     "keywords": [
@@ -2898,9 +3321,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii artistic documentary",
+      "Second World War",
+      "WWII action art",
+      "war zone photography",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of Second World War comes alive in this piece, showcasing war zone photography and WWII battlefield. A testament to Second World War in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2915,8 +3343,8 @@ export const galleryData = [
   },
   {
     "id": "i-rmzHh2j",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring Wwii Artistic Documentary",
+    "description": "Delve into wwii artistic documentary via this WWII battlefield by Wayne Heim. Highlighting WWII action art through WWII action art and Second World War, it's great for collectors interested in wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-rmzHh2j/A",
     "keywords": [
@@ -2927,9 +3355,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "WWII action art",
+      "Second World War",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies battlefield moments and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of WWII action art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2944,8 +3377,8 @@ export const galleryData = [
   },
   {
     "id": "i-tgmq9D9",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Fine Art War Zone Photography",
+    "description": "Wayne Heim's war zone photography captures the spirit of WWII action art in this war zone photography image. Featuring wwii artistic documentary, WWII action art, and war zone photography, it's ideal for WWII action art enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tgmq9D9/A",
     "keywords": [
@@ -2956,9 +3389,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "war zone photography",
+      "WWII action art",
+      "wwii artistic documentary",
+      "Second World War",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing war zone photography and Second World War. A testament to battlefield moments in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2973,8 +3411,8 @@ export const galleryData = [
   },
   {
     "id": "i-z3k6ZDH",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "War Zone Photography Moment",
+    "description": "Wayne Heim's war zone photography captures the spirit of WWII battlefield in this wwii artistic documentary image. Featuring WWII action art, wwii artistic documentary, and war zone photography, it's ideal for WWII battlefield enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-z3k6ZDH/A",
     "keywords": [
@@ -2985,9 +3423,15 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "war zone photography",
+      "WWII battlefield",
+      "wwii artistic documentary",
+      "WWII action art",
+      "battlefield moments",
+      "Second World War"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of WWII action art comes alive in this piece, showcasing battlefield moments and WWII action art. A testament to Second World War in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3002,8 +3446,8 @@ export const galleryData = [
   },
   {
     "id": "i-XZXJtMr",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing Wwii Artistic Documentary",
+    "description": "Explore wwii artistic documentary with Wayne Heim's WWII battlefield. This WWII action art piece conveys war zone photography, war zone photography, and wwii artistic documentary, perfect for fans of WWII battlefield. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XZXJtMr/A",
     "keywords": [
@@ -3014,9 +3458,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "WWII action art",
+      "war zone photography",
+      "battlefield moments"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies WWII action art and war zone photography, captured by Wayne Heim in his signature style. It reflects battlefield moments with a touch of WWII action art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3031,8 +3480,8 @@ export const galleryData = [
   },
   {
     "id": "i-4c55gCM",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Artistic Documentary Study",
+    "description": "Discover the wwii artistic documentary in this powerful battlefield moments by Wayne Heim. A compelling work that embodies wwii artistic documentary, WWII action art, and war zone photography. Perfect for art lovers seeking wwii artistic documentary to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-4c55gCM/A",
     "keywords": [
@@ -3043,9 +3492,15 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii artistic documentary",
+      "battlefield moments",
+      "WWII action art",
+      "war zone photography",
+      "Second World War",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of Second World War comes alive in this piece, showcasing WWII battlefield and WWII battlefield. A testament to war zone photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3060,8 +3515,8 @@ export const galleryData = [
   },
   {
     "id": "i-Ztdkx4R",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "WWII Action Art In Fine Art",
+    "description": "Uncover WWII action art through this WWII action art from Wayne Heim. Showcasing Second World War, wwii artistic documentary, and WWII battlefield, it's perfect for enthusiasts of WWII action art. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Ztdkx4R/A",
     "keywords": [
@@ -3072,9 +3527,15 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "WWII action art",
+      "Second World War",
+      "wwii artistic documentary",
+      "WWII battlefield",
+      "battlefield moments",
+      "war zone photography"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies wwii artistic documentary and battlefield moments, captured by Wayne Heim in his signature style. It reflects war zone photography with a touch of Second World War. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3089,8 +3550,8 @@ export const galleryData = [
   },
   {
     "id": "i-tdzdbQH",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "The Essence Of Wwii Artistic Documentary",
+    "description": "Witness wwii artistic documentary in Wayne Heim's battlefield moments. This image features WWII action art with WWII action art and Second World War, ideal for admirers of wwii artistic documentary. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tdzdbQH/A",
     "keywords": [
@@ -3101,9 +3562,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii artistic documentary",
+      "battlefield moments",
+      "WWII action art",
+      "Second World War",
+      "WWII battlefield"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of battlefield moments comes alive in this piece, showcasing WWII action art and wwii artistic documentary. A testament to WWII battlefield in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-b2hZptn",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Mountain Landscape Photography Moment",
+    "description": "Experience mountain landscape photography through this evocative painterly mountain art from Wayne Heim's portfolio. This piece highlights mountain landscape photography with painterly mountain art, while conveying painterly mountain art, ideal for those who appreciate mountain landscape photography. © Wayne Heim",
     "alt": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photograph: Break in the Storm -  Mountain Landscape",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/A",
     "keywords": [
@@ -51,9 +51,11 @@ export const galleryData = [
       "Western art",
       "western fine art photography",
       "Wyoming",
-      "western"
+      "western",
+      "mountain landscape photography",
+      "painterly mountain art"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of painterly mountain art comes alive in this piece, showcasing painterly mountain art and painterly mountain art. A testament to mountain landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

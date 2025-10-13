@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-b2hZptn",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Sunset Landscape Photography In Fine Art",
+    "description": "Experience sunset landscape photography through this evocative sunset landscape photography from Wayne Heim's portfolio. This piece highlights painterly sunset scenes with painterly sunset scenes, while conveying painterly sunset scenes, ideal for those who appreciate sunset landscape photography. © Wayne Heim",
     "alt": "Painterly Mountain Photography:  Mountains Photography:  Painterly Photograph: Break in the Storm -  Mountain Landscape",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/A",
     "keywords": [
@@ -51,9 +51,11 @@ export const galleryData = [
       "Western art",
       "western fine art photography",
       "Wyoming",
-      "western"
+      "western",
+      "sunset landscape photography",
+      "painterly sunset scenes"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into sunset landscape photography, this work by Wayne Heim highlights painterly sunset scenes through sunset landscape photography and sunset landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

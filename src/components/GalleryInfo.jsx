@@ -135,23 +135,55 @@ export default function GalleryInfo({
           }}
         >
           {entranceData?.image && (
-            <figure>
-              <img
-                src={entranceData.image.src}
-                alt={
-                  entranceData.image.alt || "Portrait preview"
+            <a
+              href={exploreHref}
+              style={{
+                textDecoration: 'none',
+                color: 'inherit',
+                display: 'block',
+                cursor: 'pointer'
+              }}
+              aria-label="Explore the gallery"
+              onMouseEnter={() => {
+                // Trigger glow effect on explore button
+                const exploreButton = document.querySelector('.explore-section');
+                if (exploreButton) {
+                  exploreButton.classList.add('image-hover-glow');
                 }
-                style={{
-                  maxWidth: "100%",
-                  borderRadius: "9px",
-                  boxShadow: "0 8px 32px #0002",
-                  border: "2px solid #ddd",
-                }}
-              />
-              <figcaption>
-                {entranceData.image.caption}
-              </figcaption>
-            </figure>
+              }}
+              onMouseLeave={() => {
+                // Remove glow effect from explore button
+                const exploreButton = document.querySelector('.explore-section');
+                if (exploreButton) {
+                  exploreButton.classList.remove('image-hover-glow');
+                }
+              }}
+            >
+              <figure>
+                <img
+                  src={entranceData.image.src}
+                  alt={
+                    entranceData.image.alt || "Portrait preview"
+                  }
+                  style={{
+                    maxWidth: "100%",
+                    borderRadius: "9px",
+                    boxShadow: "0 8px 32px #0002",
+                    border: "2px solid #ddd",
+                    transition: "box-shadow 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.boxShadow = '0 0 0 2px rgba(255, 255, 255, 0.85), 0 4px 15px 4px rgba(134, 134, 134, 0.85)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.boxShadow = '0 8px 32px #0002';
+                  }}
+                />
+                <figcaption>
+                  {entranceData.image.caption}
+                </figcaption>
+              </figure>
+            </a>
           )}
         </motion.div>
       </section>

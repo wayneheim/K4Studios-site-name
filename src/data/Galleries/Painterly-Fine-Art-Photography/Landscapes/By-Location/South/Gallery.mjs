@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-fgkX7Jn",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Blue Ridge Painterly Landscapes Moment",
+    "description": "Wayne Heim's blue ridge painterly landscapes captures the spirit of blue ridge painterly landscapes in this blue ridge painterly landscapes image. Featuring southern landscape photography, blue ridge painterly landscapes, and blue ridge painterly landscapes, it's ideal for blue ridge painterly landscapes enthusiasts. © Wayne Heim",
     "alt": "Forest Brook in Green",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/A",
     "keywords": [
@@ -36,9 +36,11 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "blue ridge painterly landscapes",
+      "southern landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into blue ridge painterly landscapes, this work by Wayne Heim highlights blue ridge painterly landscapes through southern landscape photography and blue ridge painterly landscapes. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -53,8 +55,8 @@ export const galleryData = [
   },
   {
     "id": "i-7LZhFkc",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Southern Landscape Photography And Blue Ridge Painterly Landscapes",
+    "description": "Experience southern landscape photography through this evocative blue ridge painterly landscapes from Wayne Heim's portfolio. This piece highlights southern landscape photography with blue ridge painterly landscapes, while conveying southern landscape photography, ideal for those who appreciate southern landscape photography. © Wayne Heim",
     "alt": "Forest Brook in Green",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7LZhFkc/A",
     "keywords": [
@@ -66,9 +68,11 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "southern landscape photography",
+      "blue ridge painterly landscapes"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into southern landscape photography, this work by Wayne Heim highlights southern landscape photography through southern landscape photography and southern landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -143,8 +147,8 @@ export const galleryData = [
   },
   {
     "id": "i-FpmhtnM",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Fine Art Southern Landscape Photography",
+    "description": "Wayne Heim presents southern landscape photography in this southern landscape photography work. Embodying southern landscape photography, blue ridge painterly landscapes, and southern landscape photography, it's recommended for lovers of southern landscape photography. © Wayne Heim",
     "alt": "A Path Less Traveled",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-FpmhtnM/A",
     "keywords": [
@@ -156,9 +160,11 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "southern landscape photography",
+      "blue ridge painterly landscapes"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies blue ridge painterly landscapes and blue ridge painterly landscapes, captured by Wayne Heim in his signature style. It reflects blue ridge painterly landscapes with a touch of blue ridge painterly landscapes. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -173,8 +179,8 @@ export const galleryData = [
   },
   {
     "id": "i-Jstk9Gx",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Exploring Southern Landscape Photography",
+    "description": "This southern landscape photography artwork by Wayne Heim showcases southern landscape photography in a southern landscape photography style. Reflecting southern landscape photography, blue ridge painterly landscapes, and southern landscape photography, it's suited for admirers of southern landscape photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Jstk9Gx/A",
     "keywords": [
@@ -186,9 +192,11 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "southern landscape photography",
+      "blue ridge painterly landscapes"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of southern landscape photography comes alive in this piece, showcasing southern landscape photography and southern landscape photography. A testament to blue ridge painterly landscapes in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -263,8 +271,8 @@ export const galleryData = [
   },
   {
     "id": "i-cKsdqTs",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Essence Of Southern Landscape Photography",
+    "description": "Delve into southern landscape photography via this blue ridge painterly landscapes by Wayne Heim. Highlighting southern landscape photography through blue ridge painterly landscapes and southern landscape photography, it's great for collectors interested in southern landscape photography. © Wayne Heim",
     "alt": "Hidden Falls x2",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cKsdqTs/A",
     "keywords": [
@@ -276,9 +284,11 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "southern landscape photography",
+      "blue ridge painterly landscapes"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of blue ridge painterly landscapes comes alive in this piece, showcasing southern landscape photography and blue ridge painterly landscapes. A testament to blue ridge painterly landscapes in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

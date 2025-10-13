@@ -3257,8 +3257,8 @@ export const galleryData = [
   },
   {
     "id": "i-Hk6CHqx",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Iconic Landmarks Study",
+    "description": "This iconic landmarks artwork by Wayne Heim showcases quiet grandeur of architecture in a classic buildings style. Reflecting traditional architecture art, Landmarks & Icons, and iconic landmarks, it's suited for admirers of quiet grandeur of architecture. © Wayne Heim",
     "alt": "Still Standing in Black & white    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/A",
     "keywords": [
@@ -3269,9 +3269,15 @@ export const galleryData = [
       "boat houses",
       "colorful",
       "faroe islands",
-      "k4 studios"
+      "k4 studios",
+      "iconic landmarks",
+      "quiet grandeur of architecture",
+      "classic buildings",
+      "traditional architecture art",
+      "Landmarks & Icons",
+      "classic architecture"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies quiet grandeur of architecture and classic architecture, captured by Wayne Heim in his signature style. It reflects classic buildings with a touch of traditional architecture art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3286,8 +3292,8 @@ export const galleryData = [
   },
   {
     "id": "i-3S3RMNW",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Fine Art Quiet Grandeur Of Architecture",
+    "description": "Wayne Heim presents quiet grandeur of architecture in this traditional architecture art work. Embodying classic architecture, building portraits, and architecture photography, it's recommended for lovers of quiet grandeur of architecture. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW/A",
     "keywords": [
@@ -3298,9 +3304,17 @@ export const galleryData = [
       "boat houses",
       "colorful",
       "faroe islands",
-      "k4 studios"
+      "k4 studios",
+      "quiet grandeur of architecture",
+      "traditional architecture art",
+      "classic architecture",
+      "building portraits",
+      "architecture photography",
+      "beauty of architecture",
+      "architectural fine art",
+      "iconic landmarks"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of beauty of architecture comes alive in this piece, showcasing architectural fine art and building portraits. A testament to iconic landmarks in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

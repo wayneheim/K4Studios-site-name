@@ -664,6 +664,26 @@ export const semantic = {
     ]
   },
 
+  wildlifePainterly: {
+    path: "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife",
+    def: "Painterly wildlife photography capturing the beauty and essence of animals in their natural habitats.",
+    landingPhrases: [
+      { phrase: "wildlife photography", rating: 5, use: true },
+      { phrase: "animal portraits", rating: 4, use: true },
+      { phrase: "nature's creatures", rating: 4, use: true },
+      { phrase: "wildlife art", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "wildlife photography", rating: 5, use: true },
+      { phrase: "animal portrait", rating: 5, use: true },
+      { phrase: "nature's beauty", rating: 4, use: true },
+      { phrase: "wildlife art", rating: 4, use: true },
+      { phrase: "animal kingdom", rating: 4, use: true },
+      { phrase: "fauna photography", rating: 3, use: true },
+      { phrase: "wild animal art", rating: 3, use: true }
+    ]
+  },
+
   // --- TRANSPORTATION, UNIVERSAL, SYNONYMS ---
   transportation: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Transportation",
@@ -679,14 +699,29 @@ export const semantic = {
     imagePhrases: [
       { phrase: "classic car photography", rating: 5, use: true },
       { phrase: "vintage train photography", rating: 5, use: true },
+      { phrase: "boat photography", rating: 5, use: true },
+      { phrase: "plane photography", rating: 5, use: true },
+      { phrase: "military vehicle photography", rating: 5, use: true },
       { phrase: "steam engine photography", rating: 4, use: true },
       { phrase: "steam engine art", rating: 4, use: true },
+      { phrase: "nautical art", rating: 4, use: true },
+      { phrase: "aviation art", rating: 4, use: true },
+      { phrase: "military art", rating: 4, use: true },
       { phrase: "route 66 car photography prints", rating: 4, use: true },
       { phrase: "americana wall art", rating: 4, use: true },
       { phrase: "classic car art prints for enthusiasts", rating: 3, use: true },
       { phrase: "painterly classic car photos for auto lovers", rating: 3, use: true },
+      { phrase: "boat art prints for enthusiasts", rating: 3, use: true },
+      { phrase: "painterly boat photos for nautical lovers", rating: 3, use: true },
+      { phrase: "plane art prints for enthusiasts", rating: 3, use: true },
+      { phrase: "painterly plane photos for aviation lovers", rating: 3, use: true },
+      { phrase: "military vehicle art prints for enthusiasts", rating: 3, use: true },
+      { phrase: "painterly military photos for history lovers", rating: 3, use: true },
       { phrase: "americana wall art for garages", rating: 3, use: true },
       { phrase: "automotive art prints", rating: 3, use: true },
+      { phrase: "nautical art prints", rating: 3, use: true },
+      { phrase: "aviation art prints", rating: 3, use: true },
+      { phrase: "military art prints", rating: 3, use: true },
       { phrase: "vintage train photography for man cave", rating: 3, use: true },
       { phrase: "steam engine wall art for collectors", rating: 3, use: true },
       { phrase: "route 66 art", rating: 3, use: true },
@@ -694,8 +729,14 @@ export const semantic = {
       { phrase: "vintage auto art", rating: 3, use: true },
       { phrase: "rust and chrome photography", rating: 3, use: true },
       { phrase: "timeless automotive prints", rating: 3, use: true },
+      { phrase: "timeless nautical prints", rating: 3, use: true },
+      { phrase: "timeless aviation prints", rating: 3, use: true },
+      { phrase: "timeless military prints", rating: 3, use: true },
       { phrase: "locomotive painterly photography for home decor", rating: 3, use: true },
       { phrase: "steam engine wall art for collectors", rating: 3, use: true },
+      { phrase: "boat wall art for collectors", rating: 3, use: true },
+      { phrase: "plane wall art for collectors", rating: 3, use: true },
+      { phrase: "military wall art for collectors", rating: 3, use: true },
     ],
   },
 

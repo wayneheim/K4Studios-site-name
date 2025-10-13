@@ -9,9 +9,10 @@ interface Props {
   }[];
   path: string; // exact gallery URL (preferred)
   limit?: number;
+  label?: string;
 }
 
-const { images, path, limit = 6 } = Astro.props;
+const { images, path, limit = 6, label = "Gallery Preview" } = Astro.props;
 
 // CHANGED: take the exact gallery URL if given; otherwise use the current page path as-is
 const rawBaseUrl = (typeof path === "string" && path.length) ? path : Astro.url.pathname;
@@ -76,7 +77,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
 <section class="gallery-preview-strip" aria-label="Gallery preview strip">
   <div class="gallery-label-frame">
     <span class="gallery-hr gallery-hr-left" />
-    <span class="gallery-label">Gallery Preview</span>
+    <span class="gallery-label">{label}</span>
     <span class="gallery-hr gallery-hr-right" />
   </div>
 

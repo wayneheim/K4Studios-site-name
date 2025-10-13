@@ -452,8 +452,8 @@ export const galleryData = [
   },
   {
     "id": "i-NRsfsrH",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing Feel Every Layer Of It",
+    "description": "Wayne Heim's feel every layer of it captures the spirit of feel every layer of it in this feel every layer of it image. Featuring feel every layer of it, ethereal landscapes, and feel every layer of it, it's ideal for feel every layer of it enthusiasts. © Wayne Heim",
     "alt": "The Grand    Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NRsfsrH/A",
     "keywords": [
@@ -468,9 +468,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "feel every layer of it",
+      "ethereal landscapes",
+      "western landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into western landscape photography, this work by Wayne Heim highlights ethereal landscapes through western landscape photography and western landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -551,8 +554,8 @@ export const galleryData = [
   },
   {
     "id": "i-bddbzmJ",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Western Landscape Photography Landscape",
+    "description": "Wayne Heim's western landscape photography captures the spirit of western landscape photography in this feel every layer of it image. Featuring ethereal landscapes, feel every layer of it, and western landscape photography, it's ideal for western landscape photography enthusiasts. © Wayne Heim",
     "alt": "Peaceful River  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-bddbzmJ/A",
     "keywords": [
@@ -567,9 +570,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "western landscape photography",
+      "feel every layer of it",
+      "ethereal landscapes"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into ethereal landscapes, this work by Wayne Heim highlights ethereal landscapes through ethereal landscapes and western landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -584,8 +590,8 @@ export const galleryData = [
   },
   {
     "id": "i-RHHbQPW",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Landscape Photography And Ethereal Landscapes",
+    "description": "Experience western landscape photography through this evocative ethereal landscapes from Wayne Heim's portfolio. This piece highlights western landscape photography with feel every layer of it, while conveying feel every layer of it, ideal for those who appreciate western landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-RHHbQPW/A",
     "keywords": [
@@ -600,9 +606,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "western landscape photography",
+      "ethereal landscapes",
+      "feel every layer of it"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing feel every layer of it and feel every layer of it. A testament to feel every layer of it in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -749,8 +758,8 @@ export const galleryData = [
   },
   {
     "id": "i-vMNKH96",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Feel Every Layer Of It And Ethereal Landscapes",
+    "description": "This feel every layer of it artwork by Wayne Heim showcases ethereal landscapes in a feel every layer of it style. Reflecting western landscape photography, ethereal landscapes, and feel every layer of it, it's suited for admirers of ethereal landscapes. © Wayne Heim",
     "alt": "Around the Bend  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-vMNKH96/A",
     "keywords": [
@@ -765,9 +774,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "feel every layer of it",
+      "ethereal landscapes",
+      "western landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies feel every layer of it and feel every layer of it, captured by Wayne Heim in his signature style. It reflects feel every layer of it with a touch of ethereal landscapes. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -815,8 +827,8 @@ export const galleryData = [
   },
   {
     "id": "i-Ggkxvm8",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Western Landscape Photography Study",
+    "description": "Uncover western landscape photography through this ethereal landscapes from Wayne Heim. Showcasing ethereal landscapes, feel every layer of it, and ethereal landscapes, it's perfect for enthusiasts of western landscape photography. © Wayne Heim",
     "alt": "Canadian Rockies Peak and Pine Trees Reflecting on the Water",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Ggkxvm8/A",
     "keywords": [
@@ -831,9 +843,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "western landscape photography",
+      "ethereal landscapes",
+      "feel every layer of it"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies ethereal landscapes and feel every layer of it, captured by Wayne Heim in his signature style. It reflects western landscape photography with a touch of ethereal landscapes. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -848,8 +863,8 @@ export const galleryData = [
   },
   {
     "id": "i-dGJDdP2",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Capturing Ethereal Landscapes",
+    "description": "Uncover ethereal landscapes through this feel every layer of it from Wayne Heim. Showcasing ethereal landscapes, western landscape photography, and feel every layer of it, it's perfect for enthusiasts of ethereal landscapes. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-dGJDdP2/A",
     "keywords": [
@@ -864,9 +879,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "ethereal landscapes",
+      "feel every layer of it",
+      "western landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing ethereal landscapes and ethereal landscapes. A testament to western landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -881,8 +899,8 @@ export const galleryData = [
   },
   {
     "id": "i-WWng23V",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Capturing Ethereal Landscapes",
+    "description": "Explore ethereal landscapes with Wayne Heim's western landscape photography. This ethereal landscapes piece conveys ethereal landscapes, feel every layer of it, and ethereal landscapes, perfect for fans of western landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-WWng23V/A",
     "keywords": [
@@ -897,9 +915,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "ethereal landscapes",
+      "western landscape photography",
+      "feel every layer of it"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into ethereal landscapes, this work by Wayne Heim highlights feel every layer of it through western landscape photography and ethereal landscapes. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -914,8 +935,8 @@ export const galleryData = [
   },
   {
     "id": "i-4Bf2zsv",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Capturing Western Landscape Photography",
+    "description": "Uncover western landscape photography through this ethereal landscapes from Wayne Heim. Showcasing ethereal landscapes, ethereal landscapes, and feel every layer of it, it's perfect for enthusiasts of western landscape photography. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4Bf2zsv/A",
     "keywords": [
@@ -930,9 +951,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "western landscape photography",
+      "ethereal landscapes",
+      "feel every layer of it"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of feel every layer of it comes alive in this piece, showcasing feel every layer of it and ethereal landscapes. A testament to feel every layer of it in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -947,8 +971,8 @@ export const galleryData = [
   },
   {
     "id": "i-SSw3qvn",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Fine Art Ethereal Landscapes",
+    "description": "Wayne Heim's ethereal landscapes captures the spirit of feel every layer of it in this ethereal landscapes image. Featuring western landscape photography, ethereal landscapes, and ethereal landscapes, it's ideal for feel every layer of it enthusiasts. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SSw3qvn/A",
     "keywords": [
@@ -963,9 +987,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "ethereal landscapes",
+      "feel every layer of it",
+      "western landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of western landscape photography comes alive in this piece, showcasing ethereal landscapes and feel every layer of it. A testament to western landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -980,8 +1007,8 @@ export const galleryData = [
   },
   {
     "id": "i-cSFvwcM",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Ethereal Landscapes Moment",
+    "description": "This ethereal landscapes artwork by Wayne Heim showcases ethereal landscapes in a feel every layer of it style. Reflecting ethereal landscapes, feel every layer of it, and ethereal landscapes, it's suited for admirers of ethereal landscapes. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cSFvwcM/A",
     "keywords": [
@@ -996,9 +1023,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "ethereal landscapes",
+      "feel every layer of it",
+      "western landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into western landscape photography, this work by Wayne Heim highlights ethereal landscapes through western landscape photography and ethereal landscapes. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1013,8 +1043,8 @@ export const galleryData = [
   },
   {
     "id": "i-TTLmLd3",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing Feel Every Layer Of It",
+    "description": "Explore feel every layer of it with Wayne Heim's western landscape photography. This western landscape photography piece conveys ethereal landscapes, feel every layer of it, and feel every layer of it, perfect for fans of western landscape photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-TTLmLd3/A",
     "keywords": [
@@ -1029,9 +1059,12 @@ export const galleryData = [
       "nature",
       "nature photography",
       "stream",
-      "k4 studios"
+      "k4 studios",
+      "feel every layer of it",
+      "western landscape photography",
+      "ethereal landscapes"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into feel every layer of it, this work by Wayne Heim highlights ethereal landscapes through feel every layer of it and feel every layer of it. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1196,8 +1229,8 @@ export const galleryData = [
   },
   {
     "id": "i-cgSjPmT",
-    "title": "Untitled",
-    "description": "Puff.",
+    "title": "Ethereal Landscapes - Western Landscape Photography",
+    "description": "Discover the ethereal landscapes in this powerful western landscape photography by Wayne Heim. A compelling work that embodies ethereal landscapes, western landscape photography, and western landscape photography. Perfect for art lovers seeking ethereal landscapes to enhance their collection. © Wayne Heim",
     "alt": "Question River   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cgSjPmT/A",
     "keywords": [
@@ -1209,9 +1242,12 @@ export const galleryData = [
       "grand tetons",
       "window",
       "meadow",
-      "mountains"
+      "mountains",
+      "ethereal landscapes",
+      "western landscape photography",
+      "feel every layer of it"
     ],
-    "story": "Puff.",
+    "story": "Wayne Heim's exploration of ethereal landscapes comes alive in this piece, showcasing western landscape photography and western landscape photography. A testament to feel every layer of it in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

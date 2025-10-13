@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-gr3rsVB",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Midwest Landscape Photography Moment",
+    "description": "Experience midwest landscape photography through this evocative midwest landscape photography from Wayne Heim's portfolio. This piece highlights midwest landscape photography with midwest landscape photography, while conveying midwest landscape photography, ideal for those who appreciate midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-gr3rsVB/A",
     "keywords": [
@@ -35,9 +35,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -284,8 +285,8 @@ export const galleryData = [
   },
   {
     "id": "i-GvZBLcv",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Capturing Midwest Landscape Photography",
+    "description": "Witness midwest landscape photography in Wayne Heim's midwest landscape photography. This image features midwest landscape photography with midwest landscape photography and midwest landscape photography, ideal for admirers of midwest landscape photography. © Wayne Heim",
     "alt": "Out of the Rocks - Photography of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-GvZBLcv/A",
     "keywords": [
@@ -296,9 +297,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -313,8 +315,8 @@ export const galleryData = [
   },
   {
     "id": "i-LR3Vr2N",
-    "title": "Untitled",
-    "description": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
+    "title": "Midwest Landscape Photography Moment",
+    "description": "Discover the midwest landscape photography in this powerful midwest landscape photography by Wayne Heim. A compelling work that embodies midwest landscape photography, midwest landscape photography, and midwest landscape photography. Perfect for art lovers seeking midwest landscape photography to enhance their collection. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-LR3Vr2N/A",
     "keywords": [
@@ -325,9 +327,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -342,8 +345,8 @@ export const galleryData = [
   },
   {
     "id": "i-N3ShZHB",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Midwest Landscape Photography - Midwest Landscape Photography",
+    "description": "Wayne Heim presents midwest landscape photography in this midwest landscape photography work. Embodying midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's recommended for lovers of midwest landscape photography. © Wayne Heim",
     "alt": "Fine art landscape photography capturing Black River West Falls in Elyria, Ohio.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-N3ShZHB/A",
     "keywords": [
@@ -354,9 +357,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -371,8 +375,8 @@ export const galleryData = [
   },
   {
     "id": "i-V92SWJF",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Midwest Landscape Photography In Fine Art",
+    "description": "Explore midwest landscape photography with Wayne Heim's midwest landscape photography. This midwest landscape photography piece conveys midwest landscape photography, midwest landscape photography, and midwest landscape photography, perfect for fans of midwest landscape photography. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-V92SWJF/A",
     "keywords": [
@@ -383,9 +387,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -400,8 +405,8 @@ export const galleryData = [
   },
   {
     "id": "i-KFLXt4D",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "The Essence Of Midwest Landscape Photography",
+    "description": "Wayne Heim's midwest landscape photography captures the spirit of midwest landscape photography in this midwest landscape photography image. Featuring midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's ideal for midwest landscape photography enthusiasts. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-KFLXt4D/A",
     "keywords": [
@@ -412,9 +417,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -429,8 +435,8 @@ export const galleryData = [
   },
   {
     "id": "i-LmTHhDn",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Midwest Landscape Photography Moment",
+    "description": "Experience midwest landscape photography through this evocative midwest landscape photography from Wayne Heim's portfolio. This piece highlights midwest landscape photography with midwest landscape photography, while conveying midwest landscape photography, ideal for those who appreciate midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-LmTHhDn/A",
     "keywords": [
@@ -441,9 +447,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -458,8 +465,8 @@ export const galleryData = [
   },
   {
     "id": "i-KG32NV6",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Fine Art Midwest Landscape Photography",
+    "description": "This midwest landscape photography artwork by Wayne Heim showcases midwest landscape photography in a midwest landscape photography style. Reflecting midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's suited for admirers of midwest landscape photography. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-KG32NV6/A",
     "keywords": [
@@ -470,9 +477,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -487,8 +495,8 @@ export const galleryData = [
   },
   {
     "id": "i-NMRNtrB",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Fine Art Midwest Landscape Photography",
+    "description": "Wayne Heim presents midwest landscape photography in this midwest landscape photography work. Embodying midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's recommended for lovers of midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-NMRNtrB/A",
     "keywords": [
@@ -499,9 +507,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -516,8 +525,8 @@ export const galleryData = [
   },
   {
     "id": "i-c4qSzm6",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Capturing Midwest Landscape Photography",
+    "description": "Explore midwest landscape photography with Wayne Heim's midwest landscape photography. This midwest landscape photography piece conveys midwest landscape photography, midwest landscape photography, and midwest landscape photography, perfect for fans of midwest landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-c4qSzm6/A",
     "keywords": [
@@ -528,9 +537,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -545,8 +555,8 @@ export const galleryData = [
   },
   {
     "id": "i-2d2fgNW",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Midwest Landscape Photography - Midwest Landscape Photography",
+    "description": "Wayne Heim presents midwest landscape photography in this midwest landscape photography work. Embodying midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's recommended for lovers of midwest landscape photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-2d2fgNW/A",
     "keywords": [
@@ -557,9 +567,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -574,8 +585,8 @@ export const galleryData = [
   },
   {
     "id": "i-Vm7vR4f",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Essence Of Midwest Landscape Photography",
+    "description": "Wayne Heim's midwest landscape photography captures the spirit of midwest landscape photography in this midwest landscape photography image. Featuring midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's ideal for midwest landscape photography enthusiasts. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Vm7vR4f/A",
     "keywords": [
@@ -586,9 +597,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -603,8 +615,8 @@ export const galleryData = [
   },
   {
     "id": "i-FGWfXBM",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Fine Art Midwest Landscape Photography",
+    "description": "Wayne Heim's midwest landscape photography captures the spirit of midwest landscape photography in this midwest landscape photography image. Featuring midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's ideal for midwest landscape photography enthusiasts. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-FGWfXBM/A",
     "keywords": [
@@ -615,9 +627,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -632,8 +645,8 @@ export const galleryData = [
   },
   {
     "id": "i-jd8JMK2",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Midwest Landscape Photography Study",
+    "description": "Wayne Heim's midwest landscape photography captures the spirit of midwest landscape photography in this midwest landscape photography image. Featuring midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's ideal for midwest landscape photography enthusiasts. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jd8JMK2/A",
     "keywords": [
@@ -644,9 +657,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -690,8 +704,8 @@ export const galleryData = [
   },
   {
     "id": "i-RWr4ppX",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Exploring Midwest Landscape Photography",
+    "description": "Delve into midwest landscape photography via this midwest landscape photography by Wayne Heim. Highlighting midwest landscape photography through midwest landscape photography and midwest landscape photography, it's great for collectors interested in midwest landscape photography. © Wayne Heim",
     "alt": "Painterly Landscape Photo: Light through trees.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-RWr4ppX/A",
     "keywords": [
@@ -702,9 +716,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -719,8 +734,8 @@ export const galleryData = [
   },
   {
     "id": "i-ScMsR8H",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Midwest Landscape Photography Landscape",
+    "description": "Uncover midwest landscape photography through this midwest landscape photography from Wayne Heim. Showcasing midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's perfect for enthusiasts of midwest landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-ScMsR8H/A",
     "keywords": [
@@ -731,9 +746,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -748,8 +764,8 @@ export const galleryData = [
   },
   {
     "id": "i-rm2GNVm",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Midwest Landscape Photography Moment",
+    "description": "Experience midwest landscape photography through this evocative midwest landscape photography from Wayne Heim's portfolio. This piece highlights midwest landscape photography with midwest landscape photography, while conveying midwest landscape photography, ideal for those who appreciate midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-rm2GNVm/A",
     "keywords": [
@@ -760,9 +776,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -777,8 +794,8 @@ export const galleryData = [
   },
   {
     "id": "i-kqQ26Rw",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Midwest Landscape Photography - Midwest Landscape Photography",
+    "description": "Witness midwest landscape photography in Wayne Heim's midwest landscape photography. This image features midwest landscape photography with midwest landscape photography and midwest landscape photography, ideal for admirers of midwest landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kqQ26Rw/A",
     "keywords": [
@@ -789,9 +806,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -806,8 +824,8 @@ export const galleryData = [
   },
   {
     "id": "i-8hzdpxL",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Midwest Landscape Photography Moment",
+    "description": "This midwest landscape photography artwork by Wayne Heim showcases midwest landscape photography in a midwest landscape photography style. Reflecting midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's suited for admirers of midwest landscape photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hzdpxL/A",
     "keywords": [
@@ -818,9 +836,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -835,8 +854,8 @@ export const galleryData = [
   },
   {
     "id": "i-p2Hdrmc",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing Midwest Landscape Photography",
+    "description": "Wayne Heim presents midwest landscape photography in this midwest landscape photography work. Embodying midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's recommended for lovers of midwest landscape photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-p2Hdrmc/A",
     "keywords": [
@@ -847,9 +866,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -893,8 +913,8 @@ export const galleryData = [
   },
   {
     "id": "i-J6CS9dN",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Midwest Landscape Photography Landscape",
+    "description": "Immerse yourself in midwest landscape photography with this stunning midwest landscape photography by Wayne Heim. Capturing midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's a must-have for collectors of midwest landscape photography. © Wayne Heim",
     "alt": "Red barn and storm clouds.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-J6CS9dN/A",
     "keywords": [
@@ -905,9 +925,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -922,8 +943,8 @@ export const galleryData = [
   },
   {
     "id": "i-nxp4vKr",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Essence Of Midwest Landscape Photography",
+    "description": "Immerse yourself in midwest landscape photography with this stunning midwest landscape photography by Wayne Heim. Capturing midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's a must-have for collectors of midwest landscape photography. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-nxp4vKr/A",
     "keywords": [
@@ -934,9 +955,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -951,8 +973,8 @@ export const galleryData = [
   },
   {
     "id": "i-fQCdxsp",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Midwest Landscape Photography And Midwest Landscape Photography",
+    "description": "Uncover midwest landscape photography through this midwest landscape photography from Wayne Heim. Showcasing midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's perfect for enthusiasts of midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-fQCdxsp/A",
     "keywords": [
@@ -963,9 +985,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -980,8 +1003,8 @@ export const galleryData = [
   },
   {
     "id": "i-4rJVZLg",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Midwest Landscape Photography Landscape",
+    "description": "Discover the midwest landscape photography in this powerful midwest landscape photography by Wayne Heim. A compelling work that embodies midwest landscape photography, midwest landscape photography, and midwest landscape photography. Perfect for art lovers seeking midwest landscape photography to enhance their collection. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-4rJVZLg/A",
     "keywords": [
@@ -992,9 +1015,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1009,8 +1033,8 @@ export const galleryData = [
   },
   {
     "id": "i-jrGJSbH",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Fine Art Midwest Landscape Photography",
+    "description": "Uncover midwest landscape photography through this midwest landscape photography from Wayne Heim. Showcasing midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's perfect for enthusiasts of midwest landscape photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jrGJSbH/A",
     "keywords": [
@@ -1021,9 +1045,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1038,8 +1063,8 @@ export const galleryData = [
   },
   {
     "id": "i-72t3jbT",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Fine Art Midwest Landscape Photography",
+    "description": "Wayne Heim presents midwest landscape photography in this midwest landscape photography work. Embodying midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's recommended for lovers of midwest landscape photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-72t3jbT/A",
     "keywords": [
@@ -1050,9 +1075,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1067,8 +1093,8 @@ export const galleryData = [
   },
   {
     "id": "i-HmSt4wB",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Exploring Midwest Landscape Photography",
+    "description": "Discover the midwest landscape photography in this powerful midwest landscape photography by Wayne Heim. A compelling work that embodies midwest landscape photography, midwest landscape photography, and midwest landscape photography. Perfect for art lovers seeking midwest landscape photography to enhance their collection. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-HmSt4wB/A",
     "keywords": [
@@ -1079,9 +1105,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1096,8 +1123,8 @@ export const galleryData = [
   },
   {
     "id": "i-9sP9Qxs",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Midwest Landscape Photography - Midwest Landscape Photography",
+    "description": "Delve into midwest landscape photography via this midwest landscape photography by Wayne Heim. Highlighting midwest landscape photography through midwest landscape photography and midwest landscape photography, it's great for collectors interested in midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-9sP9Qxs/A",
     "keywords": [
@@ -1108,9 +1135,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1125,8 +1153,8 @@ export const galleryData = [
   },
   {
     "id": "i-jt8P6Wg",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Capturing Midwest Landscape Photography",
+    "description": "Uncover midwest landscape photography through this midwest landscape photography from Wayne Heim. Showcasing midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's perfect for enthusiasts of midwest landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-jt8P6Wg/A",
     "keywords": [
@@ -1137,9 +1165,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1154,8 +1183,8 @@ export const galleryData = [
   },
   {
     "id": "i-Sv7gsQB",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Exploring Midwest Landscape Photography",
+    "description": "Delve into midwest landscape photography via this midwest landscape photography by Wayne Heim. Highlighting midwest landscape photography through midwest landscape photography and midwest landscape photography, it's great for collectors interested in midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Sv7gsQB/A",
     "keywords": [
@@ -1166,9 +1195,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1183,8 +1213,8 @@ export const galleryData = [
   },
   {
     "id": "i-f6BHPxK",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Midwest Landscape Photography In Fine Art",
+    "description": "Witness midwest landscape photography in Wayne Heim's midwest landscape photography. This image features midwest landscape photography with midwest landscape photography and midwest landscape photography, ideal for admirers of midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-f6BHPxK/A",
     "keywords": [
@@ -1195,9 +1225,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1212,8 +1243,8 @@ export const galleryData = [
   },
   {
     "id": "i-8hTCKbn",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Midwest Landscape Photography In Fine Art",
+    "description": "Delve into midwest landscape photography via this midwest landscape photography by Wayne Heim. Highlighting midwest landscape photography through midwest landscape photography and midwest landscape photography, it's great for collectors interested in midwest landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8hTCKbn/A",
     "keywords": [
@@ -1224,9 +1255,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1241,8 +1273,8 @@ export const galleryData = [
   },
   {
     "id": "i-qLRXb8W",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "The Essence Of Midwest Landscape Photography",
+    "description": "Uncover midwest landscape photography through this midwest landscape photography from Wayne Heim. Showcasing midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's perfect for enthusiasts of midwest landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-qLRXb8W/A",
     "keywords": [
@@ -1253,9 +1285,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1270,8 +1303,8 @@ export const galleryData = [
   },
   {
     "id": "i-kpzgc6N",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Midwest Landscape Photography And Midwest Landscape Photography",
+    "description": "Immerse yourself in midwest landscape photography with this stunning midwest landscape photography by Wayne Heim. Capturing midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's a must-have for collectors of midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-kpzgc6N/A",
     "keywords": [
@@ -1282,9 +1315,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1299,8 +1333,8 @@ export const galleryData = [
   },
   {
     "id": "i-VM79mV2",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Midwest Landscape Photography Moment",
+    "description": "Experience midwest landscape photography through this evocative midwest landscape photography from Wayne Heim's portfolio. This piece highlights midwest landscape photography with midwest landscape photography, while conveying midwest landscape photography, ideal for those who appreciate midwest landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-VM79mV2/A",
     "keywords": [
@@ -1311,9 +1345,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1328,8 +1363,8 @@ export const galleryData = [
   },
   {
     "id": "i-sHqStwk",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "The Essence Of Midwest Landscape Photography",
+    "description": "This midwest landscape photography artwork by Wayne Heim showcases midwest landscape photography in a midwest landscape photography style. Reflecting midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's suited for admirers of midwest landscape photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sHqStwk/A",
     "keywords": [
@@ -1340,9 +1375,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies midwest landscape photography and midwest landscape photography, captured by Wayne Heim in his signature style. It reflects midwest landscape photography with a touch of midwest landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1357,8 +1393,8 @@ export const galleryData = [
   },
   {
     "id": "i-43SfvFJ",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Midwest Landscape Photography Landscape",
+    "description": "Experience midwest landscape photography through this evocative midwest landscape photography from Wayne Heim's portfolio. This piece highlights midwest landscape photography with midwest landscape photography, while conveying midwest landscape photography, ideal for those who appreciate midwest landscape photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-43SfvFJ/A",
     "keywords": [
@@ -1369,9 +1405,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1386,8 +1423,8 @@ export const galleryData = [
   },
   {
     "id": "i-8RHD2km",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Midwest Landscape Photography In Fine Art",
+    "description": "Wayne Heim's midwest landscape photography captures the spirit of midwest landscape photography in this midwest landscape photography image. Featuring midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's ideal for midwest landscape photography enthusiasts. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-8RHD2km/A",
     "keywords": [
@@ -1398,9 +1435,10 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "midwest landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into midwest landscape photography, this work by Wayne Heim highlights midwest landscape photography through midwest landscape photography and midwest landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1415,15 +1453,16 @@ export const galleryData = [
   },
   {
     "id": "i-Mtm6Htz",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing Midwest Landscape Photography",
+    "description": "Wayne Heim's midwest landscape photography captures the spirit of midwest landscape photography in this midwest landscape photography image. Featuring midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's ideal for midwest landscape photography enthusiasts. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-Mtm6Htz/A",
     "keywords": [
       "O1H1068",
-      "Pano"
+      "Pano",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

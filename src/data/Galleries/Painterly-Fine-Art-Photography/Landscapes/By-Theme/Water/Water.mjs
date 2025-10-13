@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-Pgks2np",
-    "title": "Trifecta - Waterfalls in Iceland",
-    "description": "Wayne Heim Photography: A selection from Waterfall series. Full description coming soon.",
+    "title": "The Truth Of A Moment Study",
+    "description": "Uncover the truth of a moment through this painterly river scenes from Wayne Heim. Showcasing waterfall landscape photography, the truth of a moment, and painterly river scenes, it's perfect for enthusiasts of the truth of a moment. © Wayne Heim",
     "alt": "Roadside Iceland Waterfall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-Pgks2np/A",
     "keywords": [
@@ -94,9 +94,12 @@ export const galleryData = [
       "Sveinsstekksfoss",
       "Litlanesfoss",
       "Stuðlagil",
-      "Goðafoss"
+      "Goðafoss",
+      "the truth of a moment",
+      "painterly river scenes",
+      "waterfall landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies painterly river scenes and the truth of a moment, captured by Wayne Heim in his signature style. It reflects waterfall landscape photography with a touch of the truth of a moment. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

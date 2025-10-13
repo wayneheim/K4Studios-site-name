@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-G6gftd8",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Feel Every Layer Of It In Fine Art",
+    "description": "Uncover feel every layer of it through this western landscape photography from Wayne Heim. Showcasing ethereal landscapes, ethereal landscapes, and ethereal landscapes, it's perfect for enthusiasts of feel every layer of it. © Wayne Heim",
     "alt": "Painterly Mountain Photography: Don't fence me in.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/A",
     "keywords": [
@@ -43,9 +43,11 @@ export const galleryData = [
       "painterly photography",
       "Western photography prints",
       "western landscape photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "feel every layer of it",
+      "ethereal landscapes"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into feel every layer of it, this work by Wayne Heim highlights feel every layer of it through feel every layer of it and ethereal landscapes. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1895,8 +1897,8 @@ export const galleryData = [
   },
   {
     "id": "i-2hZwZ6C",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Feel Every Layer Of It Portrait",
+    "description": "Witness feel every layer of it in Wayne Heim's western landscape photography. This image features western landscape photography with feel every layer of it and western landscape photography, ideal for admirers of feel every layer of it. © Wayne Heim",
     "alt": "Painterly photo: Lunch time",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/A",
     "keywords": [
@@ -1926,9 +1928,11 @@ export const galleryData = [
       "West",
       "Western art",
       "western fine art photography",
-      "western"
+      "western",
+      "feel every layer of it",
+      "ethereal landscapes"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into feel every layer of it, this work by Wayne Heim highlights feel every layer of it through ethereal landscapes and feel every layer of it. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2183,8 +2187,8 @@ export const galleryData = [
   },
   {
     "id": "i-KKkLwvR",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Fine Art Ethereal Landscapes",
+    "description": "Discover the ethereal landscapes in this powerful ethereal landscapes by Wayne Heim. A compelling work that embodies ethereal landscapes, feel every layer of it, and ethereal landscapes. Perfect for art lovers seeking ethereal landscapes to enhance their collection. © Wayne Heim",
     "alt": "Towering Green Aspens",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/A",
     "keywords": [
@@ -2214,9 +2218,11 @@ export const galleryData = [
       "West",
       "Western art",
       "western fine art photography",
-      "western"
+      "western",
+      "ethereal landscapes",
+      "feel every layer of it"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies western landscape photography and feel every layer of it, captured by Wayne Heim in his signature style. It reflects western landscape photography with a touch of western landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

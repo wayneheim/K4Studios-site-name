@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-VzhZFL7",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Steam Engine Wall Art For Collectors Moment",
+    "description": "Uncover steam engine wall art for collectors through this steam engine wall art for collectors from Wayne Heim. Showcasing vintage train photography for man cave, steam engine art, and steam engine photography, it's perfect for enthusiasts of steam engine wall art for collectors. © Wayne Heim",
     "alt": "This too Shall Pass",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-VzhZFL7/A",
     "keywords": [
@@ -35,9 +35,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top  Railroad"
+      "East Broad Top  Railroad",
+      "steam engine wall art for collectors",
+      "vintage train photography for man cave",
+      "steam engine art",
+      "steam engine photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies vintage train photography for man cave and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine wall art for collectors. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

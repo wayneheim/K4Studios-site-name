@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-QgkMVvX",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Painterly Classic Car Photos For Auto Lovers Portrait",
+    "description": "Wayne Heim's painterly classic car photos for auto lovers captures the spirit of classic car photography in this classic car art prints for enthusiasts image. Featuring route 66 art, classic car art prints for enthusiasts, and painterly classic car photos for auto lovers, it's ideal for classic car photography enthusiasts. © Wayne Heim",
     "alt": "Route 66 Wigwam Motel: Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-QgkMVvX/A",
     "keywords": [
@@ -35,9 +35,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "painterly classic car photos for auto lovers",
+      "classic car photography",
+      "classic car art prints for enthusiasts",
+      "route 66 art",
+      "route 66 car photography prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies classic car photography and route 66 car photography prints, captured by Wayne Heim in his signature style. It reflects classic car art prints for enthusiasts with a touch of route 66 art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -52,8 +57,8 @@ export const galleryData = [
   },
   {
     "id": "i-2S2ZbzK",
-    "title": "Route 66 Wigwam Motel: Painterly Photography",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Timeless Automotive Prints - Timeless Automotive Prints",
+    "description": "Discover the timeless automotive prints in this powerful timeless automotive prints by Wayne Heim. A compelling work that embodies route 66 car photography prints, route 66 art, and route 66 art. Perfect for art lovers seeking timeless automotive prints to enhance their collection. © Wayne Heim",
     "alt": "Wigwam Motel in Green",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-2S2ZbzK/A",
     "keywords": [
@@ -64,9 +69,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "timeless automotive prints",
+      "route 66 car photography prints",
+      "route 66 art",
+      "painterly classic car photos for auto lovers",
+      "classic car art prints for enthusiasts"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of painterly classic car photos for auto lovers comes alive in this piece, showcasing timeless automotive prints and route 66 car photography prints. A testament to classic car art prints for enthusiasts in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -81,8 +91,8 @@ export const galleryData = [
   },
   {
     "id": "i-SPVGpxw",
-    "title": "Route 66 Wigwam Motel: Painterly Photography",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Capturing Timeless Automotive Prints",
+    "description": "Immerse yourself in timeless automotive prints with this stunning classic car photography by Wayne Heim. Capturing timeless automotive prints, classic car photography, and route 66 art, it's a must-have for collectors of timeless automotive prints. © Wayne Heim",
     "alt": "Route 66 Wigwam Motel: Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-SPVGpxw/A",
     "keywords": [
@@ -93,9 +103,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "timeless automotive prints",
+      "classic car photography",
+      "route 66 art",
+      "painterly classic car photos for auto lovers"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into route 66 art, this work by Wayne Heim highlights classic car photography through classic car photography and painterly classic car photos for auto lovers. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -110,8 +124,8 @@ export const galleryData = [
   },
   {
     "id": "i-7dRzH7F",
-    "title": "Route 66 Desota: Painterly Photography",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing Timeless Automotive Prints",
+    "description": "Delve into timeless automotive prints via this timeless automotive prints by Wayne Heim. Highlighting automotive art prints through classic car art prints for enthusiasts and classic car art prints for enthusiasts, it's great for collectors interested in timeless automotive prints. © Wayne Heim",
     "alt": "Route 66 Wigwam Motel: Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-7dRzH7F/A",
     "keywords": [
@@ -122,9 +136,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "timeless automotive prints",
+      "automotive art prints",
+      "classic car art prints for enthusiasts",
+      "painterly classic car photos for auto lovers",
+      "route 66 car photography prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies automotive art prints and timeless automotive prints, captured by Wayne Heim in his signature style. It reflects painterly classic car photos for auto lovers with a touch of route 66 car photography prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -139,8 +158,8 @@ export const galleryData = [
   },
   {
     "id": "i-cgh854F",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Automotive Art Prints - Route 66 Art",
+    "description": "Discover the automotive art prints in this powerful route 66 art by Wayne Heim. A compelling work that embodies classic car photography, route 66 car photography prints, and route 66 art. Perfect for art lovers seeking automotive art prints to enhance their collection. © Wayne Heim",
     "alt": "Route 66 Desota: Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-cgh854F/A",
     "keywords": [
@@ -151,9 +170,15 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "automotive art prints",
+      "route 66 art",
+      "classic car photography",
+      "route 66 car photography prints",
+      "painterly classic car photos for auto lovers",
+      "classic car art prints for enthusiasts"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into route 66 car photography prints, this work by Wayne Heim highlights painterly classic car photos for auto lovers through route 66 car photography prints and classic car art prints for enthusiasts. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -226,8 +251,8 @@ export const galleryData = [
   },
   {
     "id": "i-wkRb273",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Essence Of Route 66 Car Photography Prints",
+    "description": "Delve into route 66 car photography prints via this classic car art prints for enthusiasts by Wayne Heim. Highlighting automotive art prints through painterly classic car photos for auto lovers and timeless automotive prints, it's great for collectors interested in route 66 car photography prints. © Wayne Heim",
     "alt": "Truck & Train Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-wkRb273/A",
     "keywords": [
@@ -238,9 +263,16 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "route 66 car photography prints",
+      "classic car art prints for enthusiasts",
+      "automotive art prints",
+      "painterly classic car photos for auto lovers",
+      "timeless automotive prints",
+      "route 66 art",
+      "classic car photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies painterly classic car photos for auto lovers and route 66 art, captured by Wayne Heim in his signature style. It reflects painterly classic car photos for auto lovers with a touch of classic car photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -255,8 +287,8 @@ export const galleryData = [
   },
   {
     "id": "i-9NHSnWK",
-    "title": "Route 66 Wigwam Motel: Painterly Photography",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Painterly Classic Car Photos For Auto Lovers And Painterly Classic Car Photos For Auto Lovers",
+    "description": "Experience painterly classic car photos for auto lovers through this evocative painterly classic car photos for auto lovers from Wayne Heim's portfolio. This piece highlights automotive art prints with classic car photography, while conveying route 66 car photography prints, ideal for those who appreciate painterly classic car photos for auto lovers. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-9NHSnWK/A",
     "keywords": [
@@ -267,9 +299,16 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "painterly classic car photos for auto lovers",
+      "automotive art prints",
+      "classic car photography",
+      "route 66 car photography prints",
+      "classic car art prints for enthusiasts",
+      "route 66 art",
+      "timeless automotive prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies classic car art prints for enthusiasts and route 66 art, captured by Wayne Heim in his signature style. It reflects timeless automotive prints with a touch of painterly classic car photos for auto lovers. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

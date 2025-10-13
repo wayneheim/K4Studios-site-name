@@ -220,10 +220,7 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
             ) : (
               <button
                 type="button"
-                onClick={() => {
-                  logUIEvent("tour_done", { page: window.location.pathname, sectionKey });
-                  closeTour(true);
-                }}
+                onClick={() => closeTour(true)}
                 style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
               >
                 Done
@@ -233,7 +230,6 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
               type="button"
               title="Skip for now"
               onClick={() => {
-                logUIEvent("tour_skip", { page: window.location.pathname, sectionKey });
                 try {
                   sessionStorage.setItem(`k4-tour-skip:${sectionKey || "k4"}`, "1");
                 } catch {}
@@ -248,7 +244,6 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
                 type="button"
                 title="Hide for 1 month"
                 onClick={() => {
-                  logUIEvent("tour_hide", { page: window.location.pathname, sectionKey });
                   try {
                     localStorage.setItem(seenKey, JSON.stringify({ ts: Date.now(), ttl: 2592000000 })); // 30 days in ms
                   } catch {}

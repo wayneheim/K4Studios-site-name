@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-7FwpMPD",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Wartime Portraits - Greatest Generation Photos",
+    "description": "Explore wartime portraits with Wayne Heim's greatest generation photos. This moments of connection piece conveys wartime portraits, moments of connection, and wartime portraits, perfect for fans of greatest generation photos. © Wayne Heim",
     "alt": "An Airman Waiting  for Orders",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7FwpMPD/A",
     "keywords": [
@@ -37,9 +37,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -54,8 +58,8 @@ export const galleryData = [
   },
   {
     "id": "i-6sP3zMj",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Exploring Moments Of Connection",
+    "description": "This moments of connection artwork by Wayne Heim showcases moments of connection in a moments of connection style. Reflecting heroic portraits, wwii photography, and moments of connection, it's suited for admirers of moments of connection. © Wayne Heim",
     "alt": "An Airman Waiting  for Orders",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-6sP3zMj/A",
     "keywords": [
@@ -68,9 +72,11 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights moments of connection through heroic portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -85,8 +91,8 @@ export const galleryData = [
   },
   {
     "id": "i-JB8X7Dx",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Moments Of Connection Study",
+    "description": "Delve into moments of connection via this wartime portraits by Wayne Heim. Highlighting wwii photography through moments of connection and wartime portraits, it's great for collectors interested in moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-JB8X7Dx/A",
     "keywords": [
@@ -99,9 +105,11 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights wwii photography through wwii photography and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -116,8 +124,8 @@ export const galleryData = [
   },
   {
     "id": "i-PFt82WZ",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Greatest Generation Photos",
+    "description": "Experience greatest generation photos through this evocative heroic portraits from Wayne Heim's portfolio. This piece highlights greatest generation photos with greatest generation photos, while conveying wartime portraits, ideal for those who appreciate greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-PFt82WZ/A",
     "keywords": [
@@ -130,9 +138,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wwii photography through wwii photography and greatest generation photos. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -147,8 +158,8 @@ export const galleryData = [
   },
   {
     "id": "i-B29WDb2",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Fine Art Wartime Portraits",
+    "description": "Delve into wartime portraits via this greatest generation photos by Wayne Heim. Highlighting wwii photography through wartime portraits and wwii photography, it's great for collectors interested in wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-B29WDb2/A",
     "keywords": [
@@ -161,9 +172,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing heroic portraits and moments of connection. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -178,8 +193,8 @@ export const galleryData = [
   },
   {
     "id": "i-6JwKG4S",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Wartime Portraits",
+    "description": "Delve into wartime portraits via this moments of connection by Wayne Heim. Highlighting heroic portraits through wartime portraits and moments of connection, it's great for collectors interested in wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-6JwKG4S/A",
     "keywords": [
@@ -192,9 +207,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "moments of connection",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing greatest generation photos and wwii photography. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -240,8 +259,8 @@ export const galleryData = [
   },
   {
     "id": "i-7wHMjmx",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Greatest Generation Photos",
+    "description": "This greatest generation photos artwork by Wayne Heim showcases greatest generation photos in a wwii photography style. Reflecting greatest generation photos, wwii photography, and greatest generation photos, it's suited for admirers of greatest generation photos. © Wayne Heim",
     "alt": "Yes Sir     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7wHMjmx/A",
     "keywords": [
@@ -254,9 +273,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -271,8 +294,8 @@ export const galleryData = [
   },
   {
     "id": "i-qfPmmsJ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2018",
+    "title": "Greatest Generation Photos Portrait",
+    "description": "Delve into greatest generation photos via this greatest generation photos by Wayne Heim. Highlighting wwii photography through moments of connection and greatest generation photos, it's great for collectors interested in greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-qfPmmsJ/A",
     "keywords": [
@@ -285,9 +308,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2018",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights greatest generation photos through moments of connection and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -302,8 +328,8 @@ export const galleryData = [
   },
   {
     "id": "i-jFZMg3C",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2018",
+    "title": "Wartime Portraits Moment",
+    "description": "Wayne Heim's wartime portraits captures the spirit of greatest generation photos in this wartime portraits image. Featuring wwii photography, moments of connection, and wartime portraits, it's ideal for greatest generation photos enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2018",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-jFZMg3C/A",
     "keywords": [
@@ -316,9 +342,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2018",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights heroic portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -333,8 +363,8 @@ export const galleryData = [
   },
   {
     "id": "i-pBMmvMZ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2018",
+    "title": "Heroic Portraits And Greatest Generation Photos",
+    "description": "Delve into heroic portraits via this greatest generation photos by Wayne Heim. Highlighting wartime portraits through wartime portraits and greatest generation photos, it's great for collectors interested in heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2018",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-pBMmvMZ/A",
     "keywords": [
@@ -347,9 +377,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "heroic portraits",
+      "greatest generation photos",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2018",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights heroic portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -364,8 +397,8 @@ export const galleryData = [
   },
   {
     "id": "i-qxWjPP3",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Wartime Portraits Study",
+    "description": "Delve into wartime portraits via this heroic portraits by Wayne Heim. Highlighting wwii photography through heroic portraits and wwii photography, it's great for collectors interested in wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2018",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-qxWjPP3/A",
     "keywords": [
@@ -378,9 +411,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "This image embodies greatest generation photos and moments of connection, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -395,8 +432,8 @@ export const galleryData = [
   },
   {
     "id": "i-CQvXKFW",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Moments Of Connection - Moments Of Connection",
+    "description": "Discover the moments of connection in this powerful moments of connection by Wayne Heim. A compelling work that embodies greatest generation photos, heroic portraits, and greatest generation photos. Perfect for art lovers seeking moments of connection to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-CQvXKFW/A",
     "keywords": [
@@ -409,9 +446,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights greatest generation photos through heroic portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -426,8 +467,8 @@ export const galleryData = [
   },
   {
     "id": "i-kK4P2Zq",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Fine Art Greatest Generation Photos",
+    "description": "Uncover greatest generation photos through this greatest generation photos from Wayne Heim. Showcasing moments of connection, moments of connection, and heroic portraits, it's perfect for enthusiasts of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-kK4P2Zq/A",
     "keywords": [
@@ -440,9 +481,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies moments of connection and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of greatest generation photos. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -457,8 +501,8 @@ export const galleryData = [
   },
   {
     "id": "i-5vBKDbF",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Fine Art Wartime Portraits",
+    "description": "Experience wartime portraits through this evocative moments of connection from Wayne Heim's portfolio. This piece highlights wartime portraits with heroic portraits, while conveying heroic portraits, ideal for those who appreciate wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-5vBKDbF/A",
     "keywords": [
@@ -471,9 +515,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights heroic portraits through heroic portraits and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -488,8 +535,8 @@ export const galleryData = [
   },
   {
     "id": "i-5GP6fLt",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "The Essence Of Moments Of Connection",
+    "description": "This moments of connection artwork by Wayne Heim showcases wartime portraits in a heroic portraits style. Reflecting wwii photography, greatest generation photos, and moments of connection, it's suited for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-5GP6fLt/A",
     "keywords": [
@@ -502,9 +549,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and heroic portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -519,8 +570,8 @@ export const galleryData = [
   },
   {
     "id": "i-sphS8CJ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Greatest Generation Photos Portrait",
+    "description": "Uncover greatest generation photos through this greatest generation photos from Wayne Heim. Showcasing heroic portraits, wartime portraits, and wartime portraits, it's perfect for enthusiasts of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-sphS8CJ/A",
     "keywords": [
@@ -533,9 +584,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights wartime portraits through heroic portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -550,8 +605,8 @@ export const galleryData = [
   },
   {
     "id": "i-tKfhjQv",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Wartime Portraits In Fine Art",
+    "description": "Experience wartime portraits through this evocative wwii photography from Wayne Heim's portfolio. This piece highlights wwii photography with heroic portraits, while conveying wwii photography, ideal for those who appreciate wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-tKfhjQv/A",
     "keywords": [
@@ -564,9 +619,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing wwii photography and wwii photography. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -581,8 +639,8 @@ export const galleryData = [
   },
   {
     "id": "i-hQwkqXf",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Moments Of Connection Portrait",
+    "description": "Experience moments of connection through this evocative greatest generation photos from Wayne Heim's portfolio. This piece highlights moments of connection with greatest generation photos, while conveying greatest generation photos, ideal for those who appreciate moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-hQwkqXf/A",
     "keywords": [
@@ -595,9 +653,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "greatest generation photos",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -612,8 +673,8 @@ export const galleryData = [
   },
   {
     "id": "i-7twk4TT",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wartime Portraits - Wartime Portraits",
+    "description": "Immerse yourself in wartime portraits with this stunning wartime portraits by Wayne Heim. Capturing greatest generation photos, heroic portraits, and greatest generation photos, it's a must-have for collectors of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7twk4TT/A",
     "keywords": [
@@ -626,9 +687,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies greatest generation photos and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -643,8 +707,8 @@ export const galleryData = [
   },
   {
     "id": "i-BBHzSFk",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing Wartime Portraits",
+    "description": "Uncover wartime portraits through this heroic portraits from Wayne Heim. Showcasing heroic portraits, moments of connection, and greatest generation photos, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-BBHzSFk/A",
     "keywords": [
@@ -657,9 +721,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing wartime portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -674,8 +742,8 @@ export const galleryData = [
   },
   {
     "id": "i-Pqw7qmk",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing Wartime Portraits",
+    "description": "Experience wartime portraits through this evocative wartime portraits from Wayne Heim's portfolio. This piece highlights heroic portraits with wwii photography, while conveying wartime portraits, ideal for those who appreciate wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Pqw7qmk/A",
     "keywords": [
@@ -688,9 +756,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and moments of connection. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -736,8 +807,8 @@ export const galleryData = [
   },
   {
     "id": "i-KZzHbBS",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Moments Of Connection Portrait",
+    "description": "Immerse yourself in moments of connection with this stunning greatest generation photos by Wayne Heim. Capturing greatest generation photos, wwii photography, and wartime portraits, it's a must-have for collectors of moments of connection. © Wayne Heim",
     "alt": "Dish Washing     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-KZzHbBS/A",
     "keywords": [
@@ -750,9 +821,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing wwii photography and wwii photography. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -767,8 +842,8 @@ export const galleryData = [
   },
   {
     "id": "i-mLhqPHZ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Greatest Generation Photos In Fine Art",
+    "description": "Witness greatest generation photos in Wayne Heim's heroic portraits. This image features heroic portraits with wartime portraits and moments of connection, ideal for admirers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-mLhqPHZ/A",
     "keywords": [
@@ -781,9 +856,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -798,8 +877,8 @@ export const galleryData = [
   },
   {
     "id": "i-M9DgWmr",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Greatest Generation Photos In Fine Art",
+    "description": "Wayne Heim's greatest generation photos captures the spirit of wwii photography in this moments of connection image. Featuring greatest generation photos, wartime portraits, and greatest generation photos, it's ideal for wwii photography enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9DgWmr/A",
     "keywords": [
@@ -812,9 +891,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wartime portraits and moments of connection. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -829,8 +911,8 @@ export const galleryData = [
   },
   {
     "id": "i-fLNLCcT",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Greatest Generation Photos Portrait",
+    "description": "Wayne Heim presents greatest generation photos in this wwii photography work. Embodying heroic portraits, greatest generation photos, and heroic portraits, it's recommended for lovers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fLNLCcT/A",
     "keywords": [
@@ -843,9 +925,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights greatest generation photos through moments of connection and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -860,8 +946,8 @@ export const galleryData = [
   },
   {
     "id": "i-5jcG5nN",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wwii Photography Portrait",
+    "description": "Wayne Heim's wwii photography captures the spirit of wwii photography in this greatest generation photos image. Featuring wartime portraits, moments of connection, and wwii photography, it's ideal for wwii photography enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-5jcG5nN/A",
     "keywords": [
@@ -874,9 +960,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "wartime portraits",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies heroic portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -891,8 +981,8 @@ export const galleryData = [
   },
   {
     "id": "i-WbwZqng",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Capturing Moments Of Connection",
+    "description": "Experience moments of connection through this evocative wwii photography from Wayne Heim's portfolio. This piece highlights wwii photography with greatest generation photos, while conveying heroic portraits, ideal for those who appreciate moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-WbwZqng/A",
     "keywords": [
@@ -905,9 +995,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing moments of connection and heroic portraits. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -922,8 +1016,8 @@ export const galleryData = [
   },
   {
     "id": "i-SJwvSNZ",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Capturing Greatest Generation Photos",
+    "description": "Wayne Heim's greatest generation photos captures the spirit of moments of connection in this wwii photography image. Featuring wwii photography, greatest generation photos, and greatest generation photos, it's ideal for moments of connection enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-SJwvSNZ/A",
     "keywords": [
@@ -936,9 +1030,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography and moments of connection. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -953,8 +1050,8 @@ export const galleryData = [
   },
   {
     "id": "i-L75dcxk",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection - Heroic Portraits",
+    "description": "Experience moments of connection through this evocative heroic portraits from Wayne Heim's portfolio. This piece highlights greatest generation photos with moments of connection, while conveying wwii photography, ideal for those who appreciate moments of connection. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-L75dcxk/A",
     "keywords": [
@@ -967,9 +1064,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing moments of connection and greatest generation photos. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -984,8 +1084,8 @@ export const galleryData = [
   },
   {
     "id": "i-mtJrXvg",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring Moments Of Connection",
+    "description": "Witness moments of connection in Wayne Heim's heroic portraits. This image features heroic portraits with wwii photography and moments of connection, ideal for admirers of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-mtJrXvg/A",
     "keywords": [
@@ -998,9 +1098,12 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights greatest generation photos through greatest generation photos and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1418,8 +1521,8 @@ export const galleryData = [
   },
   {
     "id": "i-Rg252Nw",
-    "title": "Untitled",
-    "description": "Wayne Heim ©2015",
+    "title": "Exploring Moments Of Connection",
+    "description": "Uncover moments of connection through this wartime portraits from Wayne Heim. Showcasing heroic portraits, heroic portraits, and wwii photography, it's perfect for enthusiasts of moments of connection. © Wayne Heim",
     "alt": "Pilot    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Rg252Nw/A",
     "keywords": [
@@ -1432,9 +1535,13 @@ export const galleryData = [
       "reenactment",
       "reenactors",
       "soldier",
-      "k4 studios"
+      "k4 studios",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "Wayne Heim ©2015",
+    "story": "This image embodies wwii photography and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1623,8 +1730,8 @@ export const galleryData = [
   },
   {
     "id": "i-GfnGfKK",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing Moments Of Connection",
+    "description": "Witness moments of connection in Wayne Heim's greatest generation photos. This image features wwii photography with moments of connection and wartime portraits, ideal for admirers of moments of connection. © Wayne Heim",
     "alt": "Like Your Hat    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-GfnGfKK/A",
     "keywords": [
@@ -1634,9 +1741,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights moments of connection through wartime portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1651,8 +1762,8 @@ export const galleryData = [
   },
   {
     "id": "i-sFKZj53",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Moments Of Connection And Wwii Photography",
+    "description": "This moments of connection artwork by Wayne Heim showcases wwii photography in a wartime portraits style. Reflecting wwii photography, wwii photography, and moments of connection, it's suited for admirers of wwii photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-sFKZj53/A",
     "keywords": [
@@ -1662,9 +1773,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1679,8 +1793,8 @@ export const galleryData = [
   },
   {
     "id": "i-ZR76b36",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Wwii Photography Moment",
+    "description": "Uncover wwii photography through this heroic portraits from Wayne Heim. Showcasing wartime portraits, greatest generation photos, and wartime portraits, it's perfect for enthusiasts of wwii photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-ZR76b36/A",
     "keywords": [
@@ -1690,9 +1804,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies greatest generation photos and wwii photography, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1735,8 +1853,8 @@ export const galleryData = [
   },
   {
     "id": "i-wpDJ7Zg",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Greatest Generation Photos Moment",
+    "description": "This greatest generation photos artwork by Wayne Heim showcases heroic portraits in a wartime portraits style. Reflecting wwii photography, wartime portraits, and greatest generation photos, it's suited for admirers of heroic portraits. © Wayne Heim",
     "alt": "Portrait at Rockford   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-wpDJ7Zg/A",
     "keywords": [
@@ -1746,9 +1864,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies wwii photography and heroic portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1763,8 +1885,8 @@ export const galleryData = [
   },
   {
     "id": "i-CnJvwVq",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Fine Art Moments Of Connection",
+    "description": "Witness moments of connection in Wayne Heim's moments of connection. This image features moments of connection with heroic portraits and wartime portraits, ideal for admirers of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-CnJvwVq/A",
     "keywords": [
@@ -1774,9 +1896,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography and wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1791,8 +1917,8 @@ export const galleryData = [
   },
   {
     "id": "i-CwZ2zTV",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Wwii Photography - Greatest Generation Photos",
+    "description": "Discover the wwii photography in this powerful greatest generation photos by Wayne Heim. A compelling work that embodies wwii photography, greatest generation photos, and heroic portraits. Perfect for art lovers seeking wwii photography to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-CwZ2zTV/A",
     "keywords": [
@@ -1802,9 +1928,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights wwii photography through wwii photography and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1847,8 +1977,8 @@ export const galleryData = [
   },
   {
     "id": "i-XRrdhGn",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Wwii Photography In Fine Art",
+    "description": "Witness wwii photography in Wayne Heim's moments of connection. This image features wwii photography with wartime portraits and wwii photography, ideal for admirers of wwii photography. © Wayne Heim",
     "alt": "Radio Operator    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-XRrdhGn/A",
     "keywords": [
@@ -1858,9 +1988,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through wwii photography and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1875,8 +2008,8 @@ export const galleryData = [
   },
   {
     "id": "i-2BM6trD",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Wartime Portraits Moment",
+    "description": "Wayne Heim presents wartime portraits in this wwii photography work. Embodying heroic portraits, wwii photography, and wartime portraits, it's recommended for lovers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-2BM6trD/A",
     "keywords": [
@@ -1886,9 +2019,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies moments of connection and wartime portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1903,8 +2039,8 @@ export const galleryData = [
   },
   {
     "id": "i-QCrGgX8",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2016",
+    "title": "Wartime Portraits Portrait",
+    "description": "Uncover wartime portraits through this wartime portraits from Wayne Heim. Showcasing wwii photography, heroic portraits, and wwii photography, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-QCrGgX8/A",
     "keywords": [
@@ -1914,9 +2050,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2016",
+    "story": "This image embodies wartime portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of wwii photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1931,8 +2070,8 @@ export const galleryData = [
   },
   {
     "id": "i-Bjdz3R9",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Fine Art Wartime Portraits",
+    "description": "Witness wartime portraits in Wayne Heim's heroic portraits. This image features moments of connection with moments of connection and wwii photography, ideal for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Bjdz3R9/A",
     "keywords": [
@@ -1942,9 +2081,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies moments of connection and moments of connection, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1959,8 +2101,8 @@ export const galleryData = [
   },
   {
     "id": "i-sLQtWvL",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection Study",
+    "description": "Experience moments of connection through this evocative wartime portraits from Wayne Heim's portfolio. This piece highlights heroic portraits with heroic portraits, while conveying heroic portraits, ideal for those who appreciate moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-sLQtWvL/A",
     "keywords": [
@@ -1970,9 +2112,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights greatest generation photos through moments of connection and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1987,8 +2133,8 @@ export const galleryData = [
   },
   {
     "id": "i-3KQX5zn",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Wwii Photography",
+    "description": "Witness wwii photography in Wayne Heim's greatest generation photos. This image features moments of connection with wartime portraits and heroic portraits, ideal for admirers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-3KQX5zn/A",
     "keywords": [
@@ -1998,9 +2144,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies heroic portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2043,8 +2193,8 @@ export const galleryData = [
   },
   {
     "id": "i-LM9wCk4",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography In Fine Art",
+    "description": "This wwii photography artwork by Wayne Heim showcases wwii photography in a wartime portraits style. Reflecting wartime portraits, wwii photography, and wwii photography, it's suited for admirers of wwii photography. © Wayne Heim",
     "alt": "Pilot    Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-LM9wCk4/A",
     "keywords": [
@@ -2054,9 +2204,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wartime portraits through greatest generation photos and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2071,8 +2224,8 @@ export const galleryData = [
   },
   {
     "id": "i-LBzsXH4",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Moments Of Connection",
+    "description": "Wayne Heim's moments of connection captures the spirit of greatest generation photos in this moments of connection image. Featuring heroic portraits, moments of connection, and moments of connection, it's ideal for greatest generation photos enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-LBzsXH4/A",
     "keywords": [
@@ -2082,9 +2235,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wwii photography through wartime portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2127,8 +2284,8 @@ export const galleryData = [
   },
   {
     "id": "i-Jbt8KCd",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Wwii Photography",
+    "description": "Uncover wwii photography through this wartime portraits from Wayne Heim. Showcasing greatest generation photos, greatest generation photos, and wwii photography, it's perfect for enthusiasts of wwii photography. © Wayne Heim",
     "alt": "War Correspondent  Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Jbt8KCd/A",
     "keywords": [
@@ -2138,9 +2295,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights greatest generation photos through wartime portraits and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2155,8 +2315,8 @@ export const galleryData = [
   },
   {
     "id": "i-7zPV4QX",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography Portrait",
+    "description": "Immerse yourself in wwii photography with this stunning greatest generation photos by Wayne Heim. Capturing greatest generation photos, wartime portraits, and wartime portraits, it's a must-have for collectors of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7zPV4QX/A",
     "keywords": [
@@ -2166,9 +2326,11 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "greatest generation photos",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wartime portraits and wwii photography, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2183,8 +2345,8 @@ export const galleryData = [
   },
   {
     "id": "i-Z3xcgPq",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Heroic Portraits",
+    "description": "Uncover heroic portraits through this wwii photography from Wayne Heim. Showcasing greatest generation photos, wartime portraits, and wwii photography, it's perfect for enthusiasts of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Z3xcgPq/A",
     "keywords": [
@@ -2194,9 +2356,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "greatest generation photos",
+      "wartime portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights greatest generation photos through heroic portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2211,8 +2377,8 @@ export const galleryData = [
   },
   {
     "id": "i-tpBwQzL",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2018",
+    "title": "Wartime Portraits Portrait",
+    "description": "Wayne Heim presents wartime portraits in this greatest generation photos work. Embodying wwii photography, greatest generation photos, and heroic portraits, it's recommended for lovers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-tpBwQzL/A",
     "keywords": [
@@ -2222,9 +2388,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2018",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2239,8 +2409,8 @@ export const galleryData = [
   },
   {
     "id": "i-djZrQxQ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2018",
+    "title": "Greatest Generation Photos Study",
+    "description": "Witness greatest generation photos in Wayne Heim's greatest generation photos. This image features wwii photography with wartime portraits and wwii photography, ideal for admirers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim 2018",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-djZrQxQ/A",
     "keywords": [
@@ -2250,9 +2420,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2018",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing heroic portraits and greatest generation photos. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2267,8 +2440,8 @@ export const galleryData = [
   },
   {
     "id": "i-ZcXGsW3",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Greatest Generation Photos Portrait",
+    "description": "Witness greatest generation photos in Wayne Heim's wartime portraits. This image features heroic portraits with wwii photography and moments of connection, ideal for admirers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim 2018",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-ZcXGsW3/A",
     "keywords": [
@@ -2278,9 +2451,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through heroic portraits and greatest generation photos. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2295,8 +2472,8 @@ export const galleryData = [
   },
   {
     "id": "i-dppZCKv",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Heroic Portraits Portrait",
+    "description": "Wayne Heim presents heroic portraits in this greatest generation photos work. Embodying heroic portraits, wwii photography, and heroic portraits, it's recommended for lovers of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-dppZCKv/A",
     "keywords": [
@@ -2306,9 +2483,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "greatest generation photos",
+      "wartime portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "This image embodies wartime portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of greatest generation photos. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2323,8 +2504,8 @@ export const galleryData = [
   },
   {
     "id": "i-wzQLFp3",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "The Essence Of Moments Of Connection",
+    "description": "Immerse yourself in moments of connection with this stunning heroic portraits by Wayne Heim. Capturing moments of connection, wartime portraits, and heroic portraits, it's a must-have for collectors of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-wzQLFp3/A",
     "keywords": [
@@ -2334,9 +2515,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "This image embodies wartime portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wwii photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2351,8 +2535,8 @@ export const galleryData = [
   },
   {
     "id": "i-fb9Ds9r",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Heroic Portraits In Fine Art",
+    "description": "Wayne Heim presents heroic portraits in this moments of connection work. Embodying greatest generation photos, moments of connection, and wwii photography, it's recommended for lovers of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fb9Ds9r/A",
     "keywords": [
@@ -2362,9 +2546,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "moments of connection",
+      "greatest generation photos",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights wwii photography through greatest generation photos and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2379,8 +2567,8 @@ export const galleryData = [
   },
   {
     "id": "i-6RrzKF3",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Capturing Wwii Photography",
+    "description": "Witness wwii photography in Wayne Heim's moments of connection. This image features wwii photography with greatest generation photos and heroic portraits, ideal for admirers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-6RrzKF3/A",
     "keywords": [
@@ -2390,9 +2578,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "This image embodies heroic portraits and wwii photography, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2407,8 +2599,8 @@ export const galleryData = [
   },
   {
     "id": "i-jCkmncD",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "The Essence Of Heroic Portraits",
+    "description": "Uncover heroic portraits through this wwii photography from Wayne Heim. Showcasing wartime portraits, wwii photography, and wwii photography, it's perfect for enthusiasts of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-jCkmncD/A",
     "keywords": [
@@ -2418,9 +2610,11 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies wwii photography and wwii photography, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of wwii photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2435,8 +2629,8 @@ export const galleryData = [
   },
   {
     "id": "i-tJfJDvb",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing Heroic Portraits",
+    "description": "Wayne Heim presents heroic portraits in this wwii photography work. Embodying moments of connection, greatest generation photos, and wwii photography, it's recommended for lovers of heroic portraits. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-tJfJDvb/A",
     "keywords": [
@@ -2446,9 +2640,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "moments of connection",
+      "greatest generation photos"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography and wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2463,8 +2660,8 @@ export const galleryData = [
   },
   {
     "id": "i-nNQd2p5",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Fine Art Wwii Photography",
+    "description": "Uncover wwii photography through this moments of connection from Wayne Heim. Showcasing greatest generation photos, heroic portraits, and wwii photography, it's perfect for enthusiasts of wwii photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-nNQd2p5/A",
     "keywords": [
@@ -2474,9 +2671,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing moments of connection and wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2491,8 +2692,8 @@ export const galleryData = [
   },
   {
     "id": "i-LkpNVPS",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Greatest Generation Photos Moment",
+    "description": "Delve into greatest generation photos via this greatest generation photos by Wayne Heim. Highlighting wartime portraits through moments of connection and wartime portraits, it's great for collectors interested in greatest generation photos. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-LkpNVPS/A",
     "keywords": [
@@ -2502,9 +2703,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "greatest generation photos",
+      "wartime portraits",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing greatest generation photos and heroic portraits. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2519,8 +2724,8 @@ export const galleryData = [
   },
   {
     "id": "i-7SHGcw8",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Heroic Portraits - Wartime Portraits",
+    "description": "Delve into heroic portraits via this wartime portraits by Wayne Heim. Highlighting greatest generation photos through greatest generation photos and greatest generation photos, it's great for collectors interested in heroic portraits. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7SHGcw8/A",
     "keywords": [
@@ -2530,9 +2735,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights moments of connection through wwii photography and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2547,8 +2756,8 @@ export const galleryData = [
   },
   {
     "id": "i-fX3D9ZP",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2019",
+    "title": "Fine Art Wwii Photography",
+    "description": "Uncover wwii photography through this wartime portraits from Wayne Heim. Showcasing greatest generation photos, moments of connection, and greatest generation photos, it's perfect for enthusiasts of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fX3D9ZP/A",
     "keywords": [
@@ -2558,9 +2767,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wwii photography through wartime portraits and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2575,8 +2787,8 @@ export const galleryData = [
   },
   {
     "id": "i-bqvwkKT",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Heroic Portraits Portrait",
+    "description": "Wayne Heim's heroic portraits captures the spirit of heroic portraits in this wartime portraits image. Featuring moments of connection, wartime portraits, and heroic portraits, it's ideal for heroic portraits enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-bqvwkKT/A",
     "keywords": [
@@ -2586,9 +2798,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies heroic portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of greatest generation photos. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2603,8 +2819,8 @@ export const galleryData = [
   },
   {
     "id": "i-7kBK9mH",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Greatest Generation Photos Moment",
+    "description": "Experience greatest generation photos through this evocative heroic portraits from Wayne Heim's portfolio. This piece highlights greatest generation photos with moments of connection, while conveying greatest generation photos, ideal for those who appreciate greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7kBK9mH/A",
     "keywords": [
@@ -2614,9 +2830,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2631,8 +2851,8 @@ export const galleryData = [
   },
   {
     "id": "i-PJKbV3h",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Wartime Portraits Moment",
+    "description": "Wayne Heim's wartime portraits captures the spirit of heroic portraits in this heroic portraits image. Featuring moments of connection, wartime portraits, and wartime portraits, it's ideal for heroic portraits enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-PJKbV3h/A",
     "keywords": [
@@ -2642,9 +2862,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights heroic portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2659,8 +2882,8 @@ export const galleryData = [
   },
   {
     "id": "i-NT6Fg22",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "The Essence Of Wartime Portraits",
+    "description": "Uncover wartime portraits through this moments of connection from Wayne Heim. Showcasing greatest generation photos, greatest generation photos, and wwii photography, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-NT6Fg22/A",
     "keywords": [
@@ -2670,9 +2893,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights moments of connection through heroic portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2687,8 +2914,8 @@ export const galleryData = [
   },
   {
     "id": "i-dDS7hMj",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring Wartime Portraits",
+    "description": "Experience wartime portraits through this evocative wartime portraits from Wayne Heim's portfolio. This piece highlights wartime portraits with heroic portraits, while conveying wwii photography, ideal for those who appreciate wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-dDS7hMj/A",
     "keywords": [
@@ -2698,9 +2925,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wwii photography through wartime portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2715,8 +2945,8 @@ export const galleryData = [
   },
   {
     "id": "i-nPPzdkT",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "The Essence Of Heroic Portraits",
+    "description": "Explore heroic portraits with Wayne Heim's wwii photography. This greatest generation photos piece conveys moments of connection, wartime portraits, and heroic portraits, perfect for fans of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-nPPzdkT/A",
     "keywords": [
@@ -2726,9 +2956,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights heroic portraits through wartime portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2743,8 +2977,8 @@ export const galleryData = [
   },
   {
     "id": "i-xKtpTz7",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Heroic Portraits In Fine Art",
+    "description": "Immerse yourself in heroic portraits with this stunning heroic portraits by Wayne Heim. Capturing heroic portraits, heroic portraits, and greatest generation photos, it's a must-have for collectors of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-xKtpTz7/A",
     "keywords": [
@@ -2754,9 +2988,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "heroic portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wwii photography through moments of connection and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2771,8 +3008,8 @@ export const galleryData = [
   },
   {
     "id": "i-FC5fGtD",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "The Essence Of Moments Of Connection",
+    "description": "Immerse yourself in moments of connection with this stunning wartime portraits by Wayne Heim. Capturing heroic portraits, wwii photography, and moments of connection, it's a must-have for collectors of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-FC5fGtD/A",
     "keywords": [
@@ -2782,9 +3019,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography and wwii photography. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2799,8 +3039,8 @@ export const galleryData = [
   },
   {
     "id": "i-9rr8bpL",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Exploring Wartime Portraits",
+    "description": "Uncover wartime portraits through this greatest generation photos from Wayne Heim. Showcasing wartime portraits, greatest generation photos, and wwii photography, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-9rr8bpL/A",
     "keywords": [
@@ -2810,9 +3050,12 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies heroic portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2827,8 +3070,8 @@ export const galleryData = [
   },
   {
     "id": "i-XBTNVg3",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wartime Portraits Portrait",
+    "description": "Immerse yourself in wartime portraits with this stunning moments of connection by Wayne Heim. Capturing wartime portraits, moments of connection, and wwii photography, it's a must-have for collectors of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-XBTNVg3/A",
     "keywords": [
@@ -2838,9 +3081,13 @@ export const galleryData = [
       "wwii reenactment",
       "veterans",
       "black and white photography",
-      "d day conneaut"
+      "d day conneaut",
+      "wartime portraits",
+      "moments of connection",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing greatest generation photos and wwii photography. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2855,8 +3102,8 @@ export const galleryData = [
   },
   {
     "id": "i-F6c4Dcc",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "The Essence Of Greatest Generation Photos",
+    "description": "Immerse yourself in greatest generation photos with this stunning heroic portraits by Wayne Heim. Capturing wartime portraits, greatest generation photos, and greatest generation photos, it's a must-have for collectors of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-F6c4Dcc/A",
     "keywords": [
@@ -2867,9 +3114,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies moments of connection and wwii photography, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2884,8 +3136,8 @@ export const galleryData = [
   },
   {
     "id": "i-Lkb22VB",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Capturing Moments Of Connection",
+    "description": "Wayne Heim presents moments of connection in this heroic portraits work. Embodying heroic portraits, moments of connection, and greatest generation photos, it's recommended for lovers of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Lkb22VB/A",
     "keywords": [
@@ -2896,9 +3148,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "moments of connection",
+      "heroic portraits",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies wwii photography and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wwii photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2913,8 +3169,8 @@ export const galleryData = [
   },
   {
     "id": "i-Zwr4qQH",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wartime Portraits Moment",
+    "description": "Witness wartime portraits in Wayne Heim's heroic portraits. This image features wartime portraits with greatest generation photos and moments of connection, ideal for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Zwr4qQH/A",
     "keywords": [
@@ -2925,9 +3181,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos",
+      "moments of connection",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing wwii photography and moments of connection. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2942,8 +3203,8 @@ export const galleryData = [
   },
   {
     "id": "i-gFJb9TS",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Heroic Portraits Moment",
+    "description": "Explore heroic portraits with Wayne Heim's wartime portraits. This heroic portraits piece conveys moments of connection, greatest generation photos, and heroic portraits, perfect for fans of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-gFJb9TS/A",
     "keywords": [
@@ -2954,9 +3215,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights heroic portraits through wwii photography and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2971,8 +3237,8 @@ export const galleryData = [
   },
   {
     "id": "i-9zQS8ns",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Capturing Wwii Photography",
+    "description": "This wwii photography artwork by Wayne Heim showcases wwii photography in a moments of connection style. Reflecting wwii photography, wwii photography, and wwii photography, it's suited for admirers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-9zQS8ns/A",
     "keywords": [
@@ -2983,9 +3249,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii photography",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3000,8 +3270,8 @@ export const galleryData = [
   },
   {
     "id": "i-GJv5z55",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wartime Portraits Portrait",
+    "description": "Wayne Heim's wartime portraits captures the spirit of moments of connection in this wartime portraits image. Featuring moments of connection, wartime portraits, and wartime portraits, it's ideal for moments of connection enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-GJv5z55/A",
     "keywords": [
@@ -3012,9 +3282,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "moments of connection",
+      "wwii photography",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wartime portraits through heroic portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3029,8 +3303,8 @@ export const galleryData = [
   },
   {
     "id": "i-5PbVZPJ",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Heroic Portraits Moment",
+    "description": "Wayne Heim presents heroic portraits in this greatest generation photos work. Embodying greatest generation photos, wwii photography, and wartime portraits, it's recommended for lovers of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-5PbVZPJ/A",
     "keywords": [
@@ -3041,9 +3315,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "greatest generation photos",
+      "wwii photography",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and greatest generation photos. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3058,8 +3336,8 @@ export const galleryData = [
   },
   {
     "id": "i-7SVHXLH",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "The Essence Of Moments Of Connection",
+    "description": "This moments of connection artwork by Wayne Heim showcases wartime portraits in a wwii photography style. Reflecting greatest generation photos, heroic portraits, and moments of connection, it's suited for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7SVHXLH/A",
     "keywords": [
@@ -3070,9 +3348,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "moments of connection",
+      "wartime portraits",
+      "wwii photography",
+      "greatest generation photos",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and wartime portraits. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3087,8 +3370,8 @@ export const galleryData = [
   },
   {
     "id": "i-D23Vxtk",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wwii Photography Portrait",
+    "description": "Uncover wwii photography through this wartime portraits from Wayne Heim. Showcasing wartime portraits, heroic portraits, and wartime portraits, it's perfect for enthusiasts of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-D23Vxtk/A",
     "keywords": [
@@ -3099,9 +3382,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii photography",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing moments of connection and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3116,8 +3404,8 @@ export const galleryData = [
   },
   {
     "id": "i-j5WQwdQ",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Greatest Generation Photos Portrait",
+    "description": "Explore greatest generation photos with Wayne Heim's moments of connection. This heroic portraits piece conveys greatest generation photos, wartime portraits, and greatest generation photos, perfect for fans of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-j5WQwdQ/A",
     "keywords": [
@@ -3128,9 +3416,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies heroic portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3145,8 +3437,8 @@ export const galleryData = [
   },
   {
     "id": "i-F9S3P6r",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Capturing Moments Of Connection",
+    "description": "Witness moments of connection in Wayne Heim's greatest generation photos. This image features moments of connection with heroic portraits and wartime portraits, ideal for admirers of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-F9S3P6r/A",
     "keywords": [
@@ -3157,9 +3449,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3174,8 +3470,8 @@ export const galleryData = [
   },
   {
     "id": "i-MZNSN6J",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wartime Portraits Portrait",
+    "description": "Witness wartime portraits in Wayne Heim's greatest generation photos. This image features heroic portraits with heroic portraits and greatest generation photos, ideal for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-MZNSN6J/A",
     "keywords": [
@@ -3186,9 +3482,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies moments of connection and greatest generation photos, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of greatest generation photos. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3203,8 +3504,8 @@ export const galleryData = [
   },
   {
     "id": "i-nKHdrd2",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wartime Portraits Portrait",
+    "description": "Experience wartime portraits through this evocative moments of connection from Wayne Heim's portfolio. This piece highlights wartime portraits with wartime portraits, while conveying wwii photography, ideal for those who appreciate wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-nKHdrd2/A",
     "keywords": [
@@ -3215,9 +3516,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "moments of connection",
+      "wwii photography",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies moments of connection and heroic portraits, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3232,8 +3537,8 @@ export const galleryData = [
   },
   {
     "id": "i-xcS3GZ7",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Exploring Greatest Generation Photos",
+    "description": "Explore greatest generation photos with Wayne Heim's moments of connection. This wwii photography piece conveys greatest generation photos, heroic portraits, and greatest generation photos, perfect for fans of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-xcS3GZ7/A",
     "keywords": [
@@ -3244,9 +3549,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "moments of connection",
+      "wwii photography",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3261,8 +3571,8 @@ export const galleryData = [
   },
   {
     "id": "i-QXLhzGj",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Wartime Portraits In Fine Art",
+    "description": "Wayne Heim's wartime portraits captures the spirit of wwii photography in this greatest generation photos image. Featuring wartime portraits, heroic portraits, and wartime portraits, it's ideal for wwii photography enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-QXLhzGj/A",
     "keywords": [
@@ -3273,9 +3583,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "wwii photography",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "This image embodies moments of connection and wartime portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of greatest generation photos. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3290,8 +3605,8 @@ export const galleryData = [
   },
   {
     "id": "i-6VtVvBq",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Exploring Greatest Generation Photos",
+    "description": "Discover the greatest generation photos in this powerful heroic portraits by Wayne Heim. A compelling work that embodies heroic portraits, heroic portraits, and wartime portraits. Perfect for art lovers seeking greatest generation photos to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-6VtVvBq/A",
     "keywords": [
@@ -3302,9 +3617,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing wwii photography and greatest generation photos. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3319,8 +3638,8 @@ export const galleryData = [
   },
   {
     "id": "i-pTT7Zcr",
-    "title": "Untitled",
-    "description": "© Wayne Heim '23",
+    "title": "Moments Of Connection - Wwii Photography",
+    "description": "Immerse yourself in moments of connection with this stunning wwii photography by Wayne Heim. Capturing heroic portraits, moments of connection, and wwii photography, it's a must-have for collectors of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-pTT7Zcr/A",
     "keywords": [
@@ -3331,9 +3650,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "moments of connection",
+      "wwii photography",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wwii photography and wartime portraits. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3348,8 +3671,8 @@ export const galleryData = [
   },
   {
     "id": "i-W4QXPzk",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits Study",
+    "description": "Wayne Heim presents wartime portraits in this greatest generation photos work. Embodying greatest generation photos, heroic portraits, and moments of connection, it's recommended for lovers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-W4QXPzk/A",
     "keywords": [
@@ -3360,9 +3683,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wwii photography and wwii photography. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3377,8 +3705,8 @@ export const galleryData = [
   },
   {
     "id": "i-dspFjtV",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits And Greatest Generation Photos",
+    "description": "Uncover heroic portraits through this greatest generation photos from Wayne Heim. Showcasing wwii photography, moments of connection, and moments of connection, it's perfect for enthusiasts of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-dspFjtV/A",
     "keywords": [
@@ -3389,9 +3717,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "greatest generation photos",
+      "wwii photography",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wartime portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of greatest generation photos. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3406,8 +3739,8 @@ export const galleryData = [
   },
   {
     "id": "i-4SS593J",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Moments Of Connection",
+    "description": "Discover the moments of connection in this powerful wartime portraits by Wayne Heim. A compelling work that embodies wartime portraits, wartime portraits, and wartime portraits. Perfect for art lovers seeking moments of connection to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-4SS593J/A",
     "keywords": [
@@ -3418,9 +3751,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "moments of connection",
+      "wartime portraits",
+      "wwii photography",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography and wwii photography. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3435,8 +3772,8 @@ export const galleryData = [
   },
   {
     "id": "i-gmq8Bt5",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos - Wartime Portraits",
+    "description": "Discover the greatest generation photos in this powerful wartime portraits by Wayne Heim. A compelling work that embodies wwii photography, wartime portraits, and moments of connection. Perfect for art lovers seeking greatest generation photos to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-gmq8Bt5/A",
     "keywords": [
@@ -3447,9 +3784,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "wartime portraits",
+      "wwii photography",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wartime portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3464,8 +3806,8 @@ export const galleryData = [
   },
   {
     "id": "i-SD38LDB",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Wwii Photography",
+    "description": "Immerse yourself in wwii photography with this stunning moments of connection by Wayne Heim. Capturing greatest generation photos, wartime portraits, and wartime portraits, it's a must-have for collectors of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-SD38LDB/A",
     "keywords": [
@@ -3476,9 +3818,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii photography",
+      "moments of connection",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies moments of connection and moments of connection, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3493,8 +3840,8 @@ export const galleryData = [
   },
   {
     "id": "i-gvqmdxw",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Wwii Photography",
+    "description": "Wayne Heim presents wwii photography in this moments of connection work. Embodying wartime portraits, wwii photography, and heroic portraits, it's recommended for lovers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-gvqmdxw/A",
     "keywords": [
@@ -3505,9 +3852,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii photography",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3522,8 +3874,8 @@ export const galleryData = [
   },
   {
     "id": "i-JW9jZPK",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Fine Art Moments Of Connection",
+    "description": "Immerse yourself in moments of connection with this stunning moments of connection by Wayne Heim. Capturing wwii photography, heroic portraits, and moments of connection, it's a must-have for collectors of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-JW9jZPK/A",
     "keywords": [
@@ -3534,9 +3886,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "moments of connection",
+      "wwii photography",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wartime portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3551,8 +3907,8 @@ export const galleryData = [
   },
   {
     "id": "i-drvkqnM",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography In Fine Art",
+    "description": "Delve into wwii photography via this heroic portraits by Wayne Heim. Highlighting moments of connection through wwii photography and heroic portraits, it's great for collectors interested in wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-drvkqnM/A",
     "keywords": [
@@ -3563,9 +3919,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii photography",
+      "heroic portraits",
+      "moments of connection",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wwii photography and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3580,8 +3940,8 @@ export const galleryData = [
   },
   {
     "id": "i-WWLsQd9",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Heroic Portraits",
+    "description": "Discover the heroic portraits in this powerful wartime portraits by Wayne Heim. A compelling work that embodies greatest generation photos, wwii photography, and wartime portraits. Perfect for art lovers seeking heroic portraits to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-WWLsQd9/A",
     "keywords": [
@@ -3592,9 +3952,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "wartime portraits",
+      "greatest generation photos",
+      "wwii photography",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights moments of connection through greatest generation photos and greatest generation photos. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3609,8 +3974,8 @@ export const galleryData = [
   },
   {
     "id": "i-wmrTJdX",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits Portrait",
+    "description": "Uncover wartime portraits through this wwii photography from Wayne Heim. Showcasing wwii photography, moments of connection, and wartime portraits, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-wmrTJdX/A",
     "keywords": [
@@ -3621,9 +3986,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "wwii photography",
+      "moments of connection",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights moments of connection through greatest generation photos and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3638,8 +4008,8 @@ export const galleryData = [
   },
   {
     "id": "i-4wW9DCc",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Heroic Portraits Study",
+    "description": "Delve into heroic portraits via this moments of connection by Wayne Heim. Highlighting wwii photography through moments of connection and moments of connection, it's great for collectors interested in heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-4wW9DCc/A",
     "keywords": [
@@ -3650,9 +4020,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "moments of connection",
+      "wwii photography",
+      "greatest generation photos",
+      "wartime portraits"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies greatest generation photos and moments of connection, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3667,8 +4042,8 @@ export const galleryData = [
   },
   {
     "id": "i-fTTQjZQ",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection In Fine Art",
+    "description": "Wayne Heim presents moments of connection in this greatest generation photos work. Embodying wartime portraits, heroic portraits, and heroic portraits, it's recommended for lovers of moments of connection. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fTTQjZQ/A",
     "keywords": [
@@ -3679,9 +4054,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "moments of connection",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3696,8 +4075,8 @@ export const galleryData = [
   },
   {
     "id": "i-drxhXH8",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits Moment",
+    "description": "Uncover heroic portraits through this wwii photography from Wayne Heim. Showcasing heroic portraits, heroic portraits, and moments of connection, it's perfect for enthusiasts of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-drxhXH8/A",
     "keywords": [
@@ -3708,9 +4087,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "wwii photography",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wwii photography and wwii photography, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3725,8 +4108,8 @@ export const galleryData = [
   },
   {
     "id": "i-Lt7xx85",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Fine Art Greatest Generation Photos",
+    "description": "Witness greatest generation photos in Wayne Heim's wartime portraits. This image features greatest generation photos with heroic portraits and heroic portraits, ideal for admirers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Lt7xx85/A",
     "keywords": [
@@ -3737,9 +4120,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies heroic portraits and wwii photography, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3754,8 +4141,8 @@ export const galleryData = [
   },
   {
     "id": "i-Qhffvx2",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Wartime Portraits",
+    "description": "Discover the wartime portraits in this powerful wwii photography by Wayne Heim. A compelling work that embodies moments of connection, greatest generation photos, and wartime portraits. Perfect for art lovers seeking wartime portraits to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Qhffvx2/A",
     "keywords": [
@@ -3766,9 +4153,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "wwii photography",
+      "moments of connection",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and moments of connection. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3783,8 +4174,8 @@ export const galleryData = [
   },
   {
     "id": "i-w8M7GcW",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos Study",
+    "description": "Wayne Heim presents greatest generation photos in this wwii photography work. Embodying wwii photography, heroic portraits, and wartime portraits, it's recommended for lovers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-w8M7GcW/A",
     "keywords": [
@@ -3795,9 +4186,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "wwii photography",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies moments of connection and wartime portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3812,8 +4208,8 @@ export const galleryData = [
   },
   {
     "id": "i-jjMqqvv",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos In Fine Art",
+    "description": "This greatest generation photos artwork by Wayne Heim showcases wartime portraits in a heroic portraits style. Reflecting wartime portraits, heroic portraits, and greatest generation photos, it's suited for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-jjMqqvv/A",
     "keywords": [
@@ -3824,9 +4220,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights heroic portraits through greatest generation photos and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3841,8 +4240,8 @@ export const galleryData = [
   },
   {
     "id": "i-HppD7nm",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits Portrait",
+    "description": "This wartime portraits artwork by Wayne Heim showcases wwii photography in a moments of connection style. Reflecting wartime portraits, wartime portraits, and wartime portraits, it's suited for admirers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-HppD7nm/A",
     "keywords": [
@@ -3853,9 +4252,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "wwii photography",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights moments of connection through moments of connection and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3870,8 +4272,8 @@ export const galleryData = [
   },
   {
     "id": "i-qcS6nhz",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection - Moments Of Connection",
+    "description": "Explore moments of connection with Wayne Heim's moments of connection. This heroic portraits piece conveys wartime portraits, greatest generation photos, and moments of connection, perfect for fans of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-qcS6nhz/A",
     "keywords": [
@@ -3882,9 +4284,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wartime portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3899,8 +4306,8 @@ export const galleryData = [
   },
   {
     "id": "i-gPXTRxR",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits Moment",
+    "description": "Delve into heroic portraits via this moments of connection by Wayne Heim. Highlighting wartime portraits through greatest generation photos and greatest generation photos, it's great for collectors interested in heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-gPXTRxR/A",
     "keywords": [
@@ -3911,9 +4318,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "moments of connection",
+      "wartime portraits",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing wwii photography and moments of connection. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3928,8 +4340,8 @@ export const galleryData = [
   },
   {
     "id": "i-cRFJSxJ",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits - Greatest Generation Photos",
+    "description": "Explore wartime portraits with Wayne Heim's greatest generation photos. This greatest generation photos piece conveys wwii photography, moments of connection, and wartime portraits, perfect for fans of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-cRFJSxJ/A",
     "keywords": [
@@ -3940,9 +4352,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "greatest generation photos",
+      "wwii photography",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies heroic portraits and greatest generation photos, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3957,8 +4374,8 @@ export const galleryData = [
   },
   {
     "id": "i-5s2jXNd",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos Portrait",
+    "description": "Immerse yourself in greatest generation photos with this stunning wwii photography by Wayne Heim. Capturing wwii photography, wwii photography, and greatest generation photos, it's a must-have for collectors of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-5s2jXNd/A",
     "keywords": [
@@ -3969,9 +4386,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "wwii photography",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wwii photography through moments of connection and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3986,8 +4407,8 @@ export const galleryData = [
   },
   {
     "id": "i-Tz34hmg",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits Portrait",
+    "description": "This heroic portraits artwork by Wayne Heim showcases moments of connection in a greatest generation photos style. Reflecting heroic portraits, moments of connection, and heroic portraits, it's suited for admirers of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Tz34hmg/A",
     "keywords": [
@@ -3998,9 +4419,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "moments of connection",
+      "greatest generation photos",
+      "wartime portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through wwii photography and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4015,8 +4441,8 @@ export const galleryData = [
   },
   {
     "id": "i-BtMwcTh",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography Study",
+    "description": "Discover the wwii photography in this powerful wwii photography by Wayne Heim. A compelling work that embodies wartime portraits, greatest generation photos, and greatest generation photos. Perfect for art lovers seeking wwii photography to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-BtMwcTh/A",
     "keywords": [
@@ -4027,9 +4453,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii photography",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wwii photography and wartime portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4044,8 +4474,8 @@ export const galleryData = [
   },
   {
     "id": "i-9zZ6HjL",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Wartime Portraits",
+    "description": "Uncover wartime portraits through this heroic portraits from Wayne Heim. Showcasing wartime portraits, heroic portraits, and heroic portraits, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-9zZ6HjL/A",
     "keywords": [
@@ -4056,9 +4486,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights greatest generation photos through wwii photography and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4073,8 +4507,8 @@ export const galleryData = [
   },
   {
     "id": "i-6sQRCPh",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography Moment",
+    "description": "Uncover wwii photography through this wwii photography from Wayne Heim. Showcasing greatest generation photos, wartime portraits, and greatest generation photos, it's perfect for enthusiasts of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-6sQRCPh/A",
     "keywords": [
@@ -4085,9 +4519,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii photography",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing wwii photography and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4102,8 +4540,8 @@ export const galleryData = [
   },
   {
     "id": "i-vzSJdcp",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits Moment",
+    "description": "Wayne Heim presents heroic portraits in this heroic portraits work. Embodying moments of connection, wwii photography, and wwii photography, it's recommended for lovers of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-vzSJdcp/A",
     "keywords": [
@@ -4114,9 +4552,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "moments of connection",
+      "wwii photography",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wartime portraits and wwii photography, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4131,8 +4573,8 @@ export const galleryData = [
   },
   {
     "id": "i-tHZG2Md",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography And Wwii Photography",
+    "description": "Uncover wwii photography through this wwii photography from Wayne Heim. Showcasing wwii photography, greatest generation photos, and greatest generation photos, it's perfect for enthusiasts of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-tHZG2Md/A",
     "keywords": [
@@ -4143,9 +4585,14 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wwii photography",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies greatest generation photos and moments of connection, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4160,8 +4607,8 @@ export const galleryData = [
   },
   {
     "id": "i-3PknXD8",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Greatest Generation Photos",
+    "description": "Delve into greatest generation photos via this greatest generation photos by Wayne Heim. Highlighting moments of connection through moments of connection and wartime portraits, it's great for collectors interested in greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-3PknXD8/A",
     "keywords": [
@@ -4172,9 +4619,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights moments of connection through wwii photography and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4189,8 +4640,8 @@ export const galleryData = [
   },
   {
     "id": "i-hZ3rsGq",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Fine Art Wartime Portraits",
+    "description": "This wartime portraits artwork by Wayne Heim showcases wwii photography in a moments of connection style. Reflecting heroic portraits, moments of connection, and wartime portraits, it's suited for admirers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-hZ3rsGq/A",
     "keywords": [
@@ -4201,9 +4652,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "wartime portraits",
+      "wwii photography",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wartime portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4218,8 +4673,8 @@ export const galleryData = [
   },
   {
     "id": "i-4LZ6Bkr",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits - Wwii Photography",
+    "description": "Explore heroic portraits with Wayne Heim's wwii photography. This moments of connection piece conveys greatest generation photos, heroic portraits, and heroic portraits, perfect for fans of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-4LZ6Bkr/A",
     "keywords": [
@@ -4230,9 +4685,13 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "heroic portraits",
+      "wwii photography",
+      "moments of connection",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing moments of connection and wwii photography. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4247,15 +4706,19 @@ export const galleryData = [
   },
   {
     "id": "i-VRP9HFP",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Heroic Portraits",
+    "description": "Discover the heroic portraits in this powerful moments of connection by Wayne Heim. A compelling work that embodies greatest generation photos, wwii photography, and wwii photography. Perfect for art lovers seeking heroic portraits to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-VRP9HFP/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "heroic portraits",
+      "moments of connection",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights heroic portraits through wwii photography and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4270,15 +4733,17 @@ export const galleryData = [
   },
   {
     "id": "i-zKMhfHj",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Wartime Portraits",
+    "description": "Witness wartime portraits in Wayne Heim's wartime portraits. This image features wwii photography with wartime portraits and wartime portraits, ideal for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-zKMhfHj/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wwii photography and wartime portraits, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4293,15 +4758,19 @@ export const galleryData = [
   },
   {
     "id": "i-Gx8hKbS",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Moments Of Connection",
+    "description": "Discover the moments of connection in this powerful greatest generation photos by Wayne Heim. A compelling work that embodies heroic portraits, greatest generation photos, and greatest generation photos. Perfect for art lovers seeking moments of connection to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Gx8hKbS/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights greatest generation photos through heroic portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4316,15 +4785,19 @@ export const galleryData = [
   },
   {
     "id": "i-sNBhnGX",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection And Heroic Portraits",
+    "description": "Wayne Heim's moments of connection captures the spirit of heroic portraits in this wartime portraits image. Featuring wartime portraits, greatest generation photos, and moments of connection, it's ideal for heroic portraits enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-sNBhnGX/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights greatest generation photos through moments of connection and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4339,15 +4812,20 @@ export const galleryData = [
   },
   {
     "id": "i-fhZkRZ5",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits Portrait",
+    "description": "Uncover wartime portraits through this wwii photography from Wayne Heim. Showcasing moments of connection, greatest generation photos, and wartime portraits, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fhZkRZ5/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "wwii photography",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4362,15 +4840,20 @@ export const galleryData = [
   },
   {
     "id": "i-Tn7p8x4",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Wartime Portraits",
+    "description": "Explore wartime portraits with Wayne Heim's heroic portraits. This moments of connection piece conveys heroic portraits, moments of connection, and wartime portraits, perfect for fans of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Tn7p8x4/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies greatest generation photos and wwii photography, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wwii photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4385,15 +4868,20 @@ export const galleryData = [
   },
   {
     "id": "i-QrmnBcM",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits - Wwii Photography",
+    "description": "Uncover wartime portraits through this wwii photography from Wayne Heim. Showcasing greatest generation photos, wwii photography, and heroic portraits, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-QrmnBcM/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "wwii photography",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights moments of connection through heroic portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4408,15 +4896,19 @@ export const galleryData = [
   },
   {
     "id": "i-dqCtL9c",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection Portrait",
+    "description": "Wayne Heim presents moments of connection in this greatest generation photos work. Embodying wwii photography, moments of connection, and heroic portraits, it's recommended for lovers of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-dqCtL9c/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "greatest generation photos",
+      "wwii photography",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights heroic portraits through heroic portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4431,15 +4923,20 @@ export const galleryData = [
   },
   {
     "id": "i-4mHkJZh",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Fine Art Wartime Portraits",
+    "description": "Uncover wartime portraits through this heroic portraits from Wayne Heim. Showcasing moments of connection, wartime portraits, and heroic portraits, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-4mHkJZh/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection",
+      "wwii photography",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4454,15 +4951,19 @@ export const galleryData = [
   },
   {
     "id": "i-Ht39nrT",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Heroic Portraits",
+    "description": "Wayne Heim presents heroic portraits in this heroic portraits work. Embodying wwii photography, moments of connection, and heroic portraits, it's recommended for lovers of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Ht39nrT/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "heroic portraits",
+      "wwii photography",
+      "moments of connection",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wwii photography and greatest generation photos, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4477,15 +4978,19 @@ export const galleryData = [
   },
   {
     "id": "i-7vjjbpb",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits In Fine Art",
+    "description": "Explore heroic portraits with Wayne Heim's moments of connection. This moments of connection piece conveys wartime portraits, moments of connection, and heroic portraits, perfect for fans of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7vjjbpb/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "heroic portraits",
+      "moments of connection",
+      "wartime portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights wwii photography through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4500,15 +5005,20 @@ export const galleryData = [
   },
   {
     "id": "i-mf7kXJg",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection And Greatest Generation Photos",
+    "description": "Wayne Heim presents moments of connection in this greatest generation photos work. Embodying greatest generation photos, heroic portraits, and wwii photography, it's recommended for lovers of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-mf7kXJg/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wwii photography",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4523,15 +5033,19 @@ export const galleryData = [
   },
   {
     "id": "i-2Hp8xBf",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography - Greatest Generation Photos",
+    "description": "Immerse yourself in wwii photography with this stunning greatest generation photos by Wayne Heim. Capturing moments of connection, heroic portraits, and wwii photography, it's a must-have for collectors of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-2Hp8xBf/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wwii photography",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits and greatest generation photos. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4546,15 +5060,19 @@ export const galleryData = [
   },
   {
     "id": "i-qqJ8Q8M",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos - Wartime Portraits",
+    "description": "Immerse yourself in greatest generation photos with this stunning wartime portraits by Wayne Heim. Capturing heroic portraits, greatest generation photos, and heroic portraits, it's a must-have for collectors of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-qqJ8Q8M/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies wwii photography and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4569,15 +5087,20 @@ export const galleryData = [
   },
   {
     "id": "i-tC8JFrK",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos Study",
+    "description": "Explore greatest generation photos with Wayne Heim's heroic portraits. This heroic portraits piece conveys greatest generation photos, heroic portraits, and greatest generation photos, perfect for fans of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-tC8JFrK/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing moments of connection and wwii photography. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4592,15 +5115,20 @@ export const galleryData = [
   },
   {
     "id": "i-xJ4RNCj",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Greatest Generation Photos",
+    "description": "Explore greatest generation photos with Wayne Heim's wartime portraits. This heroic portraits piece conveys wwii photography, wartime portraits, and greatest generation photos, perfect for fans of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-xJ4RNCj/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "greatest generation photos",
+      "wartime portraits",
+      "heroic portraits",
+      "wwii photography",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4615,15 +5143,19 @@ export const galleryData = [
   },
   {
     "id": "i-P3gPGJW",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits Portrait",
+    "description": "Uncover wartime portraits through this wartime portraits from Wayne Heim. Showcasing greatest generation photos, heroic portraits, and moments of connection, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-P3gPGJW/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing heroic portraits and wartime portraits. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4638,15 +5170,20 @@ export const galleryData = [
   },
   {
     "id": "i-4Rk9G7c",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits And Heroic Portraits",
+    "description": "Explore wartime portraits with Wayne Heim's heroic portraits. This heroic portraits piece conveys heroic portraits, moments of connection, and wartime portraits, perfect for fans of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-4Rk9G7c/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection",
+      "wwii photography",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights greatest generation photos through heroic portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4661,15 +5198,19 @@ export const galleryData = [
   },
   {
     "id": "i-q9Rj7kr",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection In Fine Art",
+    "description": "Discover the moments of connection in this powerful heroic portraits by Wayne Heim. A compelling work that embodies moments of connection, greatest generation photos, and heroic portraits. Perfect for art lovers seeking moments of connection to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-q9Rj7kr/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "heroic portraits",
+      "greatest generation photos",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies moments of connection and wartime portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4684,15 +5225,20 @@ export const galleryData = [
   },
   {
     "id": "i-64L2Z7p",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection Moment",
+    "description": "Discover the moments of connection in this powerful moments of connection by Wayne Heim. A compelling work that embodies greatest generation photos, heroic portraits, and wartime portraits. Perfect for art lovers seeking moments of connection to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-64L2Z7p/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing moments of connection and wwii photography. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4707,15 +5253,18 @@ export const galleryData = [
   },
   {
     "id": "i-w8h5fnF",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos - Wwii Photography",
+    "description": "Explore greatest generation photos with Wayne Heim's wwii photography. This greatest generation photos piece conveys greatest generation photos, heroic portraits, and greatest generation photos, perfect for fans of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-w8h5fnF/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "greatest generation photos",
+      "wwii photography",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies greatest generation photos and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4730,15 +5279,19 @@ export const galleryData = [
   },
   {
     "id": "i-tMNwj5g",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits And Greatest Generation Photos",
+    "description": "Discover the heroic portraits in this powerful greatest generation photos by Wayne Heim. A compelling work that embodies wwii photography, greatest generation photos, and heroic portraits. Perfect for art lovers seeking heroic portraits to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-tMNwj5g/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "heroic portraits",
+      "greatest generation photos",
+      "wwii photography",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing wwii photography and moments of connection. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4753,15 +5306,19 @@ export const galleryData = [
   },
   {
     "id": "i-KM6s4g2",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Fine Art Wartime Portraits",
+    "description": "Uncover wartime portraits through this wartime portraits from Wayne Heim. Showcasing greatest generation photos, moments of connection, and heroic portraits, it's perfect for enthusiasts of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-KM6s4g2/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies greatest generation photos and wartime portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of greatest generation photos. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4776,15 +5333,19 @@ export const galleryData = [
   },
   {
     "id": "i-KmgzqNw",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos Moment",
+    "description": "Wayne Heim's greatest generation photos captures the spirit of moments of connection in this moments of connection image. Featuring heroic portraits, heroic portraits, and greatest generation photos, it's ideal for moments of connection enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-KmgzqNw/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wartime portraits and moments of connection. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4799,15 +5360,20 @@ export const galleryData = [
   },
   {
     "id": "i-S4Wxx5b",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Heroic Portraits",
+    "description": "Wayne Heim's heroic portraits captures the spirit of greatest generation photos in this wwii photography image. Featuring moments of connection, wartime portraits, and heroic portraits, it's ideal for greatest generation photos enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-S4Wxx5b/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "heroic portraits",
+      "greatest generation photos",
+      "wwii photography",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies heroic portraits and wwii photography, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wartime portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4822,15 +5388,19 @@ export const galleryData = [
   },
   {
     "id": "i-Q7JSC7M",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography Study",
+    "description": "Wayne Heim's wwii photography captures the spirit of moments of connection in this moments of connection image. Featuring wwii photography, wwii photography, and wwii photography, it's ideal for moments of connection enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Q7JSC7M/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wwii photography",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies heroic portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4845,15 +5415,20 @@ export const galleryData = [
   },
   {
     "id": "i-FVMGJbM",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Wwii Photography",
+    "description": "Uncover wwii photography through this moments of connection from Wayne Heim. Showcasing wartime portraits, heroic portraits, and wwii photography, it's perfect for enthusiasts of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-FVMGJbM/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wwii photography",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing greatest generation photos and heroic portraits. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4868,15 +5443,20 @@ export const galleryData = [
   },
   {
     "id": "i-R8kLR6g",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits And Wwii Photography",
+    "description": "This heroic portraits artwork by Wayne Heim showcases wwii photography in a moments of connection style. Reflecting wwii photography, moments of connection, and heroic portraits, it's suited for admirers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-R8kLR6g/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "heroic portraits",
+      "wwii photography",
+      "moments of connection",
+      "greatest generation photos",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits through greatest generation photos and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4891,15 +5471,19 @@ export const galleryData = [
   },
   {
     "id": "i-fKf5KdW",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection Moment",
+    "description": "Uncover moments of connection through this wartime portraits from Wayne Heim. Showcasing moments of connection, greatest generation photos, and wwii photography, it's perfect for enthusiasts of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-fKf5KdW/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "wartime portraits",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wwii photography and wwii photography. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4914,15 +5498,19 @@ export const galleryData = [
   },
   {
     "id": "i-SQVsGPT",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits Moment",
+    "description": "Delve into wartime portraits via this greatest generation photos by Wayne Heim. Highlighting moments of connection through greatest generation photos and moments of connection, it's great for collectors interested in wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-SQVsGPT/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4937,15 +5525,19 @@ export const galleryData = [
   },
   {
     "id": "i-hzjckz3",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Wartime Portraits",
+    "description": "Witness wartime portraits in Wayne Heim's heroic portraits. This image features wartime portraits with moments of connection and moments of connection, ideal for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-hzjckz3/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "heroic portraits",
+      "moments of connection",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through moments of connection and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4960,15 +5552,19 @@ export const galleryData = [
   },
   {
     "id": "i-9tmPQjd",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Fine Art Moments Of Connection",
+    "description": "Experience moments of connection through this evocative moments of connection from Wayne Heim's portfolio. This piece highlights wartime portraits with wartime portraits, while conveying wartime portraits, ideal for those who appreciate moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-9tmPQjd/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "wartime portraits",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies greatest generation photos and wartime portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of wwii photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4983,15 +5579,20 @@ export const galleryData = [
   },
   {
     "id": "i-TsQBmws",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography - Wwii Photography",
+    "description": "Wayne Heim's wwii photography captures the spirit of wwii photography in this heroic portraits image. Featuring wwii photography, greatest generation photos, and wwii photography, it's ideal for wwii photography enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-TsQBmws/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wwii photography",
+      "heroic portraits",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies moments of connection and wartime portraits, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of moments of connection. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5006,15 +5607,19 @@ export const galleryData = [
   },
   {
     "id": "i-nL2TWFX",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography Moment",
+    "description": "Witness wwii photography in Wayne Heim's wartime portraits. This image features greatest generation photos with moments of connection and moments of connection, ideal for admirers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-nL2TWFX/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wwii photography",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights wwii photography through greatest generation photos and greatest generation photos. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5029,15 +5634,19 @@ export const galleryData = [
   },
   {
     "id": "i-Q7N8Pfj",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Exploring Wartime Portraits",
+    "description": "Witness wartime portraits in Wayne Heim's wartime portraits. This image features heroic portraits with wwii photography and wartime portraits, ideal for admirers of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-Q7N8Pfj/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "heroic portraits",
+      "wwii photography",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing moments of connection and wwii photography. A testament to moments of connection in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5052,15 +5661,19 @@ export const galleryData = [
   },
   {
     "id": "i-8qH4gfS",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos In Fine Art",
+    "description": "This greatest generation photos artwork by Wayne Heim showcases wwii photography in a heroic portraits style. Reflecting heroic portraits, greatest generation photos, and greatest generation photos, it's suited for admirers of wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-8qH4gfS/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "greatest generation photos",
+      "wwii photography",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits and greatest generation photos. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5075,15 +5688,20 @@ export const galleryData = [
   },
   {
     "id": "i-GmBz5Ng",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits Study",
+    "description": "Witness heroic portraits in Wayne Heim's wwii photography. This image features wwii photography with heroic portraits and wwii photography, ideal for admirers of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-GmBz5Ng/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "heroic portraits",
+      "wwii photography",
+      "wartime portraits",
+      "moments of connection",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing moments of connection and wwii photography. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5098,15 +5716,18 @@ export const galleryData = [
   },
   {
     "id": "i-rLdK3vp",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits Study",
+    "description": "Explore wartime portraits with Wayne Heim's wartime portraits. This wwii photography piece conveys moments of connection, wartime portraits, and wartime portraits, perfect for fans of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-rLdK3vp/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "wwii photography",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing wartime portraits and wwii photography. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5121,15 +5742,19 @@ export const galleryData = [
   },
   {
     "id": "i-6TwpvFD",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos - Moments Of Connection",
+    "description": "Wayne Heim presents greatest generation photos in this moments of connection work. Embodying greatest generation photos, heroic portraits, and wwii photography, it's recommended for lovers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-6TwpvFD/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies heroic portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5144,15 +5769,19 @@ export const galleryData = [
   },
   {
     "id": "i-kNDX8tK",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Moments Of Connection Portrait",
+    "description": "Discover the moments of connection in this powerful wwii photography by Wayne Heim. A compelling work that embodies wwii photography, moments of connection, and moments of connection. Perfect for art lovers seeking moments of connection to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-kNDX8tK/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "wwii photography",
+      "greatest generation photos",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing greatest generation photos and heroic portraits. A testament to heroic portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5167,15 +5796,20 @@ export const galleryData = [
   },
   {
     "id": "i-XkRd7jb",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Capturing Moments Of Connection",
+    "description": "This moments of connection artwork by Wayne Heim showcases greatest generation photos in a heroic portraits style. Reflecting greatest generation photos, wartime portraits, and moments of connection, it's suited for admirers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-XkRd7jb/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "moments of connection",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights heroic portraits through wwii photography and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5190,15 +5824,20 @@ export const galleryData = [
   },
   {
     "id": "i-DGWhPFx",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wwii Photography Moment",
+    "description": "Experience wwii photography through this evocative wwii photography from Wayne Heim's portfolio. This piece highlights moments of connection with heroic portraits, while conveying wartime portraits, ideal for those who appreciate wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-DGWhPFx/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wwii photography",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits",
+      "greatest generation photos"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights greatest generation photos through moments of connection and greatest generation photos. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5213,15 +5852,20 @@ export const galleryData = [
   },
   {
     "id": "i-pWNqV2x",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Heroic Portraits Portrait",
+    "description": "Immerse yourself in heroic portraits with this stunning wwii photography by Wayne Heim. Capturing greatest generation photos, greatest generation photos, and greatest generation photos, it's a must-have for collectors of heroic portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-pWNqV2x/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "heroic portraits",
+      "wwii photography",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wwii photography through moments of connection and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5236,15 +5880,19 @@ export const galleryData = [
   },
   {
     "id": "i-dgqm4xT",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos Moment",
+    "description": "Witness greatest generation photos in Wayne Heim's moments of connection. This image features wwii photography with wwii photography and moments of connection, ideal for admirers of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-dgqm4xT/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "greatest generation photos",
+      "moments of connection",
+      "wwii photography",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "This image embodies greatest generation photos and heroic portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5259,15 +5907,19 @@ export const galleryData = [
   },
   {
     "id": "i-nfM7qLs",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Wartime Portraits And Moments Of Connection",
+    "description": "Experience wartime portraits through this evocative moments of connection from Wayne Heim's portfolio. This piece highlights moments of connection with moments of connection, while conveying wartime portraits, ideal for those who appreciate wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-nfM7qLs/A",
     "keywords": [
       "HF23686",
-      "DDay 2024"
+      "DDay 2024",
+      "wartime portraits",
+      "moments of connection",
+      "greatest generation photos",
+      "wwii photography"
     ],
-    "story": "© Wayne Heim",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing greatest generation photos and wwii photography. A testament to wartime portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5537,8 +6189,8 @@ export const galleryData = [
   },
   {
     "id": "i-qm9X87m",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "Greatest Generation Photos In Fine Art",
+    "description": "Delve into greatest generation photos via this moments of connection by Wayne Heim. Highlighting heroic portraits through wartime portraits and wartime portraits, it's great for collectors interested in greatest generation photos. © Wayne Heim",
     "alt": "Over and Out      Black & White Photography by Wayne HEIM",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-qm9X87m/A",
     "keywords": [
@@ -5551,9 +6203,13 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights wartime portraits through wwii photography and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5568,8 +6224,8 @@ export const galleryData = [
   },
   {
     "id": "i-2Q7wvmR",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Exploring Greatest Generation Photos",
+    "description": "Uncover greatest generation photos through this moments of connection from Wayne Heim. Showcasing moments of connection, wartime portraits, and heroic portraits, it's perfect for enthusiasts of greatest generation photos. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-2Q7wvmR/A",
     "keywords": [
@@ -5582,9 +6238,13 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection",
+      "wartime portraits",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into wwii photography, this work by Wayne Heim highlights greatest generation photos through moments of connection and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5599,8 +6259,8 @@ export const galleryData = [
   },
   {
     "id": "i-7693ncN",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "The Essence Of Greatest Generation Photos",
+    "description": "Explore greatest generation photos with Wayne Heim's moments of connection. This greatest generation photos piece conveys moments of connection, moments of connection, and greatest generation photos, perfect for fans of moments of connection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-7693ncN/A",
     "keywords": [
@@ -5613,9 +6273,11 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to greatest generation photos in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5630,8 +6292,8 @@ export const galleryData = [
   },
   {
     "id": "i-nSHQRnQ",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Fine Art Wartime Portraits",
+    "description": "Immerse yourself in wartime portraits with this stunning greatest generation photos by Wayne Heim. Capturing heroic portraits, wartime portraits, and moments of connection, it's a must-have for collectors of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-nSHQRnQ/A",
     "keywords": [
@@ -5644,9 +6306,13 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "greatest generation photos",
+      "heroic portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "This image embodies heroic portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of heroic portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5661,8 +6327,8 @@ export const galleryData = [
   },
   {
     "id": "i-bnJtpBX",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2018",
+    "title": "Heroic Portraits Portrait",
+    "description": "Discover the heroic portraits in this powerful heroic portraits by Wayne Heim. A compelling work that embodies greatest generation photos, heroic portraits, and heroic portraits. Perfect for art lovers seeking heroic portraits to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-bnJtpBX/A",
     "keywords": [
@@ -5675,9 +6341,13 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "heroic portraits",
+      "greatest generation photos",
+      "wartime portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2018",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits through moments of connection and heroic portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5692,8 +6362,8 @@ export const galleryData = [
   },
   {
     "id": "i-bgGp5rk",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Fine Art Greatest Generation Photos",
+    "description": "Wayne Heim's greatest generation photos captures the spirit of moments of connection in this heroic portraits image. Featuring greatest generation photos, greatest generation photos, and greatest generation photos, it's ideal for moments of connection enthusiasts. © Wayne Heim",
     "alt": "© Wayne Heim 2018",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-bgGp5rk/A",
     "keywords": [
@@ -5706,9 +6376,13 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights moments of connection through moments of connection and wartime portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5723,8 +6397,8 @@ export const galleryData = [
   },
   {
     "id": "i-mWjnFH2",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2018",
+    "title": "Wwii Photography In Fine Art",
+    "description": "Delve into wwii photography via this wwii photography by Wayne Heim. Highlighting wwii photography through wartime portraits and moments of connection, it's great for collectors interested in wwii photography. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-mWjnFH2/A",
     "keywords": [
@@ -5737,9 +6411,12 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "moments of connection",
+      "heroic portraits"
     ],
-    "story": "© Wayne Heim 2018",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights heroic portraits through moments of connection and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5754,8 +6431,8 @@ export const galleryData = [
   },
   {
     "id": "i-htL8XNB",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2021",
+    "title": "Greatest Generation Photos In Fine Art",
+    "description": "Discover the greatest generation photos in this powerful moments of connection by Wayne Heim. A compelling work that embodies moments of connection, greatest generation photos, and greatest generation photos. Perfect for art lovers seeking greatest generation photos to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2018",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-htL8XNB/A",
     "keywords": [
@@ -5768,9 +6445,13 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "moments of connection",
+      "heroic portraits",
+      "wartime portraits"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through wartime portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5785,8 +6466,8 @@ export const galleryData = [
   },
   {
     "id": "i-zqzcBZm",
-    "title": "Untitled",
-    "description": "© Wayne Heim",
+    "title": "The Essence Of Wwii Photography",
+    "description": "Discover the wwii photography in this powerful greatest generation photos by Wayne Heim. A compelling work that embodies heroic portraits, heroic portraits, and wartime portraits. Perfect for art lovers seeking wwii photography to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-zqzcBZm/A",
     "keywords": [
@@ -5799,9 +6480,13 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "greatest generation photos",
+      "heroic portraits",
+      "wartime portraits",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim",
+    "story": "Delving into moments of connection, this work by Wayne Heim highlights wartime portraits through wartime portraits and wwii photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5816,8 +6501,8 @@ export const galleryData = [
   },
   {
     "id": "i-M9cq3qz",
-    "title": "Untitled",
-    "description": "© Wayne Heim 2018",
+    "title": "Wartime Portraits Study",
+    "description": "Immerse yourself in wartime portraits with this stunning wartime portraits by Wayne Heim. Capturing greatest generation photos, moments of connection, and wartime portraits, it's a must-have for collectors of wartime portraits. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-M9cq3qz/A",
     "keywords": [
@@ -5830,9 +6515,12 @@ export const galleryData = [
       "beach battle",
       "d day conneaut",
       "half track",
-      "k4 studios"
+      "k4 studios",
+      "wartime portraits",
+      "greatest generation photos",
+      "moments of connection"
     ],
-    "story": "© Wayne Heim 2018",
+    "story": "Delving into wartime portraits, this work by Wayne Heim highlights greatest generation photos through greatest generation photos and moments of connection. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

@@ -23,27 +23,16 @@ export const galleryData = [
   },
   {
     "id": "i-QfHn5BW",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Painterly European Landscapes In Newfoundland",
+    "description": "Delve into painterly european landscapes via this fantastic places by Wayne Heim from Newfoundland. Highlighting international landscape photography through international landscape photography and fantastic places, it's great for collectors interested in painterly european landscapes. © Wayne Heim",
     "alt": "Walt to the Other Side     Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-QfHn5BW/A",
     "keywords": [
-      "Canada",
-      "Newfoundland",
-      "lakes",
-      "water",
-      "icebergs",
-      "seashore",
-      "churches",
-      "boats",
-      "lighthouses",
-      "ocean",
-      "rocks",
-      "fine art",
-      "photography",
-      "landscape"
+      "painterly european landscapes",
+      "fantastic places",
+      "international landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies international landscape photography and international landscape photography, captured by Wayne Heim in his signature style in Newfoundland. It reflects painterly european landscapes with a touch of international landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1070,5 +1059,5 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-JW39KK8/0/M8c5t9BrtxXqfM566FhbQBzL7NpnHN25tv52RDncr/M/_WHZ3140_tonemapped-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-JW39KK8/0/M9wnmJkTrCvVkDj5LjTBzvFLSgpVxDtnRMNtS2hNg/S/_WHZ3140_tonemapped-S.jpg",
     "srcOriginal": ""
- }
+  }
 ];

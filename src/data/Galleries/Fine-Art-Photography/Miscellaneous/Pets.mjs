@@ -3,7 +3,7 @@ export const galleryData = [
     "id": "i-k4studios",
     "title": "Welcome K4 Studios",
     "description": "Explore the grit, grace, and story behind each image.",
-    "alt": "Welcome to the K4 Studios Gallery",
+    "alt": "Welcome K4 Studios",
     "src": "/images/gallery-intro-placeholder.jpg",
     "buyLink": "",
     "keywords": [],
@@ -23,9 +23,9 @@ export const galleryData = [
   },
   {
     "id": "i-s3nMQsB",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
-    "alt": "Little One  - Photography by Wayne Heim",
+    "title": "Capturing Miscellaneous Painterly Photography",
+    "description": "Immerse yourself in miscellaneous painterly photography with this stunning miscellaneous painterly photography by Wayne Heim. Capturing experimental fine art, creative painterly art, and experimental fine art, it's a must-have for collectors of miscellaneous painterly photography. © Wayne Heim",
+    "alt": "Capturing Miscellaneous Painterly Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-s3nMQsB/A",
     "keywords": [
       "k4 studios",
@@ -34,9 +34,12 @@ export const galleryData = [
       "pet",
       "animal photography",
       "animals",
-      "portrait"
+      "portrait",
+      "miscellaneous painterly photography",
+      "experimental fine art",
+      "creative painterly art"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of experimental fine art comes alive in this piece, showcasing experimental fine art and miscellaneous painterly photography. A testament to experimental fine art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -53,7 +56,7 @@ export const galleryData = [
     "id": "i-hBdhx6Q",
     "title": "Dog Park - Photography by Wayne Heim",
     "description": "Fine art architectural photography of Normandy, Paris and Strasbourg, France.",
-    "alt": "Little One  - Photography by Wayne Heim",
+    "alt": "Dog Park - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-hBdhx6Q/A",
     "keywords": [
       "k4 studios",
@@ -81,7 +84,7 @@ export const galleryData = [
     "id": "i-pZxP9tV",
     "title": "Hi There -- Black and White Photography by Wayne Heim",
     "description": "Hi there - young Westie pup looks inquisitively  at the camera. ©Wayne Heim",
-    "alt": "Dog Park - Photography by Wayne Heim",
+    "alt": "Hi There -- Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-pZxP9tV/A",
     "keywords": [
       "k4 studios",
@@ -109,7 +112,7 @@ export const galleryData = [
     "id": "i-7tpCc48",
     "title": "Greyhound    Photography by Wayne Heim",
     "description": "Sydney --rescue Greyhound poses. ©Wayne Heim",
-    "alt": "Hi There -- Black and White Photography by Wayne Heim",
+    "alt": "Greyhound    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7tpCc48/A",
     "keywords": [
       "k4 studios",
@@ -137,7 +140,7 @@ export const galleryData = [
     "id": "i-SCKPhWW",
     "title": "It Wasn't Me - Photography by Wayne Heim",
     "description": "It Wasn't Me - little dog lays looking at you as if he did something wrong. ©Wayne Heim",
-    "alt": "Greyhound    Photography by Wayne Heim",
+    "alt": "It Wasn't Me - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-SCKPhWW/A",
     "keywords": [
       "k4 studios",
@@ -165,7 +168,7 @@ export const galleryData = [
     "id": "i-7PtnHmz",
     "title": "Water Play - Black & White Photography by Wayne Heim",
     "description": "Water Play -  cat stares at stream of  running water getting ready to play with it. ©Wayne Heim",
-    "alt": "It Wasn't Me - Photography by Wayne Heim",
+    "alt": "Water Play - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-7PtnHmz/A",
     "keywords": [
       "k4 studios",
@@ -193,7 +196,7 @@ export const galleryData = [
     "id": "i-5mTvRhD",
     "title": "Can I Go - Photography by Wayne Heim",
     "description": "Can I Go -- cat looks out of a gym bag asking to go too. ©Wayne Heim",
-    "alt": "Water Play - Black & White Photography by Wayne Heim",
+    "alt": "Can I Go - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5mTvRhD/A",
     "keywords": [
       "k4 studios",
@@ -221,7 +224,7 @@ export const galleryData = [
     "id": "i-BZ4RgGh",
     "title": "Chewie - Photography by Wayne Heim",
     "description": "Chewie - portrait of a Chorkie who looks like Star Wars figure Chewbacca. ©Wayne Heim",
-    "alt": "Can I Go - Photography by Wayne Heim",
+    "alt": "Chewie - Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-BZ4RgGh/A",
     "keywords": [
       "k4 studios",
@@ -249,7 +252,7 @@ export const galleryData = [
     "id": "i-NHRCp22",
     "title": "Nice Kitty - Black & White Photography by Wayne Heim",
     "description": "Nice Kitty -- little girl holds her kitty while watching the camera.©Wayne Heim",
-    "alt": "Chewie - Photography by Wayne Heim",
+    "alt": "Nice Kitty - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-NHRCp22/A",
     "keywords": [
       "k4 studios",
@@ -277,7 +280,7 @@ export const galleryData = [
     "id": "i-CCNhBwc",
     "title": "Peek a Boo - Black & White Photography by Wayne Heim",
     "description": "Peek a Boo - pet rat peeks over carpet. ©Wayne Heim",
-    "alt": "Nice Kitty - Black & White Photography by Wayne Heim",
+    "alt": "Peek a Boo - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-CCNhBwc/A",
     "keywords": [
       "k4 studios",
@@ -305,7 +308,7 @@ export const galleryData = [
     "id": "i-rhLNhpZ",
     "title": "Can I get Down - Photography by Wayne AHeim",
     "description": "Can I Get Down - a pet rat tries to get down from his bed. ©Wayne Heim",
-    "alt": "Peek a Boo - Black & White Photography by Wayne Heim",
+    "alt": "Can I get Down - Photography by Wayne AHeim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-rhLNhpZ/A",
     "keywords": [
       "k4 studios",
@@ -333,7 +336,7 @@ export const galleryData = [
     "id": "i-5JVMpJZ",
     "title": "Twins -- Black & White Photography by Wayne Heim",
     "description": "Twins  - a boy holds his two gerbils. ©Wayne Heim",
-    "alt": "Can I get Down - Photography by Wayne AHeim",
+    "alt": "Twins -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-5JVMpJZ/A",
     "keywords": [
       "k4 studios",
@@ -361,7 +364,7 @@ export const galleryData = [
     "id": "i-V92pfNN",
     "title": "Feels Good - Black & White Photography by Wayne Heim",
     "description": "Feels Good --cat scratched head on carpet covered stair. ©Wayne Heim",
-    "alt": "Twins -- Black & White Photography by Wayne Heim",
+    "alt": "Feels Good - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-V92pfNN/A",
     "keywords": [
       "k4 studios",
@@ -389,7 +392,7 @@ export const galleryData = [
     "id": "i-dTH9cj4",
     "title": "Trust -- Black and White Photography by Wayne Heim",
     "description": "Trust  - cat's paw in human hand shows his trust of his owner. ©Wayne Heim",
-    "alt": "Feels Good - Black & White Photography by Wayne Heim",
+    "alt": "Trust -- Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-dTH9cj4/A",
     "keywords": [
       "k4 studios",
@@ -417,7 +420,7 @@ export const galleryData = [
     "id": "i-tVmdphq",
     "title": "Cat in A Basket - Black & White Photography by Wayne Heim",
     "description": "Cat in a Basket --pretty cat sits in a bushel basket looking inquisitively. ©Wayne Heim",
-    "alt": "Trust -- Black and White Photography by Wayne Heim",
+    "alt": "Cat in A Basket - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-tVmdphq/A",
     "keywords": [
       "k4 studios",
@@ -445,7 +448,7 @@ export const galleryData = [
     "id": "i-bkZm3zs",
     "title": "He is Mine - Black and White Photography by Wayne Heim",
     "description": "He is Mine - black and white photo of boy and his black Labrador Retriever. ©Wayne Heim",
-    "alt": "Cat in A Basket - Black & White Photography by Wayne Heim",
+    "alt": "He is Mine - Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-bkZm3zs/A",
     "keywords": [
       "k4 studios",
@@ -473,7 +476,7 @@ export const galleryData = [
     "id": "i-TJLXpHJ",
     "title": "Best Friends. Black & White Photograph by Wayne Heim",
     "description": "Best Friends -  boy and his dog are seen in moment of togetherness.©Wayne Heim",
-    "alt": "He is Mine - Black and White Photography by Wayne Heim",
+    "alt": "Best Friends. Black & White Photograph by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-TJLXpHJ/A",
     "keywords": [
       "k4 studios",
@@ -501,7 +504,7 @@ export const galleryData = [
     "id": "i-vPmTJp8",
     "title": "It's Mine - Black and White Photogarphy by Wayne Heim",
     "description": "It's Mine -- Beagle dog holding a toy and his look is one of defying you to take it away. ©Wayne Heim",
-    "alt": "Best Friends. Black & White Photograph by Wayne Heim",
+    "alt": "It's Mine - Black and White Photogarphy by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-vPmTJp8/A",
     "keywords": [
       "k4 studios",
@@ -529,7 +532,7 @@ export const galleryData = [
     "id": "i-fMTtsT7",
     "title": "All Mine -- Black & White Photography by Wayne Heim",
     "description": "All Mine  - young boy embraces his dog. ©Wayne Heim",
-    "alt": "It's Mine - Black and White Photogarphy by Wayne Heim",
+    "alt": "All Mine -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-fMTtsT7/A",
     "keywords": [
       "k4 studios",
@@ -557,7 +560,7 @@ export const galleryData = [
     "id": "i-9x2P85T",
     "title": "Cat in a Bag _ Black & White Photography by Wayne Heim",
     "description": "Cat in a Bag - young cat peeking out on a duffel bag. ©Wayne Heim",
-    "alt": "All Mine -- Black & White Photography by Wayne Heim",
+    "alt": "Cat in a Bag _ Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/A",
     "keywords": [
       "k4 studios",
@@ -585,7 +588,7 @@ export const galleryData = [
     "id": "i-mQZ9rNb",
     "title": "Cat's Eyes -  Black & White Photography by Wayne Heim",
     "description": "Cat's Eyes -- close up study of a cat's eyes. ©Wayne Heim",
-    "alt": "Cat in a Bag _ Black & White Photography by Wayne Heim",
+    "alt": "Cat's Eyes -  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-mQZ9rNb/A",
     "keywords": [
       "k4 studios",

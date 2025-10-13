@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-8tvnHvW",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "The Essence Of Blue Ridge Painterly Landscapes",
+    "description": "Wayne Heim presents blue ridge painterly landscapes in this blue ridge painterly landscapes work. Embodying blue ridge painterly landscapes, blue ridge painterly landscapes, and blue ridge painterly landscapes, it's recommended for lovers of blue ridge painterly landscapes. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-8tvnHvW/A",
     "keywords": [
@@ -35,9 +35,11 @@ export const galleryData = [
       "forest",
       "trees",
       "secluded",
-      "landscape"
+      "landscape",
+      "blue ridge painterly landscapes",
+      "southern landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies southern landscape photography and blue ridge painterly landscapes, captured by Wayne Heim in his signature style. It reflects southern landscape photography with a touch of blue ridge painterly landscapes. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -52,8 +54,8 @@ export const galleryData = [
   },
   {
     "id": "i-R6Zh32H",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Blue Ridge Painterly Landscapes Study",
+    "description": "This blue ridge painterly landscapes artwork by Wayne Heim showcases southern landscape photography in a blue ridge painterly landscapes style. Reflecting blue ridge painterly landscapes, blue ridge painterly landscapes, and blue ridge painterly landscapes, it's suited for admirers of southern landscape photography. © Wayne Heim",
     "alt": "Green Lagoon  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-R6Zh32H/A",
     "keywords": [
@@ -64,9 +66,11 @@ export const galleryData = [
       "forest",
       "trees",
       "secluded",
-      "landscape"
+      "landscape",
+      "blue ridge painterly landscapes",
+      "southern landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies southern landscape photography and southern landscape photography, captured by Wayne Heim in his signature style. It reflects blue ridge painterly landscapes with a touch of southern landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -81,8 +85,8 @@ export const galleryData = [
   },
   {
     "id": "i-rH4MSZg",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Blue Ridge Painterly Landscapes And Blue Ridge Painterly Landscapes",
+    "description": "Uncover blue ridge painterly landscapes through this blue ridge painterly landscapes from Wayne Heim. Showcasing southern landscape photography, blue ridge painterly landscapes, and blue ridge painterly landscapes, it's perfect for enthusiasts of blue ridge painterly landscapes. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-rH4MSZg/A",
     "keywords": [
@@ -93,9 +97,11 @@ export const galleryData = [
       "forest",
       "trees",
       "secluded",
-      "landscape"
+      "landscape",
+      "blue ridge painterly landscapes",
+      "southern landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into southern landscape photography, this work by Wayne Heim highlights southern landscape photography through blue ridge painterly landscapes and southern landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -110,8 +116,8 @@ export const galleryData = [
   },
   {
     "id": "i-ZBbxVgZ",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Blue Ridge Painterly Landscapes Study",
+    "description": "Delve into blue ridge painterly landscapes via this southern landscape photography by Wayne Heim. Highlighting southern landscape photography through southern landscape photography and blue ridge painterly landscapes, it's great for collectors interested in blue ridge painterly landscapes. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/i-ZBbxVgZ/A",
     "keywords": [
@@ -122,9 +128,11 @@ export const galleryData = [
       "forest",
       "trees",
       "secluded",
-      "landscape"
+      "landscape",
+      "blue ridge painterly landscapes",
+      "southern landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of southern landscape photography comes alive in this piece, showcasing blue ridge painterly landscapes and southern landscape photography. A testament to blue ridge painterly landscapes in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

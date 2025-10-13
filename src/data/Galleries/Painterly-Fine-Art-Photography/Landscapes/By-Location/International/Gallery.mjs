@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-wqJHvpV",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "International – Across Borders Moment",
+    "description": "Explore International – Across Borders with Wayne Heim's painterly european landscapes. This international landscape photography piece conveys International – Across Borders, international landscape photography, and International – Across Borders, perfect for fans of painterly european landscapes. © Wayne Heim",
     "alt": "Kirkjufellsfoss Mountain- Iceland",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-wqJHvpV/A",
     "keywords": [
@@ -33,9 +33,13 @@ export const galleryData = [
       "rocks",
       "stormy",
       "waterfall",
-      "waterfalls"
+      "waterfalls",
+      "International – Across Borders",
+      "painterly european landscapes",
+      "international landscape photography",
+      "fantastic places"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies fantastic places and international landscape photography, captured by Wayne Heim in his signature style. It reflects international landscape photography with a touch of painterly european landscapes. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

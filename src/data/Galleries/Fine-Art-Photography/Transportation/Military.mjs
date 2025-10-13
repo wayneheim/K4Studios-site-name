@@ -52,8 +52,8 @@ export const galleryData = [
   },
   {
     "id": "i-X88ZNb4",
-    "title": "Untitled",
-    "description": "© Wayne Heim '21",
+    "title": "Military Wall Art For Collectors - Military Wall Art For Collectors",
+    "description": "Wayne Heim presents military wall art for collectors in this military wall art for collectors work. Embodying military wall art for collectors, military vehicle art prints for enthusiasts, and military vehicle art prints for enthusiasts, it's recommended for lovers of military wall art for collectors. © Wayne Heim",
     "alt": "Coming Up the Sand.   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/A",
     "keywords": [
@@ -64,9 +64,12 @@ export const galleryData = [
       "tank",
       "beach battle",
       "beach",
-      "k4 studios"
+      "k4 studios",
+      "military wall art for collectors",
+      "military vehicle art prints for enthusiasts",
+      "painterly military photos for history lovers"
     ],
-    "story": "© Wayne Heim '21",
+    "story": "Wayne Heim's exploration of military wall art for collectors comes alive in this piece, showcasing painterly military photos for history lovers and painterly military photos for history lovers. A testament to military vehicle art prints for enthusiasts in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -255,8 +258,8 @@ export const galleryData = [
   },
   {
     "id": "i-DS9wCpW",
-    "title": "Untitled",
-    "description": "© Wayne Heim '21",
+    "title": "Military Vehicle Art Prints For Enthusiasts Portrait",
+    "description": "Immerse yourself in military vehicle art prints for enthusiasts with this stunning military vehicle photography by Wayne Heim. Capturing military vehicle art prints for enthusiasts, painterly military photos for history lovers, and military vehicle art prints for enthusiasts, it's a must-have for collectors of military vehicle art prints for enthusiasts. © Wayne Heim",
     "alt": "Small but Mighty  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/A",
     "keywords": [
@@ -267,9 +270,13 @@ export const galleryData = [
       "tank",
       "beach battle",
       "beach",
-      "k4 studios"
+      "k4 studios",
+      "military vehicle art prints for enthusiasts",
+      "military vehicle photography",
+      "painterly military photos for history lovers",
+      "military art"
     ],
-    "story": "© Wayne Heim '21",
+    "story": "Delving into military vehicle art prints for enthusiasts, this work by Wayne Heim highlights military art through military art and military vehicle art prints for enthusiasts. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -284,8 +291,8 @@ export const galleryData = [
   },
   {
     "id": "i-wTvbzbV",
-    "title": "Untitled",
-    "description": "© Wayne Heim '21",
+    "title": "Timeless Military Prints In Fine Art",
+    "description": "Discover the timeless military prints in this powerful military art prints by Wayne Heim. A compelling work that embodies military art prints, military vehicle photography, and military vehicle photography. Perfect for art lovers seeking timeless military prints to enhance their collection. © Wayne Heim",
     "alt": "© Wayne Heim '21",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/A",
     "keywords": [
@@ -296,9 +303,14 @@ export const galleryData = [
       "tank",
       "beach battle",
       "beach",
-      "k4 studios"
+      "k4 studios",
+      "timeless military prints",
+      "military art prints",
+      "military vehicle photography",
+      "military wall art for collectors",
+      "military vehicle art prints for enthusiasts"
     ],
-    "story": "© Wayne Heim '21",
+    "story": "This image embodies military wall art for collectors and timeless military prints, captured by Wayne Heim in his signature style. It reflects military wall art for collectors with a touch of military vehicle art prints for enthusiasts. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

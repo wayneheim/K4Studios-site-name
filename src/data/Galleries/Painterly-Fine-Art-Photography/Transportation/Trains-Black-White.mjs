@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-FrDFN7V",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Fine Art Steam Engine Photography",
+    "description": "This steam engine photography artwork by Wayne Heim showcases vintage train photography in a steam engine art style. Reflecting vintage train photography for man cave, steam engine wall art for collectors, and steam engine photography, it's suited for admirers of vintage train photography. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-FrDFN7V/A",
     "keywords": [
@@ -38,9 +38,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine photography",
+      "vintage train photography",
+      "steam engine art",
+      "vintage train photography for man cave",
+      "steam engine wall art for collectors"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies vintage train photography for man cave and steam engine wall art for collectors, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -55,8 +60,8 @@ export const galleryData = [
   },
   {
     "id": "i-n6PjStj",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Wall Art For Collectors In Fine Art",
+    "description": "Discover the steam engine wall art for collectors in this powerful steam engine wall art for collectors by Wayne Heim. A compelling work that embodies steam engine wall art for collectors, steam engine photography, and steam engine wall art for collectors. Perfect for art lovers seeking steam engine wall art for collectors to enhance their collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n6PjStj/A",
     "keywords": [
@@ -70,9 +75,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "steam engine photography",
+      "vintage train photography for man cave",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Wayne Heim's exploration of vintage train photography for man cave comes alive in this piece, showcasing vintage train photography for man cave and steam engine art. A testament to steam engine photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -119,8 +128,8 @@ export const galleryData = [
   },
   {
     "id": "i-n6ktVfH",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "The Essence Of Vintage Train Photography For Man Cave",
+    "description": "Wayne Heim presents vintage train photography for man cave in this vintage train photography for man cave work. Embodying steam engine wall art for collectors, steam engine wall art for collectors, and vintage train photography for man cave, it's recommended for lovers of vintage train photography for man cave. © Wayne Heim",
     "alt": "Creature of the darkness.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n6ktVfH/A",
     "keywords": [
@@ -134,9 +143,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography for man cave",
+      "steam engine wall art for collectors",
+      "steam engine art",
+      "vintage train photography",
+      "steam engine photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies steam engine art and vintage train photography, captured by Wayne Heim in his signature style. It reflects steam engine photography with a touch of steam engine wall art for collectors. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -151,8 +165,8 @@ export const galleryData = [
   },
   {
     "id": "i-jwzQrKx",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Art In Fine Art",
+    "description": "Experience steam engine art through this evocative steam engine wall art for collectors from Wayne Heim's portfolio. This piece highlights steam engine photography with steam engine art, while conveying steam engine wall art for collectors, ideal for those who appreciate steam engine art. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jwzQrKx/A",
     "keywords": [
@@ -166,9 +180,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine art",
+      "steam engine wall art for collectors",
+      "steam engine photography",
+      "vintage train photography for man cave",
+      "vintage train photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies vintage train photography for man cave and steam engine wall art for collectors, captured by Wayne Heim in his signature style. It reflects steam engine art with a touch of vintage train photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -183,8 +202,8 @@ export const galleryData = [
   },
   {
     "id": "i-ML26tVm",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Art Portrait",
+    "description": "Immerse yourself in steam engine art with this stunning vintage train photography for man cave by Wayne Heim. Capturing steam engine art, steam engine photography, and vintage train photography, it's a must-have for collectors of steam engine art. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-ML26tVm/A",
     "keywords": [
@@ -198,9 +217,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine art",
+      "vintage train photography for man cave",
+      "steam engine photography",
+      "vintage train photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into steam engine photography, this work by Wayne Heim highlights vintage train photography for man cave through steam engine art and vintage train photography for man cave. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -215,8 +238,8 @@ export const galleryData = [
   },
   {
     "id": "i-JNBbHjN",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Vintage Train Photography Moment",
+    "description": "Immerse yourself in vintage train photography with this stunning steam engine photography by Wayne Heim. Capturing steam engine art, steam engine wall art for collectors, and steam engine wall art for collectors, it's a must-have for collectors of vintage train photography. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-JNBbHjN/A",
     "keywords": [
@@ -230,9 +253,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography",
+      "steam engine photography",
+      "steam engine art",
+      "steam engine wall art for collectors"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into steam engine art, this work by Wayne Heim highlights steam engine wall art for collectors through steam engine wall art for collectors and steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -247,8 +274,8 @@ export const galleryData = [
   },
   {
     "id": "i-NXqvv7J",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Exploring Vintage Train Photography",
+    "description": "Discover the vintage train photography in this powerful vintage train photography for man cave by Wayne Heim. A compelling work that embodies vintage train photography for man cave, steam engine photography, and steam engine wall art for collectors. Perfect for art lovers seeking vintage train photography to enhance their collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-NXqvv7J/A",
     "keywords": [
@@ -262,9 +289,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography",
+      "vintage train photography for man cave",
+      "steam engine photography",
+      "steam engine wall art for collectors",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies steam engine art and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects vintage train photography with a touch of vintage train photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -279,8 +311,8 @@ export const galleryData = [
   },
   {
     "id": "i-Lj6wfwt",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Exploring Steam Engine Wall Art For Collectors",
+    "description": "Explore steam engine wall art for collectors with Wayne Heim's steam engine wall art for collectors. This steam engine wall art for collectors piece conveys steam engine wall art for collectors, vintage train photography, and steam engine wall art for collectors, perfect for fans of steam engine wall art for collectors. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-Lj6wfwt/A",
     "keywords": [
@@ -294,9 +326,12 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "vintage train photography",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies steam engine wall art for collectors and steam engine art, captured by Wayne Heim in his signature style. It reflects steam engine art with a touch of steam engine wall art for collectors. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -311,8 +346,8 @@ export const galleryData = [
   },
   {
     "id": "i-CGvLHjK",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Wall Art For Collectors Portrait",
+    "description": "Experience steam engine wall art for collectors through this evocative steam engine wall art for collectors from Wayne Heim's portfolio. This piece highlights steam engine art with steam engine art, while conveying steam engine photography, ideal for those who appreciate steam engine wall art for collectors. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CGvLHjK/A",
     "keywords": [
@@ -326,9 +361,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "steam engine art",
+      "steam engine photography",
+      "vintage train photography",
+      "vintage train photography for man cave"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies vintage train photography and steam engine art, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -343,8 +383,8 @@ export const galleryData = [
   },
   {
     "id": "i-wGGSxJM",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Vintage Train Photography In Fine Art",
+    "description": "Discover the vintage train photography in this powerful vintage train photography for man cave by Wayne Heim. A compelling work that embodies steam engine wall art for collectors, vintage train photography for man cave, and vintage train photography. Perfect for art lovers seeking vintage train photography to enhance their collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-wGGSxJM/A",
     "keywords": [
@@ -358,9 +398,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography",
+      "vintage train photography for man cave",
+      "steam engine wall art for collectors",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into vintage train photography, this work by Wayne Heim highlights vintage train photography for man cave through vintage train photography for man cave and steam engine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -375,8 +419,8 @@ export const galleryData = [
   },
   {
     "id": "i-cBxjW3V",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "The Essence Of Vintage Train Photography For Man Cave",
+    "description": "Wayne Heim's vintage train photography for man cave captures the spirit of vintage train photography in this steam engine photography image. Featuring steam engine wall art for collectors, steam engine art, and vintage train photography for man cave, it's ideal for vintage train photography enthusiasts. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-cBxjW3V/A",
     "keywords": [
@@ -390,9 +434,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography for man cave",
+      "vintage train photography",
+      "steam engine photography",
+      "steam engine wall art for collectors",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies vintage train photography for man cave and steam engine photography, captured by Wayne Heim in his signature style. It reflects steam engine wall art for collectors with a touch of steam engine wall art for collectors. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -407,8 +456,8 @@ export const galleryData = [
   },
   {
     "id": "i-VRcx6Vb",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Capturing Steam Engine Art",
+    "description": "Experience steam engine art through this evocative steam engine art from Wayne Heim's portfolio. This piece highlights steam engine art with steam engine photography, while conveying steam engine art, ideal for those who appreciate steam engine art. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-VRcx6Vb/A",
     "keywords": [
@@ -422,9 +471,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine art",
+      "steam engine photography",
+      "steam engine wall art for collectors",
+      "vintage train photography for man cave"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into steam engine wall art for collectors, this work by Wayne Heim highlights steam engine wall art for collectors through vintage train photography for man cave and steam engine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -439,8 +492,8 @@ export const galleryData = [
   },
   {
     "id": "i-n492NmH",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Exploring Steam Engine Wall Art For Collectors",
+    "description": "Delve into steam engine wall art for collectors via this steam engine art by Wayne Heim. Highlighting steam engine art through steam engine photography and steam engine photography, it's great for collectors interested in steam engine wall art for collectors. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-n492NmH/A",
     "keywords": [
@@ -454,9 +507,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "steam engine art",
+      "steam engine photography",
+      "vintage train photography for man cave"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Wayne Heim's exploration of vintage train photography for man cave comes alive in this piece, showcasing steam engine art and steam engine wall art for collectors. A testament to steam engine wall art for collectors in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -471,8 +528,8 @@ export const galleryData = [
   },
   {
     "id": "i-gtHP556",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Fine Art Steam Engine Photography",
+    "description": "Wayne Heim presents steam engine photography in this steam engine wall art for collectors work. Embodying steam engine art, steam engine photography, and steam engine wall art for collectors, it's recommended for lovers of steam engine photography. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-gtHP556/A",
     "keywords": [
@@ -486,9 +543,12 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine photography",
+      "steam engine wall art for collectors",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors and steam engine wall art for collectors. A testament to steam engine art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -503,8 +563,8 @@ export const galleryData = [
   },
   {
     "id": "i-jxpPrSQ",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Art - Vintage Train Photography",
+    "description": "Delve into steam engine art via this vintage train photography by Wayne Heim. Highlighting steam engine wall art for collectors through vintage train photography for man cave and vintage train photography for man cave, it's great for collectors interested in steam engine art. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jxpPrSQ/A",
     "keywords": [
@@ -518,9 +578,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine art",
+      "vintage train photography",
+      "steam engine wall art for collectors",
+      "vintage train photography for man cave",
+      "steam engine photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into vintage train photography for man cave, this work by Wayne Heim highlights steam engine photography through steam engine wall art for collectors and steam engine photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -535,8 +600,8 @@ export const galleryData = [
   },
   {
     "id": "i-hHdRfWJ",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Wall Art For Collectors Moment",
+    "description": "Experience steam engine wall art for collectors through this evocative steam engine wall art for collectors from Wayne Heim's portfolio. This piece highlights steam engine wall art for collectors with steam engine wall art for collectors, while conveying steam engine art, ideal for those who appreciate steam engine wall art for collectors. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-hHdRfWJ/A",
     "keywords": [
@@ -550,9 +615,12 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "steam engine art",
+      "vintage train photography for man cave"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into steam engine wall art for collectors, this work by Wayne Heim highlights vintage train photography for man cave through steam engine wall art for collectors and steam engine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -567,8 +635,8 @@ export const galleryData = [
   },
   {
     "id": "i-vQSzph5",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Fine Art Vintage Train Photography For Man Cave",
+    "description": "Wayne Heim's vintage train photography for man cave captures the spirit of steam engine photography in this steam engine wall art for collectors image. Featuring vintage train photography for man cave, steam engine photography, and vintage train photography for man cave, it's ideal for steam engine photography enthusiasts. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-vQSzph5/A",
     "keywords": [
@@ -582,9 +650,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography for man cave",
+      "steam engine photography",
+      "steam engine wall art for collectors",
+      "vintage train photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies steam engine wall art for collectors and vintage train photography, captured by Wayne Heim in his signature style. It reflects vintage train photography with a touch of steam engine photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -599,8 +671,8 @@ export const galleryData = [
   },
   {
     "id": "i-4NQdjBP",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Fine Art Vintage Train Photography For Man Cave",
+    "description": "Uncover vintage train photography for man cave through this steam engine art from Wayne Heim. Showcasing steam engine art, steam engine wall art for collectors, and steam engine wall art for collectors, it's perfect for enthusiasts of vintage train photography for man cave. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-4NQdjBP/A",
     "keywords": [
@@ -614,9 +686,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography for man cave",
+      "steam engine art",
+      "steam engine wall art for collectors",
+      "steam engine photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies steam engine wall art for collectors and steam engine photography, captured by Wayne Heim in his signature style. It reflects vintage train photography for man cave with a touch of steam engine photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -631,8 +707,8 @@ export const galleryData = [
   },
   {
     "id": "i-nbZ2kwd",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Wall Art For Collectors Study",
+    "description": "This steam engine wall art for collectors artwork by Wayne Heim showcases vintage train photography for man cave in a vintage train photography style. Reflecting vintage train photography, vintage train photography for man cave, and steam engine wall art for collectors, it's suited for admirers of vintage train photography for man cave. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-nbZ2kwd/A",
     "keywords": [
@@ -646,9 +722,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "vintage train photography for man cave",
+      "vintage train photography",
+      "steam engine photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into vintage train photography, this work by Wayne Heim highlights steam engine photography through steam engine wall art for collectors and vintage train photography for man cave. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -663,8 +743,8 @@ export const galleryData = [
   },
   {
     "id": "i-MTqWVJ8",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Wall Art For Collectors Portrait",
+    "description": "Delve into steam engine wall art for collectors via this vintage train photography by Wayne Heim. Highlighting vintage train photography for man cave through vintage train photography and vintage train photography for man cave, it's great for collectors interested in steam engine wall art for collectors. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-MTqWVJ8/A",
     "keywords": [
@@ -678,9 +758,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "vintage train photography",
+      "vintage train photography for man cave",
+      "steam engine photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies steam engine wall art for collectors and steam engine photography, captured by Wayne Heim in his signature style. It reflects vintage train photography with a touch of steam engine photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -695,8 +779,8 @@ export const galleryData = [
   },
   {
     "id": "i-jbScHR5",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Capturing Steam Engine Photography",
+    "description": "Immerse yourself in steam engine photography with this stunning vintage train photography by Wayne Heim. Capturing steam engine photography, steam engine wall art for collectors, and vintage train photography for man cave, it's a must-have for collectors of steam engine photography. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-jbScHR5/A",
     "keywords": [
@@ -710,9 +794,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine photography",
+      "vintage train photography",
+      "steam engine wall art for collectors",
+      "vintage train photography for man cave"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing vintage train photography for man cave and vintage train photography for man cave. A testament to steam engine wall art for collectors in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -727,8 +815,8 @@ export const galleryData = [
   },
   {
     "id": "i-BMTswCg",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Vintage Train Photography Moment",
+    "description": "Delve into vintage train photography via this vintage train photography for man cave by Wayne Heim. Highlighting vintage train photography for man cave through steam engine photography and vintage train photography, it's great for collectors interested in vintage train photography. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-BMTswCg/A",
     "keywords": [
@@ -742,9 +830,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography",
+      "vintage train photography for man cave",
+      "steam engine photography",
+      "steam engine wall art for collectors",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into steam engine wall art for collectors, this work by Wayne Heim highlights vintage train photography through steam engine art and steam engine photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -759,8 +852,8 @@ export const galleryData = [
   },
   {
     "id": "i-CbbTFst",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Vintage Train Photography In Fine Art",
+    "description": "Uncover vintage train photography through this steam engine photography from Wayne Heim. Showcasing steam engine art, steam engine photography, and steam engine wall art for collectors, it's perfect for enthusiasts of vintage train photography. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CbbTFst/A",
     "keywords": [
@@ -774,9 +867,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography",
+      "steam engine photography",
+      "steam engine art",
+      "steam engine wall art for collectors"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into steam engine art, this work by Wayne Heim highlights steam engine art through steam engine photography and steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -791,8 +888,8 @@ export const galleryData = [
   },
   {
     "id": "i-MSGcRLk",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "The Essence Of Steam Engine Art",
+    "description": "Witness steam engine art in Wayne Heim's steam engine photography. This image features steam engine photography with vintage train photography for man cave and vintage train photography, ideal for admirers of steam engine art. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-MSGcRLk/A",
     "keywords": [
@@ -806,9 +903,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine art",
+      "steam engine photography",
+      "vintage train photography for man cave",
+      "vintage train photography",
+      "steam engine wall art for collectors"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into steam engine photography, this work by Wayne Heim highlights vintage train photography for man cave through vintage train photography and steam engine wall art for collectors. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -823,8 +925,8 @@ export const galleryData = [
   },
   {
     "id": "i-Qk22N2c",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Vintage Train Photography Moment",
+    "description": "Delve into vintage train photography via this steam engine wall art for collectors by Wayne Heim. Highlighting steam engine art through steam engine art and steam engine photography, it's great for collectors interested in vintage train photography. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-Qk22N2c/A",
     "keywords": [
@@ -838,9 +940,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography",
+      "steam engine wall art for collectors",
+      "steam engine art",
+      "steam engine photography"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Wayne Heim's exploration of steam engine wall art for collectors comes alive in this piece, showcasing steam engine wall art for collectors and steam engine wall art for collectors. A testament to steam engine wall art for collectors in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -855,8 +961,8 @@ export const galleryData = [
   },
   {
     "id": "i-FcdDxxw",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Capturing Steam Engine Wall Art For Collectors",
+    "description": "This steam engine wall art for collectors artwork by Wayne Heim showcases vintage train photography for man cave in a vintage train photography style. Reflecting steam engine wall art for collectors, steam engine wall art for collectors, and steam engine wall art for collectors, it's suited for admirers of vintage train photography for man cave. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-FcdDxxw/A",
     "keywords": [
@@ -870,9 +976,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "vintage train photography for man cave",
+      "vintage train photography",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies steam engine art and steam engine wall art for collectors, captured by Wayne Heim in his signature style. It reflects steam engine wall art for collectors with a touch of steam engine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -887,8 +997,8 @@ export const galleryData = [
   },
   {
     "id": "i-QdcLZLF",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Vintage Train Photography For Man Cave - Vintage Train Photography",
+    "description": "Discover the vintage train photography for man cave in this powerful vintage train photography by Wayne Heim. A compelling work that embodies steam engine photography, vintage train photography for man cave, and vintage train photography for man cave. Perfect for art lovers seeking vintage train photography for man cave to enhance their collection. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-QdcLZLF/A",
     "keywords": [
@@ -902,9 +1012,14 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography for man cave",
+      "vintage train photography",
+      "steam engine photography",
+      "steam engine wall art for collectors",
+      "steam engine art"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "This image embodies steam engine wall art for collectors and vintage train photography for man cave, captured by Wayne Heim in his signature style. It reflects steam engine art with a touch of vintage train photography for man cave. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -919,8 +1034,8 @@ export const galleryData = [
   },
   {
     "id": "i-nSnCQtj",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Vintage Train Photography Portrait",
+    "description": "Wayne Heim's vintage train photography captures the spirit of vintage train photography in this steam engine art image. Featuring vintage train photography, steam engine wall art for collectors, and vintage train photography, it's ideal for vintage train photography enthusiasts. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-nSnCQtj/A",
     "keywords": [
@@ -934,9 +1049,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "vintage train photography",
+      "steam engine art",
+      "steam engine wall art for collectors",
+      "vintage train photography for man cave"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Wayne Heim's exploration of steam engine art comes alive in this piece, showcasing vintage train photography for man cave and steam engine wall art for collectors. A testament to vintage train photography for man cave in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -951,8 +1070,8 @@ export const galleryData = [
   },
   {
     "id": "i-CBkjbnq",
-    "title": "Untitled",
-    "description": "B/W Painterly Train Photography © Wayne Heim",
+    "title": "Steam Engine Wall Art For Collectors And Steam Engine Photography",
+    "description": "Immerse yourself in steam engine wall art for collectors with this stunning steam engine photography by Wayne Heim. Capturing steam engine photography, steam engine art, and steam engine wall art for collectors, it's a must-have for collectors of steam engine wall art for collectors. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-CBkjbnq/A",
     "keywords": [
@@ -966,9 +1085,13 @@ export const galleryData = [
       "train photos",
       "painterly photography",
       "painterly train photos",
-      "East Broad Top Railroad"
+      "East Broad Top Railroad",
+      "steam engine wall art for collectors",
+      "steam engine photography",
+      "steam engine art",
+      "vintage train photography for man cave"
     ],
-    "story": "B/W Painterly Train Photography © Wayne Heim",
+    "story": "Delving into vintage train photography for man cave, this work by Wayne Heim highlights steam engine photography through steam engine photography and vintage train photography for man cave. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

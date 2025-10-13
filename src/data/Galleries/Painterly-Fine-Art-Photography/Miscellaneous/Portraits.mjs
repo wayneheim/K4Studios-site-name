@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-M2fMMNQ",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Capturing Experimental Fine Art",
+    "description": "Immerse yourself in experimental fine art with this stunning experimental fine art by Wayne Heim. Capturing miscellaneous painterly photography, creative painterly art, and miscellaneous painterly photography, it's a must-have for collectors of experimental fine art. © Wayne Heim",
     "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/A",
     "keywords": [
@@ -38,9 +38,12 @@ export const galleryData = [
       "fine art",
       "fine art photography",
       "fine art painterly photography",
-      "painterly portrait photo"
+      "painterly portrait photo",
+      "experimental fine art",
+      "miscellaneous painterly photography",
+      "creative painterly art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into experimental fine art, this work by Wayne Heim highlights creative painterly art through experimental fine art and miscellaneous painterly photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -55,8 +58,8 @@ export const galleryData = [
   },
   {
     "id": "i-62sCLX4",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Fine Art Experimental Fine Art",
+    "description": "Witness experimental fine art in Wayne Heim's creative painterly art. This image features experimental fine art with creative painterly art and miscellaneous painterly photography, ideal for admirers of experimental fine art. © Wayne Heim",
     "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-62sCLX4/A",
     "keywords": [
@@ -70,9 +73,12 @@ export const galleryData = [
       "fine art",
       "fine art photography",
       "fine art painterly photography",
-      "painterly portrait photo"
+      "painterly portrait photo",
+      "experimental fine art",
+      "creative painterly art",
+      "miscellaneous painterly photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of creative painterly art comes alive in this piece, showcasing creative painterly art and creative painterly art. A testament to experimental fine art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2007,8 +2013,8 @@ export const galleryData = [
   },
   {
     "id": "i-pB5DwkQ",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Exploring Experimental Fine Art",
+    "description": "Experience experimental fine art through this evocative miscellaneous painterly photography from Wayne Heim's portfolio. This piece highlights miscellaneous painterly photography with experimental fine art, while conveying experimental fine art, ideal for those who appreciate experimental fine art. © Wayne Heim",
     "alt": "Fine Art Painterly Portrait Photography:",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-pB5DwkQ/A",
     "keywords": [
@@ -2022,9 +2028,11 @@ export const galleryData = [
       "fine art",
       "fine art photography",
       "fine art painterly photography",
-      "painterly portrait photo"
+      "painterly portrait photo",
+      "experimental fine art",
+      "miscellaneous painterly photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of experimental fine art comes alive in this piece, showcasing experimental fine art and miscellaneous painterly photography. A testament to experimental fine art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-fgkX7Jn",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Exploring Autumn In New England",
+    "description": "Uncover autumn in new england through this see beauty in simplicity from Wayne Heim. Showcasing autumn in new england, autumn in new england, and see beauty in simplicity, it's perfect for enthusiasts of autumn in new england. © Wayne Heim",
     "alt": "Forest Brook in Green",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/A",
     "keywords": [
@@ -36,9 +36,11 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "autumn in new england",
+      "see beauty in simplicity"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into autumn in new england, this work by Wayne Heim highlights see beauty in simplicity through see beauty in simplicity and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -53,8 +55,8 @@ export const galleryData = [
   },
   {
     "id": "i-7LZhFkc",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "See Beauty In Simplicity - See Beauty In Simplicity",
+    "description": "Wayne Heim presents see beauty in simplicity in this see beauty in simplicity work. Embodying The Northeast, The Northeast, and The Northeast, it's recommended for lovers of see beauty in simplicity. © Wayne Heim",
     "alt": "Forest Brook in Green",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7LZhFkc/A",
     "keywords": [
@@ -66,9 +68,12 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies autumn in new england and autumn in new england, captured by Wayne Heim in his signature style. It reflects see beauty in simplicity with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -143,8 +148,8 @@ export const galleryData = [
   },
   {
     "id": "i-FpmhtnM",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Fine Art See Beauty In Simplicity",
+    "description": "Uncover see beauty in simplicity through this autumn in new england from Wayne Heim. Showcasing see beauty in simplicity, autumn in new england, and autumn in new england, it's perfect for enthusiasts of see beauty in simplicity. © Wayne Heim",
     "alt": "A Path Less Traveled",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-FpmhtnM/A",
     "keywords": [
@@ -156,9 +161,12 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "see beauty in simplicity",
+      "autumn in new england",
+      "The Northeast"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -173,8 +181,8 @@ export const galleryData = [
   },
   {
     "id": "i-Jstk9Gx",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Northeast And See Beauty In Simplicity",
+    "description": "Immerse yourself in The Northeast with this stunning see beauty in simplicity by Wayne Heim. Capturing see beauty in simplicity, autumn in new england, and The Northeast, it's a must-have for collectors of The Northeast. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Jstk9Gx/A",
     "keywords": [
@@ -186,9 +194,12 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england through The Northeast and autumn in new england. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -263,8 +274,8 @@ export const galleryData = [
   },
   {
     "id": "i-cKsdqTs",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Capturing See Beauty In Simplicity",
+    "description": "This see beauty in simplicity artwork by Wayne Heim showcases see beauty in simplicity in a The Northeast style. Reflecting The Northeast, autumn in new england, and see beauty in simplicity, it's suited for admirers of see beauty in simplicity. © Wayne Heim",
     "alt": "Hidden Falls x2",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cKsdqTs/A",
     "keywords": [
@@ -276,9 +287,12 @@ export const galleryData = [
       "babbling brook",
       "fine art painterly photography",
       "painterly photography",
-      "painterly landscape photography"
+      "painterly landscape photography",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects see beauty in simplicity with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

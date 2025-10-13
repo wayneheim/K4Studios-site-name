@@ -3,7 +3,7 @@ const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 import ShareDrawer from '@/components/ShareDrawer.jsx';
 
-const { previewImages = [], previewPath = "", title = "", currentImageUrl } = Astro.props;
+const { previewImages = [], previewPath = "", title = "", currentImageUrl, label } = Astro.props;
 
 // Get actual runtime URL
 const currentPath = Astro.url.pathname;
@@ -35,6 +35,7 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
         images={previewImages}
         path={previewPath}
         limit={6}
+        label={label || undefined}
       />
     </div>
   )}

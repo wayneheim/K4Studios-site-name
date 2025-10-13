@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-c8SFXzH",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Classic Car Photography - Route 66 Art",
+    "description": "Uncover classic car photography through this route 66 art from Wayne Heim. Showcasing timeless automotive prints, route 66 art, and route 66 art, it's perfect for enthusiasts of classic car photography. © Wayne Heim",
     "alt": "Hudson -- Photography of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/A",
     "keywords": [
@@ -36,9 +36,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car photography",
+      "route 66 art",
+      "timeless automotive prints",
+      "classic car art prints for enthusiasts",
+      "painterly classic car photos for auto lovers"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies classic car photography and classic car art prints for enthusiasts, captured by Wayne Heim in his signature style. It reflects painterly classic car photos for auto lovers with a touch of route 66 art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -53,8 +58,8 @@ export const galleryData = [
   },
   {
     "id": "i-PfrKwt2",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Painterly Classic Car Photos For Auto Lovers Moment",
+    "description": "Wayne Heim's painterly classic car photos for auto lovers captures the spirit of painterly classic car photos for auto lovers in this timeless automotive prints image. Featuring painterly classic car photos for auto lovers, classic car art prints for enthusiasts, and painterly classic car photos for auto lovers, it's ideal for painterly classic car photos for auto lovers enthusiasts. © Wayne Heim",
     "alt": "Hudson -- Photography of Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PfrKwt2/A",
     "keywords": [
@@ -66,9 +71,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "painterly classic car photos for auto lovers",
+      "timeless automotive prints",
+      "classic car art prints for enthusiasts",
+      "route 66 art",
+      "route 66 car photography prints"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies route 66 art and route 66 car photography prints, captured by Wayne Heim in his signature style. It reflects route 66 car photography prints with a touch of route 66 art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -113,8 +123,8 @@ export const galleryData = [
   },
   {
     "id": "i-Q347VzH",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Timeless Automotive Prints Moment",
+    "description": "Wayne Heim presents timeless automotive prints in this classic car art prints for enthusiasts work. Embodying automotive art prints, classic car art prints for enthusiasts, and classic car photography, it's recommended for lovers of timeless automotive prints. © Wayne Heim",
     "alt": "Model A -- Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Q347VzH/A",
     "keywords": [
@@ -126,9 +136,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "timeless automotive prints",
+      "classic car art prints for enthusiasts",
+      "automotive art prints",
+      "classic car photography",
+      "painterly classic car photos for auto lovers"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of painterly classic car photos for auto lovers comes alive in this piece, showcasing timeless automotive prints and timeless automotive prints. A testament to automotive art prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -143,8 +158,8 @@ export const galleryData = [
   },
   {
     "id": "i-cQfBvZN",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Capturing Classic Car Photography",
+    "description": "This classic car photography artwork by Wayne Heim showcases classic car photography in a route 66 car photography prints style. Reflecting timeless automotive prints, route 66 art, and classic car photography, it's suited for admirers of classic car photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-cQfBvZN/A",
     "keywords": [
@@ -156,9 +171,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car photography",
+      "route 66 car photography prints",
+      "timeless automotive prints",
+      "route 66 art",
+      "painterly classic car photos for auto lovers"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of timeless automotive prints comes alive in this piece, showcasing painterly classic car photos for auto lovers and route 66 art. A testament to timeless automotive prints in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -503,8 +523,8 @@ export const galleryData = [
   },
   {
     "id": "i-zwNxLnH",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Capturing Painterly Classic Car Photos For Auto Lovers",
+    "description": "Explore painterly classic car photos for auto lovers with Wayne Heim's automotive art prints. This timeless automotive prints piece conveys route 66 art, classic car photography, and painterly classic car photos for auto lovers, perfect for fans of automotive art prints. © Wayne Heim",
     "alt": "Close up of Terraplane   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-zwNxLnH/A",
     "keywords": [
@@ -516,9 +536,16 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "painterly classic car photos for auto lovers",
+      "automotive art prints",
+      "timeless automotive prints",
+      "route 66 art",
+      "classic car photography",
+      "classic car art prints for enthusiasts",
+      "route 66 car photography prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into route 66 art, this work by Wayne Heim highlights classic car art prints for enthusiasts through route 66 car photography prints and route 66 car photography prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -713,8 +740,8 @@ export const galleryData = [
   },
   {
     "id": "i-FrmDMQq",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Route 66 Art Study",
+    "description": "Witness route 66 art in Wayne Heim's painterly classic car photos for auto lovers. This image features classic car photography with route 66 car photography prints and timeless automotive prints, ideal for admirers of route 66 art. © Wayne Heim",
     "alt": "Old Front Seat - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-FrmDMQq/A",
     "keywords": [
@@ -726,9 +753,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 art",
+      "painterly classic car photos for auto lovers",
+      "classic car photography",
+      "route 66 car photography prints",
+      "timeless automotive prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into timeless automotive prints, this work by Wayne Heim highlights timeless automotive prints through timeless automotive prints and classic car photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -743,8 +775,8 @@ export const galleryData = [
   },
   {
     "id": "i-gH4Qd3N",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Capturing Classic Car Art Prints For Enthusiasts",
+    "description": "Discover the classic car art prints for enthusiasts in this powerful automotive art prints by Wayne Heim. A compelling work that embodies classic car photography, route 66 art, and painterly classic car photos for auto lovers. Perfect for art lovers seeking classic car art prints for enthusiasts to enhance their collection. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-gH4Qd3N/A",
     "keywords": [
@@ -756,9 +788,15 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car art prints for enthusiasts",
+      "automotive art prints",
+      "classic car photography",
+      "route 66 art",
+      "painterly classic car photos for auto lovers",
+      "route 66 car photography prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of route 66 car photography prints comes alive in this piece, showcasing automotive art prints and route 66 art. A testament to painterly classic car photos for auto lovers in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -773,8 +811,8 @@ export const galleryData = [
   },
   {
     "id": "i-fr3rcbb",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Classic Car Photography In Fine Art",
+    "description": "Experience classic car photography through this evocative timeless automotive prints from Wayne Heim's portfolio. This piece highlights route 66 car photography prints with automotive art prints, while conveying classic car photography, ideal for those who appreciate classic car photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fr3rcbb/A",
     "keywords": [
@@ -786,9 +824,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car photography",
+      "timeless automotive prints",
+      "route 66 car photography prints",
+      "automotive art prints",
+      "route 66 art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into route 66 art, this work by Wayne Heim highlights route 66 art through automotive art prints and route 66 art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -803,8 +846,8 @@ export const galleryData = [
   },
   {
     "id": "i-336zMPt",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Route 66 Car Photography Prints Moment",
+    "description": "Wayne Heim's route 66 car photography prints captures the spirit of route 66 car photography prints in this timeless automotive prints image. Featuring classic car art prints for enthusiasts, classic car photography, and route 66 car photography prints, it's ideal for route 66 car photography prints enthusiasts. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-336zMPt/A",
     "keywords": [
@@ -816,9 +859,13 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 car photography prints",
+      "timeless automotive prints",
+      "classic car art prints for enthusiasts",
+      "classic car photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of classic car photography comes alive in this piece, showcasing route 66 car photography prints and route 66 car photography prints. A testament to classic car photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -833,8 +880,8 @@ export const galleryData = [
   },
   {
     "id": "i-V8xzMjq",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Automotive Art Prints And Route 66 Art",
+    "description": "Witness automotive art prints in Wayne Heim's route 66 art. This image features painterly classic car photos for auto lovers with route 66 art and timeless automotive prints, ideal for admirers of automotive art prints. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-V8xzMjq/A",
     "keywords": [
@@ -846,9 +893,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "automotive art prints",
+      "route 66 art",
+      "painterly classic car photos for auto lovers",
+      "timeless automotive prints",
+      "classic car photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies automotive art prints and classic car photography, captured by Wayne Heim in his signature style. It reflects painterly classic car photos for auto lovers with a touch of automotive art prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -863,8 +915,8 @@ export const galleryData = [
   },
   {
     "id": "i-mT37fhN",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Classic Car Art Prints For Enthusiasts In Fine Art",
+    "description": "Uncover classic car art prints for enthusiasts through this classic car photography from Wayne Heim. Showcasing painterly classic car photos for auto lovers, route 66 art, and timeless automotive prints, it's perfect for enthusiasts of classic car art prints for enthusiasts. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-mT37fhN/A",
     "keywords": [
@@ -876,9 +928,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car art prints for enthusiasts",
+      "classic car photography",
+      "painterly classic car photos for auto lovers",
+      "route 66 art",
+      "timeless automotive prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into classic car photography, this work by Wayne Heim highlights painterly classic car photos for auto lovers through timeless automotive prints and painterly classic car photos for auto lovers. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -923,8 +980,8 @@ export const galleryData = [
   },
   {
     "id": "i-tCqCrV5",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Exploring Route 66 Car Photography Prints",
+    "description": "Experience route 66 car photography prints through this evocative classic car art prints for enthusiasts from Wayne Heim's portfolio. This piece highlights route 66 art with automotive art prints, while conveying route 66 art, ideal for those who appreciate route 66 car photography prints. © Wayne Heim",
     "alt": "Night Moves",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-tCqCrV5/A",
     "keywords": [
@@ -936,9 +993,15 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 car photography prints",
+      "classic car art prints for enthusiasts",
+      "route 66 art",
+      "automotive art prints",
+      "timeless automotive prints",
+      "painterly classic car photos for auto lovers"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies automotive art prints and timeless automotive prints, captured by Wayne Heim in his signature style. It reflects painterly classic car photos for auto lovers with a touch of route 66 car photography prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -953,8 +1016,8 @@ export const galleryData = [
   },
   {
     "id": "i-kJTR6Bf",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Classic Car Photography Study",
+    "description": "Experience classic car photography through this evocative timeless automotive prints from Wayne Heim's portfolio. This piece highlights automotive art prints with painterly classic car photos for auto lovers, while conveying automotive art prints, ideal for those who appreciate classic car photography. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-kJTR6Bf/A",
     "keywords": [
@@ -966,9 +1029,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car photography",
+      "timeless automotive prints",
+      "automotive art prints",
+      "painterly classic car photos for auto lovers",
+      "route 66 art"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies classic car photography and route 66 art, captured by Wayne Heim in his signature style. It reflects painterly classic car photos for auto lovers with a touch of route 66 art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -983,8 +1051,8 @@ export const galleryData = [
   },
   {
     "id": "i-fgVVLbm",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing Route 66 Art",
+    "description": "Wayne Heim presents route 66 art in this painterly classic car photos for auto lovers work. Embodying painterly classic car photos for auto lovers, classic car art prints for enthusiasts, and route 66 car photography prints, it's recommended for lovers of route 66 art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-fgVVLbm/A",
     "keywords": [
@@ -996,9 +1064,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 art",
+      "painterly classic car photos for auto lovers",
+      "classic car art prints for enthusiasts",
+      "route 66 car photography prints",
+      "classic car photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of classic car photography comes alive in this piece, showcasing classic car photography and route 66 art. A testament to route 66 art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1013,8 +1086,8 @@ export const galleryData = [
   },
   {
     "id": "i-g8T6jdd",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Painterly Classic Car Photos For Auto Lovers In Fine Art",
+    "description": "Delve into painterly classic car photos for auto lovers via this painterly classic car photos for auto lovers by Wayne Heim. Highlighting route 66 art through classic car photography and classic car photography, it's great for collectors interested in painterly classic car photos for auto lovers. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-g8T6jdd/A",
     "keywords": [
@@ -1026,9 +1099,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "painterly classic car photos for auto lovers",
+      "route 66 art",
+      "classic car photography",
+      "classic car art prints for enthusiasts",
+      "timeless automotive prints"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into classic car art prints for enthusiasts, this work by Wayne Heim highlights route 66 art through classic car art prints for enthusiasts and timeless automotive prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1073,8 +1151,8 @@ export const galleryData = [
   },
   {
     "id": "i-ZpwKrbj",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Automotive Art Prints And Timeless Automotive Prints",
+    "description": "Discover the automotive art prints in this powerful timeless automotive prints by Wayne Heim. A compelling work that embodies classic car art prints for enthusiasts, classic car art prints for enthusiasts, and route 66 art. Perfect for art lovers seeking automotive art prints to enhance their collection. © Wayne Heim",
     "alt": "Liberty Aviation Museum   Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-ZpwKrbj/A",
     "keywords": [
@@ -1086,9 +1164,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "automotive art prints",
+      "timeless automotive prints",
+      "classic car art prints for enthusiasts",
+      "route 66 art",
+      "classic car photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into route 66 art, this work by Wayne Heim highlights classic car photography through route 66 art and route 66 art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1103,8 +1186,8 @@ export const galleryData = [
   },
   {
     "id": "i-jXXqmN2",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Essence Of Route 66 Car Photography Prints",
+    "description": "Delve into route 66 car photography prints via this automotive art prints by Wayne Heim. Highlighting route 66 car photography prints through classic car photography and classic car art prints for enthusiasts, it's great for collectors interested in route 66 car photography prints. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-jXXqmN2/A",
     "keywords": [
@@ -1116,9 +1199,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 car photography prints",
+      "automotive art prints",
+      "classic car photography",
+      "classic car art prints for enthusiasts",
+      "painterly classic car photos for auto lovers"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into classic car photography, this work by Wayne Heim highlights automotive art prints through painterly classic car photos for auto lovers and classic car photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1133,8 +1221,8 @@ export const galleryData = [
   },
   {
     "id": "i-rtPVxVG",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Fine Art Route 66 Car Photography Prints",
+    "description": "Uncover route 66 car photography prints through this route 66 art from Wayne Heim. Showcasing classic car photography, route 66 car photography prints, and route 66 art, it's perfect for enthusiasts of route 66 car photography prints. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rtPVxVG/A",
     "keywords": [
@@ -1146,9 +1234,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 car photography prints",
+      "route 66 art",
+      "classic car photography",
+      "classic car art prints for enthusiasts",
+      "automotive art prints"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into classic car art prints for enthusiasts, this work by Wayne Heim highlights automotive art prints through route 66 car photography prints and automotive art prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1163,8 +1256,8 @@ export const galleryData = [
   },
   {
     "id": "i-pStwNMq",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Exploring Timeless Automotive Prints",
+    "description": "Wayne Heim presents timeless automotive prints in this painterly classic car photos for auto lovers work. Embodying classic car photography, classic car photography, and painterly classic car photos for auto lovers, it's recommended for lovers of timeless automotive prints. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-pStwNMq/A",
     "keywords": [
@@ -1176,9 +1269,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "timeless automotive prints",
+      "painterly classic car photos for auto lovers",
+      "classic car photography",
+      "route 66 car photography prints",
+      "automotive art prints"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into route 66 car photography prints, this work by Wayne Heim highlights timeless automotive prints through automotive art prints and automotive art prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1193,8 +1291,8 @@ export const galleryData = [
   },
   {
     "id": "i-CfcqrJ9",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Fine Art Classic Car Art Prints For Enthusiasts",
+    "description": "This classic car art prints for enthusiasts artwork by Wayne Heim showcases automotive art prints in a timeless automotive prints style. Reflecting timeless automotive prints, painterly classic car photos for auto lovers, and classic car art prints for enthusiasts, it's suited for admirers of automotive art prints. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-CfcqrJ9/A",
     "keywords": [
@@ -1206,9 +1304,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car art prints for enthusiasts",
+      "automotive art prints",
+      "timeless automotive prints",
+      "painterly classic car photos for auto lovers",
+      "classic car photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of automotive art prints comes alive in this piece, showcasing classic car photography and classic car photography. A testament to classic car art prints for enthusiasts in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1223,8 +1326,8 @@ export const galleryData = [
   },
   {
     "id": "i-QfJt7xr",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Essence Of Painterly Classic Car Photos For Auto Lovers",
+    "description": "Wayne Heim presents painterly classic car photos for auto lovers in this classic car art prints for enthusiasts work. Embodying painterly classic car photos for auto lovers, route 66 art, and classic car photography, it's recommended for lovers of painterly classic car photos for auto lovers. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-QfJt7xr/A",
     "keywords": [
@@ -1236,9 +1339,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "painterly classic car photos for auto lovers",
+      "classic car art prints for enthusiasts",
+      "route 66 art",
+      "classic car photography",
+      "timeless automotive prints"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into timeless automotive prints, this work by Wayne Heim highlights painterly classic car photos for auto lovers through painterly classic car photos for auto lovers and timeless automotive prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1253,8 +1361,8 @@ export const galleryData = [
   },
   {
     "id": "i-Psb5Rzp",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Classic Car Photography - Route 66 Art",
+    "description": "Witness classic car photography in Wayne Heim's route 66 art. This image features classic car art prints for enthusiasts with route 66 car photography prints and classic car photography, ideal for admirers of classic car photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-Psb5Rzp/A",
     "keywords": [
@@ -1266,9 +1374,15 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car photography",
+      "route 66 art",
+      "classic car art prints for enthusiasts",
+      "route 66 car photography prints",
+      "automotive art prints",
+      "timeless automotive prints"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies automotive art prints and classic car photography, captured by Wayne Heim in his signature style. It reflects timeless automotive prints with a touch of timeless automotive prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1283,8 +1397,8 @@ export const galleryData = [
   },
   {
     "id": "i-NSJhpSV",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Route 66 Car Photography Prints Portrait",
+    "description": "This route 66 car photography prints artwork by Wayne Heim showcases timeless automotive prints in a classic car art prints for enthusiasts style. Reflecting automotive art prints, painterly classic car photos for auto lovers, and route 66 car photography prints, it's suited for admirers of timeless automotive prints. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-NSJhpSV/A",
     "keywords": [
@@ -1296,9 +1410,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 car photography prints",
+      "timeless automotive prints",
+      "classic car art prints for enthusiasts",
+      "automotive art prints",
+      "painterly classic car photos for auto lovers"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies timeless automotive prints and timeless automotive prints, captured by Wayne Heim in his signature style. It reflects automotive art prints with a touch of classic car art prints for enthusiasts. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1313,8 +1432,8 @@ export const galleryData = [
   },
   {
     "id": "i-j3jLH4h",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Capturing Route 66 Art",
+    "description": "This route 66 art artwork by Wayne Heim showcases classic car art prints for enthusiasts in a classic car art prints for enthusiasts style. Reflecting automotive art prints, automotive art prints, and route 66 art, it's suited for admirers of classic car art prints for enthusiasts. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-j3jLH4h/A",
     "keywords": [
@@ -1326,9 +1445,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 art",
+      "classic car art prints for enthusiasts",
+      "automotive art prints",
+      "classic car photography",
+      "painterly classic car photos for auto lovers"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into classic car photography, this work by Wayne Heim highlights painterly classic car photos for auto lovers through painterly classic car photos for auto lovers and automotive art prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1343,8 +1467,8 @@ export const galleryData = [
   },
   {
     "id": "i-rT9Kp2K",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Route 66 Art Portrait",
+    "description": "Witness route 66 art in Wayne Heim's route 66 car photography prints. This image features route 66 art with classic car art prints for enthusiasts and route 66 art, ideal for admirers of route 66 art. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-rT9Kp2K/A",
     "keywords": [
@@ -1356,9 +1480,13 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "route 66 art",
+      "route 66 car photography prints",
+      "classic car art prints for enthusiasts",
+      "automotive art prints"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies automotive art prints and automotive art prints, captured by Wayne Heim in his signature style. It reflects classic car art prints for enthusiasts with a touch of automotive art prints. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1373,8 +1501,8 @@ export const galleryData = [
   },
   {
     "id": "i-PrdZP4Z",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Essence Of Timeless Automotive Prints",
+    "description": "Discover the timeless automotive prints in this powerful painterly classic car photos for auto lovers by Wayne Heim. A compelling work that embodies classic car art prints for enthusiasts, route 66 art, and timeless automotive prints. Perfect for art lovers seeking timeless automotive prints to enhance their collection. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-PrdZP4Z/A",
     "keywords": [
@@ -1386,9 +1514,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "timeless automotive prints",
+      "painterly classic car photos for auto lovers",
+      "classic car art prints for enthusiasts",
+      "route 66 art",
+      "automotive art prints"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into automotive art prints, this work by Wayne Heim highlights route 66 art through route 66 art and painterly classic car photos for auto lovers. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1403,8 +1536,8 @@ export const galleryData = [
   },
   {
     "id": "i-XZ2DDS3",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Classic Car Art Prints For Enthusiasts Portrait",
+    "description": "Wayne Heim presents classic car art prints for enthusiasts in this painterly classic car photos for auto lovers work. Embodying route 66 car photography prints, automotive art prints, and route 66 car photography prints, it's recommended for lovers of classic car art prints for enthusiasts. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-XZ2DDS3/A",
     "keywords": [
@@ -1416,9 +1549,13 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "classic car art prints for enthusiasts",
+      "painterly classic car photos for auto lovers",
+      "route 66 car photography prints",
+      "automotive art prints"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into route 66 car photography prints, this work by Wayne Heim highlights route 66 car photography prints through classic car art prints for enthusiasts and route 66 car photography prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1433,8 +1570,8 @@ export const galleryData = [
   },
   {
     "id": "i-7PM87B8",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Automotive Art Prints - Route 66 Car Photography Prints",
+    "description": "Delve into automotive art prints via this route 66 car photography prints by Wayne Heim. Highlighting timeless automotive prints through painterly classic car photos for auto lovers and automotive art prints, it's great for collectors interested in automotive art prints. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-7PM87B8/A",
     "keywords": [
@@ -1446,9 +1583,14 @@ export const galleryData = [
       "Conneaut",
       "Ohio",
       "D Day Conneaut",
-      "green"
+      "green",
+      "automotive art prints",
+      "route 66 car photography prints",
+      "timeless automotive prints",
+      "painterly classic car photos for auto lovers",
+      "classic car art prints for enthusiasts"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of route 66 car photography prints comes alive in this piece, showcasing classic car art prints for enthusiasts and route 66 car photography prints. A testament to painterly classic car photos for auto lovers in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

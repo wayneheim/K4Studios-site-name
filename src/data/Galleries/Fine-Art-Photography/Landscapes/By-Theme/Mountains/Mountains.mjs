@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-sTCJ5dz",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Mountain Landscape Photography In Fine Art",
+    "description": "Uncover mountain landscape photography through this painterly mountain art from Wayne Heim. Showcasing painterly mountain art, mountain landscape photography, and mountain landscape photography, it's perfect for enthusiasts of mountain landscape photography. © Wayne Heim",
     "alt": "The Grand    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-sTCJ5dz/A",
     "keywords": [
@@ -35,9 +35,11 @@ export const galleryData = [
       "nature",
       "mountains",
       "grand tetons",
-      "k4 studios"
+      "k4 studios",
+      "mountain landscape photography",
+      "painterly mountain art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into mountain landscape photography, this work by Wayne Heim highlights painterly mountain art through mountain landscape photography and painterly mountain art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -835,8 +837,8 @@ export const galleryData = [
   },
   {
     "id": "i-RHkxK9x",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Mountain Landscape Photography - Painterly Mountain Art",
+    "description": "Immerse yourself in mountain landscape photography with this stunning painterly mountain art by Wayne Heim. Capturing painterly mountain art, painterly mountain art, and mountain landscape photography, it's a must-have for collectors of mountain landscape photography. © Wayne Heim",
     "alt": "Overlook",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-RHkxK9x/A",
     "keywords": [
@@ -847,9 +849,11 @@ export const galleryData = [
       "nature",
       "mountains",
       "grand tetons",
-      "k4 studios"
+      "k4 studios",
+      "mountain landscape photography",
+      "painterly mountain art"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies painterly mountain art and mountain landscape photography, captured by Wayne Heim in his signature style. It reflects mountain landscape photography with a touch of painterly mountain art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -864,8 +868,8 @@ export const galleryData = [
   },
   {
     "id": "i-7jBKDJ9",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Painterly Mountain Art Study",
+    "description": "This painterly mountain art artwork by Wayne Heim showcases painterly mountain art in a painterly mountain art style. Reflecting mountain landscape photography, mountain landscape photography, and painterly mountain art, it's suited for admirers of painterly mountain art. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-7jBKDJ9/A",
     "keywords": [
@@ -876,9 +880,11 @@ export const galleryData = [
       "nature",
       "mountains",
       "grand tetons",
-      "k4 studios"
+      "k4 studios",
+      "painterly mountain art",
+      "mountain landscape photography"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies mountain landscape photography and painterly mountain art, captured by Wayne Heim in his signature style. It reflects painterly mountain art with a touch of mountain landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -893,8 +899,8 @@ export const galleryData = [
   },
   {
     "id": "i-Lc9fCHw",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Essence Of Painterly Mountain Art",
+    "description": "Experience painterly mountain art through this evocative painterly mountain art from Wayne Heim's portfolio. This piece highlights painterly mountain art with mountain landscape photography, while conveying mountain landscape photography, ideal for those who appreciate painterly mountain art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Lc9fCHw/A",
     "keywords": [
@@ -905,9 +911,11 @@ export const galleryData = [
       "nature",
       "mountains",
       "grand tetons",
-      "k4 studios"
+      "k4 studios",
+      "painterly mountain art",
+      "mountain landscape photography"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of mountain landscape photography comes alive in this piece, showcasing painterly mountain art and mountain landscape photography. A testament to mountain landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -922,8 +930,8 @@ export const galleryData = [
   },
   {
     "id": "i-35gFhbt",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Painterly Mountain Art And Painterly Mountain Art",
+    "description": "Uncover painterly mountain art through this painterly mountain art from Wayne Heim. Showcasing mountain landscape photography, mountain landscape photography, and mountain landscape photography, it's perfect for enthusiasts of painterly mountain art. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-35gFhbt/A",
     "keywords": [
@@ -934,9 +942,11 @@ export const galleryData = [
       "nature",
       "mountains",
       "grand tetons",
-      "k4 studios"
+      "k4 studios",
+      "painterly mountain art",
+      "mountain landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of mountain landscape photography comes alive in this piece, showcasing mountain landscape photography and mountain landscape photography. A testament to mountain landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -951,8 +961,8 @@ export const galleryData = [
   },
   {
     "id": "i-Qs5qL2f",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Mountain Landscape Photography Moment",
+    "description": "Wayne Heim presents mountain landscape photography in this mountain landscape photography work. Embodying mountain landscape photography, painterly mountain art, and mountain landscape photography, it's recommended for lovers of mountain landscape photography. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-Qs5qL2f/A",
     "keywords": [
@@ -963,9 +973,11 @@ export const galleryData = [
       "nature",
       "mountains",
       "grand tetons",
-      "k4 studios"
+      "k4 studios",
+      "mountain landscape photography",
+      "painterly mountain art"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of painterly mountain art comes alive in this piece, showcasing painterly mountain art and mountain landscape photography. A testament to mountain landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1029,7 +1041,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 34,
-       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LXCBHG6RkSKxJgsq5hrFVTXjLPX3dZCqP2MkTwjXM/XL/_IGP2891-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LXCBHG6RkSKxJgsq5hrFVTXjLPX3dZCqP2MkTwjXM/XL/_IGP2891-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LXCBHG6RkSKxJgsq5hrFVTXjLPX3dZCqP2MkTwjXM/XL/_IGP2891-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/LtfKxSmmVzGT22L6QXfQCMxTvL9XddMXXzdQ463rK/L/_IGP2891-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Glacier-National-Park-Montana/Glacier-and-Montana/i-BzsKZNR/4/M6XVHdwnssBqnmfQDDCFJ85c2fm2JtvpWX62TTPCb/M/_IGP2891-M.jpg",

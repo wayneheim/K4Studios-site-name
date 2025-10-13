@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-6Vj6H86",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Essence Of Autumn In New England",
+    "description": "Wayne Heim presents autumn in new england in this The Northeast work. Embodying autumn in new england, The Northeast, and autumn in new england, it's recommended for lovers of autumn in new england. © Wayne Heim",
     "alt": "Long View of Letchworth Canyon   Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6Vj6H86/A",
     "keywords": [
@@ -53,9 +53,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies The Northeast and autumn in new england, captured by Wayne Heim in his signature style. It reflects see beauty in simplicity with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -352,8 +355,8 @@ export const galleryData = [
   },
   {
     "id": "i-vqC5jTC",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Exploring The Northeast",
+    "description": "Delve into The Northeast via this see beauty in simplicity by Wayne Heim. Highlighting The Northeast through autumn in new england and see beauty in simplicity, it's great for collectors interested in The Northeast. © Wayne Heim",
     "alt": "Watkins Glen Canyon. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vqC5jTC/A",
     "keywords": [
@@ -382,9 +385,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing The Northeast and autumn in new england. A testament to see beauty in simplicity in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -446,8 +452,8 @@ export const galleryData = [
   },
   {
     "id": "i-dmwDS7K",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Autumn In New England And The Northeast",
+    "description": "Discover the autumn in new england in this powerful The Northeast by Wayne Heim. A compelling work that embodies see beauty in simplicity, autumn in new england, and The Northeast. Perfect for art lovers seeking autumn in new england to enhance their collection. © Wayne Heim",
     "alt": "Yellowstone Hotspots   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-dmwDS7K/A",
     "keywords": [
@@ -476,9 +482,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -493,8 +502,8 @@ export const galleryData = [
   },
   {
     "id": "i-s3xXCPH",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "See Beauty In Simplicity Moment",
+    "description": "Delve into see beauty in simplicity via this autumn in new england by Wayne Heim. Highlighting The Northeast through autumn in new england and The Northeast, it's great for collectors interested in see beauty in simplicity. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-s3xXCPH/A",
     "keywords": [
@@ -523,9 +532,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "autumn in new england",
+      "The Northeast"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies autumn in new england and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -587,8 +599,8 @@ export const galleryData = [
   },
   {
     "id": "i-rfGP5Zj",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "See Beauty In Simplicity In Fine Art",
+    "description": "Uncover see beauty in simplicity through this autumn in new england from Wayne Heim. Showcasing The Northeast, see beauty in simplicity, and The Northeast, it's perfect for enthusiasts of see beauty in simplicity. © Wayne Heim",
     "alt": "A Path Less Traveled",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rfGP5Zj/A",
     "keywords": [
@@ -617,9 +629,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "autumn in new england",
+      "The Northeast"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -634,8 +649,8 @@ export const galleryData = [
   },
   {
     "id": "i-bdSGG9L",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Autumn In New England Landscape",
+    "description": "This autumn in new england artwork by Wayne Heim showcases autumn in new england in a autumn in new england style. Reflecting autumn in new england, autumn in new england, and autumn in new england, it's suited for admirers of autumn in new england. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bdSGG9L/A",
     "keywords": [
@@ -664,9 +679,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects see beauty in simplicity with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -681,8 +699,8 @@ export const galleryData = [
   },
   {
     "id": "i-BqKXR7D",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "See Beauty In Simplicity - The Northeast",
+    "description": "Delve into see beauty in simplicity via this The Northeast by Wayne Heim. Highlighting The Northeast through The Northeast and autumn in new england, it's great for collectors interested in see beauty in simplicity. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-BqKXR7D/A",
     "keywords": [
@@ -711,9 +729,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into autumn in new england, this work by Wayne Heim highlights see beauty in simplicity through see beauty in simplicity and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -775,8 +796,8 @@ export const galleryData = [
   },
   {
     "id": "i-MGNfc8z",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Capturing The Northeast",
+    "description": "Wayne Heim presents The Northeast in this see beauty in simplicity work. Embodying see beauty in simplicity, see beauty in simplicity, and see beauty in simplicity, it's recommended for lovers of The Northeast. © Wayne Heim",
     "alt": "Hidden Falls x2",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MGNfc8z/A",
     "keywords": [
@@ -805,9 +826,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies The Northeast and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -869,8 +893,8 @@ export const galleryData = [
   },
   {
     "id": "i-MwLgJL5",
-    "title": "Eminent Rise",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Capturing See Beauty In Simplicity",
+    "description": "Uncover see beauty in simplicity through this The Northeast from Wayne Heim. Showcasing The Northeast, The Northeast, and autumn in new england, it's perfect for enthusiasts of see beauty in simplicity. © Wayne Heim",
     "alt": "Davis West Virginia Sunrise in full show.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-MwLgJL5/A",
     "keywords": [
@@ -899,9 +923,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of The Northeast comes alive in this piece, showcasing see beauty in simplicity and The Northeast. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -963,8 +990,8 @@ export const galleryData = [
   },
   {
     "id": "i-hVB6Pxq",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Exploring Autumn In New England",
+    "description": "Immerse yourself in autumn in new england with this stunning see beauty in simplicity by Wayne Heim. Capturing see beauty in simplicity, see beauty in simplicity, and The Northeast, it's a must-have for collectors of autumn in new england. © Wayne Heim",
     "alt": "A Painters Pallet",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-hVB6Pxq/A",
     "keywords": [
@@ -993,9 +1020,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "see beauty in simplicity",
+      "The Northeast"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies The Northeast and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1010,8 +1040,8 @@ export const galleryData = [
   },
   {
     "id": "i-R5xvd53",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "See Beauty In Simplicity Study",
+    "description": "Delve into see beauty in simplicity via this see beauty in simplicity by Wayne Heim. Highlighting see beauty in simplicity through autumn in new england and see beauty in simplicity, it's great for collectors interested in see beauty in simplicity. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-R5xvd53/A",
     "keywords": [
@@ -1040,9 +1070,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "autumn in new england",
+      "The Northeast"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast and The Northeast. A testament to autumn in new england in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1057,8 +1090,8 @@ export const galleryData = [
   },
   {
     "id": "i-cQ5DJJL",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Exploring Autumn In New England",
+    "description": "Experience autumn in new england through this evocative The Northeast from Wayne Heim's portfolio. This piece highlights see beauty in simplicity with The Northeast, while conveying autumn in new england, ideal for those who appreciate autumn in new england. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-cQ5DJJL/A",
     "keywords": [
@@ -1087,9 +1120,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies see beauty in simplicity and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1104,8 +1140,8 @@ export const galleryData = [
   },
   {
     "id": "i-2MmTpqQ",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "See Beauty In Simplicity And The Northeast",
+    "description": "Experience see beauty in simplicity through this evocative The Northeast from Wayne Heim's portfolio. This piece highlights autumn in new england with autumn in new england, while conveying autumn in new england, ideal for those who appreciate see beauty in simplicity. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2MmTpqQ/A",
     "keywords": [
@@ -1134,9 +1170,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing see beauty in simplicity and The Northeast. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1151,8 +1190,8 @@ export const galleryData = [
   },
   {
     "id": "i-h7Rcxmr",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "The Northeast And Autumn In New England",
+    "description": "Delve into The Northeast via this autumn in new england by Wayne Heim. Highlighting autumn in new england through see beauty in simplicity and The Northeast, it's great for collectors interested in The Northeast. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-h7Rcxmr/A",
     "keywords": [
@@ -1181,9 +1220,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "autumn in new england",
+      "see beauty in simplicity"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing see beauty in simplicity and see beauty in simplicity. A testament to see beauty in simplicity in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1198,8 +1240,8 @@ export const galleryData = [
   },
   {
     "id": "i-wqjGgt4",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Fine Art Autumn In New England",
+    "description": "Immerse yourself in autumn in new england with this stunning The Northeast by Wayne Heim. Capturing The Northeast, autumn in new england, and autumn in new england, it's a must-have for collectors of autumn in new england. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wqjGgt4/A",
     "keywords": [
@@ -1228,9 +1270,11 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "The Northeast"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing autumn in new england and autumn in new england. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1245,8 +1289,8 @@ export const galleryData = [
   },
   {
     "id": "i-4WL9kr6",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Essence Of The Northeast",
+    "description": "Immerse yourself in The Northeast with this stunning see beauty in simplicity by Wayne Heim. Capturing The Northeast, The Northeast, and The Northeast, it's a must-have for collectors of The Northeast. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-4WL9kr6/A",
     "keywords": [
@@ -1275,9 +1319,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england through autumn in new england and autumn in new england. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1292,8 +1339,8 @@ export const galleryData = [
   },
   {
     "id": "i-68NCBvz",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Exploring Autumn In New England",
+    "description": "Wayne Heim presents autumn in new england in this see beauty in simplicity work. Embodying The Northeast, The Northeast, and autumn in new england, it's recommended for lovers of autumn in new england. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-68NCBvz/A",
     "keywords": [
@@ -1322,9 +1369,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "see beauty in simplicity",
+      "The Northeast"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into The Northeast, this work by Wayne Heim highlights autumn in new england through The Northeast and The Northeast. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1339,8 +1389,8 @@ export const galleryData = [
   },
   {
     "id": "i-jgkhwcs",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Autumn In New England Landscape",
+    "description": "Wayne Heim presents autumn in new england in this The Northeast work. Embodying The Northeast, see beauty in simplicity, and see beauty in simplicity, it's recommended for lovers of autumn in new england. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jgkhwcs/A",
     "keywords": [
@@ -1369,9 +1419,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing autumn in new england and The Northeast. A testament to autumn in new england in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1386,8 +1439,8 @@ export const galleryData = [
   },
   {
     "id": "i-6qnzDzx",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Northeast - See Beauty In Simplicity",
+    "description": "Wayne Heim's The Northeast captures the spirit of see beauty in simplicity in this The Northeast image. Featuring see beauty in simplicity, see beauty in simplicity, and The Northeast, it's ideal for see beauty in simplicity enthusiasts. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6qnzDzx/A",
     "keywords": [
@@ -1416,9 +1469,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies autumn in new england and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1433,8 +1489,8 @@ export const galleryData = [
   },
   {
     "id": "i-jP9xB7p",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Exploring The Northeast",
+    "description": "Experience The Northeast through this evocative see beauty in simplicity from Wayne Heim's portfolio. This piece highlights The Northeast with autumn in new england, while conveying The Northeast, ideal for those who appreciate The Northeast. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-jP9xB7p/A",
     "keywords": [
@@ -1463,9 +1519,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing autumn in new england and autumn in new england. A testament to see beauty in simplicity in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1480,8 +1539,8 @@ export const galleryData = [
   },
   {
     "id": "i-Qdgw4G5",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Capturing The Northeast",
+    "description": "Explore The Northeast with Wayne Heim's see beauty in simplicity. This see beauty in simplicity piece conveys autumn in new england, The Northeast, and The Northeast, perfect for fans of see beauty in simplicity. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Qdgw4G5/A",
     "keywords": [
@@ -1510,9 +1569,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england through autumn in new england and autumn in new england. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1527,8 +1589,8 @@ export const galleryData = [
   },
   {
     "id": "i-sRRJHVz",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Fine Art The Northeast",
+    "description": "Wayne Heim presents The Northeast in this see beauty in simplicity work. Embodying see beauty in simplicity, autumn in new england, and The Northeast, it's recommended for lovers of The Northeast. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-sRRJHVz/A",
     "keywords": [
@@ -1557,9 +1619,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1574,8 +1639,8 @@ export const galleryData = [
   },
   {
     "id": "i-2PC8CL2",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "See Beauty In Simplicity And The Northeast",
+    "description": "Witness see beauty in simplicity in Wayne Heim's The Northeast. This image features see beauty in simplicity with see beauty in simplicity and see beauty in simplicity, ideal for admirers of see beauty in simplicity. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-2PC8CL2/A",
     "keywords": [
@@ -1604,9 +1669,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights see beauty in simplicity through autumn in new england and The Northeast. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1621,8 +1689,8 @@ export const galleryData = [
   },
   {
     "id": "i-HqXtbrD",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Northeast Landscape",
+    "description": "Explore The Northeast with Wayne Heim's The Northeast. This see beauty in simplicity piece conveys autumn in new england, autumn in new england, and The Northeast, perfect for fans of The Northeast. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-HqXtbrD/A",
     "keywords": [
@@ -1651,9 +1719,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into The Northeast, this work by Wayne Heim highlights see beauty in simplicity through see beauty in simplicity and The Northeast. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1668,8 +1739,8 @@ export const galleryData = [
   },
   {
     "id": "i-7pG4nQv",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "See Beauty In Simplicity And See Beauty In Simplicity",
+    "description": "Immerse yourself in see beauty in simplicity with this stunning see beauty in simplicity by Wayne Heim. Capturing autumn in new england, The Northeast, and The Northeast, it's a must-have for collectors of see beauty in simplicity. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-7pG4nQv/A",
     "keywords": [
@@ -1698,9 +1769,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "autumn in new england",
+      "The Northeast"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast and see beauty in simplicity. A testament to see beauty in simplicity in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1715,8 +1789,8 @@ export const galleryData = [
   },
   {
     "id": "i-DKPmrRN",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Autumn In New England - Autumn In New England",
+    "description": "Uncover autumn in new england through this autumn in new england from Wayne Heim. Showcasing The Northeast, The Northeast, and autumn in new england, it's perfect for enthusiasts of autumn in new england. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DKPmrRN/A",
     "keywords": [
@@ -1745,9 +1819,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies autumn in new england and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1762,8 +1839,8 @@ export const galleryData = [
   },
   {
     "id": "i-gM4DZ97",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "See Beauty In Simplicity - See Beauty In Simplicity",
+    "description": "Uncover see beauty in simplicity through this see beauty in simplicity from Wayne Heim. Showcasing The Northeast, The Northeast, and see beauty in simplicity, it's perfect for enthusiasts of see beauty in simplicity. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-gM4DZ97/A",
     "keywords": [
@@ -1792,9 +1869,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1809,8 +1889,8 @@ export const galleryData = [
   },
   {
     "id": "i-rsKpjQ8",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Autumn In New England And See Beauty In Simplicity",
+    "description": "Wayne Heim presents autumn in new england in this see beauty in simplicity work. Embodying autumn in new england, The Northeast, and autumn in new england, it's recommended for lovers of autumn in new england. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-rsKpjQ8/A",
     "keywords": [
@@ -1839,9 +1919,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "see beauty in simplicity",
+      "The Northeast"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies The Northeast and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1856,8 +1939,8 @@ export const galleryData = [
   },
   {
     "id": "i-T3fx2pT",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Exploring Autumn In New England",
+    "description": "Experience autumn in new england through this evocative autumn in new england from Wayne Heim's portfolio. This piece highlights The Northeast with The Northeast, while conveying autumn in new england, ideal for those who appreciate autumn in new england. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-T3fx2pT/A",
     "keywords": [
@@ -1886,9 +1969,11 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "The Northeast"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing The Northeast and autumn in new england. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1903,8 +1988,8 @@ export const galleryData = [
   },
   {
     "id": "i-DmxFbF6",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "See Beauty In Simplicity In Fine Art",
+    "description": "Wayne Heim presents see beauty in simplicity in this see beauty in simplicity work. Embodying The Northeast, The Northeast, and autumn in new england, it's recommended for lovers of see beauty in simplicity. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-DmxFbF6/A",
     "keywords": [
@@ -1933,9 +2018,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies The Northeast and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1950,8 +2038,8 @@ export const galleryData = [
   },
   {
     "id": "i-VDnpX3W",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Fine Art See Beauty In Simplicity",
+    "description": "Explore see beauty in simplicity with Wayne Heim's autumn in new england. This The Northeast piece conveys see beauty in simplicity, see beauty in simplicity, and see beauty in simplicity, perfect for fans of autumn in new england. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-VDnpX3W/A",
     "keywords": [
@@ -1980,9 +2068,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "autumn in new england",
+      "The Northeast"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into autumn in new england, this work by Wayne Heim highlights The Northeast through see beauty in simplicity and The Northeast. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1997,8 +2088,8 @@ export const galleryData = [
   },
   {
     "id": "i-wTXh9Lv",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Exploring The Northeast",
+    "description": "Experience The Northeast through this evocative see beauty in simplicity from Wayne Heim's portfolio. This piece highlights see beauty in simplicity with The Northeast, while conveying see beauty in simplicity, ideal for those who appreciate The Northeast. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-wTXh9Lv/A",
     "keywords": [
@@ -2027,9 +2118,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies autumn in new england and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2044,8 +2138,8 @@ export const galleryData = [
   },
   {
     "id": "i-5RjNxDr",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Autumn In New England Landscape",
+    "description": "Delve into autumn in new england via this see beauty in simplicity by Wayne Heim. Highlighting see beauty in simplicity through see beauty in simplicity and autumn in new england, it's great for collectors interested in autumn in new england. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5RjNxDr/A",
     "keywords": [
@@ -2074,9 +2168,11 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "autumn in new england",
+      "see beauty in simplicity"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies see beauty in simplicity and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2091,8 +2187,8 @@ export const galleryData = [
   },
   {
     "id": "i-Rpxdj4F",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "The Northeast In Fine Art",
+    "description": "Immerse yourself in The Northeast with this stunning see beauty in simplicity by Wayne Heim. Capturing see beauty in simplicity, see beauty in simplicity, and see beauty in simplicity, it's a must-have for collectors of The Northeast. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-Rpxdj4F/A",
     "keywords": [
@@ -2121,9 +2217,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of see beauty in simplicity. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2138,8 +2237,8 @@ export const galleryData = [
   },
   {
     "id": "i-PhDqRHJ",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Northeast Study",
+    "description": "Discover the The Northeast in this powerful The Northeast by Wayne Heim. A compelling work that embodies The Northeast, autumn in new england, and autumn in new england. Perfect for art lovers seeking The Northeast to enhance their collection. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-PhDqRHJ/A",
     "keywords": [
@@ -2168,9 +2267,11 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies autumn in new england and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2185,8 +2286,8 @@ export const galleryData = [
   },
   {
     "id": "i-B9pcP9b",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Northeast Study",
+    "description": "Witness The Northeast in Wayne Heim's The Northeast. This image features see beauty in simplicity with The Northeast and autumn in new england, ideal for admirers of The Northeast. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-B9pcP9b/A",
     "keywords": [
@@ -2215,9 +2316,12 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies autumn in new england and see beauty in simplicity, captured by Wayne Heim in his signature style. It reflects see beauty in simplicity with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2232,8 +2336,8 @@ export const galleryData = [
   },
   {
     "id": "i-WqnXv6B",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "See Beauty In Simplicity Moment",
+    "description": "This see beauty in simplicity artwork by Wayne Heim showcases autumn in new england in a see beauty in simplicity style. Reflecting see beauty in simplicity, autumn in new england, and see beauty in simplicity, it's suited for admirers of autumn in new england. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-WqnXv6B/A",
     "keywords": [
@@ -2262,9 +2366,11 @@ export const galleryData = [
       "cliffs",
       "ledges",
       "gorges",
-      "rock walls"
+      "rock walls",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing see beauty in simplicity and see beauty in simplicity. A testament to autumn in new england in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2279,8 +2385,8 @@ export const galleryData = [
   },
   {
     "id": "i-mgSFMf3",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Autumn In New England Landscape",
+    "description": "Witness autumn in new england in Wayne Heim's autumn in new england. This image features The Northeast with The Northeast and see beauty in simplicity, ideal for admirers of autumn in new england. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-mgSFMf3/A",
     "keywords": [
@@ -2291,9 +2397,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies see beauty in simplicity and autumn in new england, captured by Wayne Heim in his signature style. It reflects The Northeast with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2308,8 +2417,8 @@ export const galleryData = [
   },
   {
     "id": "i-D7VJ3Nh",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Autumn In New England Moment",
+    "description": "Wayne Heim's autumn in new england captures the spirit of see beauty in simplicity in this see beauty in simplicity image. Featuring see beauty in simplicity, autumn in new england, and autumn in new england, it's ideal for see beauty in simplicity enthusiasts. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-D7VJ3Nh/A",
     "keywords": [
@@ -2320,9 +2429,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "autumn in new england",
+      "see beauty in simplicity",
+      "The Northeast"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of see beauty in simplicity comes alive in this piece, showcasing The Northeast and The Northeast. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2337,8 +2449,8 @@ export const galleryData = [
   },
   {
     "id": "i-6gXJFDR",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "The Northeast - See Beauty In Simplicity",
+    "description": "Wayne Heim's The Northeast captures the spirit of see beauty in simplicity in this see beauty in simplicity image. Featuring autumn in new england, see beauty in simplicity, and The Northeast, it's ideal for see beauty in simplicity enthusiasts. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6gXJFDR/A",
     "keywords": [
@@ -2349,9 +2461,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of autumn in new england. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2366,8 +2481,8 @@ export const galleryData = [
   },
   {
     "id": "i-GjpFSmz",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "The Essence Of The Northeast",
+    "description": "Wayne Heim presents The Northeast in this see beauty in simplicity work. Embodying autumn in new england, The Northeast, and The Northeast, it's recommended for lovers of The Northeast. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-GjpFSmz/A",
     "keywords": [
@@ -2378,9 +2493,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies The Northeast and The Northeast, captured by Wayne Heim in his signature style. It reflects autumn in new england with a touch of The Northeast. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2395,8 +2513,8 @@ export const galleryData = [
   },
   {
     "id": "i-bQHXTGL",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Exploring Autumn In New England",
+    "description": "Experience autumn in new england through this evocative autumn in new england from Wayne Heim's portfolio. This piece highlights autumn in new england with see beauty in simplicity, while conveying autumn in new england, ideal for those who appreciate autumn in new england. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-bQHXTGL/A",
     "keywords": [
@@ -2407,9 +2525,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "autumn in new england",
+      "see beauty in simplicity",
+      "The Northeast"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into The Northeast, this work by Wayne Heim highlights autumn in new england through autumn in new england and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2424,8 +2545,8 @@ export const galleryData = [
   },
   {
     "id": "i-6GZxKjN",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "The Northeast Landscape",
+    "description": "Uncover The Northeast through this see beauty in simplicity from Wayne Heim. Showcasing see beauty in simplicity, The Northeast, and see beauty in simplicity, it's perfect for enthusiasts of The Northeast. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6GZxKjN/A",
     "keywords": [
@@ -2436,9 +2557,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "The Northeast",
+      "see beauty in simplicity",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of The Northeast comes alive in this piece, showcasing autumn in new england and see beauty in simplicity. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2453,8 +2577,8 @@ export const galleryData = [
   },
   {
     "id": "i-vnRK6nq",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "The Essence Of See Beauty In Simplicity",
+    "description": "Witness see beauty in simplicity in Wayne Heim's The Northeast. This image features autumn in new england with The Northeast and see beauty in simplicity, ideal for admirers of see beauty in simplicity. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vnRK6nq/A",
     "keywords": [
@@ -2465,9 +2589,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into autumn in new england, this work by Wayne Heim highlights autumn in new england through The Northeast and autumn in new england. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2482,8 +2609,8 @@ export const galleryData = [
   },
   {
     "id": "i-qpPKnkk",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Autumn In New England Moment",
+    "description": "Explore autumn in new england with Wayne Heim's autumn in new england. This The Northeast piece conveys see beauty in simplicity, autumn in new england, and autumn in new england, perfect for fans of autumn in new england. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-qpPKnkk/A",
     "keywords": [
@@ -2494,9 +2621,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into see beauty in simplicity, this work by Wayne Heim highlights autumn in new england through The Northeast and see beauty in simplicity. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2511,8 +2641,8 @@ export const galleryData = [
   },
   {
     "id": "i-6jZxx8J",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "The Essence Of See Beauty In Simplicity",
+    "description": "This see beauty in simplicity artwork by Wayne Heim showcases The Northeast in a see beauty in simplicity style. Reflecting see beauty in simplicity, autumn in new england, and see beauty in simplicity, it's suited for admirers of The Northeast. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-6jZxx8J/A",
     "keywords": [
@@ -2523,9 +2653,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "see beauty in simplicity",
+      "The Northeast",
+      "autumn in new england"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing autumn in new england and see beauty in simplicity. A testament to see beauty in simplicity in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2540,8 +2673,8 @@ export const galleryData = [
   },
   {
     "id": "i-vXBVBKJ",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Exploring Autumn In New England",
+    "description": "Experience autumn in new england through this evocative The Northeast from Wayne Heim's portfolio. This piece highlights autumn in new england with autumn in new england, while conveying autumn in new england, ideal for those who appreciate autumn in new england. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-vXBVBKJ/A",
     "keywords": [
@@ -2552,9 +2685,12 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "autumn in new england",
+      "The Northeast",
+      "see beauty in simplicity"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of autumn in new england comes alive in this piece, showcasing see beauty in simplicity and autumn in new england. A testament to The Northeast in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],

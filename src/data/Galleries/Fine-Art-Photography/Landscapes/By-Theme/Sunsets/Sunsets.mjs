@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-wxLBqLg",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Sunset Landscape Photography Study",
+    "description": "Experience sunset landscape photography through this evocative sunset landscape photography from Wayne Heim's portfolio. This piece highlights painterly sunset scenes with painterly sunset scenes, while conveying painterly sunset scenes, ideal for those who appreciate sunset landscape photography. © Wayne Heim",
     "alt": "Grand Sunset Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-wxLBqLg/A",
     "keywords": [
@@ -38,9 +38,11 @@ export const galleryData = [
       "Western scene",
       "mountains",
       "sunset",
-      "color photography"
+      "color photography",
+      "sunset landscape photography",
+      "painterly sunset scenes"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights sunset landscape photography through painterly sunset scenes and painterly sunset scenes. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -55,8 +57,8 @@ export const galleryData = [
   },
   {
     "id": "i-VScCFDQ",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Painterly Sunset Scenes In Fine Art",
+    "description": "Delve into painterly sunset scenes via this painterly sunset scenes by Wayne Heim. Highlighting sunset landscape photography through sunset landscape photography and sunset landscape photography, it's great for collectors interested in painterly sunset scenes. © Wayne Heim",
     "alt": "Grand Sunset Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VScCFDQ/A",
     "keywords": [
@@ -70,9 +72,11 @@ export const galleryData = [
       "Western scene",
       "mountains",
       "sunset",
-      "color photography"
+      "color photography",
+      "painterly sunset scenes",
+      "sunset landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -119,8 +123,8 @@ export const galleryData = [
   },
   {
     "id": "i-3jXg4hf",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Sunset Landscape Photography And Painterly Sunset Scenes",
+    "description": "Wayne Heim presents sunset landscape photography in this painterly sunset scenes work. Embodying painterly sunset scenes, sunset landscape photography, and sunset landscape photography, it's recommended for lovers of sunset landscape photography. © Wayne Heim",
     "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-3jXg4hf/A",
     "keywords": [
@@ -134,9 +138,11 @@ export const galleryData = [
       "Western scene",
       "mountains",
       "sunset",
-      "color photography"
+      "color photography",
+      "sunset landscape photography",
+      "painterly sunset scenes"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -151,8 +157,8 @@ export const galleryData = [
   },
   {
     "id": "i-XmVfrdk",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "title": "Painterly Sunset Scenes Study",
+    "description": "Explore painterly sunset scenes with Wayne Heim's painterly sunset scenes. This painterly sunset scenes piece conveys sunset landscape photography, painterly sunset scenes, and painterly sunset scenes, perfect for fans of painterly sunset scenes. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/A",
     "keywords": [
@@ -166,9 +172,11 @@ export const galleryData = [
       "Western scene",
       "mountains",
       "sunset",
-      "color photography"
+      "color photography",
+      "painterly sunset scenes",
+      "sunset landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -215,8 +223,8 @@ export const galleryData = [
   },
   {
     "id": "i-hVB6Pxq",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "title": "Sunset Landscape Photography Study",
+    "description": "Wayne Heim's sunset landscape photography captures the spirit of painterly sunset scenes in this painterly sunset scenes image. Featuring sunset landscape photography, sunset landscape photography, and sunset landscape photography, it's ideal for painterly sunset scenes enthusiasts. © Wayne Heim",
     "alt": "Another View    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-hVB6Pxq/A",
     "keywords": [
@@ -230,9 +238,11 @@ export const galleryData = [
       "Western scene",
       "mountains",
       "sunset",
-      "color photography"
+      "color photography",
+      "sunset landscape photography",
+      "painterly sunset scenes"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into sunset landscape photography, this work by Wayne Heim highlights painterly sunset scenes through sunset landscape photography and painterly sunset scenes. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -503,8 +513,8 @@ export const galleryData = [
   },
   {
     "id": "i-MwsQPKg",
-    "title": "Untitled",
-    "description": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
+    "title": "Sunset Landscape Photography Moment",
+    "description": "Uncover sunset landscape photography through this painterly sunset scenes from Wayne Heim. Showcasing sunset landscape photography, painterly sunset scenes, and painterly sunset scenes, it's perfect for enthusiasts of sunset landscape photography. © Wayne Heim",
     "alt": "Midnight Sun Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-MwsQPKg/A",
     "keywords": [
@@ -518,9 +528,11 @@ export const galleryData = [
       "Western scene",
       "mountains",
       "sunset",
-      "color photography"
+      "color photography",
+      "sunset landscape photography",
+      "painterly sunset scenes"
     ],
-    "story": "Fine art landscape photography of Iceland Sunset and clouds in the Fall.",
+    "story": "This image embodies painterly sunset scenes and painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -663,8 +675,8 @@ export const galleryData = [
   },
   {
     "id": "i-MwLgJL5",
-    "title": "Eminent Rise",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "title": "Sunset Landscape Photography Moment",
+    "description": "Discover the sunset landscape photography in this powerful painterly sunset scenes by Wayne Heim. A compelling work that embodies painterly sunset scenes, sunset landscape photography, and painterly sunset scenes. Perfect for art lovers seeking sunset landscape photography to enhance their collection. © Wayne Heim",
     "alt": "Davis West Virginia Sunrise in full show.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-MwLgJL5/A",
     "keywords": [
@@ -678,9 +690,11 @@ export const galleryData = [
       "Western scene",
       "mountains",
       "sunset",
-      "color photography"
+      "color photography",
+      "sunset landscape photography",
+      "painterly sunset scenes"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -942,7 +956,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 28,
-      "src": "https://photos.smugmug.com/photos/i-VbL6CF7/4/NjRMzJ7S6pbvkFnHrWNnnWccSwdCFWqCnJfcJKZZj/XL/i-VbL6CF7-XL.jpg",
+    "src": "https://photos.smugmug.com/photos/i-VbL6CF7/4/NjRMzJ7S6pbvkFnHrWNnnWccSwdCFWqCnJfcJKZZj/XL/i-VbL6CF7-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-VbL6CF7/4/NjRMzJ7S6pbvkFnHrWNnnWccSwdCFWqCnJfcJKZZj/XL/i-VbL6CF7-XL.jpg",
     "srcL": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MsfJb7mj34SDf2fQWMzBRJX5FSjJmTtFqGBsJqSrj/L/i-VbL6CF7-L.jpg",
     "srcM": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MShtTP2rRDP3FZzwVRs2dR38fLPBzZw8MKn4MgN7D/M/i-VbL6CF7-M.jpg",

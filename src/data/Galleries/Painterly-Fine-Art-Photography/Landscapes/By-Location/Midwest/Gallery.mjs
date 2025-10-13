@@ -23,8 +23,8 @@ export const galleryData = [
   },
   {
     "id": "i-GBTSWkW",
-    "title": "Untitled",
-    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "title": "Midwest Landscape Photography Moment",
+    "description": "This midwest landscape photography artwork by Wayne Heim showcases midwest landscape photography in a midwest landscape photography style. Reflecting midwest landscape photography, midwest landscape photography, and midwest landscape photography, it's suited for admirers of midwest landscape photography. © Wayne Heim",
     "alt": "Old Clifton Mill",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-GBTSWkW/A",
     "keywords": [
@@ -38,9 +38,10 @@ export const galleryData = [
       "trees",
       "bridges",
       "Buckeye State",
-      "rivers"
+      "rivers",
+      "midwest landscape photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of midwest landscape photography comes alive in this piece, showcasing midwest landscape photography and midwest landscape photography. A testament to midwest landscape photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -136,7 +137,7 @@ export const galleryData = [
       "Buckeye State",
       "rivers"
     ],
-    "story": "Two waterfalls flow over same rocks. . ©Wayne Heim",
+    "story": "Two waterfalls flow over same rocks. ©Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
