@@ -114,7 +114,7 @@ export const semantic = {
       { phrase: "grit & glory of the west", rating: 4, use: true },
       { phrase: "authentic frontier art prints", rating: 4, use: true },
       { phrase: "western art for rustic interiors", rating: 3, use: true },
-
+      { phrase: "historical reenactment", rating: 3, use: true },
       { phrase: "painterly cowboy photography", rating: 5, use: true },
       { phrase: "wild west painterly photography", rating: 5, use: true },
       { phrase: "western painterly photography", rating: 4, use: true },
@@ -151,6 +151,7 @@ export const semantic = {
       { phrase: "cowboy portraits", rating: 5, use: true },
        { phrase: "cowboy art", rating: 5, use: true },
        { phrase: "Western cowboys", rating: 5, use: true },
+       { phrase: "western canon", rating: 3, use: true },
         { phrase: "cowboy artwork", rating: 5, use: true },
         { phrase: "western fine art", rating: 5, use: true },
         { phrase: "fine art Western photography", rating: 5, use: true },
@@ -352,6 +353,7 @@ export const semantic = {
     def: "Abroad—where light behaves differently enough to make you look twice.",
     landingPhrases: [
       { phrase: "natural grain", rating: 5, use: true },
+      { phrase: "cinematic landscapes", rating: 3, use: true },
       { phrase: "International Painterly Landscapes", rating: 5, use: true },
       { phrase: "european landscape art", rating: 4, use: true },
       { phrase: "world landscapes fine art", rating: 3, use: true },
@@ -814,6 +816,7 @@ export const semantic = {
     landingPhrases: [
       { phrase: "Painterly Fine Art Photography", rating: 5, use: true },
       { phrase: "painterly photography", rating: 5, use: true },
+      { phrase: "painterly storytelling", rating: 5, use: true },
       { phrase: "Read the full story here", rating: 5, use: true },
       { phrase: "painterly art collection", rating: 4, use: true },
       { phrase: "painterly style wall art", rating: 4, use: true },

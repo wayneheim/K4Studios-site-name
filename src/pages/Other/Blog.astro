@@ -7,6 +7,19 @@ import { getLandingMeta } from "@/data/landingMeta.ts";
 
 import { posts } from "@/data/Other/Blog/posts.mjs"; // new dataset
 import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
+import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { galleryData as roaring20sColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { galleryData as roaring20sBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  sectionGalleries,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.ts";
 import "@/styles/global.css";
 
 // ----------------------
@@ -37,7 +50,7 @@ const meta = getLandingMeta(sectionPath, landingImgUrl);
 if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
 
-// Prepare gallery preview images from painterly section
+// Prepare gallery preview images from multiple painterly galleries
 function shuffleArray<T>(arr: T[]): T[] {
   return arr
     .map(value => ({ value, sort: Math.random() }))
@@ -45,9 +58,24 @@ function shuffleArray<T>(arr: T[]): T[] {
     .map(({ value }) => value);
 }
 
-const visiblePainterlyImages = painterlyImages.filter(img => img.visibility !== "ghost");
-const previewImages = shuffleArray(visiblePainterlyImages).slice(0, 6);
-const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+// Combine images from multiple Facing History galleries
+const allGalleryImages = [
+  ...painterlyImages,
+  ...civilWarColor,
+  ...civilWarBW,
+  ...roaring20sColor,
+  ...roaring20sBW,
+  ...wwiiPortraitsColor,
+  ...wwiiPortraitsBW
+].filter(img => img.visibility !== "ghost");
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+
+// Setup for keyword linking
+const galleryDatas = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
 ---
 
 <BaseLayout
@@ -73,12 +101,7 @@ const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/We
     <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-10">
   <h2 class="text-4xl font-extrabold mb-2" style="font-family: 'Glegoo', serif;">Inside the Frame</h2>
   <h3 class="text-2xl font-semibold mb-8 text-gray-700" style="font-family: 'Glegoo', serif;">The K4 Studios Blog</h3>
-        <p class="text-lg leading-relaxed text-gray-700">
-          “Inside the Frame” is where I step out from behind the lens and share the stories 
-          that shape my work. Part interview, part reflection, these posts explore composition, 
-          symbolism, and the choices that transform my fine art photography into 
-          narrative-driven, storytelling.
-        </p>
+        <p class="text-lg leading-relaxed text-gray-700" set:html={autoLinkKeywordsInText('\"Inside the Frame\" is where I step out from behind the lens and share the stories that shape my work. Part interview, part reflection, these posts explore composition, symbolism, and the choices that transform my fine art photography into narrative-driven, storytelling.', galleryDatas, featheredImages, galleryPaths, k4Semantic)} /></p>
     </section>
 
     <section class="story-layout" style="font-family: 'Glegoo', serif;">
@@ -99,7 +122,7 @@ const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/We
                 <a href={`/Other/Blog/${post.slug}`}>{post.title}</a>
               </h2>
               <p class="text-sm text-gray-600 mb-2">{post.date}</p>
-              <p class="mb-4">{post.excerpt}</p>
+              <p class="mb-4" set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic)} /></p>
               <a href={`/Other/Blog/${post.slug}`} class="underline text-blue-700">Read more →</a>
             </article>
         ))}

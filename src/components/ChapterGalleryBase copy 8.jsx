@@ -24,28 +24,6 @@ import StoryShow from "./Gallery-Slideshow.jsx";
 import useHorizontalSwipeNav from "./hooks/useHorizontalSwipeNav.js";
 import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
-import { siteNav } from "../data/siteNav.js";
-
-/* =========================================================
-   Helper function to find section landing page from siteNav
-   ========================================================= */
-function findSectionUrl(basePath) {
-  // For paths containing "By-Location", go up to the By-Location level
-  if (basePath.includes('/By-Location/')) {
-    const parts = basePath.split('/');
-    const byLocationIndex = parts.findIndex(part => part === 'By-Location');
-    if (byLocationIndex !== -1) {
-      return parts.slice(0, byLocationIndex + 1).join('/');
-    }
-  }
-  
-  // Fallback: strip "/Gallery" if present, then go up one level
-  let url = basePath;
-  if (url.endsWith('/Gallery')) {
-    url = url.slice(0, -'/Gallery'.length);
-  }
-  return url.split('/').slice(0, -1).join('/');
-}
 
 /* =========================================================
    Reusable lightweight guided tour (uses sectionKey + image)
@@ -314,52 +292,6 @@ export default function ChapterGalleryBase({
   galleryKey,
   initialImageId
 }) {
-  const sectionUrl = findSectionUrl(basePath);
-  
-  // Generate appropriate title for the section landing page
-  const getSectionDisplayTitle = (url) => {
-    const parts = url.split('/').filter(p => p);
-    
-    // Handle Landscapes sections
-    if (url.includes('/Landscapes/')) {
-      if (url.includes('/By-Location')) {
-        return 'Landscapes By Location';
-      }
-      if (url.includes('/By-Theme')) {
-        return 'Landscapes By Theme';
-      }
-      return 'Landscapes';
-    }
-    
-    // Handle Facing History sections
-    if (url.includes('/Facing-History/')) {
-      const historyIndex = parts.findIndex(p => p === 'Facing-History');
-      if (historyIndex !== -1 && parts.length > historyIndex + 1) {
-        const section = parts[historyIndex + 1];
-        if (parts.length > historyIndex + 2) {
-          const subsection = parts[historyIndex + 2];
-          // Map subsection codes to display names
-          const subsectionNames = {
-            'War': 'Art of War',
-            'Machines': 'Men & Machines',
-            'Portraits': 'Portraits'
-          };
-          const displaySubsection = subsectionNames[subsection] || subsection.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-          return `${section.toUpperCase()}: ${displaySubsection}`;
-        }
-        return section.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-      }
-    }
-    
-    // Default: use the last part with title case
-    const lastPart = parts[parts.length - 1];
-    return lastPart.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  };
-  
-  const sectionDisplayTitle = getSectionDisplayTitle(sectionUrl);
-  
-  const altText = `${sectionDisplayTitle} – Painterly Fine Art Photography by Wayne Heim`;
-  const titleText = altText;
   // Filter out ghost + hidden items
   const isGhost  = (e) => e && e.id === "i-k4studios";
   const isHidden = (e) => e?.visibility === "hidden" || e?.show === false || e?.hidden === true;
@@ -1080,22 +1012,12 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
 
                     {/* Logo Watermark */}
                     <div className="mb-4 flex justify-center relative z-0 hidden md:flex">
-                      <a
-                        href={sectionUrl}
-                        title={titleText}
-                        className="relative block group"
-                      >
-                        <img
-                          src="/images/K4Logo-web-b.jpg"
-                          alt={altText}
-                          className="h-16.5 mb-5 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none"
-                          style={{ borderRadius: "50px", maxWidth: "160px", opacity: ".20" }}
-                        />
-                        <span className="absolute inset-0 flex items-center justify-center text-center text-[#7a6a58] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-white rounded-full">
-                          {sectionDisplayTitle}
-                        </span>
-                        <span className="sr-only">{sectionDisplayTitle}</span>
-                      </a>
+                      <img
+                        src="/images/K4Logo-web-b.jpg"
+                        alt="K4 Studios Logo"
+                        className="h-16.5 mb-5"
+                        style={{ borderRadius: "50px", maxWidth: "160px", opacity: ".20" }}
+                      />
                     </div>
 
                     {/* Title */}

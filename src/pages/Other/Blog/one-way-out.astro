@@ -4,6 +4,20 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  sectionGalleries,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.ts";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
+import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { galleryData as roaring20sColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { galleryData as roaring20sBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import "@/styles/global.css";
 
 const sectionPath = "/Other/Blog/one-way-out";
@@ -43,6 +57,33 @@ const meta = {
   twitterImage: coverImage,
   twitterCard: "summary_large_image"
 };
+
+// Prepare gallery preview images from multiple painterly galleries
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+// Combine images from multiple Facing History galleries
+const allGalleryImages = [
+  ...painterlyImages,
+  ...civilWarColor,
+  ...civilWarBW,
+  ...roaring20sColor,
+  ...roaring20sBW,
+  ...wwiiPortraitsColor,
+  ...wwiiPortraitsBW
+].filter(img => img.visibility !== "ghost");
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+
+// Setup for keyword linking
+const galleryDatas = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
 ---
 
 <BaseLayout
@@ -126,7 +167,13 @@ const meta = {
       </article>
     </section>
 
-    <SiteFooter title="Conversations With Quill – One Way Out" class="pt-12 pb-12" />
+    <SiteFooter 
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title="Conversations With Quill – One Way Out"
+      label="Explore Galleries"
+      class="pt-12 pb-12" 
+    />
   </main>
 
   <style>

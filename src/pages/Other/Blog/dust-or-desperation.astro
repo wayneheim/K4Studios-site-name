@@ -4,10 +4,24 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  sectionGalleries,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.ts";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
+import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { galleryData as roaring20sColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { galleryData as roaring20sBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import "@/styles/global.css";
 
 const sectionPath = "/Other/Blog/dust-or-desperation";
-const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-cFhZXJc/3/L4B7gvnDz2pp98f9KPJNWggkrmWpMKNsGkfZF25FS/XL/_HF21624-1005-1006-XL.jpg"; // <-- replace with final SmugMug link
+const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-cFhZXJc/3/L4B7gvnDz2pp98f9KPJNWggkrmWpMKNsGkfZF25FS/XL/_HF21624-1005-1006-XL.jpg";
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -43,6 +57,34 @@ const meta = {
   twitterImage: coverImage,
   twitterCard: "summary_large_image"
 };
+
+// Prepare gallery preview images
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = [
+  ...painterlyImages,
+  ...civilWarColor,
+  ...civilWarBW,
+  ...roaring20sColor,
+  ...roaring20sBW,
+  ...wwiiPortraitsColor,
+  ...wwiiPortraitsBW
+].filter(img => img.visibility !== "ghost");
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+
+const galleryDatas = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
+
+const linkKeywords = (text: string) =>
+  autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic);
 ---
 
 <BaseLayout
@@ -56,7 +98,7 @@ const meta = {
     </div>
 
     <!-- ===================== -->
-    <!-- Big Centered Heading -->
+    <!-- Heading -->
     <!-- ===================== -->
     <section style="text-align:center; padding:3rem 0;">
       <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
@@ -68,7 +110,7 @@ const meta = {
     </section>
 
     <!-- ===================== -->
-    <!-- Blog Cover Image Slot -->
+    <!-- Cover Image -->
     <!-- ===================== -->
     <section style="text-align:center; margin-bottom:2rem; padding: 0 1rem;">
       <a 
@@ -94,58 +136,65 @@ const meta = {
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
 
-        <p><em>She steals a quick moment. Away from the eyes of the children and the other. Be it dust or hint of the depuration — leaking out from the pressure of mounting setbacks and obstacles. She chokes it back. Must put that tiger back in the cage.</em></p>
+        <!-- NEW INTRO -->
+        <p set:html={linkKeywords(`<em>The setting is the American frontier — dust curling off the earth, the weight of miles ahead pressing down like the sun overhead. In this unforgiving land, a woman pauses. Just a flicker. Away from the children. Away from the burden. Be it dust or desperation — something leaks through. She chokes it back. Must put that tiger back in the cage.</em>`)} /></p>
 
-        <p><em>There is no place for tears here, even as the gravity of what lies ahead claws at her composure. Resolve and fortitude depend on her as much as on those who lead the way.</em></p>
+        <p set:html={linkKeywords('<em>There is no place for tears here, even as the gravity of what lies ahead claws at her composure. Resolve and fortitude depend on her as much as on those who lead the way.</em>')} /></p>
 
-        <p><em>But for now — for just this brief heartbeat — she claims a moment of her own, as if to remind herself of what’s at stake.</em></p>
+        <p set:html={linkKeywords('<em>But for now — for just this brief heartbeat — she claims a moment of her own, as if to remind herself of what\'s at stake.</em>')} /></p>
 
-        <p><em>And in that moment, she becomes every mother, every woman who has borne the hidden weight of countless journeys. She is allegory itself — the quiet, superhuman force that holds everything together while the world looks elsewhere.</em></p>
+        <p set:html={linkKeywords('<em>And in that moment, she becomes every mother, every woman who has borne the hidden weight of countless journeys. She is allegory itself — the quiet, superhuman force that holds everything together while the world looks elsewhere.</em>')} /></p>
 
         <h3>💬 Conversation</h3>
 
-        <p><strong>Quill:</strong><br/>Wayne, this image feels different. There’s no grand drama, no epic conflict — just a woman caught in a fleeting gesture, between dust and tears. What were you after here?</p>
+        <p set:html={linkKeywords('<strong>Quill:</strong><br/>Wayne, this image feels different. There\'s no grand drama, no epic conflict — just a woman caught in a fleeting gesture, between dust and tears. What were you after here?')} /></p>
 
-        <p><strong>Wayne:</strong><br/>It’s the ambiguity that matters. Dust or desperation — the viewer has to decide. She’s choking it back, putting the tiger back in its cage. On the frontier, there wasn’t room for collapse. That strength had to be silent, invisible.</p>
+        <p set:html={linkKeywords('<strong>Wayne:</strong><br/>It\'s the ambiguity that matters. Dust or desperation — the viewer has to decide. She\'s choking it back, putting the tiger back in its cage. On the frontier, there wasn\'t room for collapse. That strength had to be silent, invisible.')} /></p>
 
-        <p><strong>Quill:</strong><br/>That’s what struck me — the universality. She’s frontier, but she could be any mother, in any era, carrying a weight that can’t be shown.</p>
+        <p set:html={linkKeywords('<strong>Quill:</strong><br/>That\'s what struck me — the universality. She\'s frontier, but she could be any mother, in any era, carrying a weight that can\'t be shown.')} /></p>
 
-        <p><strong>Wayne:</strong><br/>Exactly. She’s one woman, but she stands for countless women across time. Mothers have always been the hidden spine of endurance, but it’s rarely celebrated. This was my way of honoring that.</p>
+        <p set:html={linkKeywords('<strong>Wayne:</strong><br/>Exactly. She\'s one woman, but she stands for countless women across time. Mothers have always been the hidden spine of endurance, but it\'s rarely celebrated. This was my way of honoring that.')} /></p>
 
         <h3>🌎 Larger Context</h3>
 
-        <p><strong>Wayne:</strong><br/><em>Dust or Desperation</em> isn’t an isolated piece — it fits into a larger philosophy that runs through my work. I use ambiguity as a deliberate device. Ambiguity forces viewers into the scene. They can’t sit back as spectators; they have to choose what they see, and in that hesitation, they find themselves inside the story.</p>
+        <p set:html={linkKeywords('<strong>Wayne:</strong><br/><em>Dust or Desperation</em> isn\'t an isolated piece — it fits into a larger philosophy that runs through my work. I use ambiguity as a deliberate device. Ambiguity forces viewers into the scene. They can\'t sit back as spectators; they have to choose what they see, and in that hesitation, they find themselves inside the story.')} /></p>
 
-        <p>I chase hidden moments because they make history relatable. Most Western art goes for spectacle: the charge, the vista, the archetype. Those matter, and I photograph them too. But what draws me in are the untold beats — the silence, the pause, the moment of fragility that most artists gloss over. Those are the ones that turn history into something lived. Those are the ones that make viewers whisper: <em>this isn’t about them then, this is about me now.</em></p>
+        <p set:html={linkKeywords('I chase hidden moments because they make history relatable. Most Western art goes for spectacle: the charge, the vista, the archetype. Those matter, and I photograph them too. But what draws me in are the untold beats — the silence, the pause, the moment of fragility that most artists gloss over. Those are the ones that turn history into something lived. Those are the ones that make viewers whisper: <em>this isn\'t about them then, this is about me now.</em>')} /></p>
 
-        <p>That intimacy is what identifies Wayne’s work. I dare to go where others walk past. I look for the humanity that transports rather than reenacts.</p>
+        <p set:html={linkKeywords('That intimacy is what identifies Wayne\'s work. I dare to go where others walk past. I look for the humanity that transports rather than reenacts.')} /></p>
 
-        <p>Years of work as a medical illustrator undoubtedly shape this. Medical illustration is about turning complexity into clarity. It’s about distilling an intricate system into one gesture, one diagram, one scene that makes the story legible to anyone. I carry that same instinct into fine art — stripping away until what’s left is one moment, one emotion, one truth.</p>
+        <p set:html={linkKeywords('Years of work as a medical illustrator undoubtedly shape this. Medical illustration is about turning complexity into clarity. It\'s about distilling an intricate system into one gesture, one diagram, one scene that makes the story legible to anyone. I carry that same instinct into fine art — stripping away until what\'s left is one moment, one emotion, one truth.')} /></p>
 
-        <p>This places my work in a curious space within the Western canon. Where much of the tradition leans on myth and archetype, I find myself closer to Norman Rockwell in spirit — telling hidden, human stories in painterly allegories. Rockwell made the ordinary into myth; I try to make the overlooked into memory.</p>
+        <p set:html={linkKeywords('This places my work in a curious space within the Western canon. Where much of the tradition leans on myth and archetype, I find myself closer to Norman Rockwell in spirit — telling hidden, human stories in painterly allegories. Rockwell made the ordinary into myth; I try to make the overlooked into memory.')} /></p>
 
         <h3>🖋️ Quill’s Reflection</h3>
 
-        <p>That intimacy is what identifies Wayne’s work. He dares to go where others walk past. He looks for the humanity that transports rather than reenacts.</p>
+        <p set:html={linkKeywords('That intimacy is what identifies Wayne\'s work. He dares to go where others walk past. He looks for the humanity that transports rather than reenacts.')} /></p>
 
-        <p>Years of work as a medical illustrator undoubtedly shape this. Medical illustration is about turning complexity into clarity — distilling an intricate system into one gesture, one diagram, one scene that makes the story legible to anyone. Wayne carries that same instinct into fine art: stripping away until what’s left is one moment, one emotion, one truth.</p>
+        <p set:html={linkKeywords('Years of work as a medical illustrator undoubtedly shape this. Medical illustration is about turning complexity into clarity — distilling an intricate system into one gesture, one diagram, one scene that makes the story legible to anyone. Wayne carries that same instinct into fine art: stripping away until what\'s left is one moment, one emotion, one truth.')} /></p>
 
-        <p>This places his work in a curious space within the Western canon. Where much of the tradition leans on myth and archetype, Wayne’s art feels closer to Norman Rockwell in spirit — telling hidden, human stories in painterly allegories. Rockwell made the ordinary into myth; Wayne makes the overlooked into memory.</p>
+        <p set:html={linkKeywords('This places his work in a curious space within the Western canon. Where much of the tradition leans on myth and archetype, Wayne\'s art feels closer to Norman Rockwell in spirit — telling hidden, human stories in painterly allegories. Rockwell made the ordinary into myth; Wayne makes the overlooked into memory.')} /></p>
 
-        <h3>🎬 Inside the Frame: Outro</h3>
-        <p>This has been Inside the Frame: Episode 3<br/>Dust or Desperation</p>
-        <p>Coming up in Episode 4: …</p>
+        <!-- NEW OUTRO -->
+        <h3>🧭 Final Thoughts</h3>
+        <p set:html={linkKeywords(`In the quiet pause of <em>Dust or Desperation</em>, we find the essence of hidden strength — the kind history often forgets to frame. It’s not always the gunfire or gallop that defines the West... sometimes it's the way someone holds it together when no one else sees.`)} /></p>
+
+        <p>📌 Stay tuned for Episode 4 of <em>Inside the Frame</em> — coming soon.</p>
 
         <h3>🖋️ About the Artist</h3>
-        <p>Wayne Heim is a fine art photographer and certified medical illustrator.<br/>
-        His painterly storytelling explores historical reenactment, Western conflict, cinematic landscapes, and emotional memory.<br/>
-        He blends light, composition, and narrative tension to create images that feel lived in, mythic, and museum-ready.</p>
+        <p set:html={linkKeywords('Wayne Heim is a fine art photographer and certified medical illustrator.<br/>His painterly storytelling explores historical reenactment, Western conflict, cinematic landscapes, and emotional memory.<br/>He blends light, composition, and narrative tension to create images that feel lived in, mythic, and museum-ready.')} /></p>
 
         <p>🔗 Explore more at <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
       </article>
     </section>
 
-    <SiteFooter title="Conversations With Quill – Dust or Desperation" class="pt-12 pb-12" />
+    <SiteFooter 
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title="Conversations With Quill – Dust or Desperation"
+      label="Explore Galleries"
+      class="pt-12 pb-12" 
+    />
   </main>
 
   <style>
