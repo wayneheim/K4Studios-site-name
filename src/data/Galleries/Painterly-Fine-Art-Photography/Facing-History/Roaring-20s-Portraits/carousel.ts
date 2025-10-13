@@ -16,9 +16,11 @@ for (const filePath in modules) {
   if (visible.length === 0) continue;
   // Extract subfolder name from file path for path building
   const match = filePath.match(/Roaring-20s-Portraits\/?([^/]*)/);
-  const subfolder = match && match[1] ? `/${match[1]}` : '';
+  const subfolderRaw = match && match[1] ? match[1] : '';
+  const subfolder = subfolderRaw.replace(/\.mjs$/, ''); // Strip .mjs extension
+  const subfolderPath = subfolder ? `/${subfolder}` : '';
   galleryDatas.push(visible);
-  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits${subfolder}`);
+  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits${subfolderPath}`);
 }
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating

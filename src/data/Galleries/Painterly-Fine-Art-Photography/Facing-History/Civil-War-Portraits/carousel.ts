@@ -14,8 +14,8 @@ for (const filePath in modules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Extract subfolder name from file path for path building
-  const match = filePath.match(/Civil-War-Portraits\/?([^/]*)/);
+  // Extract subfolder name from file path for path building (exclude .mjs extension)
+  const match = filePath.match(/Civil-War-Portraits\/?([^/]*?)(?:\.mjs)?$/);
   const subfolder = match && match[1] ? `/${match[1]}` : '';
   galleryDatas.push(visible);
   galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits${subfolder}`);
