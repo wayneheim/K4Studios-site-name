@@ -8,6 +8,8 @@ import { getImageMeta } from "@/components/utils/getImageMeta.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   return galleryData.map(img => ({
     params: { id: img.id },

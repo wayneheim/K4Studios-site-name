@@ -1,4 +1,4 @@
-export const roaring20sStory = [
+export const westernStory = [
   /* 1: INTRO – THE UNTOLD SIDE OF THE JAZZ AGE */
   {
     breadcrumb: "Roaring 20s Portraits | Color",
