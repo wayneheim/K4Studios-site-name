@@ -1,32 +1,12 @@
-# Civil War
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/"
-status = 301
-force = true
-
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/index.html"
 status = 200
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/"
-status = 301
-force = true
-
-[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/index.html"
 status = 200
-
-# Western Cowboy
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/"
-status = 301
-force = true
 
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/*"
@@ -34,22 +14,9 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Po
 status = 200
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/"
-status = 301
-force = true
-
-[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/index.html"
 status = 200
-
-# Roaring 20s
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/"
-status = 301
-force = true
 
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/*"
@@ -57,22 +24,9 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portr
 status = 200
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/"
-status = 301
-force = true
-
-[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/index.html"
 status = 200
-
-# WWII (Color + B&W)
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/"
-status = 301
-force = true
 
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/*"
@@ -80,22 +34,9 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/
 status = 200
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/"
-status = 301
-force = true
-
-[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/index.html"
 status = 200
-
-# Transportation
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/"
-status = 301
-force = true
 
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/*"
@@ -103,21 +44,9 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:i
 status = 200
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/"
-status = 301
-force = true
-
-[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/index.html"
 status = 200
-
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/"
-status = 301
-force = true
 
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/*"
@@ -125,28 +54,38 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/index.
 status = 200
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id"
-to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/"
-status = 301
-force = true
-
-[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/index.html"
 status = 200
-
-# Engrained Series
-[[redirects]]
-from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
-to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/"
-status = 301
-force = true
 
 [[redirects]]
 from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/*"
 to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/index.html"
 status = 200
 
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+status = 301
+force = true
 
 [functions]
   directory = "netlify/functions"
