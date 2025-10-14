@@ -1,4 +1,4 @@
-export const painterlyPortraitStory = [
+export const painterlyLandscapeStory = [
   // 1. INTRO
   {
     title: "Fine Art Painterly Portraits – The Art of Timeless Character",
