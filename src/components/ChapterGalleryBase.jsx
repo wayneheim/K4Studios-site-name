@@ -14,6 +14,7 @@ import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight } from "lucide-react";
 import { getClosingSentence } from "../utils/seoDescriptionAppender.js";
+import { sitemapMatches } from "../data/sitemapMatches.ts";
 import ZoomOverlay from "./ZoomOverlay.jsx";
 import RebuiltScrollGrid from "./RebuiltScrollGrid";
 import MobileMiniDrawer from "./MobileMiniDrawer";
@@ -98,8 +99,24 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
     if (!autoStart) return;
 
     const tryStart = () => {
-      // Hide tour for this gallery if skip flag is set in sessionStorage
-      if (sessionStorage.getItem(`k4-tour-skip:${sectionKey || "k4"}`) === "1") return;
+      // Hide tour globally if skip flag is set in sessionStorage
+      if (sessionStorage.getItem("k4-tour-skipped") === "1") return;
+      
+      // Hide tour globally if hide flag is set and not expired
+      try {
+        const hiddenRaw = localStorage.getItem("k4-tour-hidden");
+        if (hiddenRaw) {
+          try {
+            const obj = JSON.parse(hiddenRaw);
+            if (obj && typeof obj.ts === "number" && typeof obj.ttl === "number") {
+              if (Date.now() - obj.ts < obj.ttl) return;
+              localStorage.removeItem("k4-tour-hidden");
+            }
+          } catch {}
+        }
+      } catch {}
+
+      // Check section-specific hide (legacy support)
       try {
         const raw = localStorage.getItem(seenKey);
         if (raw) {
@@ -258,7 +275,7 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
               onClick={() => {
                 logUIEvent("tour_skip", { page: window.location.pathname, sectionKey });
                 try {
-                  sessionStorage.setItem(`k4-tour-skip:${sectionKey || "k4"}`, "1");
+                  sessionStorage.setItem("k4-tour-skipped", "1");
                 } catch {}
                 setIsOpen(false); onClose && onClose();
               }}
@@ -269,11 +286,11 @@ function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
             {!steps[idx].selector && (
               <button
                 type="button"
-                title="Hide for 1 month"
+                title="Hide for 1 week"
                 onClick={() => {
                   logUIEvent("tour_hide", { page: window.location.pathname, sectionKey });
                   try {
-                    localStorage.setItem(seenKey, JSON.stringify({ ts: Date.now(), ttl: 2592000000 })); // 30 days in ms
+                    localStorage.setItem("k4-tour-hidden", JSON.stringify({ ts: Date.now(), ttl: 604800000 })); // 1 week in ms
                   } catch {}
                   setIsOpen(false); onClose && onClose();
                 }}
@@ -398,6 +415,28 @@ export default function ChapterGalleryBase({
   const [matColor, setMatColor] = useState("white");
   const [showMiniMenu, setShowMiniMenu] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
+
+  // Sister link logic
+  const currentImageId = galleryData[currentIndex]?.id;
+  let sisterMatch = sitemapMatches.find(m => m.a.includes(currentImageId));
+  // Fallback: link to sister gallery (Color <-> Black-White)
+  if (!sisterMatch) {
+    const currentPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') : '';
+    let sisterPath = currentPath;
+    if (currentPath.includes('/Color/')) {
+      sisterPath = currentPath.replace('/Color/', '/Black-White/');
+    } else if (currentPath.includes('/Black-White/')) {
+      sisterPath = currentPath.replace('/Black-White/', '/Color/');
+    }
+    if (sisterPath !== currentPath) {
+      sisterMatch = { b: `https://www.k4studios.com${sisterPath}` };
+    }
+  }
+  console.log('Sister link debug:', { currentImageId, sisterMatch: !!sisterMatch });
+  const anchorTexts = ["See more painterly photography", "Explore traditional fine art photography", "Discover related images", "View similar artwork", "Browse additional pieces", "Check out more fine art", "Find related photography", "Explore more images", "Enjoy more of Wayne's work", "Discover more art", "Explore Wayne Heim's portfolio", "Discover more artistic pieces", "View additional fine art", "Browse related works", "See more from this series"];
+  const hash = currentImageId ? currentImageId.split('').reduce((a, b) => ((a << 5) - a) + b.charCodeAt(0), 0) : 0;
+  const anchorIndex = Math.abs(hash) % anchorTexts.length;
+  const anchorText = anchorTexts[anchorIndex];
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showStoryShow, setShowStoryShow] = useState(false);
@@ -1131,7 +1170,18 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                         >
                           <button
                             type="button"
-                            onClick={(e) => { e.stopPropagation(); setIsExpanded((p) => !p); }}
+                            onClick={(e) => { 
+                              e.stopPropagation(); 
+                              const newExpanded = !isExpanded;
+                              setIsExpanded(newExpanded);
+                              if (newExpanded) {
+                                logUIEvent("more_about_image_click", {
+                                  page: window.location.pathname,
+                                  imageId: galleryData[currentIndex]?.id,
+                                  sectionKey
+                                });
+                              }
+                            }}
                             className="inline-flex items-center gap-1 no-underline hover:no-underline focus:no-underline"
                             aria-expanded={isExpanded}
                             aria-controls={descPanelId}
@@ -1162,6 +1212,23 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                               >
                                 <h2 className="text-lg font-semibold mb-2">More about this image</h2>
                                 <p className="pb-2">{galleryData[currentIndex]?.description} — {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
+                                {sisterMatch && (
+                                  <div className="pt-2 text-sm">
+                                    <a 
+                                      href={sisterMatch.b.replace('https://www.k4studios.com', typeof window !== 'undefined' ? window.location.origin : 'https://www.k4studios.com')} 
+                                      className="underline text-[#7b1e1e] hover:opacity-80"
+                                      onClick={() => logUIEvent("sister_link_click", {
+                                        page: window.location.pathname,
+                                        imageId: galleryData[currentIndex]?.id,
+                                        sectionKey,
+                                        destination: sisterMatch.b,
+                                        anchorText
+                                      })}
+                                    >
+                                      {anchorText}
+                                    </a>
+                                  </div>
+                                )}
 
                                 {/* NEW: CTA to open Collector Notes (mobile panel) */}
                                 {galleryData[currentIndex]?.notes?.trim() && (
@@ -1209,6 +1276,23 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                                 </button>
                                 <h2 className="text-lg font-semibold mb-2">More about this image</h2>
                                 <p className="pb-2">{galleryData[currentIndex]?.description} — {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
+                                {sisterMatch && (
+                                  <div className="pt-2 text-sm">
+                                    <a 
+                                      href={sisterMatch.b.replace('https://www.k4studios.com', typeof window !== 'undefined' ? window.location.origin : 'https://www.k4studios.com')} 
+                                      className="underline text-[#7b1e1e] hover:opacity-80"
+                                      onClick={() => logUIEvent("sister_link_click", {
+                                        page: window.location.pathname,
+                                        imageId: galleryData[currentIndex]?.id,
+                                        sectionKey,
+                                        destination: sisterMatch.b,
+                                        anchorText
+                                      })}
+                                    >
+                                      {anchorText}
+                                    </a>
+                                  </div>
+                                )}
 
                                 {/* NEW: CTA to open Collector Notes (desktop panel) */}
                                 {galleryData[currentIndex]?.notes?.trim() && (

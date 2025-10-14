@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && npx cpx \"_redirects\" dist/",
+    "build": "npm run gen:master-data && npm run gen:sitemap:matches && astro build && npx cpx \"_redirects\" dist/",
+    "gen:master-data": "node src/scripts/generateMasterGalleryData.cjs",
+    "gen:sitemap": "node scripts/generate-sitemap-data.mjs",
+    "gen:sitemap:matches": "node scripts/generate-sitemap-matches.mjs",
     "preview": "astro preview"
   },
   "repository": {
@@ -36,7 +39,8 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.9.1",
     "recast": "^0.23.11",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "fast-xml-parser": "^4.5.0"
   },
   "devDependencies": {
     "cpx": "^1.5.0",

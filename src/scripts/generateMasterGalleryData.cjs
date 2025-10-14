@@ -6,7 +6,7 @@ const { siteNav } = require('../data/siteNav.js');
 
 // ---- CONFIG ----
 const ROOT_DIR        = path.resolve(__dirname, '../data/Galleries');
-const OUTPUT_FILE_TS  = path.resolve(__dirname, '../data/galleryMaps/MasterGalleryData.ts');
+const OUTPUT_FILE_TS  = path.resolve(__dirname, '../data/galleryMaps/MasterGalleryData.mjs');
 const PER_GALLERY_LIMIT = 20;
 
 // ---- HELPERS ----
@@ -94,7 +94,7 @@ function findNavNodeByHref(node, href) {
     }
     // filter out your studio watermark & cap
     const filtered = raw.filter(img => img.id !== 'i-k4studios');
-    const curated  = pullTopN(filtered);
+    const curated  = filtered;
 
     // Always use the original href as the key, regardless of file location
     galleryDataMap[href] = curated.map(img => ({

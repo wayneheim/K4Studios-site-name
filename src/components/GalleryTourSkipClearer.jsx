@@ -21,12 +21,14 @@ export default function GalleryTourSkipClearer() {
 
   useEffect(() => {
     const clearSkipIfNotGallery = () => {
-      // Get all sessionStorage keys that start with k4-tour-skip
-      const keys = Object.keys(sessionStorage).filter(key => key.startsWith('k4-tour-skip:'));
       const isOnGalleryPage = /\/i-[a-zA-Z0-9_-]+$/i.test(window.location.pathname);
 
       if (!isOnGalleryPage) {
-        // Clear all gallery skip flags when not on any gallery page
+        // Clear global tour skip flag when not on any gallery page
+        sessionStorage.removeItem("k4-tour-skipped");
+        
+        // Also clear legacy section-specific flags for cleanup
+        const keys = Object.keys(sessionStorage).filter(key => key.startsWith('k4-tour-skip:'));
         keys.forEach(key => sessionStorage.removeItem(key));
       }
     };
