@@ -6,6 +6,8 @@ import path from 'path';
 
 export default defineConfig({
  site: 'https://www.k4studios.com',   // 👈 Add this
+  // Enforce no trailing slashes for routes
+  trailingSlash: 'never',
   output: 'server',
   adapter: netlify(),
   integrations: [
