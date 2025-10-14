@@ -6,7 +6,7 @@ export const entranceData = {
     Each image is carefully crafted in classic photographic style, focusing on shape, light, and atmosphere. Perfect for collectors, interior designers, and anyone who loves the artistry of black and white.
     <br><br>
     For evocative painterly scenes in black & white, explore our
-    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Black-White"
+    <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme"
       style="color:#85644b; text-decoration:underline; transition:color 0.2s; font-size:inherit; font-family:inherit; font-weight:inherit;"
       onmouseover="this.style.color='#a74219'"
       onmouseout="this.style.color='#85644b'">Painterly Black & White Landscapes</a>.

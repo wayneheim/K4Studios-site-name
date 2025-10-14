@@ -39,24 +39,6 @@ export default function RebuiltScrollGrid({
   const [headingHover, setHeadingHover] = useState(false);
   const rowRefs = useRef({});
 
-  // Prefer a smaller image in the grid for speed; fall back to larger if needed.
-  const getPreferredSrc = (entry, cols) => {
-    const m = entry?.srcM;
-    const l = entry?.srcL;
-    const xl = entry?.srcXL;
-    const original = entry?.src;
-    if (cols <= 1) {
-      // 1-col (mobile/full width): prefer larger
-      return xl || l || m || original || null;
-    }
-    if (cols === 2) {
-      // 2-col: medium/large
-      return l || xl || m || original || null;
-    }
-    // 3-col: medium best for thumbnails
-    return m || l || xl || original || null;
-  };
-
   // Simple close handler: reload the page to exit grid mode
   const handleClose = () => {
     window.location.reload();
@@ -116,12 +98,9 @@ export default function RebuiltScrollGrid({
     const preloadStart = end;
     const preloadEnd = Math.min(preloadStart + BATCH_SIZES[colCount], galleryData.length);
     galleryData.slice(preloadStart, preloadEnd).forEach((entry) => {
-      const url = getPreferredSrc(entry, colCount);
-      if (url) {
+      if (entry?.src) {
         const img = new window.Image();
-        img.decoding = "async";
-        img.loading = "eager";
-        img.src = url;
+        img.src = entry.src;
       }
     });
   }, [end, colCount, galleryData]);
@@ -130,12 +109,9 @@ export default function RebuiltScrollGrid({
     const preloadStart = Math.max(0, start - BATCH_SIZES[colCount]);
     const preloadEnd = start;
     galleryData.slice(preloadStart, preloadEnd).forEach((entry) => {
-      const url = getPreferredSrc(entry, colCount);
-      if (url) {
+      if (entry?.src) {
         const img = new window.Image();
-        img.decoding = "async";
-        img.loading = "eager";
-        img.src = url;
+        img.src = entry.src;
       }
     });
   }, [start, colCount, galleryData]);
@@ -251,9 +227,8 @@ export default function RebuiltScrollGrid({
           const globalIndex = start + i;
           const rowIndex = Math.floor(globalIndex / colCount);
           const rowAnchor = globalIndex % colCount === 0;
-          const gridSrc = getPreferredSrc(entry, colCount);
 
-          return gridSrc && entry?.title ? (
+          return entry?.src && entry?.title ? (
             <motion.div
               key={globalIndex}
               ref={(el) => rowAnchor && (rowRefs.current[`row-${rowIndex}`] = el)}
@@ -295,12 +270,10 @@ export default function RebuiltScrollGrid({
                   }}
                 >
                   <img
-                    src={gridSrc}
+                    src={entry.src}
                     alt={entry.title}
                     className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
                     style={{ minHeight: 120 }}
-                    loading="lazy"
-                    decoding="async"
                     onError={(e) => {
                       // @ts-ignore
                       e.target.style.opacity = 0.25;

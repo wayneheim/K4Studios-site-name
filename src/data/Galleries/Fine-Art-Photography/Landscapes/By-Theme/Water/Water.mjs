@@ -246,7 +246,7 @@ export const galleryData = [
   },
   {
     "id": "i-8hwfnGn",
-    "title": "\"Meandering Stream\". Photography by Wayne Heim",
+    "title": "\"Wandering Stream\". Photography by Wayne Heim",
     "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
     "alt": "Buffalo Bill Reservoir at sunset.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8hwfnGn/A",
