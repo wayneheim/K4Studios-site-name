@@ -48,4 +48,13 @@ export const westernFAQ = [
       `<a href="/Contact">Contact Wayne</a> to plan a session, learn about packages, or inquire about group coverage.`,
     ],
   },
+  {
+  q: "What are 'Collector Notes' and how do I find/use them?",
+  a: [
+    `Ever wanted to know the deeper story behind an image, or get the artist’s creative perspective? <strong>Collector Notes</strong> are exclusive insights on select images—offering background on artistic choices, historical details, and what makes each piece extraordinary.`,
+    `To read a Collector Note, just click the <strong>notepad</strong> icon at the upper right of an image (desktop), or tap the same icon in the toolbar below the image (mobile). You'll discover creative context, art history comparisons, and insider observations that help you see your print the way an art collector—or even the artist—does.`,
+    `Our collection of Collector Notes is always growing, so check back for new insights and stories as you explore the gallery!`
+  ]
+},
+
 ];

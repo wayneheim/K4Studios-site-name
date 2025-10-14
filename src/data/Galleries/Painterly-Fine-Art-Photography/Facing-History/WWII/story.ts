@@ -1,78 +1,87 @@
 export const westernStory = [
-  /* ───────────────────────────────────────────── 1 */
+  // ───────────────────────────────────────────── 1
   {
     breadcrumb: "Facing History | WWII Themed Photography",
-    title: "WWII Photography: Embrace the Past... Live the Story",
-    subhead: "Remembering the Greatest Generation",
-    tagline: "Historically Themed Fine Art Painterly Reenactment Photography",
+    title: "WWII Fine Art Photography: Embrace the Past… Live the Story",
+    subhead: "Remembering the Greatest Generation—Painterly WWII Reenactment Art",
+    tagline: "Award-Winning WWII Reenactment, Collector Prints, and Living History",
     paragraphs: [
-      `Step into K4 Studios’ WWII gallery—where the past is brought to life through the lens of award-winning photographer Wayne Heim. These evocative portraits and scenes are more than just pictures: they are painterly fine art, created in close collaboration with some of the nation's most skilled reenactors at major historical events.`,
-      `Wayne’s painterly WWII photography captures the essence of the 1940s, revealing powerful stories of heroism, sacrifice, and the indomitable human spirit. Each image transports you into the heart of history, where every detail, expression, and gesture tells a story rooted in the experience of the Greatest Generation.`
+      `Step into the WWII gallery at K4 Studios, where history is reimagined through Wayne Heim’s painterly fine art photography. Each image is more than a photograph—it’s a cinematic, collector-grade print, crafted in collaboration with the nation’s top WWII reenactors at the largest living history events in America.`,
+      `Wayne’s painterly technique transforms the chaos and courage of the 1940s into emotive art, bringing to life stories of heroism, invention, camaraderie, and sacrifice. Every detail—from the mud-splattered tanks to the furrowed brows of the soldiers—invites you to experience the world of the Greatest Generation up close.`
     ]
   },
 
-  /* ───────────────────────────────────────────── 2 */
-{
-  subhead: "Three Themes, One Historic Legacy",
-  tagline: "Art of War, Men & Machines, and Portraits",
-  paragraphs: [
-    `This curated gallery is divided into three immersive themes: <strong>Art of War</strong>, <strong>Men & Machines</strong>, and <strong>Portraits</strong>. Each explores a unique facet of the World War II experience:`,
-    `Each section invites you to connect with a different layer of history, providing a deeper and more personal understanding of the era.`
-  ],
-  list: [
-    `Art of War: Experience the intensity and drama of battle—strategic moments, raw emotion, and the fog of war, all rendered with painterly artistry.`,
-    `Men & Machines: Delve into the intricate bond between soldiers and the powerful machinery that shaped their world—trucks, tanks, aircraft, and the relentless push of technology.`,
-    `Portraits: Discover the humanity and individuality of reenactors who breathe life into the WWII era, their faces and uniforms reflecting both the pride and the sacrifice of a generation.`
-  ]
-},
-
-  /* ───────────────────────────────────────────── 3 */
+  // ───────────────────────────────────────────── 2
   {
-    subhead: "The Painterly Technique: Bringing History to Life",
-    tagline: "Where Historical Reenactment Becomes Fine Art",
+    subhead: "Three Themes, One Historic Legacy",
+    tagline: "Art of War, Men & Machines, and Portraits",
     paragraphs: [
-      `Wayne Heim’s signature painterly technique transforms every reenactment image into a timeless work of art. Each photograph blends meticulous historical research with fine art composition, using color, light, and texture to evoke the spirit of the 1940s.`,
-      `Unlike ordinary documentary photography, Wayne’s approach infuses every scene with a sense of atmosphere and emotion—bridging the gap between the past and the present. His WWII-themed art isn’t just a visual record; it’s an immersive experience, inviting the viewer to step directly into the world of World War II.`
+      `This curated WWII gallery explores three story-rich themes—each one a window into a unique facet of the era:`,
+      `• <strong>Art of War</strong>: Battlefields, strategic moments, and the relentless fog of war—captured with painterly drama and tension.`,
+      `• <strong>Men & Machines</strong>: The bond between soldiers and their machinery—trucks, tanks, aircraft—rendered with historical accuracy and cinematic flair.`,
+      `• <strong>Portraits</strong>: Emotional close-ups of reenactors who channel the spirit, pride, and sacrifice of the WWII generation. Every face, uniform, and detail tells its own story.`
+    ],
+    list: [
+      "Each section offers not just art for your walls, but a deeper, more personal understanding of World War II—perfect for history lovers, collectors, and families with a connection to the era."
     ]
   },
 
-  /* ───────────────────────────────────────────── 4 */
+  // ───────────────────────────────────────────── 3
   {
-    subhead: "Stories of Courage, Sacrifice, and Humanity",
-    tagline: "The Emotional Heart of WWII Art",
+    subhead: "The Painterly Process: Where History Becomes Fine Art",
+    tagline: "WWII Reenactment Photography, Elevated",
     paragraphs: [
-      `Beyond uniforms and equipment, these photographs reveal the inner world of those who lived—and relive—history. Wayne’s painterly reenactment photography captures the struggles, triumphs, and quiet moments of the WWII generation, paying tribute to both real veterans and passionate reenactors.`,
-      `Each image is carefully crafted to honor the courage and resilience of the men and women who served, offering a rare window into the emotional reality of wartime life.`
+      `Wayne Heim’s painterly method combines exhaustive research, authentic period equipment, and advanced lighting to turn reenactment photography into museum-quality art. This isn’t digital filtering—each print is painstakingly built with light, color, and texture to evoke the era’s raw emotion and lived-in truth.`,
+      `From the chaos of battle to the calm before the storm, Wayne’s WWII photography bridges documentary realism with a timeless, painterly aesthetic—making each piece a story, not just a record.`
     ]
   },
 
-  /* ───────────────────────────────────────────── 5 */
+  // ───────────────────────────────────────────── 4
   {
-    subhead: "Decor that Tells a Story",
-    tagline: "A Powerful Addition to Any Man Cave or Collector’s Space",
+    subhead: "Stories of Sacrifice, Camaraderie, and Human Spirit",
+    tagline: "The Emotional Heart of WWII Fine Art",
     paragraphs: [
-      `Wayne Heim’s WWII-themed art is more than a historical tribute—it’s a dramatic statement piece for your home, office, or man cave. These museum-quality prints serve as both fine art and a visual memorial, sparking conversation and remembrance of the Greatest Generation.`,
-      `Each portrait or action scene captures not just the outward drama of war, but the timeless emotions that resonate across generations.`
+      `Beyond uniforms and machinery, Wayne’s work finds the humanity at the center of history. Each portrait and action scene honors both the veterans who served and the reenactors who keep their memory alive—capturing not just the battles, but the bonds, doubts, and small triumphs of wartime life.`,
+      `The result: WWII art prints that bring home the emotional truth of an extraordinary era, created for collectors who value both authenticity and storytelling.`
     ]
   },
 
-  /* ───────────────────────────────────────────── 6 */
+  // ───────────────────────────────────────────── 5
+  {
+    subhead: "Decor That Sparks Conversation—Art for Collectors and History Lovers",
+    tagline: "WWII Art Prints for Homes, Man Caves & Public Spaces",
+    paragraphs: [
+      `Wayne Heim’s WWII-themed art is more than a tribute—it’s a powerful statement piece for your living room, office, or man cave. Each print is produced to museum standards, serving as both fine art and a living memorial for the Greatest Generation.`,
+      `With every portrait and battlefield scene, you get more than a decorative image: you get a story, a conversation starter, and a visual bridge across generations.`
+    ]
+  },
+
+  // ───────────────────────────────────────────── 6
+  {
+    subhead: "Collector Notes—Go Deeper Into Each Image",
+    tagline: "Behind-the-Scenes Art Insights",
+    paragraphs: [
+      `Curious about the backstory of a particular image? Select WWII art prints feature <strong>Collector Notes</strong>—exclusive commentary revealing the artistic choices, historic research, or hidden symbolism that make each piece extraordinary.`,
+      `Click the notepad icon (desktop) or tap it on mobile to unlock these insights and see your chosen print the way a historian or collector would. Our library of Collector Notes is always expanding, offering new reasons to explore—and collect—again and again.`
+    ]
+  },
+
+  // ───────────────────────────────────────────── 7
   {
     subhead: "Timeless Art for Every Generation",
-    tagline: "Where Past and Present Connect",
+    tagline: "Connecting Past, Present, and Collector Legacy",
     paragraphs: [
-      `Wayne’s WWII art bridges eras, inviting viewers of all ages to experience the drama, honor, and sacrifice of World War II. His painterly style ensures each photograph is both historical and contemporary—an artwork that keeps the stories of the past alive for today’s world.`,
-      `Collectors, history enthusiasts, and lovers of fine art alike will find something meaningful and unique in this WWII-themed collection. Every piece is a celebration of courage, resilience, and the enduring human spirit.`
+      `Wayne Heim’s painterly WWII art bridges generations—inviting viewers of all ages to experience the drama, honor, and sacrifice of World War II through a contemporary fine art lens. Every piece is a celebration of resilience and the enduring human spirit.`,
+      `Whether you’re a collector, a reenactor, or a family seeking to honor a legacy, these WWII art prints make history personal, powerful, and unforgettable.`
     ]
   },
 
-  /* ───────────────────────────────────────────── 7 */
+  // ───────────────────────────────────────────── 8
   {
     subhead: "Own a Piece of Living History",
-    tagline: "Bring the Story Home",
+    tagline: "Start Your WWII Fine Art Collection",
     paragraphs: [
-      `These aren’t just photographs—they’re stories, moments frozen in time, and tributes to the men and women who shaped history. Add a piece of Wayne Heim’s WWII collection to your space and embrace the past, live the story, and honor the legacy of the Greatest Generation.`,
-      `Experience World War II through a master photographer’s eye and see how painterly fine art can make history personal, powerful, and unforgettable.`
+      `These are more than just photographs—they’re moments preserved in light and emotion, tributes to the people who shaped history, and legacies you can pass down. Add a Wayne Heim WWII print to your collection, embrace the past, and live the story for generations to come.`
     ]
   }
 ];

@@ -1,77 +1,75 @@
-export const westernStory = [
-    /* ───────────────────────────────────────────── 1 */
+export const civilWarStory = [
+  /* 1: INTRO – THE CIVIL WAR IN PAINTERLY FINE ART */
   {
-    breadcrumb: "Civil War Portraits ",
+    breadcrumb: "Civil War Portraits",
     title: "Civil War Portraits: Embrace the Past… Live the Story",
     subhead: "A Window to the Past – Stories Told Through Art",
     tagline: "Painterly Fine Art Photography of the Civil War Era",
     paragraphs: [
-      `In the hands of Wayne Heim, the Civil War era becomes more than a chapter in a history book — it becomes a living narrative, captured through the evocative lens of painterly fine art photography. Each image transcends the medium, inviting viewers to step into moments of courage, sacrifice, and quiet resilience.`,
-      `While these works evoke the haunting stillness of 19th-century photography, Wayne’s approach elevates each scene to an art form — a compelling contrast to his more traditional reenactment photography collection, where historic moments are preserved with striking realism.`,
-      `“Not just photographs — windows into the past, where each face tells a story, each moment lingers like a memory.”`
+      "Step into a world where history lingers—where every face, uniform, and weathered field becomes part of a living journey. Wayne Heim’s Civil War Portraits don’t just revisit the American Civil War; they embody its valor, loss, and resolve through painterly fine art photography.",
+      "Each image is more than a photograph. It’s a carefully crafted narrative—an invitation to witness moments of courage, sacrifice, and brotherhood. These portraits evoke the haunting stillness of 19th-century photography, yet Wayne’s vision elevates them, transforming traditional reenactment photography into award-winning fine art for collectors and lovers of American history.",
+      "Not just photographs—windows into the past. Each face tells a story; every moment lingers like memory. This is the art of visual storytelling, rendered in painterly detail."
     ]
   },
 
-  /* ───────────────────────────────────────────── 2 */
+  /* 2: PRESERVING HISTORY – ARTISTRY & EMOTION */
   {
     subhead: "Preserving History Through Painterly Fine Art Photography",
     tagline: "Reviving the Legacy of Civil War Art & Photography",
     paragraphs: [
-      `Photography during the Civil War was revolutionary yet limited. Wet-plate collodion negatives required long exposures, resulting in hauntingly still scenes — soldiers standing in solemn lines, families waiting in quiet desperation, battlefields eerily emptied of life.`,
-      `These early images became some of the first mass-distributed visual records of war, shaping public perception of the conflict.`,
-      `For Wayne Heim, this stillness is more than a technical limitation — it is a visual language, a way to convey the emotional gravity of the era. His painterly approach transforms each image into a visual narrative that blurs the line between documentation and art, creating fine art prints that echo the depth and emotion of 19th-century photography.`
+      "Civil War photography was revolutionary. The wet-plate collodion process created images with long exposures—haunting stillness, soldiers frozen in time, and the silent aftermath of battlefields. These first mass-distributed photographs changed how Americans saw conflict, loss, and hope.",
+      "Wayne Heim draws on this legacy. His painterly approach transforms technical limitations into a visual language. Stillness becomes a way to convey emotion—each portrait a Civil War art print that bridges realism and imagination, inviting viewers to pause and feel the weight of American history."
     ]
   },
 
-  /* ───────────────────────────────────────────── 3 */
+  /* 3: PORTRAIT THEMES – CHARACTER & STORY */
   {
     subhead: "Portrait Themes",
     tagline: "Civil War Figures Rendered in Painterly Detail",
     list: [
-      `Civilians & Daily Life: Moments of waiting and wondering, of loss and longing. Each face becomes a study in quiet endurance, rendered in painterly textures that convey the emotional weight of the era.`,
-      `Faces of Conflict: Soldiers captured in moments of stillness, their eyes reflecting both the conflict within and the war raging around them.`,
-      `Aftermath & Reflection: Scenes that echo the stillness of early war photography, each composition a tribute to those whose lives were forever changed by the conflict.`
+      "Civilians & Daily Life – Quiet moments of waiting, endurance, and longing. Each face a study in resilience, rendered with painterly texture and empathy.",
+      "Faces of Conflict – Soldiers and officers caught in moments of tension, reflection, or resolve—their eyes reflecting the turmoil within and the war around them.",
+      "Aftermath & Reflection – Scenes echoing the stillness of early war photography. Every composition is a tribute to those forever changed by the conflict."
     ]
   },
 
-  /* ───────────────────────────────────────────── 4 */
+  /* 4: THE POWER OF STILLNESS – CINEMATIC NARRATIVE */
   {
-    subhead: "The Power of Stillness – A Painterly Interpretation of War",
+    subhead: "The Power of Stillness – Painterly Interpretation of War",
     tagline: "Stillness as Visual Language",
     paragraphs: [
-      `In the early days of photography, long exposure times meant that each shot became a study in stillness. Action could not be captured, but the pauses, the waiting, the silent aftermath — these moments became visual narratives that conveyed the emotional toll of war.`,
-      `“Through painterly textures and cinematic compositions, Wayne Heim transforms Civil War photography into art that transcends time.”`
+      "The early days of photography demanded patience—long exposures meant action was lost, but waiting, aftermath, and silence became the story. Wayne Heim’s cinematic compositions and painterly techniques embrace this tradition, letting stillness become a form of storytelling.",
+      "Through evocative lighting and period-authentic detail, each Civil War portrait becomes more than documentation—it becomes fine art for collectors and students of American history alike."
     ]
   },
 
-  /* ───────────────────────────────────────────── 5 */
+  /* 5: FROM REENACTMENTS TO FINE ART – AUTHENTICITY & ARTISTRY */
   {
-    subhead: "A Unique Approach – From Reenactments to Fine Art Civil War Paintings",
+    subhead: "A Unique Approach – From Reenactments to Fine Art Civil War Prints",
     tagline: "Authenticity Meets Artistic Vision",
     paragraphs: [
-      `Where traditional reenactment photography often captures costumed characters and staged scenes, Wayne’s work moves beyond the surface. In his lens, each reenactor becomes a storyteller — their expressions and gestures imbued with the spirit of the past.`,
-      `Collaborating with talented reenactors who live and breathe Civil War history, Wayne captures moments that feel less like staged scenes and more like lived experiences. These partnerships lend depth and credibility to each image, transforming them into powerful works of art.`
+      "Traditional reenactment photography preserves costumed characters and staged scenes. Wayne’s painterly portraits go further—he works with talented reenactors who live and breathe Civil War history, capturing moments that feel like lived experience.",
+      "These collaborations add depth, authenticity, and legacy to each print—transforming them into collector-worthy works that honor both history and art."
     ]
   },
 
-  /* ───────────────────────────────────────────── 6 */
+  /* 6: THE ENGRAINED SERIES – STORIES ETCHED IN WOOD */
   {
     subhead: "Engrained – Civil War Stories on Wood",
     tagline: "Where Texture Meets Time",
     paragraphs: [
-      `For those seeking a truly distinctive presentation, explore Wayne’s Engrained Series, where select Civil War-themed images are reimagined as wall art printed directly onto wood panels.`,
-      `The natural grain enhances the painterly textures, creating a tactile storytelling experience that elevates each piece beyond traditional prints.`
+      "For a truly distinctive presentation, explore Wayne’s Engrained Series. Select Civil War-themed images are printed directly onto Baltic Birch wood panels, merging painterly texture with the warmth and character of the grain.",
+      "The result: tactile storytelling—civil war art for history lovers, blending fine art with material memory."
     ]
   },
 
-  /* ───────────────────────────────────────────── 7 */
+  /* 7: LEGACY & COLLECTOR VALUE – ART THAT CONNECTS */
   {
     subhead: "Carry History Forward",
     tagline: "Experience Civil War Art That Transcends Time",
     paragraphs: [
-      `Imagine these Civil War prints as a striking addition to your walls — each piece a reminder of the stories and sacrifices that shaped America’s past.`,
-      `For collectors, history enthusiasts, or those seeking to bring a piece of the past into their home, Wayne’s Civil War art prints and paintings are more than historical images — they are timeless stories, rendered with a painterly touch.`,
-      `“In Wayne Heim’s hands, each Civil War image becomes more than a photograph — it becomes a portal to the past, where the quiet stillness of history echoes through every frame.”`
+      "Imagine these prints as the focal point of your space—a bridge to the past, and a conversation starter for today. Wayne Heim’s Civil War portraits are more than historical images; they are timeless stories, rendered with a painterly touch.",
+      "For collectors, history enthusiasts, or anyone drawn to American history wall decor, these works offer something rare: emotional depth, authenticity, and legacy. In Wayne’s hands, each Civil War image is a portal to the past—where stillness, story, and artistry echo through every frame."
     ]
   }
 ];

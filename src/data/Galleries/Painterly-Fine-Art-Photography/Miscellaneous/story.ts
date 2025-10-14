@@ -1,61 +1,56 @@
-export const painterlyLandscapeStory = [
-  // ─────────────────────────────── 1
+export const painterlyPortraitStory = [
+  // 1. INTRO
   {
-    title: "Fine Art Painterly Portraits & Moments Between",
-    subhead: "Where the Unscripted Becomes Art",
+    title: "Fine Art Painterly Portraits – The Art of Timeless Character",
+    subhead: "Where the Unscripted Moment Becomes Painterly Art",
     paragraphs: [
-      `Some images don’t belong to a time or place — they belong to a feeling. This gallery gathers those portraits and painterly moments that resist easy classification. Here, Wayne Heim captures the in-between: expressions that linger, gestures caught mid-thought, and stories that unfold without a script.`,
-      `Blending classical fine art portraiture with a distinctly painterly sensibility, this collection offers a quiet defiance of traditional categories. Each image is rendered with a depth of tone and light that invites longer looks and deeper contemplation — a study in nuance, mood, and narrative.`
+      `Wayne Heim’s painterly portraits are more than photographs—they’re fine art studies in character, mood, and timeless emotion. This gallery is devoted to *painterly portrait photography* that captures the in-between: a glance, a gesture, a story unfolding beyond the frame.`,
+      `Blending classical portrait techniques with Wayne’s distinctive painterly style, every image invites you to linger—rich in texture, depth, and narrative. These are portraits for collectors who seek art with heart, depth, and meaning.`
     ]
   },
 
-  // ─────────────────────────────── 2
+  // 2. SOLO STUDIES
   {
-    subhead: "Solo Studies – Portraits That Hold a Gaze",
+    subhead: "Solo Painterly Portraits – Timeless Character Revealed",
     paragraphs: [
-      `These are the faces that stay with you. Each solo portrait in this series distills a moment of introspection, resolve, or wonder. Whether it's the light catching just so across a cheekbone or the tension in a single hand, these portraits don’t just show the subject — they reveal them.`,
-      `Rendered in Wayne’s painterly style, these images feel timeless, almost classical. The brush of light across skin, the softness of background textures, and the contemplative atmosphere bring to mind museum portraits — but rooted in real, present-day emotion.`
+      `Each *painterly portrait* in this collection is a window into character and soul. Wayne’s approach fuses soft, expressive light with classical composition, resulting in fine art portrait photography that feels both modern and ageless.`,
+      `Whether it’s the delicate fall of shadow across a face or the hint of story in a subject’s eyes, these images go beyond mere likeness—they capture presence and emotion, echoing the tradition of museum-quality portraiture for the contemporary collector.`
     ]
   },
 
-  // ─────────────────────────────── 3
+  // 3. FIGURES IN FOCUS
   {
-    subhead: "Figures in Focus – More Than a Setting",
+    subhead: "Painterly Photo Portraits – Essence Over Environment",
     paragraphs: [
-      `These portraits draw the eye inward, toward the person rather than the place. Even when framed in dramatic landscapes or vintage interiors, the subject remains front and center — an anchor in the composition.`,
-      `This series is about essence: posture, expression, and mood. Each figure is shaped by their environment but not defined by it. The painterly touch adds depth and texture, turning each frame into a character study.`
+      `Here, the *painterly portrait* style centers on the person, not the setting. Even when surrounded by dramatic landscapes or vintage interiors, the subject commands the story—each pose, expression, and detail heightened by Wayne’s painterly technique.`,
+      `Collectors of painterly fine art photography will appreciate how these images transcend setting, transforming fleeting moments into deeply resonant, character-driven works of art.`
     ]
   },
 
-   // ─────────────────────────────── 4
+  // 4. PAINTERLY BRIDE & GROOM
   {
-    subhead: "Painterly Bride & Groom – Moments of Connection",
+    subhead: "Painterly Wedding Portraits – Love as Fine Art",
     paragraphs: [
-      `Not wedding photography — but something more enduring. These images focus on the emotional resonance between two people, capturing love in quiet, unscripted forms. A shared glance. A breath held.`,
-      `Presented in Wayne’s painterly approach, these portraits transcend the event. They become heirlooms — artistic representations of commitment and tenderness, frozen in time yet alive with meaning.`
+      `Not just wedding photography—*painterly wedding portraits* by Wayne Heim capture genuine emotion and timeless connection. Each image is a study in intimacy and tenderness, rendered in soft, expressive light and brush-like texture.`,
+      `These heirloom portraits are crafted for couples who value artistry over trend—portraits designed to be cherished for generations as true fine art.`
     ]
   },
 
-  // ─────────────────────────────── 5
+  // 5. CANDID & MISCELLANEOUS MOMENTS
   {
-    subhead: "EMiscellaneous Moments – Candid Meets Crafted",
-       paragraphs: [
-       `Some images exist purely because the moment was too good to pass up. This is where spontaneity and artistic discipline meet. Children laughing off-frame, a reenactor adjusting a costume in the quiet between scenes, a pair of boots left under a church pew.`,
-      `These images may not fit a single category, but they hold space in the broader story. They’re the connective tissue between galleries — proof that artistry can thrive in the unscripted, the overlooked, and the almost-missed.`
+    subhead: "Painterly Candid Portraits – Moments Between",
+    paragraphs: [
+      `Some of the most powerful painterly portraits happen when no one is posing. Wayne’s candid painterly photography reveals the beauty of unscripted moments—laughter, thoughtfulness, anticipation. These images connect galleries and stories, proof that painterly portraiture thrives in both formal and fleeting moments.`,
+      `Collectors looking for *contemporary painterly portraiture* will find each image alive with nuance, authenticity, and a sense of quiet narrative.`
     ]
   },
 
-  // ─────────────────────────────── 6
+  // 6. WHY PAINTERLY PORTRAITS?
   {
-    subhead: "Where Narrative and Nuance Collide",
+    subhead: "Why Painterly Portrait Photography Matters",
     paragraphs: [
-      `This gallery serves as a creative crossroads. It’s where the fine art portrait meets the fleeting glance — where traditional techniques collide with modern sensibility. For collectors and viewers alike, it offers a deeper exploration of Wayne Heim’s painterly voice outside thematic constraints.`,
-      `Whether you’re drawn to the technical mastery of light and texture or the emotional pull of unscripted moments, you’ll find something here that resonates. These are images that don’t just show — they say something.`
+      `In a world of quick snapshots and filters, painterly portrait photography stands apart. Wayne Heim’s fine art approach combines old-world craftsmanship with a modern sensibility, creating portraits that don’t just show—they reveal, invite, and endure.`,
+      `Whether you’re drawn to technical mastery or emotional storytelling, these painterly portraits offer a singular vision—a collection for those who want art that feels personal, timeless, and deeply felt.`
     ]
   }
-
-
-
-
-
 ];

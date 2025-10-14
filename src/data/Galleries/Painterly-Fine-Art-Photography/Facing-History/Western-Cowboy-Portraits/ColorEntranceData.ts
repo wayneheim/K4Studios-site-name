@@ -1,16 +1,14 @@
-// data/galleries/Painterly-Western-Cowboy-Portraits/ColorEntranceData.ts
-
 export const entranceData = {
-  title: "Cowboy Fine Art Photography in Color – Authentic Western Prints by Wayne Heim",
-  subtitle: "Capturing the Spirit of the American West",
+  title: "Painterly Cowboy Fine Art Photography – Western Prints in Vivid Color by Wayne Heim",
+  subtitle: "Authentic Cowboy Portraits & Western Wall Art",
   description:
-    "Discover a painterly take on cowboy photography that brings the color and grit of the frontier to life. Wayne Heim's Western art prints are more than portraits — they are vivid stories etched in sun, shadow, and dust.",
+    "Experience painterly cowboy photography that blends the grit of the frontier with fine art storytelling. Wayne Heim's Western art prints are more than portraits—they are collector-worthy stories rendered in sun, shadow, and dust. Perfect for anyone seeking cowboy fine art photography, Western wall art, or unique cowboy decor.",
   details:
-    "These color cowboy photographs are captured with the soul of the American West in mind—no studio backdrops, no Hollywood tropes. Just real cowboys, historic reenactors, and the spirit of wide-open spaces. Printed using painterly techniques, these works blend the realism of photography with the brushlike textures of illustration.",
+    "These color cowboy photographs are created on location—not in studios, and never with Hollywood gimmicks or AI. Every image features real cowboys, skilled reenactors, and the authentic atmosphere of the American West. Using painterly techniques, Wayne fuses the realism of photography with brushlike textures and historic narrative. Many images include <strong>Collector Notes</strong>—click the notepad icon for behind-the-scenes insight into the making and meaning of each print.",
   image: {
     src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
-    alt: "Portrait preview",
-    caption: "\"The Old Hand\"",
+    alt: "Painterly cowboy fine art portrait – The Old Hand by Wayne Heim",
+    caption: "\"The Old Hand\" – Painterly cowboy fine art photography",
    },
   breadcrumb: 
   `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='red'" onmouseout="this.style.color='inherit'">Facing History</a> | <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='#4aa8ff'" onmouseout="this.style.color='inherit'">Cowboy Portraits</a> | Color`,

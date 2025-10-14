@@ -1,75 +1,81 @@
 export const westernStory = [
+  // 1. INTRO: TRANSPORTATION GALLERY OVERVIEW
   {
-    title: "Transportation-Themed Painterly Photography – Vintage Trains & Classic Cars",
+    title: "Transportation-Themed Painterly Photography – Vintage Trains, Classic Cars & American Icons",
     paragraphs: [
-      "Award-winning fine art photographer Wayne Heim invites you to step back in time, capturing the mechanical marvels that once defined eras of progress and innovation. At K4 Studios, Wayne’s painterly photography brings these moments to life — from the churning power of steam locomotives to the enduring beauty of classic cars. Each piece invites you to linger in a moment where art, history, and engineering converge."
+      `Award-winning fine art photographer Wayne Heim brings transportation history to life in painterly detail. This gallery showcases classic cars, vintage trucks, and steam locomotives—each captured with Wayne’s signature painterly photography style. From the grit of rusted rails to the polished chrome of restored classics, every image invites you to experience the spirit of American innovation and nostalgia.`,
+      `Whether you’re a collector, car enthusiast, train buff, or simply appreciate art that tells a story, these transportation-themed fine art prints connect past and present, engineering and artistry.`
     ]
   },
 
+  // 2. THE ART & EMOTION OF MECHANICAL ICONS
   {
-    subhead: "Discover a World of Motion and Nostalgia",
+    subhead: "The Art of Movement – Why Transportation Inspires",
     paragraphs: [
-      "Vehicles do more than transport — they carry stories, emotions, and the spirit of an age. Wayne Heim’s painterly photography reveals the artistic essence of mechanical icons, blending the raw power of vintage trains with the polished allure of classic cars.",
-      "Each piece is crafted using Wayne’s signature painterly technique, transforming rusted relics, restored beauties, and steam-powered giants into art that invites you to step back in time and feel the pulse of movement.",
-      "Curious about the painterly technique? Learn more here."
+      `Vehicles are more than machines—they’re vessels of memory, freedom, and invention. Wayne Heim’s painterly transportation photography transforms vintage trains, classic cars, and trucks into visual narratives: each image blends historic research, masterful composition, and rich, textured light.`,
+      `From the open roads of Route 66 to the rumble of steam engines, every piece is crafted with a collector’s eye for detail and emotion.`
     ]
   },
 
+  // 3. VINTAGE TRAINS & STEAM LOCOMOTIVES
   {
-    subhead: "Vintage Trains & Steam Locomotives – Power, Elegance & Grit",
+    subhead: "Vintage Trains & Steam Locomotives – Power, Grit & Grandeur",
     paragraphs: [
-      "Long before digital marketing, trains were promoted through captivating art — posters that depicted luxury, speed, and the allure of rail travel. Wayne Heim’s painterly photography continues that tradition, capturing the nostalgia of a time when trains symbolized progress and adventure."
+      `Long before digital ads, trains were icons of progress—featured in bold posters and painted ads. Wayne’s painterly train photography continues this tradition, celebrating the raw power and historic drama of steam locomotives and rail travel.`,
+      `Each print blends documentary realism with painterly technique, making the era’s energy tangible for collectors and interior design.`
     ],
     list: [
-      "Black & White Gallery: Experience the haunting contrast of steam clouds against iron engines. Each monochrome piece underscores the raw, untamed power of these rail giants.",
-      "Color Gallery: Feel the heat and hear the roar as brilliant hues bring rusted train cars and winding tracks to life."
-    ],
-    tagline: "Add a Touch of Grit and Grandeur to Your Space."
-  },
-
-  {
-    subhead: "Classic Cars & Vintage Trucks – From Rust to Restoration",
-    paragraphs: [
-      "Chrome gleams in the sun, the scent of gasoline lingers in the air, and the rumble of engines echoes through time. In Wayne Heim’s Classic Cars & Trucks Photography Collection, every vehicle tells a story — from the polished perfection of restored classics to the rugged patina of rusted relics.",
-      "Inspired by the open road, the nostalgia of Route 66, and the spirit of Americana, these images capture the essence of freedom and adventure — a visual road trip through history."
-    ],
-    list: [
-      "Restored Vehicles: Gleaming chrome, polished paint, and the unmistakable curves of automotive design showcase the artistry of a bygone era.",
-      "Rusted Relics: Weathered metal, flaking paint, and the unmistakable signs of time give these vehicles a raw, rugged beauty. Rust becomes a badge of honor — a testament to years lived and roads traveled."
-    ],
-    tagline: "Answer the Call of the Open Road and Explore Our Vintage Rides."
-  },
-
-  {
-    subhead: "Timeless Prints That Evoke Emotion & Wonder",
-    paragraphs: [
-      "A rusted train car, its paint flaking like old memories. A classic car, its chrome glinting with a touch of nostalgia.",
-      "Each print is more than an image — it’s a portal to the past, a story that invites you to connect with a time when machines ruled the road and rails."
+      `Black & White Gallery – Steam clouds, strong contrast, and the timeless elegance of iron and steel.`,
+      `Color Gallery – Vivid palettes bring out rust, sun, and the heartbeat of American railroads.`
     ]
   },
 
+  // 4. CLASSIC CARS & TRUCKS
   {
-    subhead: "Embrace the Past… Live the Story",
+    subhead: "Classic Cars & Vintage Trucks – Chrome, Patina & Personality",
     paragraphs: [
-      "From the roar of steam engines to the rumble of classic cars, Wayne Heim’s award-winning painterly photography invites you to step into moments where engineering meets artistry."
+      `Every vehicle tells a story. In Wayne’s Classic Cars & Trucks collection, you’ll find the gleam of restored beauties, the rugged appeal of rusted relics, and the iconic design of mid-century American automobiles.`,
+      `Inspired by road trips, Americana, and the spirit of discovery, these painterly car photographs invite you to see beyond the metal—to the culture, dreams, and freedom these machines represent.`
     ],
-    tagline: "Like what you see here?"
-  },
-
-  {
     list: [
-      "Western Cowboy Portraits – Grit, grandeur, and the untamed frontier.",
-      "Roaring 20s Portraits – Bold, brazen, and unforgettable moments.",
-      "Civil War Photography – Valor, loss, and resolve captured in painterly fine art.",
-      "WWII Photography – Sacrifice, brotherhood, and wartime chaos.",
-      "Engrained Series – For something different, explore the Engrained Series — a selection of rustic landscapes and historic-themed pieces, beautifully printed on ready-to-hang wood panels."
+      `Restored Vehicles – Gleaming chrome, flawless paint, and the sweeping curves of automotive design.`,
+      `Rusted Relics – Patina, weathered paint, and the texture of history—each car wears its years with pride.`
     ]
   },
 
+  // 5. FINE ART PRINTS THAT SPARK CONNECTION
+  {
+    subhead: "Fine Art Prints – Wall Art That Moves You",
+    paragraphs: [
+      `Each print in this collection is more than a photograph—it’s an invitation to travel in time, sparking nostalgia, admiration, and wonder. Wayne’s painterly technique elevates transportation photography to gallery-worthy fine art, perfect for collectors, car lovers, and anyone wanting a conversation piece for their home, office, or garage.`
+    ]
+  },
+
+  // 6. EMBRACE THE PAST… LIVE THE STORY
+  {
+    subhead: "Embrace the Past… Live the Story.",
+    paragraphs: [
+      `From the thunder of steam engines to the quiet dignity of an old Ford truck, Wayne Heim’s painterly transportation photography bridges eras. Each piece is carefully composed, lit, and finished to honor both engineering marvel and human spirit.`,
+      `Like what you see? Explore more below, or discover other collections—including Western Cowboy Portraits, Roaring 20s Portraits, Civil War Photography, WWII Fine Art, and the Engrained Series, featuring rustic wood-mounted wall art.`
+    ]
+  },
+
+  // 7. CROSS-LINKS (if desired—otherwise, integrate as above)
+  {
+    list: [
+      "Western Cowboy Portraits – Grit, grandeur, and frontier storytelling.",
+      "Roaring 20s Portraits – Jazz, rebellion, and vintage style.",
+      "Civil War Photography – Valor, sacrifice, and painterly tribute.",
+      "WWII Photography – Sacrifice, brotherhood, and wartime history.",
+      "Engrained Series – Painterly art, printed on Baltic Birch wood panels."
+    ]
+  },
+
+  // 8. CALL TO ACTION
   {
     subhead: "Find Your Connection to the Past",
     paragraphs: [
-      "Every image in this collection is a story waiting to be told — a moment of motion, a glimpse of grit, a celebration of craftsmanship. Discover the art of transportation and explore how Wayne Heim’s painterly photography transforms history into timeless fine art."
+      `Every image in this collection is a story waiting to be discovered—a moment of motion, a glimpse of grit, a tribute to design and craft. Browse the gallery, explore Collector Notes for behind-the-scenes insights, and see how Wayne Heim’s painterly transportation photography transforms the familiar into extraordinary fine art.`
     ]
   }
 ];
