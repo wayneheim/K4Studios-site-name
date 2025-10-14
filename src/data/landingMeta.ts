@@ -1,6 +1,16 @@
 // src/data/landingMeta.ts
 
 export const landingMetaDB = {
+  "/": {
+    ogTitle: "Painterly Fine Art Photography – Western, Historical & Storytelling | Wayne Heim",
+    ogDescription: "Experience painterly fine art photography that brings history, the American West, and timeless stories to life. Explore cowboy portraits, historical reenactment photography, and evocative landscapes by award-winning artist Wayne Heim. Every image is a living journey—crafted for collectors and lovers of visual storytelling.",
+    ogImage: "/og/painterly.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Wayne Heim – Painterly Fine Art Photography & Storytelling",
+    twitterDescription: "Discover Western fine art photography, cowboy portraits, and historical storytelling through painterly images by Wayne Heim. Explore the story behind every photograph.",
+    twitterImage: "/og/painterly.jpg"
+  },
   "/Contact": {
     ogTitle: "Contact Wayne Heim – Fine Art Photography",
     ogDescription: "Get in touch with Wayne Heim for fine art photography inquiries, commissions, or general questions. Reach out for collaborations or print orders.",
@@ -52,24 +62,24 @@ export const landingMetaDB = {
     twitterImage: "/og/historical-reenactment.jpg"
   },
   "/Galleries/Painterly-Fine-Art-Photography": {
-    ogTitle: "Painterly Fine Art Photography by Wayne Heim",
-    ogDescription: "Experience painterly fine art photography by award-winning artist Wayne Heim—blending Western history, Americana, and painterly landscapes. Printed on museum-grade paper or artisan wood panels.",
-    ogImage: "/og/painterly.jpg",
-    ogType: "website",
-    twitterCard: "summary_large_image",
-    twitterTitle: "Painterly Fine Art Photography by Wayne Heim",
-    twitterDescription: "Award-winning painterly photography—Western, historical, and landscape art by Wayne Heim.",
-    twitterImage: "/og/painterly.jpg"
+  ogTitle: "Painterly Fine Art Photography – Storytelling, Western & Historical Art | Wayne Heim",
+  ogDescription: "Discover painterly fine art photography where storytelling meets art. Inspired by the Pictorialist movement, Wayne Heim’s work blends expressive painterly style with photographic realism—featuring western cowboy portraits, historical reenactment photography, and evocative landscapes. Each image is a chapter in a living journey, crafted for collectors and lovers of Americana and narrative art.",
+  ogImage: "/og/painterly.jpg",
+  ogType: "website",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Wayne Heim – Painterly Fine Art, Western & Historical Photography",
+  twitterDescription: "Painterly fine art photography—story-driven, western, and historical images by Wayne Heim. Explore cowboy portraits, reenactment photography, and legacy wall art.",
+  twitterImage: "/og/painterly.jpg"
   },
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History": {
-    ogTitle: "Facing History: Painterly Western, Cowboy, and Americana Portraits",
-    ogDescription: "Explore the 'Facing History' collection—painterly portraits and stories from the Old West, Civil War, Roaring 20s, and Greatest Generation, created by fine art photographer Wayne Heim.",
-    ogImage: "/og/facing-history.jpg",
-    ogType: "website",
-    twitterCard: "summary_large_image",
-    twitterTitle: "Facing History by Wayne Heim – Painterly Portrait Art",
-    twitterDescription: "Western, Civil War, and Americana painterly portrait photography by Wayne Heim.",
-    twitterImage: "/og/facing-history.jpg"
+  ogTitle: "Facing History – Painterly Fine Art & Historical Portraits | Wayne Heim",
+  ogDescription: "Step inside the story with Facing History—Wayne Heim’s collection of reenactment photography, painterly fine art, and evocative historical imagery. Explore Civil War portraits, WWII legacy prints, Roaring 20s jazz-age art, and authentic western cowboy photography. Each museum-quality print is crafted for collectors, reenactors, and lovers of history and visual storytelling.",
+  ogImage: "/og/facing-history.jpg",
+  ogType: "website",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Wayne Heim – Facing History: Painterly Fine Art & Historical Storytelling",
+  twitterDescription: "Explore painterly photography—Civil War, WWII, Roaring 20s, and western portraits by Wayne Heim. Art for collectors, reenactors, and history lovers.",
+  twitterImage: "/og/facing-history.jpg"
   },
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits": {
     ogTitle: "Civil War Portraits – Painterly History Photography by Wayne Heim",
@@ -92,14 +102,14 @@ export const landingMetaDB = {
     twitterImage: "/og/roaring20s.jpg"
   },
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits": {
-    ogTitle: "Western Cowboy Portraits – Painterly Art by Wayne Heim",
-    ogDescription: "Grit, grit, and more grit—painterly Western cowboy portraits by Wayne Heim. Fine art images of the Old West, outlaws, and Americana.",
-    ogImage: "/images/default-og.jpg",
-    ogType: "website",
-    twitterCard: "summary_large_image",
-    twitterTitle: "Western Cowboy Portraits – Wayne Heim",
-    twitterDescription: "Painterly cowboy and Western photography by Wayne Heim.",
-    twitterImage: "/images/default-og.jpg"
+  ogTitle: "Cowboy Art & Western Art – Painterly Western Cowboy Portraits | Wayne Heim",
+  ogDescription: "Discover cowboy art and western art in painterly western cowboy portraits by Wayne Heim. This collection features authentic frontier art, wild west art, and vintage cowboy art photography—blending myth and reality of the American West. Perfect for collectors seeking fine art prints, legacy wall art, and rustic western decor.",
+  ogImage: "/images/default-og.jpg",
+  ogType: "website",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Wayne Heim – Cowboy Art, Western Art & Painterly Fine Art Prints",
+  twitterDescription: "Explore cowboy art, western art, and painterly western cowboy portraits by Wayne Heim. Fine art prints and wild west art for collectors and western decor lovers.",
+  twitterImage: "/images/default-og.jpg"
   },
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII": {
     ogTitle: "WWII Portraits & Machines – Painterly History by Wayne Heim",
