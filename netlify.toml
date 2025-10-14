@@ -1,190 +1,153 @@
-## Civil War Portraits (Color) – canonical item route & trailing slash cleanup
+# Civil War
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/index.html"
 status = 200
 
-## Civil War Portraits (Black & White)
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-:id/index.html"
 status = 200
 
-## Western Cowboy Portraits (Color)
+# Western Cowboy
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id/index.html"
 status = 200
 
-## Western Cowboy Portraits (Black & White)
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-:id/index.html"
 status = 200
 
-## Roaring 20s Portraits (Color)
+# Roaring 20s
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-:id/index.html"
 status = 200
 
-## Roaring 20s Portraits (Black & White)
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-:id/index.html"
 status = 200
 
-## WWII (Color)
+# WWII (Color + B&W)
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Color/i-:id/index.html"
 status = 200
 
-## WWII (Black & White)
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Black-White/i-:id/index.html"
 status = 200
 
-## Transportation – Trains (Color)
+# Transportation
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color/i-:id/index.html"
 status = 200
 
-## Transportation – Trains (Black & White)
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White/i-:id/index.html"
 status = 200
 
-## Transportation – Cars
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars/i-:id/index.html"
 status = 200
 
-## Transportation – Boats
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/"
-to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id"
+from = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Transportation/Boats/i-:id/index.html"
 status = 200
 
-## Engrained Series
+# Engrained Series
 [[redirects]]
-from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/"
-to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
+from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
+from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/*"
 to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/index.html"
 status = 200
 
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West"
-to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
-status = 301
-force = true
-
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International"
-to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
-status = 301
-force = true
-
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast"
-to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
-status = 301
-force = true
-
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South"
-to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
-status = 301
-force = true
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-
-## Generic trailing slash cleanup (placed after specific gallery rules & before functions block)
-[[redirects]]
-from = "/*/"
-to = "/:splat"
-status = 301
-force = true
