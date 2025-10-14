@@ -1,4 +1,4 @@
-export const civilWarStory = [
+export const westernStory = [
   /* 1: INTRO – THE CIVIL WAR IN PAINTERLY FINE ART */
   {
     breadcrumb: "Civil War Portraits",
