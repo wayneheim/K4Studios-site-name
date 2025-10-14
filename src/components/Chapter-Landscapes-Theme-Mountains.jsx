@@ -7,7 +7,7 @@ export default function ChapterLandscapesMountainsWrapper(props){
       rawData={rawData}
       basePath="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
       titleBase="Painterly Landscapes — Mountains"
-      sectionKey="/Landscapes/Mountains"
+      sectionKey="/Landscapes/Mountains-Painterly"
       swipeHintKey="Painterly-Landscapes-Mountains"
       {...props}
     />

@@ -9,6 +9,36 @@ function getSemanticKey(sectionKey) {
   if (sectionKey.includes('Roaring-20s')) return 'roaring20s';
   if (sectionKey.includes('WWII/Portraits')) return 'wwiiPortraits';
   if (sectionKey.includes('WWII/War')) return 'wwiiArtOfWar';
+  if (sectionKey === '/Facing-History/WWII/Machines/Black-White') return 'wwiiMenAndMachinesBW';
+  if (sectionKey === '/Facing-History/WWII/Machines/Color') return 'wwiiMenAndMachinesColor';
+  if (sectionKey === '/Miscellaneous/Portraits') return 'miscellaneousPainterly';
+  if (sectionKey === '/Miscellaneous/Reenactments') return 'reenactorsTraditional';
+  if (sectionKey === '/Miscellaneous/Wildlife') return 'wildlifePainterly';
+  if (sectionKey.includes('/Miscellaneous/')) return 'miscellaneousTraditional';
+  if (sectionKey === '/Transportation/Military') return 'militaryVehiclesTraditional';
+  if (sectionKey === '/Transportation/Planes') return 'aviationTraditional';
+  if (sectionKey === '/Transportation/Trains') return 'railwayTraditional';
+  if (sectionKey.includes('/Transportation/')) return 'transportation';
+  if (sectionKey === '/Landscapes/International') return 'landscapeIntTraditional';
+  if (sectionKey === '/Landscapes/International/Canada-Western') return 'canadaWesternTraditional';
+  if (sectionKey === '/Landscapes/International/Iceland') return 'icelandTraditional';
+  if (sectionKey === '/Landscapes/International/Newfoundland') return 'newfoundlandTraditional';
+  if (sectionKey === '/Landscapes/International/The-Faroe-Islands') return 'faroeIslandsTraditional';
+  if (sectionKey === '/Landscapes/West') return 'landscapeWestTraditional';
+  if (sectionKey === '/Landscapes/Midwest') return 'landscapeMidwestTraditional';
+  if (sectionKey === '/Landscapes/Northeast') return 'landscapeNortheastTraditional';
+  if (sectionKey === '/Landscapes/South') return 'landscapeSouthTraditional';
+  if (sectionKey === '/Landscapes/Black-White-Traditional') return 'blackWhiteTraditional';
+  if (sectionKey === '/Landscapes/Color-Traditional') return 'colorTraditional';
+  if (sectionKey === '/Landscapes/Mountains-Traditional') return 'mountainsTraditional';
+  if (sectionKey === '/Landscapes/Sunsets-Traditional') return 'sunsetsTraditional';
+  if (sectionKey === '/Landscapes/Water-Traditional') return 'waterTraditional';
+  if (sectionKey === '/Landscapes/Mountains-Painterly') return 'mountainsPainterly';
+  if (sectionKey === '/Landscapes/Water-Painterly') return 'waterPainterly';
+  if (sectionKey === '/Landscapes/Sunsets-Painterly') return 'sunsetsPainterly';
+  if (sectionKey === '/Architecture/Gallery') return 'architectureTraditional';
+  if (sectionKey === '/Portraits/Reenactors') return 'reenactorsTraditional';
+  if (sectionKey.includes('/Portraits/')) return 'portraitsTraditional';
   if (sectionKey.includes('Cowboy')) return 'cowboy';
   if (sectionKey.includes('Civil-War')) return 'civilwar';
   // Add more mappings as needed
@@ -43,5 +73,11 @@ export function getClosingSentence(sectionKey, imageId) {
   const template = closingTemplates[templateIndex];
   const keyword = keywords[keywordIndex];
 
-  return template.replace('[keyword]', keyword);
+  // For traditional sections, replace "painterly" with "fine art" or remove
+  let finalTemplate = template;
+  if (semanticKey.includes('Traditional')) {
+    finalTemplate = finalTemplate.replace(/painterly fine art/g, 'fine art').replace(/painterly/g, 'fine art');
+  }
+
+  return finalTemplate.replace('[keyword]', keyword);
 }

@@ -7,7 +7,7 @@ export default function ChapterLandscapesColorWrapper(props){
       rawData={rawData}
       basePath="/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White"
       titleBase="Painterly Landscapes — Black & White"
-      sectionKey="/Landscapes/Black-White"
+      sectionKey="/Landscapes/Black-White-Traditional"
       swipeHintKey="Landscapes-Black-White"
       {...props}
     />

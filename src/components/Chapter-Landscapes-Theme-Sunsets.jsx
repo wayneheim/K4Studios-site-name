@@ -7,7 +7,7 @@ export default function ChapterLandscapesSunsetsWrapper(props){
       rawData={rawData}
       basePath="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
       titleBase="Painterly Landscapes — Sunsets"
-      sectionKey="/Landscapes/Sunsets"
+      sectionKey="/Landscapes/Sunsets-Painterly"
       swipeHintKey="Painterly-Landscapes-Sunsets"
       {...props}
     />

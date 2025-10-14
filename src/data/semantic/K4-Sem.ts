@@ -223,6 +223,27 @@ export const semantic = {
     ]
   },
 
+  portraitsTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Portraits",
+    def: "Classic portrait photography—timeless expressions captured in traditional style.",
+    landingPhrases: [
+      { phrase: "Traditional Portraits", rating: 5, use: true },
+      { phrase: "Classic Portrait Photography", rating: 5, use: true },
+      { phrase: "Fine Art Portraits", rating: 4, use: true },
+      { phrase: "Timeless Portraits", rating: 4, use: true },
+      { phrase: "Portrait Gallery", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "portrait photography", rating: 5, use: true },
+      { phrase: "traditional portrait", rating: 5, use: true },
+      { phrase: "classic portrait", rating: 4, use: true },
+      { phrase: "fine art portrait", rating: 4, use: true },
+      { phrase: "timeless portrait", rating: 4, use: true },
+      { phrase: "portrait art", rating: 3, use: true },
+      { phrase: "portraiture", rating: 3, use: true }
+    ]
+  },
+
   wwii: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII",
     def: "Cinematic portraits honoring the Greatest Generation—service, sacrifice, resilience.",
@@ -292,6 +313,42 @@ export const semantic = {
       { phrase: "WWII Military Equipment", rating: 4, use: true },
       { phrase: "Life Behind the Lines", rating: 4, use: true },
       { phrase: "WWII Mechanized Might", rating: 3, use: true },
+    ],
+    imagePhrases: [
+      { phrase: "wwii tanks and trucks", rating: 4, use: true },
+      { phrase: "mechanical war art", rating: 3, use: true },
+      { phrase: "battle-ready machines", rating: 3, use: true },
+      { phrase: "military machinery prints", rating: 2, use: true },
+      { phrase: "history's greatest conflicts", rating: 2, use: true },
+    ],
+  },
+
+  wwiiMenAndMachinesBW: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
+    def: "Human presence beside steel and fuel—a study of scale, sound, and craft in black and white.",
+    landingPhrases: [
+      { phrase: "Men & Machines B/W", rating: 5, use: true },
+      { phrase: "WWII Military Equipment B/W", rating: 4, use: true },
+      { phrase: "Black & White WWII Machines", rating: 4, use: true },
+      { phrase: "Monochrome WWII Mechanized Might", rating: 3, use: true },
+    ],
+    imagePhrases: [
+      { phrase: "wwii tanks and trucks", rating: 4, use: true },
+      { phrase: "mechanical war art", rating: 3, use: true },
+      { phrase: "battle-ready machines", rating: 3, use: true },
+      { phrase: "military machinery prints", rating: 2, use: true },
+      { phrase: "history's greatest conflicts", rating: 2, use: true },
+    ],
+  },
+
+  wwiiMenAndMachinesColor: {
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
+    def: "Human presence beside steel and fuel—a study of scale, sound, and craft in vivid color.",
+    landingPhrases: [
+      { phrase: "Men & Machines Color", rating: 5, use: true },
+      { phrase: "WWII Military Equipment Color", rating: 4, use: true },
+      { phrase: "Color WWII Machines", rating: 4, use: true },
+      { phrase: "Vivid WWII Mechanized Might", rating: 3, use: true },
     ],
     imagePhrases: [
       { phrase: "wwii tanks and trucks", rating: 4, use: true },
@@ -807,6 +864,90 @@ export const semantic = {
       { phrase: "plane wall art for collectors", rating: 3, use: true },
       { phrase: "military wall art for collectors", rating: 3, use: true },
     ],
+  },
+
+  militaryVehiclesTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Transportation/Military",
+    def: "Military vehicles and equipment—planes, tanks, jeeps, vintage machines in traditional style.",
+    landingPhrases: [
+      { phrase: "Military Vehicles Photography", rating: 5, use: true },
+      { phrase: "Military Equipment Collection", rating: 5, use: true },
+      { phrase: "Vintage Military Machines", rating: 4, use: true },
+      { phrase: "Military Transportation Gallery", rating: 4, use: true },
+      { phrase: "Historic Military Vehicles", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "military vehicle photography", rating: 5, use: true },
+      { phrase: "tank photography", rating: 5, use: true },
+      { phrase: "jeep photography", rating: 5, use: true },
+      { phrase: "plane photography", rating: 5, use: true },
+      { phrase: "military equipment photography", rating: 4, use: true },
+      { phrase: "vintage military machine", rating: 4, use: true },
+      { phrase: "historic tank", rating: 4, use: true },
+      { phrase: "classic jeep", rating: 4, use: true },
+      { phrase: "military aviation photography", rating: 4, use: true },
+      { phrase: "military vehicle art", rating: 3, use: true },
+      { phrase: "tank art prints", rating: 3, use: true },
+      { phrase: "jeep art prints", rating: 3, use: true },
+      { phrase: "plane art prints", rating: 3, use: true },
+      { phrase: "military equipment art", rating: 3, use: true },
+      { phrase: "vintage military photography", rating: 3, use: true },
+      { phrase: "historic military vehicle prints", rating: 3, use: true },
+      { phrase: "military machine wall art", rating: 3, use: true },
+      { phrase: "timeless military vehicle prints", rating: 3, use: true }
+    ]
+  },
+
+  aviationTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Transportation/Planes",
+    def: "Aircraft and aviation photography—planes, vintage aircraft, aviation history in traditional style.",
+    landingPhrases: [
+      { phrase: "Aviation Photography", rating: 5, use: true },
+      { phrase: "Plane Photography Collection", rating: 5, use: true },
+      { phrase: "Vintage Aircraft Gallery", rating: 4, use: true },
+      { phrase: "Aviation Art Collection", rating: 4, use: true },
+      { phrase: "Historic Planes", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "plane photography", rating: 5, use: true },
+      { phrase: "aviation photography", rating: 5, use: true },
+      { phrase: "vintage aircraft photography", rating: 4, use: true },
+      { phrase: "airplane photography", rating: 4, use: true },
+      { phrase: "historic plane photography", rating: 4, use: true },
+      { phrase: "aviation art", rating: 3, use: true },
+      { phrase: "plane art prints", rating: 3, use: true },
+      { phrase: "aircraft photography prints", rating: 3, use: true },
+      { phrase: "vintage plane wall art", rating: 3, use: true },
+      { phrase: "aviation history photography", rating: 3, use: true },
+      { phrase: "timeless aviation prints", rating: 3, use: true },
+      { phrase: "plane wall art for collectors", rating: 3, use: true }
+    ]
+  },
+
+  railwayTraditional: {
+    path: "/Galleries/Fine-Art-Photography/Transportation/Trains",
+    def: "Railway and locomotive photography—trains, steam engines, vintage railways in traditional style.",
+    landingPhrases: [
+      { phrase: "Railway Photography", rating: 5, use: true },
+      { phrase: "Train Photography Collection", rating: 5, use: true },
+      { phrase: "Steam Engine Gallery", rating: 4, use: true },
+      { phrase: "Locomotive Art Collection", rating: 4, use: true },
+      { phrase: "Historic Trains", rating: 3, use: true }
+    ],
+    imagePhrases: [
+      { phrase: "train photography", rating: 5, use: true },
+      { phrase: "steam engine photography", rating: 5, use: true },
+      { phrase: "locomotive photography", rating: 4, use: true },
+      { phrase: "railway photography", rating: 4, use: true },
+      { phrase: "vintage train photography", rating: 4, use: true },
+      { phrase: "historic locomotive photography", rating: 3, use: true },
+      { phrase: "steam train art", rating: 3, use: true },
+      { phrase: "railway art prints", rating: 3, use: true },
+      { phrase: "locomotive wall art", rating: 3, use: true },
+      { phrase: "train photography prints", rating: 3, use: true },
+      { phrase: "vintage railway wall art", rating: 3, use: true },
+      { phrase: "timeless locomotive prints", rating: 3, use: true }
+    ]
   },
 
   // --- PAINTERLY: MAIN LANDING ---

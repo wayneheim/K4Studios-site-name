@@ -7,7 +7,7 @@ export default function ChapterLandscapesWaterWrapper(props){
       rawData={rawData}
       basePath="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
       titleBase="Painterly Landscapes — Water"
-      sectionKey="/Landscapes/Water"
+      sectionKey="/Landscapes/Water-Painterly"
       swipeHintKey="Painterly-Landscapes-Water"
       {...props}
     />

@@ -1161,7 +1161,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                                 aria-label="More information about this image"
                               >
                                 <h2 className="text-lg font-semibold mb-2">More about this image</h2>
-                                <p className="pb-2">{galleryData[currentIndex]?.description} {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
+                                <p className="pb-2">{galleryData[currentIndex]?.description} — {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
 
                                 {/* NEW: CTA to open Collector Notes (mobile panel) */}
                                 {galleryData[currentIndex]?.notes?.trim() && (
@@ -1208,7 +1208,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                                   <CircleX className="w-7 h-7" />
                                 </button>
                                 <h2 className="text-lg font-semibold mb-2">More about this image</h2>
-                                <p className="pb-2">{galleryData[currentIndex]?.description} {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
+                                <p className="pb-2">{galleryData[currentIndex]?.description} — {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
 
                                 {/* NEW: CTA to open Collector Notes (desktop panel) */}
                                 {galleryData[currentIndex]?.notes?.trim() && (

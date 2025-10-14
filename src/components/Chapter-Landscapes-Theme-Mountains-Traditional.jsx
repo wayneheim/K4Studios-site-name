@@ -7,7 +7,7 @@ export default function ChapterLandscapesMountainsWrapper(props){
       rawData={rawData}
       basePath="/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains"
       titleBase="Landscapes — Mountains"
-      sectionKey="/Landscapes/Mountains"
+      sectionKey="/Landscapes/Mountains-Traditional"
       swipeHintKey="Landscapes-Mountains"
       {...props}
     />

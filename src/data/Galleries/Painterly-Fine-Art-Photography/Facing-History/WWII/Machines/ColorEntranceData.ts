@@ -1,6 +1,6 @@
-// data/galleries/WWII-MenMachines/BWEntranceData.ts
+// data/galleries/WWII-MenMachines/ColorEntranceData.ts
 
-// Import the full gallery data set for WWII Men & Machines in Black & White
+// Import the full gallery data set for WWII Men & Machines in Color
 import { galleryData } from "./Color.mjs";
 
 // ======= Dynamic Featured Image Logic ======= //
@@ -17,29 +17,29 @@ const featured = previewPool[0] || {};
 
 // ======= Entrance Data for Gallery Landing ======= //
 export const entranceData = {
-  title: "WWII Men & Machines – Black & White Fine Art Photography by Wayne Heim",
-  subtitle: "Historic World War II Machines & Crew in Black & White",
+  title: "WWII Men & Machines – Color Fine Art Photography by Wayne Heim",
+  subtitle: "Historic World War II Machines & Crew in Vivid Color",
   description:
-    "Explore the stark beauty of WWII military machinery and the people who shaped history. Wayne Heim’s black and white portraits capture the essence of vehicles, equipment, and crew—from tanks and jeeps to pilots and mechanics—in dramatic, painterly light. Each photograph is an homage to engineering, teamwork, and resilience during wartime.",
+    "Discover the vibrant intensity of WWII military machinery and the heroes who operated them. Wayne Heim’s color photographs bring to life the vehicles, equipment, and crew—from tanks and jeeps to pilots and mechanics—in painterly detail. Each image honors the ingenuity, bravery, and teamwork that defined wartime innovation.",
   details: `
-WWII vehicle photography, black & white art prints, and authentic reenactment scenes focused on the machines and men of World War II.
+WWII vehicle photography, color art prints, and authentic reenactment scenes showcasing the machines and men of World War II.
 
 Available as museum-quality archival prints and UV-printed wood panels.
 
-Perfect for collectors, WWII historians, military offices, industrial interiors, or anyone drawn to timeless monochrome storytelling.
+Perfect for collectors, WWII historians, military offices, industrial interiors, or anyone drawn to colorful historical storytelling.
 
 Every image features historically accurate equipment, vehicles, and period detail—crafted to highlight the artistry in both steel and spirit.
 
 Custom commissions and special projects are welcome—contact Wayne for group portraits or unique vehicle requests.
 
-These black and white WWII Men & Machines photographs celebrate the enduring power of innovation, leadership, and courage.
+These color WWII Men & Machines photographs celebrate the enduring power of innovation, leadership, and courage.
 
-Keywords: WWII black and white art, military vehicles, tank photography, World War II crew portraits, fine art prints, reenactment wall art, Wayne Heim, K4 Studios.
+Keywords: WWII color art, military vehicles, tank photography, World War II crew portraits, fine art prints, reenactment wall art, Wayne Heim, K4 Studios.
   `,
   image: {
-    src: featured?.src || "/images/placeholder-wwii-bw.jpg",
-    alt: featured?.alt || featured?.title || "Featured WWII Men & Machines photograph in black and white",
-    caption: featured?.title || "WWII Men & Machines (B/W featured image)",
+    src: featured?.src || "/images/placeholder-wwii-color.jpg",
+    alt: featured?.alt || featured?.title || "Featured WWII Men & Machines photograph in color",
+    caption: featured?.title || "WWII Men & Machines (Color featured image)",
   },
 breadcrumb: `
 <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History"
