@@ -1622,7 +1622,7 @@ export const galleryData = [
   },
   {
     "id": "i-8hwfnGn",
-    "title": "\"Meandering Stream\". Photography by Wayne Heim",
+    "title": "\"Meandering MountainStream\". Photography by Wayne Heim",
     "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
     "alt": "Deserted Barn photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8hwfnGn/A",

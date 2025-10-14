@@ -63,6 +63,29 @@ from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/*"
 to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/index.html"
 status = 200
 
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery"
+status = 301
+force = true
 
 [functions]
   directory = "netlify/functions"
