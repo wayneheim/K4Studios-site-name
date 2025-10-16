@@ -11,14 +11,14 @@ export const westernFAQ = [
     a: [
       `Every figure you see is a real person — often a skilled reenactor or living historian — chosen for their authenticity and deep understanding of the time period.`,
       `They're featured throughout the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> collection — visual tributes to real-life legacies of the American West.`,
-      `This includes both cowboy portraits and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Native-American">Native American reenactors</a> who portray tribal figures with cultural reverence and historical accuracy.`,
+      `This includes both cowboy portraits and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">Native American reenactors</a> who portray tribal figures with cultural reverence and historical accuracy.`,
     ],
   },
   {
     q: "Do you offer Native American portraits too?",
     a: [
       `Yes. Wayne's collection also includes portraits of <strong>Native American reenactors</strong>, captured in a painterly fine art style that honors their cultural legacy and presence in the story of the American West.`,
-      `These images appear within the broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Native-American">Western Cowboy Portraits</a> section, and offer a compelling counterbalance to the cowboy mythos — highlighting regalia, strength, and identity.`,
+      `These images appear within the broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">Western Cowboy Portraits</a> section, and offer a compelling counterbalance to the cowboy mythos — highlighting regalia, strength, and identity.`,
     ],
   },
   {
@@ -37,7 +37,7 @@ export const westernFAQ = [
     q: "Do you offer both color and black and white cowboy portraits?",
     a: [
       `Yes. Wayne's <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">black and white cowboy art</a> taps into the timeless feel of vintage Western photography — while his color work adds painterly warmth and cinematic impact.`,
-      `The same painterly approach is used for <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Native-American">Native American portraits</a> — offered in both color and black & white — to suit different collector preferences while maintaining narrative depth.`,
+      `The same painterly approach is used for <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">Native American portraits</a> — offered in both color and black & white — to suit different collector preferences while maintaining narrative depth.`,
     ],
   },
   {
@@ -58,7 +58,7 @@ export const westernFAQ = [
     a: [
       `The <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> includes select cowboy portraits printed directly onto wood using a multi-layer UV process.`,
       `This preserves fine photographic detail while allowing the wood grain to show through in places — creating a hybrid of art photography and rustic Western wall decor.`,
-      `Select <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Native-American">Native American portraits</a> are also available in this series, offering collectors a unique fusion of cultural reverence and natural texture.`,
+      `Select <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color">Native American portraits</a> are also available in this series, offering collectors a unique fusion of cultural reverence and natural texture.`,
     ],
   },
   {

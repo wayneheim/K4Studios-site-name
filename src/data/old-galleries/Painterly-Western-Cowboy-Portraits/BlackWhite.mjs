@@ -922,7 +922,7 @@ export const galleryData = [
     "description": "In this dramatic black and white Western photograph, a cowboy on horseback keeps a vigilant eye on the horizon. The intense focus of the cowboy mirrors the constant alertness required to survive on the frontier. Wayne Heim’s unique painterly photography style enhances the powerful emotions conveyed in this quiet yet commanding moment. The absence of color draws attention to the intricate textures of the cowboy’s weathered attire and the contours of his horse, further emphasizing the rugged beauty of the Old West. The high-ISO technique used in this image creates a subtle grain, giving it the timeless feel of a film photograph. This piece transports you to a time when the open range demanded strength, patience, and constant awareness. Bring the heart of the Wild West into your space with this striking cowboy artwork that immortalizes the spirit of the frontier. © Wayne Heim",
     "alt": "Old West Cowboy in Saddle: A Watchful Eye on the Horizon",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-D2fQjDQ/1/KPbTXds2Zw3ZPB7s5F2qDxRNg7brzwNf82HB3sd5R/XL/_ANA9703-Edit-XL.jpg",
-    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-D2fQjDQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-D2fQjDQ/A",
     "keywords": [
       "Black And White Cowboy Art",
       "Black And White Cowboy Photography",

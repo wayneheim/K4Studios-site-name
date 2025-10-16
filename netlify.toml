@@ -90,3 +90,108 @@ force = true
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+[[redirects]]
+from = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/Black-White*"
+to = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White Backup/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color copy/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/Water/*"
+to = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color Backup/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/m/opt/*"
+to = "/Glossary"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color copy/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Other/K4-Select-Series"
+to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series"
+status = 301
+force = true
+[[redirects]]
+from = "/hack/*"
+to = "/Glossary"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/zPainterly-Western-Cowboy-Portraits/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/api/v2/*"
+to = "/Glossary"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color-back2/Color fixed/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Other/Photo-Shoots/*"
+to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Native-American"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color-back2/Color fixed/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color-back2/Color 1src/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "/keyword/*"
+to = "/Glossary"
+status = 301
+force = true
+[[redirects]]
+from = "/Other/Photo-Shoots-and-Themes"
+to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots"
+status = 301
+force = true

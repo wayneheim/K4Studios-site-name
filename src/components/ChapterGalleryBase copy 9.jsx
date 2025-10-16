@@ -1229,6 +1229,26 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                                     </a>
                                   </div>
                                 )}
+
+                                {/* NEW: CTA to open Collector Notes (mobile panel) */}
+                                {galleryData[currentIndex]?.notes?.trim() && (
+                                  <div className="mt-3 flex justify-center">
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setShowNotes(true);          // open notes
+                                        setIsExpanded(false);        // close desc panel
+                                        setTimeout(() => notesBtnRef.current?.focus(), 0);
+                                      }}
+                                      className="text-sm underline text-[#7b1e1e] hover:opacity-80"
+                                      aria-haspopup="dialog"
+                                      aria-expanded={showNotes}
+                                    >
+                                      View Collector Notes
+                                    </button>
+                                  </div>
+                                )}
                               </motion.div>
                             ) : (
                               <motion.div
@@ -1254,47 +1274,6 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                                 >
                                   <CircleX className="w-7 h-7" />
                                 </button>
-                                {/* Collector Notes button next to close button */}
-                                {galleryData[currentIndex]?.notes?.trim() && (
-                                  <button
-                                    type="button"
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setShowNotes(true);
-                                      setIsExpanded(false);
-                                      setTimeout(() => notesBtnRef.current?.focus(), 0);
-                                      logUIEvent("collector_notes_toggle", {
-                                        page: window.location.pathname,
-                                        imageId: galleryData[currentIndex]?.id,
-                                        notesVisible: true
-                                      });
-                                    }}
-                                    aria-label="View Collector Notes"
-                                    title="Open Collector Notes"
-                                    className={`absolute bottom-3 left-14 inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-400 rounded-full shadow-sm hover:bg-gray-200 hover:text-gray-700 transition-colors cursor-pointer ${showCollectorHint ? 'collector-hint-ring' : ''}`}
-                                    style={{ zIndex: 10001 }}
-                                  >
-                                    <span className="relative inline-flex items-center justify-center w-5 h-5">
-                                      <span className="absolute left-3 top-0 text-[10px] text-red-600 font-semibold">*</span>
-                                      <Notebook 
-                                        className="w-5 h-5 stroke-[1.75] cursor-pointer" 
-                                        style={{ color: '#9bb69eff' }}
-                                        onMouseEnter={(e) => {
-                                          const tooltip = e.currentTarget.parentElement.querySelector('.tooltip');
-                                          if (tooltip) tooltip.style.opacity = '1';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                          const tooltip = e.currentTarget.parentElement.querySelector('.tooltip');
-                                          if (tooltip) tooltip.style.opacity = '0';
-                                        }}
-                                      />
-                                      {/* Hover tooltip: only shows when hovering the notebook icon */}
-                                      <span className="tooltip absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
-                                        View extra insight about this image
-                                      </span>
-                                    </span>
-                                  </button>
-                                )}
                                 <h2 className="text-lg font-semibold mb-2">More about this image</h2>
                                 <p className="pb-2">{galleryData[currentIndex]?.description} — {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
                                 {sisterMatch && (
@@ -1312,6 +1291,26 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                                     >
                                       {anchorText}
                                     </a>
+                                  </div>
+                                )}
+
+                                {/* NEW: CTA to open Collector Notes (desktop panel) */}
+                                {galleryData[currentIndex]?.notes?.trim() && (
+                                  <div className="mt-2 mb-1 flex justify-center">
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setShowNotes(true);
+                                        setIsExpanded(false);
+                                        setTimeout(() => notesBtnRef.current?.focus(), 0);
+                                      }}
+                                      className="px-4 py-1 rounded-full border border-[#7b1e1e] text-[#7b1e1e] bg-white hover:bg-gray-100 text-sm font-semibold shadow transition-colors"
+                                      aria-haspopup="dialog"
+                                      aria-expanded={showNotes}
+                                    >
+                                      View Collector Notes
+                                    </button>
                                   </div>
                                 )}
                               </motion.div>

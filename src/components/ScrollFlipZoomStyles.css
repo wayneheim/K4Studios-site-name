@@ -274,22 +274,22 @@ opacity: 0%;
   0% {
     box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
   }
-  15% {
+  24.75% {
     box-shadow: 0 0 0 5px rgba(220, 38, 38, 0);
   }
-  15.01% {
+  24.76% {
     box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
   }
-  30.75% {
+  50.74% {
     box-shadow: 0 0 0 5px rgba(220, 38, 38, 0);
   }
-  30.76% {
+  50.75% {
     box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
   }
-  46.155% {
+  76.19% {
     box-shadow: 0 0 0 5px rgba(220, 38, 38, 0);
   }
-  46.156% {
+  76.2% {
     box-shadow: none;
   }
   100% {
@@ -298,5 +298,19 @@ opacity: 0%;
 }
 
 .collector-hint-ring {
-  animation: collectorHintRing 5.2s ease-out infinite;
+  animation: collectorHintRing 3.15s ease-out infinite;
+}
+
+/* Show Collector Notes Button Blink Animation */
+@keyframes showNotesBlink {
+  0%, 50% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.3;
+  }
+}
+
+.show-notes-blink {
+  animation: showNotesBlink 2s ease-in-out infinite;
 }
