@@ -91,6 +91,31 @@ force = true
   directory = "netlify/functions"
   node_bundler = "esbuild"
 [[redirects]]
+from = "/*/A"
+to = "https://wayne-heim.smugmug.com/:splat/A"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Fine-Art-Photography/Portraits/Color/i-nxz6Zxg/A"
+to = "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nxz6Zxg/A"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-D2fQjDQ/A"
+to = "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-D2fQjDQ/A"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/:splat/i-:id/A"
+to = "https://wayne-heim.smugmug.com/Galleries/:splat/i-:id/A"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/zPainterly-Western-Cowboy-Portraits/Color/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
 from = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/Black-White*"
 to = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White:splat"
 status = 301
@@ -98,11 +123,6 @@ force = true
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White Backup/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/:splat"
-status = 301
-force = true
-[[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color copy/*"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/:splat"
 status = 301
 force = true
 [[redirects]]
@@ -141,13 +161,18 @@ to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series"
 status = 301
 force = true
 [[redirects]]
+from = "/Other/K4-Select-Series/*"
+to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series/:splat"
+status = 301
+force = true
+[[redirects]]
 from = "/hack/*"
 to = "/Glossary"
 status = 301
 force = true
 [[redirects]]
-from = "/Galleries/zPainterly-Western-Cowboy-Portraits/*"
-to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/:splat"
+from = "/Galleries/zPainterly-Western-Cowboy-Portraits/BlackWhite/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/:splat"
 status = 301
 force = true
 [[redirects]]
@@ -191,7 +216,7 @@ to = "/Glossary"
 status = 301
 force = true
 [[redirects]]
-from = "/Other/Photo-Shoots-and-Themes"
-to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots"
+from = "/Other/Photo-Shoots-and-Themes/*"
+to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
 status = 301
 force = true
