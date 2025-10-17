@@ -1,0 +1,174 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import "@/styles/global.css";
+
+import { semantic } from "@/data/semantic/K4-Sem.ts";
+import { siteNav } from "@/data/siteNav.ts";
+
+/* ---------- helpers ---------- */
+function normalizeHref(href = "") {
+  return href.replace(/\/+$/, "").toLowerCase();
+}
+
+const semanticByPath = {};
+for (const key of Object.keys(semantic || {})) {
+  if (key === "synonymMap") continue;
+  const entry = semantic[key];
+  if (entry?.path) semanticByPath[normalizeHref(entry.path)] = entry;
+}
+
+/* collect all landing pages (simplified from glossary) */
+function getAllLandingPages(nav) {
+  const out = [];
+  const seen = new Set();
+
+  function walk(nodes = [], depth = 0) {
+    for (const n of nodes) {
+      if (!n) continue;
+      const { href, label, type, children } = n;
+      const normalized = normalizeHref(href);
+      const hasChildren = Array.isArray(children) && children.length > 0;
+      const isLanding =
+        href &&
+        (type !== "gallery-source") &&
+        (type || hasChildren) &&
+        !normalized.includes("/landscapes/by-") &&
+        !["/contact", "/news-awards", "/other/photo-shoots", "/other/print-options", "/other/bio"].includes(
+          normalized
+        );
+
+      if (isLanding && !seen.has(normalized)) {
+        seen.add(normalized);
+        out.push({ href, title: label });
+      }
+      if (hasChildren && depth < 2) walk(children, depth + 1);
+    }
+  }
+
+  walk(nav);
+  return out;
+}
+
+const LANDING_PAGES = [{ href: "/", title: "Home" }, ...getAllLandingPages(siteNav)];
+
+/* ---------- meta ---------- */
+const pageTitle = "Lost to History – K4 Studios";
+const pageSubhead = "Looks like this story wandered off the trail.";
+const description =
+  "Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim.";
+---
+
+<BaseLayout title={pageTitle}>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap"
+  />
+
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen flex flex-col" style="font-family: 'Glegoo', serif;">
+    <LandingHeader client:load breadcrumb="<a href='/'>Home</a> / Lost to History" />
+
+    <!-- ========== MAIN 404 SECTION ========== -->
+    <section class="text-center px-6 py-12 md:py-16 max-w-[850px] mx-auto">
+      <h1
+  class="fade-in select-none font-extrabold tracking-tight mb-4 leading-none"
+  style="
+    font-size: clamp(8rem, 15vw, 11rem);
+    color: #75614aff;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+  "
+>
+  404
+</h1>
+      <h2 class="text-xl md:text-2xl text-[#6d5b4a] italic mb-6 fade-in">
+        {pageSubhead}
+      </h2>
+
+      <p class="max-w-prose text-gray-700 mb-10 fade-in">
+        The page you’re looking for might have been moved, renamed, or wandered off into the sunset.
+        <br>But every wrong turn leads to another story — perhaps one waiting for you below.
+      </p>
+
+      <a
+        href="/"
+        class="inline-block bg-[#5a4a3b] text-white px-6 py-3 rounded-2xl text-lg font-medium hover:bg-[#7a6250] transition-all duration-300 fade-in"
+      >
+        Return Home
+      </a>
+    </section>
+
+    <!-- ========== EXPLORER GRID (borrowed from Glossary) ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-4 my-20">
+      <h3 class="text-2xl font-semibold mb-6 text-center tracking-tight text-[#5a4a3b]">
+        Explore Other Collections
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {LANDING_PAGES.map(page => {
+          const sem =
+            semanticByPath[normalizeHref(page.href)] ||
+            semanticByPath[normalizeHref(page.href.replace(/\/gallery$/, ""))] ||
+            {};
+          const def = sem.def || "Discover the collection";
+          const colorClass = page.href.startsWith("/Galleries/Painterly")
+            ? "bg-blue-50"
+            : page.href.startsWith("/Galleries/Traditional")
+            ? "bg-green-50"
+            : page.href.includes("engrained")
+            ? "bg-yellow-50"
+            : "bg-white";
+          return (
+            <div
+              class={`rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 ${colorClass}`}
+            >
+              <a href={page.href} class="block p-5 h-[140px]">
+                <h4 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-black">
+                  {page.title}
+                </h4>
+                <p class="text-sm text-gray-600 line-clamp-3">{def}</p>
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2, h3, h4, p, a {
+      font-family: "Glegoo", serif;
+      letter-spacing: -0.015em;
+    }
+  </style>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const els = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      els.forEach((el) => observer.observe(el));
+    });
+  </script>
+</BaseLayout>

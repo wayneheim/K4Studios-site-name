@@ -79,6 +79,24 @@ export const semantic = {
     ]
   },
 
+  architectureTraditionalTraditional: {
+  path: "/Galleries/Fine-Art-Photography/Architecture", // matches LANDING_PAGE href
+    def: "Architectural fine art studies that capture geometry, symmetry, and atmosphere — where light, line, and shadow define character as vividly as any portrait.",
+    landingPhrases: [
+      { phrase: "architectural fine art photography", rating: 5, use: true },
+      { phrase: "traditional architecture photography", rating: 5, use: true },
+      { phrase: "building photography", rating: 4, use: true },
+      { phrase: "fine art architecture prints", rating: 4, use: true },
+      { phrase: "black and white architecture", rating: 3, use: true },
+      { phrase: "modern architecture photography", rating: 3, use: true },
+    ],
+    imagePhrases: [
+      { phrase: "architectural details", rating: 4, use: true },
+      { phrase: "city architecture", rating: 3, use: true },
+      { phrase: "historic buildings", rating: 3, use: true },
+    ]
+  },
+
   facingHistory: {
     path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
     def: "An ongoing series that blends living history and painterly craft into character-driven portraiture.",
@@ -858,6 +876,64 @@ export const semantic = {
       { phrase: "timeless automotive prints", rating: 3, use: true },
       { phrase: "timeless nautical prints", rating: 3, use: true },
       { phrase: "timeless aviation prints", rating: 3, use: true },
+      { phrase: "timeless military prints", rating: 3, use: true },
+      { phrase: "locomotive painterly photography for home decor", rating: 3, use: true },
+      { phrase: "steam engine wall art for collectors", rating: 3, use: true },
+      { phrase: "boat wall art for collectors", rating: 3, use: true },
+      { phrase: "plane wall art for collectors", rating: 3, use: true },
+      { phrase: "military wall art for collectors", rating: 3, use: true },
+    ],
+  },
+
+  transportationTraditional: {
+  path: "/Galleries/Fine-Art-Photography/Transportation",
+    def: "Classic cars, trucks, and rails—timeworn texture, story-first framing in traditional style.",
+    landingPhrases: [
+      { phrase: "visual storytelling", rating: 5, use: true },
+      { phrase: "Transportation", rating: 5, use: true },
+      { phrase: "Classic Cars & Trucks Collection", rating: 5, use: true },
+      { phrase: "Route 66 Photography", rating: 5, use: true },
+      { phrase: "Steam Engine Photography", rating: 5, use: true },
+      { phrase: "traditional transportation photography", rating: 4, use: true },
+
+      { phrase: "traditional car photography", rating: 5, use: true },
+      { phrase: "traditional train photography", rating: 5, use: true }
+
+    ],
+    imagePhrases: [
+      { phrase: "classic car photography", rating: 5, use: true },
+      { phrase: "vintage train photography", rating: 5, use: true },
+      { phrase: "boat photography", rating: 5, use: true },
+      { phrase: "plane photography", rating: 5, use: true },
+      { phrase: "military vehicle photography", rating: 5, use: true },
+      { phrase: "steam engine photography", rating: 4, use: true },
+      { phrase: "steam engine art", rating: 4, use: true },
+      { phrase: "nautical art", rating: 4, use: true },
+      { phrase: "aviation art", rating: 4, use: true },
+      { phrase: "military art", rating: 4, use: true },
+      { phrase: "route 66 car photography prints", rating: 4, use: true },
+      { phrase: "americana wall art", rating: 4, use: true },
+      { phrase: "classic car art prints for enthusiasts", rating: 3, use: true },
+      { phrase: "painterly classic car photos for auto lovers", rating: 3, use: true },
+      { phrase: "boat art prints for enthusiasts", rating: 3, use: true },
+      { phrase: "painterly boat photos for nautical lovers", rating: 3, use: true },
+      { phrase: "plane art prints for enthusiasts", rating: 3, use: true },
+      { phrase: "painterly plane photos for aviation lovers", rating: 3, use: true },
+      { phrase: "military vehicle art prints for enthusiasts", rating: 3, use: true },
+      { phrase: "painterly military photos for history lovers", rating: 3, use: true },
+      { phrase: "americana wall art for garages", rating: 3, use: true },
+      { phrase: "automotive art prints", rating: 3, use: true },
+      { phrase: "nautical art prints", rating: 3, use: true },
+      { phrase: "aviation art prints", rating: 3, use: true },
+      { phrase: "military art prints", rating: 3, use: true },
+      { phrase: "transportation art", rating: 3, use: true },
+      { phrase: "vintage transportation photography", rating: 3, use: true },
+      { phrase: "classic transportation art", rating: 3, use: true },
+      { phrase: "timeless transportation prints", rating: 3, use: true },
+      { phrase: "timeless car prints", rating: 3, use: true },
+      { phrase: "timeless train prints", rating: 3, use: true },
+      { phrase: "timeless boat prints", rating: 3, use: true },
+      { phrase: "timeless plane prints", rating: 3, use: true },
       { phrase: "timeless military prints", rating: 3, use: true },
       { phrase: "locomotive painterly photography for home decor", rating: 3, use: true },
       { phrase: "steam engine wall art for collectors", rating: 3, use: true },

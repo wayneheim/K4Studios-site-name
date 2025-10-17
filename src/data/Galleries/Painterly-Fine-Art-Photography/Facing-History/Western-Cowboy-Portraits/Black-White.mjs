@@ -77,7 +77,7 @@ export const galleryData = [
       "Wild West Themed Photography",
       "Black and White Western Photos"
     ],
-    "story": "Every flick of the wrist, every coiled loop — it’s muscle memory and legacy tied together.\nOut here, alone in the clearing, he’s not putting on a show. He’s tuning his instincts.\n\nThe rope whispers where the horse isn't, where the cattle won’t run, where habits become second nature.\nJust him, dust, and repetition.\n\nHe doesn’t need the stakes to be high.\nHe needs to be ready when they are.",
+    "story": "Every flick of the wrist, every coiled loop — it’s muscle memory and legacy tied together. Out here, alone in the clearing, he’s not putting on a show. He’s tuning his instincts.\n\nThe rope whispers where the horse isn't, where the cattle won’t run, where habits become second nature.\nJust him, dust, and repetition.\n\nHe doesn’t need the stakes to be high.\nHe needs to be ready when they are.",
     "notes": "This piece captures the unspoken ritual that precedes action — a cowboy honing his craft not for show, but for survival.\nIt’s a portrait of repetition turned sacred, rendered in Wayne Heim’s painterly process where texture meets tension.\n\nThere’s lineage here — not just Western, but artistic:\nThe quiet intentionality calls to mind Andrew Wyeth’s discipline, while the tactile dust and rope echo the best of Remington’s authenticity.\n\nFor collectors, this is a piece that rewards second looks. It’s about preparation — and presence.\nA grounded, timeless study of craft becoming instinct.",
     "rating": 4,
     "galleries": [

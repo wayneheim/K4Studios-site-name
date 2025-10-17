@@ -87,6 +87,24 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gal
 status = 301
 force = true
 
+[[redirects]]
+from = "/Other/K4-Select-Series/Series-1"
+to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Series-1"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Other/K4-Select-Series/Series-2"
+to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Series-2"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Other/K4-Select-Series/Series-3"
+to = "/Other/K4-Select-Series/Engrained"
+status = 301
+force = true
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
@@ -153,16 +171,6 @@ force = true
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color copy/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/:splat"
-status = 301
-force = true
-[[redirects]]
-from = "/Other/K4-Select-Series"
-to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series"
-status = 301
-force = true
-[[redirects]]
-from = "/Other/K4-Select-Series/*"
-to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series/:splat"
 status = 301
 force = true
 [[redirects]]
