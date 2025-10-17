@@ -101,13 +101,10 @@ const structuredData = getStructuredData({
   }
 });
 ---
-
-<!-- ✅ Inject JSON-LD in the head BEFORE layout -->
-<script type="application/ld+json" is:inline set:html={structuredData}></script>
-
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={landingMeta}
+  structuredDataJSON={structuredData}
 >
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">

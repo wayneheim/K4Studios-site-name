@@ -17,8 +17,20 @@ export async function handler(event) {
     };
   }
 
-  // Extract IP address
-  const ip = event.headers['x-forwarded-for']?.split(',')[0]?.trim() || event.headers['client-ip'] || 'unknown';
+  // Extract request context: UA, Referer, IP
+  const ua = event.headers['user-agent'] || 'unknown';
+  const referer = event.headers['referer'] || event.headers['referrer'] || 'none';
+  const rawIp =
+    event.headers['x-forwarded-for'] ||
+    event.headers['client-ip'] ||
+    event.headers['x-nf-client-connection-ip'] ||
+    event.ip ||
+    '';
+  const ip = (rawIp || '')
+    .toString()
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean)[0] || 'unknown';
 
   const {
     AIRTABLE_API_TOKEN,
@@ -49,6 +61,8 @@ export async function handler(event) {
         details: JSON.stringify(details || {}),
         timestamp: eventTime,
         ip,
+        ua,
+        referer,
       },
     }),
   });

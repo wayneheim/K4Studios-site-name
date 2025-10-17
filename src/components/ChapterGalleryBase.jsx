@@ -800,6 +800,9 @@ export default function ChapterGalleryBase({
                                 };
                               })()
                             }
+                            draggable={false}
+                            onDragStart={(e) => e.preventDefault()}
+                            onContextMenu={(e) => e.preventDefault()}
                             onClick={() => {
                               if (!isLandscapeMobile) {
                                 setIsZoomed(true);

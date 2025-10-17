@@ -38,6 +38,21 @@ export async function handler(event) {
     day: 'numeric',
   });
 
+  // Request context: UA, Referer, IP
+  const ua = event.headers['user-agent'] || 'unknown';
+  const referer = event.headers['referer'] || event.headers['referrer'] || 'none';
+  const rawIp =
+    event.headers['x-forwarded-for'] ||
+    event.headers['client-ip'] ||
+    event.headers['x-nf-client-connection-ip'] ||
+    event.ip ||
+    '';
+  const ip = (rawIp || '')
+    .toString()
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean)[0] || 'unknown';
+
   // 📝 Airtable Logging
   const airtableRes = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Likes`, {
     method: 'POST',
@@ -51,6 +66,9 @@ export async function handler(event) {
         title: title || 'Untitled',
         Page: page,
         timestamp: likeTime,
+        ip,
+        ua,
+        referer,
       },
     }),
   });

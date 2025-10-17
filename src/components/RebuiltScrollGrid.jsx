@@ -301,6 +301,9 @@ export default function RebuiltScrollGrid({
                     style={{ minHeight: 120 }}
                     loading="lazy"
                     decoding="async"
+                    draggable={false}
+                    onDragStart={(e) => e.preventDefault()}
+                    onContextMenu={(e) => e.preventDefault()}
                     onError={(e) => {
                       // @ts-ignore
                       e.target.style.opacity = 0.25;

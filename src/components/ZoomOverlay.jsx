@@ -258,6 +258,9 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                   display: "block",
                   border: "1px solid #bbb",
                 }}
+                draggable={false}
+                onDragStart={(e) => e.preventDefault()}
+                onContextMenu={(e) => e.preventDefault()}
               />
               {/* Magnifier lens */}
               <div
