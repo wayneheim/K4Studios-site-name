@@ -14,19 +14,18 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
     }
   }, [isOpen]);
 
+  const finalTitle = pageTitle || "Check this out from K4 Studios";
   const notifyShare = async (platform) => {
     try {
       await fetch("/.netlify/functions/share-notify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ platform, page: pageUrl, title: pageTitle }),
+        body: JSON.stringify({ platform, page: pageUrl, title: finalTitle }),
       });
     } catch (err) {
       console.error("Share notify error:", err);
     }
   };
-
-  const finalTitle = pageTitle || "Check this out from K4 Studios";
   const encodedTitle = encodeURIComponent(finalTitle);
   const encodedUrl = encodeURIComponent(pageUrl);
   const shareText = encodeURIComponent(`${finalTitle}\n\n${pageUrl}`);

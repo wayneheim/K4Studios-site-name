@@ -26,7 +26,7 @@ export const galleryData = [
     "title": "High Country Sentinel",
     "description": "A dramatic Western art photograph by Wayne Heim, featuring a Native American rider in full regalia, poised on horseback atop a sunlit ridge. “High Country Sentinel” blends painterly technique with classic composition, celebrating the spirit of guardianship and the open majesty of the American West. An ideal choice for collectors of Western-themed art, historical photography, and fine art with cinematic flair.",
     "alt": "Native American rider in full headdress on horseback, silhouetted on a high ridge beneath a dramatic sky, painterly Western art by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/1/MjVrkVrTqGwXnxtLS93NDhHqqHHjWqkQ9wJp5sxLv/S/_WHO2552-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-2s2LtQp/A",
     "keywords": [
       "western art",
@@ -49,9 +49,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 125,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/1/MJr79bZrTb3Nx97V74zshkS572zKRz8QxNSZW3KWb/XL/_WHO2552-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/1/KkktTpx2MX6pg6mPns6bStFV72h4p5NtKcMDRMCgp/L/_WHO2552-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/1/MjVrkVrTqGwXnxtLS93NDhHqqHHjWqkQ9wJp5sxLv/S/_WHO2552-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/1/MJr79bZrTb3Nx97V74zshkS572zKRz8QxNSZW3KWb/XL/_WHO2552-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/1/KkktTpx2MX6pg6mPns6bStFV72h4p5NtKcMDRMCgp/L/_WHO2552-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/1/MjVrkVrTqGwXnxtLS93NDhHqqHHjWqkQ9wJp5sxLv/S/_WHO2552-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -59,7 +59,7 @@ export const galleryData = [
     "title": "Crossing in Silence",
     "description": "A painterly Western art photograph by Wayne Heim, depicting a Native American man in traditional dress at the water’s edge. This contemplative image captures the quiet moments between journeys, where reflection and memory meet. Ideal for collectors of Western-themed art, fine art photography, and historical portraiture with a meditative edge.",
     "alt": "Native American man in fringed clothing crouched by the water’s edge, studying his reflection, painterly Western art photograph by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/Lj6QBVbS4rWP6n92R65CZpX8sjm3KccJ7TJXzHcZp/XL/_WHO1676-887-888-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/2/K2wsHV4jH3PbdLrnBmxJ59mfz64MdrDtL8X68DKmj/S/_WHO1676-887-888-3-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KtmPcCf/A",
     "keywords": [
       "western art",
@@ -82,9 +82,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 103,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/Lj6QBVbS4rWP6n92R65CZpX8sjm3KccJ7TJXzHcZp/XL/_WHO1676-887-888-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/LvN9vBc2JK479758Wk9cJjS3v69Jzqk9QTtHxmBzb/L/_WHO1676-887-888-3-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/LJGkzZpF2mnQjMMZjLfpMGLZJQzXSBP2frm3K7rSm/M/_WHO1676-887-888-3-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/K2wsHV4jH3PbdLrnBmxJ59mfz64MdrDtL8X68DKmj/S/_WHO1676-887-888-3-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/2/LvN9vBc2JK479758Wk9cJjS3v69Jzqk9QTtHxmBzb/L/_WHO1676-887-888-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/2/LJGkzZpF2mnQjMMZjLfpMGLZJQzXSBP2frm3K7rSm/M/_WHO1676-887-888-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/2/K2wsHV4jH3PbdLrnBmxJ59mfz64MdrDtL8X68DKmj/S/_WHO1676-887-888-3-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -92,7 +92,7 @@ export const galleryData = [
     "title": "Deviation of Destiny",
     "description": "A cinematic, painterly Western portrait by Wayne Heim, capturing a Native American rider at a literal and figurative crossroads. With his horse alert and the path uncertain, this fine art photograph channels the tension of choice, tradition, and the silent stories of the Old West — perfect for collectors of cowboy art, historical Western photography, and painterly portraiture.",
     "alt": "Native American rider and horse at a crossroads, both alert and facing forward, painterly fine art Western portrait by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/MpfZhzbJmGb45pdK7LZF9nBmNC37WbpPgJr8D35VM/XL/_WHO2423-Edit-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FzCLS97/0/MDvTGp6dkn7CGNs2vtHjwF6xccRwnrn79w6PQHzrg/S/_WHO2685-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-69qsFwx/A",
     "keywords": [
       "western art",
@@ -115,9 +115,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 185,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/MpfZhzbJmGb45pdK7LZF9nBmNC37WbpPgJr8D35VM/XL/_WHO2423-Edit-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/NFKVXk7bSWdCNtdptzFJzvMz9ZGvRZsJcL6DLbPzt/L/_WHO2685-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/MtK3zdz6D3s289ssL2Ff5gScDjkbc4GHB2S2XZ629/M/_WHO2685-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/MDvTGp6dkn7CGNs2vtHjwF6xccRwnrn79w6PQHzrg/S/_WHO2685-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FzCLS97/0/NFKVXk7bSWdCNtdptzFJzvMz9ZGvRZsJcL6DLbPzt/L/_WHO2685-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FzCLS97/0/MtK3zdz6D3s289ssL2Ff5gScDjkbc4GHB2S2XZ629/M/_WHO2685-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FzCLS97/0/MDvTGp6dkn7CGNs2vtHjwF6xccRwnrn79w6PQHzrg/S/_WHO2685-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -125,7 +125,7 @@ export const galleryData = [
     "title": "In the Presence of Time",
     "description": "A powerful Native American portrait in traditional regalia, captured by Wayne Heim in painterly light and archival tones. This fine art photograph bridges the worlds of Western art, Western photography, and historical portraiture, honoring the dignity and legacy of the American frontier. Perfect for collectors seeking Native American fine art, Western-themed wall decor, or distinctive archival prints.",
     "alt": "Native American man in traditional regalia, feathered headdress blowing in the wind, standing against a textured background in painterly Western art photograph by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/2/KLGwmMR57nK2V8mWm5Wcm7K2ChC39txffFTFh5WfB/XL/_HF20466-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzhQxMz/0/Lg5bGG5Q2SmdLsSnJtszBZW5s9BgPMTdbKHPGPZKx/S/_WHO6157-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-qLzRgbS/A",
     "keywords": [
       "western art",
@@ -149,9 +149,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 172,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/2/KLGwmMR57nK2V8mWm5Wcm7K2ChC39txffFTFh5WfB/XL/_HF20466-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/LbnXc2dCPxrjJDjw6FPBCRBKXFXhBghG5PfD7jLzQ/XL/_WHO6157-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/KRNR6ZwKwW6b7ksZqnp8Db4CDbWKjPTjdN5nqHcpW/L/_WHO6157-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/Lg5bGG5Q2SmdLsSnJtszBZW5s9BgPMTdbKHPGPZKx/S/_WHO6157-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzhQxMz/0/LbnXc2dCPxrjJDjw6FPBCRBKXFXhBghG5PfD7jLzQ/XL/_WHO6157-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzhQxMz/0/KRNR6ZwKwW6b7ksZqnp8Db4CDbWKjPTjdN5nqHcpW/L/_WHO6157-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzhQxMz/0/Lg5bGG5Q2SmdLsSnJtszBZW5s9BgPMTdbKHPGPZKx/S/_WHO6157-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -159,7 +159,7 @@ export const galleryData = [
     "title": "Above the Divide",
     "description": "A sweeping Western art photograph by Wayne Heim, featuring three Native American riders poised on horseback atop a sunlit cliff. With painterly texture and cinematic scope, this image celebrates the spirit of exploration and the timeless grandeur of the American West. A standout for collectors of Western photography, fine art, and historical Western-themed art.",
     "alt": "Three Native American riders on horseback atop a rocky cliff under a dramatic sky, painterly Western art photograph by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/LhMVZt54VBgBSfMCPgdZhC3VghscbNcSPfgjws4tp/XL/_WHO1062-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rRdrQBg/A",
     "keywords": [
       "western art",
@@ -192,9 +192,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 126,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/LhMVZt54VBgBSfMCPgdZhC3VghscbNcSPfgjws4tp/XL/_WHO1062-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/NWrcRpzXrbMcgcmP48CHjZh7PHDj3RZPh3rTtNqkK/L/_WHO1570-Pano-Edit-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/NWrcRpzXrbMcgcmP48CHjZh7PHDj3RZPh3rTtNqkK/L/_WHO1570-Pano-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -202,7 +202,7 @@ export const galleryData = [
     "title": "High Ground Justice",
     "description": "Fine art Western photograph by Wayne Heim, capturing a cinematic three-way standoff in a painterly, high-drama landscape. Shot in the wild terrain of the American West, this image blends traditional Western themes with layered storytelling—evoking tension, narrative ambiguity, and classic film composition. A masterful example of painterly cowboy photography, where every character placement holds meaning and every frame invites a story.\n\nKeywords: Western fine art, cowboy art, painterly photography, standoff scene, cinematic cowboy wall art, fine art western photography, narrative photography, Old West photo, historical storytelling image.",
     "alt": "Three men locked in a cinematic standoff across a rugged Western hillside—one crouching behind rocks, one aiming from higher ground, and a third approaching from the left.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/0/LM599HhPqKD7B5LjM2ddv6PQCpW6xpL3hLCk7VcbQ/XL/_HF27324-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MGtzcDRG4J5ZqsWJwLLB4qPKJ7GpssFwzHXnnvZBs/S/_HF27362-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-6NQ6hQZ/A",
     "keywords": [
       "western fine art photography",
@@ -233,9 +233,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 112,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/0/LM599HhPqKD7B5LjM2ddv6PQCpW6xpL3hLCk7VcbQ/XL/_HF27324-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/1/KH3H8n6nbzTq34W7FpFxX9ChJPSSX7mNNcdFhfHJ9/L/_HF27362-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/1/MWhmW9nnCh4V8fHzQ7Fsq7V8LVcCbNT25rkqG5DGf/M/_HF27362-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/1/MGtzcDRG4J5ZqsWJwLLB4qPKJ7GpssFwzHXnnvZBs/S/_HF27362-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/KH3H8n6nbzTq34W7FpFxX9ChJPSSX7mNNcdFhfHJ9/L/_HF27362-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MWhmW9nnCh4V8fHzQ7Fsq7V8LVcCbNT25rkqG5DGf/M/_HF27362-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MGtzcDRG4J5ZqsWJwLLB4qPKJ7GpssFwzHXnnvZBs/S/_HF27362-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -243,7 +243,7 @@ export const galleryData = [
     "title": "Through Still Waters",
     "description": "A suspenseful, painterly Western art photograph by Wayne Heim, capturing a Native American man poised in a canoe with bow drawn, slipping through misty water and swaying reeds. “Element of Surprise” channels tension, tradition, and the art of stealth—perfect for collectors of Western art, Western photography, and historical fine art imagery from the American frontier.",
     "alt": "Native American man in a canoe, bow drawn, moving through misty reeds and water in painterly Western art photograph by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/0/MNwKQJwzS4467v7ZQBThSHJmhXkmThTC6psMst99S/XL/_WHO0336-Edit-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/2/Kc9kjVchdngh9CbKGChdHL4KBPK4QLVjWQFVnVfW3/S/_WHO0707-Edit-Edit-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zjtVmT8/A",
     "keywords": [
       "western art",
@@ -275,9 +275,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 128,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/0/MNwKQJwzS4467v7ZQBThSHJmhXkmThTC6psMst99S/XL/_WHO0336-Edit-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/2/M3qp9wzQxvR46jHxthhGFpWWsJQfqJwnD8FsmjPTM/L/_WHO0707-Edit-Edit-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/2/KDvzCFJmKLzJGrv7p9JNLPmpfJsfWbL85kCdsRqB2/M/_WHO0707-Edit-Edit-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/2/Kc9kjVchdngh9CbKGChdHL4KBPK4QLVjWQFVnVfW3/S/_WHO0707-Edit-Edit-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/2/M3qp9wzQxvR46jHxthhGFpWWsJQfqJwnD8FsmjPTM/L/_WHO0707-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/2/KDvzCFJmKLzJGrv7p9JNLPmpfJsfWbL85kCdsRqB2/M/_WHO0707-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/2/Kc9kjVchdngh9CbKGChdHL4KBPK4QLVjWQFVnVfW3/S/_WHO0707-Edit-Edit-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -285,7 +285,7 @@ export const galleryData = [
     "title": "Breath Before Thunder",
     "description": "A dramatic, painterly Western art photograph by Wayne Heim, capturing a Native American marksman poised in a cloud of dust, rifle steady and eyes sharp. “Breath Before Thunder” channels tension, tradition, and the decisive moments that shape legends—ideal for collectors of Western art, Western photography, and fine art imagery rooted in the American frontier.",
     "alt": "Native American man in fringed buckskin aiming a rifle, focused and intense, in a painterly Western art photograph by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/1/KgDDgW7gkmtK9CSqSRMTTXBfrjNfWZJ8vZV7GCb5n/XL/_WHO1458-891-893-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/2/M3q4Xsqb7wrf4tKrcXnCVZmBzL3nbCmRGfrX4tskH/S/_WHO1264-894-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-jWFcDHr/A",
     "keywords": [
       "western art",
@@ -316,9 +316,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 100,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/1/KgDDgW7gkmtK9CSqSRMTTXBfrjNfWZJ8vZV7GCb5n/XL/_WHO1458-891-893-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/2/LdbcfBNP7vSgHHNWrGckfSz39HV7dMxkBvkMwjz8M/XL/_WHO1264-894-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/2/KDJKRsxLZzjwFGMLSmcV2B57NskWXhq78MvXhDjCG/L/_WHO1264-894-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/2/M3q4Xsqb7wrf4tKrcXnCVZmBzL3nbCmRGfrX4tskH/S/_WHO1264-894-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/2/LdbcfBNP7vSgHHNWrGckfSz39HV7dMxkBvkMwjz8M/XL/_WHO1264-894-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/2/KDJKRsxLZzjwFGMLSmcV2B57NskWXhq78MvXhDjCG/L/_WHO1264-894-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/2/M3q4Xsqb7wrf4tKrcXnCVZmBzL3nbCmRGfrX4tskH/S/_WHO1264-894-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -326,7 +326,7 @@ export const galleryData = [
     "title": "Red Stripe",
     "description": "A painterly Western art portrait titled “Red Stripe,” featuring a Native American woman wrapped in a signature red-striped blanket, her gaze calm against the wind. This fine art image blends warmth, resilience, and timeless Western beauty—ideal for collectors of Western photography, Native American portraiture, and narrative-driven fine art.",
     "alt": "The wind finds every weakness but never breaks me. Blanket wrapped tight, I wait and watch, trusting in warmth and memory to outlast the storm.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/LZmHGfQv8tMgnvDzDvX2wxMcNzL5NLsCRBd3Dgp94/XL/_WHO2514-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/M8GRnMdzZPwLtwFrnj7jvQRjhL7cLrCNWdtR3h74k/S/_WHO4466-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-QJXw3Sj/A",
     "keywords": [
       "western art",
@@ -357,9 +357,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 139,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/LZmHGfQv8tMgnvDzDvX2wxMcNzL5NLsCRBd3Dgp94/XL/_WHO2514-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/MSFS8gTP8SMCZtqsvkF8fRPzdqhF4m8Hkr3qvcZWC/L/_WHO4466-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/MJRGHzBLk5FHpK2dKVLsqKnMtcfjTLNMVvTwV2khm/M/_WHO4466-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/M8GRnMdzZPwLtwFrnj7jvQRjhL7cLrCNWdtR3h74k/S/_WHO4466-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/MSFS8gTP8SMCZtqsvkF8fRPzdqhF4m8Hkr3qvcZWC/L/_WHO4466-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/MJRGHzBLk5FHpK2dKVLsqKnMtcfjTLNMVvTwV2khm/M/_WHO4466-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/M8GRnMdzZPwLtwFrnj7jvQRjhL7cLrCNWdtR3h74k/S/_WHO4466-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -367,7 +367,7 @@ export const galleryData = [
     "title": "Keeper of the Flame",
     "description": "A painterly Western art portrait titled “Keeper of the Flame,” featuring a Native American elder adorned in ceremonial headdress with striking red ribbons and beadwork. This dignified image honors the unbroken chain of tradition, wisdom, and resilience—an ideal piece for collectors of Western art, Native American portraiture, and fine art that celebrates heritage and living history.",
     "alt": "Native American elder in a feathered headdress with red ribbons, warm painterly tones, Western art portrait symbolizing tradition and endurance.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/0/M9Jk3CqFS4v8jWbvKbzBrcXdZWjH89ScXtg4TF67Q/XL/_WHO4968-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/3/LtMhKXKswfpb3DJbgjSJ4MqR3mPpt3zdV6J8GM2Nd/S/_WHO5639-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Ns73cwK/A",
     "keywords": [
       "western art",
@@ -398,9 +398,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 68,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/0/M9Jk3CqFS4v8jWbvKbzBrcXdZWjH89ScXtg4TF67Q/XL/_WHO4968-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/3/M4fcPPX58ZrCnt6Q4bzNSZQ3rzq8CQTxbWgM3KXHd/L/_WHO5639-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/3/LpZD42gdDrWjSsjwZxxWn4FRMJ87zMS84bdLCtBz6/M/_WHO5639-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/3/LtMhKXKswfpb3DJbgjSJ4MqR3mPpt3zdV6J8GM2Nd/S/_WHO5639-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/3/M4fcPPX58ZrCnt6Q4bzNSZQ3rzq8CQTxbWgM3KXHd/L/_WHO5639-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/3/LpZD42gdDrWjSsjwZxxWn4FRMJ87zMS84bdLCtBz6/M/_WHO5639-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/3/LtMhKXKswfpb3DJbgjSJ4MqR3mPpt3zdV6J8GM2Nd/S/_WHO5639-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -408,7 +408,7 @@ export const galleryData = [
     "title": "Exploring Native American Photography",
     "description": "Wayne Heim's Native American photography captures the spirit of Native American Portraits in this Native American heritage art image. Featuring painterly Native American images, Indigenous experience, and Native American photography, it's ideal for Native American Portraits enthusiasts. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MdcGHDPzMsxp5bGpXpWLKdfS2zt7Mn5Zc736MMQRG/XL/_HF27362-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/3/K6xKzPvMhTgS6GLZw9MsSwdZfLsmpRGSx2thKghnB/S/_HF27522-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-QNdCxKN/A",
     "keywords": [
       "a",
@@ -434,9 +434,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 111,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MdcGHDPzMsxp5bGpXpWLKdfS2zt7Mn5Zc736MMQRG/XL/_HF27362-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/3/NHnRzZhQL8WfZZWTCLjpjCf9SBSk6dX652zftfvJh/XL/_HF27522-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/3/NHnRzZhQL8WfZZWTCLjpjCf9SBSk6dX652zftfvJh/XL/_HF27522-Edit-XL.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/3/K6xKzPvMhTgS6GLZw9MsSwdZfLsmpRGSx2thKghnB/S/_HF27522-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/3/NHnRzZhQL8WfZZWTCLjpjCf9SBSk6dX652zftfvJh/XL/_HF27522-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/3/NHnRzZhQL8WfZZWTCLjpjCf9SBSk6dX652zftfvJh/XL/_HF27522-Edit-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/3/K6xKzPvMhTgS6GLZw9MsSwdZfLsmpRGSx2thKghnB/S/_HF27522-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -444,7 +444,7 @@ export const galleryData = [
     "title": "Spirit Of The West In Fine Art",
     "description": "Witness spirit of the West in Wayne Heim's Native American Portraits. This image features Indigenous experience with Native American tradition and Native American photography, ideal for admirers of spirit of the West. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/0/LPRCpfjRSRXG4bxRszMpfrm7XnssVBBmmDShFRrtS/XL/_WHO5788-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/2/NJwDnfxqbBqjPWP3ZWNJSTCbhwQ6F7wtZXSDDFcm5/S/_WHO5804-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Jbxc4G6/A",
     "keywords": [
       "a",
@@ -470,9 +470,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 65,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/0/LPRCpfjRSRXG4bxRszMpfrm7XnssVBBmmDShFRrtS/XL/_WHO5788-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/2/L3LmXzhW2j6CszwWddw4v4W4KQrXfq6N9CZXNzzHD/L/_WHO5804-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/2/NFrrst9cGjqHSCJrZTvZd7VqpLCn3jpsZJC5bd3mk/M/_WHO5804-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/2/NJwDnfxqbBqjPWP3ZWNJSTCbhwQ6F7wtZXSDDFcm5/S/_WHO5804-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/2/L3LmXzhW2j6CszwWddw4v4W4KQrXfq6N9CZXNzzHD/L/_WHO5804-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/2/NFrrst9cGjqHSCJrZTvZd7VqpLCn3jpsZJC5bd3mk/M/_WHO5804-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/2/NJwDnfxqbBqjPWP3ZWNJSTCbhwQ6F7wtZXSDDFcm5/S/_WHO5804-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -480,7 +480,7 @@ export const galleryData = [
     "title": "Fine Art Native American Photography",
     "description": "Discover the Native American photography in this powerful Native American Portraits by Wayne Heim. A compelling work that embodies painterly Native American images, Indigenous experience, and Native American art prints. Perfect for art lovers seeking Native American photography to enhance their collection. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/1/MJr79bZrTb3Nx97V74zshkS572zKRz8QxNSZW3KWb/XL/_WHO2552-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/KtDKSL46kWGVWrQ9zRWVkPWTkfwPRRxGCGTZtpPWS/S/_WHO2870-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-9frbWfJ/A",
     "keywords": [
       "a",
@@ -506,9 +506,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 124,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/1/MJr79bZrTb3Nx97V74zshkS572zKRz8QxNSZW3KWb/XL/_WHO2552-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/0/MtKXR9ZxNjqV9qgJDgsLVKs3FnQjswwxNkqzDgMTQ/L/_WHO2870-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/0/KPsjZhV6rP6GsmbgCN7ntdFrG5rVXnKWqKTCdNbg8/M/_WHO2870-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/0/KtDKSL46kWGVWrQ9zRWVkPWTkfwPRRxGCGTZtpPWS/S/_WHO2870-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/MtKXR9ZxNjqV9qgJDgsLVKs3FnQjswwxNkqzDgMTQ/L/_WHO2870-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/KPsjZhV6rP6GsmbgCN7ntdFrG5rVXnKWqKTCdNbg8/M/_WHO2870-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/KtDKSL46kWGVWrQ9zRWVkPWTkfwPRRxGCGTZtpPWS/S/_WHO2870-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -516,7 +516,7 @@ export const galleryData = [
     "title": "Native American Photography - Native American Portraits",
     "description": "Witness Native American photography in Wayne Heim's Native American Portraits. This image features Native American art prints with painterly Native American images and Native American heritage art, ideal for admirers of Native American photography. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/0/LXcgC4RNw9LLgGGWfvWV5hbsnwwqwDNRFS9782TGN/XL/_WHO0707-Edit-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/1/LCT8ZvrM62GJLmmJp2fTbXPXfk3NVqvhHvVX5VK6G/S/_WHO1062-Edit-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-vJSCrqC/A",
     "keywords": [
       "a",
@@ -541,9 +541,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 127,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/0/LXcgC4RNw9LLgGGWfvWV5hbsnwwqwDNRFS9782TGN/XL/_WHO0707-Edit-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/1/MnLdDbrdcqRbJb4QbNPxN6tHvX9PhCw5bXgzbdZmb/L/_WHO1062-Edit-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/1/LLkZqqmHmTDTcVnFVR48XRfDVB4mrTxHdPzWF2QMv/M/_WHO1062-Edit-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/1/LCT8ZvrM62GJLmmJp2fTbXPXfk3NVqvhHvVX5VK6G/S/_WHO1062-Edit-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/1/MnLdDbrdcqRbJb4QbNPxN6tHvX9PhCw5bXgzbdZmb/L/_WHO1062-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/1/LLkZqqmHmTDTcVnFVR48XRfDVB4mrTxHdPzWF2QMv/M/_WHO1062-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/1/LCT8ZvrM62GJLmmJp2fTbXPXfk3NVqvhHvVX5VK6G/S/_WHO1062-Edit-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -551,7 +551,7 @@ export const galleryData = [
     "title": "Native American Photography And Spirit Of The West",
     "description": "Wayne Heim's Native American photography captures the spirit of spirit of the West in this Native American tradition image. Featuring Indigenous experience, Native American Portraits, and Native American photography, it's ideal for spirit of the West enthusiasts. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KmHXFd8MFFCLTpg7SH72LN3SwhQPWNkXvQsDGcdBN/XL/_HF25860-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/NHkb48JKZjk6XmxRWhqxvrNgtrM8Kr9ww7vkXHHvh/S/_WHO3211-Edit-Edit-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-CD6rgtF/A",
     "keywords": [
       "a",
@@ -576,9 +576,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 120,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KmHXFd8MFFCLTpg7SH72LN3SwhQPWNkXvQsDGcdBN/XL/_HF25860-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/MghZ7PrSDzVhns2qKkVR2xtddsw3NCB3mxScsgwp2/L/_WHO3211-Edit-Edit-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KsmF9nCxKZLc3c5Z52nfGfKzxqq9MkDjCbHnrsdt8/M/_WHO3211-Edit-Edit-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/NHkb48JKZjk6XmxRWhqxvrNgtrM8Kr9ww7vkXHHvh/S/_WHO3211-Edit-Edit-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/MghZ7PrSDzVhns2qKkVR2xtddsw3NCB3mxScsgwp2/L/_WHO3211-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/KsmF9nCxKZLc3c5Z52nfGfKzxqq9MkDjCbHnrsdt8/M/_WHO3211-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/NHkb48JKZjk6XmxRWhqxvrNgtrM8Kr9ww7vkXHHvh/S/_WHO3211-Edit-Edit-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -586,7 +586,7 @@ export const galleryData = [
     "title": "Fine Art Indigenous Experience",
     "description": "This Indigenous experience artwork by Wayne Heim showcases Native American art prints in a Native American tradition style. Reflecting Native American Portraits, spirit of the West, and Indigenous experience, it's suited for admirers of Native American art prints. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/2/MkfZVP83n6CfxDPSD8tLmx9vnhz3b2nDmbgrfBFKn/XL/_WHO5804-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/1/LbZvqqbJ8GdHvNSTfPNR5mvK79rHpL7GJ66FMw8kK/S/_WHO5832-920-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-bxDjH9c/A",
     "keywords": [
       "a",
@@ -612,9 +612,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 64,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/2/MkfZVP83n6CfxDPSD8tLmx9vnhz3b2nDmbgrfBFKn/XL/_WHO5804-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/1/KpZJZX52m5C5njM5sBc2Sks4c6FWSRgnqLdFQNBrH/XL/_WHO5832-920-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/1/Nb8fFVH4K4LKQ5LGMdzvT25BrDjB7HxHFXbN5FCV9/L/_WHO5832-920-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/1/LbZvqqbJ8GdHvNSTfPNR5mvK79rHpL7GJ66FMw8kK/S/_WHO5832-920-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/1/KpZJZX52m5C5njM5sBc2Sks4c6FWSRgnqLdFQNBrH/XL/_WHO5832-920-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/1/Nb8fFVH4K4LKQ5LGMdzvT25BrDjB7HxHFXbN5FCV9/L/_WHO5832-920-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/1/LbZvqqbJ8GdHvNSTfPNR5mvK79rHpL7GJ66FMw8kK/S/_WHO5832-920-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -622,7 +622,7 @@ export const galleryData = [
     "title": "Young Warrior",
     "description": "A vibrant, painterly portrait by Wayne Heim, capturing a young Native American warrior standing tall by the water. Bathed in sunlight and tradition, this Western art photograph celebrates youthful courage, ceremonial heritage, and the living spirit of the Old West. Ideal for collectors of Western-themed art, painterly cowboy photography, and fine art that honors history with a fresh eye.",
     "alt": "Young Native American boy in ceremonial dress holding a spear, standing by water in painterly fine art style by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/LHQnH52gpCBqgMDDNXb8qKxJQ9BXmctrNGWkFzPMM/XL/_HF29032-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xmJ87ZT/0/Mrd4Lc9vdZBQ5nZRSn7xNHHqsrjHBMHf4njL4gsMR/S/_HF29302-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Wsxmqv/A",
     "keywords": [
       "a",
@@ -641,9 +641,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 181,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/LHQnH52gpCBqgMDDNXb8qKxJQ9BXmctrNGWkFzPMM/XL/_HF29032-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/MhzR8smg5LN5gxmJFRRV6kZjLVKTcP89X8dVS87sh/XL/_HF29302-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/KtVvWPZMZHv9hzFv5ZwNHsg6MR7nj3XLQ5MxmBG2S/L/_HF29302-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/Mrd4Lc9vdZBQ5nZRSn7xNHHqsrjHBMHf4njL4gsMR/S/_HF29302-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xmJ87ZT/0/MhzR8smg5LN5gxmJFRRV6kZjLVKTcP89X8dVS87sh/XL/_HF29302-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xmJ87ZT/0/KtVvWPZMZHv9hzFv5ZwNHsg6MR7nj3XLQ5MxmBG2S/L/_HF29302-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xmJ87ZT/0/Mrd4Lc9vdZBQ5nZRSn7xNHHqsrjHBMHf4njL4gsMR/S/_HF29302-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -651,7 +651,7 @@ export const galleryData = [
     "title": "Native American Photography Moment",
     "description": "Explore Native American photography with Wayne Heim's Native American tradition. This Native American heritage art piece conveys Native American Portraits, Native American art prints, and Native American photography, perfect for fans of Native American tradition. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/0/MggWQRwDzZCsQ3TGqcPXbrDF56Qvg5wrJXmwdvPX9/XL/_WHO0996-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/Kb2rRcNXqtkqnn2WLVh49LPJkJhstMSqv9BsZVnrT/S/_HF24203-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-V96Rgmj/A",
     "keywords": [
       "a",
@@ -676,9 +676,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 147,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/0/MggWQRwDzZCsQ3TGqcPXbrDF56Qvg5wrJXmwdvPX9/XL/_WHO0996-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/2/LBVLp52L8TCvJZs3mjw4V3HMJ57Zp5VZwGdSWPz5K/L/_HF24203-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/2/M3wm7sVCrBf3HK6zc55BpHJKGnX3H4pJdh4CbTFWQ/M/_HF24203-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/2/Kb2rRcNXqtkqnn2WLVh49LPJkJhstMSqv9BsZVnrT/S/_HF24203-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/LBVLp52L8TCvJZs3mjw4V3HMJ57Zp5VZwGdSWPz5K/L/_HF24203-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/M3wm7sVCrBf3HK6zc55BpHJKGnX3H4pJdh4CbTFWQ/M/_HF24203-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/Kb2rRcNXqtkqnn2WLVh49LPJkJhstMSqv9BsZVnrT/S/_HF24203-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -686,7 +686,7 @@ export const galleryData = [
     "title": "The Essence Of Native American Heritage Art",
     "description": "Experience Native American heritage art through this evocative Native American photography from Wayne Heim's portfolio. This piece highlights Indigenous experience with Native American art prints, while conveying Native American Portraits, ideal for those who appreciate Native American heritage art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/KVTLxxQwM7HdcwgDV8Kvv3xnn6QNzvfsCT3T5Spwq/XL/_WHO0338-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/3/K3HTWCKcTZPVc94wzJJbr5LJpCkvnHWZtDFrB5jh3/S/_WHO0618-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-h679dhn/A",
     "keywords": [
       "a",
@@ -712,9 +712,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 151,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/KVTLxxQwM7HdcwgDV8Kvv3xnn6QNzvfsCT3T5Spwq/XL/_WHO0338-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/3/NLRqF6bz66jjxbMtDChwqPqjpRbScmq5BztBtR8jD/XL/_WHO0618-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/3/NP65NCJMS2nCvWCJvrRnb3n4BSwxKtzfdJQtk6nHN/L/_WHO0618-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/3/K3HTWCKcTZPVc94wzJJbr5LJpCkvnHWZtDFrB5jh3/S/_WHO0618-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/3/NLRqF6bz66jjxbMtDChwqPqjpRbScmq5BztBtR8jD/XL/_WHO0618-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/3/NP65NCJMS2nCvWCJvrRnb3n4BSwxKtzfdJQtk6nHN/L/_WHO0618-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/3/K3HTWCKcTZPVc94wzJJbr5LJpCkvnHWZtDFrB5jh3/S/_WHO0618-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -722,7 +722,7 @@ export const galleryData = [
     "title": "Capturing Indigenous Experience",
     "description": "Immerse yourself in Indigenous experience with this stunning spirit of the West by Wayne Heim. Capturing Native American photography, painterly Native American images, and Native American Portraits, it's a must-have for collectors of Indigenous experience. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NB485BPKHD5dS3QZN6xmQGznJwwXW65dgfRPcFPLN/XL/_HF29691-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/NGw3MB5zmmB9VbLNMwb7nfLFdfs67sm38cTWrPv2D/S/_HF29701-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zt2btJ7/A",
     "keywords": [
       "a",
@@ -747,9 +747,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 177,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NB485BPKHD5dS3QZN6xmQGznJwwXW65dgfRPcFPLN/XL/_HF29691-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/Mq279fZhKTB5LQFNJJ6rkP3J2Qv3F3fGsBSxJ6VjK/L/_HF29701-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/K4BqtQNpnMkmLxvL8CPT42jSQgCBxrk2FMDvLzpKK/M/_HF29701-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NGw3MB5zmmB9VbLNMwb7nfLFdfs67sm38cTWrPv2D/S/_HF29701-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/Mq279fZhKTB5LQFNJJ6rkP3J2Qv3F3fGsBSxJ6VjK/L/_HF29701-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/K4BqtQNpnMkmLxvL8CPT42jSQgCBxrk2FMDvLzpKK/M/_HF29701-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/NGw3MB5zmmB9VbLNMwb7nfLFdfs67sm38cTWrPv2D/S/_HF29701-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -757,7 +757,7 @@ export const galleryData = [
     "title": "Native American Tradition And Indigenous Experience",
     "description": "Delve into Native American tradition via this Indigenous experience by Wayne Heim. Highlighting Native American heritage art through Native American photography and spirit of the West, it's great for collectors interested in Native American tradition. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/0/Ldc2DvrgzRsGtfcQHrmxCX9X3Jj6t8pJ8FzVzNrxT/XL/_WHO2838-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/LjqDBDHrz9DFPXRffF4cknPQrGkHjdq3NHPkRRLwB/S/_HF24846-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-NgkC4Zt/A",
     "keywords": [
       "a",
@@ -782,9 +782,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 81,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/0/Ldc2DvrgzRsGtfcQHrmxCX9X3Jj6t8pJ8FzVzNrxT/XL/_WHO2838-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/1/M3wwqpzMpSFZm2MCgqHFFmkmWvNW7Zbdp8szLnvSP/XL/_HF24846-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/1/KHcdPrvnZ2bWCHdDvG8NGrfhNBrt226C9ZsBpnRNv/L/_HF24846-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/1/LjqDBDHrz9DFPXRffF4cknPQrGkHjdq3NHPkRRLwB/S/_HF24846-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/M3wwqpzMpSFZm2MCgqHFFmkmWvNW7Zbdp8szLnvSP/XL/_HF24846-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/KHcdPrvnZ2bWCHdDvG8NGrfhNBrt226C9ZsBpnRNv/L/_HF24846-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/LjqDBDHrz9DFPXRffF4cknPQrGkHjdq3NHPkRRLwB/S/_HF24846-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -792,7 +792,7 @@ export const galleryData = [
     "title": "Painterly Native American Images And Native American Photography",
     "description": "Experience painterly Native American images through this evocative Native American photography from Wayne Heim's portfolio. This piece highlights Native American tradition with Native American art prints, while conveying spirit of the West, ideal for those who appreciate painterly Native American images. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/MD7RbqMBSTV2FNNpVxDdTSKwm5wFHggmwx35RpvFn/S/_WHO0338-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zZJbbHG/A",
     "keywords": [
       "a",
@@ -818,9 +818,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 152,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/Nfn8LSBhxL2z5R9gMBF2gJ8NF8JbxzmPGFgV5mBMS/L/_WHO0338-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/NDq7M6dfnFFj9RJQb97cSBh7XCt5znbcckBhG3b3x/M/_WHO0338-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/MD7RbqMBSTV2FNNpVxDdTSKwm5wFHggmwx35RpvFn/S/_WHO0338-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/Nfn8LSBhxL2z5R9gMBF2gJ8NF8JbxzmPGFgV5mBMS/L/_WHO0338-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/NDq7M6dfnFFj9RJQb97cSBh7XCt5znbcckBhG3b3x/M/_WHO0338-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/MD7RbqMBSTV2FNNpVxDdTSKwm5wFHggmwx35RpvFn/S/_WHO0338-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -828,7 +828,7 @@ export const galleryData = [
     "title": "Spirit Of The West Portrait",
     "description": "Explore spirit of the West with Wayne Heim's Indigenous experience. This Native American tradition piece conveys Native American photography, painterly Native American images, and spirit of the West, perfect for fans of Indigenous experience. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/M3d9mnw38Tn6p4P4MWdv5JKVN9DpJCgHJdfRRb2cM/XL/_WHO2415-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/L7w7SVFh3Nb7w3BMjxG9r5WJ8f2qfPZScJN6x7gBW/S/_WHO2514-Edit-2-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sDZFJ6t/A",
     "keywords": [
       "a",
@@ -854,9 +854,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 140,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/M3d9mnw38Tn6p4P4MWdv5JKVN9DpJCgHJdfRRb2cM/XL/_WHO2415-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/LNRs3sPRDZW8r3v7P5vqNtzD88QWSbbJGwkvvsSJC/L/_WHO2514-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/MPkFqp9JD8wBz8mz7dfB4HJhLL9BvzXVXTPbrrcZv/M/_WHO2514-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/L7w7SVFh3Nb7w3BMjxG9r5WJ8f2qfPZScJN6x7gBW/S/_WHO2514-Edit-2-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/LNRs3sPRDZW8r3v7P5vqNtzD88QWSbbJGwkvvsSJC/L/_WHO2514-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/MPkFqp9JD8wBz8mz7dfB4HJhLL9BvzXVXTPbrrcZv/M/_WHO2514-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/L7w7SVFh3Nb7w3BMjxG9r5WJ8f2qfPZScJN6x7gBW/S/_WHO2514-Edit-2-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -864,7 +864,7 @@ export const galleryData = [
     "title": "Fine Art Spirit Of The West",
     "description": "Delve into spirit of the West via this painterly Native American images by Wayne Heim. Highlighting Native American photography through Native American art prints and Native American tradition, it's great for collectors interested in spirit of the West. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/LfbKQpX3tSXNRNz9jsjJsdxGFzGdktCLRvGHJcvsC/XL/_WHO3531-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/LB7pS5DFVjPVdt3jXWMGnX8SCDTC5m7nZkQW5N6qj/S/_HF29691-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-cNbW8wV/A",
     "keywords": [
       "a",
@@ -890,9 +890,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 178,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/LfbKQpX3tSXNRNz9jsjJsdxGFzGdktCLRvGHJcvsC/XL/_WHO3531-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/1/NB485BPKHD5dS3QZN6xmQGznJwwXW65dgfRPcFPLN/XL/_HF29691-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/1/NPx34vCBQ57VCXdXSLm9JFsbwfV2ZwqSRKQvFLFhb/L/_HF29691-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/1/LB7pS5DFVjPVdt3jXWMGnX8SCDTC5m7nZkQW5N6qj/S/_HF29691-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NB485BPKHD5dS3QZN6xmQGznJwwXW65dgfRPcFPLN/XL/_HF29691-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NPx34vCBQ57VCXdXSLm9JFsbwfV2ZwqSRKQvFLFhb/L/_HF29691-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/LB7pS5DFVjPVdt3jXWMGnX8SCDTC5m7nZkQW5N6qj/S/_HF29691-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -900,7 +900,7 @@ export const galleryData = [
     "title": "Native American Art Prints And Native American Portraits",
     "description": "This Native American art prints artwork by Wayne Heim showcases Native American Portraits in a painterly Native American images style. Reflecting spirit of the West, Native American heritage art, and Native American art prints, it's suited for admirers of Native American Portraits. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/KvnVJgjSnm9Vphqk8VSjwcLmqgtBwRSc7JRpD32pS/XL/_HF29701-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/LnpTmc5XFghrqhmsKHCF2PFPBnxSBhKhZFg2xkwbF/S/_WHO3989-Edit-2-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Hz6D7k/A",
     "keywords": [
       "a",
@@ -926,9 +926,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 176,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/KvnVJgjSnm9Vphqk8VSjwcLmqgtBwRSc7JRpD32pS/XL/_HF29701-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/LMk6v3Lhjk7fgM8p5dzC7w8zKdVr5zZm9Khq4JxCq/L/_WHO3989-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/LXncGgXJNGtB8bSTxHmtnwxCvbXGPqmcZNzHKvrLK/M/_WHO3989-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/LnpTmc5XFghrqhmsKHCF2PFPBnxSBhKhZFg2xkwbF/S/_WHO3989-Edit-2-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/LMk6v3Lhjk7fgM8p5dzC7w8zKdVr5zZm9Khq4JxCq/L/_WHO3989-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/LXncGgXJNGtB8bSTxHmtnwxCvbXGPqmcZNzHKvrLK/M/_WHO3989-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/LnpTmc5XFghrqhmsKHCF2PFPBnxSBhKhZFg2xkwbF/S/_WHO3989-Edit-2-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -969,7 +969,7 @@ export const galleryData = [
     "title": "Cowboy Native American Heritage Art",
     "description": "Witness Native American Portraits in Wayne Heim's Native American heritage art. This image features Native American tradition with Indigenous experience and Native American art prints, ideal for admirers of Native American Portraits. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/LwTGSKTQ4c28GG4nfhBhcJFRbNkRjFq5VsMVK6Tbw/S/_WHO1255-897-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Z8pZLnt/A",
     "keywords": [
       "a",
@@ -995,9 +995,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 96,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/MksrwdgdJztCbSHt6qX5Zk9mQX38dmhs9FxWws4Jk/L/_WHO1255-897-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LwTGSKTQ4c28GG4nfhBhcJFRbNkRjFq5VsMVK6Tbw/S/_WHO1255-897-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/MksrwdgdJztCbSHt6qX5Zk9mQX38dmhs9FxWws4Jk/L/_WHO1255-897-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/LwTGSKTQ4c28GG4nfhBhcJFRbNkRjFq5VsMVK6Tbw/S/_WHO1255-897-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1005,7 +1005,7 @@ export const galleryData = [
     "title": "The Essence Of Indigenous Experience",
     "description": "Delve into Indigenous experience via this Native American photography by Wayne Heim. Highlighting Native American art prints through Native American heritage art and Native American Portraits, it's great for collectors interested in Indigenous experience. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qbDq3P4/1/M2hPXR8Vrcz45gQtKT69wNR2bjBdHbXpTKqq8tmZ5/S/_WHO0574-904-905-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-67Qt8WM/A",
     "keywords": [
       "a",
@@ -1031,9 +1031,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 95,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/1/KHdNQWSKDD2j4RHvxnLvtrZGWpKvB73tV2TjbJBV8/XL/_WHO0574-904-905-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/1/M79GKvW4NJsdh739Vd29ccJpXZLPHN7vQv8HMpD2r/L/_WHO0574-904-905-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/1/M2hPXR8Vrcz45gQtKT69wNR2bjBdHbXpTKqq8tmZ5/S/_WHO0574-904-905-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qbDq3P4/1/KHdNQWSKDD2j4RHvxnLvtrZGWpKvB73tV2TjbJBV8/XL/_WHO0574-904-905-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qbDq3P4/1/M79GKvW4NJsdh739Vd29ccJpXZLPHN7vQv8HMpD2r/L/_WHO0574-904-905-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qbDq3P4/1/M2hPXR8Vrcz45gQtKT69wNR2bjBdHbXpTKqq8tmZ5/S/_WHO0574-904-905-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1073,7 +1073,7 @@ export const galleryData = [
     "title": "Indigenous Experience Portrait",
     "description": "Immerse yourself in Indigenous experience with this stunning spirit of the West by Wayne Heim. Capturing Native American photography, Native American tradition, and painterly Native American images, it's a must-have for collectors of Indigenous experience. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/2/MBVn7H63mjJjvc6bhsQTxK3msmpx7wg4kzhQP9cvm/XL/_WHO1676-887-888-3-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vj2mkf6/3/MtgshDH9mmFBxrVKPV6vTmb5HgT7xCzJ8k8pBF3sK/S/_WHO1676-887-888-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KG7ZwXT/A",
     "keywords": [
       "a",
@@ -1097,9 +1097,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 102,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/2/MBVn7H63mjJjvc6bhsQTxK3msmpx7wg4kzhQP9cvm/XL/_WHO1676-887-888-3-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/3/KcjQwcf69KnC4Np3QMbxxhSSCW6KhkNDgsnCg7c9s/L/_WHO1676-887-888-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/3/KDZ5vHdt7TC9zVHjMP6BHLskSPqHFCkn2XnNRVCpw/M/_WHO1676-887-888-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/3/MtgshDH9mmFBxrVKPV6vTmb5HgT7xCzJ8k8pBF3sK/S/_WHO1676-887-888-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vj2mkf6/3/KcjQwcf69KnC4Np3QMbxxhSSCW6KhkNDgsnCg7c9s/L/_WHO1676-887-888-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vj2mkf6/3/KDZ5vHdt7TC9zVHjMP6BHLskSPqHFCkn2XnNRVCpw/M/_WHO1676-887-888-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vj2mkf6/3/MtgshDH9mmFBxrVKPV6vTmb5HgT7xCzJ8k8pBF3sK/S/_WHO1676-887-888-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1107,7 +1107,7 @@ export const galleryData = [
     "title": "Native American Tradition - Native American Art Prints",
     "description": "Wayne Heim's Native American tradition captures the spirit of Native American art prints in this Native American Portraits image. Featuring painterly Native American images, Indigenous experience, and Native American tradition, it's ideal for Native American art prints enthusiasts. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KdGP25pr56zsbpsqzJsGC5kxkN35k6BHS7p2spzNS/XL/_WHO6372-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/LhRgd89gVX67bVDz4xgtgqnWt2BVhcLSdtHcN9SkC/S/_HF24995-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Gk8bBLn/A",
     "keywords": [
       "a",
@@ -1133,9 +1133,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 130,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KdGP25pr56zsbpsqzJsGC5kxkN35k6BHS7p2spzNS/XL/_WHO6372-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KwHbm5MwxXrRWgJMwfrmJh9vn38Sm52Fr9xprsw2N/XL/_HF24995-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/Kdw8KbBNQQhmpxmf3GJXTvFCrXMLNV6wW26PZGJCL/L/_HF24995-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/LhRgd89gVX67bVDz4xgtgqnWt2BVhcLSdtHcN9SkC/S/_HF24995-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/KwHbm5MwxXrRWgJMwfrmJh9vn38Sm52Fr9xprsw2N/XL/_HF24995-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/Kdw8KbBNQQhmpxmf3GJXTvFCrXMLNV6wW26PZGJCL/L/_HF24995-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/LhRgd89gVX67bVDz4xgtgqnWt2BVhcLSdtHcN9SkC/S/_HF24995-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1143,7 +1143,7 @@ export const galleryData = [
     "title": "Painterly Native American Images And Native American Photography",
     "description": "Uncover painterly Native American images through this Native American photography from Wayne Heim. Showcasing Indigenous experience, Native American Portraits, and Native American tradition, it's perfect for enthusiasts of painterly Native American images. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/3/NKfD2D6xFMwkHP6QTHzNNCwNN5kFwzdB9p5tkhsLT/S/_HF20466-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-nZbDC9C/A",
     "keywords": [
       "a",
@@ -1168,9 +1168,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 173,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/3/K467CkJJBfmSCkwqL5znz98RG3rbthdD3HKSQCTt5/L/_HF20466-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/3/L3PDqSh5NFJvD5VT8P6DxSjxVdnvmB32SMLnRpKrR/M/_HF20466-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/3/NKfD2D6xFMwkHP6QTHzNNCwNN5kFwzdB9p5tkhsLT/S/_HF20466-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/3/K467CkJJBfmSCkwqL5znz98RG3rbthdD3HKSQCTt5/L/_HF20466-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/3/L3PDqSh5NFJvD5VT8P6DxSjxVdnvmB32SMLnRpKrR/M/_HF20466-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/3/NKfD2D6xFMwkHP6QTHzNNCwNN5kFwzdB9p5tkhsLT/S/_HF20466-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1178,7 +1178,7 @@ export const galleryData = [
     "title": "Before the Eyes of the Hills",
     "description": "A haunting moment from Wayne Heim’s painterly Western fine art photography series, blending Native American portraiture with cinematic atmosphere. Rendered in warm, archival tones, this historical reenactment evokes a lone figure against the rugged Western backdrop — ideal for collectors of cowboy art, Old West storytelling, and fine art wall decor.",
     "alt": "Native American man on horseback with rifle, riding through dusty Western terrain in painterly fine art style by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/3/MvHKdkWz5rrXDmH46nSmWwXxHhqj8DHhDdH9LjSGm/XL/_WHO2172-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9Qt4nh7/4/M3KvQbth62SnJpkqZB4ht27nLsFpN3Qz6zpdNQrGD/S/_WHO2299-Edit-Edit-2-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sGW55ch/A",
     "keywords": [
       "native american",
@@ -1206,9 +1206,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 193,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/3/MvHKdkWz5rrXDmH46nSmWwXxHhqj8DHhDdH9LjSGm/XL/_WHO2172-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/4/K2n9SrVWLBj6LnFC2LGxCKLDTjCHCfrXZ9ddtMf8B/L/_WHO2299-Edit-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/4/MnxFrjGBZGTZc385HJ9PrwPdgsHZwJnhRZZjN5STq/M/_WHO2299-Edit-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/4/M3KvQbth62SnJpkqZB4ht27nLsFpN3Qz6zpdNQrGD/S/_WHO2299-Edit-Edit-2-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9Qt4nh7/4/K2n9SrVWLBj6LnFC2LGxCKLDTjCHCfrXZ9ddtMf8B/L/_WHO2299-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9Qt4nh7/4/MnxFrjGBZGTZc385HJ9PrwPdgsHZwJnhRZZjN5STq/M/_WHO2299-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9Qt4nh7/4/M3KvQbth62SnJpkqZB4ht27nLsFpN3Qz6zpdNQrGD/S/_WHO2299-Edit-Edit-2-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1216,7 +1216,7 @@ export const galleryData = [
     "title": "Fine Art Native American Art Prints",
     "description": "Wayne Heim's Native American art prints captures the spirit of Native American Portraits in this Native American tradition image. Featuring spirit of the West, Indigenous experience, and Native American art prints, it's ideal for Native American Portraits enthusiasts. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MWbpQRmQw7DXf6KMrVCnBhXNcv4b2gN6V5ws6TWQj/XL/_WHO0135-Edit-3-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/MDsr8cx8d75VzppjZpjdmMsWfRChNnHvrPjhhz7Nr/S/_WHO0204-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-WXNSQzk/A",
     "keywords": [
       "a",
@@ -1240,9 +1240,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 153,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MWbpQRmQw7DXf6KMrVCnBhXNcv4b2gN6V5ws6TWQj/XL/_WHO0135-Edit-3-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/McFZMMFbmJPSWT4rLwG5TNw4vc8ZmdF7xC4wchwhr/L/_WHO0204-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MDsr8cx8d75VzppjZpjdmMsWfRChNnHvrPjhhz7Nr/S/_WHO0204-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/McFZMMFbmJPSWT4rLwG5TNw4vc8ZmdF7xC4wchwhr/L/_WHO0204-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/MDsr8cx8d75VzppjZpjdmMsWfRChNnHvrPjhhz7Nr/S/_WHO0204-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1250,7 +1250,7 @@ export const galleryData = [
     "title": "Native American Tradition - Indigenous Experience",
     "description": "Experience Native American tradition through this evocative Indigenous experience from Wayne Heim's portfolio. This piece highlights Native American photography with Native American Portraits, while conveying painterly Native American images, ideal for those who appreciate Native American tradition. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/1/LkgR77BRdwK9NfF4g3mWDL7JKRRzgHzhrcC4tXdvV/XL/_WHO1224-901-902-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/3/MWszQ3nXNzWBh4bm2wLQ4JcP4ChQrLQFRbqKZb99C/S/_WHO1224-901-902-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rR76nKr/A",
     "keywords": [
       "a",
@@ -1276,9 +1276,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 92,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/1/LkgR77BRdwK9NfF4g3mWDL7JKRRzgHzhrcC4tXdvV/XL/_WHO1224-901-902-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/3/LmGLCFGHGFbhRmXjs6g5WzPZ4vdbmMZz6V4Jnjdx8/L/_WHO1224-901-902-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/3/Mq79PDzJnTzT2mdZJkPrfzgCpSpdtrpRgCJ6qZq8t/M/_WHO1224-901-902-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/3/MWszQ3nXNzWBh4bm2wLQ4JcP4ChQrLQFRbqKZb99C/S/_WHO1224-901-902-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/3/LmGLCFGHGFbhRmXjs6g5WzPZ4vdbmMZz6V4Jnjdx8/L/_WHO1224-901-902-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/3/Mq79PDzJnTzT2mdZJkPrfzgCpSpdtrpRgCJ6qZq8t/M/_WHO1224-901-902-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/3/MWszQ3nXNzWBh4bm2wLQ4JcP4ChQrLQFRbqKZb99C/S/_WHO1224-901-902-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1286,7 +1286,7 @@ export const galleryData = [
     "title": "Capturing Native American Art Prints",
     "description": "Discover the Native American art prints in this powerful Native American heritage art by Wayne Heim. A compelling work that embodies spirit of the West, Native American photography, and painterly Native American images. Perfect for art lovers seeking Native American art prints to enhance their collection. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/K2c9cpst3Hd8sbMnNKrKW4zpHRpgmZf7QHzpLP32D/S/_HF24217-Edit-2-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zDcr5T3/A",
     "keywords": [
       "a",
@@ -1311,9 +1311,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 145,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KsKQZC84RZdPxPFgFhWC9XgbjZRRTKvJHd2vLH44v/L/_HF24217-Edit-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/K2c9cpst3Hd8sbMnNKrKW4zpHRpgmZf7QHzpLP32D/S/_HF24217-Edit-2-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/KsKQZC84RZdPxPFgFhWC9XgbjZRRTKvJHd2vLH44v/L/_HF24217-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/K2c9cpst3Hd8sbMnNKrKW4zpHRpgmZf7QHzpLP32D/S/_HF24217-Edit-2-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1321,7 +1321,7 @@ export const galleryData = [
     "title": "Native American Tradition Study",
     "description": "Witness Native American tradition in Wayne Heim's painterly Native American images. This image features Native American Portraits with Native American art prints and Indigenous experience, ideal for admirers of Native American tradition. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/2/KJNKKMVsd8t977NpwVvFggb7LHHjP8rTKmcjG2Kf2/XL/_WHO1224-901-902-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/1/MX99wBfznsBG2TSJf8m6qVtjgL9wx9XQWRQb4BJWN/S/_WHO5909-908-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-hHVb4vC/A",
     "keywords": [
       "a",
@@ -1346,9 +1346,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 91,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/2/KJNKKMVsd8t977NpwVvFggb7LHHjP8rTKmcjG2Kf2/XL/_WHO1224-901-902-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/1/MFpMp8fp9hR8SZ6JMgmjmhQQkXjb6rS7T4xgJk5mw/L/_WHO5909-908-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/1/Mv4QWFdRd2ncnvxKCPftKfGGNB5qmGmbGFkqmmfW9/M/_WHO5909-908-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/1/MX99wBfznsBG2TSJf8m6qVtjgL9wx9XQWRQb4BJWN/S/_WHO5909-908-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/1/MFpMp8fp9hR8SZ6JMgmjmhQQkXjb6rS7T4xgJk5mw/L/_WHO5909-908-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/1/Mv4QWFdRd2ncnvxKCPftKfGGNB5qmGmbGFkqmmfW9/M/_WHO5909-908-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/1/MX99wBfznsBG2TSJf8m6qVtjgL9wx9XQWRQb4BJWN/S/_WHO5909-908-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1356,7 +1356,7 @@ export const galleryData = [
     "title": "Native American Art Prints Portrait",
     "description": "Wayne Heim presents Native American art prints in this Native American heritage art work. Embodying spirit of the West, Native American tradition, and Native American photography, it's recommended for lovers of Native American art prints. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/2/NLgqVKtJv7xJvnGmcNPfrJD6GLLCZ4LQLRrzJvCTv/XL/_WHO1264-895-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/1/NG386n8HbkDkgrkrgVjpVZ9kqvW78WXh9d8hrQRT8/S/_WHO1264-895-2-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-tfZTHXq/A",
     "keywords": [
       "a",
@@ -1381,9 +1381,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 98,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/2/NLgqVKtJv7xJvnGmcNPfrJD6GLLCZ4LQLRrzJvCTv/XL/_WHO1264-895-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/1/LLcRhWSJhrbbdQ22NMCt7tVTTpJ9nN2B4BX6wJzHX/XL/_WHO1264-895-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/1/K3rPfXt9wJ4LQF5LZxWhwvHVRJX3XZs4ZNXvdV5qF/L/_WHO1264-895-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/1/NG386n8HbkDkgrkrgVjpVZ9kqvW78WXh9d8hrQRT8/S/_WHO1264-895-2-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/1/LLcRhWSJhrbbdQ22NMCt7tVTTpJ9nN2B4BX6wJzHX/XL/_WHO1264-895-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/1/K3rPfXt9wJ4LQF5LZxWhwvHVRJX3XZs4ZNXvdV5qF/L/_WHO1264-895-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/1/NG386n8HbkDkgrkrgVjpVZ9kqvW78WXh9d8hrQRT8/S/_WHO1264-895-2-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1391,7 +1391,7 @@ export const galleryData = [
     "title": "Exploring Native American Art Prints",
     "description": "Delve into Native American art prints via this Native American tradition by Wayne Heim. Highlighting Native American photography through painterly Native American images and Native American Portraits, it's great for collectors interested in Native American art prints. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/1/LLcRhWSJhrbbdQ22NMCt7tVTTpJ9nN2B4BX6wJzHX/XL/_WHO1264-895-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/NCtmnk6bh799ggRkzLRWgGS5RDLFThLrR3KRphT24/S/_WHO1255-896-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-z4mTWBb/A",
     "keywords": [
       "a",
@@ -1417,9 +1417,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 97,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/1/LLcRhWSJhrbbdQ22NMCt7tVTTpJ9nN2B4BX6wJzHX/XL/_WHO1264-895-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/0/Lg5L5467mjggC27fTdVz6pKShNDhgK6vHgBF3RZxM/L/_WHO1255-896-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/0/NCtmnk6bh799ggRkzLRWgGS5RDLFThLrR3KRphT24/S/_WHO1255-896-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/Lg5L5467mjggC27fTdVz6pKShNDhgK6vHgBF3RZxM/L/_WHO1255-896-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/NCtmnk6bh799ggRkzLRWgGS5RDLFThLrR3KRphT24/S/_WHO1255-896-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1427,7 +1427,7 @@ export const galleryData = [
     "title": "Capturing Native American Art Prints",
     "description": "Wayne Heim presents Native American art prints in this Native American tradition work. Embodying spirit of the West, Native American heritage art, and Native American Portraits, it's recommended for lovers of Native American art prints. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/M9RQmdb6bMtSXHTmXXxfJ6Kpwcd9hQpD5BRNL6w5Z/XL/_HF24203-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KdGjW2RxRHTTfWBCt7sJXq95dB9g3RV5bw9sbnLSb/S/_HF24217-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-StJWnTh/A",
     "keywords": [
       "a",
@@ -1453,9 +1453,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 146,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/M9RQmdb6bMtSXHTmXXxfJ6Kpwcd9hQpD5BRNL6w5Z/XL/_HF24203-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/0/LbMWKxrZCktZfszFqB3x9DpbV24FgjqR6r5WMVkHt/L/_HF24217-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/0/KdGjW2RxRHTTfWBCt7sJXq95dB9g3RV5bw9sbnLSb/S/_HF24217-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/LbMWKxrZCktZfszFqB3x9DpbV24FgjqR6r5WMVkHt/L/_HF24217-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KdGjW2RxRHTTfWBCt7sJXq95dB9g3RV5bw9sbnLSb/S/_HF24217-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1463,7 +1463,7 @@ export const galleryData = [
     "title": "Painterly Native American Images Portrait",
     "description": "Wayne Heim's painterly Native American images captures the spirit of Native American tradition in this Native American heritage art image. Featuring Indigenous experience, Native American photography, and painterly Native American images, it's ideal for Native American tradition enthusiasts. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6FGmZK4/0/NBZpn7kfThmWG9VWcd8xsCtx3HfMmNHQcj2RhBjd6/S/_WHO1979-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7CjNq8p/A",
     "keywords": [
       "a",
@@ -1489,9 +1489,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 144,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/Lv5JZzTfqN6mFQRrHNXsgCqbQzZ8pmHw8DjCJhBtk/XL/_WHO1979-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/M4Ggvn5zHMDZ4zgJ6tB9KwMspkfCLGDnnPdbshqSK/L/_WHO1979-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/NBZpn7kfThmWG9VWcd8xsCtx3HfMmNHQcj2RhBjd6/S/_WHO1979-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6FGmZK4/0/Lv5JZzTfqN6mFQRrHNXsgCqbQzZ8pmHw8DjCJhBtk/XL/_WHO1979-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6FGmZK4/0/M4Ggvn5zHMDZ4zgJ6tB9KwMspkfCLGDnnPdbshqSK/L/_WHO1979-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6FGmZK4/0/NBZpn7kfThmWG9VWcd8xsCtx3HfMmNHQcj2RhBjd6/S/_WHO1979-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1499,7 +1499,7 @@ export const galleryData = [
     "title": "The Essence Of Spirit Of The West",
     "description": "Discover the spirit of the West in this powerful Native American Portraits by Wayne Heim. A compelling work that embodies Native American tradition, Native American photography, and Native American heritage art. Perfect for art lovers seeking spirit of the West to enhance their collection. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/0/NdNswj9fNLQ73JWX7LPNKG5hsSZkcXf5sQKsQ5zPJ/XL/_WHO6112-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/2/KXcQp4VxKh58P96DwFGtFjhB2xc9t4k8DjVpnmc5P/S/_WHO5788-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-567K6d3/A",
     "keywords": [
       "a",
@@ -1525,9 +1525,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 66,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/0/NdNswj9fNLQ73JWX7LPNKG5hsSZkcXf5sQKsQ5zPJ/XL/_WHO6112-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/2/Mx2T2f8btVBsSh3GZLH9sGpmJ8JTqXJSp7WncH7RS/L/_WHO5788-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/2/KHpkzjJkfm5Zs6SdVvVBqx6VgXRX5tccd8Wgk6R3p/M/_WHO5788-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/2/KXcQp4VxKh58P96DwFGtFjhB2xc9t4k8DjVpnmc5P/S/_WHO5788-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/2/Mx2T2f8btVBsSh3GZLH9sGpmJ8JTqXJSp7WncH7RS/L/_WHO5788-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/2/KHpkzjJkfm5Zs6SdVvVBqx6VgXRX5tccd8Wgk6R3p/M/_WHO5788-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/2/KXcQp4VxKh58P96DwFGtFjhB2xc9t4k8DjVpnmc5P/S/_WHO5788-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1535,7 +1535,7 @@ export const galleryData = [
     "title": "Native American Heritage Art - Indigenous Experience",
     "description": "Experience Native American heritage art through this evocative Indigenous experience from Wayne Heim's portfolio. This piece highlights Native American photography with spirit of the West, while conveying Native American tradition, ideal for those who appreciate Native American heritage art. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/K2M9dDMLGdbLRRHvzZqxj4rpFSrP2tjCLP937GzPW/XL/_WHO2117-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/KtnQwtdQCKc7xGCx6g9Px34SdLNTjXpxjGsnvQxzV/S/_WHO2415-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-JbWnV3V/A",
     "keywords": [
       "a",
@@ -1560,9 +1560,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 141,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/K2M9dDMLGdbLRRHvzZqxj4rpFSrP2tjCLP937GzPW/XL/_WHO2117-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/M3d9mnw38Tn6p4P4MWdv5JKVN9DpJCgHJdfRRb2cM/XL/_WHO2415-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/KVMwqm63kHwZdB5htCNv37X2CPjfrrwNMDfqvDW4S/L/_WHO2415-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/KtnQwtdQCKc7xGCx6g9Px34SdLNTjXpxjGsnvQxzV/S/_WHO2415-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/M3d9mnw38Tn6p4P4MWdv5JKVN9DpJCgHJdfRRb2cM/XL/_WHO2415-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/KVMwqm63kHwZdB5htCNv37X2CPjfrrwNMDfqvDW4S/L/_WHO2415-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/KtnQwtdQCKc7xGCx6g9Px34SdLNTjXpxjGsnvQxzV/S/_WHO2415-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1570,7 +1570,7 @@ export const galleryData = [
     "title": "Native American Tradition Portrait",
     "description": "Wayne Heim's Native American tradition captures the spirit of Native American heritage art in this Native American photography image. Featuring Indigenous experience, painterly Native American images, and Native American tradition, it's ideal for Native American heritage art enthusiasts. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/K8wPVfPrjCMmPBCnWCJGw7GzwKFTQwqcN75Jwbdcs/XL/_WHO2202-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/Lnf45sHGDnFwMJRP4R6v4Gf5GdcC3HXBbtXq5rZLR/S/_WHO2281-Edit-Edit-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-FTCst2K/A",
     "keywords": [
       "a",
@@ -1595,9 +1595,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 78,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/K8wPVfPrjCMmPBCnWCJGw7GzwKFTQwqcN75Jwbdcs/XL/_WHO2202-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/LBmRNCtRbHwvN2rQ62SXb5W2gKSHMQcFzmfzMQVgj/L/_WHO2281-Edit-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/Lnf45sHGDnFwMJRP4R6v4Gf5GdcC3HXBbtXq5rZLR/S/_WHO2281-Edit-Edit-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LBmRNCtRbHwvN2rQ62SXb5W2gKSHMQcFzmfzMQVgj/L/_WHO2281-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/Lnf45sHGDnFwMJRP4R6v4Gf5GdcC3HXBbtXq5rZLR/S/_WHO2281-Edit-Edit-S.jpg",
     "srcOriginal": ""
   },
   {
@@ -1605,7 +1605,7 @@ export const galleryData = [
     "title": "Indigenous Experience Study",
     "description": "Delve into Indigenous experience via this Native American Portraits by Wayne Heim. Highlighting painterly Native American images through Native American tradition and Native American photography, it's great for collectors interested in Indigenous experience. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/Ng4bCdQhv8c3vf9fKxNCdDfq5P4n9MFTQsKrv4Sf4/XL/_WHO1626-886-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/3/M4QtNPq297SZ2BDkg6TXF3dKP9gm5SJmszVM47hpx/S/_WHO1676-887-888-2-S.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7hD9CCh/A",
     "keywords": [
       "a",
@@ -1630,9 +1630,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 104,
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/Ng4bCdQhv8c3vf9fKxNCdDfq5P4n9MFTQsKrv4Sf4/XL/_WHO1626-886-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/3/LRQ3WDw8JFjGJQTvZBMjf3kHCPcgXgbCVCkPCpTq7/L/_WHO1676-887-888-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/3/KNmMDZ8w9t8KZsXd3stwFFWqr4bnjvrJvLz8JfTBK/M/_WHO1676-887-888-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/3/M4QtNPq297SZ2BDkg6TXF3dKP9gm5SJmszVM47hpx/S/_WHO1676-887-888-2-S.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/3/LRQ3WDw8JFjGJQTvZBMjf3kHCPcgXgbCVCkPCpTq7/L/_WHO1676-887-888-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/3/KNmMDZ8w9t8KZsXd3stwFFWqr4bnjvrJvLz8JfTBK/M/_WHO1676-887-888-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/3/M4QtNPq297SZ2BDkg6TXF3dKP9gm5SJmszVM47hpx/S/_WHO1676-887-888-2-S.jpg",
     "srcOriginal": ""
   }
 ]

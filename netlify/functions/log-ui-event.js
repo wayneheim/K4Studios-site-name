@@ -60,6 +60,7 @@ export async function handler(event) {
         eventType,
         details: JSON.stringify(details || {}),
         timestamp: eventTime,
+        When: eventTime,
         ip,
         ua,
         referer,

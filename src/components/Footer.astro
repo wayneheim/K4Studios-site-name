@@ -44,11 +44,11 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
 
     <!-- 🔗 Share Drawer (with fallback) -->
     <div class="pb-4">
-      <ShareDrawer
-        client:load
-        imageUrl={shareImage}
-        pageTitle={title}
-      />
+        <ShareDrawer
+          client:load
+          imageUrl={shareImage}
+          pageTitle={title || 'K4 Studios'}
+        />
     </div>
 
     <!-- 🌐 Social Icons -->
