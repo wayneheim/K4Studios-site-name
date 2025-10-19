@@ -233,3 +233,6 @@ from = "/Other/Photo-Shoots-and-Themes/*"
 to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
 status = 301
 force = true
+
+[[plugins]]
+  package = "./plugins/netlify-plugin-cloudflare-purge"
