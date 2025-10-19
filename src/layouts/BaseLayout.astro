@@ -211,14 +211,19 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
       }
     </style>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0J1HSKFC04');
-    </script>
+   <!-- Google Analytics (with API secret protection) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // ✅ Secure configuration to prevent fake GA hits
+  gtag('config', 'G-0J1HSKFC04', {
+    'api_secret': 'puQODutySsiMJp5q3kkfhA',
+    'send_page_view': true
+  });
+</script>
   </head>
 
   <body>

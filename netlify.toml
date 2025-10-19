@@ -108,6 +108,11 @@ force = true
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+[[edge_functions]]
+  function = "block-countries"
+  path = "/*"
+
 [[redirects]]
 from = "/*/A"
 to = "https://wayne-heim.smugmug.com/:splat/A"
