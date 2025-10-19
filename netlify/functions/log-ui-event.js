@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 
 export async function handler(event) {
+  console.log('log-ui-event called with method:', event.httpMethod);
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -9,6 +10,7 @@ export async function handler(event) {
   }
 
   const { eventType, details, timestamp } = JSON.parse(event.body || '{}');
+  console.log('Parsed eventType:', eventType, 'details:', details);
 
   if (!eventType) {
     return {
@@ -36,6 +38,8 @@ export async function handler(event) {
     AIRTABLE_API_TOKEN,
     AIRTABLE_BASE_ID,
   } = process.env;
+  
+  console.log('AIRTABLE_BASE_ID set:', !!AIRTABLE_BASE_ID, 'AIRTABLE_API_TOKEN set:', !!AIRTABLE_API_TOKEN);
 
   const eventTime = new Date(timestamp || Date.now()).toLocaleString('en-US', {
     timeZone: 'America/New_York',

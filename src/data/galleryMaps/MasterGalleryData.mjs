@@ -5150,7 +5150,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/LPqW5WnC62t999WmJKFzrp7k7G2vw7h3gMJLXrh8P/L/_O2H0388-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KTxX9RQDCdbFMtxf2GHjMrzSnLC7qj95KbHpK9zV5/XL/_O2H0388-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KxRw9CKxDxjzwBkK4VfMhThqNTKvD4hPKb7ckbMmH/S/_O2H0388-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
       ]
@@ -5186,7 +5186,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/KKBWDgtsGKhtd7WhPXG6zS7rpdL74wgmZqL736rZX/L/_HF29384-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/Km8RBCM8Zsgn8pNBmJxJCBkrTVSCdzqZDMQ2nPT9P/XL/_HF29384-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/LLr3Q6wpGC2vQxZLWx5GqQSWFHNz6fnSsPG49b8rV/S/_HF29384-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
       ]
@@ -5198,7 +5198,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/NBtt4LJPSH2pWCw7Ljw9jSxpHWX3hVBmvkQ4fM9X4/L/_O1H0469-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/M63wFvc6NmgnvS7ZQBhcDZjFJdJJz7dMmTvHs66b7/XL/_O1H0469-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/MSV7wx8gmnT9LCVHwjxCdFpmrrrL4NcMX9ftcgnnh/S/_O1H0469-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
       ]
@@ -5210,7 +5210,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-RK9HRjR/0/Kw4HKxb6QFw5dxQ5jshj8TF8H4fDmjpmgPfQMVDPp/L/_HF23341-816-L.jpg",
       "srcXL": "",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-RK9HRjR/0/KzGDtk4DbmC2N9WcMSB7F3BNCs2Lg7gX9Skkds8w5/S/_HF23341-816-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
       ]
@@ -5222,7 +5222,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/MDwnr85kPJqMNZh33pHQfWXcQz9STXv9cMDJ32wbD/XL/_O1H1607-Edit-2-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/MDwnr85kPJqMNZh33pHQfWXcQz9STXv9cMDJ32wbD/XL/_O1H1607-Edit-2-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/LmDmwHKDPTP4SSrsrbs5Fp2WSZC82PKvhgT4JjKbg/S/_O1H1607-Edit-2-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
       ]
@@ -5246,7 +5246,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/MXRKhT8WTwFqZS8HTdxcMXm6Mq5XnHCwdg9Bkrq6n/XL/_O2H2449-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/MXRKhT8WTwFqZS8HTdxcMXm6Mq5XnHCwdg9Bkrq6n/XL/_O2H2449-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/L2PqgLpzj2TZ2QdKCPV95366p45MLpBQGFpF6VPS9/S/_O2H2449-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
       ]
@@ -5258,7 +5258,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/L4wfgnBNgRPcTBTRTspjrDPNTMCfvRLBvdwg7H58w/XL/_O1H0568-Edit-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/L4wfgnBNgRPcTBTRTspjrDPNTMCfvRLBvdwg7H58w/XL/_O1H0568-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/M592npcWNxZrGm3QvjPg7PgCWxXXMd55jBGs4fqfD/S/_O1H0568-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
       ]
@@ -5270,7 +5270,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/L5BVh7BvXtNXZKtQcDcvF4MvmvkCgtdb5pFVGNsJT/L/_O1H0181-Edit-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/K4h9ZC5sWp99bpGd2qzVcM2zj4ds8pRhQhPzkXmxg/XL/_O1H0181-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/LT3jHhbqCh6SCBhrvs7QDSQHDVFRKJsQJtxL2XJXz/S/_O1H0181-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
       ]
@@ -44678,7 +44678,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/LPqW5WnC62t999WmJKFzrp7k7G2vw7h3gMJLXrh8P/L/_O2H0388-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KTxX9RQDCdbFMtxf2GHjMrzSnLC7qj95KbHpK9zV5/XL/_O2H0388-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KxRw9CKxDxjzwBkK4VfMhThqNTKvD4hPKb7ckbMmH/S/_O2H0388-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
@@ -44714,7 +44714,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/KKBWDgtsGKhtd7WhPXG6zS7rpdL74wgmZqL736rZX/L/_HF29384-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/Km8RBCM8Zsgn8pNBmJxJCBkrTVSCdzqZDMQ2nPT9P/XL/_HF29384-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/LLr3Q6wpGC2vQxZLWx5GqQSWFHNz6fnSsPG49b8rV/S/_HF29384-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
@@ -44726,7 +44726,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/NBtt4LJPSH2pWCw7Ljw9jSxpHWX3hVBmvkQ4fM9X4/L/_O1H0469-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/M63wFvc6NmgnvS7ZQBhcDZjFJdJJz7dMmTvHs66b7/XL/_O1H0469-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/MSV7wx8gmnT9LCVHwjxCdFpmrrrL4NcMX9ftcgnnh/S/_O1H0469-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
@@ -44738,7 +44738,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-RK9HRjR/0/Kw4HKxb6QFw5dxQ5jshj8TF8H4fDmjpmgPfQMVDPp/L/_HF23341-816-L.jpg",
     "srcXL": "",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-RK9HRjR/0/KzGDtk4DbmC2N9WcMSB7F3BNCs2Lg7gX9Skkds8w5/S/_HF23341-816-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
@@ -44750,7 +44750,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/MDwnr85kPJqMNZh33pHQfWXcQz9STXv9cMDJ32wbD/XL/_O1H1607-Edit-2-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/MDwnr85kPJqMNZh33pHQfWXcQz9STXv9cMDJ32wbD/XL/_O1H1607-Edit-2-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/LmDmwHKDPTP4SSrsrbs5Fp2WSZC82PKvhgT4JjKbg/S/_O1H1607-Edit-2-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
@@ -44774,7 +44774,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/MXRKhT8WTwFqZS8HTdxcMXm6Mq5XnHCwdg9Bkrq6n/XL/_O2H2449-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/MXRKhT8WTwFqZS8HTdxcMXm6Mq5XnHCwdg9Bkrq6n/XL/_O2H2449-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/L2PqgLpzj2TZ2QdKCPV95366p45MLpBQGFpF6VPS9/S/_O2H2449-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
@@ -44786,7 +44786,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/L4wfgnBNgRPcTBTRTspjrDPNTMCfvRLBvdwg7H58w/XL/_O1H0568-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/L4wfgnBNgRPcTBTRTspjrDPNTMCfvRLBvdwg7H58w/XL/_O1H0568-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/M592npcWNxZrGm3QvjPg7PgCWxXXMd55jBGs4fqfD/S/_O1H0568-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
@@ -44798,7 +44798,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/L5BVh7BvXtNXZKtQcDcvF4MvmvkCgtdb5pFVGNsJT/L/_O1H0181-Edit-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/K4h9ZC5sWp99bpGd2qzVcM2zj4ds8pRhQhPzkXmxg/XL/_O1H0181-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/LT3jHhbqCh6SCBhrvs7QDSQHDVFRKJsQJtxL2XJXz/S/_O1H0181-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
     ]
