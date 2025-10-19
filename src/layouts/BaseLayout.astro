@@ -47,11 +47,16 @@ let pageTitle = isImagePage
 
 const cleanTitle = (pageTitle || '').replace(/<[^>]*>/g, '');
 
-// ✅ Split descriptions
+// ✅ Improved description logic to eliminate duplicates
+const defaultDescription =
+  'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
+
 const seoDescription =
   meta.description ||
   (isImagePage ? preloadImage?.description : null) ||
-  'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
+  (Astro.url?.pathname === '/'
+    ? defaultDescription
+    : `${cleanTitle} – Fine Art Photography by Wayne Heim`);
 
 const socialDescription =
   (isImagePage && preloadImage?.story)
@@ -118,6 +123,13 @@ const inferMimeType = (url) => {
 
 const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
 const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
+
+// ✅ Keywords (for Bing differentiation)
+const keywords =
+  meta.keywords ||
+  (Array.isArray(preloadImage?.keywords)
+    ? preloadImage.keywords.join(', ')
+    : preloadImage?.keywords || '');
 ---
 
 <!DOCTYPE html>
@@ -130,6 +142,7 @@ const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 
     <!-- ✅ Always render SEO title + description -->
     <title>{cleanTitle}</title>
     <meta name="description" content={seoDescription} />
+    {keywords && <meta name="keywords" content={keywords} />}
     <meta name="author" content="Wayne Heim" />
     <meta name="copyright" content="© Wayne Heim, K4 Studios" />
     <meta name="creator" content="Wayne Heim" />
