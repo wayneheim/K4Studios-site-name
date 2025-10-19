@@ -1021,6 +1021,13 @@ export default function ChapterGalleryBase({
                         style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
                         onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
                         onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
+                        onClick={() => {
+                          logUIEvent("buy_link_click", {
+                            page: window.location.pathname,
+                            imageId: galleryData[currentIndex]?.id,
+                            buyLink: galleryData[currentIndex]?.buyLink
+                          });
+                        }}
                       >
                         <ShoppingCart className="w-4 h-4" />
                       </a>
