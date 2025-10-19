@@ -51,17 +51,29 @@ const cleanTitle = (pageTitle || '').replace(/<[^>]*>/g, '');
 const defaultDescription =
   'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
 
-const seoDescription =
+// ✅ Smart trimming helper for Bing (max ~160 chars)
+const trimDescription = (text = '', maxLength = 160) => {
+  if (!text) return '';
+  const trimmed = text.trim();
+  return trimmed.length > maxLength
+    ? trimmed.slice(0, trimmed.lastIndexOf(' ', maxLength)) + '…'
+    : trimmed;
+};
+
+const seoDescriptionRaw =
   meta.description ||
   (isImagePage ? preloadImage?.description : null) ||
   (Astro.url?.pathname === '/'
     ? defaultDescription
     : `${cleanTitle} – Fine Art Photography by Wayne Heim`);
 
+// ✅ Truncate for meta <description> but keep full text for OG/Twitter
+const seoDescription = trimDescription(seoDescriptionRaw);
+
 const socialDescription =
   (isImagePage && preloadImage?.story)
     ? preloadImage.story
-    : (meta.story || seoDescription);
+    : (meta.story || seoDescriptionRaw);
 
 // OG/Twitter image setup
 let rawOgImage;
@@ -132,6 +144,7 @@ const keywords =
     : preloadImage?.keywords || '');
 ---
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -177,6 +190,8 @@ const keywords =
 
     <!-- ✅ Schema.org fallback -->
     {!structuredDataJSON && (
+      <!-- Pinterest compatibility -->
+      {ogImage && <link rel="image_src" href={ogImage} />}
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ImageObject",
