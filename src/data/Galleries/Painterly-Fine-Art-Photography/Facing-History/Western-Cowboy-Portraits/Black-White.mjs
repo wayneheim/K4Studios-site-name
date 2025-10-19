@@ -356,7 +356,7 @@ export const galleryData = [
   },
   {
     "id": "i-qwFCjLp",
-    "title": "Black & White Cowboy Art:  You Can't Save Them All",
+    "title": "You Can't Save Them All",
     "description": "Black and white Western art photograph—an older cowboy guiding his young apprentice through the aftermath of a shootout. Their faces tell the story: the cost of pride, the weight of choices, and the reality that not every life can be saved. A painterly, fine art cowboy portrait by Wayne Heim, blending narrative with timeless Americana. © Wayne Heim",
     "alt": "Black and white painterly photograph of an older cowboy teaching a young woman a lesson after a shootout, Western fine art by Wayne Heim.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/Km8RBCM8Zsgn8pNBmJxJCBkrTVSCdzqZDMQ2nPT9P/XL/_HF29384-Edit-XL.jpg",
