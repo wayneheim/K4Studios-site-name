@@ -66,9 +66,6 @@ export async function handler(event) {
         title: title || 'Untitled',
         Page: page,
         timestamp: likeTime,
-        ip,
-        ua,
-        referer,
       },
     }),
   });
