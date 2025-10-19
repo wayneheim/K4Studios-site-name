@@ -2,7 +2,21 @@
 import React from "react";
 
 export default function FAQAccordion({ items }) {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": Array.isArray(item.a) ? item.a.join(' ') : item.a,
+      },
+    })),
+  };
+
   return (
+    <>
     <section className="faq">
       <h2>Frequently Asked Questions</h2>
       {items.map((item, idx) => (
@@ -10,10 +24,16 @@ export default function FAQAccordion({ items }) {
           <summary dangerouslySetInnerHTML={{ __html: `<b>${item.q}</b>` }} />
           <div
             className="faq-content"
-            dangerouslySetInnerHTML={{ __html: item.a }}
+            dangerouslySetInnerHTML={{ __html: Array.isArray(item.a) ? item.a.join('') : item.a }}
           />
         </details>
       ))}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </section>
 
       <style jsx>{`
 
@@ -211,6 +231,6 @@ export default function FAQAccordion({ items }) {
         }
         }
       `}</style>
-    </section>
+    </>
   );
 }
