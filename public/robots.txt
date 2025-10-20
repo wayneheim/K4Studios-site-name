@@ -1,10 +1,11 @@
 # ======================================================
 # robots.txt for https://www.k4studios.com
 # Author: Wayne Heim (K4 Studios)
-# Purpose: Allow human discovery but block AI/data/image training crawlers
+# Purpose: Allow human discovery and search indexing,
+#          but block AI/data/image training crawlers
 # ======================================================
 
-# --- Default rules ---
+# --- Default access rules ---
 User-agent: *
 Disallow: /admin/
 Disallow: /Other/Photo-Shoots/
@@ -26,7 +27,7 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# --- AI / LLM / dataset crawlers (blocked) ---
+# --- AI / LLM / dataset crawlers (explicitly blocked) ---
 User-agent: GPTBot
 Disallow: /
 
@@ -96,6 +97,11 @@ Disallow: /
 
 User-agent: PetalBot
 Disallow: /
+
+# --- Optional emerging directive ( non-standard ) ---
+# Indicates content may be indexed for search, but not used for AI model training.
+# Some AI crawlers may respect this even though it is not officially standardized.
+Content-signal: search=yes, ai-train=no
 
 # --- Sitemap reference ---
 Sitemap: https://www.k4studios.com/sitemap.xml
