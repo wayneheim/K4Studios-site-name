@@ -236,10 +236,5 @@ force = true
 
 
 
-[[plugins]]
-  package = "netlify-plugin-cloudflare-purge"
-
-  [plugins.inputs]
-    zone_id = "${CF_ZONE_ID}"
-    purge_everything = true
-    fail_on_error = true
+[build]
+  command = "npm run build && node scripts/purge-cloudflare.js"
