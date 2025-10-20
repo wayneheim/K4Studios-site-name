@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "npm run gen:master-data && npm run gen:sitemap:matches && astro build && npx cpx \"_redirects\" dist/",
@@ -32,6 +33,7 @@
     "@types/react-dom": "^19.1.6",
     "airtable": "^0.12.2",
     "astro": "^5.9.2",
+    "fast-xml-parser": "^4.5.0",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.513.0",
     "nodemailer": "^7.0.5",
@@ -39,8 +41,7 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.9.1",
     "recast": "^0.23.11",
-    "tailwindcss": "^3.4.17",
-    "fast-xml-parser": "^4.5.0"
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
