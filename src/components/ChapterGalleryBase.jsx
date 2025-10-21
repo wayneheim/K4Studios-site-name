@@ -27,6 +27,7 @@ import useHorizontalSwipeNav from "./hooks/useHorizontalSwipeNav.js";
 import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
 import { siteNav } from "../data/siteNav.js";
+import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
 
 /* =========================================================
    Helper function to find section landing page from siteNav
@@ -388,6 +389,9 @@ export default function ChapterGalleryBase({
       .filter((e) => e && !isGhost(e) && !isHidden(e))
       .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
   }, [rawData]);
+
+  // 🚨 ADD THIS LINE:
+  useImageFallbackRedirect(galleryData);
 
   const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
   // SSR-safe initial index: match initialImageId or URL
