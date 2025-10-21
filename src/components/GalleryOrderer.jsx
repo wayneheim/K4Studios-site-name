@@ -158,6 +158,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0, itemId: null, action: null, targetPath: '' });
   const [showBackupPrompt, setShowBackupPrompt] = useState(false);
   const [backupOptions, setBackupOptions] = useState({ source: true, target: true });
+  const [skipBackupPrompt, setSkipBackupPrompt] = useState(false);
 
   // Choose dataset: prefer prop → URL → first option
   useEffect(() => {
@@ -292,11 +293,15 @@ export default function GalleryOrderer({ datasetPath = "" }) {
 
   // Build final array (ghost first, then reordered items), resequence sortOrder
   function buildFinalArray() {
-    if (!backupData) return [];
-    const ghosts = backupData.filter(isGhost);
-    const vis = items.slice();
-    vis.forEach((it, i) => { it.sortOrder = i; });
-    return ghosts.concat(vis);
+  if (!backupData) return [];
+  const ghosts = backupData.filter(isGhost);
+  // Move hidden items to the end
+  const vis = items.slice();
+  const shown = vis.filter(it => !isHidden(it));
+  const hidden = vis.filter(it => isHidden(it));
+  const ordered = shown.concat(hidden);
+  ordered.forEach((it, i) => { it.sortOrder = i; });
+  return ghosts.concat(ordered);
   }
 
   // Save to server (Netlify function) – send FULL ARRAY so visibility persists
@@ -319,6 +324,10 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       if (!res.ok) throw new Error(await res.text());
       note("Saved order/visibility in-place");
       setDirty(false);
+      // Refresh page and restore unlocked state
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
     } catch (err) {
       alert("Server save failed. Falling back to download.\n\n" + err.message);
       const filename = datasetPathClean.split("/").pop() || "gallery.mjs";
@@ -327,6 +336,10 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       note(`Downloaded → ${filename}`);
       setDirty(false);
     }
+  useEffect(() => {
+    // On mount, always restore unlocked state (no backup prompt, ordering enabled)
+    setBackupMade(true);
+  }, []);
   }
 
   // Optional manual download
@@ -358,29 +371,20 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     const item = items.find(it => it.id === itemId);
     if (!item) return;
 
-    // download backups if selected
-    if (backupOptions.source) {
-      const ts = new Date().toISOString().replace(/[:.]/g, "-");
-      const sourceFilename = `BACKUP-${selectedPath.split('/').pop()}-${ts}`;
-      downloadText(JSON.stringify(backupData, null, 2), `${sourceFilename}.json`);
-      downloadText(buildMjsJson(backupData, "galleryData"), `${sourceFilename}.mjs`);
-    }
-
-    // load target data
-    let targetData = [];
-    try {
-      const mod = await modules[targetPath]();
-      targetData = Array.isArray(mod) ? mod : [];
-    } catch (err) {
-      alert("Failed to load target dataset: " + err.message);
-      return;
-    }
-
-    if (backupOptions.target) {
-      const ts = new Date().toISOString().replace(/[:.]/g, "-");
-      const targetFilename = `BACKUP-${targetPath.split('/').pop()}-${ts}`;
-      downloadText(JSON.stringify(targetData, null, 2), `${targetFilename}.json`);
-      downloadText(buildMjsJson(targetData, "galleryData"), `${targetFilename}.mjs`);
+    // download backups if selected and not skipping for session
+    if (!skipBackupPrompt) {
+      if (backupOptions.source) {
+        const ts = new Date().toISOString().replace(/[:.]/g, "-");
+        const sourceFilename = `BACKUP-${selectedPath.split('/').pop()}-${ts}`;
+        downloadText(JSON.stringify(backupData, null, 2), `${sourceFilename}.json`);
+        downloadText(buildMjsJson(backupData, "galleryData"), `${sourceFilename}.mjs`);
+      }
+      if (backupOptions.target) {
+        const ts = new Date().toISOString().replace(/[:.]/g, "-");
+        const targetFilename = `BACKUP-${targetPath.split('/').pop()}-${ts}`;
+        downloadText(JSON.stringify(targetData, null, 2), `${targetFilename}.json`);
+        downloadText(buildMjsJson(targetData, "galleryData"), `${targetFilename}.mjs`);
+      }
     }
 
     // prepare updated data
@@ -400,7 +404,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       updatedTarget = targetData.concat([normalizedItem]);
     }
 
-    // save source if moved
+    // auto-save current state before moving
     if (action === 'move') {
       try {
         const res = await fetch("/.netlify/functions/updateGalleryOrder", {
@@ -408,12 +412,12 @@ export default function GalleryOrderer({ datasetPath = "" }) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             datasetPath: selectedPath.replace(/^\//, ""),
-            fullArray: updatedSource,
+            fullArray: backupData,
           }),
         });
         if (!res.ok) throw new Error(await res.text());
       } catch (err) {
-        alert("Failed to update source: " + err.message);
+        alert("Failed to auto-save current order: " + err.message);
         return;
       }
     }
@@ -453,6 +457,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
 
       {/* dataset + backup gate */}
       <div className="flex flex-wrap items-center gap-2 mb-3">
+
         <select
           className="border rounded-md px-2 py-1 min-w-[22rem]"
           value={selectedPath}
@@ -466,9 +471,14 @@ export default function GalleryOrderer({ datasetPath = "" }) {
         </select>
 
         {!backupMade ? (
-          <button onClick={ensureBackup} className="px-3 py-1 rounded-md border bg-white">
-            1) Make Data Backup
-          </button>
+          <>
+            <button onClick={ensureBackup} className="px-3 py-1 rounded-md border bg-white">
+              1) Make Data Backup
+            </button>
+            <button onClick={() => { setBackupMade(true); }} className="px-3 py-1 rounded-md border bg-gray-50 ml-2">
+              Skip Backup
+            </button>
+          </>
         ) : (
           <span className="text-green-700">✅ Backup created — ordering unlocked</span>
         )}
@@ -707,6 +717,15 @@ export default function GalleryOrderer({ datasetPath = "" }) {
                   className="mr-2"
                 />
                 Backup target file ({contextMenu.targetPath.split('/').pop()})
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  checked={skipBackupPrompt}
+                  onChange={(e) => setSkipBackupPrompt(e.target.checked)}
+                  className="mr-2"
+                />
+                Don't show backup prompt again this session
               </label>
             </div>
             <div className="flex gap-2 justify-end">

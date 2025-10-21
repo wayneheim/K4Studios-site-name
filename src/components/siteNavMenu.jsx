@@ -62,85 +62,102 @@ export default function SiteNavMenu({ forceMobile = false }) {
   }, []);
 
   function MenuBranch({ node, depth = 0, delay = 0, reset, forceMobile = false }) {
-    const [expanded, setExpanded] = useState(false);
-    const hasKids = node.children?.length > 0;
+  const [expanded, setExpanded] = useState(false);
+  const hasKids = node.children?.length > 0;
 
-    useEffect(() => setExpanded(false), [reset]);
+  useEffect(() => setExpanded(false), [reset]);
 
-    const isMobileView = () =>
-      forceMobile || (typeof window !== "undefined" && window.innerWidth <= 768) || mobileOpen;
+  const isMobileView = () =>
+    forceMobile || (typeof window !== "undefined" && window.innerWidth <= 768) || mobileOpen;
 
-    const handleClick = (e) => {
-      if (isMobileView() && hasKids) {
-        e.preventDefault();
-        setExpanded((x) => !x);
-      }
-    };
-
-    const handleToggle = (e) => {
+  const handleClick = (e) => {
+    if (isMobileView() && hasKids) {
       e.preventDefault();
-      e.stopPropagation();
       setExpanded((x) => !x);
-    };
+    }
+  };
 
-   return (
-  <div
-    className={`nav-item${hasKids ? " has-dropdown" : ""}${expanded ? " expanded" : ""}`}
-    style={{ animationDelay: `${0.1 + delay}s` }}
-  >
-    <div className="menu-row" style={{ display: "flex", alignItems: "center" }}>
-      {/* ⬅️ Hamburger ONLY to toggle, not tied to link */}
-      {hasKids && isMobileView() && (
-        <button
-          className={`mini-ham-icon hover-collapse mobile-only${expanded ? " rotated" : ""}`}
-          onClick={handleToggle}
-          aria-label="Toggle Submenu"
-          style={{ marginRight: "0.5rem" }}
-        >
-          <span className="bar top" />
-          <span className="bar mid" />
-          <span className="bar bot" />
-        </button>
-      )}
+  const handleToggle = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setExpanded((x) => !x);
+  };
 
-      {/* ⬅️ Always navigates — no toggle */}
-      <a
-        href={node.href || "#"}
-        className={depth ? "menu-link has-expand" : "nav-link has-expand"}
-      >
-        {!hasKids ? (
-          <span className="leaf-label">
-            <span className="leaf-prefix" style={{ marginRight: "0.3rem" }} aria-hidden="true">○</span>
-            {node.label}
-          </span>
-        ) : (
-          node.label
+  // Determine a descriptive label for leaf nodes
+  const getLeafLabel = () => {
+    const lower = (node.label || "").toLowerCase();
+    // You can add node.parentLabel to your siteNav data for context if you want more specificity
+    if (lower === "color") return "Color Gallery";
+    if (lower === "black & white" || lower === "b&w") return "Black & White Gallery";
+    // Add other mappings if needed
+    return node.label;
+  };
+
+  return (
+    <div
+      className={`nav-item${hasKids ? " has-dropdown" : ""}${expanded ? " expanded" : ""}`}
+      style={{ animationDelay: `${0.1 + delay}s` }}
+    >
+      <div className="menu-row" style={{ display: "flex", alignItems: "center" }}>
+        {/* Hamburger for mobile */}
+        {hasKids && isMobileView() && (
+          <button
+            className={`mini-ham-icon hover-collapse mobile-only${expanded ? " rotated" : ""}`}
+            onClick={handleToggle}
+            aria-label="Toggle Submenu"
+            style={{ marginRight: "0.5rem" }}
+          >
+            <span className="bar top" />
+            <span className="bar mid" />
+            <span className="bar bot" />
+          </button>
         )}
-      </a>
-    </div>
 
-    {hasKids && (
-      <div
-        className={depth === 0 ? "dropdown-panel" : "submenu"}
-        data-depth={depth}
-        style={{ zIndex: 1000 + depth * 5 }}
-      >
-        {node.children.map((kid) => (
-          <MenuBranch
-            key={kid.label}
-            node={kid}
-            depth={depth + 1}
-            delay={delay}
-            reset={reset}
-            forceMobile={forceMobile}
-          />
-        ))}
+        {/* Render the circle icon for leaf/terminal links */}
+        {!hasKids && (
+          <span
+            className="leaf-prefix"
+            style={{ marginRight: "0.3rem" }}
+            aria-hidden="true"
+            role="presentation"
+          >
+            ○
+          </span>
+        )}
+
+        {/* Main nav link */}
+        <a
+          href={node.href || "#"}
+          className={depth ? "menu-link has-expand" : "nav-link has-expand"}
+          title={!hasKids ? getLeafLabel() : node.label}
+          aria-label={!hasKids ? getLeafLabel() : node.label}
+        >
+          {!hasKids ? getLeafLabel() : node.label}
+        </a>
       </div>
-    )}
-  </div>
-);
 
-  }
+      {hasKids && (
+        <div
+          className={depth === 0 ? "dropdown-panel" : "submenu"}
+          data-depth={depth}
+          style={{ zIndex: 1000 + depth * 5 }}
+        >
+          {node.children.map((kid) => (
+            <MenuBranch
+              key={kid.label}
+              node={kid}
+              depth={depth + 1}
+              delay={delay}
+              reset={reset}
+              forceMobile={forceMobile}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 
   return (
     <header className="nav-wrapper">
@@ -182,12 +199,13 @@ export default function SiteNavMenu({ forceMobile = false }) {
                 ))}
               </div>
 
-             <a href="/" aria-label="K4 Studios Home" className="k4-logo-hover">
+  <a href="/" aria-label="K4 Studios Home" className="k4-logo-hover">
   <img
-  src="/images/K4Logo-web-c.webp"
+    src="/images/K4Logo-web-c.webp"
     alt="K4 Studios Logo"
     className="k4-watermark-opacity"
   />
+  <span className="visually-hidden">K4 Studios Home – Fine Art Photography</span>
 </a>
 
 <style jsx>{`
@@ -210,7 +228,19 @@ export default function SiteNavMenu({ forceMobile = false }) {
   .k4-logo-hover:hover .k4-watermark-opacity {
     opacity: 1;
   }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+  }
 `}</style>
+
 
             </div>
           ) : (

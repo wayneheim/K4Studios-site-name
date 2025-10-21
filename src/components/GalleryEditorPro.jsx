@@ -212,6 +212,11 @@ export default function GalleryEditorPro() {
   // Load dataset when changed
   useEffect(() => {
     let cancelled = false;
+    // Clear stale draft and resume state for this gallery
+    try {
+      localStorage.removeItem(keyLS("draft"));
+      localStorage.removeItem(RESUME_KEY);
+    } catch {}
     async function load() {
       if (!selectedPath) return;
       const mod = await modules[selectedPath]();
@@ -219,25 +224,11 @@ export default function GalleryEditorPro() {
       const arr = allArr.filter(isRealItem);
       if (cancelled) return;
 
-      const draftRaw = localStorage.getItem(keyLS("draft"));
-      const draft = draftRaw ? JSON.parse(draftRaw) : null;
-      const uiArr = draft && Array.isArray(draft) && draft.length ? draft.filter(isRealItem) : arr;
-
-      setData(uiArr);
+      setData(arr);
       setBackupData(allArr);
-
-      const resume = readResumeState();
-      if (resume && resume.selectedPath === selectedPath) {
-        setFilter(resume.filter || "");
-        setIdx(Math.max(0, Math.min(resume.idx || 0, uiArr.length - 1)));
-        setBackupMade(!!resume.backupMade);
-        localStorage.removeItem(RESUME_KEY);
-      } else {
-        setIdx(0);
-        setFilter("");
-        setBackupMade(false);
-      }
-
+      setIdx(0);
+      setFilter("");
+      setBackupMade(false);
       setDirty(false);
       setLastAction(null);
       setShowRefreshGuard(false);
