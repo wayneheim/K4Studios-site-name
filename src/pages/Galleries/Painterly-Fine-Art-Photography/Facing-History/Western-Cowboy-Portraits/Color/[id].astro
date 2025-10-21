@@ -17,11 +17,18 @@ export async function getStaticPaths() {
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
 if (!imageData) {
-  // SSR fallback: redirect to parent gallery if image id is invalid
-  return Astro.redirect(
-    Astro.url.pathname.replace(/\/i-[^/]+$/, ''),
-    302
-  );
+  if (typeof window !== "undefined") {
+    // Client-side navigation fallback
+    window.location.replace(
+      window.location.pathname.replace(/\/i-[^/]+$/, '')
+    );
+  } else {
+    // SSR fallback
+    return Astro.redirect(
+      Astro.url.pathname.replace(/\/i-[^/]+$/, ''),
+      302
+    );
+  }
 }
 
 // Ensure absolute URL (don’t prepend if already absolute)
