@@ -391,7 +391,21 @@ export default function ChapterGalleryBase({
   }, [rawData]);
 
   // 🚨 ADD THIS LINE:
+
   useImageFallbackRedirect(galleryData);
+
+  // Prevent SSR/CSR errors: if the imageId in the URL is invalid, render nothing and let the hook redirect
+  let imageIdFromUrl = null;
+  if (typeof window !== "undefined") {
+    const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
+    imageIdFromUrl = match ? match[1] : null;
+  }
+  const isImageDetail = !!imageIdFromUrl;
+  const foundImage = !isImageDetail || galleryData.some(e => e && e.id === imageIdFromUrl);
+  if (isImageDetail && !foundImage) {
+    // Don't render image-dependent UI, let the hook redirect
+    return null;
+  }
 
   const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
   // SSR-safe initial index: match initialImageId or URL
