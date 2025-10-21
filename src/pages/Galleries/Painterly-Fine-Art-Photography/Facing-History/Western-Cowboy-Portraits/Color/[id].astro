@@ -16,9 +16,11 @@ export async function getStaticPaths() {
 
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
-if (!imageData) {
-  // Remove the /i-xxxxx or /i-xxxxx/ at the end, with optional trailing slash(es)
-  const cleanUrl = Astro.url.pathname.replace(/\/i-[a-zA-Z0-9_-]+\/?$/, '').replace(/\/+$/, '');
+
+const isBadId = !imageData && (id && (id.startsWith('i-') || id === 'i'));
+if (isBadId) {
+  let cleanUrl = Astro.url.pathname.replace(/\/i[^/]*\/?$/, '');
+  cleanUrl = cleanUrl.replace(/\/+$/, '');
   if (typeof window !== "undefined") {
     window.location.replace(cleanUrl);
   } else {
