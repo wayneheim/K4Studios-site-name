@@ -18,12 +18,12 @@ if (!imageData) {
   if (typeof window !== "undefined") {
     // Client-side navigation fallback
     window.location.replace(
-      window.location.pathname.replace(/\/i-[^/]+$/, '')
+      window.location.pathname.replace(/\/i-[^/]+\/?$/, '')
     );
   } else {
     // SSR fallback
     return Astro.redirect(
-      Astro.url.pathname.replace(/\/i-[^/]+$/, ''),
+      Astro.url.pathname.replace(/\/i-[^/]+\/?$/, ''),
       302
     );
   }
