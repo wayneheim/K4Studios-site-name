@@ -2,17 +2,22 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clipboard } from "lucide-react";
 
-export default function ShareDrawer({ imageUrl, pageTitle }) {
+export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
   const [isOpen, setIsOpen] = useState(false);
   const [pageUrl, setPageUrl] = useState("");
+  const [currentImageUrl, setCurrentImageUrl] = useState(propImageUrl || "");
   const [isClipboardHovered, setIsClipboardHovered] = useState(false);
 
-  // Always update pageUrl every time the drawer opens
+  // Always update pageUrl and imageUrl every time the drawer opens
   useEffect(() => {
     if (isOpen && typeof window !== "undefined") {
       setPageUrl(window.location.href);
+      // Get current image from og:image meta tag
+      const ogImageMeta = document.querySelector('meta[property="og:image"]');
+      const imageFromMeta = ogImageMeta ? ogImageMeta.getAttribute('content') : propImageUrl || "";
+      setCurrentImageUrl(imageFromMeta);
     }
-  }, [isOpen]);
+  }, [isOpen, propImageUrl]);
 
   const finalTitle = pageTitle || "Check this out from K4 Studios";
   const notifyShare = async (platform) => {
@@ -32,7 +37,7 @@ export default function ShareDrawer({ imageUrl, pageTitle }) {
   const links = {
     twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}%20${encodedUrl}`,
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-    pinterest: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodeURIComponent(imageUrl || "")}&description=${encodedTitle}`,
+    pinterest: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodeURIComponent(currentImageUrl || "")}&description=${encodedTitle}`,
     email: `mailto:?subject=${encodedTitle}&body=${shareText}`,
   };
 
