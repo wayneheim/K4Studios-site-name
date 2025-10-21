@@ -434,6 +434,18 @@ export default function ChapterGalleryBase({
   const [showMiniMenu, setShowMiniMenu] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
 
+    // Event counters for batching UI actions
+    const [eventCounts, setEventCounts] = useState({
+      next: 0,
+      grid: 0,
+      zoom: 0,
+      like: 0,
+      slideshow: 0,
+      share: 0,
+      prev: 0,
+      exit: 0
+    });
+
   // Sister link logic
   const currentImageId = galleryData[currentIndex]?.id;
   let sisterMatch = sitemapMatches.find(m => m.a.includes(currentImageId));
@@ -474,12 +486,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.max(i - 1, 0);
-      logUIEvent("gallery_prev", {
-        page: window.location.pathname,
-        fromIndex: i,
-        toIndex: newIndex,
-        imageId: galleryData[newIndex]?.id
-      });
+      setEventCounts((counts) => ({ ...counts, prev: counts.prev + 1 }));
       return newIndex;
     });
   };
@@ -489,12 +496,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.min(i + 1, galleryData.length - 1);
-      logUIEvent("gallery_next", {
-        page: window.location.pathname,
-        fromIndex: i,
-        toIndex: newIndex,
-        imageId: galleryData[newIndex]?.id
-      });
+      setEventCounts((counts) => ({ ...counts, next: counts.next + 1 }));
       return newIndex;
     });
   };
@@ -502,11 +504,7 @@ export default function ChapterGalleryBase({
     e?.stopPropagation();
     if (tourOpen()) return;
     setViewMode("grid");
-    logUIEvent("gallery_grid_view", {
-      page: window.location.pathname,
-      imageId: galleryData[currentIndex]?.id,
-      index: currentIndex
-    });
+    setEventCounts((counts) => ({ ...counts, grid: counts.grid + 1 }));
   };
   const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; if (basePath) window.location.href = basePath; };
 
@@ -697,6 +695,49 @@ export default function ChapterGalleryBase({
     onNext: () => { if (!tourOpen()) goNext(); }
   });
 
+  // Inactivity/session-end logging
+  useEffect(() => {
+    let inactivityTimer;
+    const INACTIVITY_LIMIT = 5 * 60 * 1000; // 5 minutes
+
+    const logAndResetEvents = () => {
+      Object.entries(eventCounts).forEach(([eventType, count]) => {
+        if (count > 0) {
+          logUIEvent(eventType, {
+            page: window.location.pathname,
+            count
+          });
+        }
+      });
+      setEventCounts({ next: 0, grid: 0, zoom: 0, like: 0, slideshow: 0, share: 0, prev: 0, exit: 0 });
+    };
+
+    const resetTimer = () => {
+      clearTimeout(inactivityTimer);
+      inactivityTimer = setTimeout(logAndResetEvents, INACTIVITY_LIMIT);
+    };
+
+    // Reset timer on any click or keydown
+    const activityHandler = () => resetTimer();
+    window.addEventListener("click", activityHandler);
+    window.addEventListener("keydown", activityHandler);
+
+    // Log on tab close or hide
+    window.addEventListener("beforeunload", logAndResetEvents);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") logAndResetEvents();
+    });
+
+    resetTimer();
+    return () => {
+      clearTimeout(inactivityTimer);
+      window.removeEventListener("click", activityHandler);
+      window.removeEventListener("keydown", activityHandler);
+      window.removeEventListener("beforeunload", logAndResetEvents);
+      document.removeEventListener("visibilitychange", logAndResetEvents);
+    };
+  }, [eventCounts]);
+
   const direction = currentIndex > prevIndex.current ? 1 : -1;
   prevIndex.current = currentIndex;
 
@@ -824,6 +865,7 @@ export default function ChapterGalleryBase({
                             onClick={() => {
                               if (!isLandscapeMobile) {
                                 setIsZoomed(true);
+  setEventCounts((counts) => ({ ...counts, zoom: counts.zoom + 1 }));
                                 logUIEvent("image_zoom", {
                                   page: window.location.pathname,
                                   imageId: galleryData[currentIndex]?.id
@@ -851,6 +893,7 @@ export default function ChapterGalleryBase({
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setShowNotes((p) => !p);
+  setEventCounts((counts) => ({ ...counts, notes: (counts.notes || 0) + 1 }));
                                 sessionStorage.setItem("collectorHintShown", "1");
                                 setShowCollectorHint(false);
                                 logUIEvent("collector_notes_toggle", {
@@ -1076,6 +1119,9 @@ export default function ChapterGalleryBase({
                           logUIEvent("slideshow_start", { page: window.location.pathname });
                           if (!tourOpen()) {
                             setShowStoryShow(true);
+  setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
+  setEventCounts((counts) => ({ ...counts, share: counts.share + 1 }));
+  setEventCounts((counts) => ({ ...counts, exit: counts.exit + 1 }));
                           }
                         }}
                         aria-label="Play K4 Slideshow"
