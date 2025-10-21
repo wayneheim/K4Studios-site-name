@@ -15,17 +15,12 @@ export async function getStaticPaths() {
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
 if (!imageData) {
+  // Remove the /i-xxxxx or /i-xxxxx/ at the end, with optional trailing slash(es)
+  const cleanUrl = Astro.url.pathname.replace(/\/i-[a-zA-Z0-9_-]+\/?$/, '').replace(/\/+$/, '');
   if (typeof window !== "undefined") {
-    // Client-side navigation fallback
-    window.location.replace(
-      window.location.pathname.replace(/\/i-[^/]+\/?$/, '')
-    );
+    window.location.replace(cleanUrl);
   } else {
-    // SSR fallback
-    return Astro.redirect(
-      Astro.url.pathname.replace(/\/i-[^/]+\/?$/, ''),
-      302
-    );
+    return Astro.redirect(cleanUrl, 302);
   }
 }
 
