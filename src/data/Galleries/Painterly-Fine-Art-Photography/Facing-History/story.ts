@@ -10,7 +10,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 2: WESTERN FRONTIER (moved up)
+  // 2: WESTERN FRONTIER
   {
     subhead: "The Western Frontier – Cowboy Art, Grit & Glory",
     paragraphs: [
@@ -55,7 +55,7 @@ export const facingHistoryStory = [
     subhead: "The Roaring 20s – Jazz, Grit & Reinvention",
     paragraphs: [
       "Bootleggers slipping through the shadows, flappers dancing under velvet light, G-men chasing fortune and failure in equal measure—the Roaring 20s is a decade of reinvention, captured here in <strong>painterly jazz-age portraits</strong> and <strong>history themed art</strong>. Wayne’s collection goes beyond nostalgia, revealing the tension, energy, and consequence beneath the sparkle.",
-      "These <strong>roaring twenties portraits</strong> and Gatsby-era art works are more than just period pieces—they’re emotional narratives for the modern collector. Step into the roaring 20s and experience the contrasts of a nation reinventing itself: rebellion and opulence, grit and glamour.",
+      "These <strong>roaring twenties portraits</strong> and Gatsby-era artworks are more than just period pieces—they’re emotional narratives for the modern collector. Step into the roaring 20s and experience the contrasts of a nation reinventing itself: rebellion and opulence, grit and glamour.",
       "Ideal for lovers of <strong>roaring 20s wall art</strong> for jazz fans, vintage portraiture, and anyone seeking <strong>history themed photography</strong> that both entertains and informs."
     ],
     list: [
@@ -63,7 +63,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 6: ENGR AINED SERIES
+  // 6: ENGRAINED SERIES
   {
     subhead: "Engrained Series – Stories Etched in Wood",
     paragraphs: [
@@ -79,8 +79,10 @@ export const facingHistoryStory = [
   {
     subhead: "Why Painterly Photography? Why Historical Portraiture?",
     paragraphs: [
-      "In an era of AI-generated images and mass-produced wall decor, <strong>painterly fine art photography</strong> stands apart. It’s rooted in the Pictorialist movement, <strong>history themed art</strong>, and living history—built for tactile storytelling, emotional depth, and lasting legacy. Every print in the Facing History series is carefully crafted: no filters, no shortcuts, just light, shadow, and the truth of a moment.",
-      "Collectors, reenactors, and history lovers know that art with feeling sparks conversation and creates connection. If you want <strong>fine art painterly photography</strong> or <strong>history themed photography</strong> that resonates—work that tells a story and endures—Wayne’s work is for you."
+      "In an age where algorithms can fabricate faces and mimic style, Wayne Heim’s painterly fine art photography stands apart because it’s built by hand — not code. Every subject is real, every spark of light intentional, every texture shaped by craft. These are not AI-generated images or digital effects; they are living studies of light, emotion, and story.",
+      "As both an <strong>award-winning medical illustrator</strong> and <strong>fine art photographer</strong>, Wayne approaches his images with an artist’s discipline and a storyteller’s heart. He doesn’t capture scenes — he sculpts them. The raw photograph becomes his foundation — his canvas, his ingredients — where color, light, and shadow are bent to his will like brush and pigment.",
+      "Painterly photography gives the viewer realism with soul — the sense of a lived moment, but with just enough artistry to get lost in it. Like the pull of a good novel or the tension before a film’s turning point, it draws you in until you forget you’re looking at a modern photograph at all.",
+      "That’s why painterly photography matters. It’s not about creating perfection, but about evoking truth — about making history feel close enough to touch."
     ]
   },
 
@@ -92,12 +94,13 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 9: FAQ / LEARN MORE
+  // 9: STORYTELLING VS AI
   {
-    subhead: "Want to Know More? Storytelling vs. AI & Traditional Art",
+    subhead: "Storytelling vs. AI & Traditional Art",
     paragraphs: [
-      "Curious how <strong>painterly photography</strong> and <strong>history themed art</strong> differ from traditional photography, AI-generated images, or digital illustration? Read Wayne’s full blog post: What Is Painterly Photography? and discover why each image is an authentic, collector-focused work of art—not a product of software or trend.",
-      "Every print is designed for those who value legacy, authenticity, and <strong>timeless photography</strong> for lodges, collectors, and homes with a story to tell."
+      "Curious how <strong>painterly photography</strong> differs from traditional photography, AI-generated imagery, or digital illustration? Wayne’s work begins in reality — with real people, real light, and real emotion — and then transcends it through artistic interpretation. The result is neither photojournalism nor fabrication, but something rarer: a crafted moment that feels lived.",
+      "Artificial intelligence can replicate style, but it cannot replicate human intent — the instinct to pause, to interpret, to honor. Every one of Wayne’s <strong>painterly historical portraits</strong> is grounded in authenticity: real reenactors, researched detail, and the empathy of an artist who has spent decades studying how light tells a story.",
+      "Each print is designed for those who value legacy, craftsmanship, and truth in image-making — <strong>fine art photography</strong> that connects emotion, history, and imagination in a way machines never will."
     ]
   }
 ];
