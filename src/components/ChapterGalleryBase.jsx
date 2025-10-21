@@ -865,11 +865,7 @@ export default function ChapterGalleryBase({
                             onClick={() => {
                               if (!isLandscapeMobile) {
                                 setIsZoomed(true);
-  setEventCounts((counts) => ({ ...counts, zoom: counts.zoom + 1 }));
-                                logUIEvent("image_zoom", {
-                                  page: window.location.pathname,
-                                  imageId: galleryData[currentIndex]?.id
-                                });
+                                setEventCounts((counts) => ({ ...counts, zoom: counts.zoom + 1 }));
                               }
                             }}
                             data-zoom-btn
@@ -893,14 +889,9 @@ export default function ChapterGalleryBase({
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setShowNotes((p) => !p);
-  setEventCounts((counts) => ({ ...counts, notes: (counts.notes || 0) + 1 }));
+                                setEventCounts((counts) => ({ ...counts, notes: (counts.notes || 0) + 1 }));
                                 sessionStorage.setItem("collectorHintShown", "1");
                                 setShowCollectorHint(false);
-                                logUIEvent("collector_notes_toggle", {
-                                  page: window.location.pathname,
-                                  imageId: galleryData[currentIndex]?.id,
-                                  notesVisible: !showNotes
-                                });
                               }}
                               aria-label="View Collector Notes"
                               title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
