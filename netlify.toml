@@ -1,4 +1,16 @@
 [[redirects]]
+from = "/robots.txt"
+to = "/robots.txt"
+status = 200
+
+[[redirects]]
+from = "/sitemap.xml"
+to = "/sitemap.xml"
+status = 200
+
+
+
+[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id/index.html"
 status = 200
