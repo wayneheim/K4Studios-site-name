@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 const DATA_ROOTS = [
   "/src/data/Galleries",
   "/src/pages/Other",
+  "/src/data/Other",
 ];
 
 /* ---------- helpers ---------- */
@@ -164,13 +165,22 @@ export default function GalleryEditorPro() {
     const maps = [
       import.meta.glob("/src/data/Galleries/**/*.mjs", { eager: false, import: "galleryData" }),
       import.meta.glob("/src/pages/Other/**/*.mjs",     { eager: false, import: "galleryData" }),
+      import.meta.glob("/src/data/Other/**/*.mjs",      { eager: false, import: "galleryData" }),
     ];
     return Object.assign({}, ...maps);
   }, []);
 
   const options = useMemo(() => {
+    const rootIdx = (p) => {
+      const n = normalizePath(p);
+      return DATA_ROOTS.findIndex((r) => n.startsWith(normalizePath(r) + "/"));
+    };
     return Object.keys(modules)
-      .sort((a, b) => stripRoot(a).localeCompare(stripRoot(b)))
+      .sort((a, b) => {
+        const ra = rootIdx(a), rb = rootIdx(b);
+        if (ra !== rb) return ra - rb; // group by root order
+        return stripRoot(a).localeCompare(stripRoot(b));
+      })
       .map((path) => ({ path, label: prettyLabelFromPath(path) }));
   }, [modules]);
 
@@ -220,7 +230,14 @@ export default function GalleryEditorPro() {
     async function load() {
       if (!selectedPath) return;
       const mod = await modules[selectedPath]();
-      const allArr = Array.isArray(mod) ? mod : [];
+      // Support both shapes: import option may return the value or module object
+      const allArr = Array.isArray(mod)
+        ? mod
+        : Array.isArray(mod?.galleryData)
+        ? mod.galleryData
+        : Array.isArray(mod?.default)
+        ? mod.default
+        : [];
       const arr = allArr.filter(isRealItem);
       if (cancelled) return;
 

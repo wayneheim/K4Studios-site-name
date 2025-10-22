@@ -26,11 +26,14 @@ const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia
 const structuredData = getStructuredData({
   type: "BlogPosting",
   data: {
-    title: "Conversations With Quill – Dust or Desperation",
+    headline: "Conversations With Quill – Dust or Desperation",
     description: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim’s Western image “Dust or Desperation.”",
     url: `https://k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
-    author: "Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
     datePublished: "2025-10-05",
     image: coverImage
   },
@@ -67,20 +70,20 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 const allGalleryImages = [
-  ...painterlyImages,
-  ...civilWarColor,
-  ...civilWarBW,
-  ...roaring20sColor,
-  ...roaring20sBW,
-  ...wwiiPortraitsColor,
-  ...wwiiPortraitsBW
+  ...painterlyImages.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" })),
+  ...civilWarColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color" })),
+  ...civilWarBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White" })),
+  ...roaring20sColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color" })),
+  ...roaring20sBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White" })),
+  ...wwiiPortraitsColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color" })),
+  ...wwiiPortraitsBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White" }))
 ].filter(img => img.visibility !== "ghost");
 
 const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
-const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+const previewPath = ""; // Not needed, each image now has its own galleryPath
 
 const galleryDatas = Object.values(galleryDataMap).flat();
-const featheredImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 12);
+const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
 const galleryPaths = Object.keys(galleryDataMap);
 
 const linkKeywords = (text: string) =>
@@ -116,8 +119,8 @@ const linkKeywords = (text: string) =>
       <a 
         href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-cFhZXJc" 
         style="display:inline-block;"
-        onMouseEnter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)';"
-        onMouseLeave="this.querySelector('img').style.boxShadow='none';"
+        onmouseenter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)';"
+        onmouseleave="this.querySelector('img').style.boxShadow='none';"
       >
         <img 
           src={coverImage} 

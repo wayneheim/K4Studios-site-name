@@ -6,6 +6,7 @@ interface Props {
     alt?: string;
     src: string;
     visibility?: string;
+    galleryPath: string;
   }[];
   path: string; // exact gallery URL (preferred)
   limit?: number;
@@ -88,7 +89,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       const direction = offset === 0 ? "center" : offset < 0 ? "left" : "right";
       return (
         <a
-          href={joinPath(resolvedBaseUrl, img.id)}  // dynamic gallery base + image id
+          href={`/${img.galleryPath}/${img.id}`}
           class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}
@@ -209,8 +210,8 @@ const middleIndex = Math.floor(visibleImages.length / 2);
 <script>
   const checkAndHidePreview = () => {
     const chapter = document.getElementById("chapter-section");
-    const preview = document.querySelector(".gallery-preview-strip");
-    if (!chapter || !preview) return;
+  const preview = document.querySelector(".gallery-preview-strip") as HTMLElement;
+  if (!chapter || !preview) return;
 
     const isVisible = chapter.classList.contains("section-visible");
     if (isVisible) {

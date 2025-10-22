@@ -28,14 +28,18 @@ import "@/styles/global.css";
 const sectionPath = "/Other/Blog";
 
 const structuredData = getStructuredData({
-  type: "Blog",
+  type: "BlogPosting",
   data: {
-    title: "Inside the Frame",
+    headline: "Inside the Frame",
     description: "Conversations with Quill about layered storytelling, composition, and painterly photography.",
     url: `https://k4studios.com${sectionPath}`,
-    copyrightNotice: "© Wayne Heim"
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    image: posts.map(p => p.cover)
   },
-  images: posts.map(p => p.cover),
   defaults: {
     copyrightNotice: "© Wayne Heim",
     license: "https://k4studios.com/copyright",
@@ -60,21 +64,21 @@ function shuffleArray<T>(arr: T[]): T[] {
 
 // Combine images from multiple Facing History galleries
 const allGalleryImages = [
-  ...painterlyImages,
-  ...civilWarColor,
-  ...civilWarBW,
-  ...roaring20sColor,
-  ...roaring20sBW,
-  ...wwiiPortraitsColor,
-  ...wwiiPortraitsBW
+  ...painterlyImages.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" })),
+  ...civilWarColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color" })),
+  ...civilWarBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White" })),
+  ...roaring20sColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color" })),
+  ...roaring20sBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White" })),
+  ...wwiiPortraitsColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color" })),
+  ...wwiiPortraitsBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White" }))
 ].filter(img => img.visibility !== "ghost");
 
 const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
-const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
+const previewPath = ""; // Not needed, each image now has its own galleryPath
 
 // Setup for keyword linking
 const galleryDatas = Object.values(galleryDataMap).flat();
-const featheredImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 12);
+const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
 const galleryPaths = Object.keys(galleryDataMap);
 ---
 
@@ -115,14 +119,14 @@ const galleryPaths = Object.keys(galleryDataMap);
                   alt={post.title}
                   class="mb-4 rounded-2xl shadow max-w-[200px] h-[200px] object-cover"
                   style="aspect-ratio: 1/1;"
-                  onContextMenu={(e) => e.preventDefault()}
+                  oncontextmenu="event.preventDefault()"
                 />
               </a>
               <h2 class="text-xl font-bold mb-2">
                 <a href={`/Other/Blog/${post.slug}`}>{post.title}</a>
               </h2>
               <p class="text-sm text-gray-600 mb-2">{post.date}</p>
-              <p class="mb-4" set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic)} /></p>
+              <p class="mb-4" set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               <a href={`/Other/Blog/${post.slug}`} class="underline text-blue-700">Read more →</a>
             </article>
         ))}

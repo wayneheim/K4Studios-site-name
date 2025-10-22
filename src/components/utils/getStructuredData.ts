@@ -4,7 +4,7 @@ export function getStructuredData({
   images = [],
   defaults = {}
 }: {
-  type: "gallery" | "image",
+  type: "gallery" | "image" | "BlogPosting",
   data: any,          // single image object or gallery info
   images?: any[],     // for gallery: featured images (optional)
   defaults?: {        // fallback values for copyright, license, etc.
@@ -133,5 +133,31 @@ export function getStructuredData({
     return JSON.stringify(obj, null, 2);
   }
 
+  // For a blog post page
+  if (type === "BlogPosting") {
+    const obj: any = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": data.title,
+      "description": data.description,
+      "articleBody": data.body || data.excerpt || "",
+      "url": data.url,
+      "datePublished": data.datePublished,
+      "author": {
+        "@type": "Person",
+        "name": creatorName,
+        "url": creatorUrl
+      },
+      "image": data.image || images.map(img => img.src),
+      "inLanguage": "en"
+    };
+    if (data.keywords && data.keywords.length)
+      obj.keywords = data.keywords.join(", ");
+    if (data.dateModified)
+      obj.dateModified = data.dateModified;
+    if (data.publisher)
+      obj.publisher = data.publisher;
+    return JSON.stringify(obj, null, 2);
+  }
   return "";
 }
