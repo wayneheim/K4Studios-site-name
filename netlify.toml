@@ -221,6 +221,31 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Po
 status = 301
 force = true
 [[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-:id"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color-back2/Color 1src/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color-back2/Color%201src/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-:id"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits copy/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-:id"
+status = 301
+force = true
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits%20copy/i-:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-:id"
+status = 301
+force = true
+[[redirects]]
 from = "/Other/Photo-Shoots/*"
 to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
 status = 301
