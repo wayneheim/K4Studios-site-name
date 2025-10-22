@@ -14205,8 +14205,8 @@ export const galleryData = [
   },
   {
     "id": "i-mWMXhcc",
-    "title": "Exploring Frederic Remington",
-    "description": "Wayne Heim's frederic remington captures the spirit of cowboy art in this rustic charm image. Featuring painterly cowboy portraits, cowboy portraits, and frederic remington, it's ideal for cowboy art enthusiasts. © Wayne Heim",
+    "title": "Saying Goodbye - Cowboy Art",
+    "description": "New frontier widdow says one last goodbye on her way West. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-mWMXhcc/0/MLZdXKLC2TM66LpR8GQrZLRmcrHSNfmBppdfNpnks/XL/_HF21294-1062-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-mWMXhcc/0/MLZdXKLC2TM66LpR8GQrZLRmcrHSNfmBppdfNpnks/XL/_HF21294-1062-2-XL.jpg",

@@ -191,6 +191,11 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Co
 status = 301
 force = true
 [[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color%20copy/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
 from = "/hack/*"
 to = "/Glossary"
 status = 301
@@ -211,10 +216,16 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Po
 status = 301
 force = true
 [[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color-back2/Color%20fixed/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
 from = "/Other/Photo-Shoots/*"
 to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
 status = 301
 force = true
+
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Native-American"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
