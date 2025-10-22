@@ -242,11 +242,18 @@ const keywords =
    <!-- Google Analytics (with API secret protection) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
 <script>
+  // TypeScript compatibility for Google Analytics
+  // @ts-ignore
+  declare global {
+    interface Window { dataLayer: any[]; }
+  }
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){window.dataLayer.push(arguments);}
+  // @ts-ignore
   gtag('js', new Date());
 
   // ✅ Secure configuration to prevent fake GA hits
+  // @ts-ignore
   gtag('config', 'G-0J1HSKFC04', {
     'api_secret': 'puQODutySsiMJp5q3kkfhA',
     'send_page_view': true
