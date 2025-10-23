@@ -60,7 +60,7 @@ async function logGallerySession({
       duration_min,
       avg_time_per_event: avgPerEvent,
       device: getDevice(ua || (typeof window !== "undefined" ? navigator.userAgent : "")),
-      details: totalEvents,
+      details: `Total events: ${totalEvents}`,
       eventCounts, // Send per-type stats as JSON
     };
     
