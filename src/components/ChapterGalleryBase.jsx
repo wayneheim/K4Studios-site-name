@@ -17,6 +17,19 @@ import useMetaSwap from "./hooks/useMetaSwap.js";
 import { siteNav } from "../data/siteNav.js";
 import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
 
+// Helper to log UI events to Airtable
+async function logUIEvent(eventType, details = {}) {
+  try {
+    await fetch("/.netlify/functions/log-ui-event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ eventType, details, timestamp: Date.now() }),
+    });
+  } catch (err) {
+    console.error("UI event logging failed:", err);
+  }
+}
+
 // --- Session + batching helpers --- //
 const getDevice = (uaStr) =>
   /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(uaStr) ? "Mobile" : "Desktop";
