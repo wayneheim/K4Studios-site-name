@@ -1,9 +1,6 @@
 import fetch from 'node-fetch';
 
 export async function handler(event) {
-  console.log('🔥 Function called with method:', event.httpMethod);
-  console.log('📨 Raw body:', event.body);
-
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -14,9 +11,8 @@ export async function handler(event) {
   let bodyData;
   try {
     bodyData = JSON.parse(event.body || '{}');
-    console.log('📦 Parsed body:', bodyData);
   } catch (parseError) {
-    console.error('❌ JSON parse error:', parseError);
+    console.error('JSON parse error:', parseError);
     return {
       statusCode: 400,
       body: JSON.stringify({ error: 'Invalid JSON in request body' }),
@@ -26,7 +22,7 @@ export async function handler(event) {
   const { eventType, details, timestamp } = bodyData;
 
   if (!eventType) {
-    console.error('❌ Missing eventType');
+    console.error('Missing eventType');
     return {
       statusCode: 400,
       body: JSON.stringify({ error: 'Missing eventType' }),
@@ -48,17 +44,13 @@ export async function handler(event) {
     .map((s) => s.trim())
     .filter(Boolean)[0] || 'unknown';
 
-  console.log('🌐 Context - IP:', ip, 'UA:', ua, 'Referer:', referer);
-
   const {
     AIRTABLE_API_TOKEN,
     AIRTABLE_BASE_ID,
   } = process.env;
 
-  console.log('🔑 Env vars present - Token:', !!AIRTABLE_API_TOKEN, 'Base ID:', !!AIRTABLE_BASE_ID);
-
   if (!AIRTABLE_API_TOKEN || !AIRTABLE_BASE_ID) {
-    console.error('❌ Missing Airtable credentials');
+    console.error('Missing Airtable credentials');
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Server configuration error' }),
@@ -76,22 +68,40 @@ export async function handler(event) {
     day: 'numeric',
   });
 
-  console.log('📅 Event time:', eventTime);
-
   // Prepare Airtable payload
-  const airtablePayload = {
-    fields: {
-      eventType,
-      details: JSON.stringify(details || {}),
-      timestamp: eventTime,
-      ip,
-      ua,
-      referer,
-    },
-  };
-
-  console.log('📤 Sending to Airtable:', airtablePayload);
-  console.log('📤 Full URL:', `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/UIEvents`);
+  let airtablePayload;
+  
+  if (eventType === 'gallery_session') {
+    // For session summaries, extract individual fields from details
+    const sessionData = details || {};
+    airtablePayload = {
+      fields: {
+        eventType,
+        details: sessionData.details || 0, // total event count
+        start: sessionData.start || '',
+        end: sessionData.end || '',
+        duration_min: sessionData.duration_min || 0,
+        avg_time_per_event: sessionData.avg_time_per_event || null,
+        device: sessionData.device || 'unknown',
+        timestamp: eventTime,
+        ip,
+        ua,
+        referer,
+      },
+    };
+  } else {
+    // For individual events, keep as before
+    airtablePayload = {
+      fields: {
+        eventType,
+        details: JSON.stringify(details || {}),
+        timestamp: eventTime,
+        ip,
+        ua,
+        referer,
+      },
+    };
+  }
 
   try {
     // Airtable Logging
@@ -104,32 +114,24 @@ export async function handler(event) {
       body: JSON.stringify(airtablePayload),
     });
 
-    const airtableResponseText = await airtableRes.text();
-    console.log('📥 Airtable status:', airtableRes.status);
-    console.log('📥 Airtable response:', airtableResponseText);
-
     if (!airtableRes.ok) {
-      console.error('❌ Airtable logging error:', airtableResponseText);
+      const airtableResponseText = await airtableRes.text();
+      console.error('Airtable error:', airtableResponseText);
       return {
         statusCode: 500,
-        body: JSON.stringify({
-          error: 'Airtable logging failed',
-          airtableStatus: airtableRes.status,
-          airtableResponse: airtableResponseText
-        }),
+        body: JSON.stringify({ error: 'Airtable logging failed' }),
       };
     }
 
-    console.log('✅ Success!');
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true }),
     };
   } catch (fetchError) {
-    console.error('💥 Fetch error:', fetchError);
+    console.error('Network error:', fetchError);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Network error', details: fetchError.message }),
+      body: JSON.stringify({ error: 'Network error' }),
     };
   }
 }

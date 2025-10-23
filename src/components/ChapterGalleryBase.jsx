@@ -42,7 +42,6 @@ async function logGallerySession({
   referer,
   ua,
 }) {
-  console.log("🔥 logGallerySession called with:", { eventCounts, sessionStart, sessionEnd });
   try {
     const duration_min = (sessionEnd - sessionStart) / 1000 / 60;
     const totalEvents = Object.values(eventCounts).reduce((sum, v) => sum + v, 0);
@@ -63,23 +62,17 @@ async function logGallerySession({
       timestamp: sessionEnd,
     };
     
-    console.log("📤 Sending session data:", sessionData);
-    
     const response = await fetch("/.netlify/functions/log-ui-event", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(sessionData),
     });
     
-    console.log("📥 Response status:", response.status);
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("❌ Session logging failed:", errorText);
-    } else {
-      console.log("✅ Session logged successfully");
+      console.error("Session logging failed:", await response.text());
     }
   } catch (err) {
-    console.error("💥 Session logging error:", err);
+    console.error("Session logging error:", err);
   }
 }
 
@@ -506,7 +499,6 @@ export default function ChapterGalleryBase({
 
   // Update last interaction
   const recordInteraction = (eventType) => {
-    console.log("📊 Recording interaction:", eventType);
     setEventCounts((prev) => ({ ...prev, [eventType]: (prev[eventType] || 0) + 1 }));
     lastInteractionRef.current = Date.now();
   };
@@ -762,9 +754,7 @@ export default function ChapterGalleryBase({
 
   // Log the summary on exit/unmount/close
   useEffect(() => {
-    console.log("🎯 Session logging useEffect mounted, eventCounts:", eventCounts);
     const logSession = () => {
-      console.log("🚪 Session ending, calling logGallerySession");
       logGallerySession({
         eventCounts,
         sessionStart: sessionStartRef.current,
@@ -776,7 +766,6 @@ export default function ChapterGalleryBase({
     window.addEventListener("beforeunload", logSession);
     window.addEventListener("pagehide", logSession);
     return () => {
-      console.log("🔄 Component unmounting, logging session");
       logSession();
       window.removeEventListener("beforeunload", logSession);
       window.removeEventListener("pagehide", logSession);
