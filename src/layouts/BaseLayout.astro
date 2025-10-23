@@ -170,19 +170,11 @@ const keywords =
       <script type="application/ld+json" set:html={structuredDataJSON} />
     )}
 
-    <!-- ✅ Pinterest-specific OG cleanup -->
-    {isImagePage && (
-      <>
-        <meta property="og:title" content={preloadImage?.title || cleanTitle} />
-        <meta property="og:description" content={preloadImage?.description || defaultDescription} />
-      </>
-    )}
-
     <!-- ✅ Open Graph -->
-    <meta property="og:title" content={cleanTitle} />
+    <meta property="og:title" content={isImagePage ? (preloadImage?.title || cleanTitle) : cleanTitle} />
     <meta property="og:description" content={
       isImagePage
-        ? (preloadImage?.description || meta.description || defaultDescription)
+        ? (preloadImage?.story || preloadImage?.description || meta.description || defaultDescription)
         : (socialDescription || seoDescription)
     } />
     {ogImage && <meta property="og:image" content={ogImage} />}
@@ -208,7 +200,7 @@ const keywords =
     {isImagePage && (
       <>
         <meta name="pinterest:rich_title" content={preloadImage?.title || cleanTitle} />
-        <meta name="pinterest:description" content={preloadImage?.description || defaultDescription} />
+        <meta name="pinterest:description" content={preloadImage?.story || preloadImage?.description || defaultDescription} />
         <meta name="pinterest:image" content={ogImage} />
         <meta name="pinterest:media:alt" content={preloadImage?.alt || preloadImage?.title || cleanTitle} />
         <meta name="pinterest:creator" content="Wayne Heim" />
@@ -221,7 +213,7 @@ const keywords =
         "@context": "https://schema.org",
         "@type": "ImageObject",
         "name": preloadImage?.title || cleanTitle,
-        "description": preloadImage?.description || defaultDescription,
+        "description": preloadImage?.story || preloadImage?.description || defaultDescription,
         "contentUrl": ogImage,
         "url": canonicalUrl,
         "thumbnailUrl": ogImage,
@@ -243,7 +235,7 @@ const keywords =
         "@context": "https://schema.org",
         "@type": "SocialMediaPosting",
         "headline": preloadImage?.title || cleanTitle,
-        "articleBody": preloadImage?.description || defaultDescription,
+        "articleBody": preloadImage?.story || preloadImage?.description || defaultDescription,
         "author": {
           "@type": "Person",
           "name": "Wayne Heim",
@@ -275,7 +267,7 @@ const keywords =
             contentUrl: (preloadImage?.src || ogImage).replace(/^http:/, 'https:'),
             name: preloadImage?.alt || preloadImage?.title || cleanTitle,
             caption: preloadImage?.alt || preloadImage?.title || cleanTitle,
-            description: preloadImage?.description || socialDescription,
+            description: preloadImage?.story || preloadImage?.description || socialDescription,
             width: preloadImage?.width || ogWidth || "1600",
             height: preloadImage?.height || ogHeight || "1200",
             copyrightNotice: "Wayne Heim",
