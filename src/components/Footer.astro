@@ -1,6 +1,7 @@
 ---
 const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
+import BlogGalleryPreviewStrip from './BlogGalleryPreviewStrip.astro';
 import ShareDrawer from '@/components/ShareDrawer.jsx';
 
 const { previewImages = [], previewPath = "", title = "", currentImageUrl, label } = Astro.props;
@@ -31,12 +32,20 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
 
   {showPreviewBar && (
     <div class="w-full max-w-screen-xl mx-auto px-4 pb-2">
-      <GalleryPreviewStrip
-        images={previewImages}
-        path={previewPath}
-        limit={6}
-        label={label || undefined}
-      />
+      {currentPath.startsWith('/Other/Blog') ? (
+        <BlogGalleryPreviewStrip
+          images={previewImages}
+          limit={6}
+          label={label || undefined}
+        />
+      ) : (
+        <GalleryPreviewStrip
+          images={previewImages}
+          path={previewPath}
+          limit={6}
+          label={label || undefined}
+        />
+      )}
     </div>
   )}
 

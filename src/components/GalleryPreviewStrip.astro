@@ -6,7 +6,7 @@ interface Props {
     alt?: string;
     src: string;
     visibility?: string;
-    galleryPath: string;
+  // ...existing code...
   }[];
   path: string; // exact gallery URL (preferred)
   limit?: number;
@@ -89,7 +89,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
       const direction = offset === 0 ? "center" : offset < 0 ? "left" : "right";
       return (
         <a
-          href={`/${img.galleryPath}/${img.id}`}
+          href={joinPath(resolvedBaseUrl, img.id)}  // dynamic gallery base + image id
           class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}
