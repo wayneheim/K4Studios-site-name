@@ -192,15 +192,18 @@ const keywords =
     {isImagePage && (
       <>
         <meta name="pinterest:title" content={cleanTitle} />
-        <meta
-          name="pinterest:description"
-          content={
-            preloadImage?.description ||
-            meta.description ||
-            defaultDescription
-          }
-        />
+        <meta name="pinterest:description" content={
+          preloadImage?.description ||
+          meta.description ||
+          defaultDescription
+        } />
         <meta name="pinterest:image" content={ogImage} />
+        <meta name="pinterest:rich_title" content={cleanTitle} />
+        <meta name="pinterest:media:alt" content={
+          preloadImage?.alt ||
+          preloadImage?.title ||
+          cleanTitle
+        } />
       </>
     )}
 
@@ -263,7 +266,7 @@ const keywords =
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
+  function gtag(...args: any[]){window.dataLayer.push(args);}
   gtag('js', new Date());
   gtag('config', 'G-0J1HSKFC04', {
     'api_secret': 'puQODutySsiMJp5q3kkfhA',
