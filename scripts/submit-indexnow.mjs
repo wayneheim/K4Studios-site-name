@@ -57,8 +57,8 @@ async function submitBatch(urlList, batchNum) {
 // === 🚦 MAIN ===
 async function main() {
   if (!fs.existsSync(SITEMAP_PATH)) {
-    console.error(`❌ Sitemap not found at ${SITEMAP_PATH}`);
-    process.exit(1);
+    console.warn(`⚠️ Sitemap not found at ${SITEMAP_PATH}, skipping IndexNow submission.`);
+    process.exit(0);
   }
 
   const xml = fs.readFileSync(SITEMAP_PATH, "utf8");
