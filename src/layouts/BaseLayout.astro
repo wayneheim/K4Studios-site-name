@@ -104,7 +104,7 @@ const ogImage = ensureAbsoluteUrl(rawOgImage).replace(/^http:/, 'https:');
 const ogImageSecureUrl = ensureAbsoluteUrl(meta.ogImageSecureUrl || rawOgImage)?.replace(/^http:/, 'https:');
 
 // ✅ Changed og:type for Pinterest optimization
-const ogType = isImagePage ? "image" : (meta.ogType || "website");
+const ogType = isImagePage ? "article" : (meta.ogType || "website");
 
 const twitterTitle = meta.twitterTitle || cleanTitle;
 const twitterImage = ensureAbsoluteUrl(meta.twitterImage || rawOgImage).replace(/^http:/, 'https:');
@@ -168,28 +168,18 @@ const keywords =
 
     <!-- ✅ Open Graph -->
     <meta property="og:title" content={cleanTitle} />
-
-    <!-- 👇 Pinterest always uses this description -->
     <meta property="og:description" content={
       isImagePage
         ? (preloadImage?.description || meta.description || defaultDescription)
         : (socialDescription || seoDescription)
     } />
-
     {ogImage && <meta property="og:image" content={ogImage} />}
     {ogImageSecureUrl && <meta property="og:image:secure_url" content={ogImageSecureUrl} />}
     <meta property="og:image:width" content={ogWidth} />
     <meta property="og:image:height" content={ogHeight} />
-
-    <!-- 👇 this is the only alt Pinterest reads -->
-    <meta property="og:image:alt" content={
-      preloadImage?.alt ||
-      preloadImage?.title ||
-      cleanTitle
-    } />
-
+    <meta property="og:image:alt" content={preloadImage?.alt || preloadImage?.title || cleanTitle} />
     <meta property="og:image:type" content={ogImageType} />
-    <meta property="og:type" content={isImagePage ? "article" : (meta.ogType || "website")} />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
     <meta property="og:site_name" content="K4 Studios – Fine Art Photography" />
     <meta property="og:locale" content={meta.ogLocale || 'en_US'} />
@@ -206,21 +196,36 @@ const keywords =
     {isImagePage && (
       <>
         <meta name="pinterest:rich_title" content={cleanTitle} />
-        <meta name="pinterest:description" content={
-          preloadImage?.description ||
-          meta.description ||
-          defaultDescription
-        } />
+        <meta name="pinterest:description" content={preloadImage?.description || meta.description || defaultDescription} />
         <meta name="pinterest:image" content={ogImage} />
-        <meta name="pinterest:media:alt" content={
-          preloadImage?.alt ||
-          preloadImage?.title ||
-          cleanTitle
-        } />
+        <meta name="pinterest:media:alt" content={preloadImage?.alt || preloadImage?.title || cleanTitle} />
       </>
     )}
 
-    <!-- ✅ Schema.org fallback -->
+    <!-- ✅ Schema.org: Pinterest-optimized ImageObject -->
+    {isImagePage && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "name": preloadImage?.title || cleanTitle,
+        "description": preloadImage?.description || defaultDescription,
+        "contentUrl": ogImage,
+        "url": canonicalUrl,
+        "thumbnailUrl": ogImage,
+        "author": {
+          "@type": "Person",
+          "name": "Wayne Heim",
+          "url": "https://www.k4studios.com/"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Wayne Heim"
+        },
+        "license": "https://www.k4studios.com/Contact"
+      })}></script>
+    )}
+
+    <!-- ✅ Existing fallback schema -->
     {!structuredDataJSON && (
       <>
         {ogImage && <link rel="image_src" href={ogImage} />}
@@ -255,9 +260,7 @@ const keywords =
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
 
-    {preloadImage?.src && (
-      <link rel="preload" as="image" href={preloadImage.src} />
-    )}
+    {preloadImage?.src && <link rel="preload" as="image" href={preloadImage.src} />}
 
     <style>
       body {
@@ -275,17 +278,17 @@ const keywords =
       }
     </style>
 
-   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(...args){window.dataLayer.push(args);}
-  gtag('js', new Date());
-  gtag('config', 'G-0J1HSKFC04', {
-    'api_secret': 'puQODutySsiMJp5q3kkfhA',
-    'send_page_view': true
-  });
-</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args){window.dataLayer.push(args);}
+      gtag('js', new Date());
+      gtag('config', 'G-0J1HSKFC04', {
+        'api_secret': 'puQODutySsiMJp5q3kkfhA',
+        'send_page_view': true
+      });
+    </script>
   </head>
 
   <body>
@@ -298,11 +301,7 @@ const keywords =
     <!-- SVG sharpening filter -->
     <svg width="0" height="0" style="position:absolute">
       <filter id="sharpen">
-        <feConvolveMatrix order="3" kernelMatrix="
-          0 -.5 0
-          -.5 3.2 -.5
-          0 -.5 0
-        " divisor="1.2"/>
+        <feConvolveMatrix order="3" kernelMatrix="0 -.5 0 -.5 3.2 -.5 0 -.5 0" divisor="1.2" />
       </filter>
     </svg>
   </body>
