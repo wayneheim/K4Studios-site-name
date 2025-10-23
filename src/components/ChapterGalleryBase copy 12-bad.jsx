@@ -1,15 +1,3 @@
-// Helper to log UI events to Airtable
-async function logUIEvent(eventType, details = {}) {
-  try {
-    await fetch("/.netlify/functions/log-ui-event", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ eventType, details, timestamp: Date.now() }),
-    });
-  } catch (err) {
-    console.error("UI event logging failed:", err);
-  }
-}
 import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight } from "lucide-react";
@@ -28,6 +16,60 @@ import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
 import { siteNav } from "../data/siteNav.js";
 import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
+
+// Helper to log UI events to Airtable
+async function logUIEvent(eventType, details = {}) {
+  try {
+    // Always send details as a pretty-printed JSON string for better Airtable readability
+    const detailsStr = typeof details === "string" ? details : JSON.stringify(details, null, 2);
+    await fetch("/.netlify/functions/log-ui-event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        eventType,
+        details: detailsStr,
+        timestamp: Date.now()
+      }),
+    });
+  } catch (err) {
+    console.error("UI event logging failed:", err);
+  }
+}
+
+// --- Session + batching helpers --- //
+const getDevice = (uaStr) =>
+  /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(uaStr) ? "Mobile" : "Desktop";
+
+// Log summary row to Airtable (call on unmount/exit)
+async function logGallerySession({
+  eventCounts,
+  sessionStart,
+  sessionEnd,
+  referer,
+  ua,
+}) {
+  try {
+    const duration_min = (sessionEnd - sessionStart) / 1000 / 60;
+    const totalEvents = Object.values(eventCounts).reduce((sum, v) => sum + v, 0);
+    const avgPerEvent =
+      totalEvents > 0 ? Math.round((duration_min / totalEvents) * 100) / 100 : null;
+    
+    const sessionDetails = {
+      start: new Date(sessionStart).toISOString(),
+      end: new Date(sessionEnd).toISOString(),
+      duration_min,
+      avg_time_per_event: avgPerEvent,
+      device: getDevice(ua || (typeof window !== "undefined" ? navigator.userAgent : "")),
+      details: `Total events: ${totalEvents}`,
+      eventCounts, // Send per-type stats as JSON
+    };
+    
+    // Use the helper function instead of manual fetch
+    await logUIEvent("gallery_session", sessionDetails);
+  } catch (err) {
+    console.error("Session logging error:", err);
+  }
+}
 
 /* =========================================================
    Helper function to find section landing page from siteNav
@@ -434,17 +476,27 @@ export default function ChapterGalleryBase({
   const [showMiniMenu, setShowMiniMenu] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
 
-    // Event counters for batching UI actions
-    const [eventCounts, setEventCounts] = useState({
-      next: 0,
-      grid: 0,
-      zoom: 0,
-      like: 0,
-      slideshow: 0,
-      share: 0,
-      prev: 0,
-      exit: 0
-    });
+  // --- NEW SESSION LOGIC --- //
+  const [eventCounts, setEventCounts] = useState({
+    next: 0,
+    prev: 0,
+    zoom: 0,
+    grid: 0,
+    like: 0,
+    slideshow: 0,
+    share: 0,
+    exit: 0,
+    notes: 0,
+    // Add more types if you track more!
+  });
+  const sessionStartRef = useRef(Date.now());
+  const lastInteractionRef = useRef(Date.now());
+
+  // Update last interaction
+  const recordInteraction = (eventType) => {
+    setEventCounts((prev) => ({ ...prev, [eventType]: (prev[eventType] || 0) + 1 }));
+    lastInteractionRef.current = Date.now();
+  };
 
   // Sister link logic
   const currentImageId = galleryData[currentIndex]?.id;
@@ -486,7 +538,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.max(i - 1, 0);
-      setEventCounts((counts) => ({ ...counts, prev: counts.prev + 1 }));
+      recordInteraction("prev");
       return newIndex;
     });
   };
@@ -496,7 +548,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.min(i + 1, galleryData.length - 1);
-      setEventCounts((counts) => ({ ...counts, next: counts.next + 1 }));
+      recordInteraction("next");
       return newIndex;
     });
   };
@@ -504,7 +556,7 @@ export default function ChapterGalleryBase({
     e?.stopPropagation();
     if (tourOpen()) return;
     setViewMode("grid");
-    setEventCounts((counts) => ({ ...counts, grid: counts.grid + 1 }));
+    recordInteraction("grid");
   };
   const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; if (basePath) window.location.href = basePath; };
 
@@ -695,47 +747,25 @@ export default function ChapterGalleryBase({
     onNext: () => { if (!tourOpen()) goNext(); }
   });
 
-  // Inactivity/session-end logging
+  // Log the summary on exit/unmount/close
   useEffect(() => {
-    let inactivityTimer;
-    const INACTIVITY_LIMIT = 5 * 60 * 1000; // 5 minutes
-
-    const logAndResetEvents = () => {
-      Object.entries(eventCounts).forEach(([eventType, count]) => {
-        if (count > 0) {
-          logUIEvent(eventType, {
-            page: window.location.pathname,
-            count
-          });
-        }
+    const logSession = () => {
+      logGallerySession({
+        eventCounts,
+        sessionStart: sessionStartRef.current,
+        sessionEnd: Date.now(),
+        referer: typeof window !== "undefined" ? document.referrer : "",
+        ua: typeof window !== "undefined" ? navigator.userAgent : "",
       });
-      setEventCounts({ next: 0, grid: 0, zoom: 0, like: 0, slideshow: 0, share: 0, prev: 0, exit: 0 });
     };
-
-    const resetTimer = () => {
-      clearTimeout(inactivityTimer);
-      inactivityTimer = setTimeout(logAndResetEvents, INACTIVITY_LIMIT);
-    };
-
-    // Reset timer on any click or keydown
-    const activityHandler = () => resetTimer();
-    window.addEventListener("click", activityHandler);
-    window.addEventListener("keydown", activityHandler);
-
-    // Log on tab close or hide
-    window.addEventListener("beforeunload", logAndResetEvents);
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden") logAndResetEvents();
-    });
-
-    resetTimer();
+    window.addEventListener("beforeunload", logSession);
+    window.addEventListener("pagehide", logSession);
     return () => {
-      clearTimeout(inactivityTimer);
-      window.removeEventListener("click", activityHandler);
-      window.removeEventListener("keydown", activityHandler);
-      window.removeEventListener("beforeunload", logAndResetEvents);
-      document.removeEventListener("visibilitychange", logAndResetEvents);
+      logSession();
+      window.removeEventListener("beforeunload", logSession);
+      window.removeEventListener("pagehide", logSession);
     };
+    // eslint-disable-next-line
   }, [eventCounts]);
 
   const direction = currentIndex > prevIndex.current ? 1 : -1;
@@ -865,7 +895,7 @@ export default function ChapterGalleryBase({
                             onClick={() => {
                               if (!isLandscapeMobile) {
                                 setIsZoomed(true);
-                                setEventCounts((counts) => ({ ...counts, zoom: counts.zoom + 1 }));
+                                recordInteraction("zoom");
                               }
                             }}
                             data-zoom-btn
@@ -889,7 +919,7 @@ export default function ChapterGalleryBase({
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setShowNotes((p) => !p);
-                                setEventCounts((counts) => ({ ...counts, notes: (counts.notes || 0) + 1 }));
+                                recordInteraction("notes");
                                 sessionStorage.setItem("collectorHintShown", "1");
                                 setShowCollectorHint(false);
                               }}
@@ -1110,9 +1140,7 @@ export default function ChapterGalleryBase({
                           logUIEvent("slideshow_start", { page: window.location.pathname });
                           if (!tourOpen()) {
                             setShowStoryShow(true);
-  setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
-  setEventCounts((counts) => ({ ...counts, share: counts.share + 1 }));
-  setEventCounts((counts) => ({ ...counts, exit: counts.exit + 1 }));
+                            recordInteraction("slideshow");
                           }
                         }}
                         aria-label="Play K4 Slideshow"
