@@ -1030,7 +1030,7 @@ export const galleryData = [
   },
   {
     "id": "i-5s8Zkrb",
-    "title": "A",
+    "title": "A Watchful Eye",
     "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5s8Zkrb/0/LkZQBpcxGhkFhCXrc2Ssnc72ZgWKcFxsGVrPG9pKv/L/_HF23527-Edit-2-L.jpg",
