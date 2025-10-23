@@ -52,15 +52,16 @@ async function logGallerySession({
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         eventType: "gallery_session",
-        details: totalEvents,
-        start: new Date(sessionStart).toISOString(),
-        end: new Date(sessionEnd).toISOString(),
-        referer: referer || (typeof window !== "undefined" ? document.referrer : ""),
-        ua: ua || (typeof window !== "undefined" ? navigator.userAgent : ""),
-        device: getDevice(ua || (typeof window !== "undefined" ? navigator.userAgent : "")),
-        duration_min,
-        avg_time_per_event: avgPerEvent,
-        eventCounts, // Send per-type stats as JSON (optional: remove if not needed)
+        details: {
+          start: new Date(sessionStart).toISOString(),
+          end: new Date(sessionEnd).toISOString(),
+          duration_min,
+          avg_time_per_event: avgPerEvent,
+          device: getDevice(ua || (typeof window !== "undefined" ? navigator.userAgent : "")),
+          details: totalEvents,
+          eventCounts, // Send per-type stats as JSON
+        },
+        timestamp: sessionEnd,
       }),
     });
   } catch (err) {
