@@ -1134,18 +1134,6 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-WxQjxQS",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/Kq5DmQ7fm8rK5dqqWnZWGqX9k8dHp6Wbv2qFZ5vtf/S/_WHO7929-952-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/NCjgzmtgWGjsmVKRCWbZhKZFPB9qCqC26V3tMZGZN/L/_WHO7929-952-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/KqsGkLzvRT42kcMvk4QLQfGsWncjsbSfF5ZCv4bZT/XL/_WHO7929-952-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/KqsGkLzvRT42kcMvk4QLQfGsWncjsbSfF5ZCv4bZT/XL/_WHO7929-952-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/Kq5DmQ7fm8rK5dqqWnZWGqX9k8dHp6Wbv2qFZ5vtf/S/_WHO7929-952-S.jpg",
-      "rating": 4,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
       "id": "i-fCG2nm8",
       "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8/2/MxMN6qLDNzpfJptvF79mqCnq4Q25pqrw4bgZkRdBD/S/Western%20Cowboy%20Painterly%20Portrait%20_ANA0303-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8/2/MmtbQwgk69kxthxCqwj2Cdrw9n2D6xkBqk3bH7R46/M/Western%20Cowboy%20Painterly%20Portrait%20_ANA0303-Edit-M.jpg",
@@ -1182,24 +1170,24 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-rRdrQBg",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/NWrcRpzXrbMcgcmP48CHjZh7PHDj3RZPh3rTtNqkK/L/_WHO1570-Pano-Edit-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
-      "rating": 4,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
       "id": "i-QB4jLsH",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/MmDMMGP3jWrWpPpgW2F2qZWw5qWVp6x2cNn2ZVgtL/S/_O2H3871-871-873-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/Mjc6S5pVjrR2KPm9CZDVTFgFkdn6pdDL743WNgCqk/M/_O2H3871-871-873-M.jpg",
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/LCPsRF4HJP9dXGT9mhn9DNNRHwdnS86bW7ZkcW5Xt/L/_O2H3871-871-873-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/LCPsRF4HJP9dXGT9mhn9DNNRHwdnS86bW7ZkcW5Xt/L/_O2H3871-871-873-L.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/MmDMMGP3jWrWpPpgW2F2qZWw5qWVp6x2cNn2ZVgtL/S/_O2H3871-871-873-S.jpg",
+      "rating": 5,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-8rsG6P9",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/MNBCjg9pVL52psMGbhnWjJ8xm5F8ZRnzQ6fb48477/S/_HF21300-1063-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/Mr8J7jrcrjhP7J8mwmGTFD2js3G46Mz5BVLdWn3sp/M/_HF21300-1063-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/LkWHDNGVMBkstFWZ9kg4p93F4DmZphhP8XhFcCvGx/L/_HF21300-1063-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/KD9bRxSxMv9vVnqZrW6hjd38mJvdJx7Cb45xXLb4T/XL/_HF21300-1063-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/MNBCjg9pVL52psMGbhnWjJ8xm5F8ZRnzQ6fb48477/S/_HF21300-1063-2-S.jpg",
       "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -1266,6 +1254,18 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-WxQjxQS",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/Kq5DmQ7fm8rK5dqqWnZWGqX9k8dHp6Wbv2qFZ5vtf/S/_WHO7929-952-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/NCjgzmtgWGjsmVKRCWbZhKZFPB9qCqC26V3tMZGZN/L/_WHO7929-952-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/KqsGkLzvRT42kcMvk4QLQfGsWncjsbSfF5ZCv4bZT/XL/_WHO7929-952-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/KqsGkLzvRT42kcMvk4QLQfGsWncjsbSfF5ZCv4bZT/XL/_WHO7929-952-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/Kq5DmQ7fm8rK5dqqWnZWGqX9k8dHp6Wbv2qFZ5vtf/S/_WHO7929-952-S.jpg",
+      "rating": 4,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
       "id": "i-JKnW497",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/MQq4ptRJqb6fNQwgZW3fx595RmpcCfSkqbc548tGZ/S/cowboy%20photography%20_O2H0496-Edit-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/M53R3zvqZDRKvQk5NfxZHkqgcGTSFBW5DhWs9zbsJ/L/cowboy%20photography%20_O2H0496-Edit-Edit-L.jpg",
@@ -1321,18 +1321,6 @@ export const galleryDataMap   = {
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5HpSkgR/0/NV5hG2zP8SbsSN6V79RKZ5nqm6HmS2N92XFShpNW7/L/_HF23379-819-2-L.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5HpSkgR/0/LTfsp656Djnw6ZF6GD42SPpmDbTVkkJ97cvVQpkkL/S/_HF23379-819-2-S.jpg",
       "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-8rsG6P9",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/MNBCjg9pVL52psMGbhnWjJ8xm5F8ZRnzQ6fb48477/S/_HF21300-1063-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/Mr8J7jrcrjhP7J8mwmGTFD2js3G46Mz5BVLdWn3sp/M/_HF21300-1063-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/LkWHDNGVMBkstFWZ9kg4p93F4DmZphhP8XhFcCvGx/L/_HF21300-1063-2-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/KD9bRxSxMv9vVnqZrW6hjd38mJvdJx7Cb45xXLb4T/XL/_HF21300-1063-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/MNBCjg9pVL52psMGbhnWjJ8xm5F8ZRnzQ6fb48477/S/_HF21300-1063-2-S.jpg",
-      "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1762,7 +1750,7 @@ export const galleryDataMap   = {
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/KS6qh3Vd5WDpsfCmH2PRgTL4xbhbdmHC6Jc57TvN7/S/_WHO2874-Edit-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/LhBq3kcTp3RJnb457KZNZz9HZt6dzTvvC8ZTSNQg2/M/_WHO2874-Edit-Edit-M.jpg",
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/MSBXfwkLRcbgnDpCD9ZPCSLbDsR6nVDTS6Vq5psJR/L/_WHO2874-Edit-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/LWqsVhv5KhMQ56p2JHfDfBJxJS6pRVMGgLFkhQ2ZK/XL/_WHO2874-Edit-Edit-XL.jpg",
+      "srcXL": "https://potos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/LWqsVhv5KhMQ56p2JHfDfBJxJS6pRVMGgLFkhQ2ZK/XL/_WHO2874-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/KS6qh3Vd5WDpsfCmH2PRgTL4xbhbdmHC6Jc57TvN7/S/_WHO2874-Edit-Edit-S.jpg",
       "rating": 4,
       "galleries": [
@@ -4986,6 +4974,30 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-rRdrQBg",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/NWrcRpzXrbMcgcmP48CHjZh7PHDj3RZPh3rTtNqkK/L/_WHO1570-Pano-Edit-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
+      "rating": 4,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-ps4qwgF",
+      "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/KktSCs2Lppj29GTRZ4J35ZMh3C39pWLn366XN48K6/M/cowboy%20art%20photo_O1H0363-Edit-Edit-4-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/Lq6K7kSXkHKhthzQ5SwXdVxzZgv4ZLGtndb2MSBFQ/L/cowboy%20art%20photo_O1H0363-Edit-Edit-4-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/MPw2M9tjXtwkVpTb57qSqN2CPXtZ2kfR4phr8pHsM/XL/cowboy%20art%20photo_O1H0363-Edit-Edit-4-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
       "id": "i-c4xWGxj",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-c4xWGxj/3/K29V66DJZ3bkFSvRTGZRJQ5Tw58P8D998cdWXFxmc/S/_HF26270-Edit-Edit-2-2-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-c4xWGxj/3/KXJVRr9ZPqp3stGg3sCvvz8cdQ5x9XHFBC3kZvr8L/L/_HF26270-Edit-Edit-2-2-L.jpg",
@@ -5112,18 +5124,6 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6pCLC4L/1/MkzsVSszcZnqtFZsnHtBKDdjN75cNmvMmtxkJBfNz/L/Cowboy%20Art%20_HF29254-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6pCLC4L/1/LCJFFdBJsWxLvDn8nJpCGhRn4LWprPXKK8PjksLLm/XL/Cowboy%20Art%20_HF29254-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6pCLC4L/1/MH8F2mmz3cDCTnCMt77tRWktBXN7ccVVKKBQQdZFR/S/Cowboy%20Art%20_HF29254-Edit-Edit-S.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
-      "id": "i-ps4qwgF",
-      "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
-      "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/KktSCs2Lppj29GTRZ4J35ZMh3C39pWLn366XN48K6/M/cowboy%20art%20photo_O1H0363-Edit-Edit-4-M.jpg",
-      "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/Lq6K7kSXkHKhthzQ5SwXdVxzZgv4ZLGtndb2MSBFQ/L/cowboy%20art%20photo_O1H0363-Edit-Edit-4-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/MPw2M9tjXtwkVpTb57qSqN2CPXtZ2kfR4phr8pHsM/XL/cowboy%20art%20photo_O1H0363-Edit-Edit-4-XL.jpg",
-      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -31716,18 +31716,6 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-dQbG65F",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/LH4s2tDJRqgMnGBQv4przcqB4mRgWL98bmD33Cqxd/M/_WHK3073-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Portraits/Black-White"
-      ]
-    },
-    {
       "id": "i-mMZDVvM",
       "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/Kg4zJpsTTJNwVzrFc6V8gwDZMnCqpnkCc3gbtFcwx/S/w_whz5994-edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/LJmX5TpmKPL7FLvTZ3wQfLxmxwZcvDdrm4jq4DHDZ/M/w_whz5994-edit-M.jpg",
@@ -31740,24 +31728,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-5FHtCVg",
-      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
-      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NHxt8j9xX2vRkBGqHcrGxRF93fz2wh6fb9Zdb4SJg/M/_IMG4636-M.jpg",
-      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/KxXbnPPm4C3cnbFPw3LRBc3d5m3LpkbZ88LJ6pLQS/L/_IMG4636-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/L8F9n9mqkBv7ZT5sqfwFG4wC573bdpcqhZbH926K4/XL/_IMG4636-XL.jpg",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-gjVgKTL",
-      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
-      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/MRz3Xshs5D2n8gRKftncFDmCGg35vxnRcWdkC3c6P/M/_IMG8678-M.jpg",
-      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M6Ktc2c6BMnGSDRgMx3BG9ztN7LMDm63gvvXwWrfw/L/_IMG8678-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/NbgQNKHrC96TP9RwQbHGzN7QxbJkzKPgMpLQJ7g83/XL/_IMG8678-XL.jpg",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
+      "id": "i-GLhK6TT",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/KkdczX4ffsddTLkRdfwRjgC6DKKXQnVz5zQkG6NpM/L/_FWH7478-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -31776,12 +31752,84 @@ export const galleryDataMap   = {
       ]
     },
     {
+      "id": "i-5FHtCVg",
+      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NHxt8j9xX2vRkBGqHcrGxRF93fz2wh6fb9Zdb4SJg/M/_IMG4636-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/KxXbnPPm4C3cnbFPw3LRBc3d5m3LpkbZ88LJ6pLQS/L/_IMG4636-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/L8F9n9mqkBv7ZT5sqfwFG4wC573bdpcqhZbH926K4/XL/_IMG4636-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-dQbG65F",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/LH4s2tDJRqgMnGBQv4przcqB4mRgWL98bmD33Cqxd/M/_WHK3073-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-g9njn76",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MVfVgjPQr9nBDrjSXHkfpwR2CJvX7kzR2ZMpvCGTB/L/_O1H2329-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-gjVgKTL",
+      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/MRz3Xshs5D2n8gRKftncFDmCGg35vxnRcWdkC3c6P/M/_IMG8678-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M6Ktc2c6BMnGSDRgMx3BG9ztN7LMDm63gvvXwWrfw/L/_IMG8678-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/NbgQNKHrC96TP9RwQbHGzN7QxbJkzKPgMpLQJ7g83/XL/_IMG8678-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Portraits/Black-White"
+      ]
+    },
+    {
       "id": "i-zkVnCjx",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/Kfjw74nFW6dnt4xRzP8Vbmgt4pJWsW4JkjGT7zSJ3/S/_IMG3978-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LNwkcTtTtN9g96wnPdjhnChNdw2DLNQ6TRLnXZGT7/M/_IMG3978-M.jpg",
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/NGPKBTLPRvVSBKvd6NF43FSvWzV9sKHcjQ8rzJ8Xn/L/_IMG3978-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LFb58JT5Vg2DznNWCmsRrS9TsDS5wvTRsh24KkDH2/XL/_IMG3978-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/Kfjw74nFW6dnt4xRzP8Vbmgt4pJWsW4JkjGT7zSJ3/S/_IMG3978-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-t4bq7qj",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/KjW9fwGph3vXxn36dKr4t43Z32wkGZQBpp644sHH8/L/_WHZ5449-Edit-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Fine-Art-Photography/Portraits/Black-White"
+      ]
+    },
+    {
+      "id": "i-CjRTfF3",
+      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KQncWpSfx2tbrdK3pnX4V7G8TbWLFPGLNXgkVpnBk/L/_WHZ1247-L.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -31818,18 +31866,6 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/KbKjjz6m8ffqsZf8zdkdKKKSNHNnBxc7JkrgTCR7H/S/_WHZ1101-Edit-2-S.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-GLhK6TT",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/KkdczX4ffsddTLkRdfwRjgC6DKKXQnVz5zQkG6NpM/L/_FWH7478-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -31902,18 +31938,6 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/M9J2qbRVcjqv6JTkbHF46ZgGxJSXXHWd569kdGPQG/L/_W3H3194-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/LkNSWQ49hvJBDm6xCz3QsJ7VQvM8LjpZgbPsRH8Gw/S/_W3H3194-S.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-CjRTfF3",
-      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
-      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KQncWpSfx2tbrdK3pnX4V7G8TbWLFPGLNXgkVpnBk/L/_WHZ1247-L.jpg",
-      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -32094,18 +32118,6 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/M9kh7WG6zPncHFLshmPN9ptw8PJ8J88KmbWSKMdsb/L/_IMG8585-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7cL7Qw7sKKjpthckcb8sp6pPsd3ngDvrVxC4p8hD/XL/_IMG8585-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/NMJLmZMgzVzGk6PjJCnd7zjRd72LsQx2QT4r795jb/S/_IMG8585-S.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-t4bq7qj",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/KjW9fwGph3vXxn36dKr4t43Z32wkGZQBpp644sHH8/L/_WHZ5449-Edit-Edit-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -32442,18 +32454,6 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KmFVD5DbLs6q4MM5t8wbbghSFqmdDJtgmM4vTdhjq/L/_FWH7407-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KK2ZsxP9hsrXVww3WZ7WPPMBFDJHh8p2wSLZGNSRh/XL/_FWH7407-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/MH4FSNWdn2CkNCQMVnFbGgkBGd38z656tbXT85LVL/S/_FWH7407-S.jpg",
-      "rating": 0,
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Portraits/Black-White"
-      ]
-    },
-    {
-      "id": "i-g9njn76",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MVfVgjPQr9nBDrjSXHkfpwR2CJvX7kzR2ZMpvCGTB/L/_O1H2329-L.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -39210,12 +39210,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-hBdhx6Q",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/M2QC7vsBKgrDmBrfNJCpB4Mtt5jz6fdWk6J99Nm53/S/_IMG3082-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/KcL6vZFpjFk3FwvDCcKVnSMJ74QtXGZkvGGrVntNL/M/_IMG3082-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/MncPpgkfQqGbWFFLDtzxhGspJvLg6qQgRN6m9TQgR/L/_IMG3082-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/K4TkqZfLqbfJZjBSV53WHSK9Bkz4HT5VKJN99VZSg/XL/_IMG3082-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/M2QC7vsBKgrDmBrfNJCpB4Mtt5jz6fdWk6J99Nm53/S/_IMG3082-S.jpg",
+      "id": "i-9x2P85T",
+      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/NDgLzR7XqX3W4fDx95wkZ79q3PRP5VfdfR8vxs3Pt/S/_IMG5576-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/KXRkjdgmtBTZK87bgxVSJxVWtfTWq84QhRgZ5xtLP/L/_IMG5576-L.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/NDgLzR7XqX3W4fDx95wkZ79q3PRP5VfdfR8vxs3Pt/S/_IMG5576-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Fine-Art-Photography/Miscellaneous/Pets"
@@ -39426,12 +39426,12 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-9x2P85T",
-      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/NDgLzR7XqX3W4fDx95wkZ79q3PRP5VfdfR8vxs3Pt/S/_IMG5576-S.jpg",
-      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/KXRkjdgmtBTZK87bgxVSJxVWtfTWq84QhRgZ5xtLP/L/_IMG5576-L.jpg",
-      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
-      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
-      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/NDgLzR7XqX3W4fDx95wkZ79q3PRP5VfdfR8vxs3Pt/S/_IMG5576-S.jpg",
+      "id": "i-hBdhx6Q",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/M2QC7vsBKgrDmBrfNJCpB4Mtt5jz6fdWk6J99Nm53/S/_IMG3082-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/KcL6vZFpjFk3FwvDCcKVnSMJ74QtXGZkvGGrVntNL/M/_IMG3082-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/MncPpgkfQqGbWFFLDtzxhGspJvLg6qQgRN6m9TQgR/L/_IMG3082-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/K4TkqZfLqbfJZjBSV53WHSK9Bkz4HT5VKJN99VZSg/XL/_IMG3082-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/M2QC7vsBKgrDmBrfNJCpB4Mtt5jz6fdWk6J99Nm53/S/_IMG3082-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Fine-Art-Photography/Miscellaneous/Pets"
@@ -40904,18 +40904,6 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-WxQjxQS",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/Kq5DmQ7fm8rK5dqqWnZWGqX9k8dHp6Wbv2qFZ5vtf/S/_WHO7929-952-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/NCjgzmtgWGjsmVKRCWbZhKZFPB9qCqC26V3tMZGZN/L/_WHO7929-952-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/KqsGkLzvRT42kcMvk4QLQfGsWncjsbSfF5ZCv4bZT/XL/_WHO7929-952-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/KqsGkLzvRT42kcMvk4QLQfGsWncjsbSfF5ZCv4bZT/XL/_WHO7929-952-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/Kq5DmQ7fm8rK5dqqWnZWGqX9k8dHp6Wbv2qFZ5vtf/S/_WHO7929-952-S.jpg",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
     "id": "i-fCG2nm8",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8/2/MxMN6qLDNzpfJptvF79mqCnq4Q25pqrw4bgZkRdBD/S/Western%20Cowboy%20Painterly%20Portrait%20_ANA0303-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fCG2nm8/2/MmtbQwgk69kxthxCqwj2Cdrw9n2D6xkBqk3bH7R46/M/Western%20Cowboy%20Painterly%20Portrait%20_ANA0303-Edit-M.jpg",
@@ -40952,24 +40940,24 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-rRdrQBg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/NWrcRpzXrbMcgcmP48CHjZh7PHDj3RZPh3rTtNqkK/L/_WHO1570-Pano-Edit-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
     "id": "i-QB4jLsH",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/MmDMMGP3jWrWpPpgW2F2qZWw5qWVp6x2cNn2ZVgtL/S/_O2H3871-871-873-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/Mjc6S5pVjrR2KPm9CZDVTFgFkdn6pdDL743WNgCqk/M/_O2H3871-871-873-M.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/LCPsRF4HJP9dXGT9mhn9DNNRHwdnS86bW7ZkcW5Xt/L/_O2H3871-871-873-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/LCPsRF4HJP9dXGT9mhn9DNNRHwdnS86bW7ZkcW5Xt/L/_O2H3871-871-873-L.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QB4jLsH/0/MmDMMGP3jWrWpPpgW2F2qZWw5qWVp6x2cNn2ZVgtL/S/_O2H3871-871-873-S.jpg",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-8rsG6P9",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/MNBCjg9pVL52psMGbhnWjJ8xm5F8ZRnzQ6fb48477/S/_HF21300-1063-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/Mr8J7jrcrjhP7J8mwmGTFD2js3G46Mz5BVLdWn3sp/M/_HF21300-1063-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/LkWHDNGVMBkstFWZ9kg4p93F4DmZphhP8XhFcCvGx/L/_HF21300-1063-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/KD9bRxSxMv9vVnqZrW6hjd38mJvdJx7Cb45xXLb4T/XL/_HF21300-1063-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/MNBCjg9pVL52psMGbhnWjJ8xm5F8ZRnzQ6fb48477/S/_HF21300-1063-2-S.jpg",
     "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -41036,6 +41024,18 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-WxQjxQS",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/Kq5DmQ7fm8rK5dqqWnZWGqX9k8dHp6Wbv2qFZ5vtf/S/_WHO7929-952-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/NCjgzmtgWGjsmVKRCWbZhKZFPB9qCqC26V3tMZGZN/L/_WHO7929-952-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/KqsGkLzvRT42kcMvk4QLQfGsWncjsbSfF5ZCv4bZT/XL/_WHO7929-952-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/KqsGkLzvRT42kcMvk4QLQfGsWncjsbSfF5ZCv4bZT/XL/_WHO7929-952-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WxQjxQS/0/Kq5DmQ7fm8rK5dqqWnZWGqX9k8dHp6Wbv2qFZ5vtf/S/_WHO7929-952-S.jpg",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
     "id": "i-JKnW497",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/MQq4ptRJqb6fNQwgZW3fx595RmpcCfSkqbc548tGZ/S/cowboy%20photography%20_O2H0496-Edit-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/M53R3zvqZDRKvQk5NfxZHkqgcGTSFBW5DhWs9zbsJ/L/cowboy%20photography%20_O2H0496-Edit-Edit-L.jpg",
@@ -41091,18 +41091,6 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5HpSkgR/0/NV5hG2zP8SbsSN6V79RKZ5nqm6HmS2N92XFShpNW7/L/_HF23379-819-2-L.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5HpSkgR/0/LTfsp656Djnw6ZF6GD42SPpmDbTVkkJ97cvVQpkkL/S/_HF23379-819-2-S.jpg",
     "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-8rsG6P9",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/MNBCjg9pVL52psMGbhnWjJ8xm5F8ZRnzQ6fb48477/S/_HF21300-1063-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/Mr8J7jrcrjhP7J8mwmGTFD2js3G46Mz5BVLdWn3sp/M/_HF21300-1063-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/LkWHDNGVMBkstFWZ9kg4p93F4DmZphhP8XhFcCvGx/L/_HF21300-1063-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/KD9bRxSxMv9vVnqZrW6hjd38mJvdJx7Cb45xXLb4T/XL/_HF21300-1063-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8rsG6P9/2/MNBCjg9pVL52psMGbhnWjJ8xm5F8ZRnzQ6fb48477/S/_HF21300-1063-2-S.jpg",
-    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -41532,7 +41520,7 @@ export const allImages        = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/KS6qh3Vd5WDpsfCmH2PRgTL4xbhbdmHC6Jc57TvN7/S/_WHO2874-Edit-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/LhBq3kcTp3RJnb457KZNZz9HZt6dzTvvC8ZTSNQg2/M/_WHO2874-Edit-Edit-M.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/MSBXfwkLRcbgnDpCD9ZPCSLbDsR6nVDTS6Vq5psJR/L/_WHO2874-Edit-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/LWqsVhv5KhMQ56p2JHfDfBJxJS6pRVMGgLFkhQ2ZK/XL/_WHO2874-Edit-Edit-XL.jpg",
+    "srcXL": "https://potos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/LWqsVhv5KhMQ56p2JHfDfBJxJS6pRVMGgLFkhQ2ZK/XL/_WHO2874-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/KS6qh3Vd5WDpsfCmH2PRgTL4xbhbdmHC6Jc57TvN7/S/_WHO2874-Edit-Edit-S.jpg",
     "rating": 4,
     "galleries": [
@@ -44756,6 +44744,30 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-rRdrQBg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/NWrcRpzXrbMcgcmP48CHjZh7PHDj3RZPh3rTtNqkK/L/_WHO1570-Pano-Edit-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-ps4qwgF",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/KktSCs2Lppj29GTRZ4J35ZMh3C39pWLn366XN48K6/M/cowboy%20art%20photo_O1H0363-Edit-Edit-4-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/Lq6K7kSXkHKhthzQ5SwXdVxzZgv4ZLGtndb2MSBFQ/L/cowboy%20art%20photo_O1H0363-Edit-Edit-4-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/MPw2M9tjXtwkVpTb57qSqN2CPXtZ2kfR4phr8pHsM/XL/cowboy%20art%20photo_O1H0363-Edit-Edit-4-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
     "id": "i-c4xWGxj",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-c4xWGxj/3/K29V66DJZ3bkFSvRTGZRJQ5Tw58P8D998cdWXFxmc/S/_HF26270-Edit-Edit-2-2-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-c4xWGxj/3/KXJVRr9ZPqp3stGg3sCvvz8cdQ5x9XHFBC3kZvr8L/L/_HF26270-Edit-Edit-2-2-L.jpg",
@@ -44882,18 +44894,6 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6pCLC4L/1/MkzsVSszcZnqtFZsnHtBKDdjN75cNmvMmtxkJBfNz/L/Cowboy%20Art%20_HF29254-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6pCLC4L/1/LCJFFdBJsWxLvDn8nJpCGhRn4LWprPXKK8PjksLLm/XL/Cowboy%20Art%20_HF29254-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6pCLC4L/1/MH8F2mmz3cDCTnCMt77tRWktBXN7ccVVKKBQQdZFR/S/Cowboy%20Art%20_HF29254-Edit-Edit-S.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
-    "id": "i-ps4qwgF",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/KktSCs2Lppj29GTRZ4J35ZMh3C39pWLn366XN48K6/M/cowboy%20art%20photo_O1H0363-Edit-Edit-4-M.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/Lq6K7kSXkHKhthzQ5SwXdVxzZgv4ZLGtndb2MSBFQ/L/cowboy%20art%20photo_O1H0363-Edit-Edit-4-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/MPw2M9tjXtwkVpTb57qSqN2CPXtZ2kfR4phr8pHsM/XL/cowboy%20art%20photo_O1H0363-Edit-Edit-4-XL.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -71420,18 +71420,6 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-dQbG65F",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/LH4s2tDJRqgMnGBQv4przcqB4mRgWL98bmD33Cqxd/M/_WHK3073-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Portraits/Black-White"
-    ]
-  },
-  {
     "id": "i-mMZDVvM",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/Kg4zJpsTTJNwVzrFc6V8gwDZMnCqpnkCc3gbtFcwx/S/w_whz5994-edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-mMZDVvM/0/LJmX5TpmKPL7FLvTZ3wQfLxmxwZcvDdrm4jq4DHDZ/M/w_whz5994-edit-M.jpg",
@@ -71444,24 +71432,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-5FHtCVg",
-    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NHxt8j9xX2vRkBGqHcrGxRF93fz2wh6fb9Zdb4SJg/M/_IMG4636-M.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/KxXbnPPm4C3cnbFPw3LRBc3d5m3LpkbZ88LJ6pLQS/L/_IMG4636-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/L8F9n9mqkBv7ZT5sqfwFG4wC573bdpcqhZbH926K4/XL/_IMG4636-XL.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-gjVgKTL",
-    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/MRz3Xshs5D2n8gRKftncFDmCGg35vxnRcWdkC3c6P/M/_IMG8678-M.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M6Ktc2c6BMnGSDRgMx3BG9ztN7LMDm63gvvXwWrfw/L/_IMG8678-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/NbgQNKHrC96TP9RwQbHGzN7QxbJkzKPgMpLQJ7g83/XL/_IMG8678-XL.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
+    "id": "i-GLhK6TT",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/KkdczX4ffsddTLkRdfwRjgC6DKKXQnVz5zQkG6NpM/L/_FWH7478-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -71480,12 +71456,84 @@ export const allImages        = [
     ]
   },
   {
+    "id": "i-5FHtCVg",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NHxt8j9xX2vRkBGqHcrGxRF93fz2wh6fb9Zdb4SJg/M/_IMG4636-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/KxXbnPPm4C3cnbFPw3LRBc3d5m3LpkbZ88LJ6pLQS/L/_IMG4636-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/L8F9n9mqkBv7ZT5sqfwFG4wC573bdpcqhZbH926K4/XL/_IMG4636-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-5FHtCVg/4/NN25sNRsrvBTr9fqXPPsLRGQKTnXv2wMPjTj9HxbW/S/_IMG4636-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-dQbG65F",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/LH4s2tDJRqgMnGBQv4przcqB4mRgWL98bmD33Cqxd/M/_WHK3073-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/Nbbqd9R2CwDT35sCLLGGJkwcsTZTP4SLZ2DTsbXkW/XL/_WHK3073-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Prom-2016/Prom-2018/i-dQbG65F/2/NPwM9qCWgpDZFJDHpqnZkmWkhFscrcmdNkGcmw8gD/S/_WHK3073-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-g9njn76",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MVfVgjPQr9nBDrjSXHkfpwR2CJvX7kzR2ZMpvCGTB/L/_O1H2329-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-gjVgKTL",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/MRz3Xshs5D2n8gRKftncFDmCGg35vxnRcWdkC3c6P/M/_IMG8678-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M6Ktc2c6BMnGSDRgMx3BG9ztN7LMDm63gvvXwWrfw/L/_IMG8678-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/NbgQNKHrC96TP9RwQbHGzN7QxbJkzKPgMpLQJ7g83/XL/_IMG8678-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-gjVgKTL/3/M5PTXsfgs5q27BppwRrLMt3n5HTRTTdmSMTwQCb5s/S/_IMG8678-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Portraits/Black-White"
+    ]
+  },
+  {
     "id": "i-zkVnCjx",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/Kfjw74nFW6dnt4xRzP8Vbmgt4pJWsW4JkjGT7zSJ3/S/_IMG3978-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LNwkcTtTtN9g96wnPdjhnChNdw2DLNQ6TRLnXZGT7/M/_IMG3978-M.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/NGPKBTLPRvVSBKvd6NF43FSvWzV9sKHcjQ8rzJ8Xn/L/_IMG3978-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/LFb58JT5Vg2DznNWCmsRrS9TsDS5wvTRsh24KkDH2/XL/_IMG3978-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2012/i-zkVnCjx/6/Kfjw74nFW6dnt4xRzP8Vbmgt4pJWsW4JkjGT7zSJ3/S/_IMG3978-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-t4bq7qj",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/KjW9fwGph3vXxn36dKr4t43Z32wkGZQBpp644sHH8/L/_WHZ5449-Edit-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Fine-Art-Photography/Portraits/Black-White"
+    ]
+  },
+  {
+    "id": "i-CjRTfF3",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KQncWpSfx2tbrdK3pnX4V7G8TbWLFPGLNXgkVpnBk/L/_WHZ1247-L.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -71522,18 +71570,6 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/L389CD7XhgnWWNSsMFZbcSkCCPRNxjkVrFvgPgggV/XL/_WHZ1101-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-z8JXFZ2/1/KbKjjz6m8ffqsZf8zdkdKKKSNHNnBxc7JkrgTCR7H/S/_WHZ1101-Edit-2-S.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-GLhK6TT",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/KkdczX4ffsddTLkRdfwRjgC6DKKXQnVz5zQkG6NpM/L/_FWH7478-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/K9mrwL86rXn2ZSZ4GXQQ86qFC4Bqz8Dv25JXBJ2zQ/XL/_FWH7478-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-GLhK6TT/1/NKRMCHZJBzhG2ktM4srLZ8DQddrVsD3fXpLxPKBdL/S/_FWH7478-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -71606,18 +71642,6 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/M9J2qbRVcjqv6JTkbHF46ZgGxJSXXHWd569kdGPQG/L/_W3H3194-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/Lx2BBK5MG5hKbG9pRbkFm2vskdgnjjzcffPHVhkV7/XL/_W3H3194-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-9NT8GV4/5/LkNSWQ49hvJBDm6xCz3QsJ7VQvM8LjpZgbPsRH8Gw/S/_W3H3194-S.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-CjRTfF3",
-    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KQncWpSfx2tbrdK3pnX4V7G8TbWLFPGLNXgkVpnBk/L/_WHZ1247-L.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/KJzmhfMGtRMfqTpsZ6g33BP2RhqQmQ8HcvWB23jHZ/XL/_WHZ1247-XL.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Black-White/i-CjRTfF3/1/LX49t9T6RXtqVBjrqqwxjg4fRVCGsVpGfqTnvd9S9/S/_WHZ1247-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -71798,18 +71822,6 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/M9kh7WG6zPncHFLshmPN9ptw8PJ8J88KmbWSKMdsb/L/_IMG8585-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/L7cL7Qw7sKKjpthckcb8sp6pPsd3ngDvrVxC4p8hD/XL/_IMG8585-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2011/i-zF4sTBK/4/NMJLmZMgzVzGk6PjJCnd7zjRd72LsQx2QT4r795jb/S/_IMG8585-S.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-t4bq7qj",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/KjW9fwGph3vXxn36dKr4t43Z32wkGZQBpp644sHH8/L/_WHZ5449-Edit-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MPzCcMWpsqNQKWrZh5DrRpQhxrVrh9zgtL7s9mMCK/XL/_WHZ5449-Edit-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Kid-Pics/Samantha/Spring-2020/i-t4bq7qj/1/MTmPP4N86g4JHbp5TBNKPZ2kpbXLVxJXzr5kpkbSk/S/_WHZ5449-Edit-Edit-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -72146,18 +72158,6 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KmFVD5DbLs6q4MM5t8wbbghSFqmdDJtgmM4vTdhjq/L/_FWH7407-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/KK2ZsxP9hsrXVww3WZ7WPPMBFDJHh8p2wSLZGNSRh/XL/_FWH7407-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-DFqr488/1/MH4FSNWdn2CkNCQMVnFbGgkBGd38z656tbXT85LVL/S/_FWH7407-S.jpg",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Portraits/Black-White"
-    ]
-  },
-  {
-    "id": "i-g9njn76",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MVfVgjPQr9nBDrjSXHkfpwR2CJvX7kzR2ZMpvCGTB/L/_O1H2329-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/MMjrbPWSM5h7FkQnNk6qpCF7rjXxQsDHFTkGrFTkH/XL/_O1H2329-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Deb-and-Cody-Wedding/i-g9njn76/0/LDVznNkC8kmBvCZwzHpDpDGBbKbbt98wfGMNd2bbg/S/_O1H2329-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Fine-Art-Photography/Portraits/Black-White"
@@ -78896,12 +78896,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-hBdhx6Q",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/M2QC7vsBKgrDmBrfNJCpB4Mtt5jz6fdWk6J99Nm53/S/_IMG3082-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/KcL6vZFpjFk3FwvDCcKVnSMJ74QtXGZkvGGrVntNL/M/_IMG3082-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/MncPpgkfQqGbWFFLDtzxhGspJvLg6qQgRN6m9TQgR/L/_IMG3082-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/K4TkqZfLqbfJZjBSV53WHSK9Bkz4HT5VKJN99VZSg/XL/_IMG3082-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/M2QC7vsBKgrDmBrfNJCpB4Mtt5jz6fdWk6J99Nm53/S/_IMG3082-S.jpg",
+    "id": "i-9x2P85T",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/NDgLzR7XqX3W4fDx95wkZ79q3PRP5VfdfR8vxs3Pt/S/_IMG5576-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/KXRkjdgmtBTZK87bgxVSJxVWtfTWq84QhRgZ5xtLP/L/_IMG5576-L.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/NDgLzR7XqX3W4fDx95wkZ79q3PRP5VfdfR8vxs3Pt/S/_IMG5576-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Fine-Art-Photography/Miscellaneous/Pets"
@@ -79112,12 +79112,12 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-9x2P85T",
-    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/NDgLzR7XqX3W4fDx95wkZ79q3PRP5VfdfR8vxs3Pt/S/_IMG5576-S.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/KXRkjdgmtBTZK87bgxVSJxVWtfTWq84QhRgZ5xtLP/L/_IMG5576-L.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/LprpH9LBWCHND3gLNKLfgrNG5LL47GVCcr5ks5hKX/XL/_IMG5576-XL.jpg",
-    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Pets/i-9x2P85T/3/NDgLzR7XqX3W4fDx95wkZ79q3PRP5VfdfR8vxs3Pt/S/_IMG5576-S.jpg",
+    "id": "i-hBdhx6Q",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/M2QC7vsBKgrDmBrfNJCpB4Mtt5jz6fdWk6J99Nm53/S/_IMG3082-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/KcL6vZFpjFk3FwvDCcKVnSMJ74QtXGZkvGGrVntNL/M/_IMG3082-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/MncPpgkfQqGbWFFLDtzxhGspJvLg6qQgRN6m9TQgR/L/_IMG3082-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/K4TkqZfLqbfJZjBSV53WHSK9Bkz4HT5VKJN99VZSg/XL/_IMG3082-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-hBdhx6Q/3/M2QC7vsBKgrDmBrfNJCpB4Mtt5jz6fdWk6J99Nm53/S/_IMG3082-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Fine-Art-Photography/Miscellaneous/Pets"

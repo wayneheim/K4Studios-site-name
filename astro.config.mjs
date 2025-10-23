@@ -2,7 +2,9 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
 import path from 'path';
+import { sitemap as sitemapData } from './src/data/sitemap.ts';
 
 export default defineConfig({
  site: 'https://www.k4studios.com',   // 👈 Add this
@@ -13,6 +15,13 @@ export default defineConfig({
   integrations: [
     react(),
     tailwind(),  // <-- Tailwind goes here!
+    sitemap({
+      customPages: sitemapData.map(entry => entry.loc),
+      lastmod: (url) => {
+        const entry = sitemapData.find(e => e.loc === url);
+        return entry?.lastmod || new Date().toISOString();
+      },
+    }),
   ],
   vite: {
     resolve: {

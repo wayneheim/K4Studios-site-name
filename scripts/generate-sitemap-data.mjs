@@ -36,7 +36,7 @@ async function main() {
     const urls = Array.isArray(urlset.url) ? urlset.url : [urlset.url];
     entries = urls.map(u => ({
       loc: u.loc,
-      lastmod: u.lastmod,
+      lastmod: u.lastmod || new Date().toISOString(),
       changefreq: u.changefreq,
       priority: u.priority !== undefined ? Number(u.priority) : undefined,
     })).filter(e => typeof e.loc === 'string' && e.loc.length > 0);
@@ -52,7 +52,7 @@ async function main() {
       const us = p.urlset && p.urlset.url ? (Array.isArray(p.urlset.url) ? p.urlset.url : [p.urlset.url]) : [];
       return us.map(u => ({
         loc: u.loc,
-        lastmod: u.lastmod,
+        lastmod: u.lastmod || new Date().toISOString(),
         changefreq: u.changefreq,
         priority: u.priority !== undefined ? Number(u.priority) : undefined,
       })).filter(e => typeof e.loc === 'string' && e.loc.length > 0);

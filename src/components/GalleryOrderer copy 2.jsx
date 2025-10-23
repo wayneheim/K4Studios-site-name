@@ -172,47 +172,14 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   const [backupOptions, setBackupOptions] = useState({ source: true, target: true });
   const [skipBackupPrompt, setSkipBackupPrompt] = useState(false);
 
-  // --- Read ?dataset=... from URL (consistent with DataSwapper)
-  const [urlDataset, setUrlDataset] = useState("");
-  useEffect(() => {
-    try {
-      const search =
-        window.location.search ||
-        (window.location.hash.includes("?")
-          ? window.location.hash.split("?")[1]
-          : "");
-      const params = new URLSearchParams(search);
-      const raw = params.get("dataset");
-      if (!raw) return;
-      const prefixed = raw.startsWith("/src/") ? raw : `/src/${raw}`;
-      setUrlDataset(normalizePath(prefixed));
-    } catch {}
-  }, []);
-
-  // Choose dataset: prefer prop → URL → sessionStorage → first option
+  // Choose dataset: prefer prop → URL → first option
   useEffect(() => {
     if (!options.length) return;
-
-    const fromProp = datasetPath
-      ? (datasetPath.startsWith("/") ? datasetPath : `/${datasetPath}`)
-      : "";
-    const fromUrl = urlDataset || "";
-    const fromSession = sessionStorage.getItem("lastDatasetPath") || "";
-
-    const candidate = [fromProp, fromUrl, fromSession, options[0]?.path]
-      .find((p) => p && options.some((o) => o.path === normalizePath(p)));
-
-    if (candidate && candidate !== selectedPath) {
-      setSelectedPath(normalizePath(candidate));
-    }
-  }, [options, datasetPath, urlDataset]);
-
-  // Persist selected dataset to sessionStorage for cross-app continuity
-  useEffect(() => {
-    if (selectedPath) {
-      sessionStorage.setItem("lastDatasetPath", selectedPath);
-    }
-  }, [selectedPath]);
+    const fromProp = datasetPath ? (datasetPath.startsWith("/") ? datasetPath : `/${datasetPath}`) : "";
+    const candidate = normalizePath(fromProp || getDatasetFromUrl() || options[0]?.path || "");
+    setSelectedPath(options.some(o => o.path === candidate) ? candidate : (options[0]?.path || ""));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [options.length, datasetPath]);
 
   // load dataset
   useEffect(() => {
@@ -263,9 +230,8 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   function ensureBackup() {
     if (!backupData) return;
     const ts = new Date().toISOString().replace(/[:.]/g, "-");
-    const galleryName = selectedPath ? prettyLabelFromPath(selectedPath).replace(/[^a-zA-Z0-9-_]/g, "-") : "unknown";
-    downloadText(JSON.stringify(backupData, null, 2), `ORDER-BACKUP-${galleryName}-${ts}.json`);
-    downloadText(buildMjsJson(backupData, "galleryData"), `ORDER-BACKUP-${galleryName}-${ts}.mjs`);
+    downloadText(JSON.stringify(backupData, null, 2), `ORDER-BACKUP-${ts}.json`);
+    downloadText(buildMjsJson(backupData, "galleryData"), `ORDER-BACKUP-${ts}.mjs`);
     setBackupMade(true);
     note("Backup created, ordering unlocked");
   }
@@ -372,45 +338,15 @@ export default function GalleryOrderer({ datasetPath = "" }) {
 
   // Build final array (ghost first, then reordered items), resequence sortOrder
   function buildFinalArray() {
-    if (!backupData) return [];
-
-    const ghosts = backupData.filter(isGhost);
-
-    // Deep clone and normalize everything so no object references carry over
-    const cloned = items.map((it) => ({
-      id: it.id,
-      title: it.title ?? "",
-      alt: it.alt ?? "",
-      description: it.description ?? "",
-      story: it.story ?? "",
-      notes: it.notes ?? it.collectorNotes ?? "",
-      keywords: Array.isArray(it.keywords)
-        ? [...it.keywords]
-        : Array.isArray(it.tags)
-        ? [...it.tags]
-        : [],
-      src: it.src ?? it.url ?? "",
-      srcXL: it.srcXL ?? "",
-      srcL: it.srcL ?? "",
-      srcM: it.srcM ?? "",
-      srcS: it.srcS ?? "",
-      srcOriginal: it.srcOriginal ?? "",
-      visibility: it.visibility ?? "",
-      rating: typeof it.rating === "number" ? it.rating : undefined,
-      galleries: Array.isArray(it.galleries) ? [...it.galleries] : undefined,
-      buyLink: it.buyLink ?? "",
-    }));
-
-    // Separate visible/hidden and resequence sortOrder
-    const shown = cloned.filter((x) => !isHidden(x));
-    const hidden = cloned.filter((x) => isHidden(x));
-
-    const ordered = shown.concat(hidden).map((it, i) => ({
-      ...it,
-      sortOrder: i,
-    }));
-
-    return ghosts.concat(ordered);
+  if (!backupData) return [];
+  const ghosts = backupData.filter(isGhost);
+  // Move hidden items to the end
+  const vis = items.slice();
+  const shown = vis.filter(it => !isHidden(it));
+  const hidden = vis.filter(it => isHidden(it));
+  const ordered = shown.concat(hidden);
+  ordered.forEach((it, i) => { it.sortOrder = i; });
+  return ghosts.concat(ordered);
   }
 
   // Save to server (Netlify function) – send FULL ARRAY so visibility persists
@@ -419,7 +355,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     if (!selectedPath) return;
 
     const datasetPathClean = selectedPath.replace(/^\//, ""); // strip leading slash
-    const fullArray = JSON.parse(JSON.stringify(buildFinalArray()));
+    const fullArray = buildFinalArray();
 
     try {
       const res = await fetch("/.netlify/functions/updateGalleryOrder", {
@@ -605,67 +541,8 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   const total = items.length;
 
   return (
-    <div
-      className="p-6 max-w-7xl mx-auto text-sm"
-      style={{
-        fontFamily: "'Glegoo', serif",
-        background: "#f5f3ef", // 🟤 soft painterly beige background to match DataSwapper
-        minHeight: "100vh",
-        color: "#2a1f17",
-      }}
-    >
-      {/* Header Bar */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          background: "#e4dae9",
-          padding: "10px 20px",
-          borderRadius: 8,
-          marginBottom: 18,
-          boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-        }}
-      >
-        <div>
-          <h1 style={{ fontSize: "1.6em", fontWeight: "700", margin: 0 }}>
-            Gallery Orderer
-          </h1>
-          {selectedPath && (
-            <div style={{
-              fontSize: "0.9em",
-              color: "#5a4a3a",
-              marginTop: 4,
-              fontWeight: 500,
-              opacity: 0.8
-            }}>
-              {prettyLabelFromPath(selectedPath)}
-            </div>
-          )}
-        </div>
-
-        <button
-          onClick={() => {
-            const q = selectedPath
-              ? `?dataset=${encodeURIComponent(selectedPath.replace(/^\/src\//, ""))}`
-              : "";
-            window.open(`/admin/GalleryDataSwapper${q}`, "_self"); // open in same tab
-          }}
-          style={{
-            background: "#d4c4b5",
-            border: "1px solid #b6a998",
-            borderRadius: 6,
-            padding: "6px 12px",
-            fontWeight: "600",
-            cursor: "pointer",
-            transition: "background 0.2s ease",
-          }}
-          onMouseOver={(e) => (e.currentTarget.style.background = "#c3b29e")}
-          onMouseOut={(e) => (e.currentTarget.style.background = "#d4c4b5")}
-        >
-          ⇄ Switch to Data View
-        </button>
-      </div>
+    <div className="p-6 max-w-7xl mx-auto text-sm">
+      <h1 className="text-2xl font-semibold mb-3">Gallery Orderer</h1>
 
       {/* dataset + backup gate */}
       <div className="flex flex-wrap items-center gap-2 mb-3">

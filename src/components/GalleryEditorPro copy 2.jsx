@@ -184,10 +184,7 @@ export default function GalleryEditorPro() {
       .map((path) => ({ path, label: prettyLabelFromPath(path) }));
   }, [modules]);
 
-  const [selectedPath, setSelectedPath] = useState(() => {
-    // Initialize with sessionStorage if available (client-side only)
-    return typeof window !== "undefined" ? sessionStorage.getItem("lastDatasetPath") || "" : "";
-  });
+  const [selectedPath, setSelectedPath] = useState(options[0]?.path || "");
   const [data, setData] = useState([]);
   const [backupData, setBackupData] = useState(null);
   const [idx, setIdx] = useState(0);
@@ -221,12 +218,6 @@ export default function GalleryEditorPro() {
     setResumeApplied(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [options.length, resumeApplied]);
-
-  // Initialize with first option if no sessionStorage value
-  useEffect(() => {
-    if (!options.length || selectedPath) return;
-    setSelectedPath(options[0]?.path || "");
-  }, [options, selectedPath]);
 
   // Load dataset when changed
   useEffect(() => {
@@ -270,13 +261,6 @@ export default function GalleryEditorPro() {
     try { localStorage.setItem(keyLS("draft"), JSON.stringify(data)); } catch {}
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
-
-  // Persist selected dataset to sessionStorage for cross-app continuity
-  useEffect(() => {
-    if (selectedPath && typeof window !== "undefined") {
-      sessionStorage.setItem("lastDatasetPath", selectedPath);
-    }
-  }, [selectedPath]);
 
   const filtered = useMemo(() => {
     const base = data;
@@ -553,7 +537,7 @@ export default function GalleryEditorPro() {
     window.location.reload();
   }
 
-  const datasetParam = encodeURIComponent(selectedPath || "");
+  const datasetParam = encodeURIComponent((selectedPath || "").replace(/^\//, ""));
   const total = filtered.length;
   const pos = total ? idx + 1 : 0;
 
@@ -614,18 +598,6 @@ export default function GalleryEditorPro() {
             onMouseLeave={(e) => (e.currentTarget.style.background = '#e4dae9ff')}
           >
             Open Reorder
-          </a>
-
-          <a
-            href={`/admin/GalleryDataSwapper?dataset=${datasetParam}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${btnBase} ${btnHover}`}
-            style={{ background: '#d4e4faff', borderColor: '#6fa5a5ff', color: '#233b31ff' }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#acd4b4ff')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#d4e4faff')}
-          >
-            Open Data Swapper
           </a>
 
           <a

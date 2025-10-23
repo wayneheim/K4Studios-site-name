@@ -553,7 +553,7 @@ export default function GalleryEditorPro() {
     window.location.reload();
   }
 
-  const datasetParam = encodeURIComponent(selectedPath || "");
+  const datasetParam = encodeURIComponent((selectedPath || "").replace(/^\//, ""));
   const total = filtered.length;
   const pos = total ? idx + 1 : 0;
 

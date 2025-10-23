@@ -1,0 +1,43 @@
+---
+import GalleryDataSwapper from '../../components/GalleryDataSwapper.jsx';
+
+const params = new URLSearchParams(Astro.url.search);
+const dataset = params.get('dataset') || '';
+---
+
+<!-- Optional: make sure Glegoo loads globally if not already -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  :root {
+    --k4-font: 'Glegoo', serif;
+  }
+
+  * {
+    font-family: var(--k4-font) !important;
+  }
+
+  body, html, main, div, span, p, h1, h2, h3, h4, h5, h6,
+  input, textarea, select, button, label, option {
+    font-family: var(--k4-font) !important;
+  }
+
+  main {
+    font-family: var(--k4-font);
+    color: #2a1f17;
+    background: #f9f7f4;
+    min-height: 100vh;
+    padding: 24px;
+  }
+
+  select, input, textarea, button {
+    font-family: var(--k4-font);
+  }
+</style>
+
+<main>
+  <GalleryDataSwapper client:only="react" datasetPath={dataset} />
+</main>

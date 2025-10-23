@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import GalleryEditorPro from "@/components/GalleryOrderer.jsx";
+
+const { url } = Astro;
+const dataset = url.searchParams.get("dataset");
+const datasetPath = dataset ? (dataset.startsWith("/src/") ? dataset : `/src/${dataset}`) : "";
 ---
 
-<BaseLayout title="Gallery Editor Pro">
+<BaseLayout title="Gallery Reorderer">
   <div class="pt-6">
-    <GalleryEditorPro client:load />
+    <GalleryEditorPro client:load {datasetPath} />
   </div>
 </BaseLayout>
