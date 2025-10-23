@@ -23,7 +23,11 @@ async function logUIEvent(eventType, details = {}) {
     await fetch("/.netlify/functions/log-ui-event", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ eventType, details, timestamp: Date.now() }),
+      body: JSON.stringify({
+        eventType,
+        details: typeof details === "string" ? details : JSON.stringify(details),
+        timestamp: Date.now()
+      }),
     });
   } catch (err) {
     console.error("UI event logging failed:", err);
@@ -50,7 +54,7 @@ async function logGallerySession({
     
     const sessionData = {
       eventType: "gallery_session",
-      details: {
+      details: JSON.stringify({
         start: new Date(sessionStart).toISOString(),
         end: new Date(sessionEnd).toISOString(),
         duration_min,
@@ -58,7 +62,7 @@ async function logGallerySession({
         device: getDevice(ua || (typeof window !== "undefined" ? navigator.userAgent : "")),
         details: totalEvents,
         eventCounts, // Send per-type stats as JSON
-      },
+      }),
       timestamp: sessionEnd,
     };
     

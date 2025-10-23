@@ -72,17 +72,11 @@ export async function handler(event) {
   let airtablePayload;
   
   if (eventType === 'gallery_session') {
-    // For session summaries, extract individual fields from details
-    const sessionData = details || {};
+    // For session summaries, details is already a JSON string from frontend
     airtablePayload = {
       fields: {
         eventType,
-        details: sessionData.details || 0, // total event count
-        start: sessionData.start || '',
-        end: sessionData.end || '',
-        duration_min: sessionData.duration_min || 0,
-        avg_time_per_event: sessionData.avg_time_per_event || null,
-        device: sessionData.device || 'unknown',
+        details: details || '{}',
         timestamp: eventTime,
         ip,
         ua,
@@ -90,11 +84,11 @@ export async function handler(event) {
       },
     };
   } else {
-    // For individual events, keep as before
+    // For individual events, details is already a JSON string from frontend
     airtablePayload = {
       fields: {
         eventType,
-        details: JSON.stringify(details || {}),
+        details: details || '{}',
         timestamp: eventTime,
         ip,
         ua,
