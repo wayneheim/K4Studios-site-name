@@ -20,12 +20,14 @@ import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
 // Helper to log UI events to Airtable
 async function logUIEvent(eventType, details = {}) {
   try {
+    // Always send details as a pretty-printed JSON string for better Airtable readability
+    const detailsStr = typeof details === "string" ? details : JSON.stringify(details, null, 2);
     await fetch("/.netlify/functions/log-ui-event", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         eventType,
-        details: typeof details === "string" ? details : JSON.stringify(details),
+        details: detailsStr,
         timestamp: Date.now()
       }),
     });
@@ -52,29 +54,18 @@ async function logGallerySession({
     const avgPerEvent =
       totalEvents > 0 ? Math.round((duration_min / totalEvents) * 100) / 100 : null;
     
-    const sessionData = {
-      eventType: "gallery_session",
-      details: JSON.stringify({
-        start: new Date(sessionStart).toISOString(),
-        end: new Date(sessionEnd).toISOString(),
-        duration_min,
-        avg_time_per_event: avgPerEvent,
-        device: getDevice(ua || (typeof window !== "undefined" ? navigator.userAgent : "")),
-        details: totalEvents,
-        eventCounts, // Send per-type stats as JSON
-      }),
-      timestamp: sessionEnd,
+    const sessionDetails = {
+      start: new Date(sessionStart).toISOString(),
+      end: new Date(sessionEnd).toISOString(),
+      duration_min,
+      avg_time_per_event: avgPerEvent,
+      device: getDevice(ua || (typeof window !== "undefined" ? navigator.userAgent : "")),
+      details: totalEvents,
+      eventCounts, // Send per-type stats as JSON
     };
     
-    const response = await fetch("/.netlify/functions/log-ui-event", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(sessionData),
-    });
-    
-    if (!response.ok) {
-      console.error("Session logging failed:", await response.text());
-    }
+    // Use the helper function instead of manual fetch
+    await logUIEvent("gallery_session", sessionDetails);
   } catch (err) {
     console.error("Session logging error:", err);
   }

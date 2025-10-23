@@ -68,6 +68,9 @@ export async function handler(event) {
     day: 'numeric',
   });
 
+  // Ensure details is always a string (safeguard against any remaining non-string values)
+  const detailsStr = typeof details === 'string' ? details : JSON.stringify(details || {}, null, 2);
+
   // Prepare Airtable payload
   let airtablePayload;
   
@@ -76,7 +79,7 @@ export async function handler(event) {
     airtablePayload = {
       fields: {
         eventType,
-        details: details || '{}',
+        details: detailsStr,
         timestamp: eventTime,
         ip,
         ua,
@@ -88,7 +91,7 @@ export async function handler(event) {
     airtablePayload = {
       fields: {
         eventType,
-        details: details || '{}',
+        details: detailsStr,
         timestamp: eventTime,
         ip,
         ua,
