@@ -45,11 +45,7 @@ let pageTitle = isImagePage
   ? (preloadImage?.title || meta.ogTitle || meta.ogImageTitle || galleryTitle)
   : galleryTitle;
 
-// Remove HTML and redundant separators for Pinterest & social previews
-const cleanTitle = (pageTitle || '')
-  .replace(/<[^>]*>/g, '')
-  .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
-  .trim();
+const cleanTitle = (pageTitle || '').replace(/<[^>]*>/g, '');
 
 // ✅ Improved description logic
 const defaultDescription =
@@ -170,14 +166,6 @@ const keywords =
       <script type="application/ld+json" set:html={structuredDataJSON} />
     )}
 
-    <!-- ✅ Pinterest-specific OG cleanup -->
-    {isImagePage && (
-      <>
-        <meta property="og:title" content={preloadImage?.title || cleanTitle} />
-        <meta property="og:description" content={preloadImage?.description || defaultDescription} />
-      </>
-    )}
-
     <!-- ✅ Open Graph -->
     <meta property="og:title" content={cleanTitle} />
     <meta property="og:description" content={
@@ -204,14 +192,13 @@ const keywords =
     <meta name="twitter:image:alt" content={ogAlt} />
     <meta name="twitter:url" content={twitterUrl} />
 
-    <!-- ✅ Pinterest Metadata (clean separation of title/description) -->
+    <!-- ✅ Pinterest Metadata -->
     {isImagePage && (
       <>
-        <meta name="pinterest:rich_title" content={preloadImage?.title || cleanTitle} />
-        <meta name="pinterest:description" content={preloadImage?.description || defaultDescription} />
+        <meta name="pinterest:rich_title" content={cleanTitle} />
+        <meta name="pinterest:description" content={preloadImage?.description || meta.description || defaultDescription} />
         <meta name="pinterest:image" content={ogImage} />
         <meta name="pinterest:media:alt" content={preloadImage?.alt || preloadImage?.title || cleanTitle} />
-        <meta name="pinterest:creator" content="Wayne Heim" />
       </>
     )}
 
@@ -235,30 +222,6 @@ const keywords =
           "name": "Wayne Heim"
         },
         "license": "https://www.k4studios.com/Contact"
-      })}></script>
-    )}
-
-    {isImagePage && (
-      <script type="application/ld+json" set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "SocialMediaPosting",
-        "headline": preloadImage?.title || cleanTitle,
-        "articleBody": preloadImage?.description || defaultDescription,
-        "author": {
-          "@type": "Person",
-          "name": "Wayne Heim",
-          "url": "https://www.k4studios.com/"
-        },
-        "sharedContent": {
-          "@type": "ImageObject",
-          "contentUrl": ogImage,
-          "caption": preloadImage?.title || cleanTitle
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "K4 Studios",
-          "url": "https://www.k4studios.com/"
-        }
       })}></script>
     )}
 
@@ -289,51 +252,6 @@ const keywords =
         ></script>
       </>
     )}
-
-    <!-- Person Schema -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Wayne Heim",
-      "jobTitle": "Fine Art Photographer & Medical Illustrator",
-      "url": "https://www.k4studios.com/",
-      "image": "https://www.k4studios.com/images/WayneHeimPortrait.jpg",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "K4 Studios",
-        "url": "https://www.k4studios.com/"
-      },
-      "sameAs": [
-        "https://www.instagram.com/k4studios",
-        "https://www.pinterest.com/k4studios",
-        "https://www.heimmedicalart.com"
-      ]
-    })}></script>
-
-    <!-- Organization Schema -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "K4 Studios",
-      "url": "https://www.k4studios.com/",
-      "logo": "https://www.k4studios.com/images/K4Logo-web-c.webp",
-      "sameAs": [
-        "https://www.instagram.com/k4studios",
-        "https://www.pinterest.com/k4studios",
-        "https://www.heimmedicalart.com"
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Wayne Heim",
-        "url": "https://www.k4studios.com/"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Support",
-        "email": "k4studiosnotices@gmail.com",
-        "url": "https://www.k4studios.com/Contact"
-      }
-    })}></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
