@@ -167,23 +167,29 @@ const keywords =
     )}
 
     <!-- ✅ Open Graph -->
-    <meta property="og:title" content={meta.ogTitle || cleanTitle} />
-    {isImagePage ? (
-      <meta property="og:description" content={
-        preloadImage?.description ||
-        meta.description ||
-        defaultDescription
-      } />
-    ) : (
-      <meta property="og:description" content={socialDescription} />
-    )}
+    <meta property="og:title" content={cleanTitle} />
+
+    <!-- 👇 Pinterest always uses this description -->
+    <meta property="og:description" content={
+      isImagePage
+        ? (preloadImage?.description || meta.description || defaultDescription)
+        : (socialDescription || seoDescription)
+    } />
+
     {ogImage && <meta property="og:image" content={ogImage} />}
     {ogImageSecureUrl && <meta property="og:image:secure_url" content={ogImageSecureUrl} />}
     <meta property="og:image:width" content={ogWidth} />
     <meta property="og:image:height" content={ogHeight} />
-    <meta property="og:image:alt" content={ogAlt} />
+
+    <!-- 👇 this is the only alt Pinterest reads -->
+    <meta property="og:image:alt" content={
+      preloadImage?.alt ||
+      preloadImage?.title ||
+      cleanTitle
+    } />
+
     <meta property="og:image:type" content={ogImageType} />
-    <meta property="og:type" content={ogType} />
+    <meta property="og:type" content={isImagePage ? "article" : (meta.ogType || "website")} />
     <meta property="og:url" content={ogUrl} />
     <meta property="og:site_name" content="K4 Studios – Fine Art Photography" />
     <meta property="og:locale" content={meta.ogLocale || 'en_US'} />
