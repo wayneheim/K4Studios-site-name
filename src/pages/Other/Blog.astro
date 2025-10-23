@@ -112,23 +112,27 @@ const galleryPaths = Object.keys(galleryDataMap);
       <!-- MAIN CONTENT (left) -->
       <div class="text-column">
         {posts.map(post => (
-            <article class="story-block mb-10">
-              <a href={`/Other/Blog/${post.slug}`} aria-label={post.title}>
+          <article class="story-block mb-10">
+            <div class="flex flex-col md:flex-row md:items-start gap-4">
+              <a href={`/Other/Blog/${post.slug}`} aria-label={post.title} class="flex-shrink-0">
                 <img
                   src={post.cover}
                   alt={post.title}
-                  class="mb-4 rounded-2xl shadow max-w-[200px] h-[200px] object-cover"
+                  class="rounded-2xl shadow max-w-[200px] h-[200px] object-cover"
                   style="aspect-ratio: 1/1;"
                   oncontextmenu="event.preventDefault()"
                 />
               </a>
-              <h2 class="text-xl font-bold mb-2">
-                <a href={`/Other/Blog/${post.slug}`}>{post.title}</a>
-              </h2>
-              <p class="text-sm text-gray-600 mb-2">{post.date}</p>
-              <p class="mb-4" set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-              <a href={`/Other/Blog/${post.slug}`} class="underline text-blue-700">Read more →</a>
-            </article>
+              <div class="flex-1 min-w-0">
+                <h2 class="text-xl font-bold mb-2">
+                  <a href={`/Other/Blog/${post.slug}`}>{post.title}</a>
+                </h2>
+                <p class="text-sm text-gray-600 mb-2">{post.date}</p>
+                <p class="mb-4" set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                <a href={`/Other/Blog/${post.slug}`} class="underline text-blue-700">Read more →</a>
+              </div>
+            </div>
+          </article>
         ))}
       </div>
 

@@ -1,10 +1,17 @@
 export const posts = [
   {
+    slug: "10-oclock-staging",
+    title: "Inside the Frame: 10 O’Clock Staging",
+    date: "2025-10-22",
+    excerpt: "A conversation with Quill about suspense, ambiguity, and the storytelling power of black and white in Wayne Heim’s Western image '10 O’Clock Staging.'",
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kxnK2MM/1/MnvSjcBZCnjRnR3Xzn5rzchBnxLgSfg7BjLk3fQQg/S/_WHO0807-1138-1139-S.jpg" // <-- Replace with actual SmugMug link
+  },
+  {
     slug: "dust-or-desperation",
     title: "Inside the Frame: Dust or Desperation",
     date: "2025-10-05",
     excerpt: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim’s Western image 'Dust or Desperation.'",
-    cover: "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-cFhZXJc/3/NgnZb2R8LZhnbq6wvbd8nd6s98h5rffmGcjkznMTq/S/_HF21624-1005-1006-S.jpg" // <-- replace with actual SmugMug link
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-cFhZXJc/3/NgnZb2R8LZhnbq6wvbd8nd6s98h5rffmGcjkznMTq/S/_HF21624-1005-1006-S.jpg"
   },
   {
     slug: "one-way-out",

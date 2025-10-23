@@ -7,7 +7,7 @@ const path = require('path');
 
 // Update these paths as needed
 const masterPath = path.resolve(__dirname, '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs');
-const fixedPath = path.resolve(__dirname, '../src/pages/Other/Photo-Shoots/Sout-Dakota/Artist-Ride-2025/Artist-Ride-F.mjs');
+const fixedPath = path.resolve(__dirname, '../src/data/Other/Photo-Shoots/South-Dakota/Artist-Ride-F.mjs');
 const outputPath = masterPath; // Overwrite master
 
 function extractGalleryData(fileContent) {

@@ -150,6 +150,8 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   }, [modules]);
 
   const [selectedPath, setSelectedPath] = useState("");
+  // Multi-select state
+  const [selectedIds, setSelectedIds] = useState([]);
   const [backupData, setBackupData] = useState(null);   // full array as loaded (incl ghost)
   const [items, setItems] = useState([]);               // working order (ghost excluded)
   const [backupMade, setBackupMade] = useState(false);
@@ -276,6 +278,33 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     note(`Moved #${from + 1} → #${to + 1}`);
   }
 
+  // Multi-select click handler
+  function handleSelect(e, id) {
+    if (e.button !== 0) return; // only left click
+    if (e.ctrlKey || e.metaKey) {
+      // Toggle selection
+      setSelectedIds(sel => sel.includes(id) ? sel.filter(x => x !== id) : [...sel, id]);
+    } else if (e.shiftKey && selectedIds.length > 0) {
+      // Range select
+      const lastSelected = selectedIds[selectedIds.length - 1];
+      const idxA = items.findIndex(x => x.id === lastSelected);
+      const idxB = items.findIndex(x => x.id === id);
+      if (idxA === -1 || idxB === -1) {
+        setSelectedIds([id]);
+        return;
+      }
+      const [start, end] = [idxA, idxB].sort((a, b) => a - b);
+      const rangeIds = items.slice(start, end + 1).map(x => x.id);
+      setSelectedIds(Array.from(new Set([...selectedIds, ...rangeIds])));
+    } else {
+      // Single select
+      setSelectedIds([id]);
+    }
+  }
+
+  // Deselect on dataset change or reload
+  useEffect(() => { setSelectedIds([]); }, [selectedPath, items]);
+
   function resetOrder() {
     if (!backupData) return;
     setItems(backupData.filter(isRealItem));
@@ -384,8 +413,45 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     const { itemId, action, targetPath } = contextMenu;
     if (!itemId || !action || !targetPath) return;
 
+    // Warn if unsaved changes before moving
+    if (action === 'move' && dirty) {
+      const proceed = window.confirm('You have unsaved changes. Do you want to save before moving? Click OK to save, Cancel to discard changes and continue.');
+      if (proceed) {
+        await saveOrderHere();
+      } else {
+        setDirty(false);
+      }
+    }
+
     const item = items.find(it => it.id === itemId);
     if (!item) return;
+
+    // Load target data
+    const targetMod = await modules[targetPath]();
+    let targetData = Array.isArray(targetMod)
+      ? targetMod
+      : Array.isArray(targetMod?.galleryData)
+      ? targetMod.galleryData
+      : Array.isArray(targetMod?.default)
+      ? targetMod.default
+      : [];
+
+    // Check if item is already in target
+    const alreadyInTarget = targetData.some(it => it.id === itemId);
+    if (alreadyInTarget) {
+      if (action === 'move') {
+        const confirmDelete = window.confirm('The image is already in the target gallery. Do you want to delete it from the source gallery?');
+        if (!confirmDelete) {
+          closeContextMenu();
+          return;
+        }
+        // Proceed to delete from source without adding to target
+      } else if (action === 'copy') {
+        alert('The image is already in the target gallery. Cannot copy.');
+        closeContextMenu();
+        return;
+      }
+    }
 
     // download backups if selected and not skipping for session
     if (!skipBackupPrompt) {
@@ -404,8 +470,10 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     }
 
     // prepare updated data
-    const normalizedItem = normalizeItem(item);
-    normalizedItem.sortOrder = targetData.filter(isRealItem).length; // append to end
+    const normalizedItem = !alreadyInTarget ? normalizeItem(item) : null;
+    if (normalizedItem) {
+      normalizedItem.sortOrder = targetData.filter(isRealItem).length; // append to end
+    }
 
     let updatedSource = backupData;
     let updatedTarget = targetData;
@@ -413,14 +481,34 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     if (action === 'move') {
       // remove from source
       updatedSource = backupData.filter(it => it.id !== itemId);
-      // add to target
-      updatedTarget = targetData.concat([normalizedItem]);
+      // add to target only if not already there
+      if (!alreadyInTarget) {
+        updatedTarget = targetData.concat([normalizedItem]);
+      }
     } else if (action === 'copy') {
       // just add to target
       updatedTarget = targetData.concat([normalizedItem]);
     }
 
-    // auto-save current state before moving
+    // save target if changed
+    if (updatedTarget !== targetData) {
+      try {
+        const res = await fetch("/.netlify/functions/updateGalleryOrder", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            datasetPath: targetPath.replace(/^\//, ""),
+            fullArray: updatedTarget,
+          }),
+        });
+        if (!res.ok) throw new Error(await res.text());
+      } catch (err) {
+        alert("Failed to update target: " + err.message);
+        return;
+      }
+    }
+
+    // save source if moved
     if (action === 'move') {
       try {
         const res = await fetch("/.netlify/functions/updateGalleryOrder", {
@@ -428,40 +516,25 @@ export default function GalleryOrderer({ datasetPath = "" }) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             datasetPath: selectedPath.replace(/^\//, ""),
-            fullArray: backupData,
+            fullArray: updatedSource,
           }),
         });
         if (!res.ok) throw new Error(await res.text());
       } catch (err) {
-        alert("Failed to auto-save current order: " + err.message);
+        alert("Failed to update source: " + err.message);
         return;
       }
     }
 
-    // save target
-    try {
-      const res = await fetch("/.netlify/functions/updateGalleryOrder", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          datasetPath: targetPath.replace(/^\//, ""),
-          fullArray: updatedTarget,
-        }),
-      });
-      if (!res.ok) throw new Error(await res.text());
-    } catch (err) {
-      alert("Failed to update target: " + err.message);
-      return;
-    }
-
     // update local state if current dataset affected
-    if (action === 'move' && selectedPath === selectedPath) {
-      setItems(updatedSource.filter(isRealItem));
-      setBackupData(updatedSource);
-      setDirty(false);
+    if (action === 'move' && contextMenu.targetPath !== selectedPath) {
+      // Remove from current gallery immediately
+      setItems(items => items.filter(it => it.id !== itemId));
+      setBackupData(data => data.filter(it => it.id !== itemId));
+      setDirty(true);
     }
 
-    note(`${action === 'move' ? 'Moved' : 'Copied'} item to ${targetPath.split('/').pop()}`);
+    note(action === 'move' && alreadyInTarget ? 'Deleted item from source (already in target)' : `${action === 'move' ? 'Moved' : 'Copied'} item to ${targetPath.split('/').pop()}`);
     closeContextMenu();
   }
 
@@ -566,6 +639,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
           const img = pickImage(it);
           const i = items.findIndex((x) => x.id === it.id);
           const hidden = isHidden(it);
+          const selected = selectedIds.includes(it.id);
           return (
             <div
               key={it.id}
@@ -574,7 +648,8 @@ export default function GalleryOrderer({ datasetPath = "" }) {
               onDragOver={onDragOver}
               onDrop={(e) => onDrop(e, it.id)}
               onContextMenu={(e) => handleContextMenu(e, it.id)}
-              className="relative border rounded-md bg-white overflow-hidden shadow-sm"
+              onClick={(e) => handleSelect(e, it.id)}
+              className={`relative border rounded-md bg-white overflow-hidden shadow-sm cursor-pointer ${selected ? "ring-2 ring-blue-500" : ""}`}
               title={`#${i + 1} – ${it.id}${hidden ? " (hidden)" : ""}`}
               style={hidden ? { opacity: 0.5, filter: "grayscale(0.35)" } : undefined}
             >
@@ -661,6 +736,44 @@ export default function GalleryOrderer({ datasetPath = "" }) {
               </option>
             ))}
           </select>
+          <div className="flex gap-2 mb-2">
+            <button
+              onClick={() => {
+                // Move selected images to top
+                setItems(items => {
+                  const selSet = new Set(selectedIds);
+                  const selected = items.filter(it => selSet.has(it.id));
+                  const rest = items.filter(it => !selSet.has(it.id));
+                  return [...selected, ...rest];
+                });
+                setDirty(true);
+                note('Moved selected to top');
+                closeContextMenu();
+              }}
+              className="px-3 py-1 rounded-md border bg-blue-50 hover:bg-blue-100"
+              disabled={selectedIds.length === 0}
+            >
+              Move to Top
+            </button>
+            <button
+              onClick={() => {
+                // Move selected images to bottom
+                setItems(items => {
+                  const selSet = new Set(selectedIds);
+                  const selected = items.filter(it => selSet.has(it.id));
+                  const rest = items.filter(it => !selSet.has(it.id));
+                  return [...rest, ...selected];
+                });
+                setDirty(true);
+                note('Moved selected to bottom');
+                closeContextMenu();
+              }}
+              className="px-3 py-1 rounded-md border bg-blue-50 hover:bg-blue-100"
+              disabled={selectedIds.length === 0}
+            >
+              Move to Bottom
+            </button>
+          </div>
           <div className="flex gap-2">
             <button
               onClick={() => {

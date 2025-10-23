@@ -117,6 +117,42 @@ export const galleryData = [
     "sortOrder": 1
   },
   {
+    "id": "i-n5BfXBm",
+    "title": "10 O’Clock Staging ",
+    "description": "Painterly Western fine art photograph—this color portrait of two men and their horses captures the tension and beauty of a stagecoach wait at the edge of wild country. Every detail—sunlit grass, weathered hats, blue saddle blanket—draws out the cinematic richness and emotional weight of the moment. Wayne Heim’s process fuses historical realism with a luminous, painterly palette, transporting viewers into the heart of the American West. Essential for collectors of cowboy art, painterly fine art photography, and authentic Americana.\n© Wayne Heim",
+    "alt": "Two cowboys and their horses wait in sunlit tall grass for a stagecoach, one kneeling with a rifle, the other watching from horseback, in a painterly color photograph of the American West by Wayne Heim.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-n5BfXBm/1/LbFJFVzKJGtw2GfK7C9sBHMZntvkPKDF4KbHVPt9k/XL/_WHO0807-1138-1139-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-n5BfXBm/1/LbFJFVzKJGtw2GfK7C9sBHMZntvkPKDF4KbHVPt9k/XL/_WHO0807-1138-1139-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-n5BfXBm/1/Ln7vjtjWppdkd5vMXH26Kdj3hXkrhJDsQBTwj7X7Q/L/_WHO0807-1138-1139-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-n5BfXBm/1/MDbBBK9PtjP9S64Mfndx2fz6fgRkn6SLdWKVphQgj/M/_WHO0807-1138-1139-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-n5BfXBm/1/KNhfckh4jdkQZMRZbFHMgVq7wW89DMXqL5RhMNMRc/S/_WHO0807-1138-1139-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-n5BfXBm/A",
+    "keywords": [
+      "western art",
+      "cowboy",
+      "stagecoach",
+      "painterly fine art photography",
+      "color western",
+      "American West",
+      "patience",
+      "anticipation",
+      "cowboy wall art",
+      "historical",
+      "sunlit prairie",
+      "cinematic",
+      "frontier stories",
+      "Americana",
+      "Wayne Heim"
+    ],
+    "story": "Morning sun climbs, bathing every color in anticipation and purpose. Sweat beads, dust shimmers, saddle leather glows with stories untold. The clock strikes ten—she’s late. Nerves on edge, they hold their places. Distant rumbles echo—steel, hooves, danger on the ridge.\n“Steady, Billy. Stick to the plan.”\nToday, patience is the hardest virtue. Vengeance or fortune—both ride with the morning wind.",
+    "notes": "This color rendering builds on the visual traditions of Hudson River School landscapes and classic Western illustration, while introducing a cinematic intensity that only painterly color can achieve. The blue of the saddle blanket and the sun-warmed tones of earth and leather evoke nostalgia, grounding the narrative in both history and myth. The composition pulls the eye toward the horizon, echoing the quiet suspense of frontier storytelling. Instead of drama through action, this work invites the viewer to linger in a moment of anticipation—where every detail is charged with the possibility of what’s about to unfold.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 2
+  },
+  {
     "id": "i-44jcjTQ",
     "title": "Over My Dead Body: Frontier Stand-off ",
     "description": "A color Western portrait of a seasoned cowboy braced at his cabin window, rifle ready and gaze fixed on the yard. Warm light rakes the hat, coat, and timber while the room drops to quiet shadow, holding the moment between caution and action. Wayne Heim’s Painterly Fine Art approach shapes tone and texture for a print-first finish—rich color, disciplined contrast, and lived-in detail that honors classic frontier storytelling. Ideal for collectors of Western fine art photography and Americana wall art.",
@@ -157,7 +193,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 3
   },
   {
     "id": "i-fM9qmKW",
@@ -197,7 +233,7 @@ export const galleryData = [
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-    "sortOrder": 3
+    "sortOrder": 4
   },
   {
     "id": "i-hKcrxwf",
@@ -231,7 +267,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 5
   },
   {
     "id": "i-CD6rgtF",
@@ -266,7 +302,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 6
   },
   {
     "id": "i-WxQjxQS",
@@ -303,7 +339,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 7
   },
   {
     "id": "i-fCG2nm8",
@@ -341,7 +377,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 8
   },
   {
     "id": "i-HBRmWg4",
@@ -373,7 +409,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 9
   },
   {
     "id": "i-VDLVwqr",
@@ -410,7 +446,7 @@ export const galleryData = [
     "notes": "What makes this piece resonate is its ambiguity. The revolver and bandolier stand as symbols of protection, yet in their placement within the bedroom they also become emblems of dependence, even confinement. Her gaze outward suggests longing, while her posture reflects vigilance — leaving the viewer to wonder which truly defines her.\n\nThe composition marries intimacy with unease: soft painterly tones bathe the interior, but the stark geometry of the bedpost and ammunition cuts through the warmth. It recalls Vermeer’s use of light in private domestic scenes, fused with the narrative grit of Remington. For the collector, this is not just a Western portrait — it’s a meditation on love, danger, and the strange companions they make.",
     "rating": 5,
     "galleries": [],
-    "sortOrder": 9
+    "sortOrder": 10
   },
   {
     "id": "i-rRdrQBg",
@@ -447,7 +483,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 11
   },
   {
     "id": "i-QB4jLsH",
@@ -480,7 +516,7 @@ export const galleryData = [
     "notes": "This work embodies the archetype of the last stand—raw defiance made flesh. The figure surges forward, coat and hair caught in motion, the revolver’s line cutting across the frame with unflinching resolve. It’s a painterly study in momentum and defiance, where narrative and form collide.\n\nThe energy recalls the frontier illustrations of Frederic Remington but amplified with cinematic immediacy, like a freeze-frame torn from a lost Western epic. The layering of smoke, fabric, and gesture suspends chaos in balance, creating a piece that resonates as both history and myth. For collectors, it represents not just Western art, but the distilled essence of grit, courage, and the refusal to yield.",
     "rating": 5,
     "galleries": [],
-    "sortOrder": 11
+    "sortOrder": 12
   },
   {
     "id": "i-hMXZ8Xh",
@@ -537,7 +573,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 13
   },
   {
     "id": "i-hrmrhT3",
@@ -594,7 +630,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 14
   },
   {
     "id": "i-mLPgSpC",
@@ -651,7 +687,37 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 15
+  },
+  {
+    "id": "i-LCspRF4",
+    "title": "Fine Art Historic Western Prints",
+    "description": "Immerse yourself in historic western prints with this stunning cowboy artwork by Wayne Heim. Capturing wild west photography, rugged spirit, and western fine art, it's a must-have for collectors of historic western prints. © Wayne Heim",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/MkcfVqT4bFPgFXHKNJRg9NMKKmmPfzKWwZfW9gFm3/L/_HF22770-953-954-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/MtnqV9z3WtkP9zbm3JWLK5k7btnk8NjtLCjks7GSv/S/_HF22770-953-954-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/A",
+    "keywords": [
+      "WHO0135",
+      "historic western prints",
+      "cowboy artwork",
+      "wild west photography",
+      "rugged spirit",
+      "western fine art",
+      "western art",
+      "outlaw portraits",
+      "cowboy art"
+    ],
+    "story": "This image embodies western art and outlaw portraits, captured by Wayne Heim in his signature style. It reflects cowboy art with a touch of western fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 16
   },
   {
     "id": "i-qVZ9m7j",
@@ -708,7 +774,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 17
   },
   {
     "id": "i-JKnW497",
@@ -747,7 +813,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 18
   },
   {
     "id": "i-5FX3W9r",
@@ -804,7 +870,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 19
   },
   {
     "id": "i-cFhZXJc",
@@ -839,7 +905,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 20
   },
   {
     "id": "i-Rx5gLJz",
@@ -896,7 +962,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 21
   },
   {
     "id": "i-5HpSkgR",
@@ -925,7 +991,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 22
   },
   {
     "id": "i-8rsG6P9",
@@ -957,7 +1023,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 23
   },
   {
     "id": "i-mpfG8XF",
@@ -1014,7 +1080,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 24
   },
   {
     "id": "i-PM4d3g3",
@@ -1050,7 +1116,44 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 25
+  },
+  {
+    "id": "i-T7TFJX2",
+    "title": "Exploring Rustic Charm",
+    "description": "Explore rustic charm with Wayne Heim's cowboy artwork. This western cowboy art piece conveys western fine art, painterly cowboy portraits, and rustic charm, perfect for fans of cowboy artwork. © Wayne Heim",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/MGwdczQgmPtjpntZtkxxjTSJBgvV8GFSXGwp5LW3w/L/_HF23132-1014-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/MGwdczQgmPtjpntZtkxxjTSJBgvV8GFSXGwp5LW3w/L/_HF23132-1014-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/MGwdczQgmPtjpntZtkxxjTSJBgvV8GFSXGwp5LW3w/L/_HF23132-1014-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/MGwdczQgmPtjpntZtkxxjTSJBgvV8GFSXGwp5LW3w/L/_HF23132-1014-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/LKX2fdtVrsRWVRXsjKThhBDdG6Gv6b43ZM4dhFQ35/S/_HF23132-1014-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "rustic charm",
+      "cowboy artwork",
+      "western cowboy art",
+      "western fine art",
+      "painterly cowboy portraits",
+      "frederic remington",
+      "fine art Western photography",
+      "rugged spirit"
+    ],
+    "story": "Wayne Heim's exploration of frederic remington comes alive in this piece, showcasing fine art Western photography and rustic charm. A testament to rugged spirit in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 26
   },
   {
     "id": "i-8BbMZjs",
@@ -1107,7 +1210,36 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 27
+  },
+  {
+    "id": "i-c5K798H",
+    "title": "Cowboy Artwork And Western Fine Art",
+    "description": "Uncover cowboy artwork through this western fine art from Wayne Heim. Showcasing frederic remington, rustic charm, and painterly cowboy portraits, it's perfect for enthusiasts of cowboy artwork. © Wayne Heim",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/NgvpvqtnjC7ctKpJN6X94hDKRx69QQhhf84WBSVJ7/L/_HF28455-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/K75GgvxGvp4dNNcZZNPfQbBNSGX826M6mxncTR8HJ/S/_HF28455-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/A",
+    "keywords": [
+      "HF22961",
+      "cowboy artwork",
+      "western fine art",
+      "frederic remington",
+      "rustic charm",
+      "painterly cowboy portraits",
+      "cowboy painting art",
+      "historic western prints"
+    ],
+    "story": "This image embodies cowboy artwork and frederic remington, captured by Wayne Heim in his signature style. It reflects cowboy painting art with a touch of historic western prints. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 28
   },
   {
     "id": "i-Dw6Z8ff",
@@ -1165,64 +1297,37 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 29
   },
   {
-    "id": "i-8VPQmkW",
-    "title": "Anticipation - Frontier Woman in Window",
-    "description": "A painterly fine art portrait of a frontier woman caught in a moment of stillness and quiet emotion, rendered in soft textures and golden morning light. Wayne Heim’s painterly Western photography fuses classical portraiture with cinematic mood, capturing the character and resilience of the American frontier. This timeless image tells a quiet story of longing, memory, and hope—ideal for collectors of cowboy wall art, frontier realism, or historical fine art photography. Perfect for those drawn to vintage-inspired Western imagery that evokes deep emotional atmosphere and pictorial depth.",
-    "alt": "Frontier woman in bonnet gazing out window at children playing, bathed in soft morning light — painterly Western fine art portrait by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/MgrpKLNCNcfZQTz2V2hwhQVPvZvgwJG6JBWgQ7bVX/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/MgrpKLNCNcfZQTz2V2hwhQVPvZvgwJG6JBWgQ7bVX/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/MgrpKLNCNcfZQTz2V2hwhQVPvZvgwJG6JBWgQ7bVX/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/KS9ZNcsJSq7ZK7g7rMjxzsNwS3zBLH4pSXzNDJ8N4/L/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/KvWjzmxx6g7dkNbzNR46xRkVMNL5hz6WdHpTwnNKq/S/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-S.jpg",
+    "id": "i-7dCKHjg",
+    "title": "Cowboy Art Study",
+    "description": "Immerse yourself in cowboy art with this stunning cowboy artwork by Wayne Heim. Capturing painterly cowboy portraits, cowboy portraits, and rustic charm, it's a must-have for collectors of cowboy art. © Wayne Heim",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/KSg4xPQGdFZQwMDDZZf6DX65PJKphHsmxsrFhD785/XL/_WHO0921-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/KSg4xPQGdFZQwMDDZZf6DX65PJKphHsmxsrFhD785/XL/_WHO0921-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/MH55Dt8TcPF3ztps75KVDzkKSGgv59LHxLV6BQRG4/L/_WHO0921-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/KrXBrfbhcxJzNZNQN63R57rJDMJLpKH8vdJR7BJhR/M/_WHO0921-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/NSNRDC2c4LKPCxsC9nb9krX2csNGqd2Fb4TPS6rzx/S/_WHO0921-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8VPQmkW/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/A",
     "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
+      "HF26271",
+      "cowboy art",
+      "cowboy artwork",
+      "painterly cowboy portraits",
+      "cowboy portraits",
+      "rustic charm",
+      "frederic remington",
+      "cowboy painting art",
+      "western fine art"
     ],
-    "story": "Another day in an endless string of days, each one folding into the next like worn linens—quiet, steady, solitary. She moves through her morning ritual with the practiced grace of someone who’s learned to carry silence like a second skin.\n\nThen, a sound breaks through. Laughter. Children outside—giggling, hollering, chasing each other in the dust as if sorrow and worry were stories for another time. She pauses at the window, hand resting lightly on the glass, eyes searching the light. A flicker of memory tugs at her chest.\n\nAll giggles and dust, chasing each other like sorrow and worry ain’t even real. “Oh, to be young and free again. God keep them, and guard that innocence a while longer.”\n",
-    "notes": "This portrait carries the quiet gravity of waiting — not with idle patience, but with purpose. Her stance, framed by the soft glow of the frontier morning, is firm yet elegant. She is not simply looking out — she is holding the line.\n\nThe crisp pleats of her blouse echo the window frame’s sharp geometry, each fold a reminder of structure, order, and the burdens of those who stayed behind. Light brushes her profile with restraint, illuminating not just her features, but the tension between vulnerability and strength. Pride. Duty. A trace of worry she won’t speak aloud.\n\nIn Wayne Heim’s painterly tradition, this image recalls Victorian portraiture — yet it’s wholly Western in spirit. A tribute not to those who rode out, but to those who kept the fire lit, wrote the letters, and bore the silence. The weight of the waiting belongs to them.",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing frederic remington and cowboy painting art. A testament to western fine art in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 30
   },
   {
     "id": "i-tnWbQrT",
@@ -1259,7 +1364,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 31
   },
   {
     "id": "i-sTnckb6",
@@ -1316,7 +1421,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 32
   },
   {
     "id": "i-vFrxmXD",
@@ -1354,7 +1459,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 33
   },
   {
     "id": "i-KBNSftv",
@@ -1392,7 +1497,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 34
   },
   {
     "id": "i-KVxkXrV",
@@ -1429,7 +1534,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 35
   },
   {
     "id": "i-FpH3LXf",
@@ -1470,7 +1575,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 36
   },
   {
     "id": "i-ZRFr8hd",
@@ -1501,7 +1606,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 37
   },
   {
     "id": "i-gF8j3Jz",
@@ -1534,7 +1639,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 38
   },
   {
     "id": "i-ML9dbMj",
@@ -1591,7 +1696,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 39
   },
   {
     "id": "i-xmJ87ZT",
@@ -1621,7 +1726,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 40
   },
   {
     "id": "i-NKdPDCg",
@@ -1654,7 +1759,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 41
   },
   {
     "id": "i-LLdZzQW",
@@ -1711,37 +1816,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 38
-  },
-  {
-    "id": "i-7dCKHjg",
-    "title": "Cowboy Art Study",
-    "description": "Immerse yourself in cowboy art with this stunning cowboy artwork by Wayne Heim. Capturing painterly cowboy portraits, cowboy portraits, and rustic charm, it's a must-have for collectors of cowboy art. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/KSg4xPQGdFZQwMDDZZf6DX65PJKphHsmxsrFhD785/XL/_WHO0921-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/KSg4xPQGdFZQwMDDZZf6DX65PJKphHsmxsrFhD785/XL/_WHO0921-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/MH55Dt8TcPF3ztps75KVDzkKSGgv59LHxLV6BQRG4/L/_WHO0921-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/KrXBrfbhcxJzNZNQN63R57rJDMJLpKH8vdJR7BJhR/M/_WHO0921-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/0/NSNRDC2c4LKPCxsC9nb9krX2csNGqd2Fb4TPS6rzx/S/_WHO0921-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7dCKHjg/A",
-    "keywords": [
-      "HF26271",
-      "cowboy art",
-      "cowboy artwork",
-      "painterly cowboy portraits",
-      "cowboy portraits",
-      "rustic charm",
-      "frederic remington",
-      "cowboy painting art",
-      "western fine art"
-    ],
-    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing frederic remington and cowboy painting art. A testament to western fine art in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 42
   },
   {
     "id": "i-6Ffpw9t",
@@ -1779,7 +1854,64 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 43
+  },
+  {
+    "id": "i-8VPQmkW",
+    "title": "Anticipation - Frontier Woman in Window",
+    "description": "A painterly fine art portrait of a frontier woman caught in a moment of stillness and quiet emotion, rendered in soft textures and golden morning light. Wayne Heim’s painterly Western photography fuses classical portraiture with cinematic mood, capturing the character and resilience of the American frontier. This timeless image tells a quiet story of longing, memory, and hope—ideal for collectors of cowboy wall art, frontier realism, or historical fine art photography. Perfect for those drawn to vintage-inspired Western imagery that evokes deep emotional atmosphere and pictorial depth.",
+    "alt": "Frontier woman in bonnet gazing out window at children playing, bathed in soft morning light — painterly Western fine art portrait by Wayne Heim.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/MgrpKLNCNcfZQTz2V2hwhQVPvZvgwJG6JBWgQ7bVX/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/MgrpKLNCNcfZQTz2V2hwhQVPvZvgwJG6JBWgQ7bVX/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/MgrpKLNCNcfZQTz2V2hwhQVPvZvgwJG6JBWgQ7bVX/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/KS9ZNcsJSq7ZK7g7rMjxzsNwS3zBLH4pSXzNDJ8N4/L/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/KvWjzmxx6g7dkNbzNR46xRkVMNL5hz6WdHpTwnNKq/S/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8VPQmkW/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Another day in an endless string of days, each one folding into the next like worn linens—quiet, steady, solitary. She moves through her morning ritual with the practiced grace of someone who’s learned to carry silence like a second skin.\n\nThen, a sound breaks through. Laughter. Children outside—giggling, hollering, chasing each other in the dust as if sorrow and worry were stories for another time. She pauses at the window, hand resting lightly on the glass, eyes searching the light. A flicker of memory tugs at her chest.\n\nAll giggles and dust, chasing each other like sorrow and worry ain’t even real. “Oh, to be young and free again. God keep them, and guard that innocence a while longer.”\n",
+    "notes": "This portrait carries the quiet gravity of waiting — not with idle patience, but with purpose. Her stance, framed by the soft glow of the frontier morning, is firm yet elegant. She is not simply looking out — she is holding the line.\n\nThe crisp pleats of her blouse echo the window frame’s sharp geometry, each fold a reminder of structure, order, and the burdens of those who stayed behind. Light brushes her profile with restraint, illuminating not just her features, but the tension between vulnerability and strength. Pride. Duty. A trace of worry she won’t speak aloud.\n\nIn Wayne Heim’s painterly tradition, this image recalls Victorian portraiture — yet it’s wholly Western in spirit. A tribute not to those who rode out, but to those who kept the fire lit, wrote the letters, and bore the silence. The weight of the waiting belongs to them.",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 44
   },
   {
     "id": "i-DwVBJb3",
@@ -1836,7 +1968,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 45
   },
   {
     "id": "i-LBSWzcj",
@@ -1871,7 +2003,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 46
   },
   {
     "id": "i-ZPmj5Wk",
@@ -1928,7 +2060,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 47
   },
   {
     "id": "i-dNgct6r",
@@ -1985,7 +2117,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 48
   },
   {
     "id": "i-k6jGzSq",
@@ -2042,7 +2174,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 49
   },
   {
     "id": "i-gj4hHmL",
@@ -2099,7 +2231,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 50
   },
   {
     "id": "i-Mm3jXFH",
@@ -2156,7 +2288,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 51
   },
   {
     "id": "i-k4b6c5b",
@@ -2213,7 +2345,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 52
   },
   {
     "id": "i-T6bD4w7",
@@ -2249,7 +2381,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 53
   },
   {
     "id": "i-7Jzf69b",
@@ -2306,7 +2438,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 54
   },
   {
     "id": "i-mbND55n",
@@ -2343,7 +2475,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 55
   },
   {
     "id": "i-vP376vx",
@@ -2400,7 +2532,38 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 56
+  },
+  {
+    "id": "i-z3wvMkB",
+    "title": "Exploring Outlaw Portraits",
+    "description": "Delve into outlaw portraits via this western art by Wayne Heim. Highlighting cowboy artwork through cowboy painting art and wild west photography, it's great for collectors interested in outlaw portraits. © Wayne Heim",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/MnvM6K66WFSTRDS24D8ctT8LSbmjT2LRwJbqGfC7T/L/_HF23239-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/MnvM6K66WFSTRDS24D8ctT8LSbmjT2LRwJbqGfC7T/L/_HF23239-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/MnvM6K66WFSTRDS24D8ctT8LSbmjT2LRwJbqGfC7T/L/_HF23239-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/MnvM6K66WFSTRDS24D8ctT8LSbmjT2LRwJbqGfC7T/L/_HF23239-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/KLB9bdSgK3MZsPL99zQjQs5qhLVqQjRBRg3FVz4mT/S/_HF23239-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/A",
+    "keywords": [
+      "WHO0426",
+      "1086",
+      "outlaw portraits",
+      "western art",
+      "cowboy artwork",
+      "cowboy painting art",
+      "wild west photography",
+      "historic western prints",
+      "cowboy portraits",
+      "painterly cowboy portraits"
+    ],
+    "story": "This image embodies historic western prints and cowboy portraits, captured by Wayne Heim in his signature style. It reflects painterly cowboy portraits with a touch of outlaw portraits. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 57
   },
   {
     "id": "i-rhvQkwh",
@@ -2457,7 +2620,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 58
   },
   {
     "id": "i-GPq6m5q",
@@ -2479,7 +2642,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 59
   },
   {
     "id": "i-8CfzGMc",
@@ -2510,7 +2673,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 60
   },
   {
     "id": "i-rMkQnM6",
@@ -2567,7 +2730,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 61
   },
   {
     "id": "i-b3vCXwR",
@@ -2624,7 +2787,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 62
   },
   {
     "id": "i-TLDkd5q",
@@ -2681,7 +2844,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 63
   },
   {
     "id": "i-FVHm8VJ",
@@ -2738,7 +2901,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 64
   },
   {
     "id": "i-GG7mgqM",
@@ -2795,7 +2958,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 65
   },
   {
     "id": "i-P8B2zJj",
@@ -2852,7 +3015,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 66
   },
   {
     "id": "i-KTGLfqc",
@@ -2909,7 +3072,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 67
   },
   {
     "id": "i-v4TzPgF",
@@ -2966,7 +3129,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 68
   },
   {
     "id": "i-8cXqSjj",
@@ -3023,7 +3186,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 69
   },
   {
     "id": "i-mHpH7rZ",
@@ -3080,7 +3243,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 70
   },
   {
     "id": "i-vGkvhmq",
@@ -3137,7 +3300,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 71
   },
   {
     "id": "i-mdz2QGr",
@@ -3194,7 +3357,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 72
   },
   {
     "id": "i-6pLTtkL",
@@ -3251,7 +3414,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 73
   },
   {
     "id": "i-btSc5RS",
@@ -3293,7 +3456,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 74
   },
   {
     "id": "i-8zFZ3jn",
@@ -3350,7 +3513,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 75
   },
   {
     "id": "i-FsLKLp3",
@@ -3407,7 +3570,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 76
   },
   {
     "id": "i-p9FqvPh",
@@ -3464,7 +3627,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 77
   },
   {
     "id": "i-xNnJTSK",
@@ -3521,7 +3684,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 78
   },
   {
     "id": "i-rhqqrfz",
@@ -3578,7 +3741,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 79
   },
   {
     "id": "i-D5kv9Q6",
@@ -3635,7 +3798,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 80
   },
   {
     "id": "i-D3HdMmb",
@@ -3692,7 +3855,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 81
   },
   {
     "id": "i-xXQ3gDM",
@@ -3749,7 +3912,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 82
   },
   {
     "id": "i-8JSdTGz",
@@ -3806,7 +3969,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 83
   },
   {
     "id": "i-6GQxb97",
@@ -3863,7 +4026,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 84
   },
   {
     "id": "i-J8Tr628",
@@ -3920,7 +4083,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 85
   },
   {
     "id": "i-zv8VJBg",
@@ -3977,7 +4140,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 86
   },
   {
     "id": "i-sBDTm7k",
@@ -4034,7 +4197,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 87
   },
   {
     "id": "i-8Ld2ZHQ",
@@ -4091,7 +4254,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 83
+    "sortOrder": 88
   },
   {
     "id": "i-Dthbn8K",
@@ -4148,7 +4311,36 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 84
+    "sortOrder": 89
+  },
+  {
+    "id": "i-jcLJT4J",
+    "title": "Set in her ways",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/LsRCL77nstrL8JMJqBH5RqKnshprZwqRZpBbCFPwR/L/_HF23527-Edit-2-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/LsRCL77nstrL8JMJqBH5RqKnshprZwqRZpBbCFPwR/L/_HF23527-Edit-2-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/LsRCL77nstrL8JMJqBH5RqKnshprZwqRZpBbCFPwR/L/_HF23527-Edit-2-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/LsRCL77nstrL8JMJqBH5RqKnshprZwqRZpBbCFPwR/L/_HF23527-Edit-2-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/M3sdPMBxrsqw5Gb8Rd7JQSGSpSL2SK4Cfhnm5PLFr/S/_HF23527-Edit-2-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-jcLJT4J/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 90
   },
   {
     "id": "i-vpt6C9V",
@@ -4184,7 +4376,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 91
   },
   {
     "id": "i-V5WcTqg",
@@ -4219,7 +4411,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 92
   },
   {
     "id": "i-vcX6WLC",
@@ -4276,7 +4468,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 93
   },
   {
     "id": "i-TtXPkVK",
@@ -4333,7 +4525,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 88
+    "sortOrder": 94
   },
   {
     "id": "i-Cg4ZB72",
@@ -4390,7 +4582,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 89
+    "sortOrder": 95
   },
   {
     "id": "i-6G4PBd8",
@@ -4447,7 +4639,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 90
+    "sortOrder": 96
   },
   {
     "id": "i-PPJ9GKf",
@@ -4477,834 +4669,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 91
-  },
-  {
-    "id": "i-w3JBvXs",
-    "title": "Cowboy Art:  Farewell!",
-    "description": "Painterly Wild West themed photography of a lady waving goodbye from the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Farewell!",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/KvM4k8DwFS6JR2g2B9fxnNrRGJx7W5NnNH2FVgTbv/L/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/KDK3QdXstFJkCWnnQCzm3DPJgJppG8Q3Hw6PBncNB/S/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of a lady waving goodbye from the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 92
-  },
-  {
-    "id": "i-pNSX6cp",
-    "title": "Hired Gun",
-    "description": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Hired Gun",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/LKsw8cZvh3Fj76tKzrdgnj2VVdwKNCG8L2nfRcRdJ/XL/painterly%20cowboy%20photography%20_HF28526-301-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/LKsw8cZvh3Fj76tKzrdgnj2VVdwKNCG8L2nfRcRdJ/XL/painterly%20cowboy%20photography%20_HF28526-301-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/LKsw8cZvh3Fj76tKzrdgnj2VVdwKNCG8L2nfRcRdJ/XL/painterly%20cowboy%20photography%20_HF28526-301-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/MzkbNKx5Tr3NKJQZfPzCfsjhw7QnxXzPZSXfJHtDG/L/painterly%20cowboy%20photography%20_HF28526-301-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/K4drcrQ5dxZtzdvrTsjsJF3w5jT6hCDQ54sCnHNgZ/S/painterly%20cowboy%20photography%20_HF28526-301-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 93
-  },
-  {
-    "id": "i-zH8SD79",
-    "title": "Dead to Rights",
-    "description": "Painterly Wild West themed photography of cowboy with his Henry. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Dead to Rights",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/MSfPBrqff76D87G4KPVtSjmfgFBRJfXH54mTZ4ct2/XL/_O2H2299-Edit-2-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/MSfPBrqff76D87G4KPVtSjmfgFBRJfXH54mTZ4ct2/XL/_O2H2299-Edit-2-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/Kcm8NKsc6qCDmsL3ShxDkXdWJ5jjNqZfZCzff5n6C/L/_O2H2299-Edit-2-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/NJRRcZRqbsbSs35WQkbfDgJpjQWzCDTQW2TgDQn9W/M/_O2H2299-Edit-2-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/LNz7nDXq4Rr9nfGSTmzHXfjC89jQjd89ZQTCVzhNf/S/_O2H2299-Edit-2-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zH8SD79/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy with his Henry. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 94
-  },
-  {
-    "id": "i-dwk4K8v",
-    "title": "Now let's see you dance!",
-    "description": "Cowboy with his gun causing trouble. Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Now let's see you dance!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/MLWGpwpx2GK2tcwFqHTXsbfz3tSfFCMMzzJF48B5D/XL/cowboy%20art%20_ANA9563-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/MLWGpwpx2GK2tcwFqHTXsbfz3tSfFCMMzzJF48B5D/XL/cowboy%20art%20_ANA9563-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/KtprFrLW8Qz5x5zw3jQn7cZNrDGfmtpjLtdHfB2d7/L/cowboy%20art%20_ANA9563-Edit-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/NL4BS2D5wRFVpqwVWWKrkFF8gQPQkQ8gDbJjXDtKV/M/cowboy%20art%20_ANA9563-Edit-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/MTfcmKwkBjFhfC4cwC6ZkGsZNjK8Xzk99sHf925fS/S/cowboy%20art%20_ANA9563-Edit-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dwk4K8v/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Cowboy with his gun causing trouble. Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 95
-  },
-  {
-    "id": "i-ZKCtdPV",
-    "title": "Cowboy Art: Trouble Approaching",
-    "description": "Painterly Wild West themed photography of settler woman reaching for \"Old Betsy\" as she hears trouble outside the window of her cabin. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Trouble Approaching",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/LL7m9xLSkhszMtRgHJm5D33m42hfH7CS2hKS7JXjL/XL/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/LL7m9xLSkhszMtRgHJm5D33m42hfH7CS2hKS7JXjL/XL/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/KQSrjPbWgGDCKz3978ZhfXJNttHtT44PKFpKv77V6/L/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/MR6PZh9TFSR8BpdTP6QJD49b9vB2KKVFRvwbctZCV/M/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/KpqVkLMBMQPcbvrszb52bs4QZjHgjZDJvg6JLQCbV/S/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ZKCtdPV/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of settler woman reaching for \"Old Betsy\" as she hears trouble outside the window of her cabin. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 96
-  },
-  {
-    "id": "i-CgCxXGG",
-    "title": "I beg your pardon?",
-    "description": "Painterly Wild West themed photography of classic wild west cowboy looking puzzled. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: I beg your pardon?",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/KShdt4Xzv4nMTZtm7SrnLjZxM838SQGXt6RzwT46J/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/KShdt4Xzv4nMTZtm7SrnLjZxM838SQGXt6RzwT46J/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/MhqJ68NzTkddWcpN6ZcCM6xJ4FB8r3J6g3n5dTzD7/L/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/MSK55GnZgtbzrbbMPqh2g7LxNZVsbkRhxHk6GSDrJ/M/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/LqL2Nqb6vBRjFgL3qkHSq273bFk9ntWLQNfm9Hjv9/S/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-CgCxXGG/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of classic wild west cowboy looking puzzled. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
     "sortOrder": 97
-  },
-  {
-    "id": "i-TVSQHzg",
-    "title": "Doubtful",
-    "description": "Painterly Wild West themed photography western traveler sensing trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Doubtful",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/MHzWmf32Kb5PgczLN27snrKDc9cC7r7bfw2zKFCrk/XL/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/MHzWmf32Kb5PgczLN27snrKDc9cC7r7bfw2zKFCrk/XL/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/Krr2P8fp2QgnWXZrkxNS8mq2fpvf3mv7hgLfx4cbk/L/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/M2zsxSWQLBGQBsg2vGTcg5q7CMqjT9PNTm34KKWgS/M/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/NCnSWtDTXXmThVqkFvhQzswnTBLB3d9W4z4Rf8R6r/S/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography western traveler sensing trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 98
-  },
-  {
-    "id": "i-dqdZcnX",
-    "title": "Cowboy Art:  Joyful Reunion",
-    "description": "Painterly Wild West themed photography of 2 old friends. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Joyful Reunion",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/LBvhMtZ4Md48WDNHRqqkkm5jcswCc3FJdnQZPTgdX/XL/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/LBvhMtZ4Md48WDNHRqqkkm5jcswCc3FJdnQZPTgdX/XL/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/LkqCFJBMVKhLKs8Bfnn6NdCdWd3nwtdvX3ZhTn8FN/L/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/KRXzrPMhCLmP9XXbLWwMGdNjhrFmCHT8DLrCQrcgs/M/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/MDR2Z7pBWScrJQqCMkbpBPXznCgKXWKtwPPcKPCWD/S/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of 2 old friends. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 99
-  },
-  {
-    "id": "i-MDrw6sD",
-    "title": "Cowboy Coffee",
-    "description": "Painterly Wild West themed photography of cowboy warming himself by the fire. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Cowboy Coffee",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/KrW35NZ8h8RT3SQGFVB52VjmFMdMhbHcmZJSKDg6L/XL/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/KrW35NZ8h8RT3SQGFVB52VjmFMdMhbHcmZJSKDg6L/XL/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/KrW35NZ8h8RT3SQGFVB52VjmFMdMhbHcmZJSKDg6L/XL/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/M2HsWQvrxBTqW7GwFQjnSbc5np2Jf8xnVWrwv3hwz/L/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/Mx49JdXmPqXrKs5Mxw8f5XGSrGkDNHvSCKtCrw4X3/S/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy warming himself by the fire. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 100
-  },
-  {
-    "id": "i-SPTNHnP",
-    "title": "I'm Not Done Yet",
-    "description": "Painterly Wild West themed photography of cowboy drinking his troubles away. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: I'm Not Done Yet",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/NbN42pMRWFWcmhvZVSsGHSpdcDWMspC4J9bqhjWtZ/XL/vintage%20western%20art_HF26696-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/NbN42pMRWFWcmhvZVSsGHSpdcDWMspC4J9bqhjWtZ/XL/vintage%20western%20art_HF26696-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/NbN42pMRWFWcmhvZVSsGHSpdcDWMspC4J9bqhjWtZ/XL/vintage%20western%20art_HF26696-Edit-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/MFrxzLVrDrPp8WWWPbrfgr5jKS6pwfmsnFq7XcW45/L/vintage%20western%20art_HF26696-Edit-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/L7CrQ8nmtwxxZSDxtsshWtpkJDj9JGWVmJN3cL3FM/S/vintage%20western%20art_HF26696-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-SPTNHnP/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy drinking his troubles away. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 101
-  },
-  {
-    "id": "i-NBsQ59h",
-    "title": "Cowboy Art: Almost Home",
-    "description": "Painterly Wild West themed photography of cowboy in cowboy hat and slicker on a train deep in thought. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Almost Home",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/LFJ2JLD6KkwjFB86vsWWGZMxCh8ZvCP3SRFx7tPck/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/LFJ2JLD6KkwjFB86vsWWGZMxCh8ZvCP3SRFx7tPck/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/KvHPtstSccGZHCFbMjZtGRzChhHdGLrTBrB35bFTb/L/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/LQK5WRhqGJMG9xWt6qJ7M86QZ3SCmXZ26rn7FQhZj/M/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/ND94XC7T8wBtB6MDhXsTd7wWj59pmZRnqcx387snV/S/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy in cowboy hat and slicker on a train deep in thought. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 102
-  },
-  {
-    "id": "i-6BgfRxb",
-    "title": "Cowboy Art: Gold!",
-    "description": "Cowboy strikes it rich as he finds gold in his gold claim. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Gold!",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/M3xgzVTMPHn5mb9d3Z9wWsZXGLRbRBVFNkNZTJVzk/XL/Cowboy%20wall%20art%20_DSF9064-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/M3xgzVTMPHn5mb9d3Z9wWsZXGLRbRBVFNkNZTJVzk/XL/Cowboy%20wall%20art%20_DSF9064-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/L92h3nzBctVKnSq6HTPmxqF535hzZBgsfD7CkWChh/L/Cowboy%20wall%20art%20_DSF9064-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/Mgwd92C9g4nTzLK4fB7VMqfd63brPc8v7SXM3sPXw/M/Cowboy%20wall%20art%20_DSF9064-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/K6gz4WRz5dM6chSMbhKwXKGH3bNxPq8C7zkThKtXL/S/Cowboy%20wall%20art%20_DSF9064-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6BgfRxb/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Cowboy strikes it rich as he finds gold in his gold claim. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 103
-  },
-  {
-    "id": "i-zXnjqZZ",
-    "title": "Cowboy Art: Mr. Twain",
-    "description": "Painterly Wild West themed photography of Mr. Twain. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Mr. Twain",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/LhZrrv9phPrCS9Kd95LsfxHXDrnbZ7CVsL4PN4qpW/XL/historic%20art_HF21481-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/LhZrrv9phPrCS9Kd95LsfxHXDrnbZ7CVsL4PN4qpW/XL/historic%20art_HF21481-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/LhZrrv9phPrCS9Kd95LsfxHXDrnbZ7CVsL4PN4qpW/XL/historic%20art_HF21481-Edit-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/M6m26Fz5RL8gsWNCnJ8RcMBNJqMHMZNshGJS5CnxJ/L/historic%20art_HF21481-Edit-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/NcvbGTqdxqtWhKGJjRXLrMh39pTNN8mBgHLFXd9CP/S/historic%20art_HF21481-Edit-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of Mr. Twain. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 104
-  },
-  {
-    "id": "i-3ppJNtd",
-    "title": "Old Guard",
-    "description": "Painterly fine art portrait of a seasoned Western cowboy—stoic, weathered, and resolute. Captured by Wayne Heim in a style that blends historical authenticity with cinematic light, this image evokes the timeless authority of the “old guard.” Perfect for collectors of cowboy art, Western fine art photography, and Americana décor that celebrates character and legacy. © Wayne Heim",
-    "alt": "Painterly portrait of an older Western cowboy in hat and vest, seated with cane and revolver, lit dramatically.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/NPgsjRcSbLZGSGGqN89Pv6KmTwnJ7FNrhwZMJwPkp/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/NPgsjRcSbLZGSGGqN89Pv6KmTwnJ7FNrhwZMJwPkp/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/NPgsjRcSbLZGSGGqN89Pv6KmTwnJ7FNrhwZMJwPkp/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/L27rVMpsTXqPDB8Sh2XFBskqc2hNT2HtN7BR3snpf/L/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/MJjshFCJjqNZRxCS8zdcj4qG8HJvsMPvxhwKMJRhT/S/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Every crease carries a memory, every glance a warning, every silence a story you’ll never quite earn.\n\nThis isn’t just the old guard. This is the line between then and now— a reminder that some men aren’t merely remembered.\nThey endure.",
-    "notes": "“Old Guard” is less a portrait than a statement of medium. Wayne Heim’s painterly photography doesn’t imitate painting, nor cling to the strict fidelity of traditional photography. Instead, it occupies the charged space in between—where light, texture, and atmosphere become narrative tools.\n\nThe chiaroscuro recalls the pictorialist tradition, yet the directness of the gaze roots it in photographic truth. Like Remington’s archetypal frontiersmen or Wyeth’s weathered figures, the subject here stands as more than a likeness—he becomes emblematic. A reminder that the West was not just motion and mythic landscapes, but also endurance, wisdom, and presence hard-earned.\n\nFor collectors, this work underscores why painterly photography belongs in the canon of fine art: it captures character with the weight of history, and history with the intimacy of a living presence.",
-    "rating": 3,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 105
-  },
-  {
-    "id": "i-jcLJT4J",
-    "title": "Set in her ways",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/LsRCL77nstrL8JMJqBH5RqKnshprZwqRZpBbCFPwR/L/_HF23527-Edit-2-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/LsRCL77nstrL8JMJqBH5RqKnshprZwqRZpBbCFPwR/L/_HF23527-Edit-2-2-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/LsRCL77nstrL8JMJqBH5RqKnshprZwqRZpBbCFPwR/L/_HF23527-Edit-2-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/LsRCL77nstrL8JMJqBH5RqKnshprZwqRZpBbCFPwR/L/_HF23527-Edit-2-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/M3sdPMBxrsqw5Gb8Rd7JQSGSpSL2SK4Cfhnm5PLFr/S/_HF23527-Edit-2-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-jcLJT4J/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy"
-    ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 106
   },
   {
     "id": "i-HHxxcsM",
@@ -5361,20 +4726,20 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 107
+    "sortOrder": 98
   },
   {
-    "id": "i-Khb37pn",
-    "title": "Kiss for Good Measures",
-    "description": "Painterly Wild West themed photography of western characters exchanging a kiss for good luck. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Kiss for Good Measures",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/M8JnLZXc8gqkcxBRQMBRDM3BMgrvRpj6J9MHTqzLm/XL/Western%20themed%20photography_HF27563-205-207-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/M8JnLZXc8gqkcxBRQMBRDM3BMgrvRpj6J9MHTqzLm/XL/Western%20themed%20photography_HF27563-205-207-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/KJs26Frxr3VVm7q2G5HwV8LbqjPbvX84xb322bxZP/L/Western%20themed%20photography_HF27563-205-207-L.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/KvPbz4vTvcP4tTMjLbRtW3cZ4HR6q9zWc58NpjMZV/M/Western%20themed%20photography_HF27563-205-207-M.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/KvhZkPg997D2gwZJXmngWbSpkgLZtLdNxPZ5sksKk/S/Western%20themed%20photography_HF27563-205-207-S.jpg",
+    "id": "i-w3JBvXs",
+    "title": "Cowboy Art:  Farewell!",
+    "description": "Painterly Wild West themed photography of a lady waving goodbye from the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Farewell!",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/KvM4k8DwFS6JR2g2B9fxnNrRGJx7W5NnNH2FVgTbv/L/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/KDK3QdXstFJkCWnnQCzm3DPJgJppG8Q3Hw6PBncNB/S/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/A",
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -5411,27 +4776,27 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Painterly Wild West themed photography of western characters exchanging a kiss for good luck. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "story": "Painterly Wild West themed photography of a lady waving goodbye from the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 108
+    "sortOrder": 99
   },
   {
-    "id": "i-mJQCXmh",
-    "title": "Wetting the Whistle: Between Sips and Silence",
-    "description": "A cowboy pauses for a drink in this captivating fine art photograph by Wayne Heim. Infused with painterly texture and Western storytelling, the image captures a quiet, contemplative moment that balances solitude and strength. Perfect for collectors of cowboy art, rustic wall décor, and vintage-style Western prints, this image evokes the raw emotion and timeless beauty of the frontier. Bring the essence of the Old West into your space with stunning fine art photography that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Wetting the Whistle",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/KJLDGhK86Q7hgtbsPFJPW9wcWkr4wZXT63S9FBbPs/XL/cowboy%20art%20_HF26275-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/KJLDGhK86Q7hgtbsPFJPW9wcWkr4wZXT63S9FBbPs/XL/cowboy%20art%20_HF26275-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/KJLDGhK86Q7hgtbsPFJPW9wcWkr4wZXT63S9FBbPs/XL/cowboy%20art%20_HF26275-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/L5QB8qbCJZSbgVXM5zmmkMRWT79ZhSRD3bVgtMD5T/L/cowboy%20art%20_HF26275-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/LgjRnzXsMNwF7Hrg3BvZQ5fZxSrtcbQVMHnNqXRs4/S/cowboy%20art%20_HF26275-Edit-S.jpg",
+    "id": "i-pNSX6cp",
+    "title": "Hired Gun",
+    "description": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Hired Gun",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/LKsw8cZvh3Fj76tKzrdgnj2VVdwKNCG8L2nfRcRdJ/XL/painterly%20cowboy%20photography%20_HF28526-301-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/LKsw8cZvh3Fj76tKzrdgnj2VVdwKNCG8L2nfRcRdJ/XL/painterly%20cowboy%20photography%20_HF28526-301-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/LKsw8cZvh3Fj76tKzrdgnj2VVdwKNCG8L2nfRcRdJ/XL/painterly%20cowboy%20photography%20_HF28526-301-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/MzkbNKx5Tr3NKJQZfPzCfsjhw7QnxXzPZSXfJHtDG/L/painterly%20cowboy%20photography%20_HF28526-301-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/K4drcrQ5dxZtzdvrTsjsJF3w5jT6hCDQ54sCnHNgZ/S/painterly%20cowboy%20photography%20_HF28526-301-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-mJQCXmh/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/A",
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -5468,27 +4833,27 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Ain’t the coffee he’s after. Not really.\nIt’s the heat in his hands, the pause it buys, the chance to pretend things still make sense. Out here, a man don’t get many comforts. But for a minute — just one — he can close his eyes, draw in the steam, and hope it fills the spaces Martha left behind.",
-    "notes": "This piece draws from a lineage that spans Remington to Rockwell — storytellers who painted the soul of the frontier in brush or lens. The triangular composition (brow, elbow, glass) roots the figure with quiet purpose, while side lighting casts him in painterly chiaroscuro, evoking the mood of Rembrandt or the grit of early Pictorialist photography.\n\nWhat sets this work apart is its restraint. It’s not spectacle, but suggestion — a story left half-told, pulling the viewer in to finish it. The weathered textures, warm-to-cool palette, and softened edges make this more than a photograph — it's a cinematic moment preserved in pigment and tone.\n",
-    "rating": 3,
+    "story": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 109
+    "sortOrder": 100
   },
   {
-    "id": "i-jLSNwCT",
-    "title": "Together Forever",
-    "description": "Wherever this train and the future takes us I know one thing, we are going down that track together. Cowboy and his lady look out the back of the train as they head off to a new adventure. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Together",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/LjWXp5dFfFLBRJhx49gCgbFFDSmJPCzjP8MKn92mN/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/LjWXp5dFfFLBRJhx49gCgbFFDSmJPCzjP8MKn92mN/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/LjWXp5dFfFLBRJhx49gCgbFFDSmJPCzjP8MKn92mN/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/LgkVWB4fcZWGB9pzhSCWXgs65K4dJC7mtpfn2DpsT/L/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/MrvcSPg6dgmzj46WztxX4sh5rkTppjt42QfmjBVDG/S/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-S.jpg",
+    "id": "i-zH8SD79",
+    "title": "Dead to Rights",
+    "description": "Painterly Wild West themed photography of cowboy with his Henry. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Dead to Rights",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/MSfPBrqff76D87G4KPVtSjmfgFBRJfXH54mTZ4ct2/XL/_O2H2299-Edit-2-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/MSfPBrqff76D87G4KPVtSjmfgFBRJfXH54mTZ4ct2/XL/_O2H2299-Edit-2-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/Kcm8NKsc6qCDmsL3ShxDkXdWJ5jjNqZfZCzff5n6C/L/_O2H2299-Edit-2-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/NJRRcZRqbsbSs35WQkbfDgJpjQWzCDTQW2TgDQn9W/M/_O2H2299-Edit-2-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/LNz7nDXq4Rr9nfGSTmzHXfjC89jQjd89ZQTCVzhNf/S/_O2H2299-Edit-2-Edit-2-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zH8SD79/A",
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -5525,125 +4890,27 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Wherever this train and the future takes us I know one thing, we are going down that track together. Cowboy and his lady look out the back of the train as they head off to a new adventure. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "story": "Painterly Wild West themed photography of cowboy with his Henry. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 101
   },
   {
-    "id": "i-kBNpRtm",
-    "title": "Western Fine Art Cowboy",
-    "description": "Explore western fine art with Wayne Heim's Western cowboys. This painterly cowboy portraits piece conveys rustic charm, cowboy artwork, and western fine art, perfect for fans of Western cowboys. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/MhBkn2wtdSJ9VWf25vSv6Szwdg7NWT4hNn5sCKd6T/XL/_HF26550-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/MhBkn2wtdSJ9VWf25vSv6Szwdg7NWT4hNn5sCKd6T/XL/_HF26550-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/K9HRDSPQTz8q3hnnHjSWzPt2CX6PDvKsRB6S8LBQH/L/_HF26550-Edit-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/NRfKXfVKvmLGBMXVnF9DXt9xJB7VfMGLvpRwqKf5j/M/_HF26550-Edit-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/Mm7qrPW8s6wz3SC2jC9pwSBFzp9cJRtt7cSvGk5XB/S/_HF26550-Edit-Edit-S.jpg",
+    "id": "i-dwk4K8v",
+    "title": "Now let's see you dance!",
+    "description": "Cowboy with his gun causing trouble. Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Now let's see you dance!",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/MLWGpwpx2GK2tcwFqHTXsbfz3tSfFCMMzzJF48B5D/XL/cowboy%20art%20_ANA9563-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/MLWGpwpx2GK2tcwFqHTXsbfz3tSfFCMMzzJF48B5D/XL/cowboy%20art%20_ANA9563-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/KtprFrLW8Qz5x5zw3jQn7cZNrDGfmtpjLtdHfB2d7/L/cowboy%20art%20_ANA9563-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/NL4BS2D5wRFVpqwVWWKrkFF8gQPQkQ8gDbJjXDtKV/M/cowboy%20art%20_ANA9563-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-dwk4K8v/1/MTfcmKwkBjFhfC4cwC6ZkGsZNjK8Xzk99sHf925fS/S/cowboy%20art%20_ANA9563-Edit-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/A",
-    "keywords": [
-      "WHO4278",
-      "western fine art",
-      "Western cowboys",
-      "painterly cowboy portraits",
-      "rustic charm",
-      "cowboy artwork",
-      "fine art Western photography",
-      "historic western prints",
-      "powerful works of art",
-      "western art"
-    ],
-    "story": "This image embodies fine art Western photography and historic western prints, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of western art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 111
-  },
-  {
-    "id": "i-xr5chJG",
-    "title": "Capturing Painterly Cowboy Portraits",
-    "description": "Wayne Heim's painterly cowboy portraits captures the spirit of cowboy portraits in this cowboy painting art image. Featuring Western cowboys, rustic charm, and painterly cowboy portraits, it's ideal for cowboy portraits enthusiasts. © Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/Mkb9q8KXSgk8Sn7VswWfk2d52QNwB39z7r8VJHXJj/XL/_WHO4721-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/Mkb9q8KXSgk8Sn7VswWfk2d52QNwB39z7r8VJHXJj/XL/_WHO4721-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/M7Vfb3B2bWRXP3DgxCHf5LLZWmnG42LpZwXsq6xcN/L/_WHO4721-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/LRrQW47SPWJrx4ZZtWV2Hkxdq865zzbd7N3tr5PXn/M/_WHO4721-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/MRWhfx682T8KNXVBxBFXjgdV59dv4MtmxvjJsCKq4/S/_WHO4721-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/A",
-    "keywords": [
-      "HF26271",
-      "painterly cowboy portraits",
-      "cowboy portraits",
-      "cowboy painting art",
-      "Western cowboys",
-      "rustic charm",
-      "western fine art",
-      "historic western prints",
-      "cowboy artwork"
-    ],
-    "story": "Wayne Heim's exploration of western fine art comes alive in this piece, showcasing cowboy painting art and historic western prints. A testament to cowboy artwork in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 112
-  },
-  {
-    "id": "i-nLKscbQ",
-    "title": "Fine Art Western Photography In Fine Art",
-    "description": "Discover the fine art Western photography in this powerful rustic charm by Wayne Heim. A compelling work that embodies frontier life, western cowboy art, and rugged spirit. Perfect for art lovers seeking fine art Western photography to enhance their collection. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/K8VrJGFDvbhw6GGXJgn9Msdgq5hFRkLSWfznn3LNq/L/_HF23785-735-736-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/K8VrJGFDvbhw6GGXJgn9Msdgq5hFRkLSWfznn3LNq/L/_HF23785-735-736-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/K8VrJGFDvbhw6GGXJgn9Msdgq5hFRkLSWfznn3LNq/L/_HF23785-735-736-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/K8VrJGFDvbhw6GGXJgn9Msdgq5hFRkLSWfznn3LNq/L/_HF23785-735-736-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/LQmSkg5VfDpmVP9QgsD8T5jRGpbz2trXhHZZ8qxLg/S/_HF23785-735-736-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "fine art Western photography",
-      "rustic charm",
-      "frontier life",
-      "western cowboy art",
-      "rugged spirit",
-      "cowboy painting art",
-      "Western cowboys",
-      "powerful works of art"
-    ],
-    "story": "Delving into cowboy painting art, this work by Wayne Heim highlights rugged spirit through Western cowboys and powerful works of art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 113
-  },
-  {
-    "id": "i-TQw7vC7",
-    "title": "Cowboy Art: Traveler",
-    "description": "Painterly Wild West themed photography of traveler. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim.",
-    "alt": "Cowboy Art: Traveler",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/M5VGGC9TPNnns6Fv7dxcjgp5CvQsHJTpbMCpxJvjk/XL/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/M5VGGC9TPNnns6Fv7dxcjgp5CvQsHJTpbMCpxJvjk/XL/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/M5VGGC9TPNnns6Fv7dxcjgp5CvQsHJTpbMCpxJvjk/XL/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/LH6L4SD9nX7hFJkZ8nc7dvcfQNhWkjTQ868FrBdSv/L/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/NJ2htBFn7G42f7pxpMBkpQ6MWLTP37z9Wzf3GggLF/S/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dwk4K8v/A",
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -5680,27 +4947,27 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Painterly Wild West themed photography of traveler. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim.",
+    "story": "Cowboy with his gun causing trouble. Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 114
+    "sortOrder": 102
   },
   {
-    "id": "i-MnX4pxX",
-    "title": "Cowboy Art: Fading Light",
-    "description": "Painterly Wild West themed photography of woman darning socks by the fading light. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Fading Light",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/MhnGCkWZNjtht6Z5jPzHfP4R5jj8BXcWgL4H7ZTWP/XL/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/MhnGCkWZNjtht6Z5jPzHfP4R5jj8BXcWgL4H7ZTWP/XL/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/MhnGCkWZNjtht6Z5jPzHfP4R5jj8BXcWgL4H7ZTWP/XL/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/MN2Ss45Gt2bRFqb2bmTbcPtZJzBjnbGhkDPKg3cHV/L/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/KvchnDBRQ7mV8v3Zc8mV2ctqBBS3fFQ9j53MtKnpV/S/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-S.jpg",
+    "id": "i-ZKCtdPV",
+    "title": "Cowboy Art: Trouble Approaching",
+    "description": "Painterly Wild West themed photography of settler woman reaching for \"Old Betsy\" as she hears trouble outside the window of her cabin. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Trouble Approaching",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/LL7m9xLSkhszMtRgHJm5D33m42hfH7CS2hKS7JXjL/XL/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/LL7m9xLSkhszMtRgHJm5D33m42hfH7CS2hKS7JXjL/XL/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/KQSrjPbWgGDCKz3978ZhfXJNttHtT44PKFpKv77V6/L/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/MR6PZh9TFSR8BpdTP6QJD49b9vB2KKVFRvwbctZCV/M/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-ZKCtdPV/2/KpqVkLMBMQPcbvrszb52bs4QZjHgjZDJvg6JLQCbV/S/western%20themed%20portrait%20photo%20_O1H0175-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ZKCtdPV/A",
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -5737,64 +5004,27 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Painterly Wild West themed photography of woman darning socks by the fading light. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "story": "Painterly Wild West themed photography of settler woman reaching for \"Old Betsy\" as she hears trouble outside the window of her cabin. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 115
+    "sortOrder": 103
   },
   {
-    "id": "i-SVwxn5L",
-    "title": "Cowboy Cowboy Art",
-    "description": "Uncover historic western prints through this cowboy art from Wayne Heim. Showcasing frontier life, powerful works of art, and cowboy artwork, it's perfect for enthusiasts of historic western prints. © Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/MFsKPKpf3H7TGBBRzw2jjGtCFksvs7LvRRjmqTZ3H/L/_O2H2905-682-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/MFsKPKpf3H7TGBBRzw2jjGtCFksvs7LvRRjmqTZ3H/L/_O2H2905-682-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/MFsKPKpf3H7TGBBRzw2jjGtCFksvs7LvRRjmqTZ3H/L/_O2H2905-682-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/MFsKPKpf3H7TGBBRzw2jjGtCFksvs7LvRRjmqTZ3H/L/_O2H2905-682-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/KGjFcLvKkKHZjKSGzpr8RT38nSFRGJRvMzZfM8gxM/S/_O2H2905-682-S.jpg",
+    "id": "i-CgCxXGG",
+    "title": "I beg your pardon?",
+    "description": "Painterly Wild West themed photography of classic wild west cowboy looking puzzled. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: I beg your pardon?",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/KShdt4Xzv4nMTZtm7SrnLjZxM838SQGXt6RzwT46J/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/KShdt4Xzv4nMTZtm7SrnLjZxM838SQGXt6RzwT46J/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/MhqJ68NzTkddWcpN6ZcCM6xJ4FB8r3J6g3n5dTzD7/L/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/MSK55GnZgtbzrbbMPqh2g7LxNZVsbkRhxHk6GSDrJ/M/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/LqL2Nqb6vBRjFgL3qkHSq273bFk9ntWLQNfm9Hjv9/S/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-SVwxn5L/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "historic western prints",
-      "cowboy art",
-      "frontier life",
-      "powerful works of art",
-      "cowboy artwork",
-      "fine art Western photography",
-      "cowboy painting art",
-      "outlaw portraits"
-    ],
-    "story": "Delving into fine art Western photography, this work by Wayne Heim highlights cowboy art through cowboy painting art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 116
-  },
-  {
-    "id": "i-gQ7GZ5s",
-    "title": "Cowboy Art:  Ready for Vengeance",
-    "description": "Painterly Wild West themed photography of a cowboy getting ready for action in an impending gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Ready for Vengeance",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/MvFvv3C2SnJP3kTsB85DPj5NMfrZCFM5kXtwm5TH9/XL/_O2H0274-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/MvFvv3C2SnJP3kTsB85DPj5NMfrZCFM5kXtwm5TH9/XL/_O2H0274-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/MMrGZZSwhzNN3k8MQLCnXpdMqcG8vWHkk2hxHjF9N/L/_O2H0274-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/KzRGvz7gJxjtGqS4NRR6kPBNzjcGttdHqM4v92kzC/M/_O2H0274-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/MWNd3MGVHChp9v4L2rL7TSCb8ktRNGCfVLVQfCcQf/S/_O2H0274-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-gQ7GZ5s/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-CgCxXGG/A",
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -5831,27 +5061,27 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Painterly Wild West themed photography of a cowboy getting ready for action in an impending gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "story": "Painterly Wild West themed photography of classic wild west cowboy looking puzzled. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 117
+    "sortOrder": 104
   },
   {
-    "id": "i-52tTd9G",
-    "title": "Final Stand",
-    "description": "Painterly Wild West themed photography of cowboys making a stand during a classic western gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Final Stand",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/Mjj7LhJw7jVLGW2vBmMrcBHQ9zNnRSLThMfn3WLsk/XL/_O2H3281-311-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/Mjj7LhJw7jVLGW2vBmMrcBHQ9zNnRSLThMfn3WLsk/XL/_O2H3281-311-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/Mjj7LhJw7jVLGW2vBmMrcBHQ9zNnRSLThMfn3WLsk/XL/_O2H3281-311-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/LmF3fjjJxt4Vk4qh2L6TTMJBZThrFF5jFm784vJcP/L/_O2H3281-311-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/Lw2J78DqsVg3JMhBj6j9QCJxj9nmw92zXv5ndnBHr/S/_O2H3281-311-S.jpg",
+    "id": "i-TVSQHzg",
+    "title": "Doubtful",
+    "description": "Painterly Wild West themed photography western traveler sensing trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Doubtful",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/MHzWmf32Kb5PgczLN27snrKDc9cC7r7bfw2zKFCrk/XL/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/MHzWmf32Kb5PgczLN27snrKDc9cC7r7bfw2zKFCrk/XL/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/Krr2P8fp2QgnWXZrkxNS8mq2fpvf3mv7hgLfx4cbk/L/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/M2zsxSWQLBGQBsg2vGTcg5q7CMqjT9PNTm34KKWgS/M/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/NCnSWtDTXXmThVqkFvhQzswnTBLB3d9W4z4Rf8R6r/S/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/A",
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -5888,170 +5118,27 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Painterly Wild West themed photography of cowboys making a stand during a classic western gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "story": "Painterly Wild West themed photography western traveler sensing trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 118
+    "sortOrder": 105
   },
   {
-    "id": "i-TpkTsMg",
-    "title": "Western Cowboys Study",
-    "description": "Discover the Western cowboys in this powerful rugged spirit by Wayne Heim. A compelling work that embodies western art, historic western prints, and cowboy art. Perfect for art lovers seeking Western cowboys to enhance their collection. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/Nf2hFc5W67v2cLnhHkB3d9kHJQktbxdzWRBz7Bxxj/L/_O2H3127-862-863-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/Nf2hFc5W67v2cLnhHkB3d9kHJQktbxdzWRBz7Bxxj/L/_O2H3127-862-863-2-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/Nf2hFc5W67v2cLnhHkB3d9kHJQktbxdzWRBz7Bxxj/L/_O2H3127-862-863-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/NNjB53J7cDBrwSQXwVhnmK7bXvcgvB5dZK5TXvQL6/M/_O2H3127-862-863-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/NHMB4GzGfKX3JhhbfpnPWdLnSvDpBwC8qFS88bh5Z/S/_O2H3127-862-863-2-S.jpg",
+    "id": "i-dqdZcnX",
+    "title": "Cowboy Art:  Joyful Reunion",
+    "description": "Painterly Wild West themed photography of 2 old friends. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Joyful Reunion",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/LBvhMtZ4Md48WDNHRqqkkm5jcswCc3FJdnQZPTgdX/XL/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/LBvhMtZ4Md48WDNHRqqkkm5jcswCc3FJdnQZPTgdX/XL/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/LkqCFJBMVKhLKs8Bfnn6NdCdWd3nwtdvX3ZhTn8FN/L/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/KRXzrPMhCLmP9XXbLWwMGdNjhrFmCHT8DLrCQrcgs/M/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/1/MDR2Z7pBWScrJQqCMkbpBPXznCgKXWKtwPPcKPCWD/S/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9980-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-TpkTsMg/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "Western cowboys",
-      "rugged spirit",
-      "western art",
-      "historic western prints",
-      "cowboy art",
-      "cowboy portraits",
-      "painterly cowboy portraits",
-      "frontier life"
-    ],
-    "story": "Wayne Heim's exploration of cowboy portraits comes alive in this piece, showcasing painterly cowboy portraits and Western cowboys. A testament to frontier life in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 119
-  },
-  {
-    "id": "i-X9h6sdw",
-    "title": "Exploring Wild West Photography",
-    "description": "This wild west photography artwork by Wayne Heim showcases frederic remington in a Western cowboys style. Reflecting outlaw portraits, cowboy artwork, and wild west photography, it's suited for admirers of frederic remington. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/MpKF3tnd6jDkXsJpQB28j9DnVJw4G6R6HCD66J6kK/L/_HF23742-722-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/MpKF3tnd6jDkXsJpQB28j9DnVJw4G6R6HCD66J6kK/L/_HF23742-722-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/MpKF3tnd6jDkXsJpQB28j9DnVJw4G6R6HCD66J6kK/L/_HF23742-722-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/MpKF3tnd6jDkXsJpQB28j9DnVJw4G6R6HCD66J6kK/L/_HF23742-722-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/NG87gcBxk6p9Hm63J9xkCvsCQdD7vcf745L3CMCfm/S/_HF23742-722-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-X9h6sdw/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "wild west photography",
-      "frederic remington",
-      "Western cowboys",
-      "outlaw portraits",
-      "cowboy artwork",
-      "cowboy art",
-      "powerful works of art",
-      "fine art Western photography",
-      "rustic charm"
-    ],
-    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing powerful works of art and fine art Western photography. A testament to rustic charm in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 120
-  },
-  {
-    "id": "i-LCspRF4",
-    "title": "Fine Art Historic Western Prints",
-    "description": "Immerse yourself in historic western prints with this stunning cowboy artwork by Wayne Heim. Capturing wild west photography, rugged spirit, and western fine art, it's a must-have for collectors of historic western prints. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/MkcfVqT4bFPgFXHKNJRg9NMKKmmPfzKWwZfW9gFm3/L/_HF22770-953-954-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/MtnqV9z3WtkP9zbm3JWLK5k7btnk8NjtLCjks7GSv/S/_HF22770-953-954-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/A",
-    "keywords": [
-      "WHO0135",
-      "historic western prints",
-      "cowboy artwork",
-      "wild west photography",
-      "rugged spirit",
-      "western fine art",
-      "western art",
-      "outlaw portraits",
-      "cowboy art"
-    ],
-    "story": "This image embodies western art and outlaw portraits, captured by Wayne Heim in his signature style. It reflects cowboy art with a touch of western fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 121
-  },
-  {
-    "id": "i-DGtgJJJ",
-    "title": "Frederic Remington Portrait",
-    "description": "Wayne Heim presents frederic remington in this western landscapes fine art work. Embodying cowboy painting art, fine art Western photography, and cowboy art, it's recommended for lovers of frederic remington. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/NL4tdpQ7XnXGFVxbKCX8bCz3prPwQnT64NgvwCbZX/S/_O2H0723-Edit-784-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-DGtgJJJ/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "frederic remington",
-      "western landscapes fine art",
-      "cowboy painting art",
-      "fine art Western photography",
-      "cowboy art",
-      "cowboy artwork",
-      "western art",
-      "western fine art",
-      "rustic charm"
-    ],
-    "story": "Delving into cowboy artwork, this work by Wayne Heim highlights western art through western fine art and rustic charm. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 122
-  },
-  {
-    "id": "i-trM4FpR",
-    "title": "Music Lessons",
-    "description": "Painterly Wild West themed photography of settlers passing time with music lessons. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Music Lessons",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/K8x8CHdcKnNHrWRpszGxHbqCjs7RxjfwZJx3qZNT3/XL/painterly%20cowboy%20photography_HF29317-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/K8x8CHdcKnNHrWRpszGxHbqCjs7RxjfwZJx3qZNT3/XL/painterly%20cowboy%20photography_HF29317-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/LQFcDNMwdjfX4GbZrDKd5GmPkMkRjF2sG537hkNj3/L/painterly%20cowboy%20photography_HF29317-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/K6gh45JjWHHntnRmcH26zJ4BGwqFzTD8pW92LKgzD/M/painterly%20cowboy%20photography_HF29317-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/KZK4SsDP33g77Xqq5G6bkqVhpcs7jcSVXwZjPbJ2v/S/painterly%20cowboy%20photography_HF29317-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-trM4FpR/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dqdZcnX/A",
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -6088,686 +5175,14 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Painterly Wild West themed photography of settlers passing time with music lessons. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "story": "Painterly Wild West themed photography of 2 old friends. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 123
-  },
-  {
-    "id": "i-bkjkPfH",
-    "title": "Cowboy Art:  All in the Cards",
-    "description": "Painterly Wild West themed photography of cowboy playing cards in the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  All in the Cards",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/Lp6FZKcF2LTLjf6jxn2zPhv8BP8fqzw87JQxPmrNq/XL/cowboy%20cards_HF26909-Enhanced-NR-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/Lp6FZKcF2LTLjf6jxn2zPhv8BP8fqzw87JQxPmrNq/XL/cowboy%20cards_HF26909-Enhanced-NR-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/Lp6FZKcF2LTLjf6jxn2zPhv8BP8fqzw87JQxPmrNq/XL/cowboy%20cards_HF26909-Enhanced-NR-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/LT4V623Wj4hKXPgCvcdLDc7gvkCqfVTggQThLvhv9/L/cowboy%20cards_HF26909-Enhanced-NR-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/NbQWpNTRxwnzxqxQbfttJR5Cb6DRJcmmWq8XF6jsQ/S/cowboy%20cards_HF26909-Enhanced-NR-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bkjkPfH/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy playing cards in the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 124
-  },
-  {
-    "id": "i-R3CqrBr",
-    "title": "The Essence Of Frederic Remington",
-    "description": "Wayne Heim's frederic remington captures the spirit of cowboy portraits in this painterly cowboy portraits image. Featuring cowboy painting art, rustic charm, and frederic remington, it's ideal for cowboy portraits enthusiasts. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/MBwWQKsVfcmS7fgsZwBnVcjGL4rH97QBZq8dm4Qjd/L/_HF23341-816-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/MBwWQKsVfcmS7fgsZwBnVcjGL4rH97QBZq8dm4Qjd/L/_HF23341-816-2-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/MBwWQKsVfcmS7fgsZwBnVcjGL4rH97QBZq8dm4Qjd/L/_HF23341-816-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/MBwWQKsVfcmS7fgsZwBnVcjGL4rH97QBZq8dm4Qjd/L/_HF23341-816-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/KG6K7zkn5JxFKrbczr3bvSwnx78CgJwS3s29NfwtX/S/_HF23341-816-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-R3CqrBr/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "frederic remington",
-      "cowboy portraits",
-      "painterly cowboy portraits",
-      "cowboy painting art",
-      "rustic charm",
-      "frontier life",
-      "cowboy artwork"
-    ],
-    "story": "This image embodies rustic charm and frontier life, captured by Wayne Heim in his signature style. It reflects cowboy artwork with a touch of frederic remington. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 125
-  },
-  {
-    "id": "i-Cz82g6x",
-    "title": "Cowboy Art: One for the Road",
-    "description": "Painterly Wild West themed photography of drunk cowboy in doorway. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: One for the Road",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/LPQDBJFQHFbghW8zzVfCRBpp5Phfc4TLF89jP8Bcj/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/LPQDBJFQHFbghW8zzVfCRBpp5Phfc4TLF89jP8Bcj/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/LPQDBJFQHFbghW8zzVfCRBpp5Phfc4TLF89jP8Bcj/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/Lzb49kjMDq7vzwjX5WMJTFB3XBHP2fb6xQCR85WF7/L/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/KwknK3ZCp4HN8rzBJrZNTVDjTsPpvcFK7m4cj2MhD/S/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Cz82g6x/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of drunk cowboy in doorway. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 126
-  },
-  {
-    "id": "i-SPd5h6X",
-    "title": "Left for Dead",
-    "description": "Painterly Wild West themed photography of wounded cowboy left behind. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Left for Dead",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KLBGT9kCmDpS2PXhrT6W4GFrLsmb3mJKXkMdKXjwS/XL/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KLBGT9kCmDpS2PXhrT6W4GFrLsmb3mJKXkMdKXjwS/XL/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/NStGCnvH7KvnFbMtFs4F634vB2BVK4wzsQWwTBds4/L/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/Kq5FVff87pVhLhKF5QjWsVQsCCgP3dhCjdKgS5Wmm/M/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KGzgts9B43MNkPsczZFfhwx4d9BggMt7WFshpkq9K/S/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-SPd5h6X/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of wounded cowboy left behind. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 127
-  },
-  {
-    "id": "i-QWT3QZ4",
-    "title": "Exploring Cowboy Artwork",
-    "description": "Experience cowboy artwork through this evocative cowboy art from Wayne Heim's portfolio. This piece highlights historic western prints with wild west photography, while conveying rugged spirit, ideal for those who appreciate cowboy artwork. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/Nfjs3GwWSgqkNTrMRmG7HMCcR6gT65pZmBnBnfj62/L/_HF24218-746-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/Nfjs3GwWSgqkNTrMRmG7HMCcR6gT65pZmBnBnfj62/L/_HF24218-746-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/Nfjs3GwWSgqkNTrMRmG7HMCcR6gT65pZmBnBnfj62/L/_HF24218-746-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/Nfjs3GwWSgqkNTrMRmG7HMCcR6gT65pZmBnBnfj62/L/_HF24218-746-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/LT3fkVJpcQZ7n2WHn8hZ2g9KZRxDNDPXZ42gN2Ptm/S/_HF24218-746-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-QWT3QZ4/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "cowboy artwork",
-      "cowboy art",
-      "historic western prints",
-      "wild west photography",
-      "rugged spirit",
-      "frontier life",
-      "cowboy portraits",
-      "western cowboy art"
-    ],
-    "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing rugged spirit and cowboy portraits. A testament to western cowboy art in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 128
-  },
-  {
-    "id": "i-WCw4qpB",
-    "title": "Cowboy Art: Trouble",
-    "description": "Painterly Wild West themed photography of cowboy bandit during a train robbery. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Trouble",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/MNGwdGxnCHQNFBc7K7jj5K4m84C2rwMkTdqZ8fRRM/XL/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/MNGwdGxnCHQNFBc7K7jj5K4m84C2rwMkTdqZ8fRRM/XL/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/MNGwdGxnCHQNFBc7K7jj5K4m84C2rwMkTdqZ8fRRM/XL/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/L34wSQ6wpzhWp555wpWjNSRtfPnZns8DJhBxknF26/L/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/LLBbG6NnJW2V7DxstLNcjcsX7b3sSRksJqkd5hr7M/S/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy bandit during a train robbery. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 129
-  },
-  {
-    "id": "i-sDLXtRZ",
-    "title": "Cowboy Art: Privateer",
-    "description": "Painterly Wild West themed photography of hired gun. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Privateer",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/KWMXJqc48GtSBPf82M7KwShQnkk26wsGTd4QsdV47/XL/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/KWMXJqc48GtSBPf82M7KwShQnkk26wsGTd4QsdV47/XL/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/KWMXJqc48GtSBPf82M7KwShQnkk26wsGTd4QsdV47/XL/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/MHVxsGxqSkpjqCwvT7F37rPxfPPzRZ985X58x6WDJ/L/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/KZ3p2FTCGJ5XXqHZK7rWtLG9bfjJZg38QZd9wqZ4X/S/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sDLXtRZ/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of hired gun. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 130
-  },
-  {
-    "id": "i-kh6KWS9",
-    "title": "Cowboy Art: Negotiation",
-    "description": "Painterly Wild West themed photography of 2 cowboys striking a deal in camp. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Negotiation",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/KGB7MxWm4NVqmK26Kd5rkXxFmh9Wfb9FQH5NL3wFm/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/KGB7MxWm4NVqmK26Kd5rkXxFmh9Wfb9FQH5NL3wFm/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/LkDktKsfwzjfNgjwt3sQT2gLFkQDnGRfPNZqHRsQx/L/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-L.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/MXrQbSx9r8sW4tVP7d3vvTtB2H8cp5h6hJdPxVcqm/M/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-M.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/KdqxmHwLkdwpRKws4wW535jCjFxvfk5769NgppnKD/S/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of 2 cowboys striking a deal in camp. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 131
-  },
-  {
-    "id": "i-c5K798H",
-    "title": "Cowboy Artwork And Western Fine Art",
-    "description": "Uncover cowboy artwork through this western fine art from Wayne Heim. Showcasing frederic remington, rustic charm, and painterly cowboy portraits, it's perfect for enthusiasts of cowboy artwork. © Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/NgvpvqtnjC7ctKpJN6X94hDKRx69QQhhf84WBSVJ7/L/_HF28455-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/K75GgvxGvp4dNNcZZNPfQbBNSGX826M6mxncTR8HJ/S/_HF28455-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/A",
-    "keywords": [
-      "HF22961",
-      "cowboy artwork",
-      "western fine art",
-      "frederic remington",
-      "rustic charm",
-      "painterly cowboy portraits",
-      "cowboy painting art",
-      "historic western prints"
-    ],
-    "story": "This image embodies cowboy artwork and frederic remington, captured by Wayne Heim in his signature style. It reflects cowboy painting art with a touch of historic western prints. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 132
-  },
-  {
-    "id": "i-bN9mRH6",
-    "title": "Cowboy Art:  Break in the Storm",
-    "description": "Painterly Wild West themed photography of cowboy on horse at sunset. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Break in the Storm",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MMDPLqtNvVg724fGMxWNpNW9CvwzZfxtDTbzVXZXz/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MMDPLqtNvVg724fGMxWNpNW9CvwzZfxtDTbzVXZXz/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MMDPLqtNvVg724fGMxWNpNW9CvwzZfxtDTbzVXZXz/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MB9H8NX4q42H7PhgQpqFXGTjW5mdft8hQrWhtTGGT/L/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MNn8Dnpjp5Rwwvz2MHBm5vsBZLNNqNZztrMHV4xtb/S/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy on horse at sunset. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 133
-  },
-  {
-    "id": "i-2Z3ZvJS",
-    "title": "Interrupted Cowboy",
-    "description": "Painterly Wild West themed photography of cowboy with the paper. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Interrupted Cowboy",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/MNTpLwx6knXLWmW9k8pxGSpnpFc22qjCKx3RpvN9g/XL/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/MNTpLwx6knXLWmW9k8pxGSpnpFc22qjCKx3RpvN9g/XL/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/MNTpLwx6knXLWmW9k8pxGSpnpFc22qjCKx3RpvN9g/XL/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/LsX2nmgmxWWj4D4js7vBVZJJmNQZPWX78SMJ2GQjz/L/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/MMTHC59WrGRWZgtZMSqdjb594K8KtMtZSHQbfW3NM/S/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2Z3ZvJS/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy with the paper. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 134
-  },
-  {
-    "id": "i-XR9PZT5",
-    "title": "Cowboy Art: Late for Dinner",
-    "description": "Painterly Wild West themed photography of woman waiting patiently for the boys to come home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: Late for Dinner",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/MTzXGNntMzJrHjbwB3RCmvqVDfg2hDXm3TX8KH238/XL/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/MTzXGNntMzJrHjbwB3RCmvqVDfg2hDXm3TX8KH238/XL/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/MTzXGNntMzJrHjbwB3RCmvqVDfg2hDXm3TX8KH238/XL/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/MBFRvgDjGmvpFKww6JkzNQCRGNS25VQWfjg9ZRHvw/L/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/KvKnMn9qg2Gzxb3484TPvCkqjtpFpnC963VfXmw52/S/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-XR9PZT5/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of woman waiting patiently for the boys to come home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 135
-  },
-  {
-    "id": "i-R2JG4bd",
-    "title": "Cowboy Art: I got this.",
-    "description": "Painterly Wild West themed photography of settler protecting his home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: I got this.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/Ng9mzNpDHFg7jT83fwQWs8rJrszJNS4rjDTrxvkdj/XL/western%20themed%20art%20_O1H0196-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/Ng9mzNpDHFg7jT83fwQWs8rJrszJNS4rjDTrxvkdj/XL/western%20themed%20art%20_O1H0196-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/LZqgxWRCtbK54gbrZbgZdQZnpg6F8VnvxCg5vVHzM/L/western%20themed%20art%20_O1H0196-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/NFbjWwwZMs3GJF4QCGXFwkdstfkCD3XF77XZFfMp2/M/western%20themed%20art%20_O1H0196-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/NcqfXx6vKZP4cMfS8jBGtP7pgN9bqXvD4SgVQHP4F/S/western%20themed%20art%20_O1H0196-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of settler protecting his home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 136
+    "sortOrder": 106
   },
   {
     "id": "i-cKFv3th",
@@ -6824,7 +5239,1696 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
+    "sortOrder": 107
+  },
+  {
+    "id": "i-MDrw6sD",
+    "title": "Cowboy Coffee",
+    "description": "Painterly Wild West themed photography of cowboy warming himself by the fire. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Cowboy Coffee",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/KrW35NZ8h8RT3SQGFVB52VjmFMdMhbHcmZJSKDg6L/XL/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/KrW35NZ8h8RT3SQGFVB52VjmFMdMhbHcmZJSKDg6L/XL/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/KrW35NZ8h8RT3SQGFVB52VjmFMdMhbHcmZJSKDg6L/XL/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/M2HsWQvrxBTqW7GwFQjnSbc5np2Jf8xnVWrwv3hwz/L/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/Mx49JdXmPqXrKs5Mxw8f5XGSrGkDNHvSCKtCrw4X3/S/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy warming himself by the fire. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 108
+  },
+  {
+    "id": "i-3ppJNtd",
+    "title": "Old Guard",
+    "description": "Painterly fine art portrait of a seasoned Western cowboy—stoic, weathered, and resolute. Captured by Wayne Heim in a style that blends historical authenticity with cinematic light, this image evokes the timeless authority of the “old guard.” Perfect for collectors of cowboy art, Western fine art photography, and Americana décor that celebrates character and legacy. © Wayne Heim",
+    "alt": "Painterly portrait of an older Western cowboy in hat and vest, seated with cane and revolver, lit dramatically.",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/NPgsjRcSbLZGSGGqN89Pv6KmTwnJ7FNrhwZMJwPkp/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/NPgsjRcSbLZGSGGqN89Pv6KmTwnJ7FNrhwZMJwPkp/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/NPgsjRcSbLZGSGGqN89Pv6KmTwnJ7FNrhwZMJwPkp/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/L27rVMpsTXqPDB8Sh2XFBskqc2hNT2HtN7BR3snpf/L/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/1/MJjshFCJjqNZRxCS8zdcj4qG8HJvsMPvxhwKMJRhT/S/Painterly%20Cowboy%20Portrait%20Photography%20_DSF6724-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-3ppJNtd/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Every crease carries a memory, every glance a warning, every silence a story you’ll never quite earn.\n\nThis isn’t just the old guard. This is the line between then and now— a reminder that some men aren’t merely remembered.\nThey endure.",
+    "notes": "“Old Guard” is less a portrait than a statement of medium. Wayne Heim’s painterly photography doesn’t imitate painting, nor cling to the strict fidelity of traditional photography. Instead, it occupies the charged space in between—where light, texture, and atmosphere become narrative tools.\n\nThe chiaroscuro recalls the pictorialist tradition, yet the directness of the gaze roots it in photographic truth. Like Remington’s archetypal frontiersmen or Wyeth’s weathered figures, the subject here stands as more than a likeness—he becomes emblematic. A reminder that the West was not just motion and mythic landscapes, but also endurance, wisdom, and presence hard-earned.\n\nFor collectors, this work underscores why painterly photography belongs in the canon of fine art: it captures character with the weight of history, and history with the intimacy of a living presence.",
+    "rating": 3,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 109
+  },
+  {
+    "id": "i-SPTNHnP",
+    "title": "I'm Not Done Yet",
+    "description": "Painterly Wild West themed photography of cowboy drinking his troubles away. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: I'm Not Done Yet",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/NbN42pMRWFWcmhvZVSsGHSpdcDWMspC4J9bqhjWtZ/XL/vintage%20western%20art_HF26696-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/NbN42pMRWFWcmhvZVSsGHSpdcDWMspC4J9bqhjWtZ/XL/vintage%20western%20art_HF26696-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/NbN42pMRWFWcmhvZVSsGHSpdcDWMspC4J9bqhjWtZ/XL/vintage%20western%20art_HF26696-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/MFrxzLVrDrPp8WWWPbrfgr5jKS6pwfmsnFq7XcW45/L/vintage%20western%20art_HF26696-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/L7CrQ8nmtwxxZSDxtsshWtpkJDj9JGWVmJN3cL3FM/S/vintage%20western%20art_HF26696-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-SPTNHnP/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy drinking his troubles away. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 110
+  },
+  {
+    "id": "i-DGtgJJJ",
+    "title": "Frederic Remington Portrait",
+    "description": "Wayne Heim presents frederic remington in this western landscapes fine art work. Embodying cowboy painting art, fine art Western photography, and cowboy art, it's recommended for lovers of frederic remington. © Wayne Heim",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/NL4tdpQ7XnXGFVxbKCX8bCz3prPwQnT64NgvwCbZX/S/_O2H0723-Edit-784-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-DGtgJJJ/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "frederic remington",
+      "western landscapes fine art",
+      "cowboy painting art",
+      "fine art Western photography",
+      "cowboy art",
+      "cowboy artwork",
+      "western art",
+      "western fine art",
+      "rustic charm"
+    ],
+    "story": "Delving into cowboy artwork, this work by Wayne Heim highlights western art through western fine art and rustic charm. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 111
+  },
+  {
+    "id": "i-NBsQ59h",
+    "title": "Cowboy Art: Almost Home",
+    "description": "Painterly Wild West themed photography of cowboy in cowboy hat and slicker on a train deep in thought. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Almost Home",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/LFJ2JLD6KkwjFB86vsWWGZMxCh8ZvCP3SRFx7tPck/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/LFJ2JLD6KkwjFB86vsWWGZMxCh8ZvCP3SRFx7tPck/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/KvHPtstSccGZHCFbMjZtGRzChhHdGLrTBrB35bFTb/L/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/LQK5WRhqGJMG9xWt6qJ7M86QZ3SCmXZ26rn7FQhZj/M/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/1/ND94XC7T8wBtB6MDhXsTd7wWj59pmZRnqcx387snV/S/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF21392-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NBsQ59h/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy in cowboy hat and slicker on a train deep in thought. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 112
+  },
+  {
+    "id": "i-6BgfRxb",
+    "title": "Cowboy Art: Gold!",
+    "description": "Cowboy strikes it rich as he finds gold in his gold claim. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Gold!",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/M3xgzVTMPHn5mb9d3Z9wWsZXGLRbRBVFNkNZTJVzk/XL/Cowboy%20wall%20art%20_DSF9064-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/M3xgzVTMPHn5mb9d3Z9wWsZXGLRbRBVFNkNZTJVzk/XL/Cowboy%20wall%20art%20_DSF9064-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/L92h3nzBctVKnSq6HTPmxqF535hzZBgsfD7CkWChh/L/Cowboy%20wall%20art%20_DSF9064-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/Mgwd92C9g4nTzLK4fB7VMqfd63brPc8v7SXM3sPXw/M/Cowboy%20wall%20art%20_DSF9064-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/K6gz4WRz5dM6chSMbhKwXKGH3bNxPq8C7zkThKtXL/S/Cowboy%20wall%20art%20_DSF9064-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6BgfRxb/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Cowboy strikes it rich as he finds gold in his gold claim. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 113
+  },
+  {
+    "id": "i-zXnjqZZ",
+    "title": "Cowboy Art: Mr. Twain",
+    "description": "Painterly Wild West themed photography of Mr. Twain. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Mr. Twain",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/LhZrrv9phPrCS9Kd95LsfxHXDrnbZ7CVsL4PN4qpW/XL/historic%20art_HF21481-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/LhZrrv9phPrCS9Kd95LsfxHXDrnbZ7CVsL4PN4qpW/XL/historic%20art_HF21481-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/LhZrrv9phPrCS9Kd95LsfxHXDrnbZ7CVsL4PN4qpW/XL/historic%20art_HF21481-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/M6m26Fz5RL8gsWNCnJ8RcMBNJqMHMZNshGJS5CnxJ/L/historic%20art_HF21481-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/NcvbGTqdxqtWhKGJjRXLrMh39pTNN8mBgHLFXd9CP/S/historic%20art_HF21481-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of Mr. Twain. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 114
+  },
+  {
+    "id": "i-Khb37pn",
+    "title": "Kiss for Good Measures",
+    "description": "Painterly Wild West themed photography of western characters exchanging a kiss for good luck. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Kiss for Good Measures",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/M8JnLZXc8gqkcxBRQMBRDM3BMgrvRpj6J9MHTqzLm/XL/Western%20themed%20photography_HF27563-205-207-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/M8JnLZXc8gqkcxBRQMBRDM3BMgrvRpj6J9MHTqzLm/XL/Western%20themed%20photography_HF27563-205-207-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/KJs26Frxr3VVm7q2G5HwV8LbqjPbvX84xb322bxZP/L/Western%20themed%20photography_HF27563-205-207-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/KvPbz4vTvcP4tTMjLbRtW3cZ4HR6q9zWc58NpjMZV/M/Western%20themed%20photography_HF27563-205-207-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/1/KvhZkPg997D2gwZJXmngWbSpkgLZtLdNxPZ5sksKk/S/Western%20themed%20photography_HF27563-205-207-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Khb37pn/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of western characters exchanging a kiss for good luck. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 115
+  },
+  {
+    "id": "i-mJQCXmh",
+    "title": "Wetting the Whistle: Between Sips and Silence",
+    "description": "A cowboy pauses for a drink in this captivating fine art photograph by Wayne Heim. Infused with painterly texture and Western storytelling, the image captures a quiet, contemplative moment that balances solitude and strength. Perfect for collectors of cowboy art, rustic wall décor, and vintage-style Western prints, this image evokes the raw emotion and timeless beauty of the frontier. Bring the essence of the Old West into your space with stunning fine art photography that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Wetting the Whistle",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/KJLDGhK86Q7hgtbsPFJPW9wcWkr4wZXT63S9FBbPs/XL/cowboy%20art%20_HF26275-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/KJLDGhK86Q7hgtbsPFJPW9wcWkr4wZXT63S9FBbPs/XL/cowboy%20art%20_HF26275-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/KJLDGhK86Q7hgtbsPFJPW9wcWkr4wZXT63S9FBbPs/XL/cowboy%20art%20_HF26275-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/L5QB8qbCJZSbgVXM5zmmkMRWT79ZhSRD3bVgtMD5T/L/cowboy%20art%20_HF26275-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-mJQCXmh/2/LgjRnzXsMNwF7Hrg3BvZQ5fZxSrtcbQVMHnNqXRs4/S/cowboy%20art%20_HF26275-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-mJQCXmh/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Ain’t the coffee he’s after. Not really.\nIt’s the heat in his hands, the pause it buys, the chance to pretend things still make sense. Out here, a man don’t get many comforts. But for a minute — just one — he can close his eyes, draw in the steam, and hope it fills the spaces Martha left behind.",
+    "notes": "This piece draws from a lineage that spans Remington to Rockwell — storytellers who painted the soul of the frontier in brush or lens. The triangular composition (brow, elbow, glass) roots the figure with quiet purpose, while side lighting casts him in painterly chiaroscuro, evoking the mood of Rembrandt or the grit of early Pictorialist photography.\n\nWhat sets this work apart is its restraint. It’s not spectacle, but suggestion — a story left half-told, pulling the viewer in to finish it. The weathered textures, warm-to-cool palette, and softened edges make this more than a photograph — it's a cinematic moment preserved in pigment and tone.\n",
+    "rating": 3,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 116
+  },
+  {
+    "id": "i-jLSNwCT",
+    "title": "Together Forever",
+    "description": "Wherever this train and the future takes us I know one thing, we are going down that track together. Cowboy and his lady look out the back of the train as they head off to a new adventure. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Together",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/LjWXp5dFfFLBRJhx49gCgbFFDSmJPCzjP8MKn92mN/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/LjWXp5dFfFLBRJhx49gCgbFFDSmJPCzjP8MKn92mN/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/LjWXp5dFfFLBRJhx49gCgbFFDSmJPCzjP8MKn92mN/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/LgkVWB4fcZWGB9pzhSCWXgs65K4dJC7mtpfn2DpsT/L/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/1/MrvcSPg6dgmzj46WztxX4sh5rkTppjt42QfmjBVDG/S/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF22050-Edit-3-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-jLSNwCT/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Wherever this train and the future takes us I know one thing, we are going down that track together. Cowboy and his lady look out the back of the train as they head off to a new adventure. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 117
+  },
+  {
+    "id": "i-kBNpRtm",
+    "title": "Western Fine Art Cowboy",
+    "description": "Explore western fine art with Wayne Heim's Western cowboys. This painterly cowboy portraits piece conveys rustic charm, cowboy artwork, and western fine art, perfect for fans of Western cowboys. © Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/MhBkn2wtdSJ9VWf25vSv6Szwdg7NWT4hNn5sCKd6T/XL/_HF26550-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/MhBkn2wtdSJ9VWf25vSv6Szwdg7NWT4hNn5sCKd6T/XL/_HF26550-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/K9HRDSPQTz8q3hnnHjSWzPt2CX6PDvKsRB6S8LBQH/L/_HF26550-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/NRfKXfVKvmLGBMXVnF9DXt9xJB7VfMGLvpRwqKf5j/M/_HF26550-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/1/Mm7qrPW8s6wz3SC2jC9pwSBFzp9cJRtt7cSvGk5XB/S/_HF26550-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kBNpRtm/A",
+    "keywords": [
+      "WHO4278",
+      "western fine art",
+      "Western cowboys",
+      "painterly cowboy portraits",
+      "rustic charm",
+      "cowboy artwork",
+      "fine art Western photography",
+      "historic western prints",
+      "powerful works of art",
+      "western art"
+    ],
+    "story": "This image embodies fine art Western photography and historic western prints, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of western art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 118
+  },
+  {
+    "id": "i-xr5chJG",
+    "title": "Capturing Painterly Cowboy Portraits",
+    "description": "Wayne Heim's painterly cowboy portraits captures the spirit of cowboy portraits in this cowboy painting art image. Featuring Western cowboys, rustic charm, and painterly cowboy portraits, it's ideal for cowboy portraits enthusiasts. © Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/Mkb9q8KXSgk8Sn7VswWfk2d52QNwB39z7r8VJHXJj/XL/_WHO4721-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/Mkb9q8KXSgk8Sn7VswWfk2d52QNwB39z7r8VJHXJj/XL/_WHO4721-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/M7Vfb3B2bWRXP3DgxCHf5LLZWmnG42LpZwXsq6xcN/L/_WHO4721-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/LRrQW47SPWJrx4ZZtWV2Hkxdq865zzbd7N3tr5PXn/M/_WHO4721-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/0/MRWhfx682T8KNXVBxBFXjgdV59dv4MtmxvjJsCKq4/S/_WHO4721-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xr5chJG/A",
+    "keywords": [
+      "HF26271",
+      "painterly cowboy portraits",
+      "cowboy portraits",
+      "cowboy painting art",
+      "Western cowboys",
+      "rustic charm",
+      "western fine art",
+      "historic western prints",
+      "cowboy artwork"
+    ],
+    "story": "Wayne Heim's exploration of western fine art comes alive in this piece, showcasing cowboy painting art and historic western prints. A testament to cowboy artwork in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 119
+  },
+  {
+    "id": "i-nLKscbQ",
+    "title": "Fine Art Western Photography In Fine Art",
+    "description": "Discover the fine art Western photography in this powerful rustic charm by Wayne Heim. A compelling work that embodies frontier life, western cowboy art, and rugged spirit. Perfect for art lovers seeking fine art Western photography to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/K8VrJGFDvbhw6GGXJgn9Msdgq5hFRkLSWfznn3LNq/L/_HF23785-735-736-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/K8VrJGFDvbhw6GGXJgn9Msdgq5hFRkLSWfznn3LNq/L/_HF23785-735-736-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/K8VrJGFDvbhw6GGXJgn9Msdgq5hFRkLSWfznn3LNq/L/_HF23785-735-736-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/K8VrJGFDvbhw6GGXJgn9Msdgq5hFRkLSWfznn3LNq/L/_HF23785-735-736-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/LQmSkg5VfDpmVP9QgsD8T5jRGpbz2trXhHZZ8qxLg/S/_HF23785-735-736-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "fine art Western photography",
+      "rustic charm",
+      "frontier life",
+      "western cowboy art",
+      "rugged spirit",
+      "cowboy painting art",
+      "Western cowboys",
+      "powerful works of art"
+    ],
+    "story": "Delving into cowboy painting art, this work by Wayne Heim highlights rugged spirit through Western cowboys and powerful works of art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 120
+  },
+  {
+    "id": "i-TQw7vC7",
+    "title": "Cowboy Art: Traveler",
+    "description": "Painterly Wild West themed photography of traveler. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim.",
+    "alt": "Cowboy Art: Traveler",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/M5VGGC9TPNnns6Fv7dxcjgp5CvQsHJTpbMCpxJvjk/XL/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/M5VGGC9TPNnns6Fv7dxcjgp5CvQsHJTpbMCpxJvjk/XL/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/M5VGGC9TPNnns6Fv7dxcjgp5CvQsHJTpbMCpxJvjk/XL/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/LH6L4SD9nX7hFJkZ8nc7dvcfQNhWkjTQ868FrBdSv/L/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/1/NJ2htBFn7G42f7pxpMBkpQ6MWLTP37z9Wzf3GggLF/S/Old%20West%20themed%20photo%20_HF27624-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TQw7vC7/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of traveler. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 121
+  },
+  {
+    "id": "i-MnX4pxX",
+    "title": "Cowboy Art: Fading Light",
+    "description": "Painterly Wild West themed photography of woman darning socks by the fading light. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Fading Light",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/MhnGCkWZNjtht6Z5jPzHfP4R5jj8BXcWgL4H7ZTWP/XL/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/MhnGCkWZNjtht6Z5jPzHfP4R5jj8BXcWgL4H7ZTWP/XL/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/MhnGCkWZNjtht6Z5jPzHfP4R5jj8BXcWgL4H7ZTWP/XL/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/MN2Ss45Gt2bRFqb2bmTbcPtZJzBjnbGhkDPKg3cHV/L/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/KvchnDBRQ7mV8v3Zc8mV2ctqBBS3fFQ9j53MtKnpV/S/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of woman darning socks by the fading light. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 122
+  },
+  {
+    "id": "i-SVwxn5L",
+    "title": "Cowboy Cowboy Art",
+    "description": "Uncover historic western prints through this cowboy art from Wayne Heim. Showcasing frontier life, powerful works of art, and cowboy artwork, it's perfect for enthusiasts of historic western prints. © Wayne Heim",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/MFsKPKpf3H7TGBBRzw2jjGtCFksvs7LvRRjmqTZ3H/L/_O2H2905-682-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/MFsKPKpf3H7TGBBRzw2jjGtCFksvs7LvRRjmqTZ3H/L/_O2H2905-682-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/MFsKPKpf3H7TGBBRzw2jjGtCFksvs7LvRRjmqTZ3H/L/_O2H2905-682-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/MFsKPKpf3H7TGBBRzw2jjGtCFksvs7LvRRjmqTZ3H/L/_O2H2905-682-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/KGjFcLvKkKHZjKSGzpr8RT38nSFRGJRvMzZfM8gxM/S/_O2H2905-682-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-SVwxn5L/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "historic western prints",
+      "cowboy art",
+      "frontier life",
+      "powerful works of art",
+      "cowboy artwork",
+      "fine art Western photography",
+      "cowboy painting art",
+      "outlaw portraits"
+    ],
+    "story": "Delving into fine art Western photography, this work by Wayne Heim highlights cowboy art through cowboy painting art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 123
+  },
+  {
+    "id": "i-gQ7GZ5s",
+    "title": "Cowboy Art:  Ready for Vengeance",
+    "description": "Painterly Wild West themed photography of a cowboy getting ready for action in an impending gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Ready for Vengeance",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/MvFvv3C2SnJP3kTsB85DPj5NMfrZCFM5kXtwm5TH9/XL/_O2H0274-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/MvFvv3C2SnJP3kTsB85DPj5NMfrZCFM5kXtwm5TH9/XL/_O2H0274-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/MMrGZZSwhzNN3k8MQLCnXpdMqcG8vWHkk2hxHjF9N/L/_O2H0274-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/KzRGvz7gJxjtGqS4NRR6kPBNzjcGttdHqM4v92kzC/M/_O2H0274-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gQ7GZ5s/4/MWNd3MGVHChp9v4L2rL7TSCb8ktRNGCfVLVQfCcQf/S/_O2H0274-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-gQ7GZ5s/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of a cowboy getting ready for action in an impending gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 124
+  },
+  {
+    "id": "i-52tTd9G",
+    "title": "Final Stand",
+    "description": "Painterly Wild West themed photography of cowboys making a stand during a classic western gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Final Stand",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/Mjj7LhJw7jVLGW2vBmMrcBHQ9zNnRSLThMfn3WLsk/XL/_O2H3281-311-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/Mjj7LhJw7jVLGW2vBmMrcBHQ9zNnRSLThMfn3WLsk/XL/_O2H3281-311-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/Mjj7LhJw7jVLGW2vBmMrcBHQ9zNnRSLThMfn3WLsk/XL/_O2H3281-311-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/LmF3fjjJxt4Vk4qh2L6TTMJBZThrFF5jFm784vJcP/L/_O2H3281-311-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/0/Lw2J78DqsVg3JMhBj6j9QCJxj9nmw92zXv5ndnBHr/S/_O2H3281-311-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-52tTd9G/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboys making a stand during a classic western gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 125
+  },
+  {
+    "id": "i-TpkTsMg",
+    "title": "Western Cowboys Study",
+    "description": "Discover the Western cowboys in this powerful rugged spirit by Wayne Heim. A compelling work that embodies western art, historic western prints, and cowboy art. Perfect for art lovers seeking Western cowboys to enhance their collection. © Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/Nf2hFc5W67v2cLnhHkB3d9kHJQktbxdzWRBz7Bxxj/L/_O2H3127-862-863-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/Nf2hFc5W67v2cLnhHkB3d9kHJQktbxdzWRBz7Bxxj/L/_O2H3127-862-863-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/Nf2hFc5W67v2cLnhHkB3d9kHJQktbxdzWRBz7Bxxj/L/_O2H3127-862-863-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/NNjB53J7cDBrwSQXwVhnmK7bXvcgvB5dZK5TXvQL6/M/_O2H3127-862-863-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TpkTsMg/0/NHMB4GzGfKX3JhhbfpnPWdLnSvDpBwC8qFS88bh5Z/S/_O2H3127-862-863-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-TpkTsMg/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "Western cowboys",
+      "rugged spirit",
+      "western art",
+      "historic western prints",
+      "cowboy art",
+      "cowboy portraits",
+      "painterly cowboy portraits",
+      "frontier life"
+    ],
+    "story": "Wayne Heim's exploration of cowboy portraits comes alive in this piece, showcasing painterly cowboy portraits and Western cowboys. A testament to frontier life in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 126
+  },
+  {
+    "id": "i-X9h6sdw",
+    "title": "Exploring Wild West Photography",
+    "description": "This wild west photography artwork by Wayne Heim showcases frederic remington in a Western cowboys style. Reflecting outlaw portraits, cowboy artwork, and wild west photography, it's suited for admirers of frederic remington. © Wayne Heim",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/MpKF3tnd6jDkXsJpQB28j9DnVJw4G6R6HCD66J6kK/L/_HF23742-722-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/MpKF3tnd6jDkXsJpQB28j9DnVJw4G6R6HCD66J6kK/L/_HF23742-722-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/MpKF3tnd6jDkXsJpQB28j9DnVJw4G6R6HCD66J6kK/L/_HF23742-722-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/MpKF3tnd6jDkXsJpQB28j9DnVJw4G6R6HCD66J6kK/L/_HF23742-722-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/NG87gcBxk6p9Hm63J9xkCvsCQdD7vcf745L3CMCfm/S/_HF23742-722-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-X9h6sdw/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "wild west photography",
+      "frederic remington",
+      "Western cowboys",
+      "outlaw portraits",
+      "cowboy artwork",
+      "cowboy art",
+      "powerful works of art",
+      "fine art Western photography",
+      "rustic charm"
+    ],
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing powerful works of art and fine art Western photography. A testament to rustic charm in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 127
+  },
+  {
+    "id": "i-trM4FpR",
+    "title": "Music Lessons",
+    "description": "Painterly Wild West themed photography of settlers passing time with music lessons. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Music Lessons",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/K8x8CHdcKnNHrWRpszGxHbqCjs7RxjfwZJx3qZNT3/XL/painterly%20cowboy%20photography_HF29317-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/K8x8CHdcKnNHrWRpszGxHbqCjs7RxjfwZJx3qZNT3/XL/painterly%20cowboy%20photography_HF29317-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/LQFcDNMwdjfX4GbZrDKd5GmPkMkRjF2sG537hkNj3/L/painterly%20cowboy%20photography_HF29317-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/K6gh45JjWHHntnRmcH26zJ4BGwqFzTD8pW92LKgzD/M/painterly%20cowboy%20photography_HF29317-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-trM4FpR/6/KZK4SsDP33g77Xqq5G6bkqVhpcs7jcSVXwZjPbJ2v/S/painterly%20cowboy%20photography_HF29317-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-trM4FpR/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of settlers passing time with music lessons. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 128
+  },
+  {
+    "id": "i-bkjkPfH",
+    "title": "Cowboy Art:  All in the Cards",
+    "description": "Painterly Wild West themed photography of cowboy playing cards in the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  All in the Cards",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/Lp6FZKcF2LTLjf6jxn2zPhv8BP8fqzw87JQxPmrNq/XL/cowboy%20cards_HF26909-Enhanced-NR-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/Lp6FZKcF2LTLjf6jxn2zPhv8BP8fqzw87JQxPmrNq/XL/cowboy%20cards_HF26909-Enhanced-NR-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/Lp6FZKcF2LTLjf6jxn2zPhv8BP8fqzw87JQxPmrNq/XL/cowboy%20cards_HF26909-Enhanced-NR-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/LT4V623Wj4hKXPgCvcdLDc7gvkCqfVTggQThLvhv9/L/cowboy%20cards_HF26909-Enhanced-NR-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/NbQWpNTRxwnzxqxQbfttJR5Cb6DRJcmmWq8XF6jsQ/S/cowboy%20cards_HF26909-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bkjkPfH/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy playing cards in the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 129
+  },
+  {
+    "id": "i-R3CqrBr",
+    "title": "The Essence Of Frederic Remington",
+    "description": "Wayne Heim's frederic remington captures the spirit of cowboy portraits in this painterly cowboy portraits image. Featuring cowboy painting art, rustic charm, and frederic remington, it's ideal for cowboy portraits enthusiasts. © Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/MBwWQKsVfcmS7fgsZwBnVcjGL4rH97QBZq8dm4Qjd/L/_HF23341-816-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/MBwWQKsVfcmS7fgsZwBnVcjGL4rH97QBZq8dm4Qjd/L/_HF23341-816-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/MBwWQKsVfcmS7fgsZwBnVcjGL4rH97QBZq8dm4Qjd/L/_HF23341-816-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/MBwWQKsVfcmS7fgsZwBnVcjGL4rH97QBZq8dm4Qjd/L/_HF23341-816-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/KG6K7zkn5JxFKrbczr3bvSwnx78CgJwS3s29NfwtX/S/_HF23341-816-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-R3CqrBr/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "frederic remington",
+      "cowboy portraits",
+      "painterly cowboy portraits",
+      "cowboy painting art",
+      "rustic charm",
+      "frontier life",
+      "cowboy artwork"
+    ],
+    "story": "This image embodies rustic charm and frontier life, captured by Wayne Heim in his signature style. It reflects cowboy artwork with a touch of frederic remington. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 130
+  },
+  {
+    "id": "i-Cz82g6x",
+    "title": "Cowboy Art: One for the Road",
+    "description": "Painterly Wild West themed photography of drunk cowboy in doorway. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: One for the Road",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/LPQDBJFQHFbghW8zzVfCRBpp5Phfc4TLF89jP8Bcj/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/LPQDBJFQHFbghW8zzVfCRBpp5Phfc4TLF89jP8Bcj/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/LPQDBJFQHFbghW8zzVfCRBpp5Phfc4TLF89jP8Bcj/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/Lzb49kjMDq7vzwjX5WMJTFB3XBHP2fb6xQCR85WF7/L/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-Cz82g6x/2/KwknK3ZCp4HN8rzBJrZNTVDjTsPpvcFK7m4cj2MhD/S/Western%20Themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26657-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Cz82g6x/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of drunk cowboy in doorway. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 131
+  },
+  {
+    "id": "i-SPd5h6X",
+    "title": "Left for Dead",
+    "description": "Painterly Wild West themed photography of wounded cowboy left behind. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Left for Dead",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KLBGT9kCmDpS2PXhrT6W4GFrLsmb3mJKXkMdKXjwS/XL/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KLBGT9kCmDpS2PXhrT6W4GFrLsmb3mJKXkMdKXjwS/XL/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/NStGCnvH7KvnFbMtFs4F634vB2BVK4wzsQWwTBds4/L/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/Kq5FVff87pVhLhKF5QjWsVQsCCgP3dhCjdKgS5Wmm/M/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KGzgts9B43MNkPsczZFfhwx4d9BggMt7WFshpkq9K/S/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-SPd5h6X/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of wounded cowboy left behind. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 132
+  },
+  {
+    "id": "i-QWT3QZ4",
+    "title": "Exploring Cowboy Artwork",
+    "description": "Experience cowboy artwork through this evocative cowboy art from Wayne Heim's portfolio. This piece highlights historic western prints with wild west photography, while conveying rugged spirit, ideal for those who appreciate cowboy artwork. © Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/Nfjs3GwWSgqkNTrMRmG7HMCcR6gT65pZmBnBnfj62/L/_HF24218-746-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/Nfjs3GwWSgqkNTrMRmG7HMCcR6gT65pZmBnBnfj62/L/_HF24218-746-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/Nfjs3GwWSgqkNTrMRmG7HMCcR6gT65pZmBnBnfj62/L/_HF24218-746-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/Nfjs3GwWSgqkNTrMRmG7HMCcR6gT65pZmBnBnfj62/L/_HF24218-746-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QWT3QZ4/0/LT3fkVJpcQZ7n2WHn8hZ2g9KZRxDNDPXZ42gN2Ptm/S/_HF24218-746-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-QWT3QZ4/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "cowboy artwork",
+      "cowboy art",
+      "historic western prints",
+      "wild west photography",
+      "rugged spirit",
+      "frontier life",
+      "cowboy portraits",
+      "western cowboy art"
+    ],
+    "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing rugged spirit and cowboy portraits. A testament to western cowboy art in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 133
+  },
+  {
+    "id": "i-WCw4qpB",
+    "title": "Cowboy Art: Trouble",
+    "description": "Painterly Wild West themed photography of cowboy bandit during a train robbery. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Trouble",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/MNGwdGxnCHQNFBc7K7jj5K4m84C2rwMkTdqZ8fRRM/XL/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/MNGwdGxnCHQNFBc7K7jj5K4m84C2rwMkTdqZ8fRRM/XL/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/MNGwdGxnCHQNFBc7K7jj5K4m84C2rwMkTdqZ8fRRM/XL/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/L34wSQ6wpzhWp555wpWjNSRtfPnZns8DJhBxknF26/L/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/1/LLBbG6NnJW2V7DxstLNcjcsX7b3sSRksJqkd5hr7M/S/Old%20West%20Cowboy%20Portrait%20_HF27784-Edit-149-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-WCw4qpB/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy bandit during a train robbery. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 134
+  },
+  {
+    "id": "i-sDLXtRZ",
+    "title": "Cowboy Art: Privateer",
+    "description": "Painterly Wild West themed photography of hired gun. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Privateer",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/KWMXJqc48GtSBPf82M7KwShQnkk26wsGTd4QsdV47/XL/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/KWMXJqc48GtSBPf82M7KwShQnkk26wsGTd4QsdV47/XL/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/KWMXJqc48GtSBPf82M7KwShQnkk26wsGTd4QsdV47/XL/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/MHVxsGxqSkpjqCwvT7F37rPxfPPzRZ985X58x6WDJ/L/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sDLXtRZ/3/KZ3p2FTCGJ5XXqHZK7rWtLG9bfjJZg38QZd9wqZ4X/S/Western%20themed%20fine%20art%20photography%20_HF29578-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sDLXtRZ/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of hired gun. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 135
+  },
+  {
+    "id": "i-kh6KWS9",
+    "title": "Cowboy Art: Negotiation",
+    "description": "Painterly Wild West themed photography of 2 cowboys striking a deal in camp. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Negotiation",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/KGB7MxWm4NVqmK26Kd5rkXxFmh9Wfb9FQH5NL3wFm/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/KGB7MxWm4NVqmK26Kd5rkXxFmh9Wfb9FQH5NL3wFm/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/LkDktKsfwzjfNgjwt3sQT2gLFkQDnGRfPNZqHRsQx/L/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/MXrQbSx9r8sW4tVP7d3vvTtB2H8cp5h6hJdPxVcqm/M/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/1/KdqxmHwLkdwpRKws4wW535jCjFxvfk5769NgppnKD/S/Western%20Cowboy%20Portrait%20Photography%20Edit%20_HF29312-229-232-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-kh6KWS9/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of 2 cowboys striking a deal in camp. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 136
+  },
+  {
+    "id": "i-bN9mRH6",
+    "title": "Cowboy Art:  Break in the Storm",
+    "description": "Painterly Wild West themed photography of cowboy on horse at sunset. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Break in the Storm",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MMDPLqtNvVg724fGMxWNpNW9CvwzZfxtDTbzVXZXz/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MMDPLqtNvVg724fGMxWNpNW9CvwzZfxtDTbzVXZXz/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MMDPLqtNvVg724fGMxWNpNW9CvwzZfxtDTbzVXZXz/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MB9H8NX4q42H7PhgQpqFXGTjW5mdft8hQrWhtTGGT/L/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/1/MNn8Dnpjp5Rwwvz2MHBm5vsBZLNNqNZztrMHV4xtb/S/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA9025-Edit-Edit-Edit-3-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bN9mRH6/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy on horse at sunset. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
     "sortOrder": 137
+  },
+  {
+    "id": "i-2Z3ZvJS",
+    "title": "Interrupted Cowboy",
+    "description": "Painterly Wild West themed photography of cowboy with the paper. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Interrupted Cowboy",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/MNTpLwx6knXLWmW9k8pxGSpnpFc22qjCKx3RpvN9g/XL/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/MNTpLwx6knXLWmW9k8pxGSpnpFc22qjCKx3RpvN9g/XL/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/MNTpLwx6knXLWmW9k8pxGSpnpFc22qjCKx3RpvN9g/XL/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/LsX2nmgmxWWj4D4js7vBVZJJmNQZPWX78SMJ2GQjz/L/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-2Z3ZvJS/2/MMTHC59WrGRWZgtZMSqdjb594K8KtMtZSHQbfW3NM/S/cowboy%20paintings%20_O1H1607-Edit-2-Edit-4-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2Z3ZvJS/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy with the paper. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 138
+  },
+  {
+    "id": "i-XR9PZT5",
+    "title": "Cowboy Art: Late for Dinner",
+    "description": "Painterly Wild West themed photography of woman waiting patiently for the boys to come home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: Late for Dinner",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/MTzXGNntMzJrHjbwB3RCmvqVDfg2hDXm3TX8KH238/XL/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/MTzXGNntMzJrHjbwB3RCmvqVDfg2hDXm3TX8KH238/XL/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/MTzXGNntMzJrHjbwB3RCmvqVDfg2hDXm3TX8KH238/XL/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/MBFRvgDjGmvpFKww6JkzNQCRGNS25VQWfjg9ZRHvw/L/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-XR9PZT5/5/KvKnMn9qg2Gzxb3484TPvCkqjtpFpnC963VfXmw52/S/Western%20themed%20Portrait%20Photography%20Edit%20_HF20096-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-XR9PZT5/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of woman waiting patiently for the boys to come home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 139
+  },
+  {
+    "id": "i-R2JG4bd",
+    "title": "Cowboy Art: I got this.",
+    "description": "Painterly Wild West themed photography of settler protecting his home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: I got this.",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/Ng9mzNpDHFg7jT83fwQWs8rJrszJNS4rjDTrxvkdj/XL/western%20themed%20art%20_O1H0196-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/Ng9mzNpDHFg7jT83fwQWs8rJrszJNS4rjDTrxvkdj/XL/western%20themed%20art%20_O1H0196-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/LZqgxWRCtbK54gbrZbgZdQZnpg6F8VnvxCg5vVHzM/L/western%20themed%20art%20_O1H0196-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/NFbjWwwZMs3GJF4QCGXFwkdstfkCD3XF77XZFfMp2/M/western%20themed%20art%20_O1H0196-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/NcqfXx6vKZP4cMfS8jBGtP7pgN9bqXvD4SgVQHP4F/S/western%20themed%20art%20_O1H0196-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of settler protecting his home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 140
   },
   {
     "id": "i-fTHtL25",
@@ -6860,75 +6964,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 138
-  },
-  {
-    "id": "i-T7TFJX2",
-    "title": "Exploring Rustic Charm",
-    "description": "Explore rustic charm with Wayne Heim's cowboy artwork. This western cowboy art piece conveys western fine art, painterly cowboy portraits, and rustic charm, perfect for fans of cowboy artwork. © Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/MGwdczQgmPtjpntZtkxxjTSJBgvV8GFSXGwp5LW3w/L/_HF23132-1014-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/MGwdczQgmPtjpntZtkxxjTSJBgvV8GFSXGwp5LW3w/L/_HF23132-1014-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/MGwdczQgmPtjpntZtkxxjTSJBgvV8GFSXGwp5LW3w/L/_HF23132-1014-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/MGwdczQgmPtjpntZtkxxjTSJBgvV8GFSXGwp5LW3w/L/_HF23132-1014-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/0/LKX2fdtVrsRWVRXsjKThhBDdG6Gv6b43ZM4dhFQ35/S/_HF23132-1014-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-T7TFJX2/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "rustic charm",
-      "cowboy artwork",
-      "western cowboy art",
-      "western fine art",
-      "painterly cowboy portraits",
-      "frederic remington",
-      "fine art Western photography",
-      "rugged spirit"
-    ],
-    "story": "Wayne Heim's exploration of frederic remington comes alive in this piece, showcasing fine art Western photography and rustic charm. A testament to rugged spirit in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 139
-  },
-  {
-    "id": "i-z3wvMkB",
-    "title": "Exploring Outlaw Portraits",
-    "description": "Delve into outlaw portraits via this western art by Wayne Heim. Highlighting cowboy artwork through cowboy painting art and wild west photography, it's great for collectors interested in outlaw portraits. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/MnvM6K66WFSTRDS24D8ctT8LSbmjT2LRwJbqGfC7T/L/_HF23239-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/MnvM6K66WFSTRDS24D8ctT8LSbmjT2LRwJbqGfC7T/L/_HF23239-Edit-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/MnvM6K66WFSTRDS24D8ctT8LSbmjT2LRwJbqGfC7T/L/_HF23239-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/MnvM6K66WFSTRDS24D8ctT8LSbmjT2LRwJbqGfC7T/L/_HF23239-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/0/KLB9bdSgK3MZsPL99zQjQs5qhLVqQjRBRg3FVz4mT/S/_HF23239-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-z3wvMkB/A",
-    "keywords": [
-      "WHO0426",
-      "1086",
-      "outlaw portraits",
-      "western art",
-      "cowboy artwork",
-      "cowboy painting art",
-      "wild west photography",
-      "historic western prints",
-      "cowboy portraits",
-      "painterly cowboy portraits"
-    ],
-    "story": "This image embodies historic western prints and cowboy portraits, captured by Wayne Heim in his signature style. It reflects painterly cowboy portraits with a touch of outlaw portraits. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 140
+    "sortOrder": 141
   },
   {
     "id": "i-tgzR5Rh",
@@ -6985,7 +7021,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 141
+    "sortOrder": 142
   },
   {
     "id": "i-6dHrd9m",
@@ -7042,7 +7078,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 142
+    "sortOrder": 143
   },
   {
     "id": "i-cF2kLFP",
@@ -7099,7 +7135,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 143
+    "sortOrder": 144
   },
   {
     "id": "i-QxFK26w",
@@ -7156,7 +7192,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 144
+    "sortOrder": 145
   },
   {
     "id": "i-zW6Zb4W",
@@ -7213,7 +7249,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 145
+    "sortOrder": 146
   },
   {
     "id": "i-bxsRc6q",
@@ -7249,7 +7285,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 146
+    "sortOrder": 147
   },
   {
     "id": "i-5BtMrfM",
@@ -7306,7 +7342,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 147
+    "sortOrder": 148
   },
   {
     "id": "i-CmScKnv",
@@ -7342,7 +7378,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 148
+    "sortOrder": 149
   },
   {
     "id": "i-qXd5779",
@@ -7399,7 +7435,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 149
+    "sortOrder": 150
   },
   {
     "id": "i-GH7H4LC",
@@ -7456,7 +7492,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 150
+    "sortOrder": 151
   },
   {
     "id": "i-qzGSQz7",
@@ -7493,7 +7529,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 151
+    "sortOrder": 152
   },
   {
     "id": "i-XsdNV9s",
@@ -7523,7 +7559,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 152
+    "sortOrder": 153
   },
   {
     "id": "i-5LTzhJ6",
@@ -7560,7 +7596,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 153
+    "sortOrder": 154
   },
   {
     "id": "i-dwVgbxR",
@@ -7597,7 +7633,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 154
+    "sortOrder": 155
   },
   {
     "id": "i-7K9GG9z",
@@ -7654,7 +7690,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 155
+    "sortOrder": 156
   },
   {
     "id": "i-GBvFP8Q",
@@ -7692,7 +7728,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 156
+    "sortOrder": 157
   },
   {
     "id": "i-WD9ZmGH",
@@ -7749,7 +7785,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 157
+    "sortOrder": 158
   },
   {
     "id": "i-d9znSwP",
@@ -7786,7 +7822,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 159
   },
   {
     "id": "i-dnxxDXH",
@@ -7843,7 +7879,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 159
+    "sortOrder": 160
   },
   {
     "id": "i-PDVZhtZ",
@@ -7900,7 +7936,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 160
+    "sortOrder": 161
   },
   {
     "id": "i-tWx3N8c",
@@ -7957,7 +7993,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 161
+    "sortOrder": 162
   },
   {
     "id": "i-S5zV9h4",
@@ -8014,7 +8050,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 162
+    "sortOrder": 163
   },
   {
     "id": "i-2Cj8j9W",
@@ -8071,7 +8107,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 163
+    "sortOrder": 164
   },
   {
     "id": "i-G7csptc",
@@ -8102,7 +8138,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 164
+    "sortOrder": 165
   },
   {
     "id": "i-GjZfMXj",
@@ -8159,7 +8195,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 165
+    "sortOrder": 166
   },
   {
     "id": "i-gs6X2P7",
@@ -8216,7 +8252,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 166
+    "sortOrder": 167
   },
   {
     "id": "i-QGCQt7M",
@@ -8253,7 +8289,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 167
+    "sortOrder": 168
   },
   {
     "id": "i-n8TX2qS",
@@ -8310,7 +8346,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 168
+    "sortOrder": 169
   },
   {
     "id": "i-tVxgfZN",
@@ -8367,7 +8403,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 169
+    "sortOrder": 170
   },
   {
     "id": "i-pZDmzdq",
@@ -8404,7 +8440,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 170
+    "sortOrder": 171
   },
   {
     "id": "i-4jRzBgC",
@@ -8461,7 +8497,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 171
+    "sortOrder": 172
   },
   {
     "id": "i-7V4VjNm",
@@ -8498,7 +8534,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 172
+    "sortOrder": 173
   },
   {
     "id": "i-S2sZdJB",
@@ -8535,7 +8571,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 173
+    "sortOrder": 174
   },
   {
     "id": "i-7Kwv8vc",
@@ -8592,7 +8628,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 174
+    "sortOrder": 175
   },
   {
     "id": "i-TgkwSbh",
@@ -8649,7 +8685,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 175
+    "sortOrder": 176
   },
   {
     "id": "i-grM2LkC",
@@ -8706,7 +8742,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 176
+    "sortOrder": 177
   },
   {
     "id": "i-Lk79jNj",
@@ -8763,7 +8799,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 177
+    "sortOrder": 178
   },
   {
     "id": "i-GK7Trs9",
@@ -8820,7 +8856,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 178
+    "sortOrder": 179
   },
   {
     "id": "i-WSQrZ3M",
@@ -8877,7 +8913,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 179
+    "sortOrder": 180
   },
   {
     "id": "i-spjF4Zd",
@@ -8934,7 +8970,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 180
+    "sortOrder": 181
   },
   {
     "id": "i-rC7SvgP",
@@ -8991,7 +9027,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 181
+    "sortOrder": 182
   },
   {
     "id": "i-vTp98Z6",
@@ -9048,7 +9084,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 182
+    "sortOrder": 183
   },
   {
     "id": "i-7RWxjz3",
@@ -9105,7 +9141,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 183
+    "sortOrder": 184
   },
   {
     "id": "i-vrc7KkJ",
@@ -9135,7 +9171,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 184
+    "sortOrder": 185
   },
   {
     "id": "i-5PbMGPm",
@@ -9171,7 +9207,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 185
+    "sortOrder": 186
   },
   {
     "id": "i-hrghzzx",
@@ -9228,7 +9264,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 186
+    "sortOrder": 187
   },
   {
     "id": "i-8W7jxkN",
@@ -9285,7 +9321,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 187
+    "sortOrder": 188
   },
   {
     "id": "i-V5djX4B",
@@ -9342,7 +9378,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 188
+    "sortOrder": 189
   },
   {
     "id": "i-GSPLsk9",
@@ -9399,7 +9435,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 189
+    "sortOrder": 190
   },
   {
     "id": "i-9q5B7FX",
@@ -9435,7 +9471,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 190
+    "sortOrder": 191
   },
   {
     "id": "i-SBjhvGf",
@@ -9472,7 +9508,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 191
+    "sortOrder": 192
   },
   {
     "id": "i-WzTZ6Jv",
@@ -9529,7 +9565,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 192
+    "sortOrder": 193
   },
   {
     "id": "i-s79JnZ2",
@@ -9586,7 +9622,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 193
+    "sortOrder": 194
   },
   {
     "id": "i-76Fjxvs",
@@ -9643,7 +9679,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 194
+    "sortOrder": 195
   },
   {
     "id": "i-vgZ8twt",
@@ -9673,7 +9709,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 195
+    "sortOrder": 196
   },
   {
     "id": "i-qwPBrns",
@@ -9710,7 +9746,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 196
+    "sortOrder": 197
   },
   {
     "id": "i-HZK96qf",
@@ -9746,7 +9782,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 197
+    "sortOrder": 198
   },
   {
     "id": "i-8g6m7tf",
@@ -9778,7 +9814,64 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 198
+    "sortOrder": 199
+  },
+  {
+    "id": "i-z3VScfV",
+    "title": "Cowboy Art:  Site for Sore Eyes",
+    "description": "Painterly Wild West themed photography of cowboy flirting at the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art:  Site for Sore Eyes",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/Kq7PBsNKCrBkv4XC5ZfMmL6bnsdZsLtTRRDSt9cTr/XL/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/Kq7PBsNKCrBkv4XC5ZfMmL6bnsdZsLtTRRDSt9cTr/XL/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/Kq7PBsNKCrBkv4XC5ZfMmL6bnsdZsLtTRRDSt9cTr/XL/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/NFQsRNZ5ktBTnRpq2MZ9NR4Tgfk3X43KD3BZdtKvp/L/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/MVQwtbZhhv7SmbN5SvMTtmsgjL9FX2pHSHHxMSCm7/S/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-z3VScfV/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy flirting at the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 200
   },
   {
     "id": "i-MB2KXB3",
@@ -9835,7 +9928,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 199
+    "sortOrder": 201
   },
   {
     "id": "i-XnW7ZD5",
@@ -9867,7 +9960,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 200
+    "sortOrder": 202
   },
   {
     "id": "i-fJ9WQSS",
@@ -9924,7 +10017,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 201
+    "sortOrder": 203
   },
   {
     "id": "i-b4hnpNn",
@@ -9961,7 +10054,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 202
+    "sortOrder": 204
   },
   {
     "id": "i-jmNjVwB",
@@ -10019,44 +10112,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 203
-  },
-  {
-    "id": "i-95vTrrv",
-    "title": "Fine Art Western Photography In Fine Art",
-    "description": "Experience fine art Western photography through this evocative cowboy portraits from Wayne Heim's portfolio. This piece highlights cowboy painting art with frederic remington, while conveying cowboy art, ideal for those who appreciate fine art Western photography. © Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/KDtWZHwtkjScjvhbQFK7gKPNsXPnRCSfKv5Wj2WB5/L/_HF23408-821-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/KDtWZHwtkjScjvhbQFK7gKPNsXPnRCSfKv5Wj2WB5/L/_HF23408-821-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/KDtWZHwtkjScjvhbQFK7gKPNsXPnRCSfKv5Wj2WB5/L/_HF23408-821-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/KDtWZHwtkjScjvhbQFK7gKPNsXPnRCSfKv5Wj2WB5/L/_HF23408-821-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/MtxWjnJ3K5TP5Snd989w4n4wW64cRtGjtDSHXJW6B/S/_HF23408-821-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-95vTrrv/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "fine art Western photography",
-      "cowboy portraits",
-      "cowboy painting art",
-      "frederic remington",
-      "cowboy art",
-      "cowboy artwork",
-      "wild west photography",
-      "western cowboy art"
-    ],
-    "story": "Delving into cowboy artwork, this work by Wayne Heim highlights fine art Western photography through wild west photography and western cowboy art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 204
+    "sortOrder": 205
   },
   {
     "id": "i-48jGpLt",
@@ -10093,7 +10149,44 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [],
-    "sortOrder": 205
+    "sortOrder": 206
+  },
+  {
+    "id": "i-95vTrrv",
+    "title": "Fine Art Western Photography In Fine Art",
+    "description": "Experience fine art Western photography through this evocative cowboy portraits from Wayne Heim's portfolio. This piece highlights cowboy painting art with frederic remington, while conveying cowboy art, ideal for those who appreciate fine art Western photography. © Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/KDtWZHwtkjScjvhbQFK7gKPNsXPnRCSfKv5Wj2WB5/L/_HF23408-821-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/KDtWZHwtkjScjvhbQFK7gKPNsXPnRCSfKv5Wj2WB5/L/_HF23408-821-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/KDtWZHwtkjScjvhbQFK7gKPNsXPnRCSfKv5Wj2WB5/L/_HF23408-821-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/KDtWZHwtkjScjvhbQFK7gKPNsXPnRCSfKv5Wj2WB5/L/_HF23408-821-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-95vTrrv/0/MtxWjnJ3K5TP5Snd989w4n4wW64cRtGjtDSHXJW6B/S/_HF23408-821-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-95vTrrv/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "fine art Western photography",
+      "cowboy portraits",
+      "cowboy painting art",
+      "frederic remington",
+      "cowboy art",
+      "cowboy artwork",
+      "wild west photography",
+      "western cowboy art"
+    ],
+    "story": "Delving into cowboy artwork, this work by Wayne Heim highlights fine art Western photography through wild west photography and western cowboy art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 207
   },
   {
     "id": "i-BtCH5S3",
@@ -10150,64 +10243,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 206
-  },
-  {
-    "id": "i-z3VScfV",
-    "title": "Cowboy Art:  Site for Sore Eyes",
-    "description": "Painterly Wild West themed photography of cowboy flirting at the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Site for Sore Eyes",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/Kq7PBsNKCrBkv4XC5ZfMmL6bnsdZsLtTRRDSt9cTr/XL/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/Kq7PBsNKCrBkv4XC5ZfMmL6bnsdZsLtTRRDSt9cTr/XL/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/Kq7PBsNKCrBkv4XC5ZfMmL6bnsdZsLtTRRDSt9cTr/XL/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/NFQsRNZ5ktBTnRpq2MZ9NR4Tgfk3X43KD3BZdtKvp/L/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/MVQwtbZhhv7SmbN5SvMTtmsgjL9FX2pHSHHxMSCm7/S/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-z3VScfV/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy flirting at the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 207
+    "sortOrder": 208
   },
   {
     "id": "i-2jfdQGw",
@@ -10244,7 +10280,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 208
+    "sortOrder": 209
   },
   {
     "id": "i-xMk6ZJ9",
@@ -10280,7 +10316,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 209
+    "sortOrder": 210
   },
   {
     "id": "i-2pRkNng",
@@ -10337,7 +10373,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 210
+    "sortOrder": 211
   },
   {
     "id": "i-b7HtD4R",
@@ -10393,44 +10429,6 @@ export const galleryData = [
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-    "visibility": "show",
-    "sortOrder": 211
-  },
-  {
-    "id": "i-3HM43Zv",
-    "title": "The Essence Of Rugged Spirit",
-    "description": "Immerse yourself in rugged spirit with this stunning cowboy art by Wayne Heim. Capturing powerful works of art, frontier life, and painterly cowboy portraits, it's a must-have for collectors of rugged spirit. © Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/LL3jKjh4T5dPgMcSqPDbzjvd2XLP6TfcL3bsN6Jmp/L/_O2H0031-769-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/LL3jKjh4T5dPgMcSqPDbzjvd2XLP6TfcL3bsN6Jmp/L/_O2H0031-769-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/LL3jKjh4T5dPgMcSqPDbzjvd2XLP6TfcL3bsN6Jmp/L/_O2H0031-769-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/M5MrHGgxsMWDJwqqzx6CShHVLCFRsmL5DRf3DN5Mp/M/_O2H0031-769-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/KWKbJqsCNsKnMJFZLRMH2GNh2Zz3JbScsCvGGpSmx/S/_O2H0031-769-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-3HM43Zv/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "rugged spirit",
-      "cowboy art",
-      "powerful works of art",
-      "frontier life",
-      "painterly cowboy portraits",
-      "cowboy artwork",
-      "rustic charm",
-      "outlaw portraits",
-      "frederic remington"
-    ],
-    "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing rustic charm and outlaw portraits. A testament to frederic remington in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
     "visibility": "show",
     "sortOrder": 212
   },
@@ -10921,37 +10919,6 @@ export const galleryData = [
     "sortOrder": 221
   },
   {
-    "id": "i-PxNFNhQ",
-    "title": "The Essence Of Wild West Photography",
-    "description": "Explore wild west photography with Wayne Heim's rugged spirit. This western cowboy art piece conveys cowboy artwork, cowboy painting art, and wild west photography, perfect for fans of rugged spirit. © Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/MTPBvm96dh2z5VF37rRnRBVgg735MJJsxCrVvdTn4/XL/_WHO7504-938-940-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/MTPBvm96dh2z5VF37rRnRBVgg735MJJsxCrVvdTn4/XL/_WHO7504-938-940-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/MTPBvm96dh2z5VF37rRnRBVgg735MJJsxCrVvdTn4/XL/_WHO7504-938-940-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/K6Rsf6fSJWPFtGK85sTGjNPmrMxCvzf9XhHV4Kzrj/L/_WHO7504-938-940-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/NcqfhPNXpZdknwvncrZCQwM9NpKhVHzFW2jLmKr6Q/S/_WHO7504-938-940-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/A",
-    "keywords": [
-      "HF26507",
-      "971",
-      "982",
-      "wild west photography",
-      "rugged spirit",
-      "western cowboy art",
-      "cowboy artwork",
-      "cowboy painting art",
-      "Western cowboys",
-      "rustic charm"
-    ],
-    "story": "This image embodies Western cowboys and cowboy artwork, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of western cowboy art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 222
-  },
-  {
     "id": "i-sPkKGnX",
     "title": "Fine Art Wild West Photography",
     "description": "Immerse yourself in wild west photography with this stunning painterly cowboy portraits by Wayne Heim. Capturing cowboy artwork, fine art Western photography, and cowboy portraits, it's a must-have for collectors of wild west photography. © Wayne Heim",
@@ -10976,6 +10943,37 @@ export const galleryData = [
       "western fine art"
     ],
     "story": "Delving into western art, this work by Wayne Heim highlights historic western prints through frontier life and western fine art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 222
+  },
+  {
+    "id": "i-PxNFNhQ",
+    "title": "The Essence Of Wild West Photography",
+    "description": "Explore wild west photography with Wayne Heim's rugged spirit. This western cowboy art piece conveys cowboy artwork, cowboy painting art, and wild west photography, perfect for fans of rugged spirit. © Wayne Heim",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/MTPBvm96dh2z5VF37rRnRBVgg735MJJsxCrVvdTn4/XL/_WHO7504-938-940-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/MTPBvm96dh2z5VF37rRnRBVgg735MJJsxCrVvdTn4/XL/_WHO7504-938-940-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/MTPBvm96dh2z5VF37rRnRBVgg735MJJsxCrVvdTn4/XL/_WHO7504-938-940-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/K6Rsf6fSJWPFtGK85sTGjNPmrMxCvzf9XhHV4Kzrj/L/_WHO7504-938-940-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/NcqfhPNXpZdknwvncrZCQwM9NpKhVHzFW2jLmKr6Q/S/_WHO7504-938-940-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/A",
+    "keywords": [
+      "HF26507",
+      "971",
+      "982",
+      "wild west photography",
+      "rugged spirit",
+      "western cowboy art",
+      "cowboy artwork",
+      "cowboy painting art",
+      "Western cowboys",
+      "rustic charm"
+    ],
+    "story": "This image embodies Western cowboys and cowboy artwork, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of western cowboy art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -11247,6 +11245,44 @@ export const galleryData = [
     "sortOrder": 229
   },
   {
+    "id": "i-PzwsgTk",
+    "title": "Western Art Study",
+    "description": "This western art artwork by Wayne Heim showcases powerful works of art in a western fine art style. Reflecting cowboy art, painterly cowboy portraits, and western art, it's suited for admirers of powerful works of art. © Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/NgNHFcpp8g7npZ6LpnJ48h7R337PntmcwF63vJHVL/L/_O2H3934-719-720-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/NgNHFcpp8g7npZ6LpnJ48h7R337PntmcwF63vJHVL/L/_O2H3934-719-720-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/NgNHFcpp8g7npZ6LpnJ48h7R337PntmcwF63vJHVL/L/_O2H3934-719-720-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/KqW46LMQ33H4G95Wg9M7B2WvNtSxjmZjDhgr5rzVB/M/_O2H3934-719-720-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/LjSP7JHCjhqMBDB7f5HHBJqdV6tG58hKd7WmFsV4z/S/_O2H3934-719-720-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "western art",
+      "powerful works of art",
+      "western fine art",
+      "cowboy art",
+      "painterly cowboy portraits",
+      "wild west photography",
+      "western cowboy art",
+      "outlaw portraits",
+      "rugged spirit"
+    ],
+    "story": "Delving into wild west photography, this work by Wayne Heim highlights western cowboy art through outlaw portraits and rugged spirit. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 230
+  },
+  {
     "id": "i-WNLSRQf",
     "title": "Rugged Spirit In Fine Art",
     "description": "Experience rugged spirit through this evocative cowboy portraits from Wayne Heim's portfolio. This piece highlights rustic charm with historic western prints, while conveying cowboy art, ideal for those who appreciate rugged spirit. © Wayne Heim",
@@ -11273,7 +11309,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 230
+    "sortOrder": 231
   },
   {
     "id": "i-Qx9xbv7",
@@ -11303,7 +11339,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 231
+    "sortOrder": 232
   },
   {
     "id": "i-kjWmdVL",
@@ -11341,7 +11377,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 232
+    "sortOrder": 233
   },
   {
     "id": "i-7DZfRCN",
@@ -11373,44 +11409,6 @@ export const galleryData = [
       "fine art Western photography"
     ],
     "story": "Wayne Heim's exploration of Western cowboys comes alive in this piece, showcasing cowboy artwork and fine art Western photography. A testament to outlaw portraits in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 233
-  },
-  {
-    "id": "i-PzwsgTk",
-    "title": "Western Art Study",
-    "description": "This western art artwork by Wayne Heim showcases powerful works of art in a western fine art style. Reflecting cowboy art, painterly cowboy portraits, and western art, it's suited for admirers of powerful works of art. © Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/NgNHFcpp8g7npZ6LpnJ48h7R337PntmcwF63vJHVL/L/_O2H3934-719-720-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/NgNHFcpp8g7npZ6LpnJ48h7R337PntmcwF63vJHVL/L/_O2H3934-719-720-2-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/NgNHFcpp8g7npZ6LpnJ48h7R337PntmcwF63vJHVL/L/_O2H3934-719-720-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/KqW46LMQ33H4G95Wg9M7B2WvNtSxjmZjDhgr5rzVB/M/_O2H3934-719-720-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/LjSP7JHCjhqMBDB7f5HHBJqdV6tG58hKd7WmFsV4z/S/_O2H3934-719-720-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "western art",
-      "powerful works of art",
-      "western fine art",
-      "cowboy art",
-      "painterly cowboy portraits",
-      "wild west photography",
-      "western cowboy art",
-      "outlaw portraits",
-      "rugged spirit"
-    ],
-    "story": "Delving into wild west photography, this work by Wayne Heim highlights western cowboy art through outlaw portraits and rugged spirit. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -11941,35 +11939,6 @@ export const galleryData = [
     "sortOrder": 246
   },
   {
-    "id": "i-NMWM9tP",
-    "title": "The Essence Of Rugged Spirit",
-    "description": "Experience rugged spirit through this evocative western art from Wayne Heim's portfolio. This piece highlights rustic charm with western fine art, while conveying painterly cowboy portraits, ideal for those who appreciate rugged spirit. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NMWM9tP/0/NVJ5hx8JWkjJCbDwB4WGCGJ6kz3H54zQkbwt5qvwS/XL/_HF27295-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NMWM9tP/0/NVJ5hx8JWkjJCbDwB4WGCGJ6kz3H54zQkbwt5qvwS/XL/_HF27295-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NMWM9tP/0/NVJ5hx8JWkjJCbDwB4WGCGJ6kz3H54zQkbwt5qvwS/XL/_HF27295-Edit-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NMWM9tP/0/KSBS5GdgPpZtXFdVJSdsr9JkCk6BhHxRfqrJjbhCW/L/_HF27295-Edit-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NMWM9tP/0/MwfvBVWGjsdJC44QL3tbHBgvBC33p4WWGLZjwfdt4/S/_HF27295-Edit-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NMWM9tP/A",
-    "keywords": [
-      "WHO0135",
-      "rugged spirit",
-      "western art",
-      "rustic charm",
-      "western fine art",
-      "painterly cowboy portraits",
-      "cowboy portraits",
-      "frederic remington"
-    ],
-    "story": "Delving into western art, this work by Wayne Heim highlights cowboy portraits through western fine art and frederic remington. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 247
-  },
-  {
     "id": "i-sVrtDx8",
     "title": "Cowboy Art:  Self Defense",
     "description": "Painterly Wild West themed photography of cattle rustler on trial. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
@@ -12024,7 +11993,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 248
+    "sortOrder": 247
   },
   {
     "id": "i-jDmnnrm",
@@ -12081,7 +12050,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 249
+    "sortOrder": 248
   },
   {
     "id": "i-f8VznFc",
@@ -12138,7 +12107,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 250
+    "sortOrder": 249
   },
   {
     "id": "i-wXQgDCx",
@@ -12195,7 +12164,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 251
+    "sortOrder": 250
   },
   {
     "id": "i-DK48RWj",
@@ -12252,7 +12221,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 252
+    "sortOrder": 251
   },
   {
     "id": "i-CFT7PJM",
@@ -12309,7 +12278,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 253
+    "sortOrder": 252
   },
   {
     "id": "i-fsL7pfL",
@@ -12340,7 +12309,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 254
+    "sortOrder": 253
   },
   {
     "id": "i-qDkTww8",
@@ -12370,7 +12339,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 255
+    "sortOrder": 254
   },
   {
     "id": "i-zqZBdJF",
@@ -12400,7 +12369,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 256
+    "sortOrder": 255
   },
   {
     "id": "i-pHhRGL6",
@@ -12457,7 +12426,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 257
+    "sortOrder": 256
   },
   {
     "id": "i-sLtTp4m",
@@ -12514,7 +12483,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 258
+    "sortOrder": 257
   },
   {
     "id": "i-zqZPZF6",
@@ -12571,7 +12540,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 259
+    "sortOrder": 258
   },
   {
     "id": "i-79P6kHT",
@@ -12628,7 +12597,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 260
+    "sortOrder": 259
   },
   {
     "id": "i-qJtstjP",
@@ -12659,7 +12628,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 261
+    "sortOrder": 260
   },
   {
     "id": "i-9LC3ZrM",
@@ -12697,7 +12666,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 262
+    "sortOrder": 261
   },
   {
     "id": "i-J3dh2p4",
@@ -12729,7 +12698,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 263
+    "sortOrder": 262
   },
   {
     "id": "i-7GcQw6R",
@@ -12761,7 +12730,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 264
+    "sortOrder": 263
   },
   {
     "id": "i-tKZ2wgt",
@@ -12818,7 +12787,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 265
+    "sortOrder": 264
   },
   {
     "id": "i-QNLd2xZ",
@@ -12848,7 +12817,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 266
+    "sortOrder": 265
   },
   {
     "id": "i-5fm7Hhr",
@@ -12879,7 +12848,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 267
+    "sortOrder": 266
   },
   {
     "id": "i-trZrk2w",
@@ -12909,7 +12878,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 268
+    "sortOrder": 267
   },
   {
     "id": "i-6wMDxdF",
@@ -12966,7 +12935,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 269
+    "sortOrder": 268
   },
   {
     "id": "i-m52CLPT",
@@ -12996,7 +12965,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 270
+    "sortOrder": 269
   },
   {
     "id": "i-8pp9T7x",
@@ -13026,7 +12995,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 271
+    "sortOrder": 270
   },
   {
     "id": "i-XpH2QfG",
@@ -13084,7 +13053,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 272
+    "sortOrder": 271
   },
   {
     "id": "i-RRB2hNj",
@@ -13117,7 +13086,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 273
+    "sortOrder": 272
   },
   {
     "id": "i-zN6f785",
@@ -13147,7 +13116,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 274
+    "sortOrder": 273
   },
   {
     "id": "i-4G9GB3b",
@@ -13179,7 +13148,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 275
+    "sortOrder": 274
   },
   {
     "id": "i-DK8t88F",
@@ -13212,7 +13181,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 276
+    "sortOrder": 275
   },
   {
     "id": "i-9Qt4nh7",
@@ -13241,7 +13210,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 277
+    "sortOrder": 276
   },
   {
     "id": "i-qNb7qRw",
@@ -13272,7 +13241,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 278
+    "sortOrder": 277
   },
   {
     "id": "i-kk6DvMJ",
@@ -13304,7 +13273,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 279
+    "sortOrder": 278
   },
   {
     "id": "i-ZDGhLps",
@@ -13361,7 +13330,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 280
+    "sortOrder": 279
   },
   {
     "id": "i-NzMs3RH",
@@ -13390,7 +13359,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 281
+    "sortOrder": 280
   },
   {
     "id": "i-CmHHjwV",
@@ -13420,7 +13389,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 282
+    "sortOrder": 281
   },
   {
     "id": "i-2s2LtQp",
@@ -13450,7 +13419,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 283
+    "sortOrder": 282
   },
   {
     "id": "i-Q3Qm4f2",
@@ -13480,7 +13449,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 284
+    "sortOrder": 283
   },
   {
     "id": "i-KXLmcXW",
@@ -13511,7 +13480,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 285
+    "sortOrder": 284
   },
   {
     "id": "i-rdf8JpZ",
@@ -13540,7 +13509,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 286
+    "sortOrder": 285
   },
   {
     "id": "i-XLXGHT9",
@@ -13568,7 +13537,7 @@ export const galleryData = [
     "notes": "",
     "rating": 0,
     "galleries": [],
-    "sortOrder": 287
+    "sortOrder": 286
   },
   {
     "id": "i-V9Jx8D8",
@@ -13597,7 +13566,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 288
+    "sortOrder": 287
   },
   {
     "id": "i-mn8RKLL",
@@ -13629,7 +13598,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 289
+    "sortOrder": 288
   },
   {
     "id": "i-3V4rCN8",
@@ -13666,7 +13635,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 290
+    "sortOrder": 289
   },
   {
     "id": "i-Q2cHRkn",
@@ -13699,7 +13668,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 291
+    "sortOrder": 290
   },
   {
     "id": "i-549JVNk",
@@ -13731,7 +13700,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 292
+    "sortOrder": 291
   },
   {
     "id": "i-k5zmxS5",
@@ -13762,7 +13731,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 293
+    "sortOrder": 292
   },
   {
     "id": "i-vP7bLLc",
@@ -13797,7 +13766,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 294
+    "sortOrder": 293
   },
   {
     "id": "i-RRw2Tfr",
@@ -13833,7 +13802,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 295
+    "sortOrder": 294
   },
   {
     "id": "i-3vxbnpZ",
@@ -13865,7 +13834,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 296
+    "sortOrder": 295
   },
   {
     "id": "i-73WFHzh",
@@ -13896,7 +13865,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 297
+    "sortOrder": 296
   },
   {
     "id": "i-Z6TkHwJ",
@@ -13927,7 +13896,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 298
+    "sortOrder": 297
   },
   {
     "id": "i-fJmGF7N",
@@ -13964,7 +13933,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 299
+    "sortOrder": 298
   },
   {
     "id": "i-FNSvKZz",
@@ -13992,7 +13961,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 300
+    "sortOrder": 299
   },
   {
     "id": "i-q3f95K3",
@@ -14030,7 +13999,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 301
+    "sortOrder": 300
   },
   {
     "id": "i-NgkC4Zt",
@@ -14066,7 +14035,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 302
+    "sortOrder": 301
   },
   {
     "id": "i-9j9t5n4",
@@ -14102,7 +14071,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 303
+    "sortOrder": 302
   },
   {
     "id": "i-hHVb4vC",
@@ -14140,7 +14109,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 304
+    "sortOrder": 303
   },
   {
     "id": "i-XTs3sP3",
@@ -14171,7 +14140,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 305
+    "sortOrder": 304
   },
   {
     "id": "i-6FGmZK4",
@@ -14201,7 +14170,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 306
+    "sortOrder": 305
   },
   {
     "id": "i-mWMXhcc",
@@ -14237,7 +14206,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 307
+    "sortOrder": 306
   },
   {
     "id": "i-9frbWfJ",
@@ -14268,7 +14237,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 308
+    "sortOrder": 307
   },
   {
     "id": "i-N8PLGR4",
@@ -14299,7 +14268,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 309
+    "sortOrder": 308
   },
   {
     "id": "i-7PMm6sZ",
@@ -14331,7 +14300,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 310
+    "sortOrder": 309
   },
   {
     "id": "i-TNm6hQ3",
@@ -14367,7 +14336,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 311
+    "sortOrder": 310
   },
   {
     "id": "i-Zt47sk7",
@@ -14404,7 +14373,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 312
+    "sortOrder": 311
   },
   {
     "id": "i-5XC2cj5",
@@ -14460,7 +14429,395 @@ export const galleryData = [
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+    "sortOrder": 312
+  },
+  {
+    "id": "i-xqZwcZh",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/LJj3WLWv23DSSK2RB8Wgj8cJh5wrGbbrfwx3vKMBS/S/_HF26558-983-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
     "sortOrder": 313
+  },
+  {
+    "id": "i-6QFpvwm",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6QFpvwm/1/LZpWdBc4pRvSt6rr8wjMsvxbBPRHJvhXCB4kp3Mp6/XL/_HF26701-987-991-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6QFpvwm/1/LZpWdBc4pRvSt6rr8wjMsvxbBPRHJvhXCB4kp3Mp6/XL/_HF26701-987-991-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6QFpvwm/1/LZpWdBc4pRvSt6rr8wjMsvxbBPRHJvhXCB4kp3Mp6/XL/_HF26701-987-991-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6QFpvwm/1/LZpWdBc4pRvSt6rr8wjMsvxbBPRHJvhXCB4kp3Mp6/XL/_HF26701-987-991-Edit-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6QFpvwm/1/LdPV23qx8dGD9cgrGDcFSM9PKWWNtDcz86McnfSrh/S/_HF26701-987-991-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6QFpvwm/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 314
+  },
+  {
+    "id": "i-NdQnj6P",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/KVCfGF9b9WQH9k3RmwTmTpK85F2mQrQK5F2sPL8K7/L/_WHO8015-955-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/LJmRkvHxZ6p5xD9hqrHKLBGvp2NpzfkNV3FBcTvT9/S/_WHO8015-955-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 315
+  },
+  {
+    "id": "i-QHN52S6",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QHN52S6/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QHN52S6/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QHN52S6/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QHN52S6/1/M5kpzVXcFVqfB3TC2Tr9S45Xs8NT6QhHPF3TMKJnt/L/_HF26959-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QHN52S6/1/LSkd4KGVH79GLfDRQfWBBNNMDKcS3TZnKz4ZdHt4V/S/_HF26959-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QHN52S6/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 316
+  },
+  {
+    "id": "i-dsqgfVj",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/MJVJNH3GvsdfTF6KMJ4G4ZbSscLTXHB4RTmZfGJb7/XL/_HF26562-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/MJVJNH3GvsdfTF6KMJ4G4ZbSscLTXHB4RTmZfGJb7/XL/_HF26562-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/Mw4QfVzvH9vkDcrhcsRWsVsw3q8N9jDKMZhbXW2QW/L/_HF26562-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/NVRBh23pLnCFbcrrWgs8pMZZDMdxL4pmSX869JLXw/M/_HF26562-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/LtjDQhP9fB4wmHkdTNs9xkcjftqJpR5gmpb5wf5Ks/S/_HF26562-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 317
+  },
+  {
+    "id": "i-G9kSt8Q",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G9kSt8Q/0/KPJTjvhq66br4RNKF2S8SNNdg5BtvrDK4ntbrDzdP/XL/_WHO4767-Edit-3-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G9kSt8Q/0/KPJTjvhq66br4RNKF2S8SNNdg5BtvrDK4ntbrDzdP/XL/_WHO4767-Edit-3-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G9kSt8Q/0/MGRdL8RCJkJ56S4PC6f9GkwG8KRLdn8S22PFkGvFt/L/_WHO4767-Edit-3-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G9kSt8Q/0/NKsPGZpxNG85hSvxqMGLbGpsMhjd348DV4X3mVTkr/M/_WHO4767-Edit-3-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G9kSt8Q/0/KgPv5m8Xc5SrdfWDP2G545SNjsHMbDMF8gxFL5Tcb/S/_WHO4767-Edit-3-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G9kSt8Q/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 318
+  },
+  {
+    "id": "i-drTwKMw",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-drTwKMw/0/KZwgw7X7S6zLGKKHGMn4ZxKZFWf69dzSswvpdpf5p/XL/_WHO0931-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-drTwKMw/0/KZwgw7X7S6zLGKKHGMn4ZxKZFWf69dzSswvpdpf5p/XL/_WHO0931-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-drTwKMw/0/MBdkkPNxkRLvZbKJZHmNFrQDqVqMJB69CGw2t4swj/L/_WHO0931-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-drTwKMw/0/MTCxKdGZ9P4PHd8GR4QCf9wxPb4ktQjp2ncpmc4Bg/M/_WHO0931-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-drTwKMw/0/NPwxnxMF4DkPFvHKmqwMMzLDGzJLZjpkjCBmggd3s/S/_WHO0931-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-drTwKMw/A",
+    "keywords": [
+      "WHO2514"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 319
+  },
+  {
+    "id": "i-f9nZhvM",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f9nZhvM/1/NMrxPz2dhxXPvHLJjBBz8WxQr2BGCb6RzpTthC5Kp/XL/_WHO8538-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f9nZhvM/1/NMrxPz2dhxXPvHLJjBBz8WxQr2BGCb6RzpTthC5Kp/XL/_WHO8538-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f9nZhvM/1/MvD7PSZN9q9RnJgJTM5RwvQD6VWVS97S3wzBgvvQX/L/_WHO8538-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f9nZhvM/1/Kd9vqvBwzn9ZM2TtRsHQMTkMFjpWVzXvpjsbTF4mn/M/_WHO8538-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f9nZhvM/1/KqM88Gx9BpQVjFLGc82VTDHdZwhN5VqbhKZJ7W8xh/S/_WHO8538-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f9nZhvM/A",
+    "keywords": [
+      "WHO2514"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 320
+  },
+  {
+    "id": "i-MMmDhV2",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/NXtn8Lnt9DbTbf4f4wMGDfSkwnmxsdBrVQmbFKQG2/L/_HF23060-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/L9WZWJ37nnCGkw38gZjZxmdVVhvx3HHdJ3LbjGsF2/S/_HF23060-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/A",
+    "keywords": [
+      "WHO2514"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 321
+  },
+  {
+    "id": "i-h6SnLK4",
+    "title": "Untitled",
+    "description": "From the Wayne Heim A series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h6SnLK4/0/LJx7jDBDsN8hD89MFbFvjtC6Cq5KntPXxXv2254JV/XL/_WHO7014-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h6SnLK4/0/LJx7jDBDsN8hD89MFbFvjtC6Cq5KntPXxXv2254JV/XL/_WHO7014-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h6SnLK4/0/NBp9xHWKCMpgQBHf4RLD7MJB5N9X8Xk6z9tRsP6nc/L/_WHO7014-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h6SnLK4/0/MLB7chct5Vm6D463WV5ZpVTtmptcrP4MmxL7khDcv/M/_WHO7014-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h6SnLK4/0/NBVGSCMNfRvGKLkw46364MgkqznzgcrBf3rn2jwFs/S/_WHO7014-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h6SnLK4/A",
+    "keywords": [
+      "WHO2514"
+    ],
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 322
+  },
+  {
+    "id": "i-JcHKH5f",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/KMFZc4BfSkWqtjpmXNdvKQ4B5pBgWjRwdk98H7WJs/XL/_WHO3989-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/KMFZc4BfSkWqtjpmXNdvKQ4B5pBgWjRwdk98H7WJs/XL/_WHO3989-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/LMk6v3Lhjk7fgM8p5dzC7w8zKdVr5zZm9Khq4JxCq/L/_WHO3989-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/LXncGgXJNGtB8bSTxHmtnwxCvbXGPqmcZNzHKvrLK/M/_WHO3989-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/LnpTmc5XFghrqhmsKHCF2PFPBnxSBhKhZFg2xkwbF/S/_WHO3989-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/A",
+    "keywords": [
+      "WHO2514"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 323
+  },
+  {
+    "id": "i-2D49wp7",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2D49wp7/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2D49wp7/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2D49wp7/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2D49wp7/0/NgvpvqtnjC7ctKpJN6X94hDKRx69QQhhf84WBSVJ7/L/_HF28455-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2D49wp7/0/K75GgvxGvp4dNNcZZNPfQbBNSGX826M6mxncTR8HJ/S/_HF28455-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2D49wp7/A",
+    "keywords": [
+      "WHO2514"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 324
+  },
+  {
+    "id": "i-rTwWXgw",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rTwWXgw/1/LwdDhXJ57CXthdxpMxn4LNt9Tmk9WJCWkcP8n4m5X/XL/_WHO1980-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rTwWXgw/1/LwdDhXJ57CXthdxpMxn4LNt9Tmk9WJCWkcP8n4m5X/XL/_WHO1980-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rTwWXgw/1/LwdDhXJ57CXthdxpMxn4LNt9Tmk9WJCWkcP8n4m5X/XL/_WHO1980-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rTwWXgw/1/L2kPj9Jkw6JPzqP8Lzq7XDQsphwKbFpQ37vP8tXrL/L/_WHO1980-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rTwWXgw/1/KZBQxnjDxxckSCfdVrxDP9SCCXmQDTZVmZ8n3JRsm/S/_WHO1980-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rTwWXgw/A",
+    "keywords": [
+      "HF28249"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 325
+  },
+  {
+    "id": "i-bhXQ8Hx",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from A. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/1/LBSsCjcmch97WV8bzcjDxD6tJN4XhPWNXZnk74Prf/XL/_HF26210-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/1/LBSsCjcmch97WV8bzcjDxD6tJN4XhPWNXZnk74Prf/XL/_HF26210-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/1/M4tCQ85bhNg4x2QVfJv7gX9JG8NvkXXpqH6VJC8nL/L/_HF26210-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/1/LHsjkkkJFJVsqnVq584BPSJV5Bg7SzCm26zWzXhCG/M/_HF26210-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/1/Nh7tMMT74Mvj3n2CrTvXxmq7Pg86cK9SLRzxdgd8q/S/_HF26210-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/A",
+    "keywords": [
+      "HF28249"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 326
+  },
+  {
+    "id": "i-3HM43Zv",
+    "title": "The Essence Of Rugged Spirit",
+    "description": "Immerse yourself in rugged spirit with this stunning cowboy art by Wayne Heim. Capturing powerful works of art, frontier life, and painterly cowboy portraits, it's a must-have for collectors of rugged spirit. © Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/LL3jKjh4T5dPgMcSqPDbzjvd2XLP6TfcL3bsN6Jmp/L/_O2H0031-769-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/LL3jKjh4T5dPgMcSqPDbzjvd2XLP6TfcL3bsN6Jmp/L/_O2H0031-769-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/LL3jKjh4T5dPgMcSqPDbzjvd2XLP6TfcL3bsN6Jmp/L/_O2H0031-769-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/M5MrHGgxsMWDJwqqzx6CShHVLCFRsmL5DRf3DN5Mp/M/_O2H0031-769-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/KWKbJqsCNsKnMJFZLRMH2GNh2Zz3JbScsCvGGpSmx/S/_O2H0031-769-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-3HM43Zv/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "rugged spirit",
+      "cowboy art",
+      "powerful works of art",
+      "frontier life",
+      "painterly cowboy portraits",
+      "cowboy artwork",
+      "rustic charm",
+      "outlaw portraits",
+      "frederic remington"
+    ],
+    "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing rustic charm and outlaw portraits. A testament to frederic remington in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 327
   },
   {
     "id": "i-c4xWGxj",
@@ -14517,7 +14874,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 314
+    "sortOrder": 328
   },
   {
     "id": "i-RrRPTZP",
@@ -14574,7 +14931,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 315
+    "sortOrder": 329
   },
   {
     "id": "i-nbvxtrR",
@@ -14631,7 +14988,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 316
+    "sortOrder": 330
   },
   {
     "id": "i-g9mC35L",
@@ -14688,7 +15045,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 317
+    "sortOrder": 331
   },
   {
     "id": "i-r9xCmwz",
@@ -14725,7 +15082,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 318
+    "sortOrder": 332
   },
   {
     "id": "i-4pVqPVw",
@@ -14782,7 +15139,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 319
+    "sortOrder": 333
   },
   {
     "id": "i-dXDLH7c",
@@ -14839,7 +15196,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 320
+    "sortOrder": 334
   },
   {
     "id": "i-mBD4f67",
@@ -14896,7 +15253,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 321
+    "sortOrder": 335
   },
   {
     "id": "i-Tcg3LZS",
@@ -14953,7 +15310,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 322
+    "sortOrder": 336
   },
   {
     "id": "i-vhGcpWV",
@@ -15011,7 +15368,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 323
+    "sortOrder": 337
   },
   {
     "id": "i-6pCLC4L",
@@ -15068,7 +15425,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 324
+    "sortOrder": 338
   },
   {
     "id": "i-ps4qwgF",
@@ -15125,6 +15482,6 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 325
+    "sortOrder": 339
   }
 ];
