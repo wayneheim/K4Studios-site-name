@@ -15,6 +15,7 @@ const SITE_HOST = "www.k4studios.com";
 const INDEXNOW_KEY = "e05ffc8ff8004372b01c0e153ba16b44";
 const INDEXNOW_KEY_URL = `https://${SITE_HOST}/${INDEXNOW_KEY}.txt`;
 const SITEMAP_PATH = path.join(__dirname, "../dist/sitemap.xml");
+const SITEMAP_URL = process.env.SITEMAP_URL || `https://${SITE_HOST}/sitemap.xml`;
 const ENDPOINT = "https://api.indexnow.org/indexnow";
 const BATCH_SIZE = 500;
 const DELAY_MS = 2000; // 2s between requests
@@ -56,12 +57,25 @@ async function submitBatch(urlList, batchNum) {
 
 // === 🚦 MAIN ===
 async function main() {
-  if (!fs.existsSync(SITEMAP_PATH)) {
-    console.warn(`⚠️ Sitemap not found at ${SITEMAP_PATH}, skipping IndexNow submission.`);
-    process.exit(0);
+  let xml;
+  if (fs.existsSync(SITEMAP_PATH)) {
+    console.log(`📄 Using local sitemap at: ${SITEMAP_PATH}`);
+    xml = fs.readFileSync(SITEMAP_PATH, "utf8");
+  } else {
+    console.warn(`⚠️ Sitemap not found at ${SITEMAP_PATH}. Falling back to remote: ${SITEMAP_URL}`);
+    try {
+      const res = await fetch(SITEMAP_URL);
+      if (!res.ok) {
+        console.error(`❌ Failed to fetch remote sitemap: ${res.status} ${res.statusText}`);
+        process.exit(1);
+      }
+      xml = await res.text();
+    } catch (err) {
+      console.error(`❌ Error fetching remote sitemap:`, err);
+      process.exit(1);
+    }
   }
 
-  const xml = fs.readFileSync(SITEMAP_PATH, "utf8");
   const allUrls = extractUrlsFromSitemap(xml);
   console.log(`📄 Found ${allUrls.length} URLs in sitemap.xml`);
 
