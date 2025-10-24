@@ -441,6 +441,8 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
         description: item.description ?? "",
         story: item.story ?? "",
         notes: item.notes ?? "",
+        // include rating so star selection persists
+        rating: typeof item.rating === "number" ? item.rating : undefined,
         keywords: Array.isArray(item.keywords)
           ? item.keywords
           : String(item.keywords || "")

@@ -9988,5 +9988,42 @@ export const galleryData = [
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 183
+  },
+  {
+    "id": "i-Z34Lmz4",
+    "title": "Frontier Life And Western Landscapes Fine Art",
+    "description": "Explore frontier life with Wayne Heim's western landscapes fine art. This powerful works of art piece conveys cowboy artwork, Western cowboys, and frontier life, perfect for fans of western landscapes fine art. © Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/L3rmVZcZC42bXPxbcczgKN7jVd7zzwkCG7v5zNPRW/S/_HF22086-1044-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "frontier life",
+      "western landscapes fine art",
+      "powerful works of art",
+      "cowboy artwork",
+      "Western cowboys",
+      "cowboy portraits",
+      "wild west photography",
+      "fine art Western photography"
+    ],
+    "story": "This image embodies cowboy portraits and cowboy artwork, captured by Wayne Heim in his signature style. It reflects wild west photography with a touch of fine art Western photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 184
   }
 ];
