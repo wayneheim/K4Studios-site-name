@@ -49,6 +49,8 @@ const regions = [
 export const landingWestern = {
   title: "Traditional Style Portraits",
   subtitle: "Photographs that are not merely images—but windows into worlds that exist beyond my lens.",
+  description: "Photographs that are not merely images—but windows into worlds that exist beyond my lens.",
+  keywords: [],
   breadcrumb: `
     <a href="/Galleries/Fine-Art-Photography"
        style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;"

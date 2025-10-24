@@ -13,7 +13,7 @@ import { getLandingMeta } from '@/data/landingMeta.ts';
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
-import { semantic as cowboySemantic } from '@/data/semantic/Western-Cowboy-Portraits-Sem.ts';
+import { semantic as defaultSemantic } from '@/data/semantic/K4-Sem.ts';
 
 import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/landingstones.ts';
 import { westernStory } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/story.ts';
@@ -48,12 +48,12 @@ const galleryPaths = landingNav?.children?.filter(c =>
 const allGalleryData = import.meta.glob('@/data/galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = "@/data/galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-  return allGalleryData[filePath]?.galleryData || [];
+  return (allGalleryData[filePath] as any)?.galleryData || [];
 });
 
 // Feathered image injection logic
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
-const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
+const featheredImages = getSideImages({ sectionPath, headingCount, excludeIds: new Set() });
 
 // ----------------------
 // NEW: dynamic OG/Twitter image
@@ -65,7 +65,7 @@ function makeAbsoluteUrl(src?: string) {
 }
 
 const landingImg    = featheredImages[0];
-const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+const landingImgUrl = makeAbsoluteUrl((landingImg as any)?.src);
 
 const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
 if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
@@ -78,9 +78,9 @@ const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingWestern.subtitle || (landingWestern as any).description,
     url: `https://k4studios.com${sectionPath}`,
-    keywords: landingWestern.keywords || [],
+    keywords: (landingWestern as any).keywords || [],
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
@@ -115,7 +115,7 @@ const structuredData = getStructuredData({
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+        <ImageBar2 client:load slides={[]} />
       </div>
     </div>
 
@@ -131,14 +131,14 @@ const structuredData = getStructuredData({
     </section>
 
     <div class="py-5">
-      <TombstoneNav items={landingWestern.tombstones} />
+      <TombstoneNav items={landingWestern.tombstones} title={landingWestern.title} subtitle={landingWestern.subtitle} />
     </div>
 
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section, index) => (
-            <article class="story-block" key={index}>
+            <article class="story-block">
               {section.title && (
                 <h2
                   class="slide-in-left"
@@ -147,7 +147,7 @@ const structuredData = getStructuredData({
                     galleryDatas,
                     featheredImages,
                     galleryPaths,
-                    cowboySemantic
+                    defaultSemantic
                   )}
                 />
               )}
@@ -159,7 +159,7 @@ const structuredData = getStructuredData({
                     galleryDatas,
                     featheredImages,
                     galleryPaths,
-                    cowboySemantic
+                    defaultSemantic
                   )}
                 />
               )}
@@ -171,21 +171,20 @@ const structuredData = getStructuredData({
                     galleryDatas,
                     featheredImages,
                     galleryPaths,
-                    cowboySemantic
+                    defaultSemantic
                   )}
                 />
               )}
 
               {section.paragraphs?.map((para, i) => (
                 <p
-                  key={i}
                   class="reveal-on-scroll"
                   set:html={autoLinkKeywordsInText(
                     para,
                     galleryDatas,
                     featheredImages,
                     galleryPaths,
-                    cowboySemantic
+                    defaultSemantic
                   )}
                 />
               ))}
@@ -194,14 +193,13 @@ const structuredData = getStructuredData({
                 <ul>
                   {section.list.map((item, j) => (
                     <li
-                      key={j}
                       class="reveal-on-scroll"
                       set:html={autoLinkKeywordsInText(
                         item,
                         galleryDatas,
                         featheredImages,
                         galleryPaths,
-                        cowboySemantic
+                        defaultSemantic
                       )}
                     />
                   ))}

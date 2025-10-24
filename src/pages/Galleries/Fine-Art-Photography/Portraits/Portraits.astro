@@ -1,0 +1,210 @@
+---
+import BaseLayout         from '@/layouts/BaseLayout.astro';
+import LandingHeader      from '@/components/Landing-Header.jsx';
+import ImageBar2          from '@/components/ImageBar2.jsx';
+import TombstoneNav       from '@/components/TombstoneNav.jsx';
+import LandingRightImages from '@/components/LandingRightImages.jsx';
+import FAQAccordion       from '@/components/FAQAccordion.jsx';
+import SiteFooter         from '@/components/Footer.astro';
+import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
+import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getLandingMeta } from '@/data/landingMeta.ts';
+
+import { siteNav } from '@/data/siteNav.ts';
+import { getSideImages } from '@/components/utils/getSideImages.ts';
+import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
+import { semantic as defaultSemantic } from '@/data/semantic/K4-Sem.ts';
+
+import { landingWestern } from '@/data/Galleries/Fine-Art-Photography/Portraits/landingstones.ts';
+import { westernStory } from '@/data/Galleries/Fine-Art-Photography/Portraits/story.ts';
+import { portraitsFAQ as westernFAQ } from '@/data/Galleries/Fine-Art-Photography/Portraits/faq.ts';
+
+import '@/styles/global.css';
+import '@/styles/oneupheader.css';
+
+// ----------------------
+// DYNAMIC LOGIC SECTION
+// ----------------------
+
+const sectionPath = "/Galleries/Fine-Art-Photography/Portraits";
+
+function findNavEntry(nav, url) {
+  for (const entry of nav) {
+    if (entry.href === url) return entry;
+    if (entry.children) {
+      const found = findNavEntry(entry.children, url);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+
+const landingNav = findNavEntry(siteNav, sectionPath);
+const galleryPaths = landingNav?.children?.filter(c =>
+  /\/Color$|\/Black-White$/.test(c.href)
+).map(c => c.href) || [];
+
+// Load gallery data
+const allGalleryData = import.meta.glob('@/data/galleries/**/*.mjs', { eager: true });
+const galleryDatas = galleryPaths.map(path => {
+  const filePath = "@/data/galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  return (allGalleryData[filePath] as any)?.galleryData || [];
+});
+
+// Feathered image injection logic
+const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+const featheredImages = getSideImages({ sectionPath, headingCount, excludeIds: new Set() });
+
+// ----------------------
+// NEW: dynamic OG/Twitter image
+// ----------------------
+function makeAbsoluteUrl(src?: string) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
+
+const landingImg    = featheredImages[0];
+const landingImgUrl = makeAbsoluteUrl((landingImg as any)?.src);
+
+const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
+if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// ----------------------
+// Structured data
+// ----------------------
+const structuredData = getStructuredData({
+  type: "gallery",
+  data: {
+    title: landingWestern.title,
+    description: landingWestern.subtitle || (landingWestern as any).description,
+    url: `https://k4studios.com${sectionPath}`,
+    keywords: (landingWestern as any).keywords || [],
+    copyrightNotice: "© Wayne Heim"
+  },
+  images: featheredImages,
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+---
+
+<!-- ✅ Structured data JSON-LD injection -->
+<script type="application/ld+json" is:inline set:html={structuredData}></script>
+
+<BaseLayout
+  title={landingWestern.title}
+  description={landingWestern.subtitle}
+  meta={landingMeta}
+  breadcrumb={landingWestern.breadcrumb}
+  sectionPath={sectionPath}
+>
+  <LandingHeader
+    title={landingWestern.title}
+    subtitle={landingWestern.subtitle}
+    breadcrumb={landingWestern.breadcrumb}
+  />
+
+  <div class="w-full max-w-[1200px] mx-auto px-4">
+    <div class="carousel-fade reveal-on-scroll">
+      <ImageBar2 client:load slides={[]} />
+    </div>
+  </div>
+
+  <div class="py-5">
+    <TombstoneNav items={landingWestern.tombstones} title={landingWestern.title} subtitle={landingWestern.subtitle} />
+  </div>
+
+  <div class="story-section">
+    {westernStory.map((section, index) => (
+      <article class="story-block">
+        {section.title && (
+          <h2
+            class="slide-in-left"
+            set:html={autoLinkKeywordsInText(
+              section.title,
+              galleryDatas,
+              featheredImages,
+              galleryPaths,
+              defaultSemantic
+            )}
+          />
+        )}
+        {section.subhead && (
+          <h3
+            class="slide-in-left"
+            set:html={autoLinkKeywordsInText(
+              section.subhead,
+              galleryDatas,
+              featheredImages,
+              galleryPaths,
+              defaultSemantic
+            )}
+          />
+        )}
+        {section.tagline && (
+          <h4
+            class="tagline reveal-on-scroll"
+            set:html={autoLinkKeywordsInText(
+              section.tagline,
+              galleryDatas,
+              featheredImages,
+              galleryPaths,
+              defaultSemantic
+            )}
+          />
+        )}
+
+        {section.paragraphs?.map((para, i) => (
+          <p
+            class="reveal-on-scroll"
+            set:html={autoLinkKeywordsInText(
+              para,
+              galleryDatas,
+              featheredImages,
+              galleryPaths,
+              defaultSemantic
+            )}
+          />
+        ))}
+
+        {section.list && section.list.length > 0 && (
+          <ul>
+            {section.list.map((item, j) => (
+              <li
+                class="reveal-on-scroll"
+                set:html={autoLinkKeywordsInText(
+                  item,
+                  galleryDatas,
+                  featheredImages,
+                  galleryPaths,
+                  defaultSemantic
+                )}
+              />
+            ))}
+          </ul>
+        )}
+      </article>
+    ))}
+  </div>
+
+  <LandingRightImages
+    heading="Featured Portraits"
+    images={featheredImages.slice(0, 5)}
+  />
+
+  <FAQAccordion items={westernFAQ} />
+
+  <MobileStoryImages
+    client:load
+    images={featheredImages}
+  />
+
+  <SiteFooter />
+</BaseLayout>
