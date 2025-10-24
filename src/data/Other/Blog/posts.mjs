@@ -1,10 +1,17 @@
 export const posts = [
   {
+    slug: "inevitable",
+    title: "Inside the Frame: Inevitable",
+    date: "2025-10-24",
+    excerpt: "A conversation with Quill about light, judgment, and inevitability in Wayne Heim’s Western fine art photograph 'Inevitable.'",
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wfqSGcV/0/L2nwL9SnLmx2WngswF2rRc6LkrSsjZ7bWvNgmq4ct/S/_HF26225-1143-2-S.jpg"
+  },
+  {
     slug: "10-oclock-staging",
     title: "Inside the Frame: 10 O’Clock Staging",
     date: "2025-10-22",
     excerpt: "A conversation with Quill about suspense, ambiguity, and the storytelling power of black and white in Wayne Heim’s Western image '10 O’Clock Staging.'",
-    cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kxnK2MM/1/MnvSjcBZCnjRnR3Xzn5rzchBnxLgSfg7BjLk3fQQg/S/_WHO0807-1138-1139-S.jpg" // <-- Replace with actual SmugMug link
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kxnK2MM/1/MnvSjcBZCnjRnR3Xzn5rzchBnxLgSfg7BjLk3fQQg/S/_WHO0807-1138-1139-S.jpg"
   },
   {
     slug: "dust-or-desperation",
@@ -27,11 +34,4 @@ export const posts = [
     excerpt: "A conversation with Quill about layered storytelling and composition in one of Wayne Heim’s most cinematic Western images.",
     cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/Lk98prkSh8vttR2WDnVHTh53VfjdRzCCGsLMNk9JK/S/_HF25860-Edit-S.jpg"
   }
-  // {
-  //   slug: "frame-of-consequences",
-  //   title: "Inside the Frame: Frame of Consequences",
-  //   date: "2025-09-29",
-  //   excerpt: "Exploring the ambiguity of choice, regret, and direction in a tense frontier standoff.",
-  //   cover: "/images/blog/frame-of-consequences.jpg"
-  // }
 ];
