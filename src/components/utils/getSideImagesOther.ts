@@ -23,24 +23,45 @@ function findGallerySourcesRecursive(node: any): any[] {
 }
 
 function getAllGallerySources(sectionPath: string): { label: string; href: string }[] {
-  function findNode(tree: any[]): any {
+  // There can be duplicate nodes with the same href in siteNav (e.g., Engrained).
+  // Collect ALL matches, then pick the ones that actually contain gallery-source children.
+  function collectMatchingNodes(tree: any[]): any[] {
+    let matches: any[] = [];
     for (const node of tree) {
-      if (node.href === sectionPath) return node;
-      if (node.children) {
-        const found = findNode(node.children);
-        if (found) return found;
-      }
+      if (node && node.href === sectionPath) matches.push(node);
+      if (node && node.children) matches = matches.concat(collectMatchingNodes(node.children));
     }
-    return null;
+    return matches;
   }
-  const node = findNode(siteNav);
-  if (!node) {
+
+  const matches = collectMatchingNodes(siteNav as any);
+  if (!matches.length) {
     console.warn(`❌ No section node found for path: ${sectionPath}`);
     return [];
   }
-  const sources = findGallerySourcesRecursive(node);
-  console.log(`✅ Found ${sources.length} gallery sources under: ${sectionPath}`);
-  return sources;
+
+  // For each match, gather gallery sources and prefer nodes with the most sources.
+  const sourcesByNode = matches.map((n) => findGallerySourcesRecursive(n));
+  const flattened = sourcesByNode.flat();
+
+  if (!flattened.length) {
+    console.warn(
+      `❓ Found ${matches.length} siteNav match(es) for "${sectionPath}" but none contained gallery-source children. Returning empty.`
+    );
+    return [];
+  }
+
+  // De-dupe by href to avoid duplicate sources if both nodes contain the same child path
+  const seen = new Set<string>();
+  const unique = flattened.filter((s: any) => {
+    const key = s?.href || `${s?.label}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  console.log(`✅ Found ${unique.length} gallery sources under: ${sectionPath} (from ${matches.length} match(es))`);
+  return unique as any;
 }
 
 function shuffle<T>(arr: T[]): T[] {
