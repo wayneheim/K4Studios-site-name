@@ -135,6 +135,54 @@ from = "/Galleries/Fine-Art-Photography/Portraits/Color/i-nxz6Zxg/A"
 to = "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Color/i-nxz6Zxg/A"
 status = 301
 force = true
+
+[[redirects]]
+from = "/black-and-white-western-photos"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+status = 301
+force = true
+
+[[redirects]]
+from = "/black-and-white-western-photos/"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
+status = 301
+force = true
+
+[[redirects]]
+from = "/historical-reenactment-photography"
+to = "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments"
+status = 301
+force = true
+
+[[redirects]]
+from = "/historical-reenactment-photography/"
+to = "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Black-and-White-Western-Photos"
+to = "https://wayne-heim.smugmug.com/Black-and-White-Western-Photos"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Black-and-White-Western-Photos/"
+to = "https://wayne-heim.smugmug.com/Black-and-White-Western-Photos"
+status = 301
+force = true
+
+[[redirects]]
+from = "/k4-studios-site-map"
+to = "/sitemap.xml"
+status = 301
+force = true
+
+[[redirects]]
+from = "/k4-studios-site-map/"
+to = "/sitemap.xml"
+status = 301
+force = true
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-D2fQjDQ/A"
 to = "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-D2fQjDQ/A"
@@ -283,6 +331,48 @@ status = 301
 force = true
 
 
+[[redirects]]
+from = "/bio"
+to = "/Other/Bio"
+status = 301
+force = true
+
+
+[[redirects]]
+from = "/news-awards"
+to = "/News-Awards"
+status = 301
+force = true
+
+[[redirects]]
+from = "/news-awards/"
+to = "/News-Awards"
+status = 301
+force = true
+
+[[redirects]]
+from = "/search"
+to = "/Glossary"
+status = 301
+force = true
+
+[[redirects]]
+from = "/search/"
+to = "/Glossary"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog-thoughts-and-ideas"
+to = "/Blog"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog-thoughts-and-ideas/"
+to = "/Blog"
+status = 301
+force = true
 
 [build]
   command = "npm run build && node scripts/purge-cloudflare.js"
