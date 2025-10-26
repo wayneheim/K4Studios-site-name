@@ -17,9 +17,9 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Lock scroll + reset mat color
+  // Lock scroll + set default mat color (start with black look via 'white3')
   useEffect(() => {
-    setMatColor("no-wood");
+    setMatColor("white3");
     document.body.classList.add("zoom-open");
     return () => document.body.classList.remove("zoom-open");
   }, []);
@@ -171,9 +171,9 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
   };
 
   const context =
-    matColor === "no-wood"
+    (matColor === "no-wood" || matColor === "white3")
       ? "Click the color icons above to preview different finishing/display options. All images are available for order on a selection of Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details."
-      : ["wood", "no-wood"].includes(matColor)
+      : matColor === "wood"
       ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
 
@@ -327,14 +327,34 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 style={{
                   width: 20,
                   height: 20,
-                  border: "1px solid #777",
+                  border: matColor === "no-wood" ? "2px solid #b91c1c" : "1px solid #777",
                   borderRadius: 4,
                   backgroundImage: "url('/images/materials/White-w.jpg')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   cursor: "pointer",
+                  boxShadow: matColor === "no-wood" ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
+                  position: "relative",
+                  overflow: "hidden",
                 }}
-              />
+              >
+                {/* Diagonal slash to indicate "no mat" vs white mat circle */}
+                <span
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "50%",
+                    top: "50%",
+                    transform: "translate(-50%, -50%) rotate(-45deg)",
+                    width: 18,
+                    height: 1.5,
+                    background: matColor === "no-wood" ? "#b91c1c" : "#777",
+                    opacity: 0.8,
+                    pointerEvents: "none",
+                    borderRadius: 1,
+                  }}
+                />
+              </button>
               <button
                 title="Wood print"
                 onClick={(e) => {
@@ -344,12 +364,13 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 style={{
                   width: 20,
                   height: 20,
-                  border: "1px solid #777",
+                  border: matColor === "wood" ? "2px solid #b91c1c" : "1px solid #777",
                   borderRadius: 4,
                   backgroundImage: "url('/images/materials/Maple-w.jpg')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   cursor: "pointer",
+                  boxShadow: matColor === "wood" ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
                 }}
               />
               {[
@@ -367,10 +388,11 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                   style={{
                     width: 20,
                     height: 20,
-                    border: "1px solid #777",
+                    border: matColor === key ? "2px solid #b91c1c" : "1px solid #777",
                     borderRadius: "50%",
                     background: bg,
                     cursor: "pointer",
+                    boxShadow: matColor === key ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
                   }}
                 />
               ))}
@@ -407,7 +429,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
 
           {/* CONTEXT TEXT */}
           <div style={{ minHeight: reservedHeight || undefined }}>
-            <p
+            <div
               style={{
                 marginTop: 18,
                 fontSize: "0.9rem",
@@ -423,10 +445,23 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 wordBreak: "break-word",
                 hyphens: "auto",
                 willChange: "opacity",
+                textAlign: "center",
               }}
             >
-              {displayContext}
-            </p>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  letterSpacing: "0.05em",
+                  color: "#928176",
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                  marginBottom: 6,
+                }}
+              >
+                Explore Finishing Options
+              </p>
+              <p style={{ marginTop: 0 }}>{displayContext}</p>
+            </div>
             <p
               ref={measureRef}
               aria-hidden="true"
@@ -475,3 +510,4 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
     </div>
   );
 }
+ 

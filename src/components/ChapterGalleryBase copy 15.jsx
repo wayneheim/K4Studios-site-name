@@ -53,11 +53,11 @@ function findSectionUrl(basePath) {
 /* =========================================================
    Reusable lightweight guided tour (uses sectionKey + image)
    ========================================================= */
-function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
+function GalleryTour({ sectionKey, imageId, autoStart = true, onClose }) {
   const [isOpen, setIsOpen] = useState(false);
   const [idx, setIdx] = useState(0);
   const [rect, setRect] = useState(null);
-  // Manual-open only: no auto-start, no session/localStorage flags
+  const seenKey = `k4-tour-seen:${sectionKey || "k4"}`;
 
   const isVisible = (el) => {
     if (!el) return false;
@@ -95,14 +95,70 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
     { selector: `[data-share-btn]`, title: 'Share', body: 'Copy or share this chapter-image.', placement: 'top' },
   ];
 
-  // Manual open trigger: open whenever openNonce changes
+  // Open logic
   useEffect(() => {
-    if (!imageId) return;
-    if (openNonce > 0) {
-      setIdx(0);
-      setIsOpen(true);
-    }
-  }, [openNonce, imageId]);
+    if (!autoStart) return;
+
+    const tryStart = () => {
+      // Hide tour globally if skip flag is set in sessionStorage
+      if (sessionStorage.getItem("k4-tour-skipped") === "1") return;
+      
+      // Hide tour globally if hide flag is set and not expired
+      try {
+        const hiddenRaw = localStorage.getItem("k4-tour-hidden");
+        if (hiddenRaw) {
+          try {
+            const obj = JSON.parse(hiddenRaw);
+            if (obj && typeof obj.ts === "number" && typeof obj.ttl === "number") {
+              if (Date.now() - obj.ts < obj.ttl) return;
+              localStorage.removeItem("k4-tour-hidden");
+            }
+          } catch {}
+        }
+      } catch {}
+
+      // Check section-specific hide (legacy support)
+      try {
+        const raw = localStorage.getItem(seenKey);
+        if (raw) {
+          if (raw === "1") return;
+          try {
+            const obj = JSON.parse(raw);
+            if (obj && typeof obj.ts === "number" && typeof obj.ttl === "number") {
+              if (Date.now() - obj.ts < obj.ttl) return;
+              localStorage.removeItem(seenKey);
+            }
+          } catch {}
+        }
+      } catch {}
+
+      const ok =
+        pickVisible(`[data-image-id="${imageId}"] [data-next-btn], [data-image-id="${imageId}"] [data-prev-btn], [data-image-id="${imageId}"] [data-grid-btn], [data-image-id="${imageId}"] [data-zoom-btn]`) ||
+        pickVisible(`[data-next-btn], [data-prev-btn], [data-grid-btn], [data-zoom-btn]`) ||
+        pickVisible(`[data-cart-btn], [data-share-btn]`) ||
+        pickVisible(`[data-image-id="${imageId}"] [data-exit-btn]`);
+
+      if (ok) { setIsOpen(true); return; }
+
+      let tries = 0;
+      const max = 30;
+      const tick = 15;
+      const retry = () => {
+        const again =
+          pickVisible(`[data-image-id="${imageId}"] [data-next-btn], [data-image-id="${imageId}"] [data-prev-btn], [data-image-id="${imageId}"] [data-grid-btn], [data-image-id="${imageId}"] [data-zoom-btn]`) ||
+          pickVisible(`[data-next-btn], [data-prev-btn], [data-grid-btn], [data-zoom-btn]`) ||
+          pickVisible(`[data-cart-btn], [data-share-btn]`) ||
+          pickVisible(`[data-image-id="${imageId}"] [data-exit-btn]`);
+        if (again) { setIsOpen(true); return; }
+        if (tries++ < max) setTimeout(retry, tick);
+      };
+      retry();
+    };
+
+    tryStart();
+    window.addEventListener("k4:urlchange", tryStart);
+    return () => window.removeEventListener("k4:urlchange", tryStart);
+  }, [autoStart, seenKey, imageId, sectionKey]);
 
   // Mark html with a flag while tour is open — nav/keys check this
   useEffect(() => {
@@ -158,7 +214,8 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
     ? { position: "fixed", left: r.x - 8, top: r.y - 8, width: r.w + 16, height: r.h + 16, borderRadius: 10, boxShadow: "0 0 0 9999px rgba(0,0,0,0.6)", outline: "2px solid rgba(255,255,255,0.5)", pointerEvents: "none", transition: "all .2s ease" }
     : { position: "fixed", inset: 0, boxShadow: "0 0 0 9999px rgba(0,0,0,0.6)", pointerEvents: "none" };
 
-  const closeTour = () => {
+  const closeTour = (markSeen = true) => {
+    if (markSeen) { try { localStorage.setItem(seenKey, "1"); } catch {} }
     setIsOpen(false);
     onClose && onClose();
   };
@@ -167,7 +224,8 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
     <div
       style={{ position: "fixed", inset: 0, zIndex: 999999, pointerEvents: "auto", fontFamily: "'Glegoo', serif" }}
       onClick={() => {
-        // Close tour when clicking anywhere outside the tip box
+        // Close tour when clicking anywhere outside the tip box (acts like Skip for this session)
+        try { sessionStorage.setItem("k4-tour-skipped", "1"); } catch {}
         logUIEvent("tour_click_outside", { page: window.location.pathname, sectionKey });
         setIsOpen(false);
         onClose && onClose();
@@ -218,7 +276,7 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
                 type="button"
                 onClick={() => {
                   logUIEvent("tour_done", { page: window.location.pathname, sectionKey });
-                  closeTour();
+                  closeTour(true);
                 }}
                 style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
               >
@@ -227,15 +285,34 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
             )}
             <button
               type="button"
-              title="Close guide"
+              title="Skip for now"
               onClick={() => {
-                logUIEvent("tour_close", { page: window.location.pathname, sectionKey });
+                logUIEvent("tour_skip", { page: window.location.pathname, sectionKey });
+                try {
+                  sessionStorage.setItem("k4-tour-skipped", "1");
+                } catch {}
                 setIsOpen(false); onClose && onClose();
               }}
-              style={{ pointerEvents: "auto", background: "#fff", color: "#444", border: "1px solid #c0c0c0", borderRadius: 88, padding: "5px 8px", fontSize: 12, cursor: "pointer" }}
+              style={{ pointerEvents: "auto", background: "transparent", marginLeft: 10, color: "#7b1e1e", border: "1px solid rgba(123,30,30,0.35)", borderRadius: 88, padding: "5px 5px", fontSize: 11, cursor: "pointer" }}
             >
-              Close
+              Skip
             </button>
+            {!steps[idx].selector && (
+              <button
+                type="button"
+                title="Hide for 1 week"
+                onClick={() => {
+                  logUIEvent("tour_hide", { page: window.location.pathname, sectionKey });
+                  try {
+                    localStorage.setItem("k4-tour-hidden", JSON.stringify({ ts: Date.now(), ttl: 604800000 })); // 1 week in ms
+                  } catch {}
+                  setIsOpen(false); onClose && onClose();
+                }}
+                style={{ pointerEvents: "auto", background: "#fff", color: "#444", border: "1px solid #c0c0c0", borderRadius: 88, padding: "5px 5px", fontSize: 11, cursor: "pointer" }}
+              >
+                Hide
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -678,7 +755,6 @@ export default function ChapterGalleryBase({
   prevIndex.current = currentIndex;
 
   const currentId = galleryData[currentIndex]?.id;
-  const [tourOpenNonce, setTourOpenNonce] = useState(0);
 
   return (
     <div
@@ -873,17 +949,14 @@ export default function ChapterGalleryBase({
                       {/* Removed absolute-positioned mobile arrows; moved to row near slideshow */}
                     </div>
 
-                    {/* Unified Nav Row + Guide trigger */}
-                    <div className="flex items-center justify-center gap-2 mt-4 mb-1">
-                      {/* Toolbar */}
-                      <div
-                        className={
-                          `flex items-center gap-1 md:gap-6 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none ` +
-                          (isMobile ? ' w-full max-w-full' : ' max-w-[1300px]')
-                        }
-                        style={isMobile ? { width: '100%', maxWidth: '100%', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
-                      >
-                        {/* Menu */}
+                    {/* Unified Nav Row */}
+                    <div
+  className={
+    `flex items-center gap-1 md:gap-6 mt-4 mb-1 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none ` +
+    (isMobile ? ' w-full max-w-full' : ' max-w-[1300px]')
+  }
+  style={isMobile ? { width: '100%', maxWidth: '100%', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
+>
                       {/* Menu */}
                       <button
                         type="button"
@@ -1006,20 +1079,6 @@ export default function ChapterGalleryBase({
                       </div>
 
                       {/* Exit */}
-                      {/* Mobile Guide "?" button: between Like and Exit */}
-                      {isMobile && (
-                        <button
-                          type="button"
-                          aria-label="Open Guide"
-                          title="View our brief guided walk-through of all the features of our gallery viewer."
-                          className="inline-flex items-center justify-center w-6 h-6  border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200"
-                          onClick={(e) => { e.stopPropagation(); setTourOpenNonce(n => n + 1); }}
-                        >
-                          <span className="font-bold text-gray-300">?</span>
-                        </button>
-                      )}
-
-                      {/* Exit */}
                       <button
                         type="button"
                         className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
@@ -1031,19 +1090,6 @@ export default function ChapterGalleryBase({
                       >
                         <CircleX className="w-7 h-7" />
                       </button>
-                      </div>
-                      {/* Desktop-only Guide button to the right of the toolbar */}
-                      {!isMobile && (
-                        <button
-                          type="button"
-                          onClick={() => setTourOpenNonce(n => n + 1)}
-                          className="hidden md:inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
-                          title="View our brief guided walk-through of all the features of our gallery viewer."
-                          aria-label="Open Guide"
-                        >
-                          <span className="text-sm font-medium text-gray-500">Guide</span>
-                        </button>
-                      )}
                     </div>
 
                     {!showStoryShow && (
@@ -1055,11 +1101,11 @@ export default function ChapterGalleryBase({
                             onClick={goPrev}
                             aria-label="Previous Chapter"
                             title="Previous"
-                            className="w-10 h-10 rounded-full bg-white  flex items-center justify-center active:scale-[0.98]"
-                            style={{ borderColor: "#ffffffff" }}
+                            className="w-10 h-10 rounded-full bg-white border border-gray-300 shadow flex items-center justify-center active:scale-[0.98]"
+                            style={{ borderColor: "#d9cfc8" }}
                             data-prev-btn
                           >
-                            <SquareChevronLeft className="w-6 h-6" style={{ color: "#bdb5aeff" }} />
+                            <SquareChevronLeft className="w-6 h-6" style={{ color: "#66574bff" }} />
                             <span className="sr-only">Previous</span>
                           </button>
 
@@ -1096,11 +1142,11 @@ export default function ChapterGalleryBase({
                             onClick={goNext}
                             aria-label="Next Chapter"
                             title="Next"
-                            className="w-10 h-10 rounded-full bg-white flex items-center justify-center active:scale-[0.98]"
+                            className="w-10 h-10 rounded-full bg-white border border-gray-300 shadow flex items-center justify-center active:scale-[0.98]"
                             style={{ borderColor: "#c5d1c8ff" }}
                             data-next-btn
                           >
-                            <SquareChevronRight className="w-6 h-6" style={{ color: "#bdb5aeff" }} />
+                            <SquareChevronRight className="w-6 h-6" style={{ color: "#7c6a5bff" }} />
                             <span className="sr-only">Next</span>
                           </button>
                         </div>
@@ -1476,9 +1522,9 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
         />
       )}
 
-  {/* Swipe hint + Guided Tour */}
+      {/* Swipe hint + Guided Tour */}
       <SwipeHint galleryKey={galleryKey || "k4-gallery"} />
-  <GalleryTour sectionKey={sectionKey} imageId={currentId} openNonce={tourOpenNonce} />
+      <GalleryTour sectionKey={sectionKey} imageId={currentId} autoStart={true} />
     </div>
   );
 }
