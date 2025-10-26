@@ -95,14 +95,13 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
     { selector: `[data-share-btn]`, title: 'Share', body: 'Copy or share this chapter-image.', placement: 'top' },
   ];
 
-  // Manual open trigger: open whenever openNonce changes
+  // Manual open trigger: open ONLY when openNonce increments (ignore imageId changes)
   useEffect(() => {
-    if (!imageId) return;
     if (openNonce > 0) {
       setIdx(0);
       setIsOpen(true);
     }
-  }, [openNonce, imageId]);
+  }, [openNonce]);
 
   // Mark html with a flag while tour is open — nav/keys check this
   useEffect(() => {
@@ -168,7 +167,7 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
       style={{ position: "fixed", inset: 0, zIndex: 999999, pointerEvents: "auto", fontFamily: "'Glegoo', serif" }}
       onClick={() => {
         // Close tour when clicking anywhere outside the tip box
-        logUIEvent("tour_click_outside", { page: window.location.pathname, sectionKey });
+  logUIEvent("guide_click_outside", { page: window.location.pathname, sectionKey });
         setIsOpen(false);
         onClose && onClose();
       }}
@@ -217,7 +216,7 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
               <button
                 type="button"
                 onClick={() => {
-                  logUIEvent("tour_done", { page: window.location.pathname, sectionKey });
+                  logUIEvent("guide_done", { page: window.location.pathname, sectionKey });
                   closeTour();
                 }}
                 style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
@@ -229,7 +228,7 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
               type="button"
               title="Close guide"
               onClick={() => {
-                logUIEvent("tour_close", { page: window.location.pathname, sectionKey });
+                logUIEvent("guide_close", { page: window.location.pathname, sectionKey });
                 setIsOpen(false); onClose && onClose();
               }}
               style={{ pointerEvents: "auto", background: "#fff", color: "#444", border: "1px solid #c0c0c0", borderRadius: 88, padding: "5px 8px", fontSize: 12, cursor: "pointer" }}
@@ -1013,7 +1012,7 @@ export default function ChapterGalleryBase({
                           aria-label="Open Guide"
                           title="View our brief guided walk-through of all the features of our gallery viewer."
                           className="inline-flex items-center justify-center w-6 h-6  border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200"
-                          onClick={(e) => { e.stopPropagation(); setTourOpenNonce(n => n + 1); }}
+                          onClick={(e) => { e.stopPropagation(); logUIEvent("guide_open", { page: window.location.pathname, sectionKey }); setTourOpenNonce(n => n + 1); }}
                         >
                           <span className="font-bold text-gray-300">?</span>
                         </button>
@@ -1036,7 +1035,7 @@ export default function ChapterGalleryBase({
                       {!isMobile && (
                         <button
                           type="button"
-                          onClick={() => setTourOpenNonce(n => n + 1)}
+                          onClick={() => { logUIEvent("guide_open", { page: window.location.pathname, sectionKey }); setTourOpenNonce(n => n + 1); }}
                           className="hidden md:inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
                           title="View our brief guided walk-through of all the features of our gallery viewer."
                           aria-label="Open Guide"
