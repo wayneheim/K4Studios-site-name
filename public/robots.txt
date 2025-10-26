@@ -4,37 +4,54 @@
 # Purpose: Allow SEO + image indexing while blocking AI/data crawlers
 # ======================================================
 
-# --- Priority: Allow all Google services for indexing ---
+# --- Google services ---
 User-agent: Googlebot
 Allow: /
-
 User-agent: Googlebot-Image
 Allow: /
-
 User-agent: GoogleOther
 Allow: /
-
 User-agent: Google-News
 Allow: /
-
 User-agent: Googlebot-Mobile
+Allow: /
+User-agent: Google-InspectionTool
+Allow: /
+User-agent: AdsBot-Google
 Allow: /
 
 # --- Bing and DuckDuckGo ---
 User-agent: Bingbot
 Allow: /
-
 User-agent: Bingbot-Image
 Allow: /
-
 User-agent: DuckDuckBot
 Allow: /
+
+# --- Applebot and related services ---
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Image
+Allow: /
+User-agent: Applebot-Extended
+Disallow: /
+
+# --- Ahrefs (explicit clarity) ---
+User-agent: AhrefsBot
+Allow: /
+User-agent: AhrefsSiteAudit
+Allow: /
+
+# --- Semrush standard allowed; AI variant blocked ---
+User-agent: SemrushBot
+Allow: /
+User-agent: SemrushBot-BAI
+Disallow: /
 
 # --- Default access ---
 User-agent: *
 Disallow: /admin/
 Disallow: /Other/Photo-Shoots/
-Allow: /
 
 # --- Explicit AI / LLM / dataset crawlers (blocked) ---
 User-agent: GPTBot
@@ -44,6 +61,8 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 User-agent: ClaudeBot
+Disallow: /
+User-agent: Claude-Web
 Disallow: /
 User-agent: CCBot
 Disallow: /
@@ -61,6 +80,8 @@ User-agent: DataForSeoBot
 Disallow: /
 User-agent: omgilibot
 Disallow: /
+User-agent: omgili
+Disallow: /
 User-agent: Scrapy
 Disallow: /
 User-agent: StabilityAI-ImageCrawler
@@ -73,12 +94,9 @@ User-agent: PhindBot
 Disallow: /
 User-agent: You.com-Image
 Disallow: /
-User-agent: Applebot-Image
-Disallow: /
-User-agent: SemrushBot-BAI
-Disallow: /
 
 # --- Regional image mirrors ---
+# PetalBot disallowed here (advisory), but still 200 at edge for flexibility.
 User-agent: Baiduspider-image
 Disallow: /
 User-agent: YandexImages
@@ -86,8 +104,26 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
+# --- Social unfurlers (explicitly allowed) ---
+User-agent: Slackbot
+Allow: /
+User-agent: Twitterbot
+Allow: /
+User-agent: facebookexternalhit
+Allow: /
+User-agent: Facebot
+Allow: /
+User-agent: Discordbot
+Allow: /
+User-agent: TelegramBot
+Allow: /
+User-agent: Pinterestbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
+
 # --- Optional emerging directive (non-standard) ---
-Content-signal: search=yes, ai-train=no
+# Content-signal: search=yes, ai-train=no
 
 # --- Sitemap ---
 Sitemap: https://www.k4studios.com/sitemap.xml
