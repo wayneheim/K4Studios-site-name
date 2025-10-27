@@ -200,7 +200,7 @@ status = 301
 force = true
 [[redirects]]
 from = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/Black-White*"
-to = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White:splat"
+to = "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White/:splat"
 status = 301
 force = true
 [[redirects]]
@@ -233,6 +233,18 @@ from = "/m/opt/*"
 to = "/Glossary"
 status = 301
 force = true
+
+[[redirects]]
+from = "/m/opt"
+to = "/Glossary"
+status = 301
+force = true
+
+[[redirects]]
+from = "/m/opt/"
+to = "/Glossary"
+status = 301
+force = true
 [[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color copy/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/:splat"
@@ -255,6 +267,11 @@ status = 301
 force = true
 [[redirects]]
 from = "/api/v2/*"
+to = "/Glossary"
+status = 301
+force = true
+[[redirects]]
+from = "/api/*"
 to = "/Glossary"
 status = 301
 force = true
@@ -284,6 +301,11 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Po
 status = 301
 force = true
 [[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color-back2/Color%201src/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits copy/i-:id"
 to = "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-:id"
 status = 301
@@ -296,6 +318,12 @@ force = true
 [[redirects]]
 from = "/Other/Photo-Shoots/*"
 to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Slideshows/*"
+to = "https://wayne-heim.smugmug.com/Slideshows/:splat"
 status = 301
 force = true
 
@@ -321,6 +349,18 @@ status = 301
 force = true
 [[redirects]]
 from = "/keyword/*"
+to = "/Glossary"
+status = 301
+force = true
+
+[[redirects]]
+from = "/keyword"
+to = "/Glossary"
+status = 301
+force = true
+
+[[redirects]]
+from = "/keyword/"
 to = "/Glossary"
 status = 301
 force = true
@@ -371,6 +411,42 @@ force = true
 [[redirects]]
 from = "/blog-thoughts-and-ideas/"
 to = "/Blog"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Fine-Art-Photography/Portraits/i-:id"
+to = "/Galleries/Fine-Art-Photography/Portraits"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Fine-Art-Photography/Portraits//i-:id"
+to = "/Galleries/Fine-Art-Photography/Portraits"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color copy/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color%20copy/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White copy/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White%20copy/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/:splat"
 status = 301
 force = true
 

@@ -6,6 +6,7 @@ import {
   sectionGalleries,
   allImages
 } from '@data/galleryMaps/MasterGalleryData.ts';
+import { joinUrl, normalizeBasePath } from './url';
 
 function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&");
@@ -286,10 +287,8 @@ export function autoLinkKeywordsInText(
 
         if (poolEntries.length) {
           const pick = poolEntries[Math.floor(Math.random() * poolEntries.length)];
-          const base = pick.galleryKey.startsWith('/')
-            ? pick.galleryKey
-            : '/' + pick.galleryKey;
-          href = `${base}/${pick.img.id}`;
+          const base = normalizeBasePath(pick.galleryKey);
+          href = joinUrl(base, pick.img.id);
         }
       }
     }
@@ -301,8 +300,9 @@ export function autoLinkKeywordsInText(
         let pool = allImages.filter(img => !exclude.has(img.id));
         if (!pool.length) pool = allImages;
         const pick = pool[Math.floor(Math.random() * pool.length)];
-        const sec = pick.galleries?.[0] || sectionPath.replace(/^\//, '');
-        href = `/${sec}/${pick.id}`;
+        const secRaw = pick.galleries?.[0] || sectionPath.replace(/^\//, '');
+        const base = normalizeBasePath(secRaw);
+        href = joinUrl(base, pick.id);
       }
     }
 
@@ -356,10 +356,8 @@ export function autoLinkKeywordsInText(
             if (filtered2.length) poolEntries2 = filtered2;
             if (poolEntries2.length) {
               const pick2 = poolEntries2[Math.floor(Math.random() * poolEntries2.length)];
-              const base2 = pick2.galleryKey.startsWith('/')
-                ? pick2.galleryKey
-                : '/' + pick2.galleryKey;
-              href = `${base2}/${pick2.img.id}`;
+              const base2 = normalizeBasePath(pick2.galleryKey);
+              href = joinUrl(base2, pick2.img.id);
             }
           }
         }

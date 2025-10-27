@@ -4,6 +4,9 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": ".",
+    "types": [
+      "vite/client"
+    ],
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
