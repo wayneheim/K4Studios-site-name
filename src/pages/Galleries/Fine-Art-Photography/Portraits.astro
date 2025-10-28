@@ -104,11 +104,11 @@ const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
 if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
 
-// Breadcrumbs JSON-LD for this landing page
-const breadcrumbsJSON = getGalleryBreadcrumbList(
-  { title: `${landingWestern.title} – ${landingWestern.subtitle}`, url: `https://k4studios.com${sectionPath}` },
-  { galleriesPath: '/Galleries' }
-);
+// Breadcrumbs JSON-LD for this landing page (temporarily disabled to isolate CF worker error)
+// const breadcrumbsJSON = getGalleryBreadcrumbList(
+//   { title: `${landingWestern.title} – ${landingWestern.subtitle}`, url: `https://k4studios.com${sectionPath}` },
+//   { galleriesPath: '/Galleries' }
+// );
 ---
 
 <!-- ✅ JSON-LD Structured Data for SEO -->
@@ -117,7 +117,7 @@ const breadcrumbsJSON = getGalleryBreadcrumbList(
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={landingMeta}
-  breadcrumbsJSON={breadcrumbsJSON}
+  
 >
 
 

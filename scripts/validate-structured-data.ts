@@ -72,7 +72,9 @@ async function testImage() {
   const obj = parseJson(jsonStr);
   assert(obj["@type"] === "ImageObject", "@type should be ImageObject");
   assert(obj["@id"].endsWith("#image"), "Image @id should end with #image");
-  assert(obj.url === data.src && obj.contentUrl === data.src, "Image URLs should match src");
+  // Policy: url = canonical page URL; contentUrl = asset URL (src)
+  assert(typeof obj.url === "string" && obj.url.startsWith("http"), "Image url (canonical) missing/invalid");
+  assert(obj.contentUrl === data.src, "Image contentUrl should match src");
   assert(obj.creator && obj.creator["@type"] === "Person", "creator missing or wrong type");
 }
 

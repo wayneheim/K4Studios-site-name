@@ -18,6 +18,7 @@ import { semantic as defaultSemantic } from '@/data/semantic/K4-Sem.ts';
 import { landingWestern } from '@/data/Galleries/Fine-Art-Photography/Portraits/landingstones.ts';
 import { westernStory } from '@/data/Galleries/Fine-Art-Photography/Portraits/story.ts';
 import { portraitsFAQ as westernFAQ } from '@/data/Galleries/Fine-Art-Photography/Portraits/faq.ts';
+import { slides as portraitsSlides } from '@/data/Galleries/Fine-Art-Photography/Portraits/carousel.ts';
 
 import '@/styles/global.css';
 import '@/styles/oneupheader.css';
@@ -45,10 +46,11 @@ const galleryPaths = landingNav?.children?.filter(c =>
 ).map(c => c.href) || [];
 
 // Load gallery data
-const allGalleryData = import.meta.glob('@/data/galleries/**/*.mjs', { eager: true });
+const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
-  const filePath = "@/data/galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-  return (allGalleryData[filePath] as any)?.galleryData || [];
+  const filePath = "@/data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
+  const mod: any = (allGalleryData as any)[filePath];
+  return (mod && (mod.galleryData || (mod.default && mod.default.galleryData))) || [];
 });
 
 // Feathered image injection logic
@@ -64,8 +66,7 @@ function makeAbsoluteUrl(src?: string) {
   return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
-const landingImg    = featheredImages[0];
-const landingImgUrl = makeAbsoluteUrl((landingImg as any)?.src);
+const landingImgUrl = makeAbsoluteUrl(portraitsSlides?.[0]?.src);
 
 const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
 if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
@@ -102,18 +103,14 @@ const structuredData = getStructuredData({
   title={landingWestern.title}
   description={landingWestern.subtitle}
   meta={landingMeta}
-  breadcrumb={landingWestern.breadcrumb}
-  sectionPath={sectionPath}
 >
   <LandingHeader
-    title={landingWestern.title}
-    subtitle={landingWestern.subtitle}
     breadcrumb={landingWestern.breadcrumb}
   />
 
   <div class="w-full max-w-[1200px] mx-auto px-4">
     <div class="carousel-fade reveal-on-scroll">
-      <ImageBar2 client:load slides={[]} />
+  <ImageBar2 client:load slides={[]} />
     </div>
   </div>
 
