@@ -2,7 +2,7 @@
 import BaseLayout    from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
-import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getStructuredData, getBlogBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
 import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
@@ -44,6 +44,11 @@ const structuredData = getStructuredData({
     creatorName: "Wayne Heim",
     creatorUrl: "https://k4studios.com/"
   }
+});
+
+const breadcrumbsJSON = getBlogBreadcrumbList({
+  title: "Inside the Frame: 10 O’Clock Staging",
+  url: `https://k4studios.com${sectionPath}`
 });
 
 const meta = {
@@ -93,6 +98,7 @@ const linkKeywords = (text: string) =>
 <BaseLayout
   title="Inside the Frame: 10 O’Clock Staging"
   structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbsJSON}
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">

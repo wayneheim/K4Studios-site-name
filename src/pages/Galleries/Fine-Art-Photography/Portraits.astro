@@ -7,7 +7,7 @@ import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
-import { getStructuredData } from '@/components/utils/getStructuredData.ts';
+import { getStructuredData, getGalleryBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
@@ -17,6 +17,7 @@ import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 import { landingWestern } from '@/data/Galleries/Fine-Art-Photography/Portraits/landingstones.ts';
 import { westernStory } from '@/data/Galleries/Fine-Art-Photography/Portraits/story.ts';
 import { portraitsFAQ } from '@/data/Galleries/Fine-Art-Photography/Portraits/faq.ts';
+import { slides as portraitsSlides } from '@/data/Galleries/Fine-Art-Photography/Portraits/carousel.ts';
 
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
@@ -55,13 +56,13 @@ const galleryPaths = landingNav ? recursivelyGatherAllGalleryHrefs(landingNav) :
 const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
-  return allGalleryData[filePath]?.galleryData || [];
+  const mod: any = (allGalleryData as any)[filePath];
+  return (mod && (mod.galleryData || (mod.default && mod.default.galleryData))) || [];
 });
 
 const featheredImages = getSideImages({
   sectionPath,
   headingCount,
-  galleryDatas,
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
@@ -97,12 +98,17 @@ function makeAbsoluteUrl(src?: string) {
   return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
-const landingImg    = featheredImages[0];   // stable first pick
-const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+const landingImgUrl = makeAbsoluteUrl(portraitsSlides?.[0]?.src);
 
 const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
 if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// Breadcrumbs JSON-LD for this landing page
+const breadcrumbsJSON = getGalleryBreadcrumbList(
+  { title: `${landingWestern.title} – ${landingWestern.subtitle}`, url: `https://k4studios.com${sectionPath}` },
+  { galleriesPath: '/Galleries' }
+);
 ---
 
 <!-- ✅ JSON-LD Structured Data for SEO -->
@@ -111,6 +117,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={landingMeta}
+  breadcrumbsJSON={breadcrumbsJSON}
 >
 
 
@@ -125,7 +132,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+  <ImageBar2 client:load slides={[]} />
       </div>
     </div>
 
@@ -141,24 +148,24 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </section>
 
     <div class="py-5">
-      <TombstoneNav items={landingWestern.tombstones} />
+  <TombstoneNav items={landingWestern.tombstones} title={landingWestern.title} subtitle={landingWestern.subtitle} />
     </div>
 
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section, index) => (
-            <article class="story-block" key={index}>
+            <article class="story-block">
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
               {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
                   ))}
                 </ul>
               )}

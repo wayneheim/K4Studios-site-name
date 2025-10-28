@@ -4,6 +4,7 @@ import GalleryTourSkipClearer from "../components/GalleryTourSkipClearer.jsx";
 const {
   title = 'Gallery',
   structuredDataJSON,
+  breadcrumbsJSON,
   meta = {},
   preloadImage
 } = Astro.props;
@@ -169,6 +170,9 @@ const keywords =
     {structuredDataJSON && (
       <script type="application/ld+json" set:html={structuredDataJSON} />
     )}
+    {breadcrumbsJSON && (
+      <script type="application/ld+json" set:html={breadcrumbsJSON} />
+    )}
 
     <!-- ✅ Open Graph -->
     <meta property="og:title" content={isImagePage ? (preloadImage?.title || cleanTitle) : cleanTitle} />
@@ -230,29 +234,7 @@ const keywords =
       })}></script>
     )}
 
-    {isImagePage && (
-      <script type="application/ld+json" set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "SocialMediaPosting",
-        "headline": preloadImage?.title || cleanTitle,
-        "articleBody": preloadImage?.story || preloadImage?.description || defaultDescription,
-        "author": {
-          "@type": "Person",
-          "name": "Wayne Heim",
-          "url": "https://www.k4studios.com/"
-        },
-        "sharedContent": {
-          "@type": "ImageObject",
-          "contentUrl": ogImage,
-          "caption": preloadImage?.title || cleanTitle
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "K4 Studios",
-          "url": "https://www.k4studios.com/"
-        }
-      })}></script>
-    )}
+    {/* Removed SocialMediaPosting JSON-LD to avoid Google "Discussion forum" warnings and missing datePublished */}
 
     <!-- ✅ Existing fallback schema -->
     {!structuredDataJSON && (
@@ -263,7 +245,7 @@ const keywords =
           set:html={JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ImageObject",
-            url: (preloadImage?.src || ogImage).replace(/^http:/, 'https:'),
+            url: canonicalUrl,
             contentUrl: (preloadImage?.src || ogImage).replace(/^http:/, 'https:'),
             name: preloadImage?.alt || preloadImage?.title || cleanTitle,
             caption: preloadImage?.alt || preloadImage?.title || cleanTitle,

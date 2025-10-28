@@ -1,4 +1,12 @@
-import type { ImageData } from "../types";
+// Minimal local type to satisfy TS without external dependency
+type ImageData = {
+  id?: string;
+  src?: string;
+  srcS?: string;
+  srcM?: string;
+  srcL?: string;
+  visibility?: string;
+};
 
 // ───── Load Gallery Modules ─────
 const galleryModules = import.meta.glob(

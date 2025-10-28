@@ -7,7 +7,7 @@ import Footer from "@/components/Footer.astro";
 
 import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western.mjs";
 import { landingWestern } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/landingstones.ts";
-import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getStructuredData, getGalleryBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 
 /** ----------------------------------------------------------------
  * Robust mojibake cleaner
@@ -70,7 +70,8 @@ const usedEntranceData = {
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
   title: entranceData?.title || landingWestern?.title || "Gallery",
   subtitle: entranceData?.subtitle || landingWestern?.subtitle || "",
-  description: entranceData?.description || landingWestern?.description || "",
+  // landingWestern may not declare `description` in its type; access defensively
+  description: entranceData?.description || (landingWestern as any)?.description || "",
 };
 
 /** ---------------------------------------------------------------
@@ -152,9 +153,14 @@ const meta = {
  * --------------------------------------------------------------- */
 const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
 const isImagePage = lastSegment.startsWith("i-");
+
+/** ---------------------------------------------------------------
+ * Breadcrumbs JSON-LD
+ * --------------------------------------------------------------- */
+const breadcrumbsJSON = getGalleryBreadcrumbList({ title: fixMojibake(usedEntranceData.title || pageTitle), url: canonicalUrl });
 ---
 
-<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
+<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData} breadcrumbsJSON={breadcrumbsJSON}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
     {/* Header */}
     {!isImagePage && (
@@ -291,8 +297,9 @@ const isImagePage = lastSegment.startsWith("i-");
         });
       });
 
-      document.addEventListener('contextmenu', e => {
-        if (e.target.tagName === 'IMG') e.preventDefault();
+      document.addEventListener('contextmenu', (e) => {
+        const t = e.target as HTMLElement | null;
+        if (t && t.tagName === 'IMG') e.preventDefault();
       });
     </script>
   )}
