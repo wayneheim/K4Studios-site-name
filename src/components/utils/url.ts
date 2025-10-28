@@ -5,7 +5,6 @@
 // - start with exactly one leading slash
 // - have no trailing slash (except root)
 // - collapse any doubled slashes
-// - apply business rule: Portraits landing should default to /Color
 export function normalizeBasePath(path: string): string {
   if (!path) return '/';
   let p = path.trim().replace(/\\/g, '/');
@@ -14,10 +13,6 @@ export function normalizeBasePath(path: string): string {
   p = p.replace(/\/+/g, '/');
   // remove trailing slash if not root
   if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
-  // Business rule: Portraits must include a child category; default to Color
-  if (p === '/Galleries/Fine-Art-Photography/Portraits') {
-    p += '/Color';
-  }
   return p;
 }
 
