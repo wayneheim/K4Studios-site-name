@@ -93,6 +93,12 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 }
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
+  // Temporary bypass for Portraits path while investigating CF 1101
+  const path = new URL(context.request.url).pathname;
+  if (path.startsWith('/Galleries/Fine-Art-Photography/Portraits')) {
+    return next();
+  }
+
   const response = await next();
   const contentType = response.headers.get("content-type") || "";
 
