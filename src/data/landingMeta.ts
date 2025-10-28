@@ -315,9 +315,38 @@ export const landingMetaDB = {
 
 
 // Helper to retrieve meta for a given pathname (can be imported in Astro files)
+// 🧠 Auto-description helper to ensure uniqueness (Bing duplicate fix)
+function buildUniqueDescription(baseDesc: string, path: string) {
+  const segment = path.split("/").filter(Boolean).slice(-1)[0] || "";
+  const readable = segment
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (m) => m.toUpperCase())
+    .trim();
+
+  // Skip if it's the root or already descriptive
+  if (!segment || baseDesc.toLowerCase().includes(readable.toLowerCase()))
+    return baseDesc;
+
+  // Append context-specific suffix for uniqueness
+  return `${baseDesc.replace(/\.*$/, "")} – ${readable} gallery by Wayne Heim.`;
+}
+
+// ✂️ Character limiter for meta descriptions (150–160 chars, no mid-sentence cut)
+function trimMetaDescription(desc: string, maxLength = 160) {
+  if (!desc) return '';
+  if (desc.length <= maxLength) return desc;
+  // Try to cut at last period before maxLength
+  const periodIdx = desc.lastIndexOf('.', maxLength);
+  if (periodIdx > 80) return desc.slice(0, periodIdx + 1).trim();
+  // Otherwise, cut at last space before maxLength
+  const spaceIdx = desc.lastIndexOf(' ', maxLength);
+  return (spaceIdx > 80 ? desc.slice(0, spaceIdx) : desc.slice(0, maxLength)).trim() + '…';
+}
+
+// Helper to retrieve meta for a given pathname (can be imported in Astro files)
 export function getLandingMeta(pathname: string, imageSrc?: string) {
   // Normalize trailing slash and ensure leading slash
-  const clean = pathname.replace(/\/$/, "").replace(/^[^/]/, '/$&');
+  const clean = pathname.replace(/\/$/, "").replace(/^[^/]/, "/$&");
 
   // Helper to override image if provided
   const overrideImage = (meta: any) => {
@@ -339,14 +368,16 @@ export function getLandingMeta(pathname: string, imageSrc?: string) {
     return siteBase + (path.startsWith("/") ? path : "/" + path);
   };
 
-  // 1. Exact match
+  // 1️⃣ Exact match
   if (landingMetaDB[clean]) {
     const meta = overrideImage(landingMetaDB[clean]);
     const url = getAbsoluteUrl(clean);
-    return { ...meta, ogUrl: url, twitterUrl: url };
+    // ✅ Add uniqueness layer and trim
+    const uniqueDesc = trimMetaDescription(buildUniqueDescription(meta.ogDescription, clean));
+    return { ...meta, ogDescription: uniqueDesc, twitterDescription: uniqueDesc, ogUrl: url, twitterUrl: url };
   }
 
-  // 2. Longest prefix match (inherit parent meta)
+  // 2️⃣ Prefix match fallback
   const parentKey = Object.keys(landingMetaDB)
     .filter((key) => key !== "default" && clean.startsWith(key))
     .sort((a, b) => b.length - a.length)[0];
@@ -354,11 +385,13 @@ export function getLandingMeta(pathname: string, imageSrc?: string) {
   if (parentKey) {
     const meta = overrideImage(landingMetaDB[parentKey]);
     const url = getAbsoluteUrl(clean);
-    return { ...meta, ogUrl: url, twitterUrl: url };
+    const uniqueDesc = trimMetaDescription(buildUniqueDescription(meta.ogDescription, clean));
+    return { ...meta, ogDescription: uniqueDesc, twitterDescription: uniqueDesc, ogUrl: url, twitterUrl: url };
   }
 
-  // 3. Fallback to default (use relative URL)
+  // 3️⃣ Default
   const meta = overrideImage(landingMetaDB["default"] || {});
   const url = getAbsoluteUrl(clean, true);
-  return { ...meta, ogUrl: url, twitterUrl: url };
+  const uniqueDesc = trimMetaDescription(buildUniqueDescription(meta.ogDescription, clean));
+  return { ...meta, ogDescription: uniqueDesc, twitterDescription: uniqueDesc, ogUrl: url, twitterUrl: url };
 }
