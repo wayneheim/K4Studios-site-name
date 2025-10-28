@@ -93,17 +93,15 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 }
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
-  // Temporary bypass for Portraits path while investigating CF 1101
-  const path = new URL(context.request.url).pathname;
-  if (path.startsWith('/Galleries/Fine-Art-Photography/Portraits')) {
-    return next();
-  }
-
   const response = await next();
   const contentType = response.headers.get("content-type") || "";
 
   if (contentType.includes("text/html")) {
     const body = await response.text();
+    // Skip cleaning for large responses to avoid memory issues in Cloudflare
+    if (body.length > 1000000) {
+      return response;
+    }
     const { cleaned, changed } = stripNestedTags(body);
 
     if (changed) {
