@@ -269,12 +269,7 @@ export default function ChapterGalleryBase({
   initialImageId
 }) {
   const sectionUrl = findSectionUrl(basePath);
-
-  // Edition context for SEO uniqueness
-  const path = typeof window !== "undefined" ? window.location.pathname.toLowerCase() : (basePath || "").toLowerCase();
-  const isBW = path.includes("/black-white/");
-  const editionTag = isBW ? "Black and White" : "Color";
-
+  
   // Generate appropriate title for the section landing page
   const getSectionDisplayTitle = (url) => {
     const parts = url.split('/').filter(p => p);
@@ -692,24 +687,6 @@ export default function ChapterGalleryBase({
     >
       {/* Google Font */}
       <link href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-
-      {/* SEO Meta Tags for Edition Context (invisible to users) */}
-      <meta name="keywords" content={`${galleryData[currentIndex]?.keywords?.join(", ") || ""}, ${editionTag}, painterly fine art, western fine art`} />
-      <meta name="description" content={`${galleryData[currentIndex]?.description || ""} | ${editionTag} edition of this painterly fine art photograph by Wayne Heim.`} />
-      <link rel="canonical" href={`https://www.k4studios.com${path}`} />
-
-      {/* Structured Data Edition Context (for JSON-LD) */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ImageObject",
-          "name": `${galleryData[currentIndex]?.title} – ${editionTag}`,
-          "description": `${galleryData[currentIndex]?.description} This is the ${editionTag} edition of this artwork by Wayne Heim.`,
-          "contentUrl": galleryData[currentIndex]?.src,
-          "creator": "Wayne Heim",
-          "keywords": `${galleryData[currentIndex]?.keywords?.join(", ") || ""}, ${editionTag}, painterly fine art, western fine art`
-        })
-      }} />
 
   <div className="relative max-w-6xl mx-auto">
         {isZoomed ? (
