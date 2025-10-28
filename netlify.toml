@@ -415,18 +415,6 @@ status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Fine-Art-Photography/Portraits/i-:id"
-to = "/Galleries/Fine-Art-Photography/Portraits"
-status = 301
-force = true
-
-[[redirects]]
-from = "/Galleries/Fine-Art-Photography/Portraits//i-:id"
-to = "/Galleries/Fine-Art-Photography/Portraits"
-status = 301
-force = true
-
-[[redirects]]
 from = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color copy/*"
 to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/:splat"
 status = 301

@@ -1,5 +1,4 @@
 import { siteNav } from '../../data/siteNav';
-import { joinUrl } from './url';
 
 type Image = {
   id: string;
@@ -110,7 +109,7 @@ function getSmartFeatheredImages({
   // Set href for each image
   return chosen.map(img => ({
     ...img,
-    href: joinUrl(img.__galleryHref || sectionPath, img.id),
+    href: `${img.__galleryHref || sectionPath}/${img.id}`,
   }));
 }
 
@@ -154,7 +153,7 @@ function getClassicFeatheredImages({
   }
   return chosen.map(img => ({
     ...img,
-    href: joinUrl(img.__galleryHref || sectionPath, img.id),
+    href: `${img.__galleryHref || sectionPath}/${img.id}`,
   }));
 }
 
@@ -194,7 +193,7 @@ export function getSideImages({
       const highRated = wcpImages.filter(img => (img.rating ?? 0) >= 4);
       const pick = shuffle(highRated).pop() || shuffle(wcpImages).pop();
       if (pick) {
-        featheredImages.push({ ...pick, href: joinUrl(pick.__galleryHref || sectionPath, pick.id) });
+        featheredImages.push({ ...pick, href: `${pick.__galleryHref || sectionPath}/${pick.id}` });
         excludeIds.add(pick.id);
         slotsLeft--;
       }
