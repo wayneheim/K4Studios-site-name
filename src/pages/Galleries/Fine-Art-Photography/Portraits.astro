@@ -17,7 +17,8 @@ import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 import { landingWestern } from '@/data/Galleries/Fine-Art-Photography/Portraits/landingstones.ts';
 import { westernStory } from '@/data/Galleries/Fine-Art-Photography/Portraits/story.ts';
 import { portraitsFAQ } from '@/data/Galleries/Fine-Art-Photography/Portraits/faq.ts';
-import { slides as portraitsSlides } from '@/data/Galleries/Fine-Art-Photography/Portraits/carousel.ts';
+// (optional) you can still import slides if ImageBar2 needs them internally, but we won't pass an empty array
+// import { slides as portraitsSlides } from '@/data/Galleries/Fine-Art-Photography/Portraits/carousel.ts';
 
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
@@ -47,21 +48,26 @@ function recursivelyGatherAllGalleryHrefs(node) {
   let result = [];
   if (!node) return result;
   if (node.href && node.href.startsWith('/Galleries/')) result.push(node.href);
-  if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
+  if (node.children) node.children.forEach(child => {
+    result = result.concat(recursivelyGatherAllGalleryHrefs(child));
+  });
   return result;
 }
 
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav ? recursivelyGatherAllGalleryHrefs(landingNav) : [];
 const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
+
 const galleryDatas = galleryPaths.map(path => {
   const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
-  return (allGalleryData as any)[filePath]?.galleryData || [];
+  return allGalleryData[filePath]?.galleryData || [];
 });
 
+// IMPORTANT: pass galleryDatas so the util doesn’t explode
 const featheredImages = getSideImages({
   sectionPath,
   headingCount,
+  galleryDatas,
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
@@ -97,7 +103,8 @@ function makeAbsoluteUrl(src?: string) {
   return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
-const landingImgUrl = makeAbsoluteUrl(portraitsSlides?.[0]?.src);
+const landingImg    = featheredImages[0];
+const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
 
 const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
 if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
@@ -111,8 +118,6 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={landingMeta}
 >
-
-
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
@@ -124,7 +129,8 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
-  <ImageBar2 client:load slides={[]} />
+        <!-- Don’t pass an empty array; let the component handle defaults or internal slides -->
+        <ImageBar2 client:load />
       </div>
     </div>
 
@@ -140,24 +146,48 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </section>
 
     <div class="py-5">
-      <TombstoneNav items={landingWestern.tombstones} title={landingWestern.title} subtitle={landingWestern.subtitle} />
+      <!-- Match the working version’s prop shape -->
+      <TombstoneNav items={landingWestern.tombstones} />
     </div>
 
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section, index) => (
-            <article class="story-block">
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+            <article class="story-block" key={index}>
+              {section.title && (
+                <h2
+                  class="slide-in-left"
+                  set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                />
+              )}
+              {section.subhead && (
+                <h3
+                  class="slide-in-left"
+                  set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                />
+              )}
+              {section.tagline && (
+                <h4
+                  class="tagline reveal-on-scroll"
+                  set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                />
+              )}
               {section.paragraphs?.map((para, i) => (
-                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                <p
+                  key={i}
+                  class="reveal-on-scroll"
+                  set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                    <li
+                      key={j}
+                      class="reveal-on-scroll"
+                      set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                    />
                   ))}
                 </ul>
               )}
