@@ -63,13 +63,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     activeTimeouts.current = []; // Clear any pending timeouts
     stopSpeech();
     setDirection(1);
-    if (currentIndex === 0) {
-      // Find first non-ghost image
-      const firstRealIdx = rawData.findIndex(img => img.id !== 'i-k4studios');
-      setCurrentIndex(firstRealIdx > -1 ? firstRealIdx : 1);
-    } else {
-      setCurrentIndex(i => Math.min(i + 1, rawData.length));
-    }
+    setCurrentIndex((i) => Math.min(i + 1, rawData.length));
   };
 
   const currentImage = rawData[currentIndex];
@@ -638,17 +632,17 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
               >
                 {/* CARD CONTAINER FOR START PAGE */}
                 {currentIndex === 0 ? (
-                  <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '1rem 0', perspective: '1000px' }}>
+                  <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '1rem 0' }}>
                     {/* Multiple stacked shadow cards for realistic stack effect */}
                     {/* Card stack config: adjust offsets/rotation per card here */}
-                    {[ 
+                    {[
                       { top: -2, left: 2, rotate: -4 },
                       { top: 2, left: 4, rotate: 1 },
                       { top: 1, left: 3, rotate: -3 },
                       { top: -3, left: 5, rotate: 3 },
                       { top: 0, left: 6, rotate: 1 },
                     ].map((cfg, i) => (
-                      <motion.div
+                      <div
                         key={i}
                         style={{
                           position: 'absolute',
@@ -661,23 +655,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                           boxShadow: '0 4px 10px rgba(26, 22, 20, 0.22)',
                           zIndex: i + 1,
                           border: '1px solid #d6c6b2',
-                        }}
-                        animate={{
-                          rotate: isCardHovered
-                            ? cfg.rotate + (Math.random() - 0.5) * 1.5
-                            : cfg.rotate,
-                          x: isCardHovered
-                            ? cfg.left + (Math.random() - 0.5) * 2
-                            : cfg.left,
-                          y: isCardHovered
-                            ? cfg.top + (Math.random() - 0.5) * 2
-                            : cfg.top,
-                        }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 180,
-                          damping: 12,
-                          mass: 0.6,
+                          transform: `rotate(${cfg.rotate}deg)`,
+                          transition: 'none',
                         }}
                         aria-hidden="true"
                       />
@@ -729,13 +708,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                         className="text-center max-w-sm mx-auto"
                       >
                         <h1
-                          className="font-semibold mb-3 text-3xl"
-                          style={{
-                            opacity: 0.7,
-                            fontFamily: "'Glegoo', serif",
-                            color: '#85644b',
-                            transition: 'color 0.2s',
-                          }}
+                          className="text-[#85644b] font-semibold mb-3 text-3xl"
+                          style={{ opacity: 0.7, fontFamily: "'Glegoo', serif" }}
                         >
                           {(() => {
                             const title = currentImage?.title || titleBase || "Untitled";
@@ -743,29 +717,12 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                               const parts = title.split("Prologue:");
                               return (
                                 <>
-                                  <span className="text-xl block mb-1 text-[#85644b]">Prologue:</span>
-                                  <span
-                                    className="text-2xl font-bold"
-                                    style={{
-                                      color: isCardHovered ? '#470b00ff' : '#723a20ff',
-                                      transition: 'color 0.25s ease',
-                                    }}
-                                  >
-                                    {parts[1]?.trim() || ""}
-                                  </span>
+                                  <span className="text-xl block mb-1">Prologue:</span>
+                                  <span className="text-[#722F0F] text-2xl font-bold">{parts[1]?.trim() || ""}</span>
                                 </>
                               );
                             }
-                            return (
-                              <span
-                                style={{
-                                  color: isCardHovered ? '#8B4513' : '#85644b',
-                                  transition: 'color 0.25s ease',
-                                }}
-                              >
-                                {title}
-                              </span>
-                            );
+                            return title;
                           })()}
                         </h1>
                         {currentImage?.story && (
@@ -779,7 +736,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                           <button
                             type="button"
                             onClick={goNext}
-                            className={`w-16 h-16 flex items-center justify-center rounded transition-all duration-200 ${isCardHovered ? 'text-[#8B4513]' : 'text-[#bba798]'}`}
+                            className={`w-16 h-16 flex items-center justify-center rounded transition-all duration-200 ${isCardHovered ? 'text-[#8B4513]' : 'text-gray-400'}`}
                             title="Begin Story"
                           >
                             <SquareChevronRight className="w-9 h-9" />

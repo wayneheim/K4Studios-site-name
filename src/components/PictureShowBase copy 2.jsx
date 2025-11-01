@@ -17,7 +17,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const [showSlideshow, setShowSlideshow] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [currentVoice, setCurrentVoice] = useState(null);
-  const [isCardHovered, setIsCardHovered] = useState(false);
   const activeUtterances = useRef([]);
   const activeTimeouts = useRef([]);
   const [voicePreferences, setVoicePreferences] = useState(() => {
@@ -63,13 +62,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     activeTimeouts.current = []; // Clear any pending timeouts
     stopSpeech();
     setDirection(1);
-    if (currentIndex === 0) {
-      // Find first non-ghost image
-      const firstRealIdx = rawData.findIndex(img => img.id !== 'i-k4studios');
-      setCurrentIndex(firstRealIdx > -1 ? firstRealIdx : 1);
-    } else {
-      setCurrentIndex(i => Math.min(i + 1, rawData.length));
-    }
+    setCurrentIndex((i) => Math.min(i + 1, rawData.length));
   };
 
   const currentImage = rawData[currentIndex];
@@ -555,15 +548,15 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   return (
     <>
       <div
-  className="min-h-screen bg-white text-black font-serif px-5 py-8 overflow-visible"
-  style={{ fontFamily: "Glegoo, serif" }}
->
+        className="min-h-screen bg-white text-black font-serif px-5 py-8 overflow-hidden"
+        style={{ fontFamily: "Glegoo, serif" }}
+      >
         <link
           href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
 
-  <div className="relative max-w-6xl mx-auto flex flex-col items-center overflow-visible">
+        <div className="relative max-w-6xl mx-auto flex flex-col items-center">
           <AnimatePresence mode="wait">
             {isEndOfStory ? (
               // ===================== CLOSING PAGE =====================
@@ -625,6 +618,58 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   Back to Start
                 </button>
 
+                {/* Footer */}
+                <footer
+                  className="bg-[#fff] font-serif text-center pb-16 w-full mt-12"
+                  style={{ fontFamily: "'Glegoo', serif" }}
+                  aria-label="Site footer"
+                  itemScope
+                  itemType="https://schema.org/Organization"
+                >
+                  <div className="mx-auto max-w-xl px-4 pt-8 pb-4 footer-fade" aria-label="Footer controls and info">
+                    {/* 🔗 Share Drawer */}
+                    <div className="pb-4">
+                      <ShareDrawer
+                        imageUrl={rawData?.[0]?.src}
+                        pageTitle="Story Complete - K4 Studios"
+                      />
+                    </div>
+
+                    {/* 🌐 Social Icons */}
+                    <div className="flex justify-center gap-5 mb-3">
+                      <a href="https://www.facebook.com/k4studiosphotography/" target="_blank" rel="noopener noreferrer">
+                        <img className="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" itemProp="sameAs" />
+                      </a>
+                      <a href="https://www.instagram.com/k4studios/" target="_blank" rel="noopener noreferrer">
+                        <img className="social-icon" src="https://cdn.simpleicons.org/instagram/444444" alt="Instagram" width="20" height="20" itemProp="sameAs" />
+                      </a>
+                      <a href="https://www.threads.com/@k4studios" target="_blank" rel="noopener noreferrer">
+                        <img className="social-icon" src="https://cdn.simpleicons.org/threads/444444" alt="Threads" width="20" height="20" itemProp="sameAs" />
+                      </a>
+                      <a href="https://www.pinterest.com/K4studios/" target="_blank" rel="noopener noreferrer">
+                        <img className="social-icon" src="https://cdn.simpleicons.org/pinterest/444444" alt="Pinterest" width="20" height="20" itemProp="sameAs" />
+                      </a>
+                      <a href="https://500px.com/wayneheim" target="_blank" rel="noopener noreferrer">
+                        <img className="social-icon" src="https://cdn.simpleicons.org/500px/444444" alt="500px" width="20" height="20" itemProp="sameAs" />
+                      </a>
+                      <a href="/Contact">
+                        <img className="social-icon" src="https://cdn.simpleicons.org/gmail/444444" alt="Email" width="20" height="20" itemProp="sameAs" />
+                      </a>
+                    </div>
+
+                    {/* 🄯 Copyright */}
+                    <div className="text-xs text-[#2c2c2c] opacity-70" itemProp="name">
+                      <time dateTime={new Date().getFullYear().toString()} aria-label={`Copyright ${new Date().getFullYear()}`}>&copy; {new Date().getFullYear()}</time>
+                      {' '}Wayne Heim |{' '}
+                      <a href="/Glossary" className="underline hover:no-underline" title="Story Glossary">Story Glossary</a>
+                      {' '}| All rights reserved.
+                    </div>
+
+                    <div className="mt-5 flex justify-center">
+                      <a href="/" className="home-btn" aria-label="Go to homepage">Home</a>
+                    </div>
+                  </div>
+                </footer>
               </motion.div>
             ) : (
               // ===================== IMAGE SEQUENCE =====================
@@ -634,170 +679,16 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
                 transition={{ duration: 0.5 }}
-                className="w-full flex flex-col items-center overflow-visible"
+                className="w-full flex flex-col items-center"
               >
-                {/* CARD CONTAINER FOR START PAGE */}
-                {currentIndex === 0 ? (
-                  <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '1rem 0', perspective: '1000px' }}>
-                    {/* Multiple stacked shadow cards for realistic stack effect */}
-                    {/* Card stack config: adjust offsets/rotation per card here */}
-                    {[ 
-                      { top: -2, left: 2, rotate: -4 },
-                      { top: 2, left: 4, rotate: 1 },
-                      { top: 1, left: 3, rotate: -3 },
-                      { top: -3, left: 5, rotate: 3 },
-                      { top: 0, left: 6, rotate: 1 },
-                    ].map((cfg, i) => (
-                      <motion.div
-                        key={i}
-                        style={{
-                          position: 'absolute',
-                          top: `${cfg.top}px`,
-                          left: `${cfg.left}px`,
-                          width: '100%',
-                          height: '100%',
-                          background: '#ece8dfff',
-                          borderRadius: '1rem',
-                          boxShadow: '0 4px 10px rgba(26, 22, 20, 0.22)',
-                          zIndex: i + 1,
-                          border: '1px solid #d6c6b2',
-                        }}
-                        animate={{
-                          rotate: isCardHovered
-                            ? cfg.rotate + (Math.random() - 0.5) * 1.5
-                            : cfg.rotate,
-                          x: isCardHovered
-                            ? cfg.left + (Math.random() - 0.5) * 2
-                            : cfg.left,
-                          y: isCardHovered
-                            ? cfg.top + (Math.random() - 0.5) * 2
-                            : cfg.top,
-                        }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 180,
-                          damping: 12,
-                          mass: 0.6,
-                        }}
-                        aria-hidden="true"
-                      />
-                    ))}
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
-                      onClick={goNext}
-                      onMouseEnter={() => setIsCardHovered(true)}
-                      onMouseLeave={() => setIsCardHovered(false)}
-                      className="rounded-xl border border-gray-300 pt-12 px-6 pb-4 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
-                        style={{
-                          backgroundColor: "#f7f3ebff",
-                          position: 'relative',
-                          zIndex: 10,
-                          boxShadow: `0 4px 10px rgba(26, 22, 20, 0.52), inset 0 2px 8px rgba(255,255,255,0.18), inset 0 -2px 8px rgba(0,0,0,0.10)`,
-                          border: '2px solid #b8a47a', // slightly darker outline
-                        }}
-                    >
-                      {/* IMAGE CONTAINER */}
-                      <div className="aspect-square bg-[#eae6df] rounded-sm relative mb-6 max-w-md mx-auto">
-                        <div
-                          className="absolute inset-0 rounded-sm pointer-events-none"
-                          style={{
-                            boxShadow: `
-                              inset 2px 0 3px rgba(75,75,75,.4),
-                              inset -2px 0 3px rgba(236,236,236,.68),
-                              inset 0 2px 3px rgba(77,77,77,.4),
-                              inset 0 -3px 4px rgba(255,255,255,.81)
-                            `,
-                            zIndex: 10,
-                          }}
-                        />
-                        <img
-                          src={currentImage?.src}
-                          alt={currentImage?.title}
-                          className="w-full h-full object-contain rounded-sm border-2 border-gray-400"
-                          onClick={() => setIsZoomed(true)}
-                          draggable={false}
-                        />
-                      </div>
-
-                      {/* TEXT CONTENT AT BOTTOM */}
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
-                        className="text-center max-w-sm mx-auto"
-                      >
-                        <h1
-                          className="font-semibold mb-3 text-3xl"
-                          style={{
-                            opacity: 0.7,
-                            fontFamily: "'Glegoo', serif",
-                            color: '#85644b',
-                            transition: 'color 0.2s',
-                          }}
-                        >
-                          {(() => {
-                            const title = currentImage?.title || titleBase || "Untitled";
-                            if (title.startsWith("Prologue:")) {
-                              const parts = title.split("Prologue:");
-                              return (
-                                <>
-                                  <span className="text-xl block mb-1 text-[#85644b]">Prologue:</span>
-                                  <span
-                                    className="text-2xl font-bold"
-                                    style={{
-                                      color: isCardHovered ? '#470b00ff' : '#723a20ff',
-                                      transition: 'color 0.25s ease',
-                                    }}
-                                  >
-                                    {parts[1]?.trim() || ""}
-                                  </span>
-                                </>
-                              );
-                            }
-                            return (
-                              <span
-                                style={{
-                                  color: isCardHovered ? '#8B4513' : '#85644b',
-                                  transition: 'color 0.25s ease',
-                                }}
-                              >
-                                {title}
-                              </span>
-                            );
-                          })()}
-                        </h1>
-                        {currentImage?.story && (
-                          <p className="italic text-sm leading-relaxed text-gray-700 mb-4">
-                            {currentImage.story}
-                          </p>
-                        )}
-
-                        {/* NEXT BUTTON INSIDE CARD */}
-                        <div className="flex justify-center mt-4">
-                          <button
-                            type="button"
-                            onClick={goNext}
-                            className={`w-16 h-16 flex items-center justify-center rounded transition-all duration-200 ${isCardHovered ? 'text-[#8B4513]' : 'text-[#bba798]'}`}
-                            title="Begin Story"
-                          >
-                            <SquareChevronRight className="w-9 h-9" />
-                          </button>
-                        </div>
-                      </motion.div>
-                    </motion.div>
-                  </div>
-                ) : (
-                  /* IMAGE */
-                  <img
-                    src={currentImage?.src}
-                    alt={currentImage?.title}
-                    className={`rounded-lg max-h-[70vh] object-contain shadow-md border border-gray-300`}
-                    onClick={() => setIsZoomed(true)}
-                    draggable={false}
-                  />
-                )}
+                {/* IMAGE */}
+                <img
+                  src={currentImage?.src}
+                  alt={currentImage?.title}
+                  className={`rounded-lg max-h-[70vh] object-contain ${currentIndex === 0 ? '' : 'shadow-md border border-gray-300'}`}
+                  onClick={() => setIsZoomed(true)}
+                  draggable={false}
+                />
 {/* Shopping Cart & Notes Buttons */}
                 {currentImage?.notes && (
                   <div className="flex items-center gap-3 mt-3">
@@ -855,7 +746,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 </AnimatePresence>
 
                 {/* PROGRESS DOTS & NAV */}
-                <div className="flex justify-center items-center gap-3 mt-2 ml-16">
+                <div className="flex justify-center items-center gap-3 mt-5">
                   {/* PREV BUTTON */}
                   {currentIndex > 0 && (
                     <button
@@ -869,7 +760,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   )}
 
                   {/* PROGRESS DOTS */}
-                  {currentIndex > 0 && Array.from({ length: rawData.length + 1 }, (_, idx) => idx).map((idx) => (
+                  {Array.from({ length: rawData.length + 1 }, (_, idx) => idx).map((idx) => (
                     <button
                       key={idx}
                       onClick={() => {
@@ -890,133 +781,74 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   ))}
 
                   {/* NEXT BUTTON */}
-                  {currentIndex > 0 && (
-                    <button
-                      type="button"
-                      onClick={goNext}
-                      className="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
-                      title="Next"
-                    >
-                      <SquareChevronRight className="w-7 h-7" />
-                    </button>
-                  )}
+                  <button
+                    type="button"
+                    onClick={goNext}
+                    className="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
+                    title="Next"
+                  >
+                    <SquareChevronRight className="w-7 h-7" />
+                  </button>
 
                   {/* TEXT-TO-SPEECH BUTTON */}
-                  {currentIndex > 0 && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (isSpeechActive() || isSpeaking) {
-                          stopSpeech();
-                        } else {
-                          speakText();
-                        }
-                      }}
-                      className={`w-12 h-12 flex items-center justify-center rounded transition-all duration-200 ${
-                        isSpeechActive() || isSpeaking
-                          ? "text-blue-600 hover:text-blue-700 bg-blue-50"
-                          : "text-gray-400 hover:text-[#8B4513]"
-                      }`}
-                      title={isSpeechActive() || isSpeaking ? "Stop reading" : "Read aloud"}
-                    >
-                      <Volume2 className="w-6 h-6" />
-                    </button>
-                  )}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (isSpeechActive() || isSpeaking) {
+                        stopSpeech();
+                      } else {
+                        speakText();
+                      }
+                    }}
+                    className={`w-12 h-12 flex items-center justify-center rounded transition-all duration-200 ${
+                      isSpeechActive() || isSpeaking
+                        ? "text-blue-600 hover:text-blue-700 bg-blue-50"
+                        : "text-gray-400 hover:text-[#8B4513]"
+                    }`}
+                    title={isSpeechActive() || isSpeaking ? "Stop reading" : "Read aloud"}
+                  >
+                    <Volume2 className="w-6 h-6" />
+                  </button>
                 </div>
 
-                {/* TEXT SECTION - Only for non-start pages */}
-                {currentIndex > 0 && (
-                  <motion.div
-                    key={`text-${currentIndex}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mt-10 text-center max-w-3xl"
+                {/* TEXT SECTION */}
+                <motion.div
+                  key={`text-${currentIndex}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mt-10 text-center max-w-3xl"
+                >
+                  <h1
+                    className={`text-[#85644b] font-semibold mb-2 ${currentIndex === 0 ? 'text-3xl' : 'text-xl'}`}
+                    style={{ opacity: 0.7, fontFamily: "'Glegoo', serif" }}
                   >
-                    <h1
-                      className={`text-[#85644b] font-semibold mb-2 ${currentIndex === 0 ? 'text-3xl' : 'text-xl'}`}
-                      style={{ opacity: 0.7, fontFamily: "'Glegoo', serif" }}
-                    >
-                      {(() => {
-                        const title = currentImage?.title || titleBase || "Untitled";
-                        if (currentIndex === 0 && title.startsWith("Prologue:")) {
-                          const parts = title.split("Prologue:");
-                          return (
-                            <>
-                              <span className="text-2xl">Prologue:</span>
-                              <br />
-                              <span className="text-[#722F0F]">{parts[1]?.trim() || ""}</span>
-                            </>
-                          );
-                        }
-                        return title;
-                      })()}
-                    </h1>
-                    {currentImage?.story && (
-                      <p className="italic text-base leading-relaxed">
-                        {currentImage.story}
-                      </p>
-                    )}
-                  </motion.div>
-                )}
+                    {(() => {
+                      const title = currentImage?.title || titleBase || "Untitled";
+                      if (currentIndex === 0 && title.startsWith("Prologue:")) {
+                        const parts = title.split("Prologue:");
+                        return (
+                          <>
+                            <span className="text-2xl">Prologue:</span>
+                            <br />
+                            <span className="text-[#722F0F]">{parts[1]?.trim() || ""}</span>
+                          </>
+                        );
+                      }
+                      return title;
+                    })()}
+                  </h1>
+                  {currentImage?.story && (
+                    <p className="italic text-base leading-relaxed">
+                      {currentImage.story}
+                    </p>
+                  )}
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
-
-        {/* Footer */}
-        <footer
-          className="bg-[#fff] font-serif text-center pb-16 w-full mt-12"
-          style={{ fontFamily: "'Glegoo', serif" }}
-          aria-label="Site footer"
-          itemScope
-          itemType="https://schema.org/Organization"
-        >
-          <div className="mx-auto max-w-xl px-4 pt-8 pb-4 footer-fade" aria-label="Footer controls and info">
-            {/* 🔗 Share Drawer */}
-            <div className="pb-4">
-              <ShareDrawer
-                imageUrl={rawData?.[0]?.src}
-                pageTitle="Story Complete - K4 Studios"
-              />
-            </div>
-
-            {/* 🌐 Social Icons */}
-            <div className="flex justify-center gap-5 mb-3">
-              <a href="https://www.facebook.com/k4studiosphotography/" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/facebook/444444" alt="Facebook" width="20" height="20" itemProp="sameAs" />
-              </a>
-              <a href="https://www.instagram.com/k4studios/" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/instagram/444444" alt="Instagram" width="20" height="20" itemProp="sameAs" />
-              </a>
-              <a href="https://www.threads.com/@k4studios" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/threads/444444" alt="Threads" width="20" height="20" itemProp="sameAs" />
-              </a>
-              <a href="https://www.pinterest.com/K4studios/" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/pinterest/444444" alt="Pinterest" width="20" height="20" itemProp="sameAs" />
-              </a>
-              <a href="https://500px.com/wayneheim" target="_blank" rel="noopener noreferrer">
-                <img className="social-icon" src="https://cdn.simpleicons.org/500px/444444" alt="500px" width="20" height="20" itemProp="sameAs" />
-              </a>
-              <a href="/Contact">
-                <img className="social-icon" src="https://cdn.simpleicons.org/gmail/444444" alt="Email" width="20" height="20" itemProp="sameAs" />
-              </a>
-            </div>
-
-            {/* 🄯 Copyright */}
-            <div className="text-xs text-[#2c2c2c] opacity-70" itemProp="name">
-              <time dateTime={new Date().getFullYear().toString()} aria-label={`Copyright ${new Date().getFullYear()}`}>&copy; {new Date().getFullYear()}</time>
-              {' '}Wayne Heim - K4 Studios |{' '}
-              <a href="/Glossary" className="underline hover:no-underline" title="Story Glossary">Story Glossary</a>
-              {' '}| All rights reserved.
-            </div>
-
-            <div className="mt-5 flex justify-center">
-              <a href="/" className="home-btn" aria-label="Go to homepage">Home</a>
-            </div>
-          </div>
-        </footer>
       </div>
 
       {showSlideshow && (
