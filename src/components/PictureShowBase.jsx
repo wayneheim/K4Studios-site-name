@@ -627,7 +627,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   return (
     <>
       <div
-  className="min-h-screen bg-white text-black font-serif px-5 py-8 overflow-visible"
+  className="min-h-screen bg-white text-black font-serif px-4 sm:px-5 md:px-8 lg:px-12 py-8 overflow-visible"
   style={{ fontFamily: "Glegoo, serif" }}
 >
         <link
@@ -635,7 +635,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
           rel="stylesheet"
         />
 
-  <div className="relative max-w-6xl mx-auto flex flex-col items-center overflow-visible">
+  <div className="relative max-w-6xl mx-auto flex flex-col items-center overflow-visible px-3 sm:px-4 md:px-6">
           <AnimatePresence mode="wait">
             {isEndOfStory ? (
               // ===================== CLOSING PAGE =====================
@@ -710,7 +710,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
               >
                 {/* CARD CONTAINER FOR START PAGE */}
                 {currentIndex === 0 ? (
-                  <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '1rem 0', perspective: '1000px' }}>
+                  <div className="w-full px-3 sm:px-4 md:px-0">
+                    <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '1rem 0', perspective: '1000px' }}>
                     {/* Multiple stacked shadow cards for realistic stack effect */}
                     {/* Card stack config: adjust offsets/rotation per card here */}
                     {[ 
@@ -761,7 +762,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                       onClick={goNext}
                       onMouseEnter={() => setIsCardHovered(true)}
                       onMouseLeave={() => setIsCardHovered(false)}
-                      className="rounded-xl border border-gray-300 pt-12 px-6 pb-4 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
+                      className="rounded-xl border border-gray-300 pt-12 px-8 pb-4 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
                         style={{
                           backgroundColor: "#f7f3ebff",
                           position: 'relative',
@@ -770,8 +771,16 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                           border: '2px solid #b8a47a', // slightly darker outline
                         }}
                     >
-                      {/* IMAGE CONTAINER */}
-                      <div className="aspect-square bg-[#eae6df] rounded-sm relative mb-6 max-w-md mx-auto">
+                      {/* IMAGE CONTAINER (hover crossfade by revealing background) */}
+                      <div
+                        className="aspect-square bg-[#eae6df] rounded-sm relative mb-6 max-w-md mx-auto overflow-hidden border-2 border-gray-400"
+                        style={{
+                          backgroundImage: currentImage?.src2 ? `url(${currentImage.src2})` : 'none',
+                          backgroundSize: 'contain',
+                          backgroundPosition: 'center',
+                          backgroundRepeat: 'no-repeat',
+                        }}
+                      >
                         <div
                           className="absolute inset-0 rounded-sm pointer-events-none"
                           style={{
@@ -787,7 +796,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                         <img
                           src={currentImage?.src}
                           alt={currentImage?.title}
-                          className="w-full h-full object-contain rounded-sm border-2 border-gray-400"
+                          className={`w-full h-full object-contain rounded-sm transition-opacity duration-300 ease-out ${currentImage?.src2 ? 'group-hover:opacity-0' : ''}`}
                           onClick={() => setIsZoomed(true)}
                           draggable={false}
                         />
@@ -859,20 +868,23 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                         </div>
                       </motion.div>
                     </motion.div>
+                    </div>
                   </div>
                 ) : (
                   /* IMAGE */
-                  <img
-                    src={currentImage?.src}
-                    alt={currentImage?.title}
-                    className={`rounded-lg max-h-[70vh] object-contain shadow-md border border-gray-300`}
-                    onClick={() => setIsZoomed(true)}
-                    draggable={false}
-                  />
+                  <div className="w-full px-3 sm:px-4 md:px-6">
+                    <img
+                      src={currentImage?.src}
+                      alt={currentImage?.title}
+                      className="block mx-auto rounded-lg max-h-[70vh] max-w-full object-contain shadow-md border border-gray-300"
+                      onClick={() => setIsZoomed(true)}
+                      draggable={false}
+                    />
+                  </div>
                 )}
 {/* Shopping Cart & Notes Buttons */}
                 {currentImage?.notes && (
-                  <div className="flex items-center gap-3 mt-3">
+                  <div className="w-full px-3 sm:px-4 md:px-6 flex flex-wrap items-center justify-center gap-3 mt-3">
                     <a
                       href={currentImage?.buyLink}
                       target="_blank"
@@ -927,13 +939,13 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 </AnimatePresence>
 
                 {/* PROGRESS DOTS & NAV */}
-                <div className="flex justify-center items-center gap-3 mt-2 ml-16">
+                <div className="w-full px-3 sm:px-4 md:px-6 flex justify-center items-center gap-3 mt-2">
                   {/* PREV BUTTON */}
                   {currentIndex > 0 && (
                     <button
                       type="button"
                       onClick={goPrev}
-                      className="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513]  rounded transition-all duration-200"
+                      className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513]  rounded transition-all duration-200"
                       title="Previous"
                     >
                       <SquareChevronLeft className="w-7 h-7" />
@@ -966,7 +978,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                     <button
                       type="button"
                       onClick={goNext}
-                      className="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
+                      className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
                       title="Next"
                     >
                       <SquareChevronRight className="w-7 h-7" />
@@ -984,7 +996,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                           speakText();
                         }
                       }}
-                      className={`w-12 h-12 flex items-center justify-center rounded transition-all duration-200 ${
+                      className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded transition-all duration-200 ${
                         isSpeechActive() || isSpeaking
                           ? "text-blue-600 hover:text-blue-700 bg-blue-50"
                           : "text-gray-400 hover:text-[#8B4513]"
@@ -1100,6 +1112,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
           setIsMuted={setIsMuted}
           audioRef={audioRef}
           setIsSpeaking={setIsSpeaking}
+          isSpeaking={isSpeaking}
         />
       )}
 

@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import { ShoppingCart, VolumeX } from "lucide-react";
 import PunchInIntro from "./PunchInIntro.jsx";
 
-export default function StoryShow({ images, startImageId, onExit, isMuted, setIsMuted, audioRef, setIsSpeaking }) {
+export default function StoryShow({ images, startImageId, onExit, isMuted, setIsMuted, audioRef, setIsSpeaking, isSpeaking }) {
   const [index, setIndex] = useState(0);
   const [isIntro, setIsIntro] = useState(false);
   const [showControls, setShowControls] = useState(true);
@@ -88,7 +88,8 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
       }
     } else {
       style.maxHeight = "100vh";
-      style.maxWidth = "100vw";
+      // Account for mobile margins - use 92% of viewport width instead of 100% (accounting for container padding)
+      style.maxWidth = "92vw";
     }
     
     // Apply sharpening filter like in zoom overlay
@@ -107,20 +108,22 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
   const kenAngle = kenAngles[index];
 
   const kenBurns = useMemo(() => {
+    // We zoom in, then gently reverse back out on a loop while the slide is visible.
+    // repeatType: 'reverse' returns to the "initial" scale after each zoom-in.
     if (isLandscape && isVertical) {
-      // Subtle zoom to avoid cropping in portrait-in-landscape
+      // Subtle zoom for portrait-in-landscape
       return {
         initial: { scale: 1, opacity: 0.95, rotate: 0 },
         animate: { scale: 1.06, opacity: 1, rotate: 0 },
         exit: { opacity: 0 },
-        transition: { duration: 27, ease: "easeInOut" },
+        transition: { duration: 27, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
       };
     }
     return {
-        initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
-        animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
-        exit: { opacity: 0 },
-        transition: { duration: 27, ease: "easeInOut" },
+      initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
+      animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
+      exit: { opacity: 0 },
+      transition: { duration: 27, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
     };
   }, [isLandscape, isVertical, kenAngle]);
 
@@ -183,7 +186,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
   const fade = {
     initial: { opacity: 0 },
     animate: { opacity: 1, transition: { duration: 0.45, ease: "easeOut" } },
-    exit: { opacity: 0, transition: { duration: 0.76, ease: "easeIn" } },
+    exit: { opacity: 0, transition: { duration: 1.0, ease: "easeInOut" } },
   };
 
   return createPortal(
@@ -199,7 +202,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
             transform-origin: bottom center;
             left: 50% !important;
           }
-          .slideshow-controls .btn { padding: 0.25rem 0.5rem; font-size: 0.8rem; }
+          .slideshow-controls .btn { padding: 0.25rem 0.5rem; font-size: 0.75rem; white-space: nowrap; }
         }
 
         .gallery-slideshow img { width: 100%; height: auto; }
@@ -286,7 +289,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
               className="absolute inset-0 w-full h-full flex items-center justify-center"
               {...fade}
             >
-              <div className="w-screen h-screen flex items-center justify-center relative gallery-slideshow">
+              <div className="w-screen h-screen flex items-center justify-center relative gallery-slideshow px-4 md:px-0">
                 <motion.img
                   src={current.src}
                   alt={current.title || ""}
@@ -295,42 +298,45 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
                   {...kenBurns}
                 />
 
-                {/* Title + Story: hidden for all phones/phablets via isMobileShort */}
-{current.story && !isMobileShort && (
-  <motion.div
-    className={`absolute p-4 md:p-6 text-sm md:text-base text-content ${
-      isVertical
-        ? "right-6 top-1/2 -translate-y-1/2"
-        : "bottom-8 right-8"
-    }`}
-    {...fade}
-    style={{
-      // ✅ Cap width to 520px or 92vw (whichever is smaller)
-      maxWidth: "min(92vw, 520px)",
-      // ✅ Prevent the box from stretching wider than the cap
-      width: "auto",
-      backgroundColor: "rgba(0, 0, 0, 0.2)",
-      boxShadow: "0 0 2px 2px rgba(0, 0, 0, 0.2)",
-      borderRadius: "1rem",
-    }}
-  >
-    <div className="font-semibold text-lg mb-2 story-title">
-      {current.title}
-    </div>
+                {/* Title + Story: hidden for all phones/phablets via isMobileShort, and hidden when audio is playing unless muted */}
+                <AnimatePresence>
+                  {current.story && !isMobileShort && (!isSpeaking || isMuted) && (
+                    <motion.div
+                      key="story-text"
+                      className={`absolute p-4 md:p-6 text-sm md:text-base text-content ${
+                        isVertical
+                          ? "right-6 top-1/2 -translate-y-1/2"
+                          : "bottom-8 right-8"
+                      }`}
+                      {...fade}
+                      style={{
+                        // ✅ Cap width to 520px or 92vw (whichever is smaller)
+                        maxWidth: "min(92vw, 520px)",
+                        // ✅ Prevent the box from stretching wider than the cap
+                        width: "auto",
+                        backgroundColor: "rgba(0, 0, 0, 0.2)",
+                        boxShadow: "0 0 2px 2px rgba(0, 0, 0, 0.2)",
+                        borderRadius: "1rem",
+                      }}
+                    >
+                      <div className="font-semibold text-lg mb-2 story-title">
+                        {current.title}
+                      </div>
 
-    {/* ✅ Force line wrapping */}
-    <div
-      className="opacity-80 story-body"
-      style={{
-        whiteSpace: "pre-wrap",        // preserve newlines, wrap lines
-        overflowWrap: "anywhere",       // break long words if needed
-        wordBreak: "break-word"         // extra safety for older browsers
-      }}
-    >
-      {current.story}
-    </div>
-  </motion.div>
-)}
+                      {/* ✅ Force line wrapping */}
+                      <div
+                        className="opacity-80 story-body"
+                        style={{
+                          whiteSpace: "pre-wrap",        // preserve newlines, wrap lines
+                          overflowWrap: "anywhere",       // break long words if needed
+                          wordBreak: "break-word"         // extra safety for older browsers
+                        }}
+                      >
+                        {current.story}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
 
               </div>
             </motion.div>
@@ -344,7 +350,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute border rounded-lg p-2 flex gap-4 items-center slideshow-controls"
+              className="absolute border rounded-lg p-2 flex gap-3 items-center slideshow-controls"
               style={{
                 borderColor: "rgba(255,255,255,0.25)",
                 backgroundColor: "rgba(0, 0, 0, 0.8)", // 80% opaque black
@@ -356,21 +362,23 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
               {/* Prev */}
               <button
                 onClick={goPrev}
-                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition btn"
+                className="bg-white/10 text-white rounded px-2 sm:px-3 py-1 hover:bg-white/20 transition btn whitespace-nowrap text-xs sm:text-sm leading-none flex items-center gap-1"
                 aria-label="Previous image"
                 title="Previous image"
               >
-                ◀ Prev
+                <span aria-hidden>◀</span>
+                <span>Prev</span>
               </button>
 
               {/* Next */}
               <button
                 onClick={goNext}
-                className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition btn"
+                className="bg-white/10 text-white rounded px-2 sm:px-3 py-1 hover:bg-white/20 transition btn whitespace-nowrap text-xs sm:text-sm leading-none flex items-center gap-1"
                 aria-label="Next image"
                 title="Next image"
               >
-                Next ▶
+                <span>Next</span>
+                <span aria-hidden>▶</span>
               </button>
 
               {/* Mute */}

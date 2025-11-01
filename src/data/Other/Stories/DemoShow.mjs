@@ -8,6 +8,7 @@ export const storyData = [
     description: "An opening panel introducing this story sequence.",
     alt: "Intro slide for demo picture show",
     src: "/images/K4-Stories.webp",
+    src2: "/images/K4-Stories-b.webp",
     visibility: "ghost",
     sortOrder: -1,
     story: "The West wasn’t built on gold—it was built on memory. Every trail, every face, every echo of dust tells a story worth retelling.",
@@ -143,7 +144,7 @@ export const storyData = [
     "story": "Morning sun climbs, bathing every color in anticipation and purpose. Sweat beads, dust shimmers, saddle leather glows with stories untold. The clock strikes ten—she’s late. Nerves on edge, they hold their places. Distant rumbles echo—steel, hooves, danger on the ridge.\n“Steady, Billy. Stick to the plan.”\nToday, patience is the hardest virtue. Vengeance or fortune—both ride with the morning wind.",
     "notes": "This color rendering builds on the visual traditions of Hudson River School landscapes and classic Western illustration, while introducing a cinematic intensity that only painterly color can achieve. The blue of the saddle blanket and the sun-warmed tones of earth and leather evoke nostalgia, grounding the narrative in both history and myth. The composition pulls the eye toward the horizon, echoing the quiet suspense of frontier storytelling. Instead of drama through action, this work invites the viewer to linger in a moment of anticipation—where every detail is charged with the possibility of what’s about to unfold.",
     "rating": 4,
-    "galleries": [],
+    "galleries": ["Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"],
     "visibility": "show",
     "sortOrder": 2,
     "audioSrc": "/audio/10-Oclock-Staging.mp3"
@@ -174,7 +175,7 @@ export const storyData = [
     "story": "Shadows slip across stone. Who will blink first—the men or the night? One ear to the dark, one eye on the sky. Quiet breath, steady hands—tonight, the West holds its secrets close.",
     "notes": "This piece captures not just the figures, but the tension between anticipation and action—the upward glance, the grip on leather and rifle, the silent agreement between men on the edge of danger. It’s a scene that would be at home in the pages of a Howard novel or on the walls of a serious Western art collection. The painterly finish and sculpted light echo traditions, yet there’s a cinematic weight here—a sense that something is about to happen just outside the frame. The details—the dust, the weathered gear, the lookouts’ wary posture—invite collectors to tell their own story, making this piece more than just wall art; it’s a living slice of the American West.",
     "rating": 0,
-    "galleries": [],
+    "galleries": ["Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"],
     "visibility": "show",
     "sortOrder": 3,
     "audioSrc": "/audio/Night-Raid.mp3"
@@ -283,7 +284,7 @@ export const storyData = [
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
-    "galleries": [],
+    "galleries": ["Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"],
     "visibility": "show",
     "sortOrder": 6,
     "audioSrc": "/audio/One-Way-Out.mp3"
@@ -325,7 +326,7 @@ export const storyData = [
     "story": "All lines lead to conflict. Trees stand watch from above, silent patrons to the stage below. Cliffs, angered and jagged — their edge… the box… the ring of reckoning.\n\nShadows press in, clouds gather on winds of judgment, textures pulling, tightening the grip. A bold, harsh narrator carves — its voice in shadow, speaking violence against the soft hush of summer grass.\n\nAll lines converge. Justice? Vengeance? Opportunity? Only the wind sings this song.",
     "notes": "High Ground Justice, a masterclass in compositional tension. The image pulses with cinematic energy—each natural element choreographed to guide the eye and elevate the confrontation at its heart.\n\nThe scene is architected through visual geometry: the angled cliff echoing the attacker’s posture, the dark tree boxing him in, a triangular shadow driving us toward the man climbing the ridge. Every line of the land participates in the judgment. Trees observe. Shadows accuse. Grass betrays. And the cliff itself demands consequence. This is not just a conflict of men—but of place, memory, and fate.\n\nAbove, the trees stand like silent jurors. There's a mythic weight here—part Remington, part Greek tragedy. We’re left not with clarity, but questions: justice, revenge, or seized opportunity? This isn’t just a captured moment—it’s a constructed parable.",
     "rating": 4,
-    "galleries": [],
+    "galleries": ["Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"],
     "visibility": "show",
     "sortOrder": 7,
     "audioSrc": "/audio/High-Ground-Justice.mp3"
