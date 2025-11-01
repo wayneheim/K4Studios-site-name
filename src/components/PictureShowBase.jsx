@@ -45,6 +45,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     const chapter = document.getElementById("chapter-section");
 
     if (header) header.classList.add("section-hidden");
+    if (header) header.style.display = "none";
     if (intro) intro.classList.add("section-hidden");
     if (chapter) {
       chapter.style.display = "block";
@@ -55,12 +56,31 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     // Restore on exit
     return () => {
       if (header) header.classList.remove("section-hidden");
+      if (header) header.style.display = "";
       if (intro) intro.classList.remove("section-hidden");
       if (chapter) {
         chapter.classList.remove("section-visible");
         chapter.classList.add("section-hidden");
         chapter.style.display = "none";
       }
+    };
+  }, []);
+
+  // Force viewport reset AFTER layout paint to remove top gap
+  useEffect(() => {
+    const raf1 = requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+    const raf2 = requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
     };
   }, []);
 
@@ -687,7 +707,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   return (
     <>
     <div
-  className="min-h-screen bg-white text-black font-serif px-4 sm:px-4 md:px-8 lg:px-12 pt-1 sm:pt-2 md:pt-8 pb-8 overflow-x-hidden overflow-y-visible"
+  className="picture-show-content min-h-screen bg-white text-black font-serif px-4 sm:px-4 md:px-8 lg:px-12 pt-1 sm:pt-2 md:pt-8 pb-8 overflow-x-hidden overflow-y-visible"
   style={{ fontFamily: "Glegoo, serif", boxSizing: 'border-box' }}
 >
         <link
