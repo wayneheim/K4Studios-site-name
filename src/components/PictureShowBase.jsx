@@ -635,7 +635,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
           rel="stylesheet"
         />
 
-  <div className="relative max-w-6xl mx-auto flex flex-col items-center overflow-visible px-5 sm:px-6 md:px-8">
+  <div className="relative max-w-6xl mx-auto flex flex-col items-center overflow-visible">
           <AnimatePresence mode="wait">
             {isEndOfStory ? (
               // ===================== CLOSING PAGE =====================
@@ -710,7 +710,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
               >
                 {/* CARD CONTAINER FOR START PAGE */}
                 {currentIndex === 0 ? (
-                  <div className="w-full px-5 sm:px-6 md:px-0">
+                  <div className="w-full px-3 sm:px-4 md:px-0">
                     <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '.25rem 0', perspective: '1000px' }}>
                     {/* Multiple stacked shadow cards for realistic stack effect */}
                     {/* Card stack config: adjust offsets/rotation per card here */}
@@ -884,7 +884,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 )}
 {/* Shopping Cart & Notes Buttons */}
                 {currentImage?.notes && (
-                  <div className="w-full px-5 sm:px-6 md:px-8 flex flex-wrap items-center justify-center gap-3 mt-3">
+                  <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-3`}>
                     <a
                       href={currentImage?.buyLink}
                       target="_blank"
@@ -939,7 +939,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 </AnimatePresence>
 
                 {/* PROGRESS DOTS & NAV */}
-                <div className="w-full px-5 sm:px-6 md:px-8 flex justify-center items-center gap-3 mt-2">
+                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex justify-center items-center gap-3 mt-2`}>
                   {/* PREV BUTTON */}
                   {currentIndex > 0 && (
                     <button
