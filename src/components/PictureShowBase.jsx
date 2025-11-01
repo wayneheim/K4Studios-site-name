@@ -22,6 +22,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const activeUtterances = useRef([]);
   const activeTimeouts = useRef([]);
   const audioRef = useRef(null);
+  // swipe tracking
+  const touchStart = useRef({ x: 0, y: 0, t: 0 });
   const [voicePreferences, setVoicePreferences] = useState(() => {
     // Load saved preferences from localStorage
     if (typeof window !== 'undefined') {
@@ -117,6 +119,37 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
         }, 100);
         return newIndex;
       });
+    }
+  };
+
+  // --- touch swipe handlers (mobile) ---
+  const SWIPE_MIN_X = 60; // px
+  const SWIPE_MAX_Y = 50; // px vertical tolerance
+  const SWIPE_MAX_MS = 700; // ms
+
+  const handleTouchStart = (e) => {
+    if (isZoomed) return; // don't hijack when zoom overlay open
+    const t = e.changedTouches?.[0] || e.touches?.[0];
+    if (!t) return;
+    touchStart.current = { x: t.clientX, y: t.clientY, t: Date.now() };
+  };
+
+  const handleTouchEnd = (e) => {
+    if (isZoomed) return;
+    const t = e.changedTouches?.[0] || e.touches?.[0];
+    if (!t) return;
+    const dx = t.clientX - touchStart.current.x;
+    const dy = t.clientY - touchStart.current.y;
+    const dt = Date.now() - touchStart.current.t;
+    // only horizontal, quick-ish swipes
+    if (Math.abs(dx) >= SWIPE_MIN_X && Math.abs(dy) <= SWIPE_MAX_Y && dt <= SWIPE_MAX_MS) {
+      if (dx < 0) {
+        // swipe left → next
+        goNext();
+      } else if (dx > 0) {
+        // swipe right → prev
+        goPrev();
+      }
     }
   };
 
@@ -627,7 +660,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   return (
     <>
     <div
-  className="min-h-screen bg-white text-black font-serif px-4 sm:px-5 md:px-8 lg:px-12 pt-1 sm:pt-5 md:pt-8 pb-8 overflow-x-hidden overflow-y-visible"
+  className={`min-h-screen bg-white text-black font-serif px-4 sm:px-5 md:px-8 lg:px-12 ${currentIndex > 0 ? 'pt-0 sm:pt-5 md:pt-8' : 'pt-1 sm:pt-5 md:pt-8'} pb-8 overflow-x-hidden overflow-y-visible`}
   style={{ fontFamily: "Glegoo, serif", boxSizing: 'border-box' }}
 >
         <link
@@ -707,6 +740,9 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
                 transition={{ duration: 0.5 }}
                 className="w-full flex flex-col items-center overflow-visible"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                style={{ touchAction: 'pan-y' }}
               >
                 {/* CARD CONTAINER FOR START PAGE */}
                 {currentIndex === 0 ? (
@@ -890,9 +926,10 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2"
+                      aria-label="Order"
                     >
-                      <ShoppingCart className="w-4 h-4 text-gray-500" />
-                      Order
+                      <ShoppingCart className="w-4 h-4 text-gray-500" aria-hidden="true" />
+                      <span className="hidden sm:inline">Order</span>
                     </a>
 
                     <button
