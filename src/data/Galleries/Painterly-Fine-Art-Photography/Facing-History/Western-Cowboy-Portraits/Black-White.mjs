@@ -32,6 +32,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Txh4c8k/3/LPqKzBn7cbNQ4SPtPbVkg483F6jLRFpWtXq4gCd9w/XL/_HF20275-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Txh4c8k/3/MH2VN5vZHfBsM9vzSZTgGMLWfzcRSZKMc2mcCLMNX/L/_HF20275-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Txh4c8k/3/L4FB9Rg8xSbxwFSc3kZRWjwWrXpDHLPrfF7P3zm4m/S/_HF20275-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Txh4c8k/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -79,7 +80,7 @@ export const galleryData = [
     ],
     "story": "Every flick of the wrist, every coiled loop — it’s muscle memory and legacy tied together. Out here, alone in the clearing, he’s not putting on a show. He’s tuning his instincts.\n\nThe rope whispers where the horse isn't, where the cattle won’t run, where habits become second nature.\nJust him, dust, and repetition.\n\nHe doesn’t need the stakes to be high.\nHe needs to be ready when they are.",
     "notes": "This piece captures the unspoken ritual that precedes action — a cowboy honing his craft not for show, but for survival.\nIt’s a portrait of repetition turned sacred, rendered in Wayne Heim’s painterly process where texture meets tension.\n\nThere’s lineage here — not just Western, but artistic:\nThe quiet intentionality calls to mind Andrew Wyeth’s discipline, while the tactile dust and rope echo the best of Remington’s authenticity.\n\nFor collectors, this is a piece that rewards second looks. It’s about preparation — and presence.\nA grounded, timeless study of craft becoming instinct.",
-    "rating": 4,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -119,6 +120,40 @@ export const galleryData = [
     "sortOrder": 1
   },
   {
+    "id": "i-kp5NHNw",
+    "title": "Under Fire, Over the Line",
+    "description": "A dramatic black and white Western photograph of a cowboy dragging his wounded comrade to safety during a shootout—captured in Wayne Heim’s signature painterly fine art style. This image blends emotional storytelling with bold, timeless composition, evoking the grit, sacrifice, and unspoken bonds of the American frontier. Perfect for collectors of Western wall art, cowboy photography, or anyone drawn to heroic moments of the Old West. © Wayne Heim",
+    "alt": "Cowboy dragging injured comrade through grass during Western shootout, black and white painterly fine art photograph by Wayne Heim.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KTxX9RQDCdbFMtxf2GHjMrzSnLC7qj95KbHpK9zV5/XL/_O2H0388-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KTxX9RQDCdbFMtxf2GHjMrzSnLC7qj95KbHpK9zV5/XL/_O2H0388-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/LPqW5WnC62t999WmJKFzrp7k7G2vw7h3gMJLXrh8P/L/_O2H0388-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KtNRGfxq4gSKQPmx9HGcTPLwHMnjth6rgVkTZZmss/M/_O2H0388-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KxRw9CKxDxjzwBkK4VfMhThqNTKvD4hPKb7ckbMmH/S/_O2H0388-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-kp5NHNw/A",
+    "keywords": [
+      "western art",
+      "black and white photography",
+      "cowboy",
+      "fine art",
+      "painterly",
+      "rescue",
+      "frontier",
+      "shootout",
+      "Americana",
+      "historic",
+      "Wayne Heim"
+    ],
+    "story": "God bless it—never saw ’em coming.\nBet it was those Johnson boys… knew they’d turn bad, the lot of ’em.\nC’mon, Hank—don’t you quit on me.\nI got you.\nDoc Fielding’ll patch you up right quick—just hold on a little longer.\nAin’t leaving you behind. Not today, not ever.\nI’m gonna make this right. I promise you that.",
+    "notes": "This image channels the raw, documentary feel of classic Western cinema, but with a painterly touch that blurs the line between photography and illustration. The diagonal movement and dynamic posture mirror the urgency of the moment, while the black and white palette strips away distraction—focusing on gesture, texture, and emotional weight. Notice the visual echo of Remington’s drama, but recast in pure light and shadow. Few Western images show vulnerability and loyalty this starkly; here, both men are heroes in their own right. The ghosted background and kinetic energy give it an almost mythic timelessness—something rarely achieved in staged reenactment art.",
+    "rating": 4,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 2
+  },
+  {
     "id": "i-HfQ5NVR",
     "title": "Morning Joe: Cowboy with His First Coffee of the Day",
     "description": "In this evocative black and white Western photograph, a cowboy takes a quiet moment for himself, savoring his morning coffee before the demands of the day begin. The stark contrasts of light and shadow in Wayne Heim’s signature painterly photography style bring the serenity of this simple act into focus. The soft light highlighting the cowboy’s weathered face and the steaming cup in his hand speaks to the hard yet intimate realities of frontier life. Through his unique high-ISO technique, the texture of the image adds a timeless quality, allowing viewers to feel the weight of the past in the image. This piece captures more than just a moment—it encapsulates the quiet strength and solitude found in the everyday life of the Old West. Bring the spirit of the Wild West into your space with this authentic cowboy art, reflecting the enduring legacy of the American frontier. © Wayne Heim",
@@ -128,6 +163,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-HfQ5NVR/0/LSXGznRj6rSF2TXmDTjMWbjCFSbK2fr5Gq45dhJPF/XL/_DSF8812-Edit-2-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-HfQ5NVR/0/NDdChZSstzgkT8K2wgF3dbfnrNcHXxBRqT68NRBGZ/L/_DSF8812-Edit-2-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-HfQ5NVR/0/MdPFBpKdhKpgdzXQzPgWgs5F7qgS6xNLxX4bF3Tgt/S/_DSF8812-Edit-2-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-HfQ5NVR/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -180,7 +216,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 3
   },
   {
     "id": "i-qMQf7b6",
@@ -192,6 +228,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qMQf7b6/0/Nb5mFsggXgrk9LbFs3cfB2kd6BNzrgKv5v7Vfz2h8/XL/_O1H0067-Edit-3-Edit-2-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qMQf7b6/0/K3QmTJ9Kj96BL867L3BgfDkfQZFs2rr4km6w5RZgx/L/_O1H0067-Edit-3-Edit-2-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qMQf7b6/0/MSrrm3tJDdqZWP7Dvm9tZmfCkcvjFqwkTB5wQ5BQr/S/_O1H0067-Edit-3-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qMQf7b6/A",
     "keywords": [
       "western fine art photography",
@@ -212,7 +249,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 4
   },
   {
     "id": "i-GSk4JS8",
@@ -246,39 +283,6 @@ export const galleryData = [
     "notes": "Unfinished Business is a masterclass in visual tension.\nThe composition is triangular — anchored by the man in the foreground, and counterbalanced by the two women whose stances echo confrontation and caution. This triangular structure, often found in Renaissance and Baroque painting, builds an invisible pressure in the frame — it feels like something is about to give.\n\nWayne Heim’s painterly black-and-white style strips away distraction and lets gesture, posture, and line do the storytelling. The light wraps the cabin in softness, but the man remains stark and defined — separating action from judgment, and past from present.\n\nThere are echoes of Rockwell’s narrative timing, but the restraint leans more Wyeth or Pictorialist photography, inviting interpretation rather than declaring meaning. This is a conversation piece. A frozen reckoning — not about violence, but about how close we stand to it when justice falters.",
     "rating": 0,
     "galleries": [],
-    "visibility": "show",
-    "sortOrder": 4
-  },
-  {
-    "id": "i-kp5NHNw",
-    "title": "Under Fire, Over the Line",
-    "description": "A dramatic black and white Western photograph of a cowboy dragging his wounded comrade to safety during a shootout—captured in Wayne Heim’s signature painterly fine art style. This image blends emotional storytelling with bold, timeless composition, evoking the grit, sacrifice, and unspoken bonds of the American frontier. Perfect for collectors of Western wall art, cowboy photography, or anyone drawn to heroic moments of the Old West. © Wayne Heim",
-    "alt": "Cowboy dragging injured comrade through grass during Western shootout, black and white painterly fine art photograph by Wayne Heim.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KTxX9RQDCdbFMtxf2GHjMrzSnLC7qj95KbHpK9zV5/XL/_O2H0388-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KTxX9RQDCdbFMtxf2GHjMrzSnLC7qj95KbHpK9zV5/XL/_O2H0388-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/LPqW5WnC62t999WmJKFzrp7k7G2vw7h3gMJLXrh8P/L/_O2H0388-Edit-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KtNRGfxq4gSKQPmx9HGcTPLwHMnjth6rgVkTZZmss/M/_O2H0388-Edit-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-kp5NHNw/17/KxRw9CKxDxjzwBkK4VfMhThqNTKvD4hPKb7ckbMmH/S/_O2H0388-Edit-2-S.jpg",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-kp5NHNw/A",
-    "keywords": [
-      "western art",
-      "black and white photography",
-      "cowboy",
-      "fine art",
-      "painterly",
-      "rescue",
-      "frontier",
-      "shootout",
-      "Americana",
-      "historic",
-      "Wayne Heim"
-    ],
-    "story": "God bless it—never saw ’em coming.\nBet it was those Johnson boys… knew they’d turn bad, the lot of ’em.\nC’mon, Hank—don’t you quit on me.\nI got you.\nDoc Fielding’ll patch you up right quick—just hold on a little longer.\nAin’t leaving you behind. Not today, not ever.\nI’m gonna make this right. I promise you that.",
-    "notes": "This image channels the raw, documentary feel of classic Western cinema, but with a painterly touch that blurs the line between photography and illustration. The diagonal movement and dynamic posture mirror the urgency of the moment, while the black and white palette strips away distraction—focusing on gesture, texture, and emotional weight. Notice the visual echo of Remington’s drama, but recast in pure light and shadow. Few Western images show vulnerability and loyalty this starkly; here, both men are heroes in their own right. The ghosted background and kinetic energy give it an almost mythic timelessness—something rarely achieved in staged reenactment art.",
-    "rating": 4,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
     "visibility": "show",
     "sortOrder": 5
   },
@@ -328,6 +332,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-FXNxqTK/1/KFNVR52P6jWrrHp5WpWT2K7VDHQz4KHRPwbcWBZtt/XL/_ANA8540-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-FXNxqTK/1/Ln9dLLGbQFDszg2VhLPCjTtCtLZqHL5Vs6GHgrWB5/L/_ANA8540-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-FXNxqTK/1/K7GS3RKprrbkpdSnttm5x7bTC8SrVPqT4tPKvGb2t/S/_ANA8540-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-FXNxqTK/A",
     "keywords": [
       "western fine art photography",
@@ -440,6 +445,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-dZKzBBQ/4/Mw7b56rbnX4fXHcMJsqmLrMGv4rdr36ptH5KNP8sq/L/_O2H0274-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-dZKzBBQ/4/LZXPJ4bqqqbSSF3mKBPFVwg3LvSvtvzxd6Ng8VVvC/M/_O2H0274-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-dZKzBBQ/4/LnmdkNp7FthBXMR9TGLs7dgc9PtgTzNNCkVB4tTTp/S/_O2H0274-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dZKzBBQ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -535,6 +541,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/NBtt4LJPSH2pWCw7Ljw9jSxpHWX3hVBmvkQ4fM9X4/L/_O1H0469-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/LgdRdq8rw73WCJh6fR5t9T64QDbkms78vMqmHHH8g/M/_O1H0469-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-cGDk6Nc/0/MSV7wx8gmnT9LCVHwjxCdFpmrrrL4NcMX9ftcgnnh/S/_O1H0469-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-cGDk6Nc/A",
     "keywords": [
       "Western fine art photography",
@@ -569,6 +576,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/KKBWDgtsGKhtd7WhPXG6zS7rpdL74wgmZqL736rZX/L/_HF29384-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/LcpQJF2wdH4n9CRrSqLQjKqdVSQ6d5SDHKbJnd6w5/M/_HF29384-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qwFCjLp/3/LLr3Q6wpGC2vQxZLWx5GqQSWFHNz6fnSsPG49b8rV/S/_HF29384-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qwFCjLp/A",
     "keywords": [
       "black and white cowboy art",
@@ -633,6 +641,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SwhsL2h/4/NG9Sts3d8zKjB2BV3mnwgzBHsFJjLRdgvNrsDPBSf/XL/Western%20Portrait%20Photography_HF29529-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SwhsL2h/4/MZHWpNDTV7zXrz5wLQ9rgQwzXv6cgTCfzRFnMX7Nk/L/Western%20Portrait%20Photography_HF29529-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-SwhsL2h/4/K76VB2bRQTd2VcHjfhr547fZNqrG3Lxwns8prMnTQ/S/Western%20Portrait%20Photography_HF29529-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-SwhsL2h/A",
     "keywords": [
       "western fine art photography",
@@ -670,6 +679,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-W73hxx4/4/LzKpwvJTGX6hQN7JBkHqdQHM7KSbC428dwQRXsBjq/XL/Wild%20West%20Cowgirl%20Photo_HF20300-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-W73hxx4/4/Lmps4ww2L2LHgLvfQLj2wknbdKhs858kvS8Z9NhwX/L/Wild%20West%20Cowgirl%20Photo_HF20300-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-W73hxx4/4/MDSSDvSTKHP876GC7ZWGX78GLj45Rwgwj9fFMxNZv/S/Wild%20West%20Cowgirl%20Photo_HF20300-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-W73hxx4/A",
     "keywords": [
       "Calamity Jane",
@@ -702,6 +712,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/MDwnr85kPJqMNZh33pHQfWXcQz9STXv9cMDJ32wbD/XL/_O1H1607-Edit-2-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/K8JQMnmpMfdNbwnRtBLgfzXrsrfx8LRtH9szwxsd9/L/_O1H1607-Edit-2-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-FnZ68h3/1/LmDmwHKDPTP4SSrsrbs5Fp2WSZC82PKvhgT4JjKbg/S/_O1H1607-Edit-2-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-FnZ68h3/A",
     "keywords": [
       "Western fine art photography",
@@ -736,6 +747,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/L5BVh7BvXtNXZKtQcDcvF4MvmvkCgtdb5pFVGNsJT/L/_O1H0181-Edit-Edit-2-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/NgJtTtpCNfKsMMJZgj3dQV3QnhHqqV798kLWcdmfc/M/_O1H0181-Edit-Edit-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/0/LT3jHhbqCh6SCBhrvs7QDSQHDVFRKJsQJtxL2XJXz/S/_O1H0181-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-zTWQkqD/A",
     "keywords": [
       "Western fine art photography",
@@ -770,6 +782,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dLDF4Q6/1/Lp2gNBCxBKPvGFm9BnFfzzXpQQJMfv48bz9wt3kPG/XL/_ANA0964-Edit-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dLDF4Q6/1/NdDTvj4xkvzJ3VPH8FKcMWq2MDN3fXPdXQr9RwH94/L/_ANA0964-Edit-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dLDF4Q6/1/Lzf5KbNjQRqWSXwxctvZCZcr2V33xRLXfcNbjhtF6/S/_ANA0964-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dLDF4Q6/A",
     "keywords": [
       "western portrait photography",
@@ -802,6 +815,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/MXRKhT8WTwFqZS8HTdxcMXm6Mq5XnHCwdg9Bkrq6n/XL/_O2H2449-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/MSXk62Fs7sF3dgDTmgT7FVkd8sSZDgRbNpcqDzcNL/L/_O2H2449-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-JvnhWXr/3/L2PqgLpzj2TZ2QdKCPV95366p45MLpBQGFpF6VPS9/S/_O2H2449-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-JvnhWXr/A",
     "keywords": [
       "Western fine art photography",
@@ -835,6 +849,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/L4wfgnBNgRPcTBTRTspjrDPNTMCfvRLBvdwg7H58w/XL/_O1H0568-Edit-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/KjCbXWqfsNWNFwcJVvjDsqsZ3SVvsxtpkpv49PLhZ/L/_O1H0568-Edit-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/1/M592npcWNxZrGm3QvjPg7PgCWxXXMd55jBGs4fqfD/S/_O1H0568-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rqk5Kdk/A",
     "keywords": [
       "Western fine art photography",
@@ -869,6 +884,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TpqkCVk/3/KrkkRmVZDWdSxbvdk9HfJd2jZc4cMvpSHLWshWbKr/XL/_HF20647-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TpqkCVk/3/LdtJ8H48ZqjWPGrQRvrx3fFCkQh55XhKB23x9kJZG/L/_HF20647-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TpqkCVk/3/LSn7b832DPCKBJskNNfVwp3gq2RLTj4zKBVLfR5Rh/S/_HF20647-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-TpqkCVk/A",
     "keywords": [
       "cowboy portrait",
@@ -1006,6 +1022,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-m8pgc8k/3/K9nCQhL2LSRVrjNCLJsCDLPCrtftPDtdSsV6DqPr7/XL/_HF20198-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-m8pgc8k/3/NMHm48J72jt9TwfzxSXK53fcjcPhq8fsQ944Fpcrj/L/_HF20198-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-m8pgc8k/3/K8rv9Txbb65VM2cz77hBsB6kCK36x2grHcM6MD4rM/S/_HF20198-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-m8pgc8k/A",
     "keywords": [
       "western portrait",
@@ -1061,6 +1078,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KL9t3Xg/0/KHkhQWn36rKSpCk5bDCNqHRz4NpHbdDx2nL3RdG5P/L/_DSF9980-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KL9t3Xg/0/LKS3Kr8Wvvd4hq7fPBGHFtGNggWtjvBLQRGxwcxVD/M/_DSF9980-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KL9t3Xg/0/MQ756bdghV3R6nx35XNKw9Q3tLWPptHHbxkCwnMNT/S/_DSF9980-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KL9t3Xg/A",
     "keywords": [
       "black and white western portrait",
@@ -1093,6 +1111,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-M95HTNH/0/M6vwSfpVJxzgsFL9JPtvCBpgwpZFSGbV2ZcS5VhhV/XL/_DSF9690-Edit-2-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-M95HTNH/0/MKTCHfwBwjCV8QQHmPNGwh5BxnLhtfzGJT27FqrgF/L/_DSF9690-Edit-2-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-M95HTNH/0/MpRhMrZWvPWFsG9DLjt8WNjTvRT7FCXFRJcdRqVnV/S/_DSF9690-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-M95HTNH/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1157,6 +1176,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-2VTWJ3R/4/KrLwFmZJ88hKsZVL494PM9rqnnrkbTqLXhhjSsN6p/L/_HF20421-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-2VTWJ3R/4/KGXx66CGtLLs7rcfPsJt53Wx3GbdHmS22wvjKNV69/M/_HF20421-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-2VTWJ3R/4/KkwKQQMTKPMDKJrc94fnf423fPPQbFJHxnZtXb9jT/S/_HF20421-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-2VTWJ3R/A",
     "keywords": [
       "black and white cowboy",
@@ -1192,6 +1212,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-tbctTrL/1/MQH477DjVxvF7kkd5MhrrkX8BdCcx7xNPZ8HVjFBv/L/_O2H2652-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-tbctTrL/1/MLNkB6hw78Knq4bbsGTGHSMdgM7NhCWGGDXzqGJK5/M/_O2H2652-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-tbctTrL/1/K678vkR528GM7H9kSkczfFtjf6DDwX2z3F6DFhFj8/S/_O2H2652-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-tbctTrL/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1256,6 +1277,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PSkctsq/3/Krn7QCjdPnwvPHqXr3PBm5zgnJRHk9WxjbF54CGbX/XL/Western%20Cowboy%20Photography%20_HF20134-Edit-2-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PSkctsq/3/Ndds76GTdGzZP59RQghQRZjH3w89NmRLFMDnFW6j7/L/Western%20Cowboy%20Photography%20_HF20134-Edit-2-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-PSkctsq/3/L2xhsZPMXKb9bDTNCnw8XgbX7wTBjTnbG5nhHmpff/S/Western%20Cowboy%20Photography%20_HF20134-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PSkctsq/A",
     "keywords": [
       "western fine art photography",
@@ -1298,6 +1320,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-HjTFKJ7/0/NS7wDWN8VLC7bGkjffXMz3Cjfpmh9kbXsSJCNGwmV/XL/_HF21981-Enhanced-NR-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-HjTFKJ7/0/Mqq9GMptgPRT2NmjcHztdf4Cn8rgmxkTqRxsGfvfp/L/_HF21981-Enhanced-NR-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-HjTFKJ7/0/KVfWvss9Q8b8XmTJpqQNKmnc6hFpTtjHz5M3QnzPp/S/_HF21981-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-HjTFKJ7/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1362,6 +1385,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-kp6HLCx/0/LMGrS86Mjv9jS9B8CKPF2BvQx4mNq7hXVr4KHSJHX/XL/_DSF9786-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-kp6HLCx/0/Kd7n8jPWDs6vw2G7NCfbXxh5dGd6dvP72KDD9Bnc7/L/_DSF9786-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-kp6HLCx/0/L3sbVVj3Sg2ThzjVh2ShLMFC9CGZ9FfDVFTbxH2sR/S/_DSF9786-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-kp6HLCx/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1426,6 +1450,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-N77wcxb/1/KJzqpTWjtXMdfn593skxdg6p4dDCkQ2KBBZkScsc4/L/_DSF7600-Edit-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-N77wcxb/1/K7nRFsvvZ5k7VcJfM9RsPQ32bwHxJ524NDRPR5nD3/M/_DSF7600-Edit-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-N77wcxb/1/M8fzXQhNNLXWfj5QG4X7GfCQgkGhT4PCBkjXNz3js/S/_DSF7600-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-N77wcxb/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1490,6 +1515,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KgKZZxg/1/LTF7bRWWhMh87Sx6jsB5sMHZ8ScnpCxPCmsCdhBvJ/XL/_ANA8380-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KgKZZxg/1/LqGLSNGwdq4v2ZZx7bq9FnRhgnR6kXTxvpfLHLScV/L/_ANA8380-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KgKZZxg/1/LsV973Tn8bmw7D364mCddCQnJjRKSWWX8kVPkHg5S/S/_ANA8380-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KgKZZxg/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1554,6 +1580,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RMdScDd/0/NVmLrfmdCJZ24ZDHwfCh9qwKPszrwNxkv286Gcbs8/XL/_DSF9039-Enhanced-NR-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RMdScDd/0/KzmtCN5Jfncmm3HD6L9LwJPfSjPJ6dcvzZgBwrwvR/L/_DSF9039-Enhanced-NR-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RMdScDd/0/KtjWfWrwzC4nGgrG25Z4nFzDsWjn5vfhhSzcb926V/S/_DSF9039-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RMdScDd/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1647,6 +1674,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wS6x5S5/0/LS26H6xQLfRVVFFDFfcBSZJHqZp42XSw8JG2vZXkf/XL/_DSF9871-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wS6x5S5/0/MphW5NMgqkZxSDxsw6Hg34JTndp9twQmJcMQLj5H2/L/_DSF9871-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wS6x5S5/0/KcNcCxjVLPfDWCZ7HL2c77D9QvHnQPNqVR5g326pR/S/_DSF9871-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wS6x5S5/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1711,6 +1739,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DJMTZ8z/0/NTWgJvHtDkjCMbH98MShX7Lq5FQNwwkrgzZQR9JtC/L/_HF29305-Edit-2-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DJMTZ8z/0/NdnBvrzz4bn7v3dkwFHQRfCQG6HchTtw8kg36pqLQ/M/_HF29305-Edit-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DJMTZ8z/0/LRn7m9XBTvgC2WHjhGMmKj9qBNThMpCLRqfBxvbdM/S/_HF29305-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DJMTZ8z/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1775,6 +1804,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DQHK8FK/0/NF9cxNGh2WKJ65khxd7Nwz9kXWtshLMgTTbbjN8hf/XL/_DSF0082-Edit-Edit-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DQHK8FK/0/MJ8ZrLTRHKXRVgZ3HpkksSq7wPqQ7jzk2fGRd5GGv/L/_DSF0082-Edit-Edit-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DQHK8FK/0/NSdBTm5hCmCdk7tGHQtNVhbGnWNS3kbR449HMC5nm/S/_DSF0082-Edit-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-DQHK8FK/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1839,6 +1869,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-4s2pK5Z/0/LkrZvsfq83dzbQcDFXwnDD6dLTLcSBWkXWTfRrCHS/XL/_DSF9095-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-4s2pK5Z/0/MBcGd3DhZ75fg98XZMdZ8TvmwxBwQRgRkLxjQV4Vr/L/_DSF9095-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-4s2pK5Z/0/Kff46dRXQzQ6mK4CTKbSs5Md6C33X6P7ffRHt4rPt/S/_DSF9095-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-4s2pK5Z/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1903,6 +1934,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-W5d8Ss8/0/LGhFcCvwK5HNhWvks6LzMtww6fnTDvSBsd7bHQKFQ/L/_ANA0883-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-W5d8Ss8/0/NGSGh2f3ZC5H9GXxFsVBJM76ZpMvPs7Smbp3XBmp3/M/_ANA0883-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-W5d8Ss8/0/LTJJRH2fRHWSKSHzpGTqz6bQNLfrRQ4FjfDgKfVSp/S/_ANA0883-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-W5d8Ss8/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -1967,6 +1999,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-LrfWmg7/5/LTjv4snWHMB5s6S2S8S9qpd62HqmXxnPQNjb8XpqJ/L/Western%20Cowboy%20Photography%20%20_O2H2299-Edit-2-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-LrfWmg7/5/KTDrcJQh7PVgHz3qPrpVSMD9KMQxVtCZ3nrFzzbmt/M/Western%20Cowboy%20Photography%20%20_O2H2299-Edit-2-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-LrfWmg7/5/MrqNBSW3RcbS8HrPgvsbGQdkqLnmPtW5mTdMkT77P/S/Western%20Cowboy%20Photography%20%20_O2H2299-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-LrfWmg7/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2031,6 +2064,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xfqTp8K/0/LgLNBhxqGCTQbKM8WH9D8sBXvbLRprgV5cd9kNChj/XL/_DSF9100-Edit-3-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xfqTp8K/0/NRp7z9vwTdjVzfLBNLDCPgDdXQdnGwkk2jvrzH5vz/L/_DSF9100-Edit-3-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xfqTp8K/0/L9LwqDmQnSpFxwcrhkwjkf2t4BxDQ3dM8CVPzrWgS/S/_DSF9100-Edit-3-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xfqTp8K/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2095,6 +2129,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-MnBn4kW/0/KQVVXSZpCs6vds5hzGqDqrqKk9h6Gg3zBX6m46pCp/XL/_HF21130-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-MnBn4kW/0/MG93gBRBMzbNrHTKRBSfhWLPzqv7nFCc8G74FJh44/L/_HF21130-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-MnBn4kW/0/NFkHWqtrhqZT3zZscD6945rPV9LjGSP9qJJZDD5pr/S/_HF21130-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MnBn4kW/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2159,6 +2194,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bLHTNNg/1/LqnsVZKVGjcZ7F5jnLRP9ccpFwjD6G5nWvF6ZNp3t/XL/_ANA8462-Edit-Edit-2-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bLHTNNg/1/NHzMQNjBxXf8BnzC2tf5c3gVrJ6MmJB2Cg4mshFNd/L/_ANA8462-Edit-Edit-2-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bLHTNNg/1/MjNcz8tsT3HcT7FWxRT68XLkNQRNsn3QCZq2Lsknd/S/_ANA8462-Edit-Edit-2-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bLHTNNg/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2223,6 +2259,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-s5XTxBL/2/KtLqq5f9JtdnDZ3dXJ4KJdGgfGhfTjwg2kk8DSkKV/XL/Western%20Cowboy%20Portrait%20Photo%20_HF20550-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-s5XTxBL/2/LH8JM4MhCcRJR2CVcKtnbhwb7XT8gzDZsxjZpCrQw/L/Western%20Cowboy%20Portrait%20Photo%20_HF20550-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-s5XTxBL/2/MkX2GkTtZmKXDQhjZDvKndJQhCsC525dZp5LChzTT/S/Western%20Cowboy%20Portrait%20Photo%20_HF20550-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-s5XTxBL/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2287,6 +2324,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-R7VTGwJ/2/K2SQMfdXQDQtt6j9gxBVkMK92j2VnSqVLg4NHvvLS/XL/Wild%20West%20Portrait%20Photo%20_O1H5704-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-R7VTGwJ/2/NDzJsn6BBDjQDC6CnBQpZ5P6FnCVjkrBTQmGMLR5f/L/Wild%20West%20Portrait%20Photo%20_O1H5704-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-R7VTGwJ/2/MWhWQVRbCJf5D99gvcr9gVwCsS9qLfqMct8kH9L7h/S/Wild%20West%20Portrait%20Photo%20_O1H5704-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-R7VTGwJ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2351,6 +2389,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dTxwFN4/0/M3n9nmsfJnVgP8LpHJZHXHwVZJLWd3g2CwfbhHBLb/L/_DSF8830-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dTxwFN4/0/MDXzFt6KXhfLF5hJmNPP2XgSN3sjDhCtFmp6ZngGd/M/_DSF8830-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dTxwFN4/0/NgKCQxhRRs8kJ7dTjkZ49MH6btk27sf6xCQTdkknR/S/_DSF8830-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dTxwFN4/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2415,6 +2454,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-C9Q7sKR/1/LFmKHm7kjgrQfxrPQJPxxzQ7xmcxSL2KSVdTSHcwp/L/_DSF9715-Edit-Western%20Cowgirl%20Portrait%20Photo%20Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-C9Q7sKR/1/LT3337kbPtF8TnfwzSVVczdPZpChDM62hVJ3VLMrK/M/_DSF9715-Edit-Western%20Cowgirl%20Portrait%20Photo%20Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-C9Q7sKR/1/Lvt4FhRbv4wm7Lwv95WBGFnGmSrpfxwMND7jx66Bn/S/_DSF9715-Edit-Western%20Cowgirl%20Portrait%20Photo%20Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-C9Q7sKR/A",
     "keywords": [
       "Western female gunslinger",
@@ -2453,6 +2493,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xsqsCKz/0/MGTCNH2526vGZQ8GCkgbjfT7MmmF735pzMDgrG54p/XL/_HF20166-268-270-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xsqsCKz/0/LX868ZDd9GR9pQ6tz26tGk5dRqhp8BMvMm6pCZRSp/L/_HF20166-268-270-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xsqsCKz/0/NTTqnSNGC4gQzT8X3hdwxMzVdSGm83Bh9JWhw7JtX/S/_HF20166-268-270-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xsqsCKz/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2517,6 +2558,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-dc76hpJ/2/KSLzXzbXxWwrJPmmT8GjWtNsDqNwgwL53PcPvRBPV/XL/_O2H0496-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-dc76hpJ/2/MQXTnP5PSCR5T7Zcs3wtGwzz2czQzPWbQ3vffBHZ5/L/_O2H0496-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-dc76hpJ/2/Lxb3Gc5kdZWtsL3J49JbNsd3kvv53xckKXbQjPnxV/S/_O2H0496-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dc76hpJ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2581,6 +2623,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MpBPrZK/0/M6BHCDDsBfgP2b2XP36kmZDWSXSCFbMs6D3NHkfGs/XL/_DSF9766-Edit-2-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MpBPrZK/0/NLvXq9Pf7FD6f3JDSFDBLc4ZTQW9PPwPRdxcrgBkM/L/_DSF9766-Edit-2-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MpBPrZK/0/NLrM2F2zFXqzqN2G9vrR3LP4jPNbPJnS5h7wxp6vS/S/_DSF9766-Edit-2-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MpBPrZK/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2645,6 +2688,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-ffzG95X/0/MfnqQMhBLk7sxfdHqShBrtrh7dMHgzgM8rrFSgsDK/L/_O1H0377-Edit-Edit-3-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-ffzG95X/0/MPxbmpRr5hqfB8bBmthZvGp8gm3smhsqFDBV6kqbT/M/_O1H0377-Edit-Edit-3-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-ffzG95X/0/MdWxgvCbHdqmWDpSh8q2KBs4g4HWj5TXsKFTFC6gg/S/_O1H0377-Edit-Edit-3-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-ffzG95X/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2709,6 +2753,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-727jVkX/0/KgqkvZ6BSVxLxcZC8WCXKmbtn5t6MD6Bv9wg7zvwk/XL/_DSF9776-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-727jVkX/0/Mz23d2C2J7Fh7sT7tFc765qQVdDQDQKqRp7C7ChTH/L/_DSF9776-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-727jVkX/0/NZr4ddtqq6KM4Bj3gRPRnTRvHJjkxr8qLX3bCTLp8/S/_DSF9776-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-727jVkX/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2773,6 +2818,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bvbHPHN/0/MjTVmQCksPZBxp2tTB7GWQrHz7MjRHtFf3JNFsMX4/XL/_HF28863-321-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bvbHPHN/0/KJt5NqwF7Qv6cXGBx7p8ntNWrtSfKBrCR2KhtTnWk/L/_HF28863-321-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bvbHPHN/0/Ng9CNNRSqZtHnJTFkbXq2xSbjr37zDQffpcPf5x42/S/_HF28863-321-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bvbHPHN/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2837,6 +2883,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hMJZN2m/1/MjzfkMRfVTJs6CzcSRqBxVq8vkBmN5DFWTdM7b4ZD/XL/_ANA0574-Enhanced-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hMJZN2m/1/LS3XKct2wM9nfQwfKz65n6Q3kqKKtZVgg7XHczCSC/L/_ANA0574-Enhanced-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hMJZN2m/1/LKF9fgFrDMQqPdcz5rJsgkQkDnqbc6krDV5SZmmrW/S/_ANA0574-Enhanced-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hMJZN2m/A",
     "keywords": [
       "black and white cowboy",
@@ -2877,6 +2924,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-BQw2kzC/19/L6hJG2L9Z99mTJF7wpGWzvjRbDnQQppXMVdzSP3d2/XL/_HF20116-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-BQw2kzC/19/MpPVQf2WjL9z2p8Dh5W7LFmgqzfHRF37BBXGkz9TH/L/_HF20116-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-BQw2kzC/19/K4VRH5nKQBvN3f5Z7q7xZ44DzNWxjRjrJ4RWd3zzq/S/_HF20116-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BQw2kzC/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -2941,6 +2989,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-tpLxDbH/0/NgwJXjR7rDxP5VbvKDTPW9bDWLVJG9sLdzpwf37cL/XL/_HF21769-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-tpLxDbH/0/MstnhjK9PnCbsFvzHpSVHs7m4nw6fMt6H3m7sTvZv/L/_HF21769-Enhanced-NR-Edit-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-tpLxDbH/0/Ng2tF63qWCS4M72DNPHFFnfJDxk2gLP9HwzWjKK96/S/_HF21769-Enhanced-NR-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-tpLxDbH/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3005,6 +3054,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RdsBKX8/0/NHq2QsKvpqSH29bf5dPKKRbBS43m7WvQJqbsSXWwD/L/_HF29248-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RdsBKX8/0/K5QGStWxRtCNXM5wjNbkVVhtMpPqPxJsGrpRSsRSc/M/_HF29248-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RdsBKX8/0/KptKHPFpHLVz4MFmdJ5DC89G63WV3h47sZZTxm3dv/S/_HF29248-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RdsBKX8/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3069,6 +3119,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Z7G9xfp/0/NbK5QBQk36Qx475dG3cZN9XmWm9dtcKhczRMMCSfq/L/_HF29278-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Z7G9xfp/0/KLxCfcTqjc3r7Dr6X9ptFX3BC3q9GktRFRDr92jnZ/M/_HF29278-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Z7G9xfp/0/MRGTM2rDWxKPgK7qwvnzkM6N4WBBD4KN9mfrH9PCg/S/_HF29278-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Z7G9xfp/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3133,6 +3184,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wpFH7zn/0/LLLwW7khcTxFZ6LPC9LM24bRmV3v83Bt9jhMFnKqC/L/_HF28559-Edit-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wpFH7zn/0/K3gd5XRJh8T4GhdZ9TZG82s8QVq85QhRbFP7k6SNZ/M/_HF28559-Edit-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wpFH7zn/0/MDk3vZdS55tLGFPqNXTVGxSBVF2m9JW9sr7x5S8hk/S/_HF28559-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wpFH7zn/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3197,6 +3249,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-MFBcm7q/2/KKxq3rqcrLBRCRRkGkVcVLqS8k4Z3nWNk9tdwMcrp/XL/_HF20134-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-MFBcm7q/2/MTgqVcZKskmZFcdKpTGtrdrBCf4Xx6RcJ2BGx37rz/L/_HF20134-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-MFBcm7q/2/MsNzcr7NCqqtc3zjxJKHRzG7qgNJt5fjBC4dp8Qdg/S/_HF20134-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MFBcm7q/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3261,6 +3314,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NZLcBqN/3/LBVs8KVwcVnFsNHbssCfCSJ99tt5bmHtBMt5Q8XXD/L/_HF20190-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NZLcBqN/3/K8SzLbJTtvcbPT6q5jZm8SP26q3Dmgm8hjkxSGwbs/M/_HF20190-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-NZLcBqN/3/NRm9Hz2DFG8KZ2vfLS9zVhjQhzK9VzqmbdCFBvtLn/S/_HF20190-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NZLcBqN/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3325,6 +3379,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-gKXZc84/3/LNWFXJFx4XdsR62bpkJ4t4gB8gnQ69KcbGtfwCrqH/XL/Western%20Cowgirl%20Photo%20_HF21114-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-gKXZc84/3/KqLPD78qc475CHXDQPd3nrDZ2t3nJJ6W6mqk9W2Nc/L/Western%20Cowgirl%20Photo%20_HF21114-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-gKXZc84/3/L7hZ2Hm4vxgJFMWzqmdztSRSwRSVCmSpcRvCQ69Nn/S/Western%20Cowgirl%20Photo%20_HF21114-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-gKXZc84/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3389,6 +3444,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-t79qS8x/1/K6RsvTkBJ96FJxQ5mpr88Xv4dDM2T2MhFb4bkbCpb/XL/_O1H1598-Edit-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-t79qS8x/1/LKkrd6C76chQtWxPbC8MWNB2q9gqdpXrrsCGVXz6x/L/_O1H1598-Edit-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-t79qS8x/1/MgdM92HmHbzDndXqtDBbx56mDXDWbg9Xp7cNF4Lj2/S/_O1H1598-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-t79qS8x/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3453,6 +3509,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hrx5g4S/6/MZnDhzfrJbDH7xWXcCPwjTf23k9JmJPj3cNrqmGRR/XL/_HF20502-Enhanced-NR-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hrx5g4S/6/Kk38VpSGF7kRv676Tqc36qxCW3k6QnndMKFxbTvzN/L/_HF20502-Enhanced-NR-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hrx5g4S/6/KS6XrcVnhFZpw3XSVB3nKdBTb4JtbtjswTtmVR7Ph/S/_HF20502-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hrx5g4S/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3517,6 +3574,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-hXKvJHC/1/MWV95WCxH2VMc7wqWg7HkmtTR7gqqMwjZt8cm8NLF/XL/_O2H2946-Enhanced-NR-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-hXKvJHC/1/NfXK9tShSCmSzxGgZpFmHHfhHG87wrRTRpHbPckwg/L/_O2H2946-Enhanced-NR-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-hXKvJHC/1/M5rmf9tZvtzL6SDWWzZJn3BWms9NNX99SZwGP9j7w/S/_O2H2946-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hXKvJHC/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3581,6 +3639,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/LsjFpp8jmd6m5mgkJf8vgvxX7c257Shd9L3nzrLpG/XL/_ANA0584-Edit-Edit-3-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/KF4mp9qBMZx7Sx2fv8Fj343T52nCmRBNwLQs38wKH/L/_ANA0584-Edit-Edit-3-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/LzXqdbXkntFDvHgzfW7dFhTsZjXv9HqM9vJcVZchB/S/_ANA0584-Edit-Edit-3-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3645,6 +3704,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KWLFPL9/2/KhprzNpkNnjrncpSXRHsspqBL2jLgfK7CfgRZZthg/XL/_HF20545-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KWLFPL9/2/LdvKtbgMbkCvDNjdpZNN4bKGj2PkcqFTSjXWq8vcn/L/_HF20545-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KWLFPL9/2/L3MzC5Mkcp2bKkxhTRpwxWt9hRQ4W8G5VDWgzsqwN/S/_HF20545-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KWLFPL9/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3709,6 +3769,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-x2xNvsM/1/L4jjNCD33HQJ5dDdjK9wFDnWxZqJjNS6sFmbvznxp/XL/_HF22145-Edit-2-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-x2xNvsM/1/Kt6kSFNqwCjp7RbG9RcvFJDx523pcsbWLS2m5prvG/L/_HF22145-Edit-2-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-x2xNvsM/1/Lx7qLDtzHQxVFk3fsr54ZbWPgjxW38XnXhP7gxcWK/S/_HF22145-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-x2xNvsM/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3773,6 +3834,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/2/K2TzkB5nqXMSrWJSDV5fWWd2qQZQ8jvkbKcfhgw76/XL/_HF21794-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/2/Lk8sZ9nXBh8STFggVwQN8gRTpRpkrcW8dsrNvdD6r/M/_HF21794-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/2/KxbqJVDhm8cmXCKxs4FLvJCKvVLSMB8mgPKLBmmh7/S/_HF21794-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3837,6 +3899,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/0/Lvjz6wTs2gKFTvXDHXmCsXtjQqvP7jV8c846GrRCv/XL/_HF21124-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/0/L7Z2rvdcWWxwVHL2tG3FMwhPCDVKWpjz7dLJGNPVM/L/_HF21124-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/0/M32mJ64ktDHRcZJgS85cXVWdBjv5jkVgNKVH5X8xN/S/_HF21124-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3901,6 +3964,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-53b8wQ2/1/NGhRNMbpdtNrXXszSXKpzwSPP7QSVCwzDn4T2TGmp/XL/_HF26276-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-53b8wQ2/1/L7v8s47DBjcdxnRNJrrPn4kLd7zSP4NWcWzPjKzs6/L/_HF26276-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-53b8wQ2/1/K3HpNqnrch2fcRHvt8rVBkX77R2GPXHt3bwcS2PbR/S/_HF26276-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-53b8wQ2/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -3965,6 +4029,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-nd3Wr3d/2/KvmSq87sRs9CTF2wHHdvDtVWqNhNMfH3rsT3dzjJN/XL/Wild%20West%20Cowgirl%20Photo%20_HF26483-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-nd3Wr3d/2/NVRH9n7C65jPZSQfgTpkt75z83b5qsq9fnxBvJtfV/L/Wild%20West%20Cowgirl%20Photo%20_HF26483-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-nd3Wr3d/2/L5Njqcgd4Z92tWP98M77stXTSxFL7cFvvWHD2phGz/S/Wild%20West%20Cowgirl%20Photo%20_HF26483-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-nd3Wr3d/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4029,6 +4094,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/0/LbMkkjLvDjbQStJZGbT5DrfLCvB5VLH8NLKDnwnkt/L/_HF21127-Edit-Edit-2-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/0/Kbb5fV55n38zv2L4BVvXZt972szjb74X9Rg3m22zC/M/_HF21127-Edit-Edit-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/0/Kg5zP3snDGT6Xh5LKHtmpBcBV3gWzDCz84TRMdNFp/S/_HF21127-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4093,6 +4159,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Vpmx6ck/0/McTMxQrzvz2QJx647WmGSKcG9jFNV7h3LxFsbPMCh/XL/_HF21807-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Vpmx6ck/0/MX2VSGx9r2j6TLbD8W22ST884q94n8H8PCBSXq52d/L/_HF21807-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Vpmx6ck/0/KgmgskG2KK9hBKCHKXthCQcbT4Pp875Tnb8Fmbbq8/S/_HF21807-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Vpmx6ck/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4157,6 +4224,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QhR6h4T/0/LmtSpZ5zV7kPVKVGq5PRbWztCN7VbGC524VGMB4Wt/L/_HF28288-293-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QhR6h4T/0/Kvxx5dkDvJRBRSchsChz2JzSmnSxv3vtcGvMrsSvm/M/_HF28288-293-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QhR6h4T/0/LHdwcmfm6c948rR8RRx2L4NqNDTZpnXPp4CX2twWf/S/_HF28288-293-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QhR6h4T/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4243,6 +4311,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-5qMPjFM/0/MwHj3q7zLC55Hj8hGqsL63NCw5RsKcMw3H5tV6nQb/L/_HF22111-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-5qMPjFM/0/KhxgjJhcGVfSmjctbpV9zjvMPf7d6wQdZkV3WCc3w/M/_HF22111-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-5qMPjFM/0/MkJXZtTRtRfS9bLZddk65JDwJM6FtL2RMQNFMWVXq/S/_HF22111-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5qMPjFM/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4365,6 +4434,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qpF8JQN/3/MXGp7s6NCZ8CKgTjxQSwkm4pm3sX9g3hm3c3zdLz6/L/_HF29382-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qpF8JQN/3/KZmqfsvRk68ZwNbNM26wf4cBN9jLCwm3fb6dZth3C/M/_HF29382-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qpF8JQN/3/LRWHXnXrBQkBTzjfd8SRMQPJWmWQ2Dw76kRmX8Lh7/S/_HF29382-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qpF8JQN/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4429,6 +4499,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-6mQrB7h/3/Ltvqbq47gwtp8WnpPPTGpfZbFFPDSbdp3x6MqjXGW/L/_HF29317-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-6mQrB7h/3/LLQH9Dvpb7jTkfgx2WhqGr8f7cF899tgG764tdw2S/M/_HF29317-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-6mQrB7h/3/MfxFKLs97PR7H6XLJMSVGv7KWBHJBdN6qTSTp8bVp/S/_HF29317-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6mQrB7h/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4493,6 +4564,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6z4gpF7/1/NBRRHk4h3wX7sZTkzQvxnK5ZrXMQcX4vrh3X8tCpM/L/_ANA8432-Edit-Edit-2-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6z4gpF7/1/ND5BwnDhr4wnzw9fDX8hNCcrTQ5twQtL6bRf84zHb/M/_ANA8432-Edit-Edit-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6z4gpF7/1/MCvwQMvjqqhJqx8zpw2xFSR6gw7K2f7fVcjSrWx7v/S/_ANA8432-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6z4gpF7/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4557,6 +4629,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-TM27hkq/0/KW3K4b8hzGKWgZ42Fkn3f4rFbhVfnsb2w4Br6jmv7/XL/_HF21777-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-TM27hkq/0/L26b8cFrZN55kPm7gDs4KHGt7R2tg2SpdwqsqwVMx/L/_HF21777-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-TM27hkq/0/LpwPRKGvm2jBVBDPdfvRgHHMvNp4zsdNrxtJhvXFJ/S/_HF21777-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-TM27hkq/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4621,6 +4694,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KDtv3wc/3/KkdBFXVVqpZZPWd4R3wXHkFqbGXMFCCSFqL6dctBM/L/_HF28830-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KDtv3wc/3/MZ9tC8zVmF4DDqTjWvWf9mFNS47bF8MW4F22C4RRB/M/_HF28830-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-KDtv3wc/3/KbT748MsR9QbCqQj8ZRZxpnwMLPvSqjQc4VDKrNwR/S/_HF28830-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KDtv3wc/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4707,6 +4781,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rCpGGPk/0/M5Fq4MHmvrVh3Tb3Mb7WqMkSkkfjLJqX5Ch8mxLsS/L/_HF29022-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rCpGGPk/0/Nb62bgvFCMBBwkpFVmR7vgkMVcTPV2s6tVbf6hrFG/M/_HF29022-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rCpGGPk/0/LFhmPTM8TgrfFqB6ZpNQF2XbZq2SkvjRhPhQnRnjj/S/_HF29022-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rCpGGPk/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4771,6 +4846,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-SrPqX7H/2/LbFxqp74zGWp2dsN7mvjPMxGNx9g77CNp2QgdL7M4/XL/_HF22565-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-SrPqX7H/2/Kqj9BPxXBmd9t2K2kv455nW9fqKhDSFSkZPVTLJjp/L/_HF22565-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-SrPqX7H/2/L5GXPNT8Rc2HH8tpC4x9twVJd49V77F7x3W89tpBd/S/_HF22565-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-SrPqX7H/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4835,6 +4911,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Bq4p96c/1/KxcKNfMs5TwdD2nLp7mpsD3kHh5wffw85tVrzqtxB/L/_HF22202-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Bq4p96c/1/LPGMmtpSQkZjDxxLGHQbNkkr8mjhzHsZJLVzT9tw5/M/_HF22202-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Bq4p96c/1/KDVr2QXCkWTSNDDzhvQQx5Kq3WG28bmzVSpdGPVXs/S/_HF22202-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bq4p96c/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4899,6 +4976,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-KHf6d46/0/MdNZ6v7MCgKTB3psPBzKmz8X9CStkbhkPCL2Qbbr7/XL/_DSF8006-Edit-Edit-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-KHf6d46/0/KbGg22G5wKkbD4mVs6C3wbJwcr95x37wzrgQgm9m7/L/_DSF8006-Edit-Edit-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-KHf6d46/0/LsqVDQG4hW6BqnNFFRPTKRmTq6Z2rmHnVLkfRqqRW/S/_DSF8006-Edit-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KHf6d46/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -4963,6 +5041,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-vgJmVxZ/1/LJ45226bfgx5vwCcN4gp4BTDBMmPW59vP7FQfhg4n/XL/_HF26696-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-vgJmVxZ/1/LbX3MH77Q8jwvZ4spfjh74MQGSJdR9QGzmJ7LwhCb/L/_HF26696-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-vgJmVxZ/1/NVGSgk6hmBjhX3QNQmtGRZBk5TTqdWHqwQwM83GdM/S/_HF26696-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vgJmVxZ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5027,6 +5106,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-RKgJWdw/1/NB2HvhkVPKbL7CbQsWCf43TRDPg3KMvmBjfPcZm8z/XL/_HF27028-Enhanced-NR-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-RKgJWdw/1/LTDvv2qQBP8L85NBbczTbLLGHMfTWw3sdH6vwddCT/L/_HF27028-Enhanced-NR-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-RKgJWdw/1/K2pRc6b9MHwSRGNtvTDn2nJhhzjDvjStmDVdJQm8F/S/_HF27028-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RKgJWdw/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5091,6 +5171,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-k2GK8bz/1/MFhfvvHr2BVNVgXnZcprSrDrRp9JLCqGWh5PVK5H6/L/_HF27060-Enhanced-NR-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-k2GK8bz/1/NRpZTVQKwsQdTJ25QCvdxzNK7M7KPsQqpSCK4sH2P/M/_HF27060-Enhanced-NR-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-k2GK8bz/1/LThkwqXT2KkLRnMdr4GhDBPhXHcDLR89GqP5LDHzD/S/_HF27060-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-k2GK8bz/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5155,6 +5236,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-fP4DjwJ/0/KVhMHNfpbhg4SwP8wB7tHq7RBLtrKwrsTgmTkcqtw/L/_HF27574-286-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-fP4DjwJ/0/MLXxm4hwgKBH6m7W4wVgkNwCjCm4W2bNxZ2NWgbH5/M/_HF27574-286-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-fP4DjwJ/0/Lbdmch9vwS8HVdG4kthjJsJzC2XF2jPfd2PNQNjwT/S/_HF27574-286-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-fP4DjwJ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5219,6 +5301,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-mBqL25r/0/LBZHPvvHm5F2zVGzq9cQzFWjW9x3LWf7xKDWzvm6k/XL/_HF27624-Enhanced-NR-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-mBqL25r/0/LL5ZtnG42nzgd5nTfq9zPL4tjGnsTzTkPHsJK82x4/L/_HF27624-Enhanced-NR-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-mBqL25r/0/NhqJ7hDCF85RzgP92QR84PSkJGHhbm37RQw34GrRR/S/_HF27624-Enhanced-NR-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-mBqL25r/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5305,6 +5388,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-D2fQjDQ/1/LqfD3TK6MP3GG9JK3S4PNsQMcvwphMNVtvTTqndZw/XL/_ANA9703-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-D2fQjDQ/1/NB4MQ2hkDcW4KmNwj64jXrzQqwJdnS2FMVz2XgHSX/L/_ANA9703-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-D2fQjDQ/1/M6Kp9Hcczb8d8FBXm7BqVf8VTPBgTxcLQxRqK6FsG/S/_ANA9703-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-D2fQjDQ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5369,6 +5453,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8PxNHDD/0/NRbWpDPzNcvQ4Lp6wNVJBjKwLtp6Kz2vm9Vw45rxS/XL/_HF28337-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8PxNHDD/0/K6D3X27r4JVvVJZ4pKjRQf95nf76rbbrrXTzZmrVN/L/_HF28337-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8PxNHDD/0/KVDxdbkGc4x45rsdf528wQwcdXQdLtnkd9NzGtvVx/S/_HF28337-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8PxNHDD/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5433,6 +5518,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vHWM5g8/0/Mr8R4WPHM6QCLJBX2tn6bVpSmCsZd4LmRchMWntnG/XL/_HF28394-Enhanced-NR-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vHWM5g8/0/M5rFSm6HZKXndN4HC3JPGDjzfzRPQMZQLrnBCjXBH/L/_HF28394-Enhanced-NR-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vHWM5g8/0/Lv9Bp5488xht7d4NgbmXMXMKbjD6KKxhJbwxdnjD9/S/_HF28394-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vHWM5g8/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5497,6 +5583,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8KsLSkd/2/NBtr3M5cmnbL5kx8MWKqn7dPxSvcJbQbXg3C629Zv/XL/_HF28623-Enhanced-NR-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8KsLSkd/2/MLqvdNM2SphWcm6GhQQWLCnNN9ZxQFTVh5VXzRdgX/L/_HF28623-Enhanced-NR-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8KsLSkd/2/LRKgdGvwJjXkdP8B4DfvzsDDkBx6KZkGmWZn2tsXc/S/_HF28623-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8KsLSkd/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5561,6 +5648,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-sz7RwkR/2/Lzq3G75TvTSNCZK9kzNvgMNDqb9srPPpFm7prdgv2/L/_HF28639-Pano-Edit-Edit-2-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-sz7RwkR/2/MRX8MVB2jBqbF7BWV4dnkvGHCnG7LqzzTjMp8HgRf/M/_HF28639-Pano-Edit-Edit-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-sz7RwkR/2/KcSZwB7R5gX44TjCphPNV9NLWtzvZGc8NHnWpG5wf/S/_HF28639-Pano-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-sz7RwkR/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5625,6 +5713,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8NZ2XjP/3/LSC4TrmkqGfpBPVKjPBfGpnxcJ6nnW2DSTDCq7MR3/L/_HF28772-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8NZ2XjP/3/LHMrKBCPmCK2TqH29Q63dsPJT3pgcRT5tjmtGmsKb/M/_HF28772-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8NZ2XjP/3/MsGfBFH4XRK6MhWsQKkJNxc5PGRcPgcTWmGZkVbX3/S/_HF28772-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8NZ2XjP/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5718,6 +5807,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-L29gZ2Q/1/KZXR2JM9Qr7Hz5ZkQj6KKC8TsZTNjHGdQ6SJtc5qX/L/_O1H0201-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-L29gZ2Q/1/NVDG7DnvGRCg79W4X6N7wrH7s73TGBHrs7BsDznb3/M/_O1H0201-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-L29gZ2Q/1/MXw3PdkpPq4swbzBDJQFTR68v4xWwxNBxWjkfjw9M/S/_O1H0201-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-L29gZ2Q/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5782,6 +5872,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-H8VZWJM/0/M4tphSPrfskTsBH3wrSdWTWsRxDGnBdvBMmjtv5kp/XL/_HF27987-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-H8VZWJM/0/LVLgtLT2cLTsFpt6xTxzm97Ch8C6dqdzBhZ7zZXdM/L/_HF27987-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-H8VZWJM/0/LwGKrf4Mgj9jnmG3d6M9cZDTBDhrZJGNXrGcB4XS4/S/_HF27987-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-H8VZWJM/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5846,6 +5937,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Sbr5tSx/2/KPVhqMRf9hH3b2jB3xWKhCrX3MmvrgwzKF2TrdsLW/XL/_HF29578-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Sbr5tSx/2/KKdWLP2HPS3vrqdf5MKPnX4VDwfLXvWqx3RNwn78R/L/_HF29578-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Sbr5tSx/2/NGfc3fDQrVQgHk8wPP2XQMGRnWzfTHQ2PSX96C8xv/S/_HF29578-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Sbr5tSx/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5910,6 +6002,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-shXMJQg/3/MzccgQbBSCGqPJzn7L97Jh4ZWhCqDTzgDdv4mcRG3/L/_HF29499-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-shXMJQg/3/MFXTmVLR9ZXVW6kmM2mthmMGH9gL8zzNwWJBwZsFj/M/_HF29499-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-shXMJQg/3/MdW63rMWVJLrZCW69Hb2bkMZT4sTLkXjtgZ9xvK4k/S/_HF29499-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-shXMJQg/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -5974,6 +6067,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-grR3fmV/3/KsjDCgHtGQ7FpFrLrhnkn5LnPXrTLVsLGxZJVBVST/XL/_HF28994-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-grR3fmV/3/NgcrnvRsWx2GXmbWDQnPjwj9NsHRDS79spQtfckz9/L/_HF28994-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-grR3fmV/3/MTB77PD4sRMP4DqgscQvScFnFxZmLGFQMfkNBMMHs/S/_HF28994-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-grR3fmV/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6038,6 +6132,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BQ2vH4C/0/NQ2PPN6sfGHkDDGbv63wsgZDbkfSKGcDLmq5sqtfq/XL/_HF29979-Enhanced-NR-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BQ2vH4C/0/MBb9MZN8gZdT3R9gp2pKFhKmCVsR5S9VVJccvxkdC/L/_HF29979-Enhanced-NR-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BQ2vH4C/0/Ktk4DZjjVdGvcQvpkGwmMkh9L5hWfGtQWMgZvXG9T/S/_HF29979-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BQ2vH4C/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6102,6 +6197,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-mBMhRpJ/0/K35PvBLQG623nZKbJWC4FSR24R8GvzRg5WDRnnPsz/XL/_HF28555-Edit-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-mBMhRpJ/0/MzrXxGHzKVm6jZdwrNdwZ9XzZMDLWv8Kz2CWPxd4R/L/_HF28555-Edit-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-mBMhRpJ/0/LvdXmqBh2TVBKxbsnDGGfBwPWnvM38X5jHTBWV8wR/S/_HF28555-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-mBMhRpJ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6166,6 +6262,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-CdpCkV4/17/KPWG7scczV8VdLgQ88cKKndFGCMcCRQTZ2zbtmScK/L/_HF29137-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-CdpCkV4/17/L9zhCZQx3V3MzBrrJC6dz8QZq5mZHKr2mmSsCzRFL/M/_HF29137-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-CdpCkV4/17/MVqBd6WppKV5j55pPQ4XspKH7dBrbVKZF7XfvPTHw/S/_HF29137-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-CdpCkV4/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6230,6 +6327,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-v3xhPgB/0/MFB9Z5vNQJkvZT9HS7NMrKXGM5cX7rLRmWFcSPcNw/XL/_HF29324-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-v3xhPgB/0/Kj32RxdxqGtXPmNp6btS9gDQgZGPGPgh7KnPP8HrV/L/_HF29324-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-v3xhPgB/0/NhwFSwmMgpp5vNfJVq4DZsTBs3GPQp7frfjSrwVrZ/S/_HF29324-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-v3xhPgB/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6294,6 +6392,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MCMxmKp/0/KXKHSFNfVjqc85QSVJD3KzkBQkwVBw5rnZXxZ62PD/XL/_HF29149-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MCMxmKp/0/M98FvbdLCVs5VQwF4TP8rtCDKQBnHzJQskHRQtSLx/L/_HF29149-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MCMxmKp/0/LTKJWxwVG9gtXNfrZW2t6h7qWTdgjQj4tCPZV5Kws/S/_HF29149-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MCMxmKp/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6358,6 +6457,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5rV2pQS/0/KK4sFNHs4FTHMpN7vSdbMvRSkvnQ97HptpzwctfRH/XL/_HF29396-120-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5rV2pQS/0/LQRxVbFHDdHpwgjCGBwk54xMvHTsSFQ6svt3hKB2Z/L/_HF29396-120-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5rV2pQS/0/NMMjMnfKkqxx9k3cmJHssFpLPtH2BvjTQBSgCrb8J/S/_HF29396-120-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5rV2pQS/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6422,6 +6522,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5fQjwcv/0/Mw4K3mtQRqMMS8vj66DwbpZSvDz7fSzKPT9cZ3B7C/L/_HF29299-126-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5fQjwcv/0/LwnbGqM4vDQHDp7S8VH6wVmpjTDG8tcQZK3mPhGkx/M/_HF29299-126-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5fQjwcv/0/NQXfLzXtgtMnCmBHNfNKRFmcXQwphrBBrFDZZTqF8/S/_HF29299-126-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-5fQjwcv/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6486,6 +6587,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TJbNP4k/2/KfsCZGq3CqznF6NprXM8W7nMHgztQNqckKMH5zLtZ/XL/_O2H0560-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TJbNP4k/2/KsnsWfmBxjxLZkCcngLqgVZbkVzDFxpJp6NGCddpw/L/_O2H0560-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-TJbNP4k/2/MKFDBxn437HMzWG3Z8psTcx6b4RZnFKXqVWtd48dh/S/_O2H0560-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-TJbNP4k/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6550,6 +6652,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8DfVtth/6/KzKzFm6zRKxGPMhCMHbc4b8fCtjxQFRMGfCRsZnkZ/XL/_HF20002-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8DfVtth/6/MxFFz5HCwbp7FxCSjSGDLNKcRbNNj8HvKR47sxDm2/L/_HF20002-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8DfVtth/6/LHPsPdH8PvqLxMdLRH5psjkQhSHHGKRgRSXbjX9mz/S/_HF20002-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8DfVtth/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6614,6 +6717,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NNXnThw/0/NKKLDQHPrwng5DPBbbCqdKx9T36XdJkXjPBvmLWcD/L/_HF29352-102-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NNXnThw/0/KMPcs7sDQzMbTdtvnvqLWkWGMpSSndm8Cg8XqNpRr/M/_HF29352-102-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NNXnThw/0/MgqDs32ZsNSW9szNWzq3cG4d5nJBzd6bGC3b4Gsj3/S/_HF29352-102-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NNXnThw/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6678,6 +6782,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8rx6BzZ/1/KfZFfbjXcQVc7XT2XSkrfbzX3B6WN4HbVrPwxp5jP/XL/_O1H0097-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8rx6BzZ/1/KsPphdDBj92Fs2FWrMJzRcTD9qN4rP32LsjL4PhBQ/L/_O1H0097-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8rx6BzZ/1/MzXt28gVcXwgnhjR45Ws4fW5HGWKRX44gvQJStkvC/S/_O1H0097-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-8rx6BzZ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6742,6 +6847,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QGW2q8p/0/MD63CsLMvkSGpF3wJZzvtHTpSc5NDTDBj6jhf8zms/XL/_HF29234-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QGW2q8p/0/MXfXCVTscPBLXRm2qr6NDCfXtmrtP5dr2RZ9rS9Zx/L/_HF29234-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QGW2q8p/0/NJXtqX3mcQb7HwGfJtHb7LRNZJt3mSSdFXKFpXSMj/S/_HF29234-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QGW2q8p/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6806,6 +6912,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-JFt3T2W/1/MJffN76ZHpCHTp86qKjtZQFNKvKHRcSsn4zd2vHPh/XL/_O1H0282-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-JFt3T2W/1/KwZWx7LCprsbgWv9gj2jVwHDB3c2WFKmGJKLXGnXN/L/_O1H0282-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-JFt3T2W/1/LLh7GgqBNJNKk5SfL6Ww9VdnjcKbvxFBrPdrkrz4L/S/_O1H0282-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-JFt3T2W/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6870,6 +6977,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-pdW6WgR/0/MXFqJfLD4r9b9HG9NQGxXkPLG2q6SDtpNwJKdxJt3/XL/_O1H0289-Enhanced-NR-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-pdW6WgR/0/KfhGNxnV6zZQG8xsrsLdxcV4rHPNGQFC6F2rMKnfk/L/_O1H0289-Enhanced-NR-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-pdW6WgR/0/KpdVf6gHDz7QnhbdBrrMpbKMFjxD9RWgvQZq2Mm8F/S/_O1H0289-Enhanced-NR-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-pdW6WgR/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -6934,6 +7042,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-sJDHsjN/1/KdnFpfHgQvkbBDCFLdKbwhVpBxKZ8qLRqzMp7KV3Q/L/_O1H0323-Edit-Edit-2-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-sJDHsjN/1/LvF5Z6rND5Q4ZCvB27vZ6XFSxPqvfPsVJScn7GBZ6/M/_O1H0323-Edit-Edit-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-sJDHsjN/1/KfjKn9zm4VGSjFZBV2StTng3LjXVKccxmNjqhJjxq/S/_O1H0323-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-sJDHsjN/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7021,6 +7130,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-KNRMjjD/0/MfPsfXbPC5CXnDJqNPphrqkrZBSx5pgWHv37PhkCm/L/_O1H1060-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-KNRMjjD/0/M8HWDKdx83VQMq6xRxKLCS3vHtkVJVN8wsg3NfsFv/M/_O1H1060-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-KNRMjjD/0/MLKWQVNCR5Hc3rnbmX6xL8vw8jJWfJ4dsH2gPSCh2/S/_O1H1060-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-KNRMjjD/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7085,6 +7195,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-N3S92fb/1/LzQrVnQDjkwdLHJJRbpgd4DSfgJjV68gM8HfWS5W6/XL/_O1H0439-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-N3S92fb/1/L7sPrNm8qNQJTFwWQpM7Wk7nQxhkBRPDcHjK9K9Wh/L/_O1H0439-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-N3S92fb/1/NMbC628qBbzSp289z4j2Jrs6vnKfL9qpN4gzTHNXQ/S/_O1H0439-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-N3S92fb/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7149,6 +7260,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Gqw3s5s/2/MxX7CfNM5cx7vQR6b3p9Hp85qpvtDSN4LcNg2shPK/L/_O1H0371-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Gqw3s5s/2/KXt2SpHzDxV6qGdkNxq5JXmNHBgk2WF8CZGtS5R8M/M/_O1H0371-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Gqw3s5s/2/KbvSHxzpgntqc88MNCwJLpHxLMjK7zzG6Hkk2hWhx/S/_O1H0371-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Gqw3s5s/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7213,6 +7325,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMjhQVd/0/M5gnFpHCsxktmCsT2Qsv3xv4ssfhCfgjRp6xwztgn/XL/_O1H0106-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMjhQVd/0/MfR63bm84R4N5rgzLJdww6FdDBJBdDZ5NHnVCPTn6/L/_O1H0106-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMjhQVd/0/KmXwtxxKnH3b2WtmRJrpGssj9ZvJP6MfnwDJBxjSh/S/_O1H0106-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xMjhQVd/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7277,6 +7390,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RLZFsxp/1/KbpP2SB6fqPbmhj6Rs4sTKSSthjcbrBs9vWKWvJN7/XL/_O1H0544-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RLZFsxp/1/NFTLb73rnjJxwxMMXVHSsLMH3nrvBmN4HwbDpVrWg/L/_O1H0544-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-RLZFsxp/1/LtLNFdHWTfHwqCQB3zJrhFFmT9CQmbMKgwk5dqtZn/S/_O1H0544-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RLZFsxp/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7341,6 +7455,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-f47g8KM/0/NZ8ZpFRGxmbzJpMLXJnkZkCXL3QfFtqhT4VLT742C/XL/_O1H0554-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-f47g8KM/0/NX9Z4RJX5hqgrTQhPc2HwHxM29twfJvQMLMPPwfjs/L/_O1H0554-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-f47g8KM/0/LBDtmkCVBXfZGT9vfrftZzGf39m5xj4VhKkKQD6b7/S/_O1H0554-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-f47g8KM/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7405,6 +7520,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-45kXhng/1/MF8kf5ZtWfPD9B8Q5XcbZSfGmTT9q6CSPPtMRptmS/L/_O2H2806-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-45kXhng/1/K29BFrSVfdpjRTM9fkZwmMKJJr6TSBVrTcFSDT76T/M/_O2H2806-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-45kXhng/1/NFkKzQP5f7H2Z3JQX2Kk6N6Nxw5xKdBftK5hBB83x/S/_O2H2806-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-45kXhng/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7469,6 +7585,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-MSnkjq2/0/KzWSPX8xtjdqCZnwD3sDDkRvG9bWCSJ8ZpwrptL5Q/L/_ANA1082-Edit-2-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-MSnkjq2/0/NdKdvcgFC85fMfMhPF4TpnXZGfVRTJM4K82CpC42L/M/_ANA1082-Edit-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-MSnkjq2/0/MdQrp7frdZbfbFms8wSmP65CFVpzxRL2pSsbHs5MG/S/_ANA1082-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-MSnkjq2/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7533,6 +7650,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-wdDHfpn/2/LGXBBjTGPR3ZC5KhPh4wF58gwpgBP2kMhCrqwMFNc/L/_O2H3024-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-wdDHfpn/2/KqPCxjcBFLtn8BnNZn3Q3z2gn8ssXTxhTgsHKh3pV/M/_O2H3024-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-wdDHfpn/2/KHQTN2SDnDsqnMcF7tmnZHDwHXxdKg2rWjffn2Vp5/S/_O2H3024-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-wdDHfpn/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7597,6 +7715,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-CT5ds2V/0/LXNb4gTWVq3vFFBXMkkbZMDfZXS3tcbPf6XF3pNXW/XL/_HF29662-277-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-CT5ds2V/0/NLVpZFwvm298wZmSQXNfRGLgTQfjdGnmxjcdgW9fq/L/_HF29662-277-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-CT5ds2V/0/LnSqQdKwRZhS3c3hLVBmKt5rqNdVGmkSBm4jL8b6R/S/_HF29662-277-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-CT5ds2V/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7661,6 +7780,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Zfp4KwJ/1/NVx7fxmWk37TswMb2BTgGV5f47LMW4sWrNbk5HTZ8/XL/_O1H1893-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Zfp4KwJ/1/Ksp64h6xbVnszd6chT7F8JgBtqkZqD4QkrPX6Pf95/L/_O1H1893-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Zfp4KwJ/1/NNHcP3JmgVLxffHDCZC82tsmGzPq82VSHRh2HPKrT/S/_O1H1893-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Zfp4KwJ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7725,6 +7845,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-K2f4VC2/0/KcDMp2wQM8h5zC58XKFZzz8GbmRHLw6S3Gw69QVHz/XL/_O1H3668-Edit-2-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-K2f4VC2/0/MCF5JnmGbTnTgd4jZ588HqHXCkmz5wM2kSLmMVtZH/L/_O1H3668-Edit-2-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-K2f4VC2/0/MLJjhDq7s46KhKQBvLc4tnFFhLn5vCsZk7jg5hhQf/S/_O1H3668-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-K2f4VC2/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7840,6 +7961,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bhb655B/1/M8gtbb2XDP2cDRG7bb2mfKbcFLXgM3xZpvx8c8bbc/L/_O2H2141-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bhb655B/1/MmHBkdB9VQnZWxvwjcwwqWRPFfSwgXRGLpBKgHvHw/M/_O2H2141-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bhb655B/1/MXgL3gNZ3QnvRPjGTfJ2NS48CtLCX8q79QMZ45Ztr/S/_O2H2141-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bhb655B/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7904,6 +8026,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6Mqqssm/0/MCZhcf5mmQzM6NCRnHsPVnrHjRJHS9xZ3SZ2bMpnq/XL/_HF27335-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6Mqqssm/0/MXPpR4b6JPCRvwvmN3LM9qcGXhNs5ch7cKVPBCRB7/L/_HF27335-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6Mqqssm/0/NZrwkB2Sw9FHnTRjHvXvbK7G6bzJJ9q7P9Z79hh6H/S/_HF27335-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-6Mqqssm/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -7997,6 +8120,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Bpq96Kr/4/LmhkCLt8XT6jG85ScTQff67PkwVZ3MPJc3XJBcm3X/L/_O2H0019-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Bpq96Kr/4/M3WhzsWPPq5gfPRfvR5CgGdtKhwGr2CbbZHkXhfSD/M/_O2H0019-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Bpq96Kr/4/LMVPtDVtwgCnmcgwkVMPCtfnMzNc2pGJZVFWbwtd2/S/_O2H0019-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bpq96Kr/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8061,6 +8185,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-w3rxmgg/3/KZc7Kv4v6qnBbgT56fjQ7H9fN3sJn3XsmbNnGgsms/L/_O2H0105-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-w3rxmgg/3/LZk7w9WcJv4zZpcszQmcJQc74nGqzzmvzzs6BZLXM/M/_O2H0105-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-w3rxmgg/3/LH3pdwwpbSkh9K8VxHkLkd5QVbStnHsDNTSsbs6bh/S/_O2H0105-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-w3rxmgg/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8154,6 +8279,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qJLHBWD/0/NDjQ7CwP7mjtV7bR9g88KJ7mSWwQMBhLDGjgW6ZK9/L/_O2H0142-Enhanced-NR-Edit-Edit-Edit-2-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qJLHBWD/0/NNSXpQzFz9LKV4Zn3mSBvxLHXrmfBgchM5Rf2Fhrb/M/_O2H0142-Enhanced-NR-Edit-Edit-Edit-2-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qJLHBWD/0/K3NMNQbJskGDkTfK2GXqK3W52z5jCHm388LGKFXPh/S/_O2H0142-Enhanced-NR-Edit-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qJLHBWD/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8218,6 +8344,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Dh8nT9S/1/NNk4VnXMfmVFdmHHdPHtQRW7GMhqQdjBqPxJrKtC6/L/_O1H1015-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Dh8nT9S/1/KsM2r7nbRFTCjtzhPW74sj5C4XXTMwCfznz3SXvWz/M/_O1H1015-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-Dh8nT9S/1/K9WQ336zWs2CxJSscQvPL6B36Lq7pDV9DnvBkXBVC/S/_O1H1015-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Dh8nT9S/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8282,6 +8409,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-4sbVfhW/1/M7ddKt7SM3844wNrd89PxhKF82wwvJLz9wHP8qb6S/XL/_O1H0785-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-4sbVfhW/1/LRwRM4MK9wj9GnX7PBb5wc8nMC9Z52pL24MKssMb4/L/_O1H0785-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-4sbVfhW/1/MbpRgSDKtpMvQN5WTDVBfnHW76kSLm59bHDbzRdV4/S/_O1H0785-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-4sbVfhW/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8346,6 +8474,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rZpSGr2/0/LV4ZkwqgdRmvtHjmrPFDQWmpGrtvSF9c3qpW3s7NL/L/_O2H3282-Enhanced-NR-312-314-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rZpSGr2/0/LBT6bPVzNNCvLQRG2Nxsc4kGQvKjN6zPCXLJJZ86F/M/_O2H3282-Enhanced-NR-312-314-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rZpSGr2/0/M53gc444ngChgbTHXjFvPKWCSkBNWhxpgTfw8bR3J/S/_O2H3282-Enhanced-NR-312-314-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rZpSGr2/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8439,6 +8568,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pqcmRth/4/MsVLb9LNSVb8ZbH6JwqRRCJ49DRdZf3Gfk58D2xNJ/XL/_HF20624-Edit-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pqcmRth/4/NLLmn3h44c45ffL7WDFBk9K3sbKznfjhgTSFd6Xgb/L/_HF20624-Edit-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pqcmRth/4/LfqZBtctwXKvcvzGS7SJWGXHWtr7hnq6Vz32dLJMG/S/_HF20624-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-pqcmRth/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8503,6 +8633,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gvxp8b8/3/NBRpwwwGJ2GPQ853QhJ62jtqTnJc4Sph3gkBv7Nz9/XL/_HF29501-Enhanced-NR-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gvxp8b8/3/KdhX8ChxFQPGqJrDXdJJGJqxq8qRbhCnzj8P3P6s7/L/_HF29501-Enhanced-NR-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gvxp8b8/3/LFvsVwQ37pzVPFmZnxJMcQJsh73hrwDCgZJ7LW73B/S/_HF29501-Enhanced-NR-Edit-2-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-gvxp8b8/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8567,6 +8698,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hM67hBK/1/MW6rGQQJSkvCL6GRJpcJJvWzmKWvr6x4ZdQwB7H37/L/_O1H0318-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hM67hBK/1/Mz35S8cBgBk3Lv3XTsLkxTjrXTJV5SFd4b5xxRnCz/M/_O1H0318-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hM67hBK/1/KGQsMG7JpHXj5cbBP96vZzSf9qfSTbqq9CZ5mwZmj/S/_O1H0318-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hM67hBK/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8631,6 +8763,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vnbxvkh/0/KWzDfWXtgcsmp2khvf9xxPDCTjXtWnTXcdhcLRTRS/XL/_O2H0192-203-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vnbxvkh/0/L7ZfqP48vZ62h9DWsSjdmf2jgtxTwmxrfMxJThrTZ/L/_O2H0192-203-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vnbxvkh/0/NNC8nzD52txWKKvfhDdDDzdRSk6FxpFgQsPzhTWHS/S/_O2H0192-203-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vnbxvkh/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8695,6 +8828,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FhwDm6k/6/Mr83b43qD5Zsvr8QHr8xKTfrH4DQmXbwZhfZLkqPv/L/_O1H0781-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FhwDm6k/6/M828QmCCCTdGjjPzzn7zHpxSsC7MBDqLb2C5BWM5t/M/_O1H0781-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FhwDm6k/6/NGD4ps4Kst733hshr7qt98X55F9HhQLJP85VF9C2T/S/_O1H0781-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-FhwDm6k/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8759,6 +8893,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FKmvVCn/6/LFvKjkd3vWHhRSmX7sBKjfkHPnjkrKHxmnhsrFs2N/XL/_O1H0778-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FKmvVCn/6/Kmc9nNSNJGp4jVXGqdQC2HwMqHhrprGhvfcj3BrzH/L/_O1H0778-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FKmvVCn/6/KvhrzKswKZqbnWrKgVWNgsChB8JZcGczDksDf8z6n/S/_O1H0778-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-FKmvVCn/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8852,6 +8987,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-58vzHcQ/6/NQj3LpDW3srTrmt62dBFNwBdP3FMzJTJM6TvRmqdQ/L/_DSF9064-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-58vzHcQ/6/LG8KHwtBgc4243mSWCTg28zrWtGm8vHhMmNdWM8L8/M/_DSF9064-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-58vzHcQ/6/NPSKZXJXTGCH9b67trKJhw6btw5TgKt8CD7qpq5w4/S/_DSF9064-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-58vzHcQ/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -8938,6 +9074,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-P5PB5p3/0/NBhF5DPR4h4rfczHKKrSHwjLd6Sj8QKm7wrBRJwCm/L/_HF29370-115-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-P5PB5p3/0/KbRCmJcQjDgqbtWrF6qhtBpXDDwWPJfNpPn9rNXMC/M/_HF29370-115-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-P5PB5p3/0/K2Fqp6K88rbbbpBCqHfcvTLNL6XkrKMSPNXf3sfpv/S/_HF29370-115-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-P5PB5p3/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9002,6 +9139,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-28HMKqF/0/KpHRc6xRx24W4fsqxpBsvn7gs8kKvRSJ5j3fNs3cP/XL/_HF29473-185-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-28HMKqF/0/MSgbVRg6LXHT3QMSFvGdxwXjLHhbn9KXJrRF5RFH4/L/_HF29473-185-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-28HMKqF/0/Lsmwz66HdKCZbqBtcthG5ZVmj6sKcV7Bd87pfBQNP/S/_HF29473-185-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-28HMKqF/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9066,6 +9204,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hcXpx9m/0/Lb7gLPCTbgp3nswZJVk95HFFBxNzFh9QQ2hMhcQ4M/XL/_HF20352-348-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hcXpx9m/0/NPBz5jNZb4CvXdSCCbpzvQnMQXK6Zpjq6v244bQRg/L/_HF20352-348-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hcXpx9m/0/KbL7Lc7LDs9pHq7wRG54mNLN2XQDWBdNZ88vKNxhn/S/_HF20352-348-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hcXpx9m/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9130,6 +9269,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-R4vHvjb/0/NC62cQNtS8483Z7vbkqhkd7Hsq9szqJxWt95C57CB/XL/_HF27866-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-R4vHvjb/0/LpSFwDc954kWWfTWGGLqdfBM89xNJq6STHShrMCqL/L/_HF27866-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-R4vHvjb/0/NR5cvJrFFsLsqcR7hVqVGLVgXnxS46KtQbVJFzXrV/S/_HF27866-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-R4vHvjb/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9194,6 +9334,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xH6DsjR/0/KbW27tWWbSZB7PZw8KZSmkLVTVG99gg26LtZvTKFh/XL/_HF28227-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xH6DsjR/0/NFSnxjPqLdHzCQkRS7HmDHPVXRTvpKr9VRwhGpWFZ/L/_HF28227-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xH6DsjR/0/MHcmvVm7Lbn6vbpknDJH6KfPcVxJGJFHf65DJhCbh/S/_HF28227-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xH6DsjR/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9258,6 +9399,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NcQTPBp/0/KJDw8gNpT6PM5xxgLKVfrrkKHXgtKNSWLRpJnFVRj/XL/Margaret%20Wilson%202b-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NcQTPBp/0/NRjkr6cGNWSk5SsKT4mpmM3TBhJL9dWkLwgh6fmCn/L/Margaret%20Wilson%202b-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NcQTPBp/0/MdTL8STQmdGbRQjxNS2Z77KQc9LxgXt79qvqLQSP6/S/Margaret%20Wilson%202b-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-NcQTPBp/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9345,6 +9487,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-7SDqg5R/6/LGDbz55brmvhNmTKqBgmpRwW8cg7zkB2stWm4stnK/XL/_DSF9114-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-7SDqg5R/6/NZxPgJ67f6hW6D6JqwjzQ7DT5CGcXztR3S8LVwpSd/L/_DSF9114-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-7SDqg5R/6/M7P7cmtQDRRh4xhXJ9X5TjSLgBGTCW5pJptdWd6g4/S/_DSF9114-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-7SDqg5R/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9432,6 +9575,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Tv9qCJB/3/KShm8gh9CV9TXHXbJnnVMmhpRCJXcBdwvMch49Mp3/XL/_O2H3087-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Tv9qCJB/3/M6mhcHWBkGFrtw5QmzzKwkvxmdVLPt9w78HfWQgXj/L/_O2H3087-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Tv9qCJB/3/L85Z56xRb8xr3qsSjdQZvHzmjRpbxQqGH6PNCpTVN/S/_O2H3087-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Tv9qCJB/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9518,6 +9662,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-nKHmkvM/2/Ksr7wd4LrB6BmLLwmnSCzTcFQ4RzBMH2cgqVBmh54/L/_O2H3057-Edit-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-nKHmkvM/2/LTFgpp3gnd7XwgzhrRK8qfVmmgw3xsVCZGZjGhJZs/M/_O2H3057-Edit-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-nKHmkvM/2/LzTmQCWTkzwwGMtf2rrSgSTPvtw693TQ23LLKnMfn/S/_O2H3057-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-nKHmkvM/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9641,6 +9786,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sGtzTtH/3/L2mkgPrCSkhX46gmCmcXCwQSdShCRbLPNzm5tkf43/XL/_O2H2257-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sGtzTtH/3/KP8sZLg723LJQmt8s5FFG3d4GhM4LbcMw9fxdZCKB/L/_O2H2257-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sGtzTtH/3/KvPnJzPbsxZbMG8HJqm69Fbp3DfNSrX4WfSS7LVbT/S/_O2H2257-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-sGtzTtH/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9778,6 +9924,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RHD6KVc/2/NGtZh9Lx8xnG946PtL9vSf6xGcmMWF3CrWwWN7WBh/L/_HF22146-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RHD6KVc/2/Ncxzd4RPbHJHmX7mjvt626gcZ5J7XcDBcdRvmZBcz/M/_HF22146-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RHD6KVc/2/NDX48txXWTWmLgq4G8RLVQt2LtmHRFdBg7gWRhMP5/S/_HF22146-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RHD6KVc/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9833,6 +9980,43 @@ export const galleryData = [
     "sortOrder": 180
   },
   {
+    "id": "i-Z34Lmz4",
+    "title": "Frontier Life And Western Landscapes Fine Art",
+    "description": "Explore frontier life with Wayne Heim's western landscapes fine art. This powerful works of art piece conveys cowboy artwork, Western cowboys, and frontier life, perfect for fans of western landscapes fine art. © Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/L3rmVZcZC42bXPxbcczgKN7jVd7zzwkCG7v5zNPRW/S/_HF22086-1044-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "frontier life",
+      "western landscapes fine art",
+      "powerful works of art",
+      "cowboy artwork",
+      "Western cowboys",
+      "cowboy portraits",
+      "wild west photography",
+      "fine art Western photography"
+    ],
+    "story": "This image embodies cowboy portraits and cowboy artwork, captured by Wayne Heim in his signature style. It reflects wild west photography with a touch of fine art Western photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 181
+  },
+  {
     "id": "i-xMCZJNR",
     "title": "Cowboy Art:  Where Are They Going?",
     "description": "Black and White Western Art of a law man trying to determine where all the shooting is coming from. Wild West: 1890's comes to Old Bedford Village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
@@ -9842,6 +10026,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/LcQh7Sh8w6wB99LCG8XG3fTBX5twptr87chvSQSpR/L/_O1H0580-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/M9kLq3Kf7MMPzLHKfnd3txmqSVhFZ7Dw8TnswGZbK/M/_O1H0580-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/KXkrnzXRgNQXZDVfmPVNvRj3D9K8wgTh4wNwBRSMr/S/_O1H0580-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xMCZJNR/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9894,7 +10079,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 181
+    "sortOrder": 182
   },
   {
     "id": "i-QJR63LW",
@@ -9906,6 +10091,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-QJR63LW/2/KcNZ5BtvVqV9jcWt8G8C2zqTb4Qj6ZBDwV2sr8f7J/XL/_O2H3071-Edit-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-QJR63LW/2/LvNfQhpD5x9r6XSMTmVTf95QXdj3BBBWRtD3VbQxH/L/_O2H3071-Edit-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-QJR63LW/2/Kbh5v6HKDZJ9NtdqR4ngnRprrCZbHNXtDswmw6bJX/S/_O2H3071-Edit-Edit-S.jpg",
+    "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QJR63LW/A",
     "keywords": [
       "Black And White Cowboy Art",
@@ -9958,7 +10144,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 182
+    "sortOrder": 183
   },
   {
     "id": "i-p6nks3C",
@@ -9987,43 +10173,6 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 183
-  },
-  {
-    "id": "i-Z34Lmz4",
-    "title": "Frontier Life And Western Landscapes Fine Art",
-    "description": "Explore frontier life with Wayne Heim's western landscapes fine art. This powerful works of art piece conveys cowboy artwork, Western cowboys, and frontier life, perfect for fans of western landscapes fine art. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/KpdT6X9tCZ64s8GBmPsPjnrZLgZnQkgLLwG36nmJn/L/_HF22086-1044-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/0/L3rmVZcZC42bXPxbcczgKN7jVd7zzwkCG7v5zNPRW/S/_HF22086-1044-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-Z34Lmz4/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "frontier life",
-      "western landscapes fine art",
-      "powerful works of art",
-      "cowboy artwork",
-      "Western cowboys",
-      "cowboy portraits",
-      "wild west photography",
-      "fine art Western photography"
-    ],
-    "story": "This image embodies cowboy portraits and cowboy artwork, captured by Wayne Heim in his signature style. It reflects wild west photography with a touch of fine art Western photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
     "sortOrder": 184
   }
 ];

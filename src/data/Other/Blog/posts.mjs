@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: "eye-of-the-hunt",
+    title: "Inside the Frame: Eye of the Hunt",
+    date: "2025-10-28",
+    excerpt: "A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.'",
+    cover: "https://photos.smugmug.com/path/to/your/coverimage.jpg"
+  },
+  {
     slug: "inevitable",
     title: "Inside the Frame: Inevitable",
     date: "2025-10-24",

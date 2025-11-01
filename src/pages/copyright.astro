@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const currentYear = new Date().getFullYear();
+---
+import SiteFooter from "@/components/Footer.astro";
+---
+title: "Copyright Notice"
+---
+
+<BaseLayout title="Copyright Notice">
+  <main style="max-width:600px;margin:4rem auto;padding:2rem;background:#fff;border-radius:8px;box-shadow:0 2px 16px rgba(0,0,0,0.07);font-family:'Glegoo',serif;text-align:center;">
+    <h1 style="font-size:2.2rem;font-weight:700;margin-bottom:1.2rem;">Copyright Notice</h1>
+    <p style="font-size:1.15rem;margin-bottom:2rem;">
+  All images and information on this website are copyrighted by Wayne Heim ({currentYear}).<br>
+      For more information or to license an image, please click the contact button below.
+    </p>
+    <a href="/contact" style="display:inline-block;padding:0.75rem 2rem;background:#222;color:#fff;font-size:1.1rem;font-weight:600;border-radius:6px;text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,0.08);transition:background 0.2s;">Contact</a>
+    <div style="margin-top:2.5rem;font-size:1.05rem;">
+      <strong>For additional themes and images,</strong> visit our <a href="/glossary" style="color:#1a4fa3;text-decoration:underline;font-weight:600;">Glossary</a> page.
+    </div>
+  </main>
+</BaseLayout>
