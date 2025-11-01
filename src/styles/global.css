@@ -38,6 +38,18 @@ main {
     max-width: 740px;
   }
 
+@media (max-width: 600px) {
+  .space-content {
+    display: none !important;
+  }
+  .picture-show-content {
+    margin-top: -10px!important;
+  }
+  #picture-show-content {
+    padding-top: 0 !important;
+  }
+}
+
 .sidebar-column {
   width: 100%;          /* full‐width on phones    teee        */
   max-width: 320px;     /* cap size so it doesn't stretch  */
