@@ -627,8 +627,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   return (
     <>
     <div
-  className="min-h-screen bg-white text-black font-serif px-4 sm:px-5 md:px-8 lg:px-12 pt-1 sm:pt-5 md:pt-8 pb-8 overflow-visible"
-  style={{ fontFamily: "Glegoo, serif" }}
+  className="min-h-screen bg-white text-black font-serif px-4 sm:px-5 md:px-8 lg:px-12 pt-1 sm:pt-5 md:pt-8 pb-8 overflow-x-hidden overflow-y-visible"
+  style={{ fontFamily: "Glegoo, serif", boxSizing: 'border-box' }}
 >
         <link
           href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap"
@@ -872,7 +872,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   </div>
                 ) : (
                   /* IMAGE */
-                  <div className="w-full px-5 sm:px-6 md:px-8">
+                  <div className="w-full px-5 sm:px-6 md:px-8" style={{ boxSizing: 'border-box' }}>
                     <img
                       src={currentImage?.src}
                       alt={currentImage?.title}
@@ -939,7 +939,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 </AnimatePresence>
 
                 {/* PROGRESS DOTS & NAV */}
-                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex justify-center items-center gap-3 mt-2`}>
+                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap justify-center items-center gap-2 mt-2 max-w-full`} style={{ boxSizing: 'border-box' }}>
                   {/* PREV BUTTON */}
                   {currentIndex > 0 && (
                     <button
