@@ -626,8 +626,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
 
   return (
     <>
-      <div
-  className="min-h-screen bg-white text-black font-serif px-4 sm:px-5 md:px-8 lg:px-12 py-8 overflow-visible"
+    <div
+  className="min-h-screen bg-white text-black font-serif px-4 sm:px-5 md:px-8 lg:px-12 pt-1 sm:pt-5 md:pt-8 pb-8 overflow-visible"
   style={{ fontFamily: "Glegoo, serif" }}
 >
         <link
@@ -635,7 +635,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
           rel="stylesheet"
         />
 
-  <div className="relative max-w-6xl mx-auto flex flex-col items-center overflow-visible px-3 sm:px-4 md:px-6">
+  <div className="relative max-w-6xl mx-auto flex flex-col items-center overflow-visible px-5 sm:px-6 md:px-8">
           <AnimatePresence mode="wait">
             {isEndOfStory ? (
               // ===================== CLOSING PAGE =====================
@@ -710,8 +710,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
               >
                 {/* CARD CONTAINER FOR START PAGE */}
                 {currentIndex === 0 ? (
-                  <div className="w-full px-3 sm:px-4 md:px-0">
-                    <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '1rem 0', perspective: '1000px' }}>
+                  <div className="w-full px-5 sm:px-6 md:px-0">
+                    <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '.25rem 0', perspective: '1000px' }}>
                     {/* Multiple stacked shadow cards for realistic stack effect */}
                     {/* Card stack config: adjust offsets/rotation per card here */}
                     {[ 
@@ -762,7 +762,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                       onClick={goNext}
                       onMouseEnter={() => setIsCardHovered(true)}
                       onMouseLeave={() => setIsCardHovered(false)}
-                      className="rounded-xl border border-gray-300 pt-12 px-8 pb-4 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
+                      className="rounded-xl border border-gray-300 pt-4 sm:pt-8 md:pt-12 px-8 pb-4 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
                         style={{
                           backgroundColor: "#f7f3ebff",
                           position: 'relative',
@@ -872,7 +872,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   </div>
                 ) : (
                   /* IMAGE */
-                  <div className="w-full px-3 sm:px-4 md:px-6">
+                  <div className="w-full px-5 sm:px-6 md:px-8">
                     <img
                       src={currentImage?.src}
                       alt={currentImage?.title}
@@ -884,7 +884,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 )}
 {/* Shopping Cart & Notes Buttons */}
                 {currentImage?.notes && (
-                  <div className="w-full px-3 sm:px-4 md:px-6 flex flex-wrap items-center justify-center gap-3 mt-3">
+                  <div className="w-full px-5 sm:px-6 md:px-8 flex flex-wrap items-center justify-center gap-3 mt-3">
                     <a
                       href={currentImage?.buyLink}
                       target="_blank"
@@ -939,7 +939,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 </AnimatePresence>
 
                 {/* PROGRESS DOTS & NAV */}
-                <div className="w-full px-3 sm:px-4 md:px-6 flex justify-center items-center gap-3 mt-2">
+                <div className="w-full px-5 sm:px-6 md:px-8 flex justify-center items-center gap-3 mt-2">
                   {/* PREV BUTTON */}
                   {currentIndex > 0 && (
                     <button
@@ -1016,7 +1016,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mt-10 text-center max-w-3xl"
+                    className="mt-10 text-center max-w-3xl px-5 sm:px-6 md:px-8"
                   >
                     <h1
                       className={`text-[#85644b] font-semibold mb-2 ${currentIndex === 0 ? 'text-3xl' : 'text-xl'}`}
