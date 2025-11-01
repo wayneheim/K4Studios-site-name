@@ -12,6 +12,7 @@ export const storyData = [
     sortOrder: -1,
     story: "The West wasn’t built on gold—it was built on memory. Every trail, every face, every echo of dust tells a story worth retelling.",
     galleries: [],
+
   },
   {
     "id": "i-ncFcHDM",
@@ -49,7 +50,8 @@ export const storyData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "audioSrc": "/audio/Long-Goodbye.mp3"
   },
   {
     "id": "i-bfKMXS9",
@@ -99,14 +101,15 @@ export const storyData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Just like we planned, boys.\nKeep it tight, aim for the meaty bits, and we’ll all be home in time for some of Martha’s pie.\n\nRemember now—why we’re here. This ain’t just about land or cattle. This is about drawing a line. A man’s gotta stand for somethin’. So breathe steady, don’t flinch—and let’s make this one count.",
+    "story": "Just like we planned, boys. Keep it tight, aim for the meaty bits, and we’ll all be home in time for some of Martha’s pie.\n\nRemember now—why we’re here. This ain’t just about land or cattle. This is about drawing a line. A man’s gotta stand for somethin’. So breathe steady, don’t flinch—and let’s make this one count.",
     "notes": "This composition channels the storytelling discipline of painters like Frederic Remington and illustrators like N.C. Wyeth—artists who knew how to load stillness with tension. The three men are staggered just enough to suggest individual roles in a shared purpose, while their diagonal orientation and the porch lines behind them build a strong triangular structure—a classic tool for directing the eye and implying stability before chaos. The painterly finish softens the grit, letting the image breathe with the weight of memory. It’s a scene suspended between anticipation and aftermath—ideal for collectors who value depth beyond décor.",
     "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+      "audioSrc": "/audio/3-wise-2.mp3"
   },
   {
     "id": "i-n5BfXBm",
@@ -142,7 +145,8 @@ export const storyData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "audioSrc": "/audio/10-Oclock-Staging.mp3"
   },
   {
     "id": "i-trZrk2w",
@@ -172,7 +176,8 @@ export const storyData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "audioSrc": "/audio/Night-Raid.mp3"
   },
   {
     "id": "i-44jcjTQ",
@@ -215,7 +220,8 @@ export const storyData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "audioSrc": "/audio/Over-My-Dead-Body.mp3"
   },
   {
     "id": "i-fM9qmKW",
@@ -256,11 +262,12 @@ export const storyData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "audioSrc": "/audio/Just-a-sip.mp3"
   },
   {
     "id": "i-7VWX9vk",
-    "title": "Untitled",
+    "title": "One Way Out",
     "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VWX9vk/3/MpKw9JtPVcCPfGQXPPCXdTLP8XbTtvDDJtG7WrXd4/XL/_WHO6282-918-XL.jpg",
@@ -278,7 +285,8 @@ export const storyData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    "audioSrc": "/audio/One-Way-Out.mp3"
   },
   {
     "id": "i-CD6rgtF",
@@ -319,7 +327,8 @@ export const storyData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "audioSrc": "/audio/High-Ground-Justice.mp3"
   },
   
 ];

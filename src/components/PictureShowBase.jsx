@@ -20,6 +20,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const [isCardHovered, setIsCardHovered] = useState(false);
   const activeUtterances = useRef([]);
   const activeTimeouts = useRef([]);
+  const audioRef = useRef(null);
   const [voicePreferences, setVoicePreferences] = useState(() => {
     // Load saved preferences from localStorage
     if (typeof window !== 'undefined') {
@@ -83,6 +84,12 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   // --- hard stop for queued speech (Chrome-safe) ---
   const stopSpeech = () => {
     try {
+      // Stop audio playback if playing
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+
       // Cancel queued timeouts first
       activeTimeouts.current.forEach(clearTimeout);
       activeTimeouts.current = [];
@@ -177,16 +184,30 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
 
   // Enhanced TTS control with proper state management
   const speakText = () => {
-    const synth = window.speechSynthesis;
-
-    // 🔹 If already speaking or queued → stop completely
-    if (synth.speaking || synth.pending || isSpeaking) {
+    // If already playing audio → stop
+    if (isSpeaking) {
       stopSpeech();
       return;
     }
 
     if (!currentImage) return;
     setIsSpeaking(true);
+
+    // Check if we have a static audio file
+    if (currentImage.audioSrc) {
+      // Play static audio file
+      if (audioRef.current) {
+        audioRef.current.src = currentImage.audioSrc;
+        audioRef.current.play().catch((error) => {
+          console.error('Error playing audio:', error);
+          setIsSpeaking(false);
+        });
+      }
+      return;
+    }
+
+    // Fallback to TTS if no audioSrc
+    const synth = window.speechSynthesis;
 
     // Alternate storyteller based on index
     const storytellers = ['Samuel', 'Martha'];
@@ -551,6 +572,22 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     activeTimeouts.current = [];
     stopSpeech();  // always silence old narration
   }, [currentIndex]);
+
+  // Auto-play audio when entering slideshow mode or navigating within slideshow
+  useEffect(() => {
+    if (showSlideshow && currentImage?.audioSrc) {
+      // Small delay to ensure slideshow is fully rendered or image has changed
+      const timer = setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.src = currentImage.audioSrc;
+          audioRef.current.play().catch((error) => {
+            console.error('Error auto-playing audio in slideshow:', error);
+          });
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [showSlideshow, currentIndex, currentImage?.audioSrc]);
 
   return (
     <>
@@ -1036,6 +1073,15 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
           onClose={() => setIsZoomed(false)}
         />
       )}
+
+      {/* Hidden audio element for playing static audio files */}
+      <audio
+        ref={audioRef}
+        onEnded={() => setIsSpeaking(false)}
+        onPause={() => setIsSpeaking(false)}
+        onPlay={() => setIsSpeaking(true)}
+        style={{ display: 'none' }}
+      />
     </>
   );
 }
