@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, VolumeX } from "lucide-react";
 import PunchInIntro from "./PunchInIntro.jsx";
 
-export default function StoryShow({ images, startImageId, onExit }) {
+export default function StoryShow({ images, startImageId, onExit, isMuted, setIsMuted, audioRef, setIsSpeaking }) {
   const [index, setIndex] = useState(0);
   const [isIntro, setIsIntro] = useState(false);
   const [showControls, setShowControls] = useState(true);
@@ -90,6 +90,10 @@ export default function StoryShow({ images, startImageId, onExit }) {
       style.maxHeight = "100vh";
       style.maxWidth = "100vw";
     }
+    
+    // Apply sharpening filter like in zoom overlay
+    style.filter = "contrast(1.14) brightness(1.04) url(#sharpen)";
+    
     return style;
   }, [isLandscape, isVertical, vp.h, vp.w, current?.story, isMobileShort]);
 
@@ -109,14 +113,14 @@ export default function StoryShow({ images, startImageId, onExit }) {
         initial: { scale: 1, opacity: 0.95, rotate: 0 },
         animate: { scale: 1.06, opacity: 1, rotate: 0 },
         exit: { opacity: 0 },
-        transition: { duration: 18, ease: "easeInOut" },
+        transition: { duration: 27, ease: "easeInOut" },
       };
     }
     return {
         initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
         animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
         exit: { opacity: 0 },
-        transition: { duration: 18, ease: "easeInOut" },
+        transition: { duration: 27, ease: "easeInOut" },
     };
   }, [isLandscape, isVertical, kenAngle]);
 
@@ -147,6 +151,24 @@ export default function StoryShow({ images, startImageId, onExit }) {
       return () => clearTimeout(introTimer);
     }
   }, [isIntro]);
+
+  // Auto-play audio when slideshow index changes
+  useEffect(() => {
+    if (current?.audioSrc && !isMuted) {
+      // Small delay to ensure slideshow is fully rendered
+      const timer = setTimeout(() => {
+        setIsSpeaking(true);
+        if (audioRef.current) {
+          audioRef.current.src = current.audioSrc;
+          audioRef.current.play().catch((error) => {
+            console.error('Error auto-playing audio in slideshow:', error);
+            setIsSpeaking(false);
+          });
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [index, current?.audioSrc, isMuted]);
 
   function reorderImages(list, startId) {
     const startIndex = list.findIndex((img) => img.id === startId);
@@ -349,6 +371,27 @@ export default function StoryShow({ images, startImageId, onExit }) {
                 title="Next image"
               >
                 Next ▶
+              </button>
+
+              {/* Mute */}
+              <button
+                onClick={() => {
+                  // Stop current audio playback
+                  if (audioRef.current) {
+                    audioRef.current.pause();
+                    audioRef.current.currentTime = 0;
+                  }
+                  setIsSpeaking(false);
+                  // Toggle mute state
+                  setIsMuted(!isMuted);
+                }}
+                className={`bg-white/10 text-white rounded px-2 py-1 hover:bg-white/20 transition btn ${
+                  isMuted ? 'text-red-400' : ''
+                }`}
+                aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+                title={isMuted ? "Unmute audio" : "Mute audio"}
+              >
+                <VolumeX className="w-4 h-4" />
               </button>
 
               {/* Exit */}

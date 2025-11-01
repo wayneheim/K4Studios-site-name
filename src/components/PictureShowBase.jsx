@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2 } from "lucide-react";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX } from "lucide-react";
 import ZoomOverlay from "./ZoomOverlay.jsx";
 import GallerySlideshowStory from "./Gallery-Slideshow-Story.jsx";
 import ShareDrawer from "./ShareDrawer.jsx";
@@ -18,6 +18,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [currentVoice, setCurrentVoice] = useState(null);
   const [isCardHovered, setIsCardHovered] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const activeUtterances = useRef([]);
   const activeTimeouts = useRef([]);
   const audioRef = useRef(null);
@@ -56,7 +57,23 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     activeTimeouts.current = []; // Clear any pending timeouts
     stopSpeech();
     setDirection(-1);
-    setCurrentIndex((i) => Math.max(i - 1, 0));
+    setCurrentIndex((i) => {
+      const newIndex = Math.max(i - 1, 0);
+      // Trigger audio for new image after a short delay
+      setTimeout(() => {
+        if (showSlideshow && rawData[newIndex]?.audioSrc && !isMuted) {
+          setIsSpeaking(true);
+          if (audioRef.current) {
+            audioRef.current.src = rawData[newIndex].audioSrc;
+            audioRef.current.play().catch((error) => {
+              console.error('Error playing audio on navigation:', error);
+              setIsSpeaking(false);
+            });
+          }
+        }
+      }, 100);
+      return newIndex;
+    });
   };
 
   const goNext = () => {
@@ -67,9 +84,39 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     if (currentIndex === 0) {
       // Find first non-ghost image
       const firstRealIdx = rawData.findIndex(img => img.id !== 'i-k4studios');
-      setCurrentIndex(firstRealIdx > -1 ? firstRealIdx : 1);
+      const newIndex = firstRealIdx > -1 ? firstRealIdx : 1;
+      setCurrentIndex(newIndex);
+      // Trigger audio for new image after a short delay
+      setTimeout(() => {
+        if (showSlideshow && rawData[newIndex]?.audioSrc && !isMuted) {
+          setIsSpeaking(true);
+          if (audioRef.current) {
+            audioRef.current.src = rawData[newIndex].audioSrc;
+            audioRef.current.play().catch((error) => {
+              console.error('Error playing audio on navigation:', error);
+              setIsSpeaking(false);
+            });
+          }
+        }
+      }, 100);
     } else {
-      setCurrentIndex(i => Math.min(i + 1, rawData.length));
+      setCurrentIndex(i => {
+        const newIndex = Math.min(i + 1, rawData.length);
+        // Trigger audio for new image after a short delay
+        setTimeout(() => {
+          if (showSlideshow && rawData[newIndex]?.audioSrc && !isMuted) {
+            setIsSpeaking(true);
+            if (audioRef.current) {
+              audioRef.current.src = rawData[newIndex].audioSrc;
+              audioRef.current.play().catch((error) => {
+                console.error('Error playing audio on navigation:', error);
+                setIsSpeaking(false);
+              });
+            }
+          }
+        }, 100);
+        return newIndex;
+      });
     }
   };
 
@@ -191,6 +238,10 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     }
 
     if (!currentImage) return;
+    
+    // Check if muted
+    if (isMuted) return;
+    
     setIsSpeaking(true);
 
     // Check if we have a static audio file
@@ -572,22 +623,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     activeTimeouts.current = [];
     stopSpeech();  // always silence old narration
   }, [currentIndex]);
-
-  // Auto-play audio when entering slideshow mode or navigating within slideshow
-  useEffect(() => {
-    if (showSlideshow && currentImage?.audioSrc) {
-      // Small delay to ensure slideshow is fully rendered or image has changed
-      const timer = setTimeout(() => {
-        if (audioRef.current) {
-          audioRef.current.src = currentImage.audioSrc;
-          audioRef.current.play().catch((error) => {
-            console.error('Error auto-playing audio in slideshow:', error);
-          });
-        }
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [showSlideshow, currentIndex, currentImage?.audioSrc]);
 
   return (
     <>
@@ -1061,6 +1096,10 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
           images={rawData}
           startImageId={currentImage?.id}
           onExit={() => setShowSlideshow(false)}
+          isMuted={isMuted}
+          setIsMuted={setIsMuted}
+          audioRef={audioRef}
+          setIsSpeaking={setIsSpeaking}
         />
       )}
 
