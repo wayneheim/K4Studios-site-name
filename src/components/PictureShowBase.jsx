@@ -37,6 +37,33 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     return {};
   });
 
+  // Hide site header/intro and ensure chapter section is visible while Picture Show is active
+  useEffect(() => {
+    // Hide header and intro when the Picture Show is active
+    const header = document.getElementById("header-section");
+    const intro = document.getElementById("intro-section");
+    const chapter = document.getElementById("chapter-section");
+
+    if (header) header.classList.add("section-hidden");
+    if (intro) intro.classList.add("section-hidden");
+    if (chapter) {
+      chapter.style.display = "block";
+      chapter.classList.remove("section-hidden");
+      chapter.classList.add("section-visible");
+    }
+
+    // Restore on exit
+    return () => {
+      if (header) header.classList.remove("section-hidden");
+      if (intro) intro.classList.remove("section-hidden");
+      if (chapter) {
+        chapter.classList.remove("section-visible");
+        chapter.classList.add("section-hidden");
+        chapter.style.display = "none";
+      }
+    };
+  }, []);
+
   // Save voice preferences for consistency
   const saveVoicePreference = (storytellerName, voiceName) => {
     const updatedPreferences = {
@@ -660,7 +687,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   return (
     <>
     <div
-  className={`min-h-screen bg-white text-black font-serif px-4 sm:px-5 md:px-8 lg:px-12 ${currentIndex > 0 ? 'pt-0 sm:pt-5 md:pt-8' : 'pt-1 sm:pt-5 md:pt-8'} pb-8 overflow-x-hidden overflow-y-visible`}
+  className="min-h-screen bg-white text-black font-serif px-4 sm:px-4 md:px-8 lg:px-12 pt-1 sm:pt-2 md:pt-8 pb-8 overflow-x-hidden overflow-y-visible"
   style={{ fontFamily: "Glegoo, serif", boxSizing: 'border-box' }}
 >
         <link
