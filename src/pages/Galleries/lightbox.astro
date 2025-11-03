@@ -33,13 +33,13 @@ const galleryName = [prev, last]
 const galleryLandingUrl = `https://www.k4studios.com${baseUrl}`;
 const canonicalUrl = galleryLandingUrl;
 
-// ✅ Safe JSON encoder
+// ✅ Safe JSON encoder (no double escaping)
 const clean = (val = "") =>
   String(val)
     .replace(/[\u0000-\u001F]+/g, " ") // strip control chars
     .replace(/\r?\n|\r/g, " ") // remove newlines
     .trim();
-const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/>/g, "\\u003e").replace(/\\u003c\//g, "\\u003c\\/");
+const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/>/g, "\\u003e");
 ---
 
 <!-- ✅ Global Structured Data for Site Identity -->
@@ -70,7 +70,7 @@ const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/
   })}
 </script>
 
-<!-- ✅ Allow indexing but give canonicals cedit to main gallery -->
+<!-- ✅ Allow indexing but give canonical credit to main gallery -->
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href={canonicalUrl} />
 <link
@@ -102,8 +102,8 @@ const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/
         const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
         const linkUrl = `${baseUrl}/${item.id}`;
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
-  const title = clean(item.title);
-  const description = clean(item.description || item.alt || item.title);
+        const title = clean(item.title);
+        const description = clean(item.description || item.alt || item.title);
 
         return (
           <div class="ssr-card" id={item.id}>
