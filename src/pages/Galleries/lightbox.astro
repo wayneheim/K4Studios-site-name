@@ -33,55 +33,70 @@ const galleryName = [prev, last]
 const galleryLandingUrl = `https://www.k4studios.com${baseUrl}`;
 const canonicalUrl = galleryLandingUrl;
 
-// ✅ Safe JSON encoder (no double escaping)
+// ✅ Helper for clean strings
 const clean = (val = "") =>
   String(val)
-    .replace(/[\u0000-\u001F]+/g, " ") // strip control chars
-    .replace(/\r?\n|\r/g, " ") // remove newlines
+    .replace(/[\u0000-\u001F]+/g, " ")
+    .replace(/\r?\n|\r/g, " ")
     .trim();
-const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/>/g, "\\u003e");
 ---
 
 <!-- ✅ Global Structured Data for Site Identity -->
-<script type="application/ld+json" is:inline>
-  {safeJSON({
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "K4 Studios",
-    url: "https://www.k4studios.com",
-    publisher: {
-      "@type": "Organization",
-      name: "K4 Studios",
-      url: "https://www.k4studios.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.k4studios.com/images/K4Logo-web-b.jpg"
-      }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.k4studios.com/#website",
+      "name": "K4 Studios",
+      "url": "https://www.k4studios.com",
+      "publisher": { "@id": "https://www.k4studios.com/#organization" },
+      "inLanguage": "en"
     },
-    author: {
-      "@type": "Person",
-      name: "Wayne Heim",
-      sameAs: [
+    {
+      "@type": "Organization",
+      "@id": "https://www.k4studios.com/#organization",
+      "name": "K4 Studios",
+      "url": "https://www.k4studios.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.k4studios.com/#logo",
+        "url": "https://www.k4studios.com/images/K4Logo-web-b.jpg",
+        "width": 512,
+        "height": 512
+      },
+      "founder": { "@id": "https://www.k4studios.com/#person" },
+      "sameAs": [
         "https://www.instagram.com/k4studios",
         "https://www.pinterest.com/k4studios",
         "https://www.linkedin.com/in/wayneheim"
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.k4studios.com/#person",
+      "name": "Wayne Heim",
+      "jobTitle": "Fine Art Photographer & Medical Illustrator",
+      "image": "https://www.k4studios.com/images/WayneHeimPortrait.jpg",
+      "url": "https://www.k4studios.com/",
+      "worksFor": { "@id": "https://www.k4studios.com/#organization" },
+      "sameAs": [
+        "https://www.instagram.com/k4studios",
+        "https://www.pinterest.com/k4studios",
+        "https://www.heimmedicalart.com"
+      ]
     }
-  })}
+  ]
+}
 </script>
 
-<!-- ✅ Allow indexing but give canonical credit to main gallery -->
+<!-- ✅ Canonical -->
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href={canonicalUrl} />
-<link
-  href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
 
-<BaseLayout
-  title={galleryName}
-  description={`Full SEO index of ${galleryName} from Wayne Heim’s K4 Studios`}
->
+<BaseLayout title={galleryName} description={`Full SEO index of ${galleryName} from Wayne Heim’s K4 Studios`}>
   <main>
     <!-- ✅ Logo -->
     <div class="logo">
@@ -104,31 +119,34 @@ const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
         const title = clean(item.title);
         const description = clean(item.description || item.alt || item.title);
+        const story = clean(item.story || "");
 
         return (
           <div class="ssr-card" id={item.id}>
             <a href={linkUrl}>
-              <img src={imageUrl} alt={description} title={item.title} loading="lazy" />
+              <img src={imageUrl} alt={description} title={title} loading="lazy" />
             </a>
             <div class="ssr-card-content">
-              <h3>{item.title}</h3>
-              <p>{item.story || ""}</p>
+              <h3>{title}</h3>
+              <p>{story}</p>
             </div>
 
             <!-- ✅ Per-Image JSON-LD -->
-            <script type="application/ld+json" is:inline>
-              {safeJSON({
-                "@context": "https://schema.org",
-                "@type": "ImageObject",
-                name: title,
-                description: description,
-                contentUrl: imageUrl,
-                url: fullUrl,
-                creditText: "© Wayne Heim – K4 Studios",
-                license: "https://www.k4studios.com/licensing",
-                creator: { "@type": "Person", name: "Wayne Heim" },
-                mainEntityOfPage: fullUrl
-              })}
+            <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "name": "${title}",
+  "description": "${description}",
+  "contentUrl": "${imageUrl}",
+  "url": "${fullUrl}",
+  "creditText": "© Wayne Heim – K4 Studios",
+  "license": "https://www.k4studios.com/licensing",
+  "creator": { "@type": "Person", "name": "Wayne Heim" },
+  "mainEntityOfPage": "${fullUrl}"
+}
+`}
             </script>
           </div>
         );
@@ -136,23 +154,31 @@ const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/
     </div>
 
     <!-- ✅ CollectionPage JSON-LD -->
-    <script type="application/ld+json" is:inline>
-      {safeJSON({
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        name: clean(galleryName),
-        url: galleryLandingUrl,
-        creator: { "@type": "Person", name: "Wayne Heim" },
-        creditText: "© Wayne Heim – K4 Studios",
-        about: `${clean(galleryName)} from Wayne Heim’s painterly fine art series.`,
-        hasPart: galleryData.map((item) => ({
-          "@type": "ImageObject",
-          name: clean(item.title),
-          description: clean(item.description || item.alt || item.title),
-          contentUrl: item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "",
-          url: `https://www.k4studios.com${baseUrl}/${item.id}`
-        }))
-      })}
+    <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "${clean(galleryName)}",
+  "url": "${galleryLandingUrl}",
+  "creator": { "@type": "Person", "name": "Wayne Heim" },
+  "creditText": "© Wayne Heim – K4 Studios",
+  "about": "${clean(galleryName)} from Wayne Heim’s painterly fine art series.",
+  "hasPart": [
+    ${galleryData
+      .map(
+        (item) => `{
+      "@type": "ImageObject",
+      "name": "${clean(item.title)}",
+      "description": "${clean(item.description || item.alt || item.title)}",
+      "contentUrl": "${item.srcXL || item.srcL || item.srcM || item.srcS || item.src || ""}",
+      "url": "https://www.k4studios.com${baseUrl}/${item.id}"
+    }`
+      )
+      .join(",")}
+  ]
+}
+`}
     </script>
 
     <!-- ✅ Hydrated React Grid -->

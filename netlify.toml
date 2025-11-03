@@ -438,5 +438,10 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Po
 status = 301
 force = true
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+  Cache-Control = "no-cache, no-store, must-revalidate"
+
 [build]
   command = "npm run build && node scripts/purge-cloudflare.js"
