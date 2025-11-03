@@ -9,7 +9,7 @@ const datasetPath = datasetPathRaw.endsWith(".mjs") ? datasetPathRaw : `${datase
 
 let galleryData = [];
 try {
-  const importPath = `/src/data${datasetPath}`;
+  const importPath = `../data${datasetPath}`;
   const mod = await import(importPath);
   galleryData = mod.galleryData || mod.default || (Array.isArray(mod) ? mod : []);
 } catch (err) {
