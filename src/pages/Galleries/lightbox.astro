@@ -34,6 +34,12 @@ const galleryLandingUrl = `https://www.k4studios.com${baseUrl}`;
 const canonicalUrl = galleryLandingUrl;
 
 // ✅ Safe JSON encoder
+const clean = (val = "") =>
+  String(val)
+    .replace(/[\u0000-\u001F]+/g, " ") // strip control chars
+    .replace(/\r?\n|\r/g, " ") // remove newlines
+    .replace(/"/g, '\\"') // escape double quotes
+    .trim();
 const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c");
 ---
 
@@ -97,7 +103,8 @@ const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c");
         const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
         const linkUrl = `${baseUrl}/${item.id}`;
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
-        const description = item.description || item.alt || item.title;
+  const title = clean(item.title);
+  const description = clean(item.description || item.alt || item.title);
 
         return (
           <div class="ssr-card" id={item.id}>
@@ -114,7 +121,7 @@ const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c");
               {safeJSON({
                 "@context": "https://schema.org",
                 "@type": "ImageObject",
-                name: item.title,
+                name: title,
                 description: description,
                 contentUrl: imageUrl,
                 url: fullUrl,
@@ -134,15 +141,15 @@ const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c");
       {safeJSON({
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: galleryName,
+        name: clean(galleryName),
         url: galleryLandingUrl,
         creator: { "@type": "Person", name: "Wayne Heim" },
         creditText: "© Wayne Heim – K4 Studios",
-        about: `${galleryName} from Wayne Heim’s painterly fine art series.`,
+        about: `${clean(galleryName)} from Wayne Heim’s painterly fine art series.`,
         hasPart: galleryData.map((item) => ({
           "@type": "ImageObject",
-          name: item.title,
-          description: item.description || item.alt || item.title,
+          name: clean(item.title),
+          description: clean(item.description || item.alt || item.title),
           contentUrl: item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "",
           url: `https://www.k4studios.com${baseUrl}/${item.id}`
         }))
