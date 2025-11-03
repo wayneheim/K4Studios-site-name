@@ -4,7 +4,7 @@ export const posts = [
     title: "Inside the Frame: Eye of the Hunt",
     date: "2025-10-28",
     excerpt: "A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.'",
-    cover: "https://photos.smugmug.com/path/to/your/coverimage.jpg"
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/LkdhkV7PvPKwKmwR6wbZR4sR877xm6r8TMWXN6B4W/S/_WHO6565-Edit-2-Edit-S.jpg"
   },
   {
     slug: "inevitable",

@@ -60,18 +60,14 @@ export const landingWestern = {
   description: "Photographs that are not merely images—but windows into worlds that exist beyond my lens.",
   keywords: [],
   breadcrumb: `
-    <a href="/Galleries/Fine-Art-Photography"
-       style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;"
-       onmouseover="this.style.color='darkred'"
-       onmouseout="this.style.color='#444'">Fine Art Photography</a> 
-    <a href="/Galleries/Fine-Art-Photography/Landscapes"
-       style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;"
-       onmouseover="this.style.color='#006064'"
-       onmouseout="this.style.color='#444'"> | Landscapes</a> 
-    <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location"
-       style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;"
-       onmouseover="this.style.color='purple'"
-       onmouseout="this.style.color='#444'"> | By Location</a>
+   <a href="/Galleries/Fine-Art-Photography"
+     style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;"
+     onmouseover="this.style.color='darkred'"
+     onmouseout="this.style.color='#444'">Fine Art Photography</a> 
+   <a href="/Galleries/Fine-Art-Photography/Portraits"
+     style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;"
+     onmouseover="this.style.color='#006064'"
+     onmouseout="this.style.color='#444'"> | Portraits</a>
   `,
 
 tombstones: regions.map(({ title, slug }) => {

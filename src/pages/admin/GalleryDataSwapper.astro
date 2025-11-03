@@ -1,5 +1,6 @@
 ---
 import GalleryDataSwapper from '../../components/GalleryDataSwapper.jsx';
+import '../../styles/global.css'; // ensure Tailwind/global styles are applied
 
 const params = new URLSearchParams(Astro.url.search);
 const dataset = params.get('dataset') || '';

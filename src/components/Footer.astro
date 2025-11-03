@@ -8,6 +8,7 @@ const { previewImages = [], previewPath = "", title = "", currentImageUrl, label
 
 // Get actual runtime URL
 const currentPath = Astro.url.pathname;
+const isBlog = currentPath.startsWith('/Other/Blog');
 
 // Check if we're on a deep image page like /i-xxxxx
 const isImagePage = /\/i-[a-zA-Z0-9]+$/.test(currentPath);
@@ -32,7 +33,7 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
 
   {showPreviewBar && (
     <div class="w-full max-w-screen-xl mx-auto px-4 pb-2">
-      {currentPath.startsWith('/Other/Blog') ? (
+      {isBlog ? (
         <BlogGalleryPreviewStrip
           images={previewImages}
           limit={6}
@@ -49,8 +50,8 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
     </div>
   )}
 
-  <!-- ✅ View Complete Listing link BELOW grid but ABOVE share -->
-  {showPreviewBar && (
+  <!-- ✅ View Complete Listing link BELOW grid but ABOVE share (not on Blog pages) -->
+  {showPreviewBar && !isBlog && (
     <div class="mt-5 w-full flex justify-center">
       <a
         href={`/Galleries/lightbox?dataset=${previewPath}`}
@@ -96,7 +97,7 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
 
     <!-- 🄯 Copyright -->
     <div class="text-xs text-[#2c2c2c] opacity-70" itemprop="name">
-      <time datetime={currentYear} aria-label={`Copyright ${currentYear}`}>&copy; {currentYear}</time>
+  <time datetime={`${currentYear}`} aria-label={`Copyright ${currentYear}`}>&copy; {currentYear}</time>
       {' '}Wayne Heim |{' '}
       <a href="/Glossary" class="underline hover:no-underline" title="Story Glossary">Story Glossary</a>
       {' '}| All rights reserved.

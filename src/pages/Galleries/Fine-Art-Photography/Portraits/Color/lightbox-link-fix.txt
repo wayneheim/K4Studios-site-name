@@ -1,0 +1,7 @@
+// Hardcoded lightbox link for Portraits/Color
+// Use this link in your Portraits/Color gallery landing page:
+
+/Galleries/lightbox?dataset=/Galleries/Fine-Art-Photography/Portraits/Color
+
+// This ensures the lightbox loads the correct dataset for Color.mjs.
+// Remove or update this file if you later fix the dynamic link logic.

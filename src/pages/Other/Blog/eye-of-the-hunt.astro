@@ -6,27 +6,33 @@ import { getStructuredData, getBlogBreadcrumbList } from "@/components/utils/get
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
 import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
-import { galleryDataMap, allImages } from "@/data/galleryMaps/MasterGalleryData.ts";
+import {
+  galleryDataMap,
+  sectionGalleries,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.ts";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
+import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { galleryData as roaring20sColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { galleryData as roaring20sBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import "@/styles/global.css";
 
-const sectionPath = "/Other/Blog/Eye-Of-the-Hunt";
-const coverImage  = "https://photos.smugmug.com/path/to/your/coverimage.jpg"; // placeholder
-
-// Edition context for SEO uniqueness (if relevant)
-const editionTag = "Color"; // This blog is about a color image, update if needed
+const sectionPath = "/Other/Blog/Eye-of-the-Hunt"; // canonical path for this page
+const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/MC5LhSnKVfCfnkWrmm7hRnKnnzQhGN77cshsbKcRP/L/_WHO6565-Edit-2-Edit-L.jpg";
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
   data: {
-    headline: `Inside the Frame: Eye of the Hunt – ${editionTag}`,
-    description:
-      `A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.' This is the ${editionTag} edition.`,
+    headline: "Inside the Frame: Eye of the Hunt",
+    description: "A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.'",
     url: `https://k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
     author: { "@type": "Person", name: "Wayne Heim" },
     datePublished: "2025-10-24",
-    image: coverImage,
-    keywords: `western fine art, painterly, ${editionTag}, Eye of the Hunt, Wayne Heim`
+    image: coverImage
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
@@ -44,25 +50,20 @@ const breadcrumbsJSON = getBlogBreadcrumbList({
 
 const meta = {
   ...getLandingMeta(sectionPath, coverImage),
-  description: `A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.' This is the ${editionTag} edition.`,
-  keywords: `western fine art, painterly, ${editionTag}, Eye of the Hunt, Wayne Heim`,
   ogUrl: `https://k4studios.com${sectionPath}`,
-  ogTitle: `Inside the Frame: Eye of the Hunt – ${editionTag}`,
-  ogDescription:
-    `A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.' This is the ${editionTag} edition.`,
+  ogTitle: "Inside the Frame: Eye of the Hunt",
+  ogDescription: "A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.'",
   ogImage: coverImage,
   ogImageAlt: "Eye of the Hunt cover",
   ogType: "article",
   twitterUrl: `https://k4studios.com${sectionPath}`,
-  twitterTitle: `Inside the Frame: Eye of the Hunt – ${editionTag}`,
-  twitterDescription:
-    `A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.' This is the ${editionTag} edition.`,
+  twitterTitle: "Inside the Frame: Eye of the Hunt",
+  twitterDescription: "A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.'",
   twitterImage: coverImage,
-  twitterCard: "summary_large_image",
-  canonical: `https://k4studios.com${sectionPath}`
+  twitterCard: "summary_large_image"
 };
 
-// Footer previews
+// Prepare gallery preview images (same approach as 10-oclock-staging)
 function shuffleArray(arr) {
   return arr
     .map(value => ({ value, sort: Math.random() }))
@@ -70,29 +71,35 @@ function shuffleArray(arr) {
     .map(({ value }) => value);
 }
 
-const allGalleryImages = Object.values(galleryDataMap)
-  .flat()
-  .filter(img => typeof img === 'object' && 'visibility' in img && img.visibility !== "ghost");
+const allGalleryImages = [
+  ...painterlyImages.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" })),
+  ...civilWarColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color" })),
+  ...civilWarBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White" })),
+  ...roaring20sColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color" })),
+  ...roaring20sBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White" })),
+  ...wwiiPortraitsColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color" })),
+  ...wwiiPortraitsBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White" }))
+].filter((img) => img.visibility !== "ghost");
+
 const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
 const previewPath = "/Galleries";
 
 const galleryDatas = Object.values(galleryDataMap).flat();
-const featheredImages = allImages.filter(img => typeof img === 'object' && 'visibility' in img && img.visibility !== "ghost").slice(0, 12);
+const featheredImages = allImages.filter((img) => ((img as any)?.visibility ?? "") !== "ghost").slice(0, 12);
 const galleryPaths = Object.keys(galleryDataMap);
 
 const linkKeywords = (text) =>
   autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic);
+
 ---
 
 <BaseLayout
-  title={`Inside the Frame: Eye of the Hunt – ${editionTag}`}
+  title="Inside the Frame: Eye of the Hunt"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbsJSON}
   meta={meta}
 >
-  {/* SEO Meta Tags for Edition Context (invisible to users) */}
-  <meta name="keywords" content={`western fine art, painterly, ${editionTag}, Eye of the Hunt, Wayne Heim`} />
-  <meta name="description" content={`A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim’s Western fine art photograph 'Eye of the Hunt.' This is the ${editionTag} edition.`} />
+  <!-- Canonical/SEO assist -->
   <link rel="canonical" href={`https://k4studios.com${sectionPath}`} />
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family:'Glegoo',serif;">
     <div class="drawer-mode">

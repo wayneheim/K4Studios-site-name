@@ -489,7 +489,7 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#f7f5f1] p-6 max-w-7xl mx-auto text-sm" style={{ fontFamily: "'Glegoo', serif", color: "#2a1f17" }}>
+    <div className="min-h-screen bg-[#f7f5f1] p-6 text-sm" style={{ fontFamily: "'Glegoo', serif", color: "#2a1f17" }}>
       {/* Header Bar */}
       <div
         style={{
@@ -578,24 +578,52 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
       </div>
 
       {/* Grid preview of images */}
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(210px,1fr))] gap-5 px-10 max-w-[1600px] mx-auto justify-center">
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
+          gap: 16,
+          padding: "0 20px",
+          maxWidth: "calc(6 * 210px + 5 * 16px)", // max 6 columns
+          margin: "0 auto",
+          justifyContent: "center",
+        }}
+      >
         {items.map((item) => (
           <div
             key={item.id}
-            className={`relative border rounded-lg bg-white overflow-hidden shadow-sm cursor-pointer ${selectedIds.includes(item.id) ? "ring-2 ring-blue-500 bg-blue-50" : ""} ${String(item.visibility).toLowerCase() === "hidden" ? "opacity-50 grayscale-[0.3]" : ""}`}
+            className={"relative cursor-pointer"}
+            style={{
+              border: selectedIds.includes(item.id) ? "2px solid #0078d4" : "1px solid #ddd",
+              borderRadius: 8,
+              background: "#fff",
+              overflow: "hidden",
+              boxShadow: "0 1px 2px rgba(0,0,0,0.06)",
+              ...(String(item.visibility).toLowerCase() === "hidden"
+                ? { opacity: 0.5, filter: "grayscale(0.3)" }
+                : null),
+            }}
             onClick={(e) => handleImageClick(e, item.id)}
             onContextMenu={(e) => handleImageContextMenu(e, item.id)}
           >
             <img
               src={pickImage(item)}
               alt={item.alt || item.title || ""}
-              className="w-full h-36 object-cover rounded-t-lg"
+              style={{ width: "100%", height: 120, objectFit: "cover" }}
             />
             {/* S/H tiny toggle */}
-            <div className="absolute top-1 right-1 z-10 flex gap-1">
+            <div style={{ position: "absolute", top: 4, right: 4, zIndex: 10, display: "flex", gap: 4 }}>
               <button
                 type="button"
-                className={`px-1.5 h-6 text-[11px] rounded ${selectedIds.includes(item.id) ? "bg-blue-600 text-white border border-blue-700" : isHidden(item) ? "bg-white border border-gray-300 text-gray-500" : "bg-green-600 text-white border border-green-700"}`}
+                style={{
+                  padding: "0 6px",
+                  height: 22,
+                  fontSize: 11,
+                  borderRadius: 4,
+                  border: "1px solid #7aa57a",
+                  background: selectedIds.includes(item.id) ? "#2563eb" : isHidden(item) ? "#fff" : "#16a34a",
+                  color: selectedIds.includes(item.id) ? "#fff" : isHidden(item) ? "#6b7280" : "#fff",
+                }}
                 title="Show"
                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleVisibility(item.id, false); }}
               >
@@ -603,7 +631,15 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
               </button>
               <button
                 type="button"
-                className={`px-1.5 h-6 text-[11px] rounded ${isHidden(item) ? "bg-red-600 text-white border border-red-700" : "bg-white border border-gray-300 text-gray-500"}`}
+                style={{
+                  padding: "0 6px",
+                  height: 22,
+                  fontSize: 11,
+                  borderRadius: 4,
+                  border: isHidden(item) ? "1px solid #b91c1c" : "1px solid #d1d5db",
+                  background: isHidden(item) ? "#dc2626" : "#fff",
+                  color: isHidden(item) ? "#fff" : "#6b7280",
+                }}
                 title="Hide"
                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleVisibility(item.id, true); }}
               >
@@ -611,26 +647,21 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
               </button>
             </div>
             {String(item.visibility).toLowerCase() === "hidden" && (
-              <span className="absolute top-2 left-2 text-xs px-2 py-1 rounded bg-yellow-100 border border-yellow-300 text-yellow-900">
+              <span style={{ position: "absolute", top: 8, left: 8, fontSize: 11, padding: "2px 6px", borderRadius: 4, background: "#fef9c3", border: "1px solid #fde68a", color: "#92400e" }}>
                 Hidden
               </span>
             )}
-            <div className="p-3">
-              <div className="text-xs text-gray-600 mb-1">
+            <div style={{ padding: 8 }}>
+              <div style={{ fontSize: 12, color: "#6b7280", marginBottom: 4 }}>
                 #{item.sortOrder ?? items.indexOf(item) + 1}
               </div>
-              <div className="font-bold text-sm leading-tight flex items-center gap-1">
+              <div style={{ fontWeight: 700, fontSize: 13, lineHeight: 1.2, display: "flex", alignItems: "center", gap: 4 }}>
                 <span>{item.title}</span>
                 {(item.autoTitle || item.autoGenerated) && (
-                  <span
-                    title={item.autoGenerated ? "Full auto-generated metadata" : "Auto-generated title"}
-                    className={`text-lg ${item.autoGenerated ? "text-amber-600" : "text-amber-500"}`}
-                  >
-                    ★
-                  </span>
+                  <span title={item.autoGenerated ? "Full auto-generated metadata" : "Auto-generated title"} style={{ fontSize: 16, color: item.autoGenerated ? "#b45309" : "#d97706" }}>★</span>
                 )}
               </div>
-              <div className="text-sm text-gray-600 mt-1 line-clamp-2">
+              <div style={{ fontSize: 12, color: "#6b7280", marginTop: 4, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
                 {item.story ? item.story.split("\n").slice(0, 2).join("\n") : ""}
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { siteNav } from "../data/siteNav.ts";
 
 const DATA_ROOTS = [
   "/src/data/Galleries",
@@ -78,12 +79,66 @@ export default function GalleryLightbox({ datasetPath = "", showHeader = true })
   useEffect(() => {
     let cancelled = false;
     async function load() {
-      if (!selectedPath || !modules[selectedPath]) {
+      let modKey = modules[selectedPath];
+      let triedDuplicate = false;
+      let triedFallback = false;
+      // Step 2: Try duplicating last folder name if not found
+      if (!modKey && selectedPath) {
+        const pathParts = selectedPath.replace(/^\/src\/data\//, "").replace(/\.mjs$/, "").split("/");
+        if (pathParts.length > 0) {
+          const last = pathParts[pathParts.length - 1];
+          const dupePath = `/src/data/${pathParts.join("/")}/${last}.mjs`;
+          if (dupePath !== selectedPath && modules[dupePath]) {
+            modKey = modules[dupePath];
+            triedDuplicate = true;
+          } else {
+            // Step 2b: Try .mjs file directly inside the folder
+            const directFilePath = `/src/data/${pathParts.slice(0, -1).join("/")}/${last}.mjs`;
+            if (directFilePath !== selectedPath && modules[directFilePath]) {
+              modKey = modules[directFilePath];
+              triedDuplicate = true;
+            }
+          }
+        }
+      }
+      // Step 3: Fallback to siteNav if still not found
+      if (!modKey && selectedPath) {
+        // Remove .mjs and /src/data prefix
+        const cleanPath = selectedPath.replace(/^\/src\/data/, "").replace(/\.mjs$/, "");
+        function findNav(node) {
+          if (node.href === cleanPath || node.href === `/${cleanPath}`) return node;
+          if (node.children) {
+            for (const child of node.children) {
+              const found = findNav(child);
+              if (found) return found;
+            }
+          }
+          return null;
+        }
+        let found = null;
+        for (const node of siteNav) {
+          found = findNav(node);
+          if (found) break;
+        }
+        if (found && found.href) {
+          const fallbackPath = `/src/data${found.href}.mjs`;
+          modKey = modules[fallbackPath];
+          triedFallback = true;
+        }
+      }
+      if (!modKey) {
         console.warn("No dataset found for path:", selectedPath);
+        if (triedDuplicate) {
+          console.warn("Tried duplicate folder/file fallback and failed.");
+        }
+        if (triedFallback) {
+          console.warn("Fallback to siteNav also failed.");
+        }
+        console.log("Available module keys:\n" + Object.keys(modules).join("\n"));
         return;
       }
       try {
-        const mod = await modules[selectedPath]();
+        const mod = await modKey();
         const arr = Array.isArray(mod)
           ? mod
           : Array.isArray(mod?.galleryData)
