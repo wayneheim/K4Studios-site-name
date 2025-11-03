@@ -7,10 +7,11 @@ const params = new URLSearchParams(Astro.url.search);
 const datasetPathRaw = decodeURIComponent(params.get("dataset") ?? "");
 const datasetPath = datasetPathRaw.endsWith(".mjs") ? datasetPathRaw : `${datasetPathRaw}.mjs`;
 
+const modules = import.meta.glob('../data/Galleries/**/*.mjs', { eager: true });
+
 let galleryData = [];
 try {
-  const importPath = `../data${datasetPath}`;
-  const mod = await import(importPath);
+  const mod = modules[`../data${datasetPath}`];
   galleryData = mod.galleryData || mod.default || (Array.isArray(mod) ? mod : []);
 } catch (err) {
   console.warn("⚠️ Could not load dataset SSR:", err);
