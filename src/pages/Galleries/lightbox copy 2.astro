@@ -1,0 +1,160 @@
+---
+import GalleryLightbox from "../../components/GalleryLightbox.jsx";
+import Footer from "../../components/Footer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const params = new URLSearchParams(Astro.url.search);
+const datasetPath = decodeURIComponent(params.get("dataset") ?? "");
+
+// ✅ Load gallery dataset for SSR
+let galleryData = [];
+try {
+  const importPath = datasetPath.startsWith("/src/") ? datasetPath : `/src${datasetPath}`;
+  const mod = await import(importPath);
+  galleryData = mod.galleryData || mod.default || (Array.isArray(mod) ? mod : []);
+} catch (err) {
+  console.warn("⚠️ Could not load dataset SSR:", err);
+  galleryData = [];
+}
+
+// ✅ Derive human-friendly names & paths
+const baseUrl = datasetPath.replace(/^\/src\/data/, "").replace(/\.mjs$/i, "");
+const parts = baseUrl.split("/").filter(Boolean);
+const last = parts.pop() || "";
+const prev = parts.pop() || "";
+const galleryName = [prev, last]
+  .filter(Boolean)
+  .map((s) => s.replace(/-/g, " ").replace(/\b\w/g, (m) => m.toUpperCase()))
+  .join(" – ");
+
+const canonicalUrl = `https://www.k4studios.com${baseUrl}`;
+---
+
+<!-- ✅ Global Structured Data for Site Identity -->
+<script type="application/ld+json" is:inline>
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "K4 Studios",
+    url: "https://www.k4studios.com",
+    publisher: {
+      "@type": "Organization",
+      name: "K4 Studios",
+      url: "https://www.k4studios.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.k4studios.com/assets/k4-circle-logo.png",
+      },
+    },
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim",
+      sameAs: [
+        "https://www.instagram.com/k4studios",
+        "https://www.pinterest.com/k4studios",
+        "https://www.linkedin.com/in/wayneheim"
+      ],
+    },
+  })}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href={canonicalUrl} />
+
+<BaseLayout title={galleryName} description={`Full SEO index of ${galleryName} from Wayne Heim's K4 Studios`}>
+  <main>
+    <!-- ✅ Logo -->
+    <div class="logo">
+      <a href="/" aria-label="Go to K4 Studios Homepage">
+        <img src="/assets/k4-circle-logo.png" alt="K4 Studios Logo" />
+      </a>
+    </div>
+
+    <!-- ✅ Single Header -->
+    <div class="header">
+      <a href={baseUrl}>{galleryName}</a>
+      <p style="margin:6px 0 0; font-size:.9em;">Mouse over image to see full preview. Click image to view page.</p>
+    </div>
+
+    <!-- ✅ SSR Static Grid -->
+    <div class="ssr-grid">
+      {galleryData.map((item) => {
+        const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
+        const linkUrl = `${baseUrl}/${item.id}`;
+        const fullUrl = `https://www.k4studios.com${linkUrl}`;
+        const description = item.description || item.alt || item.title;
+        return (
+          <div class="ssr-card" id={item.id}>
+            <a href={linkUrl}>
+              <img src={imageUrl} alt={description} title={item.title} loading="lazy" />
+            </a>
+            <div class="ssr-card-content">
+              <h3>{item.title}</h3>
+              <p>{item.story || ""}</p>
+            </div>
+
+            <!-- ✅ Per-Image JSON-LD -->
+            <script type="application/ld+json" is:inline>
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                name: item.title,
+                description,
+                contentUrl: imageUrl,
+                url: fullUrl,
+                creditText: "© Wayne Heim – K4 Studios",
+                license: "https://www.k4studios.com/licensing",
+                creator: { "@type": "Person", name: "Wayne Heim" },
+                mainEntityOfPage: fullUrl,
+              })}
+            </script>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- ✅ CollectionPage Schema for the gallery -->
+    <script type="application/ld+json" is:inline>
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: galleryName,
+        url: canonicalUrl,
+        creator: { "@type": "Person", name: "Wayne Heim" },
+        creditText: "© Wayne Heim – K4 Studios",
+        about: `${galleryName} from Wayne Heim's painterly fine art series.`,
+        hasPart: galleryData.map((item) => ({
+          "@type": "ImageObject",
+          name: item.title,
+          description: item.description || item.alt || item.title,
+          contentUrl:
+            item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "",
+          url: `https://www.k4studios.com${baseUrl}/${item.id}`,
+        })),
+      })}
+    </script>
+
+    <!-- ✅ Hydrated React grid (header suppressed) -->
+    <GalleryLightbox client:only="react" datasetPath={datasetPath} showHeader={false} />
+
+    <Footer />
+  </main>
+
+  <style>
+    body { background:#fff; color:#2a1f17; font-family:'Glegoo',serif; }
+    main { min-height:100vh; padding:24px; }
+    .logo { display:flex; justify-content:center; margin:32px 0 16px; }
+    .logo a { display:inline-block; transition:transform .3s ease; }
+    .logo a:hover { transform:scale(1.05); }
+    .logo img { width:100px; height:100px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,.2); }
+    .header { text-align:center; background:#2a1f17; color:#f7f5f1; padding:16px; border-radius:8px; margin-bottom:24px; }
+    .header a { color:#f7f5f1; text-decoration:none; font-weight:700; font-size:1.5em; }
+    .ssr-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:20px; margin:30px auto; max-width:1600px; }
+    .ssr-card { border:1px solid #ddd; border-radius:8px; background:#fff; box-shadow:0 2px 5px rgba(0,0,0,.1); overflow:hidden; }
+    .ssr-card img { width:100%; height:140px; object-fit:cover; }
+    .ssr-card-content { padding:10px 12px; }
+    .ssr-card-content h3 { font-size:.95rem; font-weight:700; margin:0 0 5px; }
+    .ssr-card-content p { font-size:.85rem; line-height:1.2rem; margin:0; }
+  </style>
+</BaseLayout>

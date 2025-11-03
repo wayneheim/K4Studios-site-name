@@ -49,6 +49,18 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
     </div>
   )}
 
+  <!-- ✅ View Complete Listing link BELOW grid but ABOVE share -->
+  {showPreviewBar && (
+    <div class="mt-6 w-full flex justify-center">
+      <a
+        href={`/Galleries/lightbox?dataset=${previewPath}`}
+        class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
+      >
+        View Complete Gallery
+      </a>
+    </div>
+  )}
+
   <div class="mx-auto max-w-xl px-4 pt-8 pb-4 footer-fade" aria-label="Footer controls and info">
 
     <!-- 🔗 Share Drawer (with fallback) -->

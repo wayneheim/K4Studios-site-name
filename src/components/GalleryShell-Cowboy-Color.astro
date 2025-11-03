@@ -190,14 +190,26 @@ const isImagePage = lastSegment.startsWith("i-");
     )}
   </div>
 
-  <div class="h-12 md:h-20"></div>
-
-  <Footer
-    previewImages={previewImages}
-    previewPath={previewPath}
-    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
-    title={pageTitle}
-  />
+<Footer
+  previewImages={previewImages}
+  previewPath={previewPath}
+  currentImageUrl={selectedImage
+    ? (selectedImage.src.startsWith('http')
+      ? selectedImage.src
+      : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`)
+    : undefined}
+  title={pageTitle}
+>
+  <!-- Named slot content -->
+  <div class="mt-6 w-full flex justify-center">
+    <a
+      href={`/Galleries/lightbox?dataset=${Astro.url.pathname}.mjs`}
+      class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
+    >
+      View Complete Listing
+    </a>
+  </div>
+</Footer>
 
   <style>
     @media (max-width: 767px) {

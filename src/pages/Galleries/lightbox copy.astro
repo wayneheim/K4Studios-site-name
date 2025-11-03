@@ -1,0 +1,77 @@
+---
+import GalleryLightbox from "../../components/GalleryLightbox.jsx";
+import Footer from "../../components/Footer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+// ✅ Capture dataset from query string
+const params = new URLSearchParams(Astro.url.search);
+const dataset = decodeURIComponent(params.get("dataset") ?? "");
+---
+
+<!-- ✅ Font -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  :root {
+    --k4-font: 'Glegoo', serif;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* ✅ white background */
+    color: #2a1f17;
+    font-family: var(--k4-font);
+  }
+
+  main {
+    min-height: 100vh;
+    padding: 24px;
+    background: #ffffff;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  .logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-link:hover {
+    transform: scale(1.05);
+  }
+
+  .logo-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+<BaseLayout title="Gallery Lightbox" description="Full gallery lightbox viewer">
+  <main>
+    <!-- ✅ Centered Circle Logo (Linked to Home) -->
+    <div class="logo-container">
+      <a href="/" class="logo-link" aria-label="Go to K4 Studios Homepage">
+        <img src="/images/K4Logo-web-b.jpg" alt="K4 Studios Logo" />
+      </a>
+    </div>
+
+    <!-- ✅ React Component -->
+    <GalleryLightbox client:only="react" datasetPath={dataset} />
+
+    <!-- ✅ Global Footer -->
+    <Footer />
+  </main>
+</BaseLayout>
