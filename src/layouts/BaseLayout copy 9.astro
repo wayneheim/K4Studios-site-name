@@ -1,0 +1,373 @@
+---
+import GalleryTourSkipClearer from "../components/GalleryTourSkipClearer.jsx";
+
+const {
+  title = 'Gallery',
+  structuredDataJSON,
+  breadcrumbsJSON,
+  meta = {},
+  preloadImage
+} = Astro.props;
+
+// ✅ Detect if this is an image page
+const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
+const isImagePage = lastSegment.startsWith("i-");
+
+// Helpers
+const parseSite = (value) => {
+  if (!value) return null;
+  if (value instanceof URL) return value;
+  try {
+    return new URL(value);
+  } catch {
+    return null;
+  }
+};
+
+const siteUrl =
+  parseSite(Astro.site) ||
+  parseSite(import.meta.env.SITE) ||
+  new URL('https://www.k4studios.com');
+
+const siteOrigin = Astro.url?.origin || siteUrl.origin;
+
+const ensureAbsoluteUrl = (value) => {
+  if (!value) return null;
+  try {
+    return new URL(value, siteOrigin).toString();
+  } catch {
+    return value;
+  }
+};
+
+// Titles
+const galleryTitle = meta.title || title || 'K4 Studios – Fine Art Photography';
+let pageTitle = isImagePage
+  ? (preloadImage?.title || meta.ogTitle || meta.ogImageTitle || galleryTitle)
+  : galleryTitle;
+
+// Remove HTML and redundant separators for Pinterest & social previews
+const cleanTitle = (pageTitle || '')
+  .replace(/<[^>]*>/g, '')
+  .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
+  .trim();
+
+// ✅ Improved description logic
+const defaultDescription =
+  'Discover painterly fine art photography, Western stories, and historical portraits by Wayne Heim. Explore galleries, stories, and limited edition prints from K4 Studios.';
+
+// ✅ Trim helper for Bing
+const trimDescription = (text = '', maxLength = 160) => {
+  if (!text) return '';
+  const trimmed = text.trim();
+  return trimmed.length > maxLength
+    ? trimmed.slice(0, trimmed.lastIndexOf(' ', maxLength)) + '…'
+    : trimmed;
+};
+
+const seoDescriptionRaw =
+  meta.description ||
+  (isImagePage ? preloadImage?.description : null) ||
+  (Astro.url?.pathname === '/'
+    ? defaultDescription
+    : `${cleanTitle} – Fine Art Photography by Wayne Heim`);
+
+const seoDescription = trimDescription(seoDescriptionRaw);
+
+const socialDescription =
+  (isImagePage && preloadImage?.story)
+    ? preloadImage.story
+    : (meta.story || seoDescriptionRaw);
+
+// OG/Twitter image setup
+let rawOgImage;
+let ogAlt;
+let ogWidth = preloadImage?.width || "1600";
+let ogHeight = preloadImage?.height || "1200";
+
+if (isImagePage && preloadImage?.src) {
+  rawOgImage = preloadImage.src;
+  ogAlt = preloadImage.alt || preloadImage.title || cleanTitle;
+  ogWidth = preloadImage.width || ogWidth;
+  ogHeight = preloadImage.height || ogHeight;
+} else if (meta.ogImage) {
+  rawOgImage = meta.ogImage;
+  ogAlt = meta.ogImageAlt || meta.ogImageTitle || cleanTitle;
+  ogWidth = meta.ogImageWidth || ogWidth;
+  ogHeight = meta.ogImageHeight || ogHeight;
+} else {
+  rawOgImage = "/images/default-og.jpg";
+  ogAlt = meta.ogImageAlt || meta.ogImageTitle || cleanTitle;
+  ogWidth = "1600";
+  ogHeight = "1200";
+}
+
+const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
+const ogUrl = canonicalUrl;
+
+const ogImage = ensureAbsoluteUrl(rawOgImage).replace(/^http:/, 'https:');
+const ogImageSecureUrl = ensureAbsoluteUrl(meta.ogImageSecureUrl || rawOgImage)?.replace(/^http:/, 'https:');
+
+// ✅ Changed og:type for Pinterest optimization
+const ogType = isImagePage ? "article" : (meta.ogType || "website");
+
+const twitterTitle = meta.twitterTitle || cleanTitle;
+const twitterImage = ensureAbsoluteUrl(meta.twitterImage || rawOgImage).replace(/^http:/, 'https:');
+const twitterUrl = ogUrl;
+
+const inferMimeType = (url) => {
+  if (!url) return null;
+  try {
+    const extension = new URL(url).pathname.split('.').pop()?.toLowerCase();
+    switch (extension) {
+      case 'jpg':
+      case 'jpeg':
+        return 'image/jpeg';
+      case 'png':
+        return 'image/png';
+      case 'webp':
+        return 'image/webp';
+      case 'gif':
+        return 'image/gif';
+      case 'avif':
+        return 'image/avif';
+      default:
+        return null;
+    }
+  } catch {
+    return null;
+  }
+};
+
+const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
+const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
+
+// ✅ Keywords
+const keywords =
+  meta.keywords ||
+  (Array.isArray(preloadImage?.keywords)
+    ? preloadImage.keywords.join(', ')
+    : preloadImage?.keywords || '');
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {import.meta.env.PROD && <base href="https://www.k4studios.com" />}
+
+    <!-- ✅ Always render SEO title + description -->
+    <title>{cleanTitle}</title>
+    <meta name="description" content={seoDescription} />
+    {keywords && <meta name="keywords" content={keywords} />}
+    <meta name="author" content="Wayne Heim" />
+    <meta name="copyright" content="© Wayne Heim, K4 Studios" />
+    <meta name="creator" content="Wayne Heim" />
+    {isImagePage && <meta name="robots" content="noai, noimageai" />}
+    <link rel="canonical" href={canonicalUrl} />
+
+    {structuredDataJSON && (
+      <script type="application/ld+json" set:html={structuredDataJSON} />
+    )}
+    {breadcrumbsJSON && (
+      <script type="application/ld+json" set:html={breadcrumbsJSON} />
+    )}
+
+    <!-- ✅ Open Graph -->
+    <meta property="og:title" content={isImagePage ? (preloadImage?.title || cleanTitle) : cleanTitle} />
+    <meta property="og:description" content={
+      isImagePage
+        ? (preloadImage?.story || preloadImage?.description || meta.description || defaultDescription)
+        : (socialDescription || seoDescription)
+    } />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    {ogImageSecureUrl && <meta property="og:image:secure_url" content={ogImageSecureUrl} />}
+    <meta property="og:image:width" content={ogWidth} />
+    <meta property="og:image:height" content={ogHeight} />
+    <meta property="og:image:alt" content={preloadImage?.alt || preloadImage?.title || cleanTitle} />
+    <meta property="og:image:type" content={ogImageType} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:site_name" content="K4 Studios – Fine Art Photography" />
+    <meta property="og:locale" content={meta.ogLocale || 'en_US'} />
+
+    <!-- ✅ Twitter -->
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:title" content={twitterTitle} />
+    <meta name="twitter:description" content={socialDescription} />
+    {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+    <meta name="twitter:image:alt" content={ogAlt} />
+    <meta name="twitter:url" content={twitterUrl} />
+
+    <!-- ✅ Pinterest Metadata (clean separation of title/description) -->
+    {isImagePage && (
+      <>
+        <meta name="pinterest:rich_title" content={preloadImage?.title || cleanTitle} />
+        <meta name="pinterest:description" content={preloadImage?.story || preloadImage?.description || defaultDescription} />
+        <meta name="pinterest:image" content={ogImage} />
+        <meta name="pinterest:media:alt" content={preloadImage?.alt || preloadImage?.title || cleanTitle} />
+        <meta name="pinterest:creator" content="Wayne Heim" />
+      </>
+    )}
+
+    <!-- ✅ Schema.org: Pinterest-optimized ImageObject -->
+    {isImagePage && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "name": preloadImage?.title || cleanTitle,
+        "description": preloadImage?.story || preloadImage?.description || defaultDescription,
+        "contentUrl": ogImage,
+        "url": canonicalUrl,
+        "thumbnailUrl": ogImage,
+        "author": {
+          "@type": "Person",
+          "name": "Wayne Heim",
+          "url": "https://www.k4studios.com/"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Wayne Heim"
+        },
+        "license": "https://www.k4studios.com/Contact"
+      })}></script>
+    )}
+
+    {/* Removed SocialMediaPosting JSON-LD to avoid Google "Discussion forum" warnings and missing datePublished */}
+
+    <!-- ✅ Existing fallback schema -->
+    {!structuredDataJSON && (
+      <>
+        {ogImage && <link rel="image_src" href={ogImage} />}
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            url: canonicalUrl,
+            contentUrl: (preloadImage?.src || ogImage).replace(/^http:/, 'https:'),
+            name: preloadImage?.alt || preloadImage?.title || cleanTitle,
+            caption: preloadImage?.alt || preloadImage?.title || cleanTitle,
+            description: preloadImage?.story || preloadImage?.description || socialDescription,
+            width: preloadImage?.width || ogWidth || "1600",
+            height: preloadImage?.height || ogHeight || "1200",
+            copyrightNotice: "Wayne Heim",
+            creditText: "Wayne Heim",
+            creator: { "@type": "Person", "name": "Wayne Heim", "url": "https://www.k4studios.com/" },
+            copyrightHolder: { "@type": "Person", "name": "Wayne Heim" },
+            license: "https://www.k4studios.com/Contact",
+            acquireLicensePage: "https://www.k4studios.com/Contact",
+            inLanguage: "en"
+          })}
+        ></script>
+      </>
+    )}
+
+    <!-- Person Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Wayne Heim",
+      "jobTitle": "Fine Art Photographer & Medical Illustrator",
+      "url": "https://www.k4studios.com/",
+      "image": "https://www.k4studios.com/images/WayneHeimPortrait.jpg",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "K4 Studios",
+        "url": "https://www.k4studios.com/"
+      },
+      "sameAs": [
+        "https://www.instagram.com/k4studios",
+        "https://www.pinterest.com/k4studios",
+        "https://www.heimmedicalart.com"
+      ]
+    })}></script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "K4 Studios",
+      "url": "https://www.k4studios.com/",
+      "logo": "https://www.k4studios.com/images/K4Logo-web-c.webp",
+      "sameAs": [
+        "https://www.instagram.com/k4studios",
+        "https://www.pinterest.com/k4studios",
+        "https://www.heimmedicalart.com"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Wayne Heim",
+        "url": "https://www.k4studios.com/"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "k4studiosnotices@gmail.com",
+        "url": "https://www.k4studios.com/Contact"
+      }
+    })}></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://photos.smugmug.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo&display=swap" rel="stylesheet" />
+
+    {preloadImage?.src && <link rel="preload" as="image" href={preloadImage.src} />}
+
+    <style>
+      body {
+        font-family: 'Glegoo', serif;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+        color: #2e2e2e;
+        margin-top: 1rem;
+      }
+      .page-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+      }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args){window.dataLayer.push(args);}
+      gtag('js', new Date());
+      gtag('config', 'G-0J1HSKFC04', {
+        'api_secret': 'puQODutySsiMJp5q3kkfhA',
+        'send_page_view': true
+      });
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "tuibatmru4");
+    </script>
+  </head>
+
+  <body>
+    <GalleryTourSkipClearer client:load />
+    <div class="page-container">
+      <slot />
+    </div>
+    <div id="overlay-root"></div>
+
+    <!-- SVG sharpening filter -->
+    <svg width="0" height="0" style="position:absolute">
+      <filter id="sharpen">
+        <feConvolveMatrix order="3" kernelMatrix="0 -.5 0 -.5 3.2 -.5 0 -.5 0" divisor="1.2" />
+      </filter>
+    </svg>
+  </body>
+</html>
