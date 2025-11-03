@@ -3,11 +3,14 @@ import GalleryLightbox from "../../components/GalleryLightbox.jsx";
 import Footer from "../../components/Footer.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+// ✅ Read query param
 const params = new URLSearchParams(Astro.url.search);
 const datasetPathRaw = decodeURIComponent(params.get("dataset") ?? "");
-const datasetPath = datasetPathRaw.endsWith(".mjs") ? datasetPathRaw : `${datasetPathRaw}.mjs`;
+const datasetPath = datasetPathRaw.endsWith(".mjs")
+  ? datasetPathRaw
+  : `${datasetPathRaw}.mjs`;
 
-// ✅ Load gallery dataset for SSR
+// ✅ Load dataset SSR
 let galleryData = [];
 try {
   const importPath = datasetPath.startsWith("/src/") ? datasetPath : `/src${datasetPath}`;
@@ -18,7 +21,16 @@ try {
   galleryData = [];
 }
 
-// ✅ Derive human-friendly names & paths
+// ✅ Clean up text for JSON-LD safety
+function safeJSON(str = "") {
+  return String(str)
+    .replace(/[\n\r]+/g, " ")
+    .replace(/"/g, '\\"')
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// ✅ Derive names & URLs
 const baseUrl = datasetPath.replace(/^\/src\/data/, "").replace(/\.mjs$/i, "");
 const parts = baseUrl.split("/").filter(Boolean);
 const last = parts.pop() || "";
@@ -32,7 +44,7 @@ const canonicalUrl = `https://www.k4studios.com${baseUrl}`;
 const metaDescription = `Structured SEO index for ${galleryName} from Wayne Heim’s K4 Studios — includes all images, stories, and metadata for crawler discovery.`;
 ---
 
-<!-- ✅ Global Structured Data for Site Identity -->
+<!-- ✅ Global Schema -->
 <script type="application/ld+json" is:inline>
   {JSON.stringify({
     "@context": "https://schema.org",
@@ -54,18 +66,14 @@ const metaDescription = `Structured SEO index for ${galleryName} from Wayne Heim
       sameAs: [
         "https://www.instagram.com/k4studios",
         "https://www.pinterest.com/k4studios",
-        "https://www.linkedin.com/in/wayneheim"
+        "https://www.linkedin.com/in/wayneheim",
       ],
     },
   })}
 </script>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap"
-  rel="stylesheet"
-/>
-
-<!-- ✅ SEO Safeguards -->
+<!-- ✅ Meta / Robots -->
+<link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
 <meta name="robots" content="noindex, follow" />
 <meta name="googlebot" content="noindex, follow, max-image-preview:large" />
 <meta name="bingbot" content="noindex, follow" />
@@ -81,19 +89,21 @@ const metaDescription = `Structured SEO index for ${galleryName} from Wayne Heim
       </a>
     </div>
 
-    <!-- ✅ Single Header -->
+    <!-- ✅ Header -->
     <div class="header">
       <a href={baseUrl}>{galleryName}</a>
       <p style="margin:6px 0 0; font-size:.9em;">Mouse over image to see full preview. Click image to view page.</p>
     </div>
 
-    <!-- ✅ SSR Static Grid -->
+    <!-- ✅ Static Grid (for crawlers + users) -->
     <div class="ssr-grid">
       {galleryData.map((item) => {
         const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
         const linkUrl = `${baseUrl}/${item.id}`;
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
-        const description = item.description || item.alt || item.title;
+        const title = safeJSON(item.title);
+        const description = safeJSON(item.description || item.alt || item.title);
+        const story = safeJSON(item.story || "");
 
         return (
           <div class="ssr-card" id={item.id}>
@@ -110,7 +120,7 @@ const metaDescription = `Structured SEO index for ${galleryName} from Wayne Heim
               {JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "ImageObject",
-                name: item.title,
+                name: title,
                 description,
                 contentUrl: imageUrl,
                 url: fullUrl,
@@ -125,28 +135,27 @@ const metaDescription = `Structured SEO index for ${galleryName} from Wayne Heim
       })}
     </div>
 
-    <!-- ✅ CollectionPage Schema for the gallery -->
+    <!-- ✅ CollectionPage Schema -->
     <script type="application/ld+json" is:inline>
       {JSON.stringify({
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: galleryName,
+        name: safeJSON(galleryName),
         url: canonicalUrl,
         creator: { "@type": "Person", name: "Wayne Heim" },
         creditText: "© Wayne Heim – K4 Studios",
-        about: `${galleryName} from Wayne Heim's painterly fine art series.`,
+        about: `${safeJSON(galleryName)} from Wayne Heim's painterly fine art series.`,
         hasPart: galleryData.map((item) => ({
           "@type": "ImageObject",
-          name: item.title,
-          description: item.description || item.alt || item.title,
-          contentUrl:
-            item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "",
+          name: safeJSON(item.title),
+          description: safeJSON(item.description || item.alt || item.title),
+          contentUrl: item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "",
           url: `https://www.k4studios.com${baseUrl}/${item.id}`,
         })),
       })}
     </script>
 
-    <!-- ✅ Hydrated React grid (header suppressed) -->
+    <!-- ✅ React Gallery (JS) -->
     <GalleryLightbox client:only="react" datasetPath={datasetPath} showHeader={false} />
 
     <Footer />
