@@ -39,7 +39,7 @@ const clean = (val = "") =>
     .replace(/[\u0000-\u001F]+/g, " ") // strip control chars
     .replace(/\r?\n|\r/g, " ") // remove newlines
     .trim();
-const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/>/g, "\\u003e");
+const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c").replace(/>/g, "\\u003e").replace(/\\u003c\//g, "\\u003c\\/");
 ---
 
 <!-- ✅ Global Structured Data for Site Identity -->
