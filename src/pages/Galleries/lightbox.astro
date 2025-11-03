@@ -3,7 +3,7 @@ import GalleryLightbox from "../../components/GalleryLightbox.jsx";
 import Footer from "../../components/Footer.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-// Read the dataset parameter (e.g. ?dataset=/Galleries/...)
+// ✅ Read dataset parameter (?dataset=/Galleries/...)
 const params = new URLSearchParams(Astro.url.search);
 const datasetPathRaw = decodeURIComponent(params.get("dataset") ?? "");
 const datasetPath = datasetPathRaw.endsWith(".mjs") ? datasetPathRaw : `${datasetPathRaw}.mjs`;
@@ -19,7 +19,7 @@ try {
   galleryData = [];
 }
 
-// ✅ Derive human-friendly names & paths
+// ✅ Derive gallery name and paths
 const baseUrl = datasetPath.replace(/^\/src\/data/, "").replace(/\.mjs$/i, "");
 const parts = baseUrl.split("/").filter(Boolean);
 const last = parts.pop() || "";
@@ -29,14 +29,17 @@ const galleryName = [prev, last]
   .map((s) => s.replace(/-/g, " ").replace(/\b\w/g, (m) => m.toUpperCase()))
   .join(" – ");
 
-// ✅ Canonical should point to the true gallery landing page (no .mjs or query params)
+// ✅ Canonical points to real gallery landing page
 const galleryLandingUrl = `https://www.k4studios.com${baseUrl}`;
 const canonicalUrl = galleryLandingUrl;
+
+// ✅ Safe JSON encoder
+const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c");
 ---
 
 <!-- ✅ Global Structured Data for Site Identity -->
 <script type="application/ld+json" is:inline>
-  {JSON.stringify({
+  {safeJSON({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "K4 Studios",
@@ -62,14 +65,17 @@ const canonicalUrl = galleryLandingUrl;
   })}
 </script>
 
-<!-- ✅ Let Google index & follow links, but canonicalize credit to real gallery -->
+<!-- ✅ Allow indexing but give canonical credit to main gallery -->
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href={canonicalUrl} />
-<link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
 
 <BaseLayout
   title={galleryName}
-  description={`Full SEO index of ${galleryName} from Wayne Heim's K4 Studios`}
+  description={`Full SEO index of ${galleryName} from Wayne Heim’s K4 Studios`}
 >
   <main>
     <!-- ✅ Logo -->
@@ -92,6 +98,7 @@ const canonicalUrl = galleryLandingUrl;
         const linkUrl = `${baseUrl}/${item.id}`;
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
         const description = item.description || item.alt || item.title;
+
         return (
           <div class="ssr-card" id={item.id}>
             <a href={linkUrl}>
@@ -104,11 +111,11 @@ const canonicalUrl = galleryLandingUrl;
 
             <!-- ✅ Per-Image JSON-LD -->
             <script type="application/ld+json" is:inline>
-              {JSON.stringify({
+              {safeJSON({
                 "@context": "https://schema.org",
                 "@type": "ImageObject",
                 name: item.title,
-                description,
+                description: description,
                 contentUrl: imageUrl,
                 url: fullUrl,
                 creditText: "© Wayne Heim – K4 Studios",
@@ -122,28 +129,27 @@ const canonicalUrl = galleryLandingUrl;
       })}
     </div>
 
-    <!-- ✅ CollectionPage JSON-LD (for the whole gallery) -->
+    <!-- ✅ CollectionPage JSON-LD -->
     <script type="application/ld+json" is:inline>
-      {JSON.stringify({
+      {safeJSON({
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         name: galleryName,
         url: galleryLandingUrl,
         creator: { "@type": "Person", name: "Wayne Heim" },
         creditText: "© Wayne Heim – K4 Studios",
-        about: `${galleryName} from Wayne Heim's painterly fine art series.`,
+        about: `${galleryName} from Wayne Heim’s painterly fine art series.`,
         hasPart: galleryData.map((item) => ({
           "@type": "ImageObject",
           name: item.title,
           description: item.description || item.alt || item.title,
-          contentUrl:
-            item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "",
+          contentUrl: item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "",
           url: `https://www.k4studios.com${baseUrl}/${item.id}`
         }))
       })}
     </script>
 
-    <!-- ✅ Hydrated React grid (header suppressed) -->
+    <!-- ✅ Hydrated React Grid -->
     <GalleryLightbox client:only="react" datasetPath={datasetPath} showHeader={false} />
 
     <Footer />
