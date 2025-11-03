@@ -38,7 +38,6 @@ const clean = (val = "") =>
   String(val)
     .replace(/[\u0000-\u001F]+/g, " ") // strip control chars
     .replace(/\r?\n|\r/g, " ") // remove newlines
-    .replace(/"/g, '\\"') // escape double quotes
     .trim();
 const safeJSON = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c");
 ---
