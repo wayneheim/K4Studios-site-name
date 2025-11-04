@@ -1,0 +1,12 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PictureShowStoryBuilder from "@/components/PictureShowStoryBuilder.jsx";
+import Footer from "@/components/Footer.astro";
+---
+
+<BaseLayout title="K4 Picture Show Story Builder">
+  <main class="px-6 py-10 max-w-7xl mx-auto">
+    <PictureShowStoryBuilder client:load />  <!-- 👈 ADD THIS -->
+  </main>
+  <Footer />
+</BaseLayout>

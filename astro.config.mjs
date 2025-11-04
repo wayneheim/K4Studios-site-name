@@ -26,9 +26,13 @@ export default defineConfig({
     },
     server: {
       host: true,
-      port: 4321,
-      origin: 'http://localhost:4321',
-      hmr: { clientPort: 443 },
+      port: 8888,
+      origin: 'http://localhost:8888',
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost',
+        port: 8888
+      },
       allowedHosts: ['.trycloudflare.com', 'localhost', '127.0.0.1']
     }
     // No need for plugins: [tailwindcss()]!

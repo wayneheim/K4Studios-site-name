@@ -1,0 +1,50 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { storyData, storyMeta } from "@/data/Other/Stories/Builder-Test-v3.mjs";
+
+const pageTitle = storyMeta.showTitle || "Untitled Picture Show";
+const pageDescription = storyMeta.description || "This is the meta description";
+const ogImage = Array.isArray(storyData) && storyData.length > 0 ? storyData[0].src : "/og/painterly.jpg";
+
+const meta = {
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage,
+  ogType: "website",
+  twitterCard: "summary_large_image",
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: ogImage
+};
+
+const structuredData = getStructuredData({
+  type: "gallery",
+  data: { title: pageTitle, description: pageDescription },
+  images: Array.isArray(storyData) ? storyData : []
+});
+---
+
+<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={structuredData}>
+  <div id="picture-show-content" class="relative z-10 bg-white min-h-screen">
+    <PictureShowBase
+      client:only="react"
+      rawData={Array.isArray(storyData) ? storyData : []}
+      basePath={`/Other/Stories/Builder-Test-v3`}
+      titleBase={storyMeta.showTitle || "Untitled Picture Show"}
+    />
+  </div>
+
+  <style>
+    #picture-show-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  </style>
+</BaseLayout>

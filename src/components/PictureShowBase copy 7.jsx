@@ -724,7 +724,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -40 }}
-                transition={{ duration: 0.72 }}
+                transition={{ duration: 0.8 }}
                 className="flex flex-col items-center justify-center text-center mt-12 w-full"
               >
                 <h1
@@ -787,7 +787,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
-                transition={{ duration: 0.45 }}
+                transition={{ duration: 0.5 }}
                 className="w-full flex flex-col items-center overflow-visible"
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
@@ -843,7 +843,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                     <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 1.386, ease: [0.33, 1, 0.68, 1] }}
+                      transition={{ duration: 1.54, ease: [0.33, 1, 0.68, 1] }}
                       onClick={goNext}
                       onMouseEnter={() => setIsCardHovered(true)}
                       onMouseLeave={() => setIsCardHovered(false)}
@@ -881,7 +881,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                         <img
                           src={currentImage?.src}
                           alt={currentImage?.title}
-                          className={`w-full h-full object-contain rounded-sm transition-opacity duration-[1116ms] ease-out ${currentImage?.src2 ? 'group-hover:opacity-0' : ''}`}
+                          className={`w-full h-full object-contain rounded-sm transition-opacity duration-[1240ms] ease-out ${currentImage?.src2 ? 'group-hover:opacity-0' : ''}`}
                           onClick={() => setIsZoomed(true)}
                           draggable={false}
                         />
@@ -891,7 +891,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.27, duration: 0.36, ease: "easeOut" }}
+                        transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
                         className="text-center max-w-sm mx-auto"
                       >
                         <h1
@@ -968,8 +968,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   </div>
                 )}
 {/* Shopping Cart & Notes Buttons */}
-                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-3`}>
-                  {currentImage?.buyLink && (
+                {currentImage?.notes && (
+                  <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-3`}>
                     <a
                       href={currentImage?.buyLink}
                       target="_blank"
@@ -980,39 +980,29 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                       <ShoppingCart className="w-4 h-4 text-gray-500" aria-hidden="true" />
                       <span className="hidden sm:inline">Order</span>
                     </a>
-                  )}
 
-                  {currentIndex > 0 && (
                     <button
                       type="button"
-                      onClick={() => {
-                        if (currentImage?.notes) setShowNotes((p) => !p);
-                      }}
-                      className={`px-4 py-2 border border-gray-300 rounded-md text-sm flex items-center gap-2 ${currentImage?.notes ? 'bg-white hover:bg-gray-100 cursor-pointer' : 'bg-gray-100 text-gray-400 cursor-not-allowed opacity-60'}`}
-                      title={currentImage?.notes ? (showNotes ? 'Hide Notes' : 'View Collector Notes') : 'Coming soon.'}
-                      disabled={!currentImage?.notes}
-                      onMouseOver={e => {
-                        if (!currentImage?.notes) {
-                          e.currentTarget.setAttribute('title', 'Coming soon.');
-                        }
-                      }}
+                      onClick={() => setShowNotes((p) => !p)}
+                      className="px-4 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2"
                     >
-                      <Notebook className="w-4 h-4" />
+                      <Notebook className="w-4 h-4 text-gray-500" />
                       {showNotes ? "Hide Notes" : "View Collector Notes"}
                     </button>
-                  )}
 
-                  {currentIndex !== 0 && (
-                    <button
-                      type="button"
-                      onClick={() => setShowSlideshow(true)}
-                      className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
-                      title="Launch Cinematic Mode"
-                    >
-                      <MonitorPlay className="w-4 h-4 text-gray-400" />
-                    </button>
-                  )}
-                </div>
+                    {currentIndex !== 0 && (
+                      <button
+                        type="button"
+                        onClick={() => setShowSlideshow(true)}
+                        className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
+                        title="Launch Cinematic Mode"
+                      >
+                        <MonitorPlay className="w-4 h-4 text-gray-400" />
+
+                      </button>
+                    )}
+                  </div>
+                )}
 
                 {/* NOTES PANEL */}
                 <AnimatePresence>
@@ -1022,7 +1012,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                       initial={{ opacity: 0, y: -8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -8 }}
-                      transition={{ duration: 0.27 }}
+                      transition={{ duration: 0.3 }}
                       className="mt-4 max-w-2xl text-sm bg-[#e9ebe4] p-4 rounded-md border border-gray-300 shadow-inner"
                     >
                       {currentImage.notes.split("\n\n").map((para, idx) => (
@@ -1082,7 +1072,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   )}
 
                   {/* TEXT-TO-SPEECH BUTTON */}
-                  {currentIndex > 0 && !isEndOfStory && currentImage?.audioSrc && (
+                  {currentIndex > 0 && (
                     <button
                       type="button"
                       onClick={() => {

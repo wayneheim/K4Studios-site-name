@@ -57,7 +57,7 @@ export function getStructuredData({
           if (img.width) obj.width = img.width;
           if (img.height) obj.height = img.height;
           if (img.keywords && img.keywords.length)
-            obj.keywords = img.keywords.join(", ");
+            obj.keywords = Array.isArray(img.keywords) ? img.keywords.join(", ") : (img.keywords || "");
           if (img.datePublished)
             obj.datePublished = img.datePublished;
           return obj;

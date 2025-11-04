@@ -156,40 +156,34 @@ force = true
 
 
 ##############################
-# ✅ Smart Cache Policy — SEO-Safe & i-Page Compatible
+# ✅ Header Policy (SEO-Friendly Hybrid Cache)
 ##############################
 
-# Static assets (CSS, JS, images, etc.)
-[[headers]]
-for = "/assets/*"
-  [headers.values]
-  Cache-Control = "public, max-age=31536000, immutable"
-
-# Astro build artifacts
-[[headers]]
-for = "/_astro/*"
-  [headers.values]
-  Cache-Control = "public, max-age=31536000, immutable"
-
-# Fonts (long-term cache)
-[[headers]]
-for = "/fonts/*"
-  [headers.values]
-  Cache-Control = "public, max-age=31536000, immutable"
-
-# Individual image pages (/i-xxx/) — must stay dynamic
-[[headers]]
-for = "/*/i-*/*"
-  [headers.values]
-  Cache-Control = "no-cache, no-store, must-revalidate"
-
-# Regular HTML pages (landing, blog, glossary, etc.)
+# HTML pages → revalidated every hour (keeps Googlebot happy)
 [[headers]]
 for = "/*.html"
   [headers.values]
   Cache-Control = "public, max-age=3600, must-revalidate"
 
-# Global fallback
+# Astro or asset bundles → long-term cache (safe even if folder not used)
+[[headers]]
+for = "/_astro/*"
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
+
+# Generic /assets/ fallback (covers any renamed or legacy build outputs)
+[[headers]]
+for = "/assets/*"
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
+
+# Fonts (future-proof)
+[[headers]]
+for = "/fonts/*"
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
+
+# Global fallback → ensures any other files aren’t stale-cached
 [[headers]]
 for = "/*"
   [headers.values]
@@ -249,16 +243,17 @@ to = "/"
 status = 410
 force = true
 
-
 ##############################
 # ✅ Crawl-Debt Cleanup
 ##############################
+# Remove duplicate SmugMug and backend junk
 [[redirects]]
 from = "/{api,api/v1,api/v2,api/v3,key,photo,buy,cart,upload,video}/*"
 to = "/"
 status = 410
 force = true
 
+# --- Legacy SmugMug feeds (primary duplicate source) ---
 [[redirects]]
 from = "/hack/feed.mg"
 to = "/"
@@ -266,12 +261,14 @@ status = 410
 force = true
 query = "*"
 
+# --- Legacy Photo Shoots Root Redirect ---
 [[redirects]]
 from = "/Other/Photo-Shoots"
 to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots"
 status = 301
 force = true
 
+# --- Legacy Photo Shoots and Themes ---
 [[redirects]]
 from = "/Other/Photo-Shoots-and-Themes/*"
 to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"

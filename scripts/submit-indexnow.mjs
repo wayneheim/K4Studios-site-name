@@ -7,6 +7,9 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
+// === ⏰ SUBMIT INTERVAL CONTROL ===
+const SUBMIT_INTERVAL_HOURS = 6;
+const LAST_SUBMIT_PATH = path.join(__dirname, ".indexnow-last-submit.json");
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -57,6 +60,21 @@ async function submitBatch(urlList, batchNum) {
 
 // === 🚦 MAIN ===
 async function main() {
+  // Check last submit time
+  let lastSubmit = 0;
+  if (fs.existsSync(LAST_SUBMIT_PATH)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(LAST_SUBMIT_PATH, "utf8"));
+      lastSubmit = data.lastSubmit || 0;
+    } catch {}
+  }
+  const now = Date.now();
+  const hoursSince = (now - lastSubmit) / (1000 * 60 * 60);
+  if (hoursSince < SUBMIT_INTERVAL_HOURS) {
+    console.log(`⏳ Skipping IndexNow submit: Only ${hoursSince.toFixed(2)} hours since last submit. Interval is ${SUBMIT_INTERVAL_HOURS} hours.`);
+    return;
+  }
+
   let xml;
   if (fs.existsSync(SITEMAP_PATH)) {
     console.log(`📄 Using local sitemap at: ${SITEMAP_PATH}`);
@@ -85,6 +103,8 @@ async function main() {
     if (i + BATCH_SIZE < allUrls.length) await sleep(DELAY_MS);
   }
 
+  // Update last submit time
+  fs.writeFileSync(LAST_SUBMIT_PATH, JSON.stringify({ lastSubmit: now }));
   console.log("🎉 All batches submitted!");
 }
 

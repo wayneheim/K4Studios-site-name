@@ -381,26 +381,28 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
                 <span aria-hidden>▶</span>
               </button>
 
-              {/* Mute */}
-              <button
-                onClick={() => {
-                  // Stop current audio playback
-                  if (audioRef.current) {
-                    audioRef.current.pause();
-                    audioRef.current.currentTime = 0;
-                  }
-                  setIsSpeaking(false);
-                  // Toggle mute state
-                  setIsMuted(!isMuted);
-                }}
-                className={`bg-white/10 text-white rounded px-2 py-1 hover:bg-white/20 transition btn ${
-                  isMuted ? 'text-red-400' : ''
-                }`}
-                aria-label={isMuted ? "Unmute audio" : "Mute audio"}
-                title={isMuted ? "Unmute audio" : "Mute audio"}
-              >
-                <VolumeX className="w-4 h-4" />
-              </button>
+              {/* Mute - only show if current image has audioSrc */}
+              {current?.audioSrc && (
+                <button
+                  onClick={() => {
+                    // Stop current audio playback
+                    if (audioRef.current) {
+                      audioRef.current.pause();
+                      audioRef.current.currentTime = 0;
+                    }
+                    setIsSpeaking(false);
+                    // Toggle mute state
+                    setIsMuted(!isMuted);
+                  }}
+                  className={`bg-white/10 text-white rounded px-2 py-1 hover:bg-white/20 transition btn ${
+                    isMuted ? 'text-red-400' : ''
+                  }`}
+                  aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+                  title={isMuted ? "Unmute audio" : "Mute audio"}
+                >
+                  <VolumeX className="w-4 h-4" />
+                </button>
+              )}
 
               {/* Exit */}
               <button

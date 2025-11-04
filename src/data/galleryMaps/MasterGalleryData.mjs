@@ -8200,7 +8200,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/MC5LhSnKVfCfnkWrmm7hRnKnnzQhGN77cshsbKcRP/L/_WHO6565-Edit-2-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/LDZZnxmV5Grh5VsVD6DbKCP6KRK6jgZZSMScd84Pd/XL/_WHO6565-Edit-2-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/LkdhkV7PvPKwKmwR6wbZR4sR877xm6r8TMWXN6B4W/S/_WHO6565-Edit-2-Edit-S.jpg",
-      "rating": 0,
+      "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
       ]
@@ -48362,7 +48362,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/MC5LhSnKVfCfnkWrmm7hRnKnnzQhGN77cshsbKcRP/L/_WHO6565-Edit-2-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/LDZZnxmV5Grh5VsVD6DbKCP6KRK6jgZZSMScd84Pd/XL/_WHO6565-Edit-2-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/LkdhkV7PvPKwKmwR6wbZR4sR877xm6r8TMWXN6B4W/S/_WHO6565-Edit-2-Edit-S.jpg",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
     ]

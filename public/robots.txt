@@ -4,6 +4,27 @@
 # Purpose: Allow SEO + image indexing while blocking AI/data crawlers
 # ======================================================
 
+# --- Global default rules ---
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /api/v2/
+Disallow: /api/v3/
+Disallow: /buy/
+Disallow: /cart/
+Disallow: /key/
+Disallow: /Other/Photo-Shoots/
+Disallow: /photo/
+Disallow: /Slideshows/
+Disallow: /S90d
+Disallow: /services/
+Disallow: /_rpc/
+Disallow: /upload/
+Disallow: /video/
+
+User-agent: *
+Disallow: /hack/feed.mg
+
 # --- Google services ---
 User-agent: Googlebot
 Allow: /
@@ -47,13 +68,6 @@ User-agent: SemrushBot
 Allow: /
 User-agent: SemrushBot-BAI
 Disallow: /
-
-# --- Default access ---
-User-agent: *
-Disallow: /admin/
-Disallow: /Other/Photo-Shoots/
-Disallow: /api/
-Disallow: /api/v2/
 
 # --- Explicit AI / LLM / dataset crawlers (blocked) ---
 User-agent: GPTBot
