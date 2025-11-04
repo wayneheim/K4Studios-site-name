@@ -9,9 +9,9 @@ import { fileURLToPath } from "url";
 
 // === ⏰ SUBMIT INTERVAL CONTROL ===
 const SUBMIT_INTERVAL_HOURS = 6;
-const LAST_SUBMIT_PATH = path.join(__dirname, ".indexnow-last-submit.json");
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const LAST_SUBMIT_PATH = path.join(__dirname, ".indexnow-last-submit.json");
 
 // === 🔧 CONFIGURATION ===
 const SITE_HOST = "www.k4studios.com";
