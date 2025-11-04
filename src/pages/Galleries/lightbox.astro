@@ -5,13 +5,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 // ✅ Read query params
 const params = new URLSearchParams(Astro.url.search);
-const datasetPathRaw = decodeURIComponent(params.get("dataset") ?? "");
-const datasetPath = datasetPathRaw.endsWith(".mjs") ? datasetPathRaw : `${datasetPathRaw}.mjs`;
+const datasetParam = decodeURIComponent(params.get("dataset") ?? "");
+
+// ✅ Normalize and derive datasetPath for later use
+//   Example param: "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+const datasetPathRaw = datasetParam.replace(/^\/?src\/data\//, "").replace(/\.mjs$/i, "");
 
 // ✅ Dynamic import of the specific gallery dataset
 let galleryData = [];
 try {
-  const mod = await import(`../data${datasetPath}`);
+  // Must include .mjs in the static portion for Vite
+  const mod = await import(`../../data/${datasetPathRaw}.mjs`);
   galleryData = mod?.galleryData || mod?.default || (Array.isArray(mod) ? mod : []);
 } catch (err) {
   console.warn("⚠️ Could not load dataset SSR:", err);
@@ -19,7 +23,7 @@ try {
 }
 
 // ✅ Build path + naming
-const baseUrl = datasetPath.replace(/^\/src\/data/, "").replace(/\.mjs$/i, "");
+const baseUrl = `/${datasetPathRaw}`;
 const parts = baseUrl.split("/").filter(Boolean);
 const last = parts.pop() || "";
 const prev = parts.pop() || "";
@@ -202,7 +206,7 @@ const clean = (val = "") =>
     }, null, 2)}
     </script>
 
-    <GalleryLightbox client:only="react" datasetPath={datasetPath} showHeader={false} />
+  <GalleryLightbox client:only="react" datasetPath={datasetPathRaw} showHeader={false} />
     <Footer />
   </main>
 
