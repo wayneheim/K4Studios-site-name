@@ -80,113 +80,28 @@ function stripRoot(p) {
   return n.startsWith("/") ? n.slice(1) : n;
 }
 
-
-/* === Server save helper (fixed version with correct order and working Package Show button) === */
+/* === Server save helper === */
+/* === Server save helper (writes .mjs + .astro) === */
 async function saveShowToServer(showArray, showMeta) {
   if (!showArray?.length) {
     alert("No show data to save.");
     return;
   }
 
-  // --- Prepare filenames and metadata ---
   const safeSlug = (showMeta?.showTitle || "Untitled-Show")
     .replace(/\s+/g, "-")
     .replace(/[^a-zA-Z0-9-_]/g, "");
+
   const mjsFilename = `${safeSlug}.mjs`;
   const astroFilename = `${safeSlug}.astro`;
-  // Remove global audio fields from storyMeta
-  const { globalAudioSrc, globalAudioMode, ...metaWithoutAudio } = showMeta;
-  const metaWithTimestamp = { ...metaWithoutAudio, savedAt: new Date().toISOString() };
 
-  // --- Upload audio (with progress + caching) ---
-  const audioCache = JSON.parse(localStorage.getItem("r2AudioCache") || "{}");
-  let uploadIndex = 1;
+  const metaWithTimestamp = { ...showMeta, savedAt: new Date().toISOString() };
 
-  async function uploadAudio(fileObj, destKey, label) {
-    if (!fileObj) throw new Error("No file object provided for upload");
-    if (audioCache[destKey]) {
-      console.log(`(cached) ${label}: ${destKey}`);
-      return audioCache[destKey];
-    }
-    console.log(`Uploading ${uploadIndex++}: ${label}...`);
-    const formData = new FormData();
-    formData.append("file", fileObj);
-    formData.append("destKey", destKey);
-    const res = await fetch("/.netlify/functions/uploadToR2", {
-      method: "POST",
-      body: formData,
-    });
-    const data = await res.json();
-    if (!data.url) throw new Error(data.error || "No URL returned");
-    audioCache[destKey] = data.url;
-    localStorage.setItem("r2AudioCache", JSON.stringify(audioCache));
-    console.log(`✅ Uploaded: ${label}`);
-    return data.url;
-  }
+  const mjsContent = `// Auto-generated Picture Show dataset\nexport const storyMeta = ${JSON.stringify(metaWithTimestamp, null, 2)};\nexport const storyData = ${JSON.stringify(showArray, null, 2)};`;
 
-  // Global audio
-  if (metaWithTimestamp.globalAudioSrc && !metaWithTimestamp.globalAudioSrc.startsWith("http")) {
-    // Find the actual File object from input (assume it's stored in showMeta.globalAudioFile)
-    const fileObj = showMeta.globalAudioFile;
-    const fileName = metaWithTimestamp.globalAudioSrc;
-    const destKey = `StoryShows/${safeSlug}/${fileName}`;
-    try {
-      metaWithTimestamp.globalAudioSrc = await uploadAudio(fileObj, destKey, fileName);
-    } catch (err) {
-      console.error("Global audio upload failed:", err);
-    }
-  }
+  // 🪶 Astro viewer template (dynamic fields)
+  const astroContent = `---\nimport BaseLayout from \"@/layouts/BaseLayout.astro\";\nimport PictureShowBase from \"@/components/PictureShowBase.jsx\";\nimport { getStructuredData } from \"@/components/utils/getStructuredData.ts\";\nimport { storyMeta, storyData } from \"@/data/Other/Stories/${safeSlug}.mjs\";\n\nconst pageTitle = storyMeta?.showTitle\n  ? \`${showMeta.showTitle} | Picture Show | Wayne Heim Fine Art Photography\`\n  : \"Untitled Picture Show | Picture Show | Wayne Heim Fine Art Photography\";\n\nconst pageDescription =\n  storyMeta?.description ||\n  \"A cinematic fine art story told through painterly photography by Wayne Heim.\";\n\nconst ogImage =\n  Array.isArray(storyData) && storyData.length > 0\n    ? storyData[0].src\n    : \"/og/painterly.jpg\";\n\nconst meta = {\n  description: pageDescription,\n  ogTitle: pageTitle,\n  ogDescription: pageDescription,\n  ogImage,\n  ogType: \"website\",\n  twitterCard: \"summary_large_image\",\n  twitterTitle: pageTitle,\n  twitterDescription: pageDescription,\n  twitterImage: ogImage\n};\n\nconst structuredData = getStructuredData({\n  type: \"gallery\",\n  data: { title: pageTitle, description: pageDescription },\n  images: Array.isArray(storyData) ? storyData : []\n});\n---\n\n<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={structuredData}>\n  <div id=\"picture-show-content\" class=\"relative z-10 bg-white min-h-screen\">\n    <PictureShowBase\n      client:only=\"react\"\n      rawData={Array.isArray(storyData) ? storyData : []}\n      basePath=\"/Other/Stories/${safeSlug}\"\n      titleBase={storyMeta?.showTitle || \"Untitled Picture Show\"}\n      globalAudioSrc={storyMeta?.globalAudioSrc || \"\"}\n      globalAudioMode={storyMeta?.globalAudioMode || \"score\"}\n      introText={storyMeta?.intro || \"\"}\n      closingText={storyMeta?.closingText || \"\"}\n    />\n  </div>\n\n  <style>\n    #picture-show-content {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: flex-start;\n      padding-top: 4rem;\n      padding-bottom: 4rem;\n    }\n  </style>\n</BaseLayout>\n`;
 
-  // Per-slide audio
-  for (const slide of showArray) {
-    if (slide.audioSrc && !slide.audioSrc.startsWith("http")) {
-      // Assume slide.audioFile contains the actual File object
-      const fileObj = slide.audioFile;
-      const fileName = slide.audioSrc.startsWith("/") ? slide.audioSrc.split("/").pop() : slide.audioSrc;
-      const destKey = `StoryShows/${safeSlug}/${fileName}`;
-      try {
-        slide.audioSrc = await uploadAudio(fileObj, destKey, fileName);
-      } catch (err) {
-        console.error(`Slide audio upload failed (${fileName}):`, err);
-      }
-    }
-  }
-
-  // Only .mjs and .astro files are written, and only audio files are uploaded.
-
-  // --- Store global audio only in ghost slide, upload if needed ---
-  let globalAudioUrl = "";
-  let ghostAudioMode = showMeta.globalAudioMode || "mute";
-  if (ghostAudioMode !== "mute" && showMeta.globalAudioFile) {
-    // Upload global audio file to R2
-    const fileObj = showMeta.globalAudioFile;
-    const fileName = showMeta.globalAudioSrc;
-    const destKey = `StoryShows/${safeSlug}/${fileName}`;
-    try {
-      globalAudioUrl = await uploadAudio(fileObj, destKey, fileName);
-    } catch (err) {
-      console.error("Global audio upload failed:", err);
-      globalAudioUrl = "";
-    }
-  }
-  // If muted, globalAudioUrl stays empty
-  const slidesWithGhostAudio = showArray.map((slide, idx) => {
-    if (idx === 0 && (slide.id === "i-k4studios" || slide.visibility === "ghost")) {
-      return {
-        ...slide,
-        audioSrc: globalAudioUrl,
-        globalAudioMode: ghostAudioMode
-      };
-    }
-    return slide;
-  });
-
-  // --- Build file contents ---
-  const mjsContent = `// Auto-generated Picture Show dataset\nexport const storyMeta = ${JSON.stringify(metaWithTimestamp, null, 2)};\nexport const storyData = ${JSON.stringify(slidesWithGhostAudio, null, 2)};`;
-
-  const astroContent = `---\n// Auto-generated Astro page for ${safeSlug}\nimport BaseLayout from \"@/layouts/BaseLayout.astro\";\nimport PictureShowBase from \"@/components/PictureShowBase.jsx\";\nimport { storyMeta, storyData } from \"@/data/Other/Stories/${safeSlug}.mjs\";\n--- \n\n<BaseLayout title={storyMeta.showTitle}>\n  <PictureShowBase\n    client:only=\"react\"\n    rawData={storyData}\n    basePath=\"/Other/Stories/${safeSlug}\"\n    titleBase={storyMeta.showTitle}\n    globalAudioSrc={storyMeta.globalAudioSrc || \"\"}\n    globalAudioMode={storyMeta.globalAudioMode || \"score\"}\n  />\n</BaseLayout>`;
-
-  // --- Save to server ---
   try {
     const res = await fetch("/.netlify/functions/saveShowData", {
       method: "POST",
@@ -195,11 +110,11 @@ async function saveShowToServer(showArray, showMeta) {
         filename: mjsFilename,
         content: mjsContent,
         astroFilename,
-        astroContent,
+        astroContent
       }),
     });
     if (!res.ok) throw new Error(await res.text());
-    alert(`✅ Show packaged and uploaded:\n• ${mjsFilename}\n• ${astroFilename}`);
+    alert(`✅ Saved:\n• /src/data/Other/Stories/${mjsFilename}\n• /src/pages/Other/Stories/${astroFilename}`);
   } catch (err) {
     console.error("Server save failed:", err);
     alert("Server save failed; falling back to download.");
@@ -1195,14 +1110,35 @@ export default function PictureShowStoryBuilder() {
         <div style={{ background: "#fff", borderRadius: 12, padding: 16, border: "1px solid #e1d9cf" }}>
           <h2 className="text-xl font-semibold mb-2">8) Save Show Data</h2>
           <p className="text-sm">Click <b>Save .mjs</b> in the header to download your dataset. Place it under <code>/src/data/Other/Stories/</code>.</p>
+          <button onClick={exportMJS} style={{ border: "1px solid #6b5b4b", padding: "8px 14px", borderRadius: 6, background: "#e3d9cf", fontWeight: 700 }}>Save .mjs Now</button>
           <button
-            onClick={() => {
-              const core = ensureGhostAndClosing(slides.length ? slides : [GHOST_TEMPLATE, ...picked, { ...CLOSING_TEMPLATE, description: showMeta.closingText }]);
-              saveShowToServer(core, showMeta);
+            onClick={async () => {
+              // Load Astro template
+              const templateRes = await fetch("/src/pages/Other/Stories/Template/show-template.astro");
+              let template = await templateRes.text();
+              const safeFile = (showMeta.showTitle?.trim() || "Untitled Picture Show").replace(/\s+/g, "-");
+              // Replace import for storyData and storyMeta
+              template = template.replace(/import { storyData } from ".*";/, `import { storyData, storyMeta } from "/src/data/Other/Stories/${safeFile}.mjs";`);
+              // Replace pageTitle and pageDescription to pull from database
+              template = template.replace(/const pageTitle = ".*";/, `const pageTitle = storyMeta.showTitle || "Untitled Picture Show";`);
+              template = template.replace(/const pageDescription = ".*";/, `const pageDescription = storyMeta.description || "This is the meta description";`);
+              // Replace basePath and titleBase to be dynamic
+              template = template.replace(/basePath="[^"]*"/, `basePath="/Other/Stories/${safeFile}"`);
+              template = template.replace(/titleBase="[^"]*"/, `titleBase={storyMeta.showTitle || "Untitled Picture Show"}`);
+              // Download the new .astro file
+              const blob = new Blob([template], { type: "text/plain;charset=utf-8" });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.href = url;
+              a.download = `${safeFile}.astro`;
+              document.body.appendChild(a);
+              a.click();
+              a.remove();
+              URL.revokeObjectURL(url);
+              alert("✅ Astro show file generated and downloaded.");
             }}
-            style={{ border: "2px solid #19c37d", padding: "10px 18px", borderRadius: 8, background: "#e3d9cf", fontWeight: 700, color: '#19c37d' }}>
-            Package Show
-          </button>
+            style={{ border: "1px solid #6b5b4b", padding: "8px 14px", borderRadius: 6, background: "#e3d9cf", fontWeight: 700, marginLeft: 12 }}
+          >Save Astro Show File</button>
         </div>
       )}
     </div>
