@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX } from "lucide-react";
 import ZoomOverlay from "./ZoomOverlay.jsx";
@@ -36,6 +36,17 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     }
     return {};
   });
+
+  // Normalize incoming data: strip any explicit closing slide since the viewer renders its own end page
+  const filteredData = useMemo(() => {
+    try {
+      return Array.isArray(rawData)
+        ? rawData.filter(img => img?.visibility !== 'closing' && img?.id !== 'i-k4studios-closing')
+        : [];
+    } catch {
+      return rawData || [];
+    }
+  }, [rawData]);
 
   // Hide site header/intro and ensure chapter section is visible while Picture Show is active
   useEffect(() => {
@@ -110,10 +121,10 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       const newIndex = Math.max(i - 1, 0);
       // Trigger audio for new image after a short delay
       setTimeout(() => {
-        if (showSlideshow && rawData[newIndex]?.audioSrc && !isMuted) {
+        if (showSlideshow && filteredData[newIndex]?.audioSrc && !isMuted) {
           setIsSpeaking(true);
           if (audioRef.current) {
-            audioRef.current.src = rawData[newIndex].audioSrc;
+            audioRef.current.src = filteredData[newIndex].audioSrc;
             audioRef.current.play().catch((error) => {
               console.error('Error playing audio on navigation:', error);
               setIsSpeaking(false);
@@ -132,15 +143,15 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     setDirection(1);
     if (currentIndex === 0) {
       // Find first non-ghost image
-      const firstRealIdx = rawData.findIndex(img => img.id !== 'i-k4studios');
+  const firstRealIdx = filteredData.findIndex(img => img.id !== 'i-k4studios');
       const newIndex = firstRealIdx > -1 ? firstRealIdx : 1;
       setCurrentIndex(newIndex);
       // Trigger audio for new image after a short delay
       setTimeout(() => {
-        if (showSlideshow && rawData[newIndex]?.audioSrc && !isMuted) {
+        if (showSlideshow && filteredData[newIndex]?.audioSrc && !isMuted) {
           setIsSpeaking(true);
           if (audioRef.current) {
-            audioRef.current.src = rawData[newIndex].audioSrc;
+            audioRef.current.src = filteredData[newIndex].audioSrc;
             audioRef.current.play().catch((error) => {
               console.error('Error playing audio on navigation:', error);
               setIsSpeaking(false);
@@ -150,13 +161,13 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       }, 100);
     } else {
       setCurrentIndex(i => {
-        const newIndex = Math.min(i + 1, rawData.length);
+  const newIndex = Math.min(i + 1, filteredData.length);
         // Trigger audio for new image after a short delay
         setTimeout(() => {
-          if (showSlideshow && rawData[newIndex]?.audioSrc && !isMuted) {
+          if (showSlideshow && filteredData[newIndex]?.audioSrc && !isMuted) {
             setIsSpeaking(true);
             if (audioRef.current) {
-              audioRef.current.src = rawData[newIndex].audioSrc;
+              audioRef.current.src = filteredData[newIndex].audioSrc;
               audioRef.current.play().catch((error) => {
                 console.error('Error playing audio on navigation:', error);
                 setIsSpeaking(false);
@@ -200,8 +211,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     }
   };
 
-  const currentImage = rawData[currentIndex];
-  const isEndOfStory = currentIndex >= rawData.length;
+  const currentImage = filteredData[currentIndex];
+  const isEndOfStory = currentIndex >= filteredData.length;
 
   // Helper function to check if speech is currently active
   const isSpeechActive = () => {
@@ -749,7 +760,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                 </h2>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-10">
-                  {rawData.filter(img => img.id !== "i-k4studios" && img.visibility !== "closing" && img.id !== "i-k4studios-closing").map((img, idx) => (
+                  {filteredData.filter(img => img.id !== "i-k4studios").map((img, idx) => (
                     <a
                       key={idx}
                       href={img.galleries && img.galleries.length > 0 ? `/Galleries/${img.galleries[0].replace('Galleries/', '').replace('.mjs', '')}/${img.id}` : "#"}
@@ -1049,7 +1060,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   )}
 
                   {/* PROGRESS DOTS */}
-                  {currentIndex > 0 && Array.from({ length: rawData.length + 1 }, (_, idx) => idx).map((idx) => (
+                  {currentIndex > 0 && Array.from({ length: filteredData.length + 1 }, (_, idx) => idx).map((idx) => (
                     <button
                       key={idx}
                       onClick={() => {
@@ -1065,7 +1076,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                         opacity: idx === currentIndex ? 1 : 0.4,
                         transform: idx === currentIndex ? "scale(1.1)" : "scale(0.9)",
                       }}
-                      title={`Go to ${idx === rawData.length ? "End" : `Slide ${idx + 1}`}`}
+                      title={`Go to ${idx === 0 ? "Intro" : (idx === filteredData.length ? "End" : `Slide ${idx}`)}`}
                     ></button>
                   ))}
 
@@ -1157,7 +1168,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
             {/* 🔗 Share Drawer */}
             <div className="pb-4">
               <ShareDrawer
-                imageUrl={rawData?.[0]?.src}
+                imageUrl={filteredData?.[0]?.src}
                 pageTitle="Story Complete - K4 Studios"
               />
             </div>
@@ -1201,7 +1212,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
 
       {showSlideshow && (
         <GallerySlideshowStory
-          images={rawData}
+          images={filteredData}
           startImageId={currentImage?.id}
           onExit={() => setShowSlideshow(false)}
           isMuted={isMuted}

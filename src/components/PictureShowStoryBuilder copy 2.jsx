@@ -171,11 +171,7 @@ async function saveShowToServer(showArray, showMeta) {
   });
 
   // --- Build file contents ---
-  // Remove closing slide from export; viewer renders its own end screen
-  const exportSlides = slidesWithGhostAudio.filter(
-    (s) => s.visibility !== "closing" && s.id !== "i-k4studios-closing"
-  );
-  const mjsContent = `// Auto-generated Picture Show dataset\nexport const storyMeta = ${JSON.stringify(metaWithTimestamp, null, 2)};\nexport const storyData = ${JSON.stringify(exportSlides, null, 2)};`;
+  const mjsContent = `// Auto-generated Picture Show dataset\nexport const storyMeta = ${JSON.stringify(metaWithTimestamp, null, 2)};\nexport const storyData = ${JSON.stringify(slidesWithGhostAudio, null, 2)};`;
 
   const astroContent = `---\n// Auto-generated Astro page for ${safeSlug}\nimport BaseLayout from \"@/layouts/BaseLayout.astro\";\nimport PictureShowBase from \"@/components/PictureShowBase.jsx\";\nimport { storyMeta, storyData } from \"@/data/Other/Stories/${safeSlug}.mjs\";\n--- \n\n<BaseLayout title={storyMeta.showTitle}>\n  <PictureShowBase\n    client:only=\"react\"\n    rawData={storyData}\n    basePath=\"/Other/Stories/${safeSlug}\"\n    titleBase={storyMeta.showTitle}\n    globalAudioSrc={storyMeta.globalAudioSrc || \"\"}\n    globalAudioMode={storyMeta.globalAudioMode || \"score\"}\n  />\n</BaseLayout>`;
 
@@ -1047,21 +1043,7 @@ export default function PictureShowStoryBuilder() {
                   {/* Consistent audio preview icon */}
                   {s.audioSrc && <AudioPreviewIcon src={s.audioSrc} muted={!!showMeta.globalAudioSrc && showMeta.globalAudioMode === "score" && !audioMuted} ambient={!!showMeta.globalAudioSrc && showMeta.globalAudioMode === "ambient"} />}
                   <div style={{ padding: 8, position: "relative" }}>
-                    <div
-                      style={{
-                        fontSize: 12,
-                        opacity: 0.85,
-                        display: "inline-block",
-                        padding: "2px 8px",
-                        borderRadius: 999,
-                        background: "#f3efe9",
-                        border: "1px solid #d8cfc3",
-                        marginBottom: 6,
-                      }}
-                      title={idx === 0 ? "Go to Intro" : (idx === slides.length - 1 ? "End" : `Slide ${idx}`)}
-                    >
-                      {idx === 0 ? "Go to Intro" : (idx === slides.length - 1 ? "End" : `Slide ${idx}`)}
-                    </div>
+                    <div style={{ fontSize: 12, opacity: 0.6 }}>#{idx}</div>
                     <div style={{ fontWeight: 700, fontSize: 13, display: "flex", alignItems: "center", gap: 6 }}>
                       {s.title || s.id}
                     </div>
@@ -1181,21 +1163,7 @@ export default function PictureShowStoryBuilder() {
                     <img src={imgSrc} alt={s.alt || s.title || ""} style={{ width: "100%", height: 160, objectFit: "cover" }} />
                   ) : null}
                   <div style={{ padding: 10 }}>
-                    <div
-                      style={{
-                        fontSize: 12,
-                        opacity: 0.85,
-                        display: "inline-block",
-                        padding: "2px 8px",
-                        borderRadius: 999,
-                        background: "#f3efe9",
-                        border: "1px solid #d8cfc3",
-                        marginBottom: 6,
-                      }}
-                      title={i === 0 ? "Go to Intro" : `Slide ${i}`}
-                    >
-                      {i === 0 ? "Go to Intro" : `Slide ${i}`}
-                    </div>
+                    <div style={{ fontSize: 12, opacity: 0.6 }}>#{i} {s.visibility ? `(${s.visibility})` : ""}</div>
                     <div style={{ fontWeight: 700, display: "flex", alignItems: "center", gap: 6 }}>
                       {s.title || s.id}
                       {s.audioSrc && <AudioPreviewIcon src={s.audioSrc} />}

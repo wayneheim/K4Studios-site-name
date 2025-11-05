@@ -1,25 +1,50 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clipboard } from "lucide-react";
 
-export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
+export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle, pageDescription }) {
   const [isOpen, setIsOpen] = useState(false);
   const [pageUrl, setPageUrl] = useState("");
   const [currentImageUrl, setCurrentImageUrl] = useState(propImageUrl || "");
+  const [currentDescription, setCurrentDescription] = useState(pageDescription || "");
   const [isClipboardHovered, setIsClipboardHovered] = useState(false);
 
-  // Always update pageUrl and imageUrl every time the drawer opens
+  // ✅ Always refresh meta and URLs when image/title/desc changes or drawer opens
   useEffect(() => {
-    if (isOpen && typeof window !== "undefined") {
-      setPageUrl(window.location.href);
-      // Get current image from og:image meta tag
-      const ogImageMeta = document.querySelector('meta[property="og:image"]');
-      const imageFromMeta = ogImageMeta ? ogImageMeta.getAttribute('content') : propImageUrl || "";
-      setCurrentImageUrl(imageFromMeta);
-    }
-  }, [isOpen, propImageUrl]);
+    if (typeof window === "undefined") return;
+
+    setPageUrl(window.location.href);
+
+    // Pull current OG data directly from head
+    const ogImageMeta = document.querySelector('meta[property="og:image"]');
+    const ogDescMeta = document.querySelector('meta[property="og:description"]');
+
+    const imageFromMeta = ogImageMeta ? ogImageMeta.getAttribute("content") : propImageUrl || "";
+    const descFromMeta = ogDescMeta ? ogDescMeta.getAttribute("content") : pageDescription || "";
+
+    setCurrentImageUrl(imageFromMeta);
+    setCurrentDescription(descFromMeta);
+  }, [isOpen, propImageUrl, pageTitle, pageDescription]);
 
   const finalTitle = pageTitle || "Check this out from K4 Studios";
+  const encodedTitle = encodeURIComponent(finalTitle);
+  const encodedUrl = encodeURIComponent(pageUrl);
+  const encodedDesc = encodeURIComponent(currentDescription || finalTitle);
+  const shareText = encodeURIComponent(`${finalTitle}\n\n${pageUrl}`);
+
+  // ✅ Rebuild links dynamically whenever dependencies change
+  const links = useMemo(
+    () => ({
+      twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}%20${encodedUrl}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      pinterest: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodeURIComponent(
+        currentImageUrl || ""
+      )}&description=${encodedDesc}`,
+      email: `mailto:?subject=${encodedTitle}&body=${shareText}`,
+    }),
+    [encodedTitle, encodedUrl, encodedDesc, shareText, currentImageUrl]
+  );
+
   const notifyShare = async (platform) => {
     try {
       await fetch("/.netlify/functions/share-notify", {
@@ -30,15 +55,6 @@ export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
     } catch (err) {
       console.error("Share notify error:", err);
     }
-  };
-  const encodedTitle = encodeURIComponent(finalTitle);
-  const encodedUrl = encodeURIComponent(pageUrl);
-  const shareText = encodeURIComponent(`${finalTitle}\n\n${pageUrl}`);
-  const links = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}%20${encodedUrl}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-    pinterest: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodeURIComponent(currentImageUrl || "")}&description=${encodedTitle}`,
-    email: `mailto:?subject=${encodedTitle}&body=${shareText}`,
   };
 
   const iconSize = 20;
@@ -85,20 +101,32 @@ export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
               position: "absolute",
               bottom: "0",
               left: "-135px",
-              transform: "translateY( -100%)",
+              transform: "translateY(-100%)",
               zIndex: 1000,
               background: "#fff",
               border: "1.5px solid #85644b",
               borderRadius: "1rem",
               width: "90vw",
               maxWidth: 420,
-              boxShadow: "0 8px 32px rgba(44,44,44,0.12), 0 1.5px 8px rgba(133,100,75,0.12)",
+              boxShadow:
+                "0 8px 32px rgba(44,44,44,0.12), 0 1.5px 8px rgba(133,100,75,0.12)",
               padding: "1.25rem 1.5rem",
               textAlign: "center",
             }}
           >
-            <p style={{ marginBottom: 14, color: "#2c2c2c", fontWeight: "bold" }}>Share!</p>
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 28 }}>
+            <p style={{ marginBottom: 14, color: "#2c2c2c", fontWeight: "bold" }}>
+              Share!
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: 28,
+              }}
+            >
               {/* Copy */}
               <button
                 onClick={() => {
@@ -120,7 +148,10 @@ export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
                   gap: 3,
                 }}
               >
-                <Clipboard size={iconSize} color={isClipboardHovered ? `#${red}` : `#${gray}`} />
+                <Clipboard
+                  size={iconSize}
+                  color={isClipboardHovered ? `#${red}` : `#${gray}`}
+                />
                 <span style={{ fontSize: 13 }}>Copy</span>
               </button>
 
@@ -145,8 +176,12 @@ export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
                   alt="Twitter"
                   width={iconSize}
                   height={iconSize}
-                  onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/X/${red}`)}
-                  onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/X/${gray}`)}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.src = `https://cdn.simpleicons.org/X/${red}`)
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.src = `https://cdn.simpleicons.org/X/${gray}`)
+                  }
                 />
                 <span style={{ fontSize: 13 }}>Twitter</span>
               </a>
@@ -172,8 +207,12 @@ export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
                   alt="Facebook"
                   width={iconSize}
                   height={iconSize}
-                  onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/facebook/${red}`)}
-                  onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/facebook/${gray}`)}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.src = `https://cdn.simpleicons.org/facebook/${red}`)
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.src = `https://cdn.simpleicons.org/facebook/${gray}`)
+                  }
                 />
                 <span style={{ fontSize: 13 }}>Facebook</span>
               </a>
@@ -199,8 +238,12 @@ export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
                   alt="Pinterest"
                   width={iconSize}
                   height={iconSize}
-                  onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/pinterest/${red}`)}
-                  onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/pinterest/${gray}`)}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.src = `https://cdn.simpleicons.org/pinterest/${red}`)
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.src = `https://cdn.simpleicons.org/pinterest/${gray}`)
+                  }
                 />
                 <span style={{ fontSize: 13 }}>Pinterest</span>
               </a>
@@ -226,14 +269,18 @@ export default function ShareDrawer({ imageUrl: propImageUrl, pageTitle }) {
                   alt="Email"
                   width={iconSize}
                   height={iconSize}
-                  onMouseEnter={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/gmail/${red}`)}
-                  onMouseLeave={(e) => (e.currentTarget.src = `https://cdn.simpleicons.org/gmail/${gray}`)}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.src = `https://cdn.simpleicons.org/gmail/${red}`)
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.src = `https://cdn.simpleicons.org/gmail/${gray}`)
+                  }
                 />
                 <span style={{ fontSize: 13 }}>Email</span>
               </a>
             </div>
 
-            {/* Close Button */}
+            {/* Close */}
             <button
               onClick={() => setIsOpen(false)}
               style={{
