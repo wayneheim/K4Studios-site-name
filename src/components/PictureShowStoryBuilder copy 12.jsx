@@ -6,27 +6,33 @@ let globalAudioRef = null;
 
 import { Volume2 } from "lucide-react";
 
-function AudioPreviewIcon({ src }) {
-  if (!src) return null;
-  return (
-    <div
-      title="Audio attached"
-      style={{
-        position: "absolute",
-        top: 8,
-        right: 8,
-        zIndex: 1000,
-        background: "rgba(255,255,255,0.9)",
-        borderRadius: "50%",
-        padding: "6px",
-        border: "1px solid #aaa",
-        boxShadow: "0 2px 4px rgba(0,0,0,0.25)",
-        pointerEvents: "none", // 👈 makes it non-clickable
-      }}
-    >
-      <Volume2 size={22} color="#19c37d" />
-    </div>
-  );
+function AudioPreviewIcon({ src, muted, ambient }) {
+    if (!src) return null;
+    // Default muted to false if not provided
+    const isMuted = typeof muted === 'boolean' ? muted : false;
+    // If ambient mode, use blue; if score (muted), use gray; else green
+    let iconColor = "#19c37d"; // default green
+    if (ambient) iconColor = "#4a90e2";
+    if (isMuted) iconColor = "#bbb";
+    return (
+      <div
+        title={isMuted ? "Audio muted" : ambient ? "Ambient audio" : "Audio attached"}
+        style={{
+          position: "absolute",
+          top: 8,
+          right: 8,
+          zIndex: 1000,
+          background: "rgba(255,255,255,0.9)",
+          borderRadius: "50%",
+          padding: "6px",
+          border: "1px solid #aaa",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.25)",
+          pointerEvents: "none",
+        }}
+      >
+        <Volume2 size={22} color={iconColor} />
+      </div>
+    );
 }
 
 /* =============================================
@@ -74,36 +80,131 @@ function stripRoot(p) {
   return n.startsWith("/") ? n.slice(1) : n;
 }
 
-/* === Server save helper === */
+
+/* === Server save helper (fixed version with correct order and working Package Show button) === */
 async function saveShowToServer(showArray, showMeta) {
   if (!showArray?.length) {
     alert("No show data to save.");
     return;
   }
 
-  const filename = `${(showMeta?.showTitle || "Untitled-Show")
+  // --- Prepare filenames and metadata ---
+  const safeSlug = (showMeta?.showTitle || "Untitled-Show")
     .replace(/\s+/g, "-")
-    .replace(/[^a-zA-Z0-9-_]/g, "")
-  }.mjs`;
+    .replace(/[^a-zA-Z0-9-_]/g, "");
+  const mjsFilename = `${safeSlug}.mjs`;
+  const astroFilename = `${safeSlug}.astro`;
+  // Remove global audio fields from storyMeta
+  const { globalAudioSrc, globalAudioMode, ...metaWithoutAudio } = showMeta;
+  const metaWithTimestamp = { ...metaWithoutAudio, savedAt: new Date().toISOString() };
 
-  const metaWithTimestamp = {
-    ...showMeta,
-    savedAt: new Date().toISOString()
-  };
+  // --- Upload audio (with progress + caching) ---
+  const audioCache = JSON.parse(localStorage.getItem("r2AudioCache") || "{}");
+  let uploadIndex = 1;
 
-  const content = `// Auto-generated Picture Show dataset\nexport const storyMeta = ${JSON.stringify(metaWithTimestamp, null, 2)};\nexport const storyData = ${JSON.stringify(showArray, null, 2)};`;
+  async function uploadAudio(fileObj, destKey, label) {
+    if (!fileObj) throw new Error("No file object provided for upload");
+    if (audioCache[destKey]) {
+      console.log(`(cached) ${label}: ${destKey}`);
+      return audioCache[destKey];
+    }
+    console.log(`Uploading ${uploadIndex++}: ${label}...`);
+    const formData = new FormData();
+    formData.append("file", fileObj);
+    formData.append("destKey", destKey);
+    const res = await fetch("/.netlify/functions/uploadToR2", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await res.json();
+    if (!data.url) throw new Error(data.error || "No URL returned");
+    audioCache[destKey] = data.url;
+    localStorage.setItem("r2AudioCache", JSON.stringify(audioCache));
+    console.log(`✅ Uploaded: ${label}`);
+    return data.url;
+  }
 
+  // Global audio
+  if (metaWithTimestamp.globalAudioSrc && !metaWithTimestamp.globalAudioSrc.startsWith("http")) {
+    // Find the actual File object from input (assume it's stored in showMeta.globalAudioFile)
+    const fileObj = showMeta.globalAudioFile;
+    const fileName = metaWithTimestamp.globalAudioSrc;
+    const destKey = `StoryShows/${safeSlug}/${fileName}`;
+    try {
+      metaWithTimestamp.globalAudioSrc = await uploadAudio(fileObj, destKey, fileName);
+    } catch (err) {
+      console.error("Global audio upload failed:", err);
+    }
+  }
+
+  // Per-slide audio
+  for (const slide of showArray) {
+    if (slide.audioSrc && !slide.audioSrc.startsWith("http")) {
+      // Assume slide.audioFile contains the actual File object
+      const fileObj = slide.audioFile;
+      const fileName = slide.audioSrc.startsWith("/") ? slide.audioSrc.split("/").pop() : slide.audioSrc;
+      const destKey = `StoryShows/${safeSlug}/${fileName}`;
+      try {
+        slide.audioSrc = await uploadAudio(fileObj, destKey, fileName);
+      } catch (err) {
+        console.error(`Slide audio upload failed (${fileName}):`, err);
+      }
+    }
+  }
+
+  // Only .mjs and .astro files are written, and only audio files are uploaded.
+
+  // --- Store global audio only in ghost slide, upload if needed ---
+  let globalAudioUrl = "";
+  let ghostAudioMode = showMeta.globalAudioMode || "mute";
+  if (ghostAudioMode !== "mute" && showMeta.globalAudioFile) {
+    // Upload global audio file to R2
+    const fileObj = showMeta.globalAudioFile;
+    const fileName = showMeta.globalAudioSrc;
+    const destKey = `StoryShows/${safeSlug}/${fileName}`;
+    try {
+      globalAudioUrl = await uploadAudio(fileObj, destKey, fileName);
+    } catch (err) {
+      console.error("Global audio upload failed:", err);
+      globalAudioUrl = "";
+    }
+  }
+  // If muted, globalAudioUrl stays empty
+  const slidesWithGhostAudio = showArray.map((slide, idx) => {
+    if (idx === 0 && (slide.id === "i-k4studios" || slide.visibility === "ghost")) {
+      return {
+        ...slide,
+        audioSrc: globalAudioUrl,
+        globalAudioMode: ghostAudioMode
+      };
+    }
+    return slide;
+  });
+
+  // --- Build file contents ---
+  const mjsContent = `// Auto-generated Picture Show dataset\nexport const storyMeta = ${JSON.stringify(metaWithTimestamp, null, 2)};\nexport const storyData = ${JSON.stringify(slidesWithGhostAudio, null, 2)};`;
+
+  const astroContent = `---\n// Auto-generated Astro page for ${safeSlug}\nimport BaseLayout from \"@/layouts/BaseLayout.astro\";\nimport PictureShowBase from \"@/components/PictureShowBase.jsx\";\nimport { storyMeta, storyData } from \"@/data/Other/Stories/${safeSlug}.mjs\";\n--- \n\n<BaseLayout title={storyMeta.showTitle}>\n  <PictureShowBase\n    client:only=\"react\"\n    rawData={storyData}\n    basePath=\"/Other/Stories/${safeSlug}\"\n    titleBase={storyMeta.showTitle}\n    globalAudioSrc={storyMeta.globalAudioSrc || \"\"}\n    globalAudioMode={storyMeta.globalAudioMode || \"score\"}\n  />\n</BaseLayout>`;
+
+  // --- Save to server ---
   try {
     const res = await fetch("/.netlify/functions/saveShowData", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ filename, content }),
+      body: JSON.stringify({
+        filename: mjsFilename,
+        content: mjsContent,
+        astroFilename,
+        astroContent,
+      }),
     });
     if (!res.ok) throw new Error(await res.text());
-    alert(`✅ Saved show file to /src/data/Other/Stories/${filename}`);
+    alert(`✅ Show packaged and uploaded:\n• ${mjsFilename}\n• ${astroFilename}`);
   } catch (err) {
-    alert("Server save failed. Falling back to download.\n\n" + err.message);
-    downloadText(content, filename);
+    console.error("Server save failed:", err);
+    alert("Server save failed; falling back to download.");
+    downloadText(mjsContent, mjsFilename);
+    downloadText(astroContent, astroFilename);
   }
 }
 
@@ -120,10 +221,11 @@ function prettyLabelFromPath(fullPath) {
 }
 
 function pickImage(d = {}) {
-  return (
+  const src = (
     d.url || d.srcXL || d.srcL || d.srcM || d.srcS || d.src || d.imageUrl || d.cover || d.hero?.src || d.preview?.src ||
     d.images?.[0]?.url || d.images?.[0]?.src || ""
   );
+  return src.replace(/\.mjs$/, "");
 }
 
 const GHOST_TEMPLATE = {
@@ -156,6 +258,8 @@ const TEMP_KEY = "K4_Show_Temp_Selected"; // holds working slides (excluding gho
 const META_KEY = "K4_Show_Meta"; // holds show meta like title/intro
 
 export default function PictureShowStoryBuilder() {
+  // --- Show loaded flag for floating continue button ---
+  const [showLoaded, setShowLoaded] = useState(false);
   // Ref to track if Show Title has been auto-cleared
   const showTitleClearedRef = useRef(false);
   // Track if Show Title has been auto-cleared
@@ -168,7 +272,8 @@ export default function PictureShowStoryBuilder() {
     try {
       return JSON.parse(localStorage.getItem(META_KEY) || "null") || {
         showTitle: "Untitled Picture Show",
-        intro: "",
+        prologueTitle: "Prologue:",
+        openingParagraph: "",
         description: "",
         keywords: [],
         alt: "",
@@ -179,7 +284,8 @@ export default function PictureShowStoryBuilder() {
     } catch {
       return {
         showTitle: "Untitled Picture Show",
-        intro: "",
+        prologueTitle: "Prologue:",
+        openingParagraph: "",
         description: "",
         keywords: [],
         alt: "",
@@ -276,7 +382,12 @@ export default function PictureShowStoryBuilder() {
       visibility: s.visibility || "show",
       sortOrder: typeof s.sortOrder === "number" ? s.sortOrder : i,
     }));
-    const ghost = { ...GHOST_TEMPLATE };
+    const ghost = {
+      ...GHOST_TEMPLATE,
+      title: showMeta.prologueTitle || "Prologue:",
+      story: showMeta.openingParagraph || "",
+      keywords: showMeta.keywords || []
+    };
     const closing = { ...CLOSING_TEMPLATE, description: showMeta.closingText };
     setSlides([ghost, ...normalized, closing]);
   }
@@ -330,16 +441,29 @@ export default function PictureShowStoryBuilder() {
   }
 
   function onAudioPick(file) {
-    if (!file) return;
-    const audioPath = AUDIO_BASE_URL + (file.name || "");
-    const localPath = file?.path || file?.webkitRelativePath || "";
-    // Update local editData
-    const updated = { ...editData, audioSrc: audioPath, audioLocal: localPath };
-    setEditData(updated);
-    // Update main slides list
-    setSlides((arr) =>
-      arr.map((s) => (s.id === updated.id ? updated : s))
-    );
+    try {
+      if (!file) {
+        console.warn('No file selected for audio.');
+        return;
+      }
+      if (!file.name) {
+        console.error('Selected file does not have a name property:', file);
+        alert('Selected file is invalid. Please pick a valid audio file.');
+        return;
+      }
+      const audioPath = AUDIO_BASE_URL + file.name;
+      const localPath = file.path || file.webkitRelativePath || "";
+      // Update local editData
+      const updated = { ...editData, audioSrc: audioPath, audioLocal: localPath };
+      setEditData(updated);
+      // Update main slides list
+      setSlides((arr) =>
+        arr.map((s) => (s.id === updated.id ? updated : s))
+      );
+    } catch (err) {
+      console.error('Error in onAudioPick:', err);
+      alert('Error adding audio file: ' + err.message);
+    }
   }
 
   /* ---------- export ---------- */
@@ -350,12 +474,21 @@ export default function PictureShowStoryBuilder() {
     const hasClosing = arr.find((s) => s.visibility === "closing")
       || arr.find((s) => s.id === "i-k4studios-closing");
 
-    if (!hasGhost) arr.unshift({ ...GHOST_TEMPLATE });
+    if (!hasGhost) arr.unshift({
+      ...GHOST_TEMPLATE,
+      title: showMeta.prologueTitle || "Prologue:",
+      story: showMeta.openingParagraph || ""
+    });
     if (!hasClosing) arr.push({ ...CLOSING_TEMPLATE, description: showMeta.closingText });
 
     // normalize sortOrder and lock endpoints
     arr = arr.map((s, i) => {
-      if (s.id === "i-k4studios" || s.visibility === "ghost") return { ...s, sortOrder: -1 };
+      if (s.id === "i-k4studios" || s.visibility === "ghost") return {
+        ...s,
+        title: showMeta.prologueTitle || s.title || "Prologue:",
+        story: showMeta.openingParagraph || s.story || "",
+        sortOrder: -1
+      };
       if (s.visibility === "closing" || s.id === "i-k4studios-closing") return { ...s, sortOrder: 9999 };
       return { ...s, sortOrder: typeof s.sortOrder === "number" ? s.sortOrder : i };
     });
@@ -388,7 +521,7 @@ export default function PictureShowStoryBuilder() {
         {/* Show Title + audio icon */}
         <div
           style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "1.1rem", fontWeight: 600, color: "#2a1f17", background: "#eaf6ff", borderRadius: 6, padding: "4px 12px", cursor: showMeta.globalAudioSrc ? "pointer" : "default" }}
-          onClick={() => showMeta.globalAudioSrc && setAudioPopup(true)}
+          onClick={() => setAudioPopup(true)}
         >
           {showMeta.showTitle}
           {showMeta.globalAudioSrc && (
@@ -398,31 +531,64 @@ export default function PictureShowStoryBuilder() {
           )}
         </div>
         {/* Audio popup */}
-        {audioPopup && showMeta.globalAudioSrc && (
+        {audioPopup && (
           <div style={{ position: "absolute", top: 54, left: 40, zIndex: 2000, background: "#fff", border: "1px solid #bcd", borderRadius: 10, boxShadow: "0 4px 16px rgba(0,0,0,.18)", padding: "18px 22px", minWidth: 260 }}>
             <div style={{ fontWeight: 700, marginBottom: 10 }}>Background Audio Options</div>
+            {showMeta.globalAudioSrc && (
+              <div style={{ marginBottom: 10, fontSize: "0.98rem", color: "#444" }}>
+                <span style={{ fontWeight: 500 }}>Audio File:</span> {showMeta.globalAudioSrc}
+              </div>
+            )}
             <div style={{ marginBottom: 10 }}>
               <button
-                style={{ padding: "6px 14px", borderRadius: 6, border: showMeta.globalAudioMode === "score" ? "2px solid #19c37d" : "1px solid #aaa", background: showMeta.globalAudioMode === "score" ? "#eafaf3" : "#f6f6f6", fontWeight: 600, marginRight: 8 }}
-                onClick={() => { setShowMeta(m => ({ ...m, globalAudioMode: "score" })); setAudioPopup(false); }}
-              >Score (green)</button>
+                style={{ width: 90, height: 32, padding: "4px 8px", fontSize: "0.95rem", borderRadius: 5, border: "1px solid #aaa", background: "#f6f6f6", fontWeight: 500, marginRight: 6, opacity: showMeta.globalAudioSrc ? 1 : 0.5, pointerEvents: showMeta.globalAudioSrc ? "auto" : "none" }}
+                disabled={!showMeta.globalAudioSrc}
+                onClick={showMeta.globalAudioSrc ? () => { setShowMeta(m => ({ ...m, globalAudioMode: "score" })); setAudioPopup(false); } : undefined}
+              >Score</button>
               <button
-                style={{ padding: "6px 14px", borderRadius: 6, border: showMeta.globalAudioMode === "ambient" ? "2px solid #4a90e2" : "1px solid #aaa", background: showMeta.globalAudioMode === "ambient" ? "#eaf6ff" : "#f6f6f6", fontWeight: 600 }}
-                onClick={() => { setShowMeta(m => ({ ...m, globalAudioMode: "ambient" })); setAudioPopup(false); }}
-              >Ambient (blue)</button>
+                style={{ width: 90, height: 32, padding: "4px 8px", fontSize: "0.95rem", borderRadius: 5, border: "1px solid #aaa", background: "#f6f6f6", fontWeight: 500, opacity: showMeta.globalAudioSrc ? 1 : 0.5, pointerEvents: showMeta.globalAudioSrc ? "auto" : "none" }}
+                disabled={!showMeta.globalAudioSrc}
+                onClick={showMeta.globalAudioSrc ? () => { setShowMeta(m => ({ ...m, globalAudioMode: "ambient" })); setAudioPopup(false); } : undefined}
+              >Ambient</button>
             </div>
             <div style={{ marginBottom: 10 }}>
               <button
-                style={{ padding: "6px 14px", borderRadius: 6, border: "1px solid #aaa", background: audioMuted ? "#eee" : "#f6f6f6", fontWeight: 600, marginRight: 8 }}
-                onClick={() => { setAudioMuted(m => !m); setAudioPopup(false); }}
-              >{audioMuted ? "Unmute" : "Mute"} Audio</button>
+                style={{ width: 90, height: 32, padding: "4px 8px", fontSize: "0.95rem", borderRadius: 5, border: "1px solid #aaa", background: "#f6f6f6", fontWeight: 500, marginRight: 6, opacity: showMeta.globalAudioSrc ? 1 : 0.5, pointerEvents: showMeta.globalAudioSrc ? "auto" : "none" }}
+                disabled={!showMeta.globalAudioSrc}
+                onClick={showMeta.globalAudioSrc ? () => { setAudioMuted(m => !m); setAudioPopup(false); } : undefined}
+              >{audioMuted ? "Unmute" : "Mute"}</button>
               <button
-                style={{ padding: "6px 14px", borderRadius: 6, border: "1px solid #c00", background: "#fbeaea", fontWeight: 600, color: "#c00" }}
-                onClick={() => { setShowMeta(m => ({ ...m, globalAudioSrc: "" })); setAudioPopup(false); }}
-              >Remove Audio</button>
+                style={{ width: 90, height: 32, padding: "4px 8px", fontSize: "0.95rem", borderRadius: 5, border: "1px solid #c00", background: "#fbeaea", fontWeight: 500, color: "#c00", opacity: showMeta.globalAudioSrc ? 1 : 0.5, pointerEvents: showMeta.globalAudioSrc ? "auto" : "none" }}
+                disabled={!showMeta.globalAudioSrc}
+                onClick={showMeta.globalAudioSrc ? () => { setShowMeta(m => ({ ...m, globalAudioSrc: "" })); setAudioPopup(false); } : undefined}
+              >Remove</button>
+            </div>
+            <div style={{ marginBottom: 10, display: "flex", alignItems: "center", gap: 8 }}>
+              <button
+                style={{ width: 110, height: 32, padding: "4px 8px", fontSize: "0.95rem", borderRadius: 5, border: "1px solid #aaa", background: "#f6f6f6", fontWeight: 500 }}
+                onClick={() => {
+                  document.getElementById('replace-audio-input').click();
+                }}
+              >{showMeta.globalAudioSrc ? "Replace" : "Add Audio"}</button>
+              <input
+                id="replace-audio-input"
+                type="file"
+                accept="audio/*"
+                style={{ display: "none" }}
+                onChange={e => {
+                  const file = e.target.files?.[0];
+                  if (!file || !file.name) {
+                    setShowMeta(m => ({ ...m, globalAudioSrc: "" }));
+                  } else {
+                    setShowMeta(m => ({ ...m, globalAudioSrc: String(file.name) }));
+                  }
+                  setAudioPopup(false);
+                  e.target.value = ""; // reset input for future use
+                }}
+              />
             </div>
             <div style={{ textAlign: "right" }}>
-              <button style={{ padding: "4px 10px", borderRadius: 6, border: "1px solid #aaa", background: "#f6f6f6" }} onClick={() => setAudioPopup(false)}>Close</button>
+              <button style={{ width: 90, height: 32, padding: "4px 8px", fontSize: "0.95rem", borderRadius: 5, border: "1px solid #aaa", background: "#f6f6f6" }} onClick={() => setAudioPopup(false)}>Close</button>
             </div>
           </div>
         )}
@@ -516,6 +682,101 @@ export default function PictureShowStoryBuilder() {
       {step === 1 && (
         <div style={{ background: "#fff", borderRadius: 12, padding: 16, border: "1px solid #e1d9cf" }}>
           <h2 className="text-xl font-semibold mb-2">1) Welcome / Show Info</h2>
+          {/* --- Load existing show --- */}
+          <div
+            style={{
+              marginBottom: 16,
+              padding: "12px 14px",
+              background: "#f3f1eb",
+              border: "1px solid #d0c2b4",
+              borderRadius: 8,
+              position: "relative",
+            }}
+          >
+            <div style={{ fontWeight: 700, marginBottom: 6 }}>Edit a Saved Show</div>
+            <p style={{ fontSize: 13, opacity: 0.8, marginBottom: 8 }}>
+              Load a previously saved <code>.mjs</code> show file to continue editing. You can review or
+              update show details here before returning to the edit grid.
+            </p>
+            <button
+              onClick={() => document.getElementById("load-saved-show").click()}
+              style={{
+                border: "1px solid #6b5b4b",
+                padding: "6px 12px",
+                borderRadius: 6,
+                background: "#e3d9cf",
+                fontWeight: 700,
+              }}
+            >
+              Load Saved Show
+            </button>
+            <input
+              id="load-saved-show"
+              type="file"
+              accept=".mjs,application/javascript"
+              style={{ display: "none" }}
+              onChange={async (e) => {
+                const file = e.target.files?.[0];
+                if (!file) return;
+                try {
+                  const text = await file.text();
+
+                  // Extract storyMeta and storyData from exported .mjs
+                  const metaMatch = text.match(/export\s+const\s+storyMeta\s*=\s*(\{[\s\S]*?\});/);
+                  const dataMatch = text.match(/export\s+const\s+storyData\s*=\s*(\[([\s\S]*?)\]);/);
+                  if (!metaMatch || !dataMatch) throw new Error("Invalid show file format.");
+
+                  const storyMeta = eval("(" + metaMatch[1] + ")");
+                  const storyData = eval("(" + dataMatch[1] + ")");
+
+                  // Find ghost slide
+                  const ghostSlide = storyData.find((s) => s.id === "i-k4studios" || s.visibility === "ghost");
+                  const prologueTitle = ghostSlide?.title || "Prologue:";
+                  const openingParagraph = ghostSlide?.story || "";
+
+                  const mainSlides = storyData.filter(
+                    (s) => s.visibility !== "ghost" && s.visibility !== "closing"
+                  );
+
+                  setShowMeta({
+                    ...storyMeta,
+                    prologueTitle,
+                    openingParagraph
+                  });
+                  setPicked(mainSlides);
+                  setSlides(storyData);
+
+                  alert(`✅ Loaded show: ${storyMeta.showTitle || "Untitled"}`);
+                  setShowLoaded(true); // 👈 flag we'll define below
+                } catch (err) {
+                  console.error(err);
+                  alert("Failed to load saved show.\n\n" + err.message);
+                }
+                e.target.value = "";
+              }}
+            />
+
+            {/* Floating continue button appears only when a show is loaded */}
+            {showLoaded && (
+              <div
+                style={{
+                  position: "absolute",
+                  right: 12,
+                  bottom: 12,
+                  background: "#19c37d",
+                  color: "#fff",
+                  padding: "8px 14px",
+                  borderRadius: 6,
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.25)",
+                }}
+                onClick={() => setStep(4)}
+              >
+                Continue Editing Show →
+              </div>
+            )}
+          </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             <LabeledInput
               label="Show Title"
@@ -529,10 +790,11 @@ export default function PictureShowStoryBuilder() {
               }}
             />
             <LabeledInput label="ALT (show-level)" value={showMeta.alt} onChange={(v) => setShowMeta((m) => ({ ...m, alt: v }))} />
-            <LabeledInput label="Keywords (comma-separated)" value={Array.isArray(showMeta.keywords) ? showMeta.keywords.join(", ") : (showMeta.keywords || "")} onChange={(v) => setShowMeta((m) => ({ ...m, keywords: v.split(",").map((s) => s.trim()).filter(Boolean) }))} />
+            <LabeledInput label="Keywords (comma-separated)" value={typeof showMeta.keywords === 'string' ? showMeta.keywords : Array.isArray(showMeta.keywords) ? showMeta.keywords.join(", ") : ""} onChange={(v) => setShowMeta((m) => ({ ...m, keywords: v }))} />
             <LabeledInput label="Description (meta)" value={showMeta.description} onChange={(v) => setShowMeta((m) => ({ ...m, description: v }))} />
+            <LabeledInput label="Prologue Title" value={showMeta.prologueTitle || "Prologue:"} onChange={(v) => setShowMeta((m) => ({ ...m, prologueTitle: v }))} placeholder="Prologue: ..." />
           </div>
-          <LabeledTextArea label="Intro (for Ghost slide story)" value={showMeta.intro} onChange={(v) => setShowMeta((m) => ({ ...m, intro: v }))} />
+          <LabeledTextArea label="Opening Paragraph" value={showMeta.openingParagraph || ""} onChange={(v) => setShowMeta((m) => ({ ...m, openingParagraph: v }))} placeholder="Opening paragraph for the prologue slide..." />
           {/* 🎧 Background Audio Section */}
           <div
             style={{
@@ -598,7 +860,7 @@ export default function PictureShowStoryBuilder() {
                   fontFamily: "monospace",
                 }}
               >
-                Selected file: {showMeta.globalAudioSrc}
+                Audio File: {showMeta.globalAudioSrc}
               </div>
             )}
           </div>
@@ -746,6 +1008,19 @@ export default function PictureShowStoryBuilder() {
         <div style={{ background: "#fff", borderRadius: 12, padding: 16, border: "1px solid #e1d9cf" }}>
           <h2 className="text-xl font-semibold mb-2">4) Reorder - Edit Slides</h2>
           <p className="text-sm opacity-70">Intro (ghost) is locked first, Closing is locked last. Drag others to reorder. <b>Click a slide to highlight, then right-click to edit or delete.</b></p>
+          <button
+            onClick={() => setStep(1)}
+            style={{
+              border: "1px solid #0a66c2",
+              background: "#e3f0ff",
+              borderRadius: 6,
+              padding: "6px 12px",
+              fontWeight: 700,
+              marginBottom: 12,
+            }}
+          >
+            ← Back to Show Details
+          </button>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
             {slides.map((s, idx) => {
               const locked = idx === 0 || idx === slides.length - 1;
@@ -766,7 +1041,7 @@ export default function PictureShowStoryBuilder() {
                     <div style={{ width: "100%", height: 140, background: "#c7e1f1ff" }} />
                   ) : null}
                   {/* Consistent audio preview icon */}
-                  {s.audioSrc && <AudioPreviewIcon src={s.audioSrc} />}
+                  {s.audioSrc && <AudioPreviewIcon src={s.audioSrc} muted={!!showMeta.globalAudioSrc && showMeta.globalAudioMode === "score" && !audioMuted} ambient={!!showMeta.globalAudioSrc && showMeta.globalAudioMode === "ambient"} />}
                   <div style={{ padding: 8, position: "relative" }}>
                     <div style={{ fontSize: 12, opacity: 0.6 }}>#{idx}</div>
                     <div style={{ fontWeight: 700, fontSize: 13, display: "flex", alignItems: "center", gap: 6 }}>
@@ -807,11 +1082,29 @@ export default function PictureShowStoryBuilder() {
             <img src={pickImage(editData)} alt={editData.alt || editData.title || ""} style={{ width: "100%", height: 200, objectFit: "cover", borderRadius: 6, marginBottom: 12 }} />
 
             {/* Core fields */}
-            <LabeledInput label="Title" value={editData.title || ""} onChange={(v) => setEditData((d) => ({ ...d, title: v }))} />
-            <LabeledTextArea label="Story" value={editData.story || ""} onChange={(v) => setEditData((d) => ({ ...d, story: v }))} />
-            <LabeledInput label="Description" value={editData.description || ""} onChange={(v) => setEditData((d) => ({ ...d, description: v }))} />
-            <LabeledInput label="ALT" value={editData.alt || ""} onChange={(v) => setEditData((d) => ({ ...d, alt: v }))} />
-            <LabeledInput label="Keywords (comma-separated)" value={Array.isArray(editData.keywords) ? editData.keywords.join(", ") : (editData.keywords || "")} onChange={(v) => setEditData((d) => ({ ...d, keywords: v.split(",").map((s) => s.trim()).filter(Boolean) }))} />
+              <LabeledInput label="Title" value={editData.title || ""} onChange={(v) => setEditData((d) => ({ ...d, title: v }))} />
+              <LabeledTextArea label="Story" value={editData.story || ""} onChange={(v) => setEditData((d) => ({ ...d, story: v }))} />
+              <LabeledInput label="Description" value={editData.description || ""} onChange={(v) => setEditData((d) => ({ ...d, description: v }))} />
+              <LabeledInput label="ALT" value={editData.alt || ""} onChange={(v) => setEditData((d) => ({ ...d, alt: v }))} />
+              <LabeledTextArea label="Collector Notes" value={editData.notes || ""} onChange={(v) => setEditData((d) => ({ ...d, notes: v }))} />
+              {/* Keywords field: for Ghost slide, always show main showMeta.keywords and update showMeta on change */}
+              {editData.id === "i-k4studios" || editData.visibility === "ghost" ? (
+                <LabeledInput
+                  label="Keywords (comma-separated)"
+                  value={Array.isArray(showMeta.keywords) ? showMeta.keywords.join(", ") : (showMeta.keywords || "")}
+                  onChange={(v) => {
+                    // Update both editData and showMeta
+                    setEditData((d) => ({ ...d, keywords: v }));
+                    setShowMeta((m) => ({ ...m, keywords: v.split(",").map(s => s.trim()).filter(Boolean) }));
+                  }}
+                />
+              ) : (
+                <LabeledInput
+                  label="Keywords (comma-separated)"
+                  value={Array.isArray(editData.keywords) ? editData.keywords.join(", ") : (editData.keywords || "")}
+                  onChange={(v) => setEditData((d) => ({ ...d, keywords: v }))}
+                />
+              )}
 
             {/* Audio browse (stores local path/name only) - disabled for closing slide */}
             {editData.id !== "i-k4studios-closing" && editData.visibility !== "closing" && (
@@ -821,12 +1114,17 @@ export default function PictureShowStoryBuilder() {
                   type="file"
                   accept="audio/*"
                   onChange={(e) => onAudioPick(e.target.files?.[0])}
-                  disabled={!!showMeta.globalAudioSrc && showMeta.globalAudioMode === "score"}
-                  style={!!showMeta.globalAudioSrc && showMeta.globalAudioMode === "score" ? { opacity: 0.5, cursor: "not-allowed" } : {}}
+                  disabled={Boolean(showMeta.globalAudioSrc && showMeta.globalAudioSrc.trim() !== "" && showMeta.globalAudioMode === "score" && !audioMuted)}
+                  style={showMeta.globalAudioSrc && showMeta.globalAudioSrc.trim() !== "" && showMeta.globalAudioMode === "score" && !audioMuted ? { opacity: 0.5, cursor: "not-allowed" } : {}}
                 />
+                {editData.audioSrc && (
+                  <div style={{ fontSize: 13, color: "#444", marginTop: 4 }}>
+                    <span style={{ fontWeight: 500 }}>File:</span> {editData.audioSrc}
+                  </div>
+                )}
                 <div style={{ fontSize: 12, opacity: 0.7, marginTop: 4 }}>
-                  {!!showMeta.globalAudioSrc && showMeta.globalAudioMode === "score"
-                    ? <span style={{ color: "#888" }}>Background audio is set to Score mode. Per-image audio is disabled.</span>
+                  {showMeta.globalAudioSrc && showMeta.globalAudioSrc.trim() !== "" && showMeta.globalAudioMode === "score" && !audioMuted
+                    ? <span style={{ color: "#888" }}>Background audio is set to Score mode and not muted. Per-image audio is disabled.</span>
                     : <>Stored as path/filename only for now: <code>{editData.audioSrc || "(none)"}</code></>}
                 </div>
               </div>
@@ -856,25 +1154,29 @@ export default function PictureShowStoryBuilder() {
           <h2 className="text-xl font-semibold mb-2">7) Review Show (Sequential)</h2>
           {!slides.length && <p className="text-sm">No slides to review yet. Go back to Step 4 and build slides.</p>}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12 }}>
-            {slides.map((s, i) => (
-              <div key={s.id} style={{ border: "1px solid #ddd", borderRadius: 8, overflow: "hidden", background: "#fff" }}>
-                {pickImage(s) ? (
-                  <img src={pickImage(s)} alt={s.alt || s.title || ""} style={{ width: "100%", height: 160, objectFit: "cover" }} />
-                ) : null}
-                <div style={{ padding: 10, background: s.visibility === "closing" ? "#fafae9ff" : undefined }}>
-                  <div style={{ fontSize: 12, opacity: 0.6 }}>#{i} {s.visibility ? `(${s.visibility})` : ""}</div>
-                  <div style={{ fontWeight: 700, display: "flex", alignItems: "center", gap: 6 }}>
-                    {s.title || s.id}
-                    {s.audioSrc && <AudioPreviewIcon src={s.audioSrc} />}
-                  </div>
-                  {(s.story || s.description) && (
-                    <div style={{ whiteSpace: "pre-wrap", fontSize: 13, marginTop: 6, opacity: 0.85 }}>
-                      {s.story || s.description}
+            {slides.filter((s, idx) => s.visibility !== "closing" && s.id !== "i-k4studios-closing").map((s, i) => {
+              // Remove .mjs from any image src path if present
+              const imgSrc = pickImage(s);
+              return (
+                <div key={s.id} style={{ border: "1px solid #ddd", borderRadius: 8, overflow: "hidden", background: "#fff" }}>
+                  {imgSrc ? (
+                    <img src={imgSrc} alt={s.alt || s.title || ""} style={{ width: "100%", height: 160, objectFit: "cover" }} />
+                  ) : null}
+                  <div style={{ padding: 10 }}>
+                    <div style={{ fontSize: 12, opacity: 0.6 }}>#{i} {s.visibility ? `(${s.visibility})` : ""}</div>
+                    <div style={{ fontWeight: 700, display: "flex", alignItems: "center", gap: 6 }}>
+                      {s.title || s.id}
+                      {s.audioSrc && <AudioPreviewIcon src={s.audioSrc} />}
                     </div>
-                  )}
+                    {(s.story || s.description) && (
+                      <div style={{ whiteSpace: "pre-wrap", fontSize: 13, marginTop: 6, opacity: 0.85 }}>
+                        {s.story || s.description}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div style={{ display: "flex", justifyContent: "space-between", marginTop: 16 }}>
             <button
@@ -893,7 +1195,14 @@ export default function PictureShowStoryBuilder() {
         <div style={{ background: "#fff", borderRadius: 12, padding: 16, border: "1px solid #e1d9cf" }}>
           <h2 className="text-xl font-semibold mb-2">8) Save Show Data</h2>
           <p className="text-sm">Click <b>Save .mjs</b> in the header to download your dataset. Place it under <code>/src/data/Other/Stories/</code>.</p>
-          <button onClick={exportMJS} style={{ border: "1px solid #6b5b4b", padding: "8px 14px", borderRadius: 6, background: "#e3d9cf", fontWeight: 700 }}>Save .mjs Now</button>
+          <button
+            onClick={() => {
+              const core = ensureGhostAndClosing(slides.length ? slides : [GHOST_TEMPLATE, ...picked, { ...CLOSING_TEMPLATE, description: showMeta.closingText }]);
+              saveShowToServer(core, showMeta);
+            }}
+            style={{ border: "2px solid #19c37d", padding: "10px 18px", borderRadius: 8, background: "#e3d9cf", fontWeight: 700, color: '#19c37d' }}>
+            Package Show
+          </button>
         </div>
       )}
     </div>

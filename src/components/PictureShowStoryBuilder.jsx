@@ -101,6 +101,8 @@ async function saveShowToServer(showArray, showMeta) {
   // --- Upload audio (with progress + caching) ---
   const audioCache = JSON.parse(localStorage.getItem("r2AudioCache") || "{}");
   let uploadIndex = 1;
+  let uploadedAudio = 0;
+  let failedAudio = [];
 
   async function uploadAudio(fileObj, destKey, label) {
     if (!fileObj) throw new Error("No file object provided for upload");
@@ -109,33 +111,18 @@ async function saveShowToServer(showArray, showMeta) {
       return audioCache[destKey];
     }
     console.log(`Uploading ${uploadIndex++}: ${label}...`);
-    const formData = new FormData();
-    formData.append("file", fileObj);
-    formData.append("destKey", destKey);
-    const res = await fetch("/.netlify/functions/uploadToR2", {
-      method: "POST",
-      body: formData,
-    });
+    const url = `/.netlify/functions/uploadToR2?destKey=${encodeURIComponent(destKey)}`;
+    const res = await fetch(url, { method: "POST", headers: { "Content-Type": fileObj.type || "application/octet-stream" }, body: fileObj });
     const data = await res.json();
     if (!data.url) throw new Error(data.error || "No URL returned");
     audioCache[destKey] = data.url;
     localStorage.setItem("r2AudioCache", JSON.stringify(audioCache));
     console.log(`✅ Uploaded: ${label}`);
+    uploadedAudio += 1;
     return data.url;
   }
 
-  // Global audio
-  if (metaWithTimestamp.globalAudioSrc && !metaWithTimestamp.globalAudioSrc.startsWith("http")) {
-    // Find the actual File object from input (assume it's stored in showMeta.globalAudioFile)
-    const fileObj = showMeta.globalAudioFile;
-    const fileName = metaWithTimestamp.globalAudioSrc;
-    const destKey = `StoryShows/${safeSlug}/${fileName}`;
-    try {
-      metaWithTimestamp.globalAudioSrc = await uploadAudio(fileObj, destKey, fileName);
-    } catch (err) {
-      console.error("Global audio upload failed:", err);
-    }
-  }
+  // Global audio upload handled during ghost slide injection below
 
   // Per-slide audio
   for (const slide of showArray) {
@@ -148,6 +135,7 @@ async function saveShowToServer(showArray, showMeta) {
         slide.audioSrc = await uploadAudio(fileObj, destKey, fileName);
       } catch (err) {
         console.error(`Slide audio upload failed (${fileName}):`, err);
+        failedAudio.push(fileName || "(unknown)");
       }
     }
   }
@@ -167,6 +155,7 @@ async function saveShowToServer(showArray, showMeta) {
     } catch (err) {
       console.error("Global audio upload failed:", err);
       globalAudioUrl = "";
+      failedAudio.push(fileName || "(global audio)");
     }
   }
   // If muted, globalAudioUrl stays empty
@@ -199,7 +188,10 @@ async function saveShowToServer(showArray, showMeta) {
       }),
     });
     if (!res.ok) throw new Error(await res.text());
-    alert(`✅ Show packaged and uploaded:\n• ${mjsFilename}\n• ${astroFilename}`);
+    const audioNote = uploadedAudio || failedAudio.length
+      ? `\n\nAudio: uploaded ${uploadedAudio}${failedAudio.length ? `, failed ${failedAudio.length} (${failedAudio.join(", ")})` : ""}`
+      : "";
+    alert(`✅ Show packaged and uploaded:\n• ${mjsFilename}\n• ${astroFilename}${audioNote}`);
   } catch (err) {
     console.error("Server save failed:", err);
     alert("Server save failed; falling back to download.");
@@ -297,7 +289,9 @@ export default function PictureShowStoryBuilder() {
   });
 
   useEffect(() => {
-    localStorage.setItem(META_KEY, JSON.stringify(showMeta));
+    // Persist meta without non-serializable File objects
+    const { globalAudioFile, ...persistable } = showMeta || {};
+    localStorage.setItem(META_KEY, JSON.stringify(persistable));
   }, [showMeta]);
 
   /* ---------- gallery discovery ---------- */
@@ -453,8 +447,13 @@ export default function PictureShowStoryBuilder() {
       }
       const audioPath = AUDIO_BASE_URL + file.name;
       const localPath = file.path || file.webkitRelativePath || "";
-      // Update local editData
-      const updated = { ...editData, audioSrc: audioPath, audioLocal: localPath };
+      // Update local editData (store actual File for upload)
+      const updated = { 
+        ...editData, 
+        audioSrc: audioPath, 
+        audioLocal: localPath,
+        audioFile: file
+      };
       setEditData(updated);
       // Update main slides list
       setSlides((arr) =>
@@ -560,7 +559,7 @@ export default function PictureShowStoryBuilder() {
               <button
                 style={{ width: 90, height: 32, padding: "4px 8px", fontSize: "0.95rem", borderRadius: 5, border: "1px solid #c00", background: "#fbeaea", fontWeight: 500, color: "#c00", opacity: showMeta.globalAudioSrc ? 1 : 0.5, pointerEvents: showMeta.globalAudioSrc ? "auto" : "none" }}
                 disabled={!showMeta.globalAudioSrc}
-                onClick={showMeta.globalAudioSrc ? () => { setShowMeta(m => ({ ...m, globalAudioSrc: "" })); setAudioPopup(false); } : undefined}
+                onClick={showMeta.globalAudioSrc ? () => { setShowMeta(m => ({ ...m, globalAudioSrc: "", globalAudioFile: null })); setAudioPopup(false); } : undefined}
               >Remove</button>
             </div>
             <div style={{ marginBottom: 10, display: "flex", alignItems: "center", gap: 8 }}>
@@ -578,9 +577,9 @@ export default function PictureShowStoryBuilder() {
                 onChange={e => {
                   const file = e.target.files?.[0];
                   if (!file || !file.name) {
-                    setShowMeta(m => ({ ...m, globalAudioSrc: "" }));
+                    setShowMeta(m => ({ ...m, globalAudioSrc: "", globalAudioFile: null }));
                   } else {
-                    setShowMeta(m => ({ ...m, globalAudioSrc: String(file.name) }));
+                    setShowMeta(m => ({ ...m, globalAudioSrc: String(file.name), globalAudioFile: file }));
                   }
                   setAudioPopup(false);
                   e.target.value = ""; // reset input for future use
@@ -816,6 +815,7 @@ export default function PictureShowStoryBuilder() {
                 setShowMeta((m) => ({
                   ...m,
                   globalAudioSrc: file.name || file.path || "",
+                  globalAudioFile: file,              // ✅ keep actual File object
                 }));
               }}
             />
