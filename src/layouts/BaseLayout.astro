@@ -217,6 +217,9 @@ const keywords =
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "tuibatmru4");
     </script>
+
+    {structuredDataJSON && <script type="application/ld+json" set:html={structuredDataJSON}></script>}
+    {breadcrumbsJSON && <script type="application/ld+json" set:html={breadcrumbsJSON}></script>}
   </head>
 
   <body>
