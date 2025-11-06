@@ -123,14 +123,14 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
         initial: { scale: 1, opacity: 0.95, rotate: 0 },
         animate: { scale: 1.06, opacity: 1, rotate: 0 },
         exit: { opacity: 0 },
-        transition: { duration: 27, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
+        transition: { duration: 22, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
       };
     }
     return {
       initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
       animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
       exit: { opacity: 0 },
-      transition: { duration: 27, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
+      transition: { duration: 22, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
     };
   }, [isLandscape, isVertical, kenAngle]);
 
