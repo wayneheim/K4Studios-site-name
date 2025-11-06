@@ -642,6 +642,13 @@ export const siteNav = [
         "slug": "blog",
         "type": "section"
       },
+      {
+        "label": "Picture Shows",
+        "href": "/Other/Shows",
+        "code": "O-S6",
+        "slug": "shows",
+        "type": "section"
+      },
     
   ],
   "code": "O",

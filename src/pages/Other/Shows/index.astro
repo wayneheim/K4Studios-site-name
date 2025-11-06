@@ -1,0 +1,197 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+
+import { stories } from "@/data/Other/Stories/stories.mjs"; // Import existing shows data
+import "@/styles/global.css";
+
+// ----------------------
+// Dynamic Logic
+// ----------------------
+const sectionPath = "/Other/Shows";
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: "K4 Studios Picture Shows",
+    description: "Interactive picture shows and visual presentations showcasing Wayne Heim's fine art photography through immersive storytelling experiences.",
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    image: stories.length > 0 ? stories[0].cover : "/images/K4-Stories logo1b.webp"
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+// Additional structured data for ItemList schema
+const itemListStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "K4 Studios Picture Shows",
+  description: "Interactive visual presentations and themed exhibitions by Wayne Heim, combining fine art photography with cinematic storytelling.",
+  url: "https://k4studios.com/Other/Shows",
+  creator: {
+    "@type": "Person",
+    name: "Wayne Heim",
+    url: "https://k4studios.com",
+  },
+  itemListElement: stories.map((show, index) => ({
+    "@type": "BlogPosting",
+    position: index + 1,
+    headline: show.title,
+    url: `https://k4studios.com/Other/Shows/${show.slug}`,
+    datePublished: show.date,
+    image: show.cover,
+    description: show.excerpt,
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+  }))
+};
+
+// Breadcrumb structured data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://k4studios.com" },
+    { "@type": "ListItem", position: 2, name: "Shows", item: "https://k4studios.com/Other/Shows" }
+  ]
+};
+
+const landingImgUrl = stories.length > 0 ? stories[0].cover : "/images/K4-Stories logo1b.webp";
+const meta = getLandingMeta(sectionPath, landingImgUrl);
+if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// Enhanced meta tags for Shows index
+meta.description = "Experience interactive picture shows from Wayne Heim — immersive visual presentations combining fine art photography with cinematic storytelling. Discover themed collections and narrative-driven exhibitions.";
+meta.keywords = "picture shows, interactive photography, visual presentations, fine art exhibitions, cinematic storytelling, Wayne Heim, themed collections, immersive art experiences";
+meta.ogTitle = "K4 Studios Picture Shows – Interactive Visual Presentations by Wayne Heim";
+meta.ogDescription = "Explore interactive picture shows featuring Wayne Heim's fine art photography — themed visual presentations that combine storytelling with immersive gallery experiences.";
+meta.ogImage = landingImgUrl;
+meta.twitterCard = "summary_large_image";
+---
+
+<BaseLayout
+  title="K4 Studios Picture Shows – Interactive Visual Presentations & Fine Art Photography by Wayne Heim"
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://k4studios.com/Other/Shows" />
+
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other › Shows" />
+    </div>
+
+    <section class="section-heading-wrap">
+      <div class="section-heading" style="font-family: 'Glegoo', serif;">
+        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">Picture Shows</h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
+          Interactive visual presentations
+        </h2>
+      </div>
+    </section>
+
+    <!-- K4 Studios Logo -->
+    <section class="logo-section text-center mb-6 -mt-10">
+      <img
+        src="/images/K4-Stories logo1b.webp"
+        alt="K4 Studios Logo"
+        class="mx-auto max-w-60 h-auto"
+        oncontextmenu="event.preventDefault()"
+      />
+    </section>
+
+    <!-- Intro block -->
+    <section class="intro-text max-w-6xl mx-auto px-4 text-center mb-10">
+      <h2 class="text-4xl font-extrabold mb-2" style="font-family: 'Glegoo', serif;">K4 Studios Picture Shows</h2>
+      <h3 class="text-2xl font-semibold mb-8 text-gray-700" style="font-family: 'Glegoo', serif;">Interactive Visual Presentations</h3>
+      <p class="text-lg leading-relaxed text-gray-700">Experience the Picture Shows — interactive visual presentations that bring Wayne Heim's fine art photography to life through immersive storytelling. Each show is a carefully crafted sequence designed to engage viewers in a cinematic journey through art and history. From themed exhibitions to narrative-driven presentations, these interactive experiences showcase the depth and beauty of fine art photography in new and compelling ways. Discover how visual storytelling can transform the way we experience and connect with art.</p>
+    </section>
+
+    {stories.length > 0 ? (
+      <section class="show-layout" style="font-family: 'Glegoo', serif;">
+        <!-- MAIN CONTENT (left) -->
+        <div class="text-column">
+          {stories.map(show => (
+            <article class="show-block mb-10">
+              <div class="flex flex-col md:flex-row md:items-start gap-4">
+                <a href={`/Other/Stories/${show.slug}`} aria-label={show.title} class="flex-shrink-0">
+                  <img
+                    src={show.cover}
+                    alt={show.alt || show.title}
+                    class="rounded-2xl shadow max-w-[120px] h-[120px] object-cover"
+                    style="aspect-ratio: 1/1;"
+                    oncontextmenu="event.preventDefault()"
+                  />
+                </a>
+                <div class="flex-1 min-w-0">
+                  <h2 class="text-xl font-bold mb-2">
+                    <a href={`/Other/Stories/${show.slug}`}>{show.title}</a>
+                  </h2>
+                  <p class="text-sm text-gray-600 mb-2">{show.date}</p>
+                  <p class="mb-4">{show.excerpt}</p>
+                  <a href={`/Other/Stories/${show.slug}`} class="underline text-blue-700">View Show →</a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <!-- SIDEBAR (right) -->
+        <div class="sidebar-column hidden md:block">
+          <div class="sample-fade reveal-on-scroll p-4 border rounded-xl shadow bg-gray-50">
+            <h3 class="font-bold mb-3">All Shows</h3>
+            <ul class="space-y-2">
+              {stories.map(show => (
+                <li>
+                  <a href={`/Other/Stories/${show.slug}`} class="block hover:text-red-600">
+                    {show.title}
+                  </a>
+                  <span class="block text-xs text-gray-500">{show.date}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    ) : (
+      <!-- Coming Soon Message -->
+      <section class="coming-soon text-center max-w-4xl mx-auto px-4 mb-16">
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm">
+          <h3 class="text-2xl font-bold mb-4 text-gray-800" style="font-family: 'Glegoo', serif;">Coming Soon</h3>
+          <p class="text-lg text-gray-600 mb-6">The Picture Shows section is currently under development. Interactive visual presentations and themed exhibitions will be available here soon.</p>
+          <p class="text-sm text-gray-500">Check back for updates on new interactive shows featuring Wayne Heim's fine art photography.</p>
+        </div>
+      </section>
+    )}
+
+    <!-- Structured Data for ItemList and Breadcrumbs -->
+    {stories.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify(itemListStructuredData)}></script>
+    )}
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)}></script>
+
+    <SiteFooter
+      title="K4 Studios Picture Shows - Interactive Visual Presentations"
+      label="Explore Galleries"
+      class="pt-8 pb-12"
+    />
+  </main>
+</BaseLayout>
