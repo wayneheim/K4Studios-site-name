@@ -51,7 +51,6 @@ export function getStructuredData({
       "acquireLicensePage": img.buyLink || img.acquireLicensePage || acquireLicensePage,
       "creator": {
         "@type": "Person",
-        "@id": `${creatorUrl.replace(/\/$/, "")}#person`,
         "name": creatorName,
         "url": creatorUrl,
         ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
@@ -127,7 +126,6 @@ export function getStructuredData({
       "acquireLicensePage": data.buyLink || data.acquireLicensePage || acquireLicensePage,
       "creator": {
         "@type": "Person",
-        "@id": `${creatorUrl.replace(/\/$/, "")}#person`,
         "name": creatorName,
         "url": creatorUrl,
         ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
