@@ -949,7 +949,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
               >
                 {/* CARD CONTAINER FOR START PAGE */}
                 {currentIndex === 0 ? (
-                  <div className="w-full px-3 sm:px-4 md:px-0 mt-8 md:mt-16 lg:mt-20">
+                  <div className="w-full px-3 sm:px-4 md:px-0">
                     <motion.div
                       initial={false}
                       animate={fanOut ? "fan" : "stack"}

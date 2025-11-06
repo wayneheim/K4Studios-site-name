@@ -1,0 +1,137 @@
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2 } from "lucide-react";
+import ZoomOverlay from "./ZoomOverlay.jsx";
+import GallerySlideshowStory from "./Gallery-Slideshow-Story.jsx";
+import ShareDrawer from "./ShareDrawer.jsx";
+import { storyVoices } from "./storyVoices.js";
+import "./ScrollFlipZoomStyles.css";
+import "../styles/global.css";
+
+export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "" }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [matColor, setMatColor] = useState("white");
+  const [showNotes, setShowNotes] = useState(false);
+  const [direction, setDirection] = useState(1);
+  const [showSlideshow, setShowSlideshow] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [currentVoice, setCurrentVoice] = useState(null);
+  const activeUtterances = useRef([]);
+  const activeTimeouts = useRef([]);
+  const [voicePreferences, setVoicePreferences] = useState(() => {
+    // Load saved preferences from localStorage
+    if (typeof window !== 'undefined') {
+      try {
+        const saved = localStorage.getItem('ttsVoicePreferences');
+        return saved ? JSON.parse(saved) : {};
+      } catch {
+        return {};
+      }
+    }
+    return {};
+  });
+
+  // Save voice preferences for consistency
+  const saveVoicePreference = (storytellerName, voiceName) => {
+    const updatedPreferences = {
+      ...voicePreferences,
+      [storytellerName]: voiceName,
+      lastUpdated: Date.now()
+    };
+    setVoicePreferences(updatedPreferences);
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('ttsVoicePreferences', JSON.stringify(updatedPreferences));
+      } catch (e) {
+        console.warn('Could not save voice preferences:', e);
+      }
+    }
+  };
+
+  const goPrev = () => {
+    activeUtterances.current = []; // Clear any pending utterances
+    activeTimeouts.current = []; // Clear any pending timeouts
+    stopSpeech();
+    setDirection(-1);
+    setCurrentIndex((i) => Math.max(i - 1, 0));
+  };
+
+  const goNext = () => {
+    activeUtterances.current = []; // Clear any pending utterances
+    activeTimeouts.current = []; // Clear any pending timeouts
+    stopSpeech();
+    setDirection(1);
+    setCurrentIndex((i) => Math.min(i + 1, rawData.length));
+  };
+
+  const currentImage = rawData[currentIndex];
+  const isEndOfStory = currentIndex >= rawData.length;
+
+  // Helper function to check if speech is currently active
+  const isSpeechActive = () => {
+    return window.speechSynthesis.speaking || window.speechSynthesis.pending;
+  };
+
+  // --- hard stop for queued speech (Chrome-safe) ---
+  const stopSpeech = () => {
+    try {
+      // Cancel queued timeouts first
+      activeTimeouts.current.forEach(clearTimeout);
+      activeTimeouts.current = [];
+
+      // Manually stop every known utterance
+      activeUtterances.current.forEach(u => {
+        try { u.onend = null; u.onerror = null; } catch {}
+        window.speechSynthesis.cancel(); // still required for some browsers
+      });
+      activeUtterances.current = [];
+
+      // Double flush Chrome's internal queue
+      const synth = window.speechSynthesis;
+      synth.cancel();
+      setTimeout(() => synth.cancel(), 60);
+      setTimeout(() => setIsSpeaking(false), 100);
+    } catch (err) {
+      console.warn("Speech stop failed:", err);
+      setIsSpeaking(false);
+    }
+  };
+
+  // Normalize voice names across browsers for better matching
+  const normalizeVoiceName = (voiceName) => {
+    return voiceName
+      .toLowerCase()
+      .replace(/microsoft\s+/g, '')
+      .replace(/google\s+/g, '')
+      .replace(/apple\s+/g, '')
+      .replace(/\s*\([^)]*\)/g, '') // Remove parentheses content
+      .replace(/\s+/g, ' ')
+      .trim();
+  };
+
+  // Detect voice characteristics for better matching
+  const detectVoiceCharacteristics = (voice) => {
+    const name = voice.name.toLowerCase();
+    const lang = voice.lang.toLowerCase();
+
+    return {
+      isFemale: name.includes('female') || name.includes('woman') || name.includes('girl') ||
+                name.includes('zira') || name.includes('hazel') || name.includes('susan') ||
+                name.includes('karen') || name.includes('samantha') || name.includes('zoe') ||
+                name.includes('serena') || name.includes('victoria'),
+      isMale: name.includes('male') || name.includes('man') || name.includes('boy') ||
+              name.includes('david') || name.includes('mark') || name.includes('daniel') ||
+              name.includes('alex') || name.includes('fred') || name.includes('ralph'),
+      isBritish: lang.includes('gb') || name.includes('uk') || name.includes('british') ||
+                 name.includes('english') && !name.includes('us'),
+      isAmerican: lang.includes('us') || name.includes('us') || name.includes('american'),
+      isAustralian: lang.includes('au') || name.includes('australian'),
+      hasAccent: name.includes('accent') || name.includes('regional')
+    };
+  };
+
+  // (... trimmed for brevity in this backup file ...)
+
+  return null;
+}

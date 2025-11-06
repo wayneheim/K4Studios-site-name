@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright } from "lucide-react";
 import GallerySlideshowStory from "./Gallery-Slideshow-Story.jsx";
 import ShareDrawer from "./ShareDrawer.jsx";
 import { storyVoices } from "./storyVoices.js";
@@ -18,11 +18,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const [currentVoice, setCurrentVoice] = useState(null);
   const [isCardHovered, setIsCardHovered] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  // Control when the intro stack should fan out (start stacked, then fan after ~75% of main card entrance)
-  const [fanOut, setFanOut] = useState(false);
-  // Start-page hover image sequencing (base -> src2 -> src3)
-  const [hoverPhase, setHoverPhase] = useState(0); // 0=base, 1=src2, 2=src3
-  const hoverTimerRef = useRef(null);
   const activeUtterances = useRef([]);
   const activeTimeouts = useRef([]);
   const audioRef = useRef(null);
@@ -217,45 +212,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
 
   const currentImage = filteredData[currentIndex];
   const isEndOfStory = currentIndex >= filteredData.length;
-
-  // Orchestrate the 3-stage hover for the opening card only
-  useEffect(() => {
-    // Only apply on first slide (intro/ghost)
-    if (currentIndex !== 0) {
-      setHoverPhase(0);
-      if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
-      return;
-    }
-
-    if (isCardHovered) {
-      // immediate fade to src2
-      setHoverPhase(1);
-      if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
-      // after src2 finishes + slight pause (~0.2s), fade to src3 if available
-      hoverTimerRef.current = setTimeout(() => {
-        if (isCardHovered && currentImage?.src3) setHoverPhase(2);
-      }, 400);
-    } else {
-      // mouse out → return to base
-      setHoverPhase(0);
-      if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
-    }
-
-    return () => {
-      if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
-    };
-  }, [isCardHovered, currentIndex, currentImage?.src3]);
-
-  // Trigger fan-out after the main card is ~75% into its entrance
-  useEffect(() => {
-    if (currentIndex !== 0) {
-      setFanOut(false);
-      return;
-    }
-    setFanOut(false);
-    const t = setTimeout(() => setFanOut(true), 450); // main card entrance ~0.6s → fan at ~0.45s
-    return () => clearTimeout(t);
-  }, [currentIndex]);
 
   // Helper function to check if speech is currently active
   const isSpeechActive = () => {
@@ -861,7 +817,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   return (
     <>
     <div
-  className="picture-show-content min-h-screen bg-white text-black font-serif px-4 sm:px-4 md:px-8 lg:px-12 pt-1 sm:pt-2 md:pt-8 pb-8 overflow-visible"
+  className="picture-show-content min-h-screen bg-white text-black font-serif px-4 sm:px-4 md:px-8 lg:px-12 pt-1 sm:pt-2 md:pt-8 pb-8 overflow-x-hidden overflow-y-visible"
   style={{ fontFamily: "Glegoo, serif", boxSizing: 'border-box' }}
 >
         <link
@@ -949,196 +905,101 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
               >
                 {/* CARD CONTAINER FOR START PAGE */}
                 {currentIndex === 0 ? (
-                  <div className="w-full px-3 sm:px-4 md:px-0 mt-8 md:mt-16 lg:mt-20">
-                    <motion.div
-                      initial={false}
-                      animate={fanOut ? "fan" : "stack"}
-                      variants={{
-                        stack: {},
-                        fan: { transition: { staggerChildren: 0, delayChildren: 0 } }
-                      }}
-                      style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '.25rem 0', perspective: '1000px' }}
-                    >
-                      {/* Shadow stack cards animate from a neat stack to fanned offsets */}
-                      {[ 
-                        { y: -2, x: 2, rotate: -4 },
-                        { y: 2, x: 4, rotate: 1 },
-                        { y: 1, x: 3, rotate: -3 },
-                        { y: -3, x: 5, rotate: 3 },
-                        { y: 0, x: 6, rotate: 1 },
-                      ].map((cfg, i) => (
-                        <motion.div
-                          key={`shadow-${i}`}
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                            background: '#ece8dfff',
-                            borderRadius: '1rem',
-                            boxShadow: '0 4px 10px rgba(26, 22, 20, 0.22)',
-                            zIndex: i + 1,
-                            border: '1px solid #d6c6b2',
-                          }}
-                          variants={{
-                            stack: { opacity: 0, y: 40, x: 0, rotate: 0, scale: 1 },
-                            fan: {
-                              opacity: 1,
-                              y: cfg.y,
-                              x: cfg.x,
-                              rotate: cfg.rotate,
-                              scale: 1,
-                              transition: { type: 'tween', ease: [0.22, 1, 0.36, 1], duration: 1.5 }
-                            }
-                          }}
-                          aria-hidden="true"
-                        />
-                      ))}
-
-                    {/* Clickable portal cards (desktop only) */}
-{[
-  { rotate: -15, x: -80, y: 8, href: "/", label: "HOME" },
-  { rotate: 16, x: 130, y: 10, href: "/Contact/", label: "@" },
-  { rotate: 14, x: 190, y: 80, href: "/Other/Stories", label: "INDEX" },
-].map((card, i) => (
-  <motion.a
-    key={`portal-${i}`}
-    href={card.href}
-    aria-label={`Go to ${card.label}`}
-    className="hidden md:block k4-card k4-card-link"
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "75%",
-      height: "86%",
-      zIndex: 6 + i,
-      cursor: "pointer",
-      transformOrigin: "center",
-    }}
-    variants={{
-      stack: { opacity: 0, y: 40, x: 0, rotate: 0, scale: 1 },
-      fan: {
-        opacity: 1,
-        y: card.y,
-        x: card.x,
-        rotate: card.rotate,
-        scale: 1,
-        transition: {
-          type: "tween",
-          ease: [0.42, 0, 0.38, 1],
-          duration: 0.8,
-          delay: card.label === "HOME" ? 0.1 : 0,
-        },
-      },
-    }}
-    whileHover={{ scale: 1.02 }}
-  >
-    <span className="sr-only">{card.label}</span>
-
-    {/* Label rendering */}
-    {(() => {
-      // stack each letter vertically for HOME and INDEX, use icon for @
-      let labelText = card.label;
-      let side, topOffset;
-      if (card.label === "HOME") {
-        side = "left-5";
-        topOffset = "top-[4%]";
-        const letters = labelText.split("");
-        return (
-          <span
-            aria-hidden="true"
-            className={`absolute ${side} ${topOffset} k4-home-label tracking-[0.15em] select-none text-sm leading-[1.51em] font-semibold opacity-50`}
-            style={{ whiteSpace: "pre-line", textAlign: "center", transition: 'color .5s ease' }}
-          >
-            {letters.join("\n")}
-          </span>
-        );
-      } else if (card.label === "INDEX") {
-        side = "right-5";
-        topOffset = "top-[4%]";
-        const letters = labelText.split("");
-        return (
-          <span
-            aria-hidden="true"
-            className={`absolute ${side} ${topOffset} k4-index-label tracking-[0.15em] select-none text-sm leading-[1.51em] font-semibold opacity-50`}
-            style={{ whiteSpace: "pre-line", textAlign: "center", transition: 'color .5s ease' }}
-          >
-            {letters.join("\n")}
-          </span>
-        );
-      } else if (card.label === "@") {
-        side = "right-5";
-        topOffset = "top-[4%]";
-        return (
-          <span
-            aria-hidden="true"
-            className={`absolute ${side} ${topOffset} k4-contact-label select-none opacity-70`}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 1s ease' }}
-          >
-            <Mail size={18} strokeWidth={2} className="k4-contact-label-icon" />
-          </span>
-        );
-      }
-    })()}
-  </motion.a>
-))}
-
-
-                      {/* Top primary card (main) */}
+                  <div className="w-full px-3 sm:px-4 md:px-0">
+                    <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '.25rem 0', perspective: '1000px' }}>
+                    {/* Multiple stacked shadow cards for realistic stack effect */}
+                    {/* Card stack config: adjust offsets/rotation per card here */}
+                    {[ 
+                      { top: -2, left: 2, rotate: -4 },
+                      { top: 2, left: 4, rotate: 1 },
+                      { top: 1, left: 3, rotate: -3 },
+                      { top: -3, left: 5, rotate: 3 },
+                      { top: 0, left: 6, rotate: 1 },
+                    ].map((cfg, i) => (
                       <motion.div
-                        initial={{ opacity: 0, y: 24 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ type: 'tween', ease: [0.22, 1, 0.36, 1], duration: 0.6 }}
-                        onClick={goNext}
-                        onMouseEnter={() => setIsCardHovered(true)}
-                        onMouseLeave={() => setIsCardHovered(false)}
-                        className="k4-card pt-4 sm:pt-8 md:pt-12 px-8 pb-6 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
+                        key={i}
                         style={{
+                          position: 'absolute',
+                          top: `${cfg.top}px`,
+                          left: `${cfg.left}px`,
+                          width: '100%',
+                          height: '100%',
+                          background: '#ece8dfff',
+                          borderRadius: '1rem',
+                          boxShadow: '0 4px 10px rgba(26, 22, 20, 0.22)',
+                          zIndex: i + 1,
+                          border: '1px solid #d6c6b2',
+                        }}
+                        animate={{
+                          rotate: isCardHovered
+                            ? cfg.rotate + (Math.random() - 0.5) * 1.5
+                            : cfg.rotate,
+                          x: isCardHovered
+                            ? cfg.left + (Math.random() - 0.5) * 2
+                            : cfg.left,
+                          y: isCardHovered
+                            ? cfg.top + (Math.random() - 0.5) * 2
+                            : cfg.top,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 180,
+                          damping: 12,
+                          mass: 0.6,
+                        }}
+                        aria-hidden="true"
+                      />
+                    ))}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1.386, ease: [0.33, 1, 0.68, 1] }}
+                      onClick={goNext}
+                      onMouseEnter={() => setIsCardHovered(true)}
+                      onMouseLeave={() => setIsCardHovered(false)}
+                      className="rounded-xl border border-gray-300 pt-4 sm:pt-8 md:pt-12 px-8 pb-4 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
+                        style={{
+                          backgroundColor: "#f7f3ebff",
                           position: 'relative',
                           zIndex: 10,
+                          boxShadow: `0 4px 10px rgba(26, 22, 20, 0.52), inset 0 2px 8px rgba(255,255,255,0.18), inset 0 -2px 8px rgba(0,0,0,0.10)`,
+                          border: '2px solid #b8a47a', // slightly darker outline
                         }}
-                      >
-                      {/* IMAGE CONTAINER (three-stage hover: src -> src2 -> src3) */}
+                    >
+                      {/* IMAGE CONTAINER (hover crossfade by revealing background) */}
                       <div
-                        className="relative mb-6 max-w-md mx-auto"
+                        className="aspect-square bg-[#eae6df] rounded-sm relative mb-6 max-w-md mx-auto overflow-hidden border-2 border-gray-400"
                         style={{
-                          background: '#f7f3eb',
+                          backgroundImage: currentImage?.src2 ? `url(${currentImage.src2})` : 'none',
+                          backgroundSize: 'contain',
+                          backgroundPosition: 'center',
+                          backgroundRepeat: 'no-repeat',
                           WebkitUserDrag: 'none',
                           userSelect: 'none',
                           WebkitTouchCallout: 'none',
                         }}
                         onContextMenu={(e) => e.preventDefault()}
                       >
-                        {/* Base image (show only when not hovered) */}
+                        <div
+                          className="absolute inset-0 rounded-sm pointer-events-none"
+                          style={{
+                            boxShadow: `
+                              inset 2px 0 3px rgba(75,75,75,.4),
+                              inset -2px 0 3px rgba(236,236,236,.68),
+                              inset 0 2px 3px rgba(77,77,77,.4),
+                              inset 0 -3px 4px rgba(255,255,255,.81)
+                            `,
+                            zIndex: 10,
+                          }}
+                        />
                         <img
                           src={currentImage?.src}
                           alt={currentImage?.title}
-                          className="w-full h-full object-contain"
-                          style={{ opacity: isCardHovered ? 0 : 1, transition: 'opacity 320ms ease-out' }}
+                          className={`w-full h-full object-contain rounded-sm transition-opacity duration-[1116ms] ease-out ${currentImage?.src2 ? 'group-hover:opacity-0' : ''}`}
+                          // zoom disabled in this viewer
+                          style={{ WebkitUserDrag: 'none', userSelect: 'none', WebkitTouchCallout: 'none' }}
                           draggable={false}
                         />
-                        {/* Hover phase 1 */}
-                        {currentImage?.src2 && (
-                          <img
-                            src={currentImage.src2}
-                            alt=""
-                            className="absolute inset-0 w-full h-full object-contain"
-                            style={{ opacity: isCardHovered ? 1 : 0, transition: 'opacity 200ms ease-out', pointerEvents: 'none' }}
-                            draggable={false}
-                          />
-                        )}
-                        {/* Hover phase 2 (animated gif) */}
-                        {currentImage?.src3 && (
-                          <img
-                            src={currentImage.src3}
-                            alt=""
-                            className="absolute inset-0 w-full h-full object-contain"
-                            style={{ opacity: hoverPhase === 2 ? 1 : 0, transition: 'opacity 320ms ease-out', pointerEvents: 'none' }}
-                            draggable={false}
-                          />
-                        )}
                         {showWatermark(currentImage) && (
                           <WatermarkOverlay text={currentImage?.watermarkText || 'Wayne Heim'} />
                         )}
@@ -1152,7 +1013,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                         className="text-center max-w-sm mx-auto"
                       >
                         <h1
-                          className="font-semibold mb-1 text-3xl"
+                          className="font-semibold mb-3 text-3xl"
                           style={{
                             opacity: 0.7,
                             fontFamily: "'Glegoo', serif",
@@ -1166,7 +1027,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                               const parts = title.split("Prologue:");
                               return (
                                 <>
-                                  <span className="text-xl block  text-[#85644b]">Prologue:</span>
+                                  <span className="text-xl block mb-1 text-[#85644b]">Prologue:</span>
                                   <span
                                     className="text-2xl font-bold"
                                     style={{
@@ -1198,22 +1059,19 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                         )}
 
                         {/* NEXT BUTTON INSIDE CARD */}
-                        <div className="flex justify-center mb-3 mt-2">
+                        <div className="flex justify-center mt-4">
                           <button
                             type="button"
                             onClick={goNext}
-                            className="k4-play-btn"
+                            className={`w-16 h-16 flex items-center justify-center rounded transition-all duration-200 ${isCardHovered ? 'text-[#8B4513]' : 'text-[#bba798]'}`}
                             title="Begin Story"
-                            aria-label="Begin Story"
                           >
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                              <path d="M8 6l10 6-10 6z" />
-                            </svg>
+                            <SquareChevronRight className="w-9 h-9" />
                           </button>
                         </div>
                       </motion.div>
-                      </motion.div>
                     </motion.div>
+                    </div>
                   </div>
                 ) : (
                   /* IMAGE */

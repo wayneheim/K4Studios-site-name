@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright } from "lucide-react";
 import GallerySlideshowStory from "./Gallery-Slideshow-Story.jsx";
 import ShareDrawer from "./ShareDrawer.jsx";
 import { storyVoices } from "./storyVoices.js";
@@ -18,8 +18,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const [currentVoice, setCurrentVoice] = useState(null);
   const [isCardHovered, setIsCardHovered] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  // Control when the intro stack should fan out (start stacked, then fan after ~75% of main card entrance)
-  const [fanOut, setFanOut] = useState(false);
   // Start-page hover image sequencing (base -> src2 -> src3)
   const [hoverPhase, setHoverPhase] = useState(0); // 0=base, 1=src2, 2=src3
   const hoverTimerRef = useRef(null);
@@ -245,17 +243,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
     };
   }, [isCardHovered, currentIndex, currentImage?.src3]);
-
-  // Trigger fan-out after the main card is ~75% into its entrance
-  useEffect(() => {
-    if (currentIndex !== 0) {
-      setFanOut(false);
-      return;
-    }
-    setFanOut(false);
-    const t = setTimeout(() => setFanOut(true), 450); // main card entrance ~0.6s → fan at ~0.45s
-    return () => clearTimeout(t);
-  }, [currentIndex]);
 
   // Helper function to check if speech is currently active
   const isSpeechActive = () => {
@@ -949,157 +936,120 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
               >
                 {/* CARD CONTAINER FOR START PAGE */}
                 {currentIndex === 0 ? (
-                  <div className="w-full px-3 sm:px-4 md:px-0 mt-8 md:mt-16 lg:mt-20">
-                    <motion.div
-                      initial={false}
-                      animate={fanOut ? "fan" : "stack"}
-                      variants={{
-                        stack: {},
-                        fan: { transition: { staggerChildren: 0, delayChildren: 0 } }
-                      }}
-                      style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '.25rem 0', perspective: '1000px' }}
-                    >
-                      {/* Shadow stack cards animate from a neat stack to fanned offsets */}
-                      {[ 
-                        { y: -2, x: 2, rotate: -4 },
-                        { y: 2, x: 4, rotate: 1 },
-                        { y: 1, x: 3, rotate: -3 },
-                        { y: -3, x: 5, rotate: 3 },
-                        { y: 0, x: 6, rotate: 1 },
-                      ].map((cfg, i) => (
-                        <motion.div
-                          key={`shadow-${i}`}
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                            background: '#ece8dfff',
-                            borderRadius: '1rem',
-                            boxShadow: '0 4px 10px rgba(26, 22, 20, 0.22)',
-                            zIndex: i + 1,
-                            border: '1px solid #d6c6b2',
-                          }}
-                          variants={{
-                            stack: { opacity: 0, y: 40, x: 0, rotate: 0, scale: 1 },
-                            fan: {
-                              opacity: 1,
-                              y: cfg.y,
-                              x: cfg.x,
-                              rotate: cfg.rotate,
-                              scale: 1,
-                              transition: { type: 'tween', ease: [0.22, 1, 0.36, 1], duration: 1.5 }
-                            }
-                          }}
-                          aria-hidden="true"
-                        />
-                      ))}
-
-                    {/* Clickable portal cards (desktop only) */}
-{[
-  { rotate: -15, x: -80, y: 8, href: "/", label: "HOME" },
-  { rotate: 16, x: 130, y: 10, href: "/Contact/", label: "@" },
-  { rotate: 14, x: 190, y: 80, href: "/Other/Stories", label: "INDEX" },
-].map((card, i) => (
-  <motion.a
-    key={`portal-${i}`}
-    href={card.href}
-    aria-label={`Go to ${card.label}`}
-    className="hidden md:block k4-card k4-card-link"
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "75%",
-      height: "86%",
-      zIndex: 6 + i,
-      cursor: "pointer",
-      transformOrigin: "center",
-    }}
-    variants={{
-      stack: { opacity: 0, y: 40, x: 0, rotate: 0, scale: 1 },
-      fan: {
-        opacity: 1,
-        y: card.y,
-        x: card.x,
-        rotate: card.rotate,
-        scale: 1,
-        transition: {
-          type: "tween",
-          ease: [0.42, 0, 0.38, 1],
-          duration: 0.8,
-          delay: card.label === "HOME" ? 0.1 : 0,
-        },
-      },
-    }}
-    whileHover={{ scale: 1.02 }}
-  >
-    <span className="sr-only">{card.label}</span>
-
-    {/* Label rendering */}
-    {(() => {
-      // stack each letter vertically for HOME and INDEX, use icon for @
-      let labelText = card.label;
-      let side, topOffset;
-      if (card.label === "HOME") {
-        side = "left-5";
-        topOffset = "top-[4%]";
-        const letters = labelText.split("");
-        return (
-          <span
-            aria-hidden="true"
-            className={`absolute ${side} ${topOffset} k4-home-label tracking-[0.15em] select-none text-sm leading-[1.51em] font-semibold opacity-50`}
-            style={{ whiteSpace: "pre-line", textAlign: "center", transition: 'color .5s ease' }}
-          >
-            {letters.join("\n")}
-          </span>
-        );
-      } else if (card.label === "INDEX") {
-        side = "right-5";
-        topOffset = "top-[4%]";
-        const letters = labelText.split("");
-        return (
-          <span
-            aria-hidden="true"
-            className={`absolute ${side} ${topOffset} k4-index-label tracking-[0.15em] select-none text-sm leading-[1.51em] font-semibold opacity-50`}
-            style={{ whiteSpace: "pre-line", textAlign: "center", transition: 'color .5s ease' }}
-          >
-            {letters.join("\n")}
-          </span>
-        );
-      } else if (card.label === "@") {
-        side = "right-5";
-        topOffset = "top-[4%]";
-        return (
-          <span
-            aria-hidden="true"
-            className={`absolute ${side} ${topOffset} k4-contact-label select-none opacity-70`}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'color 1s ease' }}
-          >
-            <Mail size={18} strokeWidth={2} className="k4-contact-label-icon" />
-          </span>
-        );
-      }
-    })()}
-  </motion.a>
-))}
-
-
-                      {/* Top primary card (main) */}
+                  <div className="w-full px-3 sm:px-4 md:px-0">
+                    <div style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '.25rem 0', perspective: '1000px' }}>
+                    {/* Multiple stacked shadow cards for realistic stack effect */}
+                    {/* Card stack config: adjust offsets/rotation per card here */}
+                    {[ 
+                      { top: -2, left: 2, rotate: -4 },
+                      { top: 2, left: 4, rotate: 1 },
+                      { top: 1, left: 3, rotate: -3 },
+                      { top: -3, left: 5, rotate: 3 },
+                      { top: 0, left: 6, rotate: 1 },
+                    ].map((cfg, i) => (
                       <motion.div
-                        initial={{ opacity: 0, y: 24 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ type: 'tween', ease: [0.22, 1, 0.36, 1], duration: 0.6 }}
-                        onClick={goNext}
-                        onMouseEnter={() => setIsCardHovered(true)}
-                        onMouseLeave={() => setIsCardHovered(false)}
-                        className="k4-card pt-4 sm:pt-8 md:pt-12 px-8 pb-6 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
+                        key={i}
+                        style={{
+                          position: 'absolute',
+                          top: `${cfg.top}px`,
+                          left: `${cfg.left}px`,
+                          width: '100%',
+                          height: '100%',
+                          background: '#ece8dfff',
+                          borderRadius: '1rem',
+                          boxShadow: '0 4px 10px rgba(26, 22, 20, 0.22)',
+                          zIndex: i + 1,
+                          border: '1px solid #d6c6b2',
+                        }}
+                        animate={{
+                          rotate: isCardHovered
+                            ? cfg.rotate + (Math.random() - 0.5) * 1.5
+                            : cfg.rotate,
+                          x: isCardHovered
+                            ? cfg.left + (Math.random() - 0.5) * 2
+                            : cfg.left,
+                          y: isCardHovered
+                            ? cfg.top + (Math.random() - 0.5) * 2
+                            : cfg.top,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 180,
+                          damping: 12,
+                          mass: 0.6,
+                        }}
+                        aria-hidden="true"
+                      />
+                    ))}
+
+                    {/* Clickable background cards (desktop only) */}
+                    <a
+                      href="/"
+                      aria-label="Go to Home"
+                      className="hidden md:block k4-card"
+                      style={{
+                        position: 'absolute',
+                        top: '6px',
+                        left: '-90px',
+                        width: '78%',
+                        height: '88%',
+                        transform: 'rotate(-8deg)',
+                        zIndex: 6,
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <span className="sr-only">Home</span>
+                    </a>
+
+                    <a
+                      href="/Other/Stories/"
+                      aria-label="Go to Stories Index"
+                      className="hidden md:block k4-card"
+                      style={{
+                        position: 'absolute',
+                        top: '18px',
+                        right: '-70px',
+                        width: '74%',
+                        height: '86%',
+                        transform: 'rotate(6deg)',
+                        zIndex: 7,
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <span className="sr-only">Stories</span>
+                    </a>
+
+                    <a
+                      href="/Other/Bio"
+                      aria-label="Go to Bio"
+                      className="hidden md:block k4-card"
+                      style={{
+                        position: 'absolute',
+                        top: '-10px',
+                        right: '-120px',
+                        width: '72%',
+                        height: '84%',
+                        transform: 'rotate(3deg)',
+                        zIndex: 8,
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <span className="sr-only">Bio</span>
+                    </a>
+
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1.386, ease: [0.33, 1, 0.68, 1] }}
+                      onClick={goNext}
+                      onMouseEnter={() => setIsCardHovered(true)}
+                      onMouseLeave={() => setIsCardHovered(false)}
+                      className="k4-card pt-4 sm:pt-8 md:pt-12 px-8 pb-6 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
                         style={{
                           position: 'relative',
                           zIndex: 10,
                         }}
-                      >
+                    >
                       {/* IMAGE CONTAINER (three-stage hover: src -> src2 -> src3) */}
                       <div
                         className="relative mb-6 max-w-md mx-auto"
@@ -1212,8 +1162,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                           </button>
                         </div>
                       </motion.div>
-                      </motion.div>
                     </motion.div>
+                    </div>
                   </div>
                 ) : (
                   /* IMAGE */
