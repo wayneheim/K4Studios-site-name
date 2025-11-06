@@ -57,7 +57,6 @@ export function getStructuredData({
       },
       "copyrightHolder": {
         "@type": "Person",
-        "@id": `${creatorUrl.replace(/\/$/, "")}#person`,
         "name": creatorName,
         "url": creatorUrl,
       },
@@ -132,7 +131,6 @@ export function getStructuredData({
       },
       "copyrightHolder": {
         "@type": "Person",
-        "@id": `${creatorUrl.replace(/\/$/, "")}#person`,
         "name": creatorName,
         "url": creatorUrl,
       },
@@ -218,7 +216,6 @@ export function getStructuredData({
       "dateModified": data.dateModified || data.datePublished || defaultDate,
       "author": {
         "@type": "Person",
-        "@id": authorId,
         "name": creatorName,
         "url": creatorUrl,
         ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
@@ -226,7 +223,6 @@ export function getStructuredData({
       "publisher": publisherObj,
       "copyrightHolder": {
         "@type": "Person",
-        "@id": authorId,
         "name": creatorName,
         "url": creatorUrl,
       },
