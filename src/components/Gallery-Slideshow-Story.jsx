@@ -1,10 +1,17 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
-import { ShoppingCart, VolumeX } from "lucide-react";
+import { ShoppingCart, VolumeX, Volume2 } from "lucide-react";
 import PunchInIntro from "./PunchInIntro.jsx";
 
-export default function StoryShow({ images, startImageId, onExit, isMuted, setIsMuted, audioRef, setIsSpeaking, isSpeaking }) {
+// Helper function to select the best image source for slideshow display
+const getBestImageSrc = (image) => {
+  if (!image) return "";
+  // For slideshow: prefer srcXL (extra large), then srcL (large), then srcM (medium), then src (original)
+  return image.srcXL || image.srcL || image.srcM || image.src || "";
+};
+
+export default function StoryShow({ images, startImageId, onExit, isMuted = false, setIsMuted, volume = 0.7, setVolume, audioRef, setIsSpeaking, isSpeaking, globalAudioSrc, globalAudioMode }) {
   const [index, setIndex] = useState(0);
   const [isIntro, setIsIntro] = useState(false);
   const [showControls, setShowControls] = useState(true);
@@ -163,6 +170,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
         setIsSpeaking(true);
         if (audioRef.current) {
           audioRef.current.src = current.audioSrc;
+          audioRef.current.volume = volume; // Apply user volume setting
           audioRef.current.play().catch((error) => {
             console.error('Error auto-playing audio in slideshow:', error);
             setIsSpeaking(false);
@@ -171,7 +179,14 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
       }, 500);
       return () => clearTimeout(timer);
     }
-  }, [index, current?.audioSrc, isMuted]);
+  }, [index, current?.audioSrc, isMuted, volume]);
+
+  // Update audio volume when volume setting changes
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = isMuted ? 0 : volume;
+    }
+  }, [volume, isMuted]);
 
   function reorderImages(list, startId) {
     const startIndex = list.findIndex((img) => img.id === startId);
@@ -291,7 +306,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
             >
               <div className="w-screen h-screen flex items-center justify-center relative gallery-slideshow px-4 md:px-0">
                 <motion.img
-                  src={current.src}
+                  src={getBestImageSrc(current)}
                   alt={current.title || ""}
                   className={`object-contain ${isVertical ? "vertical" : ""}`}
                   style={imgStyle}
@@ -381,27 +396,54 @@ export default function StoryShow({ images, startImageId, onExit, isMuted, setIs
                 <span aria-hidden>▶</span>
               </button>
 
-              {/* Mute - only show if current image has audioSrc */}
-              {current?.audioSrc && (
-                <button
-                  onClick={() => {
-                    // Stop current audio playback
-                    if (audioRef.current) {
-                      audioRef.current.pause();
-                      audioRef.current.currentTime = 0;
-                    }
-                    setIsSpeaking(false);
-                    // Toggle mute state
-                    setIsMuted(!isMuted);
-                  }}
-                  className={`bg-white/10 text-white rounded px-2 py-1 hover:bg-white/20 transition btn ${
-                    isMuted ? 'text-red-400' : ''
-                  }`}
-                  aria-label={isMuted ? "Unmute audio" : "Mute audio"}
-                  title={isMuted ? "Unmute audio" : "Mute audio"}
-                >
-                  <VolumeX className="w-4 h-4" />
-                </button>
+              {/* Audio Control - show if current image has audioSrc OR if there's global audio */}
+              {(current?.audioSrc || globalAudioSrc || (images.some(img => img.globalAudioMode) && images.some(img => img.globalAudioSrc))) && (
+                <div className="relative flex items-center gap-1">
+                <div className="relative group">
+                  <button
+                    onClick={() => {
+                      // For individual audio (score mode), stop current playback when muting
+                      if (current?.audioSrc && isSpeaking) {
+                        if (audioRef.current) {
+                          audioRef.current.pause();
+                          audioRef.current.currentTime = 0;
+                        }
+                        setIsSpeaking(false);
+                      }
+                      // Toggle mute state (affects both individual and ambient audio)
+                      setIsMuted(!isMuted);
+                    }}
+                    className={`bg-white/10 text-white rounded px-2 py-1 hover:bg-white/20 transition btn ${
+                      isMuted ? 'text-red-400' : ''
+                    }`}
+                    aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+                    title={isMuted ? "Unmute audio" : "Mute audio"}
+                  >
+                    {isMuted ? (
+                      <VolumeX className="w-4 h-4" />
+                    ) : (
+                      <Volume2 className="w-4 h-4" />
+                    )}
+                  </button>
+
+                  {/* Volume Slider */}
+                  <div className="absolute bottom-full mb-2 left-0 bg-black/80 rounded-lg p-3 min-w-32 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <div className="flex items-center gap-2">
+                      <Volume2 className="w-4 h-4 text-white" />
+                      <input
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={volume}
+                        onChange={(e) => setVolume(parseFloat(e.target.value))}
+                        className="flex-1 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"
+                      />
+                      <span className="text-white text-xs min-w-8">{Math.round(volume * 100)}%</span>
+                    </div>
+                  </div>
+                </div>
+                </div>
               )}
 
               {/* Exit */}

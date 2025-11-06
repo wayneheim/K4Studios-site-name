@@ -1,5 +1,16 @@
 // src/data/Other/Stories/DemoShow.mjs
 // Auto-generated demo PictureShow dataset
+export const storyMeta = {
+  "showTitle": "Demo Show",
+  "prologueTitle": "Prologue: Dust and Legend",
+  "openingParagraph": "The West wasn't built on gold—it was built on memory. Every trail, every face, every echo of dust tells a story worth retelling.",
+  "description": "A demo showcase of the Picture Show format featuring Wayne Heim's painterly Western photography. Experience the cinematic storytelling and emotional depth of fine art photography through carefully curated visual narratives.",
+  "keywords": "demo picture show, western fine art photography, painterly photography, visual storytelling, Wayne Heim, cowboy portraits, cinematic photography",
+  "alt": "Demo picture show featuring painterly Western photography and visual storytelling",
+  "closingText": "This demo showcases the Picture Show format — immersive visual narratives that blend photography, story, and emotion. Each image tells a story, each sequence creates a journey.",
+  "savedAt": "2025-11-06T12:00:00.000Z"
+};
+
 // src/data/Other/Stories/DemoShow.mjs
 export const storyData = [
   {

@@ -1,0 +1,17 @@
+---
+// Auto-generated Astro page for Western-Living-History
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { storyMeta, storyData } from "@/data/Other/Stories/Western-Living-History.mjs";
+--- 
+
+<BaseLayout title={storyMeta.showTitle}>
+  <PictureShowBase
+    client:only="react"
+    rawData={storyData}
+    basePath="/Other/Stories/Western-Living-History"
+    titleBase={storyMeta.showTitle}
+    globalAudioSrc={storyMeta.globalAudioSrc || ""}
+    globalAudioMode={storyMeta.globalAudioMode || "score"}
+  />
+</BaseLayout>

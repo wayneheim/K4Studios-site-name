@@ -229,8 +229,9 @@ const GHOST_TEMPLATE = {
   title: "Prologue: Dust and Legend",
   description: "An opening panel introducing this story sequence.",
   alt: "Intro slide for demo picture show",
-  src: "/images/K4-Stories.webp",
-  src2: "/images/K4-Stories-b.webp",
+  src: "/images/K4-Stories logo1b.webp",
+  src2: "/images/K4-Stories logo2.webp",
+  src3: "/images/K4-Stories-logo3b.gif",
   visibility: "ghost",
   sortOrder: -1,
   story:
@@ -276,6 +277,10 @@ export default function PictureShowStoryBuilder() {
         closingText: CLOSING_TEMPLATE.description,
         globalAudioSrc: "",
         globalAudioMode: "score", // default
+        showWatermark: false,
+        watermarkText: "© Wayne Heim",
+        copyrightName: "Wayne Heim",
+        copyrightYear: new Date().getFullYear().toString(),
       };
     } catch {
       return {
@@ -288,6 +293,10 @@ export default function PictureShowStoryBuilder() {
         closingText: CLOSING_TEMPLATE.description,
         globalAudioSrc: "",
         globalAudioMode: "score", // default
+        showWatermark: false,
+        watermarkText: "© Wayne Heim",
+        copyrightName: "Wayne Heim",
+        copyrightYear: new Date().getFullYear().toString(),
       };
     }
   });
@@ -384,6 +393,8 @@ export default function PictureShowStoryBuilder() {
       ...GHOST_TEMPLATE,
       title: showMeta.prologueTitle || "Prologue:",
       story: showMeta.openingParagraph || "",
+      showMark: showMeta.showWatermark,
+      watermarkText: showMeta.watermarkText,
       keywords: showMeta.keywords || []
     };
     const closing = { ...CLOSING_TEMPLATE, description: showMeta.closingText };
@@ -480,7 +491,9 @@ export default function PictureShowStoryBuilder() {
     if (!hasGhost) arr.unshift({
       ...GHOST_TEMPLATE,
       title: showMeta.prologueTitle || "Prologue:",
-      story: showMeta.openingParagraph || ""
+      story: showMeta.openingParagraph || "",
+      showMark: showMeta.showWatermark,
+      watermarkText: showMeta.watermarkText
     });
     if (!hasClosing) arr.push({ ...CLOSING_TEMPLATE, description: showMeta.closingText });
 
@@ -490,6 +503,8 @@ export default function PictureShowStoryBuilder() {
         ...s,
         title: showMeta.prologueTitle || s.title || "Prologue:",
         story: showMeta.openingParagraph || s.story || "",
+        showMark: showMeta.showWatermark,
+        watermarkText: showMeta.watermarkText,
         sortOrder: -1
       };
       if (s.visibility === "closing" || s.id === "i-k4studios-closing") return { ...s, sortOrder: 9999 };
@@ -736,6 +751,9 @@ export default function PictureShowStoryBuilder() {
                   const ghostSlide = storyData.find((s) => s.id === "i-k4studios" || s.visibility === "ghost");
                   const prologueTitle = ghostSlide?.title || "Prologue:";
                   const openingParagraph = ghostSlide?.story || "";
+                  const showWatermark = ghostSlide?.showMark;
+                  const rawWatermarkText = ghostSlide?.watermarkText || storyMeta?.watermarkText || "© Wayne Heim";
+                  const watermarkText = rawWatermarkText.startsWith('©') ? rawWatermarkText : '©' + rawWatermarkText;
 
                   const mainSlides = storyData.filter(
                     (s) => s.visibility !== "ghost" && s.visibility !== "closing"
@@ -744,7 +762,9 @@ export default function PictureShowStoryBuilder() {
                   setShowMeta({
                     ...storyMeta,
                     prologueTitle,
-                    openingParagraph
+                    openingParagraph,
+                    showWatermark,
+                    watermarkText
                   });
                   setPicked(mainSlides);
                   setSlides(storyData);
@@ -795,6 +815,8 @@ export default function PictureShowStoryBuilder() {
             <LabeledInput label="ALT (show-level)" value={showMeta.alt} onChange={(v) => setShowMeta((m) => ({ ...m, alt: v }))} />
             <LabeledInput label="Keywords (comma-separated)" value={typeof showMeta.keywords === 'string' ? showMeta.keywords : Array.isArray(showMeta.keywords) ? showMeta.keywords.join(", ") : ""} onChange={(v) => setShowMeta((m) => ({ ...m, keywords: v }))} />
             <LabeledInput label="Description (meta)" value={showMeta.description} onChange={(v) => setShowMeta((m) => ({ ...m, description: v }))} />
+            <LabeledInput label="Copyright Name" value={showMeta.copyrightName || ""} onChange={(v) => setShowMeta((m) => ({ ...m, copyrightName: v }))} placeholder="Wayne Heim" />
+            <LabeledInput label="Copyright Year" value={showMeta.copyrightYear || ""} onChange={(v) => setShowMeta((m) => ({ ...m, copyrightYear: v }))} placeholder="2025" />
             <LabeledInput label="Prologue Title" value={showMeta.prologueTitle || "Prologue:"} onChange={(v) => setShowMeta((m) => ({ ...m, prologueTitle: v }))} placeholder="Prologue: ..." />
           </div>
           <LabeledTextArea label="Opening Paragraph" value={showMeta.openingParagraph || ""} onChange={(v) => setShowMeta((m) => ({ ...m, openingParagraph: v }))} placeholder="Opening paragraph for the prologue slide..." />
@@ -868,6 +890,52 @@ export default function PictureShowStoryBuilder() {
               </div>
             )}
           </div>
+
+          {/* 🖼️ Watermark Section */}
+          <div
+            style={{
+              marginTop: 14,
+              padding: 12,
+              border: "1px solid #d2c4b5",
+              borderRadius: 8,
+              background: "#faf8f4",
+            }}
+          >
+            <h4 style={{ fontWeight: 700, marginBottom: 6 }}>Watermark Settings</h4>
+            <div style={{ marginBottom: 8 }}>
+              <label style={{ display: "block", marginBottom: 4 }}>
+                <input
+                  type="checkbox"
+                  checked={showMeta.showWatermark === true || showMeta.showWatermark === "yes"}
+                  onChange={(e) =>
+                    setShowMeta((m) => ({ ...m, showWatermark: e.target.checked }))
+                  }
+                />{" "}
+                Show watermark on all images
+              </label>
+            </div>
+            <div style={{ marginBottom: 10 }}>
+              <label style={{ fontWeight: 700, display: "block", marginBottom: 4 }}>Watermark Text</label>
+              <div style={{ display: "flex", alignItems: "center", border: "1px solid #c7b9a3", borderRadius: 8, background: "#faf8f4" }}>
+                <span style={{ padding: "8px 12px", fontWeight: 700, color: "#666" }}>©</span>
+                <input
+                  type="text"
+                  value={(showMeta.watermarkText || "").replace(/^©/, "")}
+                  onChange={(e) => {
+                    const text = e.target.value;
+                    setShowMeta((m) => ({ ...m, watermarkText: "©" + text }));
+                  }}
+                  placeholder="Wayne Heim"
+                  style={{ flex: 1, padding: "8px 12px", border: "none", background: "transparent", outline: "none" }}
+                />
+              </div>
+            </div>
+            <div style={{ fontSize: 12, opacity: 0.7, marginTop: 6 }}>
+              Watermarks protect your images while maintaining the viewing experience.
+              Leave text blank to use default "© Wayne Heim".
+            </div>
+          </div>
+
           <StepControls
             onNext={async () => {
               const filename = `${(showMeta.showTitle || "Untitled Picture Show")
@@ -1104,7 +1172,58 @@ export default function PictureShowStoryBuilder() {
               <LabeledTextArea label="Story" value={editData.story || ""} onChange={(v) => setEditData((d) => ({ ...d, story: v }))} />
               <LabeledInput label="Description" value={editData.description || ""} onChange={(v) => setEditData((d) => ({ ...d, description: v }))} />
               <LabeledInput label="ALT" value={editData.alt || ""} onChange={(v) => setEditData((d) => ({ ...d, alt: v }))} />
-              <LabeledTextArea label="Collector Notes" value={editData.notes || ""} onChange={(v) => setEditData((d) => ({ ...d, notes: v }))} />
+              {/* Ghost slide image sources */}
+              {(editData.id === "i-k4studios" || editData.visibility === "ghost") && (
+                <>
+                  <div style={{ marginBottom: 10 }}>
+                    <label style={{ fontWeight: 700, display: "block", marginBottom: 4, color: "#666" }}>Image Source (src)</label>
+                    <input
+                      type="text"
+                      value={editData.src || ""}
+                      disabled
+                      style={{ width: "100%", padding: "8px 10px", border: "1px solid #c7b9a3", borderRadius: 8, background: "#f5f5f5", color: "#999", cursor: "not-allowed" }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: 10 }}>
+                    <label style={{ fontWeight: 700, display: "block", marginBottom: 4, color: "#666" }}>Image Source 2 (src2)</label>
+                    <input
+                      type="text"
+                      value={editData.src2 || ""}
+                      disabled
+                      style={{ width: "100%", padding: "8px 10px", border: "1px solid #c7b9a3", borderRadius: 8, background: "#f5f5f5", color: "#999", cursor: "not-allowed" }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: 10 }}>
+                    <label style={{ fontWeight: 700, display: "block", marginBottom: 4, color: "#666" }}>Image Source 3 (src3)</label>
+                    <input
+                      type="text"
+                      value={editData.src3 || ""}
+                      disabled
+                      style={{ width: "100%", padding: "8px 10px", border: "1px solid #c7b9a3", borderRadius: 8, background: "#f5f5f5", color: "#999", cursor: "not-allowed" }}
+                    />
+                  </div>
+                </>
+              )}
+              <div style={{ marginBottom: 10 }}>
+                <label style={{ fontWeight: 700, display: "block", marginBottom: 4, color: (editData.id === "i-k4studios" || editData.visibility === "ghost") ? "#666" : "inherit" }}>Collector Notes</label>
+                <textarea
+                  value={editData.notes || ""}
+                  onChange={(v) => setEditData((d) => ({ ...d, notes: v }))}
+                  disabled={editData.id === "i-k4studios" || editData.visibility === "ghost"}
+                  placeholder={(editData.id === "i-k4studios" || editData.visibility === "ghost") ? "Not applicable for opening slides" : ""}
+                  style={{
+                    width: "100%",
+                    minHeight: 110,
+                    padding: "8px 10px",
+                    border: "1px solid #c7b9a3",
+                    borderRadius: 8,
+                    background: (editData.id === "i-k4studios" || editData.visibility === "ghost") ? "#f5f5f5" : "#faf8f4",
+                    color: (editData.id === "i-k4studios" || editData.visibility === "ghost") ? "#999" : "inherit",
+                    cursor: (editData.id === "i-k4studios" || editData.visibility === "ghost") ? "not-allowed" : "auto",
+                    resize: "vertical"
+                  }}
+                />
+              </div>
               {/* Keywords field: for Ghost slide, always show main showMeta.keywords and update showMeta on change */}
               {editData.id === "i-k4studios" || editData.visibility === "ghost" ? (
                 <LabeledInput

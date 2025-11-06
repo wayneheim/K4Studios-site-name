@@ -7,14 +7,7 @@ import { storyVoices } from "./storyVoices.js";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 
-// Helper function to select the best image source for slideshow display
-const getBestImageSrc = (image) => {
-  if (!image) return "";
-  // For slideshow: prefer srcXL (extra large), then srcL (large), then srcM (medium), then src (original)
-  return image.srcXL || image.srcL || image.srcM || image.src || "";
-};
-
-export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score" }) {
+export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
   const [matColor, setMatColor] = useState("white");
@@ -33,7 +26,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const activeUtterances = useRef([]);
   const activeTimeouts = useRef([]);
   const audioRef = useRef(null);
-  const ambientAudioRef = useRef(null);
   // swipe tracking
   const touchStart = useRef({ x: 0, y: 0, t: 0 });
   const [voicePreferences, setVoicePreferences] = useState(() => {
@@ -59,72 +51,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       return rawData || [];
     }
   }, [rawData]);
-
-  // Determine default volume: 30% for ambient, 50% for score, 70% for mixed/individual audio
-  const defaultVolume = useMemo(() => {
-    if (globalAudioSrc && filteredData.length > 0) {
-      // Check if any non-ghost images have individual audio (exclude system intro slides)
-      const hasIndividualAudio = filteredData.some(img => img?.audioSrc && img?.visibility !== 'ghost');
-
-      if (hasIndividualAudio) {
-        // Stories with individual content audio default to 70%
-        return 0.7;
-      } else {
-        // Global-only audio: ambient = 30%, score = 50%
-        return globalAudioMode === "ambient" ? 0.3 : 0.5;
-      }
-    }
-    return 0.7; // Default fallback
-  }, [globalAudioSrc, globalAudioMode, filteredData]);
-
-  const [volume, setVolume] = useState(defaultVolume);
-
-  // Find score audio source from data (full volume background music)
-  const scoreAudioSrc = useMemo(() => {
-    if (globalAudioMode === "score") {
-      // First try the globalAudioSrc prop
-      if (globalAudioSrc && globalAudioSrc.trim()) {
-        return globalAudioSrc;
-      }
-      // Then try to find it from the data items
-      const scoreItem = filteredData.find(item => item.globalAudioMode === "score" && item.audioSrc);
-      return scoreItem?.audioSrc || null;
-    }
-    return null;
-  }, [filteredData, globalAudioSrc, globalAudioMode]);
-
-  // Handle score audio playback - only when slideshow is active
-  useEffect(() => {
-    if (scoreAudioSrc && globalAudioMode === "score" && showSlideshow && !isMuted) {
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.src = scoreAudioSrc;
-        ambientAudioRef.current.volume = volume; // Full user-controlled volume for score
-        ambientAudioRef.current.loop = true;
-        ambientAudioRef.current.play().catch((error) => {
-          console.error('Error playing score audio:', error);
-        });
-      }
-    } else if (globalAudioMode !== "score") {
-      // Stop score audio if mode changes
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.pause();
-        ambientAudioRef.current.currentTime = 0;
-      }
-    }
-
-    // Update volume when it changes
-    if (ambientAudioRef.current && globalAudioMode === "score") {
-      ambientAudioRef.current.volume = isMuted ? 0 : volume;
-    }
-
-    // Cleanup on unmount
-    return () => {
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.pause();
-        ambientAudioRef.current.currentTime = 0;
-      }
-    };
-  }, [scoreAudioSrc, globalAudioMode, showSlideshow, isMuted, volume]);
 
   // Hide site header/intro and ensure chapter section is visible while Picture Show is active
   useEffect(() => {
@@ -172,44 +98,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       cancelAnimationFrame(raf2);
     };
   }, []);
-
-  // Handle ambient audio playback - only when slideshow is active and mode is ambient
-  useEffect(() => {
-    if (globalAudioSrc && globalAudioMode === "ambient" && showSlideshow) {
-      if (!isMuted) {
-        // Start or continue playing ambient audio
-        if (ambientAudioRef.current) {
-          if (ambientAudioRef.current.src !== globalAudioSrc) {
-            ambientAudioRef.current.src = globalAudioSrc;
-            ambientAudioRef.current.loop = true;
-          }
-          ambientAudioRef.current.volume = 0.3 * volume;
-          ambientAudioRef.current.play().catch((error) => {
-            console.error('Error playing ambient audio:', error);
-          });
-        }
-      } else {
-        // Pause ambient audio when muted
-        if (ambientAudioRef.current) {
-          ambientAudioRef.current.pause();
-        }
-      }
-    } else {
-      // Stop ambient audio if not in ambient mode or not in slideshow
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.pause();
-        ambientAudioRef.current.currentTime = 0;
-      }
-    }
-
-    // Cleanup on unmount
-    return () => {
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.pause();
-        ambientAudioRef.current.currentTime = 0;
-      }
-    };
-  }, [globalAudioSrc, globalAudioMode, showSlideshow, isMuted, volume]);
 
   // Save voice preferences for consistency
   const saveVoicePreference = (storytellerName, voiceName) => {
@@ -1332,17 +1220,12 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
                   <div className="w-full px-5 sm:px-6 md:px-8" style={{ boxSizing: 'border-box' }}>
                     <div className="block mx-auto" style={{ position: 'relative', width: 'fit-content' }}>
                       <img
-                        src={getBestImageSrc(currentImage)}
+                        src={currentImage?.src}
                         alt={currentImage?.title}
                         className="rounded-lg max-h-[70vh] max-w-full object-contain shadow-md border border-gray-300"
                         // zoom disabled in this viewer
                         onContextMenu={(e) => e.preventDefault()}
-                        style={{
-                          WebkitUserDrag: 'none',
-                          userSelect: 'none',
-                          WebkitTouchCallout: 'none',
-                          display: 'block'
-                        }}
+                        style={{ WebkitUserDrag: 'none', userSelect: 'none', WebkitTouchCallout: 'none', display: 'block' }}
                         draggable={false}
                       />
                       {showWatermark(currentImage) && (
@@ -1591,13 +1474,9 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
           onExit={() => setShowSlideshow(false)}
           isMuted={isMuted}
           setIsMuted={setIsMuted}
-          volume={volume}
-          setVolume={setVolume}
           audioRef={audioRef}
           setIsSpeaking={setIsSpeaking}
           isSpeaking={isSpeaking}
-          globalAudioSrc={globalAudioSrc}
-          globalAudioMode={globalAudioMode}
         />
       )}
 
@@ -1609,13 +1488,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
         onEnded={() => setIsSpeaking(false)}
         onPause={() => setIsSpeaking(false)}
         onPlay={() => setIsSpeaking(true)}
-        style={{ display: 'none' }}
-      />
-
-      {/* Hidden ambient audio element for background music */}
-      <audio
-        ref={ambientAudioRef}
-        loop
         style={{ display: 'none' }}
       />
     </>
