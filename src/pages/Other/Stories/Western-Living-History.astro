@@ -1,14 +1,4 @@
 ---
-<head>
-  <meta property="og:title" content="Western Living History – Picture Show" />
-  <meta property="og:description" content="A cinematic Picture Show by Wayne Heim featuring Western reenactors keeping history alive." />
-  <meta property="og:image" content="https://www.k4studios.com/images/stories/western-living-history-hero.jpg" />
-  <meta property="og:type" content="video.other" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Western Living History – Picture Show" />
-  <meta name="twitter:description" content="A cinematic Picture Show by Wayne Heim featuring Western reenactors keeping history alive." />
-  <meta name="twitter:image" content="https://www.k4studios.com/images/stories/western-living-history-hero.jpg" />
-</head>
 // Auto-generated Astro page for Western-Living-History
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
@@ -34,9 +24,19 @@ const structuredDataJSON = getStructuredData({
     creatorUrl: "https://k4studios.com/"
   }
 });
---- 
+---
 
 <BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON} meta={{ ogType: "video.other" }}>
+  <head>
+    <meta property="og:title" content="Western Living History – Picture Show" />
+    <meta property="og:description" content="A cinematic Picture Show by Wayne Heim featuring Western reenactors keeping history alive." />
+    <meta property="og:image" content="https://www.k4studios.com/images/stories/western-living-history-hero.jpg" />
+    <meta property="og:type" content="video.other" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Western Living History – Picture Show" />
+    <meta name="twitter:description" content="A cinematic Picture Show by Wayne Heim featuring Western reenactors keeping history alive." />
+    <meta name="twitter:image" content="https://www.k4studios.com/images/stories/western-living-history-hero.jpg" />
+  </head>
   <noscript>
     <img
       src="/images/stories/western-living-history-hero.jpg"
