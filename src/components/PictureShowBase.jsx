@@ -15,36 +15,6 @@ const getBestImageSrc = (image) => {
 };
 
 export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score" }) {
-  // 🧠 Hydration guard for Facebook / Messenger WebView
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleReady = () => setIsReady(true);
-      if (document.readyState === "complete") {
-        setIsReady(true);
-      } else {
-        window.addEventListener("load", handleReady, { once: true });
-      }
-      return () => window.removeEventListener("load", handleReady);
-    }
-  }, []);
-
-  // Optional: debug messenger behavior
-  useEffect(() => {
-    if (typeof navigator !== "undefined" && /FBAN|FBAV|Instagram|Messenger/i.test(navigator.userAgent)) {
-      console.warn("⚠️ Running inside Facebook/Messenger WebView — using delayed hydration");
-    }
-  }, []);
-
-  if (!isReady) {
-    return (
-      <div className="flex items-center justify-center w-full h-[80vh] text-[#8b7355]">
-        <p>Loading slideshow…</p>
-      </div>
-    );
-  }
-
   // 🖼️ Existing slideshow logic follows here...
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
@@ -241,6 +211,28 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       }
     };
   }, [globalAudioSrc, globalAudioMode, showSlideshow, isMuted, volume]);
+
+  // Hydration guard for Facebook / Messenger WebView
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleReady = () => setIsReady(true);
+      if (document.readyState === "complete") {
+        setIsReady(true);
+      } else {
+        window.addEventListener("load", handleReady, { once: true });
+      }
+      return () => window.removeEventListener("load", handleReady);
+    }
+  }, []);
+
+  // Optional: debug messenger behavior
+  useEffect(() => {
+    if (typeof navigator !== "undefined" && /FBAN|FBAV|Instagram|Messenger/i.test(navigator.userAgent)) {
+      console.warn("⚠️ Running inside Facebook/Messenger WebView — using delayed hydration");
+    }
+  }, []);
 
   // Save voice preferences for consistency
   const saveVoicePreference = (storytellerName, voiceName) => {
@@ -1000,6 +992,14 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       </div>
     );
   };
+
+  if (!isReady) {
+    return (
+      <div className="flex items-center justify-center w-full h-[80vh] text-[#8b7355]">
+        <p>Loading slideshow…</p>
+      </div>
+    );
+  }
 
   return (
     <>
