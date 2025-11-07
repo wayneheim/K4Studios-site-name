@@ -1469,37 +1469,7 @@ if (/FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent) && !showSlideshow
                         <div className="flex justify-center mb-3 mt-2">
                           <button
                             type="button"
-                            onClick={async () => {
-                              const ua = navigator.userAgent || "";
-
-                              // 🧩 Messenger / Instagram audio unlock
-                              if (/FBAN|FBAV|Messenger|Instagram/i.test(ua)) {
-                                try {
-                                  const silent = document.createElement("audio");
-                                  silent.src = "";
-                                  silent.muted = true;
-                                  const playPromise = silent.play();
-                                  if (playPromise) await playPromise.catch(() => {});
-                                  setTimeout(() => silent.pause(), 200);
-                                } catch (err) {
-                                  console.warn("Silent audio unlock failed:", err);
-                                }
-                              }
-
-                              // 🎧 Prime audio refs if present
-                              try {
-                                if (ambientAudioRef.current) await ambientAudioRef.current.play().catch(() => {});
-                                if (audioRef.current) await audioRef.current.play().catch(() => {});
-                              } catch (err) {
-                                console.warn("Audio prime failed:", err);
-                              }
-
-                              // ⏳ small delay to let Messenger acknowledge gesture
-                              setTimeout(() => {
-                                setShowSlideshow(true);
-                                goNext();
-                              }, 150);
-                            }}
+                            onClick={goNext}
                             className="k4-play-btn"
                             title="Begin Story"
                             aria-label="Begin Story"

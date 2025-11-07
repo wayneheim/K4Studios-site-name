@@ -173,12 +173,15 @@ const isImagePage = lastSegment.startsWith("i-");
         {usedEntranceData.subtitle && (
           <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
         )}
-        <GalleryInfo client:load entranceData={{
-          ...usedEntranceData,
-          title: fixMojibake(usedEntranceData.title),
-          subtitle: fixMojibake(usedEntranceData.subtitle),
-          image: usedEntranceData.image
-        }} />
+        <GalleryInfo
+          client:load
+          entranceData={{
+            ...usedEntranceData,
+            title: fixMojibake(usedEntranceData.title),
+            subtitle: fixMojibake(usedEntranceData.subtitle),
+            image: usedEntranceData.image,
+          }}
+        />
       </div>
     )}
 
@@ -190,26 +193,28 @@ const isImagePage = lastSegment.startsWith("i-");
     )}
   </div>
 
-<Footer
-  previewImages={previewImages}
-  previewPath={previewPath}
-  currentImageUrl={selectedImage
-    ? (selectedImage.src.startsWith('http')
-      ? selectedImage.src
-      : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`)
-    : undefined}
-  title={pageTitle}
->
-  <!-- Named slot content -->
-  <div class="mt-6 w-full flex justify-center">
-    <a
-      href={`/Galleries/lightbox?dataset=${Astro.url.pathname}.mjs`}
-      class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
-    >
-      View Complete Listing
-    </a>
-  </div>
-</Footer>
+  <Footer
+    previewImages={previewImages}
+    previewPath={previewPath}
+    currentImageUrl={
+      selectedImage
+        ? selectedImage.src.startsWith("http")
+          ? selectedImage.src
+          : `${siteBase}${selectedImage.src.startsWith("/") ? selectedImage.src : "/" + selectedImage.src}`
+        : undefined
+    }
+    title={pageTitle}
+  >
+    <!-- Named slot content -->
+    <div class="mt-6 w-full flex justify-center">
+      <a
+        href={`/Galleries/lightbox?dataset=${Astro.url.pathname}.mjs`}
+        class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
+      >
+        View Complete Listing
+      </a>
+    </div>
+  </Footer>
 
   <style>
     @media (max-width: 767px) {
@@ -266,41 +271,65 @@ const isImagePage = lastSegment.startsWith("i-");
     }
     #gallery-content p { font-size:1rem !important; margin-bottom:1em !important; }
     #gallery-content a { text-decoration:underline !important; color:#85644b !important; }
+
+    /* --- MOBILE OVERFLOW PATCH (2025-11-07) --- */
+    @media (max-width: 767px) {
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        box-sizing: border-box;
+      }
+      #gallery-content {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+      }
+      .gallery-landing-title,
+      .gallery-landing-subtitle {
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+        width: auto !important;
+      }
+      #intro-section,
+      #chapter-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
   </style>
 
   {!isImagePage && (
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const exploreButton = document.querySelector('.explore-button');
-        const header = document.getElementById('header-section');
-        const intro = document.getElementById('intro-section');
-        const chapter = document.getElementById('chapter-section');
-        const navToggle = document.getElementById('nav-toggle');
+      document.addEventListener("DOMContentLoaded", () => {
+        const exploreButton = document.querySelector(".explore-button");
+        const header = document.getElementById("header-section");
+        const intro = document.getElementById("intro-section");
+        const chapter = document.getElementById("chapter-section");
+        const navToggle = document.getElementById("nav-toggle");
         let isMenuOpen = false;
 
-        exploreButton?.addEventListener('click', () => {
-          header.classList.add('section-hidden');
-          intro.classList.add('section-hidden');
-          chapter.style.display = 'block';
+        exploreButton?.addEventListener("click", () => {
+          header.classList.add("section-hidden");
+          intro.classList.add("section-hidden");
+          chapter.style.display = "block";
           setTimeout(() => {
-            chapter.classList.remove('section-hidden');
-            chapter.classList.add('section-visible');
+            chapter.classList.remove("section-hidden");
+            chapter.classList.add("section-visible");
           }, 50);
           if (window.innerWidth >= 768) {
-            document.getElementById('nav-toggle')?.classList.remove('hidden');
+            document.getElementById("nav-toggle")?.classList.remove("hidden");
           }
         });
 
-        navToggle?.addEventListener('click', () => {
+        navToggle?.addEventListener("click", () => {
           isMenuOpen = !isMenuOpen;
-          const label = document.getElementById('menu-label');
+          const label = document.getElementById("menu-label");
           if (label) label.textContent = isMenuOpen ? "M−" : "M+";
-          document.getElementById('floating-header')?.classList.toggle('show');
+          document.getElementById("floating-header")?.classList.toggle("show");
         });
       });
 
-      document.addEventListener('contextmenu', e => {
-        if (e.target.tagName === 'IMG') e.preventDefault();
+      document.addEventListener("contextmenu", (e) => {
+        if (e.target.tagName === "IMG") e.preventDefault();
       });
     </script>
   )}

@@ -46,7 +46,8 @@ const currentImage = isGhost
   : allImages.find((img) => img.id === initialImageId && img.visibility !== "ghost");
 
 const previewImages = allImages.filter((img) => img.visibility !== "ghost").slice(0, 8);
-const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color";
+const previewPath =
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color";
 
 const singlePreviewImage =
   previewImages.length > 0
@@ -131,7 +132,8 @@ const pageDescription =
  * OG / Twitter
  * --------------------------------------------------------------- */
 const ogImage = selectedImage?.src;
-const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
+const ogAlt =
+  selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
 
 const meta = {
   description: pageDescription,
@@ -157,7 +159,7 @@ const isImagePage = lastSegment.startsWith("i-");
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
-    <!-- Header -->
+    {/* Header */}
     {!isImagePage && (
       <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
         <GalleryHeader client:load breadcrumb={breadcrumb} />
@@ -166,23 +168,26 @@ const isImagePage = lastSegment.startsWith("i-");
 
     <div class="h-0 md:h-5"></div>
 
-    <!-- Intro -->
+    {/* Intro */}
     {!isImagePage && (
       <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
         <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
         {usedEntranceData.subtitle && (
           <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
         )}
-        <GalleryInfo client:load entranceData={{
-          ...usedEntranceData,
-          title: fixMojibake(usedEntranceData.title),
-          subtitle: fixMojibake(usedEntranceData.subtitle),
-          image: usedEntranceData.image
-        }} />
+        <GalleryInfo
+          client:load
+          entranceData={{
+            ...usedEntranceData,
+            title: fixMojibake(usedEntranceData.title),
+            subtitle: fixMojibake(usedEntranceData.subtitle),
+            image: usedEntranceData.image,
+          }}
+        />
       </div>
     )}
 
-    <!-- Chapter Viewer -->
+    {/* Chapter Viewer */}
     {isImagePage && (
       <div id="chapter-section" class="section-visible" style="display:block;">
         <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
@@ -195,11 +200,16 @@ const isImagePage = lastSegment.startsWith("i-");
   <Footer
     previewImages={previewImages}
     previewPath={previewPath}
-    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
+    currentImageUrl={
+      selectedImage
+        ? selectedImage.src.startsWith("http")
+          ? selectedImage.src
+          : `${siteBase}${selectedImage.src.startsWith("/") ? selectedImage.src : "/" + selectedImage.src}`
+        : undefined
+    }
     title={pageTitle}
   />
 
-  <!-- CSS and script block identical to master -->
   <style>
     @media (max-width: 767px) {
       #nav-toggle { display: none !important; }
@@ -255,41 +265,65 @@ const isImagePage = lastSegment.startsWith("i-");
     }
     #gallery-content p { font-size:1rem !important; margin-bottom:1em !important; }
     #gallery-content a { text-decoration:underline !important; color:#85644b !important; }
+
+    /* --- MOBILE OVERFLOW PATCH (2025-11-07) --- */
+    @media (max-width: 767px) {
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        box-sizing: border-box;
+      }
+      #gallery-content {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+      }
+      .gallery-landing-title,
+      .gallery-landing-subtitle {
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+        width: auto !important;
+      }
+      #intro-section,
+      #chapter-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
   </style>
 
   {!isImagePage && (
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const exploreButton = document.querySelector('.explore-button');
-        const header = document.getElementById('header-section');
-        const intro = document.getElementById('intro-section');
-        const chapter = document.getElementById('chapter-section');
-        const navToggle = document.getElementById('nav-toggle');
+      document.addEventListener("DOMContentLoaded", () => {
+        const exploreButton = document.querySelector(".explore-button");
+        const header = document.getElementById("header-section");
+        const intro = document.getElementById("intro-section");
+        const chapter = document.getElementById("chapter-section");
+        const navToggle = document.getElementById("nav-toggle");
         let isMenuOpen = false;
 
-        exploreButton?.addEventListener('click', () => {
-          header.classList.add('section-hidden');
-          intro.classList.add('section-hidden');
-          chapter.style.display = 'block';
+        exploreButton?.addEventListener("click", () => {
+          header.classList.add("section-hidden");
+          intro.classList.add("section-hidden");
+          chapter.style.display = "block";
           setTimeout(() => {
-            chapter.classList.remove('section-hidden');
-            chapter.classList.add('section-visible');
+            chapter.classList.remove("section-hidden");
+            chapter.classList.add("section-visible");
           }, 50);
           if (window.innerWidth >= 768) {
-            document.getElementById('nav-toggle')?.classList.remove('hidden');
+            document.getElementById("nav-toggle")?.classList.remove("hidden");
           }
         });
 
-        navToggle?.addEventListener('click', () => {
+        navToggle?.addEventListener("click", () => {
           isMenuOpen = !isMenuOpen;
-          const label = document.getElementById('menu-label');
+          const label = document.getElementById("menu-label");
           if (label) label.textContent = isMenuOpen ? "M−" : "M+";
-          document.getElementById('floating-header')?.classList.toggle('show');
+          document.getElementById("floating-header")?.classList.toggle("show");
         });
       });
 
-      document.addEventListener('contextmenu', e => {
-        if (e.target.tagName === 'IMG') e.preventDefault();
+      document.addEventListener("contextmenu", (e) => {
+        if (e.target.tagName === "IMG") e.preventDefault();
       });
     </script>
   )}

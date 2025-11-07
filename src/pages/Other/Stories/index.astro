@@ -5,7 +5,7 @@ import SiteFooter    from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 
-import { stories } from "@/data/Other/Stories/stories.mjs"; // new stories dataset
+import { stories } from "@/data/Other/Stories/stories.mjs";
 import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
 import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
 import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
@@ -34,10 +34,7 @@ const structuredData = getStructuredData({
     description: "Interactive visual stories and cinematic narratives showcasing Wayne Heim's fine art photography through immersive picture shows.",
     url: `https://k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
-    author: {
-      "@type": "Person",
-      name: "Wayne Heim"
-    },
+    author: { "@type": "Person", name: "Wayne Heim" },
     image: stories.map(story => story.cover)
   },
   defaults: {
@@ -49,17 +46,17 @@ const structuredData = getStructuredData({
   }
 });
 
-// Additional structured data for ItemList schema
+// ItemList structured data
 const itemListStructuredData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "K4 Studios Picture Show Stories",
-  description: "Artist-curated visual storytelling collections by Wayne Heim, combining fine art photography, history, and cinematic narrative across painterly and traditional works.",
+  description: "Artist-curated visual storytelling collections by Wayne Heim, combining fine art photography, history, and cinematic narrative.",
   url: "https://k4studios.com/Other/Stories",
   creator: {
     "@type": "Person",
     name: "Wayne Heim",
-    url: "https://k4studios.com",
+    url: "https://k4studios.com"
   },
   itemListElement: stories.map((story, index) => ({
     "@type": "BlogPosting",
@@ -69,10 +66,7 @@ const itemListStructuredData = {
     datePublished: story.date,
     image: story.cover,
     description: story.excerpt,
-    author: {
-      "@type": "Person",
-      name: "Wayne Heim"
-    },
+    author: { "@type": "Person", name: "Wayne Heim" }
   }))
 };
 
@@ -91,23 +85,22 @@ const meta = getLandingMeta(sectionPath, landingImgUrl);
 if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
 
-// Enhanced meta tags for Stories index
-meta.description = "Explore artist-curated visual stories from Wayne Heim — themed mini shows blending fine art photography, painterly style, and historical narrative. Experience the K4 Studios Picture Shows and discover the art of visual storytelling.";
+meta.description = "Explore artist-curated visual stories from Wayne Heim — themed mini shows blending fine art photography, painterly style, and historical narrative.";
 meta.keywords = "visual storytelling, fine art photography, painterly photography, historical photography, themed art collections, picture shows, Wayne Heim, Facing History, cinematic photography, curated photo stories";
 meta.ogTitle = "K4 Studios Picture Show Stories – Visual Storytelling by Wayne Heim";
-meta.ogDescription = "Discover artist-curated, themed mini collections that turn photography into visual storytelling — from painterly Western portraits to historical narratives and fine art explorations.";
+meta.ogDescription = "Discover artist-curated, themed mini collections that turn photography into visual storytelling — from painterly Western portraits to historical narratives.";
 meta.ogImage = landingImgUrl;
 meta.twitterCard = "summary_large_image";
 
-// Prepare gallery preview images from multiple painterly galleries
-function shuffleArray<T>(arr: T[]): T[] {
+// Shuffle helper
+function shuffleArray(arr) {
   return arr
     .map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value);
 }
 
-// Combine images from multiple Facing History galleries
+// Combine gallery data
 const allGalleryImages = [
   ...painterlyImages.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" })),
   ...civilWarColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color" })),
@@ -119,11 +112,10 @@ const allGalleryImages = [
 ].filter(img => img.visibility !== "ghost");
 
 const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
-const previewPath = "/Galleries"; // Needed for GalleryPreviewStrip to render
+const previewPath = "/Galleries";
 
-// Setup for keyword linking
 const galleryDatas = Object.values(galleryDataMap).flat();
-const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
+const featheredImages = allImages.filter(img => img.visibility !== "ghost").slice(0, 12);
 const galleryPaths = Object.keys(galleryDataMap);
 ---
 
@@ -133,23 +125,19 @@ const galleryPaths = Object.keys(galleryDataMap);
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://k4studios.com/Other/Stories" />
 
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb="Other › Stories" />
     </div>
 
-    <section class="section-heading-wrap">
-      <div class="section-heading" style="font-family: 'Glegoo', serif;">
-        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">Picture Show Stories</h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
-          Interactive visual narratives
-        </h2>
+    <section class="section-heading-wrap text-center">
+      <div class="section-heading">
+        <h1 class="page-title fade-in reveal-on-scroll">Picture Show Stories</h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll">Interactive visual narratives</h2>
       </div>
     </section>
 
-    <!-- K4 Studios Logo -->
     <section class="logo-section text-center mb-6 -mt-10">
       <img
         src="/images/K4-Stories logo1b.webp"
@@ -159,15 +147,22 @@ const galleryPaths = Object.keys(galleryDataMap);
       />
     </section>
 
-    <!-- Intro block -->
     <section class="intro-text max-w-6xl mx-auto px-4 text-center mb-10">
-  <h2 class="text-4xl font-extrabold mb-2" style="font-family: 'Glegoo', serif;">K4 Studios Picture Show Stories</h2>
-  <h3 class="text-2xl font-semibold mb-8 text-gray-700" style="font-family: 'Glegoo', serif;">A Visual Blog</h3>
-        <p class="text-lg leading-relaxed text-gray-700" set:html={autoLinkKeywordsInText('Experience the Picture Shows — artist-curated, themed mini collections that turn photography into visual storytelling. Each show is a hand-crafted sequence of images — part gallery, part narrative — drawn from Wayne Heim\'s growing body of fine art and historical photography. These special "mini-themed" breakouts invite viewers to explore mood, subject, and emotional discovery through carefully selected visual stories. From the painterly spirit of the American West to the reflective power of the Facing History series, from the quiet poetry of landscapes to playful studies of everyday life, each Picture Show reveals a distinct facet of Wayne\'s creative vision. The work spans time and tone — connecting past and present, realism and imagination — through light, story, and art. More than collections, these are living stories — immersive, hand-built journeys that guide viewers through the art of seeing, feeling, and remembering. Turn the page. Enter a show. Let the story unfold.', galleryDatas, featheredImages, galleryPaths, k4Semantic)} /></p>
+      <h2 class="text-4xl font-extrabold mb-2">K4 Studios Picture Show Stories</h2>
+      <h3 class="text-2xl font-semibold mb-8 text-gray-700">A Visual Blog</h3>
+      <p
+        class="text-lg leading-relaxed text-gray-700"
+        set:html={autoLinkKeywordsInText(
+          `Experience the Picture Shows — artist-curated, themed mini collections that turn photography into visual storytelling. Each show is a hand-crafted sequence of images — part gallery, part narrative — drawn from Wayne Heim's growing body of fine art and historical photography. These special "mini-themed" breakouts invite viewers to explore mood, subject, and emotional discovery through carefully selected visual stories. From the painterly spirit of the American West to the reflective power of the Facing History series, from the quiet poetry of landscapes to playful studies of everyday life, each Picture Show reveals a distinct facet of Wayne's creative vision. The work spans time and tone — connecting past and present, realism and imagination — through light, story, and art. More than collections, these are living stories — immersive, hand-built journeys that guide viewers through the art of seeing, feeling, and remembering. Turn the page. Enter a show. Let the story unfold.`,
+          galleryDatas,
+          featheredImages,
+          galleryPaths,
+          k4Semantic
+        )}
+      />
     </section>
 
     <section class="story-layout" style="font-family: 'Glegoo', serif;">
-      <!-- MAIN CONTENT (left) -->
       <div class="text-column">
         {stories.map(story => (
           <article class="story-block mb-10">
@@ -186,7 +181,10 @@ const galleryPaths = Object.keys(galleryDataMap);
                   <a href={`/Other/Stories/${story.slug}`}>{story.title}</a>
                 </h2>
                 <p class="text-sm text-gray-600 mb-2">{story.date}</p>
-                <p class="mb-4" set:html={autoLinkKeywordsInText(story.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                <p
+                  class="mb-4"
+                  set:html={autoLinkKeywordsInText(story.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                />
                 <a href={`/Other/Stories/${story.slug}`} class="underline text-blue-700">View Story →</a>
               </div>
             </div>
@@ -194,7 +192,6 @@ const galleryPaths = Object.keys(galleryDataMap);
         ))}
       </div>
 
-      <!-- SIDEBAR (right) -->
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll p-4 border rounded-xl shadow bg-gray-50">
           <h3 class="font-bold mb-3">All Stories</h3>
@@ -212,7 +209,6 @@ const galleryPaths = Object.keys(galleryDataMap);
       </div>
     </section>
 
-    <!-- Structured Data for ItemList and Breadcrumbs -->
     <script type="application/ld+json" set:html={JSON.stringify(itemListStructuredData)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)}></script>
 
@@ -223,5 +219,40 @@ const galleryPaths = Object.keys(galleryDataMap);
       label="Explore Galleries"
       class="pt-8 pb-12"
     />
+
+    <!-- MOBILE OVERFLOW PATCH -->
+    <style>
+      @media (max-width: 767px) {
+        html, body {
+          overflow-x: hidden !important;
+          width: 100% !important;
+          box-sizing: border-box;
+        }
+        main {
+          overflow-x: hidden !important;
+          max-width: 100vw !important;
+        }
+        .intro-text,
+        .story-layout,
+        .text-column,
+        .sidebar-column {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          max-width: 100% !important;
+        }
+        .page-title,
+        .page-subtitle {
+          margin-left: 1.5rem !important;
+          margin-right: 1.5rem !important;
+          width: auto !important;
+        }
+        img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+      }
+    </style>
   </main>
 </BaseLayout>

@@ -1,3 +1,9 @@
 /og/*
   Content-Type: image/jpeg
   Cache-Control: public, max-age=31536000
+
+/*
+  Access-Control-Allow-Origin: https://www.k4studios.com
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Origin, Accept, Range
+  Timing-Allow-Origin: *
