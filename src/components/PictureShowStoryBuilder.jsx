@@ -205,7 +205,7 @@ const structuredDataJSON = getStructuredData({
 });
 ---
 
-<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON} meta={ { ogType: "video.other" } }>
+<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
   <noscript>
     <img
       src="/images/stories/${safeSlug}-hero.jpg"
