@@ -63,8 +63,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     const cleaned = bodyBlock
       .replace(/<title[\s\S]*?<\/title>/gi, "")
       .replace(/<meta[^>]*>/gi, "")
-      .replace(/<link[^>]*>/gi, "")
-      .replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, "");
+      .replace(/<link[^>]*>/gi, "");
     if (cleaned.length !== bodyBlock.length) changed = true;
     return cleaned;
   });
