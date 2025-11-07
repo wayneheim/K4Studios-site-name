@@ -1,4 +1,14 @@
 ---
+<head>
+  <meta property="og:title" content="Demo Show – Western Living History" />
+  <meta property="og:description" content="A cinematic Picture Show by Wayne Heim featuring Western reenactors keeping history alive." />
+  <meta property="og:image" content="https://www.k4studios.com/images/stories/demo-show-hero.jpg" />
+  <meta property="og:type" content="video.other" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Demo Show – Western Living History" />
+  <meta name="twitter:description" content="A cinematic Picture Show by Wayne Heim featuring Western reenactors keeping history alive." />
+  <meta name="twitter:image" content="https://www.k4studios.com/images/stories/demo-show-hero.jpg" />
+</head>
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -28,6 +38,13 @@ const structuredDataJSON = getStructuredData({
 ---
 
 <BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
+  <noscript>
+    <img
+      src="/images/stories/demo-show-hero.jpg"
+      alt="Demo Show – Western Living History"
+      style="width:100%;height:auto;display:block;"
+    />
+  </noscript>
   <PictureShowBase
     client:only="react"
     rawData={storyData}

@@ -1,4 +1,15 @@
 ---
+
+<head>
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:type" content="video.other" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={pageDescription} />
+  <meta name="twitter:image" content={ogImage} />
+</head>
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
