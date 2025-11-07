@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
 import GallerySlideshowStory from "./Gallery-Slideshow-Story.jsx";
 import ShareDrawer from "./ShareDrawer.jsx";
 import { storyVoices } from "./storyVoices.js";
@@ -35,6 +35,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const activeTimeouts = useRef([]);
   const audioRef = useRef(null);
   const ambientAudioRef = useRef(null);
+  const currentIndexRef = useRef(0);
   // swipe tracking
   const touchStart = useRef({ x: 0, y: 0, t: 0 });
   const [voicePreferences, setVoicePreferences] = useState(() => {
@@ -79,6 +80,10 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   }, [globalAudioSrc, globalAudioMode, filteredData]);
 
   const [volume, setVolume] = useState(defaultVolume);
+
+  useEffect(() => {
+    currentIndexRef.current = currentIndex;
+  }, [currentIndex]);
 
   // Find score audio source from data (full volume background music)
   const scoreAudioSrc = useMemo(() => {
@@ -402,6 +407,40 @@ useEffect(() => {
         return newIndex;
       });
     }
+  };
+
+  const startSlideshow = async ({ advanceFromIntro = true } = {}) => {
+    const ua = typeof navigator !== "undefined" ? navigator.userAgent || "" : "";
+    const isMessengerUA = /FBAN|FBAV|Messenger|Instagram/i.test(ua);
+
+    if (isMessengerUA) {
+      try {
+        const silent = document.createElement("audio");
+        silent.src = "";
+        silent.muted = true;
+        const playPromise = silent.play();
+        if (playPromise) await playPromise.catch(() => {});
+        setTimeout(() => silent.pause(), 200);
+      } catch (err) {
+        console.warn("Silent audio unlock failed:", err);
+      }
+    }
+
+    try {
+      if (ambientAudioRef.current) await ambientAudioRef.current.play().catch(() => {});
+      if (audioRef.current) await audioRef.current.play().catch(() => {});
+    } catch (err) {
+      console.warn("Audio prime failed:", err);
+    }
+
+  const delay = 150;
+    setTimeout(() => {
+      setShowSlideshow(true);
+
+      if (advanceFromIntro && currentIndexRef.current === 0 && filteredData.length > 0) {
+        goNext();
+      }
+    }, delay);
   };
 
   // --- touch swipe handlers (mobile) ---
@@ -1086,46 +1125,6 @@ useEffect(() => {
     );
   }
 
-// 🩹 Messenger fallback render guard (prevents blank screen & primes audio)
-if (/FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent) && !showSlideshow) {
-  return (
-    <div className="flex flex-col items-center justify-center w-full h-[80vh] text-[#8b7355]">
-      <p className="text-center text-base px-4">Tap once to start the Picture Show</p>
-      <button
-        className="px-6 py-2 mt-5 bg-[#85644b] text-white rounded-md hover:bg-[#6b4f3a] transition"
-        onClick={() => {
-          try {
-            // 🔹 Unlock Messenger’s audio/speech stack immediately
-            if (ambientAudioRef.current) {
-              ambientAudioRef.current.muted = true;
-              ambientAudioRef.current.play()
-                .then(() => ambientAudioRef.current.pause())
-                .catch(()=>{});
-              ambientAudioRef.current.muted = false;
-            }
-            if (audioRef.current) {
-              audioRef.current.muted = true;
-              audioRef.current.play()
-                .then(() => audioRef.current.pause())
-                .catch(()=>{});
-              audioRef.current.muted = false;
-            }
-            if (window.speechSynthesis) {
-              const u = new SpeechSynthesisUtterance(" ");
-              window.speechSynthesis.speak(u);
-              window.speechSynthesis.cancel();
-            }
-          } catch {}
-          setIsReady(true);
-          setShowSlideshow(false);
-        }}
-      >
-        Start Picture Show
-      </button>
-    </div>
-  );
-}
-
   return (
     <>
     <div
@@ -1470,35 +1469,7 @@ if (/FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent) && !showSlideshow
                           <button
                             type="button"
                             onClick={async () => {
-                              const ua = navigator.userAgent || "";
-
-                              // 🧩 Messenger / Instagram audio unlock
-                              if (/FBAN|FBAV|Messenger|Instagram/i.test(ua)) {
-                                try {
-                                  const silent = document.createElement("audio");
-                                  silent.src = "";
-                                  silent.muted = true;
-                                  const playPromise = silent.play();
-                                  if (playPromise) await playPromise.catch(() => {});
-                                  setTimeout(() => silent.pause(), 200);
-                                } catch (err) {
-                                  console.warn("Silent audio unlock failed:", err);
-                                }
-                              }
-
-                              // 🎧 Prime audio refs if present
-                              try {
-                                if (ambientAudioRef.current) await ambientAudioRef.current.play().catch(() => {});
-                                if (audioRef.current) await audioRef.current.play().catch(() => {});
-                              } catch (err) {
-                                console.warn("Audio prime failed:", err);
-                              }
-
-                              // ⏳ small delay to let Messenger acknowledge gesture
-                              setTimeout(() => {
-                                setShowSlideshow(true);
-                                goNext();
-                              }, 150);
+                              await startSlideshow();
                             }}
                             className="k4-play-btn"
                             title="Begin Story"
@@ -1570,46 +1541,6 @@ if (/FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent) && !showSlideshow
                       <span className={`${!currentImage?.notes ? 'opacity-0' : ''}`} aria-hidden={!currentImage?.notes}>
                         {showNotes ? "Hide Notes" : "View Collector Notes"}
                       </span>
-                    </button>
-                  )}
-
-                  {currentIndex !== 0 && (
-                    <button
-                      type="button"
-                      onClick={async () => {
-                        const ua = navigator.userAgent || "";
-
-                        // 🧩 Messenger / Instagram audio unlock
-                        if (/FBAN|FBAV|Messenger|Instagram/i.test(ua)) {
-                          try {
-                            const silent = document.createElement("audio");
-                            silent.src = "";
-                            silent.muted = true;
-                            const playPromise = silent.play();
-                            if (playPromise) await playPromise.catch(() => {});
-                            setTimeout(() => silent.pause(), 200);
-                          } catch (err) {
-                            console.warn("Silent audio unlock failed:", err);
-                          }
-                        }
-
-                        // 🎧 Prime audio refs if present
-                        try {
-                          if (ambientAudioRef.current) await ambientAudioRef.current.play().catch(() => {});
-                          if (audioRef.current) await audioRef.current.play().catch(() => {});
-                        } catch (err) {
-                          console.warn("Audio prime failed:", err);
-                        }
-
-                        // ⏳ small delay to let Messenger acknowledge gesture
-                        setTimeout(() => {
-                          setShowSlideshow(true);
-                        }, 150);
-                      }}
-                      className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
-                      title="Launch Cinematic Mode"
-                    >
-                      <MonitorPlay className="w-4 h-4 text-gray-400" />
                     </button>
                   )}
                 </div>

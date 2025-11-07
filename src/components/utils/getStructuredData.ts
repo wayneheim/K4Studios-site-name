@@ -19,7 +19,6 @@ export function getStructuredData({
     organizationSameAs?: string[]
   }
 }): string {
-  // Global defaults
   const {
     copyrightNotice = "© Wayne Heim, k4studios.com. All rights reserved.",
     license = "https://k4studios.com/licensing",
@@ -40,28 +39,28 @@ export function getStructuredData({
     const featuredImages = images.slice(0, 8).map((img) => ({
       "@type": "ImageObject",
       "@id": `${img.src}#image`,
-      "url": img.src,
-      "name": img.title,
-      "caption": img.description || img.alt || img.title,
-      "inLanguage": "en",
-      "encodingFormat": img.mimeType || "image/jpeg",
-      "license": img.license || license,
-      "creditText": img.creditText || creditText,
-      "copyrightNotice": img.copyrightNotice || copyrightNotice,
-      "acquireLicensePage": img.buyLink || img.acquireLicensePage || acquireLicensePage,
-      "creator": {
+      url: img.src,
+      name: img.title,
+      caption: img.description || img.alt || img.title,
+      inLanguage: "en",
+      encodingFormat: img.mimeType || "image/jpeg",
+      license: img.license || license,
+      creditText: img.creditText || creditText,
+      copyrightNotice: img.copyrightNotice || copyrightNotice,
+      acquireLicensePage: img.buyLink || img.acquireLicensePage || acquireLicensePage,
+      creator: {
         "@type": "Person",
-        "name": creatorName,
-        "url": creatorUrl,
+        name: creatorName,
+        url: creatorUrl,
         ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
       },
-      "copyrightHolder": {
+      copyrightHolder: {
         "@type": "Person",
-        "name": creatorName,
-        "url": creatorUrl,
+        name: creatorName,
+        url: creatorUrl,
       },
-      "datePublished": img.datePublished || img.dateCreated || todayIso,
-      "dateModified": img.dateModified || img.datePublished || todayIso,
+      datePublished: img.datePublished || img.dateCreated || todayIso,
+      dateModified: img.dateModified || img.datePublished || todayIso,
       ...(img.keywords?.length
         ? { keywords: Array.isArray(img.keywords) ? img.keywords.join(", ") : img.keywords }
         : {}),
@@ -74,36 +73,34 @@ export function getStructuredData({
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "@id": `${data.url}#collection`,
-      "name": data.title,
-      "description": data.description,
-      "url": data.url,
-      "genre": data.genre || "Fine Art Photography",
-      "about": data.about || [
-        { "@type": "Thing", "name": "Painterly Fine Art Photography" },
-        { "@type": "Thing", "name": "Western Art" },
-        { "@type": "Thing", "name": "Historical Portraiture" },
+      name: data.title,
+      description: data.description,
+      url: data.url,
+      genre: data.genre || "Fine Art Photography",
+      about: data.about || [
+        { "@type": "Thing", name: "Painterly Fine Art Photography" },
+        { "@type": "Thing", name: "Western Art" },
+        { "@type": "Thing", name: "Historical Portraiture" },
       ],
-      "mainEntity": {
+      mainEntity: {
         "@type": "ImageGallery",
         "@id": `${data.url}#imagegallery`,
-        "name": data.title,
-        "description": data.description,
-        "image": featuredImages,
+        name: data.title,
+        description: data.description,
+        image: featuredImages,
       },
-      "datePublished": data.datePublished || data.dateCreated || todayIso,
-      "dateModified": data.dateModified || data.datePublished || todayIso,
-      "creator": { "@type": "Person", "name": creatorName, "url": creatorUrl },
-      "copyrightHolder": { "@type": "Person", "name": creatorName, "url": creatorUrl },
-      "copyrightNotice": data.copyrightNotice || copyrightNotice,
-      "inLanguage": "en",
+      datePublished: data.datePublished || data.dateCreated || todayIso,
+      dateModified: data.dateModified || data.datePublished || todayIso,
+      creator: { "@type": "Person", name: creatorName, url: creatorUrl },
+      copyrightHolder: { "@type": "Person", name: creatorName, url: creatorUrl },
+      copyrightNotice: data.copyrightNotice || copyrightNotice,
+      inLanguage: "en",
     };
 
     if (data.keywords) {
-      if (Array.isArray(data.keywords)) {
-        collectionObj.keywords = data.keywords.join(", ");
-      } else {
-        collectionObj.keywords = data.keywords;
-      }
+      collectionObj.keywords = Array.isArray(data.keywords)
+        ? data.keywords.join(", ")
+        : data.keywords;
     }
 
     return JSON.stringify(collectionObj, null, 2);
@@ -117,52 +114,61 @@ export function getStructuredData({
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "@id": `${data.src}#image`,
-      "name": data.title,
-      "description": data.description,
-      "caption": data.alt || data.title,
-      "contentUrl": data.src,
-      "url": data.src,
-      "encodingFormat": data.mimeType || "image/jpeg",
-      "identifier": data.id || data.smugId || data.src?.split("/").pop() || "",
-      "license": data.license || license,
-      "creditText": data.creditText || creditText,
-      "copyrightNotice": data.copyrightNotice || copyrightNotice,
-      "acquireLicensePage": data.buyLink || data.acquireLicensePage || acquireLicensePage,
-      "creator": {
+      name: data.title,
+      description: data.description,
+      caption: data.alt || data.title,
+      contentUrl: data.src,
+      url: data.src,
+      encodingFormat: data.mimeType || "image/jpeg",
+      identifier: data.id || data.smugId || data.src?.split("/").pop() || "",
+      license: data.license || license,
+      creditText: data.creditText || creditText,
+      copyrightNotice: data.copyrightNotice || copyrightNotice,
+      acquireLicensePage: data.buyLink || data.acquireLicensePage || acquireLicensePage,
+      creator: {
         "@type": "Person",
-        "name": creatorName,
-        "url": creatorUrl,
+        name: creatorName,
+        url: creatorUrl,
         ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
       },
-      "copyrightHolder": {
+      copyrightHolder: {
         "@type": "Person",
-        "name": creatorName,
-        "url": creatorUrl,
+        name: creatorName,
+        url: creatorUrl,
       },
-      "genre": data.genre || "Fine Art Photography",
-      "about": data.about || [
-        { "@type": "Thing", "name": "Painterly Fine Art Photography" },
-        { "@type": "Thing", "name": "Western Art" },
-        { "@type": "Thing", "name": "Historical Portraiture" },
+      genre: data.genre || "Fine Art Photography",
+      about: data.about || [
+        { "@type": "Thing", name: "Painterly Fine Art Photography" },
+        { "@type": "Thing", name: "Western Art" },
+        { "@type": "Thing", name: "Historical Portraiture" },
       ],
-      "isAccessibleForFree": true,
-      "datePublished": data.datePublished || data.dateCreated || todayIso,
-      "dateModified": data.dateModified || data.datePublished || todayIso,
-      "inLanguage": "en",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": data.pageUrl || data.url },
-      "potentialAction": {
+      isAccessibleForFree: true,
+      datePublished: data.datePublished || data.dateCreated || todayIso,
+      dateModified: data.dateModified || data.datePublished || todayIso,
+      inLanguage: "en",
+      mainEntityOfPage: { "@type": "WebPage", "@id": data.pageUrl || data.url },
+      potentialAction: {
         "@type": "TradeAction",
-        "target": data.buyLink || "https://www.k4studios.com/licensing",
-        "result": {
-          "@type": "Product",
-          "name": data.title,
-          "category": "Fine Art Print",
-        },
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+        target: data.buyLink || "https://www.k4studios.com/licensing",
+        result: {
+          "@type": "VisualArtwork",
+          name: data.title,
+          artMedium: "Photography",
+          artform: "Fine Art Print",
+          genre: data.genre || "Fine Art Photography",
+          creator: {
+            "@type": "Person",
+            name: creatorName,
+            url: creatorUrl
+          },
+          copyrightHolder: {
+            "@type": "Person",
+            name: creatorName,
+            url: creatorUrl
+          },
+          license: data.license || license,
+          acquireLicensePage: data.buyLink || acquireLicensePage
+        }
       }
     };
 
@@ -170,7 +176,7 @@ export function getStructuredData({
       obj.isPartOf = {
         "@type": "ImageGallery",
         "@id": data.galleryUrl + "#imagegallery",
-        "name": data.galleryTitle || "Gallery",
+        name: data.galleryTitle || "Gallery",
       };
     }
 
@@ -192,26 +198,26 @@ export function getStructuredData({
     const today = new Date().toISOString().split("T")[0];
     const defaultDate = `${today}T00:00:00Z`;
 
-    // Helper to ensure ISO8601 with timezone
     function ensureIsoWithTimezone(dateStr: string | undefined): string {
       if (!dateStr) return defaultDate;
-      if (/T.*Z$/.test(dateStr)) return dateStr; // already ISO8601 with Z
+      if (/T.*Z$/.test(dateStr)) return dateStr;
       if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return `${dateStr}T00:00:00Z`;
       return dateStr;
     }
+
     const authorId = `${creatorUrl.replace(/\/$/, "")}#person`;
     const orgUrl = "https://www.k4studios.com/";
 
     const publisherObj = {
       "@type": "Organization",
       "@id": `${orgUrl}#organization`,
-      "name": "K4 Studios",
-      "url": orgUrl,
-      "logo": {
+      name: "K4 Studios",
+      url: orgUrl,
+      logo: {
         "@type": "ImageObject",
-        "url": "https://www.k4studios.com/images/K4Logo-web-c.webp",
-        "width": 512,
-        "height": 512,
+        url: "https://www.k4studios.com/images/K4Logo-web-c.webp",
+        width: 512,
+        height: 512,
       },
       ...(organizationSameAs.length ? { sameAs: organizationSameAs } : {}),
     };
@@ -220,43 +226,41 @@ export function getStructuredData({
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "@id": `${data.url}#blogpost`,
-      "headline": data.headline || data.title,
-      "description": data.description,
-      "articleBody": data.body || data.excerpt || "",
-      "url": data.url,
-      "mainEntityOfPage": { "@type": "WebPage", "@id": data.url },
-      "image":
+      headline: data.headline || data.title,
+      description: data.description,
+      articleBody: data.body || data.excerpt || "",
+      url: data.url,
+      mainEntityOfPage: { "@type": "WebPage", "@id": data.url },
+      image:
         data.image ||
         (images.length
           ? images.map((img) => img.src)
           : "https://www.k4studios.com/images/K4Logo-web-c.webp"),
-  "datePublished": ensureIsoWithTimezone(data.datePublished),
-  "dateModified": ensureIsoWithTimezone(data.dateModified || data.datePublished),
-      "author": {
+      datePublished: ensureIsoWithTimezone(data.datePublished),
+      dateModified: ensureIsoWithTimezone(data.dateModified || data.datePublished),
+      author: {
         "@type": "Person",
-        "name": creatorName,
-        "url": creatorUrl,
+        name: creatorName,
+        url: creatorUrl,
         ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
       },
-      "publisher": publisherObj,
-      "copyrightHolder": {
+      publisher: publisherObj,
+      copyrightHolder: {
         "@type": "Person",
-        "name": creatorName,
-        "url": creatorUrl,
+        name: creatorName,
+        url: creatorUrl,
       },
-      "copyrightNotice": data.copyrightNotice || copyrightNotice,
-      "genre": data.genre || "Fine Art Photography Commentary",
-      "wordCount":
+      copyrightNotice: data.copyrightNotice || copyrightNotice,
+      genre: data.genre || "Fine Art Photography Commentary",
+      wordCount:
         typeof data.wordCount === "number"
           ? data.wordCount
           : data.body?.trim().split(/\s+/).length || 950,
-      "inLanguage": "en",
+      inLanguage: "en",
     };
 
-    if (data.keywords?.length)
-      obj.keywords = data.keywords.join(", ");
-    if (data.articleSection)
-      obj.articleSection = data.articleSection;
+    if (data.keywords?.length) obj.keywords = data.keywords.join(", ");
+    if (data.articleSection) obj.articleSection = data.articleSection;
 
     return JSON.stringify(obj, null, 2);
   }

@@ -5,7 +5,7 @@ import SiteFooter    from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 
-import { stories } from "@/data/Other/Stories/stories.mjs"; // Import existing shows data
+import { stories } from "@/data/Other/Stories/stories.mjs";
 import "@/styles/global.css";
 
 // ----------------------
@@ -20,10 +20,7 @@ const structuredData = getStructuredData({
     description: "Interactive picture shows and visual presentations showcasing Wayne Heim's fine art photography through immersive storytelling experiences.",
     url: `https://k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
-    author: {
-      "@type": "Person",
-      name: "Wayne Heim"
-    },
+    author: { "@type": "Person", name: "Wayne Heim" },
     image: stories.length > 0 ? stories[0].cover : "/images/K4-Stories logo1b.webp"
   },
   defaults: {
@@ -35,7 +32,7 @@ const structuredData = getStructuredData({
   }
 });
 
-// Additional structured data for ItemList schema
+// ItemList structured data
 const itemListStructuredData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -45,23 +42,24 @@ const itemListStructuredData = {
   creator: {
     "@type": "Person",
     name: "Wayne Heim",
-    url: "https://k4studios.com",
+    url: "https://k4studios.com"
   },
   itemListElement: stories.map((show, index) => ({
     "@type": "BlogPosting",
     position: index + 1,
     headline: show.title,
     url: `https://k4studios.com/Other/Shows/${show.slug}`,
-    datePublished: (typeof show.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(show.date))
-      ? `${show.date}T00:00:00Z`
-      : show.date,
+    datePublished:
+      typeof show.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(show.date)
+        ? `${show.date}T00:00:00Z`
+        : show.date,
     image: show.cover,
     description: show.excerpt,
     author: {
       "@type": "Person",
       name: "Wayne Heim",
       url: "https://k4studios.com/"
-    },
+    }
   }))
 };
 
@@ -77,14 +75,16 @@ const breadcrumbStructuredData = {
 
 const landingImgUrl = stories.length > 0 ? stories[0].cover : "/images/K4-Stories logo1b.webp";
 const meta = getLandingMeta(sectionPath, landingImgUrl);
-if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${sectionPath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
 
-// Enhanced meta tags for Shows index
-meta.description = "Experience interactive picture shows from Wayne Heim — immersive visual presentations combining fine art photography with cinematic storytelling. Discover themed collections and narrative-driven exhibitions.";
-meta.keywords = "picture shows, interactive photography, visual presentations, fine art exhibitions, cinematic storytelling, Wayne Heim, themed collections, immersive art experiences";
+meta.description =
+  "Experience interactive picture shows from Wayne Heim — immersive visual presentations combining fine art photography with cinematic storytelling. Discover themed collections and narrative-driven exhibitions.";
+meta.keywords =
+  "picture shows, interactive photography, visual presentations, fine art exhibitions, cinematic storytelling, Wayne Heim, themed collections, immersive art experiences";
 meta.ogTitle = "K4 Studios Picture Shows – Interactive Visual Presentations by Wayne Heim";
-meta.ogDescription = "Explore interactive picture shows featuring Wayne Heim's fine art photography — themed visual presentations that combine storytelling with immersive gallery experiences.";
+meta.ogDescription =
+  "Explore interactive picture shows featuring Wayne Heim's fine art photography — themed visual presentations that combine storytelling with immersive gallery experiences.";
 meta.ogImage = landingImgUrl;
 meta.twitterCard = "summary_large_image";
 ---
@@ -95,106 +95,143 @@ meta.twitterCard = "summary_large_image";
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://k4studios.com/Other/Shows" />
 
-    <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb="Other › Shows" />
-    </div>
-
-    <section class="section-heading-wrap">
-      <div class="section-heading" style="font-family: 'Glegoo', serif;">
-        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">Picture Shows</h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
-          Interactive visual presentations
-        </h2>
+    <div class="page-container w-full max-w-[1200px] mx-auto px-4">
+      <div class="drawer-mode">
+        <LandingHeader client:load breadcrumb="Other › Shows" />
       </div>
-    </section>
 
-    <!-- K4 Studios Logo -->
-    <section class="logo-section text-center mb-6 -mt-10">
-      <img
-        src="/images/K4-Stories logo1b.webp"
-        alt="K4 Studios Logo"
-        class="mx-auto max-w-60 h-auto"
-        oncontextmenu="event.preventDefault()"
-      />
-    </section>
-
-    <!-- Intro block -->
-    <section class="intro-text max-w-6xl mx-auto px-4 text-center mb-10">
-      <h2 class="text-4xl font-extrabold mb-2" style="font-family: 'Glegoo', serif;">K4 Studios Picture Shows</h2>
-      <h3 class="text-2xl font-semibold mb-8 text-gray-700" style="font-family: 'Glegoo', serif;">Interactive Visual Presentations</h3>
-      <p class="text-lg leading-relaxed text-gray-700">Experience the Picture Shows — interactive visual presentations that bring Wayne Heim's fine art photography to life through immersive storytelling. Each show is a carefully crafted sequence designed to engage viewers in a cinematic journey through art and history. From themed exhibitions to narrative-driven presentations, these interactive experiences showcase the depth and beauty of fine art photography in new and compelling ways. Discover how visual storytelling can transform the way we experience and connect with art.</p>
-    </section>
-
-    {stories.length > 0 ? (
-      <section class="show-layout" style="font-family: 'Glegoo', serif;">
-        <!-- MAIN CONTENT (left) -->
-        <div class="text-column">
-          {stories.map(show => (
-            <article class="show-block mb-10">
-              <div class="flex flex-col md:flex-row md:items-start gap-4">
-                <a href={`/Other/Stories/${show.slug}`} aria-label={show.title} class="flex-shrink-0">
-                  <img
-                    src={show.cover}
-                    alt={show.alt || show.title}
-                    class="rounded-2xl shadow max-w-[120px] h-[120px] object-cover"
-                    style="aspect-ratio: 1/1;"
-                    oncontextmenu="event.preventDefault()"
-                  />
-                </a>
-                <div class="flex-1 min-w-0">
-                  <h2 class="text-xl font-bold mb-2">
-                    <a href={`/Other/Stories/${show.slug}`}>{show.title}</a>
-                  </h2>
-                  <p class="text-sm text-gray-600 mb-2">{show.date}</p>
-                  <p class="mb-4">{show.excerpt}</p>
-                  <a href={`/Other/Stories/${show.slug}`} class="underline text-blue-700">View Show →</a>
-                </div>
-              </div>
-            </article>
-          ))}
+      <section class="section-heading-wrap text-center">
+        <div class="section-heading">
+          <h1 class="page-title fade-in reveal-on-scroll">Picture Shows</h1>
+          <h2 class="page-subtitle fade-in reveal-on-scroll">Interactive visual presentations</h2>
         </div>
+      </section>
 
-        <!-- SIDEBAR (right) -->
-        <div class="sidebar-column hidden md:block">
-          <div class="sample-fade reveal-on-scroll p-4 border rounded-xl shadow bg-gray-50">
-            <h3 class="font-bold mb-3">All Shows</h3>
-            <ul class="space-y-2">
-              {stories.map(show => (
-                <li>
-                  <a href={`/Other/Stories/${show.slug}`} class="block hover:text-red-600">
-                    {show.title}
+      <section class="logo-section text-center mb-6 -mt-10">
+        <img
+          src="/images/K4-Stories logo1b.webp"
+          alt="K4 Studios Logo"
+          class="mx-auto max-w-60 h-auto"
+          oncontextmenu="event.preventDefault()"
+        />
+      </section>
+
+      <section class="intro-text max-w-6xl mx-auto px-4 text-center mb-10">
+        <h2 class="text-4xl font-extrabold mb-2">K4 Studios Picture Shows</h2>
+        <h3 class="text-2xl font-semibold mb-8 text-gray-700">Interactive Visual Presentations</h3>
+        <p class="text-lg leading-relaxed text-gray-700">
+          Experience the Picture Shows — interactive visual presentations that bring Wayne Heim's fine art photography to life through immersive storytelling. Each show is a carefully crafted sequence designed to engage viewers in a cinematic journey through art and history. From themed exhibitions to narrative-driven presentations, these interactive experiences showcase the depth and beauty of fine art photography in new and compelling ways. Discover how visual storytelling can transform the way we experience and connect with art.
+        </p>
+      </section>
+
+      {stories.length > 0 ? (
+        <section class="show-layout" style="font-family: 'Glegoo', serif;">
+          <div class="text-column">
+            {stories.map(show => (
+              <article class="show-block mb-10">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                  <a href={`/Other/Stories/${show.slug}`} aria-label={show.title} class="flex-shrink-0">
+                    <img
+                      src={show.cover}
+                      alt={show.alt || show.title}
+                      class="rounded-2xl shadow max-w-[120px] h-[120px] object-cover"
+                      style="aspect-ratio: 1/1;"
+                      oncontextmenu="event.preventDefault()"
+                    />
                   </a>
-                  <span class="block text-xs text-gray-500">{show.date}</span>
-                </li>
-              ))}
-            </ul>
+                  <div class="flex-1 min-w-0">
+                    <h2 class="text-xl font-bold mb-2">
+                      <a href={`/Other/Stories/${show.slug}`}>{show.title}</a>
+                    </h2>
+                    <p class="text-sm text-gray-600 mb-2">{show.date}</p>
+                    <p class="mb-4">{show.excerpt}</p>
+                    <a href={`/Other/Stories/${show.slug}`} class="underline text-blue-700">View Show →</a>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
-        </div>
-      </section>
-    ) : (
-      <!-- Coming Soon Message -->
-      <section class="coming-soon text-center max-w-4xl mx-auto px-4 mb-16">
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm">
-          <h3 class="text-2xl font-bold mb-4 text-gray-800" style="font-family: 'Glegoo', serif;">Coming Soon</h3>
-          <p class="text-lg text-gray-600 mb-6">The Picture Shows section is currently under development. Interactive visual presentations and themed exhibitions will be available here soon.</p>
-          <p class="text-sm text-gray-500">Check back for updates on new interactive shows featuring Wayne Heim's fine art photography.</p>
-        </div>
-      </section>
-    )}
 
-    <!-- Structured Data for ItemList and Breadcrumbs -->
-    {stories.length > 0 && (
-      <script type="application/ld+json" set:html={JSON.stringify(itemListStructuredData)}></script>
-    )}
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)}></script>
+          <div class="sidebar-column hidden md:block">
+            <div class="sample-fade reveal-on-scroll p-4 border rounded-xl shadow bg-gray-50">
+              <h3 class="font-bold mb-3">All Shows</h3>
+              <ul class="space-y-2">
+                {stories.map(show => (
+                  <li>
+                    <a href={`/Other/Stories/${show.slug}`} class="block hover:text-red-600">
+                      {show.title}
+                    </a>
+                    <span class="block text-xs text-gray-500">{show.date}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section class="coming-soon text-center max-w-4xl mx-auto px-4 mb-16">
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">Coming Soon</h3>
+            <p class="text-lg text-gray-600 mb-6">
+              The Picture Shows section is currently under development. Interactive visual presentations and themed exhibitions will be available here soon.
+            </p>
+            <p class="text-sm text-gray-500">
+              Check back for updates on new interactive shows featuring Wayne Heim's fine art photography.
+            </p>
+          </div>
+        </section>
+      )}
+
+      {stories.length > 0 && (
+        <script type="application/ld+json" set:html={JSON.stringify(itemListStructuredData)}></script>
+      )}
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)}></script>
+    </div>
 
     <SiteFooter
       title="K4 Studios Picture Shows - Interactive Visual Presentations"
       label="Explore Galleries"
       class="pt-8 pb-12"
     />
+
+    <!-- MOBILE OVERFLOW PATCH -->
+    <style>
+      @media (max-width: 767px) {
+        html, body {
+          overflow-x: hidden !important;
+          width: 100% !important;
+          box-sizing: border-box;
+        }
+        main {
+          overflow-x: hidden !important;
+          max-width: 100vw !important;
+        }
+        .page-container {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+        .intro-text,
+        .show-layout,
+        .text-column,
+        .sidebar-column,
+        .coming-soon {
+          margin-left: auto !important;
+          margin-right: auto !important;
+          max-width: 100% !important;
+        }
+        .page-title,
+        .page-subtitle {
+          margin-left: 1.5rem !important;
+          margin-right: 1.5rem !important;
+          width: auto !important;
+        }
+        img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+      }
+    </style>
   </main>
 </BaseLayout>
