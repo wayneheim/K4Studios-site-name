@@ -98,8 +98,13 @@ export function getStructuredData({
       "inLanguage": "en",
     };
 
-    if (data.keywords?.length)
-      collectionObj.keywords = data.keywords.join(", ");
+    if (data.keywords) {
+      if (Array.isArray(data.keywords)) {
+        collectionObj.keywords = data.keywords.join(", ");
+      } else {
+        collectionObj.keywords = data.keywords;
+      }
+    }
 
     return JSON.stringify(collectionObj, null, 2);
   }
