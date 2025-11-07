@@ -1,20 +1,24 @@
 ---
-<head>
-  <meta property="og:title" content="Demo Show – Western Living History" />
-  <meta property="og:description" content="A cinematic Picture Show by Wayne Heim featuring Western reenactors keeping history alive." />
-  <meta property="og:image" content="https://www.k4studios.com/images/stories/demo-show-hero.jpg" />
-  <meta property="og:type" content="video.other" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Demo Show – Western Living History" />
-  <meta name="twitter:description" content="A cinematic Picture Show by Wayne Heim featuring Western reenactors keeping history alive." />
-  <meta name="twitter:image" content="https://www.k4studios.com/images/stories/demo-show-hero.jpg" />
-</head>
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { storyMeta, storyData } from "@/data/Other/Stories/DemoShow.mjs";
 
+const pageTitle = "The Wayward Trail | Picture Show | Wayne Heim Fine Art Photography";
+const pageDescription = "A cinematic mini-story told through painterly photographs by Wayne Heim.";
+const ogImage = Array.isArray(storyData) && storyData.length > 0 ? storyData[0].src : "/og/painterly.jpg";
 
+const meta = {
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage,
+  ogType: "website",
+  twitterCard: "summary_large_image",
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: ogImage
+};
 
 const structuredDataJSON = getStructuredData({
   type: "gallery",
@@ -37,20 +41,24 @@ const structuredDataJSON = getStructuredData({
 });
 ---
 
-<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
-  <noscript>
-    <img
-      src="/images/stories/demo-show-hero.jpg"
-      alt="Demo Show – Western Living History"
-      style="width:100%;height:auto;display:block;"
+<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={structuredDataJSON}>
+  <div id="picture-show-content" class="relative z-10 bg-white min-h-screen">
+    <PictureShowBase
+      client:only="react"
+      rawData={Array.isArray(storyData) ? storyData : []}
+      basePath="/Other/Stories/DemoShow"
+      titleBase="The Wayward Trail"
     />
-  </noscript>
-  <PictureShowBase
-    client:only="react"
-    rawData={storyData}
-    basePath="/Other/Stories/DemoShow"
-    titleBase={storyMeta.showTitle}
-    globalAudioSrc={storyMeta.globalAudioSrc || ""}
-    globalAudioMode={storyMeta.globalAudioMode || "score"}
-  />
+  </div>
+
+  <style>
+    #picture-show-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  </style>
 </BaseLayout>
