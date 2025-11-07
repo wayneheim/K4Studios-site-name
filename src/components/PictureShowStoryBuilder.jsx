@@ -177,7 +177,51 @@ async function saveShowToServer(showArray, showMeta) {
   );
   const mjsContent = `// Auto-generated Picture Show dataset\nexport const storyMeta = ${JSON.stringify(metaWithTimestamp, null, 2)};\nexport const storyData = ${JSON.stringify(exportSlides, null, 2)};`;
 
-  const astroContent = `---\n// Auto-generated Astro page for ${safeSlug}\nimport BaseLayout from \"@/layouts/BaseLayout.astro\";\nimport PictureShowBase from \"@/components/PictureShowBase.jsx\";\nimport { storyMeta, storyData } from \"@/data/Other/Stories/${safeSlug}.mjs\";\n--- \n\n<BaseLayout title={storyMeta.showTitle}>\n  <PictureShowBase\n    client:only=\"react\"\n    rawData={storyData}\n    basePath=\"/Other/Stories/${safeSlug}\"\n    titleBase={storyMeta.showTitle}\n    globalAudioSrc={storyMeta.globalAudioSrc || \"\"}\n    globalAudioMode={storyMeta.globalAudioMode || \"score\"}\n  />\n</BaseLayout>`;
+  const astroContent = `---
+// Auto-generated Astro page for ${safeSlug}
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { storyMeta, storyData } from "@/data/Other/Stories/${safeSlug}.mjs";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+const structuredDataJSON = getStructuredData({
+  type: "gallery",
+  data: {
+    title: storyMeta.showTitle,
+    description: storyMeta.description,
+    url: \`https://k4studios.com/Other/Stories/${safeSlug}\`,
+    keywords: storyMeta.keywords,
+    copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved."
+  },
+  images: storyData,
+  defaults: {
+    copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved.",
+    license: "https://k4studios.com/licensing",
+    acquireLicensePage: "https://k4studios.com/licensing",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+---
+
+<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON} meta={{ ogType: "video.other" }}>
+  <noscript>
+    <img
+      src="/images/stories/${safeSlug}-hero.jpg"
+      alt="\${storyMeta.showTitle} – Cinematic Picture Show"
+      style="width:100%;height:auto;display:block;"
+    />
+  </noscript>
+  <PictureShowBase
+    client:only="react"
+    rawData={storyData}
+    basePath="/Other/Stories/${safeSlug}"
+    titleBase={storyMeta.showTitle}
+    globalAudioSrc={storyMeta.globalAudioSrc || ""}
+    globalAudioMode={storyMeta.globalAudioMode || "score"}
+  />
+</BaseLayout>`;
 
   // --- Save to server ---
   try {

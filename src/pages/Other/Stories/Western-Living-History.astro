@@ -26,7 +26,14 @@ const structuredDataJSON = getStructuredData({
 });
 --- 
 
-<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
+<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON} meta={{ ogType: "video.other" }}>
+  <noscript>
+    <img
+      src="/images/stories/western-living-history-hero.jpg"
+      alt="Western Living History – Cinematic Picture Show"
+      style="width:100%;height:auto;display:block;"
+    />
+  </noscript>
   <PictureShowBase
     client:only="react"
     rawData={storyData}
