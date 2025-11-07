@@ -212,105 +212,20 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     };
   }, [globalAudioSrc, globalAudioMode, showSlideshow, isMuted, volume]);
 
-// ✅ Hydration guard with fallback for Messenger WebView
-const [isReady, setIsReady] = useState(false);
+  // Hydration guard for Facebook / Messenger WebView
+  const [isReady, setIsReady] = useState(false);
 
-useEffect(() => {
-  if (typeof window === "undefined") return;
-
-  const ua = navigator.userAgent || "";
-  const isMessenger = /FBAN|FBAV|Messenger|Instagram/i.test(ua);
-
-  const handleReady = () => setIsReady(true);
-
-  // 🔹 In Messenger, skip waiting for "load" – fire immediately
-  if (isMessenger) {
-    console.warn("⚠️ Messenger WebView detected — forcing early hydration");
-    setIsReady(true);
-    return;
-  }
-
-  // Normal browsers: wait for full load or readyState
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    setIsReady(true);
-  } else {
-    window.addEventListener("load", handleReady, { once: true });
-  }
-
-  // Always add a failsafe timeout just in case "load" never fires
-  const fallback = setTimeout(() => {
-    if (!isReady) {
-      console.warn("⏳ Hydration fallback triggered");
-      setIsReady(true);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleReady = () => setIsReady(true);
+      if (document.readyState === "complete") {
+        setIsReady(true);
+      } else {
+        window.addEventListener("load", handleReady, { once: true });
+      }
+      return () => window.removeEventListener("load", handleReady);
     }
-  }, 2500);
-
-  return () => {
-    window.removeEventListener("load", handleReady);
-    clearTimeout(fallback);
-  };
-}, []);
-
-// 🧩 Messenger WebView silent prime for playback permission
-useEffect(() => {
-  const ua = navigator.userAgent || "";
-  if (!/FBAN|FBAV|Messenger|Instagram/i.test(ua)) return;
-
-  // 1 second after hydration, quietly prime audio
-  const timer = setTimeout(() => {
-    try {
-      const a = document.createElement("audio");
-      a.src = "";
-      a.muted = true;
-      const playPromise = a.play();
-      if (playPromise) playPromise.catch(()=>{});
-      setTimeout(() => a.pause(), 200);
-    } catch {}
-  }, 1000);
-
-  return () => clearTimeout(timer);
-}, []);
-
-// 🧩 Messenger / iOS WebView gesture unlock
-useEffect(() => {
-  const unlockAudio = () => {
-    try {
-      if (audioRef.current) {
-        audioRef.current.muted = true;
-        audioRef.current.play().then(() => {
-          audioRef.current.pause();
-          audioRef.current.muted = false;
-        }).catch(()=>{});
-      }
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.muted = true;
-        ambientAudioRef.current.play().then(() => {
-          ambientAudioRef.current.pause();
-          ambientAudioRef.current.muted = false;
-        }).catch(()=>{});
-      }
-
-      if (window.speechSynthesis) {
-        const u = new SpeechSynthesisUtterance(" ");
-        window.speechSynthesis.speak(u);
-        window.speechSynthesis.cancel();
-      }
-
-      window.removeEventListener("touchend", unlockAudio);
-      window.removeEventListener("click", unlockAudio);
-    } catch (e) {
-      console.warn("Audio unlock failed:", e);
-    }
-  };
-
-  window.addEventListener("touchend", unlockAudio, { once: true });
-  window.addEventListener("click", unlockAudio, { once: true });
-
-  return () => {
-    window.removeEventListener("touchend", unlockAudio);
-    window.removeEventListener("click", unlockAudio);
-  };
-}, []);
+  }, []);
 
   // Optional: debug messenger behavior
   useEffect(() => {
@@ -1086,46 +1001,6 @@ useEffect(() => {
     );
   }
 
-// 🩹 Messenger fallback render guard (prevents blank screen & primes audio)
-if (/FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent) && !showSlideshow) {
-  return (
-    <div className="flex flex-col items-center justify-center w-full h-[80vh] text-[#8b7355]">
-      <p className="text-center text-base px-4">Tap once to start the Picture Show</p>
-      <button
-        className="px-6 py-2 mt-5 bg-[#85644b] text-white rounded-md hover:bg-[#6b4f3a] transition"
-        onClick={() => {
-          try {
-            // 🔹 Unlock Messenger’s audio/speech stack immediately
-            if (ambientAudioRef.current) {
-              ambientAudioRef.current.muted = true;
-              ambientAudioRef.current.play()
-                .then(() => ambientAudioRef.current.pause())
-                .catch(()=>{});
-              ambientAudioRef.current.muted = false;
-            }
-            if (audioRef.current) {
-              audioRef.current.muted = true;
-              audioRef.current.play()
-                .then(() => audioRef.current.pause())
-                .catch(()=>{});
-              audioRef.current.muted = false;
-            }
-            if (window.speechSynthesis) {
-              const u = new SpeechSynthesisUtterance(" ");
-              window.speechSynthesis.speak(u);
-              window.speechSynthesis.cancel();
-            }
-          } catch {}
-          setIsReady(true);
-          setShowSlideshow(false);
-        }}
-      >
-        Start Picture Show
-      </button>
-    </div>
-  );
-}
-
   return (
     <>
     <div
@@ -1546,15 +1421,7 @@ if (/FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent) && !showSlideshow
                   {currentIndex !== 0 && (
                     <button
                       type="button"
-                      onClick={() => {
-                        // Force user-gesture context before state flip
-                        if (ambientAudioRef.current) {
-                          try {
-                            ambientAudioRef.current.play().catch(()=>{});
-                          } catch {}
-                        }
-                        setShowSlideshow(true);
-                      }}
+                      onClick={() => setShowSlideshow(true)}
                       className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
                       title="Launch Cinematic Mode"
                     >
