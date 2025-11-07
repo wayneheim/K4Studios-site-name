@@ -1546,14 +1546,35 @@ if (/FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent) && !showSlideshow
                   {currentIndex !== 0 && (
                     <button
                       type="button"
-                      onClick={() => {
-                        // Force user-gesture context before state flip
-                        if (ambientAudioRef.current) {
+                      onClick={async () => {
+                        const ua = navigator.userAgent || "";
+
+                        // 🧩 Messenger / Instagram audio unlock
+                        if (/FBAN|FBAV|Messenger|Instagram/i.test(ua)) {
                           try {
-                            ambientAudioRef.current.play().catch(()=>{});
-                          } catch {}
+                            const silent = document.createElement("audio");
+                            silent.src = "";
+                            silent.muted = true;
+                            const playPromise = silent.play();
+                            if (playPromise) await playPromise.catch(() => {});
+                            setTimeout(() => silent.pause(), 200);
+                          } catch (err) {
+                            console.warn("Silent audio unlock failed:", err);
+                          }
                         }
-                        setShowSlideshow(true);
+
+                        // 🎧 Prime audio refs if present
+                        try {
+                          if (ambientAudioRef.current) await ambientAudioRef.current.play().catch(() => {});
+                          if (audioRef.current) await audioRef.current.play().catch(() => {});
+                        } catch (err) {
+                          console.warn("Audio prime failed:", err);
+                        }
+
+                        // ⏳ small delay to let Messenger acknowledge gesture
+                        setTimeout(() => {
+                          setShowSlideshow(true);
+                        }, 150);
                       }}
                       className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
                       title="Launch Cinematic Mode"
