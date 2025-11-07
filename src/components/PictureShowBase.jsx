@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
 import GallerySlideshowStory from "./Gallery-Slideshow-Story.jsx";
 import ShareDrawer from "./ShareDrawer.jsx";
 import { storyVoices } from "./storyVoices.js";
@@ -1541,6 +1541,19 @@ useEffect(() => {
                       <span className={`${!currentImage?.notes ? 'opacity-0' : ''}`} aria-hidden={!currentImage?.notes}>
                         {showNotes ? "Hide Notes" : "View Collector Notes"}
                       </span>
+                    </button>
+                  )}
+
+                  {currentIndex > 0 && (
+                    <button
+                      type="button"
+                      onClick={async () => {
+                        await startSlideshow({ advanceFromIntro: false });
+                      }}
+                      className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
+                      title="Launch Cinematic Mode"
+                    >
+                      <MonitorPlay className="w-4 h-4 text-gray-400" />
                     </button>
                   )}
                 </div>
