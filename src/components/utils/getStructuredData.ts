@@ -154,6 +154,11 @@ export function getStructuredData({
           "category": "Fine Art Print",
         },
       },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
     };
 
     if (data.galleryUrl) {
@@ -181,6 +186,14 @@ export function getStructuredData({
   if (type === "BlogPosting") {
     const today = new Date().toISOString().split("T")[0];
     const defaultDate = `${today}T00:00:00Z`;
+
+    // Helper to ensure ISO8601 with timezone
+    function ensureIsoWithTimezone(dateStr: string | undefined): string {
+      if (!dateStr) return defaultDate;
+      if (/T.*Z$/.test(dateStr)) return dateStr; // already ISO8601 with Z
+      if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return `${dateStr}T00:00:00Z`;
+      return dateStr;
+    }
     const authorId = `${creatorUrl.replace(/\/$/, "")}#person`;
     const orgUrl = "https://www.k4studios.com/";
 
@@ -212,8 +225,8 @@ export function getStructuredData({
         (images.length
           ? images.map((img) => img.src)
           : "https://www.k4studios.com/images/K4Logo-web-c.webp"),
-      "datePublished": data.datePublished || defaultDate,
-      "dateModified": data.dateModified || data.datePublished || defaultDate,
+  "datePublished": ensureIsoWithTimezone(data.datePublished),
+  "dateModified": ensureIsoWithTimezone(data.dateModified || data.datePublished),
       "author": {
         "@type": "Person",
         "name": creatorName,

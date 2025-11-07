@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteFooter from "@/components/Footer.astro";
+const currentYear = new Date().getFullYear();
+const pageTitle = "Image Licensing & Usage Rights";
+---
+
+<BaseLayout title={pageTitle}>
+  <main style="max-width:600px;margin:4rem auto;padding:2rem;background:#fff;border-radius:8px;box-shadow:0 2px 16px rgba(0,0,0,0.07);font-family:'Glegoo',serif;text-align:center;">
+    <h1 style="font-size:2.2rem;font-weight:700;margin-bottom:1.2rem;line-height:1.1;">
+      <span style="display:inline-block; vertical-align:middle; transform: translateY(0.12em);">🔒</span>
+      {' '}Image Licensing & Usage Rights{' '}
+      <span style="display:inline-block; vertical-align:middle; transform: translateY(0.12em);">🔒</span>
+    </h1>
+    <p style="font-size:1.15rem;margin-bottom:2rem;">
+      All images and content on this website are protected by copyright and may not be used, reproduced, or distributed without written permission from Wayne Heim - K4 Studios ({currentYear}).<br>
+      <br>
+      <strong>Licensing Options:</strong><br>
+      - Editorial, commercial, and personal use licenses are available.<br>
+      - High-resolution files for print, web, or social media.<br>
+      - Rights-managed and royalty-free options.<br>
+      <br>
+      <strong>How to License an Image:</strong><br>
+      To request a license, inquire about usage rights, or purchase a print, please click the contact button below and specify your intended use.
+    </p>
+    <a href="/contact" style="display:inline-block;padding:0.75rem 2rem;background:#1a4fa3;color:#fff;font-size:1.1rem;font-weight:600;border-radius:6px;text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,0.08);transition:background 0.2s;">Contact</a>
+    <div style="margin-top:2.5rem;font-size:1.05rem;">
+      <strong>For more information about copyright and usage</strong><br> visit our <a href="/copyright" style="color:#222;text-decoration:underline;font-weight:600;">Copyright Notice</a> page.
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>
