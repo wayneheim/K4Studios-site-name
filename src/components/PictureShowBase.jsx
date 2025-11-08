@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
+import ShareDrawer from "./ShareDrawer.jsx";
+import StoryShow from "./Gallery-Slideshow-Story.jsx";
 
 // Helper function to select the best image source for slideshow display
 const getBestImageSrc = (image) => {
@@ -1313,7 +1315,7 @@ const isSpeechActive = () => {
       </div>
 
       {showSlideshow && (
-        <GallerySlideshowStory
+        <StoryShow
           images={filteredData}
           startImageId={currentImage?.id}
           onExit={() => setShowSlideshow(false)}
