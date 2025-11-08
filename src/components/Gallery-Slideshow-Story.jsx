@@ -184,7 +184,11 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
 
   // Handle audio playback when slideshow starts (global overrides individual, ambient behind individual)
   useEffect(() => {
-    if (isMessengerWebView && !hasUserUnlockedAudioRef.current) {
+    // For individual audio, don't require Messenger webview unlock since it should work like global audio
+    // Only block autoplay in Messenger for global audio scenarios that might need special handling
+    const shouldBlockAutoplay = isMessengerWebView && !hasUserUnlockedAudioRef.current && globalAudioSrc;
+
+    if (shouldBlockAutoplay) {
       return;
     }
 
