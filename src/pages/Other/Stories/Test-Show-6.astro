@@ -39,14 +39,12 @@ const structuredData = getStructuredData({
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={structuredData}>
   <div id="picture-show-content" class="relative z-10 bg-white min-h-screen">
     <PictureShowBase
-      client:only="react"
+      client:load
       rawData={Array.isArray(storyData) ? storyData : []}
       basePath="/Other/Stories/Test-Show-6"
       titleBase={storyMeta?.showTitle || "Untitled Picture Show"}
       globalAudioSrc={storyMeta?.globalAudioSrc || ""}
       globalAudioMode={storyMeta?.globalAudioMode || "score"}
-      introText={storyMeta?.intro || ""}
-      closingText={storyMeta?.closingText || ""}
     />
   </div>
 

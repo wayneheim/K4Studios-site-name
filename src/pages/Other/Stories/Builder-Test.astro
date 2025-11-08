@@ -7,7 +7,7 @@ import { storyMeta, storyData } from "@/data/Other/Stories/Builder-Test.mjs";
 
 <BaseLayout title={storyMeta.showTitle}>
   <PictureShowBase
-    client:only="react"
+    client:load
     rawData={storyData}
     basePath="/Other/Stories/Builder-Test"
     titleBase={storyMeta.showTitle}

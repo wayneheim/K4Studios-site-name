@@ -214,7 +214,7 @@ const structuredDataJSON = getStructuredData({
     />
   </noscript>
   <PictureShowBase
-    client:only="react"
+    client:load
     rawData={storyData}
     basePath="/Other/Stories/${safeSlug}"
     titleBase={storyMeta.showTitle}

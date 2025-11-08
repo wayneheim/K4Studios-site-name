@@ -30,7 +30,7 @@ const structuredData = getStructuredData({
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={structuredData}>
   <div id="picture-show-content" class="relative z-10 bg-white min-h-screen">
     <PictureShowBase
-      client:only="react"
+      client:load
       rawData={Array.isArray(storyData) ? storyData : []}
       basePath="/Other/Stories/DemoShow"
       titleBase="The Wayward Trail"
