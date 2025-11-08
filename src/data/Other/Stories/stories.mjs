@@ -1,6 +1,7 @@
 // Stories index data for K4 Studios Picture Show Stories
 import { storyMeta as westernLivingHistoryMeta, storyData as westernLivingHistoryData } from "./Western-Living-History.mjs";
 import { storyMeta as demoShowMeta, storyData as demoShowData } from "./DemoShow.mjs";
+import { storyMeta as outlawsBanditsMeta, storyData as outlawsBanditsData } from "./Outlaws-and-Bandits.mjs";
 
 // Helper function to get the first non-ghost slide's thumbnail image
 function getFirstSlideThumbnail(storyData) {
@@ -13,6 +14,15 @@ function getFirstSlideThumbnail(storyData) {
 }
 
 export const stories = [
+  {
+    slug: "Outlaws-and-Bandits",
+    title: outlawsBanditsMeta.showTitle,
+    date: outlawsBanditsMeta.savedAt ? new Date(outlawsBanditsMeta.savedAt).toISOString().split('T')[0] : "2025-11-08",
+    excerpt: outlawsBanditsMeta.description,
+    cover: getFirstSlideThumbnail(outlawsBanditsData),
+    keywords: outlawsBanditsMeta.keywords,
+    alt: outlawsBanditsMeta.alt
+  },
   {
     slug: "Western-Living-History",
     title: westernLivingHistoryMeta.showTitle,

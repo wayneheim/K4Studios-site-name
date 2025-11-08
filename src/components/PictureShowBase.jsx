@@ -15,6 +15,16 @@ const getBestImageSrc = (image) => {
 };
 
 export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score" }) {
+  // Detect actual global audio mode from data if not explicitly set
+  const detectedGlobalAudioMode = useMemo(() => {
+    if (globalAudioMode !== "score") return globalAudioMode;
+    // Check if any item has globalAudioMode set
+    const itemWithGlobalMode = rawData.find(item => item?.globalAudioMode);
+    return itemWithGlobalMode?.globalAudioMode || "score";
+  }, [rawData, globalAudioMode]);
+
+  // Use detected mode for audio logic
+  const effectiveGlobalAudioMode = detectedGlobalAudioMode;
   // 🖼️ Existing slideshow logic follows here...
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
@@ -62,6 +72,16 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     }
   }, [rawData]);
 
+  // Automatically skip landing card and start on first real image
+  useEffect(() => {
+    if (filteredData.length > 0 && currentIndex === 0 && filteredData[0]?.id === 'i-k4studios') {
+      const firstRealIdx = filteredData.findIndex(img => img.id !== 'i-k4studios');
+      if (firstRealIdx > 0) {
+        setCurrentIndex(firstRealIdx);
+      }
+    }
+  }, [filteredData, currentIndex]);
+
   // Determine default volume: 30% for ambient, 50% for score, 70% for mixed/individual audio
   const defaultVolume = useMemo(() => {
     if (globalAudioSrc && filteredData.length > 0) {
@@ -73,11 +93,11 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
         return 0.7;
       } else {
         // Global-only audio: ambient = 30%, score = 50%
-        return globalAudioMode === "ambient" ? 0.3 : 0.5;
+        return effectiveGlobalAudioMode === "ambient" ? 0.3 : 0.5;
       }
     }
     return 0.7; // Default fallback
-  }, [globalAudioSrc, globalAudioMode, filteredData]);
+  }, [globalAudioSrc, effectiveGlobalAudioMode, filteredData]);
 
   const [volume, setVolume] = useState(defaultVolume);
 
@@ -87,7 +107,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
 
   // Find score audio source from data (full volume background music)
   const scoreAudioSrc = useMemo(() => {
-    if (globalAudioMode === "score") {
+    if (effectiveGlobalAudioMode === "score") {
       // First try the globalAudioSrc prop
       if (globalAudioSrc && globalAudioSrc.trim()) {
         return globalAudioSrc;
@@ -97,11 +117,25 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       return scoreItem?.audioSrc || null;
     }
     return null;
-  }, [filteredData, globalAudioSrc, globalAudioMode]);
+  }, [filteredData, globalAudioSrc, effectiveGlobalAudioMode]);
 
-  // Handle score audio playback - only when slideshow is active
+  // Find ambient audio source from data (continuous background music)
+  const ambientAudioSrc = useMemo(() => {
+    if (effectiveGlobalAudioMode === "ambient") {
+      // First try the globalAudioSrc prop
+      if (globalAudioSrc && globalAudioSrc.trim()) {
+        return globalAudioSrc;
+      }
+      // Then try to find it from the data items
+      const ambientItem = filteredData.find(item => item.globalAudioMode === "ambient" && item.audioSrc);
+      return ambientItem?.audioSrc || null;
+    }
+    return null;
+  }, [filteredData, globalAudioSrc, effectiveGlobalAudioMode]);
+
+  // Handle score and ambient audio playback
   useEffect(() => {
-    if (scoreAudioSrc && globalAudioMode === "score" && showSlideshow && !isMuted) {
+    if (scoreAudioSrc && effectiveGlobalAudioMode === "score" && showSlideshow && !isMuted) {
       if (ambientAudioRef.current) {
         ambientAudioRef.current.src = scoreAudioSrc;
         ambientAudioRef.current.volume = volume; // Full user-controlled volume for score
@@ -110,8 +144,17 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
           console.error('Error playing score audio:', error);
         });
       }
-    } else if (globalAudioMode !== "score") {
-      // Stop score audio if mode changes
+    } else if (ambientAudioSrc && effectiveGlobalAudioMode === "ambient" && showSlideshow && !isMuted) {
+      if (ambientAudioRef.current) {
+        ambientAudioRef.current.src = ambientAudioSrc;
+        ambientAudioRef.current.volume = volume * 0.3; // Lower volume for ambient
+        ambientAudioRef.current.loop = true;
+        ambientAudioRef.current.play().catch((error) => {
+          console.error('Error playing ambient audio:', error);
+        });
+      }
+    } else {
+      // Stop audio if conditions not met
       if (ambientAudioRef.current) {
         ambientAudioRef.current.pause();
         ambientAudioRef.current.currentTime = 0;
@@ -119,8 +162,12 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     }
 
     // Update volume when it changes
-    if (ambientAudioRef.current && globalAudioMode === "score") {
-      ambientAudioRef.current.volume = isMuted ? 0 : volume;
+    if (ambientAudioRef.current) {
+      if (effectiveGlobalAudioMode === "score" && showSlideshow) {
+        ambientAudioRef.current.volume = isMuted ? 0 : volume;
+      } else if (effectiveGlobalAudioMode === "ambient" && showSlideshow) {
+        ambientAudioRef.current.volume = isMuted ? 0 : volume * 0.3;
+      }
     }
 
     // Cleanup on unmount
@@ -130,7 +177,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
         ambientAudioRef.current.currentTime = 0;
       }
     };
-  }, [scoreAudioSrc, globalAudioMode, showSlideshow, isMuted, volume]);
+  }, [scoreAudioSrc, ambientAudioSrc, effectiveGlobalAudioMode, showSlideshow, isMuted, volume]);
 
   // Hide site header/intro and ensure chapter section is visible while Picture Show is active
   useEffect(() => {
@@ -1171,7 +1218,7 @@ useEffect(() => {
                  Chapter Index
                 </h2>
 
-                <div className="flex flex-wrap justify-center gap-4 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 justify-items-center gap-4 mb-10 max-w-4xl mx-auto">
                   {filteredData.filter(img => img.id !== "i-k4studios").map((img, idx) => (
                     <a
                       key={idx}
@@ -1486,7 +1533,7 @@ useEffect(() => {
                   </div>
                 ) : (
                   /* IMAGE */
-                  <div className="w-full px-5 sm:px-6 md:px-8 flex items-center justify-center min-h-[80vh]" style={{ boxSizing: 'border-box' }}>
+                  <div className="w-full px-5 sm:px-6 md:px-8 flex items-center justify-center min-h-[65vh] pb-0" style={{ boxSizing: 'border-box' }}>
                     <div className="relative" style={{ width: 'fit-content' }}>
                       <img
                         src={getBestImageSrc(currentImage)}
@@ -1509,7 +1556,7 @@ useEffect(() => {
                   </div>
                 )}
 {/* Shopping Cart & Notes Buttons */}
-                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-3`}>
+                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 -mt-12`}>
                   {currentImage?.buyLink && (
                     <a
                       href={currentImage?.buyLink}
