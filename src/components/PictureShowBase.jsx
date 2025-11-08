@@ -1,9 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
-import GallerySlideshowStory from "./Gallery-Slideshow-Story.jsx";
-import ShareDrawer from "./ShareDrawer.jsx";
-import { storyVoices } from "./storyVoices.js";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 
@@ -33,7 +30,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const [direction, setDirection] = useState(1);
   const [showSlideshow, setShowSlideshow] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const [currentVoice, setCurrentVoice] = useState(null);
+
   const [isCardHovered, setIsCardHovered] = useState(false);
   const isMessengerWebView = useMemo(() => {
     if (typeof navigator === "undefined") return false;
@@ -45,25 +42,14 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   // Start-page hover image sequencing (base -> src2 -> src3)
   const [hoverPhase, setHoverPhase] = useState(0); // 0=base, 1=src2, 2=src3
   const hoverTimerRef = useRef(null);
-  const activeUtterances = useRef([]);
-  const activeTimeouts = useRef([]);
+
+
   const audioRef = useRef(null);
   const ambientAudioRef = useRef(null);
   const currentIndexRef = useRef(0);
   // swipe tracking
   const touchStart = useRef({ x: 0, y: 0, t: 0 });
-  const [voicePreferences, setVoicePreferences] = useState(() => {
-    // Load saved preferences from localStorage
-    if (typeof window !== 'undefined') {
-      try {
-        const saved = localStorage.getItem('ttsVoicePreferences');
-        return saved ? JSON.parse(saved) : {};
-      } catch {
-        return {};
-      }
-    }
-    return {};
-  });
+
 
   // Normalize incoming data: strip any explicit closing slide since the viewer renders its own end page
   const filteredData = useMemo(() => {
@@ -336,12 +322,6 @@ useEffect(() => {
         unlockAmbient.pause();
       }).catch(()=>{});
 
-      if (window.speechSynthesis) {
-        const u = new SpeechSynthesisUtterance(" ");
-        window.speechSynthesis.speak(u);
-        window.speechSynthesis.cancel();
-      }
-
       window.removeEventListener("touchend", unlockAudio);
       window.removeEventListener("click", unlockAudio);
     } catch (e) {
@@ -365,26 +345,9 @@ useEffect(() => {
     }
   }, []);
 
-  // Save voice preferences for consistency
-  const saveVoicePreference = (storytellerName, voiceName) => {
-    const updatedPreferences = {
-      ...voicePreferences,
-      [storytellerName]: voiceName,
-      lastUpdated: Date.now()
-    };
-    setVoicePreferences(updatedPreferences);
-    if (typeof window !== 'undefined') {
-      try {
-        localStorage.setItem('ttsVoicePreferences', JSON.stringify(updatedPreferences));
-      } catch (e) {
-        console.warn('Could not save voice preferences:', e);
-      }
-    }
-  };
+
 
   const goPrev = () => {
-    activeUtterances.current = []; // Clear any pending utterances
-    activeTimeouts.current = []; // Clear any pending timeouts
     stopSpeech();
     setDirection(-1);
     setCurrentIndex((i) => {
@@ -407,8 +370,6 @@ useEffect(() => {
   };
 
   const goNext = () => {
-    activeUtterances.current = []; // Clear any pending utterances
-    activeTimeouts.current = []; // Clear any pending timeouts
     stopSpeech();
     setDirection(1);
     if (currentIndex === 0) {
@@ -559,113 +520,26 @@ useEffect(() => {
     return () => clearTimeout(t);
   }, [currentIndex]);
 
-  // Helper function to check if speech is currently active
-  const isSpeechActive = () => {
-    return window.speechSynthesis.speaking || window.speechSynthesis.pending;
-  };
-
-  // --- hard stop for queued speech (Chrome-safe) ---
+// ✅ Simple speech status check (MP3 only, no TTS)
+const isSpeechActive = () => {
+  return isSpeaking;
+};  // --- simple audio stop (MP3 only) ---
   const stopSpeech = () => {
     try {
-      // Stop audio playback if playing
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
       }
-
-      // Cancel queued timeouts first
-      activeTimeouts.current.forEach(clearTimeout);
-      activeTimeouts.current = [];
-
-      // Manually stop every known utterance
-      activeUtterances.current.forEach(u => {
-        try { u.onend = null; u.onerror = null; } catch {}
-        window.speechSynthesis.cancel(); // still required for some browsers
-      });
-      activeUtterances.current = [];
-
-      // Double flush Chrome's internal queue
-      const synth = window.speechSynthesis;
-      synth.cancel();
-      setTimeout(() => synth.cancel(), 60);
-      setTimeout(() => setIsSpeaking(false), 100);
-    } catch (err) {
-      console.warn("Speech stop failed:", err);
+      setIsSpeaking(false);
+    } catch {
       setIsSpeaking(false);
     }
   };
 
-  // Normalize voice names across browsers for better matching
-  const normalizeVoiceName = (voiceName) => {
-    return voiceName
-      .toLowerCase()
-      .replace(/microsoft\s+/g, '')
-      .replace(/google\s+/g, '')
-      .replace(/apple\s+/g, '')
-      .replace(/\s*\([^)]*\)/g, '') // Remove parentheses content
-      .replace(/\s+/g, ' ')
-      .trim();
-  };
 
-  // Detect voice characteristics for better matching
-  const detectVoiceCharacteristics = (voice) => {
-    const name = voice.name.toLowerCase();
-    const lang = voice.lang.toLowerCase();
 
-    return {
-      isFemale: name.includes('female') || name.includes('woman') || name.includes('girl') ||
-                name.includes('zira') || name.includes('hazel') || name.includes('susan') ||
-                name.includes('karen') || name.includes('samantha') || name.includes('zoe') ||
-                name.includes('serena') || name.includes('victoria'),
-      isMale: name.includes('male') || name.includes('man') || name.includes('boy') ||
-              name.includes('david') || name.includes('mark') || name.includes('daniel') ||
-              name.includes('alex') || name.includes('fred') || name.includes('ralph'),
-      isBritish: lang.includes('gb') || name.includes('uk') || name.includes('british') ||
-                 name.includes('english') && !name.includes('us'),
-      isAmerican: lang.includes('us') || name.includes('us') || name.includes('american'),
-      isAustralian: lang.includes('au') || name.includes('australian'),
-      hasAccent: name.includes('accent') || name.includes('regional')
-    };
-  };
 
-  // Enhanced voice scoring with browser normalization
-  const calculateVoiceScore = (voice, storyteller) => {
-    let score = 0;
-    const name = voice.name.toLowerCase();
-    const lang = voice.lang.toLowerCase();
-
-    // Base score for English voices
-    if (lang.startsWith('en')) score += 10;
-
-    // Browser-agnostic voice matching with normalized names
-    const normalizedName = normalizeVoiceName(voice.name);
-    for (let i = 0; i < storyteller.voicePriority.length; i++) {
-      const priorityName = storyteller.voicePriority[i].toLowerCase();
-      if (normalizedName.includes(priorityName) ||
-          priorityName.includes(normalizedName) ||
-          voice.name.includes(storyteller.voicePriority[i])) {
-        score += 200 - (i * 10); // Higher priority for voices earlier in the list
-        break;
-      }
-    }
-
-    // Quality indicators in name
-    if (name.includes('natural') || name.includes('premium') || name.includes('enhanced')) score += 10;
-    if (name.includes('google')) score += 8;
-    if (name.includes('microsoft') || name.includes('azure')) score += 8;
-    if (name.includes('apple') || name.includes('siri')) score += 6;
-
-    // Voice characteristic detection
-    const voiceCharacteristics = detectVoiceCharacteristics(voice);
-    if (voiceCharacteristics.isFemale && storyteller.name === 'Martha') score += 15;
-    if (voiceCharacteristics.isMale && storyteller.name === 'Martha') score += 10; // Still good for grandpa
-    if (voiceCharacteristics.isBritish) score += 12;
-    if (voiceCharacteristics.isAmerican) score += 8;
-
-    return score;
-  };
-
-  // Enhanced TTS control with proper state management
+  // MP3 audio playback only (no TTS fallback)
   const speakText = () => {
     // If already playing audio → stop
     if (isSpeaking) {
@@ -674,389 +548,44 @@ useEffect(() => {
     }
 
     if (!currentImage) return;
-    
+
     // Check if muted
     if (isMuted) return;
-    
+
+    // Only play if we have an audio file
+    if (!currentImage.audioSrc) {
+      return; // No audio available
+    }
+
     setIsSpeaking(true);
 
-    // Check if we have a static audio file
-    if (currentImage.audioSrc) {
-      // Play static audio file
-      if (audioRef.current) {
-        audioRef.current.src = currentImage.audioSrc;
-        audioRef.current.play().catch((error) => {
-          console.error('Error playing audio:', error);
-          setIsSpeaking(false);
-        });
-      }
-      return;
-    }
-
-    // Fallback to TTS if no audioSrc
-    const synth = window.speechSynthesis;
-
-    // Alternate storyteller based on index
-    const storytellers = ['Samuel', 'Martha'];
-    const storytellerName = storytellers[currentIndex % storytellers.length];
-    const storyteller = storyVoices.find(v => v.name === storytellerName);
-
-    console.log(`Picture ${currentIndex}: Selected storyteller ${storytellerName}, voicePriority: [${storyteller.voicePriority.slice(0, 3).join(', ')}...]`);
-
-    setCurrentVoice(storyteller); // just for display/debug consistency
-
-    const rawText = `${currentImage.title || 'Untitled'}. ${currentImage.story || ''}`.trim();
-
-    if (!rawText) {
-      setIsSpeaking(false);
-      return;
-    }
-
-    // Preprocess text for more natural speech
-    const processedText = preprocessTextForSpeech(rawText);
-
-    // Split into sentences for more natural pacing
-    const sentences = processedText.split(/[.!?]+/).filter(s => s.trim().length > 0);
-
-    // Pass storyteller explicitly
-    speakSentences(sentences, storyteller);
-  };
-
-  const preprocessTextForSpeech = (text) => {
-    return text
-      // Handle contractions and common phrases that TTS struggles with
-      .replace(/\bI'm\b/g, 'I am')
-      .replace(/\bI've\b/g, 'I have')
-      .replace(/\bI'll\b/g, 'I will')
-      .replace(/\bI'd\b/g, 'I would')
-      .replace(/\bcan't\b/g, 'cannot')
-      .replace(/\bwon't\b/g, 'will not')
-      .replace(/\bdon't\b/g, 'do not')
-      .replace(/\bdoesn't\b/g, 'does not')
-      .replace(/\bdidn't\b/g, 'did not')
-      .replace(/\bisn't\b/g, 'is not')
-      .replace(/\baren't\b/g, 'are not')
-      .replace(/\bwasn't\b/g, 'was not')
-      .replace(/\bweren't\b/g, 'were not')
-      .replace(/\bhaven't\b/g, 'have not')
-      .replace(/\bhasn't\b/g, 'has not')
-      .replace(/\bhadn't\b/g, 'had not')
-      .replace(/\bthat's\b/g, 'that is')
-      .replace(/\bthere's\b/g, 'there is')
-      .replace(/\bhere's\b/g, 'here is')
-      .replace(/\bwhat's\b/g, 'what is')
-      .replace(/\bwhere's\b/g, 'where is')
-      .replace(/\bhow's\b/g, 'how is')
-      .replace(/\bwho's\b/g, 'who is')
-      .replace(/\bit's\b/g, 'it is')
-      // Replace common abbreviations
-      .replace(/\bDr\./g, 'Doctor')
-      .replace(/\bMr\./g, 'Mister')
-      .replace(/\bMrs\./g, 'Misses')
-      .replace(/\bMs\./g, 'Miss')
-      .replace(/\bSr\./g, 'Senior')
-      .replace(/\bJr\./g, 'Junior')
-      .replace(/\bvs\./g, 'versus')
-      .replace(/\betc\./g, 'et cetera')
-      .replace(/\be\.g\./g, 'for example')
-      .replace(/\bi\.e\./g, 'that is')
-      // Handle numbers and dates more naturally
-      .replace(/\b(\d{1,2})\/(\d{1,2})\/(\d{2,4})\b/g, 'the $1 $2 $3') // dates
-      .replace(/\b(\d{4})\b/g, '$1') // years
-      // Add breathing room with punctuation
-      .replace(/,/g, ', ')
-      .replace(/;/g, '; ')
-      .replace(/:/g, ': ')
-      // Clean up extra spaces
-      .replace(/\s+/g, ' ')
-      .trim();
-  };
-
-  const speakSentences = (sentences, storyteller) => {
-    if (sentences.length === 0) return;
-
-    let hasSpoken = false;
-
-    const speakOnce = (sentences, voices) => {
-      if (hasSpoken) return;
-      hasSpoken = true;
-      speakWithBestVoice(sentences, voices, storyteller);
-    };
-
-    // Wait for voices to load if they haven't yet
-    let voices = window.speechSynthesis.getVoices();
-    if (voices.length === 0) {
-      window.speechSynthesis.onvoiceschanged = () => {
-        voices = window.speechSynthesis.getVoices();
-        speakOnce(sentences, voices);
-      };
-    } else {
-      speakOnce(sentences, voices);
-    }
-  };
-
-  const isQuestion = (sentence) => {
-    const trimmed = sentence.trim();
-    return trimmed.endsWith('?') ||
-           trimmed.toLowerCase().startsWith('what ') ||
-           trimmed.toLowerCase().startsWith('where ') ||
-           trimmed.toLowerCase().startsWith('when ') ||
-           trimmed.toLowerCase().startsWith('why ') ||
-           trimmed.toLowerCase().startsWith('how ') ||
-           trimmed.toLowerCase().startsWith('who ') ||
-           trimmed.toLowerCase().startsWith('which ') ||
-           /\b(can|could|will|would|shall|should|may|might|do|does|did|is|are|was|were|have|has|had)\s+.*\?/.test(trimmed);
-  };
-
-  const speakWithBestVoice = (sentences, voices, storyteller) => {
-    console.log(`Using storyteller: ${storyteller?.name} for picture ${currentIndex}`);
-
-    // Check for saved voice preference first
-    const savedVoiceName = voicePreferences[storyteller.name];
-    console.log(`Checking saved preference for ${storyteller.name}: ${savedVoiceName || 'none'}`);
-    let preferredVoice = null;
-
-    if (savedVoiceName) {
-      preferredVoice = voices.find(voice =>
-        voice.name === savedVoiceName ||
-        normalizeVoiceName(voice.name) === normalizeVoiceName(savedVoiceName)
-      );
-      console.log(`Found saved voice: ${preferredVoice?.name || 'not found'}`);
-    }
-
-    let bestVoice;
-    if (preferredVoice) {
-      // Check if the saved voice still scores well against current priorities
-      const savedVoiceScore = calculateVoiceScore(preferredVoice, storyteller);
-      const voiceScores = voices.map(voice => ({
-        voice,
-        score: calculateVoiceScore(voice, storyteller)
-      })).sort((a, b) => b.score - a.score);
-
-      const topScore = voiceScores[0].score;
-      const scoreThreshold = topScore * 0.8; // Must be at least 80% of the best score
-
-      if (savedVoiceScore >= scoreThreshold) {
-        bestVoice = preferredVoice;
-        console.log(`Using saved preferred voice: ${bestVoice.name} (score: ${savedVoiceScore})`);
-      } else {
-        console.log(`Saved voice ${preferredVoice.name} (score: ${savedVoiceScore}) is below threshold (${scoreThreshold}), selecting better voice`);
-        bestVoice = voiceScores[0].voice;
-        console.log(`Selected better voice for ${storyteller.name}: ${bestVoice.name} (${bestVoice.lang})`);
-
-        // Update the saved preference
-        saveVoicePreference(storyteller.name, bestVoice.name);
-      }
-    } else {
-      // No saved preference, select the best voice
-      const voiceScores = voices.map(voice => ({
-        voice,
-        score: calculateVoiceScore(voice, storyteller)
-      })).sort((a, b) => b.score - a.score);
-
-      // Log available voices for debugging (remove in production)
-      console.log('Available voices:', voices.map(v => `${v.name} (${v.lang})`));
-      console.log('Top voice scores:', voiceScores.slice(0, 3).map(vs => `${vs.voice.name}: ${vs.score}`));
-
-      bestVoice = voiceScores[0].voice;
-      console.log(`Selected voice for ${storyteller.name}: ${bestVoice.name} (${bestVoice.lang})`);
-
-      // Save this choice for future consistency
-      if (bestVoice) {
-        saveVoicePreference(storyteller.name, bestVoice.name);
-      }
-    }
-
-    if (!bestVoice) {
-      // Fallback if no voices available - warm grandma bedtime story settings
-      // Clear any old references to prevent overlap
-      activeUtterances.current = [];
-
-      sentences.forEach((sentence, index) => {
-        const timeoutId = setTimeout(() => {
-          const isQuestionSentence = isQuestion(sentence);
-          const utterance = new SpeechSynthesisUtterance(sentence.trim() + (isQuestionSentence ? '?' : '.'));
-          activeUtterances.current.push(utterance);
-
-          if (isQuestionSentence) {
-            utterance.rate = 0.95; // Slightly faster for questions
-            utterance.pitch = 0.95; // Higher pitch for questions
-            utterance.volume = 0.75; // Softer for questions
-          } else {
-            utterance.rate = 0.88; // Gentle grandma pace
-            utterance.pitch = 0.88; // Warm, nurturing pitch
-            utterance.volume = 0.8; // Comforting volume
-          }
-
-          if (index === sentences.length - 1) {
-            utterance.onend = () => setIsSpeaking(false);
-            utterance.onerror = () => setIsSpeaking(false);
-          }
-          window.speechSynthesis.speak(utterance);
-        }, index * 1000); // 1000ms pause between sentences for gentle storytelling rhythm
-        activeTimeouts.current.push(timeoutId);
+    // Play MP3 audio file
+    if (audioRef.current) {
+      audioRef.current.src = currentImage.audioSrc;
+      audioRef.current.play().catch((error) => {
+        console.error('Error playing audio:', error);
+        setIsSpeaking(false);
       });
-      setIsSpeaking(true);
-      return;
     }
-
-    // Speak each sentence with natural pauses
-    // Clear any old references to prevent overlap
-    activeUtterances.current = [];
-
-    sentences.forEach((sentence, index) => {
-      const timeoutId = setTimeout(() => {
-        const isQuestionSentence = isQuestion(sentence);
-        const utterance = new SpeechSynthesisUtterance(sentence.trim() + (isQuestionSentence ? '?' : '.'));
-        activeUtterances.current.push(utterance);
-        utterance.voice = bestVoice;
-
-        // Fine-tune settings based on voice characteristics and sentence type
-        const baseSettings = getOptimalVoiceSettings(bestVoice, storyteller);
-
-        if (isQuestionSentence) {
-          // Questions get slightly higher pitch and more variation for gentle curiosity
-          utterance.rate = baseSettings.rate * storyteller.questionMultiplier.rate;
-          utterance.pitch = Math.min(baseSettings.pitch * storyteller.questionMultiplier.pitch, 1.0);
-          utterance.volume = baseSettings.volume * storyteller.questionMultiplier.volume;
-        } else {
-          utterance.rate = baseSettings.rate;
-          utterance.pitch = baseSettings.pitch;
-          utterance.volume = baseSettings.volume;
-        }
-
-        // Add gentle variation for nurturing grandma effect (more variation for questions)
-        const variationMultiplier = isQuestionSentence ? 1.3 : 1.0;
-        utterance.rate += (Math.random() - 0.5) * 0.06 * variationMultiplier; // ±0.03 (±0.039 for questions)
-        utterance.pitch += (Math.random() - 0.5) * 0.04 * variationMultiplier; // ±0.02 (±0.026 for questions)
-
-        if (index === 0) {
-          utterance.onstart = () => setIsSpeaking(true);
-        }
-        if (index === sentences.length - 1) {
-          utterance.onend = () => setIsSpeaking(false);
-          utterance.onerror = () => setIsSpeaking(false);
-        }
-
-        window.speechSynthesis.speak(utterance);
-      }, index * 1000); // 1000ms pause between sentences for gentle storytelling rhythm
-      activeTimeouts.current.push(timeoutId);
-    });
   };
 
-  const getOptimalVoiceSettings = (voice, storyteller) => {
-    const name = voice.name.toLowerCase();
-    const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent.toLowerCase() : '';
 
-    // Use storyteller's base settings as defaults
-    let settings = { ...storyteller.baseSettings };
 
-    // Browser-specific baseline adjustments for consistency
-    const browserAdjustments = getBrowserAdjustments(userAgent);
-    settings.rate *= browserAdjustments.rateMultiplier;
-    settings.pitch *= browserAdjustments.pitchMultiplier;
-    settings.volume *= browserAdjustments.volumeMultiplier;
 
-    // Voice-specific fine-tuning
-    if (name.includes('karen')) {
-      settings.rate = Math.max(settings.rate - 0.05, 0.7);
-      settings.pitch = Math.min(settings.pitch + 0.05, 1.0);
-    } else if (name.includes('samantha')) {
-      settings.rate = Math.max(settings.rate - 0.02, 0.7);
-      settings.volume = Math.min(settings.volume + 0.02, 0.9);
-    } else if (name.includes('susan')) {
-      settings.pitch = Math.min(settings.pitch + 0.03, 1.0);
-      settings.volume = Math.max(settings.volume - 0.02, 0.7);
-    } else if (name.includes('zoe') || name.includes('serena')) {
-      settings.rate = Math.min(settings.rate + 0.05, 1.0);
-      settings.pitch = Math.max(settings.pitch - 0.02, 0.8);
-    } else if (name.includes('microsoft') && name.includes('zira')) {
-      settings.volume = Math.min(settings.volume + 0.03, 0.9);
-      settings.rate *= 0.95; // Microsoft voices often need slight slowing
-    } else if (name.includes('google') && name.includes('female')) {
-      settings.rate = Math.max(settings.rate - 0.03, 0.7);
-      settings.pitch *= 1.05; // Google voices often benefit from slight pitch boost
-    } else if (name.includes('google') && name.includes('male')) {
-      settings.rate = Math.max(settings.rate - 0.05, 0.7);
-      settings.pitch *= 0.95; // Slightly lower pitch for male voices
-    }
 
-    // Clamp values to valid ranges
-    settings.rate = Math.max(0.1, Math.min(settings.rate, 10.0));
-    settings.pitch = Math.max(0.0, Math.min(settings.pitch, 2.0));
-    settings.volume = Math.max(0.0, Math.min(settings.volume, 1.0));
 
-    return settings;
-  };
 
-  // Browser-specific adjustments for consistency
-  const getBrowserAdjustments = (userAgent) => {
-    if (userAgent.includes('chrome') && !userAgent.includes('edg')) {
-      return { rateMultiplier: 1.0, pitchMultiplier: 1.0, volumeMultiplier: 1.0 };
-    } else if (userAgent.includes('firefox')) {
-      return { rateMultiplier: 1.1, pitchMultiplier: 0.95, volumeMultiplier: 1.1 }; // Firefox often needs rate boost
-    } else if (userAgent.includes('safari') && !userAgent.includes('chrome')) {
-      return { rateMultiplier: 0.95, pitchMultiplier: 1.05, volumeMultiplier: 0.95 }; // Safari adjustments
-    } else if (userAgent.includes('edg')) {
-      return { rateMultiplier: 1.05, pitchMultiplier: 0.98, volumeMultiplier: 1.0 }; // Edge adjustments
-    } else {
-      return { rateMultiplier: 1.0, pitchMultiplier: 1.0, volumeMultiplier: 1.0 }; // Default
-    }
-  };  // Voice testing function for users to find most consistent experience
-  const testVoices = () => {
-    const voices = window.speechSynthesis.getVoices();
-    const storyteller = storyVoices.find(v => v.name === 'Martha');
 
-    if (!storyteller || voices.length === 0) return;
 
-    // Test top 3 voices with a sample sentence
-    const testSentence = "Hello, I am Martha, your storytelling companion.";
-    const topVoices = voices
-      .map(voice => ({
-        voice,
-        score: calculateVoiceScore(voice, storyteller)
-      }))
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 3);
 
-    console.log('Testing top 3 voices for Martha:');
-    topVoices.forEach((voiceScore, index) => {
-      setTimeout(() => {
-        const utterance = new SpeechSynthesisUtterance(testSentence);
-        utterance.voice = voiceScore.voice;
 
-        const settings = getOptimalVoiceSettings(voiceScore.voice, storyteller);
-        utterance.rate = settings.rate;
-        utterance.pitch = settings.pitch;
-        utterance.volume = settings.volume;
 
-        utterance.onstart = () => console.log(`Testing voice ${index + 1}: ${voiceScore.voice.name} (score: ${voiceScore.score})`);
-        window.speechSynthesis.speak(utterance);
-      }, index * 3000); // 3 second gaps between tests
-    });
-  };
 
-  // Expose test function globally for debugging (remove in production)
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.testTTSVoices = testVoices;
-      window.clearTTSPreferences = () => {
-        localStorage.removeItem('ttsVoicePreferences');
-        setVoicePreferences({});
-        console.log('TTS voice preferences cleared');
-      };
-      return () => {
-        delete window.testTTSVoices;
-        delete window.clearTTSPreferences;
-      };
-    }
-  }, []);
+
 
   // Auto-stop speech when slide changes
   useEffect(() => {
     // Clear any lingering utterances from previous slides
-    activeUtterances.current = [];
-    activeTimeouts.current = [];
     stopSpeech();  // always silence old narration
   }, [currentIndex]);
 
@@ -1168,6 +697,9 @@ useEffect(() => {
     );
   }
 
+  // Compute safe speaking flag once
+  const safeSpeaking = isSpeaking || isSpeechActive();
+
   return (
     <>
     <div
@@ -1233,8 +765,6 @@ useEffect(() => {
                 <button
                   type="button"
                   onClick={() => {
-                    activeUtterances.current = []; // Clear any pending utterances
-                    activeTimeouts.current = []; // Clear any pending timeouts
                     stopSpeech();
                     setCurrentIndex(0);
                   }}
@@ -1638,8 +1168,6 @@ useEffect(() => {
                     <button
                       key={idx}
                       onClick={() => {
-                        activeUtterances.current = []; // Clear any pending utterances
-                        activeTimeouts.current = []; // Clear any pending timeouts
                         stopSpeech();
                         setCurrentIndex(idx);
                       }}
@@ -1671,18 +1199,18 @@ useEffect(() => {
                     <button
                       type="button"
                       onClick={() => {
-                        if (isSpeechActive() || isSpeaking) {
+                        if (safeSpeaking) {
                           stopSpeech();
                         } else {
                           speakText();
                         }
                       }}
                       className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded transition-all duration-200 ${
-                        isSpeechActive() || isSpeaking
+                        safeSpeaking
                           ? "text-blue-600 hover:text-blue-700 bg-blue-50"
                           : "text-gray-400 hover:text-[#8B4513]"
                       }`}
-                      title={isSpeechActive() || isSpeaking ? "Stop reading" : "Read aloud"}
+                      title={safeSpeaking ? "Stop reading" : "Read aloud"}
                     >
                       <Volume2 className="w-6 h-6" />
                     </button>
