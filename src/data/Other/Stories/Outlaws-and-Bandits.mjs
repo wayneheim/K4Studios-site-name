@@ -11,8 +11,7 @@ export const storyMeta = {
   "watermarkText": "© Wayne Heim",
   "copyrightName": "Wayne Heim",
   "copyrightYear": "2025",
-  "globalAudioFile": {},
-  "savedAt": "2025-11-08T09:12:29.729Z"
+  "savedAt": "2025-11-08T17:48:38.448Z"
 };
 export const storyData = [
   {
@@ -32,8 +31,8 @@ export const storyData = [
     "showMark": true,
     "watermarkText": "© Wayne Heim",
     "keywords": "wild west, outlaws, cowboys, gun slingers, bandits",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/west-amb-4a.mp3",
-    "globalAudioMode": "ambient"
+    "audioSrc": "",
+    "globalAudioMode": "mute"
   },
   {
     "id": "i-bfKMXS9",
@@ -96,6 +95,51 @@ export const storyData = [
     "audioFile": {}
   },
   {
+    "id": "i-v4vRSb8",
+    "title": "Chasing the Devil’s Tail",
+    "description": "A band of outlaws thunders across the sun-baked prairie, locked in a desperate chase that blurs the line between freedom and fate. The lead rider’s eyes burn with defiance—dust swirling, pistol drawn, every muscle poised between escape and reckoning. In this cinematic moment of high-stakes pursuit, the West’s untamed spirit comes alive: lawmen and renegades, betrayal and brotherhood, justice and the wild urge to outrun it all. Painterly tones and motion lend the scene a timeless grit, capturing the raw energy and narrative tension that define the mythos of the American frontier. © Wayne Heim",
+    "alt": "Four mounted riders charging through the dust, guns drawn, in a dramatic outlaw pursuit across the dry Western landscape. Painterly fine art photograph by Wayne Heim.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/MghZ7PrSDzVhns2qKkVR2xtddsw3NCB3mxScsgwp2/L/_WHO3211-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/KsmF9nCxKZLc3c5Z52nfGfKzxqq9MkDjCbHnrsdt8/M/_WHO3211-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/NHkb48JKZjk6XmxRWhqxvrNgtrM8Kr9ww7vkXHHvh/S/_WHO3211-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/A",
+    "keywords": [
+      "outlaw pursuit",
+      "Western outlaws",
+      "bandit chase",
+      "cowboy posse",
+      "dust and thunder",
+      "Old West manhunt",
+      "wild west action",
+      "lawmen vs outlaws",
+      "cowboy drama",
+      "frontier justice",
+      "cinematic western scene",
+      "high stakes chase",
+      "horses running",
+      "painted photography",
+      "K4 Studios",
+      "Wayne Heim",
+      "fine art western",
+      "painterly cowboy",
+      "historical reenactment"
+    ],
+    "story": "Told you boys—I wasn’t goin’ back there. Not now, not ever. It was mine for the takin’! You’ve got grit, Matt!—but grit ain’t enough to catch someone with nothing left to lose.\n\nDust in my throat, wind stinging my eyes, but all I taste is freedom.\nThey shout my name.  Spitting curses — promise justice.\n\nCatch me if you can, boys! I was born running, and I aim to die that way.",
+    "notes": "This piece is Western drama at full tilt. The choreography of the riders—guns out, bodies forward, horses straining—brings a cinematic urgency worthy of a classic Ford or Leone chase sequence. Notice the interplay of dust and light, and how the riders’ vests and hats echo historic 19th-century outlaw iconography.\n\nBut there’s ambiguity here: who’s the outlaw, who’s the law? The piece channels Remington’s energy and Wyeth’s psychological tension, but with the painterly effect that is now your hallmark. The viewer is thrust into the center of the chase—no time for judgment, just pure motion, adrenaline, and the uneasy question: who gets away, and who’s left in the dust?",
+    "rating": 4,
+    "galleries": [
+      "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
+    ],
+    "visibility": "show",
+    "sortOrder": 2,
+    "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/devils tail5.mp3",
+    "audioLocal": "",
+    "audioFile": {}
+  },
+  {
     "id": "i-44jcjTQ",
     "title": "Over My Dead Body: Frontier Stand-off ",
     "description": "A color Western portrait of a seasoned cowboy braced at his cabin window, rifle ready and gaze fixed on the yard. Warm light rakes the hat, coat, and timber while the room drops to quiet shadow, holding the moment between caution and action. Wayne Heim’s Painterly Fine Art approach shapes tone and texture for a print-first finish—rich color, disciplined contrast, and lived-in detail that honors classic frontier storytelling. Ideal for collectors of Western fine art photography and Americana wall art.",
@@ -136,7 +180,7 @@ export const storyData = [
       "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
     ],
     "visibility": "show",
-    "sortOrder": 4,
+    "sortOrder": 3,
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/Over-My-Dead-Body4.mp3",
     "audioLocal": "",
     "audioFile": {}
@@ -177,7 +221,7 @@ export const storyData = [
       "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
     ],
     "visibility": "show",
-    "sortOrder": 12,
+    "sortOrder": 4,
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/Meant What I Said.mp3",
     "audioLocal": "",
     "audioFile": {}
@@ -216,7 +260,7 @@ export const storyData = [
       "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
     ],
     "visibility": "show",
-    "sortOrder": 14,
+    "sortOrder": 5,
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/Hell or high Water.mp3",
     "audioLocal": "",
     "audioFile": {}
@@ -276,7 +320,7 @@ export const storyData = [
       "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
     ],
     "visibility": "show",
-    "sortOrder": 19,
+    "sortOrder": 6,
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/Up to No Good.mp3",
     "audioLocal": "",
     "audioFile": {}
@@ -336,7 +380,7 @@ export const storyData = [
       "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
     ],
     "visibility": "show",
-    "sortOrder": 25,
+    "sortOrder": 7,
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/Lord Help Us All.mp3",
     "audioLocal": "",
     "audioFile": {}
@@ -378,7 +422,7 @@ export const storyData = [
       "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
     ],
     "visibility": "show",
-    "sortOrder": 26,
+    "sortOrder": 8,
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/Wounded.mp3",
     "audioLocal": "",
     "audioFile": {}
@@ -418,7 +462,7 @@ export const storyData = [
       "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
     ],
     "visibility": "show",
-    "sortOrder": 41,
+    "sortOrder": 9,
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/rescue mission 2.mp3",
     "audioLocal": "",
     "audioFile": {}
@@ -478,7 +522,7 @@ export const storyData = [
       "Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
     ],
     "visibility": "show",
-    "sortOrder": 42,
+    "sortOrder": 10,
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/Making Their Stand.mp3",
     "audioLocal": "",
     "audioFile": {}

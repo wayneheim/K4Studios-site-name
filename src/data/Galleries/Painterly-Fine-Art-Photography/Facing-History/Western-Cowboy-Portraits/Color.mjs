@@ -499,6 +499,45 @@ export const galleryData = [
     "sortOrder": 11
   },
   {
+    "id": "i-xqZwcZh",
+    "title": "Righteous Pursuit",
+    "description": "“Righteous Pursuit” is a painterly fine art photograph capturing the tension and urgency of the American West. A determined cowboy charges forward, eyes set with purpose, every line of his posture radiating focus and inner turmoil. The cinematic green-gray palette and dynamic dust trail evoke classic Western storytelling, while the painterly finish elevates this piece beyond documentary—it becomes living myth.  Ideal for collectors seeking Western fine art wall art, cowboy action prints, and narrative-driven photography, this image stands out within Wayne Heim’s Facing History series as both timeless and contemporary—bridging tradition and innovation in Western art.© Wayne Heim",
+    "alt": "In “Righteous Pursuit,” the spirit of Remington’s action scenes fuses with the psychological intensity of Wyeth and Hopper. Heim’s approach doesn’t just mimic classic Western art—it reframes it, infusing each detail with narrative weight and ambiguity. The low, diagonal thrust of the composition pulls the eye into the chase, while the textured green atmosphere nods to pictorialism and hand-colored 19th-century prints.  What sets this piece apart is its restraint: the cowboy’s face—resolute, neither villain nor hero—anchors the story in moral tension. The painterly treatment deepens the sense of memory and myth, making this work a centerpiece for any serious collection of fine art photography or Western Americana.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/LJj3WLWv23DSSK2RB8Wgj8cJh5wrGbbrfwx3vKMBS/S/_HF26558-983-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/A",
+    "keywords": [
+      "Righteous Pursuit",
+      "Western fine art photography",
+      "painterly cowboy art",
+      "cowboy action photography",
+      "Western art prints",
+      "cinematic Western photography",
+      "Facing History photo series",
+      "cowboy on horseback",
+      "dramatic cowboy wall art",
+      "American West storytelling",
+      "fine art cowboy print",
+      "Western narrative art",
+      "cowboy pursuit photo",
+      "painterly photography Western",
+      "modern Western wall decor",
+      "gritty Western photo art",
+      "horseback action fine art",
+      "museum-quality cowboy print"
+    ],
+    "story": "Muscles tense—dust and vengeance burning like rattlesnakes and whiskey. Heart pounding, hooves digging, rider and mount move as one. Wasn’t supposed to be another one. There’s always another one, until there ain’t.\n\nThe horizon narrows as we chase a reckoning. How’s it always go South so fast around here?",
+    "notes": "In “Righteous Pursuit,” the spirit of Remington’s action scenes fuses with the psychological intensity of Wyeth and Hopper. Heim’s approach doesn’t just mimic classic Western art—it reframes it, infusing each detail with narrative weight and ambiguity. The low, diagonal thrust of the composition pulls the eye into the chase, while the textured green atmosphere nods to pictorialism and hand-colored 19th-century prints.\n\nWhat sets this piece apart is its restraint: the cowboy’s face—resolute, neither villain nor hero—anchors the story in moral tension. The painterly treatment deepens the sense of memory and myth, making this work a centerpiece for any serious collection of fine art photography or Western Americana.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 12
+  },
+  {
     "id": "i-c5K798H",
     "title": "Meant What I Said!",
     "description": "A bold Western fine art photograph by Wayne Heim, “Meant What I Said!” captures a classic cowboy moment—revolver drawn, rope coiled, and a look that needs no translation. This image channels the grit, wit, and character of the American West—ideal for collectors of cowboy art, portrait photography, and narrative-driven fine art.\n© Wayne Heim",
@@ -532,7 +571,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 13
   },
   {
     "id": "i-k4b6c5b",
@@ -589,7 +628,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 14
   },
   {
     "id": "i-QB4jLsH",
@@ -623,7 +662,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 14
+    "sortOrder": 15
   },
   {
     "id": "i-wfqSGcV",
@@ -657,7 +696,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 16
   },
   {
     "id": "i-VDLVwqr",
@@ -695,7 +734,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 16
+    "sortOrder": 17
   },
   {
     "id": "i-hrmrhT3",
@@ -752,7 +791,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 18
   },
   {
     "id": "i-HBRmWg4",
@@ -784,7 +823,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 19
   },
   {
     "id": "i-mLPgSpC",
@@ -841,7 +880,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 20
   },
   {
     "id": "i-hMXZ8Xh",
@@ -898,7 +937,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 21
   },
   {
     "id": "i-8rsG6P9",
@@ -930,7 +969,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 22
   },
   {
     "id": "i-2D49wp7",
@@ -960,7 +999,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 23
   },
   {
     "id": "i-RT474Nz",
@@ -990,7 +1029,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 24
   },
   {
     "id": "i-WxQjxQS",
@@ -1027,7 +1066,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 25
   },
   {
     "id": "i-qVZ9m7j",
@@ -1084,7 +1123,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 26
   },
   {
     "id": "i-JKnW497",
@@ -1123,7 +1162,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 27
   },
   {
     "id": "i-5HpSkgR",
@@ -1152,7 +1191,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 28
   },
   {
     "id": "i-cFhZXJc",
@@ -1187,7 +1226,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 29
   },
   {
     "id": "i-LCspRF4",
@@ -1224,7 +1263,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 30
   },
   {
     "id": "i-mpfG8XF",
@@ -1281,7 +1320,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 31
   },
   {
     "id": "i-PM4d3g3",
@@ -1317,7 +1356,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 32
   },
   {
     "id": "i-T7TFJX2",
@@ -1354,7 +1393,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 33
   },
   {
     "id": "i-5FX3W9r",
@@ -1411,7 +1450,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 34
   },
   {
     "id": "i-Dw6Z8ff",
@@ -1469,7 +1508,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 35
   },
   {
     "id": "i-Rx5gLJz",
@@ -1483,7 +1522,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Rx5gLJz/8/MWxJ6V6Vcv4VnZcmMCdd5f8s7bnNg7xczHp2bXrBV/S/cowboy%20artwork%20_HF20502-Enhanced-NR-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Rx5gLJz/A",
-
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -1520,19 +1558,14 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-
     "story": "Running their mouths like a mountain stream in spring.\nNight after night with these two… nothing but trouble.\n\nMartha always told me to “use my words first.”\nBut I reckon they gotta be deaf or dumb.\n\nNow the sun’s rising on a day that’s bound to go sideways.\nWhiskey, words, and lead are never a good combination.",
     "notes": "This portrait holds tension in every detail. The subject’s stance is relaxed, but his gaze isn’t. That look—quiet, calculating—delivers more narrative than any action could.\n\nHeim’s painterly technique channels the tonal control of Frank Tenney Johnson and the narrative weight of Howard Terpning, rendering not just a figure, but a moment suspended between patience and consequence.\n\nThe lighting isolates the subject without dramatization, allowing texture, expression, and posture to do the storytelling. This is Western art at its most distilled: a single character, a single breath, and everything unsaid.",
     "rating": 3,
-
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-
     "visibility": "show",
-    "sortOrder": 35,
-    autoGenerated: false,
-    autoTitle: false
+    "sortOrder": 36
   },
   {
     "id": "i-7dCKHjg",
@@ -1562,7 +1595,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 37
   },
   {
     "id": "i-tnWbQrT",
@@ -1599,7 +1632,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 38
   },
   {
     "id": "i-M2WdKTL",
@@ -1635,7 +1668,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 39
   },
   {
     "id": "i-CzWxpvV",
@@ -1666,7 +1699,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 40
   },
   {
     "id": "i-gL3Nnth",
@@ -1703,7 +1736,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 41
   },
   {
     "id": "i-KVxkXrV",
@@ -1740,7 +1773,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 42
   },
   {
     "id": "i-sTnckb6",
@@ -1797,7 +1830,47 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 43
+  },
+  {
+    "id": "i-v4vRSb8",
+    "title": "Chasing the Devil’s Tail",
+    "description": "A band of outlaws thunders across the sun-baked prairie, locked in a desperate chase that blurs the line between freedom and fate. The lead rider’s eyes burn with defiance—dust swirling, pistol drawn, every muscle poised between escape and reckoning. In this cinematic moment of high-stakes pursuit, the West’s untamed spirit comes alive: lawmen and renegades, betrayal and brotherhood, justice and the wild urge to outrun it all. Painterly tones and motion lend the scene a timeless grit, capturing the raw energy and narrative tension that define the mythos of the American frontier. © Wayne Heim",
+    "alt": "Four mounted riders charging through the dust, guns drawn, in a dramatic outlaw pursuit across the dry Western landscape. Painterly fine art photograph by Wayne Heim.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/MghZ7PrSDzVhns2qKkVR2xtddsw3NCB3mxScsgwp2/L/_WHO3211-Edit-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/KsmF9nCxKZLc3c5Z52nfGfKzxqq9MkDjCbHnrsdt8/M/_WHO3211-Edit-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/NHkb48JKZjk6XmxRWhqxvrNgtrM8Kr9ww7vkXHHvh/S/_WHO3211-Edit-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/A",
+    "keywords": [
+      "outlaw pursuit",
+      "Western outlaws",
+      "bandit chase",
+      "cowboy posse",
+      "dust and thunder",
+      "Old West manhunt",
+      "wild west action",
+      "lawmen vs outlaws",
+      "cowboy drama",
+      "frontier justice",
+      "cinematic western scene",
+      "high stakes chase",
+      "horses running",
+      "painted photography",
+      "K4 Studios",
+      "Wayne Heim",
+      "fine art western",
+      "painterly cowboy",
+      "historical reenactment"
+    ],
+    "story": "Told you boys—I wasn’t goin’ back there. Not now, not ever. It was mine for the takin’! You’ve got grit, Matt!—but grit ain’t enough to catch someone with nothing left to lose.\n\nDust in my throat, wind stinging my eyes, but all I taste is freedom.\nThey shout my name.  Spitting curses — promise justice.\n\nCatch me if you can, boys! I was born running, and I aim to die that way.",
+    "notes": "This piece is Western drama at full tilt. The choreography of the riders—guns out, bodies forward, horses straining—brings a cinematic urgency worthy of a classic Ford or Leone chase sequence. Notice the interplay of dust and light, and how the riders’ vests and hats echo historic 19th-century outlaw iconography.\n\nBut there’s ambiguity here: who’s the outlaw, who’s the law? The piece channels Remington’s energy and Wyeth’s psychological tension, but with the painterly effect that is now your hallmark. The viewer is thrust into the center of the chase—no time for judgment, just pure motion, adrenaline, and the uneasy question: who gets away, and who’s left in the dust?",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 44
   },
   {
     "id": "i-vFrxmXD",
@@ -1835,7 +1908,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 45
   },
   {
     "id": "i-KBNSftv",
@@ -1873,7 +1946,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 46
   },
   {
     "id": "i-MF3xPCZ",
@@ -1911,7 +1984,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 47
   },
   {
     "id": "i-bJ9LJtg",
@@ -1934,7 +2007,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 48
   },
   {
     "id": "i-ZRFr8hd",
@@ -1965,7 +2038,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 49
   },
   {
     "id": "i-gF8j3Jz",
@@ -1998,7 +2071,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 50
   },
   {
     "id": "i-ML9dbMj",
@@ -2055,7 +2128,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 51
   },
   {
     "id": "i-xmJ87ZT",
@@ -2085,7 +2158,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 52
   },
   {
     "id": "i-8VPQmkW",
@@ -2142,7 +2215,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 53
   },
   {
     "id": "i-6Ffpw9t",
@@ -2180,7 +2253,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 54
   },
   {
     "id": "i-NKdPDCg",
@@ -2213,7 +2286,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 55
   },
   {
     "id": "i-LLdZzQW",
@@ -2270,7 +2343,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 56
   },
   {
     "id": "i-DwVBJb3",
@@ -2327,7 +2400,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 57
   },
   {
     "id": "i-sLL3pQG",
@@ -2356,7 +2429,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 58
   },
   {
     "id": "i-LBSWzcj",
@@ -2391,7 +2464,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 59
   },
   {
     "id": "i-ZPmj5Wk",
@@ -2448,7 +2521,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 60
   },
   {
     "id": "i-dNgct6r",
@@ -2505,7 +2578,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 61
   },
   {
     "id": "i-z3wvMkB",
@@ -2536,7 +2609,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 62
   },
   {
     "id": "i-gj4hHmL",
@@ -2593,7 +2666,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 63
   },
   {
     "id": "i-8BbMZjs",
@@ -2650,7 +2723,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 64
   },
   {
     "id": "i-Mm3jXFH",
@@ -2707,7 +2780,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 65
   },
   {
     "id": "i-T6bD4w7",
@@ -2736,7 +2809,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 66
   },
   {
     "id": "i-7Jzf69b",
@@ -2793,7 +2866,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 67
   },
   {
     "id": "i-mbND55n",
@@ -2830,7 +2903,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 68
   },
   {
     "id": "i-vP376vx",
@@ -2887,7 +2960,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 69
   },
   {
     "id": "i-8CfzGMc",
@@ -2918,7 +2991,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 70
   },
   {
     "id": "i-JM7kNVv",
@@ -2941,7 +3014,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 71
   },
   {
     "id": "i-rMkQnM6",
@@ -2998,7 +3071,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 72
   },
   {
     "id": "i-b3vCXwR",
@@ -3055,7 +3128,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 73
   },
   {
     "id": "i-TLDkd5q",
@@ -3112,7 +3185,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 74
   },
   {
     "id": "i-FVHm8VJ",
@@ -3169,7 +3242,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 75
   },
   {
     "id": "i-k6jGzSq",
@@ -3226,7 +3299,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 76
   },
   {
     "id": "i-GG7mgqM",
@@ -3283,7 +3356,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 77
   },
   {
     "id": "i-P8B2zJj",
@@ -3340,7 +3413,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 78
   },
   {
     "id": "i-KTGLfqc",
@@ -3397,7 +3470,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 79
   },
   {
     "id": "i-v4TzPgF",
@@ -3454,7 +3527,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 80
   },
   {
     "id": "i-8cXqSjj",
@@ -3511,7 +3584,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 81
   },
   {
     "id": "i-mHpH7rZ",
@@ -3568,7 +3641,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 82
   },
   {
     "id": "i-vGkvhmq",
@@ -3625,7 +3698,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 83
   },
   {
     "id": "i-mdz2QGr",
@@ -3682,7 +3755,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 84
   },
   {
     "id": "i-6pLTtkL",
@@ -3739,7 +3812,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 83
+    "sortOrder": 85
   },
   {
     "id": "i-btSc5RS",
@@ -3781,7 +3854,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 84
+    "sortOrder": 86
   },
   {
     "id": "i-8zFZ3jn",
@@ -3838,7 +3911,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 87
   },
   {
     "id": "i-p9FqvPh",
@@ -3895,7 +3968,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 88
   },
   {
     "id": "i-xNnJTSK",
@@ -3952,7 +4025,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 89
   },
   {
     "id": "i-rhqqrfz",
@@ -4009,7 +4082,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 88
+    "sortOrder": 90
   },
   {
     "id": "i-D5kv9Q6",
@@ -4066,7 +4139,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 89
+    "sortOrder": 91
   },
   {
     "id": "i-D3HdMmb",
@@ -4123,7 +4196,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 90
+    "sortOrder": 92
   },
   {
     "id": "i-xXQ3gDM",
@@ -4180,7 +4253,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 91
+    "sortOrder": 93
   },
   {
     "id": "i-8JSdTGz",
@@ -4237,7 +4310,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 92
+    "sortOrder": 94
   },
   {
     "id": "i-6GQxb97",
@@ -4294,7 +4367,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 93
+    "sortOrder": 95
   },
   {
     "id": "i-J8Tr628",
@@ -4351,7 +4424,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 94
+    "sortOrder": 96
   },
   {
     "id": "i-zv8VJBg",
@@ -4408,7 +4481,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 95
+    "sortOrder": 97
   },
   {
     "id": "i-FpH3LXf",
@@ -4443,7 +4516,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 96
+    "sortOrder": 98
   },
   {
     "id": "i-sBDTm7k",
@@ -4500,7 +4573,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 97
+    "sortOrder": 99
   },
   {
     "id": "i-8Ld2ZHQ",
@@ -4557,7 +4630,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 98
+    "sortOrder": 100
   },
   {
     "id": "i-Dthbn8K",
@@ -4614,7 +4687,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 99
+    "sortOrder": 101
   },
   {
     "id": "i-jcLJT4J",
@@ -4643,7 +4716,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 100
+    "sortOrder": 102
   },
   {
     "id": "i-vpt6C9V",
@@ -4679,7 +4752,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 101
+    "sortOrder": 103
   },
   {
     "id": "i-V5WcTqg",
@@ -4714,7 +4787,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 102
+    "sortOrder": 104
   },
   {
     "id": "i-vcX6WLC",
@@ -4771,7 +4844,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 103
+    "sortOrder": 105
   },
   {
     "id": "i-TtXPkVK",
@@ -4828,7 +4901,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 104
+    "sortOrder": 106
   },
   {
     "id": "i-Cg4ZB72",
@@ -4885,7 +4958,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 105
+    "sortOrder": 107
   },
   {
     "id": "i-6G4PBd8",
@@ -4942,7 +5015,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 106
+    "sortOrder": 108
   },
   {
     "id": "i-PPJ9GKf",
@@ -4972,7 +5045,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 107
+    "sortOrder": 109
   },
   {
     "id": "i-HHxxcsM",
@@ -5029,7 +5102,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 108
+    "sortOrder": 110
   },
   {
     "id": "i-w3JBvXs",
@@ -5086,7 +5159,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 109
+    "sortOrder": 111
   },
   {
     "id": "i-pNSX6cp",
@@ -5143,7 +5216,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 112
   },
   {
     "id": "i-FsLKLp3",
@@ -5200,7 +5273,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 111
+    "sortOrder": 113
   },
   {
     "id": "i-zH8SD79",
@@ -5257,7 +5330,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 112
+    "sortOrder": 114
   },
   {
     "id": "i-dwk4K8v",
@@ -5314,7 +5387,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 113
+    "sortOrder": 115
   },
   {
     "id": "i-ZKCtdPV",
@@ -5371,7 +5444,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 114
+    "sortOrder": 116
   },
   {
     "id": "i-CgCxXGG",
@@ -5428,7 +5501,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 115
+    "sortOrder": 117
   },
   {
     "id": "i-TVSQHzg",
@@ -5485,7 +5558,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 116
+    "sortOrder": 118
   },
   {
     "id": "i-dqdZcnX",
@@ -5542,7 +5615,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 117
+    "sortOrder": 119
   },
   {
     "id": "i-G7csptc",
@@ -5573,7 +5646,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 118
+    "sortOrder": 120
   },
   {
     "id": "i-cKFv3th",
@@ -5630,7 +5703,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 119
+    "sortOrder": 121
   },
   {
     "id": "i-MDrw6sD",
@@ -5687,7 +5760,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 120
+    "sortOrder": 122
   },
   {
     "id": "i-3ppJNtd",
@@ -5744,7 +5817,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 121
+    "sortOrder": 123
   },
   {
     "id": "i-SPTNHnP",
@@ -5801,7 +5874,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 122
+    "sortOrder": 124
   },
   {
     "id": "i-DGtgJJJ",
@@ -5839,7 +5912,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 123
+    "sortOrder": 125
   },
   {
     "id": "i-NBsQ59h",
@@ -5896,7 +5969,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 124
+    "sortOrder": 126
   },
   {
     "id": "i-6BgfRxb",
@@ -5953,7 +6026,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 125
+    "sortOrder": 127
   },
   {
     "id": "i-zXnjqZZ",
@@ -6010,7 +6083,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 126
+    "sortOrder": 128
   },
   {
     "id": "i-Khb37pn",
@@ -6067,7 +6140,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 127
+    "sortOrder": 129
   },
   {
     "id": "i-mJQCXmh",
@@ -6124,7 +6197,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 128
+    "sortOrder": 130
   },
   {
     "id": "i-jLSNwCT",
@@ -6181,7 +6254,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 129
+    "sortOrder": 131
   },
   {
     "id": "i-kBNpRtm",
@@ -6212,7 +6285,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 130
+    "sortOrder": 132
   },
   {
     "id": "i-xr5chJG",
@@ -6242,7 +6315,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 131
+    "sortOrder": 133
   },
   {
     "id": "i-GPq6m5q",
@@ -6264,7 +6337,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 132
+    "sortOrder": 134
   },
   {
     "id": "i-nLKscbQ",
@@ -6301,7 +6374,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 133
+    "sortOrder": 135
   },
   {
     "id": "i-TQw7vC7",
@@ -6358,7 +6431,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 134
+    "sortOrder": 136
   },
   {
     "id": "i-MnX4pxX",
@@ -6415,7 +6488,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 135
+    "sortOrder": 137
   },
   {
     "id": "i-SVwxn5L",
@@ -6452,7 +6525,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 136
+    "sortOrder": 138
   },
   {
     "id": "i-gQ7GZ5s",
@@ -6509,7 +6582,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 137
+    "sortOrder": 139
   },
   {
     "id": "i-52tTd9G",
@@ -6566,7 +6639,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 138
+    "sortOrder": 140
   },
   {
     "id": "i-TpkTsMg",
@@ -6603,7 +6676,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 139
+    "sortOrder": 141
   },
   {
     "id": "i-xZkmnnx",
@@ -6626,7 +6699,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 140
+    "sortOrder": 142
   },
   {
     "id": "i-trM4FpR",
@@ -6683,7 +6756,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 141
+    "sortOrder": 143
   },
   {
     "id": "i-bkjkPfH",
@@ -6740,7 +6813,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 142
+    "sortOrder": 144
   },
   {
     "id": "i-R3CqrBr",
@@ -6776,7 +6849,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 143
+    "sortOrder": 145
   },
   {
     "id": "i-XsdNV9s",
@@ -6806,7 +6879,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 144
+    "sortOrder": 146
   },
   {
     "id": "i-Cz82g6x",
@@ -6863,7 +6936,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 145
+    "sortOrder": 147
   },
   {
     "id": "i-QWT3QZ4",
@@ -6900,7 +6973,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 146
+    "sortOrder": 148
   },
   {
     "id": "i-WCw4qpB",
@@ -6957,7 +7030,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 147
+    "sortOrder": 149
   },
   {
     "id": "i-sDLXtRZ",
@@ -7014,7 +7087,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 148
+    "sortOrder": 150
   },
   {
     "id": "i-X9h6sdw",
@@ -7052,7 +7125,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 149
+    "sortOrder": 151
   },
   {
     "id": "i-kh6KWS9",
@@ -7109,7 +7182,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 150
+    "sortOrder": 152
   },
   {
     "id": "i-bN9mRH6",
@@ -7166,7 +7239,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 151
+    "sortOrder": 153
   },
   {
     "id": "i-cF2kLFP",
@@ -7223,7 +7296,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 152
+    "sortOrder": 154
   },
   {
     "id": "i-2Z3ZvJS",
@@ -7280,7 +7353,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 153
+    "sortOrder": 155
   },
   {
     "id": "i-XR9PZT5",
@@ -7337,7 +7410,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 154
+    "sortOrder": 156
   },
   {
     "id": "i-R2JG4bd",
@@ -7394,7 +7467,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 155
+    "sortOrder": 157
   },
   {
     "id": "i-fTHtL25",
@@ -7430,7 +7503,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 156
+    "sortOrder": 158
   },
   {
     "id": "i-6dHrd9m",
@@ -7487,7 +7560,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 157
+    "sortOrder": 159
   },
   {
     "id": "i-QxFK26w",
@@ -7544,7 +7617,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 160
   },
   {
     "id": "i-zW6Zb4W",
@@ -7601,7 +7674,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 159
+    "sortOrder": 161
   },
   {
     "id": "i-bxsRc6q",
@@ -7637,7 +7710,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 160
+    "sortOrder": 162
   },
   {
     "id": "i-tgzR5Rh",
@@ -7694,7 +7767,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 161
+    "sortOrder": 163
   },
   {
     "id": "i-5BtMrfM",
@@ -7751,7 +7824,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 162
+    "sortOrder": 164
   },
   {
     "id": "i-qXd5779",
@@ -7808,7 +7881,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 163
+    "sortOrder": 165
   },
   {
     "id": "i-GH7H4LC",
@@ -7865,7 +7938,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 164
+    "sortOrder": 166
   },
   {
     "id": "i-qzGSQz7",
@@ -7902,7 +7975,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 165
+    "sortOrder": 167
   },
   {
     "id": "i-5LTzhJ6",
@@ -7939,7 +8012,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 166
+    "sortOrder": 168
   },
   {
     "id": "i-dwVgbxR",
@@ -7976,7 +8049,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 167
+    "sortOrder": 169
   },
   {
     "id": "i-7K9GG9z",
@@ -8033,7 +8106,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 168
+    "sortOrder": 170
   },
   {
     "id": "i-GBvFP8Q",
@@ -8071,7 +8144,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 169
+    "sortOrder": 171
   },
   {
     "id": "i-WD9ZmGH",
@@ -8128,7 +8201,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 170
+    "sortOrder": 172
   },
   {
     "id": "i-d9znSwP",
@@ -8165,7 +8238,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 171
+    "sortOrder": 173
   },
   {
     "id": "i-SPd5h6X",
@@ -8222,7 +8295,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 172
+    "sortOrder": 174
   },
   {
     "id": "i-dnxxDXH",
@@ -8279,7 +8352,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 173
+    "sortOrder": 175
   },
   {
     "id": "i-PDVZhtZ",
@@ -8336,7 +8409,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 174
+    "sortOrder": 176
   },
   {
     "id": "i-GjZfMXj",
@@ -8393,7 +8466,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 175
+    "sortOrder": 177
   },
   {
     "id": "i-tWx3N8c",
@@ -8450,7 +8523,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 176
+    "sortOrder": 178
   },
   {
     "id": "i-S5zV9h4",
@@ -8507,7 +8580,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 177
+    "sortOrder": 179
   },
   {
     "id": "i-2Cj8j9W",
@@ -8564,7 +8637,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 178
+    "sortOrder": 180
   },
   {
     "id": "i-gs6X2P7",
@@ -8621,7 +8694,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 179
+    "sortOrder": 181
   },
   {
     "id": "i-QGCQt7M",
@@ -8658,7 +8731,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 180
+    "sortOrder": 182
   },
   {
     "id": "i-n8TX2qS",
@@ -8715,7 +8788,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 181
+    "sortOrder": 183
   },
   {
     "id": "i-tVxgfZN",
@@ -8772,7 +8845,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 182
+    "sortOrder": 184
   },
   {
     "id": "i-4jRzBgC",
@@ -8829,7 +8902,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 183
+    "sortOrder": 185
   },
   {
     "id": "i-7V4VjNm",
@@ -8866,7 +8939,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 184
+    "sortOrder": 186
   },
   {
     "id": "i-S2sZdJB",
@@ -8903,7 +8976,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 185
+    "sortOrder": 187
   },
   {
     "id": "i-7Kwv8vc",
@@ -8960,7 +9033,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 186
+    "sortOrder": 188
   },
   {
     "id": "i-TgkwSbh",
@@ -9017,7 +9090,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 187
+    "sortOrder": 189
   },
   {
     "id": "i-grM2LkC",
@@ -9074,7 +9147,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 188
+    "sortOrder": 190
   },
   {
     "id": "i-Lk79jNj",
@@ -9131,7 +9204,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 189
+    "sortOrder": 191
   },
   {
     "id": "i-GK7Trs9",
@@ -9188,7 +9261,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 190
+    "sortOrder": 192
   },
   {
     "id": "i-WSQrZ3M",
@@ -9245,7 +9318,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 191
+    "sortOrder": 193
   },
   {
     "id": "i-spjF4Zd",
@@ -9302,7 +9375,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 192
+    "sortOrder": 194
   },
   {
     "id": "i-rC7SvgP",
@@ -9359,7 +9432,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 193
+    "sortOrder": 195
   },
   {
     "id": "i-vTp98Z6",
@@ -9416,7 +9489,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 194
+    "sortOrder": 196
   },
   {
     "id": "i-7RWxjz3",
@@ -9473,7 +9546,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 195
+    "sortOrder": 197
   },
   {
     "id": "i-vrc7KkJ",
@@ -9503,7 +9576,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 196
+    "sortOrder": 198
   },
   {
     "id": "i-5PbMGPm",
@@ -9539,7 +9612,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 197
+    "sortOrder": 199
   },
   {
     "id": "i-hrghzzx",
@@ -9596,7 +9669,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 198
+    "sortOrder": 200
   },
   {
     "id": "i-8W7jxkN",
@@ -9653,7 +9726,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 199
+    "sortOrder": 201
   },
   {
     "id": "i-V5djX4B",
@@ -9710,7 +9783,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 200
+    "sortOrder": 202
   },
   {
     "id": "i-GSPLsk9",
@@ -9767,7 +9840,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 201
+    "sortOrder": 203
   },
   {
     "id": "i-9q5B7FX",
@@ -9803,7 +9876,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 202
+    "sortOrder": 204
   },
   {
     "id": "i-SBjhvGf",
@@ -9840,7 +9913,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 203
+    "sortOrder": 205
   },
   {
     "id": "i-WzTZ6Jv",
@@ -9897,7 +9970,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 204
+    "sortOrder": 206
   },
   {
     "id": "i-s79JnZ2",
@@ -9954,7 +10027,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 205
+    "sortOrder": 207
   },
   {
     "id": "i-76Fjxvs",
@@ -10011,7 +10084,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 206
+    "sortOrder": 208
   },
   {
     "id": "i-qwPBrns",
@@ -10048,7 +10121,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 207
+    "sortOrder": 209
   },
   {
     "id": "i-HZK96qf",
@@ -10084,7 +10157,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 208
+    "sortOrder": 210
   },
   {
     "id": "i-8g6m7tf",
@@ -10116,7 +10189,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 209
+    "sortOrder": 211
   },
   {
     "id": "i-z3VScfV",
@@ -10173,7 +10246,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 210
+    "sortOrder": 212
   },
   {
     "id": "i-MB2KXB3",
@@ -10230,7 +10303,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 211
+    "sortOrder": 213
   },
   {
     "id": "i-XnW7ZD5",
@@ -10262,7 +10335,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 212
+    "sortOrder": 214
   },
   {
     "id": "i-fJ9WQSS",
@@ -10319,7 +10392,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 213
+    "sortOrder": 215
   },
   {
     "id": "i-b4hnpNn",
@@ -10356,7 +10429,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 214
+    "sortOrder": 216
   },
   {
     "id": "i-jmNjVwB",
@@ -10414,7 +10487,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 215
+    "sortOrder": 217
   },
   {
     "id": "i-48jGpLt",
@@ -10452,7 +10525,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 216
+    "sortOrder": 218
   },
   {
     "id": "i-BtCH5S3",
@@ -10509,7 +10582,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 217
+    "sortOrder": 219
   },
   {
     "id": "i-2jfdQGw",
@@ -10546,7 +10619,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 218
+    "sortOrder": 220
   },
   {
     "id": "i-xMk6ZJ9",
@@ -10582,7 +10655,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 219
+    "sortOrder": 221
   },
   {
     "id": "i-2pRkNng",
@@ -10639,7 +10712,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 220
+    "sortOrder": 222
   },
   {
     "id": "i-b7HtD4R",
@@ -10696,7 +10769,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 221
+    "sortOrder": 223
   },
   {
     "id": "i-5T9mQqT",
@@ -10726,7 +10799,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 222
+    "sortOrder": 224
   },
   {
     "id": "i-RMTbDRs",
@@ -10783,7 +10856,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 223
+    "sortOrder": 225
   },
   {
     "id": "i-nXdBwJF",
@@ -10840,7 +10913,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 224
+    "sortOrder": 226
   },
   {
     "id": "i-rGpCKkW",
@@ -10897,7 +10970,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 225
+    "sortOrder": 227
   },
   {
     "id": "i-76PxJSx",
@@ -10954,7 +11027,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 226
+    "sortOrder": 228
   },
   {
     "id": "i-7mLbVvP",
@@ -11011,7 +11084,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 227
+    "sortOrder": 229
   },
   {
     "id": "i-gkHPFXR",
@@ -11068,7 +11141,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 228
+    "sortOrder": 230
   },
   {
     "id": "i-3vrhwQ9",
@@ -11125,7 +11198,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 229
+    "sortOrder": 231
   },
   {
     "id": "i-SrcM3ZN",
@@ -11182,7 +11255,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 230
+    "sortOrder": 232
   },
   {
     "id": "i-sPkKGnX",
@@ -11213,7 +11286,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 231
+    "sortOrder": 233
   },
   {
     "id": "i-PxNFNhQ",
@@ -11244,7 +11317,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 232
+    "sortOrder": 234
   },
   {
     "id": "i-Ns6ZkrF",
@@ -11301,7 +11374,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 233
+    "sortOrder": 235
   },
   {
     "id": "i-RdTR7GD",
@@ -11358,7 +11431,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 234
+    "sortOrder": 236
   },
   {
     "id": "i-GKFFQzH",
@@ -11395,7 +11468,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 235
+    "sortOrder": 237
   },
   {
     "id": "i-JWGwQ7k",
@@ -11432,7 +11505,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 236
+    "sortOrder": 238
   },
   {
     "id": "i-npgMCML",
@@ -11470,7 +11543,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 237
+    "sortOrder": 239
   },
   {
     "id": "i-92mpb3g",
@@ -11508,7 +11581,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 238
+    "sortOrder": 240
   },
   {
     "id": "i-wZ8Zn9p",
@@ -11531,7 +11604,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 239
+    "sortOrder": 241
   },
   {
     "id": "i-WNLSRQf",
@@ -11560,7 +11633,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 240
+    "sortOrder": 242
   },
   {
     "id": "i-Qx9xbv7",
@@ -11590,7 +11663,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 241
+    "sortOrder": 243
   },
   {
     "id": "i-kjWmdVL",
@@ -11628,7 +11701,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 242
+    "sortOrder": 244
   },
   {
     "id": "i-7DZfRCN",
@@ -11664,7 +11737,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 243
+    "sortOrder": 245
   },
   {
     "id": "i-VhHKttr",
@@ -11721,7 +11794,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 244
+    "sortOrder": 246
   },
   {
     "id": "i-fcRrVV5",
@@ -11778,7 +11851,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 245
+    "sortOrder": 247
   },
   {
     "id": "i-rdJ6CV7",
@@ -11815,7 +11888,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 246
+    "sortOrder": 248
   },
   {
     "id": "i-LVFgBBN",
@@ -11872,7 +11945,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 247
+    "sortOrder": 249
   },
   {
     "id": "i-7Rt89mS",
@@ -11902,7 +11975,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 248
+    "sortOrder": 250
   },
   {
     "id": "i-gXvDSdm",
@@ -11936,7 +12009,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 249
+    "sortOrder": 251
   },
   {
     "id": "i-9Bpj29K",
@@ -11993,7 +12066,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 250
+    "sortOrder": 252
   },
   {
     "id": "i-L2BvxrK",
@@ -12024,7 +12097,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 251
+    "sortOrder": 253
   },
   {
     "id": "i-HhKWdh6",
@@ -12081,7 +12154,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 252
+    "sortOrder": 254
   },
   {
     "id": "i-sVrtDx8",
@@ -12138,7 +12211,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 253
+    "sortOrder": 255
   },
   {
     "id": "i-jDmnnrm",
@@ -12195,7 +12268,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 254
+    "sortOrder": 256
   },
   {
     "id": "i-f8VznFc",
@@ -12252,7 +12325,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 255
+    "sortOrder": 257
   },
   {
     "id": "i-wXQgDCx",
@@ -12309,7 +12382,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 256
+    "sortOrder": 258
   },
   {
     "id": "i-DK48RWj",
@@ -12366,7 +12439,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 257
+    "sortOrder": 259
   },
   {
     "id": "i-CFT7PJM",
@@ -12423,7 +12496,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 258
+    "sortOrder": 260
   },
   {
     "id": "i-fsL7pfL",
@@ -12454,7 +12527,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 259
+    "sortOrder": 261
   },
   {
     "id": "i-qDkTww8",
@@ -12484,7 +12557,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 260
+    "sortOrder": 262
   },
   {
     "id": "i-zqZBdJF",
@@ -12514,7 +12587,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 261
+    "sortOrder": 263
   },
   {
     "id": "i-pHhRGL6",
@@ -12571,7 +12644,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 262
+    "sortOrder": 264
   },
   {
     "id": "i-sLtTp4m",
@@ -12628,7 +12701,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 263
+    "sortOrder": 265
   },
   {
     "id": "i-zqZPZF6",
@@ -12685,7 +12758,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 264
+    "sortOrder": 266
   },
   {
     "id": "i-79P6kHT",
@@ -12742,7 +12815,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 265
+    "sortOrder": 267
   },
   {
     "id": "i-qJtstjP",
@@ -12773,7 +12846,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 266
+    "sortOrder": 268
   },
   {
     "id": "i-9LC3ZrM",
@@ -12811,7 +12884,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 267
+    "sortOrder": 269
   },
   {
     "id": "i-J3dh2p4",
@@ -12843,7 +12916,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 268
+    "sortOrder": 270
   },
   {
     "id": "i-7GcQw6R",
@@ -12875,7 +12948,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 269
+    "sortOrder": 271
   },
   {
     "id": "i-tKZ2wgt",
@@ -12932,7 +13005,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 270
+    "sortOrder": 272
   },
   {
     "id": "i-QNLd2xZ",
@@ -12962,7 +13035,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 271
+    "sortOrder": 273
   },
   {
     "id": "i-5fm7Hhr",
@@ -12994,7 +13067,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 272
+    "sortOrder": 274
   },
   {
     "id": "i-6wMDxdF",
@@ -13051,7 +13124,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 273
+    "sortOrder": 275
   },
   {
     "id": "i-m52CLPT",
@@ -13081,7 +13154,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 274
+    "sortOrder": 276
   },
   {
     "id": "i-8pp9T7x",
@@ -13111,7 +13184,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 275
+    "sortOrder": 277
   },
   {
     "id": "i-XpH2QfG",
@@ -13169,7 +13242,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 276
+    "sortOrder": 278
   },
   {
     "id": "i-RRB2hNj",
@@ -13202,7 +13275,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 277
+    "sortOrder": 279
   },
   {
     "id": "i-zN6f785",
@@ -13239,7 +13312,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 278
+    "sortOrder": 280
   },
   {
     "id": "i-4G9GB3b",
@@ -13271,7 +13344,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 279
+    "sortOrder": 281
   },
   {
     "id": "i-DK8t88F",
@@ -13304,7 +13377,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 280
+    "sortOrder": 282
   },
   {
     "id": "i-9Qt4nh7",
@@ -13333,7 +13406,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 281
+    "sortOrder": 283
   },
   {
     "id": "i-qNb7qRw",
@@ -13364,7 +13437,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 282
+    "sortOrder": 284
   },
   {
     "id": "i-kk6DvMJ",
@@ -13396,7 +13469,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 283
+    "sortOrder": 285
   },
   {
     "id": "i-ZDGhLps",
@@ -13453,7 +13526,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 284
+    "sortOrder": 286
   },
   {
     "id": "i-NzMs3RH",
@@ -13482,7 +13555,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 285
+    "sortOrder": 287
   },
   {
     "id": "i-CmHHjwV",
@@ -13512,7 +13585,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 286
+    "sortOrder": 288
   },
   {
     "id": "i-2s2LtQp",
@@ -13542,7 +13615,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 287
+    "sortOrder": 289
   },
   {
     "id": "i-Q3Qm4f2",
@@ -13572,7 +13645,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 288
+    "sortOrder": 290
   },
   {
     "id": "i-KXLmcXW",
@@ -13603,7 +13676,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 289
+    "sortOrder": 291
   },
   {
     "id": "i-rdf8JpZ",
@@ -13632,7 +13705,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 290
+    "sortOrder": 292
   },
   {
     "id": "i-XLXGHT9",
@@ -13661,7 +13734,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 291
+    "sortOrder": 293
   },
   {
     "id": "i-V9Jx8D8",
@@ -13690,7 +13763,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 292
+    "sortOrder": 294
   },
   {
     "id": "i-mn8RKLL",
@@ -13722,7 +13795,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 293
+    "sortOrder": 295
   },
   {
     "id": "i-3V4rCN8",
@@ -13759,7 +13832,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 294
+    "sortOrder": 296
   },
   {
     "id": "i-Q2cHRkn",
@@ -13792,7 +13865,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 295
+    "sortOrder": 297
   },
   {
     "id": "i-549JVNk",
@@ -13824,7 +13897,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 296
+    "sortOrder": 298
   },
   {
     "id": "i-k5zmxS5",
@@ -13855,7 +13928,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 297
+    "sortOrder": 299
   },
   {
     "id": "i-vP7bLLc",
@@ -13890,7 +13963,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 298
+    "sortOrder": 300
   },
   {
     "id": "i-RRw2Tfr",
@@ -13926,7 +13999,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 299
+    "sortOrder": 301
   },
   {
     "id": "i-3vxbnpZ",
@@ -13958,7 +14031,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 300
+    "sortOrder": 302
   },
   {
     "id": "i-73WFHzh",
@@ -13989,7 +14062,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 301
+    "sortOrder": 303
   },
   {
     "id": "i-Z6TkHwJ",
@@ -14020,7 +14093,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 302
+    "sortOrder": 304
   },
   {
     "id": "i-fJmGF7N",
@@ -14048,7 +14121,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 303
+    "sortOrder": 305
   },
   {
     "id": "i-FNSvKZz",
@@ -14085,7 +14158,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 304
+    "sortOrder": 306
   },
   {
     "id": "i-q3f95K3",
@@ -14123,7 +14196,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 305
+    "sortOrder": 307
   },
   {
     "id": "i-NgkC4Zt",
@@ -14159,7 +14232,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 306
+    "sortOrder": 308
   },
   {
     "id": "i-9j9t5n4",
@@ -14195,7 +14268,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 307
+    "sortOrder": 309
   },
   {
     "id": "i-hHVb4vC",
@@ -14233,7 +14306,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 308
+    "sortOrder": 310
   },
   {
     "id": "i-XTs3sP3",
@@ -14264,7 +14337,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 309
+    "sortOrder": 311
   },
   {
     "id": "i-6FGmZK4",
@@ -14294,7 +14367,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 310
+    "sortOrder": 312
   },
   {
     "id": "i-mWMXhcc",
@@ -14330,7 +14403,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 311
+    "sortOrder": 313
   },
   {
     "id": "i-9frbWfJ",
@@ -14361,7 +14434,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 312
+    "sortOrder": 314
   },
   {
     "id": "i-N8PLGR4",
@@ -14392,7 +14465,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 313
+    "sortOrder": 315
   },
   {
     "id": "i-7PMm6sZ",
@@ -14424,7 +14497,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 314
+    "sortOrder": 316
   },
   {
     "id": "i-TNm6hQ3",
@@ -14460,7 +14533,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 315
+    "sortOrder": 317
   },
   {
     "id": "i-Zt47sk7",
@@ -14497,7 +14570,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 316
+    "sortOrder": 318
   },
   {
     "id": "i-5XC2cj5",
@@ -14554,45 +14627,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 317
-  },
-  {
-    "id": "i-xqZwcZh",
-    "title": "Exploring Western Landscapes Fine Art",
-    "description": "Experience western landscapes fine art through this evocative cowboy art from Wayne Heim's portfolio. This piece highlights frontier life with frederic remington, while conveying western landscapes fine art, ideal for those who appreciate western landscapes fine art. Explore historic western prints in fine art. © Wayne Heim",
-    "alt": "western landscapes fine art in fine art photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/MXFS2mWNs4rM7VKF3hfJkpMBmD3RV2t7dqRtWxzFV/XL/_HF26558-983-XL.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/LJj3WLWv23DSSK2RB8Wgj8cJh5wrGbbrfwx3vKMBS/S/_HF26558-983-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "western landscapes fine art",
-      "cowboy art",
-      "frontier life",
-      "frederic remington",
-      "historic western prints",
-      "fine art Western photography",
-      "rugged spirit",
-      "cowboy portraits",
-      "rustic charm"
-    ],
-    "story": "Wayne Heim's exploration of fine art Western photography comes alive in this piece, showcasing rugged spirit and cowboy portraits. A testament to rustic charm in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 318
+    "sortOrder": 319
   },
   {
     "id": "i-6QFpvwm",
@@ -14628,7 +14663,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 319
+    "sortOrder": 320
   },
   {
     "id": "i-NdQnj6P",
@@ -14665,7 +14700,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 320
+    "sortOrder": 321
   },
   {
     "id": "i-QHN52S6",
@@ -14703,7 +14738,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 321
+    "sortOrder": 322
   },
   {
     "id": "i-dsqgfVj",
@@ -14742,7 +14777,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 322
+    "sortOrder": 323
   },
   {
     "id": "i-G9kSt8Q",
@@ -14779,7 +14814,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 323
+    "sortOrder": 324
   },
   {
     "id": "i-drTwKMw",
@@ -14810,7 +14845,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 324
+    "sortOrder": 325
   },
   {
     "id": "i-f9nZhvM",
@@ -14841,7 +14876,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 325
+    "sortOrder": 326
   },
   {
     "id": "i-MMmDhV2",
@@ -14872,7 +14907,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 326
+    "sortOrder": 327
   },
   {
     "id": "i-h6SnLK4",
@@ -14902,7 +14937,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 327
+    "sortOrder": 328
   },
   {
     "id": "i-JcHKH5f",
@@ -14934,7 +14969,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 328
+    "sortOrder": 329
   },
   {
     "id": "i-rTwWXgw",
@@ -14964,7 +14999,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 329
+    "sortOrder": 330
   },
   {
     "id": "i-bhXQ8Hx",
@@ -14986,7 +15021,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 330
+    "sortOrder": 331
   },
   {
     "id": "i-3HM43Zv",
@@ -15024,7 +15059,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 331
+    "sortOrder": 332
   },
   {
     "id": "i-rRdrQBg",
@@ -15061,7 +15096,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 332
+    "sortOrder": 333
   },
   {
     "id": "i-ps4qwgF",
@@ -15118,7 +15153,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 333
+    "sortOrder": 334
   },
   {
     "id": "i-RrRPTZP",
@@ -15175,7 +15210,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 334
+    "sortOrder": 335
   },
   {
     "id": "i-S9PzB6d",
@@ -15198,7 +15233,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 335
+    "sortOrder": 336
   },
   {
     "id": "i-KgkW54w",
@@ -15227,7 +15262,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 336
+    "sortOrder": 337
   },
   {
     "id": "i-xhZhRpL",
@@ -15250,7 +15285,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 337
+    "sortOrder": 338
   },
   {
     "id": "i-Z3sHLGx",
@@ -15272,7 +15307,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 338
+    "sortOrder": 339
   },
   {
     "id": "i-cRmVc3S",
@@ -15294,7 +15329,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 339
+    "sortOrder": 340
   },
   {
     "id": "i-msZxHgR",
@@ -15323,7 +15358,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 340
+    "sortOrder": 341
   },
   {
     "id": "i-LBrd53F",
@@ -15337,35 +15372,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LBrd53F/1/Mm7qrPW8s6wz3SC2jC9pwSBFzp9cJRtt7cSvGk5XB/S/_HF26550-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LBrd53F/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy"
-    ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 341
-  },
-  {
-    "id": "i-v4vRSb8",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/MghZ7PrSDzVhns2qKkVR2xtddsw3NCB3mxScsgwp2/L/_WHO3211-Edit-Edit-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/KsmF9nCxKZLc3c5Z52nfGfKzxqq9MkDjCbHnrsdt8/M/_WHO3211-Edit-Edit-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/0/NHkb48JKZjk6XmxRWhqxvrNgtrM8Kr9ww7vkXHHvh/S/_WHO3211-Edit-Edit-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-v4vRSb8/A",
     "keywords": [
       "a",
       "fine art",
