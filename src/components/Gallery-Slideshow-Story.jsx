@@ -23,6 +23,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
 
   const fsRef = useRef(null);
   const hasUserUnlockedAudioRef = useRef(false);
+  const hasAutoPlayedRef = useRef(false);
 
   // ➋ Orientation + pointer detection
   useEffect(() => {
@@ -187,6 +188,11 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
       return;
     }
 
+    // Only auto-play once per slideshow session
+    if (hasAutoPlayedRef.current) {
+      return;
+    }
+
     // Determine which audio to play: global audio overrides individual
     let primaryAudioSrc = null;
     let ambientAudioSrc = null;
@@ -212,6 +218,8 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
     }
 
     if (primaryAudioSrc) {
+      hasAutoPlayedRef.current = true; // Mark as auto-played
+      
       // Small delay to ensure slideshow is fully rendered
       const timer = setTimeout(() => {
         if (audioRef.current) {
@@ -338,6 +346,13 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
       ambientAudioRef.current.src = "";
     }
   }, [globalAudioSrc, globalAudioMode, current?.audioSrc, isMuted]);
+
+  // Reset autoplay flag when component unmounts
+  useEffect(() => {
+    return () => {
+      hasAutoPlayedRef.current = false;
+    };
+  }, []);
 
   function reorderImages(list, startId) {
     const startIndex = list.findIndex((img) => img.id === startId);
