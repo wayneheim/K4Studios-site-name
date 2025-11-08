@@ -1136,16 +1136,16 @@ const isSpeechActive = () => {
                 </AnimatePresence>
 
                 {/* PROGRESS DOTS & NAV */}
-                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap justify-center items-center gap-2 mt-2 max-w-full`} style={{ boxSizing: 'border-box' }}>
+                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap justify-center items-center gap-1 mt-2 max-w-full`} style={{ boxSizing: 'border-box' }}>
                   {/* PREV BUTTON */}
                   {currentIndex > 0 && (
                     <button
                       type="button"
                       onClick={goPrev}
-                      className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513]  rounded transition-all duration-200"
+                      className="w-8 h-10 sm:w-10 sm:h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513]  rounded transition-all duration-200"
                       title="Previous"
                     >
-                      <SquareChevronLeft className="w-7 h-7" />
+                      <SquareChevronLeft className="w-6 h-6 sm:w-7 sm:h-7" />
                     </button>
                   )}
 
@@ -1157,7 +1157,7 @@ const isSpeechActive = () => {
                         stopSpeech();
                         setCurrentIndex(idx);
                       }}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 hover:ring-2 hover:ring-[#8B4513] hover:ring-opacity-100 ${
+                      className={`w-2 h-2.5 rounded-full transition-all duration-300 hover:ring-2 hover:ring-[#8B4513] hover:ring-opacity-100 ${
                         idx === currentIndex ? "bg-[#8B4513]" : "bg-gray-300"
                       }`}
                       style={{
@@ -1173,10 +1173,10 @@ const isSpeechActive = () => {
                     <button
                       type="button"
                       onClick={goNext}
-                      className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
+                      className="w-8 h-10 sm:w-10 sm:h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
                       title="Next"
                     >
-                      <SquareChevronRight className="w-7 h-7" />
+                      <SquareChevronRight className="w-6 h-6 sm:w-7 sm:h-7" />
                     </button>
                   )}
 
@@ -1191,14 +1191,14 @@ const isSpeechActive = () => {
                           speakText();
                         }
                       }}
-                      className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded transition-all duration-200 ${
+                      className={`w-8 h-10 sm:w-10 sm:h-12 flex items-center justify-center rounded transition-all duration-200 ${
                         safeSpeaking
                           ? "text-blue-600 hover:text-blue-700 bg-blue-50"
                           : "text-gray-400 hover:text-[#8B4513]"
                       }`}
                       title={safeSpeaking ? "Stop reading" : "Read aloud"}
                     >
-                      <Volume2 className="w-6 h-6" />
+                      <Volume2 className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
                   )}
                 </div>
