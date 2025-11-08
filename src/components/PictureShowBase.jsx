@@ -1738,8 +1738,9 @@ useEffect(() => {
             {/* 🔗 Share Drawer */}
             <div className="pb-4">
               <ShareDrawer
-                imageUrl={filteredData?.[0]?.src}
-                pageTitle="Story Complete - K4 Studios"
+                imageUrl="/images/show-t.webp"
+                pageTitle={titleBase || "K4 Studios Picture Show"}
+                pageDescription={storyMeta?.description || "Experience cinematic visual storytelling with Wayne Heim's fine art photography"}
               />
             </div>
 
