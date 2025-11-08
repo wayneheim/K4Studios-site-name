@@ -72,16 +72,6 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     }
   }, [rawData]);
 
-  // Automatically skip landing card and start on first real image
-  useEffect(() => {
-    if (filteredData.length > 0 && currentIndex === 0 && filteredData[0]?.id === 'i-k4studios') {
-      const firstRealIdx = filteredData.findIndex(img => img.id !== 'i-k4studios');
-      if (firstRealIdx > 0) {
-        setCurrentIndex(firstRealIdx);
-      }
-    }
-  }, [filteredData, currentIndex]);
-
   // Determine default volume: 30% for ambient, 50% for score, 70% for mixed/individual audio
   const defaultVolume = useMemo(() => {
     if (globalAudioSrc && filteredData.length > 0) {
