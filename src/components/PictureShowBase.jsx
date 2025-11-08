@@ -1308,6 +1308,7 @@ const isSpeechActive = () => {
           volume={volume}
           setVolume={setVolume}
           audioRef={audioRef}
+          ambientAudioRef={ambientAudioRef}
           setIsSpeaking={setIsSpeaking}
           isSpeaking={isSpeaking}
           globalAudioSrc={globalAudioSrc}

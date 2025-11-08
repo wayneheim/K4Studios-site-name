@@ -11,7 +11,7 @@ const getBestImageSrc = (image) => {
   return image.srcXL || image.srcL || image.srcM || image.src || "";
 };
 
-export default function StoryShow({ images, startImageId, onExit, isMuted = false, setIsMuted, volume = 0.7, setVolume, audioRef, setIsSpeaking, isSpeaking, globalAudioSrc, globalAudioMode }) {
+export default function StoryShow({ images, startImageId, onExit, isMuted = false, setIsMuted, volume = 0.7, setVolume, audioRef, ambientAudioRef, setIsSpeaking, isSpeaking, globalAudioSrc, globalAudioMode }) {
   const [index, setIndex] = useState(0);
   const [isIntro, setIsIntro] = useState(false);
   const [showControls, setShowControls] = useState(true);
@@ -181,44 +181,66 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
     return /FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent);
   }, []);
 
-  // Handle global audio playback (score/ambient) when slideshow starts
+  // Handle audio playback when slideshow starts (global overrides individual, ambient behind individual)
   useEffect(() => {
     if (isMessengerWebView && !hasUserUnlockedAudioRef.current) {
       return;
     }
 
-    // Determine which global audio source to use
-    let globalAudioToPlay = null;
-    let audioVolume = volume;
+    // Determine which audio to play: global audio overrides individual
+    let primaryAudioSrc = null;
+    let ambientAudioSrc = null;
+    let primaryVolume = volume;
+    let ambientVolume = volume * 0.3; // Ambient always at 30%
+    let shouldLoop = false;
 
-    if (globalAudioMode === "score" && globalAudioSrc) {
-      globalAudioToPlay = globalAudioSrc;
-      audioVolume = volume; // Full volume for score
-    } else if (globalAudioMode === "ambient" && globalAudioSrc) {
-      globalAudioToPlay = globalAudioSrc;
-      audioVolume = volume * 0.3; // Lower volume for ambient
+    if (globalAudioSrc && !isMuted) {
+      // Global audio takes priority and overrides individual
+      primaryAudioSrc = globalAudioSrc;
+      primaryVolume = globalAudioMode === "ambient" ? volume * 0.3 : volume;
+      shouldLoop = true; // Global audio should loop
+      
+      // If there's individual audio and global is ambient, play both
+      if (current?.audioSrc && globalAudioMode === "ambient") {
+        ambientAudioSrc = current.audioSrc;
+      }
+    } else if (current?.audioSrc && !isMuted) {
+      // Individual audio only (no global)
+      primaryAudioSrc = current.audioSrc;
+      primaryVolume = volume * 0.35; // Individual audio at 35% volume
+      shouldLoop = false; // Individual audio doesn't loop
     }
 
-    if (globalAudioToPlay && !isMuted) {
+    if (primaryAudioSrc) {
       // Small delay to ensure slideshow is fully rendered
       const timer = setTimeout(() => {
         if (audioRef.current) {
-          audioRef.current.src = globalAudioToPlay;
-          audioRef.current.volume = audioVolume;
-          audioRef.current.loop = true; // Global audio should loop
+          audioRef.current.src = primaryAudioSrc;
+          audioRef.current.volume = primaryVolume;
+          audioRef.current.loop = shouldLoop;
           audioRef.current.play().then(() => {
             hasUserUnlockedAudioRef.current = true;
             setIsSpeaking(true); // Indicate audio is playing
           }).catch((error) => {
-            console.error('Error playing global audio in slideshow:', error);
+            console.error('Error playing primary audio in slideshow:', error);
             hasUserUnlockedAudioRef.current = false;
             setIsSpeaking(false);
           });
         }
-      }, 300); // Slightly longer delay for global audio
+        
+        // Handle ambient audio if needed
+        if (ambientAudioSrc && ambientAudioRef.current) {
+          ambientAudioRef.current.src = ambientAudioSrc;
+          ambientAudioRef.current.volume = ambientVolume;
+          ambientAudioRef.current.loop = false; // Individual audio doesn't loop
+          ambientAudioRef.current.play().catch((error) => {
+            console.error('Error playing ambient audio in slideshow:', error);
+          });
+        }
+      }, 300); // Delay to ensure component is fully mounted
       return () => clearTimeout(timer);
     }
-  }, [globalAudioSrc, globalAudioMode, isMuted, volume, isMessengerWebView]);
+  }, [current?.audioSrc, globalAudioSrc, globalAudioMode, isMuted, volume, isMessengerWebView]);
 
   // Auto-play audio when slideshow index changes, but skip inside Messenger/Instagram webviews
   useEffect(() => {
@@ -227,13 +249,38 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
       return;
     }
 
-    if (current?.audioSrc && !isMuted) {
+    // Determine which audio to play: global audio overrides individual
+    let primaryAudioSrc = null;
+    let ambientAudioSrc = null;
+    let primaryVolume = volume;
+    let ambientVolume = volume * 0.3; // Ambient always at 30%
+    let shouldLoop = false;
+
+    if (globalAudioSrc && !isMuted) {
+      // Global audio takes priority and overrides individual
+      primaryAudioSrc = globalAudioSrc;
+      primaryVolume = globalAudioMode === "ambient" ? volume * 0.3 : volume;
+      shouldLoop = true; // Global audio should loop
+      
+      // If there's individual audio and global is ambient, play both
+      if (current?.audioSrc && globalAudioMode === "ambient") {
+        ambientAudioSrc = current.audioSrc;
+      }
+    } else if (current?.audioSrc && !isMuted) {
+      // Individual audio only (no global)
+      primaryAudioSrc = current.audioSrc;
+      primaryVolume = volume * 0.35; // Individual audio at 35% volume
+      shouldLoop = false; // Individual audio doesn't loop
+    }
+
+    if (primaryAudioSrc) {
       // Small delay to ensure slideshow is fully rendered
       const timer = setTimeout(() => {
         setIsSpeaking(true);
         if (audioRef.current) {
-          audioRef.current.src = current.audioSrc;
-          audioRef.current.volume = volume; // Apply user volume setting
+          audioRef.current.src = primaryAudioSrc;
+          audioRef.current.volume = primaryVolume;
+          audioRef.current.loop = shouldLoop;
           audioRef.current.play().then(() => {
             hasUserUnlockedAudioRef.current = true;
           }).catch((error) => {
@@ -242,30 +289,55 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
             setIsSpeaking(false);
           });
         }
+        
+        // Handle ambient audio if needed
+        if (ambientAudioSrc && ambientAudioRef.current) {
+          ambientAudioRef.current.src = ambientAudioSrc;
+          ambientAudioRef.current.volume = ambientVolume;
+          ambientAudioRef.current.loop = false; // Individual audio doesn't loop
+          ambientAudioRef.current.play().catch((error) => {
+            console.error('Error playing ambient audio in slideshow:', error);
+          });
+        }
       }, 500);
       return () => clearTimeout(timer);
     }
-  }, [index, current?.audioSrc, isMuted, volume, isMessengerWebView]);
+  }, [index, current?.audioSrc, globalAudioSrc, globalAudioMode, isMuted, volume, isMessengerWebView]);
 
-  // Update audio volume when volume setting or global audio mode changes
+  // Update audio volume when volume setting or audio type changes
   useEffect(() => {
+    // Handle primary audio volume
     if (audioRef.current) {
-      // Check if we're currently playing global audio
-      const isPlayingGlobal = globalAudioSrc && (globalAudioMode === "score" || globalAudioMode === "ambient");
-
-      if (isPlayingGlobal) {
-        // Apply appropriate volume for global audio
-        if (globalAudioMode === "score") {
-          audioRef.current.volume = isMuted ? 0 : volume;
-        } else if (globalAudioMode === "ambient") {
-          audioRef.current.volume = isMuted ? 0 : volume * 0.3;
-        }
-      } else {
-        // Individual image audio
-        audioRef.current.volume = isMuted ? 0 : volume;
+      if (isMuted) {
+        audioRef.current.volume = 0;
+      } else if (globalAudioSrc) {
+        // Global audio is playing (overrides individual)
+        audioRef.current.volume = globalAudioMode === "ambient" ? volume * 0.3 : volume;
+      } else if (current?.audioSrc) {
+        // Individual audio only (no global)
+        audioRef.current.volume = volume * 0.35; // Individual at 35%
       }
     }
-  }, [volume, isMuted, globalAudioMode]);
+    
+    // Handle ambient audio volume (when playing dual audio)
+    if (ambientAudioRef.current) {
+      if (isMuted) {
+        ambientAudioRef.current.volume = 0;
+      } else {
+        ambientAudioRef.current.volume = volume * 0.3; // Ambient always at 30%
+      }
+    }
+  }, [volume, isMuted, globalAudioMode, current?.audioSrc, globalAudioSrc]);
+
+  // Stop ambient audio when no longer needed
+  useEffect(() => {
+    const shouldPlayAmbient = globalAudioSrc && globalAudioMode === "ambient" && current?.audioSrc && !isMuted;
+    
+    if (!shouldPlayAmbient && ambientAudioRef.current) {
+      ambientAudioRef.current.pause();
+      ambientAudioRef.current.src = "";
+    }
+  }, [globalAudioSrc, globalAudioMode, current?.audioSrc, isMuted]);
 
   function reorderImages(list, startId) {
     const startIndex = list.findIndex((img) => img.id === startId);
