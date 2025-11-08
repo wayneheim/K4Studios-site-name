@@ -8,6 +8,7 @@ export const storyMeta = {
   "keywords": "demo picture show, western fine art photography, painterly photography, visual storytelling, Wayne Heim, cowboy portraits, cinematic photography",
   "alt": "Demo picture show featuring painterly Western photography and visual storytelling",
   "closingText": "This demo showcases the Picture Show format — immersive visual narratives that blend photography, story, and emotion. Each image tells a story, each sequence creates a journey.",
+  "showWatermark": true,
   "savedAt": "2025-11-06T12:00:00.000Z"
 };
 
