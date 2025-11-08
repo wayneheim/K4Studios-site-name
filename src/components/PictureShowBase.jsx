@@ -38,7 +38,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     if (typeof navigator === "undefined") return false;
     return /FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent);
   }, []);
-  const [isMuted, setIsMuted] = useState(() => isMessengerWebView);
+  const [isMuted, setIsMuted] = useState(false);
   // Control when the intro stack should fan out (start stacked, then fan after ~75% of main card entrance)
   const [fanOut, setFanOut] = useState(false);
   // Start-page hover image sequencing (base -> src2 -> src3)
@@ -414,26 +414,29 @@ useEffect(() => {
   };
 
   const startSlideshow = ({ advanceFromIntro = true, immediate = false } = {}) => {
-    const ua = typeof navigator !== "undefined" ? navigator.userAgent || "" : "";
-    const isMessengerUA = /FBAN|FBAV|Messenger|Instagram/i.test(ua);
-
-    if (isMessengerUA) {
-      try {
-        const silent = document.createElement("audio");
-        silent.src = "";
-        silent.muted = true;
-        const playPromise = silent.play();
-        if (playPromise && typeof playPromise.catch === "function") {
-          playPromise.catch(() => {});
-        }
-        setTimeout(() => silent.pause(), 200);
-      } catch (err) {
-        console.warn("Silent audio unlock failed:", err);
-      }
-    }
-
     const launchSlideshow = () => {
       setShowSlideshow(true);
+
+      // Start global audio if available
+      if (scoreAudioSrc && effectiveGlobalAudioMode === "score") {
+        if (ambientAudioRef.current) {
+          ambientAudioRef.current.src = scoreAudioSrc;
+          ambientAudioRef.current.volume = volume;
+          ambientAudioRef.current.loop = true;
+          ambientAudioRef.current.play().catch((error) => {
+            console.error('Error playing score audio:', error);
+          });
+        }
+      } else if (ambientAudioSrc && effectiveGlobalAudioMode === "ambient") {
+        if (ambientAudioRef.current) {
+          ambientAudioRef.current.src = ambientAudioSrc;
+          ambientAudioRef.current.volume = volume * 0.3;
+          ambientAudioRef.current.loop = true;
+          ambientAudioRef.current.play().catch((error) => {
+            console.error('Error playing ambient audio:', error);
+          });
+        }
+      }
 
       if (advanceFromIntro && currentIndexRef.current === 0 && filteredData.length > 0) {
         goNext();
@@ -1059,7 +1062,7 @@ const isSpeechActive = () => {
                   </div>
                 ) : (
                   /* IMAGE */
-                  <div className="w-full px-5 sm:px-6 md:px-8 flex items-center justify-center min-h-[80vh]" style={{ boxSizing: 'border-box' }}>
+                  <div className="w-full px-5 sm:px-6 md:px-8 flex items-start justify-center pt-2 sm:pt-4 md:pt-8" style={{ boxSizing: 'border-box' }}>
                     <div className="relative" style={{ width: 'fit-content' }}>
                       <img
                         src={getBestImageSrc(currentImage)}

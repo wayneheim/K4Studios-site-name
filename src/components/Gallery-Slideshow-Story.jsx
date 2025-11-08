@@ -108,12 +108,25 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
 
   const [kenAngles] = useState(() =>
     images.map((_, idx) => {
-      const amount = 0.4 + Math.random() * 1.8;
+      const amount = 0.5 + Math.random() * 2.5; // Base rotation capped at 3° max (0.5-3.0°)
       const direction = idx % 2 === 0 ? -1 : 1;
       return direction * amount;
     })
   );
+  const [kenPans] = useState(() =>
+    images.map((img) => {
+      const isVertical = img?.aspectRatio && img.aspectRatio < 1;
+      // Add downward bias since important elements are usually at the top
+      // More bias for vertical images (portrait), less for horizontal (landscape)
+      const downBias = isVertical ? 15 : 8; // 15px down for vertical, 8px for horizontal
+      return {
+        x: (Math.random() - 0.5) * 40, // Random pan up to ±20px
+        y: (Math.random() - 0.5) * 40 + downBias, // Random pan with downward bias
+      };
+    })
+  );
   const kenAngle = kenAngles[index];
+  const kenPan = kenPans[index];
 
   const kenBurns = useMemo(() => {
     // We zoom in, then gently reverse back out on a loop while the slide is visible.
@@ -121,19 +134,19 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
     if (isLandscape && isVertical) {
       // Subtle zoom for portrait-in-landscape
       return {
-        initial: { scale: 1, opacity: 0.95, rotate: 0 },
-        animate: { scale: 1.06, opacity: 1, rotate: 0 },
+        initial: { scale: 1, opacity: 0.95, rotate: 0, x: 0, y: 0 },
+        animate: { scale: 1.06, opacity: 1, rotate: kenAngle * 0.3, x: kenPan.x * 0.3, y: kenPan.y * 0.3 },
         exit: { opacity: 0 },
         transition: { duration: 22, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
       };
     }
     return {
-      initial: { scale: 1.14, opacity: 0.92, rotate: 0 },
-      animate: { scale: 1.5, opacity: 1, rotate: kenAngle },
+      initial: { scale: 1.14, opacity: 0.92, rotate: 0, x: 0, y: 0 },
+      animate: { scale: 1.5, opacity: 1, rotate: kenAngle, x: kenPan.x, y: kenPan.y },
       exit: { opacity: 0 },
       transition: { duration: 22, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
     };
-  }, [isLandscape, isVertical, kenAngle]);
+  }, [isLandscape, isVertical, kenAngle, kenPan]);
 
   // Manual navigation, skipping ghost image
   const goNext = () => {
