@@ -417,26 +417,7 @@ useEffect(() => {
     const launchSlideshow = () => {
       setShowSlideshow(true);
 
-      // Start global audio if available
-      if (scoreAudioSrc && effectiveGlobalAudioMode === "score") {
-        if (ambientAudioRef.current) {
-          ambientAudioRef.current.src = scoreAudioSrc;
-          ambientAudioRef.current.volume = volume;
-          ambientAudioRef.current.loop = true;
-          ambientAudioRef.current.play().catch((error) => {
-            console.error('Error playing score audio:', error);
-          });
-        }
-      } else if (ambientAudioSrc && effectiveGlobalAudioMode === "ambient") {
-        if (ambientAudioRef.current) {
-          ambientAudioRef.current.src = ambientAudioSrc;
-          ambientAudioRef.current.volume = volume * 0.3;
-          ambientAudioRef.current.loop = true;
-          ambientAudioRef.current.play().catch((error) => {
-            console.error('Error playing ambient audio:', error);
-          });
-        }
-      }
+      // Note: Global audio is now handled by the StoryShow component to avoid conflicts
 
       if (advanceFromIntro && currentIndexRef.current === 0 && filteredData.length > 0) {
         goNext();
