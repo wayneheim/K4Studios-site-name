@@ -35,7 +35,11 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [currentVoice, setCurrentVoice] = useState(null);
   const [isCardHovered, setIsCardHovered] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const isMessengerWebView = useMemo(() => {
+    if (typeof navigator === "undefined") return false;
+    return /FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent);
+  }, []);
+  const [isMuted, setIsMuted] = useState(() => isMessengerWebView);
   // Control when the intro stack should fan out (start stacked, then fan after ~75% of main card entrance)
   const [fanOut, setFanOut] = useState(false);
   // Start-page hover image sequencing (base -> src2 -> src3)

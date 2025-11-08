@@ -22,6 +22,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
   const [isCoarsePointer, setIsCoarsePointer] = useState(false);
 
   const fsRef = useRef(null);
+  const hasUserUnlockedAudioRef = useRef(false);
 
   // ➋ Orientation + pointer detection
   useEffect(() => {
@@ -162,8 +163,18 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
     }
   }, [isIntro]);
 
-  // Auto-play audio when slideshow index changes
+  const isMessengerWebView = useMemo(() => {
+    if (typeof navigator === "undefined") return false;
+    return /FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent);
+  }, []);
+
+  // Auto-play audio when slideshow index changes, but skip inside Messenger/Instagram webviews
   useEffect(() => {
+    if (isMessengerWebView && !hasUserUnlockedAudioRef.current) {
+      setIsSpeaking(false);
+      return;
+    }
+
     if (current?.audioSrc && !isMuted) {
       // Small delay to ensure slideshow is fully rendered
       const timer = setTimeout(() => {
@@ -171,15 +182,18 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
         if (audioRef.current) {
           audioRef.current.src = current.audioSrc;
           audioRef.current.volume = volume; // Apply user volume setting
-          audioRef.current.play().catch((error) => {
+          audioRef.current.play().then(() => {
+            hasUserUnlockedAudioRef.current = true;
+          }).catch((error) => {
             console.error('Error auto-playing audio in slideshow:', error);
+            hasUserUnlockedAudioRef.current = false;
             setIsSpeaking(false);
           });
         }
       }, 500);
       return () => clearTimeout(timer);
     }
-  }, [index, current?.audioSrc, isMuted, volume]);
+  }, [index, current?.audioSrc, isMuted, volume, isMessengerWebView]);
 
   // Update audio volume when volume setting changes
   useEffect(() => {
@@ -408,14 +422,17 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
                         if (current?.audioSrc && audioRef.current) {
                           audioRef.current.src = current.audioSrc;
                           audioRef.current.volume = volume;
+                          hasUserUnlockedAudioRef.current = true;
                           audioRef.current.play().catch((error) => {
                             console.error('Error playing audio on unmute:', error);
+                            hasUserUnlockedAudioRef.current = false;
                           });
                           setIsSpeaking(true);
                         }
                       } else {
                         // Muting - stop current playback
                         setIsMuted(true);
+                        hasUserUnlockedAudioRef.current = false;
                         if (audioRef.current) {
                           audioRef.current.pause();
                           audioRef.current.currentTime = 0;
