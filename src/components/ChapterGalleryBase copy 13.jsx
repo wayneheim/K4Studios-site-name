@@ -274,7 +274,6 @@ export default function ChapterGalleryBase({
   const path = typeof window !== "undefined" ? window.location.pathname.toLowerCase() : (basePath || "").toLowerCase();
   const isBW = path.includes("/black-white/");
   const editionTag = isBW ? "Black and White" : "Color";
-  const isEngrainedSeries = basePath && basePath.includes("Engrained");
 
   // Generate appropriate title for the section landing page
   const getSectionDisplayTitle = (url) => {
@@ -412,7 +411,6 @@ export default function ChapterGalleryBase({
   const [isMobile, setIsMobile] = useState(false);
   const [showStoryShow, setShowStoryShow] = useState(false);
   const [showCollectorHint, setShowCollectorHint] = useState(false);
-  const [showPricingModal, setShowPricingModal] = useState(false);
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
@@ -1003,46 +1001,26 @@ export default function ChapterGalleryBase({
                       </form>
 
                       {/* Cart */}
-                      {isEngrainedSeries ? (
-                        <button
-                          data-cart-btn
-                          title="Click to see pricing"
-                          className="inline-flex items-center justify-center w-8 h-8 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
-                          style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
-                          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
-                          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
-                          onClick={() => {
-                            setShowPricingModal(true);
-                            logUIEvent("pricing_modal_open", {
-                              page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id
-                            });
-                          }}
-                        >
-                          <ShoppingCart className="w-4 h-4" />
-                        </button>
-                      ) : (
-                        <a
-                          data-cart-btn
-                          href={galleryData[currentIndex]?.buyLink || "#"}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Click to order prints"
-                          className="inline-flex items-center justify-center w-8 h-8 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
-                          style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
-                          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
-                          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
-                          onClick={() => {
-                            logUIEvent("buy_link_click", {
-                              page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id,
-                              buyLink: galleryData[currentIndex]?.buyLink
-                            });
-                          }}
-                        >
-                          <ShoppingCart className="w-4 h-4" />
-                        </a>
-                      )}
+                      <a
+                        data-cart-btn
+                        href={galleryData[currentIndex]?.buyLink || "#"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Click to order prints"
+                        className="inline-flex items-center justify-center w-8 h-8 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
+                        style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
+                        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
+                        onClick={() => {
+                          logUIEvent("buy_link_click", {
+                            page: window.location.pathname,
+                            imageId: galleryData[currentIndex]?.id,
+                            buyLink: galleryData[currentIndex]?.buyLink
+                          });
+                        }}
+                      >
+                        <ShoppingCart className="w-4 h-4" />
+                      </a>
 
                       {/* ❤️ Like Button */}
                       <div className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200" data-like-btn>
@@ -1523,168 +1501,6 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
   {/* Swipe hint + Guided Tour */}
       <SwipeHint galleryKey={galleryKey || "k4-gallery"} />
   <GalleryTour sectionKey={sectionKey} imageId={currentId} openNonce={tourOpenNonce} />
-
-      {/* Pricing Modal for Engrained Series */}
-      <AnimatePresence>
-        {showPricingModal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[10000] bg-black bg-opacity-50 flex items-center justify-center p-4"
-            onClick={() => setShowPricingModal(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="p-6 relative">
-                <div className="mb-4 text-center">
-                  <h2 className="text-xl font-bold text-gray-800">More About This Image</h2>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="text-center">
-                    <img
-                      src={galleryData[currentIndex]?.src}
-                      alt={galleryData[currentIndex]?.title}
-                      className="w-full max-w-48 mx-auto rounded-lg shadow-md"
-                    />
-                    <h3 className="text-lg font-semibold text-gray-800 mt-3">
-                      {galleryData[currentIndex]?.title}
-                    </h3>
-                  </div>
-
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-800 mb-2">Pricing Information</h4>
-                    <div className="space-y-2 text-sm text-gray-600">
-                      {(() => {
-                        const currentItem = galleryData[currentIndex];
-                        const editionSize = currentItem?.editionSize;
-                        const imageSize = currentItem?.imageSize;
-                        const price = currentItem?.price;
-                        const availability = currentItem?.availability;
-                        const shipping = currentItem?.shipping;
-
-                        if (editionSize || imageSize || price || availability || shipping) {
-                          return (
-                            <div className="space-y-1">
-                              {editionSize && (
-                                <p style={{ color: "#1b1a19" }}>
-                                  • Limited Edition: {editionSize}
-                                </p>
-                              )}
-                              {imageSize && (
-                                <p style={{ color: "#1b1a19" }}>
-                                  • Size: {imageSize}
-                                </p>
-                              )}
-                              {price && (
-                                <p style={{ color: "#1b1a19" }}>
-                                  • Price: {price}
-                                </p>
-                              )}
-                              {availability && (
-                                <p style={{ color: "#1b1a19" }}>
-                                  • Availability: {availability}
-                                </p>
-                              )}
-                              {shipping && (
-                                <p style={{ color: "#1b1a19" }}>
-                                  • Shipping: {shipping}
-                                </p>
-                              )}
-                            </div>
-                          );
-                        } else {
-                          // Fallback to parsing description for backward compatibility
-                          const description = currentItem?.description || "";
-                          const pricingMatches = description.match(/\$[\d,]+(?:\.\d{2})?/g);
-                          const sizeMatches = description.match(/\d+"?\s*x\s*\d+"?/g);
-                          const limitedEdition = description.match(/Limited edition[-\s]*(\d+)/i);
-
-                          if (pricingMatches && pricingMatches.length > 0) {
-                            return (
-                              <div className="space-y-1">
-                                {limitedEdition && (
-                                  <p style={{ color: "#1b1a19" }}>
-                                    • Limited Edition: {limitedEdition[1]}
-                                  </p>
-                                )}
-                                {sizeMatches && sizeMatches.length > 0 && (
-                                  <p style={{ color: "#1b1a19" }}>
-                                    • Size: {sizeMatches[0].replace(/x/g, " × ")}
-                                  </p>
-                                )}
-                                <p style={{ color: "#1b1a19" }}>
-                                  • Price: {pricingMatches[0]}
-                                </p>
-                                <p style={{ color: "#1b1a19" }}>
-                                  • Availability: Call
-                                </p>
-                              </div>
-                            );
-                          } else {
-                            return (
-                              <div className="space-y-1">
-                                <p style={{ color: "#1b1a19" }}>• Contact us for custom pricing</p>
-                                <p style={{ color: "#1b1a19" }}>• Various sizes available</p>
-                                <p style={{ color: "#1b1a19" }}>• Limited edition</p>
-                                <p style={{ color: "#1b1a19" }}>• Availability: Call</p>
-                              </div>
-                            );
-                          }
-                        }
-                      })()}
-                    </div>
-                  </div>
-
-                  <div className="p-4 rounded-lg" style={{ backgroundColor: "#cfd1c8ff" }}>
-                    <h4 className="font-semibold mb-2" style={{ color: "#1b1a19" }}>About Engrained Series</h4>
-                    <p className="text-sm" style={{ color: "#1b1a19" }}>
-                      Fine art printed on nature's canvas. Each piece is created using a custom 5-layer UV process on hand-selected Baltic Birch, where the wood's natural grain becomes part of the image. The result: rich depth, painterly texture, and a one-of-a-kind fusion of art and nature.
-                    </p>
-                  </div>
-
-                  <div className="text-center">
-                    <p className="text-sm text-gray-500 mb-3">
-                      <a
-                        href={`mailto:info@k4studios.com?subject=Purchase: ${galleryData[currentIndex]?.title || 'Engrained Series Image'}&body=Hello,%0A%0AI am interested in purchasing the following image:%0A%0ATitle: ${galleryData[currentIndex]?.title || 'N/A'}%0AImage ID: ${galleryData[currentIndex]?.id || 'N/A'}%0AImage URL: ${window.location.href}%0A%0APlease provide pricing and ordering information.%0A%0AThank you!`}
-                        className="text-blue-600 hover:text-blue-800 underline cursor-pointer"
-                        onClick={() => {
-                          logUIEvent("contact_order_click", {
-                            page: window.location.pathname,
-                            imageId: galleryData[currentIndex]?.id,
-                            imageTitle: galleryData[currentIndex]?.title
-                          });
-                        }}
-                      >
-                        Contact Us to Order
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
-                {/* Close button in lower left */}
-                <button
-                  type="button"
-                  className="absolute bottom-4 left-4 inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
-                  aria-label="Close pricing modal"
-                  title="Close"
-                  onClick={() => setShowPricingModal(false)}
-                >
-                  <CircleX className="w-7 h-7" />
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

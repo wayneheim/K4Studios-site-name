@@ -280,20 +280,20 @@ useEffect(() => {
 useEffect(() => {
   const unlockAudio = () => {
     try {
-      if (audioRef.current) {
-        audioRef.current.muted = true;
-        audioRef.current.play().then(() => {
-          audioRef.current.pause();
-          audioRef.current.muted = false;
-        }).catch(()=>{});
-      }
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.muted = true;
-        ambientAudioRef.current.play().then(() => {
-          ambientAudioRef.current.pause();
-          ambientAudioRef.current.muted = false;
-        }).catch(()=>{});
-      }
+      // Use separate audio elements for unlocking to avoid interfering with main audio
+      const unlockAudio = document.createElement("audio");
+      unlockAudio.muted = true;
+      unlockAudio.src = ""; // Empty src for silent unlock
+      unlockAudio.play().then(() => {
+        unlockAudio.pause();
+      }).catch(()=>{});
+
+      const unlockAmbient = document.createElement("audio");
+      unlockAmbient.muted = true;
+      unlockAmbient.src = "";
+      unlockAmbient.play().then(() => {
+        unlockAmbient.pause();
+      }).catch(()=>{});
 
       if (window.speechSynthesis) {
         const u = new SpeechSynthesisUtterance(" ");
@@ -409,7 +409,7 @@ useEffect(() => {
     }
   };
 
-  const startSlideshow = async ({ advanceFromIntro = true } = {}) => {
+  const startSlideshow = ({ advanceFromIntro = true, immediate = false } = {}) => {
     const ua = typeof navigator !== "undefined" ? navigator.userAgent || "" : "";
     const isMessengerUA = /FBAN|FBAV|Messenger|Instagram/i.test(ua);
 
@@ -419,28 +419,30 @@ useEffect(() => {
         silent.src = "";
         silent.muted = true;
         const playPromise = silent.play();
-        if (playPromise) await playPromise.catch(() => {});
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(() => {});
+        }
         setTimeout(() => silent.pause(), 200);
       } catch (err) {
         console.warn("Silent audio unlock failed:", err);
       }
     }
 
-    try {
-      if (ambientAudioRef.current) await ambientAudioRef.current.play().catch(() => {});
-      if (audioRef.current) await audioRef.current.play().catch(() => {});
-    } catch (err) {
-      console.warn("Audio prime failed:", err);
-    }
-
-  const delay = 150;
-    setTimeout(() => {
+    const launchSlideshow = () => {
       setShowSlideshow(true);
 
       if (advanceFromIntro && currentIndexRef.current === 0 && filteredData.length > 0) {
         goNext();
       }
-    }, delay);
+    };
+
+    if (immediate) {
+      launchSlideshow();
+      return;
+    }
+
+    const delay = 150;
+    setTimeout(launchSlideshow, delay);
   };
 
   // --- touch swipe handlers (mobile) ---
@@ -1468,9 +1470,7 @@ useEffect(() => {
                         <div className="flex justify-center mb-3 mt-2">
                           <button
                             type="button"
-                            onClick={async () => {
-                              await startSlideshow();
-                            }}
+                            onClick={goNext}
                             className="k4-play-btn"
                             title="Begin Story"
                             aria-label="Begin Story"
@@ -1486,8 +1486,8 @@ useEffect(() => {
                   </div>
                 ) : (
                   /* IMAGE */
-                  <div className="w-full px-5 sm:px-6 md:px-8" style={{ boxSizing: 'border-box' }}>
-                    <div className="block mx-auto" style={{ position: 'relative', width: 'fit-content' }}>
+                  <div className="w-full px-5 sm:px-6 md:px-8 flex items-center justify-center min-h-[80vh]" style={{ boxSizing: 'border-box' }}>
+                    <div className="relative" style={{ width: 'fit-content' }}>
                       <img
                         src={getBestImageSrc(currentImage)}
                         alt={currentImage?.title}
@@ -1547,8 +1547,8 @@ useEffect(() => {
                   {currentIndex > 0 && (
                     <button
                       type="button"
-                      onClick={async () => {
-                        await startSlideshow({ advanceFromIntro: false });
+                      onClick={() => {
+                        startSlideshow({ advanceFromIntro: false, immediate: true });
                       }}
                       className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
                       title="Launch Cinematic Mode"

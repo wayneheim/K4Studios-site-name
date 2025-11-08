@@ -12,23 +12,36 @@ import "@/styles/global.css";
 // Dynamic Logic
 // ----------------------
 const sectionPath = "/Other/Shows";
+const requestOrigin = Astro.site?.origin ?? new URL(Astro.request.url).origin;
+const toAbsoluteUrl = (value) => {
+  if (!value) return value;
+  try {
+    const maybeUrl = new URL(value);
+    return maybeUrl.toString();
+  } catch {
+    const normalized = value.startsWith("/") ? value : `/${value}`;
+    return new URL(normalized, requestOrigin).toString();
+  }
+};
+
+const defaultCoverImage = stories.length > 0 ? stories[0].cover : "/images/K4-Stories logo1b.webp";
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
   data: {
     headline: "K4 Studios Picture Shows",
     description: "Interactive picture shows and visual presentations showcasing Wayne Heim's fine art photography through immersive storytelling experiences.",
-    url: `https://k4studios.com${sectionPath}`,
+    url: toAbsoluteUrl(sectionPath),
     copyrightNotice: "© Wayne Heim",
     author: { "@type": "Person", name: "Wayne Heim" },
-    image: stories.length > 0 ? stories[0].cover : "/images/K4-Stories logo1b.webp"
+    image: toAbsoluteUrl(defaultCoverImage)
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
+    license: toAbsoluteUrl("/copyright"),
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: toAbsoluteUrl("/")
   }
 });
 
@@ -38,27 +51,27 @@ const itemListStructuredData = {
   "@type": "ItemList",
   name: "K4 Studios Picture Shows",
   description: "Interactive visual presentations and themed exhibitions by Wayne Heim, combining fine art photography with cinematic storytelling.",
-  url: "https://k4studios.com/Other/Shows",
+  url: toAbsoluteUrl(sectionPath),
   creator: {
     "@type": "Person",
     name: "Wayne Heim",
-    url: "https://k4studios.com"
+    url: toAbsoluteUrl("/")
   },
   itemListElement: stories.map((show, index) => ({
     "@type": "BlogPosting",
     position: index + 1,
     headline: show.title,
-    url: `https://k4studios.com/Other/Shows/${show.slug}`,
+    url: toAbsoluteUrl(`/Other/Shows/${show.slug}`),
     datePublished:
       typeof show.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(show.date)
         ? `${show.date}T00:00:00Z`
         : show.date,
-    image: show.cover,
+    image: toAbsoluteUrl(show.cover || defaultCoverImage),
     description: show.excerpt,
     author: {
       "@type": "Person",
       name: "Wayne Heim",
-      url: "https://k4studios.com/"
+      url: toAbsoluteUrl("/")
     }
   }))
 };
@@ -68,15 +81,15 @@ const breadcrumbStructuredData = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://k4studios.com" },
-    { "@type": "ListItem", position: 2, name: "Shows", item: "https://k4studios.com/Other/Shows" }
+    { "@type": "ListItem", position: 1, name: "Home", item: toAbsoluteUrl("/") },
+    { "@type": "ListItem", position: 2, name: "Shows", item: toAbsoluteUrl(sectionPath) }
   ]
 };
 
-const landingImgUrl = stories.length > 0 ? stories[0].cover : "/images/K4-Stories logo1b.webp";
+const landingImgUrl = defaultCoverImage;
 const meta = getLandingMeta(sectionPath, landingImgUrl);
-if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${sectionPath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+if (!meta.ogUrl) meta.ogUrl = toAbsoluteUrl(sectionPath);
+if (!meta.twitterUrl) meta.twitterUrl = toAbsoluteUrl(sectionPath);
 
 meta.description =
   "Experience interactive picture shows from Wayne Heim — immersive visual presentations combining fine art photography with cinematic storytelling. Discover themed collections and narrative-driven exhibitions.";
@@ -85,8 +98,9 @@ meta.keywords =
 meta.ogTitle = "K4 Studios Picture Shows – Interactive Visual Presentations by Wayne Heim";
 meta.ogDescription =
   "Explore interactive picture shows featuring Wayne Heim's fine art photography — themed visual presentations that combine storytelling with immersive gallery experiences.";
-meta.ogImage = landingImgUrl;
+meta.ogImage = toAbsoluteUrl(landingImgUrl);
 meta.twitterCard = "summary_large_image";
+
 ---
 
 <BaseLayout
@@ -95,7 +109,7 @@ meta.twitterCard = "summary_large_image";
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
-    <link rel="canonical" href="https://k4studios.com/Other/Shows" />
+    <link rel="canonical" href={toAbsoluteUrl(sectionPath)} />
 
     <div class="page-container w-full max-w-[1200px] mx-auto px-4">
       <div class="drawer-mode">

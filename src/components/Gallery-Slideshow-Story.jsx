@@ -402,16 +402,26 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
                 <div className="relative group">
                   <button
                     onClick={() => {
-                      // For individual audio (score mode), stop current playback when muting
-                      if (current?.audioSrc && isSpeaking) {
+                      if (isMuted) {
+                        // Unmuting - try to start audio playback
+                        setIsMuted(false);
+                        if (current?.audioSrc && audioRef.current) {
+                          audioRef.current.src = current.audioSrc;
+                          audioRef.current.volume = volume;
+                          audioRef.current.play().catch((error) => {
+                            console.error('Error playing audio on unmute:', error);
+                          });
+                          setIsSpeaking(true);
+                        }
+                      } else {
+                        // Muting - stop current playback
+                        setIsMuted(true);
                         if (audioRef.current) {
                           audioRef.current.pause();
                           audioRef.current.currentTime = 0;
                         }
                         setIsSpeaking(false);
                       }
-                      // Toggle mute state (affects both individual and ambient audio)
-                      setIsMuted(!isMuted);
                     }}
                     className={`bg-white/10 text-white rounded px-2 py-1 hover:bg-white/20 transition btn ${
                       isMuted ? 'text-red-400' : ''
