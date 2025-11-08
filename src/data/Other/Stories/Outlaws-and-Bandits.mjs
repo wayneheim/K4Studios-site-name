@@ -7,7 +7,7 @@ export const storyMeta = {
   "keywords": "wild west, outlaws, cowboys, gun slingers, bandits",
   "alt": "Outlaws in the Wild West",
   "closingText": "Every photograph carries a fragment of the past — thank you for walking through this story. Continue exploring the gallery below.",
-  "showWatermark": false,
+  "showWatermark": true,
   "watermarkText": "© Wayne Heim",
   "copyrightName": "Wayne Heim",
   "copyrightYear": "2025",
@@ -29,7 +29,7 @@ export const storyData = [
     "galleries": [
       "System / Ghost Intro"
     ],
-    "showMark": false,
+    "showMark": true,
     "watermarkText": "© Wayne Heim",
     "keywords": "wild west, outlaws, cowboys, gun slingers, bandits",
     "audioSrc": "https://media.k4studios.com/StoryShows/Outlaws-and-Bandits/west-amb-4a.mp3",

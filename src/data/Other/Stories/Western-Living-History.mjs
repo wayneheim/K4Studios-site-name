@@ -9,7 +9,8 @@ export const storyMeta = {
   "closingText": "Every image is another notch in the belt—supporting and keeping history alive. In telling these stories and making connections between past, present, and future generations, their legacy, actions, and determination live on with every image. \n\nClick the images below to view more info or to browse the entire collection.",
   "globalAudioSrc": "https://media.k4studios.com/StoryShows/Western-Living-History/wec-t2598ssave.mp3",
   "globalAudioMode": "ambient",
-  "savedAt": "2025-11-06T20:00:19.217Z"
+  "savedAt": "2025-11-06T20:00:19.217Z",
+  "showWatermark": true
 };
 export const storyData = [
   {
@@ -27,7 +28,8 @@ export const storyData = [
       "System / Ghost Intro"
     ],
     "keywords": "historical reenactment photography, western fine art, cowboy portraits, living history, frontier heritage, painterly photography, wild west, reenactors, American West, western art",
-    "audioSrc": ""
+    "audioSrc": "",
+    "showMark": true
   },
   {
     "id": "i-ncFcHDM",
