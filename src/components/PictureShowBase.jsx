@@ -1167,7 +1167,7 @@ useEffect(() => {
   return (
     <>
     <div
-  className="picture-show-content min-h-screen bg-white text-black font-serif px-4 sm:px-4 md:px-8 lg:px-12 pt-2 sm:pt-4 md:pt-12 lg:pt-16 pb-8 overflow-visible"
+  className="picture-show-content min-h-screen bg-white text-black font-serif px-4 sm:px-4 md:px-8 lg:px-12 pt-1 sm:pt-2 md:pt-8 pb-8 overflow-visible"
   style={{ fontFamily: "Glegoo, serif", boxSizing: 'border-box' }}
 >
         <link
@@ -1208,7 +1208,7 @@ useEffect(() => {
                  Chapter Index
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 justify-items-center gap-4 mb-10 max-w-4xl mx-auto">
+                <div className="flex flex-wrap justify-center gap-4 mb-10">
                   {filteredData.filter(img => img.id !== "i-k4studios").map((img, idx) => (
                     <a
                       key={idx}
@@ -1523,12 +1523,12 @@ useEffect(() => {
                   </div>
                 ) : (
                   /* IMAGE */
-                  <div className="w-full px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12 lg:py-16 flex items-center justify-center min-h-[50vh] pb-0" style={{ boxSizing: 'border-box' }}>
+                  <div className="w-full px-5 sm:px-6 md:px-8 flex items-center justify-center min-h-[80vh]" style={{ boxSizing: 'border-box' }}>
                     <div className="relative" style={{ width: 'fit-content' }}>
                       <img
                         src={getBestImageSrc(currentImage)}
                         alt={currentImage?.title}
-                        className="rounded-lg max-h-[55vh] max-w-full object-contain shadow-md border border-gray-300"
+                        className="rounded-lg max-h-[70vh] max-w-full object-contain shadow-md border border-gray-300"
                         // zoom disabled in this viewer
                         onContextMenu={(e) => e.preventDefault()}
                         style={{
@@ -1546,7 +1546,7 @@ useEffect(() => {
                   </div>
                 )}
 {/* Shopping Cart & Notes Buttons */}
-                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-4`}>
+                <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-3`}>
                   {currentImage?.buyLink && (
                     <a
                       href={currentImage?.buyLink}
@@ -1738,9 +1738,8 @@ useEffect(() => {
             {/* 🔗 Share Drawer */}
             <div className="pb-4">
               <ShareDrawer
-                imageUrl="/images/show-t.webp"
-                pageTitle={titleBase || "K4 Studios Picture Show"}
-                pageDescription="Experience cinematic visual storytelling with Wayne Heim's fine art photography"
+                imageUrl={filteredData?.[0]?.src}
+                pageTitle="Story Complete - K4 Studios"
               />
             </div>
 
