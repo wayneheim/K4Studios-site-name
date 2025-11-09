@@ -212,45 +212,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     };
   }, []);
 
-  // Handle ambient audio playback - only when slideshow is active and mode is ambient
-  useEffect(() => {
-    if (globalAudioSrc && globalAudioMode === "ambient" && showSlideshow) {
-      if (!isMuted) {
-        // Start or continue playing ambient audio
-        if (ambientAudioRef.current) {
-          if (ambientAudioRef.current.src !== globalAudioSrc) {
-            ambientAudioRef.current.src = globalAudioSrc;
-            ambientAudioRef.current.loop = true;
-          }
-          ambientAudioRef.current.volume = 0.3 * volume;
-          ambientAudioRef.current.play().catch((error) => {
-            console.error('Error playing ambient audio:', error);
-          });
-        }
-      } else {
-        // Pause ambient audio when muted
-        if (ambientAudioRef.current) {
-          ambientAudioRef.current.pause();
-        }
-      }
-    } else {
-      // Stop ambient audio if not in ambient mode or not in slideshow
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.pause();
-        ambientAudioRef.current.currentTime = 0;
-      }
-    }
-
-    // Cleanup on unmount
-    return () => {
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.pause();
-        ambientAudioRef.current.currentTime = 0;
-      }
-    };
-  }, [globalAudioSrc, globalAudioMode, showSlideshow, isMuted, volume]);
-
-// ✅ Hydration guard with fallback for Messenger WebView
+  // ✅ Hydration guard with fallback for Messenger WebView
 const [isReady, setIsReady] = useState(false);
 
 useEffect(() => {
