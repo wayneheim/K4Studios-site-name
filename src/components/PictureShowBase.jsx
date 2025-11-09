@@ -696,7 +696,7 @@ const isSpeechActive = () => {
                  Chapter Index
                 </h2>
 
-                <div className="flex flex-wrap justify-center gap-4 mb-10">
+                <div className="flex flex-wrap justify-center gap-4 mb-10 max-w-[614px] mx-auto">
                   {filteredData.filter(img => img.id !== "i-k4studios").map((img, idx) => (
                     <a
                       key={idx}
