@@ -1269,11 +1269,17 @@ const isSpeechActive = () => {
           images={filteredData}
           startImageId={currentImage?.id}
           onExit={() => {
+            // Stop all audio when exiting slideshow
             if (ambientAudioRef.current) {
               ambientAudioRef.current.pause();
               ambientAudioRef.current.currentTime = 0;
             }
+            if (audioRef.current) {
+              audioRef.current.pause();
+              audioRef.current.currentTime = 0;
+            }
             setShowSlideshow(false);
+            setIsSpeaking(false);
           }}
           isMuted={isMuted}
           setIsMuted={setIsMuted}

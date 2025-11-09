@@ -189,6 +189,29 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
     };
   }, []);
 
+  // Auto-play individual image audio when index changes (but not global audio)
+  useEffect(() => {
+    if (!current?.audioSrc || isMuted) return;
+
+    // Stop any existing individual audio
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+
+    // Play new individual audio
+    if (audioRef.current) {
+      audioRef.current.src = current.audioSrc;
+      audioRef.current.volume = volume;
+      hasUserUnlockedAudioRef.current = true;
+      audioRef.current.play().catch((error) => {
+        console.error('Error auto-playing individual audio:', error);
+        hasUserUnlockedAudioRef.current = false;
+      });
+      setIsSpeaking(true);
+    }
+  }, [index, current?.audioSrc, isMuted, volume]);
+
   function reorderImages(list, startId) {
     const startIndex = list.findIndex((img) => img.id === startId);
     if (startIndex === -1) return list;
@@ -404,38 +427,21 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
                   <button
                     onClick={() => {
                       if (isMuted) {
-                        // Unmuting - try to start audio playback
+                        // Unmuting - play individual image audio if available and not already playing
                         setIsMuted(false);
 
-                        // Determine which audio to play: individual image audio takes priority, then global audio
-                        let audioToPlay = null;
-                        let audioVolume = volume;
-
-                        if (current?.audioSrc) {
-                          // Individual image audio
-                          audioToPlay = current.audioSrc;
-                          audioVolume = volume;
-                        } else if (globalAudioSrc) {
-                          // Global audio (score or ambient)
-                          audioToPlay = globalAudioSrc;
-                          if (globalAudioMode === "ambient") {
-                            audioVolume = volume * 0.3;
-                          }
-                        }
-
-                        if (audioToPlay && audioRef.current) {
-                          audioRef.current.src = audioToPlay;
-                          audioRef.current.volume = audioVolume;
-                          if (!current?.audioSrc) {
-                            audioRef.current.loop = true; // Global audio should loop
-                          }
+                        // Play individual image audio if current image has it and not already speaking
+                        if (current?.audioSrc && audioRef.current && !isSpeaking) {
+                          audioRef.current.src = current.audioSrc;
+                          audioRef.current.volume = volume;
                           hasUserUnlockedAudioRef.current = true;
                           audioRef.current.play().catch((error) => {
-                            console.error('Error playing audio on unmute:', error);
+                            console.error('Error playing individual audio on unmute:', error);
                             hasUserUnlockedAudioRef.current = false;
                           });
                           setIsSpeaking(true);
                         }
+                        // Global audio will start automatically via unified controller when isMuted becomes false
                       } else {
                         // Muting - stop current playback
                         setIsMuted(true);
