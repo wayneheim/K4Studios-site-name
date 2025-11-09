@@ -115,51 +115,55 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
     return null;
   }, [filteredData, globalAudioSrc, effectiveGlobalAudioMode]);
 
-  // Handle score and ambient audio playback
+  // ✅ Unified global audio controller (score + ambient)
   useEffect(() => {
-    if (scoreAudioSrc && effectiveGlobalAudioMode === "score" && showSlideshow && !isMuted) {
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.src = scoreAudioSrc;
-        ambientAudioRef.current.volume = volume; // Full user-controlled volume for score
-        ambientAudioRef.current.loop = true;
-        ambientAudioRef.current.play().catch((error) => {
-          console.error('Error playing score audio:', error);
-        });
-      }
-    } else if (ambientAudioSrc && effectiveGlobalAudioMode === "ambient" && showSlideshow && !isMuted) {
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.src = ambientAudioSrc;
-        ambientAudioRef.current.volume = volume * 0.3; // Lower volume for ambient
-        ambientAudioRef.current.loop = true;
-        ambientAudioRef.current.play().catch((error) => {
-          console.error('Error playing ambient audio:', error);
-        });
-      }
-    } else {
-      // Stop audio if conditions not met
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.pause();
-        ambientAudioRef.current.currentTime = 0;
+    if (!ambientAudioRef.current) return;
+    const player = ambientAudioRef.current;
+
+    // Stop any existing playback before changing mode or src
+    player.pause();
+    player.currentTime = 0;
+
+    // Determine which global audio to use
+    let nextSrc = null;
+    let nextVol = 0;
+    let shouldPlay = false;
+
+    if (showSlideshow && !isMuted) {
+      if (effectiveGlobalAudioMode === "score" && scoreAudioSrc) {
+        nextSrc = scoreAudioSrc;
+        nextVol = volume; // full volume for score
+        shouldPlay = true;
+      } else if (effectiveGlobalAudioMode === "ambient" && ambientAudioSrc) {
+        nextSrc = ambientAudioSrc;
+        nextVol = volume * 0.3; // lower volume for ambient
+        shouldPlay = true;
       }
     }
 
-    // Update volume when it changes
-    if (ambientAudioRef.current) {
-      if (effectiveGlobalAudioMode === "score" && showSlideshow) {
-        ambientAudioRef.current.volume = isMuted ? 0 : volume;
-      } else if (effectiveGlobalAudioMode === "ambient" && showSlideshow) {
-        ambientAudioRef.current.volume = isMuted ? 0 : volume * 0.3;
-      }
+    if (shouldPlay && nextSrc) {
+      player.src = nextSrc;
+      player.volume = nextVol;
+      player.loop = true;
+      const playPromise = player.play();
+      if (playPromise) playPromise.catch((err) => {
+        console.warn("Global audio playback blocked:", err);
+      });
     }
 
-    // Cleanup on unmount
     return () => {
-      if (ambientAudioRef.current) {
-        ambientAudioRef.current.pause();
-        ambientAudioRef.current.currentTime = 0;
-      }
+      // 🚫 Stop audio cleanly when leaving slideshow or unmounting
+      player.pause();
+      player.currentTime = 0;
     };
-  }, [scoreAudioSrc, ambientAudioSrc, effectiveGlobalAudioMode, showSlideshow, isMuted, volume]);
+  }, [
+    showSlideshow,
+    isMuted,
+    effectiveGlobalAudioMode,
+    scoreAudioSrc,
+    ambientAudioSrc,
+    volume,
+  ]);
 
   // Hide site header/intro and ensure chapter section is visible while Picture Show is active
   useEffect(() => {
@@ -1302,7 +1306,13 @@ const isSpeechActive = () => {
         <StoryShow
           images={filteredData}
           startImageId={currentImage?.id}
-          onExit={() => setShowSlideshow(false)}
+          onExit={() => {
+            if (ambientAudioRef.current) {
+              ambientAudioRef.current.pause();
+              ambientAudioRef.current.currentTime = 0;
+            }
+            setShowSlideshow(false);
+          }}
           isMuted={isMuted}
           setIsMuted={setIsMuted}
           volume={volume}
