@@ -383,7 +383,7 @@ useEffect(() => {
     const launchSlideshow = () => {
       setShowSlideshow(true);
 
-      // Note: Global audio is now handled by the StoryShow component to avoid conflicts
+      // Global audio is handled by the unified controller above
 
       if (advanceFromIntro && currentIndexRef.current === 0 && filteredData.length > 0) {
         goNext();
