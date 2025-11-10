@@ -88,16 +88,28 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     }
   );
 
-  // ✅ NEW: Strip SmugMug-only JSON-LD (keeps yours intact)
-  const smugRegex =
-    /<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?"@type"\s*:\s*"ImageObject"[\s\S]*?"creator"\s*:\s*\{\s*"@type"\s*:\s*"Thing"[\s\S]*?<\/script>/gi;
-
-  const stripped = html.replace(smugRegex, "");
-  if (stripped.length !== html.length) {
-    changed = true;
-    console.log("🧹 Removed SmugMug JSON-LD block");
-  }
-  html = stripped;
+  // ✅ Strip incomplete ImageObject structured data (SmugMug)
+  html = html.replace(
+    /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
+    (match, content) => {
+      try {
+        const json = JSON.parse(content.trim());
+        const items = Array.isArray(json) ? json : [json];
+        const shouldRemove = items.some(
+          (item) =>
+            item["@type"] === "ImageObject" && !item.creditText
+        );
+        if (shouldRemove) {
+          changed = true;
+          console.log("🧹 Removed incomplete SmugMug JSON-LD block");
+          return "";
+        }
+      } catch {
+        // ignore non-JSON or invalid blocks
+      }
+      return match;
+    }
+  );
 
   return { cleaned: html, changed };
 }
@@ -109,14 +121,11 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   if (contentType.includes("text/html")) {
     const body = await response.text();
     // Skip cleaning for large responses to avoid memory issues in Cloudflare
-    if (body.length > 1000000) {
-      return response;
-    }
+    if (body.length > 1000000) return response;
+
     const { cleaned, changed } = stripNestedTags(body);
 
-    if (changed) {
-      console.log(`🧹 Cleaned HTML on ${context.url.pathname}`);
-    }
+    if (changed) console.log(`🧹 Cleaned HTML on ${context.url.pathname}`);
 
     return new Response(cleaned, {
       status: response.status,
