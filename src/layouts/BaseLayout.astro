@@ -235,44 +235,47 @@ const keywords =
       </filter>
     </svg>
 
-    <!-- 🧹 SmugMug JSON-LD scrubber (optimized single-pass) -->
-    <script>
-      function removeSmugMugJsonLd() {
-        document.querySelectorAll('script[type="application/ld+json"]').forEach((s) => {
-          try {
-            const text = s.textContent.trim();
-            if (!text.includes("photos.smugmug.com")) return;
-            const json = JSON.parse(text);
-            if (
-              (json["@type"] === "ImageObject" || json.type === "ImageObject") &&
-              (!json["@id"] || !text.includes('"creditText"'))
-            ) {
-              console.log("🧹 Removed SmugMug JSON-LD injected block");
-              s.remove();
-            }
-          } catch {}
-        });
-      }
+  <!-- 🧹 SmugMug JSON-LD scrubber (robust final client-side fallback) -->
+<script>
+  function removeSmugMugJsonLd() {
+    document.querySelectorAll('script[type="application/ld+json"]').forEach((s) => {
+      try {
+        const text = s.textContent.trim();
+        if (!text.includes("photos.smugmug.com")) return;
+        const json = JSON.parse(text);
+        if (
+          (json["@type"] === "ImageObject" || json.type === "ImageObject") &&
+          (!json["@id"] || !text.includes('"creditText"'))
+        ) {
+          console.log("🧹 Removed SmugMug JSON-LD injected block");
+          s.remove();
+        }
+      } catch {}
+    });
+  }
 
-      // Run once after DOM ready, then monitor for new scripts
-      document.addEventListener("DOMContentLoaded", () => {
-        removeSmugMugJsonLd();
-        
-        // Use MutationObserver for efficient monitoring of new scripts
-        const observer = new MutationObserver((mutations) => {
-          let hasNewScripts = false;
-          mutations.forEach((mutation) => {
-            mutation.addedNodes.forEach((node) => {
-              if (node.nodeType === 1 && (node as Element).tagName === 'SCRIPT') {
-                hasNewScripts = true;
-              }
-            });
-          });
-          if (hasNewScripts) removeSmugMugJsonLd();
-        });
-        
-        observer.observe(document.body, { childList: true, subtree: true });
-      });
-    </script>
+  document.addEventListener("DOMContentLoaded", () => {
+    removeSmugMugJsonLd();
+
+    const observer = new MutationObserver((mutations) => {
+      let needsClean = false;
+      for (const m of mutations) {
+        for (const n of m.addedNodes) {
+          if (n.nodeType === 1 && n.tagName === "SCRIPT") {
+            needsClean = true;
+          }
+        }
+      }
+      if (needsClean) removeSmugMugJsonLd();
+    });
+
+    // Watch both head and body for new scripts
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+
+    // Safety sweep after 5s for very delayed injects
+    setTimeout(removeSmugMugJsonLd, 5000);
+  });
+</script>
+
   </body>
 </html>
