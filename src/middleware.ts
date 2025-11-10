@@ -97,7 +97,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
         const items = Array.isArray(json) ? json : [json];
         const shouldRemove = items.some(
           (item) =>
-            item["@type"] === "ImageObject" && !item.creditText
+            item["@type"] === "ImageObject" && (!item.creditText || item.creator?.["@type"] !== "Person")
         );
         if (shouldRemove) {
           changed = true;
