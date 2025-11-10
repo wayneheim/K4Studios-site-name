@@ -88,43 +88,20 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     }
   );
 
-  // ✅ Strip incomplete ImageObject structured data (SmugMug)
-  const keptScripts: string[] = [];
+  // ✅ Strip incomplete ImageObject structured data (SmugMug) - keep only our complete data with @id
   html = html.replace(
     /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
     (match, content) => {
       try {
         const json = JSON.parse(content.trim());
         const items = Array.isArray(json) ? json : [json];
-        const validItems = items.filter(
-          (item) =>
-            item["@type"] === "ImageObject" &&
-            item.creditText &&
-            item.creator?.["@type"] === "Person"
+        const hasValidImageObject = items.some(
+          (item) => item["@type"] === "ImageObject" && item["@id"]
         );
-        if (validItems.length > 0) {
-          // Check for duplicates by contentUrl
-          const existing = keptScripts.find(kept => {
-            try {
-              const keptJson = JSON.parse(kept);
-              const keptItems = Array.isArray(keptJson) ? keptJson : [keptJson];
-              return keptItems.some(ki => ki.contentUrl === validItems[0].contentUrl);
-            } catch {
-              return false;
-            }
-          });
-          if (!existing) {
-            keptScripts.push(content.trim());
-            return match; // Keep this one
-          } else {
-            changed = true;
-            console.log("🧹 Removed duplicate ImageObject JSON-LD block");
-            return ""; // Remove duplicate
-          }
-        } else {
+        if (!hasValidImageObject) {
           changed = true;
-          console.log("🧹 Removed incomplete SmugMug JSON-LD block");
-          return ""; // Remove incomplete
+          console.log("🧹 Removed incomplete SmugMug JSON-LD block (missing @id)");
+          return "";
         }
       } catch {
         // ignore non-JSON or invalid blocks
