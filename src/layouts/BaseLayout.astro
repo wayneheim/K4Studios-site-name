@@ -235,11 +235,10 @@ const keywords =
       </filter>
     </svg>
 
-    <!-- 🧹 Remove SmugMug JSON-LD (handles delayed injection) -->
+    <!-- 🧹 SmugMug JSON-LD scrubber (optimized single-pass) -->
     <script>
       function removeSmugMugJsonLd() {
-        const scripts = document.querySelectorAll('script[type="application/ld+json"]');
-        scripts.forEach((s) => {
+        document.querySelectorAll('script[type="application/ld+json"]').forEach((s) => {
           try {
             const text = s.textContent.trim();
             if (!text.includes("photos.smugmug.com")) return;
@@ -255,25 +254,24 @@ const keywords =
         });
       }
 
-      document.addEventListener("DOMContentLoaded", removeSmugMugJsonLd);
-
-      const observer = new MutationObserver((mutations) => {
-        for (const m of mutations) {
-          for (const node of m.addedNodes) {
-            if (
-              node.tagName === "SCRIPT" &&
-              node.type === "application/ld+json" &&
-              node.textContent.includes("photos.smugmug.com")
-            ) {
-              removeSmugMugJsonLd();
-            }
-          }
-        }
-      });
-
-      observer.observe(document.documentElement || document.body, {
-        childList: true,
-        subtree: true,
+      // Run once after DOM ready, then monitor for new scripts
+      document.addEventListener("DOMContentLoaded", () => {
+        removeSmugMugJsonLd();
+        
+        // Use MutationObserver for efficient monitoring of new scripts
+        const observer = new MutationObserver((mutations) => {
+          let hasNewScripts = false;
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (node.nodeType === 1 && (node as Element).tagName === 'SCRIPT') {
+                hasNewScripts = true;
+              }
+            });
+          });
+          if (hasNewScripts) removeSmugMugJsonLd();
+        });
+        
+        observer.observe(document.body, { childList: true, subtree: true });
       });
     </script>
   </body>
