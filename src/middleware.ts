@@ -58,7 +58,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     return m;
   });
 
-  // 🚨 Strip <title>, <meta>, <link>, <script type="application/ld+json"> inside body
+  // 🚨 Strip <title>, <meta>, <link> inside body
   html = html.replace(/<body[\s\S]*?<\/body>/gi, (bodyBlock) => {
     const cleaned = bodyBlock
       .replace(/<title[\s\S]*?<\/title>/gi, "")
@@ -87,6 +87,16 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
       return first + deduped;
     }
   );
+
+  // ✅ NEW: Remove SmugMug JSON-LD (duplicate ImageObject blocks)
+  const STRIP_SMUGMUG_JSONLD = true; // toggle if needed
+  if (STRIP_SMUGMUG_JSONLD) {
+    const smugRegex =
+      /<script[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?smugmug\.com[\s\S]*?<\/script>/gi;
+    const stripped = html.replace(smugRegex, "");
+    if (stripped.length !== html.length) changed = true;
+    html = stripped;
+  }
 
   return { cleaned: html, changed };
 }
