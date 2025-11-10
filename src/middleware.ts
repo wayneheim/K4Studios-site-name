@@ -88,18 +88,19 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     }
   );
 
-  // ✅ NEW: Remove SmugMug JSON-LD (duplicate ImageObject blocks)
-  const STRIP_SMUGMUG_JSONLD = true; // toggle if needed
+  // ✅ NEW: Remove SmugMug's injected JSON-LD (keep ours)
+  const STRIP_SMUGMUG_JSONLD = true;
   if (STRIP_SMUGMUG_JSONLD) {
     const smugRegex =
-      /<script[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?smugmug\.com[\s\S]*?<\/script>/gi;
+      /<script[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?"@type"\s*:\s*"ImageObject"[\s\S]*?"creator"\s*:\s*\{\s*"@type"\s*:\s*"Thing"[\s\S]*?<\/script>/gi;
+
     const stripped = html.replace(smugRegex, "");
-    if (stripped.length !== html.length) changed = true;
+    if (stripped.length !== html.length) {
+      changed = true;
+      console.log("🧹 Stripped SmugMug JSON-LD block");
+    }
     html = stripped;
   }
-
-  return { cleaned: html, changed };
-}
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
   const response = await next();
