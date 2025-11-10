@@ -102,7 +102,7 @@ if (isImagePage && preloadImage?.src) {
   rawOgImage = meta.ogImage;
   ogAlt = meta.ogImageAlt || meta.ogImageTitle || cleanTitle;
 } else {
-  rawOgImage = "/images/show-2t.webp";
+  rawOgImage = "/images/show-t.webp";
   ogAlt = cleanTitle;
 }
 
@@ -234,47 +234,5 @@ const keywords =
         <feConvolveMatrix order="3" kernelMatrix="0 -.5 0 -.5 3.2 -.5 0 -.5 0" divisor="1.2" />
       </filter>
     </svg>
-
-    <!-- 🧹 Remove SmugMug JSON-LD (handles delayed injection) -->
-    <script>
-      function removeSmugMugJsonLd() {
-        const scripts = document.querySelectorAll('script[type="application/ld+json"]');
-        scripts.forEach((s) => {
-          try {
-            const text = s.textContent.trim();
-            if (!text.includes("photos.smugmug.com")) return;
-            const json = JSON.parse(text);
-            if (
-              (json["@type"] === "ImageObject" || json.type === "ImageObject") &&
-              (!json["@id"] || !text.includes('"creditText"'))
-            ) {
-              console.log("🧹 Removed SmugMug JSON-LD injected block");
-              s.remove();
-            }
-          } catch {}
-        });
-      }
-
-      document.addEventListener("DOMContentLoaded", removeSmugMugJsonLd);
-
-      const observer = new MutationObserver((mutations) => {
-        for (const m of mutations) {
-          for (const node of m.addedNodes) {
-            if (
-              node.tagName === "SCRIPT" &&
-              node.type === "application/ld+json" &&
-              node.textContent.includes("photos.smugmug.com")
-            ) {
-              removeSmugMugJsonLd();
-            }
-          }
-        }
-      });
-
-      observer.observe(document.documentElement || document.body, {
-        childList: true,
-        subtree: true,
-      });
-    </script>
   </body>
 </html>

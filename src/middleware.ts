@@ -58,13 +58,12 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     return m;
   });
 
-  // 🚨 Strip <title>, <meta>, <link>, <script type="application/ld+json"> inside body
+  // 🚨 Strip <title>, <meta>, <link> inside body
   html = html.replace(/<body[\s\S]*?<\/body>/gi, (bodyBlock) => {
     const cleaned = bodyBlock
       .replace(/<title[\s\S]*?<\/title>/gi, "")
       .replace(/<meta[^>]*>/gi, "")
-      .replace(/<link[^>]*>/gi, "")
-      .replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, "");
+      .replace(/<link[^>]*>/gi, "");
     if (cleaned.length !== bodyBlock.length) changed = true;
     return cleaned;
   });
@@ -89,6 +88,28 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     }
   );
 
+  // ✅ Strip incomplete ImageObject structured data (SmugMug) - keep only our complete data with @id
+  html = html.replace(
+    /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
+    (match, content) => {
+      try {
+        const json = JSON.parse(content.trim());
+        const items = Array.isArray(json) ? json : [json];
+        const hasValidImageObject = items.some(
+          (item) => item["@type"] === "ImageObject" && item["@id"]
+        );
+        if (!hasValidImageObject) {
+          changed = true;
+          console.log("🧹 Removed incomplete SmugMug JSON-LD block (missing @id)");
+          return "";
+        }
+      } catch {
+        // ignore non-JSON or invalid blocks
+      }
+      return match;
+    }
+  );
+
   return { cleaned: html, changed };
 }
 
@@ -99,14 +120,11 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   if (contentType.includes("text/html")) {
     const body = await response.text();
     // Skip cleaning for large responses to avoid memory issues in Cloudflare
-    if (body.length > 1000000) {
-      return response;
-    }
+    if (body.length > 1000000) return response;
+
     const { cleaned, changed } = stripNestedTags(body);
 
-    if (changed) {
-      console.log(`🧹 Cleaned HTML on ${context.url.pathname}`);
-    }
+    if (changed) console.log(`🧹 Cleaned HTML on ${context.url.pathname}`);
 
     return new Response(cleaned, {
       status: response.status,
