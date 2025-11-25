@@ -4,7 +4,8 @@ import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorP
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import ShareDrawer from "./ShareDrawer.jsx";
-import StoryShow from "./Gallery-Slideshow.jsx";
+import SimpleStoryShow from "./Gallery-Slideshow.jsx";
+import StoryShowWithAudio from "./Gallery-Slideshow-Story-MYSTERY.jsx";
 
 // Helper function to select the best image source for slideshow display
 const getBestImageSrc = (image) => {
@@ -14,6 +15,14 @@ const getBestImageSrc = (image) => {
 };
 
 export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", introMeta = {}, outroMeta = {} }) {
+  // Detect if this is a story (has audio or intro metadata) vs gallery (neither)
+  const isStory = useMemo(() => {
+    return Boolean(globalAudioSrc) || Object.keys(introMeta).length > 0 || Object.keys(outroMeta).length > 0;
+  }, [globalAudioSrc, introMeta, outroMeta]);
+
+  // Choose the appropriate slideshow component
+  const StoryShow = isStory ? StoryShowWithAudio : SimpleStoryShow;
+  
   // Detect actual global audio mode from data if not explicitly set
   const detectedGlobalAudioMode = useMemo(() => {
     if (globalAudioMode !== "score") return globalAudioMode;
@@ -1281,6 +1290,18 @@ const isSpeechActive = () => {
             setShowSlideshow(false);
             setIsSpeaking(false);
           }}
+          isMuted={isMuted}
+          setIsMuted={setIsMuted}
+          volume={volume}
+          setVolume={setVolume}
+          audioRef={audioRef}
+          ambientAudioRef={ambientAudioRef}
+          setIsSpeaking={setIsSpeaking}
+          isSpeaking={isSpeaking}
+          globalAudioSrc={globalAudioSrc}
+          globalAudioMode={globalAudioMode}
+          introMeta={introMeta}
+          outroMeta={outroMeta}
         />
       )}
 
