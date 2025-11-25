@@ -84,13 +84,13 @@ async function main() {
     try {
       const res = await fetch(SITEMAP_URL);
       if (!res.ok) {
-        console.error(`❌ Failed to fetch remote sitemap: ${res.status} ${res.statusText}`);
-        process.exit(1);
+        console.error(`❌ Failed to fetch remote sitemap: ${res.status} ${res.statusText}. Skipping IndexNow submission.`);
+        return; // Exit gracefully without failing build
       }
       xml = await res.text();
     } catch (err) {
-      console.error(`❌ Error fetching remote sitemap:`, err);
-      process.exit(1);
+      console.error(`❌ Error fetching remote sitemap:`, err.message, '. Skipping IndexNow submission.');
+      return; // Exit gracefully
     }
   }
 

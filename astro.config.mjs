@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
 import path from 'path';
 
 export default defineConfig({
@@ -13,6 +14,7 @@ export default defineConfig({
   integrations: [
     react(),
     tailwind(),  // <-- Tailwind goes here!
+    sitemap(),
   ],
   vite: {
     resolve: {
