@@ -4,7 +4,7 @@ import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorP
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import ShareDrawer from "./ShareDrawer.jsx";
-import StoryShow from "./Gallery-Slideshow-Story.jsx";
+import StoryShow from "./Gallery-Slideshow.jsx";
 
 // Helper function to select the best image source for slideshow display
 const getBestImageSrc = (image) => {
@@ -1281,18 +1281,6 @@ const isSpeechActive = () => {
             setShowSlideshow(false);
             setIsSpeaking(false);
           }}
-          isMuted={isMuted}
-          setIsMuted={setIsMuted}
-          volume={volume}
-          setVolume={setVolume}
-          audioRef={audioRef}
-          ambientAudioRef={ambientAudioRef}
-          setIsSpeaking={setIsSpeaking}
-          isSpeaking={isSpeaking}
-          globalAudioSrc={globalAudioSrc}
-          globalAudioMode={globalAudioMode}
-          introMeta={introMeta}
-          outroMeta={outroMeta}
         />
       )}
 

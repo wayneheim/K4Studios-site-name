@@ -1,6 +1,3 @@
-// Editor saved stage at 50% preview — promote back to 1:1
-const EDITOR_PREVIEW_SCALE = 0.5;
-const REAL_SCALE = 1 / EDITOR_PREVIEW_SCALE; // => 2
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
@@ -171,9 +168,6 @@ function buildPanZoomAnimation(panZoom) {
   });
 
   const buildTransform = (stage) => {
-    // Editor saved normalized coordinates and scale at 50% preview, so we need to scale up to 100% actual size.
-    // The editor's normalized x/y are in [0,1] relative to the 50% preview, so for playback we use them as-is for 100% size.
-    // No need to correct for scale factor here; just use the normalized values directly.
     const scale = stage?.scale ?? 1;
     const rotate = stage?.rotate ?? 0;
     const x = stage?.x ?? 0.5;
@@ -217,8 +211,6 @@ export default function StoryShowBaker({ images, startImageId, onExit, isMuted =
 
   const fsRef = useRef(null);
   const stageDisplayRef = useRef(null);
-  const liveAreaRef = useRef(null);
-  const [liveAreaSize, setLiveAreaSize] = useState({ width: null, height: null });
   const hasUserUnlockedAudioRef = useRef(false);
   const hasAutoPlayedRef = useRef(false);
   const hideControlsTimerRef = useRef(null);
@@ -425,34 +417,29 @@ export default function StoryShowBaker({ images, startImageId, onExit, isMuted =
       transformOrigin: "center center",
     };
 
-    // --------------------------
-    // Pull stageMeta from editor
-    // --------------------------
     const stageMeta = current?.panZoom?.stageMeta || {};
-    const metaWidth = toPositiveNumber(stageMeta.width)
-      ? toPositiveNumber(stageMeta.width) * REAL_SCALE
-      : null;
-    const metaHeight = toPositiveNumber(stageMeta.height)
-      ? toPositiveNumber(stageMeta.height) * REAL_SCALE
-      : null;
-    const metaImageWidth = toPositiveNumber(stageMeta.imageWidth)
-      ? toPositiveNumber(stageMeta.imageWidth) * REAL_SCALE
-      : null;
-    const metaImageHeight = toPositiveNumber(stageMeta.imageHeight)
-      ? toPositiveNumber(stageMeta.imageHeight) * REAL_SCALE
-      : null;
+    const metaWidth = toPositiveNumber(stageMeta.width);
+    const metaHeight = toPositiveNumber(stageMeta.height);
+    const metaImageWidth = toPositiveNumber(stageMeta.imageWidth);
+    const metaImageHeight = toPositiveNumber(stageMeta.imageHeight);
 
-    // If we have valid meta sizes, use them directly as full render dims
+    const widthPx = Number(outputResolution?.width);
+    const heightPx = Number(outputResolution?.height);
+    const hasResolution =
+      Number.isFinite(widthPx) && Number.isFinite(heightPx) && widthPx > 0 && heightPx > 0;
+    const ratio = hasResolution ? widthPx / heightPx : Number(outputAspect);
+    const hasTargetAspect = Number.isFinite(ratio) && ratio > 0;
+
     if (metaWidth && metaHeight) {
+      const maxStageWidth = Math.max(0, Math.round(vp.w * 0.94));
+      const maxStageHeight = Math.max(0, Math.round(vp.h * 0.92));
+      const scaleX = maxStageWidth > 0 ? maxStageWidth / metaWidth : 1;
+      const scaleY = maxStageHeight > 0 ? maxStageHeight / metaHeight : 1;
+      const scale = Math.min(scaleX, scaleY, 1) || 1;
+      const scaledWidth = metaWidth * scale;
+      const scaledHeight = metaHeight * scale;
       const imageWidth = metaImageWidth ?? metaWidth;
       const imageHeight = metaImageHeight ?? metaHeight;
-
-      // ✅ Automatically shrink if too large for viewport
-      const fitScale = Math.min(
-        1,
-        (vp.w * 0.94) / metaWidth,
-        (vp.h * 0.92) / metaHeight
-      );
 
       return {
         imgStyle: {
@@ -464,13 +451,11 @@ export default function StoryShowBaker({ images, startImageId, onExit, isMuted =
         },
         stageDisplayStyle: {
           position: "relative",
-          width: `${metaWidth}px`,
-          height: `${metaHeight}px`,
+          width: `${scaledWidth}px`,
+          height: `${scaledHeight}px`,
+          maxWidth: "100%",
+          maxHeight: "100%",
           overflow: "hidden",
-          backgroundColor: "black",
-          margin: "0 auto",
-          transform: `scale(${fitScale})`,
-          transformOrigin: "top left",
         },
         stageContentStyle: {
           position: "absolute",
@@ -478,75 +463,125 @@ export default function StoryShowBaker({ images, startImageId, onExit, isMuted =
           left: 0,
           width: `${metaWidth}px`,
           height: `${metaHeight}px`,
-          transform: "none",
+          transform: `scale(${scale})`,
+          transformOrigin: "top left",
         },
         imageContainerStyle: {
           ...baseContainerStyle,
           width: `${imageWidth}px`,
           height: `${imageHeight}px`,
         },
-        realMetaWidth: metaWidth,
-        realMetaHeight: metaHeight,
       };
     }
 
-    // Fallback if no meta found (uses outputResolution)
-    const widthPx = Number(outputResolution?.width);
-    const heightPx = Number(outputResolution?.height);
-    const hasResolution =
-      Number.isFinite(widthPx) && Number.isFinite(heightPx) && widthPx > 0 && heightPx > 0;
+    const style = {};
+    const hasText = Boolean(current?.story) && !isMobileShort; // hide story on all phones/phablets
+
+    let displayStyle = null;
+    let contentStyle = null;
 
     if (hasResolution) {
-      return {
-        imgStyle: {
-          ...baseImageStyle,
-          width: `${widthPx}px`,
-          height: `${heightPx}px`,
-        },
-        stageDisplayStyle: {
-          position: "relative",
-          width: `${widthPx}px`,
-          height: `${heightPx}px`,
-          overflow: "hidden",
-          backgroundColor: "black",
-          margin: "0 auto",
-          transform: "scale(1)",
-          transformOrigin: "top left",
-        },
-        stageContentStyle: {
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: `${widthPx}px`,
-          height: `${heightPx}px`,
-        },
-        imageContainerStyle: {
-          ...baseContainerStyle,
-          width: `${widthPx}px`,
-          height: `${heightPx}px`,
-        },
-        realMetaWidth: widthPx,
-        realMetaHeight: heightPx,
+      const maxStageWidth = Math.max(0, Math.round(vp.w * 0.94));
+      const maxStageHeight = Math.max(0, Math.round(vp.h * 0.92));
+      const scaleX = maxStageWidth > 0 ? maxStageWidth / widthPx : 1;
+      const scaleY = maxStageHeight > 0 ? maxStageHeight / heightPx : 1;
+      const scale = Math.min(scaleX, scaleY, 1) || 1;
+
+      const scaledWidth = widthPx * scale;
+      const scaledHeight = heightPx * scale;
+
+      displayStyle = {
+        position: "relative",
+        width: `${scaledWidth}px`,
+        height: `${scaledHeight}px`,
+        maxWidth: "100%",
+        maxHeight: "100%",
+        overflow: "hidden",
       };
+
+      contentStyle = {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: `${widthPx}px`,
+        height: `${heightPx}px`,
+        transform: `scale(${scale})`,
+        transformOrigin: "top left",
+      };
+
+      style.width = "100%";
+      style.height = "100%";
+      style.maxWidth = "100%";
+      style.maxHeight = "100%";
+    } else if (hasTargetAspect) {
+      const maxStageWidth = Math.max(0, Math.round(vp.w * 0.94));
+      const maxStageHeight = Math.max(0, Math.round(vp.h * 0.92));
+      let stageWidth = maxStageWidth || 1;
+      let stageHeight = Math.round(stageWidth / ratio) || 1;
+
+      if (stageHeight > maxStageHeight) {
+        stageHeight = maxStageHeight || 1;
+        stageWidth = Math.round(stageHeight * ratio) || 1;
+      }
+
+      displayStyle = {
+        position: "relative",
+        width: `${stageWidth}px`,
+        height: `${stageHeight}px`,
+        maxWidth: `${stageWidth}px`,
+        maxHeight: `${stageHeight}px`,
+        overflow: "hidden",
+      };
+
+      style.width = "100%";
+      style.height = "100%";
+      style.maxWidth = "100%";
+      style.maxHeight = "100%";
+    } else if (isLandscape) {
+      if (isVertical) {
+        const maxH = Math.round(vp.h * 0.92);
+        style.height = `${maxH}px`;
+        style.maxHeight = `${maxH}px`;
+        style.width = "auto";
+        style.maxWidth = hasText ? `${Math.round(vp.w * 0.7)}px` : "none";
+      } else {
+        style.maxHeight = `${Math.round(vp.h * 0.92)}px`;
+        style.maxWidth = `${Math.round(vp.w * 0.96)}px`;
+      }
+    } else {
+      style.maxHeight = "100vh";
+      // Account for mobile margins - use 92% of viewport width instead of 100% (accounting for container padding)
+      style.maxWidth = "92vw";
     }
 
-    // Generic fallback
+    const mergedStyle = {
+      ...baseImageStyle,
+      ...style,
+    };
+
+    if (!mergedStyle.width) mergedStyle.width = "100%";
+    if (!mergedStyle.height) mergedStyle.height = "100%";
+
     return {
-      imgStyle: baseImageStyle,
-      stageDisplayStyle: {
-        position: "relative",
+      imgStyle: mergedStyle,
+      stageDisplayStyle: displayStyle,
+      stageContentStyle: contentStyle,
+      imageContainerStyle: {
+        ...baseContainerStyle,
         width: "100%",
         height: "100%",
-        overflow: "hidden",
       },
-      stageContentStyle: { position: "absolute", top: 0, left: 0 },
-      imageContainerStyle: baseContainerStyle,
     };
   }, [
     current?.panZoom?.stageMeta,
-    outputResolution,
-    vp.w,
+    isLandscape,
+    isVertical,
     vp.h,
+    vp.w,
+    current?.story,
+    isMobileShort,
+    outputAspect,
+    outputResolution,
   ]);
 
   const introOpening = useMemo(() => {
@@ -724,7 +759,6 @@ export default function StoryShowBaker({ images, startImageId, onExit, isMuted =
   const liveAreaOverlay = (
     <div
       key="live-area-outline"
-      ref={liveAreaRef}
       className="pointer-events-none"
       style={{
         position: "absolute",
@@ -735,19 +769,6 @@ export default function StoryShowBaker({ images, startImageId, onExit, isMuted =
       }}
     />
   );
-
-  // Effect to update the live area overlay's pixel size
-  useEffect(() => {
-    function updateLiveAreaSize() {
-      if (liveAreaRef.current) {
-        const rect = liveAreaRef.current.getBoundingClientRect();
-        setLiveAreaSize({ width: Math.round(rect.width), height: Math.round(rect.height) });
-      }
-    }
-    updateLiveAreaSize();
-    window.addEventListener('resize', updateLiveAreaSize);
-    return () => window.removeEventListener('resize', updateLiveAreaSize);
-  }, [stageDisplayRef]);
 
   const introOverlayElement = useMemo(() => {
     if (!isIntroSlide) return null;
@@ -1227,41 +1248,6 @@ export default function StoryShowBaker({ images, startImageId, onExit, isMuted =
                     imageStack
                   )}
                   {liveAreaOverlay}
-
-                  {/* ✅ Display actual render size outside the red box */}
-                  {(() => {
-                    const widthPx = Number(outputResolution?.width);
-                    const heightPx = Number(outputResolution?.height);
-                    let displayW = widthPx;
-                    let displayH = heightPx;
-                    if (!Number.isFinite(displayW) || !Number.isFinite(displayH)) {
-                      const ratio = Number(outputAspect) || 16 / 9;
-                      displayW = Math.round(1920);
-                      displayH = Math.round(displayW / ratio);
-                    }
-                    return (
-                      <div
-                        style={{
-                          position: "absolute",
-                          bottom: "-1.6em",
-                          right: 0,
-                          color: "rgba(255,255,255,0.7)",
-                          fontSize: "0.75rem",
-                          letterSpacing: "0.03em",
-                          whiteSpace: "nowrap",
-                          textShadow: "0 0 4px rgba(0,0,0,0.7)",
-                          pointerEvents: "none",
-                          background: "rgba(0,0,0,0.32)",
-                          borderTopLeftRadius: "0.5em",
-                          padding: "0.18em 0.7em 0.18em 0.9em",
-                          margin: 0,
-                        }}
-                      >
-                        {`${displayW} × ${displayH} (Actual Render Size)`}
-                      </div>
-                    );
-                  })()}
-
                   {introOverlayElement}
                   {outroOverlayElement}
                 </div>
@@ -1323,31 +1309,6 @@ export default function StoryShowBaker({ images, startImageId, onExit, isMuted =
             />
           )}
         </AnimatePresence>
-
-        {/* Render actual pixel size of the red box above the controls */}
-        {showControls && !isIntro && liveAreaSize.width && liveAreaSize.height && (
-          <div
-            style={{
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%)",
-              bottom: "calc(max(0.75rem, env(safe-area-inset-bottom)) + 6.2rem)",
-              color: "rgba(255,255,255,0.85)",
-              fontSize: "0.85rem",
-              letterSpacing: "0.03em",
-              whiteSpace: "nowrap",
-              textShadow: "0 0 4px rgba(0,0,0,0.7)",
-              pointerEvents: "none",
-              background: "rgba(0,0,0,0.32)",
-              borderRadius: "0.5em",
-              padding: "0.22em 1.1em 0.22em 1.1em",
-              margin: 0,
-              zIndex: 10001,
-            }}
-          >
-            {`${liveAreaSize.width} × ${liveAreaSize.height} (Live Area Pixels)`}
-          </div>
-        )}
 
         <AnimatePresence>
           {showControls && !isIntro && (
