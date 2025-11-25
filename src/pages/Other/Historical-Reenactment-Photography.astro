@@ -54,13 +54,13 @@ const galleryPaths = landingNav ? collectGalleryHrefs(landingNav) : [];
 const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
-  return allGalleryData[filePath]?.galleryData || [];
+  const mod = allGalleryData[filePath];
+  return (mod && typeof mod === 'object' && 'galleryData' in mod) ? mod.galleryData : [];
 });
 
 const featheredImages = getSideImages({
   sectionPath,
   headingCount: mobileCount,
-  galleryDatas,
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
@@ -69,9 +69,8 @@ const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingWestern.subtitle,
     url: `https://k4studios.com${sectionPath}`,
-    keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
@@ -110,7 +109,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+        <ImageBar2 client:load slides={featheredImages} />
       </div>
     </div>
 
@@ -126,37 +125,45 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </section>
 
     <div class="py-5">
-      <TombstoneNav items={landingWestern.tombstones} />
+      {/* TombstoneNav removed */}
     </div>
 
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section, index) => (
-            <article class="story-block" key={index}>
-              {section.title && (
-                <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+            <article class="story-block">
+              {"title" in section && section.title && !(index === 0 && section.title === landingWestern.title) && (
+                <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(String(section.title), galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               )}
-              {section.subhead && (
-                <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+              {"subhead" in section && section.subhead && !(index === 0 && section.subhead === landingWestern.subtitle) && (
+                <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(String(section.subhead), galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               )}
               {section.tagline && (
                 <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               )}
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
-                  {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                  {section.list.map((item) => (
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
                   ))}
                 </ul>
               )}
             </article>
           ))}
+          <h3 style="font-weight: 500; font-size: 1.2rem; margin-top: -0.5rem; margin-bottom: -.025rem; color: #5a4a3b;">Guest Writing and Features</h3>
+          <p>
+            To learn more about the importance of reenactment photography and my work, see our article at:
+            <a href="https://www.legendsofamerica.com/keeping-the-frontier-alive/?fbclid=IwY2xjawOSn35leHRuA2FlbQIxMQBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeLYVToeFshUxqBNTpC4V5Uf3ZdTL8gjDsGTq1NSwlHlwKIe77lSP1r6mVpf8_aem_2PYmc4kV8ZI3WgK4_1Y6_w" target="_blank" rel="noopener noreferrer">Legends of America</a>.
+          </p>
+          <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid #ddd;" />
+          <p>
+            See what we can do for your site. <a href="mailto:contact@k4studios.com">Contact us</a> about writing an article or for information on availability of our historical themed art to support your site or blog.
+          </p>
         </section>
-
         <MobileStoryImages client:only="react" images={featheredImages} />
       </div>
 
@@ -170,15 +177,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       </div>
     </section>
 
-    <section class="pb-10">
-      <input type="checkbox" id="faq-toggle" class="more-toggle" />
-      <div class="truncate-container" style="min-height:0;">
-        <div class="truncate-text">
-          {/* <FAQAccordion items={facingFAQ} /> */}
-        </div>
-      </div>
-      <label for="faq-toggle" class="more-toggle-label"></label>
-    </section>
+    {/* FAQ section removed */}
 
     <SiteFooter class="pt-8 pb-12" />
   </main>

@@ -9,7 +9,8 @@ export const storyMeta = {
   "alt": "Demo picture show featuring painterly Western photography and visual storytelling",
   "closingText": "This demo showcases the Picture Show format — immersive visual narratives that blend photography, story, and emotion. Each image tells a story, each sequence creates a journey.",
   "showWatermark": true,
-  "savedAt": "2025-11-06T12:00:00.000Z"
+  "savedAt": "2025-11-06T12:00:00.000Z",
+  "introMeta": {}
 };
 
 // src/data/Other/Stories/DemoShow.mjs

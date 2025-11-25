@@ -48,6 +48,8 @@ const structuredDataJSON = getStructuredData({
       rawData={Array.isArray(storyData) ? storyData : []}
       basePath="/Other/Stories/DemoShow"
       titleBase="The Wayward Trail"
+      introMeta={storyMeta.introMeta || {}}
+      outroMeta={storyMeta.outroMeta || {}}
     />
   </div>
 

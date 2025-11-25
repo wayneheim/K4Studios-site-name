@@ -13,7 +13,7 @@ const getBestImageSrc = (image) => {
   return image.srcXL || image.srcL || image.srcM || image.src || "";
 };
 
-export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score" }) {
+export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", introMeta = {}, outroMeta = {} }) {
   // Detect actual global audio mode from data if not explicitly set
   const detectedGlobalAudioMode = useMemo(() => {
     if (globalAudioMode !== "score") return globalAudioMode;
@@ -1291,6 +1291,8 @@ const isSpeechActive = () => {
           isSpeaking={isSpeaking}
           globalAudioSrc={globalAudioSrc}
           globalAudioMode={globalAudioMode}
+          introMeta={introMeta}
+          outroMeta={outroMeta}
         />
       )}
 

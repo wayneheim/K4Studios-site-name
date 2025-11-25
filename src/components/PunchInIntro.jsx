@@ -1,105 +1,124 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
-const title = "Embrace the Past... Live the Story";
-const letters = title.split("").map(l => (l === " " ? "\u00A0" : l));
+export default function PunchInIntro({ onDone, introMeta = {} }) {
+  // Check if introMeta has any actual data
+  const hasIntroMeta = Object.keys(introMeta).length > 0;
 
-function getLetterDelays(count, min = 0, max = 0.7) {
-  return Array.from({ length: count }, () =>
-    +(Math.random() * (max - min) + min).toFixed(2)
-  );
-}
+  // Get intro metadata - ONLY use defaults if introMeta is completely empty
+  const showIntroText = hasIntroMeta ? (introMeta?.showIntroText ?? true) : true;
+  const showShowTitle = hasIntroMeta ? (introMeta?.showShowTitle ?? true) : true;
+  const showTagline = hasIntroMeta ? (introMeta?.showTagline ?? true) : true;
+  const introTextStage = hasIntroMeta ? (introMeta?.introTextStage ?? 1) : 1;
+  const showTitleStage = hasIntroMeta ? (introMeta?.showTitleStage ?? 2) : 2;
+  const taglineStage = hasIntroMeta ? (introMeta?.taglineStage ?? 3) : 3;
+  const introPieceOrder = hasIntroMeta ? (introMeta?.introPieceOrder || ["introText", "showTitle", "tagline"]) : ["introText", "showTitle", "tagline"];
 
-export default function PunchInIntro({ onDone }) {
-  const [showCurtain, setShowCurtain] = useState(true);         // <--- 1. ADD THIS
-  const [showShimmer, setShowShimmer] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(0);
-  const [fadeOut, setFadeOut] = useState(false);
-  const delays = useRef(getLetterDelays(letters.length, 0, 0.7)).current;
+  // Determine which stages are actually used
+  const usedStages = useMemo(() => {
+    const stages = new Set();
+    if (showIntroText) stages.add(introTextStage);
+    if (showShowTitle) stages.add(showTitleStage);
+    if (showTagline) stages.add(taglineStage);
+    return stages.size > 0 ? stages : new Set([1]);
+  }, [showIntroText, showShowTitle, showTagline, introTextStage, showTitleStage, taglineStage]);
 
-  // 2. REMOVE THE CURTAIN AFTER 1S
-  useEffect(() => {
-    const curtain = setTimeout(() => setShowCurtain(false), 800);
-    return () => clearTimeout(curtain);
-  }, []);
+  // Get the first (lowest) used stage
+  const firstStage = useMemo(() => {
+    const stagesArray = Array.from(usedStages);
+    return stagesArray.length > 0 ? Math.min(...stagesArray) : 1;
+  }, [usedStages]);
 
-  // Track when all letters are in
-  useEffect(() => {
-    if (visibleCount === letters.length) {
-      const holdTimer = setTimeout(() => {
-        setFadeOut(true);
-        if (onDone) onDone();
-      }, 5500);
-      return () => clearTimeout(holdTimer);
+  // Determine which pieces are on the first stage
+  const pieces = useMemo(() => {
+    const result = [];
+
+    if (showIntroText && introTextStage === firstStage) {
+      result.push({
+        type: "introText",
+        text: introMeta?.introText || "K4 Studios presents the Fine Art Photography of Wayne Heim.",
+      });
     }
-  }, [visibleCount, onDone]);
 
-  const letterVariants = {
-    hidden: { opacity: 0, scale: 0.85, y: 8 },
-    visible: custom => ({
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        delay: delays[custom],
-        type: "spring",
-        stiffness: 420,
-        damping: 32,
-        duration: 1.0
-      }
-    })
-  };
+    if (showShowTitle && showTitleStage === firstStage) {
+      result.push({
+        type: "showTitle",
+        text: introMeta?.showTitle || "Western Living History",
+      });
+    }
 
-  // 3. CURTAIN GOES HERE!
-  if (showCurtain) {
-    return (
-      <div
-        className="absolute inset-0 bg-black"
-        style={{ zIndex: 20 }}
-      />
-    );
-  }
+    if (showTagline && taglineStage === firstStage) {
+      result.push({
+        type: "tagline",
+        text: introMeta?.tagline || "Embrace the Past... Live the Story.",
+      });
+    }
+
+    // Sort by introPieceOrder
+    result.sort((a, b) => introPieceOrder.indexOf(a.type) - introPieceOrder.indexOf(b.type));
+
+    return result;
+  }, [introMeta, showIntroText, showShowTitle, showTagline, introTextStage, showTitleStage, taglineStage, introPieceOrder, firstStage]);
 
   return (
     <motion.div
       key="intro"
-      className="absolute inset-0 flex items-center justify-center font-serif"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: fadeOut ? 0 : 1 }}
-      transition={{ duration: 1.7, ease: "fade" }}
+      className="absolute inset-0 flex flex-col items-center justify-center font-serif gap-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeIn" }}
       style={{
-  // Responsive size: still allows wrap on narrow screens without over-scaling
-  fontSize: "clamp(1.05rem,2.5vw,2.7rem)",
-        letterSpacing: ".05em",
-        fontFamily: "'Glegoo', serif",
         color: "#f3ecd9",
-  fontWeight: 700,
-  // Provide ~5px margin on each side while centering
-  maxWidth: "calc(100% - 10px)",
-  margin: "0 5px",
-  padding: 0,
-  textAlign: "center",
-  lineHeight: 1.12
+        fontWeight: 700,
+        textAlign: "center",
+        padding: "0 20px",
+        backgroundColor: "rgba(0, 0, 0, 0.7)",
       }}
     >
-      {letters.map((l, i) => (
-        <motion.span
-          key={i}
-          custom={i}
-          initial="hidden"
-          animate="visible"
-          variants={letterVariants}
-          onAnimationComplete={() =>
-            setVisibleCount(c => (c < letters.length ? c + 1 : c))
-          }
-          style={{
-            display: "inline-block",
-            marginRight: l === "\u00A0" ? "0.25em" : "0.01em"
-          }}
-        >
-          {l}
-        </motion.span>
-      ))}
+      {/* Render all pieces on first stage in order */}
+      <div className="flex-1 flex flex-col items-center justify-center gap-8">
+        {pieces.map((piece) => (
+          <div key={piece.type} style={{ maxWidth: "80%" }}>
+            {piece.type === "introText" && (
+              <>
+                <h2 className="text-xl sm:text-2xl font-light tracking-widest opacity-80">
+                  {piece.text}
+                </h2>
+                <img
+                  src="/images/K4-Stories logo2b.webp"
+                  alt="K4 Stories Logo"
+                  style={{
+                    width: "140px",
+                    height: "auto",
+                    opacity: 0.9,
+                    filter: "drop-shadow(0 0 4px rgba(255,255,255,0.4))",
+                    margin: "1rem auto 0",
+                  }}
+                />
+              </>
+            )}
+            {piece.type === "showTitle" && (
+              <h1 className="text-4xl sm:text-5xl font-bold">
+                {piece.text}
+              </h1>
+            )}
+            {piece.type === "tagline" && (
+              <p className="text-lg sm:text-xl font-medium italic opacity-90" style={{ fontStyle: "italic" }}>
+                {piece.text}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Exit button at the bottom */}
+      <button
+        onClick={onDone}
+        className="mb-4 px-6 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
+        style={{ cursor: "pointer" }}
+      >
+        Continue →
+      </button>
     </motion.div>
   );
 }

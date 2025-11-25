@@ -11,7 +11,7 @@ const getBestImageSrc = (image) => {
   return image.srcXL || image.srcL || image.srcM || image.src || "";
 };
 
-export default function StoryShow({ images, startImageId, onExit, isMuted = false, setIsMuted, volume = 0.7, setVolume, audioRef, ambientAudioRef, setIsSpeaking, isSpeaking, globalAudioSrc, globalAudioMode }) {
+export default function StoryShow({ images, startImageId, onExit, isMuted = false, setIsMuted, volume = 0.7, setVolume, audioRef, ambientAudioRef, setIsSpeaking, isSpeaking, globalAudioSrc, globalAudioMode, introMeta = {}, outroMeta = {} }) {
   const [index, setIndex] = useState(0);
   const [isIntro, setIsIntro] = useState(false);
   const [showControls, setShowControls] = useState(true);
@@ -170,12 +170,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
     });
   };
 
-  useEffect(() => {
-    if (isIntro) {
-      const introTimer = setTimeout(() => setIsIntro(false), 3000);
-      return () => clearTimeout(introTimer);
-    }
-  }, [isIntro]);
+  // Auto-dismiss removed - user must click Exit button to close intro
 
   const isMessengerWebView = useMemo(() => {
     if (typeof navigator === "undefined") return false;
@@ -321,7 +316,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
 
         <AnimatePresence>
           {isIntro ? (
-            <PunchInIntro onDone={() => setIsIntro(false)} />
+            <PunchInIntro onDone={() => setIsIntro(false)} introMeta={introMeta} />
           ) : (
             <motion.div
               key={current.id}
