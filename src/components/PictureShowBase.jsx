@@ -706,7 +706,13 @@ const isSpeechActive = () => {
                 </h2>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-10 max-w-[614px] mx-auto">
-                  {filteredData.filter(img => img.id !== "i-k4studios").map((img, idx) => (
+                  {filteredData.filter(img => 
+                    img.id !== "i-k4studios" &&
+                    img.id !== "i-k4video-intro" &&
+                    img.id !== "i-k4video-outro" &&
+                    !img._isIntro &&
+                    !img._isOutro
+                  ).map((img, idx) => (
                     <a
                       key={idx}
                       href={img.galleries && img.galleries.length > 0 ? `/Galleries/${img.galleries[0].replace('Galleries/', '').replace('.mjs', '')}/${img.id}` : "#"}
