@@ -5,6 +5,11 @@ import "../styles/siteNavMenu.css";
 export default function SiteNavMenu({ forceMobile = false }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [resetSignal, setResetSignal] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const closeMobileMenu = () => {
     setMobileOpen(false);
@@ -61,14 +66,14 @@ export default function SiteNavMenu({ forceMobile = false }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  function MenuBranch({ node, depth = 0, delay = 0, reset, forceMobile = false }) {
+  function MenuBranch({ node, depth = 0, delay = 0, reset, forceMobile = false, mounted = false }) {
   const [expanded, setExpanded] = useState(false);
   const hasKids = node.children?.length > 0;
 
   useEffect(() => setExpanded(false), [reset]);
 
   const isMobileView = () =>
-    forceMobile || (typeof window !== "undefined" && window.innerWidth <= 768) || mobileOpen;
+    mounted && (forceMobile || (typeof window !== "undefined" && window.innerWidth <= 768) || mobileOpen);
 
   const handleClick = (e) => {
     if (isMobileView() && hasKids) {
@@ -150,6 +155,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
               delay={delay}
               reset={reset}
               forceMobile={forceMobile}
+              mounted={mounted}
             />
           ))}
         </div>
@@ -195,6 +201,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
                     delay={i * 0.1}
                     reset={resetSignal}
                     forceMobile={forceMobile}
+                    mounted={mounted}
                   />
                 ))}
               </div>
@@ -251,6 +258,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
                 delay={i * 0.1}
                 reset={resetSignal}
                 forceMobile={forceMobile}
+                mounted={mounted}
               />
             ))
           )}
