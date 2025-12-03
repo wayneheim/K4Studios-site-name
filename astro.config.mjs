@@ -12,11 +12,7 @@ export default defineConfig({
   output: 'server',
   adapter: netlify(),
   integrations: [
-    react({
-      babel: {
-        plugins: ['styled-jsx/babel']
-      }
-    }),
+    react(),
     tailwind(),  // <-- Tailwind goes here!
     sitemap(),
   ],
