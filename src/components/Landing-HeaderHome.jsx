@@ -49,16 +49,16 @@ function K4Splash({ isMobile }) {
 }
 
 function LogoSlot({ isMobile, triggerStripe }) {
-  const [logoIn, setLogoIn] = useState(isMobile);
+  const [logoIn, setLogoIn] = useState(false);
   useEffect(() => {
-    if (!isMobile) {
+    if (isMobile) {
+      setLogoIn(true);
+    } else {
       const timer = setTimeout(() => {
         setLogoIn(true);
         triggerStripe();
       }, 1300);
       return () => clearTimeout(timer);
-    } else {
-      setLogoIn(true);
     }
   }, [isMobile, triggerStripe]);
   return (
@@ -87,30 +87,33 @@ export default function LandingHeader({ breadcrumb }) {
   const isMobile = useIsMobile();
   const [animateStripes, setAnimateStripes] = useState(false);
   const [showWHLogo, setShowWHLogo] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (isMobile) {
-      const timer = setTimeout(() => setShowWHLogo(true), 420); // Delay fade-in
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted && isMobile) {
+      const timer = setTimeout(() => setShowWHLogo(true), 420);
       return () => clearTimeout(timer);
     } else {
       setShowWHLogo(false);
     }
-  }, [isMobile]);
+  }, [mounted, isMobile]);
 
   return (
     <header
-      className={`landing-header ${isMobile ? "mobile-animate" : ""} ${
-        animateStripes ? "desktop-animate" : ""
-      }`}
+      className={`landing-header${mounted && isMobile ? " mobile-animate" : ""}${mounted && animateStripes ? " desktop-animate" : ""}`}
       style={{ position: "relative", zIndex: 100 }}
     >
       <div className="breadcrumb-text desktop-only breadcrumb-fade" style={{ animationDelay: "1.2s" }}>
         {breadcrumb}
       </div>
 
-      <K4Splash isMobile={isMobile} />
-      <LogoSlot isMobile={isMobile} triggerStripe={() => setAnimateStripes(true)} />
-      {isMobile || typeof window === "undefined" ? (
+      <K4Splash isMobile={mounted && isMobile} />
+      <LogoSlot isMobile={mounted && isMobile} triggerStripe={() => setAnimateStripes(true)} />
+      {!mounted || isMobile ? (
         <div className="rhs">
           <SiteNavMenu />
         </div>
@@ -118,7 +121,7 @@ export default function LandingHeader({ breadcrumb }) {
         <DelayedRH />
       )}
 
-    {isMobile && (
+    {mounted && isMobile && (
   <a
     href="mailto:wayne@k4studios.com"
     className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}
