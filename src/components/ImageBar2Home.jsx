@@ -70,12 +70,11 @@ export default function ImageBar2Home() {
       </div>
       <style jsx>{`
         .carousel-fade {
-        margin-top: 5px;
+          margin-top: 5px;
           opacity: 0;
           transform: scale(0.85);
-          transition:
-            opacity 0.18s cubic-bezier(.33,1,.68,1),
-            transform 1.82s cubic-bezier(.38,1,.74,.96)2.5s;
+          transition: opacity 0.18s cubic-bezier(.33,1,.68,1), transform 1.82s cubic-bezier(.38,1,.74,.96);
+          transition-delay: 2.5s;
           will-change: opacity, transform;
         }
         .carousel-fadein {
