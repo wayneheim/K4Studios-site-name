@@ -1,3 +1,18 @@
+/* ========================================
+   CLS Prevention - Reserve space for client:only components
+   ======================================== */
+
+/* Reserve space for LandingHeader (client:only) - prevents layout shift */
+.drawer-mode {
+  min-height: 77px; /* header height (60px) + margin-top (1rem=16px) + border */
+}
+
+@media (max-width: 768px) {
+  .drawer-mode {
+    min-height: 60px;
+  }
+}
+
 .k4-contact-label-icon {
   color: #9a8b7a;
   transition: color 0.2s;
