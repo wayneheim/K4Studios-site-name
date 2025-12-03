@@ -18,6 +18,19 @@ from = "/sitemap.xml"
 to = "/sitemap.xml"
 status = 200
 
+# Redirect legacy Astro sitemap files to main sitemap
+[[redirects]]
+from = "/sitemap-index.xml"
+to = "/sitemap.xml"
+status = 301
+force = true
+
+[[redirects]]
+from = "/sitemap-0.xml"
+to = "/sitemap.xml"
+status = 301
+force = true
+
 
 ##############################
 # ✅ Gallery Deep-Link Fixes
