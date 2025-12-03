@@ -1,5 +1,12 @@
 export const posts = [
   {
+  slug: "signs",
+  title: "Inside the Frame: Signs",
+  date: "2025-12-01",
+  excerpt: "A conversation with Quill about choices, revelation, and the soul of the West in Wayne Heim’s painterly image 'Signs.' Step into a moral crossroads—where light, doubt, and solitude shape the story, and where the West reveals its truths in the silence between decisions.",
+  cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/MLWqJXTNgXXFr2xrLtv99fzJtBRDWb59rcStjcz9r/S/_HF21312-Edit-S.jpg" // <-- Update this URL to your real Signs cover image
+},
+  {
     slug: "eye-of-the-hunt",
     title: "Inside the Frame: Eye of the Hunt",
     date: "2025-10-28",

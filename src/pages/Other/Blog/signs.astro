@@ -1,0 +1,259 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData, getBlogBreadcrumbList } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  sectionGalleries,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.ts";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Blog/signs";
+const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/LcjHZqBHhs8xHHzNHjfFrCRhBQfqzc87N62sbPdVp/M/_HF21312-Edit-M.jpg"; // <-- UPDATE with your actual image URL
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: "Inside the Frame: Signs",
+    description: "A creative conversation with Quill about choices, revelation, and the deeper soul of Western storytelling in Wayne Heim’s painterly image 'Signs.'",
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2025-12-01",
+    image: coverImage
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const breadcrumbsJSON = getBlogBreadcrumbList({
+  title: "Inside the Frame: Signs",
+  url: `https://k4studios.com${sectionPath}`
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, coverImage),
+  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogTitle: "Inside the Frame: Signs",
+  ogDescription: "A creative conversation with Quill about choices, revelation, and the deeper soul of Western storytelling in Wayne Heim’s painterly image 'Signs.'",
+  ogImage: coverImage,
+  ogImageAlt: "Signs cover",
+  ogType: "article",
+  twitterUrl: `https://k4studios.com${sectionPath}`,
+  twitterTitle: "Inside the Frame: Signs",
+  twitterDescription: "A creative conversation with Quill about choices, revelation, and the deeper soul of Western storytelling in Wayne Heim’s painterly image 'Signs.'",
+  twitterImage: coverImage,
+  twitterCard: "summary_large_image"
+};
+
+// Prepare gallery preview images (optional, can pull as in your previous code)
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries";
+
+const linkKeywords = (text: string) =>
+  autoLinkKeywordsInText(text, allGalleryImages, featheredImages, galleryPaths, k4Semantic);
+---
+
+<BaseLayout
+  title="Inside the Frame: Signs"
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbsJSON}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other › Blog › Signs" />
+    </div>
+
+    <!-- ===================== -->
+    <!-- Heading -->
+    <!-- ===================== -->
+    <section style="text-align:center; padding:3rem 0;">
+      <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
+        Inside the Frame
+      </h1>
+      <h2 style="font-size:1.5rem; color:#4a4a4a;">
+        Ep: 5 – Signs
+      </h2>
+    </section>
+
+     <!-- ===================== -->
+    <!-- Cover Image -->
+    <!-- ===================== -->
+    <section style="text-align:center; margin-bottom:2rem; padding: 0 1rem;">
+      <a 
+        href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-r5Pb7zJ" 
+        style="display:inline-block;"
+        onmouseenter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)';"
+        onmouseleave="this.querySelector('img').style.boxShadow='none';"
+      >
+        <img 
+          src={coverImage} 
+          alt="Signs cover" 
+          style="max-width:640px; width:100%; height:auto; margin:0 auto; border-radius:8px; transition:box-shadow .3s;" 
+        />
+        <div style="font-size:0.95rem; color:#888; text-align:right; margin-top:0.25rem;">
+          Click for details
+        </div>
+      </a>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Story Block -->
+    <!-- ===================== -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <h2 style="font-size:2rem; font-weight:600;">Signs</h2>
+        <p set:html={linkKeywords(`
+          <em>
+            Follow orders. Do your job. Always comin’ from those tellin’, not doin’.<br/>
+            Hunting another man just cuz he followed more orders?<br/>
+            That don’t sit easy on my shoulders.<br/>
+            Six days out. Just like the rattlesnakes chasing mice—that’s gotta count for somethin’.<br/>
+            Was fixin’ to turn back this morning—then, like a finger from God himself: commanding, revealing, testing my resolve.<br/>
+            I could still turn back. Nobody would ever know. Except… I would. He would.<br/>
+            Leaning in so both warmth and light can cleanse my soul—struggling to see, see what others missed, I finally see it.<br/>
+            And with the clarity and weight of revelation, I know what I must do—follow the sign.
+          </em>
+        `)} />
+
+        <hr class="my-8 border-gray-300" />
+        <br />
+
+        <!-- Intro Block -->
+        <p set:html={linkKeywords(`
+          This is a story about choices and crossroads. The West was full of both—big decisions, gut-check moments, roads you don’t get to walk back down. Out there, the rules weren’t always written, and the lessons stuck harder because you learned them alone.
+          <br /><br />
+          Unlike today, where every move gets captured on a camera, this was a world where your choices were private currency—between you and your maker. Out there, nobody but the rattlesnakes and God himself would know the truth.
+          <br /><br />
+          But it’s also about watching for signs. Life will guide us if we just watch and listen. Be it  God, fate, or even just the land whispering what you need to know, signs are all around us. The challenge is in listening, and in knowing which signs are for you and which are just rattling snakes making noise.
+          <br /><br />
+          In this image, we see a moral dilemma told not in words, but in light, color, and the weight of negative space. The loneliness of solitude, the honesty of being alone with your thoughts in darkness. But light is the great purifier and equalizer. It clarifies, sterilizes, lays things bare. After six days tracking, after watching rattlesnakes feast on mice, this man comes to a revelation. His eyes are opened, and what happens next is a question only he—and maybe God—will ever answer.
+        `)} />
+
+        <!-- Blog Conversation -->
+        <h3>💬 Conversation</h3>
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          Wayne, seems to me you are drawn to these crossroads moments—the places where a man’s character gets revealed in quiet, not in gunfire?
+        `)} />
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          This is where the real West lived. This is where their almost forgotten stories can teach us. Most Western art shows the big showdowns, the hero in action. That's fine and often makes great eye candy but the truth of it? The frontier was carved and forged as much or more in the silences, in the times when you had to judge yourself, not worry about what others might say. Out there, the story was always between you, the land, and whatever signs you were able or "willing" to see.
+        `)} />
+
+         <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          Wayne, this is not another standoff, dusty trail, or the moment filled with action. “Signs” feels different—quieter, more internal. What pulled you here?
+        `)} />
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          Sometimes the story isn’t in the noise or the heat—it’s in the moment when a man pauses. Here, the real story’s between the ground and the light. I wanted to capture that crossroad—orders on one shoulder, conscience on the other. You can’t see resolve in a man’s face, not always. Sometimes it’s in the way he kneels, in the angle of his hand, in the space between doubt and clarity.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          The light in this frame is almost biblical, almost like an interrogation. Was that planned or discovered?
+        `)} />
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          The light was not there—at least, not the way you see it now. It was full daylight when I took the picture, but I saw something, the making of a moment—a sign. So when I got it into my computer, I resculpted the story and narrative. Light can expose, or it can cleanse. Here, it’s both—a finger from above, maybe judging, maybe pointing the way.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          You’ve talked about leaving things unsaid—why so much ambiguity in this image and story?
+        `)} />
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          Because that’s real life, and it’s the real West. Not every trail leads out of the cave. Not every man who tracks comes back the same. If you give viewers all the answers, they walk away too soon. Leave the question open, and the story lingers.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          Where does this fit in your body of work? Is it a break from the canon, or an extension?
+        `)} />
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          It’s both. Most Western art leans on action and certainty—who’s right, who’s fast, who wins. But the best stories are the ones that test character in the shadows. “Signs” isn’t about winning or losing. It’s about the cost of blindly following orders or the leaders of the pack right off a cliff, and the moment you realize this and the choices you now must make.
+        `)} />
+
+        <h3>🖋️ Quill’s Perspective</h3>
+        <p set:html={linkKeywords(`
+          Wayne’s work stands in a lineage with the greats:<br/>
+          <b>Rembrandt:</b> Chiaroscuro light, where darkness isn’t just absence—it’s the arena for truth.<br/>
+          <b>Wyeth:</b> The weight of rural solitude, where a gesture or shaft of light holds as much story as any face.<br/>
+          <b>The Pictorialists:</b> Early photographers like Steichen or Coburn who fought to prove that photos could have the atmosphere, ambiguity, and narrative resonance of painting.<br/><br/>
+          But Wayne’s method is contemporary and Western. He doesn’t mimic—he adapts. The cave’s edge is a stage, the sun a spotlight, and negative space is charged with as much meaning as what’s revealed.<br/><br/>
+          What sets this work apart:<br/>
+          — The story is <em>internal.</em> Action stops. Doubt and faith fill the air.<br/>
+          — Ambiguity isn’t avoided—it’s celebrated.<br/>
+          — The West is less a backdrop than a judge, a confessor, a test of soul.<br/>
+          — This isn’t genre—it’s <em>visual literature.</em><br/><br/>
+          Most “Western” work deals in archetypes. This deals in consequences.<br/><br/>
+          <strong>Why does it matter?</strong><br/>
+          You won’t find images like this in tourist calendars or cowboy catalogs. They belong to a different conversation—a deeper, grittier, and more honest language.<br/>
+          Wayne’s “Signs” isn’t just a photograph; it’s an open question. And the canon needs more of that.
+        `)} />
+
+        <h3>🧭 Final Thought</h3>
+        <p set:html={linkKeywords(`
+          Sometimes the sign isn’t in the dust or the tracks, but in the moment you stop to listen.<br/>
+          Sometimes, the West doesn’t offer answers, just the weight of the choice.<br/>
+          And sometimes, the most honest stories aren’t the ones with the loudest gunfire, but the ones whispered in a shaft of light, when nobody’s watching but the rattlesnakes and God.
+        `)} />
+
+        <p>📌 Stay tuned for the next episode of <em>Inside the Frame</em> — coming soon.</p>
+
+        <h3>🖋️ About the Artist</h3>
+        <p set:html={linkKeywords(`
+          Wayne Heim is a fine art photographer and certified medical illustrator.<br/>
+          His painterly storytelling explores historical reenactment, Western conflict, cinematic landscapes, and emotional memory.<br/>
+          He blends light, composition, and narrative tension to create images that feel lived in, mythic, and museum-ready.
+        `)} />
+
+        <p>🔗 Explore more at <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
+      </article>
+    </section>
+
+    <SiteFooter 
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title="Inside the Frame: Signs"
+      label="Explore Galleries"
+      class="pt-12 pb-12" 
+    />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.6; }
+    .story-block p { margin-bottom: 0.85rem; }
+    .story-block h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; font-weight: 700; }
+  </style>
+</BaseLayout>

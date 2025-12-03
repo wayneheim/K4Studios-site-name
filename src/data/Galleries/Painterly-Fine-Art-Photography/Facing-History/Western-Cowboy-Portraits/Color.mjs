@@ -61,6 +61,1040 @@ export const galleryData = [
     "sortOrder": 0
   },
   {
+    "id": "i-44jcjTQ",
+    "title": "Over My Dead Body: Frontier Stand-off ",
+    "description": "A color Western portrait of a seasoned cowboy braced at his cabin window, rifle ready and gaze fixed on the yard. Warm light rakes the hat, coat, and timber while the room drops to quiet shadow, holding the moment between caution and action. Wayne Heim’s Painterly Fine Art approach shapes tone and texture for a print-first finish—rich color, disciplined contrast, and lived-in detail that honors classic frontier storytelling. Ideal for collectors of Western fine art photography and Americana wall art.",
+    "alt": "Color Western portrait of an older cowboy holding a rifle at a cabin window, braced in anticipation.",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MXvpkCb39DvnLh4Jk9Pj3ZnttK2nKS33mKKvKXpKL/L/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MLDCZF8g9LJw4tnMkbfDfmRn95CLTpQtGvBhbzGrt/S/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/A",
+    "keywords": [
+      "western fine art photography",
+      "color western portrait",
+      "cowboy with rifle",
+      "cabin window",
+      "frontier standoff",
+      "old west interior",
+      "warm lamplight",
+      "painterly fine art",
+      "americana wall art",
+      "bearded cowboy",
+      "wide-brim hat",
+      "rustic wood",
+      "frontier vigil",
+      "character study",
+      "storytelling portrait",
+      "archival print",
+      "museum quality",
+      "Wayne Heim",
+      "western decor",
+      "tense moment"
+    ],
+    "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming.\n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!",
+    "notes": "The off-frame tension is pure storytelling—anchored by the rifle’s diagonal and resolved by the window frame’s vertical pull. The light carves across rough wool and weathered timber like a chiaroscuro etching, revealing the figure not as staged drama, but as lived consequence.\n\nThis is painterly photography with muscle: sculpted tonality, smart restraint, and tight composition that favors shape and story over spectacle. The bucket in the foreground subtly expands scale and texture while avoiding visual clutter. In a tradition that nods to Remington’s interiors and Wyeth’s emotional stillness, this image holds the moment between breath and action. A study in edge, mood, and memory—crafted, not captured.",
+    "rating": 5,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 1
+  },
+  {
+    "id": "i-B7ZSdfs",
+    "title": "Till Death Do Us Part",
+    "description": "“Till Death Do Us Part” is a deeply emotional Western fine art piece rendered in a painterly, cinematic style. A dying frontiersman lies in his wife’s arms, bathed in lantern light as she clings to the last fragile seconds of their shared life. The scene captures love, loss, and devotion on the unforgiving Western frontier—where dreams are fragile, hope is fleeting, and vows endure even in the face of death. With richly textured tones, controlled light, and intimate storytelling, this image is a compelling choice for collectors seeking narrative-driven painterly photography and Western fine art. © Wayne Heim",
+    "alt": "Painterly Western scene of a dying frontiersman held by his wife beside a lantern-lit cabin wall, their foreheads touching in a final moment of tenderness.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/Mjxj2rC6cHJjQpTzZ5HKMCmD24hf32MV3RfMzQCJW/XL/_HF21354-1220-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/Mjxj2rC6cHJjQpTzZ5HKMCmD24hf32MV3RfMzQCJW/XL/_HF21354-1220-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/Mjxj2rC6cHJjQpTzZ5HKMCmD24hf32MV3RfMzQCJW/XL/_HF21354-1220-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/L8pDhpwMPs2NNMJgPxd74hBLBFDB84hfNcgpqGF7d/L/_HF21354-1220-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/KxttDrjkvSkZd4x5VdfzRgHH8bX9FxNwBzzPwtnFL/S/_HF21354-1220-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "rugged spirit",
+      "western cowboy art",
+      "cowboy art",
+      "cowboy painting art",
+      "outlaw portraits",
+      "powerful works of art",
+      "western fine art",
+      "western landscapes fine art"
+    ],
+    "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part.",
+    "notes": "“Till Death Do Us Part” distills one of the most intimate and human moments in the Western canon: the quiet intersection of love, mortality, and devotion on the frontier. Lantern light pools gently across the figures, sculpting the scene in warm, painterly tones that recall the emotional restraint of Wyeth and the narrative weight of classic American illustration.\n\nThe composition anchors the viewer in the closeness of the couple—their faces pressed together, hands intertwined—while the darkened edges of the frame suggest the encroaching uncertainty beyond their small circle of light. The textures of worn fabric, rough wood, and soft illumination create a tactile sense of place, grounding the scene in lived experience rather than myth. What elevates the work is its sincerity: a portrayal of frontier hardship not as spectacle, but as a shared human passage. It offers collectors a piece of Western storytelling that is both timeless and profoundly intimate.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 2
+  },
+  {
+    "id": "i-wdF6Hw3",
+    "title": "Capturing Western Cowboy Art",
+    "description": "Wayne Heim's western cowboy art captures the spirit of powerful works of art in this outlaw portraits image. Featuring wild west photography, frederic remington, and western cowboy art, it's ideal for powerful works of art enthusiasts. Discover western art in photography. © Wayne Heim",
+    "alt": "Wayne Heim's western cowboy art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LkzcRWf8mfnhT3hrtVhD2tMKdcCmDFD95MJGv6B4f/L/_WHO7929-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/K8xsk3pChZmHXpBFfVk5Z4P3BMVGn85kkGQhLS52m/S/_WHO7929-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/A",
+    "keywords": [
+      "HF21312",
+      "western cowboy art",
+      "powerful works of art",
+      "outlaw portraits",
+      "wild west photography",
+      "frederic remington",
+      "western art",
+      "Western cowboys",
+      "rustic charm"
+    ],
+    "story": "Wayne Heim's exploration of outlaw portraits comes alive in this piece, showcasing Western cowboys and rustic charm. A testament to western cowboy art in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 3
+  },
+  {
+    "id": "i-bq4FKvX",
+    "title": "The Essence Of Rustic Charm",
+    "description": "This rustic charm artwork by Wayne Heim showcases cowboy portraits in a rugged spirit style. Reflecting wild west photography, western cowboy art, and rustic charm, it's suited for admirers of cowboy portraits. With cowboy portraits elements. © Wayne Heim",
+    "alt": "Wayne Heim's rustic charm artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LBmRNCtRbHwvN2rQ62SXb5W2gKSHMQcFzmfzMQVgj/L/_WHO2281-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/Lnf45sHGDnFwMJRP4R6v4Gf5GdcC3HXBbtXq5rZLR/S/_WHO2281-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "rustic charm",
+      "cowboy portraits",
+      "rugged spirit",
+      "wild west photography",
+      "western cowboy art",
+      "powerful works of art",
+      "Western cowboys",
+      "western landscapes fine art"
+    ],
+    "story": "Delving into powerful works of art, this work by Wayne Heim highlights Western cowboys through western landscapes fine art and cowboy portraits. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 4
+  },
+  {
+    "id": "i-7Mzzbvp",
+    "title": "Last Hand",
+    "description": "“Last Hand” is a painterly Western action scene bursting with kinetic energy and sun-bleached drama. Three cowboys on horseback race across open prairie, dust clouds curling in their wake, revolvers raised in a desperate bid for survival or victory. Each detail—raw motion, flying tack, and vintage color grading—conjures the fever and mythology of the Old West’s final gambles. © Wayne Heim",
+    "alt": "Painterly Western image of three cowboys on horseback racing forward, guns drawn, in a cloud of dust on the open prairie.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/NGKPsMCt7qGfMDNnXCFxCrN2DdmcQNdKhddf3vZRs/XL/_WHO5378-Edit-2-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/NGKPsMCt7qGfMDNnXCFxCrN2DdmcQNdKhddf3vZRs/XL/_WHO5378-Edit-2-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/KfdfV5Fh5wVNXpdwjhzRJpjhqCwgtcVc6cjScp8pF/L/_WHO5378-Edit-2-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/NXf3gDHVtPdmpxV9SDC2JGhk4DqzkH59jRsDGBhbN/M/_WHO5378-Edit-2-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/MsFBSd9mBpwWMFpnxfggfLrKfrZzNkSz2KtjWgM4G/S/_WHO5378-Edit-2-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/A",
+    "keywords": [
+      "HF29136",
+      "cowboy artwork",
+      "powerful works of art",
+      "historic western prints",
+      "western canon",
+      "outlaw portraits"
+    ],
+    "story": "Dust spirals and hooves fly as the last hand is played out under a pale, unblinking sky. Three riders, every muscle and nerve taut with gamble and grit, thunder forward—there’s no room left for bluffing, no time to count the cost. In this wild rush, history is measured not by who wins, but by who dares to ride straight into the storm, knowing the deck was never meant to be fair.",
+    "notes": "This piece captures what many Western painters strive for but rarely achieve—a perfect marriage of in-camera action, painterly light, and narrative ambiguity, all created in a single unbroken take with live riders and authentic period gear. The composition channels the dynamism of Remington and the raw storytelling of Charlie Russell, while the sun-bleached palette and kinetic framing place it squarely in the lineage of American pictorialism. Gallery owners love works like this for their visceral impact; collectors appreciate the technical challenge (try freezing three galloping horses, tack flying, dust in the air, and everyone hitting their mark) and the way the image lets you feel both the danger and thrill of a frontier “last hand.” It’s the kind of photograph that doesn’t just tell a story—it dares you to ride along.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 5
+  },
+  {
+    "id": "i-MMmDhV2",
+    "title": "Western Art Study",
+    "description": "Immerse yourself in western art with this stunning Western cowboys by Wayne Heim. Capturing cowboy portraits, frontier life, and cowboy painting art, it's a must-have for collectors of western art. Including cowboy portraits themes. © Wayne Heim",
+    "alt": "western art in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/NXtn8Lnt9DbTbf4f4wMGDfSkwnmxsdBrVQmbFKQG2/L/_HF23060-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/L9WZWJ37nnCGkw38gZjZxmdVVhvx3HHdJ3LbjGsF2/S/_HF23060-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/A",
+    "keywords": [
+      "WHO2514",
+      "western art",
+      "Western cowboys",
+      "cowboy portraits",
+      "frontier life",
+      "cowboy painting art",
+      "fine art Western photography",
+      "western canon",
+      "rustic charm",
+      "western cowboy art"
+    ],
+    "story": "This image embodies fine art Western photography and western canon, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of western cowboy art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "",
+    "sortOrder": 6
+  },
+  {
+    "id": "i-5VZVzTR",
+    "title": "The Essence Of Western Fine Art",
+    "description": "Experience western fine art through this evocative western fine art from Wayne Heim's portfolio. This piece highlights rugged spirit with wild west photography, while conveying fine art Western photography, ideal for those who appreciate western fine art. Explore western fine art in fine art. © Wayne Heim",
+    "alt": "Fine art photography of western fine art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NTQx8hr6GDBPMWb2K8pdVLJPRxJFMScxND4F7mQm8/XL/_WHO5325-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NTQx8hr6GDBPMWb2K8pdVLJPRxJFMScxND4F7mQm8/XL/_WHO5325-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NF7BTMMndV6zT3TqWzZ776mqWHJfG3w53Mw8n8VSB/L/_WHO5325-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/M6hKWVfgJBcnBGDhh3WP6mfBcS33W8grVCG8NvxHT/M/_WHO5325-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NGQsw4rHLT2s4C7L5q748gbL35CdBsNBZ8mPvxHNr/S/_WHO5325-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/A",
+    "keywords": [
+      "HF29136",
+      "western fine art",
+      "rugged spirit",
+      "wild west photography",
+      "fine art Western photography",
+      "outlaw portraits",
+      "powerful works of art",
+      "cowboy painting art",
+      "western canon"
+    ],
+    "story": "Delving into outlaw portraits, this work by Wayne Heim highlights powerful works of art through cowboy painting art and western canon. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 7
+  },
+  {
+    "id": "i-Wx5scCf",
+    "title": "Historic Western Prints In Fine Art",
+    "description": "Experience historic western prints through this evocative painterly cowboy portraits from Wayne Heim's portfolio. This piece highlights western cowboy art with historic western prints, while conveying frontier life, ideal for those who appreciate historic western prints. Explore western cowboy art in fine art. © Wayne Heim",
+    "alt": "historic western prints in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/MDz6TdBHqrwW9Bp824nRZ35Zt5krRM9W2VsrWNHB3/L/_HF25859-1151-1156-1159-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/KsgrnQk5ZFmczWrSnN6Z328fJbFZg2DXhx3tdrwjL/M/_HF25859-1151-1156-1159-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LkH4jxcHjsmTVJD9xkXmZVXcmZttrXnKLnZpHtCDn/S/_HF25859-1151-1156-1159-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/A",
+    "keywords": [
+      "HF29136",
+      "historic western prints",
+      "painterly cowboy portraits",
+      "western cowboy art",
+      "frontier life",
+      "rugged spirit",
+      "rustic charm",
+      "western canon"
+    ],
+    "story": "Wayne Heim's exploration of rugged spirit comes alive in this piece, showcasing rustic charm and western canon. A testament to rustic charm in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 8
+  },
+  {
+    "id": "i-4zxZQQ2",
+    "title": "Heading Home",
+    "description": "“Heading Home” is a luminous, painterly Western photograph capturing the timeless return—two riders, one pointing the way, the other lost in thought, framed by a sweep of open sky and golden grass. A cinematic blend of warmth, nostalgia, and the promise of belonging, this piece invites viewers to imagine the journey behind and the welcome ahead. © Wayne Heim",
+    "alt": "Painterly Western image of a man and woman on horseback, riding through sunlit grass with the man pointing forward, under a dramatic sky.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/MtXwtqvsRWsZJqjNQj54Q7Xbs5k96s25ZVxNz7q7J/XL/_HF20974-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/MtXwtqvsRWsZJqjNQj54Q7Xbs5k96s25ZVxNz7q7J/XL/_HF20974-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/MtXwtqvsRWsZJqjNQj54Q7Xbs5k96s25ZVxNz7q7J/XL/_HF20974-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/KvC6qZPxmhP34SbcvXCgqVwvjRhbD3MLQGdm7hbw3/L/_HF20974-Edit-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/L56vzKLBpfmg6qTmDc23DDFpj2ShnmvQ4Q8cKZ2xR/S/_HF20974-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/A",
+    "keywords": [
+      "HF29136",
+      "fine art Western photography",
+      "western cowboy art",
+      "powerful works of art",
+      "western art",
+      "Western cowboys",
+      "western canon",
+      "cowboy art",
+      "western landscapes fine art"
+    ],
+    "story": "Sun splits the clouds as hoofbeats hush the grass, two shadows sliding side by side across the wide plain. His arm carves the horizon, confident, certain—yet her silence lingers, gaze tethered to a world behind the eyes. Guide or guest, captive or kin—only the wind knows for sure. Home drifts somewhere ahead, but between the riders rides every question left unasked, every story the land itself will not surrender.",
+    "notes": "This work stands out for its painterly composition and narrative clarity, achieved in a single exposure on a moving trail with live horses—no digital composites or studio tricks. The dynamic gesture and interplay of light reference the Western “return home” archetype immortalized by N.C. Wyeth and the storybook canvases of American regionalists, while the open sky and lush foreground evoke the optimism and complexity of new beginnings. Collectors and gallery owners value the technical difficulty of balancing movement, light, and emotional story in real time—something rarely seen in the age of staged or AI-generated Western art—and the piece has become a conversation-starter wherever it’s shown, evoking that universal longing for a place to call home.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 9
+  },
+  {
+    "id": "i-f4MSxpP",
+    "title": "Fine Art Western Cowboys",
+    "description": "Immerse yourself in Western cowboys with this stunning wild west photography by Wayne Heim. Capturing frederic remington, frederic remington, and outlaw portraits, it's a must-have for collectors of Western cowboys. Including outlaw portraits themes. © Wayne Heim",
+    "alt": "Western cowboys in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/KrR8Z7m3fdfVWJ6BVX5243PgTHJCnrh5Cpb4jv8nB/XL/_HF27252-1165-1166-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/KrR8Z7m3fdfVWJ6BVX5243PgTHJCnrh5Cpb4jv8nB/XL/_HF27252-1165-1166-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/KrR8Z7m3fdfVWJ6BVX5243PgTHJCnrh5Cpb4jv8nB/XL/_HF27252-1165-1166-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/MBNhgnSVJM9WVKjbTKLR9PvrvS7rMd2Rkj7kMcGXL/L/_HF27252-1165-1166-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/LFmWdZjM6Zh9PTLLkD6HJqfwPJBjQ2sLZHVH5H8pK/S/_HF27252-1165-1166-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/A",
+    "keywords": [
+      "HF29136",
+      "Western cowboys",
+      "wild west photography",
+      "frederic remington",
+      "outlaw portraits",
+      "painterly cowboy portraits",
+      "western cowboy art",
+      "western landscapes fine art"
+    ],
+    "story": "Wayne Heim's exploration of painterly cowboy portraits comes alive in this piece, showcasing western cowboy art and western landscapes fine art. A testament to western landscapes fine art in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 10
+  },
+  {
+    "id": "i-gxMVNh3",
+    "title": "Tumbleweed Whispers",
+    "description": "“Tumbleweed Whispers” captures the carefree spirit of childhood on the Western frontier. A young girl and boy share a moment of spontaneous laughter on a weathered porch, bathed in soft painterly light that evokes nostalgia and innocence. Dust, sunlight, and movement blend into a cinematic scene that celebrates the fleeting magic of youth. A charming and emotive addition for collectors of Western fine art and painterly narrative photography. © Wayne Heim",
+    "alt": "Painterly Western scene of two children laughing and running on a wooden porch, bathed in warm dusty light.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-gxMVNh3/0/LdBShjNfv4XMjHn7x9Vcp4wD3qZct9Cq4TXbqrkXZ/XL/_WHO0862-1240-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-gxMVNh3/0/LdBShjNfv4XMjHn7x9Vcp4wD3qZct9Cq4TXbqrkXZ/XL/_WHO0862-1240-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-gxMVNh3/0/LL5bHq9fGJDHQPnK43sqWLHSfzFkj8XJhQGMjXwvd/L/_WHO0862-1240-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-gxMVNh3/0/K9C9whDkRq4G9HRJrL7K4c9JcmnH4q8XpQ4nNFw5Q/M/_WHO0862-1240-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-gxMVNh3/0/Kj73kGxmf2HGXRkJw3QFRgvg4wgzZKGXh7Q3pVxdk/S/_WHO0862-1240-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-gxMVNh3/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "frontier childhood art",
+      "nostalgic western scene",
+      "children on the frontier",
+      "playful western artwork",
+      "narrative fine art photography",
+      "rustic porch scene",
+      "warm light western print",
+      "cinematic western nostalgia",
+      "painterly storytelling",
+      "emotional western fine art",
+      "impressionistic western image",
+      "joyful frontier moment",
+      "collectible western artwork"
+    ],
+    "story": "The wind danced through the porch boards, carrying secrets only children hear. She spun toward him, laughter bright as sunlit dust, bare feet tapping out a rhythm older than the prairie.\n\nFor a breath, for a heartbeat, for this one wild moment — the world was nothing but joy, and the tumbleweeds whispered them forward.",
+    "notes": "“Tumbleweed Whispers” turns its gaze toward the lighter side of frontier life — the unguarded moments where childhood joy breaks through the grit of the Old West. The soft-focus treatment and warm tonal palette enhance the nostalgic quality, giving the scene a dreamlike glow reminiscent of early American impressionism.\n\nThe girl's open smile and the boy’s eager stride introduce a sense of motion that energizes the composition, while the diagonal porch boards draw the viewer into the story’s playful rhythm. Subtle atmospheric haze diffuses the background, allowing the innocence of the figures to take center stage.\n\nThis piece offers collectors a rare emotional contrast within Western fine art: a celebration of youth, spontaneity, and the fleeting magic of simpler days — rendered with painterly elegance and cinematic light.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 11
+  },
+  {
+    "id": "i-VVwZ7gM",
+    "title": "Rustic Charm Moment",
+    "description": "Experience rustic charm through this evocative western cowboy art from Wayne Heim's portfolio. This piece highlights cowboy portraits with fine art Western photography, while conveying western landscapes fine art, ideal for those who appreciate rustic charm. Explore Western cowboys in fine art. © Wayne Heim",
+    "alt": "rustic charm in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/McVdwkfTLNQJN9FDbBKT3HtzzCrwt2qkjkdgPLBtS/M/_HF29136-Edit-Edit-3-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/A",
+    "keywords": [
+      "HF29136",
+      "rustic charm",
+      "western cowboy art",
+      "cowboy portraits",
+      "fine art Western photography",
+      "western landscapes fine art",
+      "Western cowboys",
+      "cowboy art",
+      "wild west photography",
+      "western art",
+      "historic western prints"
+    ],
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing wild west photography and western art. A testament to historic western prints in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 12
+  },
+  {
+    "id": "i-DczpNpH",
+    "title": "If You Want a Job Done Right…",
+    "description": "“If You Want a Job Done Right…” is a painterly Western portrait filled with grit and humor. A frontier woman, rifle braced and eyes narrowed in determination, takes aim herself—proving some jobs are best handled firsthand. Her sly smile and steady posture bring a fresh, empowered twist to classic Western storytelling. A perfect addition for collectors who appreciate character, spirit, and a touch of attitude in narrative fine art. © Wayne Heim",
+    "alt": "Painterly Western image of a woman sitting against a stone wall, smiling confidently as she aims a rifle toward the viewer.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DczpNpH/0/L8SgnckQx9t88zcwChqMzwggzgfdTTbX7pJdJNXgt/XL/_HF29819-1268-1271-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DczpNpH/0/L8SgnckQx9t88zcwChqMzwggzgfdTTbX7pJdJNXgt/XL/_HF29819-1268-1271-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DczpNpH/0/MbDjmT4JBMqS86pWjQMBLXD5rTfb4cQPJZrKDJkHk/L/_HF29819-1268-1271-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DczpNpH/0/NWsFsCd2LGWL4MdXswwLPg3wk9znNNsQ8B44t8mSt/M/_HF29819-1268-1271-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DczpNpH/0/KGZ3RWpCRhqrJ56qmjkBHPBcTS3pVnJ32c7d95wpv/S/_HF29819-1268-1271-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DczpNpH/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "cowboy painting art",
+      "rugged spirit",
+      "rustic charm",
+      "western fine art",
+      "western landscapes fine art",
+      "cowboy art",
+      "wild west photography",
+      "powerful works of art",
+      "western canon",
+      "cowboy portraits"
+    ],
+    "story": "Let them talk. Let them doubt.\n\nSometimes you just have to take the shot yourself— because waiting for someone else means it never gets done. Besides, there’s nothing wrong with showing them how it’s done, one good aim at a time.",
+    "notes": "“If You Want a Job Done Right…” puts a sly spin on the frontier mythos. The woman’s relaxed posture and knowing grin speak volumes—there’s satisfaction in proving doubters wrong, and in handling trouble with your own two hands. The composition uses soft focus and warm light to pull the viewer into her world, while the diagonal of the rifle leads straight to her confident gaze. It’s a portrait of capability, wit, and unspoken challenge—reminding us that strength comes in many forms, and sometimes, the sharpest shot is the one nobody expects. For collectors, this piece delivers attitude, empowerment, and painterly charm, all in one frame.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 13
+  },
+  {
+    "id": "i-5TtHV8g",
+    "title": "Counting Cards",
+    "description": "“Counting Cards” captures the uneasy stillness after a plan goes wrong. A lone figure stands in the cabin doorway, rifle in hand, scanning the darkness for signs of movement—caught between regret and resolve, outnumbered and unsure if the next move belongs to him or whoever waits outside. Rendered in painterly tones and moody light, the scene leaves the real story unwritten, inviting viewers to imagine what just happened, or what’s about to. © Wayne Heim",
+    "alt": "Painterly Western scene of a man standing in a cabin’s doorway, rifle at his side, watching nervously into the dark as if counting the figures outside.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5TtHV8g/0/Lz2fktkFPDLQMvf3Kt9S8hCjWvdGJ86DCLmtNjhgT/XL/_HF23312-1246-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5TtHV8g/0/Lz2fktkFPDLQMvf3Kt9S8hCjWvdGJ86DCLmtNjhgT/XL/_HF23312-1246-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5TtHV8g/0/Lz2fktkFPDLQMvf3Kt9S8hCjWvdGJ86DCLmtNjhgT/XL/_HF23312-1246-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5TtHV8g/0/KPhvSvwQpqTKgpxwQFRpfZN56DB9MFtxMC2CNMfMn/L/_HF23312-1246-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5TtHV8g/0/MDR25vv7PGDtmZbwbWDz3CnrWcV5B2hBMTqcJFj76/S/_HF23312-1246-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5TtHV8g/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "narrative western art",
+      "tense cowboy scene",
+      "frontier cabin portrait",
+      "western suspense image",
+      "atmospheric western painting",
+      "bad plan artwork",
+      "ambiguous western story",
+      "cinematic western tension",
+      "man with rifle art",
+      "rustic frontier image",
+      "collectible western print",
+      "museum quality western art"
+    ],
+    "story": "Crap. Now what?! There’s gotta be a dozen of them now.\nThought they’d have given up hours ago. We didn’t even get anything.\n\nStupid idea. I told Jimmy that. Nobody robs a bakery—wrong kind of “dough,” I said.\nBut no, I’m the dumb one. And now we got to, count the shadows, holding our breath,\nand figuring up the odds on if we make it out alive.",
+    "notes": "“Counting Cards” leans into the uncertain pause—when bad plans unravel, nerves fray, and every sound outside means the world might shrink or explode. The man’s stance says just enough: a little regret, a little readiness, and a whole lot of wishing someone else had called the shots.\n\nLight slices through the gloom, catching rough wool and old wood, carving the figure from the hush that fills the room. The real story sits out of sight, in the shadows beyond the window—what happened, what’s about to, and who’ll make the next move.\n\nFor collectors who savor ambiguity and tension, this piece offers a moment you can’t help but finish in your head.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 14
+  },
+  {
+    "id": "i-NdQnj6P",
+    "title": "Exploring Historic Western Prints",
+    "description": "Wayne Heim's historic western prints captures the spirit of painterly cowboy portraits in this western art image. Featuring Western cowboys, western fine art, and historic western prints, it's ideal for painterly cowboy portraits enthusiasts. Discover rustic charm in photography. © Wayne Heim",
+    "alt": "Fine art photography of historic western prints by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/KVCfGF9b9WQH9k3RmwTmTpK85F2mQrQK5F2sPL8K7/L/_WHO8015-955-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/LJmRkvHxZ6p5xD9hqrHKLBGvp2NpzfkNV3FBcTvT9/S/_WHO8015-955-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "historic western prints",
+      "painterly cowboy portraits",
+      "western art",
+      "Western cowboys",
+      "western fine art",
+      "rustic charm",
+      "rugged spirit",
+      "cowboy painting art"
+    ],
+    "story": "This image embodies rugged spirit and cowboy painting art, captured by Wayne Heim in his signature style. It reflects western art with a touch of historic western prints. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 15
+  },
+  {
+    "id": "i-3SxncXS",
+    "title": "Powerful Works Of Art - Western Fine Art",
+    "description": "Immerse yourself in powerful works of art with this stunning western fine art by Wayne Heim. Capturing frontier life, wild west photography, and cowboy portraits, it's a must-have for collectors of powerful works of art. Including western fine art themes. © Wayne Heim",
+    "alt": "Wayne Heim's powerful works of art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/MS9TVHWgJN3HsPDF3pjSqV75HX7GKPgvcnCWNQVCQ/XL/_HF29303-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/MS9TVHWgJN3HsPDF3pjSqV75HX7GKPgvcnCWNQVCQ/XL/_HF29303-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/KfzgkxHH8L45dNzHCCVmBWXLMnrWbd4Cx2RxvmRRS/L/_HF29303-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/KmdgGmdTgXcdchk4q6Qhm5vCpKgbjBBZXpNqgcZQX/M/_HF29303-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/LDxsNTKCwHFrxfFQQBMSh4mQg76mbrkjHrxbwfdP8/S/_HF29303-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/A",
+    "keywords": [
+      "WHO4466",
+      "powerful works of art",
+      "western fine art",
+      "frontier life",
+      "wild west photography",
+      "cowboy portraits",
+      "cowboy art",
+      "fine art Western photography"
+    ],
+    "story": "This image embodies cowboy art and fine art Western photography, captured by Wayne Heim in his signature style. It reflects western fine art with a touch of cowboy art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 16
+  },
+  {
+    "id": "i-pcP7hcf",
+    "title": "Painterly Cowboy Portraits And Wild West Photography",
+    "description": "Immerse yourself in painterly cowboy portraits with this stunning wild west photography by Wayne Heim. Capturing wild west photography, western cowboy art, and western canon, it's a must-have for collectors of painterly cowboy portraits. Including western canon themes. © Wayne Heim",
+    "alt": "Fine art photography of painterly cowboy portraits by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LBzmH9N8F439Lbhw8PJ6PhM64JTgGCrnxhw7f6cZ4/XL/_HF29399-1255-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LBzmH9N8F439Lbhw8PJ6PhM64JTgGCrnxhw7f6cZ4/XL/_HF29399-1255-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LBzmH9N8F439Lbhw8PJ6PhM64JTgGCrnxhw7f6cZ4/XL/_HF29399-1255-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/KVjjCc4BHDh3V5QnV37HLfbTDcQMfcCX4qcGpJNS5/L/_HF29399-1255-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LxSSW8p9hBB23nSgpQM5dGhR3dsxWGJ5FRC8pW9Fr/S/_HF29399-1255-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "painterly cowboy portraits",
+      "wild west photography",
+      "western cowboy art",
+      "western canon",
+      "rugged spirit",
+      "powerful works of art",
+      "frederic remington"
+    ],
+    "story": "This image embodies rugged spirit and powerful works of art, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of western canon. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 17
+  },
+  {
+    "id": "i-qB47jJT",
+    "title": "Outlaw Portraits Moment",
+    "description": "This outlaw portraits artwork by Wayne Heim showcases cowboy painting art in a cowboy portraits style. Reflecting wild west photography, western fine art, and outlaw portraits, it's suited for admirers of cowboy painting art. With cowboy portraits elements. © Wayne Heim",
+    "alt": "outlaw portraits in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/MvDxxrNrmMWCQjS9RMzdzmXBrF4xg838trkRvZvf9/S/_WHO7107-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/A",
+    "keywords": [
+      "HF29136",
+      "outlaw portraits",
+      "cowboy painting art",
+      "cowboy portraits",
+      "wild west photography",
+      "western fine art",
+      "frederic remington",
+      "western cowboy art",
+      "rugged spirit"
+    ],
+    "story": "Wayne Heim's exploration of cowboy portraits comes alive in this piece, showcasing frederic remington and western cowboy art. A testament to rugged spirit in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 18
+  },
+  {
+    "id": "i-rfFBRQM",
+    "title": "Untimely Parting",
+    "description": "“Untimely Parting” is a deeply moving Western fine art tableau rendered in painterly tones. Grieving figures gather before a church, each posture etched with the shock of final loss. The scene captures a moment when sorrow overwhelms strength—where goodbyes are forced too soon, and the journey West must begin under a heavier sky. A powerful work for collectors drawn to authentic narrative photography, historic storytelling, and the emotional truth at the heart of the frontier experience. © Wayne Heim",
+    "alt": "Painterly Western image of three grieving figures outside a church, each overwhelmed by sorrow in a moment of loss and final farewell.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rfFBRQM/0/K3KRNqHCc6TMPqKsMqWWrhk2dHQfJjP8N2BJRthPV/XL/_HF29878-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rfFBRQM/0/K3KRNqHCc6TMPqKsMqWWrhk2dHQfJjP8N2BJRthPV/XL/_HF29878-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rfFBRQM/0/K3KRNqHCc6TMPqKsMqWWrhk2dHQfJjP8N2BJRthPV/XL/_HF29878-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rfFBRQM/0/MhB4W3xtBB6hqBFcnDp22BpVn38dbR2TKVC7bpvZg/L/_HF29878-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rfFBRQM/0/K4DjBxvbr5VJTRdtfzxQ7JF7KXcG6VhDmbZmH2B5r/S/_HF29878-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rfFBRQM/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "narrative western art",
+      "frontier grief image",
+      "mourning at church scene",
+      "emotional western storytelling",
+      "loss on the frontier",
+      "historical reenactment photography",
+      "grieving family artwork",
+      "somber western painting",
+      "cinematic western tableau",
+      "authentic western art",
+      "collectible western print",
+      "museum quality western art"
+    ],
+    "story": "Struggling for words… or even the air to breathe. Knees buckle beneath the crushing weight of reality, grief, and unanswered questions. In this moment, strength escapes — sorrow spilling from every pore. A widow, a daughter, a sister, a brother… souls and purpose suddenly shattered. The reality of a final goodbye consumes the senses. One fragile moment belonging only to them— a last farewell to the life and dreams they planned together. Here now, before God and those who watch and wonder. Just one moment — because mercy, time, and the journey forward wait for none. Somehow… some way… tomorrow we find the strength to press on. The first of many unforeseen tolls now paid in full — and the long road West can finally begin.",
+    "notes": "“Untimely Parting” stands as a testament to the realities beneath Western myth—the grief and interruption that shadowed even the boldest journeys. The composition is spare, placing all focus on gesture: hands raised to faces, heads bent, one figure looking skyward as if pleading for answers. The muted palette and soft edges amplify the weight of silence, while the church in the background anchors the moment in ritual and community. There’s a stillness here, reminiscent of 19th-century narrative painting, where emotion radiates from posture and negative space. What sets this piece apart is its willingness to pause at the threshold of loss—not to offer resolution, but to witness, and to honor the unseen stories that shaped the West. For collectors, it’s an image of empathy and quiet bravery, rendered with painterly grace and emotional fidelity.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 19
+  },
+  {
+    "id": "i-5Md3dQ3",
+    "title": "\"It's just a one day ride to Spearfish. What could possibly go wrong?\"",
+    "description": "“It's just a one day ride to Spearfish. What could possibly go wrong?” is a painterly Western portrait capturing the quiet tension of departure. A man, ready to ride, reassures with a smile, while the woman at his side leans in, holding back all the fears she can’t voice. Sun-bleached color and soft texture turn this simple farewell into a layered story—about hope, worry, and all the risks hiding in a “just one day” promise. © Wayne Heim",
+    "alt": "Painterly Western portrait of a man in frontier clothing with a woman leaning her head on his shoulder, both sharing a quiet, intimate moment before a journey.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5Md3dQ3/0/KFVq3GDvvq3STkq4mbj4qSPnzt7jLMz8d5FHrtXLW/XL/_HF20165-1292-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5Md3dQ3/0/KFVq3GDvvq3STkq4mbj4qSPnzt7jLMz8d5FHrtXLW/XL/_HF20165-1292-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5Md3dQ3/0/KJG9bJGmkvdsnTrnvcG5pcCjR6Hdqd3wx6rNmmCfr/L/_HF20165-1292-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5Md3dQ3/0/LKFRv9rbFbDcf77nFvpqKMgndHk3XGrbhz4vvVp6R/M/_HF20165-1292-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5Md3dQ3/0/LKmH7PZfMsw486dN7mdRK523G4XGWCnmvHr8JRJsH/S/_HF20165-1292-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5Md3dQ3/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "western couple portrait",
+      "narrative western art",
+      "emotional farewell image",
+      "Spearfish journey story",
+      "bittersweet cowboy scene",
+      "intimate frontier moment",
+      "cinematic western painting",
+      "gentle tension artwork",
+      "collectible western art",
+      "museum quality western print"
+    ],
+    "story": "One day, he said.\nEasy ride, he promised. Sun up, sun down, back before the lamp’s gone cold.\n\nBut her head finds his shoulder, and in the hush between words, she knows:\nIt’s never just a day, never just a ride.\n\nPlans are easy. Goodbyes—never are.",
+    "notes": "This piece draws its strength from the unspoken—the glance before the journey, the way his arm stays easy while her heart weighs heavy. Their postures are close, but the distance between hope and worry hums just beneath the surface. Soft light and gentle color grading emphasize the vulnerability of the moment, turning a casual promise into a universal story: every plan is simple until the road proves otherwise. A portrait of faith, doubt, and the courage it takes to say “it’ll be fine” when you know it might not be.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 20
+  },
+  {
+    "id": "i-dsqgfVj",
+    "title": "Historic Western Prints In Fine Art",
+    "description": "Immerse yourself in historic western prints with this stunning Western cowboys by Wayne Heim. Capturing frontier life, outlaw portraits, and painterly cowboy portraits, it's a must-have for collectors of historic western prints. Including fine art Western photography themes. © Wayne Heim",
+    "alt": "Wayne Heim's historic western prints artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/MJVJNH3GvsdfTF6KMJ4G4ZbSscLTXHB4RTmZfGJb7/XL/_HF26562-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/MJVJNH3GvsdfTF6KMJ4G4ZbSscLTXHB4RTmZfGJb7/XL/_HF26562-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/Mw4QfVzvH9vkDcrhcsRWsVsw3q8N9jDKMZhbXW2QW/L/_HF26562-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/NVRBh23pLnCFbcrrWgs8pMZZDMdxL4pmSX869JLXw/M/_HF26562-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/LtjDQhP9fB4wmHkdTNs9xkcjftqJpR5gmpb5wf5Ks/S/_HF26562-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "historic western prints",
+      "Western cowboys",
+      "frontier life",
+      "outlaw portraits",
+      "painterly cowboy portraits",
+      "fine art Western photography",
+      "western canon",
+      "rugged spirit",
+      "western art",
+      "western fine art"
+    ],
+    "story": "Delving into western canon, this work by Wayne Heim highlights rugged spirit through western art and western fine art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 21
+  },
+  {
+    "id": "i-46kWCqc",
+    "title": "No Looking Back",
+    "description": "“No Looking Back” is a cinematic Western fine art photograph rendered in rich blues and painterly detail, capturing the solitary resolve of a cowboy riding away from his past. The moment, backlit and rain-streaked, evokes themes of letting go, grit, and Western mythology, all delivered with the technical finesse and narrative ambiguity that defines contemporary painterly photography. © Wayne Heim",
+    "alt": "Painterly Western image of a lone cowboy on horseback, riding through water at dawn, looking downward with shoulders set against a dramatic blue sky.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/NVSzN3dbJWtxBKHT2GV28s73WCx5MjTj7NpW5KJxw/XL/_HF20949-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/NVSzN3dbJWtxBKHT2GV28s73WCx5MjTj7NpW5KJxw/XL/_HF20949-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/NVSzN3dbJWtxBKHT2GV28s73WCx5MjTj7NpW5KJxw/XL/_HF20949-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/LDgpXFpgWbzmfNTZXT9XtsxvcrZjLnjPPfCDhTQDt/L/_HF20949-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/NG9pRnMWgdjFk3CwnpdBtdt64th8P3sdDDs5mk2mC/S/_HF20949-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "cowboy riding away",
+      "narrative western art",
+      "blue hour western scene",
+      "frontier solitude artwork",
+      "cinematic cowboy print",
+      "emotional western photography",
+      "dramatic river crossing",
+      "collectible western print",
+      "museum quality western art"
+    ],
+    "story": "The river is cold and wide, but he never checks the current behind him. One last sunrise, one last regret swallowed in the blue—this is the look of a man riding out with nothing left to lose and nothing left to prove.",
+    "notes": "This piece is a masterclass in tonal storytelling, using a near-monochrome blue palette to evoke not just the physical chill of a river crossing, but the psychological distance of a man leaving everything behind—a technique reminiscent of Andrew Wyeth’s emotional landscapes and classic film stills from the golden age of Western cinema. The subject’s posture, turned inward and slightly slumped, hints at layers of narrative without ever dictating a single outcome, inviting viewers to supply their own story or simply get lost in the mood. This image was created using only natural pre-dawn light and a subtle long-exposure effect to render the water’s movement, making it exceptionally challenging to capture live and virtually impossible to stage after the fact. Collectors appreciate this kind of piece for its moody authenticity and technical difficulty—it’s the kind of work that immediately sets a tone in any room, offering not just visual impact but a sense of frontier legend made personal and real.",
+    "rating": 3,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 22
+  },
+  {
+    "id": "i-zHvS5jz",
+    "title": "Fine Art Western Canon",
+    "description": "Wayne Heim's western canon captures the spirit of cowboy artwork in this frederic remington image. Featuring western art, historic western prints, and western canon, it's ideal for cowboy artwork enthusiasts. Discover cowboy artwork in photography. © Wayne Heim",
+    "alt": "western canon in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/NM7RFBfNwPz5RmVVq2LV6qwbGVjbMcZMdmZcz7Xgj/XL/_WHO5559-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/NM7RFBfNwPz5RmVVq2LV6qwbGVjbMcZMdmZcz7Xgj/XL/_WHO5559-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/MPKVHRXDtTQP6gZHDS78DSpCjSgqpcw8cBWQBxK2R/L/_WHO5559-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/KstN6NS2tGjFDmfw42pWK28dZGbMsX49zpLmGmVq7/M/_WHO5559-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/KvHcCRFwWwRGL8T8V4B53zjRkWjfDdLLLqv9cTRfv/S/_WHO5559-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/A",
+    "keywords": [
+      "HF29136",
+      "western canon",
+      "cowboy artwork",
+      "frederic remington",
+      "western art",
+      "historic western prints",
+      "cowboy portraits",
+      "rustic charm"
+    ],
+    "story": "Delving into cowboy artwork, this work by Wayne Heim highlights cowboy artwork through cowboy portraits and rustic charm. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 23
+  },
+  {
+    "id": "i-Nn7scqm",
+    "title": "Do you HEAR me now?!",
+    "description": "“Do you HEAR me now?!” is a painterly Western scene capturing a fierce frontier standoff. A woman, framed by weathered fence rails and autumn fields, confronts the railroad man trying to buy her land for pennies, her raised shotgun and squared shoulders turning negotiation into defiance. Classic tones and cinematic composition amplify the clash between ambition and belonging—a vivid moment of resistance and grit on the American frontier. © Wayne Heim",
+    "alt": "Painterly Western image of a woman holding a shotgun across a fence, facing a man in a suit while another man stands nearby, set on a rural homestead.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/MzHkg4NLj6bnhzTxsVMgJgP2VX8ZhDvsgSX3RWLtK/XL/_HF20588-1294-1295-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/MzHkg4NLj6bnhzTxsVMgJgP2VX8ZhDvsgSX3RWLtK/XL/_HF20588-1294-1295-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/K5RMKsdmMjqmMBKssWxx7rJj2fkr5r5LrxVHR6BND/L/_HF20588-1294-1295-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/K9qdrTCKcM45MGKLV2vmbz9Rf3dWKPGQ2hbjPDbbM/M/_HF20588-1294-1295-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/LgRfsNzf3P5L3JZwGVkF8ccMMCvpjTkPZLVSvprVD/S/_HF20588-1294-1295-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "frontier standoff art",
+      "railroad land grab story",
+      "strong western woman",
+      "homestead defense painting",
+      "cinematic western scene",
+      "negotiation showdown artwork",
+      "rural American frontier",
+      "collectible western print",
+      "museum quality western art"
+    ],
+    "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the shotgun she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line.",
+    "notes": "Negotiation turns to showdown in this charged moment where a woman draws the line against railroad “progress,” her body language a blend of fury and resolve as she defends her family’s claim; every detail—from the pointed gun to the wary posture of the men—speaks to the untold stories of ordinary people forced to become extraordinary when their way of life is threatened by ambition and greed.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 24
+  },
+  {
+    "id": "i-cV5gwWZ",
+    "title": "Final Deposit",
+    "description": "“Final Deposit” is a gripping piece of Western fine art storytelling by Wayne Heim, rendered in his signature painterly photography style. Tension erupts outside a frontier homestead as a grieving family confronts a cold-hearted debt collector—arriving to “settle accounts” while the dead man’s memory is still fresh in the air. The controlled textures, expressive lighting, and kinetic energy elevate the moment into a cinematic tableau of justice, dignity, and rebellion in the Old West. A powerful choice for collectors seeking narrative-driven cowboy art, historical reenactment storytelling, and painterly Western fine art prints with emotional weight. © Wayne Heim",
+    "alt": "Painterly Western image of a frontier man swinging a club at a debt collector outside a log cabin, with a grieving widow watching from the doorway.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-cV5gwWZ/1/NRpH52zNFB4KXS4JXkcrF9d7ZfrRdmqG9nJwTTtpC/XL/_HF21020-1218-1219-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-cV5gwWZ/1/NRpH52zNFB4KXS4JXkcrF9d7ZfrRdmqG9nJwTTtpC/XL/_HF21020-1218-1219-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-cV5gwWZ/1/NRpH52zNFB4KXS4JXkcrF9d7ZfrRdmqG9nJwTTtpC/XL/_HF21020-1218-1219-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-cV5gwWZ/1/MH6Jb8zDFKtxJpwRzN4r8VdDxv37nwGhj8kskcddR/L/_HF21020-1218-1219-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-cV5gwWZ/1/NVk5TdJbpmFdF76Ppnt56Pmr9B9L5rVpRQ3FMBHzq/S/_HF21020-1218-1219-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-cV5gwWZ/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "western fine art photography",
+      "cowboy art",
+      "frontier justice art",
+      "Old West narrative scene",
+      "historical reenactment photography",
+      "western conflict artwork",
+      "cinematic western photography",
+      "frontier homestead art",
+      "debt collector western scene",
+      "narrative cowboy art",
+      "textured western print",
+      "fine art storytelling",
+      "painterly fine art",
+      "Remington-inspired lighting",
+      "Rockwell-inspired narrative",
+      "western wall decor",
+      "cowboy wall art",
+      "museum-quality western print",
+      "limited edition western photography",
+      "collectible western art"
+    ],
+    "story": "Fate, destiny, or God’s will? Testing. Pushing. Driving a person to the edge of breaking. Everyone knew he was in trouble— but today? For God’s sake… the ground over him isn’t even cold. And yet here he comes, this soulless robber baron, all too eager to “do his job.” “Help the poor widow,” he says— ledger in hand, eyes on her grief as if sorrow were just another line item to collect.\n\nRight or wrong, we make our stand— not only for Henry… but for every one of us they’ve bled dry. One final act. One final message. One final deposit.",
+    "notes": "“Final Deposit” examines the charged crossroads where grief, injustice, and frontier resolve collide. The widow framed in the doorway forms the emotional backbone of the piece, her stillness counterbalanced by the explosive motion of the raised weapon and the recoiling official. The diagonal energy, warm ochres, and worn textures evoke the narrative drama of classic Western illustration, while the painterly finish softens the brutality into a sculpted, almost timeless tableau.\n\nLight carves across the figures with an intentional asymmetry—one side anchored in sorrow, the other in retaliation—giving the work a tension reminiscent of Remington’s late emotional studies and the moral storytelling of Rockwell. What emerges is a frontier moment suspended between justice and consequence, rendered with cinematic clarity and quiet empathy. It stands as a portrait of a community pushed past its limit, visually rich and narratively potent.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 25
+  },
+  {
+    "id": "i-9bgtdzf",
+    "title": "Birthday Wishes",
+    "description": "Wayne Heim's western canon captures the spirit of Western cowboys in this rugged spirit image. Featuring western cowboy art, rugged spirit, and western canon, it's ideal for Western cowboys enthusiasts. Discover cowboy artwork in photography. © Wayne Heim",
+    "alt": "Wayne Heim's western canon artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9bgtdzf/1/LwMW29ZRXn6gLWXzZzPLxtHD4VqCSVkRWB7Vmbx5N/XL/_HF21467-1224-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9bgtdzf/1/LwMW29ZRXn6gLWXzZzPLxtHD4VqCSVkRWB7Vmbx5N/XL/_HF21467-1224-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9bgtdzf/1/L7tH589R8HZSvfHd9SS9TkdDtnMJcqVqJQ7HbQph3/L/_HF21467-1224-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9bgtdzf/1/MJPr7Twqs9DNs6dKFK9Nj7PRQjDZ8RWv4mXQqt7HV/M/_HF21467-1224-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9bgtdzf/1/K3Cb2HzJ6JSm47TpqSdtGHVjWQsLzMLX892gJKjnX/S/_HF21467-1224-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9bgtdzf/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "western canon",
+      "Western cowboys",
+      "rugged spirit",
+      "western cowboy art",
+      "cowboy artwork"
+    ],
+    "story": "Delving into western canon, this work by Wayne Heim highlights Western cowboys through western cowboy art and cowboy artwork. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 3,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 26
+  },
+  {
+    "id": "i-r5Pb7zJ",
+    "title": "Signs",
+    "description": "“Signs” is a cinematic piece of Western fine art storytelling by Wayne Heim, blending painterly photography with the moral tension of the Old West. A lone scout kneels in the dust, searching for meaning in the tracks before him—caught between duty, conscience, and the quiet weight of the frontier. The warm light and textured palette evoke classic Western art while pushing into a more narrative, psychological space. This is cowboy art reimagined: richly atmospheric, historically grounded, and crafted with Wayne’s distinctive painterly process that merges illustration, photography, and fine-art mood. A compelling addition for collectors of Western narrative imagery and painterly cowboy wall art.© Wayne Heim",
+    "alt": "Painterly Western scene of a frontier scout kneeling to study tracks in the dust, rifle in hand, his horse waiting behind him in warm, cinematic light.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/KNmd7QVj7vX6V98PbRwNh7mc4VmKhdF62T8nFrVXP/XL/_HF21312-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/KNmd7QVj7vX6V98PbRwNh7mc4VmKhdF62T8nFrVXP/XL/_HF21312-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/MbqjMcMK3JkVdPpZ6tT7mKnXBnJSq9PVNLj53vzkB/L/_HF21312-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/LcjHZqBHhs8xHHzNHjfFrCRhBQfqzc87N62sbPdVp/M/_HF21312-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/MLWqJXTNgXXFr2xrLtv99fzJtBRDWb59rcStjcz9r/S/_HF21312-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "western fine art photography",
+      "cowboy art",
+      "cowboy fine art",
+      "Old West wall art",
+      "narrative western art",
+      "frontier storytelling art",
+      "cowboy photography fine art",
+      "scout tracking image",
+      "western tracker art",
+      "horse and rider artwork",
+      "wilderness trail art",
+      "cinematic western photography",
+      "dust trail western scene",
+      "frontier morality story",
+      "narrative cowboy scene",
+      "wild west aesthetic",
+      "western landscape mood",
+      "painterly fine art",
+      "illustrative photography",
+      "textured western print",
+      "fine art storytelling",
+      "cinematic painterly style",
+      "Remington-inspired lighting",
+      "Wyeth-inspired mood",
+      "narrative composition",
+      "western wall decor",
+      "western art prints",
+      "cowboy wall art",
+      "museum-quality western print",
+      "limited edition western photography",
+      "collectible western art"
+    ],
+    "story": "Follow orders. Do your job. Always comin’ from those tellin’, not doin’. Hunting another man just cuz he followed more orders? That don’t sit easy on my shoulders. Six days out. Just like the rattlesnakes chasing mice— that’s gotta count for somethin’. Was fixin’ to turn back this morning— then, like a finger from God himself: commanding, revealing, testing my resolve. I could still turn back. Nobody would ever know. Except… I would. He would. Leaning in so both warmth and light can cleanse my soul — struggling to see, see what others missed, I finally see it. And with the clarity and weight of revelation, I know what I must do — follow the sign.",
+    "notes": "“Signs” channels the introspective, dust-laden solemnity found in the works of Remington and Russell, yet pushes beyond the heroic tropes into something more psychological and human. The composition leads the eye downward— from the scout’s bowed head to the faint trace on the ground—mirroring the internal journey he confronts. The warm chiaroscuro and controlled painterly toning nod subtly to Wyeth’s emotional restraint and the layered storytelling of narrative illustration.\n\nWhat distinguishes this piece is its quiet gravity: a man suspended between obligation and moral reckoning, framed not as an icon but as a character caught in a moment of truth. The textures, tones, and sculpted light elevate the photograph into a painterly tableau, yielding a work that resonates with collectors seeking depth, atmosphere, and a contemporary voice rooted in classic Western artistry.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 27
+  },
+  {
+    "id": "i-6xn5rMd",
+    "title": "Carved in Stone",
+    "description": "“Carved in Stone” is a painterly Western portrait that embodies the mythic endurance of the frontier. A bearded elder, rugged and time-worn, stands against a golden haze, every wrinkle and shadow a testament to stories survived and secrets kept. With its tactile textures and classical composition, this image channels the spirit of the Old West—stoic, poetic, and larger than life. © Wayne Heim",
+    "alt": "Painterly portrait of an older Western man with a long beard, sunhat, and vest, gazing thoughtfully into the distance, his face deeply lined as if shaped by the land itself.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6xn5rMd/0/KknVdKJ9gT3QrM9d2XvFggvDDVF6gRgtswkSMrwFq/XL/_WHO5421-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6xn5rMd/0/KknVdKJ9gT3QrM9d2XvFggvDDVF6gRgtswkSMrwFq/XL/_WHO5421-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6xn5rMd/0/KknVdKJ9gT3QrM9d2XvFggvDDVF6gRgtswkSMrwFq/XL/_WHO5421-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6xn5rMd/0/Lj64Qvhwj4jwnVHGnKf7BVHbjMQDNzW7C7XKqc4GM/L/_WHO5421-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6xn5rMd/0/LbVh3kpkcwWt7nsJZZWJ2gSD6SG8XLKZkZLGGbZDD/S/_WHO5421-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6xn5rMd/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "grizzled cowboy portrait",
+      "chiseled western face",
+      "American pictorialism",
+      "frontier elder art",
+      "living legend western",
+      "weathered cowboy image",
+      "mythic western art",
+      "museum quality western print",
+      "collectible western portrait"
+    ],
+    "story": "Grizzled and chiseled, full of lines and cracks, he looks as if he was hewn from the rock itself—etched by years of sun, wind, and memory. He stands half in sunlight, half in legend, and in the hush before he speaks you sense he’s about to share the tale of his latest discovery, or maybe the sorrow of a love long lost. There’s a world written across that weathered face—waiting for anyone brave enough to ask.",
+    "notes": "There’s a reason this piece stops people in their tracks: it’s not just a portrait, but a monument to the passage of time and the stories that carve themselves into us. Drawing on the traditions of Wyeth, Remington, and the golden age of American pictorialism, this photograph achieves a rare synthesis of realism and myth—using only natural light and in-camera technique to capture every crack and glint in his weathered face. Gallery owners appreciate its authenticity and subtle power: nothing staged, no digital composites, just a man rendered as part artifact, part legend. For collectors, it’s a signature example of contemporary Western storytelling—a conversation starter and anchor for any serious collection.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 28
+  },
+  {
+    "id": "i-MvZxkQh",
+    "title": "Cowboy Artwork In Fine Art",
+    "description": "Discover the cowboy artwork in this powerful historic western prints by Wayne Heim. A compelling work that embodies historic western prints, rustic charm, and fine art Western photography. Featuring western fine art, perfect for art lovers seeking cowboy artwork to enhance their collection. © Wayne Heim",
+    "alt": "cowboy artwork in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/MzMcNxJqbGG5B6XHGP9cwk7NtFM228prS5CbVwtRN/XL/_HF24859-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/MzMcNxJqbGG5B6XHGP9cwk7NtFM228prS5CbVwtRN/XL/_HF24859-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/MzMcNxJqbGG5B6XHGP9cwk7NtFM228prS5CbVwtRN/XL/_HF24859-Edit-2-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/NLxmKSWsdVpPhKwHvZrp8XdznCjHSgK5Sswd7bLct/L/_HF24859-Edit-2-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/NhGBdrNCb5NSXJfXTjTj8pwsVdDgNDNjWqHxdkxj4/S/_HF24859-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/A",
+    "keywords": [
+      "HF21312",
+      "cowboy artwork",
+      "historic western prints",
+      "rustic charm",
+      "fine art Western photography",
+      "western fine art",
+      "western cowboy art",
+      "frontier life",
+      "frederic remington"
+    ],
+    "story": "Delving into rustic charm, this work by Wayne Heim highlights western cowboy art through frontier life and frederic remington. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 29
+  },
+  {
+    "id": "i-5TGTZ9P",
+    "title": "Western Landscapes Fine Art Portrait",
+    "description": "Immerse yourself in western landscapes fine art with this stunning rugged spirit by Wayne Heim. Capturing outlaw portraits, wild west photography, and western canon, it's a must-have for collectors of western landscapes fine art. Including outlaw portraits themes. © Wayne Heim",
+    "alt": "Wayne Heim's western landscapes fine art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/NTB85PgXvq58Lk4ZFTxrJjjkrfgFhnpCVHC3j8jQV/XL/_WHO4062-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/NTB85PgXvq58Lk4ZFTxrJjjkrfgFhnpCVHC3j8jQV/XL/_WHO4062-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/LpG8LgGKcffs9dj4dqfnpctHNhvmqTpBKHBLcTbPQ/L/_WHO4062-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/LW7v2dKhbc7bPc7mbFZFjFQNRM3MxvqR65hffqrLV/M/_WHO4062-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/LBRTXLB5KSfxXbcRn2VL3D2sX5fQmSSKcQ6HGzN8n/S/_WHO4062-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/A",
+    "keywords": [
+      "HF21312",
+      "western landscapes fine art",
+      "rugged spirit",
+      "outlaw portraits",
+      "wild west photography",
+      "western canon",
+      "cowboy artwork",
+      "western fine art",
+      "rustic charm"
+    ],
+    "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing western fine art and rustic charm. A testament to rustic charm in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 30
+  },
+  {
+    "id": "i-5rq7gcD",
+    "title": "Let No Man Put Asunder",
+    "description": "“Let No Man Put Asunder” portrays a powerful moment of unity and resolve on the Western frontier. A couple stands together, their faces close, sharing a bond forged through hardship, sacrifice, and the hope of a new life. Rendered in rich painterly tones, the image captures both tenderness and defiance—echoing the struggles of immigrants and pioneers who claimed a place in a land still shaping its identity. A deeply emotive work for collectors of narrative Western fine art and cinematic frontier storytelling. © Wayne Heim",
+    "alt": "Painterly Western portrait of a couple holding a rifle together, faces pressed close, symbolizing unity and resolve on the frontier.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5rq7gcD/0/LPzFngs5QTL8SvtnJ3J38LgWF5tN3C5FT34qmCM8M/XL/_WHO1061-1233-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5rq7gcD/0/LPzFngs5QTL8SvtnJ3J38LgWF5tN3C5FT34qmCM8M/XL/_WHO1061-1233-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5rq7gcD/0/LPzFngs5QTL8SvtnJ3J38LgWF5tN3C5FT34qmCM8M/XL/_WHO1061-1233-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5rq7gcD/0/MPWkLDPK6zhVL5RDhqfKpRkQ7PpD7kxQ8g97d7B9G/L/_WHO1061-1233-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5rq7gcD/0/KP2vnnFjZc8zJKmcwnQptRxnWL6NdLCvmsCPWbtfD/S/_WHO1061-1233-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5rq7gcD/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "frontier couple artwork",
+      "narrative western art",
+      "immigrant pioneer story",
+      "emotional western scene",
+      "cinematic frontier portrait",
+      "unity on the frontier",
+      "textured western print",
+      "rifle training couple art",
+      "atmospheric western photography",
+      "intimate cowboy era moment",
+      "painterly storytelling",
+      "soft color western print",
+      "frontier resilience artwork",
+      "museum quality western print",
+      "collectible western fine art"
+    ],
+    "story": "An ocean and a world away… we make this stand, reconciling the promises of a new life with the frontier realities that chase us. Sacrificed. Fought. Gave of body and blood for the soul of this country. It’s our flag now — our home — same as those born here. And it’s here we shall forge our life — and all that has been bound to us — whether by destiny or the divine… let no man put asunder.",
+    "notes": "“Let No Man Put Asunder” explores the quiet strength found in shared purpose. The couple’s closeness is mirrored in the frame’s tight composition, allowing the viewer to feel the gravity of their bond. The muted palette and textured painterly treatment evoke the uncertainty of frontier life, where survival often rested on unity — emotional, practical, and spiritual.\n\nThe man’s gaze, fixed forward with wary determination, contrasts with the woman’s closed eyes and steadying calm, forming a subtle dialogue between vigilance and trust. Their hands on the rifle reinforce the symbolism: protection, solidarity, and the promise to face whatever may come as one.\n\nThe work echoes traditions of early American narrative painting, where personal stories illuminate broader histories. This piece offers collectors an intimate portrayal of frontier devotion, shaped by resilience and the unspoken contracts between two lives bound tightly together.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 31
+  },
+  {
     "id": "i-bfKMXS9",
     "title": "Three Wise Men",
     "description": "Three cowboys stand ready on the porch of a weathered frontier cabin, rifles in hand, eyes sharp for what’s coming. In Wayne Heim’s captivating western photography, each piece blends painterly texture with the grit of the Old West, preserving both the timeless beauty and the raw tension of cowboy life. This striking composition draws the viewer into a moment balanced between calm and conflict, making it a powerful addition to any western fine art collection.",
@@ -115,7 +1149,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 32
   },
   {
     "id": "i-n5BfXBm",
@@ -151,7 +1185,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 33
   },
   {
     "id": "i-trZrk2w",
@@ -181,50 +1215,75 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 34
   },
   {
-    "id": "i-44jcjTQ",
-    "title": "Over My Dead Body: Frontier Stand-off ",
-    "description": "A color Western portrait of a seasoned cowboy braced at his cabin window, rifle ready and gaze fixed on the yard. Warm light rakes the hat, coat, and timber while the room drops to quiet shadow, holding the moment between caution and action. Wayne Heim’s Painterly Fine Art approach shapes tone and texture for a print-first finish—rich color, disciplined contrast, and lived-in detail that honors classic frontier storytelling. Ideal for collectors of Western fine art photography and Americana wall art.",
-    "alt": "Color Western portrait of an older cowboy holding a rifle at a cabin window, braced in anticipation.",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MXvpkCb39DvnLh4Jk9Pj3ZnttK2nKS33mKKvKXpKL/L/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MLDCZF8g9LJw4tnMkbfDfmRn95CLTpQtGvBhbzGrt/S/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-S.jpg",
+    "id": "i-TwKFdjR",
+    "title": "Western Cowboy Art In Fine Art",
+    "description": "Immerse yourself in western cowboy art with this stunning western cowboy art by Wayne Heim. Capturing cowboy artwork, western landscapes fine art, and painterly cowboy portraits, it's a must-have for collectors of western cowboy art. Including historic western prints themes. © Wayne Heim",
+    "alt": "Fine art photography of western cowboy art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-TwKFdjR/0/L343bnWDK9J2Ftzq2tDb3tRFZK8b4Xj2DTq6JWnrD/XL/_WHO8536-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-TwKFdjR/0/L343bnWDK9J2Ftzq2tDb3tRFZK8b4Xj2DTq6JWnrD/XL/_WHO8536-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-TwKFdjR/0/KLkTzWGscfmCNBVHwnc5D8DHWgxJBszqvZhRHzqXS/L/_WHO8536-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-TwKFdjR/0/MSm6QqHBGTFPQwD7LGGPCgzV3wvRKqrX7fSc2Tgrs/M/_WHO8536-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-TwKFdjR/0/K8qks9PTvDJJbsXfLD26tSc6gzs9nsk96SmB8NVdz/S/_WHO8536-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-TwKFdjR/A",
     "keywords": [
-      "western fine art photography",
-      "color western portrait",
-      "cowboy with rifle",
-      "cabin window",
-      "frontier standoff",
-      "old west interior",
-      "warm lamplight",
-      "painterly fine art",
-      "americana wall art",
-      "bearded cowboy",
-      "wide-brim hat",
-      "rustic wood",
-      "frontier vigil",
-      "character study",
-      "storytelling portrait",
-      "archival print",
-      "museum quality",
-      "Wayne Heim",
-      "western decor",
-      "tense moment"
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "western cowboy art",
+      "cowboy artwork",
+      "western landscapes fine art",
+      "painterly cowboy portraits",
+      "historic western prints",
+      "outlaw portraits",
+      "cowboy portraits"
     ],
-    "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming.\n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!",
-    "notes": "The off-frame tension is pure storytelling—anchored by the rifle’s diagonal and resolved by the window frame’s vertical pull. The light carves across rough wool and weathered timber like a chiaroscuro etching, revealing the figure not as staged drama, but as lived consequence.\n\nThis is painterly photography with muscle: sculpted tonality, smart restraint, and tight composition that favors shape and story over spectacle. The bucket in the foreground subtly expands scale and texture while avoiding visual clutter. In a tradition that nods to Remington’s interiors and Wyeth’s emotional stillness, this image holds the moment between breath and action. A study in edge, mood, and memory—crafted, not captured.",
-    "rating": 5,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
+    "story": "This image embodies outlaw portraits and cowboy portraits, captured by Wayne Heim in his signature style. It reflects cowboy artwork with a touch of historic western prints. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 35
+  },
+  {
+    "id": "i-7mFGRtw",
+    "title": "Outlaw Portraits - Painterly Cowboy Portraits",
+    "description": "Experience outlaw portraits through this evocative painterly cowboy portraits from Wayne Heim's portfolio. This piece highlights western cowboy art with painterly cowboy portraits, while conveying frontier life, ideal for those who appreciate outlaw portraits. Explore cowboy portraits in fine art. © Wayne Heim",
+    "alt": "Wayne Heim's outlaw portraits artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7mFGRtw/0/K5qvZRzZ3X8ZHT66xnGBzTPwKdLxLpv3fMqsscZBf/XL/_HF21638-1305-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7mFGRtw/0/K5qvZRzZ3X8ZHT66xnGBzTPwKdLxLpv3fMqsscZBf/XL/_HF21638-1305-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7mFGRtw/0/MkJ2S5J2PXJKLM9FqQRRpJbHHrGgH7TkJTg2x5zgz/L/_HF21638-1305-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7mFGRtw/0/LdCLRjdmp746QwJtNpdjdH87jB2nGRpLTLXTVVqtW/M/_HF21638-1305-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7mFGRtw/0/KqRHZj8VWVwJNcsBjL6z55rTpNVjZW644LHK2Q7zb/S/_HF21638-1305-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7mFGRtw/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "outlaw portraits",
+      "painterly cowboy portraits",
+      "western cowboy art",
+      "frontier life",
+      "cowboy portraits",
+      "cowboy art",
+      "Western cowboys",
+      "powerful works of art",
+      "fine art Western photography"
+    ],
+    "story": "Delving into cowboy art, this work by Wayne Heim highlights Western cowboys through powerful works of art and fine art Western photography. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 36
   },
   {
     "id": "i-fM9qmKW",
@@ -265,7 +1324,42 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 5
+    "sortOrder": 37
+  },
+  {
+    "id": "i-MHGPvcs",
+    "title": "$3 for a whiskey?",
+    "description": "Experience cowboy painting art through this evocative western fine art from Wayne Heim's portfolio. This piece highlights western cowboy art with rugged spirit, while conveying cowboy painting art, ideal for those who appreciate cowboy painting art. Explore western cowboy art in fine art. © Wayne Heim",
+    "alt": "Painterly Western image of a man in a vest and hat sitting at a saloon table, drinking whiskey and staring thoughtfully at the viewer through the glass.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MHGPvcs/0/M85fxLvzHdR8Tww4WNKZkMc57mM5ZcgFHCH9nR4fD/XL/_HF21787-1304-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MHGPvcs/0/M85fxLvzHdR8Tww4WNKZkMc57mM5ZcgFHCH9nR4fD/XL/_HF21787-1304-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MHGPvcs/0/MftVB5jgStvbcNtndnVWk9WfNrh7HbFXJBX464hsd/L/_HF21787-1304-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MHGPvcs/0/M74Sw3bLJLQ8q7KvFX3VkBzq6qwskgQrdrPFftmZg/M/_HF21787-1304-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MHGPvcs/0/MB297TLr79fr2dq4GLNc87674Z4BtxqCvj8b6XpmJ/S/_HF21787-1304-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MHGPvcs/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "cowboy artwork",
+      "western landscapes fine art",
+      "frontier life",
+      "fine art Western photography",
+      "cowboy portraits",
+      "western art",
+      "cowboy painting art",
+      "western fine art",
+      "western cowboy art",
+      "rugged spirit",
+      "Western cowboys",
+      "frederic remington"
+    ],
+    "story": "“$3 for a whiskey?” is a painterly Western portrait alive with color, shadow, and saloon intrigue. A grizzled cowboy lifts his glass, eyes cutting through the haze and bokeh as he ponders the price of pleasure on a long frontier night. A tribute to hard-won comforts and the choices they demand, captured with cinematic style and wry humor.\n© Wayne Heim",
+    "notes": "Beneath the cinematic surface, this image draws direct inspiration from the chiaroscuro lighting of Rembrandt and Caravaggio, using controlled shadows and spot-lit highlights to pull the viewer into the scene—techniques rarely achieved in live Western reenactment photography. The subtle reflection in the glass and the layered bokeh were captured in-camera, not digitally added, which gives the piece its signature painterly depth. The subject’s pose—caught between skepticism and indulgence—embodies the frontier’s daily negotiation between risk and reward, a theme echoed in the best works of Norman Rockwell and Frederic Remington. It’s the kind of piece that stops people in their tracks at a show, because it feels both familiar and cinematic, and collectors consistently remark on its moody color palette and story-you-can-step-into quality. For a gallery or private collection, it’s a standout example of modern Western pictorialism, blending period authenticity with fine-art technique—exactly the kind of piece curators and art lovers are hungry for right now.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 38
   },
   {
     "id": "i-7VWX9vk",
@@ -287,7 +1381,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 39
   },
   {
     "id": "i-CD6rgtF",
@@ -328,7 +1422,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 40
   },
   {
     "id": "i-ShhCNkX",
@@ -363,7 +1457,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 41
   },
   {
     "id": "i-fCG2nm8",
@@ -401,7 +1495,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 42
   },
   {
     "id": "i-c3vWMgt",
@@ -439,7 +1533,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 43
   },
   {
     "id": "i-rhvQkwh",
@@ -496,7 +1590,39 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 44
+  },
+  {
+    "id": "i-Vr8vzjt",
+    "title": "Western Landscapes Fine Art Portrait",
+    "description": "This western landscapes fine art artwork by Wayne Heim showcases western canon in a western cowboy art style. Reflecting cowboy portraits, Western cowboys, and western landscapes fine art, it's suited for admirers of western canon. With historic western prints elements. © Wayne Heim",
+    "alt": "Wayne Heim's western landscapes fine art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/NVc5cNFSDXmwWcLZdbGPVDwdfBq2NXWzxbLNWR9LG/XL/_WHO1699-1184-1190-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/NVc5cNFSDXmwWcLZdbGPVDwdfBq2NXWzxbLNWR9LG/XL/_WHO1699-1184-1190-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/MnQhqfD46J3MC4VDcHg842vwqmkdsm5DqdvmzkTV6/M/_WHO1699-1184-1190-M.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/MnnW8ZMzbXgCbwL8BgjP2psZGRFQ4RRpswXRX8RpV/Ti/_WHO1699-1184-1190-Ti.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/MnnW8ZMzbXgCbwL8BgjP2psZGRFQ4RRpswXRX8RpV/Ti/_WHO1699-1184-1190-Ti.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "western landscapes fine art",
+      "western canon",
+      "western cowboy art",
+      "cowboy portraits",
+      "Western cowboys",
+      "historic western prints",
+      "western art",
+      "wild west photography",
+      "cowboy artwork"
+    ],
+    "story": "Delving into western art, this work by Wayne Heim highlights wild west photography through cowboy artwork and cowboy artwork. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 45
   },
   {
     "id": "i-xqZwcZh",
@@ -535,7 +1661,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 46
   },
   {
     "id": "i-c5K798H",
@@ -571,7 +1697,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 47
   },
   {
     "id": "i-k4b6c5b",
@@ -628,7 +1754,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 48
   },
   {
     "id": "i-QB4jLsH",
@@ -662,7 +1788,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 15
+    "sortOrder": 49
   },
   {
     "id": "i-wfqSGcV",
@@ -696,7 +1822,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 50
   },
   {
     "id": "i-VDLVwqr",
@@ -734,7 +1860,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 17
+    "sortOrder": 51
   },
   {
     "id": "i-hrmrhT3",
@@ -791,7 +1917,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 52
   },
   {
     "id": "i-HBRmWg4",
@@ -823,7 +1949,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 53
   },
   {
     "id": "i-mLPgSpC",
@@ -880,7 +2006,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 54
   },
   {
     "id": "i-hMXZ8Xh",
@@ -937,7 +2063,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 55
   },
   {
     "id": "i-8rsG6P9",
@@ -969,7 +2095,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 56
   },
   {
     "id": "i-2D49wp7",
@@ -999,7 +2125,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 57
   },
   {
     "id": "i-RT474Nz",
@@ -1029,7 +2155,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 58
   },
   {
     "id": "i-WxQjxQS",
@@ -1066,7 +2192,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 59
   },
   {
     "id": "i-qVZ9m7j",
@@ -1123,7 +2249,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 60
   },
   {
     "id": "i-JKnW497",
@@ -1162,7 +2288,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 61
   },
   {
     "id": "i-5HpSkgR",
@@ -1191,7 +2317,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 62
   },
   {
     "id": "i-cFhZXJc",
@@ -1226,7 +2352,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 63
   },
   {
     "id": "i-LCspRF4",
@@ -1263,7 +2389,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 64
   },
   {
     "id": "i-mpfG8XF",
@@ -1320,7 +2446,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 65
   },
   {
     "id": "i-PM4d3g3",
@@ -1356,7 +2482,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 66
   },
   {
     "id": "i-T7TFJX2",
@@ -1393,7 +2519,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 67
   },
   {
     "id": "i-5FX3W9r",
@@ -1450,7 +2576,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 68
   },
   {
     "id": "i-Dw6Z8ff",
@@ -1508,7 +2634,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 69
   },
   {
     "id": "i-Rx5gLJz",
@@ -1565,7 +2691,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 70
   },
   {
     "id": "i-7dCKHjg",
@@ -1595,7 +2721,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 71
   },
   {
     "id": "i-tnWbQrT",
@@ -1632,7 +2758,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 72
   },
   {
     "id": "i-M2WdKTL",
@@ -1668,7 +2794,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 73
   },
   {
     "id": "i-CzWxpvV",
@@ -1699,7 +2825,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 74
   },
   {
     "id": "i-gL3Nnth",
@@ -1736,7 +2862,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 75
   },
   {
     "id": "i-KVxkXrV",
@@ -1773,7 +2899,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 76
   },
   {
     "id": "i-sTnckb6",
@@ -1830,7 +2956,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 77
   },
   {
     "id": "i-v4vRSb8",
@@ -1870,7 +2996,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 78
   },
   {
     "id": "i-vFrxmXD",
@@ -1908,7 +3034,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 79
   },
   {
     "id": "i-KBNSftv",
@@ -1946,7 +3072,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 80
   },
   {
     "id": "i-MF3xPCZ",
@@ -1984,13 +3110,13 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 81
   },
   {
     "id": "i-bJ9LJtg",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
+    "title": "Exploring Rugged Spirit",
+    "description": "Experience rugged spirit through this evocative western landscapes fine art from Wayne Heim's portfolio. This piece highlights cowboy art with fine art Western photography, while conveying western art, ideal for those who appreciate rugged spirit. Explore fine art Western photography in fine art. © Wayne Heim",
+    "alt": "Fine art photography of rugged spirit by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bJ9LJtg/0/MKrR7k46m9ghR8v5F2k7rhNzKPz5xpPRP6NTXLZQr/XL/_WHO6469-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bJ9LJtg/0/MKrR7k46m9ghR8v5F2k7rhNzKPz5xpPRP6NTXLZQr/XL/_WHO6469-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bJ9LJtg/0/MMJ4J368jS2qSMgBN2MLkqhrVX5MRmVWQfsL6KCdx/L/_WHO6469-L.jpg",
@@ -2000,14 +3126,22 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bJ9LJtg/A",
     "keywords": [
       "HF26225",
-      "1143"
+      "1143",
+      "rugged spirit",
+      "western landscapes fine art",
+      "cowboy art",
+      "fine art Western photography",
+      "western art",
+      "western cowboy art",
+      "Western cowboys",
+      "cowboy portraits"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of western cowboy art comes alive in this piece, showcasing Western cowboys and cowboy portraits. A testament to western art in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 82
   },
   {
     "id": "i-ZRFr8hd",
@@ -2038,7 +3172,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 83
   },
   {
     "id": "i-gF8j3Jz",
@@ -2071,7 +3205,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 84
   },
   {
     "id": "i-ML9dbMj",
@@ -2128,7 +3262,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 85
   },
   {
     "id": "i-xmJ87ZT",
@@ -2158,7 +3292,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 86
   },
   {
     "id": "i-8VPQmkW",
@@ -2215,7 +3349,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 87
   },
   {
     "id": "i-6Ffpw9t",
@@ -2253,7 +3387,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 88
   },
   {
     "id": "i-NKdPDCg",
@@ -2286,7 +3420,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 89
   },
   {
     "id": "i-LLdZzQW",
@@ -2343,7 +3477,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 90
   },
   {
     "id": "i-DwVBJb3",
@@ -2400,13 +3534,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 91
   },
   {
     "id": "i-sLL3pQG",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
+    "title": "Exploring Western Canon",
+    "description": "Experience western canon through this evocative cowboy artwork from Wayne Heim's portfolio. This piece highlights cowboy art with rustic charm, while conveying western fine art, ideal for those who appreciate western canon. Explore cowboy artwork in fine art. © Wayne Heim",
+    "alt": "western canon in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sLL3pQG/0/MxPH5sMTSPhHbH7pqpmd9pRZqVgvFBW6Lwz4nRG7z/XL/_WHO2916-1148-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sLL3pQG/0/MxPH5sMTSPhHbH7pqpmd9pRZqVgvFBW6Lwz4nRG7z/XL/_WHO2916-1148-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sLL3pQG/0/NXpKH8QBchjqTVJmknQsMJVzzpG9wKH7JJGhq9csq/L/_WHO2916-1148-L.jpg",
@@ -2422,14 +3556,22 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "western canon",
+      "cowboy artwork",
+      "cowboy art",
+      "rustic charm",
+      "western fine art",
+      "frederic remington",
+      "powerful works of art",
+      "cowboy portraits"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "This image embodies frederic remington and western canon, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of cowboy portraits. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 92
   },
   {
     "id": "i-LBSWzcj",
@@ -2464,7 +3606,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 93
   },
   {
     "id": "i-ZPmj5Wk",
@@ -2521,7 +3663,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 94
   },
   {
     "id": "i-dNgct6r",
@@ -2578,7 +3720,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 95
   },
   {
     "id": "i-z3wvMkB",
@@ -2609,7 +3751,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 96
   },
   {
     "id": "i-gj4hHmL",
@@ -2666,7 +3808,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 97
   },
   {
     "id": "i-8BbMZjs",
@@ -2723,7 +3865,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 98
   },
   {
     "id": "i-Mm3jXFH",
@@ -2780,7 +3922,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 99
   },
   {
     "id": "i-T6bD4w7",
@@ -2809,7 +3951,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 100
   },
   {
     "id": "i-7Jzf69b",
@@ -2866,7 +4008,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 101
   },
   {
     "id": "i-mbND55n",
@@ -2903,7 +4045,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 102
   },
   {
     "id": "i-vP376vx",
@@ -2960,7 +4102,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 103
   },
   {
     "id": "i-8CfzGMc",
@@ -2991,13 +4133,13 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 104
   },
   {
     "id": "i-JM7kNVv",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Capturing Fine Art Western Photography",
+    "description": "Discover the fine art Western photography in this powerful cowboy artwork by Wayne Heim. A compelling work that embodies cowboy artwork, painterly cowboy portraits, and cowboy artwork. Featuring cowboy artwork, perfect for art lovers seeking fine art Western photography to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's fine art Western photography artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JM7kNVv/0/KW2p6R2TJVgfDks7M8f3RFBzTBGB2Ff4hgdbWwdwJ/XL/_HF28460-1140-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JM7kNVv/0/KW2p6R2TJVgfDks7M8f3RFBzTBGB2Ff4hgdbWwdwJ/XL/_HF28460-1140-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JM7kNVv/0/KW2p6R2TJVgfDks7M8f3RFBzTBGB2Ff4hgdbWwdwJ/XL/_HF28460-1140-XL.jpg",
@@ -3007,14 +4149,20 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JM7kNVv/A",
     "keywords": [
       "HF26225",
-      "1143"
+      "1143",
+      "fine art Western photography",
+      "cowboy artwork",
+      "painterly cowboy portraits",
+      "frederic remington",
+      "western canon",
+      "cowboy art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "This image embodies frederic remington and western canon, captured by Wayne Heim in his signature style. It reflects cowboy art with a touch of frederic remington. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 105
   },
   {
     "id": "i-rMkQnM6",
@@ -3071,7 +4219,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 106
   },
   {
     "id": "i-b3vCXwR",
@@ -3128,7 +4276,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 107
   },
   {
     "id": "i-TLDkd5q",
@@ -3185,7 +4333,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 108
   },
   {
     "id": "i-FVHm8VJ",
@@ -3242,7 +4390,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 109
   },
   {
     "id": "i-k6jGzSq",
@@ -3299,7 +4447,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 110
   },
   {
     "id": "i-GG7mgqM",
@@ -3356,7 +4504,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 111
   },
   {
     "id": "i-P8B2zJj",
@@ -3413,7 +4561,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 112
   },
   {
     "id": "i-KTGLfqc",
@@ -3470,7 +4618,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 113
   },
   {
     "id": "i-v4TzPgF",
@@ -3527,7 +4675,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 114
   },
   {
     "id": "i-8cXqSjj",
@@ -3584,7 +4732,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 115
   },
   {
     "id": "i-mHpH7rZ",
@@ -3641,7 +4789,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 116
   },
   {
     "id": "i-vGkvhmq",
@@ -3698,7 +4846,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 83
+    "sortOrder": 117
   },
   {
     "id": "i-mdz2QGr",
@@ -3755,7 +4903,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 84
+    "sortOrder": 118
   },
   {
     "id": "i-6pLTtkL",
@@ -3812,7 +4960,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 119
   },
   {
     "id": "i-btSc5RS",
@@ -3854,7 +5002,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 120
   },
   {
     "id": "i-8zFZ3jn",
@@ -3911,7 +5059,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 121
   },
   {
     "id": "i-p9FqvPh",
@@ -3968,7 +5116,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 88
+    "sortOrder": 122
   },
   {
     "id": "i-xNnJTSK",
@@ -4025,7 +5173,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 89
+    "sortOrder": 123
   },
   {
     "id": "i-rhqqrfz",
@@ -4082,7 +5230,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 90
+    "sortOrder": 124
   },
   {
     "id": "i-D5kv9Q6",
@@ -4139,7 +5287,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 91
+    "sortOrder": 125
   },
   {
     "id": "i-D3HdMmb",
@@ -4196,7 +5344,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 92
+    "sortOrder": 126
   },
   {
     "id": "i-xXQ3gDM",
@@ -4253,7 +5401,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 93
+    "sortOrder": 127
   },
   {
     "id": "i-8JSdTGz",
@@ -4310,7 +5458,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 94
+    "sortOrder": 128
   },
   {
     "id": "i-6GQxb97",
@@ -4367,7 +5515,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 95
+    "sortOrder": 129
   },
   {
     "id": "i-J8Tr628",
@@ -4424,7 +5572,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 96
+    "sortOrder": 130
   },
   {
     "id": "i-zv8VJBg",
@@ -4481,7 +5629,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 97
+    "sortOrder": 131
   },
   {
     "id": "i-FpH3LXf",
@@ -4516,7 +5664,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 98
+    "sortOrder": 132
   },
   {
     "id": "i-sBDTm7k",
@@ -4573,7 +5721,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 99
+    "sortOrder": 133
   },
   {
     "id": "i-8Ld2ZHQ",
@@ -4630,7 +5778,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 100
+    "sortOrder": 134
   },
   {
     "id": "i-Dthbn8K",
@@ -4687,7 +5835,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 101
+    "sortOrder": 135
   },
   {
     "id": "i-jcLJT4J",
@@ -4716,7 +5864,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 102
+    "sortOrder": 136
   },
   {
     "id": "i-vpt6C9V",
@@ -4752,7 +5900,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 103
+    "sortOrder": 137
   },
   {
     "id": "i-V5WcTqg",
@@ -4787,7 +5935,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 104
+    "sortOrder": 138
   },
   {
     "id": "i-vcX6WLC",
@@ -4844,7 +5992,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 105
+    "sortOrder": 139
   },
   {
     "id": "i-TtXPkVK",
@@ -4901,7 +6049,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 106
+    "sortOrder": 140
   },
   {
     "id": "i-Cg4ZB72",
@@ -4958,7 +6106,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 107
+    "sortOrder": 141
   },
   {
     "id": "i-6G4PBd8",
@@ -5015,7 +6163,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 108
+    "sortOrder": 142
   },
   {
     "id": "i-PPJ9GKf",
@@ -5045,7 +6193,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 109
+    "sortOrder": 143
   },
   {
     "id": "i-HHxxcsM",
@@ -5102,7 +6250,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 144
   },
   {
     "id": "i-w3JBvXs",
@@ -5159,7 +6307,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 111
+    "sortOrder": 145
   },
   {
     "id": "i-pNSX6cp",
@@ -5216,7 +6364,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 112
+    "sortOrder": 146
   },
   {
     "id": "i-FsLKLp3",
@@ -5273,7 +6421,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 113
+    "sortOrder": 147
   },
   {
     "id": "i-zH8SD79",
@@ -5330,7 +6478,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 114
+    "sortOrder": 148
   },
   {
     "id": "i-dwk4K8v",
@@ -5387,7 +6535,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 115
+    "sortOrder": 149
   },
   {
     "id": "i-ZKCtdPV",
@@ -5444,7 +6592,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 116
+    "sortOrder": 150
   },
   {
     "id": "i-CgCxXGG",
@@ -5501,7 +6649,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 117
+    "sortOrder": 151
   },
   {
     "id": "i-TVSQHzg",
@@ -5558,7 +6706,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 118
+    "sortOrder": 152
   },
   {
     "id": "i-dqdZcnX",
@@ -5615,7 +6763,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 119
+    "sortOrder": 153
   },
   {
     "id": "i-G7csptc",
@@ -5646,7 +6794,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 120
+    "sortOrder": 154
   },
   {
     "id": "i-cKFv3th",
@@ -5703,7 +6851,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 121
+    "sortOrder": 155
   },
   {
     "id": "i-MDrw6sD",
@@ -5760,7 +6908,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 122
+    "sortOrder": 156
   },
   {
     "id": "i-3ppJNtd",
@@ -5817,7 +6965,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 123
+    "sortOrder": 157
   },
   {
     "id": "i-SPTNHnP",
@@ -5874,7 +7022,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 124
+    "sortOrder": 158
   },
   {
     "id": "i-DGtgJJJ",
@@ -5912,7 +7060,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 125
+    "sortOrder": 159
   },
   {
     "id": "i-NBsQ59h",
@@ -5969,7 +7117,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 126
+    "sortOrder": 160
   },
   {
     "id": "i-6BgfRxb",
@@ -6026,7 +7174,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 127
+    "sortOrder": 161
   },
   {
     "id": "i-zXnjqZZ",
@@ -6083,7 +7231,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 128
+    "sortOrder": 162
   },
   {
     "id": "i-Khb37pn",
@@ -6140,7 +7288,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 129
+    "sortOrder": 163
   },
   {
     "id": "i-mJQCXmh",
@@ -6197,7 +7345,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 130
+    "sortOrder": 164
   },
   {
     "id": "i-jLSNwCT",
@@ -6254,7 +7402,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 131
+    "sortOrder": 165
   },
   {
     "id": "i-kBNpRtm",
@@ -6285,7 +7433,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 132
+    "sortOrder": 166
   },
   {
     "id": "i-xr5chJG",
@@ -6315,7 +7463,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 133
+    "sortOrder": 167
   },
   {
     "id": "i-GPq6m5q",
@@ -6337,7 +7485,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 134
+    "sortOrder": 168
   },
   {
     "id": "i-nLKscbQ",
@@ -6374,7 +7522,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 135
+    "sortOrder": 169
   },
   {
     "id": "i-TQw7vC7",
@@ -6431,7 +7579,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 136
+    "sortOrder": 170
   },
   {
     "id": "i-MnX4pxX",
@@ -6488,7 +7636,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 137
+    "sortOrder": 171
   },
   {
     "id": "i-SVwxn5L",
@@ -6525,7 +7673,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 138
+    "sortOrder": 172
   },
   {
     "id": "i-gQ7GZ5s",
@@ -6582,7 +7730,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 139
+    "sortOrder": 173
   },
   {
     "id": "i-52tTd9G",
@@ -6639,7 +7787,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 140
+    "sortOrder": 174
   },
   {
     "id": "i-TpkTsMg",
@@ -6676,7 +7824,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 141
+    "sortOrder": 175
   },
   {
     "id": "i-xZkmnnx",
@@ -6699,7 +7847,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 142
+    "sortOrder": 176
   },
   {
     "id": "i-trM4FpR",
@@ -6756,7 +7904,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 143
+    "sortOrder": 177
   },
   {
     "id": "i-bkjkPfH",
@@ -6813,7 +7961,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 144
+    "sortOrder": 178
   },
   {
     "id": "i-R3CqrBr",
@@ -6849,7 +7997,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 145
+    "sortOrder": 179
   },
   {
     "id": "i-XsdNV9s",
@@ -6879,7 +8027,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 146
+    "sortOrder": 180
   },
   {
     "id": "i-Cz82g6x",
@@ -6936,7 +8084,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 147
+    "sortOrder": 181
   },
   {
     "id": "i-QWT3QZ4",
@@ -6973,7 +8121,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 148
+    "sortOrder": 182
   },
   {
     "id": "i-WCw4qpB",
@@ -7030,7 +8178,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 149
+    "sortOrder": 183
   },
   {
     "id": "i-sDLXtRZ",
@@ -7087,7 +8235,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 150
+    "sortOrder": 184
   },
   {
     "id": "i-X9h6sdw",
@@ -7125,7 +8273,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 151
+    "sortOrder": 185
   },
   {
     "id": "i-kh6KWS9",
@@ -7182,7 +8330,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 152
+    "sortOrder": 186
   },
   {
     "id": "i-bN9mRH6",
@@ -7239,7 +8387,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 153
+    "sortOrder": 187
   },
   {
     "id": "i-cF2kLFP",
@@ -7296,7 +8444,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 154
+    "sortOrder": 188
   },
   {
     "id": "i-2Z3ZvJS",
@@ -7353,7 +8501,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 155
+    "sortOrder": 189
   },
   {
     "id": "i-XR9PZT5",
@@ -7410,7 +8558,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 156
+    "sortOrder": 190
   },
   {
     "id": "i-R2JG4bd",
@@ -7467,7 +8615,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 157
+    "sortOrder": 191
   },
   {
     "id": "i-fTHtL25",
@@ -7503,7 +8651,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 192
   },
   {
     "id": "i-6dHrd9m",
@@ -7560,7 +8708,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 159
+    "sortOrder": 193
   },
   {
     "id": "i-QxFK26w",
@@ -7617,7 +8765,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 160
+    "sortOrder": 194
   },
   {
     "id": "i-zW6Zb4W",
@@ -7674,7 +8822,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 161
+    "sortOrder": 195
   },
   {
     "id": "i-bxsRc6q",
@@ -7710,7 +8858,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 162
+    "sortOrder": 196
   },
   {
     "id": "i-tgzR5Rh",
@@ -7767,7 +8915,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 163
+    "sortOrder": 197
   },
   {
     "id": "i-5BtMrfM",
@@ -7824,7 +8972,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 164
+    "sortOrder": 198
   },
   {
     "id": "i-qXd5779",
@@ -7881,7 +9029,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 165
+    "sortOrder": 199
   },
   {
     "id": "i-GH7H4LC",
@@ -7938,7 +9086,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 166
+    "sortOrder": 200
   },
   {
     "id": "i-qzGSQz7",
@@ -7975,7 +9123,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 167
+    "sortOrder": 201
   },
   {
     "id": "i-5LTzhJ6",
@@ -8012,7 +9160,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 168
+    "sortOrder": 202
   },
   {
     "id": "i-dwVgbxR",
@@ -8049,7 +9197,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 169
+    "sortOrder": 203
   },
   {
     "id": "i-7K9GG9z",
@@ -8106,7 +9254,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 170
+    "sortOrder": 204
   },
   {
     "id": "i-GBvFP8Q",
@@ -8144,7 +9292,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 171
+    "sortOrder": 205
   },
   {
     "id": "i-WD9ZmGH",
@@ -8201,7 +9349,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 172
+    "sortOrder": 206
   },
   {
     "id": "i-d9znSwP",
@@ -8238,7 +9386,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 173
+    "sortOrder": 207
   },
   {
     "id": "i-SPd5h6X",
@@ -8295,7 +9443,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 174
+    "sortOrder": 208
   },
   {
     "id": "i-dnxxDXH",
@@ -8352,7 +9500,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 175
+    "sortOrder": 209
   },
   {
     "id": "i-PDVZhtZ",
@@ -8409,7 +9557,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 176
+    "sortOrder": 210
   },
   {
     "id": "i-GjZfMXj",
@@ -8466,7 +9614,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 177
+    "sortOrder": 211
   },
   {
     "id": "i-tWx3N8c",
@@ -8523,7 +9671,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 178
+    "sortOrder": 212
   },
   {
     "id": "i-S5zV9h4",
@@ -8580,7 +9728,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 179
+    "sortOrder": 213
   },
   {
     "id": "i-2Cj8j9W",
@@ -8637,7 +9785,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 180
+    "sortOrder": 214
   },
   {
     "id": "i-gs6X2P7",
@@ -8694,7 +9842,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 181
+    "sortOrder": 215
   },
   {
     "id": "i-QGCQt7M",
@@ -8731,7 +9879,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 182
+    "sortOrder": 216
   },
   {
     "id": "i-n8TX2qS",
@@ -8788,7 +9936,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 183
+    "sortOrder": 217
   },
   {
     "id": "i-tVxgfZN",
@@ -8845,7 +9993,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 184
+    "sortOrder": 218
   },
   {
     "id": "i-4jRzBgC",
@@ -8902,7 +10050,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 185
+    "sortOrder": 219
   },
   {
     "id": "i-7V4VjNm",
@@ -8939,7 +10087,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 186
+    "sortOrder": 220
   },
   {
     "id": "i-S2sZdJB",
@@ -8976,7 +10124,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 187
+    "sortOrder": 221
   },
   {
     "id": "i-7Kwv8vc",
@@ -9033,7 +10181,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 188
+    "sortOrder": 222
   },
   {
     "id": "i-TgkwSbh",
@@ -9090,7 +10238,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 189
+    "sortOrder": 223
   },
   {
     "id": "i-grM2LkC",
@@ -9147,7 +10295,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 190
+    "sortOrder": 224
   },
   {
     "id": "i-Lk79jNj",
@@ -9204,7 +10352,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 191
+    "sortOrder": 225
   },
   {
     "id": "i-GK7Trs9",
@@ -9261,7 +10409,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 192
+    "sortOrder": 226
   },
   {
     "id": "i-WSQrZ3M",
@@ -9318,7 +10466,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 193
+    "sortOrder": 227
   },
   {
     "id": "i-spjF4Zd",
@@ -9375,7 +10523,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 194
+    "sortOrder": 228
   },
   {
     "id": "i-rC7SvgP",
@@ -9432,7 +10580,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 195
+    "sortOrder": 229
   },
   {
     "id": "i-vTp98Z6",
@@ -9489,7 +10637,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 196
+    "sortOrder": 230
   },
   {
     "id": "i-7RWxjz3",
@@ -9546,7 +10694,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 197
+    "sortOrder": 231
   },
   {
     "id": "i-vrc7KkJ",
@@ -9576,7 +10724,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 198
+    "sortOrder": 232
   },
   {
     "id": "i-5PbMGPm",
@@ -9612,7 +10760,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 199
+    "sortOrder": 233
   },
   {
     "id": "i-hrghzzx",
@@ -9669,7 +10817,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 200
+    "sortOrder": 234
   },
   {
     "id": "i-8W7jxkN",
@@ -9726,7 +10874,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 201
+    "sortOrder": 235
   },
   {
     "id": "i-V5djX4B",
@@ -9783,7 +10931,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 202
+    "sortOrder": 236
   },
   {
     "id": "i-GSPLsk9",
@@ -9840,7 +10988,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 203
+    "sortOrder": 237
   },
   {
     "id": "i-9q5B7FX",
@@ -9876,7 +11024,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 204
+    "sortOrder": 238
   },
   {
     "id": "i-SBjhvGf",
@@ -9913,7 +11061,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 205
+    "sortOrder": 239
   },
   {
     "id": "i-WzTZ6Jv",
@@ -9970,7 +11118,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 206
+    "sortOrder": 240
   },
   {
     "id": "i-s79JnZ2",
@@ -10027,7 +11175,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 207
+    "sortOrder": 241
   },
   {
     "id": "i-76Fjxvs",
@@ -10084,7 +11232,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 208
+    "sortOrder": 242
   },
   {
     "id": "i-qwPBrns",
@@ -10121,7 +11269,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 209
+    "sortOrder": 243
   },
   {
     "id": "i-HZK96qf",
@@ -10157,7 +11305,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 210
+    "sortOrder": 244
   },
   {
     "id": "i-8g6m7tf",
@@ -10189,7 +11337,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 211
+    "sortOrder": 245
   },
   {
     "id": "i-z3VScfV",
@@ -10246,7 +11394,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 212
+    "sortOrder": 246
   },
   {
     "id": "i-MB2KXB3",
@@ -10303,7 +11451,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 213
+    "sortOrder": 247
   },
   {
     "id": "i-XnW7ZD5",
@@ -10335,7 +11483,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 214
+    "sortOrder": 248
   },
   {
     "id": "i-fJ9WQSS",
@@ -10392,7 +11540,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 215
+    "sortOrder": 249
   },
   {
     "id": "i-b4hnpNn",
@@ -10429,7 +11577,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 216
+    "sortOrder": 250
   },
   {
     "id": "i-jmNjVwB",
@@ -10487,7 +11635,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 217
+    "sortOrder": 251
   },
   {
     "id": "i-48jGpLt",
@@ -10525,7 +11673,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 218
+    "sortOrder": 252
   },
   {
     "id": "i-BtCH5S3",
@@ -10582,7 +11730,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 219
+    "sortOrder": 253
   },
   {
     "id": "i-2jfdQGw",
@@ -10619,7 +11767,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 220
+    "sortOrder": 254
   },
   {
     "id": "i-xMk6ZJ9",
@@ -10655,7 +11803,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 221
+    "sortOrder": 255
   },
   {
     "id": "i-2pRkNng",
@@ -10712,7 +11860,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 222
+    "sortOrder": 256
   },
   {
     "id": "i-b7HtD4R",
@@ -10769,7 +11917,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 223
+    "sortOrder": 257
   },
   {
     "id": "i-5T9mQqT",
@@ -10799,7 +11947,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 224
+    "sortOrder": 258
   },
   {
     "id": "i-RMTbDRs",
@@ -10856,7 +12004,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 225
+    "sortOrder": 259
   },
   {
     "id": "i-nXdBwJF",
@@ -10913,7 +12061,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 226
+    "sortOrder": 260
   },
   {
     "id": "i-rGpCKkW",
@@ -10970,7 +12118,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 227
+    "sortOrder": 261
   },
   {
     "id": "i-76PxJSx",
@@ -11027,7 +12175,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 228
+    "sortOrder": 262
   },
   {
     "id": "i-7mLbVvP",
@@ -11084,7 +12232,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 229
+    "sortOrder": 263
   },
   {
     "id": "i-gkHPFXR",
@@ -11141,7 +12289,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 230
+    "sortOrder": 264
   },
   {
     "id": "i-3vrhwQ9",
@@ -11198,7 +12346,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 231
+    "sortOrder": 265
   },
   {
     "id": "i-SrcM3ZN",
@@ -11255,7 +12403,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 232
+    "sortOrder": 266
   },
   {
     "id": "i-sPkKGnX",
@@ -11286,7 +12434,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 233
+    "sortOrder": 267
   },
   {
     "id": "i-PxNFNhQ",
@@ -11317,7 +12465,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 234
+    "sortOrder": 268
   },
   {
     "id": "i-Ns6ZkrF",
@@ -11374,7 +12522,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 235
+    "sortOrder": 269
   },
   {
     "id": "i-RdTR7GD",
@@ -11431,7 +12579,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 236
+    "sortOrder": 270
   },
   {
     "id": "i-GKFFQzH",
@@ -11468,7 +12616,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 237
+    "sortOrder": 271
   },
   {
     "id": "i-JWGwQ7k",
@@ -11505,7 +12653,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 238
+    "sortOrder": 272
   },
   {
     "id": "i-npgMCML",
@@ -11543,7 +12691,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 239
+    "sortOrder": 273
   },
   {
     "id": "i-92mpb3g",
@@ -11581,7 +12729,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 240
+    "sortOrder": 274
   },
   {
     "id": "i-wZ8Zn9p",
@@ -11604,7 +12752,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 241
+    "sortOrder": 275
   },
   {
     "id": "i-WNLSRQf",
@@ -11633,7 +12781,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 242
+    "sortOrder": 276
   },
   {
     "id": "i-Qx9xbv7",
@@ -11663,7 +12811,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 243
+    "sortOrder": 277
   },
   {
     "id": "i-kjWmdVL",
@@ -11701,7 +12849,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 244
+    "sortOrder": 278
   },
   {
     "id": "i-7DZfRCN",
@@ -11737,7 +12885,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 245
+    "sortOrder": 279
   },
   {
     "id": "i-VhHKttr",
@@ -11794,7 +12942,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 246
+    "sortOrder": 280
   },
   {
     "id": "i-fcRrVV5",
@@ -11851,7 +12999,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 247
+    "sortOrder": 281
   },
   {
     "id": "i-rdJ6CV7",
@@ -11888,7 +13036,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 248
+    "sortOrder": 282
   },
   {
     "id": "i-LVFgBBN",
@@ -11945,7 +13093,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 249
+    "sortOrder": 283
   },
   {
     "id": "i-7Rt89mS",
@@ -11975,7 +13123,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 250
+    "sortOrder": 284
   },
   {
     "id": "i-gXvDSdm",
@@ -12009,7 +13157,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 251
+    "sortOrder": 285
   },
   {
     "id": "i-9Bpj29K",
@@ -12066,7 +13214,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 252
+    "sortOrder": 286
   },
   {
     "id": "i-L2BvxrK",
@@ -12097,7 +13245,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 253
+    "sortOrder": 287
   },
   {
     "id": "i-HhKWdh6",
@@ -12154,7 +13302,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 254
+    "sortOrder": 288
   },
   {
     "id": "i-sVrtDx8",
@@ -12211,7 +13359,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 255
+    "sortOrder": 289
   },
   {
     "id": "i-jDmnnrm",
@@ -12268,7 +13416,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 256
+    "sortOrder": 290
   },
   {
     "id": "i-f8VznFc",
@@ -12325,7 +13473,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 257
+    "sortOrder": 291
   },
   {
     "id": "i-wXQgDCx",
@@ -12382,7 +13530,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 258
+    "sortOrder": 292
   },
   {
     "id": "i-DK48RWj",
@@ -12439,7 +13587,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 259
+    "sortOrder": 293
   },
   {
     "id": "i-CFT7PJM",
@@ -12496,7 +13644,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 260
+    "sortOrder": 294
   },
   {
     "id": "i-fsL7pfL",
@@ -12527,7 +13675,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 261
+    "sortOrder": 295
   },
   {
     "id": "i-qDkTww8",
@@ -12557,7 +13705,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 262
+    "sortOrder": 296
   },
   {
     "id": "i-zqZBdJF",
@@ -12587,7 +13735,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 263
+    "sortOrder": 297
   },
   {
     "id": "i-pHhRGL6",
@@ -12644,7 +13792,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 264
+    "sortOrder": 298
   },
   {
     "id": "i-sLtTp4m",
@@ -12701,7 +13849,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 265
+    "sortOrder": 299
   },
   {
     "id": "i-zqZPZF6",
@@ -12758,7 +13906,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 266
+    "sortOrder": 300
   },
   {
     "id": "i-79P6kHT",
@@ -12815,7 +13963,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 267
+    "sortOrder": 301
   },
   {
     "id": "i-qJtstjP",
@@ -12846,7 +13994,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 268
+    "sortOrder": 302
   },
   {
     "id": "i-9LC3ZrM",
@@ -12884,7 +14032,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 269
+    "sortOrder": 303
   },
   {
     "id": "i-J3dh2p4",
@@ -12916,7 +14064,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 270
+    "sortOrder": 304
   },
   {
     "id": "i-7GcQw6R",
@@ -12948,7 +14096,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 271
+    "sortOrder": 305
   },
   {
     "id": "i-tKZ2wgt",
@@ -13005,7 +14153,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 272
+    "sortOrder": 306
   },
   {
     "id": "i-QNLd2xZ",
@@ -13035,7 +14183,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 273
+    "sortOrder": 307
   },
   {
     "id": "i-5fm7Hhr",
@@ -13067,7 +14215,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 274
+    "sortOrder": 308
   },
   {
     "id": "i-6wMDxdF",
@@ -13124,7 +14272,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 275
+    "sortOrder": 309
   },
   {
     "id": "i-m52CLPT",
@@ -13154,7 +14302,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 276
+    "sortOrder": 310
   },
   {
     "id": "i-8pp9T7x",
@@ -13184,7 +14332,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 277
+    "sortOrder": 311
   },
   {
     "id": "i-XpH2QfG",
@@ -13242,7 +14390,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 278
+    "sortOrder": 312
   },
   {
     "id": "i-RRB2hNj",
@@ -13275,7 +14423,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 279
+    "sortOrder": 313
   },
   {
     "id": "i-zN6f785",
@@ -13312,7 +14460,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 280
+    "sortOrder": 314
   },
   {
     "id": "i-4G9GB3b",
@@ -13344,7 +14492,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 281
+    "sortOrder": 315
   },
   {
     "id": "i-DK8t88F",
@@ -13377,7 +14525,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 282
+    "sortOrder": 316
   },
   {
     "id": "i-9Qt4nh7",
@@ -13406,7 +14554,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 283
+    "sortOrder": 317
   },
   {
     "id": "i-qNb7qRw",
@@ -13437,7 +14585,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 284
+    "sortOrder": 318
   },
   {
     "id": "i-kk6DvMJ",
@@ -13469,7 +14617,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 285
+    "sortOrder": 319
   },
   {
     "id": "i-ZDGhLps",
@@ -13526,7 +14674,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 286
+    "sortOrder": 320
   },
   {
     "id": "i-NzMs3RH",
@@ -13555,7 +14703,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 287
+    "sortOrder": 321
   },
   {
     "id": "i-CmHHjwV",
@@ -13585,7 +14733,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 288
+    "sortOrder": 322
   },
   {
     "id": "i-2s2LtQp",
@@ -13615,7 +14763,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 289
+    "sortOrder": 323
   },
   {
     "id": "i-Q3Qm4f2",
@@ -13645,7 +14793,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 290
+    "sortOrder": 324
   },
   {
     "id": "i-KXLmcXW",
@@ -13676,7 +14824,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 291
+    "sortOrder": 325
   },
   {
     "id": "i-rdf8JpZ",
@@ -13705,7 +14853,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 292
+    "sortOrder": 326
   },
   {
     "id": "i-XLXGHT9",
@@ -13734,7 +14882,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 293
+    "sortOrder": 327
   },
   {
     "id": "i-V9Jx8D8",
@@ -13763,7 +14911,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 294
+    "sortOrder": 328
   },
   {
     "id": "i-mn8RKLL",
@@ -13795,7 +14943,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 295
+    "sortOrder": 329
   },
   {
     "id": "i-3V4rCN8",
@@ -13832,7 +14980,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 296
+    "sortOrder": 330
   },
   {
     "id": "i-Q2cHRkn",
@@ -13865,7 +15013,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 297
+    "sortOrder": 331
   },
   {
     "id": "i-549JVNk",
@@ -13897,7 +15045,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 298
+    "sortOrder": 332
   },
   {
     "id": "i-k5zmxS5",
@@ -13928,7 +15076,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 299
+    "sortOrder": 333
   },
   {
     "id": "i-vP7bLLc",
@@ -13963,7 +15111,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 300
+    "sortOrder": 334
   },
   {
     "id": "i-RRw2Tfr",
@@ -13999,7 +15147,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 301
+    "sortOrder": 335
   },
   {
     "id": "i-3vxbnpZ",
@@ -14031,7 +15179,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 302
+    "sortOrder": 336
   },
   {
     "id": "i-73WFHzh",
@@ -14062,7 +15210,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 303
+    "sortOrder": 337
   },
   {
     "id": "i-Z6TkHwJ",
@@ -14093,7 +15241,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 304
+    "sortOrder": 338
   },
   {
     "id": "i-fJmGF7N",
@@ -14121,7 +15269,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 305
+    "sortOrder": 339
   },
   {
     "id": "i-FNSvKZz",
@@ -14158,7 +15306,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 306
+    "sortOrder": 340
   },
   {
     "id": "i-q3f95K3",
@@ -14196,7 +15344,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 307
+    "sortOrder": 341
   },
   {
     "id": "i-NgkC4Zt",
@@ -14232,7 +15380,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 308
+    "sortOrder": 342
   },
   {
     "id": "i-9j9t5n4",
@@ -14268,7 +15416,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 309
+    "sortOrder": 343
   },
   {
     "id": "i-hHVb4vC",
@@ -14306,7 +15454,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 310
+    "sortOrder": 344
   },
   {
     "id": "i-XTs3sP3",
@@ -14337,7 +15485,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 311
+    "sortOrder": 345
   },
   {
     "id": "i-6FGmZK4",
@@ -14367,7 +15515,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 312
+    "sortOrder": 346
   },
   {
     "id": "i-mWMXhcc",
@@ -14403,7 +15551,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 313
+    "sortOrder": 347
   },
   {
     "id": "i-9frbWfJ",
@@ -14434,7 +15582,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 314
+    "sortOrder": 348
   },
   {
     "id": "i-N8PLGR4",
@@ -14465,7 +15613,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 315
+    "sortOrder": 349
   },
   {
     "id": "i-7PMm6sZ",
@@ -14497,7 +15645,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 316
+    "sortOrder": 350
   },
   {
     "id": "i-TNm6hQ3",
@@ -14533,7 +15681,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 317
+    "sortOrder": 351
   },
   {
     "id": "i-Zt47sk7",
@@ -14570,7 +15718,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 318
+    "sortOrder": 352
   },
   {
     "id": "i-5XC2cj5",
@@ -14627,7 +15775,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 319
+    "sortOrder": 353
   },
   {
     "id": "i-6QFpvwm",
@@ -14663,44 +15811,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 320
-  },
-  {
-    "id": "i-NdQnj6P",
-    "title": "Exploring Historic Western Prints",
-    "description": "Wayne Heim's historic western prints captures the spirit of painterly cowboy portraits in this western art image. Featuring Western cowboys, western fine art, and historic western prints, it's ideal for painterly cowboy portraits enthusiasts. Discover rustic charm in photography. © Wayne Heim",
-    "alt": "Fine art photography of historic western prints by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/KVCfGF9b9WQH9k3RmwTmTpK85F2mQrQK5F2sPL8K7/L/_WHO8015-955-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/LJmRkvHxZ6p5xD9hqrHKLBGvp2NpzfkNV3FBcTvT9/S/_WHO8015-955-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "historic western prints",
-      "painterly cowboy portraits",
-      "western art",
-      "Western cowboys",
-      "western fine art",
-      "rustic charm",
-      "rugged spirit",
-      "cowboy painting art"
-    ],
-    "story": "This image embodies rugged spirit and cowboy painting art, captured by Wayne Heim in his signature style. It reflects western art with a touch of historic western prints. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 321
+    "sortOrder": 354
   },
   {
     "id": "i-QHN52S6",
@@ -14738,46 +15849,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 322
-  },
-  {
-    "id": "i-dsqgfVj",
-    "title": "Historic Western Prints In Fine Art",
-    "description": "Immerse yourself in historic western prints with this stunning Western cowboys by Wayne Heim. Capturing frontier life, outlaw portraits, and painterly cowboy portraits, it's a must-have for collectors of historic western prints. Including fine art Western photography themes. © Wayne Heim",
-    "alt": "Wayne Heim's historic western prints artwork",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/MJVJNH3GvsdfTF6KMJ4G4ZbSscLTXHB4RTmZfGJb7/XL/_HF26562-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/MJVJNH3GvsdfTF6KMJ4G4ZbSscLTXHB4RTmZfGJb7/XL/_HF26562-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/Mw4QfVzvH9vkDcrhcsRWsVsw3q8N9jDKMZhbXW2QW/L/_HF26562-Edit-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/NVRBh23pLnCFbcrrWgs8pMZZDMdxL4pmSX869JLXw/M/_HF26562-Edit-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/LtjDQhP9fB4wmHkdTNs9xkcjftqJpR5gmpb5wf5Ks/S/_HF26562-Edit-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "historic western prints",
-      "Western cowboys",
-      "frontier life",
-      "outlaw portraits",
-      "painterly cowboy portraits",
-      "fine art Western photography",
-      "western canon",
-      "rugged spirit",
-      "western art",
-      "western fine art"
-    ],
-    "story": "Delving into western canon, this work by Wayne Heim highlights rugged spirit through western art and western fine art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 323
+    "sortOrder": 355
   },
   {
     "id": "i-G9kSt8Q",
@@ -14814,7 +15886,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 324
+    "sortOrder": 356
   },
   {
     "id": "i-drTwKMw",
@@ -14845,7 +15917,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 325
+    "sortOrder": 357
   },
   {
     "id": "i-f9nZhvM",
@@ -14876,38 +15948,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 326
-  },
-  {
-    "id": "i-MMmDhV2",
-    "title": "Western Art Study",
-    "description": "Immerse yourself in western art with this stunning Western cowboys by Wayne Heim. Capturing cowboy portraits, frontier life, and cowboy painting art, it's a must-have for collectors of western art. Including cowboy portraits themes. © Wayne Heim",
-    "alt": "western art in fine art photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/NXtn8Lnt9DbTbf4f4wMGDfSkwnmxsdBrVQmbFKQG2/L/_HF23060-Edit-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/L9WZWJ37nnCGkw38gZjZxmdVVhvx3HHdJ3LbjGsF2/S/_HF23060-Edit-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/A",
-    "keywords": [
-      "WHO2514",
-      "western art",
-      "Western cowboys",
-      "cowboy portraits",
-      "frontier life",
-      "cowboy painting art",
-      "fine art Western photography",
-      "western canon",
-      "rustic charm",
-      "western cowboy art"
-    ],
-    "story": "This image embodies fine art Western photography and western canon, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of western cowboy art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "",
-    "sortOrder": 327
+    "sortOrder": 358
   },
   {
     "id": "i-h6SnLK4",
@@ -14937,7 +15978,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 328
+    "sortOrder": 359
   },
   {
     "id": "i-JcHKH5f",
@@ -14969,7 +16010,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 329
+    "sortOrder": 360
   },
   {
     "id": "i-rTwWXgw",
@@ -14999,7 +16040,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 330
+    "sortOrder": 361
   },
   {
     "id": "i-bhXQ8Hx",
@@ -15021,7 +16062,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 331
+    "sortOrder": 362
   },
   {
     "id": "i-3HM43Zv",
@@ -15059,7 +16100,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 332
+    "sortOrder": 363
   },
   {
     "id": "i-rRdrQBg",
@@ -15096,7 +16137,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 333
+    "sortOrder": 364
   },
   {
     "id": "i-ps4qwgF",
@@ -15153,7 +16194,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 334
+    "sortOrder": 365
   },
   {
     "id": "i-RrRPTZP",
@@ -15210,13 +16251,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 335
+    "sortOrder": 366
   },
   {
     "id": "i-S9PzB6d",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
+    "title": "Rustic Charm In Fine Art",
+    "description": "Wayne Heim's rustic charm captures the spirit of fine art Western photography in this wild west photography image. Featuring outlaw portraits, western landscapes fine art, and rustic charm, it's ideal for fine art Western photography enthusiasts. Discover frederic remington in photography. © Wayne Heim",
+    "alt": "rustic charm in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-S9PzB6d/0/MxjCW3B4RtM3hNP65wWm7N4J4ZsgqZ5S4FTT2bfW5/XL/_HF26688-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-S9PzB6d/0/MxjCW3B4RtM3hNP65wWm7N4J4ZsgqZ5S4FTT2bfW5/XL/_HF26688-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-S9PzB6d/0/LbsK5pvrTQQV4j7xGSzScRZS69nN4ZXGbC6cCpcVV/L/_HF26688-Edit-2-L.jpg",
@@ -15226,20 +16267,27 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-S9PzB6d/A",
     "keywords": [
       "HF26225",
-      "1143"
+      "1143",
+      "rustic charm",
+      "fine art Western photography",
+      "wild west photography",
+      "outlaw portraits",
+      "western landscapes fine art",
+      "frederic remington",
+      "cowboy painting art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into wild west photography, this work by Wayne Heim highlights frederic remington through outlaw portraits and cowboy painting art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 336
+    "sortOrder": 367
   },
   {
     "id": "i-KgkW54w",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Upscaled with Gigapixel v8.4.4. 4150x3126 => 12000x9039 (2.89157x) @ 300 ppi Model: RecoveryV2, detail: 0.38 Face recovery version: 2, strength: 1, creativity: 0 (Realistic), selectedFaces: 2",
+    "title": "Western Cowboys And Frontier Life",
+    "description": "Discover the Western cowboys in this powerful frontier life by Wayne Heim. A compelling work that embodies painterly cowboy portraits, cowboy portraits, and western fine art. Featuring rugged spirit, perfect for art lovers seeking Western cowboys to enhance their collection. © Wayne Heim",
+    "alt": "Western cowboys in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KgkW54w/0/KQVNq9jGhLvLzLckCGt6FdKx5p4nLB5Sm9SbjtWhJ/XL/_WHO2950-1150-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KgkW54w/0/KQVNq9jGhLvLzLckCGt6FdKx5p4nLB5Sm9SbjtWhJ/XL/_WHO2950-1150-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KgkW54w/0/LzmHSV2S5GVWcMVCpZ9FZ6hL9D87BJB6CPwvdS8wG/L/_WHO2950-1150-L.jpg",
@@ -15255,20 +16303,29 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "Western cowboys",
+      "frontier life",
+      "painterly cowboy portraits",
+      "cowboy portraits",
+      "western fine art",
+      "rugged spirit",
+      "western landscapes fine art",
+      "western art",
+      "outlaw portraits"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of western landscapes fine art comes alive in this piece, showcasing western art and cowboy portraits. A testament to outlaw portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 337
+    "sortOrder": 368
   },
   {
     "id": "i-xhZhRpL",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
+    "title": "Frontier Life Moment",
+    "description": "Wayne Heim's frontier life captures the spirit of cowboy portraits in this rustic charm image. Featuring western canon, frederic remington, and frontier life, it's ideal for cowboy portraits enthusiasts. Discover Western cowboys in photography. © Wayne Heim",
+    "alt": "Wayne Heim's frontier life artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xhZhRpL/0/NH6jhDQGS8rbHTJtMxqskTjGv4TfgRxMvf7CL7tds/XL/_HF27052-989-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xhZhRpL/0/NH6jhDQGS8rbHTJtMxqskTjGv4TfgRxMvf7CL7tds/XL/_HF27052-989-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xhZhRpL/0/NH6jhDQGS8rbHTJtMxqskTjGv4TfgRxMvf7CL7tds/XL/_HF27052-989-XL.jpg",
@@ -15278,20 +16335,28 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xhZhRpL/A",
     "keywords": [
       "HF26225",
-      "1143"
+      "1143",
+      "frontier life",
+      "cowboy portraits",
+      "rustic charm",
+      "western canon",
+      "frederic remington",
+      "Western cowboys",
+      "rugged spirit",
+      "wild west photography"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into cowboy portraits, this work by Wayne Heim highlights rustic charm through rugged spirit and wild west photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 338
+    "sortOrder": 369
   },
   {
     "id": "i-Z3sHLGx",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Cowboy Portraits Study",
+    "description": "This cowboy portraits artwork by Wayne Heim showcases frontier life in a western canon style. Reflecting cowboy artwork, western fine art, and cowboy portraits, it's suited for admirers of frontier life. With cowboy painting art elements. © Wayne Heim",
+    "alt": "cowboy portraits in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z3sHLGx/0/Mf9QgSPL2QXhgKwFbvm7L8KKXwDtH3Rm7VRVnkQ8T/XL/_WHO6158-930-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z3sHLGx/0/Mf9QgSPL2QXhgKwFbvm7L8KKXwDtH3Rm7VRVnkQ8T/XL/_WHO6158-930-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z3sHLGx/0/Mf9QgSPL2QXhgKwFbvm7L8KKXwDtH3Rm7VRVnkQ8T/XL/_WHO6158-930-XL.jpg",
@@ -15300,20 +16365,28 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z3sHLGx/A",
     "keywords": [
-      "HF27295"
+      "HF27295",
+      "cowboy portraits",
+      "frontier life",
+      "western canon",
+      "cowboy artwork",
+      "western fine art",
+      "cowboy painting art",
+      "historic western prints",
+      "rugged spirit"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing historic western prints and cowboy portraits. A testament to rugged spirit in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 339
+    "sortOrder": 370
   },
   {
     "id": "i-cRmVc3S",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Painterly Cowboy Portraits In Fine Art",
+    "description": "Discover the painterly cowboy portraits in this powerful cowboy painting art by Wayne Heim. A compelling work that embodies rugged spirit, rustic charm, and painterly cowboy portraits. Featuring cowboy painting art, perfect for art lovers seeking painterly cowboy portraits to enhance their collection. © Wayne Heim",
+    "alt": "painterly cowboy portraits in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cRmVc3S/1/KKgmFL3LX2GNqtKh57c5G72RnGx9W38prf8PQDz4L/XL/_WHO6052-915-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cRmVc3S/1/KKgmFL3LX2GNqtKh57c5G72RnGx9W38prf8PQDz4L/XL/_WHO6052-915-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cRmVc3S/1/KvScFFPTRCnLQL8nWxCd7kDMFNptrZMgztD8pVD4m/L/_WHO6052-915-L.jpg",
@@ -15322,20 +16395,26 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cRmVc3S/A",
     "keywords": [
-      "HF27295"
+      "HF27295",
+      "painterly cowboy portraits",
+      "cowboy painting art",
+      "rugged spirit",
+      "rustic charm",
+      "cowboy portraits",
+      "western cowboy art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Delving into cowboy portraits, this work by Wayne Heim highlights rustic charm through western cowboy art and rustic charm. A powerful statement in photography. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 340
+    "sortOrder": 371
   },
   {
     "id": "i-msZxHgR",
-    "title": "Untitled",
-    "description": "Wayne Heim photograph from the A collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Cowboy Painting Art Moment",
+    "description": "Wayne Heim's cowboy painting art captures the spirit of fine art Western photography in this wild west photography image. Featuring powerful works of art, outlaw portraits, and cowboy painting art, it's ideal for fine art Western photography enthusiasts. Discover painterly cowboy portraits in photography. © Wayne Heim",
+    "alt": "Wayne Heim's cowboy painting art artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
@@ -15351,20 +16430,29 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "cowboy painting art",
+      "fine art Western photography",
+      "wild west photography",
+      "powerful works of art",
+      "outlaw portraits",
+      "painterly cowboy portraits",
+      "cowboy art",
+      "frederic remington",
+      "rugged spirit"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing frederic remington and rugged spirit. A testament to fine art Western photography in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 341
+    "sortOrder": 372
   },
   {
     "id": "i-LBrd53F",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Wayne Heim – Fine Art Photography",
+    "title": "Capturing Cowboy Painting Art",
+    "description": "Experience cowboy painting art through this evocative western art from Wayne Heim's portfolio. This piece highlights wild west photography with powerful works of art, while conveying painterly cowboy portraits, ideal for those who appreciate cowboy painting art. Explore western fine art in fine art. © Wayne Heim",
+    "alt": "Fine art photography of cowboy painting art by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LBrd53F/1/MhBkn2wtdSJ9VWf25vSv6Szwdg7NWT4hNn5sCKd6T/XL/_HF26550-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LBrd53F/1/MhBkn2wtdSJ9VWf25vSv6Szwdg7NWT4hNn5sCKd6T/XL/_HF26550-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LBrd53F/1/K9HRDSPQTz8q3hnnHjSWzPt2CX6PDvKsRB6S8LBQH/L/_HF26550-Edit-Edit-L.jpg",
@@ -15380,20 +16468,28 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "cowboy painting art",
+      "western art",
+      "wild west photography",
+      "powerful works of art",
+      "painterly cowboy portraits",
+      "western fine art",
+      "frederic remington",
+      "frontier life"
     ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "This image embodies painterly cowboy portraits and wild west photography, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of frontier life. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 342
+    "sortOrder": 373
   },
   {
     "id": "i-7DDFpHQ",
-    "title": "Untitled",
-    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
-    "alt": "Fine art image by Wayne Heim",
+    "title": "Capturing Rugged Spirit",
+    "description": "Experience rugged spirit through this evocative western fine art from Wayne Heim's portfolio. This piece highlights western landscapes fine art with western art, while conveying wild west photography, ideal for those who appreciate rugged spirit. Explore wild west photography in fine art. © Wayne Heim",
+    "alt": "rugged spirit in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7DDFpHQ/0/KtzJSvChmqWS7SgsfHWmwWcHph8xdWnXsvfnqdk95/XL/_WHO9057-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7DDFpHQ/0/KtzJSvChmqWS7SgsfHWmwWcHph8xdWnXsvfnqdk95/XL/_WHO9057-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7DDFpHQ/0/MNt5tQ8VGs66n9BqsCQ3jw9CjMGGBxGqHnXgzJffR/L/_WHO9057-Edit-L.jpg",
@@ -15409,14 +16505,23 @@ export const galleryData = [
       "historical",
       "western",
       "portrait",
-      "cowboy"
+      "cowboy",
+      "rugged spirit",
+      "western fine art",
+      "western landscapes fine art",
+      "western art",
+      "wild west photography",
+      "cowboy art",
+      "cowboy portraits",
+      "western canon",
+      "painterly cowboy portraits"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing cowboy portraits and western canon. A testament to painterly cowboy portraits in fine art. © Wayne Heim",
     "notes": "",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 343
+    "sortOrder": 374
   },
   {
     "id": "i-CmScKnv",
@@ -15452,7 +16557,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 344
+    "sortOrder": 375
   },
   {
     "id": "i-hKcrxwf",
@@ -15486,7 +16591,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 345
+    "sortOrder": 376
   },
   {
     "id": "i-pZDmzdq",
@@ -15523,7 +16628,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 346
+    "sortOrder": 377
   },
   {
     "id": "i-vgZ8twt",
@@ -15553,7 +16658,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 347
+    "sortOrder": 378
   },
   {
     "id": "i-95vTrrv",
@@ -15590,7 +16695,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 348
+    "sortOrder": 379
   },
   {
     "id": "i-PzwsgTk",
@@ -15628,7 +16733,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 349
+    "sortOrder": 380
   },
   {
     "id": "i-7dQdHmC",
@@ -15666,7 +16771,1980 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 350
+    "sortOrder": 381
+  },
+  {
+    "id": "i-kXqRRDP",
+    "title": "Cowboy Painting Art In Fine Art",
+    "description": "Experience cowboy painting art through this evocative frontier life from Wayne Heim's portfolio. This piece highlights western fine art with painterly cowboy portraits, while conveying painterly cowboy portraits, ideal for those who appreciate cowboy painting art. Explore western canon in fine art. © Wayne Heim",
+    "alt": "Fine art photography of cowboy painting art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kXqRRDP/0/LbLsCwHRLgXSKrjmc7W98cTXCSpk8fr5L67MdnVDn/XL/_HF29136-Edit-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kXqRRDP/0/LbLsCwHRLgXSKrjmc7W98cTXCSpk8fr5L67MdnVDn/XL/_HF29136-Edit-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kXqRRDP/0/NL7whJbsqNkSdmbjngKGHbSzsfHzgdZmhm2z5L5MP/L/_HF29136-Edit-Edit-3-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kXqRRDP/0/NDXmXFCVBWnV5TLGzgDzMzDDjMLHRFCTKQXLXbp2b/M/_HF29136-Edit-Edit-3-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kXqRRDP/0/M9GhVjWzLMgZP8KCFD8Z4RdmfnPVwg3kFcGhpKDWB/S/_HF29136-Edit-Edit-3-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kXqRRDP/A",
+    "keywords": [
+      "HF29136",
+      "cowboy painting art",
+      "frontier life",
+      "western fine art",
+      "painterly cowboy portraits",
+      "western canon",
+      "rugged spirit",
+      "rustic charm"
+    ],
+    "story": "Delving into rugged spirit, this work by Wayne Heim highlights cowboy painting art through rustic charm and cowboy painting art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 382
+  },
+  {
+    "id": "i-Zp9288b",
+    "title": "The Essence Of Cowboy Portraits",
+    "description": "Immerse yourself in cowboy portraits with this stunning cowboy painting art by Wayne Heim. Capturing frontier life, frederic remington, and rugged spirit, it's a must-have for collectors of cowboy portraits. Including painterly cowboy portraits themes. © Wayne Heim",
+    "alt": "Fine art photography of cowboy portraits by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Zp9288b/0/LbwjDkJszwhZHj8vP524p6MZ2brHK7c4Nw3V8Pr6m/XL/_WHO0629-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Zp9288b/0/LbwjDkJszwhZHj8vP524p6MZ2brHK7c4Nw3V8Pr6m/XL/_WHO0629-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Zp9288b/0/LbwjDkJszwhZHj8vP524p6MZ2brHK7c4Nw3V8Pr6m/XL/_WHO0629-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Zp9288b/0/LWGrPn6QqM9CLbWjHDbp5c3GVpdMQNxt9q9QrG4N7/L/_WHO0629-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Zp9288b/0/KHbS9BDgtf5QFNpmFhBMZb3xK3kHhFL8kQVQgn4Xg/S/_WHO0629-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Zp9288b/A",
+    "keywords": [
+      "HF29136",
+      "cowboy portraits",
+      "cowboy painting art",
+      "frontier life",
+      "frederic remington",
+      "rugged spirit",
+      "painterly cowboy portraits",
+      "outlaw portraits",
+      "western landscapes fine art"
+    ],
+    "story": "Delving into frederic remington, this work by Wayne Heim highlights outlaw portraits through western landscapes fine art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 383
+  },
+  {
+    "id": "i-cJLTQfD",
+    "title": "Cowboy Artwork Moment",
+    "description": "Discover the cowboy artwork in this powerful frederic remington by Wayne Heim. A compelling work that embodies historic western prints, western cowboy art, and western canon. Featuring cowboy portraits, perfect for art lovers seeking cowboy artwork to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's cowboy artwork artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/NjD8rsqXL22SGVphLZ8twfG6bkMmmBbhcBM5md5VL/XL/_WHO6469-1177-1179-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/NjD8rsqXL22SGVphLZ8twfG6bkMmmBbhcBM5md5VL/XL/_WHO6469-1177-1179-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/Lb9rWP5XCKC6SN9rQCCsJQQXLPdkR4j4Sn6x6mT2V/L/_WHO6469-1177-1179-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/Mw6Z38WdGBFZVLKrfZ4TQ9QNNK7Fs288HxcXvJ4sT/M/_WHO6469-1177-1179-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/MmJsXKmS69H44HrNSDdMQFhQrkNdhBD8hWnS5St8X/S/_WHO6469-1177-1179-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/A",
+    "keywords": [
+      "HF29136",
+      "cowboy artwork",
+      "frederic remington",
+      "historic western prints",
+      "western cowboy art",
+      "western canon",
+      "cowboy portraits",
+      "outlaw portraits",
+      "painterly cowboy portraits",
+      "western landscapes fine art"
+    ],
+    "story": "This image embodies outlaw portraits and historic western prints, captured by Wayne Heim in his signature style. It reflects painterly cowboy portraits with a touch of western landscapes fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 384
+  },
+  {
+    "id": "i-3ZxxB7B",
+    "title": "Painterly Cowboy Portraits Study",
+    "description": "Discover the painterly cowboy portraits in this powerful frontier life by Wayne Heim. A compelling work that embodies frontier life, cowboy art, and cowboy art. Featuring rugged spirit, perfect for art lovers seeking painterly cowboy portraits to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's painterly cowboy portraits artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3ZxxB7B/0/LVZRQG6SdcV3kTnF6gJ96gZXxT3vDfVmFnvk78cWx/XL/_WHO7192-1173-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3ZxxB7B/0/LVZRQG6SdcV3kTnF6gJ96gZXxT3vDfVmFnvk78cWx/XL/_WHO7192-1173-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3ZxxB7B/0/LVZRQG6SdcV3kTnF6gJ96gZXxT3vDfVmFnvk78cWx/XL/_WHO7192-1173-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3ZxxB7B/0/MNm5VZtnhtrbzQbRrmkQDzG4X6BVMWkn38QqHqLpJ/L/_WHO7192-1173-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3ZxxB7B/0/KqFt6XNc8RhWLgMLQ6SH4wNFvFgfbCBQ5BSS6bMkM/S/_WHO7192-1173-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3ZxxB7B/A",
+    "keywords": [
+      "HF29136",
+      "painterly cowboy portraits",
+      "frontier life",
+      "cowboy art",
+      "rugged spirit",
+      "powerful works of art",
+      "western fine art",
+      "western canon",
+      "frederic remington"
+    ],
+    "story": "This image embodies powerful works of art and western fine art, captured by Wayne Heim in his signature style. It reflects western canon with a touch of frederic remington. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 385
+  },
+  {
+    "id": "i-3Gjqpvz",
+    "title": "Capturing Powerful Works Of Art",
+    "description": "Discover the powerful works of art in this powerful Western cowboys by Wayne Heim. A compelling work that embodies western art, Western cowboys, and historic western prints. Featuring Western cowboys, perfect for art lovers seeking powerful works of art to enhance their collection. © Wayne Heim",
+    "alt": "powerful works of art in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Gjqpvz/0/LnK9G7WgG9D5q5jHrsgpVtQTR9QwNZBBxgsbZh4GQ/XL/_WHO3269-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Gjqpvz/0/LnK9G7WgG9D5q5jHrsgpVtQTR9QwNZBBxgsbZh4GQ/XL/_WHO3269-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Gjqpvz/0/LnK9G7WgG9D5q5jHrsgpVtQTR9QwNZBBxgsbZh4GQ/XL/_WHO3269-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Gjqpvz/0/MfMqBxZRCvsTTt49ZNVm2MG2MKKhjFfFBKs4H6Vz5/L/_WHO3269-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Gjqpvz/0/KN4KTD7xhv7xQRC5bXV3qmMT3LsZz7d2mWWdtrKQz/S/_WHO3269-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Gjqpvz/A",
+    "keywords": [
+      "HF29136",
+      "powerful works of art",
+      "Western cowboys",
+      "western art",
+      "historic western prints",
+      "frontier life",
+      "western canon",
+      "cowboy portraits"
+    ],
+    "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing western canon and cowboy portraits. A testament to western canon in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 386
+  },
+  {
+    "id": "i-Vd5VW3L",
+    "title": "Wild West Photography Moment",
+    "description": "Wayne Heim's wild west photography captures the spirit of western canon in this western cowboy art image. Featuring western fine art, western landscapes fine art, and wild west photography, it's ideal for western canon enthusiasts. Discover cowboy artwork in photography. © Wayne Heim",
+    "alt": "Fine art photography of wild west photography by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vd5VW3L/0/K3fkRd7NqTM3cXxPqmb8zGJ2KVRLCFmQgdcJ36728/XL/_WHO3267-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vd5VW3L/0/K3fkRd7NqTM3cXxPqmb8zGJ2KVRLCFmQgdcJ36728/XL/_WHO3267-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vd5VW3L/0/K3fkRd7NqTM3cXxPqmb8zGJ2KVRLCFmQgdcJ36728/XL/_WHO3267-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vd5VW3L/0/K3fkRd7NqTM3cXxPqmb8zGJ2KVRLCFmQgdcJ36728/XL/_WHO3267-Edit-Edit-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vd5VW3L/0/KKVNvRxMg6F2Vgz9MBHj5XCpRMcCxjBxF9bstZQK7/S/_WHO3267-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vd5VW3L/A",
+    "keywords": [
+      "HF29136",
+      "wild west photography",
+      "western canon",
+      "western cowboy art",
+      "western fine art",
+      "western landscapes fine art",
+      "cowboy artwork",
+      "cowboy painting art",
+      "rustic charm"
+    ],
+    "story": "This image embodies western landscapes fine art and cowboy painting art, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of rustic charm. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 387
+  },
+  {
+    "id": "i-9fVdg3D",
+    "title": "Cowboy Art - Rugged Spirit",
+    "description": "This cowboy art artwork by Wayne Heim showcases rugged spirit in a outlaw portraits style. Reflecting western fine art, wild west photography, and cowboy art, it's suited for admirers of rugged spirit. With outlaw portraits elements. © Wayne Heim",
+    "alt": "Fine art photography of cowboy art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9fVdg3D/1/NBjSZ9wNVxftPT5qqhQHHSJNvQjDctK5kQR8HfzKF/XL/_WHO2577-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9fVdg3D/1/NBjSZ9wNVxftPT5qqhQHHSJNvQjDctK5kQR8HfzKF/XL/_WHO2577-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9fVdg3D/1/NBjSZ9wNVxftPT5qqhQHHSJNvQjDctK5kQR8HfzKF/XL/_WHO2577-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9fVdg3D/1/Mr9tNMxmQprq4PvVSvmf46CwKwbPrgkCfgHjLg2Th/L/_WHO2577-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9fVdg3D/1/MHjd3JqtQHCLjPzWQMMcFwNFLDKnmJspDv3jxKhMW/S/_WHO2577-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9fVdg3D/A",
+    "keywords": [
+      "HF29136",
+      "cowboy art",
+      "rugged spirit",
+      "outlaw portraits",
+      "western fine art",
+      "wild west photography",
+      "fine art Western photography",
+      "historic western prints"
+    ],
+    "story": "This image embodies fine art Western photography and wild west photography, captured by Wayne Heim in his signature style. It reflects historic western prints with a touch of historic western prints. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 388
+  },
+  {
+    "id": "i-LjBc6N6",
+    "title": "Frontier Life Moment",
+    "description": "Immerse yourself in frontier life with this stunning fine art Western photography by Wayne Heim. Capturing frederic remington, cowboy artwork, and frederic remington, it's a must-have for collectors of frontier life. Including western canon themes. © Wayne Heim",
+    "alt": "Fine art photography of frontier life by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LjBc6N6/0/NKmc36hsG6LWmXQ37BfgkMMjJ9VTXZ44GjSwgCW5R/XL/_WHO2247-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LjBc6N6/0/NKmc36hsG6LWmXQ37BfgkMMjJ9VTXZ44GjSwgCW5R/XL/_WHO2247-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LjBc6N6/0/LZP6w5kNqZTWTpWqpZKzm8GwPn4VNqPZgxdCD8kLG/L/_WHO2247-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LjBc6N6/0/MQkxBC5VjBPWfKDgkV2ZsLVzZM862mmDZFpJwR2TG/M/_WHO2247-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LjBc6N6/0/MbHrJfqhB5CfdmXLsHH7BVD4tv4FqF2ZV7fgjS5vL/S/_WHO2247-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LjBc6N6/A",
+    "keywords": [
+      "HF29136",
+      "frontier life",
+      "fine art Western photography",
+      "frederic remington",
+      "cowboy artwork",
+      "western canon",
+      "rugged spirit",
+      "painterly cowboy portraits",
+      "powerful works of art",
+      "cowboy portraits"
+    ],
+    "story": "This image embodies rugged spirit and painterly cowboy portraits, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of cowboy portraits. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 389
+  },
+  {
+    "id": "i-WMs24Db",
+    "title": "Painterly Cowboy Portraits Moment",
+    "description": "This painterly cowboy portraits artwork by Wayne Heim showcases Western cowboys in a outlaw portraits style. Reflecting powerful works of art, wild west photography, and painterly cowboy portraits, it's suited for admirers of Western cowboys. With cowboy artwork elements. © Wayne Heim",
+    "alt": "Fine art photography of painterly cowboy portraits by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K98ZRzXVwqB6JRbQQgFJX8NMKNG9przLQ3G7cXjCb/S/_HF27665-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/A",
+    "keywords": [
+      "HF29136",
+      "painterly cowboy portraits",
+      "Western cowboys",
+      "outlaw portraits",
+      "powerful works of art",
+      "wild west photography",
+      "cowboy artwork",
+      "western art",
+      "frontier life",
+      "rugged spirit"
+    ],
+    "story": "Delving into western art, this work by Wayne Heim highlights Western cowboys through frontier life and rugged spirit. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 390
+  },
+  {
+    "id": "i-r4TQwkx",
+    "title": "Western Cowboys Moment",
+    "description": "Discover the Western cowboys in this powerful frontier life by Wayne Heim. A compelling work that embodies western cowboy art, frontier life, and western art. Featuring cowboy painting art, perfect for art lovers seeking Western cowboys to enhance their collection. © Wayne Heim",
+    "alt": "Western cowboys in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r4TQwkx/3/M636b6tPdzXThP8XCpRZgRgzhtvGzNP8zP5MNKgDf/XL/_HF27307-1167-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r4TQwkx/3/M636b6tPdzXThP8XCpRZgRgzhtvGzNP8zP5MNKgDf/XL/_HF27307-1167-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r4TQwkx/3/LNXkgxvLdV2GwmV9GFh8kVbrkBRj39dQ6vQf2zBNz/L/_HF27307-1167-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r4TQwkx/3/KX7R4Lds5stLXCdBBFgsZDPZWkfGghPqckH5GGmKz/M/_HF27307-1167-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r4TQwkx/3/MCxs2WZ3ntHqv6wpHWM8K22VkGM8tN4dTvfZCnKXD/S/_HF27307-1167-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r4TQwkx/A",
+    "keywords": [
+      "HF29136",
+      "Western cowboys",
+      "frontier life",
+      "western cowboy art",
+      "western art",
+      "cowboy painting art",
+      "rustic charm",
+      "powerful works of art",
+      "cowboy art",
+      "painterly cowboy portraits"
+    ],
+    "story": "Wayne Heim's exploration of rustic charm comes alive in this piece, showcasing powerful works of art and cowboy art. A testament to painterly cowboy portraits in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 391
+  },
+  {
+    "id": "i-pN58VX3",
+    "title": "Painterly Cowboy Portraits Moment",
+    "description": "Wayne Heim's painterly cowboy portraits captures the spirit of cowboy artwork in this cowboy artwork image. Featuring powerful works of art, western art, and painterly cowboy portraits, it's ideal for cowboy artwork enthusiasts. Discover frederic remington in photography. © Wayne Heim",
+    "alt": "Fine art photography of painterly cowboy portraits by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pN58VX3/0/NNVhdSJq8PCbRqZHrdF2xDK7jkwk4jPJjKdrhmS7n/XL/_WHO8983-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pN58VX3/0/NNVhdSJq8PCbRqZHrdF2xDK7jkwk4jPJjKdrhmS7n/XL/_WHO8983-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pN58VX3/0/NNVhdSJq8PCbRqZHrdF2xDK7jkwk4jPJjKdrhmS7n/XL/_WHO8983-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pN58VX3/0/KqbxFS8tGBRbKh3fPnvKCxhz3rPJ7pJ3L2gwF7Z2c/L/_WHO8983-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pN58VX3/0/KSzKRpWLkZCnMB6XkgfmFX9P8gMBNNRPpLZ4Vs6D9/S/_WHO8983-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pN58VX3/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "painterly cowboy portraits",
+      "cowboy artwork",
+      "powerful works of art",
+      "western art",
+      "frederic remington",
+      "western cowboy art",
+      "historic western prints"
+    ],
+    "story": "This image embodies painterly cowboy portraits and western cowboy art, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of historic western prints. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 392
+  },
+  {
+    "id": "i-LWJjbct",
+    "title": "Historic Western Prints Moment",
+    "description": "Wayne Heim's historic western prints captures the spirit of frontier life in this western art image. Featuring outlaw portraits, wild west photography, and historic western prints, it's ideal for frontier life enthusiasts. Discover rugged spirit in photography. © Wayne Heim",
+    "alt": "Fine art photography of historic western prints by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LWJjbct/0/K8zMSXDSvVVxxKbNgBvNvtMCZHMK7sVsMbDVKKdsB/XL/_WHO8149-Edit-Edit-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LWJjbct/0/K8zMSXDSvVVxxKbNgBvNvtMCZHMK7sVsMbDVKKdsB/XL/_WHO8149-Edit-Edit-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LWJjbct/0/K8zMSXDSvVVxxKbNgBvNvtMCZHMK7sVsMbDVKKdsB/XL/_WHO8149-Edit-Edit-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LWJjbct/0/NcDjD7ppc8rmCXRNqbGRdKd2bxm4GNDdtr9pMn8KQ/L/_WHO8149-Edit-Edit-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LWJjbct/0/L99wFtWhqrPNCkTGHPxHKK5Rx73q5ZrQjG6wLSCVK/S/_WHO8149-Edit-Edit-Edit-3-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LWJjbct/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "historic western prints",
+      "frontier life",
+      "western art",
+      "outlaw portraits",
+      "wild west photography",
+      "rugged spirit",
+      "cowboy artwork",
+      "Western cowboys"
+    ],
+    "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing historic western prints and historic western prints. A testament to Western cowboys in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 393
+  },
+  {
+    "id": "i-9DLx78V",
+    "title": "Western Landscapes Fine Art Portrait",
+    "description": "Discover the western landscapes fine art in this powerful historic western prints by Wayne Heim. A compelling work that embodies historic western prints, historic western prints, and western art. Featuring fine art Western photography, perfect for art lovers seeking western landscapes fine art to enhance their collection. © Wayne Heim",
+    "alt": "western landscapes fine art in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/LJX9cJm2Q9P3BsqDqLzFT789F59zhmvdrpc6k7HzM/XL/_WHO5639-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/LJX9cJm2Q9P3BsqDqLzFT789F59zhmvdrpc6k7HzM/XL/_WHO5639-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/Mhv9LCW2M7ZFZbK54dqZvgRTLb2dKzcLBqdRM7pkR/L/_WHO5639-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/M3c3HMbFBnxmtvFHKMQZrfpkRQrXbdwFCTxBGWc7W/M/_WHO5639-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/KsHWF2QqDcB6dvq95zVp5ZKMNGB6FSdGtj7grFQ7k/S/_WHO5639-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "western landscapes fine art",
+      "historic western prints",
+      "western art",
+      "fine art Western photography",
+      "western fine art",
+      "cowboy portraits",
+      "western canon"
+    ],
+    "story": "Delving into western fine art, this work by Wayne Heim highlights cowboy portraits through western canon and western canon. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 394
+  },
+  {
+    "id": "i-DfmB2Hv",
+    "title": "Wild West Photography Study",
+    "description": "This wild west photography artwork by Wayne Heim showcases cowboy painting art in a western landscapes fine art style. Reflecting wild west photography, rustic charm, and wild west photography, it's suited for admirers of cowboy painting art. With rustic charm elements. © Wayne Heim",
+    "alt": "Wayne Heim's wild west photography artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DfmB2Hv/0/MKSQZtg9k6HZqvfHC7frc29DHjrptFDTWh5M9DpsQ/XL/_WHO4413-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DfmB2Hv/0/MKSQZtg9k6HZqvfHC7frc29DHjrptFDTWh5M9DpsQ/XL/_WHO4413-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DfmB2Hv/0/NMPNPJ4q8JzJpC7K5wc8kMLnLbg9W4Wt6WnjdHfMV/L/_WHO4413-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DfmB2Hv/0/K6TwCh87Vc3dwrGZvWgQqQT7CH7NPzD7wDcsfqr3D/M/_WHO4413-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DfmB2Hv/0/LJKCLFXTv7FLdqnKqLbSzgSdBRnkqPvTD7w7mr8bP/S/_WHO4413-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DfmB2Hv/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "wild west photography",
+      "cowboy painting art",
+      "western landscapes fine art",
+      "rustic charm",
+      "western fine art",
+      "frederic remington",
+      "cowboy art"
+    ],
+    "story": "This image embodies western fine art and western fine art, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of cowboy art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 395
+  },
+  {
+    "id": "i-sc9dBkm",
+    "title": "Wild West Photography In Fine Art",
+    "description": "Wayne Heim's wild west photography captures the spirit of cowboy artwork in this Western cowboys image. Featuring western landscapes fine art, Western cowboys, and wild west photography, it's ideal for cowboy artwork enthusiasts. Discover frontier life in photography. © Wayne Heim",
+    "alt": "wild west photography in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sc9dBkm/1/LzgxgpvPrXMsnkPzDNp7qX8WGGXxC7c5RcSq7Rbs9/XL/_WHO4171-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sc9dBkm/1/LzgxgpvPrXMsnkPzDNp7qX8WGGXxC7c5RcSq7Rbs9/XL/_WHO4171-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sc9dBkm/1/LQ2pddXGs7FfmmTMB7w6pFWDnS4hjDnC3HSs5tRZL/L/_WHO4171-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sc9dBkm/1/NHhRzXdFTHJptTwjqnRfjq6nVKPhr4P9NP3kk7f8m/M/_WHO4171-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sc9dBkm/1/MN4XHBMGFzV7BnFSfG5s2KXRQKMj46vtVKSntcFkh/S/_WHO4171-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sc9dBkm/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "wild west photography",
+      "cowboy artwork",
+      "Western cowboys",
+      "western landscapes fine art",
+      "frontier life",
+      "outlaw portraits"
+    ],
+    "story": "Delving into Western cowboys, this work by Wayne Heim highlights frontier life through outlaw portraits and Western cowboys. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 396
+  },
+  {
+    "id": "i-zTPP4hr",
+    "title": "Western Landscapes Fine Art Portrait",
+    "description": "Experience western landscapes fine art through this evocative powerful works of art from Wayne Heim's portfolio. This piece highlights Western cowboys with western canon, while conveying cowboy portraits, ideal for those who appreciate western landscapes fine art. Explore fine art Western photography in fine art. © Wayne Heim",
+    "alt": "Wayne Heim's western landscapes fine art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/MRXD9SwvhN4CndD5xzSjCz92RCC7krSRxwrnf2kVV/L/_WHO4278-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/KMDhsF9Gs9DqJJvrzSXM8H6vp7T4xTWC8CXJSNw2N/S/_WHO4278-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "western landscapes fine art",
+      "powerful works of art",
+      "Western cowboys",
+      "western canon",
+      "cowboy portraits",
+      "fine art Western photography",
+      "frederic remington"
+    ],
+    "story": "Wayne Heim's exploration of frederic remington comes alive in this piece, showcasing western canon and powerful works of art. A testament to western landscapes fine art in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 397
+  },
+  {
+    "id": "i-FVZTmxz",
+    "title": "The Essence Of Western Canon",
+    "description": "Discover the western canon in this powerful rugged spirit by Wayne Heim. A compelling work that embodies wild west photography, rustic charm, and cowboy painting art. Featuring frontier life, perfect for art lovers seeking western canon to enhance their collection. © Wayne Heim",
+    "alt": "western canon in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FVZTmxz/3/NGwsj7MRVQ4B2V7BpgRZWngvNLdbk8VRfmj2HjnC2/XL/_WHO3948-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FVZTmxz/3/NGwsj7MRVQ4B2V7BpgRZWngvNLdbk8VRfmj2HjnC2/XL/_WHO3948-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FVZTmxz/3/McXrxxsqWrfsppvNWwCkSbtLLKdKn6fTpzMZnsPVV/L/_WHO3948-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FVZTmxz/3/LdCkSLsC5zJT8LK7j5T7QWQntvH3jKZc4hLGhPLJT/M/_WHO3948-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FVZTmxz/3/K9vTGQC6b5jFTZcPhRT9bNPfBwzLwC2QntfcrDtQM/S/_WHO3948-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FVZTmxz/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "western canon",
+      "rugged spirit",
+      "wild west photography",
+      "rustic charm",
+      "cowboy painting art",
+      "frontier life",
+      "cowboy artwork",
+      "historic western prints",
+      "cowboy art"
+    ],
+    "story": "This image embodies cowboy artwork and historic western prints, captured by Wayne Heim in his signature style. It reflects frontier life with a touch of cowboy art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 398
+  },
+  {
+    "id": "i-F6KMqpf",
+    "title": "Fine Art Cowboy Portraits",
+    "description": "Immerse yourself in cowboy portraits with this stunning cowboy artwork by Wayne Heim. Capturing outlaw portraits, fine art Western photography, and powerful works of art, it's a must-have for collectors of cowboy portraits. Including outlaw portraits themes. © Wayne Heim",
+    "alt": "Fine art photography of cowboy portraits by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-F6KMqpf/3/LM9kbPx99vVjVfpsqbw4LNLBfczDB8xVpRSj3QCQz/XL/_WHO1739-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-F6KMqpf/3/LM9kbPx99vVjVfpsqbw4LNLBfczDB8xVpRSj3QCQz/XL/_WHO1739-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-F6KMqpf/3/LM9kbPx99vVjVfpsqbw4LNLBfczDB8xVpRSj3QCQz/XL/_WHO1739-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-F6KMqpf/3/L9NT57J54Gxg9TDpZQJ8vJXMnc3JL3CvvgGxLwxPg/L/_WHO1739-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-F6KMqpf/3/KWPRZ3fpsjcFj2vBZkTVPtRhBbVSsjrDBsjHBsXw3/S/_WHO1739-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-F6KMqpf/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "cowboy portraits",
+      "cowboy artwork",
+      "outlaw portraits",
+      "fine art Western photography",
+      "powerful works of art",
+      "western fine art",
+      "rustic charm"
+    ],
+    "story": "Wayne Heim's exploration of western fine art comes alive in this piece, showcasing rustic charm and cowboy artwork. A testament to fine art Western photography in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 399
+  },
+  {
+    "id": "i-vc6XQPf",
+    "title": "Painterly Cowboy Portraits In Fine Art",
+    "description": "This painterly cowboy portraits artwork by Wayne Heim showcases western fine art in a Western cowboys style. Reflecting rugged spirit, western landscapes fine art, and painterly cowboy portraits, it's suited for admirers of western fine art. With outlaw portraits elements. © Wayne Heim",
+    "alt": "painterly cowboy portraits in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/M3wwqpzMpSFZm2MCgqHFFmkmWvNW7Zbdp8szLnvSP/XL/_HF24846-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/M3wwqpzMpSFZm2MCgqHFFmkmWvNW7Zbdp8szLnvSP/XL/_HF24846-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/M3wwqpzMpSFZm2MCgqHFFmkmWvNW7Zbdp8szLnvSP/XL/_HF24846-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/KHcdPrvnZ2bWCHdDvG8NGrfhNBrt226C9ZsBpnRNv/L/_HF24846-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/LjqDBDHrz9DFPXRffF4cknPQrGkHjdq3NHPkRRLwB/S/_HF24846-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "painterly cowboy portraits",
+      "western fine art",
+      "Western cowboys",
+      "rugged spirit",
+      "western landscapes fine art",
+      "outlaw portraits",
+      "cowboy painting art",
+      "cowboy portraits",
+      "frontier life"
+    ],
+    "story": "Delving into cowboy painting art, this work by Wayne Heim highlights cowboy portraits through rugged spirit and frontier life. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 400
+  },
+  {
+    "id": "i-JvkzcpM",
+    "title": "Fine Art Western Cowboy Art",
+    "description": "Discover the western cowboy art in this powerful western cowboy art by Wayne Heim. A compelling work that embodies western fine art, western art, and painterly cowboy portraits. Featuring western canon, perfect for art lovers seeking western cowboy art to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's western cowboy art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/LBBwv4FnQk5wCDjzjwwfrwXDtg4LD3sSPnH8TJTnH/XL/_WHO8057-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/LBBwv4FnQk5wCDjzjwwfrwXDtg4LD3sSPnH8TJTnH/XL/_WHO8057-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/NGT4HLrg9mWfhNGMXz7465h9RLCxdthDbhfp4QSNC/L/_WHO8057-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/LgrJ76hMcX822GXRhsfnDr7DQktKS6dhvh2gVZkjT/M/_WHO8057-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/M7CXWLxPZsT6SvzbZWJLDm2DMdJcBTnDxRP9JgwPn/S/_WHO8057-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "western cowboy art",
+      "western fine art",
+      "western art",
+      "painterly cowboy portraits",
+      "western canon",
+      "historic western prints",
+      "cowboy painting art"
+    ],
+    "story": "Delving into historic western prints, this work by Wayne Heim highlights western cowboy art through cowboy painting art and cowboy painting art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 401
+  },
+  {
+    "id": "i-r3Kq9B4",
+    "title": "Exploring Fine Art Western Photography",
+    "description": "Discover the fine art Western photography in this powerful fine art Western photography by Wayne Heim. A compelling work that embodies rugged spirit, rustic charm, and historic western prints. Featuring cowboy artwork, perfect for art lovers seeking fine art Western photography to enhance their collection. © Wayne Heim",
+    "alt": "Fine art photography of fine art Western photography by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r3Kq9B4/1/MTPGd8tbVx4c6cCDckx97LSFH8HzvvcbtbC7RxSbV/XL/_HF22400-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r3Kq9B4/1/MTPGd8tbVx4c6cCDckx97LSFH8HzvvcbtbC7RxSbV/XL/_HF22400-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r3Kq9B4/1/LCsvrrRsfNLTSvFxwD2WrwHSQ4n557Bgb7rTBZsDz/L/_HF22400-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r3Kq9B4/1/ND6NkZFHXH6LGb98jxwfJ2J2f669pJnZhgv8jxN2N/M/_HF22400-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r3Kq9B4/1/L7btTWzqFWrsMrpbqvhd5JnzQpC37RDn3xw2Xjw8s/S/_HF22400-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r3Kq9B4/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "fine art Western photography",
+      "rugged spirit",
+      "rustic charm",
+      "historic western prints",
+      "cowboy artwork",
+      "western fine art",
+      "cowboy art"
+    ],
+    "story": "Delving into western fine art, this work by Wayne Heim highlights cowboy art through historic western prints and western fine art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 402
+  },
+  {
+    "id": "i-7F5KJzC",
+    "title": "Cowboy Artwork - Western Landscapes Fine Art",
+    "description": "This cowboy artwork artwork by Wayne Heim showcases western landscapes fine art in a western art style. Reflecting cowboy painting art, western fine art, and cowboy artwork, it's suited for admirers of western landscapes fine art. With wild west photography elements. © Wayne Heim",
+    "alt": "cowboy artwork in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7F5KJzC/1/KPXnjD7thDgHF99Kp8PTDTmz6jcLx8L8mRfgN77Z9/XL/_HF27846-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7F5KJzC/1/KPXnjD7thDgHF99Kp8PTDTmz6jcLx8L8mRfgN77Z9/XL/_HF27846-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7F5KJzC/1/M9PR8Sd3QDMqxGJbqftDpQsgx9LtBS42Pz4FZdHp5/L/_HF27846-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7F5KJzC/1/MrKMRz3F4KP7cgtMKwSfkkn2PQ3PRGzvvVqqhKKRj/M/_HF27846-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7F5KJzC/1/M7wLfD6hQScdbqNLcqv5sc5WxX2xSMPDx8NswVHwk/S/_HF27846-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7F5KJzC/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "cowboy artwork",
+      "western landscapes fine art",
+      "western art",
+      "cowboy painting art",
+      "western fine art",
+      "wild west photography",
+      "painterly cowboy portraits",
+      "western cowboy art",
+      "outlaw portraits"
+    ],
+    "story": "Delving into painterly cowboy portraits, this work by Wayne Heim highlights western landscapes fine art through western cowboy art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 403
+  },
+  {
+    "id": "i-PqtMvHt",
+    "title": "Fine Art Painterly Cowboy Portraits",
+    "description": "Immerse yourself in painterly cowboy portraits with this stunning cowboy painting art by Wayne Heim. Capturing powerful works of art, historic western prints, and historic western prints, it's a must-have for collectors of painterly cowboy portraits. Including fine art Western photography themes. © Wayne Heim",
+    "alt": "Fine art photography of painterly cowboy portraits by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PqtMvHt/0/LfDGKqb3fMBxZt86pNVX2jC6CgdBdjrv9pVbPpdjS/XL/_HF26594-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PqtMvHt/0/LfDGKqb3fMBxZt86pNVX2jC6CgdBdjrv9pVbPpdjS/XL/_HF26594-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PqtMvHt/0/LfDGKqb3fMBxZt86pNVX2jC6CgdBdjrv9pVbPpdjS/XL/_HF26594-Edit-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PqtMvHt/0/LfDGKqb3fMBxZt86pNVX2jC6CgdBdjrv9pVbPpdjS/XL/_HF26594-Edit-Edit-XL.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PqtMvHt/0/NBtRw9XkTPbKrKqW2tSGJj4N6HtS6tjLG3XjNWn3D/S/_HF26594-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PqtMvHt/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "painterly cowboy portraits",
+      "cowboy painting art",
+      "powerful works of art",
+      "historic western prints",
+      "fine art Western photography",
+      "western cowboy art",
+      "western fine art",
+      "frederic remington"
+    ],
+    "story": "This image embodies western cowboy art and western fine art, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of powerful works of art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 404
+  },
+  {
+    "id": "i-9g57QXd",
+    "title": "Painterly Cowboy Portraits In Fine Art",
+    "description": "This painterly cowboy portraits artwork by Wayne Heim showcases western art in a rugged spirit style. Reflecting western canon, cowboy portraits, and painterly cowboy portraits, it's suited for admirers of western art. With frontier life elements. © Wayne Heim",
+    "alt": "painterly cowboy portraits in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/KwHbm5MwxXrRWgJMwfrmJh9vn38Sm52Fr9xprsw2N/XL/_HF24995-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/KwHbm5MwxXrRWgJMwfrmJh9vn38Sm52Fr9xprsw2N/XL/_HF24995-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/KwHbm5MwxXrRWgJMwfrmJh9vn38Sm52Fr9xprsw2N/XL/_HF24995-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/Kdw8KbBNQQhmpxmf3GJXTvFCrXMLNV6wW26PZGJCL/L/_HF24995-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/LhRgd89gVX67bVDz4xgtgqnWt2BVhcLSdtHcN9SkC/S/_HF24995-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "painterly cowboy portraits",
+      "western art",
+      "rugged spirit",
+      "western canon",
+      "cowboy portraits",
+      "frontier life",
+      "frederic remington"
+    ],
+    "story": "Delving into western art, this work by Wayne Heim highlights frederic remington through cowboy portraits and rugged spirit. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 405
+  },
+  {
+    "id": "i-Fx7pPGJ",
+    "title": "Frederic Remington Moment",
+    "description": "Discover the frederic remington in this powerful wild west photography by Wayne Heim. A compelling work that embodies historic western prints, frontier life, and western landscapes fine art. Featuring frontier life, perfect for art lovers seeking frederic remington to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's frederic remington artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fx7pPGJ/0/MzB9FQP5mLWt8VnHBztxxsvK5nSBX98fxRMxzJ4xd/XL/_WHO4926-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fx7pPGJ/0/MzB9FQP5mLWt8VnHBztxxsvK5nSBX98fxRMxzJ4xd/XL/_WHO4926-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fx7pPGJ/0/MzMgJjcLDV9kVGvkqXXxc8FNSZLcpDdQ7qHgpbz7V/L/_WHO4926-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fx7pPGJ/0/MHFrwdJsfWTJqBsjPwvTn6sVmCSPZ4TqBM9fK7XNt/M/_WHO4926-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fx7pPGJ/0/NVtd5GpFZRb8tJC9m3mh2VWn9FscfwGDbfckdsjGm/S/_WHO4926-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fx7pPGJ/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "frederic remington",
+      "wild west photography",
+      "historic western prints",
+      "frontier life",
+      "western landscapes fine art",
+      "painterly cowboy portraits",
+      "rugged spirit"
+    ],
+    "story": "Delving into frontier life, this work by Wayne Heim highlights painterly cowboy portraits through rugged spirit and western landscapes fine art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 406
+  },
+  {
+    "id": "i-cmH2bkC",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the A collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/Lh3522wZXDwrTCVVZzB2ZMSW3pK8zXcWsN6RsSp73/XL/_WHO8934-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/Lh3522wZXDwrTCVVZzB2ZMSW3pK8zXcWsN6RsSp73/XL/_WHO8934-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/MvvxCs7ScGcQG9X9qzB4LHXJkpPd9xHtCWxT4BBJX/L/_WHO8934-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/NdsHJvdtnXNQNRgpHwGSLVLqbr5SjXjkrQzFLZMPj/M/_WHO8934-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/M8z95fTT77XwzNGwdNDNkCs3rtpS7tjXQrBfmFPmc/S/_WHO8934-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/A",
+    "keywords": [
+      "WHO4466"
+    ],
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 407
+  },
+  {
+    "id": "i-X4SH26N",
+    "title": "Capturing Cowboy Art",
+    "description": "This cowboy art artwork by Wayne Heim showcases powerful works of art in a wild west photography style. Reflecting historic western prints, western cowboy art, and cowboy art, it's suited for admirers of powerful works of art. With powerful works of art elements. © Wayne Heim",
+    "alt": "cowboy art in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-X4SH26N/1/Lc9mVbTFsn5hJMh8wtnkkF7qhcrSHDccPrxQhRtgm/XL/_WHO2737-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-X4SH26N/1/Lc9mVbTFsn5hJMh8wtnkkF7qhcrSHDccPrxQhRtgm/XL/_WHO2737-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-X4SH26N/1/Lc9mVbTFsn5hJMh8wtnkkF7qhcrSHDccPrxQhRtgm/XL/_WHO2737-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-X4SH26N/1/NFPh3Xpw9qnBxn2mXVx6fqQfQCMxknFzGhRv6DwWh/L/_WHO2737-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-X4SH26N/1/M68cGVpm2hwqbLL573XnQNt2xbHrXQbJhkC7f2pD8/S/_WHO2737-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-X4SH26N/A",
+    "keywords": [
+      "WHO4466",
+      "cowboy art",
+      "powerful works of art",
+      "wild west photography",
+      "historic western prints",
+      "western cowboy art",
+      "frederic remington",
+      "western canon",
+      "cowboy artwork"
+    ],
+    "story": "This image embodies western cowboy art and frederic remington, captured by Wayne Heim in his signature style. It reflects western canon with a touch of cowboy artwork. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 408
+  },
+  {
+    "id": "i-cKL7kjn",
+    "title": "Western Cowboys Moment",
+    "description": "Wayne Heim's Western cowboys captures the spirit of western fine art in this cowboy art image. Featuring powerful works of art, frontier life, and Western cowboys, it's ideal for western fine art enthusiasts. Discover western canon in photography. © Wayne Heim",
+    "alt": "Fine art photography of Western cowboys by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cKL7kjn/1/Nd2m5hrKqPWbRXkKVnPkP38qH2MwcVBvNjSRfTM2v/XL/_HF26400-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cKL7kjn/1/Nd2m5hrKqPWbRXkKVnPkP38qH2MwcVBvNjSRfTM2v/XL/_HF26400-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cKL7kjn/1/Nd2m5hrKqPWbRXkKVnPkP38qH2MwcVBvNjSRfTM2v/XL/_HF26400-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cKL7kjn/1/LRTF3GpZJtCPnV2w8W8q4DdnkrmmXw55Xf7sRffzB/L/_HF26400-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cKL7kjn/1/MwkX6fhWkL7jtWX9m5xws8Fcvw2thxs9jn2DL9NQT/S/_HF26400-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cKL7kjn/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "Western cowboys",
+      "western fine art",
+      "cowboy art",
+      "powerful works of art",
+      "frontier life",
+      "western canon",
+      "cowboy painting art",
+      "historic western prints",
+      "fine art Western photography",
+      "frederic remington"
+    ],
+    "story": "Wayne Heim's exploration of cowboy painting art comes alive in this piece, showcasing historic western prints and fine art Western photography. A testament to frederic remington in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 409
+  },
+  {
+    "id": "i-NDnxRkx",
+    "title": "Exploring Outlaw Portraits",
+    "description": "Immerse yourself in outlaw portraits with this stunning western landscapes fine art by Wayne Heim. Capturing powerful works of art, cowboy artwork, and cowboy portraits, it's a must-have for collectors of outlaw portraits. Including cowboy painting art themes. © Wayne Heim",
+    "alt": "outlaw portraits in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/M7X6tzVDZXvBskG8gdXTSK8m3xcS8rnJDmcrhktXk/L/_HF26194-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/NjmxHS23sqxBKZCGs3MzvspXNnW9XjXC57NwV56nk/S/_HF26194-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "outlaw portraits",
+      "western landscapes fine art",
+      "powerful works of art",
+      "cowboy artwork",
+      "cowboy portraits",
+      "cowboy painting art",
+      "painterly cowboy portraits",
+      "western art"
+    ],
+    "story": "This image embodies painterly cowboy portraits and western art, captured by Wayne Heim in his signature style. It reflects western art with a touch of powerful works of art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 410
+  },
+  {
+    "id": "i-pXs6Fhx",
+    "title": "Light Work of Things",
+    "description": "“Light Work of Things” is a cinematic Western portrait steeped in painterly shadows and soft, dramatic light. A lone figure ignites a flame in the darkness, face briefly illuminated in a moment of pause and quiet focus. The image hangs between action and contemplation, inviting viewers to imagine what business is at hand—or what’s about to unfold. A rich, atmospheric choice for collectors of narrative Western fine art and evocative painterly photography. © Wayne Heim",
+    "alt": "Painterly Western portrait of a man in a broad hat lighting a pipe or lantern, his face illuminated by a small flame in the surrounding darkness.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pXs6Fhx/1/LMrC3hMgk5QjpbGVgLSKXzCSQ87pVM8ttZNRdDmrp/XL/_HF23501-1248-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pXs6Fhx/1/LMrC3hMgk5QjpbGVgLSKXzCSQ87pVM8ttZNRdDmrp/XL/_HF23501-1248-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pXs6Fhx/1/LMrC3hMgk5QjpbGVgLSKXzCSQ87pVM8ttZNRdDmrp/XL/_HF23501-1248-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pXs6Fhx/1/Kjmdz26nh66xLrvN4JVHsjx7M9BXvccVFkfMKcwBb/L/_HF23501-1248-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pXs6Fhx/1/Mr3fhQvL72H9vKTvNPBpzgbPfpwLQCpPssPN9zKCr/S/_HF23501-1248-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pXs6Fhx/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "cinematic western portrait",
+      "moody frontier image",
+      "narrative cowboy art",
+      "man with lantern artwork",
+      "dramatic western lighting",
+      "shadow and flame art",
+      "contemplative western scene",
+      "soft light photography",
+      "atmospheric cowboy portrait",
+      "textured fine art print",
+      "collectible western artwork",
+      "museum quality western print"
+    ],
+    "story": "Flame catches, shadows pull back. Just enough light to see what matters—hands, breath, trouble waiting on the edges.\n\nHe takes his time. Can’t rush the moment. Can’t rush what comes next. In this hush, smoke and silence dance together, and for now, that’s enough.",
+    "notes": "“Light Work of Things” dwells in the small rituals that precede action—where quiet focus becomes the only shield against a world waiting in the dark. The single flame carves out a space for thought, patience, and the gravity of what’s unsaid. Rich textures and deep shadow give the scene a timeless, almost painterly stillness. The subject’s downward gaze and the gentle arc of his hand suggest an old familiarity with this kind of work: nothing hurried, nothing wasted. It’s a portrait about preparation, about the value of quiet moments before the storm, and about the subtle power of light against the unknown.\n\nFor collectors, this piece offers an invitation into the hidden, unhurried corners of the frontier—where character is built not just in action, but in how one waits.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 411
+  },
+  {
+    "id": "i-NxjDRLV",
+    "title": "No coyotes, just a snake!",
+    "description": "“No Coyotes, Just a Snake!” captures the moment frontier danger reveals itself—not as an animal, but as a debt collector or businessman bent on eviction. Under painterly blue night, tension shifts to defiance as homesteaders stand their ground, rifle lowered but spirits unbroken. The piece blends metaphor, narrative, and quiet resilience, inviting viewers to consider the true threats faced on the edge of the Western frontier. © Wayne Heim",
+    "alt": "Painterly Western scene of a tense confrontation on a porch at night, with a man lowering his rifle, a woman holding a candle, and a businessman gesturing with papers—suggesting an eviction or unwanted demand.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NxjDRLV/0/MnDgx5cjRNJskndx89G8csRMnbsNFdPGwTBc77Vrh/XL/_HF27594-1262-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NxjDRLV/0/MnDgx5cjRNJskndx89G8csRMnbsNFdPGwTBc77Vrh/XL/_HF27594-1262-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NxjDRLV/0/KPwvQq9pGNcK7zFvkt6nNkMdkvGVF4drrTGHgb7Rp/L/_HF27594-1262-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NxjDRLV/0/NGtFzgkTbsfRKFFQ4BDSW66bhGw6Qmc55PtM32Nnc/M/_HF27594-1262-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NxjDRLV/0/LgV2JJN3wxXnHWd2MRQT7nTdMT66n3KQ8G275pGPJ/S/_HF27594-1262-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NxjDRLV/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "frontier eviction scene",
+      "debt collector western art",
+      "narrative western story",
+      "business vs homesteader art",
+      "frontier confrontation image",
+      "cinematic western painting",
+      "porch standoff artwork",
+      "metaphorical western print",
+      "atmospheric frontier night",
+      "collectible western art",
+      "museum quality western print"
+    ],
+    "story": "No coyotes after all—just a snake in the yard.\n\nFigures it’d be a suit and ledger, not fangs and fur.\nBoots and bluster, waving papers like they mean more than the roof overhead.\n\nHe lowers the rifle, breath heavy, jaw set.\nShe holds the candle steady, eyes on the man who’s already taken too much.\n\nTonight, at least, the snake goes home empty.",
+    "notes": "“No Coyotes, Just a Snake!” reframes the classic frontier scare as a battle not with beasts, but with the human predators of law and commerce. The “snake” is the man with the ledger and the cold smile, not the howling wilds. The composition captures the standoff: a rifle no longer needed for animals, a candle held high for truth, and the homesteaders’ resolve meeting bureaucracy head-on. Cool blue tones and painterly textures amplify the story’s tension and irony. This piece is for collectors who appreciate Western art with narrative bite and a nod to the very real struggles of keeping what’s yours when the true danger knocks in daylight and asks for your land.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 412
+  },
+  {
+    "id": "i-Sc9hZGs",
+    "title": "Change of Plans",
+    "description": "“Change of Plans” is a cinematic Western scene painted in stormy tones and raw anticipation. Two men, one crouched with rifle ready, the other pressed back against rough-hewn logs, find themselves improvising in the chaos of a gunfight gone wrong. The moment crackles with uncertainty—what comes next is anyone’s guess. Perfect for collectors who appreciate action, tension, and narrative ambiguity in painterly Western fine art. © Wayne Heim",
+    "alt": "Painterly Western scene of two men taking cover against a log cabin, one crouched with a rifle and the other pressed to the wall, both tense and ready for action.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/Kj28Xb8TsJZgHqvW3xK2ZxzGShFW7hgMsVdcGtjQb/XL/_HF27820-1265-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/Kj28Xb8TsJZgHqvW3xK2ZxzGShFW7hgMsVdcGtjQb/XL/_HF27820-1265-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/Kj28Xb8TsJZgHqvW3xK2ZxzGShFW7hgMsVdcGtjQb/XL/_HF27820-1265-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/LCFC25NT8NbJ2cDz42tHT4RdrrFT3Qx9nWbp3pn6d/L/_HF27820-1265-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/LXZCQkC2VD5wvVpJJ3gBDSLdsp23zv65q99FHvbVt/S/_HF27820-1265-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "narrative western art",
+      "tense cowboy scene",
+      "gunfight western painting",
+      "frontier improvisation art",
+      "cinematic western action",
+      "men with rifles artwork",
+      "stormy western print",
+      "log cabin gunfight",
+      "atmospheric western image",
+      "collectible western art",
+      "museum quality western print"
+    ],
+    "story": "Not what they planned. Not even close.\n\nA shout, a shot, and suddenly every step is the wrong one. Hunkered low, backs to the wall—counting breaths, trading glances, hoping for an opening. One signal, maybe, and they’re running again. Or not. This wasn’t the plan. But out here, plans don’t last long.",
+    "notes": "“Change of Plans” drops the viewer into the instant when everything falls apart and instinct takes over. The angles—crouched and standing, gun barrels and battered walls—convey a choreography of survival, tension, and on-the-fly decision-making.\n\nMuted, slate-blue tones reinforce the sense of threat and cold resolve. There’s no clear villain or hero, only men reacting to a world that refuses to stick to the script. The piece rewards viewers who relish images that pulse with narrative possibility but leave the ending unwritten. For collectors, it’s a visual reminder: out here, fortune favors the quick, not the careful.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 413
+  },
+  {
+    "id": "i-kQfftQ2",
+    "title": "Pinkerton's Grasp",
+    "description": "“Pinkerton’s Grasp” depicts a desperate frontier struggle in painterly, cinematic tones. A lawman’s authority falters in the grip of consequence—badges and weapons no longer shields, but reminders of lines crossed and debts come due. The composition crackles with physical tension and moral ambiguity, leaving the viewer to wonder who, if anyone, truly holds the high ground. A striking choice for collectors who appreciate dramatic Western fine art and the deeper stories behind the Old West’s rough justice. © Wayne Heim",
+    "alt": "Painterly Western scene of a violent struggle between three men on a porch—one man choking another while a third looks on, gun in hand, amid a tense confrontation.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/MxbF3npDhGmgmrrmtFn56qf5vbspsswfMwMcpwGHL/XL/_WHO0532-1266-1267-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/MxbF3npDhGmgmrrmtFn56qf5vbspsswfMwMcpwGHL/XL/_WHO0532-1266-1267-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/MxbF3npDhGmgmrrmtFn56qf5vbspsswfMwMcpwGHL/XL/_WHO0532-1266-1267-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/MNCDTh8mhxtDNBH969zQBmFf3m7nKqqgZpjhCZ3tK/L/_WHO0532-1266-1267-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/K5zXLMMHdhW8vBCbbGvRpShZC2gXLkxxZkzfxQkW3/S/_WHO0532-1266-1267-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "narrative western art",
+      "lawman confrontation artwork",
+      "Pinkerton detective story",
+      "Old West justice scene",
+      "violent frontier image",
+      "cinematic western struggle",
+      "moral ambiguity art",
+      "collectible western print",
+      "museum quality western art"
+    ],
+    "story": "Even moral rot must collect its dues. Hubris… power… unchecked orders— and now, at last, he’s gone too far. A badge… a weapon… the tools that once shielded his conscience\nnow betray him. One misstep, one reach too far, and the choke of consequence finds them all. A desperate struggle— a reckoning in motion— one final grasp at life’s blind justice.",
+    "notes": "“Pinkerton’s Grasp” is a study in the thin lines between order and chaos, justice and vengeance on the Western frontier. The chokehold at the center of the frame is both literal and symbolic—a reckoning played out in muscle, grit, and the artifacts of law gone rotten.\n\nSubdued color and sharp texture emphasize the scene’s raw intensity, while the posture of each figure reveals shifting power: one overreaches, one resists, and one stands poised on the edge, weapon drawn but judgment withheld. The ambiguity of who is right, who is wrong, and what justice means is left unresolved—echoing the lawless realities of Western myth.\n\nFor collectors, this work offers more than action: it’s a portrait of consequence, rendered with painterly gravitas and narrative bite.",
+    "rating": 5,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 414
+  },
+  {
+    "id": "i-bFwNMZK",
+    "title": "Marshal",
+    "description": "This cowboy art artwork by Wayne Heim showcases western fine art in a outlaw portraits style. Reflecting rugged spirit, western fine art, and cowboy art, it's suited for admirers of western fine art. With cowboy art elements. © Wayne Heim",
+    "alt": "Fine art photography of cowboy art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-bFwNMZK/0/LmVgKg6Pr3qSmqN2q7rTKKzc95tGGRJHVhFBXR3NX/XL/_HF28982-1244-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-bFwNMZK/0/LmVgKg6Pr3qSmqN2q7rTKKzc95tGGRJHVhFBXR3NX/XL/_HF28982-1244-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-bFwNMZK/0/LtT5BdCCRpCQsf7q6cMZZ7tfHRC9WZjZPQJkXBSKt/L/_HF28982-1244-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-bFwNMZK/0/KPvgXgVNbWv2hJF84GtrQt77dbDxV2c6b3cC8JgLw/M/_HF28982-1244-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-bFwNMZK/0/KXsfdxKDtkbthhdf5Vdd4R7RmP5swqDN3GS5g5Rhs/S/_HF28982-1244-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-bFwNMZK/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "cowboy art",
+      "western fine art",
+      "outlaw portraits",
+      "rugged spirit",
+      "cowboy portraits",
+      "historic western prints"
+    ],
+    "story": "Wayne Heim's exploration of cowboy portraits comes alive in this piece, showcasing cowboy art and historic western prints. A testament to cowboy portraits in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 415
+  },
+  {
+    "id": "i-c98L2bs",
+    "title": "Fading Memories",
+    "description": "“Fading Memories” is a quiet, contemplative Western fine art portrait rendered in soft painterly textures. A woman stands alone at a weathered fence, gazing into a muted landscape where time seems to dissolve into mist. The image evokes themes of longing, remembrance, and the fragile way memories drift yet linger on the frontier. Ideal for collectors who appreciate emotional, atmospheric Western photography and cinematic historic storytelling. © Wayne Heim",
+    "alt": "Painterly Western image of a woman standing alone at a weathered fence, looking into a soft, muted landscape as if reflecting on fading memories.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-c98L2bs/0/MZrHkCFTPffmfMsxPfvHz7mTMFsXQ7xR9PVhcF4Pm/XL/_HF29391-1254-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-c98L2bs/0/MZrHkCFTPffmfMsxPfvHz7mTMFsXQ7xR9PVhcF4Pm/XL/_HF29391-1254-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-c98L2bs/0/MZrHkCFTPffmfMsxPfvHz7mTMFsXQ7xR9PVhcF4Pm/XL/_HF29391-1254-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-c98L2bs/0/K54qJzwFhn8hPgjHm3CPsTrjv4xczJVDZKBfjQqVv/L/_HF29391-1254-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-c98L2bs/0/NGPdjBQFW4RK6bgmsgC2nrf8KhJzjDb6ZkZdG2nRK/S/_HF29391-1254-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-c98L2bs/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "atmospheric western scene",
+      "contemplative frontier art",
+      "woman at fence artwork",
+      "muted landscape imagery",
+      "narrative western photography",
+      "emotional western fine art",
+      "soft painterly tones",
+      "memory themed artwork",
+      "rustic fence western scene",
+      "cinematic western portrait",
+      "textured fine art print",
+      "frontier solitude image",
+      "museum quality western print",
+      "collectible western artwork"
+    ],
+    "story": "She stands where the world once made sense — where laughter, footsteps, and whispered promises lived in the spaces between fence rails and winter branches. Time has thinned those echoes now. Seasons have washed the color from the hills, the warmth from the air… and slowly, from her memory. Yet she returns — again and again — to gather what fragments remain. A voice. A touch. A moment she refuses to surrender. Some memories fade. Others hold fast, even when the world around them does not.",
+    "notes": "“Fading Memories” captures the emotional residue of absence rather than the moment of loss itself. The composition places the subject with her back to the viewer, encouraging a sense of shared introspection rather than voyeurism. Soft focus and desaturated tones contribute to a dreamlike quality, allowing edges to dissolve much like memory itself.\n\nThe muted palette and atmospheric falloff echo traditions of 19th-century tonalism, where mood superseded detail and landscapes became extensions of the inner world. The fence, leaning gently with age, anchors the scene in frontier realism while symbolizing boundaries — those we cross, and those left behind.\n\nThis piece offers collectors a poignant meditation on time, distance, and the lingering imprint of the past, rendered with painterly subtlety and emotional grace.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 416
+  },
+  {
+    "id": "i-BVwQDrM",
+    "title": "Western Cowboy Art Portrait",
+    "description": "Wayne Heim's western cowboy art captures the spirit of cowboy artwork in this cowboy artwork image. Featuring rustic charm, rugged spirit, and western cowboy art, it's ideal for cowboy artwork enthusiasts. Discover cowboy painting art in photography. © Wayne Heim",
+    "alt": "Wayne Heim's western cowboy art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/NX2pPS6MKZTRVGP5DFXpWqqqVdwFndBPpXgpZvrP2/XL/_HF29415-1256-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/NX2pPS6MKZTRVGP5DFXpWqqqVdwFndBPpXgpZvrP2/XL/_HF29415-1256-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/NX2pPS6MKZTRVGP5DFXpWqqqVdwFndBPpXgpZvrP2/XL/_HF29415-1256-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/LMhr6h7n22WXXQnLQ5MwNmM83N8md2QgZWSQNTMCt/L/_HF29415-1256-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/L9hPC8Vz7GQGtmQzNbK7GfkrGSKcDDKCKrtsTWzGT/S/_HF29415-1256-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "western cowboy art",
+      "cowboy artwork",
+      "rustic charm",
+      "rugged spirit",
+      "cowboy painting art",
+      "wild west photography",
+      "outlaw portraits",
+      "western canon"
+    ],
+    "story": "Delving into cowboy painting art, this work by Wayne Heim highlights wild west photography through outlaw portraits and western canon. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 417
+  },
+  {
+    "id": "i-qqVG3fw",
+    "title": "Historic Western Prints Portrait",
+    "description": "This historic western prints artwork by Wayne Heim showcases fine art Western photography in a rugged spirit style. Reflecting historic western prints, outlaw portraits, and historic western prints, it's suited for admirers of fine art Western photography. With western canon elements. © Wayne Heim",
+    "alt": "historic western prints in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/Lr78CdQNH54LmBDdJsWqJp2G6SMpp85dJJK47Ncqp/L/_HF29970-1283-1285-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/KcQpTt73kxFZpPzhhwKmCSJZMNVkRj7zF4FCr83QN/S/_HF29970-1283-1285-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "historic western prints",
+      "fine art Western photography",
+      "rugged spirit",
+      "outlaw portraits",
+      "western canon",
+      "western fine art",
+      "frederic remington",
+      "western art"
+    ],
+    "story": "Delving into western fine art, this work by Wayne Heim highlights frederic remington through western fine art and western art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 418
+  },
+  {
+    "id": "i-QWcX7JT",
+    "title": "Eye Bound Promise",
+    "description": "“Eye Bound Promise” is a luminous Western portrait rendered in gentle, painterly light. A frontier woman stands wrapped in a shawl, meeting the viewer’s gaze with quiet assurance and unwavering calm. The piece captures the power of silent vows and the strength found in steadfast presence. Perfect for collectors who appreciate emotional resonance and subtle storytelling in fine art photography. © Wayne Heim",
+    "alt": "Painterly Western portrait of a woman in a shawl standing outdoors, looking directly at the viewer with a calm, confident expression.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-QWcX7JT/0/NfC8J5LppNR736c269xz2HLd37dknhCzjHsfsPps9/XL/_HF20139-1291-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-QWcX7JT/0/NfC8J5LppNR736c269xz2HLd37dknhCzjHsfsPps9/XL/_HF20139-1291-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-QWcX7JT/0/NfC8J5LppNR736c269xz2HLd37dknhCzjHsfsPps9/XL/_HF20139-1291-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-QWcX7JT/0/KFbK9JNPv7zPtwx7ktgttSSzrPhtBJ8rpm28zj24R/L/_HF20139-1291-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-QWcX7JT/0/NbwcNcwW3TQCgBjPcbRSP59J9vrc3kBsQ2d9LnxN6/S/_HF20139-1291-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-QWcX7JT/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "frontier woman portrait",
+      "promise western art",
+      "narrative fine art photography",
+      "emotional western scene",
+      "confident pioneer woman",
+      "soft light portrait",
+      "shawl western artwork",
+      "steadfast western story",
+      "collectible western art",
+      "museum quality western print"
+    ],
+    "story": "A promise can be made in words, but it’s the eyes that hold it fast. She stands calm, steady, a thousand miles of prairie and trouble behind her— yet her gaze never wavers.\n\nNot every vow needs saying. Some are carried, quietly, in every glance and every dawn.",
+    "notes": "“Eye Bound Promise” is a meditation on trust and the strength of unspoken commitments. The soft, diffused background and gentle palette highlight the subject’s steady gaze and relaxed posture, grounding the scene in both realism and reverie. Rather than grand gesture or drama, the piece finds its narrative in restraint: a glance that speaks to loyalty, resilience, and the quiet courage required to keep a promise when words would only diminish its weight. An image as timeless and steadfast as the land itself.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 419
+  },
+  {
+    "id": "i-9wQL5tH",
+    "title": "A is for the Aftermath",
+    "description": "“A is for the Aftermath” captures a raw, solitary moment of frontier grief through soft painterly tones and quiet emotional depth. A widow stands beside a weathered fence, shielding her face as she grapples with news she cannot yet bear to face. The blurred, muted landscape reflects the inner fog of loss, creating a powerful narrative of resilience, mourning, and the fragile strength required to move forward. A striking piece for collectors drawn to emotive Western fine art and cinematic storytelling. © Wayne Heim",
+    "alt": "Painterly Western image of a grieving woman standing beside a split-rail fence, covering her face as she struggles with sorrow in a muted autumn landscape.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9wQL5tH/1/KknFbJqxJkK7m2Q6MhDJVkmrgfPBmbzxmvd5r7q4G/XL/_HF20235-1231-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9wQL5tH/1/KknFbJqxJkK7m2Q6MhDJVkmrgfPBmbzxmvd5r7q4G/XL/_HF20235-1231-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9wQL5tH/1/KknFbJqxJkK7m2Q6MhDJVkmrgfPBmbzxmvd5r7q4G/XL/_HF20235-1231-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9wQL5tH/1/MCNFBQ2qg8LNkgVFtDS8CBf7K5sn6Hs3LhHJ8hsWM/L/_HF20235-1231-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9wQL5tH/1/MJKv6Gz4gxszrbdv3fjHWzKRHq5xSxVhjmJj63bjK/S/_HF20235-1231-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9wQL5tH/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "frontier widow art",
+      "emotional western scene",
+      "narrative western photography",
+      "historical reenactment art",
+      "grieving woman artwork",
+      "atmospheric western image",
+      "muted color western print",
+      "solitary frontier moment",
+      "textured fine art print",
+      "cinematic western storytelling",
+      "rustic fence artwork",
+      "autumn western scene",
+      "emotional fine art photography",
+      "contemplative western art",
+      "museum quality western print",
+      "collectible western fine art"
+    ],
+    "story": "A — mother, widow, a heart branded with grief.\nA — letter she still can’t bear to open.\nA — sign… a prayer… and a promise she vows to keep.\nA — another day she must face alone, for the sake of those left behind.\n\nBut not today… not yet. For now, the world can wait while she gathers what pieces of herself remain.",
+    "notes": "“A is for the Aftermath” is built on restraint — not the dramatic moment of tragedy itself, but the quieter and often heavier weight that follows. The composition places the woman slightly turned away, creating a sense of privacy and vulnerability that invites empathy rather than spectacle. Her bowed posture forms a gentle arc that harmonizes with the soft, painterly falloff of the surrounding landscape.\n\nThe limited palette — earthy browns against a cool, desaturated backdrop — echoes the emotional terrain: subdued, numb, suspended. The shallow focus isolates her from the world behind her, mirroring the way grief narrows one’s awareness to the immediate, the personal, the overwhelming. There’s a timelessness in the scene reminiscent of 19th-century narrative painting, where gesture and silhouette carry emotional truth more than facial expression. This piece offers collectors a deeply human story rendered with quiet strength, grounded authenticity, and a cinematic softness that lingers well after the first viewing.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 420
+  },
+  {
+    "id": "i-C5Zh8Ld",
+    "title": "Till Death Do Us Part v2",
+    "description": "“Till Death Do Us Part — Version II” offers a reimagined color and emotional palette of the original scene, shifting the atmosphere toward a deeper, more solemn tone. The softened hues and painterly gradients place the viewer inside a quiet farewell between two Western pioneers—her hands steadying him, his breath fading in the dim glow of the lantern. This rendition emphasizes intimacy and atmosphere, exploring the fragile boundary between hope and finality on the Old West frontier. A moving choice for collectors of narrative Western art and atmospheric painterly photography. © Wayne Heim",
+    "alt": "Painterly Western artwork of a woman cradling her dying partner beside a lantern, rendered in a softer, more muted color palette emphasizing tenderness and farewell.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-C5Zh8Ld/0/LC6Xkvw6z5GdLFJLw7M8Wf6hk9BhwCXsFs8R38p7h/XL/_HF21354-1221-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-C5Zh8Ld/0/LC6Xkvw6z5GdLFJLw7M8Wf6hk9BhwCXsFs8R38p7h/XL/_HF21354-1221-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-C5Zh8Ld/0/LC6Xkvw6z5GdLFJLw7M8Wf6hk9BhwCXsFs8R38p7h/XL/_HF21354-1221-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-C5Zh8Ld/0/LfcHdVKXbb6zLZnk722Kv539F3Shpmj742DkkXSd8/L/_HF21354-1221-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-C5Zh8Ld/0/L2sW7mcmNJpjgJjQNFwJcMQTPcsN4QqRkvTzdCtKk/S/_HF21354-1221-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-C5Zh8Ld/A",
+    "keywords": [
+      "western fine art print",
+      "painterly western photography",
+      "frontier love artwork",
+      "romantic western scene",
+      "intimate cowboy art",
+      "atmospheric western image",
+      "muted color western art",
+      "lantern lit frontier moment",
+      "narrative fine art photography",
+      "historical western couple scene",
+      "emotional frontier artwork",
+      "painterly storytelling",
+      "soft tone western print",
+      "cinematic western scene",
+      "textured fine art image",
+      "muted palette photography",
+      "western romance art",
+      "collectible frontier print",
+      "museum quality western artwork"
+    ],
+    "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part.",
+    "notes": "In this alternate treatment of the scene, color becomes the central emotional engine. The restrained palette draws the viewer inward, focusing on breath, warmth, and the near-sacred quiet shared between two lives joined by hardship and devotion. The lantern casts a gentler, almost sacred glow, illuminating the couple in a moment that feels suspended outside of time. Where the original leaned into contrast and narrative immediacy, Version II softens the world around them, heightening the sense of vulnerability and closeness. The composition echoes traditions of classical domestic portraiture while retaining the grit and authenticity of frontier life. Textural shifts — from weathered boards to worn fabric — reinforce the tactile realism, while the muted chroma encourages contemplation rather than urgency. This version offers collectors a more meditative interpretation: a study in love, farewell, and the resilience of human connection in the harsh landscapes of the American West.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 421
+  },
+  {
+    "id": "i-JkFT62C",
+    "title": "Long Night",
+    "description": "“Long Night” portrays a quiet, intimate moment of endurance on the Western frontier. Rendered in a warm painterly style, the scene captures a couple huddled together against the cold as lantern light softens the rough cabin walls around them. Their closeness hints at uncertainty — perhaps worry, perhaps fatigue — leaving the viewer to decide whether this moment reflects hardship, healing, or simple devotion in a harsh world. A richly atmospheric piece for collectors drawn to emotional Western fine art and cinematic narrative photography. © Wayne Heim",
+    "alt": "Painterly Western scene of a couple holding each other for warmth beside a lantern in a rustic cabin, suggesting a long, cold night of endurance.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/0/L3D3mBFVW4Hj7J9Pjmg6CbRDz2gkmVJJW2T2zvdpn/XL/_HF21393-1250-1251-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/0/L3D3mBFVW4Hj7J9Pjmg6CbRDz2gkmVJJW2T2zvdpn/XL/_HF21393-1250-1251-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/0/L3D3mBFVW4Hj7J9Pjmg6CbRDz2gkmVJJW2T2zvdpn/XL/_HF21393-1250-1251-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/0/L8bzwRfNwQTDFQxf6jGbCJgktnLWtnKd8vrhVtgnx/L/_HF21393-1250-1251-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/0/KjMhfwJBt7j5LWQ7MsJjnK3JDxw4nRRXqFFtfWb2x/S/_HF21393-1250-1251-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "rustic charm",
+      "western canon",
+      "cowboy painting art",
+      "western art",
+      "cowboy artwork",
+      "frederic remington",
+      "outlaw portraits"
+    ],
+    "story": "They’d weathered hard nights before — cold ones, long ones, nights when the wind clawed at the walls and sleep came only in pieces. But this one felt different. He shivered against her, breath thin, searching for warmth… or strength… or simply her touch.\n\nShe held him closer, steadying the tremor in his hands with her own. Whatever storm waited outside, whatever fear whispered in the corners of the room, she’d keep him anchored through it. Shoulder to shoulder. Breath to breath. Maybe morning would bring answers. Maybe it wouldn’t. But for now, wrapped in shared resolve and the soft flicker of lantern light, surviving the long night was all that mattered.",
+    "notes": "“Long Night” shifts the emotional center toward endurance and quiet devotion. The lantern’s glow becomes the heart of the composition, casting gentle warmth across weathered boards and soft fabric folds while emphasizing the shelter these two characters create for each other. The palette leans into earth tones and softened edges, recalling classical domestic studies but grounded firmly in frontier realism.\n\nRather than framing the moment as an ending, the piece invites interpretation: Are they battling fever, storm, exhaustion — or simply the cold bite of a winter night? The ambiguity heightens the intimacy, allowing each viewer to bring their own story into the scene. The painterly textures and cinematic lighting elevate the work into a contemplative study of resilience, companionship, and the small lights that carry us through the darkest hours.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 422
+  },
+  {
+    "id": "i-5LnXk2k",
+    "title": "Fine Art Western Landscapes Fine Art",
+    "description": "Discover the western landscapes fine art in this powerful cowboy artwork by Wayne Heim. A compelling work that embodies powerful works of art, cowboy art, and western fine art. Featuring outlaw portraits, perfect for art lovers seeking western landscapes fine art to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's western landscapes fine art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5LnXk2k/0/LvvcM8q6rcjLcWQ7tn3rRtPk6L86ZkxVnfLJqb3qz/XL/_HF21509-1225-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5LnXk2k/0/LvvcM8q6rcjLcWQ7tn3rRtPk6L86ZkxVnfLJqb3qz/XL/_HF21509-1225-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5LnXk2k/0/MpNMtkMdsMtzpwq6LRdTNv55pZGDZB8nwZcBgC3Lc/L/_HF21509-1225-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5LnXk2k/0/LGnDr7cwXLzJxCsvFbVv9GK67ZfMd3R5RhDn8BNGd/M/_HF21509-1225-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5LnXk2k/0/NBsXwxmKhDjFVrXJQgxxWdCK3mSJsrFNwDRV6gQb6/S/_HF21509-1225-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5LnXk2k/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "western landscapes fine art",
+      "cowboy artwork",
+      "powerful works of art",
+      "cowboy art",
+      "western fine art",
+      "outlaw portraits",
+      "western art",
+      "western canon"
+    ],
+    "story": "Wayne Heim's exploration of western fine art comes alive in this piece, showcasing western art and western canon. A testament to western canon in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 423
+  },
+  {
+    "id": "i-tBPfdxS",
+    "title": "Reading the Room",
+    "description": "“Reading the Room” is a painterly Western portrait capturing the subtle tension of negotiation and unspoken games. A seasoned man sits at the table, glasses catching the lamplight, his posture and expression betraying the calculations and second-guessing that happen in the quiet between moves. Classic tones and rich textures evoke the hush and gravity of high-stakes decisions on the old frontier. © Wayne Heim",
+    "alt": "Painterly Western portrait of a bearded man in glasses and a hat sitting at a table, hands folded, gazing to the side with a thoughtful expression.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tBPfdxS/1/LgwwPFgkQ4LvZsttbL3dHNpRWvwvCLtxdwBSfjSZp/XL/_HF21597-1303-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tBPfdxS/1/LgwwPFgkQ4LvZsttbL3dHNpRWvwvCLtxdwBSfjSZp/XL/_HF21597-1303-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tBPfdxS/1/MfPQcgnb99LDxLSCpvb2Gr2jjBj8CDJQQ8CVGGbXc/L/_HF21597-1303-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tBPfdxS/1/Kb6fLtb33w8SDRcxFCndGkvrvkgXnstsGjRNs6vwC/M/_HF21597-1303-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tBPfdxS/1/NcmqknvMv5bb9tVfdgtqkvQ85MbR2wVdcK4CFPhJN/S/_HF21597-1303-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tBPfdxS/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "frontier negotiation art",
+      "poker game portrait",
+      "seasoned western character",
+      "thoughtful cowboy scene",
+      "cinematic western painting",
+      "high-stakes decision art",
+      "old west table scene",
+      "collectible western print",
+      "museum quality western artwork"
+    ],
+    "story": "He’s seen it all before—the long silences, the nervous hands, the way stories shift when money’s on the table. Behind the steady gaze and careful fingers, he’s weighing every word and gesture, deciding who’s bluffing and who might just surprise him before the night is over.",
+    "notes": "Every game and negotiation leaves its mark, and this image distills that tension into a single moment—subtle light tracing the lines of experience, while his eyes and hands reveal a mind always working, always one step ahead, perfectly embodying the chess-match spirit of frontier dealings without ever needing to show a single card.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 424
+  },
+  {
+    "id": "i-Nm9DNhq",
+    "title": "Rustic Charm And Western Fine Art",
+    "description": "Experience rustic charm through this evocative western fine art from Wayne Heim's portfolio. This piece highlights powerful works of art with fine art Western photography, while conveying cowboy portraits, ideal for those who appreciate rustic charm. Explore western landscapes fine art in fine art. © Wayne Heim",
+    "alt": "Wayne Heim's rustic charm artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/LVHJCpJzTDpSN35tgsNSvz4HdncTXMLBSs6LMNNd3/L/_WHO1041-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/NCgbn57xLGjVskkdTjWxB7x34DzbMzjVp9NmzQGTB/S/_WHO1041-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "rustic charm",
+      "western fine art",
+      "powerful works of art",
+      "fine art Western photography",
+      "cowboy portraits",
+      "western landscapes fine art",
+      "frontier life",
+      "western cowboy art",
+      "cowboy artwork",
+      "painterly cowboy portraits"
+    ],
+    "story": "Delving into frontier life, this work by Wayne Heim highlights western cowboy art through cowboy artwork and painterly cowboy portraits. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 425
+  },
+  {
+    "id": "i-kNXVsdd",
+    "title": "The Bedford B's",
+    "description": "Wayne Heim's rugged spirit captures the spirit of wild west photography in this painterly cowboy portraits image. Featuring western cowboy art, cowboy art, and rugged spirit, it's ideal for wild west photography enthusiasts. Discover cowboy portraits in photography. © Wayne Heim",
+    "alt": "rugged spirit in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kNXVsdd/0/KGK5VMpFWnR5KVqC3tHHHgdkT9XgMhr6jq2C34vv4/XL/_WHO1470-1212-1214-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kNXVsdd/0/KGK5VMpFWnR5KVqC3tHHHgdkT9XgMhr6jq2C34vv4/XL/_WHO1470-1212-1214-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kNXVsdd/0/M8N5dDptKMHsKGQ7BCzfZP8X5SHvGDj6dLN4Rm72s/L/_WHO1470-1212-1214-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kNXVsdd/0/Mp4KvQg8ZqTVX253RRZ5SxxJ9VjQzGS9D6kPTJk5M/M/_WHO1470-1212-1214-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kNXVsdd/0/MBvq4p5TRMvkKPT258nSNMdtzTkCVFQrqFTzVJFHF/S/_WHO1470-1212-1214-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kNXVsdd/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "rugged spirit",
+      "wild west photography",
+      "painterly cowboy portraits",
+      "western cowboy art",
+      "cowboy art",
+      "cowboy portraits",
+      "frederic remington",
+      "rustic charm",
+      "historic western prints",
+      "cowboy artwork"
+    ],
+    "story": "This image embodies frederic remington and rustic charm, captured by Wayne Heim in his signature style. It reflects historic western prints with a touch of cowboy artwork. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 426
+  },
+  {
+    "id": "i-9BhX2Lj",
+    "title": "Lenore",
+    "description": "“Lenore” is a cinematic piece of Western fine art storytelling by Wayne Heim, rendered in his signature painterly photography style. Bathed in a burning wash of golden light, a lone gunslinger bows his head as if answering a call only he can hear—half prayer, half sentence. The controlled textures, chiaroscuro tones, and narrative tension evoke the psychological weight of the Old West, where justice, grief, and consequence often blur into ritual. This image blends classic cowboy art with a modern, atmospheric voice, making it a compelling centerpiece for collectors seeking narrative-driven Western fine art and painterly cowboy wall art. © Wayne Heim",
+    "alt": "Painterly Western image of a bearded gunslinger lowering his head in golden light, hand resting near his holstered revolver as smoke rises around him.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9BhX2Lj/1/MjR5MsSzTQGdTGJPsCjrT75szpdxnC7zV3w3VZgtM/XL/_HF22324-1210-1211-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9BhX2Lj/1/MjR5MsSzTQGdTGJPsCjrT75szpdxnC7zV3w3VZgtM/XL/_HF22324-1210-1211-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9BhX2Lj/1/MjR5MsSzTQGdTGJPsCjrT75szpdxnC7zV3w3VZgtM/XL/_HF22324-1210-1211-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9BhX2Lj/1/KcVt6zfPFs8GzG8tL6TtGfFFKKKcxDk4XStc85779/L/_HF22324-1210-1211-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9BhX2Lj/1/LKFMFZRG4PwXH2sXQXVBHMVkHQdmR36QzPMtqtJBb/S/_HF22324-1210-1211-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9BhX2Lj/A",
+    "keywords": [
+      "western fine art",
+      "painterly photography",
+      "western fine art photography",
+      "cowboy art",
+      "cowboy fine art",
+      "Old West wall art",
+      "narrative western art",
+      "cinematic western photography",
+      "gunslinger artwork",
+      "frontier storytelling art",
+      "moody western scene",
+      "golden light western image",
+      "painterly fine art",
+      "illustrative photography",
+      "textured western print",
+      "fine art storytelling",
+      "Remington-inspired lighting",
+      "Wyeth-inspired mood",
+      "narrative composition",
+      "collectible western art",
+      "western art prints",
+      "cowboy wall art",
+      "museum-quality western print",
+      "limited edition western photography"
+    ],
+    "story": "Sunlight seeps in, commanding my fleeting soul — another summons to duty. First a whisper… then a moan… She speaks as if I’d forgotten my lot.\nNo resolve... no mission… no empathy… no choice. They all died that wretched day.\nOnly HER will now — cold, chiseled, set in stone is the day and what she next demands from us. Once again, only SHE will decide the day, and who must pay the price.",
+    "notes": "In “Lenore,” Wayne Heim leans into the solemn gravitas of Western mythmaking, evoking the brooding emotional charge found in late-period Remington and the interior quiet of Wyeth’s narrative studies. The composition is deliberately weighted to the lower frame, grounding the viewer in the tension between stillness and impending action. Light becomes a character of its own—scorching, sanctifying, revealing—casting the figure in a painterly glow that recalls the textured surfaces of 19th-century American illustration.\n\nThe holstered revolver, partially veiled in smoke, functions as both symbol and sentence: an artifact of fate rather than bravado. What elevates the piece is the psychological depth—this is not the romanticized gunslinger of classic tropes but a man bound to an unseen vow, shaped by loss, and summoned once more by forces beyond mercy. The image holds a cinematic, sculptural presence that positions it squarely within the evolving Western fine art canon, offering collectors a work that is both timeless and unmistakably contemporary in voice.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 427
+  },
+  {
+    "id": "i-BGmFfF5",
+    "title": "Western Cowboy Art Study",
+    "description": "Wayne Heim's western cowboy art captures the spirit of fine art Western photography in this powerful works of art image. Featuring western fine art, wild west photography, and western cowboy art, it's ideal for fine art Western photography enthusiasts. Discover western fine art in photography. © Wayne Heim",
+    "alt": "Fine art photography of western cowboy art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BGmFfF5/0/LJVkLHSrbbfffQ9rdMzJbVdBT2jpcMksN73zzfqZm/XL/_WHO1553-1205-1209-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BGmFfF5/0/LJVkLHSrbbfffQ9rdMzJbVdBT2jpcMksN73zzfqZm/XL/_WHO1553-1205-1209-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BGmFfF5/0/LJVkLHSrbbfffQ9rdMzJbVdBT2jpcMksN73zzfqZm/XL/_WHO1553-1205-1209-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BGmFfF5/0/NHG4zHg8NX7Mp9gNv7S4hg8KR8zs3d4Mm9btDBPnT/L/_WHO1553-1205-1209-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BGmFfF5/0/Mmsx5wQdKwxPhLvV9cvnzW5Jzp3mWVmRz8VLkC39W/S/_WHO1553-1205-1209-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BGmFfF5/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "western cowboy art",
+      "fine art Western photography",
+      "powerful works of art",
+      "western fine art",
+      "wild west photography",
+      "cowboy portraits",
+      "cowboy painting art",
+      "historic western prints"
+    ],
+    "story": "This image embodies powerful works of art and cowboy portraits, captured by Wayne Heim in his signature style. It reflects cowboy painting art with a touch of historic western prints. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 428
+  },
+  {
+    "id": "i-CgTvzgP",
+    "title": "The Essence Of Fine Art Western Photography",
+    "description": "Wayne Heim's fine art Western photography captures the spirit of cowboy painting art in this Western cowboys image. Featuring outlaw portraits, frontier life, and fine art Western photography, it's ideal for cowboy painting art enthusiasts. Discover western cowboy art in photography. © Wayne Heim",
+    "alt": "Fine art photography of fine art Western photography by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/0/K4KcSDQBmjQ9mZfXjQp4x6d6t73VjfcGRMtwmNc3F/XL/_WHO1631-1200-1201-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/0/K4KcSDQBmjQ9mZfXjQp4x6d6t73VjfcGRMtwmNc3F/XL/_WHO1631-1200-1201-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/0/Mj9kB76GmM97ghkKmD2xf7ctGswdZSrZmjMghpwq3/L/_WHO1631-1200-1201-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/0/MzCKjxwcFBmQ9rTFmgbHfTWHjxtbwmpvCsz3vt2MK/M/_WHO1631-1200-1201-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/0/NP623Dz7KmMGxwfKHTMDzJjS6tnZ3q4NtKrGrH57h/S/_WHO1631-1200-1201-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "fine art Western photography",
+      "cowboy painting art",
+      "Western cowboys",
+      "outlaw portraits",
+      "frontier life",
+      "western cowboy art",
+      "cowboy artwork",
+      "cowboy portraits",
+      "western landscapes fine art"
+    ],
+    "story": "Delving into cowboy artwork, this work by Wayne Heim highlights Western cowboys through cowboy portraits and western landscapes fine art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 429
+  },
+  {
+    "id": "i-4bn8bBz",
+    "title": "Capturing Frontier Life",
+    "description": "Immerse yourself in frontier life with this stunning cowboy art by Wayne Heim. Capturing cowboy painting art, cowboy portraits, and cowboy painting art, it's a must-have for collectors of frontier life. Including wild west photography themes. © Wayne Heim",
+    "alt": "Fine art photography of frontier life by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4bn8bBz/0/K8xpscpZzwW2WszXVqzVx3w7TvqbS5gPGbxDp23x2/XL/_HF21791-Edit-2-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4bn8bBz/0/K8xpscpZzwW2WszXVqzVx3w7TvqbS5gPGbxDp23x2/XL/_HF21791-Edit-2-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4bn8bBz/0/M9wFbwSKjjR3873zWvgQ2vQZtSZLc36mKGqtgcv8P/L/_HF21791-Edit-2-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4bn8bBz/0/MFv6w4Bcnm9rsHp5ngdzW94SqG5SNw3f7w2JNpfkP/M/_HF21791-Edit-2-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4bn8bBz/0/NcdsVb2VRj4mFKDCDHpm3dnfDwPGsD8Bd95hmDrzb/S/_HF21791-Edit-2-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4bn8bBz/A",
+    "keywords": [
+      "HF21312",
+      "frontier life",
+      "cowboy art",
+      "cowboy painting art",
+      "cowboy portraits",
+      "wild west photography",
+      "western art",
+      "cowboy artwork",
+      "western fine art"
+    ],
+    "story": "This image embodies western art and cowboy artwork, captured by Wayne Heim in his signature style. It reflects frontier life with a touch of western fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 430
+  },
+  {
+    "id": "i-4XLSsnC",
+    "title": "The Essence Of Outlaw Portraits",
+    "description": "Immerse yourself in outlaw portraits with this stunning western canon by Wayne Heim. Capturing painterly cowboy portraits, fine art Western photography, and rugged spirit, it's a must-have for collectors of outlaw portraits. Including frontier life themes. © Wayne Heim",
+    "alt": "outlaw portraits in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/0/K9P3KhQn5FfHJCTTkLX5VTspNGPgK2DjJSqDk5qPc/XL/_HF21794-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/0/K9P3KhQn5FfHJCTTkLX5VTspNGPgK2DjJSqDk5qPc/XL/_HF21794-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/0/NNT47JNTKJ5qqsCNGQb4hp5pSMPkt5gvSxBSPBQSP/L/_HF21794-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/0/Lz2LPNpd9ndGmL2D3rxdFS7PtqVBQqzG6qSfFVggd/M/_HF21794-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/0/LC6P7MKNG9V53z646QxL4h5W9hRHq77cQXjpwczvk/S/_HF21794-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/A",
+    "keywords": [
+      "HF21312",
+      "outlaw portraits",
+      "western canon",
+      "painterly cowboy portraits",
+      "fine art Western photography",
+      "rugged spirit",
+      "frontier life",
+      "cowboy painting art",
+      "rustic charm",
+      "western landscapes fine art",
+      "frederic remington"
+    ],
+    "story": "Wayne Heim's exploration of cowboy painting art comes alive in this piece, showcasing rustic charm and western landscapes fine art. A testament to frederic remington in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 431
+  },
+  {
+    "id": "i-T7Sjp7D",
+    "title": "Cowboy Art Portrait",
+    "description": "Discover the cowboy art in this powerful powerful works of art by Wayne Heim. A compelling work that embodies western landscapes fine art, painterly cowboy portraits, and fine art Western photography. Featuring western cowboy art, perfect for art lovers seeking cowboy art to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's cowboy art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T7Sjp7D/0/MLk2mgHbX3LjWfpFXDk8DRJtDWnC69kWHzbqsLnxD/XL/_WHO8536-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T7Sjp7D/0/MLk2mgHbX3LjWfpFXDk8DRJtDWnC69kWHzbqsLnxD/XL/_WHO8536-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T7Sjp7D/0/MGQKwNstnwLQpkS87kR7hfBP67LjTcRx54vTKLnJK/L/_WHO8536-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T7Sjp7D/0/KjqnvXHRz6wLpdQNbNKxkM5RR2wpd5RcPqtsNqCZD/M/_WHO8536-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T7Sjp7D/0/NDsdTMfvxGDvcRZfW2vXVdWD4nJBL9k8JBqnVXWX9/S/_WHO8536-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T7Sjp7D/A",
+    "keywords": [
+      "HF21312",
+      "cowboy art",
+      "powerful works of art",
+      "western landscapes fine art",
+      "painterly cowboy portraits",
+      "fine art Western photography",
+      "western cowboy art",
+      "outlaw portraits",
+      "frontier life"
+    ],
+    "story": "This image embodies fine art Western photography and outlaw portraits, captured by Wayne Heim in his signature style. It reflects outlaw portraits with a touch of frontier life. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 432
+  },
+  {
+    "id": "i-mqDfN5z",
+    "title": "Rustic Charm And Cowboy Portraits",
+    "description": "Experience rustic charm through this evocative cowboy portraits from Wayne Heim's portfolio. This piece highlights cowboy painting art with frontier life, while conveying western landscapes fine art, ideal for those who appreciate rustic charm. Explore rugged spirit in fine art. © Wayne Heim",
+    "alt": "Fine art photography of rustic charm by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mqDfN5z/0/L2r8cg8mNj42GqbVR95PRhK9CtjMkZ5ptkRJ84FsK/XL/_WHO0893-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mqDfN5z/0/L2r8cg8mNj42GqbVR95PRhK9CtjMkZ5ptkRJ84FsK/XL/_WHO0893-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mqDfN5z/0/KTdxvL83MjJMCBTFjtbRfJfM6mpZT5svSVsVThvdj/L/_WHO0893-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mqDfN5z/0/KVC5pJDLr4nBMX65gWPc5sTcFtKPs2ctBSqnKDkBz/M/_WHO0893-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mqDfN5z/0/LpWH52gjNSdR3KPT2GBR4pr4h3cW4rgmkVF4HvDbq/S/_WHO0893-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mqDfN5z/A",
+    "keywords": [
+      "HF21312",
+      "rustic charm",
+      "cowboy portraits",
+      "cowboy painting art",
+      "frontier life",
+      "western landscapes fine art",
+      "rugged spirit",
+      "cowboy art"
+    ],
+    "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing cowboy portraits and cowboy art. A testament to cowboy art in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 433
+  },
+  {
+    "id": "i-RsLmsLZ",
+    "title": "Cowboy Art In Fine Art",
+    "description": "This cowboy art artwork by Wayne Heim showcases cowboy painting art in a western landscapes fine art style. Reflecting historic western prints, Western cowboys, and cowboy art, it's suited for admirers of cowboy painting art. With Western cowboys elements. © Wayne Heim",
+    "alt": "Fine art photography of cowboy art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/KnvBmX4rj79BPNfL7Zw5SLJq34CMwKZntgL7fP6bp/XL/_WHO0893-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/KnvBmX4rj79BPNfL7Zw5SLJq34CMwKZntgL7fP6bp/XL/_WHO0893-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/MVNkFDbDmWwcr3t4dFp7KkCcqrQWW8tSPMLnJVzCS/L/_WHO0893-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/LbhxG2xHSpf47zKppJb6wTS2Trw52QhsMKNzq6ZRK/M/_WHO0893-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/NCjh3gvZwb2GQkj99Xr3nqqJPNq2H8xvpQtQvPQ3t/S/_WHO0893-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/A",
+    "keywords": [
+      "HF21312",
+      "cowboy art",
+      "cowboy painting art",
+      "western landscapes fine art",
+      "historic western prints",
+      "Western cowboys",
+      "western canon"
+    ],
+    "story": "Wayne Heim's exploration of historic western prints comes alive in this piece, showcasing Western cowboys and cowboy art. A testament to western canon in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 434
+  },
+  {
+    "id": "i-cnqWH7k",
+    "title": "The Essence Of Outlaw Portraits",
+    "description": "Discover the outlaw portraits in this powerful frederic remington by Wayne Heim. A compelling work that embodies western fine art, western canon, and western fine art. Featuring cowboy portraits, perfect for art lovers seeking outlaw portraits to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's outlaw portraits artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cnqWH7k/0/NXJXP8tvKKLLXF5jtCsX4tBMWrN4zWxQq8FkjMtzD/XL/_WHO2806-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cnqWH7k/0/NXJXP8tvKKLLXF5jtCsX4tBMWrN4zWxQq8FkjMtzD/XL/_WHO2806-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cnqWH7k/0/NXJXP8tvKKLLXF5jtCsX4tBMWrN4zWxQq8FkjMtzD/XL/_WHO2806-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cnqWH7k/0/NPbPnv37S2P6RwQMN5W8nPBf4wf4ZHS5NbkkKhPbJ/L/_WHO2806-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cnqWH7k/0/L2ZwFRRZZ7bF2BpPrFKwF2578BVFvVttLsPCSGHN5/S/_WHO2806-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cnqWH7k/A",
+    "keywords": [
+      "HF21312",
+      "outlaw portraits",
+      "frederic remington",
+      "western fine art",
+      "western canon",
+      "cowboy portraits",
+      "western landscapes fine art",
+      "rugged spirit"
+    ],
+    "story": "This image embodies western landscapes fine art and rugged spirit, captured by Wayne Heim in his signature style. It reflects western canon with a touch of frederic remington. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 435
+  },
+  {
+    "id": "i-qCNGgfg",
+    "title": "Cowboy Art Portrait",
+    "description": "Wayne Heim's cowboy art captures the spirit of cowboy portraits in this cowboy portraits image. Featuring outlaw portraits, cowboy portraits, and cowboy art, it's ideal for cowboy portraits enthusiasts. Discover cowboy portraits in photography. © Wayne Heim",
+    "alt": "Fine art photography of cowboy art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LJ8GW9rtbfR5b2Rc2WF6RZLsTSM27XGhkrG4VcFzq/L/_HF24853-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/L3wRZfcm7Vch25GQb79Df9mGGQ3bBkB3XQ3htdvG7/S/_HF24853-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/A",
+    "keywords": [
+      "HF21312",
+      "cowboy art",
+      "cowboy portraits",
+      "outlaw portraits",
+      "western canon",
+      "rustic charm"
+    ],
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing western canon and cowboy portraits. A testament to rustic charm in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 436
+  },
+  {
+    "id": "i-pVMMLRp",
+    "title": "Frontier Life Portrait",
+    "description": "Discover the frontier life in this powerful western canon by Wayne Heim. A compelling work that embodies cowboy art, painterly cowboy portraits, and western landscapes fine art. Featuring historic western prints, perfect for art lovers seeking frontier life to enhance their collection. © Wayne Heim",
+    "alt": "Fine art photography of frontier life by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/KrnMJj4SxjfDnBZN72Nz6nQTZ3xvCTFXwMBbCwLdg/XL/_WHO4172-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/KrnMJj4SxjfDnBZN72Nz6nQTZ3xvCTFXwMBbCwLdg/XL/_WHO4172-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/MRjtZ98RSSzjLTk6tbJzjMsPPvpP7bq45bC6WDgcw/L/_WHO4172-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/Lmns4ktTk5ksP8GWPCZppm7Js2FSrVjWVMF2W9jhX/M/_WHO4172-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/K2BZPcsBcf2n2mzS8CM8dchpL54Bkhq5RMLndqCMQ/S/_WHO4172-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/A",
+    "keywords": [
+      "HF21312",
+      "frontier life",
+      "western canon",
+      "cowboy art",
+      "painterly cowboy portraits",
+      "western landscapes fine art",
+      "historic western prints",
+      "cowboy artwork",
+      "wild west photography",
+      "western cowboy art"
+    ],
+    "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing wild west photography and western landscapes fine art. A testament to western cowboy art in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 437
+  },
+  {
+    "id": "i-66qXms3",
+    "title": "Fine Art Fine Art Western Photography",
+    "description": "Experience fine art Western photography through this evocative western cowboy art from Wayne Heim's portfolio. This piece highlights western landscapes fine art with frontier life, while conveying rustic charm, ideal for those who appreciate fine art Western photography. Explore historic western prints in fine art. © Wayne Heim",
+    "alt": "Wayne Heim's fine art Western photography artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-66qXms3/0/LBMmxLFhqzBRvPPMztxfb8KQhHNKSHKt5tkbG99bJ/XL/_WHO4978-Edit-Edit-Edit-3-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-66qXms3/0/LBMmxLFhqzBRvPPMztxfb8KQhHNKSHKt5tkbG99bJ/XL/_WHO4978-Edit-Edit-Edit-3-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-66qXms3/0/LBMmxLFhqzBRvPPMztxfb8KQhHNKSHKt5tkbG99bJ/XL/_WHO4978-Edit-Edit-Edit-3-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-66qXms3/0/MXGRFsv7x599QFMnKthKHSzcXXm6FdzjDx3p7QjDt/L/_WHO4978-Edit-Edit-Edit-3-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-66qXms3/0/Ngd24gJwLt4K6d4WqCPd5RDxzFkrGpLktdXxMKvbT/S/_WHO4978-Edit-Edit-Edit-3-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-66qXms3/A",
+    "keywords": [
+      "HF21312",
+      "fine art Western photography",
+      "western cowboy art",
+      "western landscapes fine art",
+      "frontier life",
+      "rustic charm",
+      "historic western prints",
+      "frederic remington"
+    ],
+    "story": "Wayne Heim's exploration of fine art Western photography comes alive in this piece, showcasing rustic charm and western cowboy art. A testament to frederic remington in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 438
+  },
+  {
+    "id": "i-WvWvS7x",
+    "title": "Capturing Cowboy Portraits",
+    "description": "Immerse yourself in cowboy portraits with this stunning Western cowboys by Wayne Heim. Capturing frontier life, historic western prints, and cowboy art, it's a must-have for collectors of cowboy portraits. Including cowboy painting art themes. © Wayne Heim",
+    "alt": "Fine art photography of cowboy portraits by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WvWvS7x/0/MngTVJxqks448KbPNr2B8TNShS75B99CCrXF95Krc/XL/_WHO5480-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WvWvS7x/0/MngTVJxqks448KbPNr2B8TNShS75B99CCrXF95Krc/XL/_WHO5480-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WvWvS7x/0/NWt8nCHCW6WQxkn7wfVVRDx9gkfhNFF8ncz6j4KR4/L/_WHO5480-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WvWvS7x/0/LhwWZQLFLQShJf2Jc4sTWrH4W5mtFP4tGp45FVjCp/M/_WHO5480-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WvWvS7x/0/K6ZvF9pHR83SMGMXHgvn5KPrf5q36BgWt5rfrtqQT/S/_WHO5480-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WvWvS7x/A",
+    "keywords": [
+      "HF21312",
+      "cowboy portraits",
+      "Western cowboys",
+      "frontier life",
+      "historic western prints",
+      "cowboy art",
+      "cowboy painting art",
+      "rugged spirit",
+      "western fine art",
+      "fine art Western photography"
+    ],
+    "story": "This image embodies rugged spirit and western fine art, captured by Wayne Heim in his signature style. It reflects western fine art with a touch of fine art Western photography. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 439
+  },
+  {
+    "id": "i-jXC3shm",
+    "title": "Cowboy Art Portrait",
+    "description": "Wayne Heim's cowboy art captures the spirit of fine art Western photography in this painterly cowboy portraits image. Featuring western landscapes fine art, western canon, and cowboy art, it's ideal for fine art Western photography enthusiasts. Discover fine art Western photography in photography. © Wayne Heim",
+    "alt": "cowboy art in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jXC3shm/0/MvKfmqbBvm5NCX4HNzTb5hPkkr4FZWLCnDsQps3ZP/XL/_WHO5028-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jXC3shm/0/MvKfmqbBvm5NCX4HNzTb5hPkkr4FZWLCnDsQps3ZP/XL/_WHO5028-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jXC3shm/0/MvKfmqbBvm5NCX4HNzTb5hPkkr4FZWLCnDsQps3ZP/XL/_WHO5028-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jXC3shm/0/MWktSBQ62ZfGNCmvmBXKjNDSBJxVGPVTzKCqvwR4k/L/_WHO5028-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jXC3shm/0/LC6QfrFVQnwBCkN8VrM5nZVGVDSt6wWcHVH9kPgMv/S/_WHO5028-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jXC3shm/A",
+    "keywords": [
+      "HF21312",
+      "cowboy art",
+      "fine art Western photography",
+      "painterly cowboy portraits",
+      "western landscapes fine art",
+      "western canon",
+      "frederic remington",
+      "outlaw portraits",
+      "historic western prints",
+      "powerful works of art"
+    ],
+    "story": "Wayne Heim's exploration of frederic remington comes alive in this piece, showcasing outlaw portraits and historic western prints. A testament to powerful works of art in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 440
+  },
+  {
+    "id": "i-FkPcsBV",
+    "title": "Fine Art Historic Western Prints",
+    "description": "Experience historic western prints through this evocative cowboy artwork from Wayne Heim's portfolio. This piece highlights western canon with cowboy artwork, while conveying rugged spirit, ideal for those who appreciate historic western prints. Explore frontier life in fine art. © Wayne Heim",
+    "alt": "Fine art photography of historic western prints by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/L7sDxLDkxRkJxNd8zncGt5stsSbZxm8fbqFcNRj4g/XL/_HF20929-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/L7sDxLDkxRkJxNd8zncGt5stsSbZxm8fbqFcNRj4g/XL/_HF20929-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/KzNJ7s367XKPQBZJSg9xtfPwH66SsFhPzCWnLnsWz/L/_HF20929-Edit-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/KKwmsxM8WTkCsh8nVcbSfQWHfMgXmvBjtDCzsTPRj/M/_HF20929-Edit-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/KXH4NsPxsXnpRRHMNxwwwvjJXNL74mBdRM5Wc3zXN/S/_HF20929-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/A",
+    "keywords": [
+      "HF21312",
+      "historic western prints",
+      "cowboy artwork",
+      "western canon",
+      "rugged spirit",
+      "frontier life",
+      "outlaw portraits"
+    ],
+    "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing frontier life and outlaw portraits. A testament to rugged spirit in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 441
   },
   {
     "id": "i-c4xWGxj",
@@ -15723,7 +18801,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 351
+    "sortOrder": 442
   },
   {
     "id": "i-nbvxtrR",
@@ -15780,7 +18858,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 352
+    "sortOrder": 443
   },
   {
     "id": "i-g9mC35L",
@@ -15837,7 +18915,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 353
+    "sortOrder": 444
   },
   {
     "id": "i-r9xCmwz",
@@ -15874,7 +18952,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 354
+    "sortOrder": 445
   },
   {
     "id": "i-4pVqPVw",
@@ -15931,7 +19009,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 355
+    "sortOrder": 446
   },
   {
     "id": "i-dXDLH7c",
@@ -15988,7 +19066,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 356
+    "sortOrder": 447
   },
   {
     "id": "i-mBD4f67",
@@ -16045,7 +19123,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 357
+    "sortOrder": 448
   },
   {
     "id": "i-Tcg3LZS",
@@ -16102,7 +19180,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 358
+    "sortOrder": 449
   },
   {
     "id": "i-vhGcpWV",
@@ -16160,7 +19238,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 359
+    "sortOrder": 450
   },
   {
     "id": "i-6pCLC4L",
@@ -16217,6 +19295,6 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 360
+    "sortOrder": 451
   }
 ];
