@@ -30,25 +30,51 @@ const entranceDataModules = import.meta.glob('../../data/**/*EntranceData.ts', {
 // ✅ Try to find matching EntranceData for this gallery
 const pathParts = datasetPathRaw.split("/").filter(Boolean);
 const galleryFolder = pathParts.slice(0, -1).join("/"); // e.g., "Galleries/Painterly.../Western-Cowboy-Portraits"
-const galleryName_raw = pathParts[pathParts.length - 1] || ""; // e.g., "Color"
-const parentName = pathParts[pathParts.length - 2] || ""; // e.g., "Western-Cowboy-Portraits"
+const galleryName_raw = pathParts[pathParts.length - 1] || ""; // e.g., "Color", "Black-White", "NA-Color"
 
-// Build possible EntranceData file names to look for
-const possibleNames = [
-  `${galleryName_raw.replace(/-/g, "")}EntranceData.ts`,
-  `${parentName.replace(/-/g, "")}${galleryName_raw.replace(/-/g, "")}EntranceData.ts`,
-  `${galleryName_raw}EntranceData.ts`,
-  `NA-EntranceData.ts`,
-];
+// Normalize gallery name for matching (remove dashes, lowercase)
+const normalizedGalleryName = galleryName_raw.replace(/-/g, "").toLowerCase();
 
-// Find matching module
+// Build search terms from the gallery name - prioritize the full name and first part
+// e.g., "NA-Color" → primary: "na", full: "nacolor"  
+// e.g., "Black-White" → primary: "bw", full: "blackwhite"
+const nameParts = galleryName_raw.split("-").map(p => p.toLowerCase());
+const primaryTerm = nameParts[0]; // First part is most specific (e.g., "na", "black")
+
+// Map common abbreviations
+const abbrevMap: Record<string, string> = { "black": "bw" };
+const primarySearch = abbrevMap[primaryTerm] || primaryTerm;
+
+// Find matching module - prioritize files that start with the primary term
+let bestMatch: { path: string; mod: any; priority: number } | null = null;
+
 for (const [modulePath, mod] of Object.entries(entranceDataModules)) {
+  // Must be in the right folder
+  if (!modulePath.includes(galleryFolder)) continue;
+  
   const fileName = modulePath.split("/").pop() || "";
-  // Check if this module is in the right folder and matches one of our expected names
-  if (modulePath.includes(galleryFolder) && possibleNames.includes(fileName)) {
-    entranceData = (mod as any)?.entranceData || (mod as any)?.BWEntranceData || (mod as any)?.default || null;
-    if (entranceData) break;
+  const normalizedFileName = fileName.replace(/-/g, "").replace(/entrancedata\.ts$/i, "").toLowerCase();
+  
+  let priority = 0;
+  
+  // Highest priority: exact match with primary term at start
+  if (normalizedFileName === primarySearch) {
+    priority = 100;
+  } else if (normalizedFileName.startsWith(primarySearch)) {
+    priority = 50;
+  } else if (normalizedFileName.includes(primarySearch)) {
+    priority = 25;
+  } else if (normalizedFileName.includes(normalizedGalleryName)) {
+    priority = 10;
   }
+  
+  if (priority > 0 && (!bestMatch || priority > bestMatch.priority)) {
+    bestMatch = { path: modulePath, mod, priority };
+  }
+}
+
+if (bestMatch) {
+  entranceData = (bestMatch.mod as any)?.entranceData || (bestMatch.mod as any)?.default || null;
 }
 
 // ✅ Build path + naming
