@@ -93,17 +93,19 @@ const galleryPaths = Object.keys(galleryDataMap);
 
 const linkKeywords = (text: string) =>
   autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic);
+
+const blogBreadcrumb = `Other › <a href='/Other/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › 10 O'Clock Staging`;
 ---
 
 <BaseLayout
-  title="Inside the Frame: 10 O’Clock Staging"
+  title="Inside the Frame: 10 O'Clock Staging"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbsJSON}
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb="Other › Blog › 10 O’Clock Staging" />
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
     </div>
 
     <!-- ===================== -->

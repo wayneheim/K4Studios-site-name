@@ -88,6 +88,8 @@ const galleryPaths = Object.keys(galleryDataMap);
 
 const linkKeywords = (text: string) =>
   autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic);
+
+const blogBreadcrumb = `Other › <a href='/Other/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Dust or Desperation`;
 ---
 
 <BaseLayout
@@ -97,7 +99,7 @@ const linkKeywords = (text: string) =>
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb="Other › Blog › Dust or Desperation" />
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
     </div>
 
     <!-- ===================== -->
