@@ -29,6 +29,17 @@ export default function GalleryLightbox({ datasetPath = "", showHeader = true })
   const [items, setItems] = useState([]);
   const [hoveredId, setHoveredId] = useState(null);
   const [activeId, setActiveId] = useState(null);
+  const [activeRowIds, setActiveRowIds] = useState(new Set());
+  const [isMobile, setIsMobile] = useState(false);
+  const gridRef = React.useRef(null);
+
+  // Detect mobile view
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // --- capture ?dataset= param or prop
   useEffect(() => {
@@ -242,14 +253,56 @@ export default function GalleryLightbox({ datasetPath = "", showHeader = true })
       )}
 
       {/* ✅ Grid */}
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(210px,1fr))] gap-5 px-10 max-w-[1600px] mx-auto justify-center">
+      <div 
+        ref={gridRef}
+        className="grid grid-cols-[repeat(auto-fill,minmax(210px,1fr))] gap-5 px-10 max-w-[1600px] mx-auto justify-center"
+        onMouseLeave={() => {
+          setTimeout(() => setActiveRowIds(new Set()), 400);
+        }}
+      >
         {items.map((item, idx) => {
-          const isExpanded = activeId === item.id;
+          const isRowActive = activeRowIds.has(item.id);
           const linkUrl = getGalleryUrl(item.id);
+          
+          // Row detection on hover
+          const handleCardHover = (e) => {
+            const card = e.currentTarget;
+            const grid = gridRef.current;
+            if (!grid) return;
+            
+            const cardTop = card.getBoundingClientRect().top;
+            const allCards = grid.querySelectorAll('[data-card-id]');
+            const rowIds = new Set();
+            
+            allCards.forEach(c => {
+              const cTop = c.getBoundingClientRect().top;
+              if (Math.abs(cTop - cardTop) < 20) {
+                rowIds.add(c.dataset.cardId);
+              }
+            });
+            
+            setActiveRowIds(rowIds);
+            setHoveredId(item.id);
+          };
+          
+          const isHovered = hoveredId === item.id;
+          
           return (
             <div
               key={item.id}
-              className="relative border rounded-lg bg-white overflow-hidden shadow-sm transition-all duration-500 ease-out"
+              data-card-id={item.id}
+              onMouseEnter={handleCardHover}
+              onMouseLeave={() => setHoveredId(null)}
+              className="relative rounded-lg bg-white overflow-hidden border border-gray-200"
+              style={{
+                transform: isRowActive ? 'scale(1.02)' : 'scale(1)',
+                boxShadow: isHovered 
+                  ? '0 0 0 3px rgba(184, 134, 11, 0.5), 0 8px 20px rgba(0,0,0,.15)' 
+                  : isRowActive 
+                    ? '0 8px 20px rgba(0,0,0,.15)' 
+                    : '0 2px 5px rgba(0,0,0,.1)',
+                transition: 'transform 0.7s ease-in-out, box-shadow 0.15s ease-out',
+              }}
             >
               {/* Image link trigger */}
               <a
@@ -257,43 +310,33 @@ export default function GalleryLightbox({ datasetPath = "", showHeader = true })
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block overflow-hidden cursor-pointer"
-                onMouseEnter={() => setHoveredId(item.id)}
-                onMouseLeave={() => setHoveredId(null)}
-                style={{
-                  transition: "all 0.6s cubic-bezier(0.25, 1, 0.3, 1)",
-                  background: isExpanded ? "#000" : "transparent",
-                }}
               >
                 <img
                   src={pickImage(item)}
                   alt={item.alt || item.title || ""}
-                  className="w-full object-cover rounded-t-lg transition-all duration-[700ms] ease-out"
+                  className="w-full rounded-t-lg"
                   style={{
-                    transform: isExpanded ? "scale(1.03)" : "scale(1)",
-                    objectFit: isExpanded ? "contain" : "cover",
-                    maxHeight: isExpanded ? "600px" : "144px",
-                    transition:
-                      "transform 0.7s ease-out, max-height 0.7s ease-out, object-fit 0.7s ease-out",
+                    transform: isRowActive && !isMobile ? "scale(1.05)" : "scale(1)",
+                    maxHeight: isMobile ? "none" : (isRowActive ? "280px" : "144px"),
+                    objectFit: isMobile ? "contain" : "cover",
+                    transition: 'all 0.7s ease-in-out',
                   }}
                 />
               </a>
 
               {/* Title + Story */}
               <div
-                className="p-3 transition-all duration-700 ease-out overflow-hidden"
+                className="p-3 overflow-hidden"
                 style={{
-                  maxHeight: isExpanded ? "400px" : "100px",
+                  maxHeight: isMobile ? "none" : (isRowActive ? "200px" : "100px"),
+                  transition: 'all 0.7s ease-in-out',
                 }}
               >
                 <div className="text-xs text-gray-600 mb-1">#{idx + 1}</div>
                 <div className="font-bold text-sm leading-tight mb-1">
                   {item.title || "Untitled"}
                 </div>
-                <div
-                  className={`text-sm text-gray-700 transition-all duration-700 ease-out ${
-                    isExpanded ? "line-clamp-none" : "line-clamp-2"
-                  }`}
-                >
+                <div className={`text-sm text-gray-700 ${isMobile ? '' : 'line-clamp-2'}`}>
                   {item.story || ""}
                 </div>
               </div>
