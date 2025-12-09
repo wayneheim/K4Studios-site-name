@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { themes } from "@/data/themes/themes.mjs";
 
 /**
@@ -8,7 +8,6 @@ import { themes } from "@/data/themes/themes.mjs";
  */
 export default function ThemeBlock({ galleryKey }) {
   const [active, setActive] = useState(null);
-  const [galleryDataCache, setGalleryDataCache] = useState({});
 
   // Filter themes that match this gallery's dataset path
   // galleryKey might be a URL path like "/Galleries/Painterly-.../Western-Cowboy-Portraits"
@@ -46,37 +45,6 @@ export default function ThemeBlock({ galleryKey }) {
     
     return match;
   });
-
-  // Load gallery data for each theme's dataset
-  const getGalleryData = async (datasetPath) => {
-    if (galleryDataCache[datasetPath]) return galleryDataCache[datasetPath];
-    
-    try {
-      // Convert dataset path to import path
-      // datasetPath is like "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
-      // Import path should be "../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      const importPath = datasetPath.replace(/^src\/data\/Galleries\//, '../data/Galleries/').replace(/\.mjs$/, '');
-      const module = await import(/* @vite-ignore */ importPath);
-      const data = module.galleryData || [];
-      setGalleryDataCache(prev => ({ ...prev, [datasetPath]: data }));
-      return data;
-    } catch (error) {
-      console.error('Failed to load gallery data for', datasetPath, error);
-      return [];
-    }
-  };
-
-  // Load data for all themes
-  useEffect(() => {
-    const loadData = async () => {
-      for (const t of galleryThemes) {
-        if (t.dataset && !galleryDataCache[t.dataset]) {
-          await getGalleryData(t.dataset);
-        }
-      }
-    };
-    loadData();
-  }, [galleryThemes]);
 
   if (!galleryThemes.length) return null;
 
@@ -146,22 +114,12 @@ export default function ThemeBlock({ galleryKey }) {
           alignItems: "center",
         }}>
           {galleryThemes.map((t) => {
-            // Get gallery data for this theme's dataset
-            const themeGalleryData = galleryDataCache[t.dataset] || [];
-            
-            // Find the first image in this gallery that belongs to this theme
-            // Images have themes: { "slug": orderNumber }
-            const themedImages = themeGalleryData
-              .filter(img => img && img.id && img.id !== "i-k4studios" && img.themes && typeof img.themes[t.slug] !== "undefined")
-              .sort((a, b) => (a.themes?.[t.slug] ?? 9999) - (b.themes?.[t.slug] ?? 9999));
-            
-            const firstThemedImage = themedImages[0];
-            
             // Build the theme URL - navigate to the first themed image with theme filter
             // Use the theme's dataset path to construct the correct gallery URL
+            // Use pre-stored firstImage from theme registry (no async loading needed)
             const datasetPath = t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/\.mjs$/, '');
-            const themeUrl = firstThemedImage 
-              ? `${datasetPath}/${firstThemedImage.id}?theme=${t.slug}`
+            const themeUrl = t.firstImage 
+              ? `${datasetPath}/${t.firstImage}?theme=${t.slug}`
               : `${datasetPath}?theme=${t.slug}`;
             
             return (

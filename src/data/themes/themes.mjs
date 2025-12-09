@@ -31,6 +31,7 @@ export const themes = [
     "description": "Ride like the wind! Images of cowboys, and their trusty horses.",
     "visible": true,
     "imageCount": 85,
+    "firstImage": "i-7Mzzbvp",
     "createdAt": "2025-12-07T03:38:46.821Z",
     "updatedAt": "2025-12-07T03:38:46.821Z"
   },
@@ -41,6 +42,7 @@ export const themes = [
     "description": "View images of wild west cowboys with their trusty horses",
     "visible": true,
     "imageCount": 16,
+    "firstImage": "i-kxnK2MM",
     "createdAt": "2025-12-07T04:08:17.039Z",
     "updatedAt": "2025-12-07T04:38:21.750Z"
   },
@@ -51,6 +53,7 @@ export const themes = [
     "description": "WWII tanks in action.",
     "visible": true,
     "imageCount": 19,
+    "firstImage": "i-pd3hvNk",
     "createdAt": "2025-12-07T04:12:27.519Z",
     "updatedAt": "2025-12-07T04:12:27.519Z"
   }

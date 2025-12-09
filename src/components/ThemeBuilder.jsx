@@ -666,6 +666,7 @@ export default function ThemeBuilder() {
       description: themeDescription,
       visible: themeVisible,
       imageCount: reorderItems.length, // track count for dropdown display
+      firstImage: reorderItems[0]?.id || null, // first image ID for direct linking
       createdAt: existingTheme?.createdAt || now,
       updatedAt: now,
     };
