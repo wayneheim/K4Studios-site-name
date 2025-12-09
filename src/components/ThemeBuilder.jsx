@@ -268,6 +268,9 @@ export default function ThemeBuilder() {
   const [thumb, setThumb] = useState(180);
   const [showSelectedOnly, setShowSelectedOnly] = useState(false);
 
+  // Context menu state for reorder mode
+  const [contextMenu, setContextMenu] = useState(null); // { x, y, idx, itemId }
+
   // Backup state (for BOTH themes & dataset)
   const [backupMade, setBackupMade] = useState(false);
   const [skipBackupPrompt, setSkipBackupPrompt] = useState(false);
@@ -486,6 +489,26 @@ export default function ThemeBuilder() {
 
   function moveReorder(fromIdx, toIdx) {
     setReorderItems((arr) => arrayMove(arr, fromIdx, toIdx));
+  }
+
+  function removeFromReorder(idx) {
+    const item = reorderItems[idx];
+    if (!item) return;
+    // Remove from reorderItems
+    setReorderItems((arr) => arr.filter((_, i) => i !== idx));
+    // Also remove from selectedIds so it's unselected if user goes back
+    setSelectedIds((ids) => ids.filter((id) => id !== item.id));
+    setContextMenu(null);
+    note(`Removed: ${item.id}`);
+  }
+
+  function handleContextMenu(e, idx, itemId) {
+    e.preventDefault();
+    setContextMenu({ x: e.clientX, y: e.clientY, idx, itemId });
+  }
+
+  function closeContextMenu() {
+    setContextMenu(null);
   }
 
   /* ========= Backup handling ========= */
@@ -1302,7 +1325,7 @@ export default function ThemeBuilder() {
 
       {/* STEP 4: Reorder */}
       {step === "reorder" && (
-        <div className="space-y-4">
+        <div className="space-y-4" onClick={closeContextMenu}>
           <div className="flex items-center justify-between mb-2">
             <div>
               <div className="font-semibold">
@@ -1342,8 +1365,9 @@ export default function ThemeBuilder() {
                       moveReorder(from, to);
                     }
                   }}
+                  onContextMenu={(e) => handleContextMenu(e, idx, it.id)}
                   className="relative border rounded-md bg-white overflow-hidden shadow-sm cursor-move"
-                  title={`#${idx + 1} – ${it.id}`}
+                  title={`#${idx + 1} – ${it.id} (right-click to remove)`}
                 >
                   {img ? (
                     <img
@@ -1370,6 +1394,27 @@ export default function ThemeBuilder() {
               );
             })}
           </div>
+
+          {/* Context menu for right-click remove */}
+          {contextMenu && (
+            <div
+              style={{
+                position: "fixed",
+                top: contextMenu.y,
+                left: contextMenu.x,
+                zIndex: 9999,
+              }}
+              className="bg-white border border-gray-300 rounded-md shadow-lg py-1 min-w-[140px]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => removeFromReorder(contextMenu.idx)}
+                className="w-full text-left px-3 py-1.5 text-sm hover:bg-red-50 text-red-600 flex items-center gap-2"
+              >
+                🗑️ Remove from Theme
+              </button>
+            </div>
+          )}
 
           <div className="flex justify-between mt-4">
             <button

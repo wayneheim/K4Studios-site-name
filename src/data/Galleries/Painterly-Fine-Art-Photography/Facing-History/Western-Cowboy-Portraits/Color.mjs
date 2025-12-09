@@ -58,7 +58,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 0
+    "sortOrder": 0,
+    "themes": {
+      "sketches-of-legends": 0,
+      "whispering-reflection": 2
+    },
+    "contentSource": "human"
   },
   {
     "id": "i-44jcjTQ",
@@ -72,7 +77,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MLDCZF8g9LJw4tnMkbfDfmRn95CLTpQtGvBhbzGrt/S/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/A",
-
     "keywords": [
       "western fine art photography",
       "color western portrait",
@@ -95,18 +99,21 @@ export const galleryData = [
       "western decor",
       "tense moment"
     ],
-
     "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!",
     "notes": "The off-frame tension is pure storytelling—anchored by the rifle’s diagonal and resolved by the window frame’s vertical pull. The light carves across rough wool and weathered timber like a chiaroscuro etching, revealing the figure not as staged drama, but as lived consequence.\n\nThis is painterly photography with muscle: sculpted tonality, smart restraint, and tight composition that favors shape and story over spectacle. The bucket in the foreground subtly expands scale and texture while avoiding visual clutter. In a tradition that nods to Remington’s interiors and Wyeth’s emotional stillness, this image holds the moment between breath and action. A study in edge, mood, and memory—crafted, not captured.",
     "rating": 5,
-
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-
     "visibility": "show",
     "sortOrder": 1,
-    contentSource: "human"
+    "themes": {
+      "firelight-shadow": 0,
+      "law-outlaws": 0,
+      "sketches-of-legends": 1,
+      "whispering-reflection": 1
+    },
+    "contentSource": "human"
   },
   {
     "id": "i-B7ZSdfs",
@@ -120,7 +127,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/KxttDrjkvSkZd4x5VdfzRgHH8bX9FxNwBzzPwtnFL/S/_HF21354-1220-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/A",
-
     "keywords": [
       "HF23312",
       "1246",
@@ -133,19 +139,21 @@ export const galleryData = [
       "western fine art",
       "western landscapes fine art"
     ],
-
     "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part.",
     "notes": "“Till Death Do Us Part” distills one of the most intimate and human moments in the Western canon: the quiet intersection of love, mortality, and devotion on the frontier. Lantern light pools gently across the figures, sculpting the scene in warm, painterly tones that recall the emotional restraint of Wyeth and the narrative weight of classic American illustration.\n\nThe composition anchors the viewer in the closeness of the couple—their faces pressed together, hands intertwined—while the darkened edges of the frame suggest the encroaching uncertainty beyond their small circle of light. The textures of worn fabric, rough wood, and soft illumination create a tactile sense of place, grounding the scene in lived experience rather than myth. What elevates the work is its sincerity: a portrayal of frontier hardship not as spectacle, but as a shared human passage. It offers collectors a piece of Western storytelling that is both timeless and profoundly intimate.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 2,
-
     "themes": {
-      "women-of-the-west": 0
+      "women-of-the-west": 0,
+      "firelight-shadow": 1,
+      "frontier-women": 0,
+      "hardship-sorrow": 0,
+      "love-goodbye": 0,
+      "whispering-reflection": 0
     },
-
-    contentSource: "human"
+    "contentSource": "human"
   },
   {
     "id": "i-wdF6Hw3",
@@ -177,7 +185,11 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    "themes": {
+      "firelight-shadow": 2,
+      "whispering-reflection": 3
+    }
   },
   {
     "id": "i-bq4FKvX",
@@ -208,7 +220,11 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    "themes": {
+      "sketches-of-legends": 2,
+      "whispering-reflection": 4
+    }
   },
   {
     "id": "i-7Mzzbvp",
@@ -237,7 +253,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 5,
     "themes": {
-      "cowboys-and-horses": 0
+      "cowboys-and-horses": 0,
+      "dust-thunder": 2
     }
   },
   {
@@ -283,7 +300,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NGQsw4rHLT2s4C7L5q748gbL35CdBsNBZ8mPvxHNr/S/_WHO5325-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/A",
-
     "keywords": [
       "western fine art photography",
       "cowboy camaraderie",
@@ -295,20 +311,18 @@ export const galleryData = [
       "frontier friendship",
       "museum quality western decor"
     ],
-
     "story": "They’d ridden half the country together and still managed to find something to laugh about on every trail. A shared joke, a jab about last night’s poker hand, maybe just the relief of another sunrise where both were still in the saddle. \n\nThe horses knew the rhythm, the men knew each other, and the land stretched out ahead like an old friend welcoming them back.\n\nSome moments aren’t about the miles—  \nthey’re about who rides beside you.",
     "notes": "Heim’s ability to capture authentic human connection sets this piece apart. The composition embraces motion without sacrificing clarity, and the interplay of warm highlights and textural layering channels both Remington’s kinetic storytelling and the tonal sophistication of modern cinematic portraiture. The riders’ expressions anchor the image, offering collectors a rare blend of narrative charm, technical craft, and emotional resonance. A standout work for those who appreciate Western art with personality and heart.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 7,
-
     "themes": {
       "cowboys-with-horses": 3,
-      "cowboys-and-horses": 2
+      "cowboys-and-horses": 2,
+      "law-outlaws": 2
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-Wx5scCf",
@@ -322,7 +336,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LkH4jxcHjsmTVJD9xkXmZVXcmZttrXnKLnZpHtCDn/S/_HF25859-1151-1156-1159-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/A",
-
     "keywords": [
       "western fine art photography",
       "frontier scouts",
@@ -335,14 +348,16 @@ export const galleryData = [
       "tactical western moment",
       "museum quality western decor"
     ],
-
     "story": "They moved like ghosts through the broken hills, each man reading the land in his own practiced way. A lifted hand, a shift of weight, a glance toward the treeline—signals shaped by hard miles and harder winters. \n\nFrom atop the sandstone ridge, the lookout caught the faintest motion in the distance, something just out of place. Below him, the others waited, breath slowed, senses sharpened. Whatever was coming, they’d face it together, the ridge at their back and the open world before them.",
     "notes": "Heim composes this piece with a strong diagonal flow, guiding the viewer’s eye from the lookout figure down through the mid-slope scout and finally toward the motion of the man descending the ridge. The layered geography and controlled palette recall the narrative staging of classic Western illustrators while embracing the atmospheric depth of pictorialist photography. This image stands out not only for its dramatic storytelling but for its structural precision—each figure contributing to a unified tension that rewards close, repeated viewing. A powerful addition for collectors of historically grounded Western art.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 8,
-    contentSource: "ai"
+    "themes": {
+      "dust-thunder": 5
+    },
+    "contentSource": "ai"
   },
   {
     "id": "i-4zxZQQ2",
@@ -376,7 +391,8 @@ export const galleryData = [
     "themes": {
       "women-of-the-west": 66,
       "cowboys-with-horses": 1,
-      "cowboys-and-horses": 1
+      "cowboys-and-horses": 1,
+      "frontier-women": 1
     }
   },
   {
@@ -391,7 +407,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/LFmWdZjM6Zh9PTLLkD6HJqfwPJBjQ2sLZHVH5H8pK/S/_HF27252-1165-1166-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/A",
-
     "keywords": [
       "western fine art photography",
       "cowboy on horseback",
@@ -403,20 +418,18 @@ export const galleryData = [
       "sunrise cowboy moment",
       "museum quality western decor"
     ],
-
     "story": "He urged the horse forward, cutting through the shallows as the morning light broke across the plains. The cold spray hit his boots, the reins pulled tight in his hands, but his focus never wavered. Out here, speed wasn’t recklessness—it was intent, a declaration that some days demanded motion before thought.\n\nThe world blurred behind him.  \nThe day waited ahead.\n\nAnd in the space between, he felt entirely alive.",
     "notes": "Heim excels at orchestrating motion within a controlled painterly palette. The rising spray forms a natural foreground frame, while the rider’s forward lean and the horse’s extended stride guide the viewer’s eye into the open landscape. The tonal interplay between warm highlights and cool shadows evokes the dynamic lighting often found in Remington’s action studies, yet the atmospheric softness grounds the image in a distinctly modern fine art sensibility. This piece stands as a testament to Heim’s ability to merge kinetic storytelling with refined compositional craft.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 10,
-
     "themes": {
       "cowboys-with-horses": 2,
-      "cowboys-and-horses": 3
+      "cowboys-and-horses": 3,
+      "law-outlaws": 1
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-gxMVNh3",
@@ -454,7 +467,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 11,
     "themes": {
-      "women-of-the-west": 40
+      "women-of-the-west": 40,
+      "love-goodbye": 1,
+      "whispering-reflection": 5
     }
   },
   {
@@ -469,7 +484,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/A",
-
     "keywords": [
       "western fine art photography",
       "indigenous scout portrait",
@@ -481,14 +495,13 @@ export const galleryData = [
       "frontier companionship",
       "museum quality western decor"
     ],
-
     "story": "They stood together at the edge of the fading storm, two men shaped by the land yet marked by different histories. No blood bound them, only miles—long miles—and the kind of trust that takes years of shared hardship to earn.\n\nThe younger man tilted his head, listening to something only he could hear in the wind. The older one waited, patient, knowing his partner’s instincts had saved them more than once.\n\nDifferent paths.  \nSame horizon.  \nA loyalty carved from earth, weather, and time.",
     "notes": "This piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly, historically grounded aesthetic. The triangular composition—horse, Indigenous scout, trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance, making it a standout selection for collectors who appreciate Western art that honors story, lineage, and human connection.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 12,
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-DczpNpH",
@@ -523,7 +536,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 13,
     "themes": {
-      "women-of-the-west": 1
+      "women-of-the-west": 1,
+      "frontier-women": 2,
+      "law-outlaws": 3,
+      "sketches-of-legends": 4
     }
   },
   {
@@ -559,7 +575,12 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    "themes": {
+      "firelight-shadow": 3,
+      "law-outlaws": 4,
+      "sketches-of-legends": 3
+    }
   },
   {
     "id": "i-NdQnj6P",
@@ -573,7 +594,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/LJmRkvHxZ6p5xD9hqrHKLBGvp2NpzfkNV3FBcTvT9/S/_WHO8015-955-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/A",
-
     "keywords": [
       "western fine art photography",
       "cowboy rest scene",
@@ -585,14 +605,17 @@ export const galleryData = [
       "cowboy realism",
       "museum quality western decor"
     ],
-
     "story": "The day had finally loosened its grip. They sat in the brittle grass, letting the last heat of sunlight settle into their shoulders. No hurry now—just the low hum of crickets, a cup of something warm, and the comfort that comes from riding beside a man who understands the weight of silence.\n\nTomorrow would demand plenty.  \nTonight asked nothing at all.",
     "notes": "Heim’s mastery lies in elevating understated moments into emotionally resonant narratives. Here, the soft interplay of warm highlights and cool shadows evokes the tonal sensitivity of early pictorialist photographers, while the worn textures and relaxed posture of the figures ground the image in lived frontier experience. The composition’s gentle downward sweep leads the eye into the shared space between the two men, reinforcing the theme of quiet connection. A refined, mood-rich addition to any Western fine art collection.",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 15,
-    contentSource: "ai"
+    "themes": {
+      "firelight-shadow": 4,
+      "whispering-reflection": 6
+    },
+    "contentSource": "ai"
   },
   {
     "id": "i-3SxncXS",
@@ -606,7 +629,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/LDxsNTKCwHFrxfFQQBMSh4mQg76mbrkjHrxbwfdP8/S/_HF29303-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/A",
-
     "keywords": [
       "western fine art photography",
       "elder cowboy portrait",
@@ -618,14 +640,17 @@ export const galleryData = [
       "rugged frontier wisdom",
       "museum quality western decor"
     ],
-
     "story": "He didn’t speak much, not because he lacked words, but because he carried too many. The land had carved its lessons deep into him—etched into the creases around his eyes, threaded through the long silver of his beard, whispered in every slow turn of his gaze.\n\nSome men grow older.  \nOthers become part of the horizon.\n\nHe was the latter.",
     "notes": "Heim brings remarkable dignity to this portrait through his orchestration of light, texture, and restraint. The softened background isolates the subject while allowing his layered expression to anchor the frame. The tonal palette recalls the muted warmth of classic Western painters, yet the intimate rendering of age and presence is distinctly Heim’s own. This work exemplifies the fusion of pictorialism and narrative portraiture, offering collectors a piece rich in character, authenticity, and emotional resonance.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 16,
-    contentSource: "ai"
+    "themes": {
+      "sketches-of-legends": 5,
+      "whispering-reflection": 7
+    },
+    "contentSource": "ai"
   },
   {
     "id": "i-pcP7hcf",
@@ -639,7 +664,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LxSSW8p9hBB23nSgpQM5dGhR3dsxWGJ5FRC8pW9Fr/S/_HF29399-1255-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/A",
-
     "keywords": [
       "western fine art photography",
       "frontier woman portrait",
@@ -651,19 +675,21 @@ export const galleryData = [
       "museum quality western decor",
       "feminine frontier story"
     ],
-
     "story": "She stood at the edge of the morning chill, shawl pulled close, watching the horizon soften beneath the rising sun. Life on the frontier had taught her patience—how to wait, how to endure, how to carry hope quietly in the space between heartbeats.\n\nWhatever she looked toward—memory or promise—it held her gently, the way light holds the first breath of a new day.",
     "notes": "Heim brings exceptional subtlety to this portrait, allowing mood and posture to communicate more powerfully than overt action. The soft gradient of morning light creates a natural halo that frames her silhouette, while the shawl’s muted pattern introduces gentle textural contrast. This piece echoes the sensitivity of early American realist painters, yet it remains distinctly modern in its emotional clarity. A standout work for collectors who appreciate nuanced, character-driven Western art.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 17,
-
     "themes": {
-      "women-of-the-west": 2
+      "women-of-the-west": 2,
+      "firelight-shadow": 5,
+      "frontier-women": 11,
+      "love-goodbye": 2,
+      "sketches-of-legends": 6,
+      "whispering-reflection": 8
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-qB47jJT",
@@ -677,7 +703,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/MvDxxrNrmMWCQjS9RMzdzmXBrF4xg838trkRvZvf9/S/_WHO7107-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/A",
-
     "keywords": [
       "western fine art photography",
       "frontier woman portrait",
@@ -689,19 +714,19 @@ export const galleryData = [
       "museum quality western decor",
       "feminine western story"
     ],
-
     "story": "She knelt in the tall grass, gloves still warm from the morning ride, as the horse lowered its head toward her. No words passed between them—none were needed. Trust like this is earned slowly, through steady hands, soft tones, and the kind of patience the frontier required of anyone who wished to belong to it.\n\nFor a breath, the world held still.  \nJust a woman, a horse, and a moment of shared calm.",
     "notes": "Heim’s command of atmosphere elevates this portrait from a simple interaction to an evocative study of relationship and restraint. The subdued palette allows the viewer’s attention to rest on the diagonal exchange between woman and horse, a compositional choice reminiscent of classical portraiture. The image balances softness and structure in a way that honors both subject and setting, making it a compelling addition to collections focused on narrative-rich Western art and the human–animal bond.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 18,
-
     "themes": {
-      "women-of-the-west": 5
+      "women-of-the-west": 5,
+      "frontier-women": 19,
+      "love-goodbye": 5,
+      "whispering-reflection": 12
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-rfFBRQM",
@@ -738,7 +763,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 19,
     "themes": {
-      "women-of-the-west": 4
+      "women-of-the-west": 4,
+      "frontier-women": 5,
+      "hardship-sorrow": 5,
+      "love-goodbye": 4,
+      "whispering-reflection": 11
     }
   },
   {
@@ -774,7 +803,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 20,
     "themes": {
-      "women-of-the-west": 3
+      "women-of-the-west": 3,
+      "frontier-women": 4,
+      "hardship-sorrow": 3,
+      "love-goodbye": 3
     }
   },
   {
@@ -789,7 +821,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/LtjDQhP9fB4wmHkdTNs9xkcjftqJpR5gmpb5wf5Ks/S/_HF26562-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/A",
-
     "keywords": [
       "western fine art photography",
       "cowboy riding fast",
@@ -801,20 +832,20 @@ export const galleryData = [
       "dramatic cowboy moment",
       "museum quality western decor"
     ],
-
     "story": "He rode like the land itself was calling him—leaned forward, jaw set, dust rising in a twisting tail behind the white horse beneath him. Whatever message he carried, whatever trouble stirred on the far ridge, he meant to meet it head-on. Out here, hesitation was the difference between return and regret.\n\nThe reins snapped tight.  \nThe wind tore past.  \nAnd the ground answered with thunder.",
     "notes": "Heim’s ability to capture motion with painterly restraint gives this image exceptional visual tension. The diagonal momentum of horse and rider creates a powerful compositional thrust, while the textured dust cloud adds atmospheric depth reminiscent of classic Western illustrators. The cool-gray tones of the horse against the warm earth tones generate a compelling chromatic contrast that heightens the sense of immediacy. This piece exemplifies Heim’s mastery of kinetic storytelling within a fine art framework.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 21,
-
     "themes": {
       "cowboys-with-horses": 4,
-      "cowboys-and-horses": 4
+      "cowboys-and-horses": 4,
+      "dust-thunder": 4,
+      "law-outlaws": 5,
+      "sketches-of-legends": 8
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-46kWCqc",
@@ -849,7 +880,11 @@ export const galleryData = [
     "sortOrder": 22,
     "themes": {
       "cowboys-with-horses": 5,
-      "cowboys-and-horses": 5
+      "cowboys-and-horses": 5,
+      "firelight-shadow": 6,
+      "law-outlaws": 6,
+      "sketches-of-legends": 7,
+      "whispering-reflection": 9
     }
   },
   {
@@ -864,7 +899,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/KvHcCRFwWwRGL8T8V4B53zjRkWjfDdLLLqv9cTRfv/S/_WHO5559-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/A",
-
     "keywords": [
       "western fine art photography",
       "cowboy and horses at river",
@@ -875,20 +909,18 @@ export const galleryData = [
       "frontier pastoral image",
       "museum quality western decor"
     ],
-
     "story": "He let the reins go slack as the horses stepped into the cool shallows, their reflections breaking softly in the moving water. After miles of dry wind and rising dust, this stretch of river felt like a small mercy—one the herd accepted without hesitation.\n\nThe mountains watched from a distance, the sky settling into a calm that only the open country truly knows. For the first time all day, he breathed easy.\n\nSome journeys aren’t measured in miles,  \nbut in moments of quiet like this.",
     "notes": "Heim’s composition emphasizes harmony between figure, herd, and landscape, using the reflective water as a natural visual anchor. The subtle interplay of warm and cool tones recalls the atmospheric sensibilities of early Western painters while maintaining the photographic clarity needed for fine art collectors. The depth cues leading from the foreground ripples to the distant mountains create a sense of vastness that is both peaceful and cinematic. A standout landscape narrative for collectors seeking contemplative Western works.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 23,
-
     "themes": {
       "cowboys-with-horses": 6,
-      "cowboys-and-horses": 7
+      "cowboys-and-horses": 7,
+      "whispering-reflection": 10
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-Nn7scqm",
@@ -922,7 +954,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 24,
     "themes": {
-      "women-of-the-west": 6
+      "women-of-the-west": 6,
+      "frontier-women": 7
     }
   },
   {
@@ -966,7 +999,12 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    "themes": {
+      "aces-smoke-whiskey": 21,
+      "dust-thunder": 6,
+      "frontier-women": 34
+    }
   },
   {
     "id": "i-9bgtdzf",
@@ -980,7 +1018,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9bgtdzf/1/K3Cb2HzJ6JSm47TpqSdtGHVjWQsLzMLX892gJKjnX/S/_HF21467-1224-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-9bgtdzf/A",
-
     "keywords": [
       "frontier childhood art",
       "western domestic scene",
@@ -991,19 +1028,18 @@ export const galleryData = [
       "historic cabin interior",
       "museum quality western fine art"
     ],
-
     "story": "She cupped her hands around the tiny flame, guarding it from the draft that slipped through the cabin boards. One small candle, one soft moment, after a long day of chores and cold wind. \n\nThe world outside was wide and wild, but here—lit by the glow of a single birthday treat—she let herself imagine something more. A hope. A dream whispered only to the flame before she breathed it out.\n\nSome wishes are too tender to speak aloud.",
     "notes": "Heim’s controlled use of lamplight creates a chiaroscuro effect reminiscent of classical portraiture, allowing the child’s expression to anchor the emotional narrative. The simplicity of the setting—tin plate, rough-hewn table, warm firelight—echoes the authenticity of frontier domestic life. This piece stands out for its quiet storytelling, offering collectors a rare glimpse into the tenderness and humanity behind the larger Western mythos.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 26,
-
     "themes": {
-      "women-of-the-west": 7
+      "women-of-the-west": 7,
+      "firelight-shadow": 7,
+      "frontier-women": 12
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-r5Pb7zJ",
@@ -1057,7 +1093,11 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    "themes": {
+      "law-outlaws": 7,
+      "whispering-reflection": 13
+    }
   },
   {
     "id": "i-6xn5rMd",
@@ -1089,7 +1129,11 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    "themes": {
+      "sketches-of-legends": 10,
+      "whispering-reflection": 14
+    }
   },
   {
     "id": "i-MvZxkQh",
@@ -1103,7 +1147,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/NhGBdrNCb5NSXJfXTjTj8pwsVdDgNDNjWqHxdkxj4/S/_HF24859-Edit-2-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/A",
-
     "keywords": [
       "mountain man artwork",
       "fur trade era art",
@@ -1114,14 +1157,16 @@ export const galleryData = [
       "painterly western photography",
       "frontier solitude artwork"
     ],
-
     "story": "Winter wind bit through the ridges, but he’d long since made peace with cold and silence.  \nA man learns to read the mountains the way others read scripture—by feel, by instinct, by the quiet warnings carried on the air.\n\nHe paused, listening.  \nSnow settling somewhere beyond the pines.  \nMaybe a deer. Maybe something else.\n\nUp here, a man’s only allies are awareness… and resolve sharpened by years of living between the known and the untamed.",
     "notes": "This portrait channels the lineage of early frontier painters—Bodmer, Russell’s trapper studies, and the rugged naturalism of the Taos school. Heim’s controlled tonal transitions echo classic oil techniques, lending depth to the textures of fur, hide, and weathered skin. The composition’s vertical lift, anchored by the rifle line, creates a sense of watchful vigilance. A defining piece for collectors interested in the mythic and historical foundations of the American West.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 29,
-    contentSource: "ai"
+    "themes": {
+      "sketches-of-legends": 9
+    },
+    "contentSource": "ai"
   },
   {
     "id": "i-5TGTZ9P",
@@ -1148,14 +1193,15 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing western fine art and rustic charm. A testament to rustic charm in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 30,
     "themes": {
       "cowboys-with-horses": 8,
       "cowboys-and-horses": 10
-    }
+    },
+    "contentSource": "ai"
   },
   {
     "id": "i-5rq7gcD",
@@ -1195,7 +1241,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 31,
     "themes": {
-      "women-of-the-west": 8
+      "women-of-the-west": 8,
+      "frontier-women": 10,
+      "love-goodbye": 6
     }
   },
   {
@@ -1253,7 +1301,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    "themes": {
+      "law-outlaws": 10
+    }
   },
   {
     "id": "i-n5BfXBm",
@@ -1323,7 +1374,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    "themes": {
+      "firelight-shadow": 8,
+      "law-outlaws": 8
+    }
   },
   {
     "id": "i-TwKFdjR",
@@ -1359,7 +1414,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    "themes": {
+      "law-outlaws": 9
+    }
   },
   {
     "id": "i-7mFGRtw",
@@ -1391,7 +1449,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    "themes": {
+      "aces-smoke-whiskey": 22,
+      "firelight-shadow": 9,
+      "law-outlaws": 11
+    }
   },
   {
     "id": "i-fM9qmKW",
@@ -1432,7 +1495,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 37
+    "sortOrder": 37,
+    "themes": {
+      "aces-smoke-whiskey": 11,
+      "sketches-of-legends": 12
+    }
   },
   {
     "id": "i-MHGPvcs",
@@ -1467,7 +1534,13 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    "themes": {
+      "aces-smoke-whiskey": 12,
+      "firelight-shadow": 11,
+      "law-outlaws": 12,
+      "sketches-of-legends": 11
+    }
   },
   {
     "id": "i-7VWX9vk",
@@ -1491,7 +1564,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 39,
     "themes": {
-      "cowboys-and-horses": 6
+      "cowboys-and-horses": 6,
+      "firelight-shadow": 10
     }
   },
   {
@@ -1647,7 +1721,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    "themes": {
+      "dust-thunder": 1
+    }
   },
   {
     "id": "i-rhvQkwh",
@@ -1704,7 +1781,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 44
+    "sortOrder": 44,
+    "themes": {
+      "sketches-of-legends": 18
+    }
   },
   {
     "id": "i-Vr8vzjt",
@@ -1738,7 +1818,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 45,
     "themes": {
-      "women-of-the-west": 65
+      "women-of-the-west": 65,
+      "firelight-shadow": 12,
+      "frontier-women": 13
     }
   },
   {
@@ -1781,7 +1863,10 @@ export const galleryData = [
     "sortOrder": 46,
     "themes": {
       "cowboys-with-horses": 9,
-      "cowboys-and-horses": 8
+      "cowboys-and-horses": 8,
+      "dust-thunder": 7,
+      "law-outlaws": 13,
+      "sketches-of-legends": 14
     }
   },
   {
@@ -1820,7 +1905,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 47,
     "themes": {
-      "cowboys-with-horses": 0
+      "cowboys-with-horses": 0,
+      "law-outlaws": 14,
+      "sketches-of-legends": 13
     }
   },
   {
@@ -1878,7 +1965,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    "themes": {
+      "hardship-sorrow": 6,
+      "sketches-of-legends": 17,
+      "whispering-reflection": 15
+    }
   },
   {
     "id": "i-QB4jLsH",
@@ -1912,7 +2004,11 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 49
+    "sortOrder": 49,
+    "themes": {
+      "dust-thunder": 8,
+      "law-outlaws": 15
+    }
   },
   {
     "id": "i-wfqSGcV",
@@ -1946,7 +2042,11 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    "themes": {
+      "firelight-shadow": 13,
+      "law-outlaws": 16
+    }
   },
   {
     "id": "i-VDLVwqr",
@@ -1986,7 +2086,12 @@ export const galleryData = [
     "visibility": "",
     "sortOrder": 51,
     "themes": {
-      "women-of-the-west": 9
+      "women-of-the-west": 9,
+      "firelight-shadow": 14,
+      "frontier-women": 14,
+      "hardship-sorrow": 7,
+      "love-goodbye": 7,
+      "whispering-reflection": 16
     }
   },
   {
@@ -2044,7 +2149,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    "themes": {
+      "aces-smoke-whiskey": 25,
+      "firelight-shadow": 15,
+      "whispering-reflection": 17
+    }
   },
   {
     "id": "i-HBRmWg4",
@@ -2076,7 +2186,12 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    "themes": {
+      "firelight-shadow": 16,
+      "hardship-sorrow": 8,
+      "whispering-reflection": 18
+    }
   },
   {
     "id": "i-mLPgSpC",
@@ -2133,7 +2248,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    "themes": {
+      "aces-smoke-whiskey": 4,
+      "firelight-shadow": 18,
+      "law-outlaws": 17
+    }
   },
   {
     "id": "i-hMXZ8Xh",
@@ -2190,7 +2310,14 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    "themes": {
+      "aces-smoke-whiskey": 15,
+      "firelight-shadow": 17,
+      "hardship-sorrow": 9,
+      "love-goodbye": 9,
+      "whispering-reflection": 19
+    }
   },
   {
     "id": "i-8rsG6P9",
@@ -2222,7 +2349,13 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    "themes": {
+      "frontier-women": 17,
+      "hardship-sorrow": 1,
+      "love-goodbye": 8,
+      "whispering-reflection": 20
+    }
   },
   {
     "id": "i-2D49wp7",
@@ -2255,7 +2388,8 @@ export const galleryData = [
     "sortOrder": 57,
     "themes": {
       "cowboys-with-horses": 10,
-      "cowboys-and-horses": 9
+      "cowboys-and-horses": 9,
+      "whispering-reflection": 21
     }
   },
   {
@@ -2288,7 +2422,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 58,
     "themes": {
-      "cowboys-and-horses": 13
+      "cowboys-and-horses": 13,
+      "whispering-reflection": 22
     }
   },
   {
@@ -2326,7 +2461,11 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    "themes": {
+      "firelight-shadow": 19,
+      "whispering-reflection": 23
+    }
   },
   {
     "id": "i-qVZ9m7j",
@@ -2383,7 +2522,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    "themes": {
+      "law-outlaws": 18,
+      "sketches-of-legends": 15
+    }
   },
   {
     "id": "i-JKnW497",
@@ -2422,7 +2565,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    "themes": {
+      "law-outlaws": 19,
+      "sketches-of-legends": 16
+    }
   },
   {
     "id": "i-5HpSkgR",
@@ -2453,7 +2600,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 62,
     "themes": {
-      "women-of-the-west": 10
+      "women-of-the-west": 10,
+      "frontier-women": 20,
+      "hardship-sorrow": 2
     }
   },
   {
@@ -2489,7 +2638,13 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 63,
+    "themes": {
+      "frontier-women": 21,
+      "hardship-sorrow": 10,
+      "love-goodbye": 10,
+      "whispering-reflection": 24
+    }
   },
   {
     "id": "i-LCspRF4",
@@ -2526,7 +2681,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 64,
+    "themes": {
+      "aces-smoke-whiskey": 16,
+      "firelight-shadow": 21,
+      "whispering-reflection": 25
+    }
   },
   {
     "id": "i-mpfG8XF",
@@ -2585,7 +2745,12 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 65,
     "themes": {
-      "women-of-the-west": 11
+      "women-of-the-west": 11,
+      "firelight-shadow": 20,
+      "frontier-women": 9,
+      "hardship-sorrow": 4,
+      "love-goodbye": 11,
+      "whispering-reflection": 26
     }
   },
   {
@@ -2622,7 +2787,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 66,
+    "themes": {
+      "aces-smoke-whiskey": 3,
+      "firelight-shadow": 22
+    }
   },
   {
     "id": "i-T7TFJX2",
@@ -2659,7 +2828,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 67,
+    "themes": {
+      "aces-smoke-whiskey": 0,
+      "firelight-shadow": 23,
+      "whispering-reflection": 27
+    }
   },
   {
     "id": "i-5FX3W9r",
@@ -2716,7 +2890,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 68,
+    "themes": {
+      "sketches-of-legends": 19
+    }
   },
   {
     "id": "i-Dw6Z8ff",
@@ -2774,7 +2951,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 69,
+    "themes": {
+      "aces-smoke-whiskey": 17,
+      "law-outlaws": 21,
+      "sketches-of-legends": 20,
+      "whispering-reflection": 28
+    }
   },
   {
     "id": "i-Rx5gLJz",
@@ -2831,7 +3014,14 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 70,
+    "themes": {
+      "aces-smoke-whiskey": 18,
+      "firelight-shadow": 24,
+      "law-outlaws": 20,
+      "sketches-of-legends": 21,
+      "whispering-reflection": 29
+    }
   },
   {
     "id": "i-7dCKHjg",
@@ -2863,7 +3053,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 71,
     "themes": {
-      "women-of-the-west": 12
+      "women-of-the-west": 12,
+      "frontier-women": 3,
+      "hardship-sorrow": 11,
+      "love-goodbye": 12,
+      "whispering-reflection": 30
     }
   },
   {
@@ -3017,7 +3211,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 75,
+    "themes": {
+      "dust-thunder": 10
+    }
   },
   {
     "id": "i-KVxkXrV",
@@ -3054,7 +3251,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 76,
+    "themes": {
+      "dust-thunder": 0,
+      "hardship-sorrow": 12,
+      "law-outlaws": 22
+    }
   },
   {
     "id": "i-sTnckb6",
@@ -3114,7 +3316,9 @@ export const galleryData = [
     "sortOrder": 77,
     "themes": {
       "cowboys-with-horses": 15,
-      "cowboys-and-horses": 17
+      "cowboys-and-horses": 17,
+      "dust-thunder": 12,
+      "law-outlaws": 23
     }
   },
   {
@@ -3159,7 +3363,8 @@ export const galleryData = [
     "themes": {
       "women-of-the-west": 39,
       "cowboys-with-horses": 14,
-      "cowboys-and-horses": 18
+      "cowboys-and-horses": 18,
+      "dust-thunder": 14
     }
   },
   {
@@ -3198,7 +3403,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 79,
+    "themes": {
+      "dust-thunder": 13
+    }
   },
   {
     "id": "i-KBNSftv",
@@ -3236,7 +3444,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 80,
+    "themes": {
+      "dust-thunder": 15,
+      "hardship-sorrow": 13,
+      "law-outlaws": 24,
+      "sketches-of-legends": 23
+    }
   },
   {
     "id": "i-MF3xPCZ",
@@ -3274,7 +3488,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 81
+    "sortOrder": 81,
+    "themes": {
+      "law-outlaws": 25,
+      "sketches-of-legends": 22
+    }
   },
   {
     "id": "i-bJ9LJtg",
@@ -3429,7 +3647,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 85
+    "sortOrder": 85,
+    "themes": {
+      "sketches-of-legends": 25
+    }
   },
   {
     "id": "i-xmJ87ZT",
@@ -3459,7 +3680,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 86
+    "sortOrder": 86,
+    "themes": {
+      "sketches-of-legends": 24
+    }
   },
   {
     "id": "i-8VPQmkW",
@@ -3518,7 +3742,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 87,
     "themes": {
-      "women-of-the-west": 38
+      "women-of-the-west": 38,
+      "frontier-women": 23,
+      "love-goodbye": 13,
+      "sketches-of-legends": 26,
+      "whispering-reflection": 32
     }
   },
   {
@@ -3557,7 +3785,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 88
+    "sortOrder": 88,
+    "themes": {
+      "frontier-women": 6,
+      "sketches-of-legends": 27
+    }
   },
   {
     "id": "i-NKdPDCg",
@@ -3590,7 +3822,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 89
+    "sortOrder": 89,
+    "themes": {
+      "frontier-women": 22,
+      "hardship-sorrow": 14,
+      "love-goodbye": 14,
+      "whispering-reflection": 31
+    }
   },
   {
     "id": "i-LLdZzQW",
@@ -3647,7 +3885,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 90
+    "sortOrder": 90,
+    "themes": {
+      "aces-smoke-whiskey": 19,
+      "law-outlaws": 28
+    }
   },
   {
     "id": "i-DwVBJb3",
@@ -3704,7 +3946,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 91
+    "sortOrder": 91,
+    "themes": {
+      "aces-smoke-whiskey": 9,
+      "law-outlaws": 27
+    }
   },
   {
     "id": "i-sLL3pQG",
@@ -3741,7 +3987,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 92
+    "sortOrder": 92,
+    "themes": {
+      "law-outlaws": 26
+    }
   },
   {
     "id": "i-LBSWzcj",
@@ -3776,7 +4025,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 93
+    "sortOrder": 93,
+    "themes": {
+      "frontier-women": 25
+    }
   },
   {
     "id": "i-ZPmj5Wk",
@@ -3835,7 +4087,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 94,
     "themes": {
-      "women-of-the-west": 37
+      "women-of-the-west": 37,
+      "frontier-women": 24
     }
   },
   {
@@ -3893,7 +4146,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 95
+    "sortOrder": 95,
+    "themes": {
+      "law-outlaws": 29
+    }
   },
   {
     "id": "i-z3wvMkB",
@@ -3924,7 +4180,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 96
+    "sortOrder": 96,
+    "themes": {
+      "aces-smoke-whiskey": 13,
+      "firelight-shadow": 26
+    }
   },
   {
     "id": "i-gj4hHmL",
@@ -3981,7 +4241,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 97
+    "sortOrder": 97,
+    "themes": {
+      "dust-thunder": 17,
+      "firelight-shadow": 25
+    }
   },
   {
     "id": "i-8BbMZjs",
@@ -4038,7 +4302,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 98
+    "sortOrder": 98,
+    "themes": {
+      "sketches-of-legends": 28,
+      "whispering-reflection": 35
+    }
   },
   {
     "id": "i-Mm3jXFH",
@@ -4097,7 +4365,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 99,
     "themes": {
-      "women-of-the-west": 36
+      "women-of-the-west": 36,
+      "frontier-women": 18,
+      "love-goodbye": 16,
+      "sketches-of-legends": 29,
+      "whispering-reflection": 34
     }
   },
   {
@@ -4127,7 +4399,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 100
+    "sortOrder": 100,
+    "themes": {
+      "sketches-of-legends": 30
+    }
   },
   {
     "id": "i-7Jzf69b",
@@ -4184,7 +4459,14 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 101
+    "sortOrder": 101,
+    "themes": {
+      "aces-smoke-whiskey": 23,
+      "law-outlaws": 30,
+      "love-goodbye": 15,
+      "sketches-of-legends": 31,
+      "whispering-reflection": 33
+    }
   },
   {
     "id": "i-mbND55n",
@@ -4221,7 +4503,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 102
+    "sortOrder": 102,
+    "themes": {
+      "dust-thunder": 16,
+      "law-outlaws": 31
+    }
   },
   {
     "id": "i-vP376vx",
@@ -4278,7 +4564,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 103
+    "sortOrder": 103,
+    "themes": {
+      "law-outlaws": 32,
+      "sketches-of-legends": 32
+    }
   },
   {
     "id": "i-8CfzGMc",
@@ -4398,7 +4688,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 106
+    "sortOrder": 106,
+    "themes": {
+      "whispering-reflection": 36
+    }
   },
   {
     "id": "i-b3vCXwR",
@@ -4455,7 +4748,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 107
+    "sortOrder": 107,
+    "themes": {
+      "aces-smoke-whiskey": 24,
+      "law-outlaws": 33,
+      "sketches-of-legends": 33,
+      "whispering-reflection": 37
+    }
   },
   {
     "id": "i-TLDkd5q",
@@ -4512,7 +4811,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 108
+    "sortOrder": 108,
+    "themes": {
+      "firelight-shadow": 30,
+      "law-outlaws": 35,
+      "whispering-reflection": 40
+    }
   },
   {
     "id": "i-FVHm8VJ",
@@ -4569,7 +4873,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 109
+    "sortOrder": 109,
+    "themes": {
+      "firelight-shadow": 29,
+      "law-outlaws": 34
+    }
   },
   {
     "id": "i-k6jGzSq",
@@ -4626,7 +4934,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 110,
+    "themes": {
+      "aces-smoke-whiskey": 1,
+      "firelight-shadow": 27
+    }
   },
   {
     "id": "i-GG7mgqM",
@@ -4683,7 +4995,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 111
+    "sortOrder": 111,
+    "themes": {
+      "aces-smoke-whiskey": 10,
+      "firelight-shadow": 28
+    }
   },
   {
     "id": "i-P8B2zJj",
@@ -4742,7 +5058,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 112,
     "themes": {
-      "women-of-the-west": 34
+      "women-of-the-west": 34,
+      "frontier-women": 27,
+      "sketches-of-legends": 34,
+      "whispering-reflection": 38
     }
   },
   {
@@ -4802,7 +5121,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 113,
     "themes": {
-      "women-of-the-west": 35
+      "women-of-the-west": 35,
+      "frontier-women": 26,
+      "love-goodbye": 17,
+      "sketches-of-legends": 35,
+      "whispering-reflection": 39
     }
   },
   {
@@ -4862,7 +5185,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 114,
     "themes": {
-      "women-of-the-west": 33
+      "women-of-the-west": 33,
+      "frontier-women": 29,
+      "hardship-sorrow": 15,
+      "love-goodbye": 19
     }
   },
   {
@@ -4920,7 +5246,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 115
+    "sortOrder": 115,
+    "themes": {
+      "sketches-of-legends": 36
+    }
   },
   {
     "id": "i-mHpH7rZ",
@@ -4977,7 +5306,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 116
+    "sortOrder": 116,
+    "themes": {
+      "law-outlaws": 36
+    }
   },
   {
     "id": "i-vGkvhmq",
@@ -5034,7 +5366,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 117
+    "sortOrder": 117,
+    "themes": {
+      "frontier-women": 30,
+      "love-goodbye": 18,
+      "sketches-of-legends": 37,
+      "whispering-reflection": 41
+    }
   },
   {
     "id": "i-mdz2QGr",
@@ -5091,7 +5429,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 118
+    "sortOrder": 118,
+    "themes": {
+      "dust-thunder": 18,
+      "law-outlaws": 37
+    }
   },
   {
     "id": "i-6pLTtkL",
@@ -5192,7 +5534,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 120,
     "themes": {
-      "women-of-the-west": 31
+      "women-of-the-west": 31,
+      "frontier-women": 28,
+      "hardship-sorrow": 16,
+      "love-goodbye": 20,
+      "whispering-reflection": 42
     }
   },
   {
@@ -5250,7 +5596,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 121
+    "sortOrder": 121,
+    "themes": {
+      "aces-smoke-whiskey": 2,
+      "sketches-of-legends": 39
+    }
   },
   {
     "id": "i-p9FqvPh",
@@ -5364,7 +5714,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 123
+    "sortOrder": 123,
+    "themes": {
+      "law-outlaws": 38,
+      "sketches-of-legends": 38,
+      "whispering-reflection": 43
+    }
   },
   {
     "id": "i-rhqqrfz",
@@ -5423,7 +5778,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 124,
     "themes": {
-      "women-of-the-west": 32
+      "women-of-the-west": 32,
+      "frontier-women": 16
     }
   },
   {
@@ -5481,7 +5837,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 125
+    "sortOrder": 125,
+    "themes": {
+      "aces-smoke-whiskey": 6,
+      "firelight-shadow": 31
+    }
   },
   {
     "id": "i-D3HdMmb",
@@ -5538,7 +5898,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 126
+    "sortOrder": 126,
+    "themes": {
+      "sketches-of-legends": 40
+    }
   },
   {
     "id": "i-xXQ3gDM",
@@ -5595,7 +5958,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 127
+    "sortOrder": 127,
+    "themes": {
+      "law-outlaws": 40,
+      "sketches-of-legends": 41
+    }
   },
   {
     "id": "i-8JSdTGz",
@@ -5652,7 +6019,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 128
+    "sortOrder": 128,
+    "themes": {
+      "frontier-women": 31,
+      "love-goodbye": 21
+    }
   },
   {
     "id": "i-6GQxb97",
@@ -5709,7 +6080,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 129
+    "sortOrder": 129,
+    "themes": {
+      "hardship-sorrow": 17
+    }
   },
   {
     "id": "i-J8Tr628",
@@ -5766,7 +6140,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 130
+    "sortOrder": 130,
+    "themes": {
+      "sketches-of-legends": 42
+    }
   },
   {
     "id": "i-zv8VJBg",
@@ -5823,7 +6200,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 131
+    "sortOrder": 131,
+    "themes": {
+      "law-outlaws": 39
+    }
   },
   {
     "id": "i-FpH3LXf",
@@ -5915,7 +6295,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 133
+    "sortOrder": 133,
+    "themes": {
+      "aces-smoke-whiskey": 28,
+      "whispering-reflection": 44
+    }
   },
   {
     "id": "i-8Ld2ZHQ",
@@ -5972,7 +6356,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 134
+    "sortOrder": 134,
+    "themes": {
+      "aces-smoke-whiskey": 29,
+      "law-outlaws": 41
+    }
   },
   {
     "id": "i-Dthbn8K",
@@ -6029,7 +6417,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 135
+    "sortOrder": 135,
+    "themes": {
+      "sketches-of-legends": 43
+    }
   },
   {
     "id": "i-jcLJT4J",
@@ -6058,7 +6449,13 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 136
+    "sortOrder": 136,
+    "themes": {
+      "frontier-women": 32,
+      "love-goodbye": 22,
+      "sketches-of-legends": 44,
+      "whispering-reflection": 46
+    }
   },
   {
     "id": "i-vpt6C9V",
@@ -6094,7 +6491,12 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 137
+    "sortOrder": 137,
+    "themes": {
+      "firelight-shadow": 32,
+      "hardship-sorrow": 18,
+      "whispering-reflection": 45
+    }
   },
   {
     "id": "i-V5WcTqg",
@@ -6129,7 +6531,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 138
+    "sortOrder": 138,
+    "themes": {
+      "aces-smoke-whiskey": 27,
+      "firelight-shadow": 33,
+      "law-outlaws": 43
+    }
   },
   {
     "id": "i-vcX6WLC",
@@ -6186,7 +6593,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 139
+    "sortOrder": 139,
+    "themes": {
+      "law-outlaws": 42,
+      "sketches-of-legends": 46
+    }
   },
   {
     "id": "i-TtXPkVK",
@@ -6243,7 +6654,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 140
+    "sortOrder": 140,
+    "themes": {
+      "sketches-of-legends": 45
+    }
   },
   {
     "id": "i-Cg4ZB72",
@@ -6300,7 +6714,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 141
+    "sortOrder": 141,
+    "themes": {
+      "firelight-shadow": 34,
+      "frontier-women": 15,
+      "love-goodbye": 23
+    }
   },
   {
     "id": "i-6G4PBd8",
@@ -6357,7 +6776,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 142
+    "sortOrder": 142,
+    "themes": {
+      "frontier-women": 33,
+      "love-goodbye": 24
+    }
   },
   {
     "id": "i-PPJ9GKf",
@@ -6389,7 +6812,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 143,
     "themes": {
-      "cowboys-and-horses": 21
+      "cowboys-and-horses": 21,
+      "dust-thunder": 23,
+      "frontier-women": 35
     }
   },
   {
@@ -6447,7 +6872,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 144
+    "sortOrder": 144,
+    "themes": {
+      "frontier-women": 37,
+      "sketches-of-legends": 47
+    }
   },
   {
     "id": "i-w3JBvXs",
@@ -6506,7 +6935,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 145,
     "themes": {
-      "women-of-the-west": 29
+      "women-of-the-west": 29,
+      "frontier-women": 36,
+      "love-goodbye": 25,
+      "sketches-of-legends": 48
     }
   },
   {
@@ -6564,7 +6996,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 146
+    "sortOrder": 146,
+    "themes": {
+      "hardship-sorrow": 19,
+      "law-outlaws": 44,
+      "sketches-of-legends": 49
+    }
   },
   {
     "id": "i-FsLKLp3",
@@ -6621,7 +7058,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 147
+    "sortOrder": 147,
+    "themes": {
+      "law-outlaws": 45,
+      "sketches-of-legends": 50
+    }
   },
   {
     "id": "i-zH8SD79",
@@ -6678,7 +7119,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 148
+    "sortOrder": 148,
+    "themes": {
+      "law-outlaws": 46,
+      "sketches-of-legends": 51
+    }
   },
   {
     "id": "i-dwk4K8v",
@@ -6735,7 +7180,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 149
+    "sortOrder": 149,
+    "themes": {
+      "law-outlaws": 47,
+      "sketches-of-legends": 52
+    }
   },
   {
     "id": "i-ZKCtdPV",
@@ -6794,7 +7243,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 150,
     "themes": {
-      "women-of-the-west": 28
+      "women-of-the-west": 28,
+      "frontier-women": 38
     }
   },
   {
@@ -6852,7 +7302,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 151
+    "sortOrder": 151,
+    "themes": {
+      "law-outlaws": 48,
+      "sketches-of-legends": 53,
+      "whispering-reflection": 47
+    }
   },
   {
     "id": "i-TVSQHzg",
@@ -6909,7 +7364,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 152
+    "sortOrder": 152,
+    "themes": {
+      "sketches-of-legends": 54,
+      "whispering-reflection": 48
+    }
   },
   {
     "id": "i-dqdZcnX",
@@ -6999,7 +7458,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 154,
     "themes": {
-      "cowboys-and-horses": 22
+      "cowboys-and-horses": 22,
+      "frontier-women": 8,
+      "hardship-sorrow": 20,
+      "love-goodbye": 26,
+      "whispering-reflection": 49
     }
   },
   {
@@ -7059,7 +7522,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 155,
     "themes": {
-      "women-of-the-west": 30
+      "women-of-the-west": 30,
+      "firelight-shadow": 35,
+      "frontier-women": 39,
+      "love-goodbye": 27,
+      "whispering-reflection": 50
     }
   },
   {
@@ -7117,7 +7584,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 156
+    "sortOrder": 156,
+    "themes": {
+      "firelight-shadow": 36
+    }
   },
   {
     "id": "i-3ppJNtd",
@@ -7174,7 +7644,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 157
+    "sortOrder": 157,
+    "themes": {
+      "aces-smoke-whiskey": 30,
+      "firelight-shadow": 37,
+      "law-outlaws": 49
+    }
   },
   {
     "id": "i-SPTNHnP",
@@ -7231,7 +7706,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 158,
+    "themes": {
+      "aces-smoke-whiskey": 31
+    }
   },
   {
     "id": "i-DGtgJJJ",
@@ -7269,7 +7747,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 159
+    "sortOrder": 159,
+    "themes": {
+      "law-outlaws": 50,
+      "sketches-of-legends": 56,
+      "whispering-reflection": 51
+    }
   },
   {
     "id": "i-NBsQ59h",
@@ -7326,7 +7809,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 160
+    "sortOrder": 160,
+    "themes": {
+      "sketches-of-legends": 55
+    }
   },
   {
     "id": "i-6BgfRxb",
@@ -7497,7 +7983,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 163
+    "sortOrder": 163,
+    "themes": {
+      "frontier-women": 41,
+      "love-goodbye": 29
+    }
   },
   {
     "id": "i-mJQCXmh",
@@ -7554,7 +8044,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 164
+    "sortOrder": 164,
+    "themes": {
+      "aces-smoke-whiskey": 32
+    }
   },
   {
     "id": "i-jLSNwCT",
@@ -7611,7 +8104,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 165
+    "sortOrder": 165,
+    "themes": {
+      "frontier-women": 40,
+      "love-goodbye": 28,
+      "whispering-reflection": 52
+    }
   },
   {
     "id": "i-kBNpRtm",
@@ -7644,7 +8142,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 166,
     "themes": {
-      "cowboys-and-horses": 23
+      "cowboys-and-horses": 23,
+      "dust-thunder": 26,
+      "frontier-women": 42,
+      "law-outlaws": 51
     }
   },
   {
@@ -7697,7 +8198,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 168
+    "sortOrder": 168,
+    "themes": {
+      "frontier-women": 43
+    }
   },
   {
     "id": "i-nLKscbQ",
@@ -7791,7 +8295,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 170
+    "sortOrder": 170,
+    "themes": {
+      "firelight-shadow": 38,
+      "hardship-sorrow": 21,
+      "whispering-reflection": 54
+    }
   },
   {
     "id": "i-MnX4pxX",
@@ -7850,7 +8359,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 171,
     "themes": {
-      "women-of-the-west": 27
+      "women-of-the-west": 27,
+      "firelight-shadow": 39,
+      "frontier-women": 44,
+      "whispering-reflection": 53
     }
   },
   {
@@ -7888,7 +8400,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 172
+    "sortOrder": 172,
+    "themes": {
+      "firelight-shadow": 40,
+      "law-outlaws": 52,
+      "whispering-reflection": 55
+    }
   },
   {
     "id": "i-gQ7GZ5s",
@@ -7945,7 +8462,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 173
+    "sortOrder": 173,
+    "themes": {
+      "dust-thunder": 19,
+      "law-outlaws": 53,
+      "sketches-of-legends": 57
+    }
   },
   {
     "id": "i-52tTd9G",
@@ -8002,7 +8524,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 174
+    "sortOrder": 174,
+    "themes": {
+      "dust-thunder": 9,
+      "law-outlaws": 55
+    }
   },
   {
     "id": "i-TpkTsMg",
@@ -8039,7 +8565,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 175
+    "sortOrder": 175,
+    "themes": {
+      "dust-thunder": 21,
+      "law-outlaws": 54
+    }
   },
   {
     "id": "i-xZkmnnx",
@@ -8121,7 +8651,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 177,
     "themes": {
-      "women-of-the-west": 26
+      "women-of-the-west": 26,
+      "frontier-women": 45,
+      "love-goodbye": 30
     }
   },
   {
@@ -8179,7 +8711,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 178
+    "sortOrder": 178,
+    "themes": {
+      "aces-smoke-whiskey": 7,
+      "firelight-shadow": 41
+    }
   },
   {
     "id": "i-R3CqrBr",
@@ -8342,7 +8878,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 182
+    "sortOrder": 182,
+    "themes": {
+      "law-outlaws": 57,
+      "sketches-of-legends": 58
+    }
   },
   {
     "id": "i-WCw4qpB",
@@ -8399,7 +8939,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 183
+    "sortOrder": 183,
+    "themes": {
+      "law-outlaws": 56
+    }
   },
   {
     "id": "i-sDLXtRZ",
@@ -8456,7 +8999,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 184
+    "sortOrder": 184,
+    "themes": {
+      "sketches-of-legends": 59
+    }
   },
   {
     "id": "i-X9h6sdw",
@@ -8494,7 +9040,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 185
+    "sortOrder": 185,
+    "themes": {
+      "law-outlaws": 58,
+      "sketches-of-legends": 60
+    }
   },
   {
     "id": "i-kh6KWS9",
@@ -8665,7 +9215,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 188
+    "sortOrder": 188,
+    "themes": {
+      "aces-smoke-whiskey": 33,
+      "firelight-shadow": 42
+    }
   },
   {
     "id": "i-2Z3ZvJS",
@@ -8722,7 +9276,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 189
+    "sortOrder": 189,
+    "themes": {
+      "whispering-reflection": 57
+    }
   },
   {
     "id": "i-XR9PZT5",
@@ -8781,7 +9338,12 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 190,
     "themes": {
-      "women-of-the-west": 25
+      "women-of-the-west": 25,
+      "firelight-shadow": 44,
+      "frontier-women": 46,
+      "hardship-sorrow": 24,
+      "sketches-of-legends": 61,
+      "whispering-reflection": 56
     }
   },
   {
@@ -8839,7 +9401,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 191
+    "sortOrder": 191,
+    "themes": {
+      "firelight-shadow": 45
+    }
   },
   {
     "id": "i-fTHtL25",
@@ -8875,7 +9440,13 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 192
+    "sortOrder": 192,
+    "themes": {
+      "firelight-shadow": 47,
+      "frontier-women": 49,
+      "hardship-sorrow": 23,
+      "whispering-reflection": 58
+    }
   },
   {
     "id": "i-6dHrd9m",
@@ -8932,7 +9503,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 193
+    "sortOrder": 193,
+    "themes": {
+      "frontier-women": 48,
+      "love-goodbye": 31
+    }
   },
   {
     "id": "i-QxFK26w",
@@ -8989,7 +9564,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 194
+    "sortOrder": 194,
+    "themes": {
+      "aces-smoke-whiskey": 34,
+      "firelight-shadow": 43,
+      "hardship-sorrow": 22,
+      "whispering-reflection": 59
+    }
   },
   {
     "id": "i-zW6Zb4W",
@@ -9048,7 +9629,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 195,
     "themes": {
-      "women-of-the-west": 24
+      "women-of-the-west": 24,
+      "firelight-shadow": 46,
+      "frontier-women": 47
     }
   },
   {
@@ -9085,7 +9668,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 196
+    "sortOrder": 196,
+    "themes": {
+      "aces-smoke-whiskey": 35,
+      "sketches-of-legends": 62
+    }
   },
   {
     "id": "i-tgzR5Rh",
@@ -9199,7 +9786,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 198
+    "sortOrder": 198,
+    "themes": {
+      "sketches-of-legends": 64,
+      "whispering-reflection": 60
+    }
   },
   {
     "id": "i-qXd5779",
@@ -9258,7 +9849,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 199,
     "themes": {
-      "women-of-the-west": 22
+      "women-of-the-west": 22,
+      "frontier-women": 52,
+      "hardship-sorrow": 25,
+      "love-goodbye": 34
     }
   },
   {
@@ -9316,7 +9910,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 200
+    "sortOrder": 200,
+    "themes": {
+      "frontier-women": 51,
+      "love-goodbye": 33
+    }
   },
   {
     "id": "i-qzGSQz7",
@@ -9355,7 +9953,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 201,
     "themes": {
-      "women-of-the-west": 23
+      "women-of-the-west": 23,
+      "frontier-women": 50,
+      "love-goodbye": 32
     }
   },
   {
@@ -9393,7 +9993,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 202
+    "sortOrder": 202,
+    "themes": {
+      "law-outlaws": 59,
+      "sketches-of-legends": 63
+    }
   },
   {
     "id": "i-dwVgbxR",
@@ -9489,7 +10093,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 204,
     "themes": {
-      "women-of-the-west": 21
+      "women-of-the-west": 21,
+      "frontier-women": 53,
+      "sketches-of-legends": 65,
+      "whispering-reflection": 61
     }
   },
   {
@@ -9528,7 +10135,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 205
+    "sortOrder": 205,
+    "themes": {
+      "law-outlaws": 61,
+      "sketches-of-legends": 67
+    }
   },
   {
     "id": "i-WD9ZmGH",
@@ -9585,7 +10196,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 206
+    "sortOrder": 206,
+    "themes": {
+      "law-outlaws": 60,
+      "sketches-of-legends": 66
+    }
   },
   {
     "id": "i-d9znSwP",
@@ -9622,7 +10237,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 207
+    "sortOrder": 207,
+    "themes": {
+      "sketches-of-legends": 68
+    }
   },
   {
     "id": "i-SPd5h6X",
@@ -9736,7 +10354,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 209
+    "sortOrder": 209,
+    "themes": {
+      "sketches-of-legends": 69
+    }
   },
   {
     "id": "i-PDVZhtZ",
@@ -9793,7 +10414,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 210
+    "sortOrder": 210,
+    "themes": {
+      "aces-smoke-whiskey": 36,
+      "firelight-shadow": 49,
+      "sketches-of-legends": 70
+    }
   },
   {
     "id": "i-GjZfMXj",
@@ -9850,7 +10476,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 211
+    "sortOrder": 211,
+    "themes": {
+      "firelight-shadow": 48
+    }
   },
   {
     "id": "i-tWx3N8c",
@@ -9907,7 +10536,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 212
+    "sortOrder": 212,
+    "themes": {
+      "law-outlaws": 62,
+      "sketches-of-legends": 71
+    }
   },
   {
     "id": "i-S5zV9h4",
@@ -9964,7 +10597,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 213
+    "sortOrder": 213,
+    "themes": {
+      "firelight-shadow": 51,
+      "frontier-women": 55
+    }
   },
   {
     "id": "i-2Cj8j9W",
@@ -10021,7 +10658,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 214
+    "sortOrder": 214,
+    "themes": {
+      "frontier-women": 54,
+      "love-goodbye": 35
+    }
   },
   {
     "id": "i-gs6X2P7",
@@ -10078,7 +10719,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 215
+    "sortOrder": 215,
+    "themes": {
+      "law-outlaws": 63,
+      "sketches-of-legends": 72
+    }
   },
   {
     "id": "i-QGCQt7M",
@@ -10115,7 +10760,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 216
+    "sortOrder": 216,
+    "themes": {
+      "law-outlaws": 67,
+      "whispering-reflection": 64
+    }
   },
   {
     "id": "i-n8TX2qS",
@@ -10172,7 +10821,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 217
+    "sortOrder": 217,
+    "themes": {
+      "law-outlaws": 66,
+      "sketches-of-legends": 73
+    }
   },
   {
     "id": "i-tVxgfZN",
@@ -10229,7 +10882,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 218
+    "sortOrder": 218,
+    "themes": {
+      "law-outlaws": 65
+    }
   },
   {
     "id": "i-4jRzBgC",
@@ -10323,7 +10979,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 220
+    "sortOrder": 220,
+    "themes": {
+      "frontier-women": 56,
+      "whispering-reflection": 62
+    }
   },
   {
     "id": "i-S2sZdJB",
@@ -10360,7 +11020,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 221
+    "sortOrder": 221,
+    "themes": {
+      "law-outlaws": 64,
+      "whispering-reflection": 63
+    }
   },
   {
     "id": "i-7Kwv8vc",
@@ -10417,7 +11081,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 222
+    "sortOrder": 222,
+    "themes": {
+      "whispering-reflection": 65
+    }
   },
   {
     "id": "i-TgkwSbh",
@@ -10474,7 +11141,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 223
+    "sortOrder": 223,
+    "themes": {
+      "frontier-women": 59
+    }
   },
   {
     "id": "i-grM2LkC",
@@ -10533,7 +11203,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 224,
     "themes": {
-      "women-of-the-west": 18
+      "women-of-the-west": 18,
+      "frontier-women": 58,
+      "sketches-of-legends": 74,
+      "whispering-reflection": 66
     }
   },
   {
@@ -10591,7 +11264,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 225
+    "sortOrder": 225,
+    "themes": {
+      "firelight-shadow": 50,
+      "whispering-reflection": 67
+    }
   },
   {
     "id": "i-GK7Trs9",
@@ -10707,7 +11384,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 227,
     "themes": {
-      "women-of-the-west": 20
+      "women-of-the-west": 20,
+      "frontier-women": 57,
+      "love-goodbye": 36,
+      "whispering-reflection": 68
     }
   },
   {
@@ -10765,7 +11445,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 228
+    "sortOrder": 228,
+    "themes": {
+      "law-outlaws": 68,
+      "sketches-of-legends": 75
+    }
   },
   {
     "id": "i-rC7SvgP",
@@ -10936,7 +11620,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 231
+    "sortOrder": 231,
+    "themes": {
+      "frontier-women": 60,
+      "sketches-of-legends": 76
+    }
   },
   {
     "id": "i-vrc7KkJ",
@@ -11059,7 +11747,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 234
+    "sortOrder": 234,
+    "themes": {
+      "frontier-women": 62,
+      "love-goodbye": 37
+    }
   },
   {
     "id": "i-8W7jxkN",
@@ -11173,7 +11865,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 236
+    "sortOrder": 236,
+    "themes": {
+      "firelight-shadow": 52
+    }
   },
   {
     "id": "i-GSPLsk9",
@@ -11230,7 +11925,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 237
+    "sortOrder": 237,
+    "themes": {
+      "frontier-women": 61,
+      "sketches-of-legends": 77
+    }
   },
   {
     "id": "i-9q5B7FX",
@@ -11266,7 +11965,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 238
+    "sortOrder": 238,
+    "themes": {
+      "sketches-of-legends": 78
+    }
   },
   {
     "id": "i-SBjhvGf",
@@ -11303,7 +12005,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 239
+    "sortOrder": 239,
+    "themes": {
+      "sketches-of-legends": 79
+    }
   },
   {
     "id": "i-WzTZ6Jv",
@@ -11360,7 +12065,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 240
+    "sortOrder": 240,
+    "themes": {
+      "sketches-of-legends": 80
+    }
   },
   {
     "id": "i-s79JnZ2",
@@ -11417,7 +12125,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 241
+    "sortOrder": 241,
+    "themes": {
+      "law-outlaws": 69,
+      "whispering-reflection": 72
+    }
   },
   {
     "id": "i-76Fjxvs",
@@ -11474,7 +12186,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 242
+    "sortOrder": 242,
+    "themes": {
+      "sketches-of-legends": 81
+    }
   },
   {
     "id": "i-qwPBrns",
@@ -11511,7 +12226,15 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 243
+    "sortOrder": 243,
+    "themes": {
+      "firelight-shadow": 53,
+      "frontier-women": 63,
+      "hardship-sorrow": 26,
+      "love-goodbye": 38,
+      "sketches-of-legends": 82,
+      "whispering-reflection": 69
+    }
   },
   {
     "id": "i-HZK96qf",
@@ -11549,7 +12272,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 244,
     "themes": {
-      "women-of-the-west": 17
+      "women-of-the-west": 17,
+      "firelight-shadow": 54,
+      "frontier-women": 64,
+      "love-goodbye": 39,
+      "whispering-reflection": 70
     }
   },
   {
@@ -11582,7 +12309,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 245
+    "sortOrder": 245,
+    "themes": {
+      "aces-smoke-whiskey": 37,
+      "firelight-shadow": 55,
+      "whispering-reflection": 71
+    }
   },
   {
     "id": "i-z3VScfV",
@@ -11639,7 +12371,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 246
+    "sortOrder": 246,
+    "themes": {
+      "aces-smoke-whiskey": 8,
+      "firelight-shadow": 56,
+      "love-goodbye": 40
+    }
   },
   {
     "id": "i-MB2KXB3",
@@ -11696,7 +12433,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 247
+    "sortOrder": 247,
+    "themes": {
+      "sketches-of-legends": 83
+    }
   },
   {
     "id": "i-XnW7ZD5",
@@ -11728,7 +12468,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 248
+    "sortOrder": 248,
+    "themes": {
+      "law-outlaws": 70
+    }
   },
   {
     "id": "i-fJ9WQSS",
@@ -11785,7 +12528,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 249
+    "sortOrder": 249,
+    "themes": {
+      "sketches-of-legends": 84
+    }
   },
   {
     "id": "i-b4hnpNn",
@@ -11975,7 +12721,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 253
+    "sortOrder": 253,
+    "themes": {
+      "sketches-of-legends": 87
+    }
   },
   {
     "id": "i-2jfdQGw",
@@ -12048,7 +12797,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 255
+    "sortOrder": 255,
+    "themes": {
+      "sketches-of-legends": 85
+    }
   },
   {
     "id": "i-2pRkNng",
@@ -12162,7 +12914,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 257
+    "sortOrder": 257,
+    "themes": {
+      "law-outlaws": 71,
+      "sketches-of-legends": 86
+    }
   },
   {
     "id": "i-5T9mQqT",
@@ -12192,7 +12948,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 258
+    "sortOrder": 258,
+    "themes": {
+      "sketches-of-legends": 90,
+      "whispering-reflection": 73
+    }
   },
   {
     "id": "i-RMTbDRs",
@@ -12249,7 +13009,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 259
+    "sortOrder": 259,
+    "themes": {
+      "sketches-of-legends": 89
+    }
   },
   {
     "id": "i-nXdBwJF",
@@ -12306,7 +13069,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 260
+    "sortOrder": 260,
+    "themes": {
+      "sketches-of-legends": 88
+    }
   },
   {
     "id": "i-rGpCKkW",
@@ -12363,7 +13129,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 261
+    "sortOrder": 261,
+    "themes": {
+      "sketches-of-legends": 91
+    }
   },
   {
     "id": "i-76PxJSx",
@@ -12420,7 +13189,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 262
+    "sortOrder": 262,
+    "themes": {
+      "frontier-women": 65
+    }
   },
   {
     "id": "i-7mLbVvP",
@@ -12477,7 +13249,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 263
+    "sortOrder": 263,
+    "themes": {
+      "sketches-of-legends": 92
+    }
   },
   {
     "id": "i-gkHPFXR",
@@ -12534,7 +13309,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 264
+    "sortOrder": 264,
+    "themes": {
+      "aces-smoke-whiskey": 20,
+      "firelight-shadow": 57,
+      "hardship-sorrow": 27
+    }
   },
   {
     "id": "i-3vrhwQ9",
@@ -12591,7 +13371,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 265
+    "sortOrder": 265,
+    "themes": {
+      "aces-smoke-whiskey": 14,
+      "firelight-shadow": 58
+    }
   },
   {
     "id": "i-SrcM3ZN",
@@ -12648,7 +13432,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 266
+    "sortOrder": 266,
+    "themes": {
+      "firelight-shadow": 59,
+      "frontier-women": 67
+    }
   },
   {
     "id": "i-sPkKGnX",
@@ -12679,7 +13467,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 267
+    "sortOrder": 267,
+    "themes": {
+      "firelight-shadow": 60,
+      "love-goodbye": 41
+    }
   },
   {
     "id": "i-PxNFNhQ",
@@ -12767,7 +13559,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 269
+    "sortOrder": 269,
+    "themes": {
+      "firelight-shadow": 61,
+      "frontier-women": 66,
+      "sketches-of-legends": 93
+    }
   },
   {
     "id": "i-RdTR7GD",
@@ -12826,7 +13623,12 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 270,
     "themes": {
-      "women-of-the-west": 16
+      "women-of-the-west": 16,
+      "firelight-shadow": 62,
+      "frontier-women": 68,
+      "hardship-sorrow": 28,
+      "love-goodbye": 42,
+      "whispering-reflection": 74
     }
   },
   {
@@ -12903,7 +13705,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 272,
     "themes": {
-      "women-of-the-west": 15
+      "women-of-the-west": 15,
+      "frontier-women": 69,
+      "sketches-of-legends": 94
     }
   },
   {
@@ -12942,7 +13746,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 273
+    "sortOrder": 273,
+    "themes": {
+      "sketches-of-legends": 95
+    }
   },
   {
     "id": "i-92mpb3g",
@@ -12982,7 +13789,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 274,
     "themes": {
-      "cowboys-and-horses": 26
+      "cowboys-and-horses": 26,
+      "dust-thunder": 20,
+      "law-outlaws": 73
     }
   },
   {
@@ -13008,7 +13817,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 275,
     "themes": {
-      "cowboys-and-horses": 25
+      "cowboys-and-horses": 25,
+      "dust-thunder": 28,
+      "law-outlaws": 72
     }
   },
   {
@@ -13112,7 +13923,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 278
+    "sortOrder": 278,
+    "themes": {
+      "sketches-of-legends": 97
+    }
   },
   {
     "id": "i-7DZfRCN",
@@ -13148,7 +13962,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 279
+    "sortOrder": 279,
+    "themes": {
+      "frontier-women": 70,
+      "love-goodbye": 43
+    }
   },
   {
     "id": "i-VhHKttr",
@@ -13299,7 +14117,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 282
+    "sortOrder": 282,
+    "themes": {
+      "aces-smoke-whiskey": 38,
+      "whispering-reflection": 75
+    }
   },
   {
     "id": "i-LVFgBBN",
@@ -13356,7 +14178,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 283
+    "sortOrder": 283,
+    "themes": {
+      "aces-smoke-whiskey": 39,
+      "law-outlaws": 74,
+      "sketches-of-legends": 98
+    }
   },
   {
     "id": "i-7Rt89mS",
@@ -13420,7 +14247,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 285
+    "sortOrder": 285,
+    "themes": {
+      "frontier-women": 71
+    }
   },
   {
     "id": "i-9Bpj29K",
@@ -13477,7 +14307,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 286
+    "sortOrder": 286,
+    "themes": {
+      "frontier-women": 72,
+      "sketches-of-legends": 96
+    }
   },
   {
     "id": "i-L2BvxrK",
@@ -13565,7 +14399,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 288
+    "sortOrder": 288,
+    "themes": {
+      "sketches-of-legends": 99,
+      "whispering-reflection": 76
+    }
   },
   {
     "id": "i-sVrtDx8",
@@ -13622,7 +14460,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 289
+    "sortOrder": 289,
+    "themes": {
+      "sketches-of-legends": 100,
+      "whispering-reflection": 77
+    }
   },
   {
     "id": "i-jDmnnrm",
@@ -13736,7 +14578,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 291
+    "sortOrder": 291,
+    "themes": {
+      "sketches-of-legends": 101
+    }
   },
   {
     "id": "i-wXQgDCx",
@@ -13793,7 +14638,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 292
+    "sortOrder": 292,
+    "themes": {
+      "frontier-women": 73
+    }
   },
   {
     "id": "i-DK48RWj",
@@ -13850,7 +14698,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 293
+    "sortOrder": 293,
+    "themes": {
+      "hardship-sorrow": 29,
+      "sketches-of-legends": 102,
+      "whispering-reflection": 78
+    }
   },
   {
     "id": "i-CFT7PJM",
@@ -13907,7 +14760,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 294
+    "sortOrder": 294,
+    "themes": {
+      "frontier-women": 74,
+      "sketches-of-legends": 105,
+      "whispering-reflection": 81
+    }
   },
   {
     "id": "i-fsL7pfL",
@@ -14055,7 +14913,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 298
+    "sortOrder": 298,
+    "themes": {
+      "hardship-sorrow": 31,
+      "sketches-of-legends": 103,
+      "whispering-reflection": 80
+    }
   },
   {
     "id": "i-sLtTp4m",
@@ -14112,7 +14975,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 299
+    "sortOrder": 299,
+    "themes": {
+      "hardship-sorrow": 30,
+      "sketches-of-legends": 104,
+      "whispering-reflection": 79
+    }
   },
   {
     "id": "i-zqZPZF6",
@@ -14169,7 +15037,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 300
+    "sortOrder": 300,
+    "themes": {
+      "firelight-shadow": 63,
+      "frontier-women": 75,
+      "whispering-reflection": 83
+    }
   },
   {
     "id": "i-79P6kHT",
@@ -14226,7 +15099,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 301
+    "sortOrder": 301,
+    "themes": {
+      "firelight-shadow": 64,
+      "frontier-women": 76,
+      "whispering-reflection": 82
+    }
   },
   {
     "id": "i-qJtstjP",
@@ -14300,7 +15178,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 303,
     "themes": {
-      "cowboys-and-horses": 30
+      "cowboys-and-horses": 30,
+      "frontier-women": 77,
+      "love-goodbye": 44,
+      "whispering-reflection": 85
     }
   },
   {
@@ -14333,7 +15214,14 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 304
+    "sortOrder": 304,
+    "themes": {
+      "aces-smoke-whiskey": 40,
+      "firelight-shadow": 66,
+      "hardship-sorrow": 32,
+      "sketches-of-legends": 106,
+      "whispering-reflection": 86
+    }
   },
   {
     "id": "i-7GcQw6R",
@@ -14365,7 +15253,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 305
+    "sortOrder": 305,
+    "themes": {
+      "firelight-shadow": 67
+    }
   },
   {
     "id": "i-tKZ2wgt",
@@ -14422,7 +15313,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 306
+    "sortOrder": 306,
+    "themes": {
+      "sketches-of-legends": 108
+    }
   },
   {
     "id": "i-QNLd2xZ",
@@ -14549,7 +15443,13 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 309,
     "themes": {
-      "women-of-the-west": 14
+      "women-of-the-west": 14,
+      "firelight-shadow": 65,
+      "frontier-women": 78,
+      "hardship-sorrow": 33,
+      "love-goodbye": 45,
+      "sketches-of-legends": 107,
+      "whispering-reflection": 84
     }
   },
   {
@@ -14613,7 +15513,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 311
+    "sortOrder": 311,
+    "themes": {
+      "sketches-of-legends": 109
+    }
   },
   {
     "id": "i-XpH2QfG",
@@ -14671,7 +15574,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 312
+    "sortOrder": 312,
+    "themes": {
+      "dust-thunder": 33
+    }
   },
   {
     "id": "i-RRB2hNj",
@@ -14744,7 +15650,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 314
+    "sortOrder": 314,
+    "themes": {
+      "firelight-shadow": 68
+    }
   },
   {
     "id": "i-4G9GB3b",
@@ -14778,7 +15687,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 315,
     "themes": {
-      "cowboys-and-horses": 35
+      "cowboys-and-horses": 35,
+      "dust-thunder": 22,
+      "law-outlaws": 76
     }
   },
   {
@@ -14814,7 +15725,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 316,
     "themes": {
-      "cowboys-and-horses": 36
+      "cowboys-and-horses": 36,
+      "dust-thunder": 27,
+      "law-outlaws": 75
     }
   },
   {
@@ -14973,7 +15886,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 320
+    "sortOrder": 320,
+    "themes": {
+      "dust-thunder": 32,
+      "sketches-of-legends": 114
+    }
   },
   {
     "id": "i-NzMs3RH",
@@ -15002,7 +15919,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 321
+    "sortOrder": 321,
+    "themes": {
+      "firelight-shadow": 69
+    }
   },
   {
     "id": "i-CmHHjwV",
@@ -15034,7 +15954,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 322,
     "themes": {
-      "cowboys-and-horses": 41
+      "cowboys-and-horses": 41,
+      "firelight-shadow": 70,
+      "whispering-reflection": 87
     }
   },
   {
@@ -15098,7 +16020,13 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 324
+    "sortOrder": 324,
+    "themes": {
+      "frontier-women": 79,
+      "hardship-sorrow": 34,
+      "sketches-of-legends": 111,
+      "whispering-reflection": 88
+    }
   },
   {
     "id": "i-KXLmcXW",
@@ -15129,7 +16057,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 325
+    "sortOrder": 325,
+    "themes": {
+      "sketches-of-legends": 110
+    }
   },
   {
     "id": "i-rdf8JpZ",
@@ -15158,7 +16089,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 326
+    "sortOrder": 326,
+    "themes": {
+      "sketches-of-legends": 112
+    }
   },
   {
     "id": "i-XLXGHT9",
@@ -15187,7 +16121,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 327
+    "sortOrder": 327,
+    "themes": {
+      "sketches-of-legends": 113
+    }
   },
   {
     "id": "i-V9Jx8D8",
@@ -15250,7 +16187,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 329,
     "themes": {
-      "cowboys-and-horses": 43
+      "cowboys-and-horses": 43,
+      "frontier-women": 80,
+      "law-outlaws": 77
     }
   },
   {
@@ -15288,7 +16227,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 330
+    "sortOrder": 330,
+    "themes": {
+      "aces-smoke-whiskey": 26,
+      "firelight-shadow": 71
+    }
   },
   {
     "id": "i-Q2cHRkn",
@@ -15323,7 +16266,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 331,
     "themes": {
-      "cowboys-and-horses": 44
+      "cowboys-and-horses": 44,
+      "dust-thunder": 25,
+      "frontier-women": 81,
+      "law-outlaws": 78
     }
   },
   {
@@ -15532,7 +16478,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 337,
     "themes": {
-      "women-of-the-west": 41
+      "women-of-the-west": 41,
+      "frontier-women": 82,
+      "sketches-of-legends": 115,
+      "whispering-reflection": 89
     }
   },
   {
@@ -15595,7 +16544,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 339
+    "sortOrder": 339,
+    "themes": {
+      "hardship-sorrow": 35,
+      "sketches-of-legends": 116,
+      "whispering-reflection": 90
+    }
   },
   {
     "id": "i-FNSvKZz",
@@ -15634,7 +16588,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 340,
     "themes": {
-      "cowboys-and-horses": 48
+      "cowboys-and-horses": 48,
+      "whispering-reflection": 91
     }
   },
   {
@@ -15786,7 +16741,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 344
+    "sortOrder": 344,
+    "themes": {
+      "dust-thunder": 31
+    }
   },
   {
     "id": "i-XTs3sP3",
@@ -15853,7 +16811,9 @@ export const galleryData = [
     "sortOrder": 346,
     "themes": {
       "women-of-the-west": 42,
-      "cowboys-and-horses": 53
+      "cowboys-and-horses": 53,
+      "frontier-women": 84,
+      "whispering-reflection": 92
     }
   },
   {
@@ -15892,7 +16852,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 347,
     "themes": {
-      "women-of-the-west": 43
+      "women-of-the-west": 43,
+      "frontier-women": 83,
+      "hardship-sorrow": 36,
+      "love-goodbye": 46,
+      "whispering-reflection": 93
     }
   },
   {
@@ -15957,7 +16921,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 349,
     "themes": {
-      "women-of-the-west": 44
+      "women-of-the-west": 44,
+      "frontier-women": 85
     }
   },
   {
@@ -15992,7 +16957,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 350,
     "themes": {
-      "cowboys-and-horses": 54
+      "cowboys-and-horses": 54,
+      "frontier-women": 87
     }
   },
   {
@@ -16031,7 +16997,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 351,
     "themes": {
-      "women-of-the-west": 45
+      "women-of-the-west": 45,
+      "frontier-women": 86
     }
   },
   {
@@ -16069,7 +17036,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 352
+    "sortOrder": 352,
+    "themes": {
+      "hardship-sorrow": 37,
+      "sketches-of-legends": 117
+    }
   },
   {
     "id": "i-5XC2cj5",
@@ -16126,7 +17097,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 353
+    "sortOrder": 353,
+    "themes": {
+      "sketches-of-legends": 118
+    }
   },
   {
     "id": "i-6QFpvwm",
@@ -16164,7 +17138,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 354,
     "themes": {
-      "cowboys-and-horses": 55
+      "cowboys-and-horses": 55,
+      "dust-thunder": 29,
+      "law-outlaws": 79
     }
   },
   {
@@ -16403,7 +17379,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 361
+    "sortOrder": 361,
+    "themes": {
+      "sketches-of-legends": 119
+    }
   },
   {
     "id": "i-bhXQ8Hx",
@@ -16427,7 +17406,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 362,
     "themes": {
-      "cowboys-and-horses": 37
+      "cowboys-and-horses": 37,
+      "frontier-women": 88,
+      "whispering-reflection": 94
     }
   },
   {
@@ -16466,7 +17447,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 363
+    "sortOrder": 363,
+    "themes": {
+      "aces-smoke-whiskey": 41,
+      "sketches-of-legends": 120
+    }
   },
   {
     "id": "i-rRdrQBg",
@@ -16560,7 +17545,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 365
+    "sortOrder": 365,
+    "themes": {
+      "firelight-shadow": 72,
+      "law-outlaws": 80,
+      "sketches-of-legends": 121
+    }
   },
   {
     "id": "i-RrRPTZP",
@@ -16617,7 +17607,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 366
+    "sortOrder": 366,
+    "themes": {
+      "law-outlaws": 81,
+      "sketches-of-legends": 122
+    }
   },
   {
     "id": "i-S9PzB6d",
@@ -16650,7 +17644,9 @@ export const galleryData = [
     "sortOrder": 367,
     "themes": {
       "women-of-the-west": 46,
-      "cowboys-and-horses": 46
+      "cowboys-and-horses": 46,
+      "dust-thunder": 30,
+      "frontier-women": 89
     }
   },
   {
@@ -16720,7 +17716,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 369
+    "sortOrder": 369,
+    "themes": {
+      "sketches-of-legends": 123
+    }
   },
   {
     "id": "i-Z3sHLGx",
@@ -16861,7 +17860,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 373,
     "themes": {
-      "cowboys-and-horses": 61
+      "cowboys-and-horses": 61,
+      "dust-thunder": 24
     }
   },
   {
@@ -16936,7 +17936,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 375
+    "sortOrder": 375,
+    "themes": {
+      "frontier-women": 90
+    }
   },
   {
     "id": "i-hKcrxwf",
@@ -16972,7 +17975,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 376,
     "themes": {
-      "cowboys-and-horses": 62
+      "cowboys-and-horses": 62,
+      "firelight-shadow": 75
     }
   },
   {
@@ -17010,7 +18014,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 377
+    "sortOrder": 377,
+    "themes": {
+      "aces-smoke-whiskey": 42,
+      "firelight-shadow": 73,
+      "sketches-of-legends": 124
+    }
   },
   {
     "id": "i-vgZ8twt",
@@ -17079,7 +18088,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 379,
     "themes": {
-      "women-of-the-west": 13
+      "women-of-the-west": 13,
+      "firelight-shadow": 74,
+      "frontier-women": 91,
+      "whispering-reflection": 95
     }
   },
   {
@@ -17156,7 +18168,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 381
+    "sortOrder": 381,
+    "themes": {
+      "sketches-of-legends": 125
+    }
   },
   {
     "id": "i-kXqRRDP",
@@ -17215,7 +18230,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 383
+    "sortOrder": 383,
+    "themes": {
+      "frontier-women": 92,
+      "hardship-sorrow": 38,
+      "sketches-of-legends": 126
+    }
   },
   {
     "id": "i-cJLTQfD",
@@ -17279,7 +18299,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 385
+    "sortOrder": 385,
+    "themes": {
+      "hardship-sorrow": 39,
+      "love-goodbye": 47,
+      "whispering-reflection": 97
+    }
   },
   {
     "id": "i-3Gjqpvz",
@@ -17308,7 +18333,13 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 386
+    "sortOrder": 386,
+    "themes": {
+      "hardship-sorrow": 40,
+      "love-goodbye": 48,
+      "sketches-of-legends": 128,
+      "whispering-reflection": 96
+    }
   },
   {
     "id": "i-Vd5VW3L",
@@ -17338,7 +18369,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 387
+    "sortOrder": 387,
+    "themes": {
+      "sketches-of-legends": 127
+    }
   },
   {
     "id": "i-9fVdg3D",
@@ -17369,7 +18403,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 388,
     "themes": {
-      "cowboys-and-horses": 64
+      "cowboys-and-horses": 64,
+      "frontier-women": 93
     }
   },
   {
@@ -17438,7 +18473,10 @@ export const galleryData = [
     "sortOrder": 390,
     "themes": {
       "women-of-the-west": 48,
-      "cowboys-and-horses": 67
+      "cowboys-and-horses": 67,
+      "frontier-women": 95,
+      "hardship-sorrow": 41,
+      "love-goodbye": 49
     }
   },
   {
@@ -17472,7 +18510,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 391,
     "themes": {
-      "cowboys-and-horses": 66
+      "cowboys-and-horses": 66,
+      "whispering-reflection": 98
     }
   },
   {
@@ -17587,7 +18626,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 394,
     "themes": {
-      "women-of-the-west": 47
+      "women-of-the-west": 47,
+      "frontier-women": 94
     }
   },
   {
@@ -17783,7 +18823,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 399,
     "themes": {
-      "cowboys-and-horses": 73
+      "cowboys-and-horses": 73,
+      "sketches-of-legends": 130
     }
   },
   {
@@ -17822,7 +18863,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 400
+    "sortOrder": 400,
+    "themes": {
+      "sketches-of-legends": 129
+    }
   },
   {
     "id": "i-JvkzcpM",
@@ -17858,7 +18902,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 401
+    "sortOrder": 401,
+    "themes": {
+      "firelight-shadow": 76
+    }
   },
   {
     "id": "i-r3Kq9B4",
@@ -18013,7 +19060,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 405,
     "themes": {
-      "women-of-the-west": 49
+      "women-of-the-west": 49,
+      "frontier-women": 96
     }
   },
   {
@@ -18108,7 +19156,10 @@ export const galleryData = [
     "sortOrder": 408,
     "themes": {
       "women-of-the-west": 51,
-      "cowboys-and-horses": 78
+      "cowboys-and-horses": 78,
+      "frontier-women": 98,
+      "love-goodbye": 50,
+      "whispering-reflection": 99
     }
   },
   {
@@ -18150,7 +19201,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 409,
     "themes": {
-      "women-of-the-west": 50
+      "women-of-the-west": 50,
+      "frontier-women": 97,
+      "sketches-of-legends": 131
     }
   },
   {
@@ -18191,7 +19244,10 @@ export const galleryData = [
     "sortOrder": 410,
     "themes": {
       "women-of-the-west": 19,
-      "cowboys-and-horses": 77
+      "cowboys-and-horses": 77,
+      "frontier-women": 99,
+      "love-goodbye": 51,
+      "sketches-of-legends": 132
     }
   },
   {
@@ -18227,7 +19283,11 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 411
+    "sortOrder": 411,
+    "themes": {
+      "aces-smoke-whiskey": 5,
+      "firelight-shadow": 77
+    }
   },
   {
     "id": "i-NxjDRLV",
@@ -18263,7 +19323,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 412,
     "themes": {
-      "women-of-the-west": 56
+      "women-of-the-west": 56,
+      "frontier-women": 100
     }
   },
   {
@@ -18298,7 +19359,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 413
+    "sortOrder": 413,
+    "themes": {
+      "law-outlaws": 82
+    }
   },
   {
     "id": "i-kQfftQ2",
@@ -18330,7 +19394,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 414
+    "sortOrder": 414,
+    "themes": {
+      "law-outlaws": 83
+    }
   },
   {
     "id": "i-bFwNMZK",
@@ -18359,7 +19426,13 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 415
+    "sortOrder": 415,
+    "themes": {
+      "aces-smoke-whiskey": 43,
+      "firelight-shadow": 78,
+      "law-outlaws": 84,
+      "sketches-of-legends": 134
+    }
   },
   {
     "id": "i-c98L2bs",
@@ -18398,7 +19471,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 416,
     "themes": {
-      "women-of-the-west": 52
+      "women-of-the-west": 52,
+      "frontier-women": 101,
+      "hardship-sorrow": 44,
+      "love-goodbye": 53,
+      "whispering-reflection": 100
     }
   },
   {
@@ -18432,7 +19509,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 417,
     "themes": {
-      "women-of-the-west": 53
+      "women-of-the-west": 53,
+      "frontier-women": 102,
+      "whispering-reflection": 101
     }
   },
   {
@@ -18466,7 +19545,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 418,
     "themes": {
-      "women-of-the-west": 54
+      "women-of-the-west": 54,
+      "frontier-women": 103,
+      "hardship-sorrow": 43,
+      "love-goodbye": 52,
+      "whispering-reflection": 102
     }
   },
   {
@@ -18502,7 +19585,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 419,
     "themes": {
-      "women-of-the-west": 55
+      "women-of-the-west": 55,
+      "frontier-women": 104,
+      "hardship-sorrow": 42,
+      "sketches-of-legends": 133,
+      "whispering-reflection": 103
     }
   },
   {
@@ -18544,7 +19631,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 420,
     "themes": {
-      "women-of-the-west": 57
+      "women-of-the-west": 57,
+      "frontier-women": 105,
+      "hardship-sorrow": 45,
+      "love-goodbye": 54,
+      "whispering-reflection": 104
     }
   },
   {
@@ -18587,7 +19678,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 421,
     "themes": {
-      "women-of-the-west": 58
+      "women-of-the-west": 58,
+      "frontier-women": 106,
+      "hardship-sorrow": 46,
+      "love-goodbye": 55,
+      "whispering-reflection": 105
     }
   },
   {
@@ -18620,7 +19715,12 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 422,
     "themes": {
-      "women-of-the-west": 59
+      "women-of-the-west": 59,
+      "firelight-shadow": 79,
+      "frontier-women": 107,
+      "hardship-sorrow": 47,
+      "love-goodbye": 56,
+      "whispering-reflection": 106
     }
   },
   {
@@ -18654,7 +19754,9 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 423,
     "themes": {
-      "women-of-the-west": 60
+      "women-of-the-west": 60,
+      "frontier-women": 108,
+      "love-goodbye": 57
     }
   },
   {
@@ -18687,7 +19789,13 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 424
+    "sortOrder": 424,
+    "themes": {
+      "aces-smoke-whiskey": 44,
+      "firelight-shadow": 83,
+      "sketches-of-legends": 135,
+      "whispering-reflection": 107
+    }
   },
   {
     "id": "i-Nm9DNhq",
@@ -18722,7 +19830,11 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 425,
     "themes": {
-      "women-of-the-west": 61
+      "women-of-the-west": 61,
+      "firelight-shadow": 84,
+      "frontier-women": 109,
+      "sketches-of-legends": 136,
+      "whispering-reflection": 108
     }
   },
   {
@@ -18758,7 +19870,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 426,
     "themes": {
-      "women-of-the-west": 63
+      "women-of-the-west": 63,
+      "frontier-women": 111
     }
   },
   {
@@ -18804,7 +19917,12 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 427
+    "sortOrder": 427,
+    "themes": {
+      "aces-smoke-whiskey": 45,
+      "firelight-shadow": 80,
+      "law-outlaws": 85
+    }
   },
   {
     "id": "i-BGmFfF5",
@@ -18835,7 +19953,12 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 428
+    "sortOrder": 428,
+    "themes": {
+      "firelight-shadow": 81,
+      "law-outlaws": 86,
+      "whispering-reflection": 109
+    }
   },
   {
     "id": "i-CgTvzgP",
@@ -18869,7 +19992,10 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 429,
     "themes": {
-      "women-of-the-west": 62
+      "women-of-the-west": 62,
+      "firelight-shadow": 82,
+      "frontier-women": 110,
+      "law-outlaws": 87
     }
   },
   {
@@ -18902,7 +20028,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 430,
     "themes": {
-      "cowboys-and-horses": 80
+      "cowboys-and-horses": 80,
+      "dust-thunder": 11
     }
   },
   {
@@ -18937,7 +20064,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 431,
     "themes": {
-      "cowboys-and-horses": 79
+      "cowboys-and-horses": 79,
+      "dust-thunder": 3
     }
   },
   {
@@ -18997,7 +20125,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 433
+    "sortOrder": 433,
+    "themes": {
+      "whispering-reflection": 114
+    }
   },
   {
     "id": "i-RsLmsLZ",
@@ -19056,7 +20187,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 435,
     "themes": {
-      "cowboys-and-horses": 81
+      "cowboys-and-horses": 81,
+      "hardship-sorrow": 48
     }
   },
   {
@@ -19084,7 +20216,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 436
+    "sortOrder": 436,
+    "themes": {
+      "sketches-of-legends": 137
+    }
   },
   {
     "id": "i-pVMMLRp",
@@ -19181,7 +20316,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 439
+    "sortOrder": 439,
+    "themes": {
+      "sketches-of-legends": 140
+    }
   },
   {
     "id": "i-jXC3shm",
@@ -19242,7 +20380,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 441,
     "themes": {
-      "cowboys-and-horses": 84
+      "cowboys-and-horses": 84,
+      "frontier-women": 112
     }
   },
   {
@@ -19300,7 +20439,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 442
+    "sortOrder": 442,
+    "themes": {
+      "sketches-of-legends": 138,
+      "whispering-reflection": 110
+    }
   },
   {
     "id": "i-nbvxtrR",
@@ -19359,7 +20502,9 @@ export const galleryData = [
     "visibility": "hidden",
     "sortOrder": 443,
     "themes": {
-      "women-of-the-west": 64
+      "women-of-the-west": 64,
+      "frontier-women": 113,
+      "sketches-of-legends": 139
     }
   },
   {
@@ -19417,7 +20562,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 444
+    "sortOrder": 444,
+    "themes": {
+      "firelight-shadow": 85,
+      "law-outlaws": 88,
+      "sketches-of-legends": 144
+    }
   },
   {
     "id": "i-r9xCmwz",
@@ -19511,7 +20661,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 446
+    "sortOrder": 446,
+    "themes": {
+      "sketches-of-legends": 141,
+      "whispering-reflection": 111
+    }
   },
   {
     "id": "i-dXDLH7c",
@@ -19568,7 +20722,13 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 447
+    "sortOrder": 447,
+    "themes": {
+      "firelight-shadow": 86,
+      "hardship-sorrow": 49,
+      "sketches-of-legends": 142,
+      "whispering-reflection": 112
+    }
   },
   {
     "id": "i-mBD4f67",
@@ -19625,7 +20785,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 448
+    "sortOrder": 448,
+    "themes": {
+      "sketches-of-legends": 143
+    }
   },
   {
     "id": "i-Tcg3LZS",
@@ -19682,7 +20845,12 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 449
+    "sortOrder": 449,
+    "themes": {
+      "aces-smoke-whiskey": 46,
+      "firelight-shadow": 87,
+      "whispering-reflection": 113
+    }
   },
   {
     "id": "i-vhGcpWV",
@@ -19740,7 +20908,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 450
+    "sortOrder": 450,
+    "themes": {
+      "love-goodbye": 58
+    }
   },
   {
     "id": "i-6pCLC4L",
@@ -19797,6 +20968,9 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 451
+    "sortOrder": 451,
+    "themes": {
+      "sketches-of-legends": 145
+    }
   }
 ];

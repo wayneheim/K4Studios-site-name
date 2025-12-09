@@ -1,5 +1,5 @@
 // src/components/GalleryEditorPro.jsx
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 /* ---------- config: add more roots here if needed ---------- */
 const DATA_ROOTS = [
@@ -214,6 +214,7 @@ export default function GalleryEditorPro() {
   const [turboApplied, setTurboApplied] = useState(false);
   const [realBackupMade, setRealBackupMade] = useState(() => resumeState?.realBackupMade ?? false);
   const [lastTurboIdx, setLastTurboIdx] = useState(-1); // Track last idx for turbo text updates
+  const turboTextareaRef = useRef(null); // Ref for turbo mode textarea
 
   useEffect(() => {
     if (!lastAction) return;
@@ -589,6 +590,21 @@ ${collectorNotes}`;
   }
 
   function turboMove(delta) {
+    // Check if there are unsaved changes in turbo mode
+    if (current) {
+      const originalText = buildTurboText(current);
+      if (turboText !== originalText && !turboApplied) {
+        const shouldSave = confirm(
+          "You have unpopulated changes in the text block.\n\n" +
+          "Click OK to save changes before moving.\n" +
+          "Click Cancel to go back and review."
+        );
+        if (!shouldSave) return; // User cancelled, go back to review
+        // Save changes before moving
+        populateFromTurbo();
+      }
+    }
+    
     move(delta);
     setTurboApplied(false);
     // Will update turboText via effect
@@ -1161,13 +1177,15 @@ ${collectorNotes}`;
                   <div className="mt-3 flex items-center justify-center gap-3">
                     <button
                       onClick={() => turboMove(-1)}
-                      className={`${btnBase} bg-green-600 border-green-700 text-white ${btnHover} px-6 py-2`}
+                      disabled={idx === 0}
+                      className={`${btnBase} px-6 py-2 ${idx === 0 ? 'bg-gray-600 border-gray-700 text-gray-400 cursor-not-allowed' : `bg-green-600 border-green-700 text-white ${btnHover}`}`}
                     >
                       ◀ Prev
                     </button>
                     <button
                       onClick={() => turboMove(1)}
-                      className={`${btnBase} bg-green-500 border-green-600 text-white ${btnHover} px-6 py-2`}
+                      disabled={idx >= filtered.length - 1}
+                      className={`${btnBase} px-6 py-2 ${idx >= filtered.length - 1 ? 'bg-gray-600 border-gray-700 text-gray-400 cursor-not-allowed' : `bg-green-500 border-green-600 text-white ${btnHover}`}`}
                     >
                       Next ▶
                     </button>
@@ -1181,6 +1199,7 @@ ${collectorNotes}`;
                   </div>
                   
                   <textarea
+                    ref={turboTextareaRef}
                     value={turboText}
                     onChange={(e) => { setTurboText(e.target.value); setTurboApplied(false); }}
                     className="flex-1 w-full min-h-[70vh] border border-gray-600 rounded-lg px-3 py-2 bg-gray-800 text-gray-100 font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-amber-400"
@@ -1197,7 +1216,7 @@ ${collectorNotes}`;
                       Reset Text
                     </button>
                     <button
-                      onClick={() => setTurboText("")}
+                      onClick={() => { setTurboText(""); turboTextareaRef.current?.focus(); }}
                       className={`${btnBase} bg-gray-600 border-gray-500 text-gray-200 ${btnHover}`}
                       title="Clear all text for easy pasting"
                     >
@@ -1225,13 +1244,15 @@ ${collectorNotes}`;
                   <div className="mt-3 flex items-center justify-center gap-3">
                     <button
                       onClick={() => turboMove(-1)}
-                      className={`${btnBase} bg-green-600 border-green-700 text-white ${btnHover} px-6 py-2`}
+                      disabled={idx === 0}
+                      className={`${btnBase} px-6 py-2 ${idx === 0 ? 'bg-gray-600 border-gray-700 text-gray-400 cursor-not-allowed' : `bg-green-600 border-green-700 text-white ${btnHover}`}`}
                     >
                       ◀ Prev
                     </button>
                     <button
                       onClick={() => turboMove(1)}
-                      className={`${btnBase} bg-green-500 border-green-600 text-white ${btnHover} px-6 py-2`}
+                      disabled={idx >= filtered.length - 1}
+                      className={`${btnBase} px-6 py-2 ${idx >= filtered.length - 1 ? 'bg-gray-600 border-gray-700 text-gray-400 cursor-not-allowed' : `bg-green-500 border-green-600 text-white ${btnHover}`}`}
                     >
                       Next ▶
                     </button>

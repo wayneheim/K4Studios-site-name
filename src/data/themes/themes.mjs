@@ -56,5 +56,104 @@ export const themes = [
     "firstImage": "i-pd3hvNk",
     "createdAt": "2025-12-07T04:12:27.519Z",
     "updatedAt": "2025-12-07T04:12:27.519Z"
+  },
+  {
+    "name": "Hardship & Sorrow",
+    "slug": "hardship-sorrow",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "Stories forged in sorrow and survival — portraits and frontier scenes capturing the emotional weight of loss, sacrifice, and the unspoken grief of Western life.",
+    "visible": true,
+    "imageCount": 50,
+    "firstImage": "i-B7ZSdfs",
+    "createdAt": "2025-12-09T19:10:52.274Z",
+    "updatedAt": "2025-12-09T22:24:59.322Z"
+  },
+  {
+    "name": "Frontier Women",
+    "slug": "frontier-women",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "Powerful portraits of Western women — strength, grit, resilience, and the untold stories of those who shaped the frontier.",
+    "visible": true,
+    "imageCount": 114,
+    "firstImage": "i-B7ZSdfs",
+    "createdAt": "2025-12-09T19:39:40.417Z",
+    "updatedAt": "2025-12-09T22:20:41.191Z"
+  },
+  {
+    "name": "Law & Outlaws",
+    "slug": "law-outlaws",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "A collection exploring justice, revenge, and the blurred lines between lawman and outlaw — classic Western tension rendered in painterly detail.",
+    "visible": true,
+    "imageCount": 89,
+    "firstImage": "i-44jcjTQ",
+    "createdAt": "2025-12-09T19:56:15.238Z",
+    "updatedAt": "2025-12-09T22:29:52.021Z"
+  },
+  {
+    "name": "Dust & Thunder",
+    "slug": "dust-thunder",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "High-energy scenes of motion, grit, and the raw power of the West — dust clouds, thundering hooves, and cinematic frontier action.",
+    "visible": true,
+    "imageCount": 34,
+    "firstImage": "i-KVxkXrV",
+    "createdAt": "2025-12-09T20:01:47.516Z",
+    "updatedAt": "2025-12-09T22:12:08.274Z"
+  },
+  {
+    "name": "Firelight & Shadow",
+    "slug": "firelight-shadow",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "Intimate Western moments illuminated by flame and fading light — campfires, lantern glow, and shadow-rich portraits that reveal the quiet stories of the frontier.",
+    "visible": true,
+    "imageCount": 88,
+    "firstImage": "i-44jcjTQ",
+    "createdAt": "2025-12-09T20:07:45.095Z",
+    "updatedAt": "2025-12-09T22:15:00.836Z"
+  },
+  {
+    "name": "Sketches of Legends",
+    "slug": "sketches-of-legends",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "Intimate frontier portraits capturing the early shape of legends — character studies, mythic faces, and cinematic moments that hint at larger stories to come.",
+    "visible": true,
+    "imageCount": 146,
+    "firstImage": "i-ncFcHDM",
+    "createdAt": "2025-12-09T20:20:50.535Z",
+    "updatedAt": "2025-12-09T22:38:50.626Z"
+  },
+  {
+    "name": "Whispering & Reflection",
+    "slug": "whispering-reflection",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "Cinematic, painterly Western scenes shaped by soft wind, quiet reflection, and the unspoken stories that drift between dust and horizon. A collection of whispered moments where the frontier reveals its gentler, more intimate side.",
+    "visible": true,
+    "imageCount": 115,
+    "firstImage": "i-B7ZSdfs",
+    "createdAt": "2025-12-09T20:29:30.153Z",
+    "updatedAt": "2025-12-09T22:43:45.852Z"
+  },
+  {
+    "name": "Aces, Smoke & Whiskey",
+    "slug": "aces-smoke-whiskey",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "A cinematic collection steeped in lantern-lit saloons, drifting smoke, and the sharp tension of frontier card games. These painterly Western scenes capture outlaws, gamblers, and lawmen testing their luck where whiskey burns, tempers flare, and every ace can change a destiny.",
+    "visible": true,
+    "imageCount": 47,
+    "firstImage": "i-T7TFJX2",
+    "createdAt": "2025-12-09T20:39:09.240Z",
+    "updatedAt": "2025-12-09T22:03:31.035Z"
+  },
+  {
+    "name": "Love & Goodbye",
+    "slug": "love-goodbye",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "description": "A tender yet unflinching collection of Western scenes shaped by devotion, distance, and the quiet heartbreak of the frontier. ‘Love and Goodbye’ captures the moments when affection meets duty, when riders part ways, and when the West asks more of the heart than it can give.",
+    "visible": true,
+    "imageCount": 59,
+    "firstImage": "i-B7ZSdfs",
+    "createdAt": "2025-12-09T20:47:50.403Z",
+    "updatedAt": "2025-12-09T22:34:12.020Z"
   }
 ];

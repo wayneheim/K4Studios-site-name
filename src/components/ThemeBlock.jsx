@@ -3,11 +3,17 @@ import { themes } from "@/data/themes/themes.mjs";
 
 /**
  * ThemeBlock - displays themes available for a gallery
+ * Shows up to 4 themes initially, with "More..." to expand
+ * ALL themes remain in DOM for SEO (hidden via CSS, not removed)
  * 
  * @param {string} galleryKey - The gallery identifier (e.g., "/Galleries/Painterly-.../Western-Cowboy-Portraits")
  */
 export default function ThemeBlock({ galleryKey }) {
   const [active, setActive] = useState(null);
+  const [expanded, setExpanded] = useState(false);
+
+  // How many to show before "More..."
+  const VISIBLE_COUNT = 4;
 
   // Filter themes that match this gallery's dataset path
   // galleryKey might be a URL path like "/Galleries/Painterly-.../Western-Cowboy-Portraits"
@@ -47,6 +53,9 @@ export default function ThemeBlock({ galleryKey }) {
   });
 
   if (!galleryThemes.length) return null;
+
+  const needsExpansion = galleryThemes.length > VISIBLE_COUNT;
+  const hiddenCount = galleryThemes.length - VISIBLE_COUNT;
 
   return (
     <div 
@@ -107,13 +116,14 @@ export default function ThemeBlock({ galleryKey }) {
         </div>
 
         {/* --- THEME GRID --- */}
+        {/* ALL themes are in DOM for SEO - hidden ones use CSS visibility */}
         <div style={{ 
           display: "flex", 
           flexDirection: "column",
           gap: "0.35rem",
           alignItems: "center",
         }}>
-          {galleryThemes.map((t) => {
+          {galleryThemes.map((t, index) => {
             // Build the theme URL - navigate to the first themed image with theme filter
             // Use the theme's dataset path to construct the correct gallery URL
             // Use pre-stored firstImage from theme registry (no async loading needed)
@@ -121,6 +131,9 @@ export default function ThemeBlock({ galleryKey }) {
             const themeUrl = t.firstImage 
               ? `${datasetPath}/${t.firstImage}?theme=${t.slug}`
               : `${datasetPath}?theme=${t.slug}`;
+            
+            // Determine if this theme should be visually hidden (but still in DOM for SEO)
+            const isHidden = !expanded && needsExpansion && index >= VISIBLE_COUNT;
             
             return (
               <a
@@ -135,12 +148,49 @@ export default function ThemeBlock({ galleryKey }) {
                   transition: "0.15s",
                   fontSize: "0.8rem",
                   fontFamily: "'Glegoo', serif",
+                  // Hide visually but keep in DOM for SEO
+                  ...(isHidden ? {
+                    position: "absolute",
+                    width: "1px",
+                    height: "1px",
+                    padding: 0,
+                    margin: "-1px",
+                    overflow: "hidden",
+                    clip: "rect(0, 0, 0, 0)",
+                    whiteSpace: "nowrap",
+                    border: 0,
+                  } : {}),
                 }}
+                // Add aria-hidden for hidden items (screen readers skip, but crawlers still see)
+                aria-hidden={isHidden ? "true" : undefined}
+                tabIndex={isHidden ? -1 : undefined}
               >
                 {t.name}
               </a>
             );
           })}
+          
+          {/* "More..." / "Less" toggle button */}
+          {needsExpansion && (
+            <button
+              onClick={() => setExpanded(!expanded)}
+              style={{
+                cursor: "pointer",
+                color: "#6a8a6a",
+                background: "none",
+                border: "none",
+                padding: 0,
+                fontSize: "0.75rem",
+                fontFamily: "'Glegoo', serif",
+                fontStyle: "italic",
+                marginTop: "0.15rem",
+              }}
+              onMouseEnter={(e) => e.target.style.textDecoration = "underline"}
+              onMouseLeave={(e) => e.target.style.textDecoration = "none"}
+            >
+              {expanded ? "▲ Show Less" : `▼ More... (${hiddenCount})`}
+            </button>
+          )}
         </div>
       </div>
 

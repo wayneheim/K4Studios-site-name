@@ -93,8 +93,47 @@ exports.handler = async (event) => {
     const toCode = await fs.readFile(toAbs, "utf8");
     const toArr  = extractArrayFromMjs(toCode);
     if (!Array.isArray(toArr)) return { statusCode: 400, body: "Failed to parse target galleryData" };
+    
+    // ========== PRESERVE THEMES FROM EXISTING TARGET FILE ==========
+    // Build a map of existing themes by id before we modify anything
+    const existingThemesById = new Map();
+    for (const item of toArr) {
+      if (item && item.id && item.themes && typeof item.themes === "object") {
+        existingThemesById.set(item.id, item.themes);
+      }
+    }
+    // ================================================================
+    
     const toGhosts = toArr.filter(isGhost);
-    const toVis    = toArr.filter(isReal);
+    let toVis    = toArr.filter(isReal);
+    
+    // ========== SMART MERGE THEMES FOR EXISTING ITEMS ==========
+    // Combine existing themes with any incoming themes
+    toVis = toVis.map((item) => {
+      if (!item || !item.id) return item;
+      
+      const existingThemes = existingThemesById.get(item.id);
+      const incomingThemes = item.themes && typeof item.themes === "object" ? item.themes : null;
+      
+      // No existing themes - just use incoming
+      if (!existingThemes || Object.keys(existingThemes).length === 0) {
+        return item;
+      }
+      
+      // No incoming themes - preserve existing
+      if (!incomingThemes || Object.keys(incomingThemes).length === 0) {
+        return { ...item, themes: existingThemes };
+      }
+      
+      // Both exist - merge
+      const mergedThemes = { ...existingThemes, ...incomingThemes };
+      for (const key of Object.keys(mergedThemes)) {
+        if (mergedThemes[key] == null) delete mergedThemes[key];
+      }
+      const hasThemes = Object.keys(mergedThemes).length > 0;
+      return { ...item, themes: hasThemes ? mergedThemes : undefined };
+    });
+    // ==============================================================
 
     // Get source items either from client (preferred) or by parsing the file
     let sourceVis = Array.isArray(selectedItems) && selectedItems.length

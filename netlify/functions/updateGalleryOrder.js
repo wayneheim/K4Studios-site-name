@@ -88,6 +88,31 @@ exports.handler = async (event) => {
       return { statusCode: 404, body: `Dataset not found: ${datasetPath}` };
     }
 
+    // ========== PRESERVE THEMES FROM EXISTING FILE ==========
+    // Read the existing file to extract current themes data
+    // This prevents stale client data from wiping out themes
+    let existingThemesById = new Map();
+    try {
+      const existingCode = await fs.readFile(absPath, "utf8");
+      // Extract the array from the file using regex (simple parse)
+      const match = existingCode.match(/export\s+const\s+galleryData\s*=\s*(\[[\s\S]*\]);?\s*$/);
+      if (match) {
+        try {
+          const existingArr = JSON.parse(match[1]);
+          for (const item of existingArr) {
+            if (item && item.id && item.themes && typeof item.themes === "object") {
+              existingThemesById.set(item.id, item.themes);
+            }
+          }
+        } catch (parseErr) {
+          console.warn("Could not parse existing gallery for themes preservation:", parseErr.message);
+        }
+      }
+    } catch (readErr) {
+      console.warn("Could not read existing file for themes preservation:", readErr.message);
+    }
+    // =========================================================
+
     // Need a complete array to rebuild the file
     let working = Array.isArray(fullArray) ? fullArray.slice() : null;
     if (!working) {
@@ -96,6 +121,43 @@ exports.handler = async (event) => {
       }
       working = sourceArray.slice();
     }
+
+    // ========== MERGE PRESERVED THEMES INTO WORKING DATA ==========
+    // SMART MERGE: Combine existing themes with incoming themes
+    // - Existing themes are preserved unless explicitly overwritten
+    // - Incoming themes add to or update existing themes
+    // - To DELETE a theme, the client must send the key with null or explicitly omit it
+    //   after having it in the existing file (we trust explicit removals from ThemeBuilder)
+    working = working.map((item) => {
+      if (!item || !item.id) return item;
+      
+      const existingThemes = existingThemesById.get(item.id);
+      const incomingThemes = item.themes && typeof item.themes === "object" ? item.themes : null;
+      
+      // Case 1: No existing themes - just use incoming (or nothing)
+      if (!existingThemes || Object.keys(existingThemes).length === 0) {
+        return item;
+      }
+      
+      // Case 2: No incoming themes - preserve all existing themes
+      if (!incomingThemes || Object.keys(incomingThemes).length === 0) {
+        return { ...item, themes: existingThemes };
+      }
+      
+      // Case 3: Both exist - merge them (incoming overwrites existing for same keys)
+      const mergedThemes = { ...existingThemes, ...incomingThemes };
+      
+      // Clean up any null/undefined values (allows explicit deletion)
+      for (const key of Object.keys(mergedThemes)) {
+        if (mergedThemes[key] == null) {
+          delete mergedThemes[key];
+        }
+      }
+      
+      const hasThemes = Object.keys(mergedThemes).length > 0;
+      return { ...item, themes: hasThemes ? mergedThemes : undefined };
+    });
+    // ==============================================================
 
     const ghosts = working.filter(isGhost);
     let visibles = working.filter(isReal);
