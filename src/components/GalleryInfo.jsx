@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
+import ThemeBlock from "./ThemeBlock.jsx";
 
 /* ---------------------------------------------------------
    Glob all gallery data files
@@ -134,6 +135,9 @@ export default function GalleryInfo({
             ease: [0.33, 1, 0.68, 1],
           }}
         >
+          {/* Theme Block - shows themes for this gallery */}
+          <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
+
           {entranceData?.image && (
             <a
               href={exploreHref}

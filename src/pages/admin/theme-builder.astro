@@ -1,0 +1,13 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ThemeBuilder from "@/components/ThemeBuilder.jsx";
+
+const { url } = Astro;
+
+// No dataset param needed — ThemeBuilder handles dataset selection itself.
+---
+<BaseLayout title="Theme Builder">
+  <div class="pt-6">
+    <ThemeBuilder client:load />
+  </div>
+</BaseLayout>

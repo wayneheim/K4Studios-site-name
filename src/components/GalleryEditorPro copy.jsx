@@ -39,6 +39,7 @@ function buildMjs(galleryData, exportName = "galleryData") {
       if (it.visibility != null) pushStr("visibility", it.visibility);
       if (typeof it.sortOrder === "number") pushVal("sortOrder", it.sortOrder);
       if (it.buyLink != null) pushStr("buyLink", it.buyLink);
+      if (it.themes && typeof it.themes === "object") out.push(`    themes: ${JSON.stringify(it.themes)},`);
       return `  {\n${out.join("\n")}\n  }`;
     })
     .join(",\n");

@@ -31942,7 +31942,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/MP9k4DZcSbQKCmM9MpjCwk4BrznVbgsBPVwfjhMRb/L/_DSF5690-Enhanced-NR-Pano-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/MrmThrqFLPQMXGhBJNQFdpgF5mbBL32QRK8wmqXn7/XL/_DSF5690-Enhanced-NR-Pano-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/KcxZ2MfcZgvdfvJ6gdZZDQt72FQsnpDZDjGfHfjk8/S/_DSF5690-Enhanced-NR-Pano-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
       ]
@@ -31990,7 +31990,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MnrTdr2PSNxHHcbVqCPZ8NF8MFf5H32b7jtHR23t9/L/_WHZ6765-Pano%20v2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MSQWvXFk5hvP6FqSzCDZhJ7hhH2TKGVpvXKDMCdvP/XL/_WHZ6765-Pano%20v2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MBkdXxQz2B9tfmwqWQw46N9rJSqcQsgQ43TwJc3XL/S/_WHZ6765-Pano%20v2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
       ]
@@ -73610,7 +73610,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/MP9k4DZcSbQKCmM9MpjCwk4BrznVbgsBPVwfjhMRb/L/_DSF5690-Enhanced-NR-Pano-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/MrmThrqFLPQMXGhBJNQFdpgF5mbBL32QRK8wmqXn7/XL/_DSF5690-Enhanced-NR-Pano-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NSj5zsB/0/KcxZ2MfcZgvdfvJ6gdZZDQt72FQsnpDZDjGfHfjk8/S/_DSF5690-Enhanced-NR-Pano-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ]
@@ -73658,7 +73658,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MnrTdr2PSNxHHcbVqCPZ8NF8MFf5H32b7jtHR23t9/L/_WHZ6765-Pano%20v2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MSQWvXFk5hvP6FqSzCDZhJ7hhH2TKGVpvXKDMCdvP/XL/_WHZ6765-Pano%20v2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Tennessee/Bulletfest-2015/i-2hVf7F4/1/MBkdXxQz2B9tfmwqWQw46N9rJSqcQsgQ43TwJc3XL/S/_WHZ6765-Pano%20v2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
     ]

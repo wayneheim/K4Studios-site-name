@@ -3,7 +3,7 @@ const fs = require("fs/promises");
 const path = require("path");
 
 /* ===== path guards & helpers (new) ===== */
-const ALLOWED_ROOTS = ["src/data/Galleries", "src/pages/Other"]; // support both trees
+const ALLOWED_ROOTS = ["src/data/Galleries", "src/pages/Other", "src/data/Other"]; // support all trees
 const toPosix = (p = "") => String(p).replace(/\\/g, "/");
 const hasTraversal = (p = "") => p.split(/[\\/]+/).some(seg => seg === "..");
 
@@ -13,7 +13,7 @@ function resolveDatasetAbsolute(datasetPath) {
     throw new Error("Invalid datasetPath");
   }
   const ok = ALLOWED_ROOTS.some(root => rel.startsWith(toPosix(root) + "/"));
-  if (!ok) throw new Error("Dataset must be under src/data/Galleries or src/pages/Other");
+  if (!ok) throw new Error("Dataset must be under src/data/Galleries, src/pages/Other, or src/data/Other");
   return path.join(process.cwd(), rel);
 }
 
@@ -48,6 +48,7 @@ function normalizeItem(raw) {
   if (Array.isArray(raw.galleries)) out.galleries = raw.galleries;
   if (raw.visibility != null) out.visibility = raw.visibility;
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
+  if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
   return out;
 }
 

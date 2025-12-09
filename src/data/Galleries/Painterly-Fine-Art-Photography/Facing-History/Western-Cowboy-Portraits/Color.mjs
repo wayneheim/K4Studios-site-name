@@ -132,7 +132,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    "themes": {
+      "women-of-the-west": 0
+    }
   },
   {
     "id": "i-wdF6Hw3",
@@ -226,7 +229,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    "themes": {
+      "cowboys-and-horses": 0
+    }
   },
   {
     "id": "i-MMmDhV2",
@@ -287,7 +293,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    "themes": {
+      "cowboys-with-horses": 3,
+      "cowboys-and-horses": 2
+    }
   },
   {
     "id": "i-Wx5scCf",
@@ -346,7 +356,12 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    "themes": {
+      "women-of-the-west": 66,
+      "cowboys-with-horses": 1,
+      "cowboys-and-horses": 1
+    }
   },
   {
     "id": "i-f4MSxpP",
@@ -375,7 +390,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    "themes": {
+      "cowboys-with-horses": 2,
+      "cowboys-and-horses": 3
+    }
   },
   {
     "id": "i-gxMVNh3",
@@ -411,7 +430,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    "themes": {
+      "women-of-the-west": 40
+    }
   },
   {
     "id": "i-VVwZ7gM",
@@ -476,7 +498,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    "themes": {
+      "women-of-the-west": 1
+    }
   },
   {
     "id": "i-5TtHV8g",
@@ -607,7 +632,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    "themes": {
+      "women-of-the-west": 2
+    }
   },
   {
     "id": "i-qB47jJT",
@@ -637,7 +665,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    "themes": {
+      "women-of-the-west": 5
+    }
   },
   {
     "id": "i-rfFBRQM",
@@ -672,7 +703,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    "themes": {
+      "women-of-the-west": 4
+    }
   },
   {
     "id": "i-5Md3dQ3",
@@ -705,7 +739,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    "themes": {
+      "women-of-the-west": 3
+    }
   },
   {
     "id": "i-dsqgfVj",
@@ -744,7 +781,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    "themes": {
+      "cowboys-with-horses": 4,
+      "cowboys-and-horses": 4
+    }
   },
   {
     "id": "i-46kWCqc",
@@ -776,7 +817,11 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    "themes": {
+      "cowboys-with-horses": 5,
+      "cowboys-and-horses": 5
+    }
   },
   {
     "id": "i-zHvS5jz",
@@ -805,7 +850,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    "themes": {
+      "cowboys-with-horses": 6,
+      "cowboys-and-horses": 7
+    }
   },
   {
     "id": "i-Nn7scqm",
@@ -837,7 +886,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    "themes": {
+      "women-of-the-west": 6
+    }
   },
   {
     "id": "i-cV5gwWZ",
@@ -908,7 +960,10 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    "themes": {
+      "women-of-the-west": 7
+    }
   },
   {
     "id": "i-r5Pb7zJ",
@@ -1054,7 +1109,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    "themes": {
+      "cowboys-with-horses": 8,
+      "cowboys-and-horses": 10
+    }
   },
   {
     "id": "i-5rq7gcD",
@@ -1092,7 +1151,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    "themes": {
+      "women-of-the-west": 8
+    }
   },
   {
     "id": "i-bfKMXS9",
@@ -1185,7 +1247,11 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    "themes": {
+      "cowboys-with-horses": 7,
+      "cowboys-and-horses": 11
+    }
   },
   {
     "id": "i-trZrk2w",
@@ -1381,7 +1447,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    "themes": {
+      "cowboys-and-horses": 6
+    }
   },
   {
     "id": "i-CD6rgtF",
@@ -1457,7 +1526,10 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    "themes": {
+      "cowboys-and-horses": 12
+    }
   },
   {
     "id": "i-fCG2nm8",
@@ -1622,7 +1694,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    "themes": {
+      "women-of-the-west": 65
+    }
   },
   {
     "id": "i-xqZwcZh",
@@ -1661,7 +1736,11 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    "themes": {
+      "cowboys-with-horses": 9,
+      "cowboys-and-horses": 8
+    }
   },
   {
     "id": "i-c5K798H",
@@ -1697,7 +1776,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    "themes": {
+      "cowboys-with-horses": 0
+    }
   },
   {
     "id": "i-k4b6c5b",
@@ -1860,7 +1942,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 51
+    "sortOrder": 51,
+    "themes": {
+      "women-of-the-west": 9
+    }
   },
   {
     "id": "i-hrmrhT3",
@@ -2125,7 +2210,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    "themes": {
+      "cowboys-with-horses": 10,
+      "cowboys-and-horses": 9
+    }
   },
   {
     "id": "i-RT474Nz",
@@ -2155,7 +2244,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    "themes": {
+      "cowboys-and-horses": 13
+    }
   },
   {
     "id": "i-WxQjxQS",
@@ -2317,7 +2409,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 62,
+    "themes": {
+      "women-of-the-west": 10
+    }
   },
   {
     "id": "i-cFhZXJc",
@@ -2446,7 +2541,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 65,
+    "themes": {
+      "women-of-the-west": 11
+    }
   },
   {
     "id": "i-PM4d3g3",
@@ -2721,7 +2819,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 71
+    "sortOrder": 71,
+    "themes": {
+      "women-of-the-west": 12
+    }
   },
   {
     "id": "i-tnWbQrT",
@@ -2758,7 +2859,11 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 72,
+    "themes": {
+      "cowboys-with-horses": 12,
+      "cowboys-and-horses": 15
+    }
   },
   {
     "id": "i-M2WdKTL",
@@ -2794,7 +2899,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 73,
+    "themes": {
+      "cowboys-with-horses": 11,
+      "cowboys-and-horses": 14
+    }
   },
   {
     "id": "i-CzWxpvV",
@@ -2825,7 +2934,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 74,
+    "themes": {
+      "cowboys-with-horses": 13,
+      "cowboys-and-horses": 16
+    }
   },
   {
     "id": "i-gL3Nnth",
@@ -2956,7 +3069,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 77,
+    "themes": {
+      "cowboys-with-horses": 15,
+      "cowboys-and-horses": 17
+    }
   },
   {
     "id": "i-v4vRSb8",
@@ -2996,7 +3113,12 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 78,
+    "themes": {
+      "women-of-the-west": 39,
+      "cowboys-with-horses": 14,
+      "cowboys-and-horses": 18
+    }
   },
   {
     "id": "i-vFrxmXD",
@@ -3141,7 +3263,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 82
+    "sortOrder": 82,
+    "themes": {
+      "cowboys-and-horses": 19
+    }
   },
   {
     "id": "i-ZRFr8hd",
@@ -3349,7 +3474,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 87
+    "sortOrder": 87,
+    "themes": {
+      "women-of-the-west": 38
+    }
   },
   {
     "id": "i-6Ffpw9t",
@@ -3663,7 +3791,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 94
+    "sortOrder": 94,
+    "themes": {
+      "women-of-the-west": 37
+    }
   },
   {
     "id": "i-dNgct6r",
@@ -3922,7 +4053,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 99
+    "sortOrder": 99,
+    "themes": {
+      "women-of-the-west": 36
+    }
   },
   {
     "id": "i-T6bD4w7",
@@ -4162,7 +4296,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 105
+    "sortOrder": 105,
+    "themes": {
+      "cowboys-and-horses": 20
+    }
   },
   {
     "id": "i-rMkQnM6",
@@ -4561,7 +4698,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 112
+    "sortOrder": 112,
+    "themes": {
+      "women-of-the-west": 34
+    }
   },
   {
     "id": "i-KTGLfqc",
@@ -4618,7 +4758,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 113
+    "sortOrder": 113,
+    "themes": {
+      "women-of-the-west": 35
+    }
   },
   {
     "id": "i-v4TzPgF",
@@ -4675,7 +4818,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 114
+    "sortOrder": 114,
+    "themes": {
+      "women-of-the-west": 33
+    }
   },
   {
     "id": "i-8cXqSjj",
@@ -5002,7 +5148,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 120
+    "sortOrder": 120,
+    "themes": {
+      "women-of-the-west": 31
+    }
   },
   {
     "id": "i-8zFZ3jn",
@@ -5230,7 +5379,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 124
+    "sortOrder": 124,
+    "themes": {
+      "women-of-the-west": 32
+    }
   },
   {
     "id": "i-D5kv9Q6",
@@ -6193,7 +6345,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 143
+    "sortOrder": 143,
+    "themes": {
+      "cowboys-and-horses": 21
+    }
   },
   {
     "id": "i-HHxxcsM",
@@ -6307,7 +6462,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 145
+    "sortOrder": 145,
+    "themes": {
+      "women-of-the-west": 29
+    }
   },
   {
     "id": "i-pNSX6cp",
@@ -6592,7 +6750,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 150
+    "sortOrder": 150,
+    "themes": {
+      "women-of-the-west": 28
+    }
   },
   {
     "id": "i-CgCxXGG",
@@ -6794,7 +6955,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 154
+    "sortOrder": 154,
+    "themes": {
+      "cowboys-and-horses": 22
+    }
   },
   {
     "id": "i-cKFv3th",
@@ -6851,7 +7015,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 155
+    "sortOrder": 155,
+    "themes": {
+      "women-of-the-west": 30
+    }
   },
   {
     "id": "i-MDrw6sD",
@@ -7433,7 +7600,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 166
+    "sortOrder": 166,
+    "themes": {
+      "cowboys-and-horses": 23
+    }
   },
   {
     "id": "i-xr5chJG",
@@ -7636,7 +7806,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 171
+    "sortOrder": 171,
+    "themes": {
+      "women-of-the-west": 27
+    }
   },
   {
     "id": "i-SVwxn5L",
@@ -7904,7 +8077,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 177
+    "sortOrder": 177,
+    "themes": {
+      "women-of-the-west": 26
+    }
   },
   {
     "id": "i-bkjkPfH",
@@ -7997,7 +8173,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 179
+    "sortOrder": 179,
+    "themes": {
+      "cowboys-and-horses": 24
+    }
   },
   {
     "id": "i-XsdNV9s",
@@ -8558,7 +8737,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 190
+    "sortOrder": 190,
+    "themes": {
+      "women-of-the-west": 25
+    }
   },
   {
     "id": "i-R2JG4bd",
@@ -8822,7 +9004,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 195
+    "sortOrder": 195,
+    "themes": {
+      "women-of-the-west": 24
+    }
   },
   {
     "id": "i-bxsRc6q",
@@ -9029,7 +9214,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 199
+    "sortOrder": 199,
+    "themes": {
+      "women-of-the-west": 22
+    }
   },
   {
     "id": "i-GH7H4LC",
@@ -9123,7 +9311,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 201
+    "sortOrder": 201,
+    "themes": {
+      "women-of-the-west": 23
+    }
   },
   {
     "id": "i-5LTzhJ6",
@@ -9254,7 +9445,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 204
+    "sortOrder": 204,
+    "themes": {
+      "women-of-the-west": 21
+    }
   },
   {
     "id": "i-GBvFP8Q",
@@ -10295,7 +10489,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 224
+    "sortOrder": 224,
+    "themes": {
+      "women-of-the-west": 18
+    }
   },
   {
     "id": "i-Lk79jNj",
@@ -10466,7 +10663,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 227
+    "sortOrder": 227,
+    "themes": {
+      "women-of-the-west": 20
+    }
   },
   {
     "id": "i-spjF4Zd",
@@ -11305,7 +11505,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 244
+    "sortOrder": 244,
+    "themes": {
+      "women-of-the-west": 17
+    }
   },
   {
     "id": "i-8g6m7tf",
@@ -12579,7 +12782,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 270
+    "sortOrder": 270,
+    "themes": {
+      "women-of-the-west": 16
+    }
   },
   {
     "id": "i-GKFFQzH",
@@ -12653,7 +12859,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 272
+    "sortOrder": 272,
+    "themes": {
+      "women-of-the-west": 15
+    }
   },
   {
     "id": "i-npgMCML",
@@ -12729,7 +12938,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 274
+    "sortOrder": 274,
+    "themes": {
+      "cowboys-and-horses": 26
+    }
   },
   {
     "id": "i-wZ8Zn9p",
@@ -12752,7 +12964,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 275
+    "sortOrder": 275,
+    "themes": {
+      "cowboys-and-horses": 25
+    }
   },
   {
     "id": "i-WNLSRQf",
@@ -12781,7 +12996,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 276
+    "sortOrder": 276,
+    "themes": {
+      "cowboys-and-horses": 28
+    }
   },
   {
     "id": "i-Qx9xbv7",
@@ -12811,7 +13029,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 277
+    "sortOrder": 277,
+    "themes": {
+      "cowboys-and-horses": 27
+    }
   },
   {
     "id": "i-kjWmdVL",
@@ -13994,7 +14215,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 302
+    "sortOrder": 302,
+    "themes": {
+      "cowboys-and-horses": 29
+    }
   },
   {
     "id": "i-9LC3ZrM",
@@ -14032,7 +14256,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 303
+    "sortOrder": 303,
+    "themes": {
+      "cowboys-and-horses": 30
+    }
   },
   {
     "id": "i-J3dh2p4",
@@ -14183,7 +14410,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 307
+    "sortOrder": 307,
+    "themes": {
+      "cowboys-and-horses": 32
+    }
   },
   {
     "id": "i-5fm7Hhr",
@@ -14215,7 +14445,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 308
+    "sortOrder": 308,
+    "themes": {
+      "cowboys-and-horses": 31
+    }
   },
   {
     "id": "i-6wMDxdF",
@@ -14272,7 +14505,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 309
+    "sortOrder": 309,
+    "themes": {
+      "women-of-the-west": 14
+    }
   },
   {
     "id": "i-m52CLPT",
@@ -14302,7 +14538,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 310
+    "sortOrder": 310,
+    "themes": {
+      "cowboys-and-horses": 33
+    }
   },
   {
     "id": "i-8pp9T7x",
@@ -14423,7 +14662,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 313
+    "sortOrder": 313,
+    "themes": {
+      "cowboys-and-horses": 34
+    }
   },
   {
     "id": "i-zN6f785",
@@ -14492,7 +14734,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 315
+    "sortOrder": 315,
+    "themes": {
+      "cowboys-and-horses": 35
+    }
   },
   {
     "id": "i-DK8t88F",
@@ -14525,7 +14770,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 316
+    "sortOrder": 316,
+    "themes": {
+      "cowboys-and-horses": 36
+    }
   },
   {
     "id": "i-9Qt4nh7",
@@ -14554,7 +14802,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 317
+    "sortOrder": 317,
+    "themes": {
+      "cowboys-and-horses": 38
+    }
   },
   {
     "id": "i-qNb7qRw",
@@ -14585,7 +14836,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 318
+    "sortOrder": 318,
+    "themes": {
+      "cowboys-and-horses": 40
+    }
   },
   {
     "id": "i-kk6DvMJ",
@@ -14617,7 +14871,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 319
+    "sortOrder": 319,
+    "themes": {
+      "cowboys-and-horses": 39
+    }
   },
   {
     "id": "i-ZDGhLps",
@@ -14733,7 +14990,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 322
+    "sortOrder": 322,
+    "themes": {
+      "cowboys-and-horses": 41
+    }
   },
   {
     "id": "i-2s2LtQp",
@@ -14763,7 +15023,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 323
+    "sortOrder": 323,
+    "themes": {
+      "cowboys-and-horses": 42
+    }
   },
   {
     "id": "i-Q3Qm4f2",
@@ -14943,7 +15206,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 329
+    "sortOrder": 329,
+    "themes": {
+      "cowboys-and-horses": 43
+    }
   },
   {
     "id": "i-3V4rCN8",
@@ -15013,7 +15279,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 331
+    "sortOrder": 331,
+    "themes": {
+      "cowboys-and-horses": 44
+    }
   },
   {
     "id": "i-549JVNk",
@@ -15076,7 +15345,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 333
+    "sortOrder": 333,
+    "themes": {
+      "cowboys-and-horses": 45
+    }
   },
   {
     "id": "i-vP7bLLc",
@@ -15111,7 +15383,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 334
+    "sortOrder": 334,
+    "themes": {
+      "cowboys-and-horses": 47
+    }
   },
   {
     "id": "i-RRw2Tfr",
@@ -15179,7 +15454,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 336
+    "sortOrder": 336,
+    "themes": {
+      "cowboys-and-horses": 50
+    }
   },
   {
     "id": "i-73WFHzh",
@@ -15210,7 +15488,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 337
+    "sortOrder": 337,
+    "themes": {
+      "women-of-the-west": 41
+    }
   },
   {
     "id": "i-Z6TkHwJ",
@@ -15241,7 +15522,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 338
+    "sortOrder": 338,
+    "themes": {
+      "cowboys-and-horses": 49
+    }
   },
   {
     "id": "i-fJmGF7N",
@@ -15306,7 +15590,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 340
+    "sortOrder": 340,
+    "themes": {
+      "cowboys-and-horses": 48
+    }
   },
   {
     "id": "i-q3f95K3",
@@ -15416,7 +15703,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 343
+    "sortOrder": 343,
+    "themes": {
+      "cowboys-and-horses": 51
+    }
   },
   {
     "id": "i-hHVb4vC",
@@ -15485,7 +15775,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 345
+    "sortOrder": 345,
+    "themes": {
+      "cowboys-and-horses": 52
+    }
   },
   {
     "id": "i-6FGmZK4",
@@ -15515,7 +15808,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 346
+    "sortOrder": 346,
+    "themes": {
+      "women-of-the-west": 42,
+      "cowboys-and-horses": 53
+    }
   },
   {
     "id": "i-mWMXhcc",
@@ -15551,7 +15848,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 347
+    "sortOrder": 347,
+    "themes": {
+      "women-of-the-west": 43
+    }
   },
   {
     "id": "i-9frbWfJ",
@@ -15613,7 +15913,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 349
+    "sortOrder": 349,
+    "themes": {
+      "women-of-the-west": 44
+    }
   },
   {
     "id": "i-7PMm6sZ",
@@ -15645,7 +15948,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 350
+    "sortOrder": 350,
+    "themes": {
+      "cowboys-and-horses": 54
+    }
   },
   {
     "id": "i-TNm6hQ3",
@@ -15681,7 +15987,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 351
+    "sortOrder": 351,
+    "themes": {
+      "women-of-the-west": 45
+    }
   },
   {
     "id": "i-Zt47sk7",
@@ -15811,7 +16120,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 354
+    "sortOrder": 354,
+    "themes": {
+      "cowboys-and-horses": 55
+    }
   },
   {
     "id": "i-QHN52S6",
@@ -15886,7 +16198,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 356
+    "sortOrder": 356,
+    "themes": {
+      "cowboys-and-horses": 56
+    }
   },
   {
     "id": "i-drTwKMw",
@@ -15978,7 +16293,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 359
+    "sortOrder": 359,
+    "themes": {
+      "cowboys-and-horses": 57
+    }
   },
   {
     "id": "i-JcHKH5f",
@@ -16010,7 +16328,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 360
+    "sortOrder": 360,
+    "themes": {
+      "cowboys-and-horses": 58
+    }
   },
   {
     "id": "i-rTwWXgw",
@@ -16062,7 +16383,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 362
+    "sortOrder": 362,
+    "themes": {
+      "cowboys-and-horses": 37
+    }
   },
   {
     "id": "i-3HM43Zv",
@@ -16281,7 +16605,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 367
+    "sortOrder": 367,
+    "themes": {
+      "women-of-the-west": 46,
+      "cowboys-and-horses": 46
+    }
   },
   {
     "id": "i-KgkW54w",
@@ -16380,7 +16708,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 370
+    "sortOrder": 370,
+    "themes": {
+      "cowboys-and-horses": 59
+    }
   },
   {
     "id": "i-cRmVc3S",
@@ -16408,7 +16739,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 371
+    "sortOrder": 371,
+    "themes": {
+      "cowboys-and-horses": 60
+    }
   },
   {
     "id": "i-msZxHgR",
@@ -16483,7 +16817,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 373
+    "sortOrder": 373,
+    "themes": {
+      "cowboys-and-horses": 61
+    }
   },
   {
     "id": "i-7DDFpHQ",
@@ -16591,7 +16928,10 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 376
+    "sortOrder": 376,
+    "themes": {
+      "cowboys-and-horses": 62
+    }
   },
   {
     "id": "i-pZDmzdq",
@@ -16695,7 +17035,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 379
+    "sortOrder": 379,
+    "themes": {
+      "women-of-the-west": 13
+    }
   },
   {
     "id": "i-PzwsgTk",
@@ -16861,7 +17204,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 384
+    "sortOrder": 384,
+    "themes": {
+      "cowboys-and-horses": 63
+    }
   },
   {
     "id": "i-3ZxxB7B",
@@ -16979,7 +17325,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 388
+    "sortOrder": 388,
+    "themes": {
+      "cowboys-and-horses": 64
+    }
   },
   {
     "id": "i-LjBc6N6",
@@ -17010,7 +17359,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 389
+    "sortOrder": 389,
+    "themes": {
+      "cowboys-and-horses": 65
+    }
   },
   {
     "id": "i-WMs24Db",
@@ -17041,7 +17393,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 390
+    "sortOrder": 390,
+    "themes": {
+      "women-of-the-west": 48,
+      "cowboys-and-horses": 67
+    }
   },
   {
     "id": "i-r4TQwkx",
@@ -17072,7 +17428,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 391
+    "sortOrder": 391,
+    "themes": {
+      "cowboys-and-horses": 66
+    }
   },
   {
     "id": "i-pN58VX3",
@@ -17145,7 +17504,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 393
+    "sortOrder": 393,
+    "themes": {
+      "cowboys-and-horses": 68
+    }
   },
   {
     "id": "i-9DLx78V",
@@ -17181,7 +17543,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 394
+    "sortOrder": 394,
+    "themes": {
+      "women-of-the-west": 47
+    }
   },
   {
     "id": "i-DfmB2Hv",
@@ -17217,7 +17582,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 395
+    "sortOrder": 395,
+    "themes": {
+      "cowboys-and-horses": 69
+    }
   },
   {
     "id": "i-sc9dBkm",
@@ -17252,7 +17620,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 396
+    "sortOrder": 396,
+    "themes": {
+      "cowboys-and-horses": 70
+    }
   },
   {
     "id": "i-zTPP4hr",
@@ -17288,7 +17659,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 397
+    "sortOrder": 397,
+    "themes": {
+      "cowboys-and-horses": 71
+    }
   },
   {
     "id": "i-FVZTmxz",
@@ -17326,7 +17700,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 398
+    "sortOrder": 398,
+    "themes": {
+      "cowboys-and-horses": 72
+    }
   },
   {
     "id": "i-F6KMqpf",
@@ -17362,7 +17739,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 399
+    "sortOrder": 399,
+    "themes": {
+      "cowboys-and-horses": 73
+    }
   },
   {
     "id": "i-vc6XQPf",
@@ -17510,7 +17890,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 403
+    "sortOrder": 403,
+    "themes": {
+      "cowboys-and-horses": 74
+    }
   },
   {
     "id": "i-PqtMvHt",
@@ -17547,7 +17930,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 404
+    "sortOrder": 404,
+    "themes": {
+      "cowboys-and-horses": 75
+    }
   },
   {
     "id": "i-9g57QXd",
@@ -17583,7 +17969,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 405
+    "sortOrder": 405,
+    "themes": {
+      "women-of-the-west": 49
+    }
   },
   {
     "id": "i-Fx7pPGJ",
@@ -17641,7 +18030,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 407
+    "sortOrder": 407,
+    "themes": {
+      "cowboys-and-horses": 76
+    }
   },
   {
     "id": "i-X4SH26N",
@@ -17671,7 +18063,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 408
+    "sortOrder": 408,
+    "themes": {
+      "women-of-the-west": 51,
+      "cowboys-and-horses": 78
+    }
   },
   {
     "id": "i-cKL7kjn",
@@ -17710,7 +18106,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 409
+    "sortOrder": 409,
+    "themes": {
+      "women-of-the-west": 50
+    }
   },
   {
     "id": "i-NDnxRkx",
@@ -17747,7 +18146,11 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 410
+    "sortOrder": 410,
+    "themes": {
+      "women-of-the-west": 19,
+      "cowboys-and-horses": 77
+    }
   },
   {
     "id": "i-pXs6Fhx",
@@ -17816,7 +18219,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 412
+    "sortOrder": 412,
+    "themes": {
+      "women-of-the-west": 56
+    }
   },
   {
     "id": "i-Sc9hZGs",
@@ -17948,7 +18354,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 416
+    "sortOrder": 416,
+    "themes": {
+      "women-of-the-west": 52
+    }
   },
   {
     "id": "i-BVwQDrM",
@@ -17979,7 +18388,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 417
+    "sortOrder": 417,
+    "themes": {
+      "women-of-the-west": 53
+    }
   },
   {
     "id": "i-qqVG3fw",
@@ -18010,7 +18422,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 418
+    "sortOrder": 418,
+    "themes": {
+      "women-of-the-west": 54
+    }
   },
   {
     "id": "i-QWcX7JT",
@@ -18043,7 +18458,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 419
+    "sortOrder": 419,
+    "themes": {
+      "women-of-the-west": 55
+    }
   },
   {
     "id": "i-9wQL5tH",
@@ -18082,7 +18500,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 420
+    "sortOrder": 420,
+    "themes": {
+      "women-of-the-west": 57
+    }
   },
   {
     "id": "i-C5Zh8Ld",
@@ -18122,7 +18543,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 421
+    "sortOrder": 421,
+    "themes": {
+      "women-of-the-west": 58
+    }
   },
   {
     "id": "i-JkFT62C",
@@ -18152,7 +18576,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 422
+    "sortOrder": 422,
+    "themes": {
+      "women-of-the-west": 59
+    }
   },
   {
     "id": "i-5LnXk2k",
@@ -18183,7 +18610,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 423
+    "sortOrder": 423,
+    "themes": {
+      "women-of-the-west": 60
+    }
   },
   {
     "id": "i-tBPfdxS",
@@ -18248,7 +18678,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 425
+    "sortOrder": 425,
+    "themes": {
+      "women-of-the-west": 61
+    }
   },
   {
     "id": "i-kNXVsdd",
@@ -18281,7 +18714,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 426
+    "sortOrder": 426,
+    "themes": {
+      "women-of-the-west": 63
+    }
   },
   {
     "id": "i-9BhX2Lj",
@@ -18389,7 +18825,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 429
+    "sortOrder": 429,
+    "themes": {
+      "women-of-the-west": 62
+    }
   },
   {
     "id": "i-4bn8bBz",
@@ -18419,7 +18858,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 430
+    "sortOrder": 430,
+    "themes": {
+      "cowboys-and-horses": 80
+    }
   },
   {
     "id": "i-4XLSsnC",
@@ -18451,7 +18893,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 431
+    "sortOrder": 431,
+    "themes": {
+      "cowboys-and-horses": 79
+    }
   },
   {
     "id": "i-T7Sjp7D",
@@ -18567,7 +19012,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 435
+    "sortOrder": 435,
+    "themes": {
+      "cowboys-and-horses": 81
+    }
   },
   {
     "id": "i-qCNGgfg",
@@ -18625,7 +19073,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 437
+    "sortOrder": 437,
+    "themes": {
+      "cowboys-and-horses": 82
+    }
   },
   {
     "id": "i-66qXms3",
@@ -18654,7 +19105,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 438
+    "sortOrder": 438,
+    "themes": {
+      "cowboys-and-horses": 83
+    }
   },
   {
     "id": "i-WvWvS7x",
@@ -18744,7 +19198,10 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 441
+    "sortOrder": 441,
+    "themes": {
+      "cowboys-and-horses": 84
+    }
   },
   {
     "id": "i-c4xWGxj",
@@ -18858,7 +19315,10 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 443
+    "sortOrder": 443,
+    "themes": {
+      "women-of-the-west": 64
+    }
   },
   {
     "id": "i-g9mC35L",

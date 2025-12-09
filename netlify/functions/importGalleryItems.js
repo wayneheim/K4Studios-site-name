@@ -3,7 +3,7 @@ const fs = require("fs/promises");
 const path = require("path");
 
 /* guards & path helpers (same as your other fns) */
-const ALLOWED_ROOTS = ["src/data/Galleries", "src/pages/Other"];
+const ALLOWED_ROOTS = ["src/data/Galleries", "src/pages/Other", "src/data/Other"];
 const toPosix = (p = "") => String(p).replace(/\\/g, "/");
 const hasTraversal = (p = "") => p.split(/[\\/]+/).some(seg => seg === "..");
 function resolveDatasetAbsolute(datasetPath) {
@@ -45,6 +45,7 @@ function normalizeItem(raw) {
   if (Array.isArray(raw.galleries)) out.galleries = raw.galleries;
   if (raw.visibility != null) out.visibility = raw.visibility;
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
+  if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
   return out;
 }
 

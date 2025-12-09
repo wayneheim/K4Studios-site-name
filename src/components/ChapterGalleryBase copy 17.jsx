@@ -28,7 +28,6 @@ import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
 import { siteNav } from "../data/siteNav.js";
 import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
-import { themes } from "../data/themes/themes.mjs";
 
 /* =========================================================
    Helper function to find section landing page from siteNav
@@ -86,6 +85,13 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
     { selector: `[data-image-id="${imageId}"] [data-grid-btn]`,  title: 'Grid View', body: 'Open a dynamic grid index to jump around.', placement: 'bottom' },
     { selector: `[data-image-id="${imageId}"] [data-menu-btn]`,  title: 'Menu', body: 'Open the site-wide navigation.', placement: 'bottom' },
     { selector: `[data-image-id="${imageId}"] [data-count]`,     title: 'Position', body: 'See your place in this gallery.', placement: 'top' },
+    { selector: `[data-image-id="${imageId}"] [data-jump-form]`, title: 'Jump to #', body: 'Enter a chapter number to jump directly.', placement: 'top' },
+    { selector: `[data-cart-btn]`,  title: 'Buy a Print', body: 'Order a print of this image.', placement: 'top' },
+    { selector: `[data-image-id="${imageId}"] [data-like-btn]`,  title: 'Like', body: 'Tap the heart to save favorites.', placement: 'top' },
+    ...(notes ? [{ selector: `[data-image-id="${imageId}"] [data-notes-btn]`, title: 'Collector Notes', body: 'Open in-depth background & story details for this image (tap again to close).', placement: 'right' }] : []),
+    { selector: `[data-image-id="${imageId}"] [data-exit-btn]`,  title: 'Exit', body: 'Return to the gallery landing page.', placement: 'top' },
+    { selector: `[data-image-id="${imageId}"] [data-zoom-btn]`,  title: 'Zoom + Matting', body: 'Click image for zoom & matting tools.', placement: 'right' },
+    { selector: `[data-image-id="${imageId}"] [data-slideshow-btn]`, title: 'Slideshow', body: 'Watch an automated story show.', placement: 'top' },
     { selector: `[data-share-btn]`, title: 'Share', body: 'Copy or share this chapter-image.', placement: 'top' },
   ];
 
@@ -318,60 +324,12 @@ export default function ChapterGalleryBase({
   const isGhost  = (e) => e && e.id === "i-k4studios";
   const isHidden = (e) => e?.visibility === "hidden" || e?.show === false || e?.hidden === true;
 
-  // Check for theme filter in URL query params
-  const themeSlug = useMemo(() => {
-    if (typeof window === "undefined") return null;
-    const params = new URLSearchParams(window.location.search);
-    return params.get("theme");
-  }, []);
-
-  // Look up the theme name from the themes registry
-  const activeTheme = useMemo(() => {
-    if (!themeSlug) return null;
-    return themes.find(t => t.slug === themeSlug) || null;
-  }, [themeSlug]);
-
-  // Strip theme param from URL immediately after processing (SEO: prevents duplicate content)
-  useEffect(() => {
-    if (typeof window === "undefined" || !themeSlug) return;
-    const url = new URL(window.location.href);
-    if (url.searchParams.has("theme")) {
-      url.searchParams.delete("theme");
-      window.history.replaceState({}, "", url.pathname + url.hash);
-    }
-  }, [themeSlug]);
-
-  // Helper to clear theme filter
-  const clearThemeFilter = () => {
-    if (typeof window !== "undefined") {
-      const url = new URL(window.location.href);
-      url.searchParams.delete("theme");
-      window.location.href = url.toString();
-    }
-  };
-
   const galleryData = useMemo(() => {
     const arr = Array.isArray(rawData) ? rawData : [];
-    let filtered = arr
-      .filter((e) => e && !isGhost(e) && !isHidden(e));
-    
-    // If theme filter is active, filter to only images with that theme
-    if (themeSlug) {
-      filtered = filtered
-        .filter((e) => e.themes && typeof e.themes[themeSlug] !== "undefined")
-        .sort((a, b) => {
-          // Sort by theme order value (the number stored in themes[slug])
-          const orderA = a.themes?.[themeSlug] ?? 9999;
-          const orderB = b.themes?.[themeSlug] ?? 9999;
-          return orderA - orderB;
-        });
-    } else {
-      // Default sort by sortOrder
-      filtered = filtered.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
-    }
-    
-    return filtered;
-  }, [rawData, themeSlug]);
+    return arr
+      .filter((e) => e && !isGhost(e) && !isHidden(e))
+      .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+  }, [rawData]);
 
   // 🚨 ADD THIS LINE:
 
@@ -728,14 +686,6 @@ export default function ChapterGalleryBase({
   const currentId = galleryData[currentIndex]?.id;
   const [tourOpenNonce, setTourOpenNonce] = useState(0);
 
-  // Add this near other useState/useEffect hooks inside ChapterGalleryBase
-  const [showThemePopover, setShowThemePopover] = useState(false);
-  useEffect(() => {
-    const handler = () => setShowThemePopover(false);
-    window.addEventListener("click", handler);
-    return () => window.removeEventListener("click", handler);
-  }, []);
-
   return (
     <div
       className="min-h- bg-white text-black font-serif px-5 py-8 overflow-hidden"
@@ -1008,67 +958,6 @@ export default function ChapterGalleryBase({
                         {`${currentIndex + 1} – ${galleryData.length}`}
                       </div>
 
-                      {/* THEME FILTER STAR (Click-To-Toggle, No Hover Popover) */}
-                      {activeTheme && (
-                        <div className="relative ml-1" style={{ zIndex: 50 }}>
-                          {/* STAR ICON */}
-                          <span
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setShowThemePopover((prev) => !prev);
-                            }}
-                            role="button"
-                            aria-label="Clear Theme"
-                            title="Clear Theme"
-                            style={{
-                              cursor: "pointer",
-                              fontSize: "1.2rem",
-                              color: "#d3a048",
-                              transition: "filter 0.15s ease",
-                              display: "inline-block",
-                            }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.filter = "drop-shadow(0 0 4px rgba(200,0,0,0.5))";
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.filter = "none";
-                            }}
-                          >
-                            ★
-                          </span>
-                          {/* CLICK POPOVER */}
-                          {showThemePopover && (
-                            <div
-                              className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg text-xs text-gray-700 px-3 py-2"
-                              style={{
-                                minWidth: "180px",
-                                fontFamily: "'Glegoo', serif",
-                                zIndex: 999,
-                                textAlign: "center",
-                              }}
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <div className="font-semibold text-amber-700 mb-1">
-                                Filtered View
-                              </div>
-                              <div className="mb-2">
-                                Viewing: <strong>{activeTheme.name}</strong>
-                              </div>
-                              <button
-                                type="button"
-                                className="px-3 py-1 border border-gray-300 bg-gray-100 hover:bg-gray-200 rounded text-xs"
-                                onClick={() => {
-                                  clearThemeFilter();
-                                  setShowThemePopover(false);
-                                }}
-                              >
-                                View Full Gallery
-                              </button>
-                            </div>
-                          )}
-                        </div>
-                      )}
-
                       {/* Grid icon (mobile) */}
                       <button
                         type="button"
@@ -1160,6 +1049,7 @@ export default function ChapterGalleryBase({
                         <LikeButton imageId={galleryData[currentIndex]?.id} pageTitle={galleryData[currentIndex]?.title} />
                       </div>
 
+                      {/* Exit */}
                       {/* Mobile Guide "?" button: between Like and Exit */}
                       {isMobile && (
                         <button
@@ -1217,36 +1107,33 @@ export default function ChapterGalleryBase({
                             <span className="sr-only">Previous</span>
                           </button>
 
-                          <div className="relative inline-flex items-center">
-                            <button
-                              type="button"
-                              onClick={() => {
-                                logUIEvent("slideshow_start", { page: window.location.pathname });
-                                if (!tourOpen()) {
-                                  setShowStoryShow(true);
-                                  setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
-                                  setEventCounts((counts) => ({ ...counts, share: counts.share + 1 }));
-                                  setEventCounts((counts) => ({ ...counts, exit: counts.exit + 1 }));
-                                }
-                              }}
-                              aria-label="Play K4 Slideshow"
-                              title="Play K4 Story Show"
-                              className="inline-flex items-center gap-2 rounded-full px-4 py-2 border shadow-sm"
-                              style={{
-                                backgroundColor: "#f5f3eeff",
-                                borderColor: "#e3d5c9",
-                                color: "#7b1e1e",
-                                letterSpacing: ".02em"
-                              }}
-                              data-slideshow-btn
-                            >
-                              <span className="inline-flex items-center justify-center w-4 h-4" style={{ color: "#7b1e1e" }}>
-                                ▶
-                              </span>
-                              <span className="text-sm font-semibold">Play Show</span>
-                            </button>
-                            
-                          </div>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              logUIEvent("slideshow_start", { page: window.location.pathname });
+                              if (!tourOpen()) {
+                                setShowStoryShow(true);
+                                setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
+                                setEventCounts((counts) => ({ ...counts, share: counts.share + 1 }));
+                                setEventCounts((counts) => ({ ...counts, exit: counts.exit + 1 }));
+                              }
+                            }}
+                            aria-label="Play K4 Slideshow"
+                            title="Play K4 Story Show"
+                            className="inline-flex items-center gap-2 rounded-full px-4 py-2 border shadow-sm"
+                            style={{
+                              backgroundColor: "#f5f3eeff",
+                              borderColor: "#e3d5c9",
+                              color: "#7b1e1e",
+                              letterSpacing: ".02em"
+                            }}
+                            data-slideshow-btn
+                          >
+                            <span className="inline-flex items-center justify-center w-4 h-4" style={{ color: "#7b1e1e" }}>
+                              ▶
+                            </span>
+                            <span className="text-sm font-semibold">Play Show</span>
+                          </button>
 
                           <button
                             type="button"
@@ -1262,34 +1149,31 @@ export default function ChapterGalleryBase({
                           </button>
                         </div>
                       ) : (
-                        // Desktop: keep standalone slideshow button with theme star indicator
-                        <div className="relative inline-flex items-center">
-                          <button
-                            type="button"
-                            onClick={() => {
-                              logUIEvent("slideshow_start", { page: window.location.pathname });
-                              if (!tourOpen()) {
-                                setShowStoryShow(true);
-                                setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
-                                setEventCounts((counts) => ({ ...counts, share: counts.share + 1 }));
-                                setEventCounts((counts) => ({ ...counts, exit: counts.exit + 1 }));
-                              }
-                            }}
-                            aria-label="Play K4 Slideshow"
-                            title="Play K4 Story Show"
-                            className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
-                            style={{ letterSpacing: ".02em" }}
-                            data-slideshow-btn
-                          >
-                            <span className="inline-flex items-center justify-center w-4 h-4 text-gray-400 group-hover:text-red-700 transition-colors">
-                              ▶
-                            </span>
-                            <span className="text-sm font-medium text-gray-400 group-hover:text-gray-500 transition-colors">
-                              Play Show
-                            </span>
-                          </button>
-                          
-                        </div>
+                        // Desktop: keep standalone slideshow button
+                        <button
+                          type="button"
+                          onClick={() => {
+                            logUIEvent("slideshow_start", { page: window.location.pathname });
+                            if (!tourOpen()) {
+                              setShowStoryShow(true);
+                              setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
+                              setEventCounts((counts) => ({ ...counts, share: counts.share + 1 }));
+                              setEventCounts((counts) => ({ ...counts, exit: counts.exit + 1 }));
+                            }
+                          }}
+                          aria-label="Play K4 Slideshow"
+                          title="Play K4 Story Show"
+                          className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
+                          style={{ letterSpacing: ".02em" }}
+                          data-slideshow-btn
+                        >
+                          <span className="inline-flex items-center justify-center w-4 h-4 text-gray-400 group-hover:text-red-700 transition-colors">
+                            ▶
+                          </span>
+                          <span className="text-sm font-medium text-gray-400 group-hover:text-gray-500 transition-colors">
+                            Play Show
+                          </span>
+                        </button>
                       )
                     )}
 

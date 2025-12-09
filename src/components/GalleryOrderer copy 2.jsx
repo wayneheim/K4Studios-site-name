@@ -60,6 +60,7 @@ function normalizeItem(raw) {
   if (Array.isArray(raw.galleries)) out.galleries = raw.galleries;
   if (raw.visibility != null) out.visibility = raw.visibility;
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
+  if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
   return out;
 }
 

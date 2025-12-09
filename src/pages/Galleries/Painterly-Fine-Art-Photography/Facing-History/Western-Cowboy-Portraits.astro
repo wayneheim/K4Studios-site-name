@@ -7,6 +7,7 @@ import LandingRightImages from '../../../../components/LandingRightImages.jsx';
 import FAQAccordion       from '../../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../../components/Footer.astro';
 import MobileStoryImages  from '../../../../components/MobileStoryImages-size.jsx';
+import ThemeBlock         from '../../../../components/ThemeBlock.jsx';
 import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
 
 import { siteNav } from '../../../../data/siteNav.ts';
@@ -175,6 +176,9 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       </div>
 
       <div class="sidebar-column hidden md:block">
+        <div class="theme-block-wrap reveal-on-scroll" style="margin-bottom: 1.5rem; position: relative; z-index: 500;">
+          <ThemeBlock client:load galleryKey={sectionPath} />
+        </div>
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
             heading="Featured Portraits"
@@ -418,5 +422,10 @@ ul li::marker {
 }
 
 
+  /* Prevent tooltip clipping for ThemeBlock */
+  .theme-block-wrap,
+  .theme-block-wrap * {
+    overflow: visible !important;
+  }
   </style>
 </BaseLayout>
