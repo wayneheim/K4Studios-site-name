@@ -153,6 +153,11 @@ exports.handler = async (event) => {
       setProp(target, "autoTitle", b.booleanLiteral(patch.autoTitle));
     }
 
+    // contentSource ("ai" or "human")
+    if (patch.contentSource != null && (patch.contentSource === "ai" || patch.contentSource === "human")) {
+      setProp(target, "contentSource", makeStringNode(patch.contentSource, usesTemplate));
+    }
+
     // rating (number)
     if (typeof patch.rating === "number") {
       const n = Number.isFinite(patch.rating) ? patch.rating : undefined;

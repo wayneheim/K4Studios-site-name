@@ -45,7 +45,6 @@ function buildMjs(galleryData, exportName = "galleryData") {
       if (it.visibility != null) pushStr("visibility", it.visibility);
       if (typeof it.sortOrder === "number") pushVal("sortOrder", it.sortOrder);
       if (it.buyLink != null) pushStr("buyLink", it.buyLink);
-      if (it.contentSource != null) pushStr("contentSource", it.contentSource);
       if (it.themes && typeof it.themes === "object") out.push(`    themes: ${JSON.stringify(it.themes)},`);
       return `  {\n${out.join("\n")}\n  }`;
     })
@@ -80,11 +79,11 @@ function isRealItem(d) { return d && d.id !== "i-k4studios"; }
 
 /* --- Quick Refresh helpers (simple) --- */
 const RESUME_KEY = "k4-editor:resume";
-function writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode }) {
+function writeResumeState({ selectedPath, idx, filter, backupMade }) {
   try {
     localStorage.setItem(
       RESUME_KEY,
-      JSON.stringify({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode, ts: Date.now() })
+      JSON.stringify({ selectedPath, idx, filter, backupMade, ts: Date.now() })
     );
   } catch {}
 }
@@ -186,34 +185,20 @@ export default function GalleryEditorPro() {
       .map((path) => ({ path, label: prettyLabelFromPath(path) }));
   }, [modules]);
 
-  // Try to restore state from resume storage (survives HMR)
-  const resumeState = useMemo(() => {
-    if (typeof window === "undefined") return null;
-    return readResumeState();
-  }, []);
-
   const [selectedPath, setSelectedPath] = useState(() => {
     // Initialize with sessionStorage if available (client-side only)
-    if (typeof window === "undefined") return "";
-    return resumeState?.selectedPath || sessionStorage.getItem("lastDatasetPath") || "";
+    return typeof window !== "undefined" ? sessionStorage.getItem("lastDatasetPath") || "" : "";
   });
   const [data, setData] = useState([]);
   const [backupData, setBackupData] = useState(null);
-  const [idx, setIdx] = useState(() => resumeState?.idx ?? 0);
-  const [filter, setFilter] = useState(() => resumeState?.filter ?? "");
+  const [idx, setIdx] = useState(0);
+  const [filter, setFilter] = useState("");
   const [dirty, setDirty] = useState(false);
-  const [backupMade, setBackupMade] = useState(() => resumeState?.backupMade ?? false);
+  const [backupMade, setBackupMade] = useState(false);
   const [lastAction, setLastAction] = useState(null);
 
   const [showRefreshGuard, setShowRefreshGuard] = useState(false);
   const [resumeApplied, setResumeApplied] = useState(false);
-
-  // Turbo Mode state
-  const [turboMode, setTurboMode] = useState(() => resumeState?.turboMode ?? false);
-  const [turboText, setTurboText] = useState("");
-  const [turboApplied, setTurboApplied] = useState(false);
-  const [realBackupMade, setRealBackupMade] = useState(() => resumeState?.realBackupMade ?? false);
-  const [lastTurboIdx, setLastTurboIdx] = useState(-1); // Track last idx for turbo text updates
 
   useEffect(() => {
     if (!lastAction) return;
@@ -247,18 +232,13 @@ export default function GalleryEditorPro() {
   // Load dataset when changed
   useEffect(() => {
     let cancelled = false;
+    // Clear stale draft and resume state for this gallery
+    try {
+      localStorage.removeItem(keyLS("draft"));
+      localStorage.removeItem(RESUME_KEY);
+    } catch {}
     async function load() {
       if (!selectedPath) return;
-      
-      // Read resume state BEFORE clearing it
-      const resume = readResumeState();
-      const isResumingSamePath = resume && resume.selectedPath === selectedPath && (Date.now() - resume.ts) < 30000;
-      
-      // Now clear stale draft (but not resume key yet - we'll clear it after using)
-      try {
-        localStorage.removeItem(keyLS("draft"));
-      } catch {}
-      
       const mod = await modules[selectedPath]();
       // Support both shapes: import option may return the value or module object
       const allArr = Array.isArray(mod)
@@ -273,32 +253,12 @@ export default function GalleryEditorPro() {
 
       setData(arr);
       setBackupData(allArr);
-      
-      if (isResumingSamePath) {
-        // Restore state from resume - don't reset everything
-        setIdx(Math.min(resume.idx ?? 0, arr.length - 1));
-        setFilter(resume.filter ?? "");
-        setBackupMade(resume.backupMade ?? false);
-        setRealBackupMade(resume.realBackupMade ?? false);
-        setTurboMode(resume.turboMode ?? false);
-        setDirty(false);
-        setLastAction("Restored after save");
-        setShowRefreshGuard(false);
-        // Clear resume state after successfully restoring
-        try { localStorage.removeItem(RESUME_KEY); } catch {}
-      } else {
-        // Fresh load - reset everything
-        setIdx(0);
-        setFilter("");
-        setBackupMade(false);
-        setRealBackupMade(false);
-        setDirty(false);
-        setLastAction(null);
-        setShowRefreshGuard(false);
-        setTurboMode(false);
-        // Clear any stale resume state
-        try { localStorage.removeItem(RESUME_KEY); } catch {}
-      }
+      setIdx(0);
+      setFilter("");
+      setBackupMade(false);
+      setDirty(false);
+      setLastAction(null);
+      setShowRefreshGuard(false);
     }
     load();
     return () => { cancelled = true; };
@@ -344,9 +304,9 @@ export default function GalleryEditorPro() {
   function ensureBackup() {
     if (!backupData) return;
     const ts = new Date().toISOString().replace(/[:.]/g, "-");
+    downloadText(JSON.stringify(backupData, null, 2), `BACKUP-${ts}.json`);
     downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${ts}.mjs`);
     setBackupMade(true);
-    setRealBackupMade(true);
     setLastAction(`Backup created — ${new Date().toLocaleTimeString()}`);
   }
   function skipBackupConfirm() {
@@ -362,10 +322,6 @@ export default function GalleryEditorPro() {
 
   function updateField(field, value) {
     if (!backupMade || !current) return;
-    // Text content fields that indicate human authorship when edited
-    const textContentFields = ["title", "alt", "description", "story", "collectorNotes", "notes", "keywords"];
-    const isTextContent = textContentFields.includes(field);
-    
     setData((arr) => {
       const i = arr.findIndex((d) => d.id === current.id);
       if (i === -1) return arr;
@@ -382,10 +338,6 @@ export default function GalleryEditorPro() {
       } else {
         copy[i] = { ...copy[i], [field]: value };
       }
-      // Mark as human-authored if editing text content fields (not in turbo mode)
-      if (isTextContent && !turboMode) {
-        copy[i] = { ...copy[i], contentSource: "human" };
-      }
       return copy;
     });
     setDirty(true);
@@ -401,12 +353,12 @@ export default function GalleryEditorPro() {
       const copy = [...arr];
       const {
         id, title, alt, description, story, collectorNotes, notes, tags, keywords,
-        url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink, contentSource
+        url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink
       } = orig;
       copy[i] = {
         id, title, alt, description, story,
         collectorNotes: collectorNotes ?? notes,
-        tags, keywords, url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink, contentSource
+        tags, keywords, url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink
       };
       return copy;
     });
@@ -421,188 +373,18 @@ export default function GalleryEditorPro() {
       backupData.filter(isRealItem).map((orig) => {
         const {
           id, title, alt, description, story, collectorNotes, notes, tags, keywords,
-          url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink, contentSource
+          url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink
         } = orig;
         return {
           id, title, alt, description, story,
           collectorNotes: collectorNotes ?? notes,
-          tags, keywords, url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink, contentSource
+          tags, keywords, url, src, srcXL, srcL, srcM, srcS, srcOriginal, section, rating, galleries, visibility, sortOrder, buyLink
         };
       })
     );
     setDirty(true);
     setLastAction(`Reverted ALL — ${new Date().toLocaleTimeString()}`);
   }
-
-  // ---- TURBO MODE functions ----
-  function buildTurboText(item) {
-    if (!item) return "";
-    const keywords = Array.isArray(item.tags)
-      ? item.tags.join(", ")
-      : Array.isArray(item.keywords)
-      ? item.keywords.join(", ")
-      : "";
-    const collectorNotes = item.collectorNotes ?? item.notes ?? "";
-    
-    return `<<TITLE>>
-${item.title || ""}
-
-<<STORY>>
-${item.story || ""}
-
-<<DESCRIPTION>>
-${item.description || ""}
-
-<<ALT>>
-${item.alt || ""}
-
-<<KEYWORDS>>
-${keywords}
-
-<<COLLECTOR_NOTES>>
-${collectorNotes}`;
-  }
-
-  function parseTurboText(text) {
-    const result = {};
-    const sections = {
-      TITLE: "title",
-      STORY: "story",
-      DESCRIPTION: "description",
-      ALT: "alt",
-      KEYWORDS: "keywords",
-      COLLECTOR_NOTES: "collectorNotes"
-    };
-    
-    const regex = /<<(\w+)>>\s*([\s\S]*?)(?=<<\w+>>|$)/g;
-    let match;
-    while ((match = regex.exec(text)) !== null) {
-      const tag = match[1].toUpperCase();
-      const content = match[2].trim();
-      if (sections[tag]) {
-        result[sections[tag]] = content;
-      }
-    }
-    return result;
-  }
-
-  function enterTurboMode() {
-    if (!current) return;
-    
-    // If real backup hasn't been made yet, trigger one now
-    if (!realBackupMade) {
-      if (!backupData) {
-        alert("No data to backup yet. Please wait for the gallery to load.");
-        return;
-      }
-      // Trigger the backup
-      const ts = new Date().toISOString().replace(/[:.]/g, "-");
-      downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${ts}.mjs`);
-      setBackupMade(true);
-      setRealBackupMade(true);
-      setLastAction(`Backup created for Turbo Mode — ${new Date().toLocaleTimeString()}`);
-    }
-    
-    setTurboText(buildTurboText(current));
-    setTurboApplied(false);
-    setTurboMode(true);
-  }
-
-  function exitTurboMode() {
-    setTurboMode(false);
-    setTurboText("");
-    setTurboApplied(false);
-  }
-
-  async function populateFromTurbo() {
-    if (!current || !backupMade) return;
-    const parsed = parseTurboText(turboText);
-    
-    // Build the updated item with contentSource: ai
-    const updatedItem = { ...current, contentSource: "ai" };
-    if (parsed.title !== undefined) updatedItem.title = parsed.title;
-    if (parsed.story !== undefined) updatedItem.story = parsed.story;
-    if (parsed.description !== undefined) updatedItem.description = parsed.description;
-    if (parsed.alt !== undefined) updatedItem.alt = parsed.alt;
-    if (parsed.collectorNotes !== undefined) updatedItem.collectorNotes = parsed.collectorNotes;
-    if (parsed.keywords !== undefined) {
-      const tags = parsed.keywords.split(",").map((s) => s.trim()).filter(Boolean);
-      updatedItem.tags = tags;
-      updatedItem.keywords = tags;
-    }
-    
-    // Capture the current id before async operations
-    const currentId = current.id;
-    
-    // Update local state
-    setData((arr) => {
-      const i = arr.findIndex((d) => d.id === currentId);
-      if (i === -1) return arr;
-      const copy = [...arr];
-      copy[i] = updatedItem;
-      return copy;
-    });
-    
-    // Save to database
-    try {
-      const payload = {
-        datasetPath: selectedPath.replace(/^\//, ""),
-        id: updatedItem.id,
-        patch: {
-          title: updatedItem.title ?? "",
-          alt: updatedItem.alt ?? "",
-          description: updatedItem.description ?? "",
-          story: updatedItem.story ?? "",
-          notes: updatedItem.collectorNotes ?? updatedItem.notes ?? "",
-          keywords: Array.isArray(updatedItem.tags)
-            ? updatedItem.tags
-            : Array.isArray(updatedItem.keywords)
-            ? updatedItem.keywords
-            : String(updatedItem.tags || updatedItem.keywords || "")
-                .split(",")
-                .map((s) => s.trim())
-                .filter(Boolean),
-          rating: typeof updatedItem.rating === "number" ? updatedItem.rating : undefined,
-          contentSource: "ai",
-        },
-      };
-
-      // Save resume state before API call (in case HMR triggers)
-      writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode: true });
-
-      const res = await fetch("/.netlify/functions/updateGalleryItem", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) throw new Error(await res.text());
-      
-      setDirty(false);
-      setTurboApplied(true);
-      setLastAction(`Saved ${currentId} — ${new Date().toLocaleTimeString()}`);
-    } catch (err) {
-      setDirty(true);
-      setTurboApplied(true);
-      setLastAction(`Populated but save failed: ${err.message}`);
-      alert("Populate succeeded but save failed.\n\n" + err.message);
-    }
-  }
-
-  function turboMove(delta) {
-    move(delta);
-    setTurboApplied(false);
-    // Will update turboText via effect
-  }
-
-  // Update turbo text when navigating to a different image in turbo mode
-  useEffect(() => {
-    if (turboMode && current && idx !== lastTurboIdx) {
-      setTurboText(buildTurboText(current));
-      setTurboApplied(false);
-      setLastTurboIdx(idx);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [turboMode, idx]);
 
   function move(delta) {
     const len = filtered.length;
@@ -649,7 +431,6 @@ ${collectorNotes}`;
               .map((s) => s.trim())
               .filter(Boolean),
         rating: typeof current.rating === "number" ? current.rating : undefined,
-        contentSource: current.contentSource ?? undefined,
         srcXL: current.srcXL ?? "",
         srcL: current.srcL ?? "",
         srcM: current.srcM ?? "",
@@ -657,9 +438,6 @@ ${collectorNotes}`;
         srcOriginal: current.srcOriginal ?? "",
       },
     };
-
-    // Save resume state before API call (in case HMR triggers)
-    writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode });
 
     try {
       const res = await fetch("/.netlify/functions/updateGalleryItem", {
@@ -863,18 +641,6 @@ ${collectorNotes}`;
           >
             Import Images…
           </a>
-
-          <button
-            onClick={enterTurboMode}
-            disabled={!backupMade}
-            className={`${btnBase} ${btnHover} ${!backupMade ? "opacity-50 cursor-not-allowed" : ""}`}
-            style={{ background: '#fef3c7', borderColor: '#f59e0b', color: '#92400e' }}
-            onMouseEnter={(e) => backupMade && (e.currentTarget.style.background = '#fde68a')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#fef3c7')}
-            title={realBackupMade ? "Enter Turbo Mode for fast AI-assisted data entry" : "Click to create backup and enter Turbo Mode"}
-          >
-            ⚡ Turbo Mode
-          </button>
         </div>
 
         {/* Row 3: search + nav */}
@@ -960,7 +726,6 @@ ${collectorNotes}`;
               {(() => {
                 const imgUrl = pickImage(current);
                 const hidden = current?.visibility === "hidden";
-                const contentSource = current?.contentSource || "human"; // Default to human if not set
                 return imgUrl ? (
                   <div className="relative">
                     <img src={imgUrl} alt="" className={`w-full rounded-lg shadow ${hidden ? "opacity-60" : ""}`} />
@@ -969,17 +734,6 @@ ${collectorNotes}`;
                         Hidden
                       </span>
                     )}
-                    {/* Content source indicator - always show */}
-                    <span 
-                      className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
-                        contentSource === "ai" 
-                          ? "bg-purple-100 border border-purple-300 text-purple-900" 
-                          : "bg-blue-100 border border-blue-300 text-blue-900"
-                      }`}
-                      title={contentSource === "ai" ? "Content written by AI/Turbo Mode" : "Content written by human (or not yet processed)"}
-                    >
-                      {contentSource === "ai" ? "🤖 AI" : "✍️ Human"}
-                    </span>
                   </div>
                 ) : (
                   <div className="w-full h-64 grid place-items-center border rounded-lg">No image url</div>
@@ -1077,173 +831,6 @@ ${collectorNotes}`;
           <div className="p-10 text-center opacity-70">No items match your filter.</div>
         )}
       </div>
-
-      {/* TURBO MODE full-screen overlay */}
-      {turboMode && (
-        <div className="fixed inset-0 z-40 bg-gray-900 overflow-auto">
-          <div className="min-h-screen p-6">
-            {/* Header bar */}
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <h2 className="text-xl font-bold text-amber-400">⚡ Turbo Mode</h2>
-              <span className="text-gray-300 text-sm">
-                {pos}/{total} — {current?.id || "No item"}
-              </span>
-              
-              <div className="flex-1" />
-              
-              <button
-                onClick={exitTurboMode}
-                className={`${btnBase} bg-red-600 border-red-700 text-white ${btnHover}`}
-              >
-                ✕ Exit Turbo Mode
-              </button>
-            </div>
-
-            {/* Success message */}
-            {turboApplied && (
-              <div className="mb-4 p-3 bg-green-800 border border-green-600 rounded-lg flex items-center gap-3">
-                <span className="text-green-200 text-lg">✓</span>
-                <span className="text-green-100 font-medium">
-                  Saved {current?.id} — Ready for next image
-                </span>
-              </div>
-            )}
-
-            {current ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {/* Left: Image */}
-                <div className="space-y-3">
-                  {(() => {
-                    const imgUrl = pickImage(current);
-                    const contentSource = current?.contentSource || "human";
-                    return imgUrl ? (
-                      <div className="relative">
-                        <img 
-                          src={imgUrl} 
-                          alt="" 
-                          className="w-full max-h-[80vh] object-contain rounded-lg shadow-lg bg-black" 
-                        />
-                        <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/70 text-white">
-                          {current.id}
-                        </div>
-                        {/* Content source indicator in turbo mode */}
-                        <span 
-                          className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
-                            contentSource === "ai" 
-                              ? "bg-purple-500 border border-purple-400 text-white" 
-                              : "bg-blue-500 border border-blue-400 text-white"
-                          }`}
-                        >
-                          {contentSource === "ai" ? "🤖 AI" : "✍️ Human"}
-                        </span>
-                      </div>
-                    ) : (
-                      <div className="w-full h-64 grid place-items-center border border-gray-600 rounded-lg text-gray-400">
-                        No image url
-                      </div>
-                    );
-                  })()}
-                  
-                  <div className="text-xs text-gray-400 text-center">
-                    Print Screen this view, feed to AI, paste the result back, then click Populate
-                  </div>
-                  
-                  {/* Rating stars */}
-                  <div className="mt-3 flex items-center justify-center gap-2 p-2 bg-gray-800 rounded-lg">
-                    <span className="text-gray-400 text-sm">Rating:</span>
-                    <StarRating
-                      value={typeof current.rating === "number" ? current.rating : 0}
-                      onChange={(n) => updateField("rating", n)}
-                    />
-                  </div>
-                  
-                  {/* Nav buttons below image */}
-                  <div className="mt-3 flex items-center justify-center gap-3">
-                    <button
-                      onClick={() => turboMove(-1)}
-                      className={`${btnBase} bg-green-600 border-green-700 text-white ${btnHover} px-6 py-2`}
-                    >
-                      ◀ Prev
-                    </button>
-                    <button
-                      onClick={() => turboMove(1)}
-                      className={`${btnBase} bg-green-500 border-green-600 text-white ${btnHover} px-6 py-2`}
-                    >
-                      Next ▶
-                    </button>
-                  </div>
-                </div>
-
-                {/* Right: Text block + actions */}
-                <div className="flex flex-col h-full">
-                  <div className="flex items-center gap-2 mb-2">
-                    <label className="text-sm text-gray-300 font-medium">Data Block</label>
-                  </div>
-                  
-                  <textarea
-                    value={turboText}
-                    onChange={(e) => { setTurboText(e.target.value); setTurboApplied(false); }}
-                    className="flex-1 w-full min-h-[70vh] border border-gray-600 rounded-lg px-3 py-2 bg-gray-800 text-gray-100 font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-amber-400"
-                    placeholder="Paste AI-generated content here in the <<TAG>> format..."
-                    spellCheck={false}
-                  />
-                  
-                  <div className="mt-3 flex flex-wrap items-center gap-2">
-                    <button
-                      onClick={() => setTurboText(buildTurboText(current))}
-                      className={`${btnBase} bg-gray-700 border-gray-600 text-gray-200 ${btnHover}`}
-                      title="Reset text to current saved data"
-                    >
-                      Reset Text
-                    </button>
-                    <button
-                      onClick={() => setTurboText("")}
-                      className={`${btnBase} bg-gray-600 border-gray-500 text-gray-200 ${btnHover}`}
-                      title="Clear all text for easy pasting"
-                    >
-                      Clear Text
-                    </button>
-                    
-                    <div className="flex-1" />
-                    
-                    <button
-                      onClick={populateFromTurbo}
-                      className={`${btnBase} bg-amber-500 border-amber-600 text-black font-semibold ${btnHover}`}
-                      title="Parse the text block, populate all fields, and save to database"
-                    >
-                      📥 Populate & Save
-                    </button>
-                    
-                    {lastAction && (
-                      <span className="text-xs bg-green-900 border border-green-700 text-green-200 px-2 py-1 rounded-md">
-                        {lastAction}
-                      </span>
-                    )}
-                  </div>
-                  
-                  {/* Nav buttons below text block */}
-                  <div className="mt-3 flex items-center justify-center gap-3">
-                    <button
-                      onClick={() => turboMove(-1)}
-                      className={`${btnBase} bg-green-600 border-green-700 text-white ${btnHover} px-6 py-2`}
-                    >
-                      ◀ Prev
-                    </button>
-                    <button
-                      onClick={() => turboMove(1)}
-                      className={`${btnBase} bg-green-500 border-green-600 text-white ${btnHover} px-6 py-2`}
-                    >
-                      Next ▶
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="p-10 text-center text-gray-400">No items in this gallery.</div>
-            )}
-          </div>
-        </div>
-      )}
 
       {/* FULL-SCREEN GUARD shown after opening Reorderer/Importer */}
       {showRefreshGuard && (
