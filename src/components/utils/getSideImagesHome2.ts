@@ -39,9 +39,14 @@ function getAllGallerySources(sectionPath: string): { label: string, href: strin
   return findGallerySourcesRecursive(node);
 }
 
-// Deterministic sort by ID to avoid hydration mismatch (no shuffle)
-function deterministicSort<T extends { id?: string }>(arr: T[]): T[] {
-  return [...arr].sort((a, b) => (a.id || '').localeCompare(b.id || ''));
+// Fisher-Yates shuffle for randomization
+function shuffle<T>(arr: T[]): T[] {
+  let a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 // Helper function to get galleries from specific paths
@@ -83,8 +88,8 @@ function pullImagesFromGalleries(
     allImages = allImages.concat(images);
   }
 
-  // Sort deterministically by ID to avoid hydration mismatch
-  allImages = deterministicSort(allImages);
+  // Shuffle for randomization
+  allImages = shuffle(allImages);
 
   // Use session storage to track last used images for better variety
   let lastUsedIndices: number[] = [];
@@ -103,7 +108,7 @@ function pullImagesFromGalleries(
       const bRecent = lastUsedIndices.includes(b.originalIndex);
       if (aRecent && !bRecent) return 1;
       if (!aRecent && bRecent) return -1;
-      return (a.img.id || '').localeCompare(b.img.id || ''); // Deterministic tiebreaker
+      return 0; // Random tiebreaker (already shuffled)
     })
     .map(item => item.img);
 

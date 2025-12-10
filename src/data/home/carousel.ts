@@ -98,24 +98,24 @@ function getGalleryData(mod) {
 function buildRankedPool(images) {
   const ratings = [5, 4, 3];
   let pool = [];
-  // Sort deterministically by ID instead of randomly to avoid hydration mismatch
+  // Randomize within each rating tier
   ratings.forEach(r => {
-    pool.push(...images.filter(img => img.rating === r).sort((a, b) => (a.id || '').localeCompare(b.id || '')));
+    pool.push(...images.filter(img => img.rating === r).sort(() => Math.random() - 0.5));
   });
-  pool.push(...images.filter(img => !ratings.includes(img.rating)).sort((a, b) => (a.id || '').localeCompare(b.id || '')));
+  pool.push(...images.filter(img => !ratings.includes(img.rating)).sort(() => Math.random() - 0.5));
   return pool;
 }
 function pickFromPools(pools, n) {
   const picks = [];
   const usedPools = new Set();
-  // Pick deterministically (first available) to avoid hydration mismatch
+  // Pick randomly from available pools
   while (picks.length < n && usedPools.size < pools.length) {
     const available = pools.filter((_, i) => !usedPools.has(i));
     if (available.length === 0) break;
-    const poolIdx = 0; // Pick first available instead of random
+    const poolIdx = Math.floor(Math.random() * available.length);
     const realIdx = pools.indexOf(available[poolIdx]);
     if (pools[realIdx].images.length === 0) { usedPools.add(realIdx); continue; }
-    const imgIdx = 0; // Pick first image instead of random
+    const imgIdx = Math.floor(Math.random() * pools[realIdx].images.length);
     const chosen = pools[realIdx].images[imgIdx];
     if (staticLcpIds.includes(chosen.id)) continue; // exclude any hero IDs from random
     picks.push({ img: chosen, path: pools[realIdx].path });
