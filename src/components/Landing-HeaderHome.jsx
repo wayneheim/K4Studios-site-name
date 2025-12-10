@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import SiteNavMenu from "./siteNavMenu.jsx";
 
+// TEMPORARILY DISABLED for hydration debugging - always returns false
 function useIsMobile() {
+  return false;
+  /*
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
     const check = () => setMobile(window.innerWidth <= 768);
@@ -10,6 +13,7 @@ function useIsMobile() {
     return () => window.removeEventListener("resize", check);
   }, []);
   return mobile;
+  */
 }
 
 function K4Splash({ isMobile }) {
