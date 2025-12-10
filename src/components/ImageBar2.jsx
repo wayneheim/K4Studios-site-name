@@ -11,6 +11,8 @@ const allCarousels = import.meta.glob([
 export default function ImageBar2({ slides }) {
   const trackRef = useRef(null);
   const [finalSlides, setFinalSlides] = useState(slides ?? []);
+  // Duplicate slides for infinite scroll effect - done in React state, not DOM manipulation
+  const [duplicated, setDuplicated] = useState(false);
 
   // First effect: match current path to a carousel file and load slides
   useEffect(() => {
@@ -37,18 +39,17 @@ export default function ImageBar2({ slides }) {
     }
   }, [slides]);
 
-  // Second effect: duplicate slides for infinite scroll effect
+  // Second effect: mark slides as duplicated for infinite scroll effect
   useEffect(() => {
-    if (
-      trackRef.current &&
-      finalSlides.length > 0 &&
-      trackRef.current.children.length === finalSlides.length
-    ) {
-      trackRef.current.innerHTML += trackRef.current.innerHTML;
+    if (finalSlides.length > 0) {
+      setDuplicated(true);
     }
   }, [finalSlides]);
 
   if (!finalSlides.length) return null;
+
+  // Double the slides for infinite scroll effect (only after hydration)
+  const displaySlides = duplicated ? [...finalSlides, ...finalSlides] : finalSlides;
 
   return (
     <section
@@ -62,10 +63,10 @@ export default function ImageBar2({ slides }) {
       <meta itemProp="creator" content="K4 Studios" />
 
       <div className="carousel-track" ref={trackRef}>
-        {finalSlides.map((s, i) => (
+        {displaySlides.map((s, i) => (
           <figure
             className="carousel-slide"
-            key={i}
+            key={`slide-${i}`}
             itemScope
             itemType="https://schema.org/ImageObject"
           >

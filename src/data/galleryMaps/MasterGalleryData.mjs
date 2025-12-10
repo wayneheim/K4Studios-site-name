@@ -1092,7 +1092,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/K8xsk3pChZmHXpBFfVk5Z4P3BMVGn85kkGQhLS52m/S/_WHO7929-Edit-S.jpg",
-      "rating": 0,
+      "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1104,7 +1104,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/Lnf45sHGDnFwMJRP4R6v4Gf5GdcC3HXBbtXq5rZLR/S/_WHO2281-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1128,7 +1128,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/L9WZWJ37nnCGkw38gZjZxmdVVhvx3HHdJ3LbjGsF2/S/_HF23060-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1140,7 +1140,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NF7BTMMndV6zT3TqWzZ776mqWHJfG3w53Mw8n8VSB/L/_WHO5325-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NTQx8hr6GDBPMWb2K8pdVLJPRxJFMScxND4F7mQm8/XL/_WHO5325-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NGQsw4rHLT2s4C7L5q748gbL35CdBsNBZ8mPvxHNr/S/_WHO5325-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1152,7 +1152,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/MDz6TdBHqrwW9Bp824nRZ35Zt5krRM9W2VsrWNHB3/L/_HF25859-1151-1156-1159-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LkH4jxcHjsmTVJD9xkXmZVXcmZttrXnKLnZpHtCDn/S/_HF25859-1151-1156-1159-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1176,7 +1176,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/KrR8Z7m3fdfVWJ6BVX5243PgTHJCnrh5Cpb4jv8nB/XL/_HF27252-1165-1166-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/KrR8Z7m3fdfVWJ6BVX5243PgTHJCnrh5Cpb4jv8nB/XL/_HF27252-1165-1166-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/LFmWdZjM6Zh9PTLLkD6HJqfwPJBjQ2sLZHVH5H8pK/S/_HF27252-1165-1166-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1200,7 +1200,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
-      "rating": 0,
+      "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1248,7 +1248,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/KfzgkxHH8L45dNzHCCVmBWXLMnrWbd4Cx2RxvmRRS/L/_HF29303-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/MS9TVHWgJN3HsPDF3pjSqV75HX7GKPgvcnCWNQVCQ/XL/_HF29303-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/LDxsNTKCwHFrxfFQQBMSh4mQg76mbrkjHrxbwfdP8/S/_HF29303-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1260,7 +1260,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LBzmH9N8F439Lbhw8PJ6PhM64JTgGCrnxhw7f6cZ4/XL/_HF29399-1255-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LBzmH9N8F439Lbhw8PJ6PhM64JTgGCrnxhw7f6cZ4/XL/_HF29399-1255-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LxSSW8p9hBB23nSgpQM5dGhR3dsxWGJ5FRC8pW9Fr/S/_HF29399-1255-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1272,7 +1272,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/MvDxxrNrmMWCQjS9RMzdzmXBrF4xg838trkRvZvf9/S/_WHO7107-Edit-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1308,7 +1308,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/Mw4QfVzvH9vkDcrhcsRWsVsw3q8N9jDKMZhbXW2QW/L/_HF26562-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/MJVJNH3GvsdfTF6KMJ4G4ZbSscLTXHB4RTmZfGJb7/XL/_HF26562-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/LtjDQhP9fB4wmHkdTNs9xkcjftqJpR5gmpb5wf5Ks/S/_HF26562-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 5,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1332,7 +1332,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/MPKVHRXDtTQP6gZHDS78DSpCjSgqpcw8cBWQBxK2R/L/_WHO5559-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/NM7RFBfNwPz5RmVVq2LV6qwbGVjbMcZMdmZcz7Xgj/XL/_WHO5559-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/KvHcCRFwWwRGL8T8V4B53zjRkWjfDdLLLqv9cTRfv/S/_WHO5559-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1404,7 +1404,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/MzMcNxJqbGG5B6XHGP9cwk7NtFM228prS5CbVwtRN/XL/_HF24859-Edit-2-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/MzMcNxJqbGG5B6XHGP9cwk7NtFM228prS5CbVwtRN/XL/_HF24859-Edit-2-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/NhGBdrNCb5NSXJfXTjTj8pwsVdDgNDNjWqHxdkxj4/S/_HF24859-Edit-2-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -1416,7 +1416,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/LpG8LgGKcffs9dj4dqfnpctHNhvmqTpBKHBLcTbPQ/L/_WHO4062-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/NTB85PgXvq58Lk4ZFTxrJjjkrfgFhnpCVHC3j8jQV/XL/_WHO4062-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/LBRTXLB5KSfxXbcRn2VL3D2sX5fQmSSKcQ6HGzN8n/S/_WHO4062-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -36514,7 +36514,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/L2tj3sK8kjDF7Dxqp5QDFK3bzZWdqscZjbSd9VwSM/L/P1000873-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KDLZHH3dKDzJpRjLpnW3drTLg4C7Zpp2VHpNgkXjd/S/P1000873-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36526,7 +36526,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/Nd5s4hWSQJPfDhz9DQg6BGTrFHVh9gSkTNTMzH6S2/S/_IMG0301-S.jpg",
-      "rating": 0,
+      "rating": 2,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36538,7 +36538,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NcPkgcJX5WrSv4bbcDLxMnMvJTFdKZCJXQC44C6br/L/WAYNE_HEIM_810-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/L9Tz6WMxp3k4s2wg2hS6N7F58whgrS7j8rT7Fdznr/S/WAYNE_HEIM_810-Edit-S.jpg",
-      "rating": 0,
+      "rating": 5,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36550,7 +36550,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/KxNp8VxKVdc26QL54pDhpr5vpbWRdSHRhq9BCgfdj/S/WAYNE_HEIM_822-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36562,7 +36562,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/MKh9xjqMJ536pf2fwMpzwpD5GmQcjwXRd6RSJ9qzb/S/_WEH7035-S.jpg",
-      "rating": 0,
+      "rating": 3,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36574,7 +36574,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/KNMvshGrgPqQG7mk6XHHzCmndDjWgmfMggSxtZXKK/S/WAYNE_HEIM_827-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36586,7 +36586,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/KK2xJcJbfcV5WRkS665crFzrBxmBpf2FTfKQkqVT2/S/_WHZ9797_tonemapped-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36598,7 +36598,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/NZM8CnW2qc5z9kKvt7fzbwRqh2NRsFMbNkVgTHbxV/S/_WHZ9798_tonemapped-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36610,7 +36610,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/Lwx3jfGVzKLKBNgcMRtqWfRVsKFkjfddKgdqG4pN4/L/_ANA3176-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/M95j8jPX82bFpb3jXpPSr57wQs2ZDVFL2vvL2vTVn/XL/_ANA3176-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/KS77cjmnPPrsvjdJSWmshFKTb3TsVvF2HQDZPrj7p/S/_ANA3176-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36622,7 +36622,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/NhHgVzM4KwB6kQfMCM25QsvZzg3tGP7Qxh9LZt9mb/L/_ANA3291-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/MnFhHXGCf53hLFXxX4Mhwsjhx74VcdFhBqwcBnXZ3/XL/_ANA3291-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/NSZzs2px7nw9XpNDj5SQbZgB6RrDb8bhxSpxPLwmg/S/_ANA3291-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -36646,7 +36646,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/LjF4Nx6sQwh3nQmfxnvd2MpPjF7fdMFRd49NRftwW/M/_ANA3350-Enhanced-Edit-Edit-2-M.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/NVjhLB896WZ9x5Rkcr3kWFS9GTqrZSLcJMq3vcTR5/S/_ANA3350-Enhanced-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -42818,7 +42818,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/LksDQhMZLgf7TRVdTB26w6Gbc4ZP9LbpDGG6fTfQB/XL/_WHO7929-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wdF6Hw3/1/K8xsk3pChZmHXpBFfVk5Z4P3BMVGn85kkGQhLS52m/S/_WHO7929-Edit-S.jpg",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42830,7 +42830,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/Lnf45sHGDnFwMJRP4R6v4Gf5GdcC3HXBbtXq5rZLR/S/_WHO2281-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42854,7 +42854,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/L9WZWJ37nnCGkw38gZjZxmdVVhvx3HHdJ3LbjGsF2/S/_HF23060-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42866,7 +42866,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NF7BTMMndV6zT3TqWzZ776mqWHJfG3w53Mw8n8VSB/L/_WHO5325-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NTQx8hr6GDBPMWb2K8pdVLJPRxJFMScxND4F7mQm8/XL/_WHO5325-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NGQsw4rHLT2s4C7L5q748gbL35CdBsNBZ8mPvxHNr/S/_WHO5325-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42878,7 +42878,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/MDz6TdBHqrwW9Bp824nRZ35Zt5krRM9W2VsrWNHB3/L/_HF25859-1151-1156-1159-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LkH4jxcHjsmTVJD9xkXmZVXcmZttrXnKLnZpHtCDn/S/_HF25859-1151-1156-1159-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42902,7 +42902,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/KrR8Z7m3fdfVWJ6BVX5243PgTHJCnrh5Cpb4jv8nB/XL/_HF27252-1165-1166-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/KrR8Z7m3fdfVWJ6BVX5243PgTHJCnrh5Cpb4jv8nB/XL/_HF27252-1165-1166-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-f4MSxpP/1/LFmWdZjM6Zh9PTLLkD6HJqfwPJBjQ2sLZHVH5H8pK/S/_HF27252-1165-1166-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42926,7 +42926,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42974,7 +42974,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/KfzgkxHH8L45dNzHCCVmBWXLMnrWbd4Cx2RxvmRRS/L/_HF29303-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/MS9TVHWgJN3HsPDF3pjSqV75HX7GKPgvcnCWNQVCQ/XL/_HF29303-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3SxncXS/0/LDxsNTKCwHFrxfFQQBMSh4mQg76mbrkjHrxbwfdP8/S/_HF29303-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42986,7 +42986,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LBzmH9N8F439Lbhw8PJ6PhM64JTgGCrnxhw7f6cZ4/XL/_HF29399-1255-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LBzmH9N8F439Lbhw8PJ6PhM64JTgGCrnxhw7f6cZ4/XL/_HF29399-1255-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pcP7hcf/2/LxSSW8p9hBB23nSgpQM5dGhR3dsxWGJ5FRC8pW9Fr/S/_HF29399-1255-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -42998,7 +42998,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/MvDxxrNrmMWCQjS9RMzdzmXBrF4xg838trkRvZvf9/S/_WHO7107-Edit-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -43034,7 +43034,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/Mw4QfVzvH9vkDcrhcsRWsVsw3q8N9jDKMZhbXW2QW/L/_HF26562-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/MJVJNH3GvsdfTF6KMJ4G4ZbSscLTXHB4RTmZfGJb7/XL/_HF26562-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dsqgfVj/0/LtjDQhP9fB4wmHkdTNs9xkcjftqJpR5gmpb5wf5Ks/S/_HF26562-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -43058,7 +43058,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/MPKVHRXDtTQP6gZHDS78DSpCjSgqpcw8cBWQBxK2R/L/_WHO5559-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/NM7RFBfNwPz5RmVVq2LV6qwbGVjbMcZMdmZcz7Xgj/XL/_WHO5559-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/KvHcCRFwWwRGL8T8V4B53zjRkWjfDdLLLqv9cTRfv/S/_WHO5559-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -43130,7 +43130,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/MzMcNxJqbGG5B6XHGP9cwk7NtFM228prS5CbVwtRN/XL/_HF24859-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/MzMcNxJqbGG5B6XHGP9cwk7NtFM228prS5CbVwtRN/XL/_HF24859-Edit-2-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MvZxkQh/0/NhGBdrNCb5NSXJfXTjTj8pwsVdDgNDNjWqHxdkxj4/S/_HF24859-Edit-2-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -43142,7 +43142,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/LpG8LgGKcffs9dj4dqfnpctHNhvmqTpBKHBLcTbPQ/L/_WHO4062-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/NTB85PgXvq58Lk4ZFTxrJjjkrfgFhnpCVHC3j8jQV/XL/_WHO4062-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5TGTZ9P/0/LBRTXLB5KSfxXbcRn2VL3D2sX5fQmSSKcQ6HGzN8n/S/_WHO4062-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -78170,7 +78170,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/L2tj3sK8kjDF7Dxqp5QDFK3bzZWdqscZjbSd9VwSM/L/P1000873-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KDLZHH3dKDzJpRjLpnW3drTLg4C7Zpp2VHpNgkXjd/S/P1000873-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78182,7 +78182,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/Nd5s4hWSQJPfDhz9DQg6BGTrFHVh9gSkTNTMzH6S2/S/_IMG0301-S.jpg",
-    "rating": 0,
+    "rating": 2,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78194,7 +78194,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NcPkgcJX5WrSv4bbcDLxMnMvJTFdKZCJXQC44C6br/L/WAYNE_HEIM_810-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/L9Tz6WMxp3k4s2wg2hS6N7F58whgrS7j8rT7Fdznr/S/WAYNE_HEIM_810-Edit-S.jpg",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78206,7 +78206,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/KxNp8VxKVdc26QL54pDhpr5vpbWRdSHRhq9BCgfdj/S/WAYNE_HEIM_822-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78218,7 +78218,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/MKh9xjqMJ536pf2fwMpzwpD5GmQcjwXRd6RSJ9qzb/S/_WEH7035-S.jpg",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78230,7 +78230,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/KNMvshGrgPqQG7mk6XHHzCmndDjWgmfMggSxtZXKK/S/WAYNE_HEIM_827-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78242,7 +78242,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/KK2xJcJbfcV5WRkS665crFzrBxmBpf2FTfKQkqVT2/S/_WHZ9797_tonemapped-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78254,7 +78254,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/NZM8CnW2qc5z9kKvt7fzbwRqh2NRsFMbNkVgTHbxV/S/_WHZ9798_tonemapped-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78266,7 +78266,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/Lwx3jfGVzKLKBNgcMRtqWfRVsKFkjfddKgdqG4pN4/L/_ANA3176-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/M95j8jPX82bFpb3jXpPSr57wQs2ZDVFL2vvL2vTVn/XL/_ANA3176-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/KS77cjmnPPrsvjdJSWmshFKTb3TsVvF2HQDZPrj7p/S/_ANA3176-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78278,7 +78278,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/NhHgVzM4KwB6kQfMCM25QsvZzg3tGP7Qxh9LZt9mb/L/_ANA3291-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/MnFhHXGCf53hLFXxX4Mhwsjhx74VcdFhBqwcBnXZ3/XL/_ANA3291-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/NSZzs2px7nw9XpNDj5SQbZgB6RrDb8bhxSpxPLwmg/S/_ANA3291-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -78302,7 +78302,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/LjF4Nx6sQwh3nQmfxnvd2MpPjF7fdMFRd49NRftwW/M/_ANA3350-Enhanced-Edit-Edit-2-M.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/NVjhLB896WZ9x5Rkcr3kWFS9GTqrZSLcJMq3vcTR5/S/_ANA3350-Enhanced-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]

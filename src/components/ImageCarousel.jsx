@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import '../styles/ImageCarousel.css';
 
 const slides = [
@@ -41,13 +41,16 @@ const slides = [
 
 export default function ImageCarousel() {
   const trackRef = useRef(null);
+  // Duplicate slides for infinite scroll effect - done in React state, not DOM manipulation
+  const [duplicated, setDuplicated] = useState(false);
 
   useEffect(() => {
-    if (trackRef.current) {
-      const clone = trackRef.current.innerHTML;
-      trackRef.current.innerHTML += clone;
-    }
+    // Mark as duplicated on client (this triggers re-render with doubled slides)
+    setDuplicated(true);
   }, []);
+
+  // Double the slides for infinite scroll effect (only after hydration)
+  const displaySlides = duplicated ? [...slides, ...slides] : slides;
 
   return (
     <section
@@ -64,10 +67,10 @@ export default function ImageCarousel() {
       <meta itemProp="creator" content="K4 Studios" />
 
       <div className="carousel-track" ref={trackRef}>
-        {slides.map((slide, i) => (
+        {displaySlides.map((slide, i) => (
           <figure
             className="carousel-slide"
-            key={i}
+            key={`slide-${i}`}
             itemScope
             itemType="https://schema.org/ImageObject"
           >

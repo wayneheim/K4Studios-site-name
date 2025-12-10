@@ -429,23 +429,35 @@ export default function ChapterGalleryBase({
       exit: 0
     });
 
-  // Sister link logic
+  // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
-  let sisterMatch = sitemapMatches.find(m => m.a.includes(currentImageId));
-  // Fallback: link to sister gallery (Color <-> Black-White)
-  if (!sisterMatch) {
-    const currentPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') : '';
-    let sisterPath = currentPath;
-    if (currentPath.includes('/Color/')) {
-      sisterPath = currentPath.replace('/Color/', '/Black-White/');
-    } else if (currentPath.includes('/Black-White/')) {
-      sisterPath = currentPath.replace('/Black-White/', '/Color/');
+  const [sisterMatch, setSisterMatch] = useState(() => {
+    // Initial render: only use sitemapMatches (deterministic, same on server & client)
+    return sitemapMatches.find(m => m.a.includes(currentImageId)) || null;
+  });
+
+  // Update sisterMatch on client when currentImageId changes (includes window.location fallback)
+  useEffect(() => {
+    let match = sitemapMatches.find(m => m.a.includes(currentImageId));
+    
+    // Fallback: link to sister gallery (Color <-> Black-White)
+    if (!match && typeof window !== 'undefined') {
+      const currentPath = window.location.pathname.replace(/\/$/, '');
+      let sisterPath = currentPath;
+      if (currentPath.includes('/Color/')) {
+        sisterPath = currentPath.replace('/Color/', '/Black-White/');
+      } else if (currentPath.includes('/Black-White/')) {
+        sisterPath = currentPath.replace('/Black-White/', '/Color/');
+      }
+      if (sisterPath !== currentPath) {
+        match = { b: `https://www.k4studios.com${sisterPath}` };
+      }
     }
-    if (sisterPath !== currentPath) {
-      sisterMatch = { b: `https://www.k4studios.com${sisterPath}` };
-    }
-  }
-  console.log('Sister link debug:', { currentImageId, sisterMatch: !!sisterMatch });
+    
+    setSisterMatch(match || null);
+    console.log('Sister link debug:', { currentImageId, sisterMatch: !!match });
+  }, [currentImageId]);
+
   const anchorTexts = ["See more painterly photography", "Explore traditional fine art photography", "Discover related images", "View similar artwork", "Browse additional pieces", "Check out more fine art", "Find related photography", "Explore more images", "Enjoy more of Wayne's work", "Discover more art", "Explore Wayne Heim's portfolio", "Discover more artistic pieces", "View additional fine art", "Browse related works", "See more from this series"];
   const hash = currentImageId ? currentImageId.split('').reduce((a, b) => ((a << 5) - a) + b.charCodeAt(0), 0) : 0;
   const anchorIndex = Math.abs(hash) % anchorTexts.length;
@@ -742,28 +754,16 @@ export default function ChapterGalleryBase({
       style={{ fontFamily: "Glegoo, serif" }}
       onMouseMove={() => setShowArrows(true)}
     >
-      {/* Google Font */}
-      <link href="https://fonts.googleapis.com/css2?family=Glegoo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+      {/* 
+        NOTE: SEO meta tags (<meta>, <link>, <script type="application/ld+json">) 
+        are handled by BaseLayout.astro in <head>. DO NOT render them here in React -
+        it causes hydration mismatches (React Error #418) because:
+        1. They're invalid inside <body>
+        2. Middleware may strip them, breaking React's expected DOM
+        3. They duplicate what's already in <head>
+      */}
 
-      {/* SEO Meta Tags for Edition Context (invisible to users) */}
-      <meta name="keywords" content={`${galleryData[currentIndex]?.keywords?.join(", ") || ""}, ${editionTag}, painterly fine art, western fine art`} />
-      <meta name="description" content={`${galleryData[currentIndex]?.description || ""} | ${editionTag} edition of this painterly fine art photograph by Wayne Heim.`} />
-      <link rel="canonical" href={`https://www.k4studios.com${path}`} />
-
-      {/* Structured Data Edition Context (for JSON-LD) */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ImageObject",
-          "name": `${galleryData[currentIndex]?.title} – ${editionTag}`,
-          "description": `${galleryData[currentIndex]?.description} This is the ${editionTag} edition of this artwork by Wayne Heim.`,
-          "contentUrl": galleryData[currentIndex]?.src,
-          "creator": "Wayne Heim",
-          "keywords": `${galleryData[currentIndex]?.keywords?.join(", ") || ""}, ${editionTag}, painterly fine art, western fine art`
-        })
-      }} />
-
-  <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         {isZoomed ? (
           <ZoomOverlay
             imageData={galleryData[currentIndex]}

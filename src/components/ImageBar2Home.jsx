@@ -6,14 +6,13 @@ export default function ImageBar2Home() {
   const trackRef = useRef(null);
   const [show, setShow] = useState(false);
   const [fullSize, setFullSize] = useState(false);
+  // Duplicate slides for infinite scroll effect - done in React state, not DOM manipulation
+  const [duplicated, setDuplicated] = useState(false);
 
   useEffect(() => {
-    if (
-      trackRef.current &&
-      homeSlides.length > 0 &&
-      trackRef.current.children.length === homeSlides.length
-    ) {
-      trackRef.current.innerHTML += trackRef.current.innerHTML;
+    // Mark as duplicated on client (this triggers re-render with doubled slides)
+    if (homeSlides.length > 0) {
+      setDuplicated(true);
     }
 
     // Appear *almost instantly* (30ms after mount)
@@ -30,6 +29,9 @@ export default function ImageBar2Home() {
 
   if (!homeSlides.length) return null;
 
+  // Double the slides for infinite scroll effect (only after hydration)
+  const displaySlides = duplicated ? [...homeSlides, ...homeSlides] : homeSlides;
+
   return (
     <section
       className={
@@ -45,10 +47,10 @@ export default function ImageBar2Home() {
       <meta itemProp="name" content="Fine Art Gallery Carousel" />
       <meta itemProp="creator" content="K4 Studios" />
       <div className="carousel-track" ref={trackRef}>
-        {homeSlides.map((s, i) => (
+        {displaySlides.map((s, i) => (
           <figure
             className="carousel-slide"
-            key={i}
+            key={`slide-${i}`}
             itemScope
             itemType="https://schema.org/ImageObject"
           >
