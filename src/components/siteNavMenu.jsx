@@ -6,9 +6,16 @@ export default function SiteNavMenu({ forceMobile = false }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [resetSignal, setResetSignal] = useState(0);
   const [mounted, setMounted] = useState(false);
+  // Track mobile viewport state properly for hydration
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    // Check viewport width only on client
+    const checkMobile = () => setIsMobileViewport(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const closeMobileMenu = () => {
@@ -66,14 +73,15 @@ export default function SiteNavMenu({ forceMobile = false }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  function MenuBranch({ node, depth = 0, delay = 0, reset, forceMobile = false, mounted = false }) {
+  function MenuBranch({ node, depth = 0, delay = 0, reset, forceMobile = false, mounted = false, isMobileViewport = false }) {
   const [expanded, setExpanded] = useState(false);
   const hasKids = node.children?.length > 0;
 
   useEffect(() => setExpanded(false), [reset]);
 
+  // Use hydration-safe isMobileViewport prop instead of calling window.innerWidth
   const isMobileView = () =>
-    mounted && (forceMobile || (typeof window !== "undefined" && window.innerWidth <= 768) || mobileOpen);
+    mounted && (forceMobile || isMobileViewport || mobileOpen);
 
   const handleClick = (e) => {
     if (isMobileView() && hasKids) {
@@ -156,6 +164,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
               reset={reset}
               forceMobile={forceMobile}
               mounted={mounted}
+              isMobileViewport={isMobileViewport}
             />
           ))}
         </div>
@@ -202,6 +211,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
                     reset={resetSignal}
                     forceMobile={forceMobile}
                     mounted={mounted}
+                    isMobileViewport={isMobileViewport}
                   />
                 ))}
               </div>
@@ -259,6 +269,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
                 reset={resetSignal}
                 forceMobile={forceMobile}
                 mounted={mounted}
+                isMobileViewport={isMobileViewport}
               />
             ))
           )}
