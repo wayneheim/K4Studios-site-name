@@ -113,6 +113,23 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
   return { cleaned: html, changed };
 }
 
+// 🚨 TEMPORARILY DISABLED - Testing hydration fix for React Error #418
+// The HTML manipulation was causing hydration mismatches because React's
+// expected DOM didn't match the modified HTML the browser received.
+//
+// Once confirmed this fixes the issue, we need to:
+// 1. Fix the source of duplicate elements in layouts (not strip them after render)
+// 2. Move structured data deduplication to build time, not runtime
+// 3. Ensure layouts don't render <title>/<meta>/<link> inside <body>
+//
+// Original middleware preserved below for reference:
+
+export const onRequest: MiddlewareHandler = async (_context, next) => {
+  return next(); // Pass through - no HTML modification
+};
+
+/*
+// ORIGINAL MIDDLEWARE - DO NOT RE-ENABLE WITHOUT FIXING HYDRATION
 export const onRequest: MiddlewareHandler = async (context, next) => {
   const response = await next();
   const contentType = response.headers.get("content-type") || "";
@@ -134,3 +151,4 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 
   return response;
 };
+*/
