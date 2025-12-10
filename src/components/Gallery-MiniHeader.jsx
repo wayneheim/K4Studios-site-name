@@ -15,7 +15,8 @@ function useIsMobile() {
 
 export default function GalleryLandingHeader({ breadcrumb }) {
   return (
-    <header
+    <div
+      role="banner"
       className={`landing-header ${useIsMobile() ? "mobile-animate" : ""}`}
       style={{ position: "relative", zIndex: 100 }}
     >
@@ -267,6 +268,6 @@ border: none!important;
         }
 
       `}</style>
-    </header>
+    </div>
   );
 }

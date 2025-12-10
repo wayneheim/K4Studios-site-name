@@ -124,7 +124,7 @@ export default function GalleryNavMenuMini({ hideDefaultHamburger = false }) {
   }, []);
 
   return (
-    <header className="nav-wrapper">
+    <div role="banner" className="nav-wrapper">
       {mobileOpen && <div className="nav-backdrop" onClick={closeMobileMenu} />}
 
       <div className="topbar-inner">
@@ -175,6 +175,6 @@ export default function GalleryNavMenuMini({ hideDefaultHamburger = false }) {
           )}
         </nav>
       </div>
-    </header>
+    </div>
   );
 }

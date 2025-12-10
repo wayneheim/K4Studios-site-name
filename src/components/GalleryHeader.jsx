@@ -202,7 +202,7 @@ export default function GalleryHeader() {
           
       `}</style>
 
-     <header>
+     <div role="banner">
   <div className="nav-bar">
     <div className="nav-item has-dropdown">
       <a href="#" className="nav-link">Painterly</a>
@@ -282,7 +282,7 @@ export default function GalleryHeader() {
       });
     `
   }} />
-</header>
+</div>
     </>
   );
 }

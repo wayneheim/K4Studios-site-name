@@ -175,7 +175,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
 
 
   return (
-    <header className="nav-wrapper">
+    <div role="banner" className="nav-wrapper">
       {mobileOpen && <div className="nav-backdrop" onClick={closeMobileMenu} />}
 
       <div className="topbar-inner">
@@ -275,6 +275,6 @@ export default function SiteNavMenu({ forceMobile = false }) {
           )}
         </nav>
       </div>
-    </header>
+    </div>
   );
 }

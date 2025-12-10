@@ -27,7 +27,8 @@ export default function GalleryLandingHeader({ breadcrumb }) {
   }, []);
 
   return (
-    <header
+    <div
+      role="banner"
       className={`landing-header${mounted && isMobile ? " mobile-animate" : ""}`}
       style={{ position: "relative", zIndex: 100 }}
     >
@@ -291,6 +292,6 @@ export default function GalleryLandingHeader({ breadcrumb }) {
           }
         }
       `}</style>
-    </header>
+    </div>
   );
 }

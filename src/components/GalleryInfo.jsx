@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
 import ThemeBlock from "./ThemeBlock.jsx";
@@ -78,12 +79,16 @@ export default function GalleryInfo({
   path = "",
   isLandingPage = false,
 }) {
-  const baseHref =
-    path ||
-    entranceData?.galleryPath ||
-    (typeof window !== "undefined"
-      ? window.location.pathname
-      : "");
+  // Use state for browser-only values to avoid hydration mismatch
+  const [clientPath, setClientPath] = useState("");
+  
+  useEffect(() => {
+    if (!path && !entranceData?.galleryPath) {
+      setClientPath(window.location.pathname);
+    }
+  }, [path, entranceData?.galleryPath]);
+  
+  const baseHref = path || entranceData?.galleryPath || clientPath;
   const trimmedBase = baseHref.replace(/\/$/, "");
 
   const galleryData = loadGalleryDataFor(trimmedBase);

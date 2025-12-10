@@ -103,7 +103,8 @@ export default function LandingHeader({ breadcrumb }) {
   }, [mounted, isMobile]);
 
   return (
-    <header
+    <div
+      role="banner"
       className={`landing-header${mounted && isMobile ? " mobile-animate" : ""}${mounted && animateStripes ? " desktop-animate" : ""}`}
       style={{ position: "relative", zIndex: 100 }}
     >
@@ -376,6 +377,6 @@ export default function LandingHeader({ breadcrumb }) {
           opacity: 0.45;
         }
       `}</style>
-    </header>
+    </div>
   );
 }
