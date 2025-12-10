@@ -16,8 +16,11 @@ function useIsMobile() {
 export default function GalleryLandingHeader({ breadcrumb }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [pathname, setPathname] = useState("");
+  const [mounted, setMounted] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
+    setMounted(true);
     if (typeof window !== "undefined") {
       setPathname(window.location.pathname);
     }
@@ -25,7 +28,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
 
   return (
     <header
-      className={`landing-header ${useIsMobile() ? "mobile-animate" : ""}`}
+      className={`landing-header${mounted && isMobile ? " mobile-animate" : ""}`}
       style={{ position: "relative", zIndex: 100 }}
     >
       {/* ── BREADCRUMB ON STRIPE BAR ── */}
