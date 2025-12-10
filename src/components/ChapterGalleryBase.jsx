@@ -264,8 +264,12 @@ export default function ChapterGalleryBase({
 }) {
   const sectionUrl = findSectionUrl(basePath);
 
-  // Edition context for SEO uniqueness
-  const path = typeof window !== "undefined" ? window.location.pathname.toLowerCase() : (basePath || "").toLowerCase();
+  // Edition context for SEO uniqueness - use basePath for SSR-safe initial render
+  const [clientPath, setClientPath] = useState((basePath || "").toLowerCase());
+  useEffect(() => {
+    setClientPath(window.location.pathname.toLowerCase());
+  }, []);
+  const path = clientPath;
   const isBW = path.includes("/black-white/");
   const editionTag = isBW ? "Black and White" : "Color";
   const isEngrainedSeries = basePath && basePath.includes("Engrained");
@@ -318,11 +322,11 @@ export default function ChapterGalleryBase({
   const isGhost  = (e) => e && e.id === "i-k4studios";
   const isHidden = (e) => e?.visibility === "hidden" || e?.show === false || e?.hidden === true;
 
-  // Check for theme filter in URL query params
-  const themeSlug = useMemo(() => {
-    if (typeof window === "undefined") return null;
+  // Check for theme filter in URL query params - hydration-safe
+  const [themeSlug, setThemeSlug] = useState(null);
+  useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    return params.get("theme");
+    setThemeSlug(params.get("theme"));
   }, []);
 
   // Look up the theme name from the themes registry
