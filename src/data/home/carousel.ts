@@ -1,7 +1,10 @@
-// --- Carousel: Robust Random Hero from 3 Cowboy Images (always srcS), Dynamic Rest Responsive ---
+// --- Carousel: Deterministic Hero from 3 Cowboy Images (always srcS), Dynamic Rest Responsive ---
 
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 import { normalizeImage } from '@/components/utils/normalizeImage';
+
+// CRITICAL: Sort file paths to ensure consistent order on server and client
+const sortedFilePaths = Object.keys(allModules).sort();
 
 // Your 3 hero cowboy image IDs (webp sources)
 const staticLcpIds = ['i-ncFcHDM', 'i-KtmPcCf', 'i-rqk5Kdk'];
@@ -15,7 +18,7 @@ const heroWebpSrcs = {
 
 // --- Find all hero matches, collecting their file path and img object ---
 const heroCandidates = [];
-for (const filePath in allModules) {
+for (const filePath of sortedFilePaths) {
   if (filePath.includes('Western-Cowboy-Portraits')) {
     const gallery = allModules[filePath].galleryData || allModules[filePath].default?.galleryData || [];
     for (const heroId of staticLcpIds) {
@@ -26,8 +29,8 @@ for (const filePath in allModules) {
 }
 if (heroCandidates.length === 0) throw new Error('No Cowboy hero images found!');
 
-// --- Pick one at random for hero ---
-const heroIdx = Math.floor(Math.random() * heroCandidates.length);
+// --- Pick FIRST hero (deterministic to avoid hydration mismatch) ---
+const heroIdx = 0;
 const { img: staticCowboyImg, filePath: staticCowboyFilePath } = heroCandidates[heroIdx];
 
 
@@ -95,22 +98,24 @@ function getGalleryData(mod) {
 function buildRankedPool(images) {
   const ratings = [5, 4, 3];
   let pool = [];
+  // Sort deterministically by ID instead of randomly to avoid hydration mismatch
   ratings.forEach(r => {
-    pool.push(...images.filter(img => img.rating === r).sort(() => Math.random() - 0.5));
+    pool.push(...images.filter(img => img.rating === r).sort((a, b) => (a.id || '').localeCompare(b.id || '')));
   });
-  pool.push(...images.filter(img => !ratings.includes(img.rating)).sort(() => Math.random() - 0.5));
+  pool.push(...images.filter(img => !ratings.includes(img.rating)).sort((a, b) => (a.id || '').localeCompare(b.id || '')));
   return pool;
 }
-function pickRandomFromPools(pools, n) {
+function pickFromPools(pools, n) {
   const picks = [];
   const usedPools = new Set();
+  // Pick deterministically (first available) to avoid hydration mismatch
   while (picks.length < n && usedPools.size < pools.length) {
     const available = pools.filter((_, i) => !usedPools.has(i));
     if (available.length === 0) break;
-    const poolIdx = Math.floor(Math.random() * available.length);
+    const poolIdx = 0; // Pick first available instead of random
     const realIdx = pools.indexOf(available[poolIdx]);
     if (pools[realIdx].images.length === 0) { usedPools.add(realIdx); continue; }
-    const imgIdx = Math.floor(Math.random() * pools[realIdx].images.length);
+    const imgIdx = 0; // Pick first image instead of random
     const chosen = pools[realIdx].images[imgIdx];
     if (staticLcpIds.includes(chosen.id)) continue; // exclude any hero IDs from random
     picks.push({ img: chosen, path: pools[realIdx].path });
@@ -121,7 +126,8 @@ function pickRandomFromPools(pools, n) {
 
 const painterlyPools = [];
 const traditionalPools = [];
-for (const filePath in allModules) {
+// Use sorted file paths for deterministic order
+for (const filePath of sortedFilePaths) {
   const mod = allModules[filePath];
   const data = getGalleryData(mod);
   if (!Array.isArray(data) || data.length === 0) continue;
@@ -138,9 +144,9 @@ for (const filePath in allModules) {
   }
 }
 
-// --- Pick from pools as usual ---
-const painterlyPicks = pickRandomFromPools(painterlyPools, 3);
-const traditionalPicks = pickRandomFromPools(traditionalPools, 3);
+// --- Pick from pools deterministically ---
+const painterlyPicks = pickFromPools(painterlyPools, 3);
+const traditionalPicks = pickFromPools(traditionalPools, 3);
 const slidesArr = [];
 for (let i = 0; i < 4; i++) {
   if (painterlyPicks[i]) slidesArr.push({ ...toSlide(painterlyPicks[i].img, painterlyPicks[i].path, slidesArr.length) });

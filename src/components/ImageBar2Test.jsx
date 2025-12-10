@@ -1,27 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 
-// Import home carousel - but we'll load it client-side only via useEffect
-// to avoid hydration mismatch from import.meta.glob differences
-const homeCarouselModule = () => import("../data/home/carousel.ts");
-
-export default function ImageBar2Home() {
+export default function ImageBar2Test({ slides: homeSlides = [] }) {
   const trackRef = useRef(null);
-  const [homeSlides, setHomeSlides] = useState([]);
   const [show, setShow] = useState(false);
   const [fullSize, setFullSize] = useState(false);
   const [duplicated, setDuplicated] = useState(false);
 
-  // Load slides client-side only to avoid hydration mismatch
-  useEffect(() => {
-    homeCarouselModule().then((mod) => {
-      if (mod.slides) {
-        setHomeSlides(mod.slides);
-      }
-    });
-  }, []);
-
-  // Animation timers
   useEffect(() => {
     if (homeSlides.length > 0) {
       setDuplicated(true);
@@ -32,9 +17,8 @@ export default function ImageBar2Home() {
       clearTimeout(fadeTimer);
       clearTimeout(scaleTimer);
     };
-  }, [homeSlides]);
+  }, []);
 
-  // Return null until slides are loaded (no SSR content = no mismatch)
   if (!homeSlides.length) return null;
 
   const displaySlides = duplicated ? [...homeSlides, ...homeSlides] : homeSlides;
@@ -48,32 +32,19 @@ export default function ImageBar2Home() {
       }
       aria-label="Fine-Art Photography Carousel"
       role="region"
-      itemScope
-      itemType="https://schema.org/ImageGallery"
     >
-      <meta itemProp="name" content="Fine Art Gallery Carousel" />
-      <meta itemProp="creator" content="K4 Studios" />
       <div className="carousel-track" ref={trackRef}>
         {displaySlides.map((s, i) => (
-          <figure
-            className="carousel-slide"
-            key={`slide-${i}`}
-            itemScope
-            itemType="https://schema.org/ImageObject"
-          >
+          <figure className="carousel-slide" key={`slide-${i}`}>
             <a href={s.href} title={s.alt} aria-label={s.alt}>
               <img
-                src={s.srcS || s.src || s.srcM || s.srcL}
+                src={s.srcS || s.src}
                 alt={s.alt}
-                itemProp="contentUrl"
                 loading={s.loading}
                 fetchpriority={s.fetchpriority}
-                width={s.width}
-                height={s.height}
-                decoding={s.loading === 'lazy' ? 'async' : 'auto'}
               />
             </a>
-            <figcaption itemProp="description">{s.description}</figcaption>
+            <figcaption>{s.description}</figcaption>
           </figure>
         ))}
       </div>
