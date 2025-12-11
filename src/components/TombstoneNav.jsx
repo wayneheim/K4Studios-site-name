@@ -60,6 +60,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
 
         .fade-in-up {
           opacity: 0;
+          visibility: hidden; /* Use visibility to prevent CLS - element still reserves space */
           animation-name: fadeSlideUp;
           animation-duration: 0.9s;
           animation-timing-function: ease;
@@ -78,10 +79,12 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         @keyframes fadeSlideUp {
           from {
             opacity: 0;
-            transform: translateY(-8px); /* Reduced from -20px to minimize CLS */
+            visibility: visible; /* Make visible at start of animation */
+            transform: translateY(-8px);
           }
           to {
             opacity: 1;
+            visibility: visible;
             transform: translateY(0);
           }
         }
@@ -203,6 +206,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
 
         .tombstone-animate {
           opacity: 0;
+          visibility: hidden; /* Use visibility to prevent CLS */
           animation-name: dropIn;
           animation-duration: 0.8s;
           animation-fill-mode: forwards;
@@ -212,10 +216,12 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         @keyframes dropIn {
           0% {
             opacity: 0;
-            transform: scale(0.95); /* Removed translateY to prevent CLS */
+            visibility: visible; /* Make visible at animation start */
+            transform: scale(0.95);
           }
           100% {
             opacity: 1;
+            visibility: visible;
             transform: scale(1);
           }
         }

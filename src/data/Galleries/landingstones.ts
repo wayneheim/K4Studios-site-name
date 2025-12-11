@@ -1,6 +1,6 @@
 export const landingWestern = {
     //Painterly Photography
-  title: "Painterly Fine Art Photography — One-Image Movie™ Art by Wayne Heim",
+  title: "Painterly Fine Art Photography — Art by Wayne Heim",
   subtitle: "Step Inside the Story — photographs that are not merely images, but windows into worlds beyond the lens.",
   breadcrumb: "Painterly Photography: Wayne Heim",
   keywords: [

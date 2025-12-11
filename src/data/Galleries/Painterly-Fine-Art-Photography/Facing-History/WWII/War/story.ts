@@ -3,7 +3,7 @@ export const westernStory = [
   /* ───────────────────────────────────────────── 1 */
   {
     breadcrumb: "WWII | Art of War | Painterly Fine Art",
-    title: "The Art of War — One-Image Movie™ WWII Battle Photography by Wayne Heim",
+    title: "The Art of War — WWII Battle Photography by Wayne Heim",
     subhead: "Capturing Courage, Chaos, and Strategy",
     tagline: "Scenes from the Front — Immersive Fine Art Photography of the Second World War",
     paragraphs: [

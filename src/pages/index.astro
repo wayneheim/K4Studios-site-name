@@ -85,6 +85,10 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
   structuredDataJSON={structuredData}
   meta={meta}
 >
+  <Fragment slot="head">
+    <!-- Preload LCP image to reduce load delay -->
+    <link rel="preload" as="image" href="/images/desktop3.webp" type="image/webp" fetchpriority="high" />
+  </Fragment>
 
   <main class="bg-white text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
@@ -100,7 +104,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     <div class="w-full max-w-[1200px] mt-8 mx-auto px-4" style="position:relative;">
       {/* --- LCP Placeholder Overlay (z-10) --- */}
       <picture>
-        <source media="(max-width: 768px)" srcset="/images/mobile.webp">
+        <source media="(max-width: 768px)" srcset="/images/mobile.webp" width="768" height="420">
         <img
           src="/images/desktop3.webp"
           alt="Featured Artwork"
@@ -109,6 +113,8 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
           loading="eager"
           decoding="sync"
           id="lcp-placeholder-img"
+          width="1200"
+          height="420"
           style="image-rendering: pixelated;"
         />
       </picture>

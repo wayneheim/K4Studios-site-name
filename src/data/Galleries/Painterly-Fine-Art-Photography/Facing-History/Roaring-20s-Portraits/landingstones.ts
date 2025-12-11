@@ -1,5 +1,5 @@
 export const landingWestern = {
-  title: "The Roaring Twenties — One-Image Movie™ Jazz Age Portraits",
+  title: "The Roaring Twenties — Jazz Age Portraits",
   subtitle: "Step Into the Roaring 20s — Flappers, Gangsters & Speakeasy Characters in Painterly Fine Art",
 
   // Keywords for structured data and semantic SEO (not meta keywords)

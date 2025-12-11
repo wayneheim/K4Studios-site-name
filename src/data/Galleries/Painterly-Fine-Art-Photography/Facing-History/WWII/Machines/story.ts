@@ -3,7 +3,7 @@ export const westernStory = [
   /* ───────────────────────────────────────────── 1 */
   {
     breadcrumb: "Men & Machines | WWII",
-    title: "Men & Machines — One-Image Movie™ WWII Portraiture by Wayne Heim",
+    title: "Men & Machines — WWII Portraiture by Wayne Heim",
     subhead: "Where Grit Meets Steel. Where Men and Their Machines Become One.",
     tagline: "Painterly Fine Art Photography of WWII Vehicles, Crews, and Frontline Resolve",
     paragraphs: [

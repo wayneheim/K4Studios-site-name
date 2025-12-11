@@ -1,5 +1,5 @@
 export const landingWestern = {
-  title: "Civil War Portraits — One-Image Movie™ Historical Photography",
+  title: "Civil War Portraits — Historical Photography",
   subtitle: "Step Inside the Story — Valor, Loss & Brotherhood in Painterly Fine Art",
 
   // Keywords for structured data and semantic SEO (not meta keywords)

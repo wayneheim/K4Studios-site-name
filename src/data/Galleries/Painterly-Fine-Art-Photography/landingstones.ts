@@ -1,6 +1,6 @@
 export const landingWestern = {
   // Painterly Photography
-  title: "Painterly Fine Art Photography — One-Image Movie™ Storytelling",
+  title: "Painterly Fine Art Photography",
   subtitle: "Step Inside the Story — Where Every Photograph Becomes a Window into Worlds Beyond the Lens",
 
   // Keywords for structured data and semantic SEO (not meta keywords)

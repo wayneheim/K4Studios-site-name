@@ -14,10 +14,12 @@
   justify-content: space-between;
   padding: 0 0.75rem;
   height: 60px;
+  min-height: 60px; /* Explicit min-height to reserve space */
   background: #fff;
   border-top: 3px solid var(--dark-brown);
   border-bottom: 3px solid var(--dark-brown);
   z-index: 100;
+  contain: layout style; /* Prevent internal changes from causing CLS */
 }
 
 /* stripe background behind logo */

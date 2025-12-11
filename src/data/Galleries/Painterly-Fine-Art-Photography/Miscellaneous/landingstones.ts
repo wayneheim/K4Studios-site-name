@@ -1,6 +1,6 @@
 export const landingWestern = {
     //Painterly Miscellaneous Portraits
-  title: "Painterly Portraits — One-Image Movie™ Fine Art by Wayne Heim",
+  title: "Painterly Portraits — Fine Art by Wayne Heim",
   subtitle: "Step Inside the Story of Timeless Character",
   breadcrumb: `<a href="/Galleries/Painterly-Fine-Art-Photography" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='#444'">Painterly Photography</a> | Miscellaneous Portraits`,
   keywords: [

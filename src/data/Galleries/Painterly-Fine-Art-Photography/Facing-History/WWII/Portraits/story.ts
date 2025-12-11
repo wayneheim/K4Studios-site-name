@@ -3,7 +3,7 @@ export const westernStory = [
   /* ───────────────────────────────────────────── 1: INTRO */
   {
     breadcrumb: "WWII Portraits | Color & Black-and-White",
-    title: "WWII Portraits — One-Image Movie™ Fine Art Photography by Wayne Heim",
+    title: "WWII Portraits — Fine Art Photography by Wayne Heim",
     subhead: "Honor the Faces Who Carried the World Forward",
     tagline: "Painterly Fine Art Portraits of the Greatest Generation",
     paragraphs: [
