@@ -2,7 +2,7 @@ export const facingFAQ = [
     {
     q: "What makes your portrait photography 'painterly'?",
     a: [
-      "Wayne Heim’s painterly portraits combine fine art sensibility with masterful photographic technique. Through tonal layering, softened edges, and deliberate lighting, each image evokes the mood and atmosphere of a classical oil painting — while staying rooted in real emotion."
+      "Wayne Heim's painterly portraits combine fine art sensibility with masterful photographic technique. Through tonal layering, softened edges, and deliberate lighting, each image becomes a One-Image Movie™ — evoking the mood and atmosphere of a classical oil painting while staying rooted in real emotion."
     ]
   },
   {
@@ -14,7 +14,7 @@ export const facingFAQ = [
   {
     q: "Is there a unifying theme in this gallery?",
     a: [
-      `Not a single theme — but a shared feeling. This gallery collects portraits and painterly moments that don’t belong to a specific historical or narrative set, but still resonate deeply. Solitude, love, grace, introspection… these are the emotional threads tying it all together.`
+      `Not a single theme — but a shared feeling. This gallery collects portraits and painterly moments that don't belong to a specific historical or narrative set, but still invite you to step inside the story. Solitude, love, grace, introspection… these are the emotional threads tying it all together.`
     ]
   },
   {
@@ -38,7 +38,7 @@ export const facingFAQ = [
   {
     q: "Is this collection still growing?",
     a: [
-      "Yes. This gallery is an evolving visual journal — a space for new discoveries, spontaneous portraits, and moments that don’t fit neatly into other collections. It grows as Wayne encounters people, moods, and stories that deserve to be remembered."
+      "Yes. This gallery is an evolving visual journal — a space for new discoveries, spontaneous portraits, and moments that don't fit neatly into other collections. It grows as Wayne encounters people, moods, and stories that deserve to be remembered. Embrace the Past… Live the Story."
     ]
   },
   {

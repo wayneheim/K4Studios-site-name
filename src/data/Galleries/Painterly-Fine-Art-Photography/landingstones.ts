@@ -1,8 +1,22 @@
 export const landingWestern = {
   // Painterly Photography
-  title: "Painterly Fine Art Photography by Wayne Heim",
-  subtitle:
-    "Photographs that are not merely images—but windows into worlds that exist beyond my lens.",
+  title: "Painterly Fine Art Photography — One-Image Movie™ Storytelling",
+  subtitle: "Step Inside the Story — Where Every Photograph Becomes a Window into Worlds Beyond the Lens",
+
+  // Keywords for structured data and semantic SEO (not meta keywords)
+  keywords: [
+    "Painterly Fine Art Photography",
+    "painterly photography",
+    "One-Image Movie",
+    "painterly storytelling",
+    "Wayne Heim photographer",
+    "Western cowboy portraits",
+    "historical reenactment photography",
+    "Facing History",
+    "fine art prints",
+    "painterly compositions"
+  ],
+
   breadcrumb:
     `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Painterly Photography`,
 

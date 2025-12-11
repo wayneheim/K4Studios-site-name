@@ -5,7 +5,7 @@ export function getStructuredData({
   images = [],
   defaults = {},
 }: {
-  type: "gallery" | "image" | "BlogPosting",
+  type: "gallery" | "image" | "BlogPosting" | "Article",
   data: any,
   images?: any[],
   defaults?: {
@@ -263,6 +263,85 @@ export function getStructuredData({
     if (data.articleSection) obj.articleSection = data.articleSection;
 
     return JSON.stringify(obj, null, 2);
+  }
+
+  /* ============================================================
+     TYPE: ARTICLE (Definition/About Pages)
+  ============================================================ */
+  if (type === "Article") {
+    const todayIso = new Date().toISOString().split("T")[0];
+    
+    const publisherObj = {
+      "@type": "Organization",
+      "@id": "https://k4studios.com/#organization",
+      name: "K4 Studios",
+      url: "https://k4studios.com/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://k4studios.com/images/K4Logo-web-c.webp",
+        width: 512,
+        height: 512,
+      },
+      ...(organizationSameAs.length ? { sameAs: organizationSameAs } : {}),
+    };
+
+    const articleObj: any = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": `${data.url}#article`,
+      headline: data.headline || data.title,
+      name: data.title,
+      description: data.description,
+      url: data.url,
+      mainEntityOfPage: { "@type": "WebPage", "@id": data.url },
+      image: data.image || "https://www.k4studios.com/images/K4Logo-web-c.webp",
+      datePublished: data.datePublished || todayIso,
+      dateModified: data.dateModified || data.datePublished || todayIso,
+      author: {
+        "@type": "Person",
+        name: creatorName,
+        url: creatorUrl,
+        ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
+      },
+      publisher: publisherObj,
+      copyrightHolder: {
+        "@type": "Person",
+        name: creatorName,
+        url: creatorUrl,
+      },
+      copyrightNotice: data.copyrightNotice || copyrightNotice,
+      inLanguage: "en",
+      ...(data.articleSection ? { articleSection: data.articleSection } : {}),
+      ...(data.keywords?.length ? { keywords: data.keywords.join(", ") } : {}),
+    };
+
+    // Add DefinedTerm schema if this is a definition page
+    if (data.definedTerm) {
+      articleObj.about = {
+        "@type": "DefinedTerm",
+        "@id": `${data.url}#definedterm`,
+        name: data.definedTerm.name,
+        description: data.definedTerm.description,
+        inDefinedTermSet: data.definedTerm.termSet || "https://k4studios.com/glossary",
+      };
+    }
+
+    // Add FAQ schema if sections with Q&A structure
+    if (data.faqItems?.length) {
+      articleObj.hasPart = {
+        "@type": "FAQPage",
+        mainEntity: data.faqItems.map((item: { question: string; answer: string }) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      };
+    }
+
+    return JSON.stringify(articleObj, null, 2);
   }
 
   return "";

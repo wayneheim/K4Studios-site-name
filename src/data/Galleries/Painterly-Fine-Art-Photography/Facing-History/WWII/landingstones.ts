@@ -1,8 +1,22 @@
 export const landingWestern = {
-  title: "WWII: Remembering The Greatest Generation",
-  subtitle: "Painterly WWII Themed Photography by Wayne Heim",
-  description: "Painterly WWII Themed Photography by Wayne Heim",
-  keywords: [],
+  title: "WWII — One-Image Movie™ Portraits of The Greatest Generation",
+  subtitle: "Step Inside the Story — Sacrifice, Brotherhood & Wartime Resilience in Painterly Fine Art",
+  description: "One-Image Movie™ WWII photography honoring the Greatest Generation by Wayne Heim",
+
+  // Keywords for structured data and semantic SEO (not meta keywords)
+  keywords: [
+    "WWII Portraits",
+    "One-Image Movie",
+    "the Greatest Generation",
+    "WWII photography",
+    "wartime photography",
+    "WWII reenactment photography",
+    "WWII Sacrifice & Brotherhood",
+    "historical themed photography",
+    "Men & Machines",
+    "The Art of War"
+  ],
+
   breadcrumb: 
   `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | WWII Themed Art`,
 

@@ -1,0 +1,156 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData, getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+
+import { oneImageMoviePage } from "@/data/Other/One-Image-Movie/story.ts";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.ts";
+import "@/styles/global.css";
+
+// ----------------------
+// Dynamic Logic
+// ----------------------
+const sectionPath = "/Other/One-Image-Movie";
+
+// Build structured data with Article + DefinedTerm schema
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    title: oneImageMoviePage.title,
+    headline: oneImageMoviePage.title,
+    description: "A One-Image Movie is a fully realized moment of cinema—compressed into a single frame—where character, mood, and narrative arc exist all at once. Wayne Heim created this new medium of fine art storytelling.",
+    url: `https://k4studios.com${sectionPath}`,
+    articleSection: "Fine Art Photography Concepts",
+    keywords: [
+      "One-Image Movie",
+      "One-Image Movie™",
+      "single-frame narrative",
+      "cinematic fine art photography",
+      "painterly photography",
+      "visual storytelling",
+      "fine art storytelling",
+      "Wayne Heim",
+      "K4 Studios"
+    ],
+    copyrightNotice: "© Wayne Heim",
+    datePublished: "2025-12-11",
+    definedTerm: {
+      name: "One-Image Movie",
+      description: "A One-Image Movie is a fully realized moment of cinema—compressed into a single frame—where character, mood, and narrative arc exist all at once. It is a medium built on suggestion, implication, and psychological resonance—inviting the viewer to step inside the story rather than simply observe it.",
+      termSet: "https://k4studios.com/glossary"
+    },
+    faqItems: [
+      {
+        question: "What is a One-Image Movie?",
+        answer: "A One-Image Movie is more than a photograph. It is a fully realized moment of cinema—compressed into a single frame—where character, mood, and narrative arc exist all at once. Wayne Heim created the concept to describe a new kind of fine art storytelling: imagery that doesn't just depict a scene, but unfolds like a lost frame from an unwritten film."
+      },
+      {
+        question: "What makes a One-Image Movie different from regular photography?",
+        answer: "A One-Image Movie features character-driven storytelling built on gesture, posture, and expression; lighting and composition inspired by classical painting and modern cinema; narrative cues that hint at unseen events before and after the image; and painterly depth that transforms realism into mythology."
+      },
+      {
+        question: "What is a Picture Show?",
+        answer: "A Picture Show is the expanded narrative form of the One-Image Movie philosophy. Picture Shows weave multiple images into a thematic, cinematic journey, each frame acting as a chapter in a larger visual narrative—enhanced with written chapter stories, voice-over narration, and sound design."
+      }
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+// Use first painterly image as OG image
+const landingImgUrl = painterlyImages.find(img => img.visibility !== "ghost")?.srcM || "";
+const meta = getLandingMeta(sectionPath, landingImgUrl);
+if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+
+// Prepare gallery preview images
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const visibleImages = painterlyImages.filter(img => img.visibility !== "ghost");
+const previewImages = shuffleArray(visibleImages).slice(0, 6).map(img => ({
+  ...img,
+  galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+}));
+const previewPath = "/Galleries";
+
+// Setup for keyword linking
+const galleryDatas = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
+
+// Breadcrumb structured data
+const breadcrumbData = getBreadcrumbList([
+  { name: "Home", item: "https://k4studios.com/" },
+  { name: "Other", item: "https://k4studios.com/Other" },
+  { name: "What Is a One-Image Movie?", item: `https://k4studios.com${sectionPath}` }
+]);
+
+// Combine structured data
+const combinedStructuredData = `[${structuredData}, ${breadcrumbData}]`;
+---
+
+<BaseLayout
+  title={`${oneImageMoviePage.title} – K4 Studios`}
+  structuredDataJSON={combinedStructuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other › One-Image Movie" />
+    </div>
+
+    <!-- Centered H1 Title -->
+    <section class="section-heading-wrap" style="margin: 2rem 0 1.5rem; text-align: center;">
+      <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif; font-size: 2.2rem; font-weight: 600; letter-spacing: -0.02em;">The One-Image Movie™</h1>
+    </section>
+
+    <section class="story-layout" style="font-family: 'Glegoo', serif;">
+      <div class="text-column story-section" style="max-width: 860px; margin: 0 auto; padding: 0 1.5rem; line-height: 1.3;">
+        {oneImageMoviePage.sections.map((section) => (
+          <article class="story-block" style="margin-bottom: 2.5rem;">
+            <h2 style="font-weight: 500; font-size: 1.65rem; margin-bottom: 0.55rem;">{section.subhead}</h2>
+            
+            {section.bullets && (
+              <ul style="padding-left: 1.4rem; margin-top: 0.5rem; list-style-type: disc;">
+                {section.bullets.map((bullet) => (
+                  <li style="margin-bottom: 0.5rem; font-size: 1rem; list-style-type: disc;">{bullet}</li>
+                ))}
+              </ul>
+            )}
+            
+            {section.paragraphs?.map((para) => (
+              <p style="line-height: 1.6; margin-bottom: 1rem; font-size: 1.01rem;" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+            ))}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <SiteFooter 
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title={`${oneImageMoviePage.title} – K4 Studios`}
+      label="Explore Galleries"
+      class="pt-8 pb-12" 
+    />
+  </main>
+</BaseLayout>

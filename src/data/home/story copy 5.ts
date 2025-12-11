@@ -2,11 +2,12 @@ export const painterlyStory = [
   /* 1: Opening — The Stage, Not the Surface */
   {
     tagline: "Embrace the Past. Live the Story.",
-    subhead: "Fine Art for Those Who See Walls as a Stage",
+    subhead: "Fine Art for Those Who See Their Walls as a Stage, Not a Surface",
     paragraphs: [
       "There are photographs—then there are the moments that refuse to sit still.",
-      "Every image here is a One-Image Movie™—a single, cinematic breath where time, myth, and memory hold still for just a moment. Painterly portraits. Western grit. Landscapes that breathe. Forgotten stories and icons of history and invention, rendered in light that feels carved from memory itself.",
-      "This is fine art photography for collectors who want more than décor. Cowboys and outlaws. WWII heroes and Civil War soldiers. Mountains that hum old hymns. Steel and steam and leather and dust. Step inside the story—and claim your place in it."
+      "Every image here is a single, cinematic breath where time, myth, and memory hold still for just a moment. Painterly light. Western grit. The hush before history turns its next page. These are not pictures to hang. They are stories to enter.",
+      "Collectors don’t come to K4 Studios for décor. They come to belong—to step inside a world where the West still breathes, where mountains hum their old hymns, where steel and steam and leather and dust feel like old companions.",
+      "You’re not buying a print. You’re claiming a place in the story."
     ]
   },
 

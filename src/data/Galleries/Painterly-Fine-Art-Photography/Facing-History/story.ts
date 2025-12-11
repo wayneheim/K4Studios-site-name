@@ -1,77 +1,87 @@
 export const facingHistoryStory = [
+
   // 1: INTRO
   {
-    title: "Facing History: Story-Driven & History Themed Fine Art Photography",
-    subhead: "Embrace the Past… Live the Story.",
+    title: "Facing History: Story-Driven & History-Themed Fine Art Photography",
+    subhead: "Embrace the Past — Live the Story.",
     paragraphs: [
-      "Some stories echo through time—tales of valor, loss, invention, and legacy. They shape the world we know and spark curiosity in those who pause to look closer. Wayne Heim’s <strong>Facing History</strong> collection is more than a gallery; it’s a living archive of character-driven portraiture, evocative <strong>history themed art</strong>, and painterly historical imagery. Here, <strong>painterly fine art photography</strong>, <strong>western themed photography</strong>, and living history blend into a single visual narrative, inviting you to step inside the story.",
-      "From the untamed legend of the West and the thunder of Civil War cannons to the smoky pulse of the Roaring 20s, these are not simply photographs. Each is a museum-quality print, a conversation piece, and a tactile bridge for discovery—crafted for collectors, reenactors, and anyone with a passion for <strong>authentic history themed art</strong> and storytelling through photography.",
-      "Whether you’re seeking <strong>fine art painterly photography</strong>, <strong>cowboy art</strong>, <strong>story-driven reenactment photography</strong>, <strong>history themed photography</strong>, or award-winning <strong>historical portraiture</strong>, Facing History delivers moments from history reimagined as gallery-worthy prints."
+      "Some moments refuse to fade. They linger—half memory, half myth—etched into the quiet pulse of who we are. Wayne Heim's Facing History collection rises from that space between remembrance and imagination. These aren't casual reenactments or opportunistic portraits—they are character-driven studies shaped with painterly craft, historical authenticity, and the narrative precision of a medical illustrator turned cinematic storyteller.",
+      "Many of the portraits function as One-Image Movies™—single frames constructed with the emotional gravity of a full story arc. A breath before a decision. A flicker of resolve. A shadow stretching toward consequence. These aren’t static portraits—they’re moments still in motion.",
+      "For collectors of painterly fine art, cowboy art, historical portraiture, and story-rich reenactment imagery, Facing History offers a curated pathway into worlds that feel both familiar and newly alive. Step inside the story."
     ]
   },
 
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  // INSERT THE NEW STORY SLIDER BLOCK RIGHT HERE
+  // Reason: This is where the emotional pitch is highest,
+  // immediately after defining One-Image Movies™.
+  //
+  // <StorySlider ... />
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
   // 2: WESTERN FRONTIER
   {
-    subhead: "The Western Frontier – Cowboy Art, Grit & Glory",
+    subhead: "The Western Frontier — Grit, Myth & the Quiet Pulse of the West",
     paragraphs: [
-      "Where the long light of the frontier meets the untamed landscape, Wayne Heim’s <strong>painterly western portraits</strong> invite you to feel every layer of dust, sweat, and sun. This is <strong>authentic cowboy art</strong>—<strong>old west fine art prints</strong> and <strong>history themed art</strong> that blend myth and reality in a single image.",
-      "With nods to Remington, Catlin, and Wyeth, these <strong>western cowboy portraits</strong>, <strong>cowboy art prints</strong>, and <strong>wild west painterly photography</strong> pay homage to the rugged spirit of the American West. Outlaws, cowboys, and pioneers—each photograph is a living journey, a visual narrative for those who crave legacy and adventure on their walls.",
-      "For collectors seeking powerful works of art, <strong>western artwork prints</strong>, <strong>cowboy art</strong>, or <strong>painterly cowboy photography</strong>, these gallery-worthy images offer rustic charm and enduring story.",
-      "Looking for a dedicated collection? Explore the <strong>Western Fine Art Photography</strong> and <strong>Cowboy Art</strong> gallery for the most complete story-driven selection of <strong>Western themed photography</strong> and <strong>history themed art</strong> by Wayne Heim."
+      "Where long light spills across dust and legend, Wayne Heim’s painterly Western portraits cut straight to the soul of frontier mythmaking. These are not costumes posed for novelty—they’re psychological studies rendered with texture, restraint, and cinematic atmosphere. Old-West fine art prints shaped by grit, silence, and the weight of untold stories.",
+      "Many Western portraits follow the One-Image Movie™ architecture: the moment before the draw, the breath after the choice, the tension between strangers sizing each other up. Light becomes subtext; posture becomes motive.",
+      "Drawing on the lineage of Remington, Catlin, Wyeth, and Rockwell, Wayne honors the American West not through cliché but through presence—the grit behind the eyes, the stoicism of stance, the poetry of landscapes that shape the people who walk them.",
+      "Collectors seeking Western artwork prints, cowboy art, and painterly cowboy portraiture will find imagery built with subtle tension, emotional depth, and mythic restraint.",
+      "For a deeper dive into frontier stories, explore the Western Fine Art Photography and Cowboy Art galleries."
     ],
     list: [
-      "Explore Western Photography – Wild west inspired photography"
+      "Explore Western Photography — A frontier of mood and myth"
     ]
   },
 
   // 3: CIVIL WAR
   {
-    subhead: "Civil War Portraits – Valor, Loss & Resolve",
+    subhead: "Civil War Portraits — Valor, Resolve & the Weight of a Nation",
     paragraphs: [
-      "The air is thick with smoke and anticipation. Every face tells a story—soldiers, nurses, and townsfolk, each bearing the weight of a nation divided. Wayne Heim’s <strong>Civil War Portraits</strong> use <strong>history themed photography</strong>, historic reenactment, period costume portraiture, and painterly lighting to reveal the quiet courage and private fears behind the uniforms.",
-      "These aren’t just reenactment portraits—they are <em>faces of conflict</em>, rendered in evocative light and shadow. Every image in this Civil War collection is a study in brotherhood, sacrifice, and <strong>American history wall decor</strong> worthy of a place in any collector’s legacy.",
-      "Collectors of <strong>Civil War themed photography</strong> find in these prints a sense of timelessness. Whether you seek <strong>Civil War art</strong> for history lovers, or want a powerful work that honors duty and loss, each photograph is designed to be both beautiful and thought-provoking."
+      "The Civil War series carries a quiet electricity. Smoke. Stillness. Faces marked by duty and doubt. Wayne’s painterly Civil War portraits use reenactment, researched detail, and cinematic lighting to create psychological character studies—not of battles, but of the people who bore them.",
+      "Each portrait is shaped as a One-Image Movie™—the emotional hinge between what has been and what must come next. Posture becomes narrative. Shadow becomes memory. A single expression can hold the echo of an entire chapter of American history.",
+      "Collectors of Civil War themed photography will find works that honor both the cost and courage of the era—prints designed to provoke reflection rather than reenact spectacle."
     ],
     list: [
-      "Explore Civil War Portraits – Legacy portraits for collectors"
+      "Explore Civil War Portraits — Legacy preserved through light"
     ]
   },
 
   // 4: WWII
   {
-    subhead: "WWII Portraits – Sacrifice, Brotherhood & the Greatest Generation",
+    subhead: "WWII Portraits — Sacrifice, Brotherhood & the Human Heart in Wartime",
     paragraphs: [
-      "Tanks and trucks grind over the mud. Radios crackle, orders are given, and moments of connection arise between soldiers in the chaos. The WWII Portraits series honors the <em>greatest generation</em> with a blend of cinematic portraiture, <strong>history themed art</strong>, and painterly documentary style.",
-      "Each wartime portrait is a window into resilience, duty, and sacrifice—celebrating both heroism and the quiet, daily realities of life on the front lines. Wayne Heim’s images pay tribute not only to the soldiers, but to the families, medics, and civilians whose stories often go untold.",
-      "This is <strong>WWII themed fine art photography</strong> and <strong>history themed photography</strong> for collectors who appreciate <strong>history in fine art</strong> and want to display meaningful, museum-quality prints. Whether your interest is in WWII military equipment, men and machines, or the emotional power of wartime photography, this collection brings the human dimension of conflict to your walls."
+      "Mud under boots. The clatter of machinery. A quiet exchange between men who understand the stakes. The WWII collection steps beyond documentation and into emotional storytelling—portraits shaped by tension, grit, and fragile humanity.",
+      "Each wartime portrait carries the One-Image Movie™ framework: deliberate light, intentional stillness, gestures that speak louder than action. These aren't snapshots—they’re meditations on courage, fear, and the unspoken bond between soldiers.",
+      "Ideal for collectors of WWII fine art photography, military history, or anyone who values art with emotional gravity and authenticity."
     ],
     list: [
-      "Discover WWII Portraits – Bring wartime photography home"
+      "Discover WWII Portraits — Stories carried in silence"
     ]
   },
 
   // 5: ROARING 20s
   {
-    subhead: "The Roaring 20s – Jazz, Grit & Reinvention",
+    subhead: "The Roaring 20s — Jazz, Rebellion & Velvet Shadows",
     paragraphs: [
-      "Bootleggers slipping through the shadows, flappers dancing under velvet light, G-men chasing fortune and failure in equal measure—the Roaring 20s is a decade of reinvention, captured here in <strong>painterly jazz-age portraits</strong> and <strong>history themed art</strong>. Wayne’s collection goes beyond nostalgia, revealing the tension, energy, and consequence beneath the sparkle.",
-      "These <strong>roaring twenties portraits</strong> and Gatsby-era artworks are more than just period pieces—they’re emotional narratives for the modern collector. Step into the roaring 20s and experience the contrasts of a nation reinventing itself: rebellion and opulence, grit and glamour.",
-      "Ideal for lovers of <strong>roaring 20s wall art</strong> for jazz fans, vintage portraiture, and anyone seeking <strong>history themed photography</strong> that both entertains and informs."
+      "The Roaring 20s was a decade built on contradiction: elegance and danger, glamour and grit. Wayne’s painterly Jazz-Age portraits reveal the tension beneath the velvet—bootleggers sliding through alley smoke, flappers defying convention, G-men tracing secrets across dimly lit rooms.",
+      "Many of these portraits operate like One-Image Movies™—expression, posture, and wardrobe arranged to imply an entire drama just outside the frame. Light becomes intrigue; shadow becomes plotline.",
+      "Perfect for collectors who love Jazz-Age aesthetics, Gatsby-era mood, and history-themed photography that feels both nostalgic and electric."
     ],
     list: [
-      "Step into the Roaring 20s – Vintage story prints"
+      "Step into the Roaring 20s — Mood, glamour, and grit"
     ]
   },
 
   // 6: ENGRAINED SERIES
   {
-    subhead: "Engrained Series – Stories Etched in Wood",
+    subhead: "The Engrained Series — When Story Meets Woodgrain",
     paragraphs: [
-      "Looking for texture, warmth, and a handcrafted finish? Wayne’s <strong>Engrained Series</strong> uses a five-layer UV process to print select images directly onto Baltic Birch. Controlled transparency lets the wood’s natural grain breathe through, making every photograph feel like a tactile relic—unique to your space.",
-      "These <strong>fine art prints on wood</strong> aren’t just wall art. They’re collector-worthy, museum quality historical prints—ideal for anyone seeking stories etched in wood and a bridge between classic technique and <strong>history themed art</strong> with modern innovation."
+      "For collectors drawn to texture and presence, the Engrained Series transforms painterly historical portraits into tangible fine art. Using a proprietary five-layer UV process printed directly onto Baltic Birch, the natural grain whispers beneath the image, deepening the atmosphere and amplifying narrative weight.",
+      "The result feels sculptural—like a relic lifted from a forgotten trunk or an heirloom preserved by time. Many Engrained pieces become even more powerful One-Image Movies™ when married to wood, gaining a sense of permanence and myth."
     ],
     list: [
-      "View Engrained Series – Photography printed on wood"
+      "View Engrained Series — Stories etched in grain and light"
     ]
   },
 
@@ -79,28 +89,28 @@ export const facingHistoryStory = [
   {
     subhead: "Why Painterly Photography? Why Historical Portraiture?",
     paragraphs: [
-      "In an age where algorithms can fabricate faces and mimic style, Wayne Heim’s painterly fine art photography stands apart because it’s built by hand — not code. Every subject is real, every spark of light intentional, every texture shaped by craft. These are not AI-generated images or digital effects; they are living studies of light, emotion, and story.",
-      "As both an <strong>award-winning medical illustrator</strong> and <strong>fine art photographer</strong>, Wayne approaches his images with an artist’s discipline and a storyteller’s heart. He doesn’t capture scenes — he sculpts them. The raw photograph becomes his foundation — his canvas, his ingredients — where color, light, and shadow are bent to his will like brush and pigment.",
-      "Painterly photography gives the viewer realism with soul — the sense of a lived moment, but with just enough artistry to get lost in it. Like the pull of a good novel or the tension before a film’s turning point, it draws you in until you forget you’re looking at a modern photograph at all.",
-      "That’s why painterly photography matters. It’s not about creating perfection, but about evoking truth — about making history feel close enough to touch."
+      "In an age overflowing with algorithmic convenience, Wayne Heim's work insists on the human touch—real people, real emotion, and real light shaping every frame. These portraits are built, not fabricated. Lived, not synthesized.",
+      "Rooted in the Pictorialist movement and shaped by his background as a medical illustrator, Wayne sculpts tension, mood, and texture until a portrait becomes a moment you can feel. His narrative-first approach turns a single image into a One-Image Movie™—a story you finish with your own imagination.",
+      "Painterly photography gives history its breath back. It lets truth and art coexist. It leaves space for reflection, curiosity, and wonder.",
+      "That's why it matters. Not for perfection—but for presence."
     ]
   },
 
   // 8: COLLECTOR CTA
   {
-    subhead: "Bring History Home – Start Your Collection",
+    subhead: "Bring History Home",
     paragraphs: [
-      "Ready to add award-winning <strong>fine art photographer</strong> Wayne Heim’s story-driven <strong>history themed photography</strong> to your collection? Explore the complete Facing History series: Civil War valor, WWII sacrifice, the wild west, cowboy art, and the jazz-age Roaring 20s—all reimagined as <strong>fine art prints</strong> for collectors. Every image is a piece of history—a window into the past, a catalyst for new conversations, and a legacy you can hang on your wall."
+      "The Facing History series—Civil War valor, Western myth, WWII resilience, Jazz-Age intrigue—offers more than themed photography. These are narrative artifacts crafted for collectors who want their walls to speak. Whether you lean toward drama, psychology, mood, or legacy, there is a story here waiting to live in your space."
     ]
   },
 
   // 9: STORYTELLING VS AI
   {
-    subhead: "Storytelling vs. AI & Traditional Art",
+    subhead: "Where Storytelling Triumphs Over Algorithms",
     paragraphs: [
-      "Curious how <strong>painterly photography</strong> differs from traditional photography, AI-generated imagery, or digital illustration? Wayne’s work begins in reality — with real people, real light, and real emotion — and then transcends it through artistic interpretation. The result is neither photojournalism nor fabrication, but something rarer: a crafted moment that feels lived.",
-      "Artificial intelligence can replicate style, but it cannot replicate human intent — the instinct to pause, to interpret, to honor. Every one of Wayne’s <strong>painterly historical portraits</strong> is grounded in authenticity: real reenactors, researched detail, and the empathy of an artist who has spent decades studying how light tells a story.",
-      "Each print is designed for those who value legacy, craftsmanship, and truth in image-making — <strong>fine art photography</strong> that connects emotion, history, and imagination in a way machines never will."
+      "Painterly photography stands apart from traditional photography and AI-generated imagery because it carries intent. Every subject is real. Every detail is chosen. Every shadow is earned.",
+      "AI can mimic style, but it cannot mimic the instinct to honor a moment, the empathy behind a portrait, or the decades of craft that shape light into meaning. Wayne’s historical portraits are built from authenticity—real reenactors, researched detail, and a storyteller’s eye for the emotional hinge inside every scene.",
+      "For those who value craft over convenience and narrative over novelty, Facing History offers fine art rooted in truth, imagination, and reverence."
     ]
   }
 ];

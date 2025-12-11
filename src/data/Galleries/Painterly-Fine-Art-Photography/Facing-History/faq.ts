@@ -1,59 +1,61 @@
 export const facingFAQ = [
-    //Facing History
+  // Facing History
   {
     q: "What is the Facing History collection?",
     a: [
-      "Facing History is a painterly fine art series by Wayne Heim that explores America’s past through evocative portraits and scenes from pivotal eras — including the Civil War, World War II, and the Roaring 20s.",
-      "Each image is designed to feel like a cinematic still or a chapter from a forgotten novel — deeply researched, emotionally grounded, and printed for collectors who tip their hat to history."
+      "Facing History is Wayne Heim’s signature painterly fine art series exploring America’s past through evocative portraits and narrative scenes from pivotal eras — including the Civil War, World War II, and the Roaring 20s.",
+      "Many images are crafted as <strong>One-Image Movies™</strong> — single, cinematic moments designed to feel like a lost frame from a larger story. Each piece is deeply researched, emotionally grounded, and printed for collectors who appreciate authentic <strong>history themed art</strong>."
     ],
   },
   {
     q: "Are the people in these portraits real or imagined?",
     a: [
-      "Every subject is real — often historical reenactors or living historians who understand the nuance of the time period they portray.",
-      "This authenticity gives the Facing History series its depth. These aren’t costumed models — they’re storytellers in their own right."
+      "Every subject is real — often historical reenactors or living historians who understand the nuance, posture, and emotional truth of the time period they portray.",
+      "Their authenticity gives the Facing History series its depth. These aren’t costumed models — they’re collaborators in the storytelling, bringing their own historical knowledge to each portrait."
     ],
   },
   {
     q: "How is this different from traditional historical photography?",
     a: [
-      "Wayne’s painterly style bridges art and realism. These aren’t sepia-toned snapshots or digitally aged filters. They're built from the ground up with layered textures, controlled lighting, and post-production techniques rooted in both traditional art and modern photography.",
-      "The result feels timeless — like something between a painting and a dream."
+      "Wayne’s painterly approach bridges realism and fine art. These aren’t sepia-toned snapshots or digitally aged filters. They are built from the ground up with layered textures, sculpted lighting, and post-production techniques rooted in both illustration and classical portraiture.",
+      "The result feels timeless — a visual blend between painting, cinema, and lived history."
     ],
   },
   {
     q: "Can I order prints from the Civil War, WWII, or Roaring 20s collections?",
     a: [
-      "Yes. All themed galleries within Facing History offer collector-grade prints — available in archival paper, aluminum, and wood-mounted Engrained Series formats."
+      "Yes. Every gallery within Facing History offers collector-grade prints — available as archival paper prints, aluminum prints, or wood-mounted pieces from the <strong>Engrained Series</strong>.",
+      "Each print is prepared to showcase the depth and cinematic qualities of Wayne’s painterly style."
     ],
   },
   {
     q: "What makes the Engrained Series unique for historical prints?",
     a: [
-      "The Engrained Series uses a proprietary UV printing method that allows the natural wood grain to show through selectively. This tactile, vintage-inspired approach works beautifully with historic imagery, lending each print warmth and soul."
+      "The Engrained Series uses a multi-layer UV printing method on Baltic Birch, allowing the natural wood grain to show through selected areas of the image.",
+      "This tactile, heritage-inspired presentation pairs beautifully with historical themes — adding warmth, depth, and a handcrafted feel to each piece."
     ],
   },
   {
     q: "Where are these images typically displayed?",
     a: [
       "Facing History prints are ideal for:",
-      "<ul>\n  <li>Historic homes, libraries, or heritage hotels</li>\n  <li>Curated museum exhibits or galleries</li>\n  <li>Collectors of Americana or military art</li>\n  <li>Interior designers looking for meaningful conversation pieces</li>\n</ul>",
-      "Wayne also works with hospitality and design firms to create custom-size installations."
+      "<ul>\n  <li>Historic homes, libraries, and heritage hotels</li>\n  <li>Museum exhibits or curated gallery shows</li>\n  <li>Collectors of Americana, military art, or narrative photography</li>\n  <li>Interior designers seeking meaningful, story-rich focal pieces</li>\n</ul>",
+      "Wayne also collaborates with hospitality and design firms to create custom-size installations."
     ],
   },
   {
     q: "Can I request a custom portrait in this style?",
     a: [
-      "Wayne occasionally collaborates with individuals and historical societies to create custom portraits in the painterly Facing History style.",
-      "If you have a story to tell — whether it's family heritage, military tribute, or a reenactment project — reach out to explore a commission."
+      "Yes. Wayne collaborates with individuals, reenactors, families, and historical societies to create custom portraits in the painterly Facing History style.",
+      "If you have a legacy to honor — whether family heritage, a military tribute, or a reenactment project — you can reach out to explore a bespoke commission."
     ],
   },
   {
-  q: "What are 'Collector Notes' and how do I find/use them?",
-  a: [
-    `Ever wanted to know the deeper story behind an image, or get the artist’s creative perspective? <strong>Collector Notes</strong> are exclusive insights on select images—offering background on artistic choices, historical details, and what makes each piece extraordinary.`,
-    `To read a Collector Note, just click the <strong>notepad</strong> icon at the upper right of an image (desktop), or tap the same icon in the toolbar below the image (mobile). You'll discover creative context, art history comparisons, and insider observations that help you see your print the way an art collector—or even the artist—does.`,
-    `Our collection of Collector Notes is always growing, so check back for new insights and stories as you explore the gallery!`
-  ]
-},
+    q: "What are 'Collector Notes' and how do I find/use them?",
+    a: [
+      `Collector Notes provide deeper insight into select images — offering background on artistic decisions, historical references, and the elements that make each piece unique.`,
+      `To read a Collector Note, click the <strong>notepad</strong> icon at the upper right of an image (desktop) or tap the same icon in the lower toolbar (mobile). Each note reveals storytelling context, art-history influences, and the narrative thinking behind Wayne’s painterly approach.`,
+      `More Collector Notes are added regularly, so check back as you explore the gallery!`
+    ]
+  }
 ];

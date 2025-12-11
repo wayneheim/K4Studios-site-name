@@ -1,84 +1,92 @@
 export const westernStory = [
-    /* ───────────────────────────────────────────── 1 */
+
+  /* ───────────────────────────────────────────── 1 */
   {
     breadcrumb: "Men & Machines | WWII",
-    title: "Men & Machines: A Tribute to Grit and Steel",
-    subhead: "Where Soldiers and War Machines Become One",
-    tagline: "Painterly Fine Art Photography of WWII Technology in Action",
+    title: "Men & Machines — One-Image Movie™ WWII Portraiture by Wayne Heim",
+    subhead: "Where Grit Meets Steel. Where Men and Their Machines Become One.",
+    tagline: "Painterly Fine Art Photography of WWII Vehicles, Crews, and Frontline Resolve",
     paragraphs: [
-      `This series isn’t just about tanks and trucks—it’s about the bond forged between man and machine in the crucible of war. Men & Machines reveals the unspoken partnership between soldiers and the powerful vehicles they depended on in World War II.`,
-      `Captured during authentic WWII reenactments like D-Day Conneaut, the world’s largest D-Day themed event, these painterly portraits go beyond documentation. They pull viewers into a cinematic experience where gears grind, boots stomp, and determination gleams from every oil-slicked surface.`
+      `Step inside the story of the men who trusted steel with their lives. War was never fought by machines alone. Every bolt, every tread, every battered fender carried the weight of the Greatest Generation who depended on it. In this series, Wayne Heim reveals that unbreakable bond — the moment a soldier stopped seeing his machine as a tool and started seeing it as a lifeline.`,
+      `Captured at immersive WWII reenactments like D-Day Conneaut — where authenticity runs as deep as memory — these painterly fine art portraits don't document machinery. They humanize it.`,
+      `You feel the heat of engines, the metallic heartbeat beneath the mud, the quiet conversations between grease-stained hands and the steel they trust with their lives.`,
+      `These aren't war photos. They are One-Image Movies™ — moments suspended between preparation and consequence, inviting you to stand where a soldier once stood… and finish the story yourself.`
     ]
   },
 
   /* ───────────────────────────────────────────── 2 */
   {
-    subhead: "The Machinery of War, the Humanity Within",
-    tagline: "WWII Vehicles in Painterly Fine Art Form",
+    subhead: "The Machinery of War, The Humanity Within",
+    tagline: "WWII Military Equipment Rendered in Painterly Detail",
     paragraphs: [
-      `This collection showcases the mechanical might of WWII — from amphibious landing craft and Sherman tanks to medical jeeps and supply haulers. But it also highlights the men behind the machines: the engineers, medics, radio operators, and drivers who made victory possible.`,
-      `Every image blends visual realism with artistic texture, revealing both the tactile grime of battle and the quiet resolve in a soldier’s eyes. These aren’t generic war photos—they’re deeply human stories layered with grit, motion, and emotion.`
+      `Sherman tanks, Willys jeeps, amphibious landing craft — the WWII military equipment was an engineering marvel. But these machines were also emotional anchors for the men who relied on them. Safety, mobility, hope, survival — often resting on a single ignition.`,
+      `Wayne's painterly technique reveals life behind the lines: the cold geometry of steel and the warm pulse of the human spirit beside it.`,
+      `Through narrative lighting and tactile texture, each piece becomes more than a WWII vehicle portrait. It becomes a study of courage, exhaustion, focus… and the quiet resolve required to keep moving forward when the world is breaking around you.`
     ]
   },
 
   /* ───────────────────────────────────────────── 3 */
   {
     subhead: "What You'll See in Men & Machines",
-    tagline: "Ground-Level Views from the WWII Frontlines",
+    tagline: "Frontline Stories Written in Oil, Mud, and Determination",
     list: [
-      `Tank crews preparing for a push through muddy fields and bombed-out villages.`,
-      `Medics and mechanics loading supplies into jeeps under threat of incoming fire.`,
-      `Pilots and paratroopers standing beside aircraft like silent giants of steel.`,
-      `Moments of focus, fatigue, and fire-forged camaraderie between man and metal.`
+      `Tank crews preparing for a push through mud-thick fields and ruined villages.`,
+      `Medics and mechanics loading supplies into jeeps beneath the threat of incoming fire.`,
+      `Pilots, paratroopers, and ground crews standing beside aircraft like guardians of steel and sky.`,
+      `Moments of fatigue, grit, and fire-forged camaraderie — the human heartbeat behind every machine.`
     ],
     paragraphs: [
-      `These portraits of wartime technology don’t glorify combat—they honor endurance, ingenuity, and the humanity embedded in every bolt and tread.`
+      `These images don’t glorify conflict. They honor resilience — the ingenuity of the machines and the endurance of the men who trusted them with their lives.`
     ]
   },
 
   /* ───────────────────────────────────────────── 4 */
   {
     subhead: "Reenactment Meets Fine Art",
-    tagline: "Turning History into Painterly Narrative",
+    tagline: "Where Historical Accuracy Becomes Cinematic Storytelling",
     list: [
-      `Real reenactors portraying medics, engineers, tank gunners, and support crews.`,
-      `Historically accurate gear and vehicles—from Willys Jeeps to armored personnel carriers.`,
-      `Dramatic lighting and artistic post-work that elevates each scene into fine art.`
+      `Dedicated reenactors portraying medics, engineers, tank crews, pilots, and support teams.`,
+      `Authentic WWII equipment and vehicles — from Willys Jeeps and half-tracks to amphibious assault craft.`,
+      `Painterly post-work that fuses realism with cinematic atmosphere and emotional depth.`
     ],
     paragraphs: [
-      `Wayne’s painterly process transforms these reenacted scenes into timeless images, where WWII photography merges with artistic interpretation. Each photograph is both tribute and testimony—alive with tension, detail, and historical weight.`
+      `Wayne’s painterly process transforms historically accurate scenes into **timeless narrative portraits**. Each image is both artifact and artwork — layered with tension, texture, and the emotional gravity of a world at war.`,
+      `You’re not looking at history from a distance. You’re standing in it.`
     ]
   },
 
   /* ───────────────────────────────────────────── 5 */
   {
     subhead: "Collect the Story of Steel and Survival",
-    tagline: "From Battlefield to Wall-Ready Art",
+    tagline: "WWII Fine Art Photography for Historians & Story Seekers",
     paragraphs: [
-      `Printed on high-quality materials and offered in exclusive formats, each piece in this series is a powerful conversation between memory and machine. These aren’t prints—they’re heirlooms of remembrance.`,
-      `Whether you’re a military historian, WWII reenactor, or fine art collector, Men & Machines invites you to own a piece of the past, preserved in painterly form.`
+      `Every piece in this series is a visual conversation between memory and machinery — crafted with the detail of a historian and the dramatic touch of a cinematic storyteller.`,
+      `These prints aren’t simply collectibles. They are heirlooms — tributes to endurance, innovation, and the men who shaped the outcome of a global conflict.`,
+      `For WWII enthusiasts, reenactors, military historians, and fine art collectors, Men & Machines offers a rare fusion of authenticity and artistry.`
     ]
   },
 
   /* ───────────────────────────────────────────── 6 */
   {
     subhead: "Collection Highlights",
-    tagline: "From Jeeps to Juggernauts",
+    tagline: "From Jeeps to Juggernauts — The Backbone of WWII",
     list: [
-      `Tank Battalions: Intimate views of tank crews with Sherman, Stuart, and Panzer models.`,
-      `Frontline Logistics: Haulers, medics, and engineers keeping operations alive.`,
-      `Air & Sea: Paratroopers and naval personnel with amphibious assault gear and landing craft.`,
-      `Authentic Emotion: Not just machines—but the men who moved history forward, one mission at a time.`
+      `Tank Battalions — Sherman, Stuart, and Panzer crews captured in the calm before the storm.`,
+      `Frontline Logistics — medics, mechanics, and haulers keeping the war effort alive one mission at a time.`,
+      `Air & Sea Support — paratroopers, pilots, signal crews, and amphibious teams preparing for operations.`,
+      `Authentic Emotion — portraits where machinery fades and the human story takes command.`
     ]
   },
 
   /* ───────────────────────────────────────────── 7 */
   {
     subhead: "Part of the WWII Collection",
-    tagline: "Explore More From the Era That Shaped the World",
+    tagline: "Explore the Stories That Defined the Greatest Generation",
     paragraphs: [
-      `Men & Machines is one chapter in a broader story. Explore other series in Wayne Heim’s WWII fine art photography collection, including [WWII Portraits](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits), [Art of War](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War), and the [WWII Main Gallery](/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII).`,
-      `Each gallery offers a different lens on the war—from intimate soldier portraits to the vast machinery that powered Allied victory.`
+      `Men & Machines is one chapter in a broader narrative. Explore Wayne Heim's full WWII fine art photography collection, including <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">WWII Portraits</a>, <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War">Art of War</a>, and the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII">WWII Main Gallery</a>.`,
+      `Each gallery offers a different vantage point on the conflict — from the quiet resolve of the individual soldier to the monumental machinery that carried them through history.`,
+      `For a tactile connection to history, explore the <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> — select WWII images printed on Baltic birch wood panels, where grain and grit become part of the story.`,
+      `Or discover more of the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> collection — including <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits">Civil War Portraits</a> capturing valor and loss from America's defining conflict, <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits">Roaring 20s Portraits</a> of flappers, bootleggers, and jazz age rebellion, and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a> of the American frontier.`
     ]
   }
 ];

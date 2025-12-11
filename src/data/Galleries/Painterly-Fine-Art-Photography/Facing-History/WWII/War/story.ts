@@ -1,13 +1,21 @@
 export const westernStory = [
-/* ───────────────────────────────────────────── 1 */
+
+  /* ───────────────────────────────────────────── 1 */
   {
     breadcrumb: "WWII | Art of War | Painterly Fine Art",
-    title: "Art of War: WWII Through the Painterly Lens of Wayne Heim",
+    title: "The Art of War — One-Image Movie™ WWII Battle Photography by Wayne Heim",
     subhead: "Capturing Courage, Chaos, and Strategy",
-    tagline: "Immersive Fine Art Photography of WWII Reenactments",
+    tagline: "Scenes from the Front — Immersive Fine Art Photography of the Second World War",
     paragraphs: [
-      `Welcome to the "Art of War" collection, where Wayne Heim's masterful painterly photography transforms World War II reenactments into striking visual narratives.`,
-      `This collection captures not just the battles, but the emotional weight, the strategic brilliance, and the human spirit that defined one of history's greatest conflicts. Each image invites viewers to step into the chaos and courage of the era.`
+      `Step inside the story of the "Art of War" collection, where Wayne Heim's masterful painterly photography transforms World War II reenactments into striking visual narratives honoring the Greatest Generation.`,
+
+      `This collection captures not just the battles, but the emotional weight, the strategic brilliance, and the human spirit that defined one of history's greatest conflicts. Each image invites viewers to step into the chaos and courage of the era.`,
+
+      // 🔥 ADDED: One-Image Movie™ identity
+      `Every scene is crafted as a One-Image Movie™ — a single cinematic moment suspended between tension and consequence, where the story extends beyond the edge of the frame.`,
+
+      // 🔥 ADDED: Ambiguity + viewer participation
+      `Wayne leaves the endings deliberately unwritten. The ambiguity invites you to inhabit the moment — to decide what happened seconds before, and what the next heartbeat will demand.`,
     ]
   },
 
@@ -17,7 +25,11 @@ export const westernStory = [
     tagline: "From Battlefield to Fine Art",
     paragraphs: [
       `Wayne’s unique approach blends historical accuracy with artistic vision, turning frozen moments into stories of resilience and sacrifice.`,
-      `Through painterly techniques—rich textures, dramatic lighting, and expressive compositions—the collection goes beyond documentary, evoking the spirit and atmosphere of WWII like no other.`
+
+      `Through painterly techniques—rich textures, dramatic lighting, and expressive compositions—the collection goes beyond documentary, evoking the spirit and atmosphere of WWII like no other.`,
+
+      // 🔥 ADDED: Strategic tension / psychological layer
+      `What emerges is not just history reenacted, but the psychological tension of war itself — the quiet calculus of strategy, the weight of responsibility, and the fleeting human moments that define a soldier’s world.`,
     ]
   },
 
@@ -29,25 +41,31 @@ export const westernStory = [
       `Infantry soldiers caught in moments of resolve and fatigue.`,
       `Medics and support crews working tirelessly behind the front lines.`,
       `Airmen and sailors embodying the tension and determination of their missions.`,
-      `Civilians whose lives were forever changed by war’s reach.`
+      `Civilians whose lives were forever changed by war’s reach.`,
     ],
     paragraphs: [
-      `This collection honors every role in the vast theater of WWII, focusing on the individuals whose stories are often lost amid grand narratives.`
+      `This collection honors every role in the vast theater of WWII, focusing on the individuals whose stories are often lost amid grand narratives.`,
+
+      // 🔥 ADDED: Human mirror effect
+      `Their expressions, gestures, and stillness become a mirror for the viewer — reminding us that history is carried by ordinary people facing extraordinary demands.`,
     ]
   },
 
   /* ───────────────────────────────────────────── 4 */
   {
     subhead: "Scenes of Strategy and Sacrifice",
-    tagline: "Evoking the Theatre of War",
+    tagline: "WWII Combat Photography — Evoking the Theatre of War",
     list: [
       `Tense moments before battle, soldiers preparing for what lies ahead.`,
       `The stark reality of war-torn landscapes and ruined buildings.`,
       `Vehicles and equipment integral to the war effort, rendered with painterly finesse.`,
-      `Quiet moments of camaraderie amid the chaos.`
+      `Quiet moments of camaraderie amid the chaos.`,
     ],
     paragraphs: [
-      `Each photograph acts as a window into the complex strategies and human experiences that defined WWII’s front lines and support systems.`
+      `Each photograph acts as a window into the complex strategies and human experiences that defined WWII's front lines and support systems.`,
+
+      // 🔥 ADDED: Cinematic suspense tone
+      `These are not snapshots of action — they are moments of suspended breath, where anticipation carries as much weight as the battle itself.`,
     ]
   },
 
@@ -57,7 +75,11 @@ export const westernStory = [
     tagline: "Own a Piece of the Past, Told Through Art",
     paragraphs: [
       `Printed with the highest quality materials, every piece in this collection is a celebration of history and art combined.`,
-      `Collectors and history enthusiasts alike will find meaning and inspiration in these evocative images, perfect for display or study.`
+
+      `Collectors and history enthusiasts alike will find meaning and inspiration in these evocative images, perfect for display or study.`,
+
+      // 🔥 ADDED: Emotional artifact positioning
+      `Each print becomes a tactile artifact — a preserved fragment of story and memory shaped through painterly interpretation.`,
     ]
   },
 
@@ -69,7 +91,7 @@ export const westernStory = [
       `Battlefield portraits that reveal the raw emotion and humanity behind the uniform.`,
       `Dynamic reenactments capturing the energy and tension of historical events.`,
       `Intricate details of period vehicles, weapons, and gear brought to life.`,
-      `Narratives that emphasize both the valor and tragedy of war.`
+      `Narratives that emphasize both the valor and tragedy of war.`,
     ]
   },
 
@@ -78,8 +100,17 @@ export const westernStory = [
     subhead: "Preserve the Legacy",
     tagline: "Bring Home the Story of WWII",
     paragraphs: [
-      `Whether you’re a collector, historian, or art lover, this collection offers a deeply personal view of WWII’s complex legacy.`,
-      `These are not mere reproductions — they are living stories, captured with passion and artistry, preserving the past for future generations.`
+      `Whether you're a collector, historian, or art lover, this collection offers a deeply personal view of WWII's complex legacy.`,
+
+      `These are not mere reproductions — they are living stories, captured with passion and artistry, preserving the past for future generations.`,
+
+      `Explore more of the WWII collection: <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">WWII Portraits</a> for faces of the Greatest Generation, <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines">Men & Machines</a> for the bond between soldiers and steel. For a tactile connection to history, discover the <a href="/Other/K4-Select-Series/Engrained">Engrained Series</a> — select WWII images printed on Baltic birch wood.`,
+
+      `Or explore the full <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> collection — including <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits">Civil War Portraits</a> capturing valor and loss from America's defining conflict, and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits">Roaring 20s Portraits</a> of flappers, bootleggers, and jazz age rebellion.`,
+
+      // 🔥 ADDED: Final ambiguity / viewer completion
+      `Every image leaves a space for your imagination — a reminder that the story of WWII is not finished until someone chooses to remember it.`,
     ]
   }
+
 ];

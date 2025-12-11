@@ -1,7 +1,22 @@
 export const landingWestern = {
-  title: "The Civil War: In Portraits",
-  subtitle: "Painterly Civil War Themed Photography by Wayne Heim",
-     breadcrumb: 
+  title: "Civil War Portraits — One-Image Movie™ Historical Photography",
+  subtitle: "Step Inside the Story — Valor, Loss & Brotherhood in Painterly Fine Art",
+
+  // Keywords for structured data and semantic SEO (not meta keywords)
+  keywords: [
+    "Civil War Portraits",
+    "One-Image Movie",
+    "Civil War photography",
+    "American Civil War",
+    "civil war reenactment photography",
+    "historical portraiture",
+    "civil war art prints",
+    "Faces of Conflict",
+    "19th-century photography",
+    "painterly Civil War art"
+  ],
+
+  breadcrumb: 
   `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | Civil War Portraits`,
 
   tombstones: [

@@ -3,8 +3,8 @@ export const facingFAQ = [
  {
     q: "What is painterly fine art photography?",
     a: [
-      "Painterly fine art photography is a distinctive blend of photographic realism and artistic techniques drawn from the world of painting. Wayne Heim’s work channels the tradition of the Pictorialist movement, using soft focus, dramatic lighting, and textured layers to create images that feel timeless, immersive, and evocative.",
-      `Curious how this differs from other styles? <a href="/Galleries/Painterly-Fine-Art-Photography">Read Wayne’s full guide to painterly photography</a>.`
+      "Painterly fine art photography is a distinctive blend of photographic realism and artistic techniques drawn from the world of painting. Wayne Heim's work channels the tradition of the Pictorialist movement, using soft focus, dramatic lighting, and textured layers to create One-Image Movies™ — images that feel timeless, immersive, and evocative.",
+      `Curious how this differs from other styles? <a href="/Galleries/Painterly-Fine-Art-Photography">Read Wayne's full guide to painterly photography</a>.`
     ],
   },
   {
@@ -25,7 +25,7 @@ export const facingFAQ = [
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation and Americana</a> (trains, vintage cars, boats)</li>
         <li><a href="/Galleries/Painterly-Fine-Art-Photography/Miscellaneous">Miscellaneous and experimental works</a></li>
       </ul>`,
-      "Each series invites viewers to step into another era and experience the story behind the image."
+      "Each series invites viewers to step inside the story and experience the narrative behind the image."
     ],
   },
   {
@@ -36,10 +36,10 @@ export const facingFAQ = [
     ],
   },
   {
-    q: "What makes Wayne Heim’s painterly style unique?",
+    q: "What makes Wayne Heim's painterly style unique?",
     a: [
-      "Wayne is an award-winning fine art photographer and medical illustrator. His painterly approach combines traditional craftsmanship, historical research, and modern photographic technique. The result is art that looks and feels timeless—each image is a story, not just a scene.",
-      "If you’re seeking <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits'>Western art</a>, <a href='/Galleries/Painterly-Fine-Art-Photography/Landscapes'>mountain landscapes</a>, or <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>historical reenactments</a>, Wayne’s painterly gallery is a curated journey through Americana."
+      "Wayne is an award-winning fine art photographer and medical illustrator. His painterly approach combines traditional craftsmanship, historical research, and modern photographic technique. The result is art that looks and feels timeless—each image is a One-Image Movie™, not just a scene.",
+      "If you're seeking <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits'>Western art</a>, <a href='/Galleries/Painterly-Fine-Art-Photography/Landscapes'>mountain landscapes</a>, or <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>historical reenactments</a>, Wayne's painterly gallery is a curated journey through Americana."
     ],
   },
   {
@@ -60,7 +60,7 @@ export const facingFAQ = [
     q: "Why should I choose painterly photography over mass-produced wall art?",
     a: [
       "Painterly fine art photography offers emotional depth, artistic intention, and a tactile sense of history. Each print is thoughtfully created—no AI, no generic stock, just one-of-a-kind visual storytelling.",
-      "In a world of mass production, a painterly piece by Wayne Heim is an investment in meaningful, conversation-starting art."
+      "In a world of mass production, a painterly piece by Wayne Heim is an investment in meaningful, conversation-starting art. Embrace the Past… Live the Story."
     ],
   },
   {

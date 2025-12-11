@@ -1,7 +1,22 @@
 export const landingWestern = {
-  title: "The Roaring Twenties: In Portraits",
-  subtitle: "Painterly Roaring Twentys Themed Photography by Wayne Heim",
-     breadcrumb: 
+  title: "The Roaring Twenties — One-Image Movie™ Jazz Age Portraits",
+  subtitle: "Step Into the Roaring 20s — Flappers, Gangsters & Speakeasy Characters in Painterly Fine Art",
+
+  // Keywords for structured data and semantic SEO (not meta keywords)
+  keywords: [
+    "Roaring 20s Portraits",
+    "One-Image Movie",
+    "1920s fine art photography",
+    "jazz age portraits",
+    "gatsby era art",
+    "speakeasy portraits",
+    "Bootleggers",
+    "roaring twenties art prints",
+    "deco era fine art",
+    "flapper photography"
+  ],
+
+  breadcrumb: 
   `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | Roaring 20's Art`,
 
   tombstones: [

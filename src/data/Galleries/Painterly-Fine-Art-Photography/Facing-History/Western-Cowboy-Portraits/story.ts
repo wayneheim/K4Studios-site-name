@@ -1,91 +1,93 @@
 export const westernStory = [
-  /* 1: Hero Section – Cowboy Art & Western Fine Art Photography */
+  /* 1: Hero Section – The Western Canon Rewritten */
   {
-    breadcrumb: "Western Cowboy Portraits | Color",
-    title: "Cowboy Art Prints – Painterly Western Fine Art & Photography",
-    subhead: "Step Into the Story: Cowboy Art That Lives and Breathes",
-    tagline: "Cowboy Art, Western Fine Art Photography & Collector Prints",
+    breadcrumb: "Western Cowboy Portraits",
+    title: "The Western Canon Rewritten — Fine Art Cowboy Portraits & Story-Driven Photography",
+    subhead: "Not the West you remember — the West that remembers you.",
+    tagline: "Western Fine Art Photography • Cowboy Art Prints • Story-Led Painterly Portraiture",
     paragraphs: [
-      `There’s a rhythm to the frontier—a slow inhale of wind, dust, and distance. Ride into that rhythm with Wayne Heim’s <strong>painterly cowboy art</strong>, <strong>Western fine art photography</strong>, and <strong>Western cowboy photography</strong>. Every image is more than a picture; it’s a pause between heartbeats, a moment where myth and memory shake hands. Wayne’s painterly technique fuses the mood of classic paintings with the immediacy of fine art photography, preserving the emotion that first drew people to the <strong>Wild West</strong>.`,
-      `From sun-baked cowhands to weathered Native American reenactors, each portrait hums with honesty and light. These aren’t staged scenes—they’re echoes of grit, grace, and stubborn hope. Each print carries the dust of the trail, the fatigue of long miles, and the endurance that built the American West.`,
-      `As you wander through this collection, look for the <strong>Collector Notes</strong> icon—small windows into how each story was shaped, where light met conviction, and what it means to hold a moment still.`
+      `The American West is overflowing with legends — yet so few of the real stories survived. The quiet ones. The human ones. The moments too honest for Hollywood and too fragile for textbooks.`,
+      `Wayne Heim's painterly Western fine art photography doesn't retell those stories. It rescues them.`,
+      `These aren't costumed models. They aren't cosplay cowboys staging nostalgia. They're character studies carved from grit, resolve, longing, and the kind of hope men once staked their lives on.`,
+      `And here's where Wayne's work breaks from the Western canon entirely: He doesn't tell the whole story. He invites you to finish it.`,
+      `Through cinematic light, painterly texture, and deliberate ambiguity, Wayne creates a threshold instead of a conclusion — a moment suspended between what has just happened and what must happen next.`,
+      `You don't stand outside the frame. You step inside the story.`,
+      `You feel the dust settle. You sense the wind shift. You recognize something familiar in a stranger's eyes — courage, doubt, yearning, consequence.`,
+      `Every One-Image Movie™ is a mirror disguised as a memory. A prompt, not a proclamation. A question asked softly: What brought you to this moment? And who do you become after it?`,
+      `This is Western art for people who crave story, soul, and truth. Not replicas of old tropes — but the forgotten stories that made this land mythic before myth had a name.`
     ]
   },
+
+  // *** INSERT STORYSLIDER BLOCK HERE ***
+  // Perfect placement — after the viewer steps into the story but before the gallery opens.
 
   /* 2: What Sets Painterly Cowboy Art Apart */
   {
-    subhead: "What Makes Painterly Cowboy Art Unique?",
-    tagline: "Where Cowboy Art, Western Themed Photography, and Storytelling Meet",
+    subhead: "What Sets Painterly Cowboy Art Apart",
+    tagline: "Where Canon Meets Craft — Painterly Western Photography",
     paragraphs: [
-      `Painterly Western photography isn’t a trick of software—it’s patience, observation, and craft. Wayne Heim approaches every frame with an illustrator’s discipline, channeling the lineage of Remington, Catlin, and Wyeth. The result is <strong>Western cowboy photography</strong> that feels cinematic and timeless. Each piece leans on lighting and texture to whisper its own story, capturing not just what a cowboy looks like, but what it <em>feels</em> like to stand in his boots.`,
-      `This is where brushstroke meets shutter click—an alchemy that turns light into legacy, creating <strong>cowboy art prints</strong> and <strong>Western fine art photography</strong> that collectors recognize instantly as something made by hand and heart.`
+      `Painterly Western photography is not a filter. It's not nostalgia with a vignette.`,
+      `It's craft — the eye of a medical illustrator, the instinct of a cinematic storyteller, and the restraint of a painter who knows what to leave unsaid. Rooted in the Pictorialist movement and refined through decades of illustration, Wayne sculpts with light the way others sculpt with clay.`,
+      `Texture becomes tone. Color becomes consequence. A shadow becomes a secret you feel but can't entirely name.`,
+      `This is why collectors are drawn to these works. They don't just look historical — they feel lived in. Cowboy art prints and Western fine art photography that carry the weight of authentic frontier art.`
     ]
   },
 
-  /* 3.5: Why Painterly Photography Matters */
-  {
-    subhead: "Why Painterly Photography Matters",
-    tagline: "Real People. Real Light. Crafted by Hand.",
-    paragraphs: [
-      `Every face in these portraits is real — every subject, every fold of cloth, every glint of light once stood in front of Wayne’s lens. But what you see in the finished image is no accident of the camera. It’s shaped — sculpted — the way a painter bends a brush to their will.`,
-      `There are <strong>no AI-generated people</strong>, no algorithms generating scenes. Wayne controls light, color, and texture the way an illustrator crafts his message. The raw photograph becomes the foundation — his canvas, his raw material, his ingredients.`,
-      `Give fifty bakers the same ingredients and you’ll get fifty cakes. Some will taste alike, but one will stop you in your tracks — the one that makes you ask <em>why have I never tasted anything like this before?</em> That’s what painterly photography does. It transforms ordinary light into living emotion.`,
-      `This isn’t about perfection; it’s about persuasion — about pulling you so deep into a story that you forget you’re looking at a modern photograph of cowboys and actors. It’s why painterly photography resonates. It’s why it moves people. And it’s why it deserves to be seen and remembered.`
-    ]
-  },
-
-  /* 4: The Frontier in Light and Shadow */
+  /* 3: The Frontier in Light and Shadow */
   {
     subhead: "The Frontier in Light and Shadow",
-    tagline: "Black and White Western Art, Color, and Indigenous Legacy",
+    tagline: "Color for the heartbeat. Black and white for the bones.",
     paragraphs: [
-      `The West has never lived in just one color. Wayne’s portfolio of <strong>Western fine art photography</strong> spans vivid, painterly color scenes and haunting <strong>black and white Western art</strong> that feels carved from history itself. Each tonal choice — color or monochrome — tells its own emotional truth.`,
-      `Through these images, the <strong>Wild West</strong> isn’t mythologized — it’s humanized.`
+      `The West isn't monochrome. It shifts — moment to moment — between fire and ash, dust and night, hope and reckoning. Wayne's Western fine art photography mirrors that truth.`
     ],
     list: [
-      `<strong>Painterly Cowboy Art in Color:</strong> Sun-struck riders, weathered hats, and the long light of evening—moments alive with motion and warmth.`,
-      `<strong>Black and White Western Art:</strong> Deep shadows, smoke, and soul. Timeless, unembellished portraits that recall the first glass-plate photographers of the 19th century.`,
-      `<strong>Native American Fine Art Portraits:</strong> Real reenactors portrayed with cultural respect and quiet strength — every bead, every thread, a story carried forward.`
+      `<strong>Painterly Cowboy Art (Color):</strong> Sun-warmed riders. Dust swirling in gold. Faces lit like campfire confessions. Cinematic, intimate, and alive.`,
+      `<strong>Black & White Western Art:</strong> Deep shadow. Primal light. Photographs that feel unearthed, not captured — as if someone found them folded in a saddlebag from 1889.`,
+      `<strong>Native American Fine Art Portraits:</strong> Handled with reverence, research, and restraint. Every garment, bead, and gesture carries the weight of a story still breathing.`
     ]
   },
 
-  /* 5: Grit, Gold, and the Heart of the Frontier */
+  /* 4: Grit, Gold & the Human Heart of the Frontier */
   {
-    subhead: "Grit, Gold, and the Heart of the Frontier",
-    tagline: "History Rendered in Light and Story",
+    subhead: "Grit, Gold & the Human Heart of the Frontier",
+    tagline: "Stories Hollywood forgot to tell — Old West Fine Art Prints",
     paragraphs: [
-      `These aren’t scenes of fantasy; they’re echoes of endurance. From miners and drifters to scouts and settlers, Wayne seeks the poetry behind the scars — the weight behind the stare. Every prop and gesture is researched for truth, every shadow deliberate. That blend of authenticity and emotion is what elevates his <strong>Western cowboy photography</strong> beyond nostalgia into fine art.`,
-      `If you look closely, each print holds the echo of something greater — the dust, the heat, and the heartbeat of a time that shaped who we are.`
+      `Forget the postcard version of the Wild West. These portraits carve into the marrow — miners, drifters, scouts, settlers, men and women who gambled everything on a dream tall enough to break them.`,
+      `Wayne captures not their posture, but their presence. Not their costumes, but their consequences.`,
+      `Look long enough and you will see it: hope held tight, loss carried quietly, dreams that outlived the dreamer. This is the Western story between the stories.`
     ]
   },
 
-  /* 6: The Engrained Series – Cowboy Portraits on Wood */
+  /* 5: The Engrained Series — Cowboy Portraits on Wood */
   {
-    subhead: "The Engrained Series – Cowboy Portraits on Wood",
-    tagline: "When Craftsmanship Meets Frontier Memory",
+    subhead: "The Engrained Series — Cowboy Portraits Printed on Wood",
+    tagline: "When story becomes artifact — Western Fine Art Wood Prints",
     paragraphs: [
-      `Some stories deserve to live in wood and light. Wayne’s <strong>Engrained Series</strong> transforms select cowboy and Native American portraits into fine-art wood prints — created with a custom five-layer UV process on Baltic Birch. The white underlayer is hand-controlled, allowing parts of the natural grain to breathe through the image like spirit through smoke.`,
-      `The result is tactile, living art — <strong>Western fine art photography</strong> that feels as though it’s been weathered by the plains themselves. No two are alike; each is a relic of story and material joined in permanence.`
+      `Some stories shouldn't live on paper. They deserve something older, sturdier — something that once lived a life of its own.`,
+      `Wayne's Engrained Series prints Western portraits directly onto Baltic Birch, letting the grain whisper through the image like memory through smoke.`,
+      `No two are alike. Each is a relic — a piece of frontier myth you can hold.`
     ]
   },
 
-  /* 7: Why Collect Wayne Heim’s Cowboy Art */
+  /* 6: Why Collect Wayne Heim's Western Art */
   {
-    subhead: "Why Collect Wayne Heim’s Cowboy Art",
-    tagline: "Authenticity, Emotion, and Legacy in Every Frame",
+    subhead: "Why Collect Wayne Heim's Western Art",
+    tagline: "Authenticity. Soul. Legacy.",
     paragraphs: [
-      `True <strong>cowboy art</strong> isn’t about props or costumes — it’s about presence. Wayne’s portraits carry the empathy of an illustrator and the patience of an <strong>award-winning photographer</strong>. Each image is crafted to feel like the closing line of a novel — quiet, inevitable, and unforgettable.`,
-      `This is work that collectors and designers choose not just for beauty, but for its sense of soul. Every print becomes a conversation piece — something that breathes in the room long after you’ve walked away.`
+      `Collectors choose Wayne's work because it lives in that rare space between fine art and human truth.`,
+      `This is not cowboy cosplay. Not décor. Not stunt photography.`,
+      `This is legacy art — crafted with empathy, discipline, and narrative restraint by an award-winning fine art photographer. Every print feels like a final line in a novel you can't stop thinking about.`
     ]
   },
 
-  /* 8: Own a Chapter of the American West */
+  /* 7: Own a Chapter of the American West */
   {
     subhead: "Own a Chapter of the American West",
-    tagline: "Western Cowboy Photography for Collectors and Dreamers",
+    tagline: "Western Fine Art Photography for Collectors & Story Seekers",
     paragraphs: [
-      `If you’ve ever felt the pull of the horizon — that curiosity about what lies beyond the ridge — you’ll find it here. Explore the gallery, read the <strong>Collector Notes</strong>, and discover how <strong>painterly cowboy art</strong> and <strong>black and white Western art</strong> can still make the present feel like memory.`,
-      `This is <strong>Western fine art photography</strong> crafted to endure — a living archive of courage, craft, and light. Bring home not just a print, but a story you can almost reach out and touch. A legacy of the American West — rendered in patience, truth, and dust.`
+      `If you've ever felt the pull of the horizon — that quiet promise at the edge of the map — you'll find it in this gallery.`,
+      `Browse. Read the Collector Notes. Let the stories take hold.`,
+      `Bring home not just a print, but an unanswered question you'll live with in the best way. A One-Image Movie™ waiting for you to finish the final scene.`
     ]
   }
 ];

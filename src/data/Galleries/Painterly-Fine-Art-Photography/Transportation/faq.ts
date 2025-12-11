@@ -1,9 +1,9 @@
 export const transportationFAQ = [
-    //Painterly Transporation Photography FAQ
+    //Painterly Transportation Photography FAQ
 {
     q: "What makes your transportation photography 'painterly'?",
     a: [
-      "Wayne Heim uses a refined post-processing technique inspired by classical painting and pictorialist photography. This painterly style enhances lighting, texture, and mood — transforming steam engines and vintage cars into timeless works of fine art."
+      "Wayne Heim uses a refined post-processing technique inspired by classical painting and pictorialist photography. This painterly style enhances lighting, texture, and mood — transforming steam engines and vintage cars into One-Image Movies™: timeless works of fine art that invite you to step inside the story."
     ]
   },
   {
@@ -43,9 +43,9 @@ export const transportationFAQ = [
     ]
   },
   {
-    q: "How do I start collecting Wayne’s painterly transportation work?",
+    q: "How do I start collecting Wayne's painterly transportation work?",
     a: [
-      `Start by exploring the <a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation Gallery</a>. You can purchase museum-quality prints in a variety of sizes and formats — from traditional archival paper to the signature Engrained wood series.`
+      `Start by exploring the <a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation Gallery</a>. You can purchase museum-quality prints in a variety of sizes and formats — from traditional archival paper to the signature Engrained wood series. Embrace the Past… Live the Story.`
     ]
   },
   {

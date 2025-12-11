@@ -1,8 +1,17 @@
 export const landingWestern = {
-    //Painterly Transporation Photogrqphy
-  title: "Painterly Transportation Themed Photography by Wayne Heim",
-  subtitle: "Fine Art Painterly Photos of Vehicles & Motion",
+    //Painterly Transportation Photography
+  title: "Transportation Photography — One-Image Movie™ Fine Art by Wayne Heim",
+  subtitle: "Step Inside the Story of Vintage Trains, Classic Cars & American Icons",
    breadcrumb: `<a href="/Galleries/Painterly-Fine-Art-Photography" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='#444'">Painterly Photography</a> | Transportation`,
+  keywords: [
+    "painterly transportation photography",
+    "vintage train photography",
+    "classic car fine art",
+    "steam locomotive art",
+    "automotive fine art prints",
+    "One-Image Movie™",
+    "American transportation icons"
+  ],
 
 
   tombstones: [

@@ -2,6 +2,11 @@
    CLS Prevention - Reserve space for client:only components
    ======================================== */
 
+/* StorySlider: Hide skeleton when React component loads */
+.story-slider-wrapper:has(.story-slider-container) .story-slider-skeleton {
+  display: none;
+}
+
 /* Reserve space for LandingHeader (client:only) - prevents layout shift */
 .drawer-mode {
   min-height: 77px; /* header height (60px) + margin-top (1rem=16px) + border */

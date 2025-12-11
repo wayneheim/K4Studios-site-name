@@ -1,8 +1,45 @@
 export const landingWestern = {
-  title: "Western Cowboy Portraits",
-  subtitle: "Painterly Cowboy & Western Art by Wayne Heim",
-     breadcrumb: 
-  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | Western Cowboy Portraits`,
+  title: "Western Fine Art Photography — The Cowboy Portrait Canon Rewritten",
+  subtitle: "Painterly Cowboy Art • Story-Led Portraits • One-Image Movies™ by Wayne Heim",
+
+  // Keywords used internally for structured data, semantic linking, and contextual SEO (not meta keywords)
+  keywords: [
+    "Western fine art photography",
+    "Western fine art",
+    "cowboy fine art photography",
+    "cowboy art prints",
+    "painterly cowboy photography",
+    "One-Image Movie",
+    "Western cowboy portraits",
+    "old west fine art prints",
+    "wild west photography",
+    "black and white western art",
+    "Native American fine art portraits",
+    "frontier photography",
+    "Americana photography",
+    "cowboy wall art",
+    "Western themed photography"
+  ],
+
+  breadcrumb: `
+    <a 
+      href="/Galleries/Painterly-Fine-Art-Photography/Facing-History"
+      style="
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        pointer-events: auto;
+        position: relative;
+        z-index: 9999;
+        transition: color 0.2s ease;
+      "
+      onmouseover="this.style.color='darkred'"
+      onmouseout="this.style.color='inherit'"
+    >
+      Facing History
+    </a> 
+    | Western Fine Art Photography
+  `,
 
   tombstones: [
     {

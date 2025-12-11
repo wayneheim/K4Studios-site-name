@@ -8,6 +8,9 @@ import FAQAccordion       from '../../../../components/FAQAccordion.jsx';
 import SiteFooter         from '../../../../components/Footer.astro';
 import MobileStoryImages  from '../../../../components/MobileStoryImages-size.jsx';
 import ThemeBlock         from '../../../../components/ThemeBlock.jsx';
+import StorySlider        from '../../../../components/StorySlider.tsx';
+import { galleryData as cowboyColorDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { storySliderImageIds } from '../../../../data/storySlider.ts';
 import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
 
 import { siteNav } from '../../../../data/siteNav.ts';
@@ -29,6 +32,11 @@ import '../../../../styles/oneupheader.css';
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
+
+// Filter gallery data for StorySlider (reduce payload)
+const cowboyColorData = cowboyColorDataFull
+  .filter((img: any) => storySliderImageIds.includes(img.id))
+  .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
 
 // Normalize any mojibake (UTF-8 shown as Latin-1) so titles render with proper punctuation
 function fixMojibake(str) {
@@ -167,6 +175,24 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                     <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, cowboySemantic)} />
                   ))}
                 </ul>
+              )}
+              {/* Insert StorySlider after section 0 (hero with One-Image Movie intro) */}
+              {index === 0 && (
+                <div class="story-slider-wrapper reveal-on-scroll mt-8">
+                  {/* Skeleton placeholder to prevent CLS */}
+                  <div class="story-slider-skeleton relative bg-[#ebe5dc] rounded-lg shadow-md px-6 py-5 max-w-2xl mx-auto border-2 border-[#d8d0c4] mb-12 h-[280px] overflow-hidden">
+                    <div class="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-l-2 border-t-2 border-[#c8bfb0]"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-r-2 border-b-2 border-[#c8bfb0]"></div>
+                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movie™ Preview</p>
+                    <div class="animate-pulse">
+                      <div class="h-5 bg-[#d8d0c4] rounded w-3/4 mb-3"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-full mb-2"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-5/6 mb-2"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-4/6"></div>
+                    </div>
+                  </div>
+                  <StorySlider client:only="react" stories={cowboyColorData} galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" />
+                </div>
               )}
             </article>
           ))}

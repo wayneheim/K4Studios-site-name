@@ -1,8 +1,24 @@
 export const landingWestern = {
-    //Facing History
-  title: "Facing History: Portraits",
-  subtitle: "Historically Themed Fine Art Painterly Reenactment Photography",
-   breadcrumb: `<a href="/Galleries/Painterly-Fine-Art-Photography" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='#444'">Painterly Photography</a> | Facing History`,
+  // Facing History
+  title: "Facing History — One-Image Movie™ Historical Portraits",
+  subtitle: "Step Inside the Story — Living History Fine Art & Pictorialist Reenactment Photography",
+
+  // Keywords for structured data and semantic SEO (not meta keywords)
+  keywords: [
+    "Facing History",
+    "One-Image Movie",
+    "historical portraiture",
+    "living history fine art",
+    "Pictorialist movement",
+    "reenactment photography",
+    "Civil War portraits",
+    "WWII photography",
+    "Roaring 20s portraits",
+    "Western cowboy portraits",
+    "painterly historical photography"
+  ],
+
+  breadcrumb: `<a href="/Galleries/Painterly-Fine-Art-Photography" style="color: #444; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 10; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='#444'">Painterly Photography</a> | Facing History`,
 
 
   tombstones: [

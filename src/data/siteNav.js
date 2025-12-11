@@ -643,6 +643,13 @@ export const siteNav = [
         "type": "section"
       },
       {
+        "label": "What Is a One-Image Movie?",
+        "href": "/Other/One-Image-Movie",
+        "code": "O-S5a",
+        "slug": "one-image-movie",
+        "type": "section"
+      },
+      {
         "label": "Picture Shows",
         "href": "/Other/Shows",
         "code": "O-S6",

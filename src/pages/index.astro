@@ -7,6 +7,14 @@ import LandingRightImages from '../components/LandingRightImages.jsx';
 import FAQAccordion       from '../components/FAQAccordion.jsx';
 import SiteFooter         from '../components/Footer.astro';
 import MobileStoryImages  from '../components/MobileStoryImages.jsx';
+import StorySlider        from '../components/StorySlider.tsx';
+import { galleryData as cowboyColorDataFull } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { storySliderImageIds } from '../data/storySlider.ts';
+
+// Filter gallery data to only include story slider images (reduce payload)
+const cowboyColorData = cowboyColorDataFull
+  .filter((img: any) => storySliderImageIds.includes(img.id))
+  .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
 
 import { getStructuredData } from '../components/utils/getStructuredData.ts';
 import { getLandingMeta }    from '../data/landingMeta.ts';
@@ -132,21 +140,41 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       <div class="text-column">
         <section class="story-section">
           {painterlyStory.map((section, index) => (
-            <article class="story-block" key={index}>
-              {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
-              {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
-              {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
-              {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-              ))}
-              {section.list && section.list.length > 0 && (
-                <ul>
-                  {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
-                  ))}
-                </ul>
+            <>
+              <article class="story-block" key={index}>
+                {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+                {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+                {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
+                {section.paragraphs?.map((para, i) => (
+                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                ))}
+                {section.list && section.list.length > 0 && (
+                  <ul>
+                    {section.list.map((item, j) => (
+                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+                    ))}
+                  </ul>
+                )}
+              </article>
+              {/* Insert StorySlider after section 7 (What Is a One-Image Movie™?) - index 6 */}
+              {index === 6 && (
+                <div class="story-slider-wrapper reveal-on-scroll">
+                  {/* Skeleton placeholder to prevent CLS - hidden when React loads */}
+                  <div class="story-slider-skeleton relative bg-[#ebe5dc] rounded-lg shadow-md px-6 py-5 max-w-2xl mx-auto border-2 border-[#d8d0c4] mb-12 h-[280px] overflow-hidden">
+                    <div class="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-l-2 border-t-2 border-[#c8bfb0]"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-r-2 border-b-2 border-[#c8bfb0]"></div>
+                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movie™ Preview</p>
+                    <div class="animate-pulse">
+                      <div class="h-5 bg-[#d8d0c4] rounded w-3/4 mb-3"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-full mb-2"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-5/6 mb-2"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-4/6"></div>
+                    </div>
+                  </div>
+                  <StorySlider client:only="react" stories={cowboyColorData} count={5} />
+                </div>
               )}
-            </article>
+            </>
           ))}
         </section>
 

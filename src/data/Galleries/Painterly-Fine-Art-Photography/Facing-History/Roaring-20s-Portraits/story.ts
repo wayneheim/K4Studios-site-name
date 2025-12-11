@@ -1,82 +1,88 @@
-export const westernStory = [
+export const roaring20sStory = [
+
   /* ───────────────────────────────────────────── 1 */
   {
     breadcrumb: "Roaring 20s Portraits | Color",
-    title: "Roaring 20s Portraits – Painterly Fine Art Photography by Wayne Heim",
-    subhead: "The Untold Side of the Jazz Age",
-    tagline: "Flappers, Gangsters, and G-Men Captured in Painterly Fine Art Photography",
+    title: "Roaring 20s Portraits — One-Image Movie™ Jazz Age Photography by Wayne Heim",
+    subhead: "The Jazz Age, Unmasked.",
+    tagline: "Flappers, Bootleggers & G-Men — Step Into the Roaring 20s",
     paragraphs: [
-      `Step into the rebellious heart of the 1920s—an age defined by speakeasies, moonshine, and the blurred lines between justice and survival. Wayne Heim’s painterly fine art portraits bring the Roaring 20s to life through cinematic storytelling and historical detail.`,
-      `These aren’t sanitized scenes of the Jazz Age. They’re moody, story-driven portraits set in smoky back rooms, alleys, and whiskey-lit hideouts. Each image fuses the authenticity of historical reenactment with the visual richness of painterly fine art photography, revealing the grit, danger, and spirit that defined the decade.`
+      `Step inside the story of a decade that rewrote America. The 1920s weren't simply roaring — they were trembling, electric, volatile. A country caught between rebellion and refinement, whiskey and law, new freedoms and old ghosts.`,
+      `Wayne Heim’s painterly fine art portraits peel back the stylized mythology of the Jazz Age and reveal the human pulse beneath it. These are not reenactments played for nostalgia — they are psychological studies shaped with cinematic atmosphere and historical grit.`,
+      `Each portrait functions as a One-Image Movie™: a moment suspended between danger and choice, where a glance, a shadow, or the curl of cigarette smoke hints at a story half-lived and half-remembered.`,
+      `This is the Roaring 20s as it truly felt — intimate, moody, and alive with consequence.`
     ]
   },
 
   /* ───────────────────────────────────────────── 2 */
   {
     subhead: "What Were the Roaring 20s Really Like?",
-    tagline: "Prohibition. Resistance. Survival.",
+    tagline: "Prohibition. Defiance. Becoming.",
     paragraphs: [
-      `The Roaring 20s were more than glitter and jazz—they were an era of rebellion and reinvention. Prohibition turned ordinary citizens into outlaws, flappers defied convention, and G-Men chased bootleggers across state lines.`,
-      `Wayne’s painterly portraits illuminate that tension between chaos and change. Through fine art photography that blends atmosphere and narrative, each image re-imagines the true pulse of a nation redefining freedom.`
+      `The Roaring 20s were not just sequins and jazz horns — they were contradictions carved into the American psyche. While speakeasies thrived, families starved. While flappers broke rules, the law tightened its grip. While the country danced, someone in the alley kept watch.`,
+      `Wayne’s painterly portraits illuminate this tension. Through the lens of historical portraiture, the decade becomes a living character: bold, reckless, and impossibly human. These scenes don’t recreate the era — they resurrect its urgency.`
     ]
   },
 
   /* ───────────────────────────────────────────── 3 */
   {
-    subhead: "The Real Roaring 20s: Portraits of Rebellion and Resistance",
-    tagline: "Bootleggers, Flappers, and the Fight for Freedom",
+    subhead: "The Real 20s: Portraits of Rebellion & Reckoning",
+    tagline: "Where Survival Was a Story of Its Own",
     list: [
-      `Bootleggers racing through back roads with contraband spirits.`,
-      `Federal agents—G-Men—caught in a relentless pursuit of justice.`,
-      `Flappers breaking every rule society tried to impose.`,
-      `Outlaws and lawmen whose choices blurred the line between right and wrong.`
+      `Bootleggers weaving through moonlit roads, risking everything for a gallon of outlawed hope.`,
+      `Federal agents — G-Men — caught between duty and doubt in a war no one won cleanly.`,
+      `Flappers rewriting womanhood with every step onto the dance floor.`,
+      `Criminals and crusaders whose moral lines blurred beneath the weight of consequence.`
     ],
     paragraphs: [
-      `This collection captures the raw defiance of the 1920s—where survival meant taking risks and living without apology. These portraits are a visual chronicle of freedom fought for, not given.`
+      `These portraits honor the people who lived between the headlines. Each one is crafted as a fine-art echo of resilience — a reminder that rebellion has always been written in heartbeat, not history books.`
     ]
   },
 
   /* ───────────────────────────────────────────── 4 */
   {
-    subhead: "Flappers, Gangsters, and G-Men in Painterly Detail",
-    tagline: "Storytelling in Every Shadow",
+    subhead: "Flappers, Gangsters & G-Men Through a Painterly Lens",
+    tagline: "Where Every Shadow Is a Plot Point",
     list: [
-      `Flappers in smoky speakeasies—grace and mischief beneath the haze.`,
-      `Gangsters and bootleggers gripping fedoras and revolvers as tension fills the air.`,
-      `Federal agents steady and stoic, standing against the chaos of the age.`
+      `Flappers framed in smoke and soft defiance — the thrill of freedom pressed into a single stare.`,
+      `Gangsters gripping fedoras and revolvers, tension coiled like a whispered threat.`,
+      `G-Men in hard light — stoic, burdened, aware that justice rarely feels just.`
     ],
     paragraphs: [
-      `Each portrait fuses fine art composition with cinematic realism. Painterly light and controlled texture turn fleeting moments into timeless visual stories—an homage to lives lived in the shadows of the Jazz Age.`
+      `Wayne’s painterly approach transforms these moments into intimate cinematic scenes. Light becomes motive, texture becomes memory, and every gesture carries emotional weight. These aren’t photographs frozen in time — they’re stories that refuse to sit still.`
     ]
   },
 
   /* ───────────────────────────────────────────── 5 */
   {
     subhead: "Experience the Spirit of the 20s Through Fine Art",
-    tagline: "Own the Grit and Grace of an Unforgiving Decade",
+    tagline: "Grit. Elegance. Consequence.",
     paragraphs: [
-      `Printed as museum-quality fine art, each piece invites you to experience the intensity and elegance of 1920s America. Whether drawn to flapper rebellion, gangster lore, or the enduring myth of the Jazz Age, these works transform history into tangible story—painterly photography that feels alive.`
+      `Printed as museum-quality fine art, each portrait invites you to step deeper into the decade's inner world — the shadowed corners, the whispered secrets, the humanity behind the spectacle.`,
+      `Whether you're drawn to rebellion, glamour, gatsby era excess, or the mythology of the Jazz Age, these works don't just show the past — they ask you to feel it.`
     ]
   },
 
   /* ───────────────────────────────────────────── 6 */
   {
     subhead: "Collection Highlights",
-    tagline: "Stories in Every Shadow",
+    tagline: "Stories Carved in Light and Smoke",
     list: [
-      `Bootleggers and G-Men – A cat-and-mouse chase through the underbelly of Prohibition America.`,
-      `Flapper Rebellion – Women rewriting the rules through bold fashion, spirit, and independence.`,
-      `Outlaws and Lawmen – From infamous legends to forgotten faces, each portrait honors the people who shaped and defied the era.`
+      `Bootleggers & G-Men — A slow-burn chase through Prohibition's underbelly.`,
+      `Flapper Rebellion — Women wielding freedom like fire in a world determined to contain them.`,
+      `Speakeasy Portraits — Secrets, smoke, and the defiant glamour of hidden rooms.`,
+      `Outlaws & Lawmen — Portraits of consequence, etched in painterly shadow and resolve.`
     ]
   },
 
   /* ───────────────────────────────────────────── 7 */
   {
-    subhead: "Own a Piece of Roaring 20s History",
-    tagline: "Bring Home the Rebellion, Preserved in Painterly Form",
+    subhead: "Own a Piece of the Roaring 20s",
+    tagline: "Bring Home a Story Only You Can Finish",
     paragraphs: [
-      `Collectors, historians, and lovers of painterly storytelling will find something rare here: the emotional texture and authenticity of 1920s America captured through fine art photography.`,
-      `Each limited-edition print is a story preserved—crafted to embrace the past, live the story, and celebrate the untamed spirit of an era that refused to be ordinary.`
+      `Collectors and storytellers are drawn to these pieces because they carry more than historical detail — they carry emotional truth.`,
+      `Each limited-edition print is a One-Image Movie™ waiting for your interpretation. Through painterly composition and deliberate ambiguity, Wayne invites you into the frame: to wonder, to imagine, to finish the story only you can see.`,
+      `These portraits don’t just remember the 20s — they remember *you*.`
     ]
   }
 ];
